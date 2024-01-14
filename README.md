@@ -1,4 +1,4 @@
-# imgutil
+# imgutils
 
 Alpine based image with:
 
