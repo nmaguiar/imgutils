@@ -15,5 +15,5 @@ This should be enough tools to be able to manage images on a Kubernetes cluster 
 With docker you can execute directly:
 
 ```bash
-docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock nmaguiar/imgutil /bin/bash
+docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock nmaguiar/imgutils /bin/bash
 ```

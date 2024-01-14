@@ -1,0 +1,88 @@
+name: Scan Images
+
+on:
+  workflow_dispatch:
+  schedule:
+  - cron: '02 7 * * *'
+
+jobs:
+  Scan-Images:
+    runs-on    : ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    name       : Scan images
+    steps      :
+    - uses: actions/checkout@v3
+      name: Checkoout
+
+    - name: Cache OpenAF runtime
+      uses: actions/cache@v3
+      with:
+        key : oaf-nightly
+        path: /tmp/oaf
+
+    - uses: openaf/ojob-action@v4
+      name: Check latest
+      with:
+        ojob: 'ojob.io/sec/genSecBadge'
+        args: 'image=nmaguiar/imgutils:latest file=.github/sec-latest.svg reportFile=.github/sec-latest.yaml'
+        dist: 'nightly'
+
+    - uses: openaf/ojob-action@v4
+      name: Generate sec-latest.md
+      with:
+        ojob: 'ojob.io/util/toMDTree'
+        args: 'inputFile=.github/sec-latest.yaml file=.github/sec-latest.md'
+        dist: 'nightly'
+
+    # - uses: openaf/ojob-action@v4
+    #   name: Check latest ubi
+    #   with:
+    #     ojob: 'ojob.io/sec/genSecBadge'
+    #     args: 'image=nmaguiar/imgutils:ubi file=.github/sec-ubi-latest.svg reportFile=.github/sec-ubi-latest.yaml'
+    #     dist: 'nightly'
+  
+    # - uses: openaf/ojob-action@v4
+    #   name: Generate sec-ubi-latest.md
+    #   with:
+    #     ojob: 'ojob.io/util/toMDTree'
+    #     args: 'inputFile=.github/sec-ubi-latest.yaml file=.github/sec-ubi-latest.md'
+    #     dist: 'nightly'
+
+    - uses: openaf/ojob-action@v4
+      name: Check build
+      with:
+        ojob: 'ojob.io/sec/genSecBadge'
+        args: 'image=nmaguiar/imgutils:build file=.github/sec-build.svg reportFile=.github/sec-build.yaml'
+        dist: 'nightly'
+
+    - uses: openaf/ojob-action@v4
+      name: Generate sec-build.md
+      with:
+        ojob: 'ojob.io/util/toMDTree'
+        args: 'inputFile=.github/sec-build.yaml file=.github/sec-build.md'
+        dist: 'nightly'
+
+    # - uses: openaf/ojob-action@v4
+    #   name: Check build ubi
+    #   with:
+    #     ojob: 'ojob.io/sec/genSecBadge'
+    #     args: 'image=nmaguiar/imgutils:ubi-build file=.github/sec-ubi-build.svg reportFile=.github/sec-ubi-build.yaml'
+    #     dist: 'nightly'
+  
+    # - uses: openaf/ojob-action@v4
+    #   name: Generate sec-ubi-build.md
+    #   with:
+    #     ojob: 'ojob.io/util/toMDTree'
+    #     args: 'inputFile=.github/sec-ubi-build.yaml file=.github/sec-ubi-build.md'
+    #     dist: 'nightly'
+
+    - uses: openaf/ojob-action@v4
+      name: Update badges
+      env :
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        ojob: 'ojob.io/git/hub/contentIn'
+        args: 'message="update\ badge\ {{date}}/{{time}}" title="Update\ badge" paths=.github/'
+        dist: 'nightly'
