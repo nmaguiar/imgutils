@@ -132,6 +132,31 @@ exit
 
 ## Accessing Kubernetes container runtime
 
+### AWS EKS with crictl
+
+To use crictl on a specific node (change from "server-0" to the specific node you want):
+
+```bash
+NODENAME=k3s-server-0 NAME=imgutils HPATH=/run/containerd/containerd.sock  /bin/sh -c 'kubectl run -n kube-system $NAME --rm -ti --image=nmaguiar/imgutils  --overrides="{\"apiVersion\":\"v1\",\"spec\":{\"nodeName\":\"$NODENAME\",\"containers\":[{\"name\":\"$NAME\",\"image\":\"nmaguiar/imgutils\",\"stdin\":true,\"stdinOnce\":true,\"tty\":true,\"args\":[\"sudo\",\"-E\",\"/bin/bash\"],\"env\":[{\"name\":\"CONTAINER_RUNTIME_ENDPOINT\",\"value\":\"unix:///run/containerd/containerd.sock\"}],\"volumeMounts\":[{\"name\":\"cri\",\"mountPath\":\"/run/containerd/containerd.sock\"}]}],\"volumes\":[{\"name\":\"cri\",\"hostPath\":{\"path\":\"$HPATH\"}}]}}" -- /bin/bash'
+```
+
+Then you can execute commands like:
+
+```bash
+$ crictl images
+[...]
+$ crictl ps
+[...]
+$ crictl rmi docker.io/some/image:latest
+[...]
+```
+
+To exit just execute:
+
+```bash
+exit
+```
+
 ### K3S with crictl
 
 To use crictl on a specific node (change from "k3s-server-0" to the specific node you want):
