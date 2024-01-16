@@ -11,10 +11,10 @@
 │                       │     ├ InstalledVersion: v0.45.0 
 │                       │     ├ FixedVersion    : 0.46.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-│                       │     │                  │         389fbf3e1fc9e3ece5ed8001 
-│                       │     │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-│                       │     │                            910882427bbdc96aae612020 
+│                       │     ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+│                       │     │                  │         37cb22338f5d38aeea3467f5 
+│                       │     │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+│                       │     │                            40778acdeeefa36d19cf7ae0 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-47108 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -80,10 +80,10 @@
 │                             ├ InstalledVersion: v0.14.0 
 │                             ├ FixedVersion    : 0.17.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-│                             │                  │         389fbf3e1fc9e3ece5ed8001 
-│                             │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-│                             │                            910882427bbdc96aae612020 
+│                             ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+│                             │                  │         37cb22338f5d38aeea3467f5 
+│                             │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+│                             │                            40778acdeeefa36d19cf7ae0 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-48795 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -287,65 +287,68 @@
 │                             │                  ├ [78] : https://nova.app/releases/#v11.8 
 │                             │                  ├ [79] : https://nvd.nist.gov/vuln/detail/CVE-2023-48795 
 │                             │                  ├ [80] : https://oryx-embedded.com/download/#changelog 
-│                             │                  ├ [81] : https://roumenpetrov.info/secsh/#news20231220 
-│                             │                  ├ [82] : https://security-tracker.debian.org/tracker/CVE-
+│                             │                  ├ [81] : https://psirt.global.sonicwall.com/vuln-detail/S
+│                             │                  │        NWLID-2024-0002 
+│                             │                  ├ [82] : https://roumenpetrov.info/secsh/#news20231220 
+│                             │                  ├ [83] : https://security-tracker.debian.org/tracker/CVE-
 │                             │                  │        2023-48795 
-│                             │                  ├ [83] : https://security-tracker.debian.org/tracker/sour
-│                             │                  │        ce-package/libssh2 
 │                             │                  ├ [84] : https://security-tracker.debian.org/tracker/sour
-│                             │                  │        ce-package/proftpd-dfsg 
+│                             │                  │        ce-package/libssh2 
 │                             │                  ├ [85] : https://security-tracker.debian.org/tracker/sour
+│                             │                  │        ce-package/proftpd-dfsg 
+│                             │                  ├ [86] : https://security-tracker.debian.org/tracker/sour
 │                             │                  │        ce-package/trilead-ssh2 
-│                             │                  ├ [86] : https://security.gentoo.org/glsa/202312-16 
-│                             │                  ├ [87] : https://security.gentoo.org/glsa/202312-17 
-│                             │                  ├ [88] : https://security.netapp.com/advisory/ntap-202401
+│                             │                  ├ [87] : https://security.gentoo.org/glsa/202312-16 
+│                             │                  ├ [88] : https://security.gentoo.org/glsa/202312-17 
+│                             │                  ├ [89] : https://security.netapp.com/advisory/ntap-202401
 │                             │                  │        05-0004/ 
-│                             │                  ├ [89] : https://terrapin-attack.com/ 
-│                             │                  ├ [90] : https://thorntech.com/cve-2023-48795-and-sftp-ga
+│                             │                  ├ [90] : https://terrapin-attack.com/ 
+│                             │                  ├ [91] : https://thorntech.com/cve-2023-48795-and-sftp-ga
 │                             │                  │        teway/ 
-│                             │                  ├ [91] : https://twitter.com/TrueSkrillor/status/17367743
+│                             │                  ├ [92] : https://twitter.com/TrueSkrillor/status/17367743
 │                             │                  │        89725565005 
-│                             │                  ├ [92] : https://ubuntu.com/security/CVE-2023-48795 
-│                             │                  ├ [93] : https://ubuntu.com/security/notices/USN-6560-1 
-│                             │                  ├ [94] : https://ubuntu.com/security/notices/USN-6560-2 
-│                             │                  ├ [95] : https://ubuntu.com/security/notices/USN-6561-1 
-│                             │                  ├ [96] : https://winscp.net/eng/docs/history#6.2.2 
-│                             │                  ├ [97] : https://www.bitvise.com/ssh-client-version-histo
+│                             │                  ├ [93] : https://ubuntu.com/security/CVE-2023-48795 
+│                             │                  ├ [94] : https://ubuntu.com/security/notices/USN-6560-1 
+│                             │                  ├ [95] : https://ubuntu.com/security/notices/USN-6560-2 
+│                             │                  ├ [96] : https://ubuntu.com/security/notices/USN-6561-1 
+│                             │                  ├ [97] : https://ubuntu.com/security/notices/USN-6585-1 
+│                             │                  ├ [98] : https://winscp.net/eng/docs/history#6.2.2 
+│                             │                  ├ [99] : https://www.bitvise.com/ssh-client-version-histo
 │                             │                  │        ry#933 
-│                             │                  ├ [98] : https://www.bitvise.com/ssh-server-version-history 
-│                             │                  ├ [99] : https://www.chiark.greenend.org.uk/~sgtatham/put
+│                             │                  ├ [100]: https://www.bitvise.com/ssh-server-version-history 
+│                             │                  ├ [101]: https://www.chiark.greenend.org.uk/~sgtatham/put
 │                             │                  │        ty/changes.html 
-│                             │                  ├ [100]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
+│                             │                  ├ [102]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
 │                             │                  │        ge=Update 
-│                             │                  ├ [101]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
-│                             │                  ├ [102]: https://www.debian.org/security/2023/dsa-5586 
-│                             │                  ├ [103]: https://www.debian.org/security/2023/dsa-5588 
-│                             │                  ├ [104]: https://www.freebsd.org/security/advisories/Free
+│                             │                  ├ [103]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
+│                             │                  ├ [104]: https://www.debian.org/security/2023/dsa-5586 
+│                             │                  ├ [105]: https://www.debian.org/security/2023/dsa-5588 
+│                             │                  ├ [106]: https://www.freebsd.org/security/advisories/Free
 │                             │                  │        BSD-SA-23:19.openssh.asc 
-│                             │                  ├ [105]: https://www.lancom-systems.de/service-support/al
+│                             │                  ├ [107]: https://www.lancom-systems.de/service-support/al
 │                             │                  │        lgemeine-sicherheitshinweise#c243508 
-│                             │                  ├ [106]: https://www.netsarang.com/en/xshell-update-history/ 
-│                             │                  ├ [107]: https://www.openssh.com/openbsd.html 
-│                             │                  ├ [108]: https://www.openssh.com/txt/release-9.6 
-│                             │                  ├ [109]: https://www.openwall.com/lists/oss-security/2023
-│                             │                  │        /12/18/2 
-│                             │                  ├ [110]: https://www.openwall.com/lists/oss-security/2023
-│                             │                  │        /12/18/3 
+│                             │                  ├ [108]: https://www.netsarang.com/en/xshell-update-history/ 
+│                             │                  ├ [109]: https://www.openssh.com/openbsd.html 
+│                             │                  ├ [110]: https://www.openssh.com/txt/release-9.6 
 │                             │                  ├ [111]: https://www.openwall.com/lists/oss-security/2023
+│                             │                  │        /12/18/2 
+│                             │                  ├ [112]: https://www.openwall.com/lists/oss-security/2023
+│                             │                  │        /12/18/3 
+│                             │                  ├ [113]: https://www.openwall.com/lists/oss-security/2023
 │                             │                  │        /12/20/3 
-│                             │                  ├ [112]: https://www.paramiko.org/changelog.html 
-│                             │                  ├ [113]: https://www.reddit.com/r/sysadmin/comments/18idv
+│                             │                  ├ [114]: https://www.paramiko.org/changelog.html 
+│                             │                  ├ [115]: https://www.reddit.com/r/sysadmin/comments/18idv
 │                             │                  │        52/cve202348795_why_is_this_cve_still_undisclosed/
 │                             │                  │         
-│                             │                  ├ [114]: https://www.suse.com/c/suse-addresses-the-ssh-v2
+│                             │                  ├ [116]: https://www.suse.com/c/suse-addresses-the-ssh-v2
 │                             │                  │        -protocol-terrapin-attack-aka-cve-2023-48795/ 
-│                             │                  ├ [115]: https://www.terrapin-attack.com 
-│                             │                  ├ [116]: https://www.theregister.com/2023/12/20/terrapin_
+│                             │                  ├ [117]: https://www.terrapin-attack.com 
+│                             │                  ├ [118]: https://www.theregister.com/2023/12/20/terrapin_
 │                             │                  │        attack_ssh 
-│                             │                  ╰ [117]: https://www.vandyke.com/products/securecrt/histo
+│                             │                  ╰ [119]: https://www.vandyke.com/products/securecrt/histo
 │                             │                           ry.txt 
 │                             ├ PublishedDate   : 2023-12-18T16:15:10.897Z 
-│                             ╰ LastModifiedDate: 2024-01-11T04:15:07.79Z 
+│                             ╰ LastModifiedDate: 2024-01-15T08:15:36.17Z 
 ├ [2] ╭ Target         : usr/bin/crictl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -355,10 +358,10 @@
 │                             ├ InstalledVersion: v0.42.0 
 │                             ├ FixedVersion    : 0.46.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-│                             │                  │         389fbf3e1fc9e3ece5ed8001 
-│                             │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-│                             │                            910882427bbdc96aae612020 
+│                             ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+│                             │                  │         37cb22338f5d38aeea3467f5 
+│                             │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+│                             │                            40778acdeeefa36d19cf7ae0 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-47108 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -427,10 +430,10 @@
 │                       │     ├ InstalledVersion: v1.6.22 
 │                       │     ├ FixedVersion    : 1.6.26, 1.7.11 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-│                       │     │                  │         389fbf3e1fc9e3ece5ed8001 
-│                       │     │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-│                       │     │                            910882427bbdc96aae612020 
+│                       │     ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+│                       │     │                  │         37cb22338f5d38aeea3467f5 
+│                       │     │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+│                       │     │                            40778acdeeefa36d19cf7ae0 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://github.com/advisories/GHSA-7ww5-4wqc-m92c 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -520,10 +523,10 @@
 │                       │     ├ InstalledVersion: v0.2.3 
 │                       │     ├ FixedVersion    : 0.2.4 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-│                       │     │                  │         389fbf3e1fc9e3ece5ed8001 
-│                       │     │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-│                       │     │                            910882427bbdc96aae612020 
+│                       │     ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+│                       │     │                  │         37cb22338f5d38aeea3467f5 
+│                       │     │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+│                       │     │                            40778acdeeefa36d19cf7ae0 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://github.com/advisories/GHSA-6xv5-86q9-7xr8 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -574,10 +577,10 @@
 │                       │     ├ InstalledVersion: v0.29.0 
 │                       │     ├ FixedVersion    : 0.46.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-│                       │     │                  │         389fbf3e1fc9e3ece5ed8001 
-│                       │     │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-│                       │     │                            910882427bbdc96aae612020 
+│                       │     ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+│                       │     │                  │         37cb22338f5d38aeea3467f5 
+│                       │     │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+│                       │     │                            40778acdeeefa36d19cf7ae0 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-47108 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -644,10 +647,10 @@
 │                       │     ├ InstalledVersion: v0.29.0 
 │                       │     ├ FixedVersion    : 0.44.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-│                       │     │                  │         389fbf3e1fc9e3ece5ed8001 
-│                       │     │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-│                       │     │                            910882427bbdc96aae612020 
+│                       │     ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+│                       │     │                  │         37cb22338f5d38aeea3467f5 
+│                       │     │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+│                       │     │                            40778acdeeefa36d19cf7ae0 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-45142 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -725,10 +728,10 @@
 │                       │     ├ InstalledVersion: v0.29.0 
 │                       │     ├ FixedVersion    : 0.44.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-│                       │     │                  │         389fbf3e1fc9e3ece5ed8001 
-│                       │     │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-│                       │     │                            910882427bbdc96aae612020 
+│                       │     ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+│                       │     │                  │         37cb22338f5d38aeea3467f5 
+│                       │     │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+│                       │     │                            40778acdeeefa36d19cf7ae0 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-45142 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -806,10 +809,10 @@
 │                       │     ├ InstalledVersion: v0.14.0 
 │                       │     ├ FixedVersion    : 0.17.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-│                       │     │                  │         389fbf3e1fc9e3ece5ed8001 
-│                       │     │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-│                       │     │                            910882427bbdc96aae612020 
+│                       │     ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+│                       │     │                  │         37cb22338f5d38aeea3467f5 
+│                       │     │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+│                       │     │                            40778acdeeefa36d19cf7ae0 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-48795 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -1013,74 +1016,77 @@
 │                       │     │                  ├ [78] : https://nova.app/releases/#v11.8 
 │                       │     │                  ├ [79] : https://nvd.nist.gov/vuln/detail/CVE-2023-48795 
 │                       │     │                  ├ [80] : https://oryx-embedded.com/download/#changelog 
-│                       │     │                  ├ [81] : https://roumenpetrov.info/secsh/#news20231220 
-│                       │     │                  ├ [82] : https://security-tracker.debian.org/tracker/CVE-
+│                       │     │                  ├ [81] : https://psirt.global.sonicwall.com/vuln-detail/S
+│                       │     │                  │        NWLID-2024-0002 
+│                       │     │                  ├ [82] : https://roumenpetrov.info/secsh/#news20231220 
+│                       │     │                  ├ [83] : https://security-tracker.debian.org/tracker/CVE-
 │                       │     │                  │        2023-48795 
-│                       │     │                  ├ [83] : https://security-tracker.debian.org/tracker/sour
-│                       │     │                  │        ce-package/libssh2 
 │                       │     │                  ├ [84] : https://security-tracker.debian.org/tracker/sour
-│                       │     │                  │        ce-package/proftpd-dfsg 
+│                       │     │                  │        ce-package/libssh2 
 │                       │     │                  ├ [85] : https://security-tracker.debian.org/tracker/sour
+│                       │     │                  │        ce-package/proftpd-dfsg 
+│                       │     │                  ├ [86] : https://security-tracker.debian.org/tracker/sour
 │                       │     │                  │        ce-package/trilead-ssh2 
-│                       │     │                  ├ [86] : https://security.gentoo.org/glsa/202312-16 
-│                       │     │                  ├ [87] : https://security.gentoo.org/glsa/202312-17 
-│                       │     │                  ├ [88] : https://security.netapp.com/advisory/ntap-202401
+│                       │     │                  ├ [87] : https://security.gentoo.org/glsa/202312-16 
+│                       │     │                  ├ [88] : https://security.gentoo.org/glsa/202312-17 
+│                       │     │                  ├ [89] : https://security.netapp.com/advisory/ntap-202401
 │                       │     │                  │        05-0004/ 
-│                       │     │                  ├ [89] : https://terrapin-attack.com/ 
-│                       │     │                  ├ [90] : https://thorntech.com/cve-2023-48795-and-sftp-ga
+│                       │     │                  ├ [90] : https://terrapin-attack.com/ 
+│                       │     │                  ├ [91] : https://thorntech.com/cve-2023-48795-and-sftp-ga
 │                       │     │                  │        teway/ 
-│                       │     │                  ├ [91] : https://twitter.com/TrueSkrillor/status/17367743
+│                       │     │                  ├ [92] : https://twitter.com/TrueSkrillor/status/17367743
 │                       │     │                  │        89725565005 
-│                       │     │                  ├ [92] : https://ubuntu.com/security/CVE-2023-48795 
-│                       │     │                  ├ [93] : https://ubuntu.com/security/notices/USN-6560-1 
-│                       │     │                  ├ [94] : https://ubuntu.com/security/notices/USN-6560-2 
-│                       │     │                  ├ [95] : https://ubuntu.com/security/notices/USN-6561-1 
-│                       │     │                  ├ [96] : https://winscp.net/eng/docs/history#6.2.2 
-│                       │     │                  ├ [97] : https://www.bitvise.com/ssh-client-version-histo
+│                       │     │                  ├ [93] : https://ubuntu.com/security/CVE-2023-48795 
+│                       │     │                  ├ [94] : https://ubuntu.com/security/notices/USN-6560-1 
+│                       │     │                  ├ [95] : https://ubuntu.com/security/notices/USN-6560-2 
+│                       │     │                  ├ [96] : https://ubuntu.com/security/notices/USN-6561-1 
+│                       │     │                  ├ [97] : https://ubuntu.com/security/notices/USN-6585-1 
+│                       │     │                  ├ [98] : https://winscp.net/eng/docs/history#6.2.2 
+│                       │     │                  ├ [99] : https://www.bitvise.com/ssh-client-version-histo
 │                       │     │                  │        ry#933 
-│                       │     │                  ├ [98] : https://www.bitvise.com/ssh-server-version-history 
-│                       │     │                  ├ [99] : https://www.chiark.greenend.org.uk/~sgtatham/put
+│                       │     │                  ├ [100]: https://www.bitvise.com/ssh-server-version-history 
+│                       │     │                  ├ [101]: https://www.chiark.greenend.org.uk/~sgtatham/put
 │                       │     │                  │        ty/changes.html 
-│                       │     │                  ├ [100]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
+│                       │     │                  ├ [102]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
 │                       │     │                  │        ge=Update 
-│                       │     │                  ├ [101]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
-│                       │     │                  ├ [102]: https://www.debian.org/security/2023/dsa-5586 
-│                       │     │                  ├ [103]: https://www.debian.org/security/2023/dsa-5588 
-│                       │     │                  ├ [104]: https://www.freebsd.org/security/advisories/Free
+│                       │     │                  ├ [103]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
+│                       │     │                  ├ [104]: https://www.debian.org/security/2023/dsa-5586 
+│                       │     │                  ├ [105]: https://www.debian.org/security/2023/dsa-5588 
+│                       │     │                  ├ [106]: https://www.freebsd.org/security/advisories/Free
 │                       │     │                  │        BSD-SA-23:19.openssh.asc 
-│                       │     │                  ├ [105]: https://www.lancom-systems.de/service-support/al
+│                       │     │                  ├ [107]: https://www.lancom-systems.de/service-support/al
 │                       │     │                  │        lgemeine-sicherheitshinweise#c243508 
-│                       │     │                  ├ [106]: https://www.netsarang.com/en/xshell-update-history/ 
-│                       │     │                  ├ [107]: https://www.openssh.com/openbsd.html 
-│                       │     │                  ├ [108]: https://www.openssh.com/txt/release-9.6 
-│                       │     │                  ├ [109]: https://www.openwall.com/lists/oss-security/2023
-│                       │     │                  │        /12/18/2 
-│                       │     │                  ├ [110]: https://www.openwall.com/lists/oss-security/2023
-│                       │     │                  │        /12/18/3 
+│                       │     │                  ├ [108]: https://www.netsarang.com/en/xshell-update-history/ 
+│                       │     │                  ├ [109]: https://www.openssh.com/openbsd.html 
+│                       │     │                  ├ [110]: https://www.openssh.com/txt/release-9.6 
 │                       │     │                  ├ [111]: https://www.openwall.com/lists/oss-security/2023
+│                       │     │                  │        /12/18/2 
+│                       │     │                  ├ [112]: https://www.openwall.com/lists/oss-security/2023
+│                       │     │                  │        /12/18/3 
+│                       │     │                  ├ [113]: https://www.openwall.com/lists/oss-security/2023
 │                       │     │                  │        /12/20/3 
-│                       │     │                  ├ [112]: https://www.paramiko.org/changelog.html 
-│                       │     │                  ├ [113]: https://www.reddit.com/r/sysadmin/comments/18idv
+│                       │     │                  ├ [114]: https://www.paramiko.org/changelog.html 
+│                       │     │                  ├ [115]: https://www.reddit.com/r/sysadmin/comments/18idv
 │                       │     │                  │        52/cve202348795_why_is_this_cve_still_undisclosed/
 │                       │     │                  │         
-│                       │     │                  ├ [114]: https://www.suse.com/c/suse-addresses-the-ssh-v2
+│                       │     │                  ├ [116]: https://www.suse.com/c/suse-addresses-the-ssh-v2
 │                       │     │                  │        -protocol-terrapin-attack-aka-cve-2023-48795/ 
-│                       │     │                  ├ [115]: https://www.terrapin-attack.com 
-│                       │     │                  ├ [116]: https://www.theregister.com/2023/12/20/terrapin_
+│                       │     │                  ├ [117]: https://www.terrapin-attack.com 
+│                       │     │                  ├ [118]: https://www.theregister.com/2023/12/20/terrapin_
 │                       │     │                  │        attack_ssh 
-│                       │     │                  ╰ [117]: https://www.vandyke.com/products/securecrt/histo
+│                       │     │                  ╰ [119]: https://www.vandyke.com/products/securecrt/histo
 │                       │     │                           ry.txt 
 │                       │     ├ PublishedDate   : 2023-12-18T16:15:10.897Z 
-│                       │     ╰ LastModifiedDate: 2024-01-11T04:15:07.79Z 
+│                       │     ╰ LastModifiedDate: 2024-01-15T08:15:36.17Z 
 │                       ├ [6] ╭ VulnerabilityID : GHSA-m425-mq94-257g 
 │                       │     ├ PkgName         : google.golang.org/grpc 
 │                       │     ├ InstalledVersion: v1.50.1 
 │                       │     ├ FixedVersion    : 1.56.3, 1.57.1, 1.58.3 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-│                       │     │                  │         389fbf3e1fc9e3ece5ed8001 
-│                       │     │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-│                       │     │                            910882427bbdc96aae612020 
+│                       │     ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+│                       │     │                  │         37cb22338f5d38aeea3467f5 
+│                       │     │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+│                       │     │                            40778acdeeefa36d19cf7ae0 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://github.com/advisories/GHSA-m425-mq94-257g 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -1127,10 +1133,10 @@
 │                             ├ InstalledVersion: v1.50.1 
 │                             ├ FixedVersion    : 1.58.3, 1.57.1, 1.56.3 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-│                             │                  │         389fbf3e1fc9e3ece5ed8001 
-│                             │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-│                             │                            910882427bbdc96aae612020 
+│                             ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+│                             │                  │         37cb22338f5d38aeea3467f5 
+│                             │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+│                             │                            40778acdeeefa36d19cf7ae0 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-44487 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -1531,10 +1537,10 @@
 │                       │     ├ InstalledVersion: v1.7.6 
 │                       │     ├ FixedVersion    : 1.6.26, 1.7.11 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-│                       │     │                  │         389fbf3e1fc9e3ece5ed8001 
-│                       │     │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-│                       │     │                            910882427bbdc96aae612020 
+│                       │     ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+│                       │     │                  │         37cb22338f5d38aeea3467f5 
+│                       │     │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+│                       │     │                            40778acdeeefa36d19cf7ae0 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://github.com/advisories/GHSA-7ww5-4wqc-m92c 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -1624,10 +1630,10 @@
 │                             ├ InstalledVersion: v0.14.0 
 │                             ├ FixedVersion    : 0.17.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-│                             │                  │         389fbf3e1fc9e3ece5ed8001 
-│                             │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-│                             │                            910882427bbdc96aae612020 
+│                             ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+│                             │                  │         37cb22338f5d38aeea3467f5 
+│                             │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+│                             │                            40778acdeeefa36d19cf7ae0 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-48795 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -1831,65 +1837,68 @@
 │                             │                  ├ [78] : https://nova.app/releases/#v11.8 
 │                             │                  ├ [79] : https://nvd.nist.gov/vuln/detail/CVE-2023-48795 
 │                             │                  ├ [80] : https://oryx-embedded.com/download/#changelog 
-│                             │                  ├ [81] : https://roumenpetrov.info/secsh/#news20231220 
-│                             │                  ├ [82] : https://security-tracker.debian.org/tracker/CVE-
+│                             │                  ├ [81] : https://psirt.global.sonicwall.com/vuln-detail/S
+│                             │                  │        NWLID-2024-0002 
+│                             │                  ├ [82] : https://roumenpetrov.info/secsh/#news20231220 
+│                             │                  ├ [83] : https://security-tracker.debian.org/tracker/CVE-
 │                             │                  │        2023-48795 
-│                             │                  ├ [83] : https://security-tracker.debian.org/tracker/sour
-│                             │                  │        ce-package/libssh2 
 │                             │                  ├ [84] : https://security-tracker.debian.org/tracker/sour
-│                             │                  │        ce-package/proftpd-dfsg 
+│                             │                  │        ce-package/libssh2 
 │                             │                  ├ [85] : https://security-tracker.debian.org/tracker/sour
+│                             │                  │        ce-package/proftpd-dfsg 
+│                             │                  ├ [86] : https://security-tracker.debian.org/tracker/sour
 │                             │                  │        ce-package/trilead-ssh2 
-│                             │                  ├ [86] : https://security.gentoo.org/glsa/202312-16 
-│                             │                  ├ [87] : https://security.gentoo.org/glsa/202312-17 
-│                             │                  ├ [88] : https://security.netapp.com/advisory/ntap-202401
+│                             │                  ├ [87] : https://security.gentoo.org/glsa/202312-16 
+│                             │                  ├ [88] : https://security.gentoo.org/glsa/202312-17 
+│                             │                  ├ [89] : https://security.netapp.com/advisory/ntap-202401
 │                             │                  │        05-0004/ 
-│                             │                  ├ [89] : https://terrapin-attack.com/ 
-│                             │                  ├ [90] : https://thorntech.com/cve-2023-48795-and-sftp-ga
+│                             │                  ├ [90] : https://terrapin-attack.com/ 
+│                             │                  ├ [91] : https://thorntech.com/cve-2023-48795-and-sftp-ga
 │                             │                  │        teway/ 
-│                             │                  ├ [91] : https://twitter.com/TrueSkrillor/status/17367743
+│                             │                  ├ [92] : https://twitter.com/TrueSkrillor/status/17367743
 │                             │                  │        89725565005 
-│                             │                  ├ [92] : https://ubuntu.com/security/CVE-2023-48795 
-│                             │                  ├ [93] : https://ubuntu.com/security/notices/USN-6560-1 
-│                             │                  ├ [94] : https://ubuntu.com/security/notices/USN-6560-2 
-│                             │                  ├ [95] : https://ubuntu.com/security/notices/USN-6561-1 
-│                             │                  ├ [96] : https://winscp.net/eng/docs/history#6.2.2 
-│                             │                  ├ [97] : https://www.bitvise.com/ssh-client-version-histo
+│                             │                  ├ [93] : https://ubuntu.com/security/CVE-2023-48795 
+│                             │                  ├ [94] : https://ubuntu.com/security/notices/USN-6560-1 
+│                             │                  ├ [95] : https://ubuntu.com/security/notices/USN-6560-2 
+│                             │                  ├ [96] : https://ubuntu.com/security/notices/USN-6561-1 
+│                             │                  ├ [97] : https://ubuntu.com/security/notices/USN-6585-1 
+│                             │                  ├ [98] : https://winscp.net/eng/docs/history#6.2.2 
+│                             │                  ├ [99] : https://www.bitvise.com/ssh-client-version-histo
 │                             │                  │        ry#933 
-│                             │                  ├ [98] : https://www.bitvise.com/ssh-server-version-history 
-│                             │                  ├ [99] : https://www.chiark.greenend.org.uk/~sgtatham/put
+│                             │                  ├ [100]: https://www.bitvise.com/ssh-server-version-history 
+│                             │                  ├ [101]: https://www.chiark.greenend.org.uk/~sgtatham/put
 │                             │                  │        ty/changes.html 
-│                             │                  ├ [100]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
+│                             │                  ├ [102]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
 │                             │                  │        ge=Update 
-│                             │                  ├ [101]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
-│                             │                  ├ [102]: https://www.debian.org/security/2023/dsa-5586 
-│                             │                  ├ [103]: https://www.debian.org/security/2023/dsa-5588 
-│                             │                  ├ [104]: https://www.freebsd.org/security/advisories/Free
+│                             │                  ├ [103]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
+│                             │                  ├ [104]: https://www.debian.org/security/2023/dsa-5586 
+│                             │                  ├ [105]: https://www.debian.org/security/2023/dsa-5588 
+│                             │                  ├ [106]: https://www.freebsd.org/security/advisories/Free
 │                             │                  │        BSD-SA-23:19.openssh.asc 
-│                             │                  ├ [105]: https://www.lancom-systems.de/service-support/al
+│                             │                  ├ [107]: https://www.lancom-systems.de/service-support/al
 │                             │                  │        lgemeine-sicherheitshinweise#c243508 
-│                             │                  ├ [106]: https://www.netsarang.com/en/xshell-update-history/ 
-│                             │                  ├ [107]: https://www.openssh.com/openbsd.html 
-│                             │                  ├ [108]: https://www.openssh.com/txt/release-9.6 
-│                             │                  ├ [109]: https://www.openwall.com/lists/oss-security/2023
-│                             │                  │        /12/18/2 
-│                             │                  ├ [110]: https://www.openwall.com/lists/oss-security/2023
-│                             │                  │        /12/18/3 
+│                             │                  ├ [108]: https://www.netsarang.com/en/xshell-update-history/ 
+│                             │                  ├ [109]: https://www.openssh.com/openbsd.html 
+│                             │                  ├ [110]: https://www.openssh.com/txt/release-9.6 
 │                             │                  ├ [111]: https://www.openwall.com/lists/oss-security/2023
+│                             │                  │        /12/18/2 
+│                             │                  ├ [112]: https://www.openwall.com/lists/oss-security/2023
+│                             │                  │        /12/18/3 
+│                             │                  ├ [113]: https://www.openwall.com/lists/oss-security/2023
 │                             │                  │        /12/20/3 
-│                             │                  ├ [112]: https://www.paramiko.org/changelog.html 
-│                             │                  ├ [113]: https://www.reddit.com/r/sysadmin/comments/18idv
+│                             │                  ├ [114]: https://www.paramiko.org/changelog.html 
+│                             │                  ├ [115]: https://www.reddit.com/r/sysadmin/comments/18idv
 │                             │                  │        52/cve202348795_why_is_this_cve_still_undisclosed/
 │                             │                  │         
-│                             │                  ├ [114]: https://www.suse.com/c/suse-addresses-the-ssh-v2
+│                             │                  ├ [116]: https://www.suse.com/c/suse-addresses-the-ssh-v2
 │                             │                  │        -protocol-terrapin-attack-aka-cve-2023-48795/ 
-│                             │                  ├ [115]: https://www.terrapin-attack.com 
-│                             │                  ├ [116]: https://www.theregister.com/2023/12/20/terrapin_
+│                             │                  ├ [117]: https://www.terrapin-attack.com 
+│                             │                  ├ [118]: https://www.theregister.com/2023/12/20/terrapin_
 │                             │                  │        attack_ssh 
-│                             │                  ╰ [117]: https://www.vandyke.com/products/securecrt/histo
+│                             │                  ╰ [119]: https://www.vandyke.com/products/securecrt/histo
 │                             │                           ry.txt 
 │                             ├ PublishedDate   : 2023-12-18T16:15:10.897Z 
-│                             ╰ LastModifiedDate: 2024-01-11T04:15:07.79Z 
+│                             ╰ LastModifiedDate: 2024-01-15T08:15:36.17Z 
 ├ [5] ╭ Target         : usr/bin/runc 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -1898,10 +1907,10 @@
 │                       │     ├ InstalledVersion: v0.2.3 
 │                       │     ├ FixedVersion    : 0.2.4 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-│                       │     │                  │         389fbf3e1fc9e3ece5ed8001 
-│                       │     │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-│                       │     │                            910882427bbdc96aae612020 
+│                       │     ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+│                       │     │                  │         37cb22338f5d38aeea3467f5 
+│                       │     │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+│                       │     │                            40778acdeeefa36d19cf7ae0 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://github.com/advisories/GHSA-6xv5-86q9-7xr8 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -1951,10 +1960,10 @@
 │                       │     ├ InstalledVersion: v0.8.0 
 │                       │     ├ FixedVersion    : 0.17.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-│                       │     │                  │         389fbf3e1fc9e3ece5ed8001 
-│                       │     │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-│                       │     │                            910882427bbdc96aae612020 
+│                       │     ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+│                       │     │                  │         37cb22338f5d38aeea3467f5 
+│                       │     │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+│                       │     │                            40778acdeeefa36d19cf7ae0 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-39325 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -2113,10 +2122,10 @@
 │                       │     ├ InstalledVersion: v0.8.0 
 │                       │     ├ FixedVersion    : 0.13.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-│                       │     │                  │         389fbf3e1fc9e3ece5ed8001 
-│                       │     │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-│                       │     │                            910882427bbdc96aae612020 
+│                       │     ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+│                       │     │                  │         37cb22338f5d38aeea3467f5 
+│                       │     │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+│                       │     │                            40778acdeeefa36d19cf7ae0 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-3978 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -2175,10 +2184,10 @@
 │                             ├ InstalledVersion: v0.8.0 
 │                             ├ FixedVersion    : 0.17.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-│                             │                  │         389fbf3e1fc9e3ece5ed8001 
-│                             │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-│                             │                            910882427bbdc96aae612020 
+│                             ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+│                             │                  │         37cb22338f5d38aeea3467f5 
+│                             │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+│                             │                            40778acdeeefa36d19cf7ae0 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-44487 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -2579,10 +2588,10 @@
 │                             ├ InstalledVersion: v0.15.0 
 │                             ├ FixedVersion    : 0.17.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-│                             │                  │         389fbf3e1fc9e3ece5ed8001 
-│                             │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-│                             │                            910882427bbdc96aae612020 
+│                             ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+│                             │                  │         37cb22338f5d38aeea3467f5 
+│                             │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+│                             │                            40778acdeeefa36d19cf7ae0 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-48795 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -2786,65 +2795,68 @@
 │                             │                  ├ [78] : https://nova.app/releases/#v11.8 
 │                             │                  ├ [79] : https://nvd.nist.gov/vuln/detail/CVE-2023-48795 
 │                             │                  ├ [80] : https://oryx-embedded.com/download/#changelog 
-│                             │                  ├ [81] : https://roumenpetrov.info/secsh/#news20231220 
-│                             │                  ├ [82] : https://security-tracker.debian.org/tracker/CVE-
+│                             │                  ├ [81] : https://psirt.global.sonicwall.com/vuln-detail/S
+│                             │                  │        NWLID-2024-0002 
+│                             │                  ├ [82] : https://roumenpetrov.info/secsh/#news20231220 
+│                             │                  ├ [83] : https://security-tracker.debian.org/tracker/CVE-
 │                             │                  │        2023-48795 
-│                             │                  ├ [83] : https://security-tracker.debian.org/tracker/sour
-│                             │                  │        ce-package/libssh2 
 │                             │                  ├ [84] : https://security-tracker.debian.org/tracker/sour
-│                             │                  │        ce-package/proftpd-dfsg 
+│                             │                  │        ce-package/libssh2 
 │                             │                  ├ [85] : https://security-tracker.debian.org/tracker/sour
+│                             │                  │        ce-package/proftpd-dfsg 
+│                             │                  ├ [86] : https://security-tracker.debian.org/tracker/sour
 │                             │                  │        ce-package/trilead-ssh2 
-│                             │                  ├ [86] : https://security.gentoo.org/glsa/202312-16 
-│                             │                  ├ [87] : https://security.gentoo.org/glsa/202312-17 
-│                             │                  ├ [88] : https://security.netapp.com/advisory/ntap-202401
+│                             │                  ├ [87] : https://security.gentoo.org/glsa/202312-16 
+│                             │                  ├ [88] : https://security.gentoo.org/glsa/202312-17 
+│                             │                  ├ [89] : https://security.netapp.com/advisory/ntap-202401
 │                             │                  │        05-0004/ 
-│                             │                  ├ [89] : https://terrapin-attack.com/ 
-│                             │                  ├ [90] : https://thorntech.com/cve-2023-48795-and-sftp-ga
+│                             │                  ├ [90] : https://terrapin-attack.com/ 
+│                             │                  ├ [91] : https://thorntech.com/cve-2023-48795-and-sftp-ga
 │                             │                  │        teway/ 
-│                             │                  ├ [91] : https://twitter.com/TrueSkrillor/status/17367743
+│                             │                  ├ [92] : https://twitter.com/TrueSkrillor/status/17367743
 │                             │                  │        89725565005 
-│                             │                  ├ [92] : https://ubuntu.com/security/CVE-2023-48795 
-│                             │                  ├ [93] : https://ubuntu.com/security/notices/USN-6560-1 
-│                             │                  ├ [94] : https://ubuntu.com/security/notices/USN-6560-2 
-│                             │                  ├ [95] : https://ubuntu.com/security/notices/USN-6561-1 
-│                             │                  ├ [96] : https://winscp.net/eng/docs/history#6.2.2 
-│                             │                  ├ [97] : https://www.bitvise.com/ssh-client-version-histo
+│                             │                  ├ [93] : https://ubuntu.com/security/CVE-2023-48795 
+│                             │                  ├ [94] : https://ubuntu.com/security/notices/USN-6560-1 
+│                             │                  ├ [95] : https://ubuntu.com/security/notices/USN-6560-2 
+│                             │                  ├ [96] : https://ubuntu.com/security/notices/USN-6561-1 
+│                             │                  ├ [97] : https://ubuntu.com/security/notices/USN-6585-1 
+│                             │                  ├ [98] : https://winscp.net/eng/docs/history#6.2.2 
+│                             │                  ├ [99] : https://www.bitvise.com/ssh-client-version-histo
 │                             │                  │        ry#933 
-│                             │                  ├ [98] : https://www.bitvise.com/ssh-server-version-history 
-│                             │                  ├ [99] : https://www.chiark.greenend.org.uk/~sgtatham/put
+│                             │                  ├ [100]: https://www.bitvise.com/ssh-server-version-history 
+│                             │                  ├ [101]: https://www.chiark.greenend.org.uk/~sgtatham/put
 │                             │                  │        ty/changes.html 
-│                             │                  ├ [100]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
+│                             │                  ├ [102]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
 │                             │                  │        ge=Update 
-│                             │                  ├ [101]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
-│                             │                  ├ [102]: https://www.debian.org/security/2023/dsa-5586 
-│                             │                  ├ [103]: https://www.debian.org/security/2023/dsa-5588 
-│                             │                  ├ [104]: https://www.freebsd.org/security/advisories/Free
+│                             │                  ├ [103]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
+│                             │                  ├ [104]: https://www.debian.org/security/2023/dsa-5586 
+│                             │                  ├ [105]: https://www.debian.org/security/2023/dsa-5588 
+│                             │                  ├ [106]: https://www.freebsd.org/security/advisories/Free
 │                             │                  │        BSD-SA-23:19.openssh.asc 
-│                             │                  ├ [105]: https://www.lancom-systems.de/service-support/al
+│                             │                  ├ [107]: https://www.lancom-systems.de/service-support/al
 │                             │                  │        lgemeine-sicherheitshinweise#c243508 
-│                             │                  ├ [106]: https://www.netsarang.com/en/xshell-update-history/ 
-│                             │                  ├ [107]: https://www.openssh.com/openbsd.html 
-│                             │                  ├ [108]: https://www.openssh.com/txt/release-9.6 
-│                             │                  ├ [109]: https://www.openwall.com/lists/oss-security/2023
-│                             │                  │        /12/18/2 
-│                             │                  ├ [110]: https://www.openwall.com/lists/oss-security/2023
-│                             │                  │        /12/18/3 
+│                             │                  ├ [108]: https://www.netsarang.com/en/xshell-update-history/ 
+│                             │                  ├ [109]: https://www.openssh.com/openbsd.html 
+│                             │                  ├ [110]: https://www.openssh.com/txt/release-9.6 
 │                             │                  ├ [111]: https://www.openwall.com/lists/oss-security/2023
+│                             │                  │        /12/18/2 
+│                             │                  ├ [112]: https://www.openwall.com/lists/oss-security/2023
+│                             │                  │        /12/18/3 
+│                             │                  ├ [113]: https://www.openwall.com/lists/oss-security/2023
 │                             │                  │        /12/20/3 
-│                             │                  ├ [112]: https://www.paramiko.org/changelog.html 
-│                             │                  ├ [113]: https://www.reddit.com/r/sysadmin/comments/18idv
+│                             │                  ├ [114]: https://www.paramiko.org/changelog.html 
+│                             │                  ├ [115]: https://www.reddit.com/r/sysadmin/comments/18idv
 │                             │                  │        52/cve202348795_why_is_this_cve_still_undisclosed/
 │                             │                  │         
-│                             │                  ├ [114]: https://www.suse.com/c/suse-addresses-the-ssh-v2
+│                             │                  ├ [116]: https://www.suse.com/c/suse-addresses-the-ssh-v2
 │                             │                  │        -protocol-terrapin-attack-aka-cve-2023-48795/ 
-│                             │                  ├ [115]: https://www.terrapin-attack.com 
-│                             │                  ├ [116]: https://www.theregister.com/2023/12/20/terrapin_
+│                             │                  ├ [117]: https://www.terrapin-attack.com 
+│                             │                  ├ [118]: https://www.theregister.com/2023/12/20/terrapin_
 │                             │                  │        attack_ssh 
-│                             │                  ╰ [117]: https://www.vandyke.com/products/securecrt/histo
+│                             │                  ╰ [119]: https://www.vandyke.com/products/securecrt/histo
 │                             │                           ry.txt 
 │                             ├ PublishedDate   : 2023-12-18T16:15:10.897Z 
-│                             ╰ LastModifiedDate: 2024-01-11T04:15:07.79Z 
+│                             ╰ LastModifiedDate: 2024-01-15T08:15:36.17Z 
 ╰ [7] ╭ Target         : usr/libexec/docker/cli-plugins/docker-buildx 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
@@ -2853,10 +2865,10 @@
                         │     ├ InstalledVersion: v1.7.7 
                         │     ├ FixedVersion    : 1.6.26, 1.7.11 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-                        │     │                  │         389fbf3e1fc9e3ece5ed8001 
-                        │     │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-                        │     │                            910882427bbdc96aae612020 
+                        │     ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+                        │     │                  │         37cb22338f5d38aeea3467f5 
+                        │     │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+                        │     │                            40778acdeeefa36d19cf7ae0 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://github.com/advisories/GHSA-7ww5-4wqc-m92c 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -2946,10 +2958,10 @@
                         │     ├ InstalledVersion: v24.0.5+incompatible 
                         │     ├ FixedVersion    : 24.0.7, 23.0.8, 20.10.27 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-                        │     │                  │         389fbf3e1fc9e3ece5ed8001 
-                        │     │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-                        │     │                            910882427bbdc96aae612020 
+                        │     ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+                        │     │                  │         37cb22338f5d38aeea3467f5 
+                        │     │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+                        │     │                            40778acdeeefa36d19cf7ae0 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://github.com/advisories/GHSA-jq35-85cj-fj4p 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -3043,10 +3055,10 @@
                         │     ├ InstalledVersion: v0.40.0 
                         │     ├ FixedVersion    : 0.46.0 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-                        │     │                  │         389fbf3e1fc9e3ece5ed8001 
-                        │     │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-                        │     │                            910882427bbdc96aae612020 
+                        │     ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+                        │     │                  │         37cb22338f5d38aeea3467f5 
+                        │     │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+                        │     │                            40778acdeeefa36d19cf7ae0 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-47108 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -3113,10 +3125,10 @@
                         │     ├ InstalledVersion: v0.40.0 
                         │     ├ FixedVersion    : 0.44.0 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-                        │     │                  │         389fbf3e1fc9e3ece5ed8001 
-                        │     │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-                        │     │                            910882427bbdc96aae612020 
+                        │     ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+                        │     │                  │         37cb22338f5d38aeea3467f5 
+                        │     │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+                        │     │                            40778acdeeefa36d19cf7ae0 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-45142 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -3194,10 +3206,10 @@
                         │     ├ InstalledVersion: v0.40.0 
                         │     ├ FixedVersion    : 0.44.0 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-                        │     │                  │         389fbf3e1fc9e3ece5ed8001 
-                        │     │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-                        │     │                            910882427bbdc96aae612020 
+                        │     ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+                        │     │                  │         37cb22338f5d38aeea3467f5 
+                        │     │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+                        │     │                            40778acdeeefa36d19cf7ae0 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-45142 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -3275,10 +3287,10 @@
                         │     ├ InstalledVersion: v0.14.0 
                         │     ├ FixedVersion    : 0.17.0 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-                        │     │                  │         389fbf3e1fc9e3ece5ed8001 
-                        │     │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-                        │     │                            910882427bbdc96aae612020 
+                        │     ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+                        │     │                  │         37cb22338f5d38aeea3467f5 
+                        │     │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+                        │     │                            40778acdeeefa36d19cf7ae0 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-48795 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -3482,74 +3494,77 @@
                         │     │                  ├ [78] : https://nova.app/releases/#v11.8 
                         │     │                  ├ [79] : https://nvd.nist.gov/vuln/detail/CVE-2023-48795 
                         │     │                  ├ [80] : https://oryx-embedded.com/download/#changelog 
-                        │     │                  ├ [81] : https://roumenpetrov.info/secsh/#news20231220 
-                        │     │                  ├ [82] : https://security-tracker.debian.org/tracker/CVE-
+                        │     │                  ├ [81] : https://psirt.global.sonicwall.com/vuln-detail/S
+                        │     │                  │        NWLID-2024-0002 
+                        │     │                  ├ [82] : https://roumenpetrov.info/secsh/#news20231220 
+                        │     │                  ├ [83] : https://security-tracker.debian.org/tracker/CVE-
                         │     │                  │        2023-48795 
-                        │     │                  ├ [83] : https://security-tracker.debian.org/tracker/sour
-                        │     │                  │        ce-package/libssh2 
                         │     │                  ├ [84] : https://security-tracker.debian.org/tracker/sour
-                        │     │                  │        ce-package/proftpd-dfsg 
+                        │     │                  │        ce-package/libssh2 
                         │     │                  ├ [85] : https://security-tracker.debian.org/tracker/sour
+                        │     │                  │        ce-package/proftpd-dfsg 
+                        │     │                  ├ [86] : https://security-tracker.debian.org/tracker/sour
                         │     │                  │        ce-package/trilead-ssh2 
-                        │     │                  ├ [86] : https://security.gentoo.org/glsa/202312-16 
-                        │     │                  ├ [87] : https://security.gentoo.org/glsa/202312-17 
-                        │     │                  ├ [88] : https://security.netapp.com/advisory/ntap-202401
+                        │     │                  ├ [87] : https://security.gentoo.org/glsa/202312-16 
+                        │     │                  ├ [88] : https://security.gentoo.org/glsa/202312-17 
+                        │     │                  ├ [89] : https://security.netapp.com/advisory/ntap-202401
                         │     │                  │        05-0004/ 
-                        │     │                  ├ [89] : https://terrapin-attack.com/ 
-                        │     │                  ├ [90] : https://thorntech.com/cve-2023-48795-and-sftp-ga
+                        │     │                  ├ [90] : https://terrapin-attack.com/ 
+                        │     │                  ├ [91] : https://thorntech.com/cve-2023-48795-and-sftp-ga
                         │     │                  │        teway/ 
-                        │     │                  ├ [91] : https://twitter.com/TrueSkrillor/status/17367743
+                        │     │                  ├ [92] : https://twitter.com/TrueSkrillor/status/17367743
                         │     │                  │        89725565005 
-                        │     │                  ├ [92] : https://ubuntu.com/security/CVE-2023-48795 
-                        │     │                  ├ [93] : https://ubuntu.com/security/notices/USN-6560-1 
-                        │     │                  ├ [94] : https://ubuntu.com/security/notices/USN-6560-2 
-                        │     │                  ├ [95] : https://ubuntu.com/security/notices/USN-6561-1 
-                        │     │                  ├ [96] : https://winscp.net/eng/docs/history#6.2.2 
-                        │     │                  ├ [97] : https://www.bitvise.com/ssh-client-version-histo
+                        │     │                  ├ [93] : https://ubuntu.com/security/CVE-2023-48795 
+                        │     │                  ├ [94] : https://ubuntu.com/security/notices/USN-6560-1 
+                        │     │                  ├ [95] : https://ubuntu.com/security/notices/USN-6560-2 
+                        │     │                  ├ [96] : https://ubuntu.com/security/notices/USN-6561-1 
+                        │     │                  ├ [97] : https://ubuntu.com/security/notices/USN-6585-1 
+                        │     │                  ├ [98] : https://winscp.net/eng/docs/history#6.2.2 
+                        │     │                  ├ [99] : https://www.bitvise.com/ssh-client-version-histo
                         │     │                  │        ry#933 
-                        │     │                  ├ [98] : https://www.bitvise.com/ssh-server-version-history 
-                        │     │                  ├ [99] : https://www.chiark.greenend.org.uk/~sgtatham/put
+                        │     │                  ├ [100]: https://www.bitvise.com/ssh-server-version-history 
+                        │     │                  ├ [101]: https://www.chiark.greenend.org.uk/~sgtatham/put
                         │     │                  │        ty/changes.html 
-                        │     │                  ├ [100]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
+                        │     │                  ├ [102]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
                         │     │                  │        ge=Update 
-                        │     │                  ├ [101]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
-                        │     │                  ├ [102]: https://www.debian.org/security/2023/dsa-5586 
-                        │     │                  ├ [103]: https://www.debian.org/security/2023/dsa-5588 
-                        │     │                  ├ [104]: https://www.freebsd.org/security/advisories/Free
+                        │     │                  ├ [103]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
+                        │     │                  ├ [104]: https://www.debian.org/security/2023/dsa-5586 
+                        │     │                  ├ [105]: https://www.debian.org/security/2023/dsa-5588 
+                        │     │                  ├ [106]: https://www.freebsd.org/security/advisories/Free
                         │     │                  │        BSD-SA-23:19.openssh.asc 
-                        │     │                  ├ [105]: https://www.lancom-systems.de/service-support/al
+                        │     │                  ├ [107]: https://www.lancom-systems.de/service-support/al
                         │     │                  │        lgemeine-sicherheitshinweise#c243508 
-                        │     │                  ├ [106]: https://www.netsarang.com/en/xshell-update-history/ 
-                        │     │                  ├ [107]: https://www.openssh.com/openbsd.html 
-                        │     │                  ├ [108]: https://www.openssh.com/txt/release-9.6 
-                        │     │                  ├ [109]: https://www.openwall.com/lists/oss-security/2023
-                        │     │                  │        /12/18/2 
-                        │     │                  ├ [110]: https://www.openwall.com/lists/oss-security/2023
-                        │     │                  │        /12/18/3 
+                        │     │                  ├ [108]: https://www.netsarang.com/en/xshell-update-history/ 
+                        │     │                  ├ [109]: https://www.openssh.com/openbsd.html 
+                        │     │                  ├ [110]: https://www.openssh.com/txt/release-9.6 
                         │     │                  ├ [111]: https://www.openwall.com/lists/oss-security/2023
+                        │     │                  │        /12/18/2 
+                        │     │                  ├ [112]: https://www.openwall.com/lists/oss-security/2023
+                        │     │                  │        /12/18/3 
+                        │     │                  ├ [113]: https://www.openwall.com/lists/oss-security/2023
                         │     │                  │        /12/20/3 
-                        │     │                  ├ [112]: https://www.paramiko.org/changelog.html 
-                        │     │                  ├ [113]: https://www.reddit.com/r/sysadmin/comments/18idv
+                        │     │                  ├ [114]: https://www.paramiko.org/changelog.html 
+                        │     │                  ├ [115]: https://www.reddit.com/r/sysadmin/comments/18idv
                         │     │                  │        52/cve202348795_why_is_this_cve_still_undisclosed/
                         │     │                  │         
-                        │     │                  ├ [114]: https://www.suse.com/c/suse-addresses-the-ssh-v2
+                        │     │                  ├ [116]: https://www.suse.com/c/suse-addresses-the-ssh-v2
                         │     │                  │        -protocol-terrapin-attack-aka-cve-2023-48795/ 
-                        │     │                  ├ [115]: https://www.terrapin-attack.com 
-                        │     │                  ├ [116]: https://www.theregister.com/2023/12/20/terrapin_
+                        │     │                  ├ [117]: https://www.terrapin-attack.com 
+                        │     │                  ├ [118]: https://www.theregister.com/2023/12/20/terrapin_
                         │     │                  │        attack_ssh 
-                        │     │                  ╰ [117]: https://www.vandyke.com/products/securecrt/histo
+                        │     │                  ╰ [119]: https://www.vandyke.com/products/securecrt/histo
                         │     │                           ry.txt 
                         │     ├ PublishedDate   : 2023-12-18T16:15:10.897Z 
-                        │     ╰ LastModifiedDate: 2024-01-11T04:15:07.79Z 
+                        │     ╰ LastModifiedDate: 2024-01-15T08:15:36.17Z 
                         ├ [6] ╭ VulnerabilityID : GHSA-m425-mq94-257g 
                         │     ├ PkgName         : google.golang.org/grpc 
                         │     ├ InstalledVersion: v1.53.0 
                         │     ├ FixedVersion    : 1.56.3, 1.57.1, 1.58.3 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-                        │     │                  │         389fbf3e1fc9e3ece5ed8001 
-                        │     │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-                        │     │                            910882427bbdc96aae612020 
+                        │     ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+                        │     │                  │         37cb22338f5d38aeea3467f5 
+                        │     │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+                        │     │                            40778acdeeefa36d19cf7ae0 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://github.com/advisories/GHSA-m425-mq94-257g 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -3596,10 +3611,10 @@
                               ├ InstalledVersion: v1.53.0 
                               ├ FixedVersion    : 1.58.3, 1.57.1, 1.56.3 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:50979fc1dabc5ee1bfc8c742f337e9cdd2b6a73f
-                              │                  │         389fbf3e1fc9e3ece5ed8001 
-                              │                  ╰ DiffID: sha256:f990b2f41604ededf43b3a4ca241c5c2951a85b7
-                              │                            910882427bbdc96aae612020 
+                              ├ Layer            ╭ Digest: sha256:d9e8e4dacc3d60ddda3a76720b870176042a0cdc
+                              │                  │         37cb22338f5d38aeea3467f5 
+                              │                  ╰ DiffID: sha256:6b8d60a07a955816cbaca5b4a34f0b88b35a9aaa
+                              │                            40778acdeeefa36d19cf7ae0 
                               ├ SeveritySource  : ghsa 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-44487 
                               ├ DataSource       ╭ ID  : ghsa 
