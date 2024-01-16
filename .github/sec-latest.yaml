@@ -170,6 +170,7 @@
     - https://nova.app/releases/#v11.8
     - https://nvd.nist.gov/vuln/detail/CVE-2023-48795
     - https://oryx-embedded.com/download/#changelog
+    - https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2024-0002
     - https://roumenpetrov.info/secsh/#news20231220
     - https://security-tracker.debian.org/tracker/CVE-2023-48795
     - https://security-tracker.debian.org/tracker/source-package/libssh2
@@ -185,6 +186,7 @@
     - https://ubuntu.com/security/notices/USN-6560-1
     - https://ubuntu.com/security/notices/USN-6560-2
     - https://ubuntu.com/security/notices/USN-6561-1
+    - https://ubuntu.com/security/notices/USN-6585-1
     - https://winscp.net/eng/docs/history#6.2.2
     - https://www.bitvise.com/ssh-client-version-history#933
     - https://www.bitvise.com/ssh-server-version-history
@@ -208,7 +210,7 @@
     - https://www.theregister.com/2023/12/20/terrapin_attack_ssh
     - https://www.vandyke.com/products/securecrt/history.txt
     PublishedDate: '2023-12-18T16:15:10.897Z'
-    LastModifiedDate: '2024-01-11T04:15:07.79Z'
+    LastModifiedDate: '2024-01-15T08:15:36.17Z'
 - Target: usr/bin/crictl
   Class: lang-pkgs
   Type: gobinary
@@ -611,6 +613,7 @@
     - https://nova.app/releases/#v11.8
     - https://nvd.nist.gov/vuln/detail/CVE-2023-48795
     - https://oryx-embedded.com/download/#changelog
+    - https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2024-0002
     - https://roumenpetrov.info/secsh/#news20231220
     - https://security-tracker.debian.org/tracker/CVE-2023-48795
     - https://security-tracker.debian.org/tracker/source-package/libssh2
@@ -626,6 +629,7 @@
     - https://ubuntu.com/security/notices/USN-6560-1
     - https://ubuntu.com/security/notices/USN-6560-2
     - https://ubuntu.com/security/notices/USN-6561-1
+    - https://ubuntu.com/security/notices/USN-6585-1
     - https://winscp.net/eng/docs/history#6.2.2
     - https://www.bitvise.com/ssh-client-version-history#933
     - https://www.bitvise.com/ssh-server-version-history
@@ -649,7 +653,7 @@
     - https://www.theregister.com/2023/12/20/terrapin_attack_ssh
     - https://www.vandyke.com/products/securecrt/history.txt
     PublishedDate: '2023-12-18T16:15:10.897Z'
-    LastModifiedDate: '2024-01-11T04:15:07.79Z'
+    LastModifiedDate: '2024-01-15T08:15:36.17Z'
   - VulnerabilityID: GHSA-m425-mq94-257g
     PkgName: google.golang.org/grpc
     InstalledVersion: v1.50.1
@@ -1093,6 +1097,7 @@
     - https://nova.app/releases/#v11.8
     - https://nvd.nist.gov/vuln/detail/CVE-2023-48795
     - https://oryx-embedded.com/download/#changelog
+    - https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2024-0002
     - https://roumenpetrov.info/secsh/#news20231220
     - https://security-tracker.debian.org/tracker/CVE-2023-48795
     - https://security-tracker.debian.org/tracker/source-package/libssh2
@@ -1108,6 +1113,7 @@
     - https://ubuntu.com/security/notices/USN-6560-1
     - https://ubuntu.com/security/notices/USN-6560-2
     - https://ubuntu.com/security/notices/USN-6561-1
+    - https://ubuntu.com/security/notices/USN-6585-1
     - https://winscp.net/eng/docs/history#6.2.2
     - https://www.bitvise.com/ssh-client-version-history#933
     - https://www.bitvise.com/ssh-server-version-history
@@ -1131,7 +1137,7 @@
     - https://www.theregister.com/2023/12/20/terrapin_attack_ssh
     - https://www.vandyke.com/products/securecrt/history.txt
     PublishedDate: '2023-12-18T16:15:10.897Z'
-    LastModifiedDate: '2024-01-11T04:15:07.79Z'
+    LastModifiedDate: '2024-01-15T08:15:36.17Z'
 - Target: usr/bin/runc
   Class: lang-pkgs
   Type: gobinary
@@ -1691,6 +1697,7 @@
     - https://nova.app/releases/#v11.8
     - https://nvd.nist.gov/vuln/detail/CVE-2023-48795
     - https://oryx-embedded.com/download/#changelog
+    - https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2024-0002
     - https://roumenpetrov.info/secsh/#news20231220
     - https://security-tracker.debian.org/tracker/CVE-2023-48795
     - https://security-tracker.debian.org/tracker/source-package/libssh2
@@ -1706,6 +1713,7 @@
     - https://ubuntu.com/security/notices/USN-6560-1
     - https://ubuntu.com/security/notices/USN-6560-2
     - https://ubuntu.com/security/notices/USN-6561-1
+    - https://ubuntu.com/security/notices/USN-6585-1
     - https://winscp.net/eng/docs/history#6.2.2
     - https://www.bitvise.com/ssh-client-version-history#933
     - https://www.bitvise.com/ssh-server-version-history
@@ -1729,7 +1737,7 @@
     - https://www.theregister.com/2023/12/20/terrapin_attack_ssh
     - https://www.vandyke.com/products/securecrt/history.txt
     PublishedDate: '2023-12-18T16:15:10.897Z'
-    LastModifiedDate: '2024-01-11T04:15:07.79Z'
+    LastModifiedDate: '2024-01-15T08:15:36.17Z'
 - Target: usr/libexec/docker/cli-plugins/docker-buildx
   Class: lang-pkgs
   Type: gobinary
@@ -2089,6 +2097,7 @@
     - https://nova.app/releases/#v11.8
     - https://nvd.nist.gov/vuln/detail/CVE-2023-48795
     - https://oryx-embedded.com/download/#changelog
+    - https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2024-0002
     - https://roumenpetrov.info/secsh/#news20231220
     - https://security-tracker.debian.org/tracker/CVE-2023-48795
     - https://security-tracker.debian.org/tracker/source-package/libssh2
@@ -2104,6 +2113,7 @@
     - https://ubuntu.com/security/notices/USN-6560-1
     - https://ubuntu.com/security/notices/USN-6560-2
     - https://ubuntu.com/security/notices/USN-6561-1
+    - https://ubuntu.com/security/notices/USN-6585-1
     - https://winscp.net/eng/docs/history#6.2.2
     - https://www.bitvise.com/ssh-client-version-history#933
     - https://www.bitvise.com/ssh-server-version-history
@@ -2127,7 +2137,7 @@
     - https://www.theregister.com/2023/12/20/terrapin_attack_ssh
     - https://www.vandyke.com/products/securecrt/history.txt
     PublishedDate: '2023-12-18T16:15:10.897Z'
-    LastModifiedDate: '2024-01-11T04:15:07.79Z'
+    LastModifiedDate: '2024-01-15T08:15:36.17Z'
   - VulnerabilityID: GHSA-m425-mq94-257g
     PkgName: google.golang.org/grpc
     InstalledVersion: v1.53.0
