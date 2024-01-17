@@ -132,6 +132,7 @@
 │                             │                  ├ cbl-mariner: 2 
 │                             │                  ├ ghsa       : 2 
 │                             │                  ├ nvd        : 2 
+│                             │                  ├ photon     : 2 
 │                             │                  ├ redhat     : 2 
 │                             │                  ╰ ubuntu     : 2 
 │                             ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N
@@ -861,6 +862,7 @@
 │                       │     │                  ├ cbl-mariner: 2 
 │                       │     │                  ├ ghsa       : 2 
 │                       │     │                  ├ nvd        : 2 
+│                       │     │                  ├ photon     : 2 
 │                       │     │                  ├ redhat     : 2 
 │                       │     │                  ╰ ubuntu     : 2 
 │                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N
@@ -1682,6 +1684,7 @@
 │                             │                  ├ cbl-mariner: 2 
 │                             │                  ├ ghsa       : 2 
 │                             │                  ├ nvd        : 2 
+│                             │                  ├ photon     : 2 
 │                             │                  ├ redhat     : 2 
 │                             │                  ╰ ubuntu     : 2 
 │                             ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N
@@ -2640,6 +2643,7 @@
 │                             │                  ├ cbl-mariner: 2 
 │                             │                  ├ ghsa       : 2 
 │                             │                  ├ nvd        : 2 
+│                             │                  ├ photon     : 2 
 │                             │                  ├ redhat     : 2 
 │                             │                  ╰ ubuntu     : 2 
 │                             ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N
@@ -3339,6 +3343,7 @@
                         │     │                  ├ cbl-mariner: 2 
                         │     │                  ├ ghsa       : 2 
                         │     │                  ├ nvd        : 2 
+                        │     │                  ├ photon     : 2 
                         │     │                  ├ redhat     : 2 
                         │     │                  ╰ ubuntu     : 2 
                         │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N
