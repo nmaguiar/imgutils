@@ -192,6 +192,7 @@
     - https://ubuntu.com/security/notices/USN-6560-2
     - https://ubuntu.com/security/notices/USN-6561-1
     - https://ubuntu.com/security/notices/USN-6585-1
+    - https://ubuntu.com/security/notices/USN-6589-1
     - https://winscp.net/eng/docs/history#6.2.2
     - https://www.bitvise.com/ssh-client-version-history#933
     - https://www.bitvise.com/ssh-server-version-history
@@ -640,6 +641,7 @@
     - https://ubuntu.com/security/notices/USN-6560-2
     - https://ubuntu.com/security/notices/USN-6561-1
     - https://ubuntu.com/security/notices/USN-6585-1
+    - https://ubuntu.com/security/notices/USN-6589-1
     - https://winscp.net/eng/docs/history#6.2.2
     - https://www.bitvise.com/ssh-client-version-history#933
     - https://www.bitvise.com/ssh-server-version-history
@@ -1129,6 +1131,7 @@
     - https://ubuntu.com/security/notices/USN-6560-2
     - https://ubuntu.com/security/notices/USN-6561-1
     - https://ubuntu.com/security/notices/USN-6585-1
+    - https://ubuntu.com/security/notices/USN-6589-1
     - https://winscp.net/eng/docs/history#6.2.2
     - https://www.bitvise.com/ssh-client-version-history#933
     - https://www.bitvise.com/ssh-server-version-history
@@ -1320,7 +1323,7 @@
     - CWE-79
     VendorSeverity:
       alma: 2
-      amazon: 3
+      amazon: 2
       cbl-mariner: 2
       ghsa: 2
       nvd: 2
@@ -1740,6 +1743,7 @@
     - https://ubuntu.com/security/notices/USN-6560-2
     - https://ubuntu.com/security/notices/USN-6561-1
     - https://ubuntu.com/security/notices/USN-6585-1
+    - https://ubuntu.com/security/notices/USN-6589-1
     - https://winscp.net/eng/docs/history#6.2.2
     - https://www.bitvise.com/ssh-client-version-history#933
     - https://www.bitvise.com/ssh-server-version-history
@@ -2145,6 +2149,7 @@
     - https://ubuntu.com/security/notices/USN-6560-2
     - https://ubuntu.com/security/notices/USN-6561-1
     - https://ubuntu.com/security/notices/USN-6585-1
+    - https://ubuntu.com/security/notices/USN-6589-1
     - https://winscp.net/eng/docs/history#6.2.2
     - https://www.bitvise.com/ssh-client-version-history#933
     - https://www.bitvise.com/ssh-server-version-history
