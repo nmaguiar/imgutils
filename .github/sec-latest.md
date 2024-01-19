@@ -325,40 +325,41 @@
 │                             │                  ├ [99] : https://ubuntu.com/security/notices/USN-6560-2 
 │                             │                  ├ [100]: https://ubuntu.com/security/notices/USN-6561-1 
 │                             │                  ├ [101]: https://ubuntu.com/security/notices/USN-6585-1 
-│                             │                  ├ [102]: https://winscp.net/eng/docs/history#6.2.2 
-│                             │                  ├ [103]: https://www.bitvise.com/ssh-client-version-histo
+│                             │                  ├ [102]: https://ubuntu.com/security/notices/USN-6589-1 
+│                             │                  ├ [103]: https://winscp.net/eng/docs/history#6.2.2 
+│                             │                  ├ [104]: https://www.bitvise.com/ssh-client-version-histo
 │                             │                  │        ry#933 
-│                             │                  ├ [104]: https://www.bitvise.com/ssh-server-version-history 
-│                             │                  ├ [105]: https://www.chiark.greenend.org.uk/~sgtatham/put
+│                             │                  ├ [105]: https://www.bitvise.com/ssh-server-version-history 
+│                             │                  ├ [106]: https://www.chiark.greenend.org.uk/~sgtatham/put
 │                             │                  │        ty/changes.html 
-│                             │                  ├ [106]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
+│                             │                  ├ [107]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
 │                             │                  │        ge=Update 
-│                             │                  ├ [107]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
-│                             │                  ├ [108]: https://www.debian.org/security/2023/dsa-5586 
-│                             │                  ├ [109]: https://www.debian.org/security/2023/dsa-5588 
-│                             │                  ├ [110]: https://www.freebsd.org/security/advisories/Free
+│                             │                  ├ [108]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
+│                             │                  ├ [109]: https://www.debian.org/security/2023/dsa-5586 
+│                             │                  ├ [110]: https://www.debian.org/security/2023/dsa-5588 
+│                             │                  ├ [111]: https://www.freebsd.org/security/advisories/Free
 │                             │                  │        BSD-SA-23:19.openssh.asc 
-│                             │                  ├ [111]: https://www.lancom-systems.de/service-support/al
+│                             │                  ├ [112]: https://www.lancom-systems.de/service-support/al
 │                             │                  │        lgemeine-sicherheitshinweise#c243508 
-│                             │                  ├ [112]: https://www.netsarang.com/en/xshell-update-history/ 
-│                             │                  ├ [113]: https://www.openssh.com/openbsd.html 
-│                             │                  ├ [114]: https://www.openssh.com/txt/release-9.6 
-│                             │                  ├ [115]: https://www.openwall.com/lists/oss-security/2023
-│                             │                  │        /12/18/2 
+│                             │                  ├ [113]: https://www.netsarang.com/en/xshell-update-history/ 
+│                             │                  ├ [114]: https://www.openssh.com/openbsd.html 
+│                             │                  ├ [115]: https://www.openssh.com/txt/release-9.6 
 │                             │                  ├ [116]: https://www.openwall.com/lists/oss-security/2023
-│                             │                  │        /12/18/3 
+│                             │                  │        /12/18/2 
 │                             │                  ├ [117]: https://www.openwall.com/lists/oss-security/2023
+│                             │                  │        /12/18/3 
+│                             │                  ├ [118]: https://www.openwall.com/lists/oss-security/2023
 │                             │                  │        /12/20/3 
-│                             │                  ├ [118]: https://www.paramiko.org/changelog.html 
-│                             │                  ├ [119]: https://www.reddit.com/r/sysadmin/comments/18idv
+│                             │                  ├ [119]: https://www.paramiko.org/changelog.html 
+│                             │                  ├ [120]: https://www.reddit.com/r/sysadmin/comments/18idv
 │                             │                  │        52/cve202348795_why_is_this_cve_still_undisclosed/
 │                             │                  │         
-│                             │                  ├ [120]: https://www.suse.com/c/suse-addresses-the-ssh-v2
+│                             │                  ├ [121]: https://www.suse.com/c/suse-addresses-the-ssh-v2
 │                             │                  │        -protocol-terrapin-attack-aka-cve-2023-48795/ 
-│                             │                  ├ [121]: https://www.terrapin-attack.com 
-│                             │                  ├ [122]: https://www.theregister.com/2023/12/20/terrapin_
+│                             │                  ├ [122]: https://www.terrapin-attack.com 
+│                             │                  ├ [123]: https://www.theregister.com/2023/12/20/terrapin_
 │                             │                  │        attack_ssh 
-│                             │                  ╰ [123]: https://www.vandyke.com/products/securecrt/histo
+│                             │                  ╰ [124]: https://www.vandyke.com/products/securecrt/histo
 │                             │                           ry.txt 
 │                             ├ PublishedDate   : 2023-12-18T16:15:10.897Z 
 │                             ╰ LastModifiedDate: 2024-01-18T03:15:58.277Z 
@@ -1067,40 +1068,41 @@
 │                       │     │                  ├ [99] : https://ubuntu.com/security/notices/USN-6560-2 
 │                       │     │                  ├ [100]: https://ubuntu.com/security/notices/USN-6561-1 
 │                       │     │                  ├ [101]: https://ubuntu.com/security/notices/USN-6585-1 
-│                       │     │                  ├ [102]: https://winscp.net/eng/docs/history#6.2.2 
-│                       │     │                  ├ [103]: https://www.bitvise.com/ssh-client-version-histo
+│                       │     │                  ├ [102]: https://ubuntu.com/security/notices/USN-6589-1 
+│                       │     │                  ├ [103]: https://winscp.net/eng/docs/history#6.2.2 
+│                       │     │                  ├ [104]: https://www.bitvise.com/ssh-client-version-histo
 │                       │     │                  │        ry#933 
-│                       │     │                  ├ [104]: https://www.bitvise.com/ssh-server-version-history 
-│                       │     │                  ├ [105]: https://www.chiark.greenend.org.uk/~sgtatham/put
+│                       │     │                  ├ [105]: https://www.bitvise.com/ssh-server-version-history 
+│                       │     │                  ├ [106]: https://www.chiark.greenend.org.uk/~sgtatham/put
 │                       │     │                  │        ty/changes.html 
-│                       │     │                  ├ [106]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
+│                       │     │                  ├ [107]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
 │                       │     │                  │        ge=Update 
-│                       │     │                  ├ [107]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
-│                       │     │                  ├ [108]: https://www.debian.org/security/2023/dsa-5586 
-│                       │     │                  ├ [109]: https://www.debian.org/security/2023/dsa-5588 
-│                       │     │                  ├ [110]: https://www.freebsd.org/security/advisories/Free
+│                       │     │                  ├ [108]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
+│                       │     │                  ├ [109]: https://www.debian.org/security/2023/dsa-5586 
+│                       │     │                  ├ [110]: https://www.debian.org/security/2023/dsa-5588 
+│                       │     │                  ├ [111]: https://www.freebsd.org/security/advisories/Free
 │                       │     │                  │        BSD-SA-23:19.openssh.asc 
-│                       │     │                  ├ [111]: https://www.lancom-systems.de/service-support/al
+│                       │     │                  ├ [112]: https://www.lancom-systems.de/service-support/al
 │                       │     │                  │        lgemeine-sicherheitshinweise#c243508 
-│                       │     │                  ├ [112]: https://www.netsarang.com/en/xshell-update-history/ 
-│                       │     │                  ├ [113]: https://www.openssh.com/openbsd.html 
-│                       │     │                  ├ [114]: https://www.openssh.com/txt/release-9.6 
-│                       │     │                  ├ [115]: https://www.openwall.com/lists/oss-security/2023
-│                       │     │                  │        /12/18/2 
+│                       │     │                  ├ [113]: https://www.netsarang.com/en/xshell-update-history/ 
+│                       │     │                  ├ [114]: https://www.openssh.com/openbsd.html 
+│                       │     │                  ├ [115]: https://www.openssh.com/txt/release-9.6 
 │                       │     │                  ├ [116]: https://www.openwall.com/lists/oss-security/2023
-│                       │     │                  │        /12/18/3 
+│                       │     │                  │        /12/18/2 
 │                       │     │                  ├ [117]: https://www.openwall.com/lists/oss-security/2023
+│                       │     │                  │        /12/18/3 
+│                       │     │                  ├ [118]: https://www.openwall.com/lists/oss-security/2023
 │                       │     │                  │        /12/20/3 
-│                       │     │                  ├ [118]: https://www.paramiko.org/changelog.html 
-│                       │     │                  ├ [119]: https://www.reddit.com/r/sysadmin/comments/18idv
+│                       │     │                  ├ [119]: https://www.paramiko.org/changelog.html 
+│                       │     │                  ├ [120]: https://www.reddit.com/r/sysadmin/comments/18idv
 │                       │     │                  │        52/cve202348795_why_is_this_cve_still_undisclosed/
 │                       │     │                  │         
-│                       │     │                  ├ [120]: https://www.suse.com/c/suse-addresses-the-ssh-v2
+│                       │     │                  ├ [121]: https://www.suse.com/c/suse-addresses-the-ssh-v2
 │                       │     │                  │        -protocol-terrapin-attack-aka-cve-2023-48795/ 
-│                       │     │                  ├ [121]: https://www.terrapin-attack.com 
-│                       │     │                  ├ [122]: https://www.theregister.com/2023/12/20/terrapin_
+│                       │     │                  ├ [122]: https://www.terrapin-attack.com 
+│                       │     │                  ├ [123]: https://www.theregister.com/2023/12/20/terrapin_
 │                       │     │                  │        attack_ssh 
-│                       │     │                  ╰ [123]: https://www.vandyke.com/products/securecrt/histo
+│                       │     │                  ╰ [124]: https://www.vandyke.com/products/securecrt/histo
 │                       │     │                           ry.txt 
 │                       │     ├ PublishedDate   : 2023-12-18T16:15:10.897Z 
 │                       │     ╰ LastModifiedDate: 2024-01-18T03:15:58.277Z 
@@ -1901,40 +1903,41 @@
 │                             │                  ├ [99] : https://ubuntu.com/security/notices/USN-6560-2 
 │                             │                  ├ [100]: https://ubuntu.com/security/notices/USN-6561-1 
 │                             │                  ├ [101]: https://ubuntu.com/security/notices/USN-6585-1 
-│                             │                  ├ [102]: https://winscp.net/eng/docs/history#6.2.2 
-│                             │                  ├ [103]: https://www.bitvise.com/ssh-client-version-histo
+│                             │                  ├ [102]: https://ubuntu.com/security/notices/USN-6589-1 
+│                             │                  ├ [103]: https://winscp.net/eng/docs/history#6.2.2 
+│                             │                  ├ [104]: https://www.bitvise.com/ssh-client-version-histo
 │                             │                  │        ry#933 
-│                             │                  ├ [104]: https://www.bitvise.com/ssh-server-version-history 
-│                             │                  ├ [105]: https://www.chiark.greenend.org.uk/~sgtatham/put
+│                             │                  ├ [105]: https://www.bitvise.com/ssh-server-version-history 
+│                             │                  ├ [106]: https://www.chiark.greenend.org.uk/~sgtatham/put
 │                             │                  │        ty/changes.html 
-│                             │                  ├ [106]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
+│                             │                  ├ [107]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
 │                             │                  │        ge=Update 
-│                             │                  ├ [107]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
-│                             │                  ├ [108]: https://www.debian.org/security/2023/dsa-5586 
-│                             │                  ├ [109]: https://www.debian.org/security/2023/dsa-5588 
-│                             │                  ├ [110]: https://www.freebsd.org/security/advisories/Free
+│                             │                  ├ [108]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
+│                             │                  ├ [109]: https://www.debian.org/security/2023/dsa-5586 
+│                             │                  ├ [110]: https://www.debian.org/security/2023/dsa-5588 
+│                             │                  ├ [111]: https://www.freebsd.org/security/advisories/Free
 │                             │                  │        BSD-SA-23:19.openssh.asc 
-│                             │                  ├ [111]: https://www.lancom-systems.de/service-support/al
+│                             │                  ├ [112]: https://www.lancom-systems.de/service-support/al
 │                             │                  │        lgemeine-sicherheitshinweise#c243508 
-│                             │                  ├ [112]: https://www.netsarang.com/en/xshell-update-history/ 
-│                             │                  ├ [113]: https://www.openssh.com/openbsd.html 
-│                             │                  ├ [114]: https://www.openssh.com/txt/release-9.6 
-│                             │                  ├ [115]: https://www.openwall.com/lists/oss-security/2023
-│                             │                  │        /12/18/2 
+│                             │                  ├ [113]: https://www.netsarang.com/en/xshell-update-history/ 
+│                             │                  ├ [114]: https://www.openssh.com/openbsd.html 
+│                             │                  ├ [115]: https://www.openssh.com/txt/release-9.6 
 │                             │                  ├ [116]: https://www.openwall.com/lists/oss-security/2023
-│                             │                  │        /12/18/3 
+│                             │                  │        /12/18/2 
 │                             │                  ├ [117]: https://www.openwall.com/lists/oss-security/2023
+│                             │                  │        /12/18/3 
+│                             │                  ├ [118]: https://www.openwall.com/lists/oss-security/2023
 │                             │                  │        /12/20/3 
-│                             │                  ├ [118]: https://www.paramiko.org/changelog.html 
-│                             │                  ├ [119]: https://www.reddit.com/r/sysadmin/comments/18idv
+│                             │                  ├ [119]: https://www.paramiko.org/changelog.html 
+│                             │                  ├ [120]: https://www.reddit.com/r/sysadmin/comments/18idv
 │                             │                  │        52/cve202348795_why_is_this_cve_still_undisclosed/
 │                             │                  │         
-│                             │                  ├ [120]: https://www.suse.com/c/suse-addresses-the-ssh-v2
+│                             │                  ├ [121]: https://www.suse.com/c/suse-addresses-the-ssh-v2
 │                             │                  │        -protocol-terrapin-attack-aka-cve-2023-48795/ 
-│                             │                  ├ [121]: https://www.terrapin-attack.com 
-│                             │                  ├ [122]: https://www.theregister.com/2023/12/20/terrapin_
+│                             │                  ├ [122]: https://www.terrapin-attack.com 
+│                             │                  ├ [123]: https://www.theregister.com/2023/12/20/terrapin_
 │                             │                  │        attack_ssh 
-│                             │                  ╰ [123]: https://www.vandyke.com/products/securecrt/histo
+│                             │                  ╰ [124]: https://www.vandyke.com/products/securecrt/histo
 │                             │                           ry.txt 
 │                             ├ PublishedDate   : 2023-12-18T16:15:10.897Z 
 │                             ╰ LastModifiedDate: 2024-01-18T03:15:58.277Z 
@@ -2196,7 +2199,7 @@
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-79 
 │                       │     ├ VendorSeverity   ╭ alma       : 2 
-│                       │     │                  ├ amazon     : 3 
+│                       │     │                  ├ amazon     : 2 
 │                       │     │                  ├ cbl-mariner: 2 
 │                       │     │                  ├ ghsa       : 2 
 │                       │     │                  ├ nvd        : 2 
@@ -2890,40 +2893,41 @@
 │                             │                  ├ [99] : https://ubuntu.com/security/notices/USN-6560-2 
 │                             │                  ├ [100]: https://ubuntu.com/security/notices/USN-6561-1 
 │                             │                  ├ [101]: https://ubuntu.com/security/notices/USN-6585-1 
-│                             │                  ├ [102]: https://winscp.net/eng/docs/history#6.2.2 
-│                             │                  ├ [103]: https://www.bitvise.com/ssh-client-version-histo
+│                             │                  ├ [102]: https://ubuntu.com/security/notices/USN-6589-1 
+│                             │                  ├ [103]: https://winscp.net/eng/docs/history#6.2.2 
+│                             │                  ├ [104]: https://www.bitvise.com/ssh-client-version-histo
 │                             │                  │        ry#933 
-│                             │                  ├ [104]: https://www.bitvise.com/ssh-server-version-history 
-│                             │                  ├ [105]: https://www.chiark.greenend.org.uk/~sgtatham/put
+│                             │                  ├ [105]: https://www.bitvise.com/ssh-server-version-history 
+│                             │                  ├ [106]: https://www.chiark.greenend.org.uk/~sgtatham/put
 │                             │                  │        ty/changes.html 
-│                             │                  ├ [106]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
+│                             │                  ├ [107]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
 │                             │                  │        ge=Update 
-│                             │                  ├ [107]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
-│                             │                  ├ [108]: https://www.debian.org/security/2023/dsa-5586 
-│                             │                  ├ [109]: https://www.debian.org/security/2023/dsa-5588 
-│                             │                  ├ [110]: https://www.freebsd.org/security/advisories/Free
+│                             │                  ├ [108]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
+│                             │                  ├ [109]: https://www.debian.org/security/2023/dsa-5586 
+│                             │                  ├ [110]: https://www.debian.org/security/2023/dsa-5588 
+│                             │                  ├ [111]: https://www.freebsd.org/security/advisories/Free
 │                             │                  │        BSD-SA-23:19.openssh.asc 
-│                             │                  ├ [111]: https://www.lancom-systems.de/service-support/al
+│                             │                  ├ [112]: https://www.lancom-systems.de/service-support/al
 │                             │                  │        lgemeine-sicherheitshinweise#c243508 
-│                             │                  ├ [112]: https://www.netsarang.com/en/xshell-update-history/ 
-│                             │                  ├ [113]: https://www.openssh.com/openbsd.html 
-│                             │                  ├ [114]: https://www.openssh.com/txt/release-9.6 
-│                             │                  ├ [115]: https://www.openwall.com/lists/oss-security/2023
-│                             │                  │        /12/18/2 
+│                             │                  ├ [113]: https://www.netsarang.com/en/xshell-update-history/ 
+│                             │                  ├ [114]: https://www.openssh.com/openbsd.html 
+│                             │                  ├ [115]: https://www.openssh.com/txt/release-9.6 
 │                             │                  ├ [116]: https://www.openwall.com/lists/oss-security/2023
-│                             │                  │        /12/18/3 
+│                             │                  │        /12/18/2 
 │                             │                  ├ [117]: https://www.openwall.com/lists/oss-security/2023
+│                             │                  │        /12/18/3 
+│                             │                  ├ [118]: https://www.openwall.com/lists/oss-security/2023
 │                             │                  │        /12/20/3 
-│                             │                  ├ [118]: https://www.paramiko.org/changelog.html 
-│                             │                  ├ [119]: https://www.reddit.com/r/sysadmin/comments/18idv
+│                             │                  ├ [119]: https://www.paramiko.org/changelog.html 
+│                             │                  ├ [120]: https://www.reddit.com/r/sysadmin/comments/18idv
 │                             │                  │        52/cve202348795_why_is_this_cve_still_undisclosed/
 │                             │                  │         
-│                             │                  ├ [120]: https://www.suse.com/c/suse-addresses-the-ssh-v2
+│                             │                  ├ [121]: https://www.suse.com/c/suse-addresses-the-ssh-v2
 │                             │                  │        -protocol-terrapin-attack-aka-cve-2023-48795/ 
-│                             │                  ├ [121]: https://www.terrapin-attack.com 
-│                             │                  ├ [122]: https://www.theregister.com/2023/12/20/terrapin_
+│                             │                  ├ [122]: https://www.terrapin-attack.com 
+│                             │                  ├ [123]: https://www.theregister.com/2023/12/20/terrapin_
 │                             │                  │        attack_ssh 
-│                             │                  ╰ [123]: https://www.vandyke.com/products/securecrt/histo
+│                             │                  ╰ [124]: https://www.vandyke.com/products/securecrt/histo
 │                             │                           ry.txt 
 │                             ├ PublishedDate   : 2023-12-18T16:15:10.897Z 
 │                             ╰ LastModifiedDate: 2024-01-18T03:15:58.277Z 
@@ -3602,40 +3606,41 @@
                         │     │                  ├ [99] : https://ubuntu.com/security/notices/USN-6560-2 
                         │     │                  ├ [100]: https://ubuntu.com/security/notices/USN-6561-1 
                         │     │                  ├ [101]: https://ubuntu.com/security/notices/USN-6585-1 
-                        │     │                  ├ [102]: https://winscp.net/eng/docs/history#6.2.2 
-                        │     │                  ├ [103]: https://www.bitvise.com/ssh-client-version-histo
+                        │     │                  ├ [102]: https://ubuntu.com/security/notices/USN-6589-1 
+                        │     │                  ├ [103]: https://winscp.net/eng/docs/history#6.2.2 
+                        │     │                  ├ [104]: https://www.bitvise.com/ssh-client-version-histo
                         │     │                  │        ry#933 
-                        │     │                  ├ [104]: https://www.bitvise.com/ssh-server-version-history 
-                        │     │                  ├ [105]: https://www.chiark.greenend.org.uk/~sgtatham/put
+                        │     │                  ├ [105]: https://www.bitvise.com/ssh-server-version-history 
+                        │     │                  ├ [106]: https://www.chiark.greenend.org.uk/~sgtatham/put
                         │     │                  │        ty/changes.html 
-                        │     │                  ├ [106]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
+                        │     │                  ├ [107]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
                         │     │                  │        ge=Update 
-                        │     │                  ├ [107]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
-                        │     │                  ├ [108]: https://www.debian.org/security/2023/dsa-5586 
-                        │     │                  ├ [109]: https://www.debian.org/security/2023/dsa-5588 
-                        │     │                  ├ [110]: https://www.freebsd.org/security/advisories/Free
+                        │     │                  ├ [108]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
+                        │     │                  ├ [109]: https://www.debian.org/security/2023/dsa-5586 
+                        │     │                  ├ [110]: https://www.debian.org/security/2023/dsa-5588 
+                        │     │                  ├ [111]: https://www.freebsd.org/security/advisories/Free
                         │     │                  │        BSD-SA-23:19.openssh.asc 
-                        │     │                  ├ [111]: https://www.lancom-systems.de/service-support/al
+                        │     │                  ├ [112]: https://www.lancom-systems.de/service-support/al
                         │     │                  │        lgemeine-sicherheitshinweise#c243508 
-                        │     │                  ├ [112]: https://www.netsarang.com/en/xshell-update-history/ 
-                        │     │                  ├ [113]: https://www.openssh.com/openbsd.html 
-                        │     │                  ├ [114]: https://www.openssh.com/txt/release-9.6 
-                        │     │                  ├ [115]: https://www.openwall.com/lists/oss-security/2023
-                        │     │                  │        /12/18/2 
+                        │     │                  ├ [113]: https://www.netsarang.com/en/xshell-update-history/ 
+                        │     │                  ├ [114]: https://www.openssh.com/openbsd.html 
+                        │     │                  ├ [115]: https://www.openssh.com/txt/release-9.6 
                         │     │                  ├ [116]: https://www.openwall.com/lists/oss-security/2023
-                        │     │                  │        /12/18/3 
+                        │     │                  │        /12/18/2 
                         │     │                  ├ [117]: https://www.openwall.com/lists/oss-security/2023
+                        │     │                  │        /12/18/3 
+                        │     │                  ├ [118]: https://www.openwall.com/lists/oss-security/2023
                         │     │                  │        /12/20/3 
-                        │     │                  ├ [118]: https://www.paramiko.org/changelog.html 
-                        │     │                  ├ [119]: https://www.reddit.com/r/sysadmin/comments/18idv
+                        │     │                  ├ [119]: https://www.paramiko.org/changelog.html 
+                        │     │                  ├ [120]: https://www.reddit.com/r/sysadmin/comments/18idv
                         │     │                  │        52/cve202348795_why_is_this_cve_still_undisclosed/
                         │     │                  │         
-                        │     │                  ├ [120]: https://www.suse.com/c/suse-addresses-the-ssh-v2
+                        │     │                  ├ [121]: https://www.suse.com/c/suse-addresses-the-ssh-v2
                         │     │                  │        -protocol-terrapin-attack-aka-cve-2023-48795/ 
-                        │     │                  ├ [121]: https://www.terrapin-attack.com 
-                        │     │                  ├ [122]: https://www.theregister.com/2023/12/20/terrapin_
+                        │     │                  ├ [122]: https://www.terrapin-attack.com 
+                        │     │                  ├ [123]: https://www.theregister.com/2023/12/20/terrapin_
                         │     │                  │        attack_ssh 
-                        │     │                  ╰ [123]: https://www.vandyke.com/products/securecrt/histo
+                        │     │                  ╰ [124]: https://www.vandyke.com/products/securecrt/histo
                         │     │                           ry.txt 
                         │     ├ PublishedDate   : 2023-12-18T16:15:10.897Z 
                         │     ╰ LastModifiedDate: 2024-01-18T03:15:58.277Z 
