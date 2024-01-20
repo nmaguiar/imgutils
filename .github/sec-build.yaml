@@ -11,8 +11,8 @@
     FixedVersion: 0.46.0
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-47108
     DataSource:
@@ -58,8 +58,8 @@
     FixedVersion: 0.17.0
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-48795
     DataSource:
@@ -155,6 +155,7 @@
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/33XHJUB6ROFUOH2OQNENFROTVH6MHSHA/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3CAYYW35MUTNO65RVAELICTNZZFMT2XS/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3YQLUQWLIHDB5QCXQEX7HXHAWMOKPP5O/
+    - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6Y74KVCPEPT4MVU3LHDWCNNOXOE5ZLUR/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/APYIXIQOVDCRWLHTGB4VYMAUIAQLKYJ3/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/BL5KTLOSLH2KHRN4HCXJPK3JUVLDGEL6/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/C3AFMZ6MH2UHHOPIWT5YLSFV3D2VB3AC/
@@ -216,7 +217,7 @@
     - https://www.theregister.com/2023/12/20/terrapin_attack_ssh
     - https://www.vandyke.com/products/securecrt/history.txt
     PublishedDate: '2023-12-18T16:15:10.897Z'
-    LastModifiedDate: '2024-01-18T03:15:58.277Z'
+    LastModifiedDate: '2024-01-19T04:15:08.343Z'
 - Target: usr/bin/crictl
   Class: lang-pkgs
   Type: gobinary
@@ -227,8 +228,8 @@
     FixedVersion: 0.46.0
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-47108
     DataSource:
@@ -278,8 +279,8 @@
     FixedVersion: 1.6.26, 1.7.11
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://github.com/advisories/GHSA-7ww5-4wqc-m92c
     DataSource:
@@ -324,8 +325,8 @@
     FixedVersion: 0.2.4
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://github.com/advisories/GHSA-6xv5-86q9-7xr8
     DataSource:
@@ -364,8 +365,8 @@
     FixedVersion: 0.46.0
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-47108
     DataSource:
@@ -411,8 +412,8 @@
     FixedVersion: 0.44.0
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45142
     DataSource:
@@ -459,8 +460,8 @@
     FixedVersion: 0.44.0
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45142
     DataSource:
@@ -507,8 +508,8 @@
     FixedVersion: 0.17.0
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-48795
     DataSource:
@@ -604,6 +605,7 @@
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/33XHJUB6ROFUOH2OQNENFROTVH6MHSHA/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3CAYYW35MUTNO65RVAELICTNZZFMT2XS/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3YQLUQWLIHDB5QCXQEX7HXHAWMOKPP5O/
+    - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6Y74KVCPEPT4MVU3LHDWCNNOXOE5ZLUR/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/APYIXIQOVDCRWLHTGB4VYMAUIAQLKYJ3/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/BL5KTLOSLH2KHRN4HCXJPK3JUVLDGEL6/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/C3AFMZ6MH2UHHOPIWT5YLSFV3D2VB3AC/
@@ -665,15 +667,15 @@
     - https://www.theregister.com/2023/12/20/terrapin_attack_ssh
     - https://www.vandyke.com/products/securecrt/history.txt
     PublishedDate: '2023-12-18T16:15:10.897Z'
-    LastModifiedDate: '2024-01-18T03:15:58.277Z'
+    LastModifiedDate: '2024-01-19T04:15:08.343Z'
   - VulnerabilityID: GHSA-m425-mq94-257g
     PkgName: google.golang.org/grpc
     InstalledVersion: v1.50.1
     FixedVersion: 1.56.3, 1.57.1, 1.58.3
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://github.com/advisories/GHSA-m425-mq94-257g
     DataSource:
@@ -713,8 +715,8 @@
     FixedVersion: 1.58.3, 1.57.1, 1.56.3
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-44487
     DataSource:
@@ -951,8 +953,8 @@
     FixedVersion: 1.6.26, 1.7.11
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://github.com/advisories/GHSA-7ww5-4wqc-m92c
     DataSource:
@@ -997,8 +999,8 @@
     FixedVersion: 0.17.0
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-48795
     DataSource:
@@ -1094,6 +1096,7 @@
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/33XHJUB6ROFUOH2OQNENFROTVH6MHSHA/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3CAYYW35MUTNO65RVAELICTNZZFMT2XS/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3YQLUQWLIHDB5QCXQEX7HXHAWMOKPP5O/
+    - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6Y74KVCPEPT4MVU3LHDWCNNOXOE5ZLUR/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/APYIXIQOVDCRWLHTGB4VYMAUIAQLKYJ3/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/BL5KTLOSLH2KHRN4HCXJPK3JUVLDGEL6/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/C3AFMZ6MH2UHHOPIWT5YLSFV3D2VB3AC/
@@ -1155,7 +1158,7 @@
     - https://www.theregister.com/2023/12/20/terrapin_attack_ssh
     - https://www.vandyke.com/products/securecrt/history.txt
     PublishedDate: '2023-12-18T16:15:10.897Z'
-    LastModifiedDate: '2024-01-18T03:15:58.277Z'
+    LastModifiedDate: '2024-01-19T04:15:08.343Z'
 - Target: usr/bin/runc
   Class: lang-pkgs
   Type: gobinary
@@ -1166,8 +1169,8 @@
     FixedVersion: 0.2.4
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://github.com/advisories/GHSA-6xv5-86q9-7xr8
     DataSource:
@@ -1206,8 +1209,8 @@
     FixedVersion: 0.17.0
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-39325
     DataSource:
@@ -1275,8 +1278,10 @@
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CLB4TW7KALB3EEQWNWCN7OUIWWVWWCG2/
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/D2BBIDR2ZMB3X5BC7SR4SLQMHRMVPY6L/
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ECRC75BQJP6FJN2L7KCKYZW4DSBD7QSD/
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/FTMJ3NJIDAZFWJQQSP3L22MUFJ3UP2PT/
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GSY7SXFFTPZFWDM6XELSDSHZLVW3AHK7/
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HZQIELEIRSZUYTFFH5KTH2YJ4IIQG2KE/
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/IPWCNYB5PQ5PCVZ4NJT6G56ZYFZ5QBU6/
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KEOTKBUPZXHE3F352JBYNTSNRXYLWD6P/
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KSEGD2IWKNUO3DWY4KQGUQM5BISRWHQE/
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MZQYOOKHQDQ57LV2IAG6NRFOVXKHJJ3Z/
@@ -1301,15 +1306,15 @@
     - https://www.cisa.gov/news-events/alerts/2023/10/10/http2-rapid-reset-vulnerability-cve-2023-44487
     - https://www.cve.org/CVERecord?id=CVE-2023-39325
     PublishedDate: '2023-10-11T22:15:09.88Z'
-    LastModifiedDate: '2024-01-18T03:15:56.55Z'
+    LastModifiedDate: '2024-01-19T04:15:08.17Z'
   - VulnerabilityID: CVE-2023-3978
     PkgName: golang.org/x/net
     InstalledVersion: v0.8.0
     FixedVersion: 0.13.0
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-3978
     DataSource:
@@ -1371,8 +1376,8 @@
     FixedVersion: 0.17.0
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-44487
     DataSource:
@@ -1609,8 +1614,8 @@
     FixedVersion: 0.17.0
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-48795
     DataSource:
@@ -1706,6 +1711,7 @@
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/33XHJUB6ROFUOH2OQNENFROTVH6MHSHA/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3CAYYW35MUTNO65RVAELICTNZZFMT2XS/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3YQLUQWLIHDB5QCXQEX7HXHAWMOKPP5O/
+    - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6Y74KVCPEPT4MVU3LHDWCNNOXOE5ZLUR/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/APYIXIQOVDCRWLHTGB4VYMAUIAQLKYJ3/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/BL5KTLOSLH2KHRN4HCXJPK3JUVLDGEL6/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/C3AFMZ6MH2UHHOPIWT5YLSFV3D2VB3AC/
@@ -1767,7 +1773,7 @@
     - https://www.theregister.com/2023/12/20/terrapin_attack_ssh
     - https://www.vandyke.com/products/securecrt/history.txt
     PublishedDate: '2023-12-18T16:15:10.897Z'
-    LastModifiedDate: '2024-01-18T03:15:58.277Z'
+    LastModifiedDate: '2024-01-19T04:15:08.343Z'
 - Target: usr/libexec/docker/cli-plugins/docker-buildx
   Class: lang-pkgs
   Type: gobinary
@@ -1778,8 +1784,8 @@
     FixedVersion: 1.6.26, 1.7.11
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://github.com/advisories/GHSA-7ww5-4wqc-m92c
     DataSource:
@@ -1824,8 +1830,8 @@
     FixedVersion: 24.0.7, 23.0.8, 20.10.27
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://github.com/advisories/GHSA-jq35-85cj-fj4p
     DataSource:
@@ -1872,8 +1878,8 @@
     FixedVersion: 0.46.0
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-47108
     DataSource:
@@ -1919,8 +1925,8 @@
     FixedVersion: 0.44.0
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45142
     DataSource:
@@ -1967,8 +1973,8 @@
     FixedVersion: 0.44.0
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45142
     DataSource:
@@ -2015,8 +2021,8 @@
     FixedVersion: 0.17.0
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-48795
     DataSource:
@@ -2112,6 +2118,7 @@
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/33XHJUB6ROFUOH2OQNENFROTVH6MHSHA/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3CAYYW35MUTNO65RVAELICTNZZFMT2XS/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3YQLUQWLIHDB5QCXQEX7HXHAWMOKPP5O/
+    - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6Y74KVCPEPT4MVU3LHDWCNNOXOE5ZLUR/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/APYIXIQOVDCRWLHTGB4VYMAUIAQLKYJ3/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/BL5KTLOSLH2KHRN4HCXJPK3JUVLDGEL6/
     - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/C3AFMZ6MH2UHHOPIWT5YLSFV3D2VB3AC/
@@ -2173,15 +2180,15 @@
     - https://www.theregister.com/2023/12/20/terrapin_attack_ssh
     - https://www.vandyke.com/products/securecrt/history.txt
     PublishedDate: '2023-12-18T16:15:10.897Z'
-    LastModifiedDate: '2024-01-18T03:15:58.277Z'
+    LastModifiedDate: '2024-01-19T04:15:08.343Z'
   - VulnerabilityID: GHSA-m425-mq94-257g
     PkgName: google.golang.org/grpc
     InstalledVersion: v1.53.0
     FixedVersion: 1.56.3, 1.57.1, 1.58.3
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://github.com/advisories/GHSA-m425-mq94-257g
     DataSource:
@@ -2221,8 +2228,8 @@
     FixedVersion: 1.58.3, 1.57.1, 1.56.3
     Status: fixed
     Layer:
-      Digest: sha256:e3032822697f1b4561cbe15f7ee206a18451b1849e520ade7656357b2ccf9809
-      DiffID: sha256:461eda14bc1d0bb396c6f79622eb7a1917faa7b6a917e0d5fd402b3890691af8
+      Digest: sha256:e88084c4e4f6692ddb9a3a3bdf95eccb98b16e918b0882d807c2b1cdd054f992
+      DiffID: sha256:4d4e9a2cfe7e00bf2cb63474f199938c92cb014fce131a519953c68379d20840
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-44487
     DataSource:
