@@ -6,7 +6,9 @@ Alpine based image with:
 * helm
 * docker-cli
 * crictl
+* dive (https://github.com/wagoodman/dive)
 * openaf (with DockerRegistry, Kube)
+* mc (Midnight Commander)
 
 This should be enough tools to be able to manage images on a Kubernetes cluster running inside the cluster (with the right permissions).
 
@@ -205,4 +207,17 @@ To exit just execute:
 
 ```bash
 exit
+```
+
+## Checking images
+
+To check images use the following commands within the imgutils/nmaguiar:
+
+```bash
+$ dive docker.io/some/image:latest
+[...]
+$ docker image save some/image:latest > image.tar
+[...]
+$ mc
+# then use the midnight-commander UI to check the details of image.tar on specific layers
 ```
