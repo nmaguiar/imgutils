@@ -4,7 +4,7 @@ Alpine based image with:
 
 * skopeo
 * helm
-* docker
+* docker-cli
 * crictl
 * openaf (with DockerRegistry, Kube)
 
