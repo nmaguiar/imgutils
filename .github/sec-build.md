@@ -211,7 +211,7 @@
 │                       │     │                   package; see the Server.MaxConcurrentStreams setting and the
 │                       │     │                   ConfigureServer function. 
 │                       │     ├ Severity        : HIGH 
-│                       │     ├ CweIDs           ─ [0]: CWE-400 
+│                       │     ├ CweIDs           ─ [0]: CWE-770 
 │                       │     ├ VendorSeverity   ╭ alma       : 2 
 │                       │     │                  ├ amazon     : 3 
 │                       │     │                  ├ bitnami    : 3 
@@ -359,7 +359,7 @@
 │                       │     │                  │       0/http2-rapid-reset-vulnerability-cve-2023-44487 
 │                       │     │                  ╰ [57]: https://www.cve.org/CVERecord?id=CVE-2023-39325 
 │                       │     ├ PublishedDate   : 2023-10-11T22:15:09.88Z 
-│                       │     ╰ LastModifiedDate: 2024-01-19T04:15:08.17Z 
+│                       │     ╰ LastModifiedDate: 2024-01-21T02:02:56.727Z 
 │                       ├ [2] ╭ VulnerabilityID : CVE-2023-3978 
 │                       │     ├ PkgName         : golang.org/x/net 
 │                       │     ├ InstalledVersion: v0.11.0 
@@ -382,7 +382,7 @@
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-79 
 │                       │     ├ VendorSeverity   ╭ alma       : 2 
-│                       │     │                  ├ amazon     : 2 
+│                       │     │                  ├ amazon     : 3 
 │                       │     │                  ├ cbl-mariner: 2 
 │                       │     │                  ├ ghsa       : 2 
 │                       │     │                  ├ nvd        : 2 
