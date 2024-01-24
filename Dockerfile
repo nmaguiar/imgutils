@@ -26,6 +26,14 @@ RUN apk update\
  && /openaf/ojob ojob.io/kube/getCriCtl path=/usr/bin\
  && /openaf/opack install DockerRegistry\
  && /openaf/opack install Kube\
+ && mkdir /openaf/ojobs\
+ && /openaf/ojob ojob.io/get job=ojob.io/docker/expand.yaml > /openaf/ojobs/expand.yaml\
+ && chown -R openaf:0 /openaf\
+ && chown openaf:0 /openaf/.opack.db\
+ && chmod -R u+rwx,g+rwx,o+rx,o-w /openaf/*\
+ && chmod a+rwx /openaf\
+ && chmod -R a+rx /openaf/.docker\
+ && sudo chmod g+w /openaf/.opack.db\
  && chmod a+x /usr/bin/crictl\
  && rm /lib/apk/db/*
 
