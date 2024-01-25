@@ -17,6 +17,14 @@ This should be enough tools to be able to manage images on a Kubernetes cluster 
 [![.github/sec-build.svg](.github/sec-build.svg)](.github/sec-build.md)<br>
 [![.github/sec-latest.svg](.github/sec-latest.svg)](.github/sec-latest.md)<br>
 
+## Guides
+
+* [Copying images and charts between registries](#copying-images-and-charts-between-registries)
+* [Copying images and charts from file to a registry](#copying-images-and-charts-from-file-to-a-registry)
+* [Accessing the Docker daemon](#accessing-the-docker-daemon)
+* [Accessing Kubernetes container runtime](#accessing-kubernetes-container-runtime)
+* [Checking images content](#checking-images-content)
+
 ## Copying images and charts between registries
 
 1. Execute:
@@ -209,7 +217,7 @@ To exit just execute:
 exit
 ```
 
-## Checking images
+## Checking images content
 
 To check images use the following commands within the imgutils/nmaguiar:
 
@@ -218,6 +226,9 @@ $ dive docker.io/some/image:latest
 [...]
 $ docker image save some/image:latest > image.tar
 [...]
+$ ojob expand.yaml image=image.tar output=output
+# Check the output for the entrypoint and other information about the image
+$ cd output
 $ mc
-# then use the midnight-commander UI to check the details of image.tar on specific layers
+# then use the midnight-commander UI to check the contents
 ```
