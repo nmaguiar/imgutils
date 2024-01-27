@@ -28,6 +28,7 @@ RUN apk update\
  && /openaf/opack install Kube\
  && mkdir /openaf/ojobs\
  && /openaf/ojob ojob.io/get job=ojob.io/docker/expand.yaml > /openaf/ojobs/expand.yaml\
+ && /openaf/ojob ojob.io/get job=ojob.io/docker/collapse.yaml > /openaf/ojobs/collapse.yaml\
  && /openaf/ojob ojob.io/get job=ojob.io/docker/listHubRepo.yaml > /openaf/ojobs/listHubRepo.yaml\
  && chown -R openaf:0 /openaf\
  && chown openaf:0 /openaf/.opack.db\

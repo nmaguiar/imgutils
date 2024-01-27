@@ -226,7 +226,7 @@ $ dive docker.io/some/image:latest
 [...]
 $ docker image save some/image:latest > image.tar
 [...]
-$ ojob expand.yaml image=image.tar output=output
+$ ojob expand.yaml image=image.tar output=output json=image.json
 # Check the output for the entrypoint and other information about the image
 $ cd output
 $ mc
