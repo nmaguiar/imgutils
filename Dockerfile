@@ -26,6 +26,7 @@ RUN apk update\
  && /openaf/ojob ojob.io/kube/getCriCtl path=/usr/bin\
  && /openaf/opack install DockerRegistry\
  && /openaf/opack install Kube\
+ && /openaf/opack install oafproc\
  && mkdir /openaf/ojobs\
  && /openaf/ojob ojob.io/get job=ojob.io/docker/expand.yaml > /openaf/ojobs/expand.yaml\
  && /openaf/ojob ojob.io/get job=ojob.io/docker/collapse.yaml > /openaf/ojobs/collapse.yaml\

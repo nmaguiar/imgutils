@@ -7,7 +7,7 @@ Alpine based image with:
 * docker-cli
 * crictl
 * dive (https://github.com/wagoodman/dive)
-* openaf (with DockerRegistry, Kube)
+* openaf (with DockerRegistry, Kube, oafp)
 * mc (Midnight Commander)
 
 This should be enough tools to be able to manage images on a Kubernetes cluster running inside the cluster (with the right permissions).
