@@ -8,13 +8,15 @@
 │     ╰ Vulnerabilities ─ [0] ╭ VulnerabilityID : CVE-2023-47108 
 │                             ├ PkgName         : go.opentelemetry.io/contrib/instrumentation/google.golan
 │                             │                   g.org/grpc/otelgrpc 
+│                             ├ PkgIdentifier    ─ PURL: pkg:golang/go.opentelemetry.io/contrib/instrument
+│                             │                          ation/google.golang.org/grpc/otelgrpc@v0.42.0 
 │                             ├ InstalledVersion: v0.42.0 
 │                             ├ FixedVersion    : 0.46.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:7bc54f2d7dd4b53318f93c421e3aee4a522cfba2
-│                             │                  │         caee10a49073db034a787c12 
-│                             │                  ╰ DiffID: sha256:31ac254ccf1a47c19a5f5d714861561602227534
-│                             │                            fd3d4611306fc36f1dca8dd8 
+│                             ├ Layer            ╭ Digest: sha256:533ced30a4a686e9e75101ea62f4516d58eca85d
+│                             │                  │         566cd832115d01cde4226c0f 
+│                             │                  ╰ DiffID: sha256:8d7a9a5334af6a4603c061b1960f48455bf64b1e
+│                             │                            6a246de23e72537d3bf168a7 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-47108 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -80,13 +82,15 @@
 │     ├ Type           : gobinary 
 │     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : GHSA-jq35-85cj-fj4p 
 │                       │     ├ PkgName         : github.com/docker/docker 
+│                       │     ├ PkgIdentifier    ─ PURL: pkg:golang/github.com/docker/docker@v24.0.2%2Binc
+│                       │     │                          ompatible 
 │                       │     ├ InstalledVersion: v24.0.2+incompatible 
 │                       │     ├ FixedVersion    : 24.0.7, 23.0.8, 20.10.27 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:7bc54f2d7dd4b53318f93c421e3aee4a522cfba2
-│                       │     │                  │         caee10a49073db034a787c12 
-│                       │     │                  ╰ DiffID: sha256:31ac254ccf1a47c19a5f5d714861561602227534
-│                       │     │                            fd3d4611306fc36f1dca8dd8 
+│                       │     ├ Layer            ╭ Digest: sha256:533ced30a4a686e9e75101ea62f4516d58eca85d
+│                       │     │                  │         566cd832115d01cde4226c0f 
+│                       │     │                  ╰ DiffID: sha256:8d7a9a5334af6a4603c061b1960f48455bf64b1e
+│                       │     │                            6a246de23e72537d3bf168a7 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://github.com/advisories/GHSA-jq35-85cj-fj4p 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -176,13 +180,14 @@
 │                       │                               HSA-jq35-85cj-fj4p 
 │                       ├ [1] ╭ VulnerabilityID : CVE-2023-39325 
 │                       │     ├ PkgName         : golang.org/x/net 
+│                       │     ├ PkgIdentifier    ─ PURL: pkg:golang/golang.org/x/net@v0.11.0 
 │                       │     ├ InstalledVersion: v0.11.0 
 │                       │     ├ FixedVersion    : 0.17.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:7bc54f2d7dd4b53318f93c421e3aee4a522cfba2
-│                       │     │                  │         caee10a49073db034a787c12 
-│                       │     │                  ╰ DiffID: sha256:31ac254ccf1a47c19a5f5d714861561602227534
-│                       │     │                            fd3d4611306fc36f1dca8dd8 
+│                       │     ├ Layer            ╭ Digest: sha256:533ced30a4a686e9e75101ea62f4516d58eca85d
+│                       │     │                  │         566cd832115d01cde4226c0f 
+│                       │     │                  ╰ DiffID: sha256:8d7a9a5334af6a4603c061b1960f48455bf64b1e
+│                       │     │                            6a246de23e72537d3bf168a7 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-39325 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -362,13 +367,14 @@
 │                       │     ╰ LastModifiedDate: 2024-01-21T02:02:56.727Z 
 │                       ├ [2] ╭ VulnerabilityID : CVE-2023-3978 
 │                       │     ├ PkgName         : golang.org/x/net 
+│                       │     ├ PkgIdentifier    ─ PURL: pkg:golang/golang.org/x/net@v0.11.0 
 │                       │     ├ InstalledVersion: v0.11.0 
 │                       │     ├ FixedVersion    : 0.13.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:7bc54f2d7dd4b53318f93c421e3aee4a522cfba2
-│                       │     │                  │         caee10a49073db034a787c12 
-│                       │     │                  ╰ DiffID: sha256:31ac254ccf1a47c19a5f5d714861561602227534
-│                       │     │                            fd3d4611306fc36f1dca8dd8 
+│                       │     ├ Layer            ╭ Digest: sha256:533ced30a4a686e9e75101ea62f4516d58eca85d
+│                       │     │                  │         566cd832115d01cde4226c0f 
+│                       │     │                  ╰ DiffID: sha256:8d7a9a5334af6a4603c061b1960f48455bf64b1e
+│                       │     │                            6a246de23e72537d3bf168a7 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-3978 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -424,13 +430,14 @@
 │                       │     ╰ LastModifiedDate: 2023-11-07T04:20:03.647Z 
 │                       ╰ [3] ╭ VulnerabilityID : CVE-2023-44487 
 │                             ├ PkgName         : golang.org/x/net 
+│                             ├ PkgIdentifier    ─ PURL: pkg:golang/golang.org/x/net@v0.11.0 
 │                             ├ InstalledVersion: v0.11.0 
 │                             ├ FixedVersion    : 0.17.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:7bc54f2d7dd4b53318f93c421e3aee4a522cfba2
-│                             │                  │         caee10a49073db034a787c12 
-│                             │                  ╰ DiffID: sha256:31ac254ccf1a47c19a5f5d714861561602227534
-│                             │                            fd3d4611306fc36f1dca8dd8 
+│                             ├ Layer            ╭ Digest: sha256:533ced30a4a686e9e75101ea62f4516d58eca85d
+│                             │                  │         566cd832115d01cde4226c0f 
+│                             │                  ╰ DiffID: sha256:8d7a9a5334af6a4603c061b1960f48455bf64b1e
+│                             │                            6a246de23e72537d3bf168a7 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-44487 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -828,13 +835,14 @@
 │     ├ Type           : gobinary 
 │     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : GHSA-7ww5-4wqc-m92c 
 │                       │     ├ PkgName         : github.com/containerd/containerd 
+│                       │     ├ PkgIdentifier    ─ PURL: pkg:golang/github.com/containerd/containerd@v1.7.6 
 │                       │     ├ InstalledVersion: v1.7.6 
 │                       │     ├ FixedVersion    : 1.6.26, 1.7.11 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:7bc54f2d7dd4b53318f93c421e3aee4a522cfba2
-│                       │     │                  │         caee10a49073db034a787c12 
-│                       │     │                  ╰ DiffID: sha256:31ac254ccf1a47c19a5f5d714861561602227534
-│                       │     │                            fd3d4611306fc36f1dca8dd8 
+│                       │     ├ Layer            ╭ Digest: sha256:533ced30a4a686e9e75101ea62f4516d58eca85d
+│                       │     │                  │         566cd832115d01cde4226c0f 
+│                       │     │                  ╰ DiffID: sha256:8d7a9a5334af6a4603c061b1960f48455bf64b1e
+│                       │     │                            6a246de23e72537d3bf168a7 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://github.com/advisories/GHSA-7ww5-4wqc-m92c 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -921,13 +929,14 @@
 │                       │                               advisories/GHSA-7ww5-4wqc-m92c 
 │                       ╰ [1] ╭ VulnerabilityID : CVE-2023-48795 
 │                             ├ PkgName         : golang.org/x/crypto 
+│                             ├ PkgIdentifier    ─ PURL: pkg:golang/golang.org/x/crypto@v0.14.0 
 │                             ├ InstalledVersion: v0.14.0 
 │                             ├ FixedVersion    : 0.17.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:7bc54f2d7dd4b53318f93c421e3aee4a522cfba2
-│                             │                  │         caee10a49073db034a787c12 
-│                             │                  ╰ DiffID: sha256:31ac254ccf1a47c19a5f5d714861561602227534
-│                             │                            fd3d4611306fc36f1dca8dd8 
+│                             ├ Layer            ╭ Digest: sha256:533ced30a4a686e9e75101ea62f4516d58eca85d
+│                             │                  │         566cd832115d01cde4226c0f 
+│                             │                  ╰ DiffID: sha256:8d7a9a5334af6a4603c061b1960f48455bf64b1e
+│                             │                            6a246de23e72537d3bf168a7 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-48795 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -1231,13 +1240,14 @@
       ├ Type           : gobinary 
       ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-21626 
                         │     ├ PkgName         : github.com/opencontainers/runc 
+                        │     ├ PkgIdentifier    ─ PURL: pkg:golang/github.com/opencontainers/runc@v1.1.10 
                         │     ├ InstalledVersion: v1.1.10 
                         │     ├ FixedVersion    : 1.1.12 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:7bc54f2d7dd4b53318f93c421e3aee4a522cfba2
-                        │     │                  │         caee10a49073db034a787c12 
-                        │     │                  ╰ DiffID: sha256:31ac254ccf1a47c19a5f5d714861561602227534
-                        │     │                            fd3d4611306fc36f1dca8dd8 
+                        │     ├ Layer            ╭ Digest: sha256:533ced30a4a686e9e75101ea62f4516d58eca85d
+                        │     │                  │         566cd832115d01cde4226c0f 
+                        │     │                  ╰ DiffID: sha256:8d7a9a5334af6a4603c061b1960f48455bf64b1e
+                        │     │                            6a246de23e72537d3bf168a7 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-21626 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -1285,16 +1295,17 @@
                         │     │                  ├ [7]: https://ubuntu.com/security/notices/USN-6619-1 
                         │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-21626 
                         │     ├ PublishedDate   : 2024-01-31T22:15:53.78Z 
-                        │     ╰ LastModifiedDate: 2024-01-31T22:15:53.78Z 
+                        │     ╰ LastModifiedDate: 2024-02-01T03:18:21.737Z 
                         ╰ [1] ╭ VulnerabilityID : CVE-2023-48795 
                               ├ PkgName         : golang.org/x/crypto 
+                              ├ PkgIdentifier    ─ PURL: pkg:golang/golang.org/x/crypto@v0.15.0 
                               ├ InstalledVersion: v0.15.0 
                               ├ FixedVersion    : 0.17.0 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:7bc54f2d7dd4b53318f93c421e3aee4a522cfba2
-                              │                  │         caee10a49073db034a787c12 
-                              │                  ╰ DiffID: sha256:31ac254ccf1a47c19a5f5d714861561602227534
-                              │                            fd3d4611306fc36f1dca8dd8 
+                              ├ Layer            ╭ Digest: sha256:533ced30a4a686e9e75101ea62f4516d58eca85d
+                              │                  │         566cd832115d01cde4226c0f 
+                              │                  ╰ DiffID: sha256:8d7a9a5334af6a4603c061b1960f48455bf64b1e
+                              │                            6a246de23e72537d3bf168a7 
                               ├ SeveritySource  : ghsa 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-48795 
                               ├ DataSource       ╭ ID  : ghsa 
