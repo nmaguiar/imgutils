@@ -8,6 +8,8 @@
 │     ╰ Vulnerabilities ─ [0] ╭ VulnerabilityID : CVE-2023-47108 
 │                             ├ PkgName         : go.opentelemetry.io/contrib/instrumentation/google.golan
 │                             │                   g.org/grpc/otelgrpc 
+│                             ├ PkgIdentifier    ─ PURL: pkg:golang/go.opentelemetry.io/contrib/instrument
+│                             │                          ation/google.golang.org/grpc/otelgrpc@v0.42.0 
 │                             ├ InstalledVersion: v0.42.0 
 │                             ├ FixedVersion    : 0.46.0 
 │                             ├ Status          : fixed 
@@ -80,6 +82,8 @@
 │     ├ Type           : gobinary 
 │     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : GHSA-jq35-85cj-fj4p 
 │                       │     ├ PkgName         : github.com/docker/docker 
+│                       │     ├ PkgIdentifier    ─ PURL: pkg:golang/github.com/docker/docker@v24.0.2%2Binc
+│                       │     │                          ompatible 
 │                       │     ├ InstalledVersion: v24.0.2+incompatible 
 │                       │     ├ FixedVersion    : 24.0.7, 23.0.8, 20.10.27 
 │                       │     ├ Status          : fixed 
@@ -176,6 +180,7 @@
 │                       │                               HSA-jq35-85cj-fj4p 
 │                       ├ [1] ╭ VulnerabilityID : CVE-2023-39325 
 │                       │     ├ PkgName         : golang.org/x/net 
+│                       │     ├ PkgIdentifier    ─ PURL: pkg:golang/golang.org/x/net@v0.11.0 
 │                       │     ├ InstalledVersion: v0.11.0 
 │                       │     ├ FixedVersion    : 0.17.0 
 │                       │     ├ Status          : fixed 
@@ -362,6 +367,7 @@
 │                       │     ╰ LastModifiedDate: 2024-01-21T02:02:56.727Z 
 │                       ├ [2] ╭ VulnerabilityID : CVE-2023-3978 
 │                       │     ├ PkgName         : golang.org/x/net 
+│                       │     ├ PkgIdentifier    ─ PURL: pkg:golang/golang.org/x/net@v0.11.0 
 │                       │     ├ InstalledVersion: v0.11.0 
 │                       │     ├ FixedVersion    : 0.13.0 
 │                       │     ├ Status          : fixed 
@@ -424,6 +430,7 @@
 │                       │     ╰ LastModifiedDate: 2023-11-07T04:20:03.647Z 
 │                       ╰ [3] ╭ VulnerabilityID : CVE-2023-44487 
 │                             ├ PkgName         : golang.org/x/net 
+│                             ├ PkgIdentifier    ─ PURL: pkg:golang/golang.org/x/net@v0.11.0 
 │                             ├ InstalledVersion: v0.11.0 
 │                             ├ FixedVersion    : 0.17.0 
 │                             ├ Status          : fixed 
@@ -828,6 +835,7 @@
 │     ├ Type           : gobinary 
 │     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : GHSA-7ww5-4wqc-m92c 
 │                       │     ├ PkgName         : github.com/containerd/containerd 
+│                       │     ├ PkgIdentifier    ─ PURL: pkg:golang/github.com/containerd/containerd@v1.7.6 
 │                       │     ├ InstalledVersion: v1.7.6 
 │                       │     ├ FixedVersion    : 1.6.26, 1.7.11 
 │                       │     ├ Status          : fixed 
@@ -921,6 +929,7 @@
 │                       │                               advisories/GHSA-7ww5-4wqc-m92c 
 │                       ╰ [1] ╭ VulnerabilityID : CVE-2023-48795 
 │                             ├ PkgName         : golang.org/x/crypto 
+│                             ├ PkgIdentifier    ─ PURL: pkg:golang/golang.org/x/crypto@v0.14.0 
 │                             ├ InstalledVersion: v0.14.0 
 │                             ├ FixedVersion    : 0.17.0 
 │                             ├ Status          : fixed 
@@ -1231,6 +1240,7 @@
       ├ Type           : gobinary 
       ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-21626 
                         │     ├ PkgName         : github.com/opencontainers/runc 
+                        │     ├ PkgIdentifier    ─ PURL: pkg:golang/github.com/opencontainers/runc@v1.1.10 
                         │     ├ InstalledVersion: v1.1.10 
                         │     ├ FixedVersion    : 1.1.12 
                         │     ├ Status          : fixed 
@@ -1285,9 +1295,10 @@
                         │     │                  ├ [7]: https://ubuntu.com/security/notices/USN-6619-1 
                         │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-21626 
                         │     ├ PublishedDate   : 2024-01-31T22:15:53.78Z 
-                        │     ╰ LastModifiedDate: 2024-01-31T22:15:53.78Z 
+                        │     ╰ LastModifiedDate: 2024-02-01T03:18:21.737Z 
                         ╰ [1] ╭ VulnerabilityID : CVE-2023-48795 
                               ├ PkgName         : golang.org/x/crypto 
+                              ├ PkgIdentifier    ─ PURL: pkg:golang/golang.org/x/crypto@v0.15.0 
                               ├ InstalledVersion: v0.15.0 
                               ├ FixedVersion    : 0.17.0 
                               ├ Status          : fixed 
