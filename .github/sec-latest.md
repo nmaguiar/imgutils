@@ -254,7 +254,7 @@
 │                       │     │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
 │                       │     │                  │       E-2023-44487 
 │                       │     │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2023-6077.html 
-│                       │     │                  ├ [12]: https://errata.rockylinux.org/RLSA-2023:6077 
+│                       │     │                  ├ [12]: https://errata.rockylinux.org/RLSA-2023:5863 
 │                       │     │                  ├ [13]: https://github.com/golang/go/commit/24ae2d927285c
 │                       │     │                  │       697440fdde3ad7f26028354bcf3 [golang- 1.21] 
 │                       │     │                  ├ [14]: https://github.com/golang/go/commit/e175f27f58aa7
@@ -388,7 +388,7 @@
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-79 
 │                       │     ├ VendorSeverity   ╭ alma       : 2 
-│                       │     │                  ├ amazon     : 3 
+│                       │     │                  ├ amazon     : 2 
 │                       │     │                  ├ cbl-mariner: 2 
 │                       │     │                  ├ ghsa       : 2 
 │                       │     │                  ├ nvd        : 2 
@@ -531,7 +531,7 @@
 │                             │                  ├ [28] : https://edg.io/lp/blog/resets-leaks-ddos-and-the
 │                             │                  │        -tale-of-a-hidden-cve 
 │                             │                  ├ [29] : https://errata.almalinux.org/9/ALSA-2023-6746.html 
-│                             │                  ├ [30] : https://errata.rockylinux.org/RLSA-2023:5838 
+│                             │                  ├ [30] : https://errata.rockylinux.org/RLSA-2023:5928 
 │                             │                  ├ [31] : https://forums.swift.org/t/swift-nio-http2-secur
 │                             │                  │        ity-update-cve-2023-44487-http-2-dos/67764 
 │                             │                  ├ [32] : https://gist.github.com/adulau/7c2bfb8e9cdbe4b35
