@@ -13,10 +13,10 @@
 │                             ├ InstalledVersion: v0.42.0 
 │                             ├ FixedVersion    : 0.46.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:9b4bb721e77e4449168672bd19eabd06ff2790c2
-│                             │                  │         3fdb33eefa82208e75489e23 
-│                             │                  ╰ DiffID: sha256:97202a4617ad60a02670e1d643d311696f36db7f
-│                             │                            988c6b102f0b8e305f3c5038 
+│                             ├ Layer            ╭ Digest: sha256:cac5be5fc0480a0af79091d248d5fab72f5de74c
+│                             │                  │         7db202b082df5706234e3260 
+│                             │                  ╰ DiffID: sha256:d85509a55710f408080b308fee2b01101c7229e3
+│                             │                            c28440e1d78dc0f775a8b526 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-47108 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -86,10 +86,10 @@
 │                       │     ├ InstalledVersion: v1.7.6 
 │                       │     ├ FixedVersion    : 1.6.26, 1.7.11 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:9b4bb721e77e4449168672bd19eabd06ff2790c2
-│                       │     │                  │         3fdb33eefa82208e75489e23 
-│                       │     │                  ╰ DiffID: sha256:97202a4617ad60a02670e1d643d311696f36db7f
-│                       │     │                            988c6b102f0b8e305f3c5038 
+│                       │     ├ Layer            ╭ Digest: sha256:cac5be5fc0480a0af79091d248d5fab72f5de74c
+│                       │     │                  │         7db202b082df5706234e3260 
+│                       │     │                  ╰ DiffID: sha256:d85509a55710f408080b308fee2b01101c7229e3
+│                       │     │                            c28440e1d78dc0f775a8b526 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://github.com/advisories/GHSA-7ww5-4wqc-m92c 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -180,10 +180,10 @@
 │                             ├ InstalledVersion: v0.14.0 
 │                             ├ FixedVersion    : 0.17.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:9b4bb721e77e4449168672bd19eabd06ff2790c2
-│                             │                  │         3fdb33eefa82208e75489e23 
-│                             │                  ╰ DiffID: sha256:97202a4617ad60a02670e1d643d311696f36db7f
-│                             │                            988c6b102f0b8e305f3c5038 
+│                             ├ Layer            ╭ Digest: sha256:cac5be5fc0480a0af79091d248d5fab72f5de74c
+│                             │                  │         7db202b082df5706234e3260 
+│                             │                  ╰ DiffID: sha256:d85509a55710f408080b308fee2b01101c7229e3
+│                             │                            c28440e1d78dc0f775a8b526 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-48795 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -316,171 +316,173 @@
 │                             │                  ├ [42] : https://github.com/openssh/openssh-portable/comm
 │                             │                  │        its/master 
 │                             │                  ├ [43] : https://github.com/paramiko/paramiko/issues/2337 
-│                             │                  ├ [44] : https://github.com/proftpd/proftpd/blob/0a7ea9b0
+│                             │                  ├ [44] : https://github.com/paramiko/paramiko/issues/2337
+│                             │                  │        #issuecomment-1887642773 
+│                             │                  ├ [45] : https://github.com/proftpd/proftpd/blob/0a7ea9b0
 │                             │                  │        ba9fcdf368374a226370d08f10397d99/RELEASE_NOTES 
-│                             │                  ├ [45] : https://github.com/proftpd/proftpd/blob/d21e7a2e
+│                             │                  ├ [46] : https://github.com/proftpd/proftpd/blob/d21e7a2e
 │                             │                  │        47e9b38f709bec58e3fa711f759ad0e1/RELEASE_NOTES 
-│                             │                  ├ [46] : https://github.com/proftpd/proftpd/blob/master/R
+│                             │                  ├ [47] : https://github.com/proftpd/proftpd/blob/master/R
 │                             │                  │        ELEASE_NOTES 
-│                             │                  ├ [47] : https://github.com/proftpd/proftpd/issues/456 
-│                             │                  ├ [48] : https://github.com/rapier1/hpn-ssh/releases 
-│                             │                  ├ [49] : https://github.com/ronf/asyncssh/blob/develop/do
+│                             │                  ├ [48] : https://github.com/proftpd/proftpd/issues/456 
+│                             │                  ├ [49] : https://github.com/rapier1/hpn-ssh/releases 
+│                             │                  ├ [50] : https://github.com/ronf/asyncssh/blob/develop/do
 │                             │                  │        cs/changes.rst 
-│                             │                  ├ [50] : https://github.com/ronf/asyncssh/security/adviso
+│                             │                  ├ [51] : https://github.com/ronf/asyncssh/security/adviso
 │                             │                  │        ries/GHSA-hfmc-7525-mj55 
-│                             │                  ├ [51] : https://github.com/ronf/asyncssh/tags 
-│                             │                  ├ [52] : https://github.com/ssh-mitm/ssh-mitm/issues/165 
-│                             │                  ├ [53] : https://github.com/warp-tech/russh 
-│                             │                  ├ [54] : https://github.com/warp-tech/russh/commit/1aa340
+│                             │                  ├ [52] : https://github.com/ronf/asyncssh/tags 
+│                             │                  ├ [53] : https://github.com/ssh-mitm/ssh-mitm/issues/165 
+│                             │                  ├ [54] : https://github.com/warp-tech/russh 
+│                             │                  ├ [55] : https://github.com/warp-tech/russh/commit/1aa340
 │                             │                  │        a7df1d5be1c0f4a9e247aade76dfdd2951 
-│                             │                  ├ [55] : https://github.com/warp-tech/russh/releases/tag/
+│                             │                  ├ [56] : https://github.com/warp-tech/russh/releases/tag/
 │                             │                  │        v0.40.2 
-│                             │                  ├ [56] : https://github.com/warp-tech/russh/security/advi
+│                             │                  ├ [57] : https://github.com/warp-tech/russh/security/advi
 │                             │                  │        sories/GHSA-45x7-px36-x8w8 
-│                             │                  ├ [57] : https://gitlab.com/libssh/libssh-mirror/-/tags 
-│                             │                  ├ [58] : https://go.dev/cl/550715 
-│                             │                  ├ [59] : https://go.dev/issue/64784 
-│                             │                  ├ [60] : https://groups.google.com/g/golang-announce/c/-n
+│                             │                  ├ [58] : https://gitlab.com/libssh/libssh-mirror/-/tags 
+│                             │                  ├ [59] : https://go.dev/cl/550715 
+│                             │                  ├ [60] : https://go.dev/issue/64784 
+│                             │                  ├ [61] : https://groups.google.com/g/golang-announce/c/-n
 │                             │                  │        5WqVC18LQ 
-│                             │                  ├ [61] : https://groups.google.com/g/golang-announce/c/qA
+│                             │                  ├ [62] : https://groups.google.com/g/golang-announce/c/qA
 │                             │                  │        3XtxvMUyg 
-│                             │                  ├ [62] : https://help.panic.com/releasenotes/transmit5/ 
-│                             │                  ├ [63] : https://jadaptive.com/important-java-ssh-securit
+│                             │                  ├ [63] : https://help.panic.com/releasenotes/transmit5/ 
+│                             │                  ├ [64] : https://jadaptive.com/important-java-ssh-securit
 │                             │                  │        y-update-new-ssh-vulnerability-discovered-cve-2023-48
 │                             │                  │        795/ 
-│                             │                  ├ [64] : https://linux.oracle.com/cve/CVE-2023-48795.html 
-│                             │                  ├ [65] : https://linux.oracle.com/errata/ELSA-2024-0628.html 
-│                             │                  ├ [66] : https://lists.debian.org/debian-lts-announce/202
-│                             │                  │        3/12/msg00017.html 
+│                             │                  ├ [65] : https://linux.oracle.com/cve/CVE-2023-48795.html 
+│                             │                  ├ [66] : https://linux.oracle.com/errata/ELSA-2024-0628.html 
 │                             │                  ├ [67] : https://lists.debian.org/debian-lts-announce/202
-│                             │                  │        4/01/msg00013.html 
+│                             │                  │        3/12/msg00017.html 
 │                             │                  ├ [68] : https://lists.debian.org/debian-lts-announce/202
+│                             │                  │        4/01/msg00013.html 
+│                             │                  ├ [69] : https://lists.debian.org/debian-lts-announce/202
 │                             │                  │        4/01/msg00014.html 
-│                             │                  ├ [69] : https://lists.fedoraproject.org/archives/list/pa
+│                             │                  ├ [70] : https://lists.fedoraproject.org/archives/list/pa
 │                             │                  │        ckage-announce%40lists.fedoraproject.org/message/33XH
 │                             │                  │        JUB6ROFUOH2OQNENFROTVH6MHSHA/ 
-│                             │                  ├ [70] : https://lists.fedoraproject.org/archives/list/pa
+│                             │                  ├ [71] : https://lists.fedoraproject.org/archives/list/pa
 │                             │                  │        ckage-announce%40lists.fedoraproject.org/message/3CAY
 │                             │                  │        YW35MUTNO65RVAELICTNZZFMT2XS/ 
-│                             │                  ├ [71] : https://lists.fedoraproject.org/archives/list/pa
+│                             │                  ├ [72] : https://lists.fedoraproject.org/archives/list/pa
 │                             │                  │        ckage-announce%40lists.fedoraproject.org/message/3JIM
 │                             │                  │        LVBDWOP4FUPXPTB4PGHHIOMGFLQE/ 
-│                             │                  ├ [72] : https://lists.fedoraproject.org/archives/list/pa
+│                             │                  ├ [73] : https://lists.fedoraproject.org/archives/list/pa
 │                             │                  │        ckage-announce%40lists.fedoraproject.org/message/3YQL
 │                             │                  │        UQWLIHDB5QCXQEX7HXHAWMOKPP5O/ 
-│                             │                  ├ [73] : https://lists.fedoraproject.org/archives/list/pa
+│                             │                  ├ [74] : https://lists.fedoraproject.org/archives/list/pa
 │                             │                  │        ckage-announce%40lists.fedoraproject.org/message/6Y74
 │                             │                  │        KVCPEPT4MVU3LHDWCNNOXOE5ZLUR/ 
-│                             │                  ├ [74] : https://lists.fedoraproject.org/archives/list/pa
+│                             │                  ├ [75] : https://lists.fedoraproject.org/archives/list/pa
 │                             │                  │        ckage-announce%40lists.fedoraproject.org/message/APYI
 │                             │                  │        XIQOVDCRWLHTGB4VYMAUIAQLKYJ3/ 
-│                             │                  ├ [75] : https://lists.fedoraproject.org/archives/list/pa
+│                             │                  ├ [76] : https://lists.fedoraproject.org/archives/list/pa
 │                             │                  │        ckage-announce%40lists.fedoraproject.org/message/BL5K
 │                             │                  │        TLOSLH2KHRN4HCXJPK3JUVLDGEL6/ 
-│                             │                  ├ [76] : https://lists.fedoraproject.org/archives/list/pa
+│                             │                  ├ [77] : https://lists.fedoraproject.org/archives/list/pa
 │                             │                  │        ckage-announce%40lists.fedoraproject.org/message/C3AF
 │                             │                  │        MZ6MH2UHHOPIWT5YLSFV3D2VB3AC/ 
-│                             │                  ├ [77] : https://lists.fedoraproject.org/archives/list/pa
+│                             │                  ├ [78] : https://lists.fedoraproject.org/archives/list/pa
 │                             │                  │        ckage-announce%40lists.fedoraproject.org/message/CHHI
 │                             │                  │        TS4PUOZAKFIUBQAQZC7JWXMOYE4B/ 
-│                             │                  ├ [78] : https://lists.fedoraproject.org/archives/list/pa
+│                             │                  ├ [79] : https://lists.fedoraproject.org/archives/list/pa
 │                             │                  │        ckage-announce%40lists.fedoraproject.org/message/F7EY
 │                             │                  │        CFQCTSGJXWO3ZZ44MGKFC5HA7G3Y/ 
-│                             │                  ├ [79] : https://lists.fedoraproject.org/archives/list/pa
+│                             │                  ├ [80] : https://lists.fedoraproject.org/archives/list/pa
 │                             │                  │        ckage-announce%40lists.fedoraproject.org/message/HYED
 │                             │                  │        EXIKFKTUJIN43RG4B7T5ZS6MHUSP/ 
-│                             │                  ├ [80] : https://lists.fedoraproject.org/archives/list/pa
+│                             │                  ├ [81] : https://lists.fedoraproject.org/archives/list/pa
 │                             │                  │        ckage-announce%40lists.fedoraproject.org/message/I724
 │                             │                  │        O3LSRCPO4WNVIXTZCT4VVRMXMMSG/ 
-│                             │                  ├ [81] : https://lists.fedoraproject.org/archives/list/pa
+│                             │                  ├ [82] : https://lists.fedoraproject.org/archives/list/pa
 │                             │                  │        ckage-announce%40lists.fedoraproject.org/message/KEOT
 │                             │                  │        KBUPZXHE3F352JBYNTSNRXYLWD6P/ 
-│                             │                  ├ [82] : https://lists.fedoraproject.org/archives/list/pa
+│                             │                  ├ [83] : https://lists.fedoraproject.org/archives/list/pa
 │                             │                  │        ckage-announce%40lists.fedoraproject.org/message/KMZC
 │                             │                  │        VGUGJZZVDPCVDA7TEB22VUCNEXDD/ 
-│                             │                  ├ [83] : https://lists.fedoraproject.org/archives/list/pa
+│                             │                  ├ [84] : https://lists.fedoraproject.org/archives/list/pa
 │                             │                  │        ckage-announce%40lists.fedoraproject.org/message/L5Y6
 │                             │                  │        MNNVAPIJSXJERQ6PKZVCIUXSNJK7/ 
-│                             │                  ├ [84] : https://lists.fedoraproject.org/archives/list/pa
+│                             │                  ├ [85] : https://lists.fedoraproject.org/archives/list/pa
 │                             │                  │        ckage-announce%40lists.fedoraproject.org/message/LZQV
 │                             │                  │        UHWVWRH73YBXUQJOD6CKHDQBU3DM/ 
-│                             │                  ├ [85] : https://lists.fedoraproject.org/archives/list/pa
+│                             │                  ├ [86] : https://lists.fedoraproject.org/archives/list/pa
 │                             │                  │        ckage-announce%40lists.fedoraproject.org/message/MKQR
 │                             │                  │        BF3DWMWPH36LBCOBUTSIZRTPEZXB/ 
-│                             │                  ├ [86] : https://lists.fedoraproject.org/archives/list/pa
+│                             │                  ├ [87] : https://lists.fedoraproject.org/archives/list/pa
 │                             │                  │        ckage-announce%40lists.fedoraproject.org/message/QI3E
 │                             │                  │        HAHABFQK7OABNCSF5GMYP6TONTI7/ 
-│                             │                  ├ [87] : https://matt.ucc.asn.au/dropbear/CHANGES 
-│                             │                  ├ [88] : https://nest.pijul.com/pijul/thrussh/changes/D6H
+│                             │                  ├ [88] : https://matt.ucc.asn.au/dropbear/CHANGES 
+│                             │                  ├ [89] : https://nest.pijul.com/pijul/thrussh/changes/D6H
 │                             │                  │        7OWTTMHHX6BTB3B6MNBOBX2L66CBL4LGSEUSAI2MCRCJDQFRQC
 │                             │                  │         
-│                             │                  ├ [89] : https://news.ycombinator.com/item?id=38684904 
-│                             │                  ├ [90] : https://news.ycombinator.com/item?id=38685286 
-│                             │                  ├ [91] : https://news.ycombinator.com/item?id=38732005 
-│                             │                  ├ [92] : https://nova.app/releases/#v11.8 
-│                             │                  ├ [93] : https://nvd.nist.gov/vuln/detail/CVE-2023-48795 
-│                             │                  ├ [94] : https://oryx-embedded.com/download/#changelog 
-│                             │                  ├ [95] : https://psirt.global.sonicwall.com/vuln-detail/S
+│                             │                  ├ [90] : https://news.ycombinator.com/item?id=38684904 
+│                             │                  ├ [91] : https://news.ycombinator.com/item?id=38685286 
+│                             │                  ├ [92] : https://news.ycombinator.com/item?id=38732005 
+│                             │                  ├ [93] : https://nova.app/releases/#v11.8 
+│                             │                  ├ [94] : https://nvd.nist.gov/vuln/detail/CVE-2023-48795 
+│                             │                  ├ [95] : https://oryx-embedded.com/download/#changelog 
+│                             │                  ├ [96] : https://psirt.global.sonicwall.com/vuln-detail/S
 │                             │                  │        NWLID-2024-0002 
-│                             │                  ├ [96] : https://roumenpetrov.info/secsh/#news20231220 
-│                             │                  ├ [97] : https://security-tracker.debian.org/tracker/CVE-
+│                             │                  ├ [97] : https://roumenpetrov.info/secsh/#news20231220 
+│                             │                  ├ [98] : https://security-tracker.debian.org/tracker/CVE-
 │                             │                  │        2023-48795 
-│                             │                  ├ [98] : https://security-tracker.debian.org/tracker/sour
-│                             │                  │        ce-package/libssh2 
 │                             │                  ├ [99] : https://security-tracker.debian.org/tracker/sour
-│                             │                  │        ce-package/proftpd-dfsg 
+│                             │                  │        ce-package/libssh2 
 │                             │                  ├ [100]: https://security-tracker.debian.org/tracker/sour
+│                             │                  │        ce-package/proftpd-dfsg 
+│                             │                  ├ [101]: https://security-tracker.debian.org/tracker/sour
 │                             │                  │        ce-package/trilead-ssh2 
-│                             │                  ├ [101]: https://security.gentoo.org/glsa/202312-16 
-│                             │                  ├ [102]: https://security.gentoo.org/glsa/202312-17 
-│                             │                  ├ [103]: https://security.netapp.com/advisory/ntap-202401
+│                             │                  ├ [102]: https://security.gentoo.org/glsa/202312-16 
+│                             │                  ├ [103]: https://security.gentoo.org/glsa/202312-17 
+│                             │                  ├ [104]: https://security.netapp.com/advisory/ntap-202401
 │                             │                  │        05-0004/ 
-│                             │                  ├ [104]: https://terrapin-attack.com/ 
-│                             │                  ├ [105]: https://thorntech.com/cve-2023-48795-and-sftp-ga
+│                             │                  ├ [105]: https://terrapin-attack.com/ 
+│                             │                  ├ [106]: https://thorntech.com/cve-2023-48795-and-sftp-ga
 │                             │                  │        teway/ 
-│                             │                  ├ [106]: https://twitter.com/TrueSkrillor/status/17367743
+│                             │                  ├ [107]: https://twitter.com/TrueSkrillor/status/17367743
 │                             │                  │        89725565005 
-│                             │                  ├ [107]: https://ubuntu.com/security/CVE-2023-48795 
-│                             │                  ├ [108]: https://ubuntu.com/security/notices/USN-6560-1 
-│                             │                  ├ [109]: https://ubuntu.com/security/notices/USN-6560-2 
-│                             │                  ├ [110]: https://ubuntu.com/security/notices/USN-6561-1 
-│                             │                  ├ [111]: https://ubuntu.com/security/notices/USN-6585-1 
-│                             │                  ├ [112]: https://ubuntu.com/security/notices/USN-6589-1 
-│                             │                  ├ [113]: https://ubuntu.com/security/notices/USN-6598-1 
-│                             │                  ├ [114]: https://winscp.net/eng/docs/history#6.2.2 
-│                             │                  ├ [115]: https://www.bitvise.com/ssh-client-version-histo
+│                             │                  ├ [108]: https://ubuntu.com/security/CVE-2023-48795 
+│                             │                  ├ [109]: https://ubuntu.com/security/notices/USN-6560-1 
+│                             │                  ├ [110]: https://ubuntu.com/security/notices/USN-6560-2 
+│                             │                  ├ [111]: https://ubuntu.com/security/notices/USN-6561-1 
+│                             │                  ├ [112]: https://ubuntu.com/security/notices/USN-6585-1 
+│                             │                  ├ [113]: https://ubuntu.com/security/notices/USN-6589-1 
+│                             │                  ├ [114]: https://ubuntu.com/security/notices/USN-6598-1 
+│                             │                  ├ [115]: https://winscp.net/eng/docs/history#6.2.2 
+│                             │                  ├ [116]: https://www.bitvise.com/ssh-client-version-histo
 │                             │                  │        ry#933 
-│                             │                  ├ [116]: https://www.bitvise.com/ssh-server-version-history 
-│                             │                  ├ [117]: https://www.chiark.greenend.org.uk/~sgtatham/put
+│                             │                  ├ [117]: https://www.bitvise.com/ssh-server-version-history 
+│                             │                  ├ [118]: https://www.chiark.greenend.org.uk/~sgtatham/put
 │                             │                  │        ty/changes.html 
-│                             │                  ├ [118]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
+│                             │                  ├ [119]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
 │                             │                  │        ge=Update 
-│                             │                  ├ [119]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
-│                             │                  ├ [120]: https://www.debian.org/security/2023/dsa-5586 
-│                             │                  ├ [121]: https://www.debian.org/security/2023/dsa-5588 
-│                             │                  ├ [122]: https://www.freebsd.org/security/advisories/Free
+│                             │                  ├ [120]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
+│                             │                  ├ [121]: https://www.debian.org/security/2023/dsa-5586 
+│                             │                  ├ [122]: https://www.debian.org/security/2023/dsa-5588 
+│                             │                  ├ [123]: https://www.freebsd.org/security/advisories/Free
 │                             │                  │        BSD-SA-23:19.openssh.asc 
-│                             │                  ├ [123]: https://www.lancom-systems.de/service-support/al
+│                             │                  ├ [124]: https://www.lancom-systems.de/service-support/al
 │                             │                  │        lgemeine-sicherheitshinweise#c243508 
-│                             │                  ├ [124]: https://www.netsarang.com/en/xshell-update-history/ 
-│                             │                  ├ [125]: https://www.openssh.com/openbsd.html 
-│                             │                  ├ [126]: https://www.openssh.com/txt/release-9.6 
-│                             │                  ├ [127]: https://www.openwall.com/lists/oss-security/2023
-│                             │                  │        /12/18/2 
+│                             │                  ├ [125]: https://www.netsarang.com/en/xshell-update-history/ 
+│                             │                  ├ [126]: https://www.openssh.com/openbsd.html 
+│                             │                  ├ [127]: https://www.openssh.com/txt/release-9.6 
 │                             │                  ├ [128]: https://www.openwall.com/lists/oss-security/2023
-│                             │                  │        /12/18/3 
+│                             │                  │        /12/18/2 
 │                             │                  ├ [129]: https://www.openwall.com/lists/oss-security/2023
+│                             │                  │        /12/18/3 
+│                             │                  ├ [130]: https://www.openwall.com/lists/oss-security/2023
 │                             │                  │        /12/20/3 
-│                             │                  ├ [130]: https://www.paramiko.org/changelog.html 
-│                             │                  ├ [131]: https://www.reddit.com/r/sysadmin/comments/18idv
+│                             │                  ├ [131]: https://www.paramiko.org/changelog.html 
+│                             │                  ├ [132]: https://www.reddit.com/r/sysadmin/comments/18idv
 │                             │                  │        52/cve202348795_why_is_this_cve_still_undisclosed/
 │                             │                  │         
-│                             │                  ├ [132]: https://www.suse.com/c/suse-addresses-the-ssh-v2
+│                             │                  ├ [133]: https://www.suse.com/c/suse-addresses-the-ssh-v2
 │                             │                  │        -protocol-terrapin-attack-aka-cve-2023-48795/ 
-│                             │                  ├ [133]: https://www.terrapin-attack.com 
-│                             │                  ├ [134]: https://www.theregister.com/2023/12/20/terrapin_
+│                             │                  ├ [134]: https://www.terrapin-attack.com 
+│                             │                  ├ [135]: https://www.theregister.com/2023/12/20/terrapin_
 │                             │                  │        attack_ssh 
-│                             │                  ╰ [135]: https://www.vandyke.com/products/securecrt/histo
+│                             │                  ╰ [136]: https://www.vandyke.com/products/securecrt/histo
 │                             │                           ry.txt 
 │                             ├ PublishedDate   : 2023-12-18T16:15:10.897Z 
 │                             ╰ LastModifiedDate: 2024-01-29T09:15:42.687Z 
@@ -493,10 +495,10 @@
                         │     ├ InstalledVersion: v1.1.10 
                         │     ├ FixedVersion    : 1.1.12 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:9b4bb721e77e4449168672bd19eabd06ff2790c2
-                        │     │                  │         3fdb33eefa82208e75489e23 
-                        │     │                  ╰ DiffID: sha256:97202a4617ad60a02670e1d643d311696f36db7f
-                        │     │                            988c6b102f0b8e305f3c5038 
+                        │     ├ Layer            ╭ Digest: sha256:cac5be5fc0480a0af79091d248d5fab72f5de74c
+                        │     │                  │         7db202b082df5706234e3260 
+                        │     │                  ╰ DiffID: sha256:d85509a55710f408080b308fee2b01101c7229e3
+                        │     │                            c28440e1d78dc0f775a8b526 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-21626 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -530,35 +532,38 @@
                         │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H
                         │     │                           │           /I:H/A:H 
                         │     │                           ╰ V3Score : 8.6 
-                        │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/0
-                        │     │                  │       2/01/1 
+                        │     ├ References       ╭ [0] : http://packetstormsecurity.com/files/176993/runc-
+                        │     │                  │       1.1.11-File-Descriptor-Leak-Privilege-Escalation.html
+                        │     │                  │       [m 
                         │     │                  ├ [1] : http://www.openwall.com/lists/oss-security/2024/0
+                        │     │                  │       2/01/1 
+                        │     │                  ├ [2] : http://www.openwall.com/lists/oss-security/2024/0
                         │     │                  │       2/02/3 
-                        │     │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2024-21626 
-                        │     │                  ├ [3] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
+                        │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2024-21626 
+                        │     │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
                         │     │                  │       E-2024-21626 
-                        │     │                  ├ [4] : https://github.com/opencontainers/runc 
-                        │     │                  ├ [5] : https://github.com/opencontainers/runc/commit/021
+                        │     │                  ├ [5] : https://github.com/opencontainers/runc 
+                        │     │                  ├ [6] : https://github.com/opencontainers/runc/commit/021
                         │     │                  │       20488a4c0fc487d1ed2867e901eeed7ce8ecf 
-                        │     │                  ├ [6] : https://github.com/opencontainers/runc/releases/t
+                        │     │                  ├ [7] : https://github.com/opencontainers/runc/releases/t
                         │     │                  │       ag/v1.1.12 
-                        │     │                  ├ [7] : https://github.com/opencontainers/runc/security/a
+                        │     │                  ├ [8] : https://github.com/opencontainers/runc/security/a
                         │     │                  │       dvisories/GHSA-xr7r-f8xq-vfvv 
-                        │     │                  ├ [8] : https://nvd.nist.gov/vuln/detail/CVE-2024-21626 
-                        │     │                  ├ [9] : https://ubuntu.com/security/notices/USN-6619-1 
-                        │     │                  ╰ [10]: https://www.cve.org/CVERecord?id=CVE-2024-21626 
+                        │     │                  ├ [9] : https://nvd.nist.gov/vuln/detail/CVE-2024-21626 
+                        │     │                  ├ [10]: https://ubuntu.com/security/notices/USN-6619-1 
+                        │     │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2024-21626 
                         │     ├ PublishedDate   : 2024-01-31T22:15:53.78Z 
-                        │     ╰ LastModifiedDate: 2024-02-02T12:15:49.553Z 
+                        │     ╰ LastModifiedDate: 2024-02-05T17:15:09.383Z 
                         ╰ [1] ╭ VulnerabilityID : CVE-2023-48795 
                               ├ PkgName         : golang.org/x/crypto 
                               ├ PkgIdentifier    ─ PURL: pkg:golang/golang.org/x/crypto@v0.15.0 
                               ├ InstalledVersion: v0.15.0 
                               ├ FixedVersion    : 0.17.0 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:9b4bb721e77e4449168672bd19eabd06ff2790c2
-                              │                  │         3fdb33eefa82208e75489e23 
-                              │                  ╰ DiffID: sha256:97202a4617ad60a02670e1d643d311696f36db7f
-                              │                            988c6b102f0b8e305f3c5038 
+                              ├ Layer            ╭ Digest: sha256:cac5be5fc0480a0af79091d248d5fab72f5de74c
+                              │                  │         7db202b082df5706234e3260 
+                              │                  ╰ DiffID: sha256:d85509a55710f408080b308fee2b01101c7229e3
+                              │                            c28440e1d78dc0f775a8b526 
                               ├ SeveritySource  : ghsa 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-48795 
                               ├ DataSource       ╭ ID  : ghsa 
@@ -691,171 +696,173 @@
                               │                  ├ [42] : https://github.com/openssh/openssh-portable/comm
                               │                  │        its/master 
                               │                  ├ [43] : https://github.com/paramiko/paramiko/issues/2337 
-                              │                  ├ [44] : https://github.com/proftpd/proftpd/blob/0a7ea9b0
+                              │                  ├ [44] : https://github.com/paramiko/paramiko/issues/2337
+                              │                  │        #issuecomment-1887642773 
+                              │                  ├ [45] : https://github.com/proftpd/proftpd/blob/0a7ea9b0
                               │                  │        ba9fcdf368374a226370d08f10397d99/RELEASE_NOTES 
-                              │                  ├ [45] : https://github.com/proftpd/proftpd/blob/d21e7a2e
+                              │                  ├ [46] : https://github.com/proftpd/proftpd/blob/d21e7a2e
                               │                  │        47e9b38f709bec58e3fa711f759ad0e1/RELEASE_NOTES 
-                              │                  ├ [46] : https://github.com/proftpd/proftpd/blob/master/R
+                              │                  ├ [47] : https://github.com/proftpd/proftpd/blob/master/R
                               │                  │        ELEASE_NOTES 
-                              │                  ├ [47] : https://github.com/proftpd/proftpd/issues/456 
-                              │                  ├ [48] : https://github.com/rapier1/hpn-ssh/releases 
-                              │                  ├ [49] : https://github.com/ronf/asyncssh/blob/develop/do
+                              │                  ├ [48] : https://github.com/proftpd/proftpd/issues/456 
+                              │                  ├ [49] : https://github.com/rapier1/hpn-ssh/releases 
+                              │                  ├ [50] : https://github.com/ronf/asyncssh/blob/develop/do
                               │                  │        cs/changes.rst 
-                              │                  ├ [50] : https://github.com/ronf/asyncssh/security/adviso
+                              │                  ├ [51] : https://github.com/ronf/asyncssh/security/adviso
                               │                  │        ries/GHSA-hfmc-7525-mj55 
-                              │                  ├ [51] : https://github.com/ronf/asyncssh/tags 
-                              │                  ├ [52] : https://github.com/ssh-mitm/ssh-mitm/issues/165 
-                              │                  ├ [53] : https://github.com/warp-tech/russh 
-                              │                  ├ [54] : https://github.com/warp-tech/russh/commit/1aa340
+                              │                  ├ [52] : https://github.com/ronf/asyncssh/tags 
+                              │                  ├ [53] : https://github.com/ssh-mitm/ssh-mitm/issues/165 
+                              │                  ├ [54] : https://github.com/warp-tech/russh 
+                              │                  ├ [55] : https://github.com/warp-tech/russh/commit/1aa340
                               │                  │        a7df1d5be1c0f4a9e247aade76dfdd2951 
-                              │                  ├ [55] : https://github.com/warp-tech/russh/releases/tag/
+                              │                  ├ [56] : https://github.com/warp-tech/russh/releases/tag/
                               │                  │        v0.40.2 
-                              │                  ├ [56] : https://github.com/warp-tech/russh/security/advi
+                              │                  ├ [57] : https://github.com/warp-tech/russh/security/advi
                               │                  │        sories/GHSA-45x7-px36-x8w8 
-                              │                  ├ [57] : https://gitlab.com/libssh/libssh-mirror/-/tags 
-                              │                  ├ [58] : https://go.dev/cl/550715 
-                              │                  ├ [59] : https://go.dev/issue/64784 
-                              │                  ├ [60] : https://groups.google.com/g/golang-announce/c/-n
+                              │                  ├ [58] : https://gitlab.com/libssh/libssh-mirror/-/tags 
+                              │                  ├ [59] : https://go.dev/cl/550715 
+                              │                  ├ [60] : https://go.dev/issue/64784 
+                              │                  ├ [61] : https://groups.google.com/g/golang-announce/c/-n
                               │                  │        5WqVC18LQ 
-                              │                  ├ [61] : https://groups.google.com/g/golang-announce/c/qA
+                              │                  ├ [62] : https://groups.google.com/g/golang-announce/c/qA
                               │                  │        3XtxvMUyg 
-                              │                  ├ [62] : https://help.panic.com/releasenotes/transmit5/ 
-                              │                  ├ [63] : https://jadaptive.com/important-java-ssh-securit
+                              │                  ├ [63] : https://help.panic.com/releasenotes/transmit5/ 
+                              │                  ├ [64] : https://jadaptive.com/important-java-ssh-securit
                               │                  │        y-update-new-ssh-vulnerability-discovered-cve-2023-48
                               │                  │        795/ 
-                              │                  ├ [64] : https://linux.oracle.com/cve/CVE-2023-48795.html 
-                              │                  ├ [65] : https://linux.oracle.com/errata/ELSA-2024-0628.html 
-                              │                  ├ [66] : https://lists.debian.org/debian-lts-announce/202
-                              │                  │        3/12/msg00017.html 
+                              │                  ├ [65] : https://linux.oracle.com/cve/CVE-2023-48795.html 
+                              │                  ├ [66] : https://linux.oracle.com/errata/ELSA-2024-0628.html 
                               │                  ├ [67] : https://lists.debian.org/debian-lts-announce/202
-                              │                  │        4/01/msg00013.html 
+                              │                  │        3/12/msg00017.html 
                               │                  ├ [68] : https://lists.debian.org/debian-lts-announce/202
+                              │                  │        4/01/msg00013.html 
+                              │                  ├ [69] : https://lists.debian.org/debian-lts-announce/202
                               │                  │        4/01/msg00014.html 
-                              │                  ├ [69] : https://lists.fedoraproject.org/archives/list/pa
+                              │                  ├ [70] : https://lists.fedoraproject.org/archives/list/pa
                               │                  │        ckage-announce%40lists.fedoraproject.org/message/33XH
                               │                  │        JUB6ROFUOH2OQNENFROTVH6MHSHA/ 
-                              │                  ├ [70] : https://lists.fedoraproject.org/archives/list/pa
+                              │                  ├ [71] : https://lists.fedoraproject.org/archives/list/pa
                               │                  │        ckage-announce%40lists.fedoraproject.org/message/3CAY
                               │                  │        YW35MUTNO65RVAELICTNZZFMT2XS/ 
-                              │                  ├ [71] : https://lists.fedoraproject.org/archives/list/pa
+                              │                  ├ [72] : https://lists.fedoraproject.org/archives/list/pa
                               │                  │        ckage-announce%40lists.fedoraproject.org/message/3JIM
                               │                  │        LVBDWOP4FUPXPTB4PGHHIOMGFLQE/ 
-                              │                  ├ [72] : https://lists.fedoraproject.org/archives/list/pa
+                              │                  ├ [73] : https://lists.fedoraproject.org/archives/list/pa
                               │                  │        ckage-announce%40lists.fedoraproject.org/message/3YQL
                               │                  │        UQWLIHDB5QCXQEX7HXHAWMOKPP5O/ 
-                              │                  ├ [73] : https://lists.fedoraproject.org/archives/list/pa
+                              │                  ├ [74] : https://lists.fedoraproject.org/archives/list/pa
                               │                  │        ckage-announce%40lists.fedoraproject.org/message/6Y74
                               │                  │        KVCPEPT4MVU3LHDWCNNOXOE5ZLUR/ 
-                              │                  ├ [74] : https://lists.fedoraproject.org/archives/list/pa
+                              │                  ├ [75] : https://lists.fedoraproject.org/archives/list/pa
                               │                  │        ckage-announce%40lists.fedoraproject.org/message/APYI
                               │                  │        XIQOVDCRWLHTGB4VYMAUIAQLKYJ3/ 
-                              │                  ├ [75] : https://lists.fedoraproject.org/archives/list/pa
+                              │                  ├ [76] : https://lists.fedoraproject.org/archives/list/pa
                               │                  │        ckage-announce%40lists.fedoraproject.org/message/BL5K
                               │                  │        TLOSLH2KHRN4HCXJPK3JUVLDGEL6/ 
-                              │                  ├ [76] : https://lists.fedoraproject.org/archives/list/pa
+                              │                  ├ [77] : https://lists.fedoraproject.org/archives/list/pa
                               │                  │        ckage-announce%40lists.fedoraproject.org/message/C3AF
                               │                  │        MZ6MH2UHHOPIWT5YLSFV3D2VB3AC/ 
-                              │                  ├ [77] : https://lists.fedoraproject.org/archives/list/pa
+                              │                  ├ [78] : https://lists.fedoraproject.org/archives/list/pa
                               │                  │        ckage-announce%40lists.fedoraproject.org/message/CHHI
                               │                  │        TS4PUOZAKFIUBQAQZC7JWXMOYE4B/ 
-                              │                  ├ [78] : https://lists.fedoraproject.org/archives/list/pa
+                              │                  ├ [79] : https://lists.fedoraproject.org/archives/list/pa
                               │                  │        ckage-announce%40lists.fedoraproject.org/message/F7EY
                               │                  │        CFQCTSGJXWO3ZZ44MGKFC5HA7G3Y/ 
-                              │                  ├ [79] : https://lists.fedoraproject.org/archives/list/pa
+                              │                  ├ [80] : https://lists.fedoraproject.org/archives/list/pa
                               │                  │        ckage-announce%40lists.fedoraproject.org/message/HYED
                               │                  │        EXIKFKTUJIN43RG4B7T5ZS6MHUSP/ 
-                              │                  ├ [80] : https://lists.fedoraproject.org/archives/list/pa
+                              │                  ├ [81] : https://lists.fedoraproject.org/archives/list/pa
                               │                  │        ckage-announce%40lists.fedoraproject.org/message/I724
                               │                  │        O3LSRCPO4WNVIXTZCT4VVRMXMMSG/ 
-                              │                  ├ [81] : https://lists.fedoraproject.org/archives/list/pa
+                              │                  ├ [82] : https://lists.fedoraproject.org/archives/list/pa
                               │                  │        ckage-announce%40lists.fedoraproject.org/message/KEOT
                               │                  │        KBUPZXHE3F352JBYNTSNRXYLWD6P/ 
-                              │                  ├ [82] : https://lists.fedoraproject.org/archives/list/pa
+                              │                  ├ [83] : https://lists.fedoraproject.org/archives/list/pa
                               │                  │        ckage-announce%40lists.fedoraproject.org/message/KMZC
                               │                  │        VGUGJZZVDPCVDA7TEB22VUCNEXDD/ 
-                              │                  ├ [83] : https://lists.fedoraproject.org/archives/list/pa
+                              │                  ├ [84] : https://lists.fedoraproject.org/archives/list/pa
                               │                  │        ckage-announce%40lists.fedoraproject.org/message/L5Y6
                               │                  │        MNNVAPIJSXJERQ6PKZVCIUXSNJK7/ 
-                              │                  ├ [84] : https://lists.fedoraproject.org/archives/list/pa
+                              │                  ├ [85] : https://lists.fedoraproject.org/archives/list/pa
                               │                  │        ckage-announce%40lists.fedoraproject.org/message/LZQV
                               │                  │        UHWVWRH73YBXUQJOD6CKHDQBU3DM/ 
-                              │                  ├ [85] : https://lists.fedoraproject.org/archives/list/pa
+                              │                  ├ [86] : https://lists.fedoraproject.org/archives/list/pa
                               │                  │        ckage-announce%40lists.fedoraproject.org/message/MKQR
                               │                  │        BF3DWMWPH36LBCOBUTSIZRTPEZXB/ 
-                              │                  ├ [86] : https://lists.fedoraproject.org/archives/list/pa
+                              │                  ├ [87] : https://lists.fedoraproject.org/archives/list/pa
                               │                  │        ckage-announce%40lists.fedoraproject.org/message/QI3E
                               │                  │        HAHABFQK7OABNCSF5GMYP6TONTI7/ 
-                              │                  ├ [87] : https://matt.ucc.asn.au/dropbear/CHANGES 
-                              │                  ├ [88] : https://nest.pijul.com/pijul/thrussh/changes/D6H
+                              │                  ├ [88] : https://matt.ucc.asn.au/dropbear/CHANGES 
+                              │                  ├ [89] : https://nest.pijul.com/pijul/thrussh/changes/D6H
                               │                  │        7OWTTMHHX6BTB3B6MNBOBX2L66CBL4LGSEUSAI2MCRCJDQFRQC
                               │                  │         
-                              │                  ├ [89] : https://news.ycombinator.com/item?id=38684904 
-                              │                  ├ [90] : https://news.ycombinator.com/item?id=38685286 
-                              │                  ├ [91] : https://news.ycombinator.com/item?id=38732005 
-                              │                  ├ [92] : https://nova.app/releases/#v11.8 
-                              │                  ├ [93] : https://nvd.nist.gov/vuln/detail/CVE-2023-48795 
-                              │                  ├ [94] : https://oryx-embedded.com/download/#changelog 
-                              │                  ├ [95] : https://psirt.global.sonicwall.com/vuln-detail/S
+                              │                  ├ [90] : https://news.ycombinator.com/item?id=38684904 
+                              │                  ├ [91] : https://news.ycombinator.com/item?id=38685286 
+                              │                  ├ [92] : https://news.ycombinator.com/item?id=38732005 
+                              │                  ├ [93] : https://nova.app/releases/#v11.8 
+                              │                  ├ [94] : https://nvd.nist.gov/vuln/detail/CVE-2023-48795 
+                              │                  ├ [95] : https://oryx-embedded.com/download/#changelog 
+                              │                  ├ [96] : https://psirt.global.sonicwall.com/vuln-detail/S
                               │                  │        NWLID-2024-0002 
-                              │                  ├ [96] : https://roumenpetrov.info/secsh/#news20231220 
-                              │                  ├ [97] : https://security-tracker.debian.org/tracker/CVE-
+                              │                  ├ [97] : https://roumenpetrov.info/secsh/#news20231220 
+                              │                  ├ [98] : https://security-tracker.debian.org/tracker/CVE-
                               │                  │        2023-48795 
-                              │                  ├ [98] : https://security-tracker.debian.org/tracker/sour
-                              │                  │        ce-package/libssh2 
                               │                  ├ [99] : https://security-tracker.debian.org/tracker/sour
-                              │                  │        ce-package/proftpd-dfsg 
+                              │                  │        ce-package/libssh2 
                               │                  ├ [100]: https://security-tracker.debian.org/tracker/sour
+                              │                  │        ce-package/proftpd-dfsg 
+                              │                  ├ [101]: https://security-tracker.debian.org/tracker/sour
                               │                  │        ce-package/trilead-ssh2 
-                              │                  ├ [101]: https://security.gentoo.org/glsa/202312-16 
-                              │                  ├ [102]: https://security.gentoo.org/glsa/202312-17 
-                              │                  ├ [103]: https://security.netapp.com/advisory/ntap-202401
+                              │                  ├ [102]: https://security.gentoo.org/glsa/202312-16 
+                              │                  ├ [103]: https://security.gentoo.org/glsa/202312-17 
+                              │                  ├ [104]: https://security.netapp.com/advisory/ntap-202401
                               │                  │        05-0004/ 
-                              │                  ├ [104]: https://terrapin-attack.com/ 
-                              │                  ├ [105]: https://thorntech.com/cve-2023-48795-and-sftp-ga
+                              │                  ├ [105]: https://terrapin-attack.com/ 
+                              │                  ├ [106]: https://thorntech.com/cve-2023-48795-and-sftp-ga
                               │                  │        teway/ 
-                              │                  ├ [106]: https://twitter.com/TrueSkrillor/status/17367743
+                              │                  ├ [107]: https://twitter.com/TrueSkrillor/status/17367743
                               │                  │        89725565005 
-                              │                  ├ [107]: https://ubuntu.com/security/CVE-2023-48795 
-                              │                  ├ [108]: https://ubuntu.com/security/notices/USN-6560-1 
-                              │                  ├ [109]: https://ubuntu.com/security/notices/USN-6560-2 
-                              │                  ├ [110]: https://ubuntu.com/security/notices/USN-6561-1 
-                              │                  ├ [111]: https://ubuntu.com/security/notices/USN-6585-1 
-                              │                  ├ [112]: https://ubuntu.com/security/notices/USN-6589-1 
-                              │                  ├ [113]: https://ubuntu.com/security/notices/USN-6598-1 
-                              │                  ├ [114]: https://winscp.net/eng/docs/history#6.2.2 
-                              │                  ├ [115]: https://www.bitvise.com/ssh-client-version-histo
+                              │                  ├ [108]: https://ubuntu.com/security/CVE-2023-48795 
+                              │                  ├ [109]: https://ubuntu.com/security/notices/USN-6560-1 
+                              │                  ├ [110]: https://ubuntu.com/security/notices/USN-6560-2 
+                              │                  ├ [111]: https://ubuntu.com/security/notices/USN-6561-1 
+                              │                  ├ [112]: https://ubuntu.com/security/notices/USN-6585-1 
+                              │                  ├ [113]: https://ubuntu.com/security/notices/USN-6589-1 
+                              │                  ├ [114]: https://ubuntu.com/security/notices/USN-6598-1 
+                              │                  ├ [115]: https://winscp.net/eng/docs/history#6.2.2 
+                              │                  ├ [116]: https://www.bitvise.com/ssh-client-version-histo
                               │                  │        ry#933 
-                              │                  ├ [116]: https://www.bitvise.com/ssh-server-version-history 
-                              │                  ├ [117]: https://www.chiark.greenend.org.uk/~sgtatham/put
+                              │                  ├ [117]: https://www.bitvise.com/ssh-server-version-history 
+                              │                  ├ [118]: https://www.chiark.greenend.org.uk/~sgtatham/put
                               │                  │        ty/changes.html 
-                              │                  ├ [118]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
+                              │                  ├ [119]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
                               │                  │        ge=Update 
-                              │                  ├ [119]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
-                              │                  ├ [120]: https://www.debian.org/security/2023/dsa-5586 
-                              │                  ├ [121]: https://www.debian.org/security/2023/dsa-5588 
-                              │                  ├ [122]: https://www.freebsd.org/security/advisories/Free
+                              │                  ├ [120]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
+                              │                  ├ [121]: https://www.debian.org/security/2023/dsa-5586 
+                              │                  ├ [122]: https://www.debian.org/security/2023/dsa-5588 
+                              │                  ├ [123]: https://www.freebsd.org/security/advisories/Free
                               │                  │        BSD-SA-23:19.openssh.asc 
-                              │                  ├ [123]: https://www.lancom-systems.de/service-support/al
+                              │                  ├ [124]: https://www.lancom-systems.de/service-support/al
                               │                  │        lgemeine-sicherheitshinweise#c243508 
-                              │                  ├ [124]: https://www.netsarang.com/en/xshell-update-history/ 
-                              │                  ├ [125]: https://www.openssh.com/openbsd.html 
-                              │                  ├ [126]: https://www.openssh.com/txt/release-9.6 
-                              │                  ├ [127]: https://www.openwall.com/lists/oss-security/2023
-                              │                  │        /12/18/2 
+                              │                  ├ [125]: https://www.netsarang.com/en/xshell-update-history/ 
+                              │                  ├ [126]: https://www.openssh.com/openbsd.html 
+                              │                  ├ [127]: https://www.openssh.com/txt/release-9.6 
                               │                  ├ [128]: https://www.openwall.com/lists/oss-security/2023
-                              │                  │        /12/18/3 
+                              │                  │        /12/18/2 
                               │                  ├ [129]: https://www.openwall.com/lists/oss-security/2023
+                              │                  │        /12/18/3 
+                              │                  ├ [130]: https://www.openwall.com/lists/oss-security/2023
                               │                  │        /12/20/3 
-                              │                  ├ [130]: https://www.paramiko.org/changelog.html 
-                              │                  ├ [131]: https://www.reddit.com/r/sysadmin/comments/18idv
+                              │                  ├ [131]: https://www.paramiko.org/changelog.html 
+                              │                  ├ [132]: https://www.reddit.com/r/sysadmin/comments/18idv
                               │                  │        52/cve202348795_why_is_this_cve_still_undisclosed/
                               │                  │         
-                              │                  ├ [132]: https://www.suse.com/c/suse-addresses-the-ssh-v2
+                              │                  ├ [133]: https://www.suse.com/c/suse-addresses-the-ssh-v2
                               │                  │        -protocol-terrapin-attack-aka-cve-2023-48795/ 
-                              │                  ├ [133]: https://www.terrapin-attack.com 
-                              │                  ├ [134]: https://www.theregister.com/2023/12/20/terrapin_
+                              │                  ├ [134]: https://www.terrapin-attack.com 
+                              │                  ├ [135]: https://www.theregister.com/2023/12/20/terrapin_
                               │                  │        attack_ssh 
-                              │                  ╰ [135]: https://www.vandyke.com/products/securecrt/histo
+                              │                  ╰ [136]: https://www.vandyke.com/products/securecrt/histo
                               │                           ry.txt 
                               ├ PublishedDate   : 2023-12-18T16:15:10.897Z 
                               ╰ LastModifiedDate: 2024-01-29T09:15:42.687Z 
