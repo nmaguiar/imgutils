@@ -13,8 +13,8 @@
     FixedVersion: 0.46.0
     Status: fixed
     Layer:
-      Digest: sha256:9b4bb721e77e4449168672bd19eabd06ff2790c23fdb33eefa82208e75489e23
-      DiffID: sha256:97202a4617ad60a02670e1d643d311696f36db7f988c6b102f0b8e305f3c5038
+      Digest: sha256:cac5be5fc0480a0af79091d248d5fab72f5de74c7db202b082df5706234e3260
+      DiffID: sha256:d85509a55710f408080b308fee2b01101c7229e3c28440e1d78dc0f775a8b526
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-47108
     DataSource:
@@ -66,8 +66,8 @@
     FixedVersion: 1.6.26, 1.7.11
     Status: fixed
     Layer:
-      Digest: sha256:9b4bb721e77e4449168672bd19eabd06ff2790c23fdb33eefa82208e75489e23
-      DiffID: sha256:97202a4617ad60a02670e1d643d311696f36db7f988c6b102f0b8e305f3c5038
+      Digest: sha256:cac5be5fc0480a0af79091d248d5fab72f5de74c7db202b082df5706234e3260
+      DiffID: sha256:d85509a55710f408080b308fee2b01101c7229e3c28440e1d78dc0f775a8b526
     SeveritySource: ghsa
     PrimaryURL: https://github.com/advisories/GHSA-7ww5-4wqc-m92c
     DataSource:
@@ -114,8 +114,8 @@
     FixedVersion: 0.17.0
     Status: fixed
     Layer:
-      Digest: sha256:9b4bb721e77e4449168672bd19eabd06ff2790c23fdb33eefa82208e75489e23
-      DiffID: sha256:97202a4617ad60a02670e1d643d311696f36db7f988c6b102f0b8e305f3c5038
+      Digest: sha256:cac5be5fc0480a0af79091d248d5fab72f5de74c7db202b082df5706234e3260
+      DiffID: sha256:d85509a55710f408080b308fee2b01101c7229e3c28440e1d78dc0f775a8b526
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-48795
     DataSource:
@@ -192,6 +192,7 @@
     - https://github.com/net-ssh/net-ssh/blob/2e65064a52d73396bfc3806c9196fc8108f33cd8/CHANGES.txt#L14-L16
     - https://github.com/openssh/openssh-portable/commits/master
     - https://github.com/paramiko/paramiko/issues/2337
+    - https://github.com/paramiko/paramiko/issues/2337#issuecomment-1887642773
     - https://github.com/proftpd/proftpd/blob/0a7ea9b0ba9fcdf368374a226370d08f10397d99/RELEASE_NOTES
     - https://github.com/proftpd/proftpd/blob/d21e7a2e47e9b38f709bec58e3fa711f759ad0e1/RELEASE_NOTES
     - https://github.com/proftpd/proftpd/blob/master/RELEASE_NOTES
@@ -298,8 +299,8 @@
     FixedVersion: 1.1.12
     Status: fixed
     Layer:
-      Digest: sha256:9b4bb721e77e4449168672bd19eabd06ff2790c23fdb33eefa82208e75489e23
-      DiffID: sha256:97202a4617ad60a02670e1d643d311696f36db7f988c6b102f0b8e305f3c5038
+      Digest: sha256:cac5be5fc0480a0af79091d248d5fab72f5de74c7db202b082df5706234e3260
+      DiffID: sha256:d85509a55710f408080b308fee2b01101c7229e3c28440e1d78dc0f775a8b526
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-21626
     DataSource:
@@ -325,6 +326,7 @@
         V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H
         V3Score: 8.6
     References:
+    - http://packetstormsecurity.com/files/176993/runc-1.1.11-File-Descriptor-Leak-Privilege-Escalation.html
     - http://www.openwall.com/lists/oss-security/2024/02/01/1
     - http://www.openwall.com/lists/oss-security/2024/02/02/3
     - https://access.redhat.com/security/cve/CVE-2024-21626
@@ -337,7 +339,7 @@
     - https://ubuntu.com/security/notices/USN-6619-1
     - https://www.cve.org/CVERecord?id=CVE-2024-21626
     PublishedDate: '2024-01-31T22:15:53.78Z'
-    LastModifiedDate: '2024-02-02T12:15:49.553Z'
+    LastModifiedDate: '2024-02-05T17:15:09.383Z'
   - VulnerabilityID: CVE-2023-48795
     PkgName: golang.org/x/crypto
     PkgIdentifier:
@@ -346,8 +348,8 @@
     FixedVersion: 0.17.0
     Status: fixed
     Layer:
-      Digest: sha256:9b4bb721e77e4449168672bd19eabd06ff2790c23fdb33eefa82208e75489e23
-      DiffID: sha256:97202a4617ad60a02670e1d643d311696f36db7f988c6b102f0b8e305f3c5038
+      Digest: sha256:cac5be5fc0480a0af79091d248d5fab72f5de74c7db202b082df5706234e3260
+      DiffID: sha256:d85509a55710f408080b308fee2b01101c7229e3c28440e1d78dc0f775a8b526
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-48795
     DataSource:
@@ -424,6 +426,7 @@
     - https://github.com/net-ssh/net-ssh/blob/2e65064a52d73396bfc3806c9196fc8108f33cd8/CHANGES.txt#L14-L16
     - https://github.com/openssh/openssh-portable/commits/master
     - https://github.com/paramiko/paramiko/issues/2337
+    - https://github.com/paramiko/paramiko/issues/2337#issuecomment-1887642773
     - https://github.com/proftpd/proftpd/blob/0a7ea9b0ba9fcdf368374a226370d08f10397d99/RELEASE_NOTES
     - https://github.com/proftpd/proftpd/blob/d21e7a2e47e9b38f709bec58e3fa711f759ad0e1/RELEASE_NOTES
     - https://github.com/proftpd/proftpd/blob/master/RELEASE_NOTES
