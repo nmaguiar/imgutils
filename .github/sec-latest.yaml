@@ -316,6 +316,7 @@
     VendorSeverity:
       amazon: 3
       ghsa: 3
+      oracle-oval: 3
       redhat: 3
       ubuntu: 3
     CVSS:
@@ -335,6 +336,9 @@
     - https://github.com/opencontainers/runc/commit/02120488a4c0fc487d1ed2867e901eeed7ce8ecf
     - https://github.com/opencontainers/runc/releases/tag/v1.1.12
     - https://github.com/opencontainers/runc/security/advisories/GHSA-xr7r-f8xq-vfvv
+    - https://linux.oracle.com/cve/CVE-2024-21626.html
+    - https://linux.oracle.com/errata/ELSA-2024-0670.html
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SYMO3BANINS6RGFQFKPRG4FIOJ7GWYTL/
     - https://nvd.nist.gov/vuln/detail/CVE-2024-21626
     - https://ubuntu.com/security/notices/USN-6619-1
     - https://www.cve.org/CVERecord?id=CVE-2024-21626
