@@ -40,7 +40,8 @@
 │                             │                   `noop.NewMeterProvider`. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-770 
-│                             ├ VendorSeverity   ╭ cbl-mariner: 3 
+│                             ├ VendorSeverity   ╭ amazon     : 3 
+│                             │                  ├ cbl-mariner: 3 
 │                             │                  ├ ghsa       : 3 
 │                             │                  ├ nvd        : 3 
 │                             │                  ╰ redhat     : 2 
@@ -523,6 +524,7 @@
                         │     ├ CweIDs           ╭ [0]: CWE-403 
                         │     │                  ╰ [1]: CWE-668 
                         │     ├ VendorSeverity   ╭ amazon     : 3 
+                        │     │                  ├ cbl-mariner: 3 
                         │     │                  ├ ghsa       : 3 
                         │     │                  ├ oracle-oval: 3 
                         │     │                  ├ redhat     : 3 
@@ -559,7 +561,7 @@
                         │     │                  ├ [13]: https://ubuntu.com/security/notices/USN-6619-1 
                         │     │                  ╰ [14]: https://www.cve.org/CVERecord?id=CVE-2024-21626 
                         │     ├ PublishedDate   : 2024-01-31T22:15:53.78Z 
-                        │     ╰ LastModifiedDate: 2024-02-05T17:15:09.383Z 
+                        │     ╰ LastModifiedDate: 2024-02-06T02:15:08.42Z 
                         ╰ [1] ╭ VulnerabilityID : CVE-2023-48795 
                               ├ PkgName         : golang.org/x/crypto 
                               ├ PkgIdentifier    ─ PURL: pkg:golang/golang.org/x/crypto@v0.15.0 
