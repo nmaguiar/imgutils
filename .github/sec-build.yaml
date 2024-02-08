@@ -315,6 +315,7 @@
     - CWE-403
     - CWE-668
     VendorSeverity:
+      alma: 3
       amazon: 3
       cbl-mariner: 3
       ghsa: 3
@@ -332,8 +333,11 @@
     - http://packetstormsecurity.com/files/176993/runc-1.1.11-File-Descriptor-Leak-Privilege-Escalation.html
     - http://www.openwall.com/lists/oss-security/2024/02/01/1
     - http://www.openwall.com/lists/oss-security/2024/02/02/3
+    - https://access.redhat.com/errata/RHSA-2024:0670
     - https://access.redhat.com/security/cve/CVE-2024-21626
+    - https://bugzilla.redhat.com/2258725
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21626
+    - https://errata.almalinux.org/9/ALSA-2024-0670.html
     - https://github.com/opencontainers/runc
     - https://github.com/opencontainers/runc/commit/02120488a4c0fc487d1ed2867e901eeed7ce8ecf
     - https://github.com/opencontainers/runc/releases/tag/v1.1.12
