@@ -523,7 +523,8 @@
                         │     ├ Severity        : HIGH 
                         │     ├ CweIDs           ╭ [0]: CWE-403 
                         │     │                  ╰ [1]: CWE-668 
-                        │     ├ VendorSeverity   ╭ amazon     : 3 
+                        │     ├ VendorSeverity   ╭ alma       : 3 
+                        │     │                  ├ amazon     : 3 
                         │     │                  ├ cbl-mariner: 3 
                         │     │                  ├ ghsa       : 3 
                         │     │                  ├ oracle-oval: 3 
@@ -542,24 +543,27 @@
                         │     │                  │       2/01/1 
                         │     │                  ├ [2] : http://www.openwall.com/lists/oss-security/2024/0
                         │     │                  │       2/02/3 
-                        │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2024-21626 
-                        │     │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
+                        │     │                  ├ [3] : https://access.redhat.com/errata/RHSA-2024:0670 
+                        │     │                  ├ [4] : https://access.redhat.com/security/cve/CVE-2024-21626 
+                        │     │                  ├ [5] : https://bugzilla.redhat.com/2258725 
+                        │     │                  ├ [6] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
                         │     │                  │       E-2024-21626 
-                        │     │                  ├ [5] : https://github.com/opencontainers/runc 
-                        │     │                  ├ [6] : https://github.com/opencontainers/runc/commit/021
+                        │     │                  ├ [7] : https://errata.almalinux.org/9/ALSA-2024-0670.html 
+                        │     │                  ├ [8] : https://github.com/opencontainers/runc 
+                        │     │                  ├ [9] : https://github.com/opencontainers/runc/commit/021
                         │     │                  │       20488a4c0fc487d1ed2867e901eeed7ce8ecf 
-                        │     │                  ├ [7] : https://github.com/opencontainers/runc/releases/t
+                        │     │                  ├ [10]: https://github.com/opencontainers/runc/releases/t
                         │     │                  │       ag/v1.1.12 
-                        │     │                  ├ [8] : https://github.com/opencontainers/runc/security/a
+                        │     │                  ├ [11]: https://github.com/opencontainers/runc/security/a
                         │     │                  │       dvisories/GHSA-xr7r-f8xq-vfvv 
-                        │     │                  ├ [9] : https://linux.oracle.com/cve/CVE-2024-21626.html 
-                        │     │                  ├ [10]: https://linux.oracle.com/errata/ELSA-2024-0670.html 
-                        │     │                  ├ [11]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [12]: https://linux.oracle.com/cve/CVE-2024-21626.html 
+                        │     │                  ├ [13]: https://linux.oracle.com/errata/ELSA-2024-0670.html 
+                        │     │                  ├ [14]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/SYMO3BAN
                         │     │                  │       INS6RGFQFKPRG4FIOJ7GWYTL/ 
-                        │     │                  ├ [12]: https://nvd.nist.gov/vuln/detail/CVE-2024-21626 
-                        │     │                  ├ [13]: https://ubuntu.com/security/notices/USN-6619-1 
-                        │     │                  ╰ [14]: https://www.cve.org/CVERecord?id=CVE-2024-21626 
+                        │     │                  ├ [15]: https://nvd.nist.gov/vuln/detail/CVE-2024-21626 
+                        │     │                  ├ [16]: https://ubuntu.com/security/notices/USN-6619-1 
+                        │     │                  ╰ [17]: https://www.cve.org/CVERecord?id=CVE-2024-21626 
                         │     ├ PublishedDate   : 2024-01-31T22:15:53.78Z 
                         │     ╰ LastModifiedDate: 2024-02-06T02:15:08.42Z 
                         ╰ [1] ╭ VulnerabilityID : CVE-2023-48795 
