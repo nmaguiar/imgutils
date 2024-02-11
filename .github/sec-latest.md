@@ -563,11 +563,14 @@
                         │     │                  ├ [12]: https://linux.oracle.com/cve/CVE-2024-21626.html 
                         │     │                  ├ [13]: https://linux.oracle.com/errata/ELSA-2024-17931.html 
                         │     │                  ├ [14]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  │       kage-announce@lists.fedoraproject.org/message/2NLXNE23
+                        │     │                  │       Q5ESQUAI22Z7A63JX2WMPJ2J/ 
+                        │     │                  ├ [15]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/SYMO3BAN
                         │     │                  │       INS6RGFQFKPRG4FIOJ7GWYTL/ 
-                        │     │                  ├ [15]: https://nvd.nist.gov/vuln/detail/CVE-2024-21626 
-                        │     │                  ├ [16]: https://ubuntu.com/security/notices/USN-6619-1 
-                        │     │                  ╰ [17]: https://www.cve.org/CVERecord?id=CVE-2024-21626 
+                        │     │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2024-21626 
+                        │     │                  ├ [17]: https://ubuntu.com/security/notices/USN-6619-1 
+                        │     │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2024-21626 
                         │     ├ PublishedDate   : 2024-01-31T22:15:53.78Z 
                         │     ╰ LastModifiedDate: 2024-02-09T15:38:09.697Z 
                         ╰ [1] ╭ VulnerabilityID : CVE-2023-48795 
