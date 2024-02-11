@@ -36,6 +36,20 @@ jobs:
         args: 'inputFile=.github/sec-latest.yaml file=.github/sec-latest.md'
         dist: 'nightly'
 
+    - uses: openaf/ojob-action@v4
+      name: Check latest
+      with:
+        ojob: 'ojob.io/sec/genSecBadge'
+        args: 'image=nmaguiar/imgutils:lite file=.github/sec-lite.svg reportFile=.github/sec-lite.yaml'
+        dist: 'nightly'
+
+    - uses: openaf/ojob-action@v4
+      name: Generate sec-lite.md
+      with:
+        ojob: 'ojob.io/util/toMDTree'
+        args: 'inputFile=.github/sec-lite.yaml file=.github/sec-lite.md'
+        dist: 'nightly'
+
     # - uses: openaf/ojob-action@v4
     #   name: Check latest ubi
     #   with:
@@ -62,6 +76,20 @@ jobs:
       with:
         ojob: 'ojob.io/util/toMDTree'
         args: 'inputFile=.github/sec-build.yaml file=.github/sec-build.md'
+        dist: 'nightly'
+
+    - uses: openaf/ojob-action@v4
+      name: Check build
+      with:
+        ojob: 'ojob.io/sec/genSecBadge'
+        args: 'image=nmaguiar/imgutils:build-lite file=.github/sec-build-lite.svg reportFile=.github/sec-build-lite.yaml'
+        dist: 'nightly'
+
+    - uses: openaf/ojob-action@v4
+      name: Generate sec-build.md
+      with:
+        ojob: 'ojob.io/util/toMDTree'
+        args: 'inputFile=.github/sec-build-lite.yaml file=.github/sec-build-lite.md'
         dist: 'nightly'
 
     # - uses: openaf/ojob-action@v4
