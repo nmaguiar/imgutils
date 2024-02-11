@@ -1,0 +1,24 @@
+# ---------------------
+FROM openaf/oaf as main
+
+USER root
+RUN apk update\
+ && apk --no-cache add tar bash gzip\
+ && /openaf/ojob ojob.io/kube/getCriCtl path=/usr/bin\
+ && chmod a+x /usr/bin/crictl\
+ && rm /lib/apk/db/*
+
+# ------------------
+FROM alpine as clean
+
+RUN apk update\
+ && apk --no-cache add tar bash gzip\
+ && rm /lib/apk/db/*
+COPY --from=main /usr/bin/crictl /usr/bin/crictl
+
+# -------------------
+FROM scratch as final
+
+COPY --from=clean / /
+
+USER root
