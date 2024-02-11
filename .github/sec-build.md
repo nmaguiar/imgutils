@@ -13,10 +13,10 @@
 │                             ├ InstalledVersion: v0.42.0 
 │                             ├ FixedVersion    : 0.46.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:3ec6e61a5670d73ee4c152512812bd2ab9c425a4
-│                             │                  │         864be5610fdedf2aa75d1650 
-│                             │                  ╰ DiffID: sha256:fcea9ad83583aa1a210bb01ff6e461dbf2df2e6b
-│                             │                            24510697478b8da31435f073 
+│                             ├ Layer            ╭ Digest: sha256:aacd3fc98ec46eb88ddd1172c30b071ed4ef1957
+│                             │                  │         38171011ac807ebdbbc8a904 
+│                             │                  ╰ DiffID: sha256:9813ce6176a84f748659b5ee2b9441fa633be558
+│                             │                            633930d3a63b77fed904326a 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-47108 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -87,10 +87,10 @@
 │                       │     ├ InstalledVersion: v1.7.6 
 │                       │     ├ FixedVersion    : 1.6.26, 1.7.11 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:3ec6e61a5670d73ee4c152512812bd2ab9c425a4
-│                       │     │                  │         864be5610fdedf2aa75d1650 
-│                       │     │                  ╰ DiffID: sha256:fcea9ad83583aa1a210bb01ff6e461dbf2df2e6b
-│                       │     │                            24510697478b8da31435f073 
+│                       │     ├ Layer            ╭ Digest: sha256:aacd3fc98ec46eb88ddd1172c30b071ed4ef1957
+│                       │     │                  │         38171011ac807ebdbbc8a904 
+│                       │     │                  ╰ DiffID: sha256:9813ce6176a84f748659b5ee2b9441fa633be558
+│                       │     │                            633930d3a63b77fed904326a 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://github.com/advisories/GHSA-7ww5-4wqc-m92c 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -181,10 +181,10 @@
 │                             ├ InstalledVersion: v0.14.0 
 │                             ├ FixedVersion    : 0.17.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:3ec6e61a5670d73ee4c152512812bd2ab9c425a4
-│                             │                  │         864be5610fdedf2aa75d1650 
-│                             │                  ╰ DiffID: sha256:fcea9ad83583aa1a210bb01ff6e461dbf2df2e6b
-│                             │                            24510697478b8da31435f073 
+│                             ├ Layer            ╭ Digest: sha256:aacd3fc98ec46eb88ddd1172c30b071ed4ef1957
+│                             │                  │         38171011ac807ebdbbc8a904 
+│                             │                  ╰ DiffID: sha256:9813ce6176a84f748659b5ee2b9441fa633be558
+│                             │                            633930d3a63b77fed904326a 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-48795 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -496,10 +496,10 @@
                         │     ├ InstalledVersion: v1.1.10 
                         │     ├ FixedVersion    : 1.1.12 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:3ec6e61a5670d73ee4c152512812bd2ab9c425a4
-                        │     │                  │         864be5610fdedf2aa75d1650 
-                        │     │                  ╰ DiffID: sha256:fcea9ad83583aa1a210bb01ff6e461dbf2df2e6b
-                        │     │                            24510697478b8da31435f073 
+                        │     ├ Layer            ╭ Digest: sha256:aacd3fc98ec46eb88ddd1172c30b071ed4ef1957
+                        │     │                  │         38171011ac807ebdbbc8a904 
+                        │     │                  ╰ DiffID: sha256:9813ce6176a84f748659b5ee2b9441fa633be558
+                        │     │                            633930d3a63b77fed904326a 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-21626 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -563,11 +563,14 @@
                         │     │                  ├ [12]: https://linux.oracle.com/cve/CVE-2024-21626.html 
                         │     │                  ├ [13]: https://linux.oracle.com/errata/ELSA-2024-17931.html 
                         │     │                  ├ [14]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  │       kage-announce@lists.fedoraproject.org/message/2NLXNE23
+                        │     │                  │       Q5ESQUAI22Z7A63JX2WMPJ2J/ 
+                        │     │                  ├ [15]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/SYMO3BAN
                         │     │                  │       INS6RGFQFKPRG4FIOJ7GWYTL/ 
-                        │     │                  ├ [15]: https://nvd.nist.gov/vuln/detail/CVE-2024-21626 
-                        │     │                  ├ [16]: https://ubuntu.com/security/notices/USN-6619-1 
-                        │     │                  ╰ [17]: https://www.cve.org/CVERecord?id=CVE-2024-21626 
+                        │     │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2024-21626 
+                        │     │                  ├ [17]: https://ubuntu.com/security/notices/USN-6619-1 
+                        │     │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2024-21626 
                         │     ├ PublishedDate   : 2024-01-31T22:15:53.78Z 
                         │     ╰ LastModifiedDate: 2024-02-09T15:38:09.697Z 
                         ╰ [1] ╭ VulnerabilityID : CVE-2023-48795 
@@ -576,10 +579,10 @@
                               ├ InstalledVersion: v0.15.0 
                               ├ FixedVersion    : 0.17.0 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:3ec6e61a5670d73ee4c152512812bd2ab9c425a4
-                              │                  │         864be5610fdedf2aa75d1650 
-                              │                  ╰ DiffID: sha256:fcea9ad83583aa1a210bb01ff6e461dbf2df2e6b
-                              │                            24510697478b8da31435f073 
+                              ├ Layer            ╭ Digest: sha256:aacd3fc98ec46eb88ddd1172c30b071ed4ef1957
+                              │                  │         38171011ac807ebdbbc8a904 
+                              │                  ╰ DiffID: sha256:9813ce6176a84f748659b5ee2b9441fa633be558
+                              │                            633930d3a63b77fed904326a 
                               ├ SeveritySource  : ghsa 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-48795 
                               ├ DataSource       ╭ ID  : ghsa 
