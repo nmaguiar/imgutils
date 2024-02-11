@@ -561,7 +561,7 @@
                         │     │                  ├ [11]: https://github.com/opencontainers/runc/security/a
                         │     │                  │       dvisories/GHSA-xr7r-f8xq-vfvv 
                         │     │                  ├ [12]: https://linux.oracle.com/cve/CVE-2024-21626.html 
-                        │     │                  ├ [13]: https://linux.oracle.com/errata/ELSA-2024-0670.html 
+                        │     │                  ├ [13]: https://linux.oracle.com/errata/ELSA-2024-17931.html 
                         │     │                  ├ [14]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/SYMO3BAN
                         │     │                  │       INS6RGFQFKPRG4FIOJ7GWYTL/ 
