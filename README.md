@@ -1,6 +1,6 @@
 # ImgUtils
 
-Alpine based image with:
+Alpine based image ("nmaguiar/imgutils") with:
 
 * skopeo
 * helm
@@ -12,10 +12,14 @@ Alpine based image with:
 
 This should be enough tools to be able to manage images on a Kubernetes cluster running inside the cluster (with the right permissions).
 
+If you just need _crictl_ you can also use the "nmaguiar/imgutils:lite" image.
+
 ## Image security scans
 
 [![.github/sec-build.svg](.github/sec-build.svg)](.github/sec-build.md)<br>
 [![.github/sec-latest.svg](.github/sec-latest.svg)](.github/sec-latest.md)<br>
+[![.github/sec-build-lite.svg](.github/sec-build-lite.svg)](.github/sec-build-lite.md)<br>
+[![.github/sec-lite.svg](.github/sec-lite.svg)](.github/sec-lite.md)<br>
 
 ## Guides
 
