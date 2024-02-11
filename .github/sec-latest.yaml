@@ -348,6 +348,7 @@
     - https://github.com/opencontainers/runc/security/advisories/GHSA-xr7r-f8xq-vfvv
     - https://linux.oracle.com/cve/CVE-2024-21626.html
     - https://linux.oracle.com/errata/ELSA-2024-17931.html
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/2NLXNE23Q5ESQUAI22Z7A63JX2WMPJ2J/
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SYMO3BANINS6RGFQFKPRG4FIOJ7GWYTL/
     - https://nvd.nist.gov/vuln/detail/CVE-2024-21626
     - https://ubuntu.com/security/notices/USN-6619-1
