@@ -572,7 +572,7 @@
                         │     │                  ├ [17]: https://ubuntu.com/security/notices/USN-6619-1 
                         │     │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2024-21626 
                         │     ├ PublishedDate   : 2024-01-31T22:15:53.78Z 
-                        │     ╰ LastModifiedDate: 2024-02-09T15:38:09.697Z 
+                        │     ╰ LastModifiedDate: 2024-02-11T06:15:11.683Z 
                         ╰ [1] ╭ VulnerabilityID : CVE-2023-48795 
                               ├ PkgName         : golang.org/x/crypto 
                               ├ PkgIdentifier    ─ PURL: pkg:golang/golang.org/x/crypto@v0.15.0 
