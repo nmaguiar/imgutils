@@ -2,7 +2,104 @@
 ╭ [0] ╭ Target: nmaguiar/imgutils:latest (alpine 3.19.1) 
 │     ├ Class : os-pkgs 
 │     ╰ Type  : alpine 
-├ [1] ╭ Target         : usr/bin/crictl 
+├ [1] ╭ Target         : Java 
+│     ├ Class          : lang-pkgs 
+│     ├ Type           : jar 
+│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-25710 
+│                       │     ├ PkgName         : org.apache.commons:commons-compress 
+│                       │     ├ PkgPath         : openaf/openaf.jar 
+│                       │     ├ PkgIdentifier    ─ PURL: pkg:maven/org.apache.commons/commons-compress@1.25.0 
+│                       │     ├ InstalledVersion: 1.25.0 
+│                       │     ├ FixedVersion    : 1.26.0 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:cac5be5fc0480a0af79091d248d5fab72f5de74c
+│                       │     │                  │         7db202b082df5706234e3260 
+│                       │     │                  ╰ DiffID: sha256:d85509a55710f408080b308fee2b01101c7229e3
+│                       │     │                            c28440e1d78dc0f775a8b526 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-25710 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Maven 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areview
+│                       │     │                          ed+ecosystem%3Amaven 
+│                       │     ├ Title           : commons-compress: Denial of service caused by an
+│                       │     │                   infinite loop for a corrupted DUMP file 
+│                       │     ├ Description     : Loop with Unreachable Exit Condition ('Infinite Loop')
+│                       │     │                   vulnerability in Apache Commons Compress.This issue affects
+│                       │     │                   Apache Commons Compress: from 1.3 through 1.25.0.
+│                       │     │                   
+│                       │     │                   Users are recommended to upgrade to version 1.26.0 which
+│                       │     │                   fixes the issue.
+│                       │     │                   
+│                       │     │                    
+│                       │     ├ Severity        : HIGH 
+│                       │     ├ CweIDs           ─ [0]: CWE-835 
+│                       │     ├ VendorSeverity   ╭ ghsa  : 3 
+│                       │     │                  ╰ redhat: 3 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:H
+│                       │     │                  │        │           /I:H/A:H 
+│                       │     │                  │        ╰ V3Score : 8.1 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:H
+│                       │     │                           │           /I:H/A:H 
+│                       │     │                           ╰ V3Score : 8.1 
+│                       │     ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/02/19/1 
+│                       │     │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2024-25710 
+│                       │     │                  ├ [2]: https://github.com/apache/commons-compress 
+│                       │     │                  ├ [3]: https://lists.apache.org/thread/cz8qkcwphy4cx8gltn
+│                       │     │                  │      932ln51cbtq6kf 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-25710 
+│                       │     │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2024-25710 
+│                       │     ├ PublishedDate   : 2024-02-19T09:15:37.943Z 
+│                       │     ╰ LastModifiedDate: 2024-02-20T19:50:53.96Z 
+│                       ╰ [1] ╭ VulnerabilityID : CVE-2024-26308 
+│                             ├ PkgName         : org.apache.commons:commons-compress 
+│                             ├ PkgPath         : openaf/openaf.jar 
+│                             ├ PkgIdentifier    ─ PURL: pkg:maven/org.apache.commons/commons-compress@1.25.0 
+│                             ├ InstalledVersion: 1.25.0 
+│                             ├ FixedVersion    : 1.26.0 
+│                             ├ Status          : fixed 
+│                             ├ Layer            ╭ Digest: sha256:cac5be5fc0480a0af79091d248d5fab72f5de74c
+│                             │                  │         7db202b082df5706234e3260 
+│                             │                  ╰ DiffID: sha256:d85509a55710f408080b308fee2b01101c7229e3
+│                             │                            c28440e1d78dc0f775a8b526 
+│                             ├ SeveritySource  : ghsa 
+│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-26308 
+│                             ├ DataSource       ╭ ID  : ghsa 
+│                             │                  ├ Name: GitHub Security Advisory Maven 
+│                             │                  ╰ URL : https://github.com/advisories?query=type%3Areview
+│                             │                          ed+ecosystem%3Amaven 
+│                             ├ Title           : commons-compress: OutOfMemoryError unpacking broken
+│                             │                   Pack200 file 
+│                             ├ Description     : Allocation of Resources Without Limits or Throttling
+│                             │                   vulnerability in Apache Commons Compress.This issue affects
+│                             │                   Apache Commons Compress: from 1.21 before 1.26.
+│                             │                   
+│                             │                   Users are recommended to upgrade to version 1.26, which fixes
+│                             │                    the issue.
+│                             │                   
+│                             │                    
+│                             ├ Severity        : HIGH 
+│                             ├ CweIDs           ─ [0]: CWE-770 
+│                             ├ VendorSeverity   ╭ ghsa  : 3 
+│                             │                  ╰ redhat: 2 
+│                             ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
+│                             │                  │        │           /I:N/A:H 
+│                             │                  │        ╰ V3Score : 7.5 
+│                             │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N
+│                             │                           │           /I:N/A:H 
+│                             │                           ╰ V3Score : 5.9 
+│                             ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/02/19/2 
+│                             │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2024-26308 
+│                             │                  ├ [2]: https://github.com/apache/commons-compress 
+│                             │                  ├ [3]: https://lists.apache.org/thread/ch5yo2d21p7vlqrhll
+│                             │                  │      9b17otbyq4npfg 
+│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-26308 
+│                             │                  ├ [5]: https://www.cve.org/CVERecord?id=CVE-2024-26308 
+│                             │                  ╰ [6]: https://www.openwall.com/lists/oss-security/2024/0
+│                             │                         2/19/2 
+│                             ├ PublishedDate   : 2024-02-19T09:15:38.277Z 
+│                             ╰ LastModifiedDate: 2024-02-20T19:50:53.96Z 
+├ [2] ╭ Target         : usr/bin/crictl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
 │     ╰ Vulnerabilities ─ [0] ╭ VulnerabilityID : CVE-2023-47108 
@@ -78,7 +175,7 @@
 │                             │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2023-47108 
 │                             ├ PublishedDate   : 2023-11-10T19:15:16.41Z 
 │                             ╰ LastModifiedDate: 2023-11-20T19:34:26.493Z 
-├ [2] ╭ Target         : usr/bin/helm 
+├ [3] ╭ Target         : usr/bin/helm 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
 │     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : GHSA-7ww5-4wqc-m92c 
@@ -559,7 +656,7 @@
 │                             │                           ry.txt 
 │                             ├ PublishedDate   : 2023-12-18T16:15:10.897Z 
 │                             ╰ LastModifiedDate: 2024-01-29T09:15:42.687Z 
-╰ [3] ╭ Target         : usr/bin/skopeo 
+╰ [4] ╭ Target         : usr/bin/skopeo 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
       ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-21626 
@@ -638,13 +735,19 @@
                         │     │                  │       /02/msg00005.html 
                         │     │                  ├ [15]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/2NLXNE23
-                        │     │                  │       Q5ESQUAI22Z7A63JX2WMPJ2J/ 
+                        │     │                  │       Q5ESQUAI22Z7A63JX2WMPJ2J 
                         │     │                  ├ [16]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  │       kage-announce@lists.fedoraproject.org/message/2NLXNE23
+                        │     │                  │       Q5ESQUAI22Z7A63JX2WMPJ2J/ 
+                        │     │                  ├ [17]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  │       kage-announce@lists.fedoraproject.org/message/SYMO3BAN
+                        │     │                  │       INS6RGFQFKPRG4FIOJ7GWYTL 
+                        │     │                  ├ [18]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/SYMO3BAN
                         │     │                  │       INS6RGFQFKPRG4FIOJ7GWYTL/ 
-                        │     │                  ├ [17]: https://nvd.nist.gov/vuln/detail/CVE-2024-21626 
-                        │     │                  ├ [18]: https://ubuntu.com/security/notices/USN-6619-1 
-                        │     │                  ╰ [19]: https://www.cve.org/CVERecord?id=CVE-2024-21626 
+                        │     │                  ├ [19]: https://nvd.nist.gov/vuln/detail/CVE-2024-21626 
+                        │     │                  ├ [20]: https://ubuntu.com/security/notices/USN-6619-1 
+                        │     │                  ╰ [21]: https://www.cve.org/CVERecord?id=CVE-2024-21626 
                         │     ├ PublishedDate   : 2024-01-31T22:15:53.78Z 
                         │     ╰ LastModifiedDate: 2024-02-19T03:15:08.413Z 
                         ╰ [1] ╭ VulnerabilityID : CVE-2023-48795 
