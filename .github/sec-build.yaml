@@ -14,8 +14,8 @@
     FixedVersion: 1.26.0
     Status: fixed
     Layer:
-      Digest: sha256:6f5bbdccb34749a532022b13822fb1198ce65aaba3cfb4170ea4a898ef042368
-      DiffID: sha256:c2a74c720e22371a6cc9e31fadaff6ae3a77d971167648788eba7d9a118a80fe
+      Digest: sha256:27b7dbc51715583efb2ed0947d934d02532ab4b0abbb5c3f62eef6d190d4ce89
+      DiffID: sha256:800fc2a5b36766a9af79f08c26d857455c5b1e303ceab7a31db53cccb8981663
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-25710
     DataSource:
@@ -63,8 +63,8 @@
     FixedVersion: 1.26.0
     Status: fixed
     Layer:
-      Digest: sha256:6f5bbdccb34749a532022b13822fb1198ce65aaba3cfb4170ea4a898ef042368
-      DiffID: sha256:c2a74c720e22371a6cc9e31fadaff6ae3a77d971167648788eba7d9a118a80fe
+      Digest: sha256:27b7dbc51715583efb2ed0947d934d02532ab4b0abbb5c3f62eef6d190d4ce89
+      DiffID: sha256:800fc2a5b36766a9af79f08c26d857455c5b1e303ceab7a31db53cccb8981663
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-26308
     DataSource:
@@ -116,8 +116,8 @@
     FixedVersion: 0.46.0
     Status: fixed
     Layer:
-      Digest: sha256:6f5bbdccb34749a532022b13822fb1198ce65aaba3cfb4170ea4a898ef042368
-      DiffID: sha256:c2a74c720e22371a6cc9e31fadaff6ae3a77d971167648788eba7d9a118a80fe
+      Digest: sha256:27b7dbc51715583efb2ed0947d934d02532ab4b0abbb5c3f62eef6d190d4ce89
+      DiffID: sha256:800fc2a5b36766a9af79f08c26d857455c5b1e303ceab7a31db53cccb8981663
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-47108
     DataSource:
@@ -170,8 +170,8 @@
     FixedVersion: 1.6.26, 1.7.11
     Status: fixed
     Layer:
-      Digest: sha256:6f5bbdccb34749a532022b13822fb1198ce65aaba3cfb4170ea4a898ef042368
-      DiffID: sha256:c2a74c720e22371a6cc9e31fadaff6ae3a77d971167648788eba7d9a118a80fe
+      Digest: sha256:27b7dbc51715583efb2ed0947d934d02532ab4b0abbb5c3f62eef6d190d4ce89
+      DiffID: sha256:800fc2a5b36766a9af79f08c26d857455c5b1e303ceab7a31db53cccb8981663
     SeveritySource: ghsa
     PrimaryURL: https://github.com/advisories/GHSA-7ww5-4wqc-m92c
     DataSource:
@@ -218,8 +218,8 @@
     FixedVersion: 0.17.0
     Status: fixed
     Layer:
-      Digest: sha256:6f5bbdccb34749a532022b13822fb1198ce65aaba3cfb4170ea4a898ef042368
-      DiffID: sha256:c2a74c720e22371a6cc9e31fadaff6ae3a77d971167648788eba7d9a118a80fe
+      Digest: sha256:27b7dbc51715583efb2ed0947d934d02532ab4b0abbb5c3f62eef6d190d4ce89
+      DiffID: sha256:800fc2a5b36766a9af79f08c26d857455c5b1e303ceab7a31db53cccb8981663
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-48795
     DataSource:
@@ -431,8 +431,8 @@
     FixedVersion: 1.1.12
     Status: fixed
     Layer:
-      Digest: sha256:6f5bbdccb34749a532022b13822fb1198ce65aaba3cfb4170ea4a898ef042368
-      DiffID: sha256:c2a74c720e22371a6cc9e31fadaff6ae3a77d971167648788eba7d9a118a80fe
+      Digest: sha256:27b7dbc51715583efb2ed0947d934d02532ab4b0abbb5c3f62eef6d190d4ce89
+      DiffID: sha256:800fc2a5b36766a9af79f08c26d857455c5b1e303ceab7a31db53cccb8981663
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-21626
     DataSource:
@@ -468,11 +468,11 @@
     - http://packetstormsecurity.com/files/176993/runc-1.1.11-File-Descriptor-Leak-Privilege-Escalation.html
     - http://www.openwall.com/lists/oss-security/2024/02/01/1
     - http://www.openwall.com/lists/oss-security/2024/02/02/3
-    - https://access.redhat.com/errata/RHSA-2024:0752
+    - https://access.redhat.com/errata/RHSA-2024:0670
     - https://access.redhat.com/security/cve/CVE-2024-21626
     - https://bugzilla.redhat.com/2258725
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21626
-    - https://errata.almalinux.org/8/ALSA-2024-0752.html
+    - https://errata.almalinux.org/9/ALSA-2024-0670.html
     - https://github.com/opencontainers/runc
     - https://github.com/opencontainers/runc/commit/02120488a4c0fc487d1ed2867e901eeed7ce8ecf
     - https://github.com/opencontainers/runc/releases/tag/v1.1.12
@@ -497,8 +497,8 @@
     FixedVersion: 0.17.0
     Status: fixed
     Layer:
-      Digest: sha256:6f5bbdccb34749a532022b13822fb1198ce65aaba3cfb4170ea4a898ef042368
-      DiffID: sha256:c2a74c720e22371a6cc9e31fadaff6ae3a77d971167648788eba7d9a118a80fe
+      Digest: sha256:27b7dbc51715583efb2ed0947d934d02532ab4b0abbb5c3f62eef6d190d4ce89
+      DiffID: sha256:800fc2a5b36766a9af79f08c26d857455c5b1e303ceab7a31db53cccb8981663
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-48795
     DataSource:
