@@ -2,112 +2,7 @@
 ╭ [0] ╭ Target: nmaguiar/imgutils:build (alpine 3.19.1) 
 │     ├ Class : os-pkgs 
 │     ╰ Type  : alpine 
-├ [1] ╭ Target         : Java 
-│     ├ Class          : lang-pkgs 
-│     ├ Type           : jar 
-│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-25710 
-│                       │     ├ PkgName         : org.apache.commons:commons-compress 
-│                       │     ├ PkgPath         : openaf/openaf.jar 
-│                       │     ├ PkgIdentifier    ─ PURL: pkg:maven/org.apache.commons/commons-compress@1.25.0 
-│                       │     ├ InstalledVersion: 1.25.0 
-│                       │     ├ FixedVersion    : 1.26.0 
-│                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:27b7dbc51715583efb2ed0947d934d02532ab4b0
-│                       │     │                  │         abbb5c3f62eef6d190d4ce89 
-│                       │     │                  ╰ DiffID: sha256:800fc2a5b36766a9af79f08c26d857455c5b1e30
-│                       │     │                            3ceab7a31db53cccb8981663 
-│                       │     ├ SeveritySource  : ghsa 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-25710 
-│                       │     ├ DataSource       ╭ ID  : ghsa 
-│                       │     │                  ├ Name: GitHub Security Advisory Maven 
-│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areview
-│                       │     │                          ed+ecosystem%3Amaven 
-│                       │     ├ Title           : commons-compress: Denial of service caused by an
-│                       │     │                   infinite loop for a corrupted DUMP file 
-│                       │     ├ Description     : Loop with Unreachable Exit Condition ('Infinite Loop')
-│                       │     │                   vulnerability in Apache Commons Compress.This issue affects
-│                       │     │                   Apache Commons Compress: from 1.3 through 1.25.0.
-│                       │     │                   
-│                       │     │                   Users are recommended to upgrade to version 1.26.0 which
-│                       │     │                   fixes the issue.
-│                       │     │                   
-│                       │     │                    
-│                       │     ├ Severity        : HIGH 
-│                       │     ├ CweIDs           ─ [0]: CWE-835 
-│                       │     ├ VendorSeverity   ╭ ghsa  : 3 
-│                       │     │                  ├ nvd   : 2 
-│                       │     │                  ╰ redhat: 3 
-│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:H
-│                       │     │                  │        │           /I:H/A:H 
-│                       │     │                  │        ╰ V3Score : 8.1 
-│                       │     │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N
-│                       │     │                  │        │           /I:N/A:H 
-│                       │     │                  │        ╰ V3Score : 5.5 
-│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:H
-│                       │     │                           │           /I:H/A:H 
-│                       │     │                           ╰ V3Score : 8.1 
-│                       │     ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/02/19/1 
-│                       │     │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2024-25710 
-│                       │     │                  ├ [2]: https://github.com/apache/commons-compress 
-│                       │     │                  ├ [3]: https://lists.apache.org/thread/cz8qkcwphy4cx8gltn
-│                       │     │                  │      932ln51cbtq6kf 
-│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-25710 
-│                       │     │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2024-25710 
-│                       │     ├ PublishedDate   : 2024-02-19T09:15:37.943Z 
-│                       │     ╰ LastModifiedDate: 2024-02-22T15:24:45.24Z 
-│                       ╰ [1] ╭ VulnerabilityID : CVE-2024-26308 
-│                             ├ PkgName         : org.apache.commons:commons-compress 
-│                             ├ PkgPath         : openaf/openaf.jar 
-│                             ├ PkgIdentifier    ─ PURL: pkg:maven/org.apache.commons/commons-compress@1.25.0 
-│                             ├ InstalledVersion: 1.25.0 
-│                             ├ FixedVersion    : 1.26.0 
-│                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:27b7dbc51715583efb2ed0947d934d02532ab4b0
-│                             │                  │         abbb5c3f62eef6d190d4ce89 
-│                             │                  ╰ DiffID: sha256:800fc2a5b36766a9af79f08c26d857455c5b1e30
-│                             │                            3ceab7a31db53cccb8981663 
-│                             ├ SeveritySource  : ghsa 
-│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-26308 
-│                             ├ DataSource       ╭ ID  : ghsa 
-│                             │                  ├ Name: GitHub Security Advisory Maven 
-│                             │                  ╰ URL : https://github.com/advisories?query=type%3Areview
-│                             │                          ed+ecosystem%3Amaven 
-│                             ├ Title           : commons-compress: OutOfMemoryError unpacking broken
-│                             │                   Pack200 file 
-│                             ├ Description     : Allocation of Resources Without Limits or Throttling
-│                             │                   vulnerability in Apache Commons Compress.This issue affects
-│                             │                   Apache Commons Compress: from 1.21 before 1.26.
-│                             │                   
-│                             │                   Users are recommended to upgrade to version 1.26, which fixes
-│                             │                    the issue.
-│                             │                   
-│                             │                    
-│                             ├ Severity        : HIGH 
-│                             ├ CweIDs           ─ [0]: CWE-770 
-│                             ├ VendorSeverity   ╭ ghsa  : 3 
-│                             │                  ├ nvd   : 2 
-│                             │                  ╰ redhat: 2 
-│                             ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
-│                             │                  │        │           /I:N/A:H 
-│                             │                  │        ╰ V3Score : 7.5 
-│                             │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N
-│                             │                  │        │           /I:N/A:H 
-│                             │                  │        ╰ V3Score : 5.5 
-│                             │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N
-│                             │                           │           /I:N/A:H 
-│                             │                           ╰ V3Score : 5.9 
-│                             ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/02/19/2 
-│                             │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2024-26308 
-│                             │                  ├ [2]: https://github.com/apache/commons-compress 
-│                             │                  ├ [3]: https://lists.apache.org/thread/ch5yo2d21p7vlqrhll
-│                             │                  │      9b17otbyq4npfg 
-│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-26308 
-│                             │                  ├ [5]: https://www.cve.org/CVERecord?id=CVE-2024-26308 
-│                             │                  ╰ [6]: https://www.openwall.com/lists/oss-security/2024/0
-│                             │                         2/19/2 
-│                             ├ PublishedDate   : 2024-02-19T09:15:38.277Z 
-│                             ╰ LastModifiedDate: 2024-02-22T15:21:36.213Z 
-├ [2] ╭ Target         : usr/bin/crictl 
+├ [1] ╭ Target         : usr/bin/crictl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
 │     ╰ Vulnerabilities ─ [0] ╭ VulnerabilityID : CVE-2023-47108 
@@ -118,10 +13,10 @@
 │                             ├ InstalledVersion: v0.42.0 
 │                             ├ FixedVersion    : 0.46.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:27b7dbc51715583efb2ed0947d934d02532ab4b0
-│                             │                  │         abbb5c3f62eef6d190d4ce89 
-│                             │                  ╰ DiffID: sha256:800fc2a5b36766a9af79f08c26d857455c5b1e30
-│                             │                            3ceab7a31db53cccb8981663 
+│                             ├ Layer            ╭ Digest: sha256:335436e116a776d91bf024ceab7b7934f2751ce5
+│                             │                  │         6c99e531d9e01e7dd0417631 
+│                             │                  ╰ DiffID: sha256:dc06cdbc77017e57c339a9f41ef4a521dab49d17
+│                             │                            e2b7f0b1be205741c1be8efa 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-47108 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -183,7 +78,7 @@
 │                             │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2023-47108 
 │                             ├ PublishedDate   : 2023-11-10T19:15:16.41Z 
 │                             ╰ LastModifiedDate: 2023-11-20T19:34:26.493Z 
-├ [3] ╭ Target         : usr/bin/helm 
+├ [2] ╭ Target         : usr/bin/helm 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
 │     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : GHSA-7ww5-4wqc-m92c 
@@ -192,10 +87,10 @@
 │                       │     ├ InstalledVersion: v1.7.6 
 │                       │     ├ FixedVersion    : 1.6.26, 1.7.11 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:27b7dbc51715583efb2ed0947d934d02532ab4b0
-│                       │     │                  │         abbb5c3f62eef6d190d4ce89 
-│                       │     │                  ╰ DiffID: sha256:800fc2a5b36766a9af79f08c26d857455c5b1e30
-│                       │     │                            3ceab7a31db53cccb8981663 
+│                       │     ├ Layer            ╭ Digest: sha256:335436e116a776d91bf024ceab7b7934f2751ce5
+│                       │     │                  │         6c99e531d9e01e7dd0417631 
+│                       │     │                  ╰ DiffID: sha256:dc06cdbc77017e57c339a9f41ef4a521dab49d17
+│                       │     │                            e2b7f0b1be205741c1be8efa 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://github.com/advisories/GHSA-7ww5-4wqc-m92c 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -286,10 +181,10 @@
 │                             ├ InstalledVersion: v0.14.0 
 │                             ├ FixedVersion    : 0.17.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:27b7dbc51715583efb2ed0947d934d02532ab4b0
-│                             │                  │         abbb5c3f62eef6d190d4ce89 
-│                             │                  ╰ DiffID: sha256:800fc2a5b36766a9af79f08c26d857455c5b1e30
-│                             │                            3ceab7a31db53cccb8981663 
+│                             ├ Layer            ╭ Digest: sha256:335436e116a776d91bf024ceab7b7934f2751ce5
+│                             │                  │         6c99e531d9e01e7dd0417631 
+│                             │                  ╰ DiffID: sha256:dc06cdbc77017e57c339a9f41ef4a521dab49d17
+│                             │                            e2b7f0b1be205741c1be8efa 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-48795 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -664,7 +559,7 @@
 │                             │                           ry.txt 
 │                             ├ PublishedDate   : 2023-12-18T16:15:10.897Z 
 │                             ╰ LastModifiedDate: 2024-01-29T09:15:42.687Z 
-╰ [4] ╭ Target         : usr/bin/skopeo 
+╰ [3] ╭ Target         : usr/bin/skopeo 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
       ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-21626 
@@ -673,10 +568,10 @@
                         │     ├ InstalledVersion: v1.1.10 
                         │     ├ FixedVersion    : 1.1.12 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:27b7dbc51715583efb2ed0947d934d02532ab4b0
-                        │     │                  │         abbb5c3f62eef6d190d4ce89 
-                        │     │                  ╰ DiffID: sha256:800fc2a5b36766a9af79f08c26d857455c5b1e30
-                        │     │                            3ceab7a31db53cccb8981663 
+                        │     ├ Layer            ╭ Digest: sha256:335436e116a776d91bf024ceab7b7934f2751ce5
+                        │     │                  │         6c99e531d9e01e7dd0417631 
+                        │     │                  ╰ DiffID: sha256:dc06cdbc77017e57c339a9f41ef4a521dab49d17
+                        │     │                            e2b7f0b1be205741c1be8efa 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-21626 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -764,10 +659,10 @@
                               ├ InstalledVersion: v0.15.0 
                               ├ FixedVersion    : 0.17.0 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:27b7dbc51715583efb2ed0947d934d02532ab4b0
-                              │                  │         abbb5c3f62eef6d190d4ce89 
-                              │                  ╰ DiffID: sha256:800fc2a5b36766a9af79f08c26d857455c5b1e30
-                              │                            3ceab7a31db53cccb8981663 
+                              ├ Layer            ╭ Digest: sha256:335436e116a776d91bf024ceab7b7934f2751ce5
+                              │                  │         6c99e531d9e01e7dd0417631 
+                              │                  ╰ DiffID: sha256:dc06cdbc77017e57c339a9f41ef4a521dab49d17
+                              │                            e2b7f0b1be205741c1be8efa 
                               ├ SeveritySource  : ghsa 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-48795 
                               ├ DataSource       ╭ ID  : ghsa 
