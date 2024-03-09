@@ -13,8 +13,8 @@
     FixedVersion: 0.46.0
     Status: fixed
     Layer:
-      Digest: sha256:16369e989cf2af16ca1412d09d83ed5ea84af8ce8f27b782f265adef06303447
-      DiffID: sha256:3562c6354bbd746c4fceee68334c96d98369c23adea8d28b4d5346d4fb6b818c
+      Digest: sha256:474748ddf912e6577171699398e598923a640c4c582ad20985fc3482469012ea
+      DiffID: sha256:71a4edf87bf32464d211b2b21742ad82329942a61c01635e64b7fd9a02258c61
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-47108
     DataSource:
@@ -67,8 +67,8 @@
     FixedVersion: 1.6.26, 1.7.11
     Status: fixed
     Layer:
-      Digest: sha256:16369e989cf2af16ca1412d09d83ed5ea84af8ce8f27b782f265adef06303447
-      DiffID: sha256:3562c6354bbd746c4fceee68334c96d98369c23adea8d28b4d5346d4fb6b818c
+      Digest: sha256:474748ddf912e6577171699398e598923a640c4c582ad20985fc3482469012ea
+      DiffID: sha256:71a4edf87bf32464d211b2b21742ad82329942a61c01635e64b7fd9a02258c61
     SeveritySource: ghsa
     PrimaryURL: https://github.com/advisories/GHSA-7ww5-4wqc-m92c
     DataSource:
@@ -115,8 +115,8 @@
     FixedVersion: 0.17.0
     Status: fixed
     Layer:
-      Digest: sha256:16369e989cf2af16ca1412d09d83ed5ea84af8ce8f27b782f265adef06303447
-      DiffID: sha256:3562c6354bbd746c4fceee68334c96d98369c23adea8d28b4d5346d4fb6b818c
+      Digest: sha256:474748ddf912e6577171699398e598923a640c4c582ad20985fc3482469012ea
+      DiffID: sha256:71a4edf87bf32464d211b2b21742ad82329942a61c01635e64b7fd9a02258c61
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-48795
     DataSource:
@@ -321,7 +321,7 @@
   Class: lang-pkgs
   Type: gobinary
   Vulnerabilities:
-  - VulnerabilityID: GHSA-c5q2-7r4c-mv6g
+  - VulnerabilityID: CVE-2024-28180
     PkgName: github.com/go-jose/go-jose/v3
     PkgIdentifier:
       PURL: pkg:golang/github.com/go-jose/go-jose/v3@v3.0.1
@@ -329,10 +329,10 @@
     FixedVersion: 3.0.3
     Status: fixed
     Layer:
-      Digest: sha256:16369e989cf2af16ca1412d09d83ed5ea84af8ce8f27b782f265adef06303447
-      DiffID: sha256:3562c6354bbd746c4fceee68334c96d98369c23adea8d28b4d5346d4fb6b818c
+      Digest: sha256:474748ddf912e6577171699398e598923a640c4c582ad20985fc3482469012ea
+      DiffID: sha256:71a4edf87bf32464d211b2b21742ad82329942a61c01635e64b7fd9a02258c61
     SeveritySource: ghsa
-    PrimaryURL: https://github.com/advisories/GHSA-c5q2-7r4c-mv6g
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-28180
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
@@ -366,8 +366,8 @@
     FixedVersion: 1.1.12
     Status: fixed
     Layer:
-      Digest: sha256:16369e989cf2af16ca1412d09d83ed5ea84af8ce8f27b782f265adef06303447
-      DiffID: sha256:3562c6354bbd746c4fceee68334c96d98369c23adea8d28b4d5346d4fb6b818c
+      Digest: sha256:474748ddf912e6577171699398e598923a640c4c582ad20985fc3482469012ea
+      DiffID: sha256:71a4edf87bf32464d211b2b21742ad82329942a61c01635e64b7fd9a02258c61
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-21626
     DataSource:
@@ -432,8 +432,8 @@
     FixedVersion: 0.17.0
     Status: fixed
     Layer:
-      Digest: sha256:16369e989cf2af16ca1412d09d83ed5ea84af8ce8f27b782f265adef06303447
-      DiffID: sha256:3562c6354bbd746c4fceee68334c96d98369c23adea8d28b4d5346d4fb6b818c
+      Digest: sha256:474748ddf912e6577171699398e598923a640c4c582ad20985fc3482469012ea
+      DiffID: sha256:71a4edf87bf32464d211b2b21742ad82329942a61c01635e64b7fd9a02258c61
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-48795
     DataSource:
@@ -634,7 +634,7 @@
     - https://www.vandyke.com/products/securecrt/history.txt
     PublishedDate: '2023-12-18T16:15:10.897Z'
     LastModifiedDate: '2024-03-07T19:15:10.263Z'
-  - VulnerabilityID: GHSA-c5q2-7r4c-mv6g
+  - VulnerabilityID: CVE-2024-28180
     PkgName: gopkg.in/go-jose/go-jose.v2
     PkgIdentifier:
       PURL: pkg:golang/gopkg.in/go-jose/go-jose.v2@v2.6.1
@@ -642,10 +642,10 @@
     FixedVersion: 2.6.3
     Status: fixed
     Layer:
-      Digest: sha256:16369e989cf2af16ca1412d09d83ed5ea84af8ce8f27b782f265adef06303447
-      DiffID: sha256:3562c6354bbd746c4fceee68334c96d98369c23adea8d28b4d5346d4fb6b818c
+      Digest: sha256:474748ddf912e6577171699398e598923a640c4c582ad20985fc3482469012ea
+      DiffID: sha256:71a4edf87bf32464d211b2b21742ad82329942a61c01635e64b7fd9a02258c61
     SeveritySource: ghsa
-    PrimaryURL: https://github.com/advisories/GHSA-c5q2-7r4c-mv6g
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-28180
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
