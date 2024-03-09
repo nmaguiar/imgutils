@@ -674,7 +674,7 @@
 ╰ [4] ╭ Target         : usr/bin/skopeo 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
-      ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : GHSA-c5q2-7r4c-mv6g 
+      ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-28180 
                         │     ├ PkgName         : github.com/go-jose/go-jose/v3 
                         │     ├ PkgIdentifier    ─ PURL: pkg:golang/github.com/go-jose/go-jose/v3@v3.0.1 
                         │     ├ InstalledVersion: v3.0.1 
@@ -685,7 +685,7 @@
                         │     │                  ╰ DiffID: sha256:d85509a55710f408080b308fee2b01101c7229e3
                         │     │                            c28440e1d78dc0f775a8b526 
                         │     ├ SeveritySource  : ghsa 
-                        │     ├ PrimaryURL      : https://github.com/advisories/GHSA-c5q2-7r4c-mv6g 
+                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-28180 
                         │     ├ DataSource       ╭ ID  : ghsa 
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areview
@@ -1195,7 +1195,7 @@
                         │     │                           ry.txt 
                         │     ├ PublishedDate   : 2023-12-18T16:15:10.897Z 
                         │     ╰ LastModifiedDate: 2024-03-07T19:15:10.263Z 
-                        ╰ [3] ╭ VulnerabilityID : GHSA-c5q2-7r4c-mv6g 
+                        ╰ [3] ╭ VulnerabilityID : CVE-2024-28180 
                               ├ PkgName         : gopkg.in/go-jose/go-jose.v2 
                               ├ PkgIdentifier    ─ PURL: pkg:golang/gopkg.in/go-jose/go-jose.v2@v2.6.1 
                               ├ InstalledVersion: v2.6.1 
@@ -1206,7 +1206,7 @@
                               │                  ╰ DiffID: sha256:d85509a55710f408080b308fee2b01101c7229e3
                               │                            c28440e1d78dc0f775a8b526 
                               ├ SeveritySource  : ghsa 
-                              ├ PrimaryURL      : https://github.com/advisories/GHSA-c5q2-7r4c-mv6g 
+                              ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-28180 
                               ├ DataSource       ╭ ID  : ghsa 
                               │                  ├ Name: GitHub Security Advisory Go 
                               │                  ╰ URL : https://github.com/advisories?query=type%3Areview
