@@ -428,7 +428,7 @@
   Class: lang-pkgs
   Type: gobinary
   Vulnerabilities:
-  - VulnerabilityID: GHSA-c5q2-7r4c-mv6g
+  - VulnerabilityID: CVE-2024-28180
     PkgName: github.com/go-jose/go-jose/v3
     PkgIdentifier:
       PURL: pkg:golang/github.com/go-jose/go-jose/v3@v3.0.1
@@ -439,7 +439,7 @@
       Digest: sha256:cac5be5fc0480a0af79091d248d5fab72f5de74c7db202b082df5706234e3260
       DiffID: sha256:d85509a55710f408080b308fee2b01101c7229e3c28440e1d78dc0f775a8b526
     SeveritySource: ghsa
-    PrimaryURL: https://github.com/advisories/GHSA-c5q2-7r4c-mv6g
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-28180
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
@@ -741,7 +741,7 @@
     - https://www.vandyke.com/products/securecrt/history.txt
     PublishedDate: '2023-12-18T16:15:10.897Z'
     LastModifiedDate: '2024-03-07T19:15:10.263Z'
-  - VulnerabilityID: GHSA-c5q2-7r4c-mv6g
+  - VulnerabilityID: CVE-2024-28180
     PkgName: gopkg.in/go-jose/go-jose.v2
     PkgIdentifier:
       PURL: pkg:golang/gopkg.in/go-jose/go-jose.v2@v2.6.1
@@ -752,7 +752,7 @@
       Digest: sha256:cac5be5fc0480a0af79091d248d5fab72f5de74c7db202b082df5706234e3260
       DiffID: sha256:d85509a55710f408080b308fee2b01101c7229e3c28440e1d78dc0f775a8b526
     SeveritySource: ghsa
-    PrimaryURL: https://github.com/advisories/GHSA-c5q2-7r4c-mv6g
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-28180
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
