@@ -579,35 +579,34 @@
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areview
                         │     │                          ed+ecosystem%3Ago 
-                        │     ├ Title           : Go JOSE vulnerable to Improper Handling of Highly
-                        │     │                   Compressed Data (Data Amplification) 
-                        │     ├ Description     : ### Impact
-                        │     │                   An attacker could send a JWE containing compressed data that
+                        │     ├ Title           : Package jose aims to provide an implementation of the
+                        │     │                   Javascript Objec ... 
+                        │     ├ Description     : Package jose aims to provide an implementation of the
+                        │     │                   Javascript Object Signing and Encryption set of standards. An
+                        │     │                    attacker could send a JWE containing compressed data that
                         │     │                   used large amounts of memory and CPU when decompressed by
                         │     │                   Decrypt or DecryptMulti. Those functions now return an error
                         │     │                   if the decompressed data would exceed 250kB or 10x the
-                        │     │                   compressed size (whichever is larger). Thanks to Enze
-                        │     │                   Wang@Alioth and Jianjun Chen@Zhongguancun Lab (@zer0yu and
-                        │     │                   @chenjj) for reporting.
-                        │     │                   
-                        │     │                   ### Patches
-                        │     │                   The problem is fixed in v4.0.1, v3.0.3, v2.6.3
-                        │     │                   
+                        │     │                   compressed size (whichever is larger). This vulnerability has
+                        │     │                    been patched in versions 4.0.1, 3.0.3 and 2.6.3.
                         │     │                    
                         │     ├ Severity        : MEDIUM 
+                        │     ├ CweIDs           ─ [0]: CWE-409 
                         │     ├ VendorSeverity   ─ ghsa: 2 
                         │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I
                         │     │                         │           :N/A:L 
                         │     │                         ╰ V3Score : 4.3 
-                        │     ╰ References       ╭ [0]: https://github.com/go-jose/go-jose 
-                        │                        ├ [1]: https://github.com/go-jose/go-jose/commit/0dd4dd54
-                        │                        │      1c665fb292d664f77604ba694726f298 
-                        │                        ├ [2]: https://github.com/go-jose/go-jose/commit/add6a284
-                        │                        │      ea0f844fd6628cba637be5451fe4b28a 
-                        │                        ├ [3]: https://github.com/go-jose/go-jose/commit/f4c051a0
-                        │                        │      653d78199a053892f7619ebf96339502 
-                        │                        ╰ [4]: https://github.com/go-jose/go-jose/security/adviso
-                        │                               ries/GHSA-c5q2-7r4c-mv6g 
+                        │     ├ References       ╭ [0]: https://github.com/go-jose/go-jose 
+                        │     │                  ├ [1]: https://github.com/go-jose/go-jose/commit/0dd4dd54
+                        │     │                  │      1c665fb292d664f77604ba694726f298 
+                        │     │                  ├ [2]: https://github.com/go-jose/go-jose/commit/add6a284
+                        │     │                  │      ea0f844fd6628cba637be5451fe4b28a 
+                        │     │                  ├ [3]: https://github.com/go-jose/go-jose/commit/f4c051a0
+                        │     │                  │      653d78199a053892f7619ebf96339502 
+                        │     │                  ╰ [4]: https://github.com/go-jose/go-jose/security/adviso
+                        │     │                         ries/GHSA-c5q2-7r4c-mv6g 
+                        │     ├ PublishedDate   : 2024-03-09T01:15:07.34Z 
+                        │     ╰ LastModifiedDate: 2024-03-09T01:15:07.34Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2024-21626 
                         │     ├ PkgName         : github.com/opencontainers/runc 
                         │     ├ PkgIdentifier    ─ PURL: pkg:golang/github.com/opencontainers/runc@v1.1.10 
@@ -1100,33 +1099,32 @@
                               │                  ├ Name: GitHub Security Advisory Go 
                               │                  ╰ URL : https://github.com/advisories?query=type%3Areview
                               │                          ed+ecosystem%3Ago 
-                              ├ Title           : Go JOSE vulnerable to Improper Handling of Highly
-                              │                   Compressed Data (Data Amplification) 
-                              ├ Description     : ### Impact
-                              │                   An attacker could send a JWE containing compressed data that
+                              ├ Title           : Package jose aims to provide an implementation of the
+                              │                   Javascript Objec ... 
+                              ├ Description     : Package jose aims to provide an implementation of the
+                              │                   Javascript Object Signing and Encryption set of standards. An
+                              │                    attacker could send a JWE containing compressed data that
                               │                   used large amounts of memory and CPU when decompressed by
                               │                   Decrypt or DecryptMulti. Those functions now return an error
                               │                   if the decompressed data would exceed 250kB or 10x the
-                              │                   compressed size (whichever is larger). Thanks to Enze
-                              │                   Wang@Alioth and Jianjun Chen@Zhongguancun Lab (@zer0yu and
-                              │                   @chenjj) for reporting.
-                              │                   
-                              │                   ### Patches
-                              │                   The problem is fixed in v4.0.1, v3.0.3, v2.6.3
-                              │                   
+                              │                   compressed size (whichever is larger). This vulnerability has
+                              │                    been patched in versions 4.0.1, 3.0.3 and 2.6.3.
                               │                    
                               ├ Severity        : MEDIUM 
+                              ├ CweIDs           ─ [0]: CWE-409 
                               ├ VendorSeverity   ─ ghsa: 2 
                               ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I
                               │                         │           :N/A:L 
                               │                         ╰ V3Score : 4.3 
-                              ╰ References       ╭ [0]: https://github.com/go-jose/go-jose 
-                                                 ├ [1]: https://github.com/go-jose/go-jose/commit/0dd4dd54
-                                                 │      1c665fb292d664f77604ba694726f298 
-                                                 ├ [2]: https://github.com/go-jose/go-jose/commit/add6a284
-                                                 │      ea0f844fd6628cba637be5451fe4b28a 
-                                                 ├ [3]: https://github.com/go-jose/go-jose/commit/f4c051a0
-                                                 │      653d78199a053892f7619ebf96339502 
-                                                 ╰ [4]: https://github.com/go-jose/go-jose/security/adviso
-                                                        ries/GHSA-c5q2-7r4c-mv6g 
+                              ├ References       ╭ [0]: https://github.com/go-jose/go-jose 
+                              │                  ├ [1]: https://github.com/go-jose/go-jose/commit/0dd4dd54
+                              │                  │      1c665fb292d664f77604ba694726f298 
+                              │                  ├ [2]: https://github.com/go-jose/go-jose/commit/add6a284
+                              │                  │      ea0f844fd6628cba637be5451fe4b28a 
+                              │                  ├ [3]: https://github.com/go-jose/go-jose/commit/f4c051a0
+                              │                  │      653d78199a053892f7619ebf96339502 
+                              │                  ╰ [4]: https://github.com/go-jose/go-jose/security/adviso
+                              │                         ries/GHSA-c5q2-7r4c-mv6g 
+                              ├ PublishedDate   : 2024-03-09T01:15:07.34Z 
+                              ╰ LastModifiedDate: 2024-03-09T01:15:07.34Z 
 ````
