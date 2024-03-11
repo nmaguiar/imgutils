@@ -579,8 +579,7 @@
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areview
                         │     │                          ed+ecosystem%3Ago 
-                        │     ├ Title           : Package jose aims to provide an implementation of the
-                        │     │                   Javascript Objec ... 
+                        │     ├ Title           : jose-go: improper handling of highly compressed data 
                         │     ├ Description     : Package jose aims to provide an implementation of the
                         │     │                   Javascript Object Signing and Encryption set of standards. An
                         │     │                    attacker could send a JWE containing compressed data that
@@ -592,19 +591,26 @@
                         │     │                    
                         │     ├ Severity        : MEDIUM 
                         │     ├ CweIDs           ─ [0]: CWE-409 
-                        │     ├ VendorSeverity   ─ ghsa: 2 
-                        │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I
-                        │     │                         │           :N/A:L 
-                        │     │                         ╰ V3Score : 4.3 
-                        │     ├ References       ╭ [0]: https://github.com/go-jose/go-jose 
-                        │     │                  ├ [1]: https://github.com/go-jose/go-jose/commit/0dd4dd54
+                        │     ├ VendorSeverity   ╭ ghsa  : 2 
+                        │     │                  ╰ redhat: 2 
+                        │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N
+                        │     │                  │        │           /I:N/A:L 
+                        │     │                  │        ╰ V3Score : 4.3 
+                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N
+                        │     │                           │           /I:N/A:L 
+                        │     │                           ╰ V3Score : 4.3 
+                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-28180 
+                        │     │                  ├ [1]: https://github.com/go-jose/go-jose 
+                        │     │                  ├ [2]: https://github.com/go-jose/go-jose/commit/0dd4dd54
                         │     │                  │      1c665fb292d664f77604ba694726f298 
-                        │     │                  ├ [2]: https://github.com/go-jose/go-jose/commit/add6a284
+                        │     │                  ├ [3]: https://github.com/go-jose/go-jose/commit/add6a284
                         │     │                  │      ea0f844fd6628cba637be5451fe4b28a 
-                        │     │                  ├ [3]: https://github.com/go-jose/go-jose/commit/f4c051a0
+                        │     │                  ├ [4]: https://github.com/go-jose/go-jose/commit/f4c051a0
                         │     │                  │      653d78199a053892f7619ebf96339502 
-                        │     │                  ╰ [4]: https://github.com/go-jose/go-jose/security/adviso
-                        │     │                         ries/GHSA-c5q2-7r4c-mv6g 
+                        │     │                  ├ [5]: https://github.com/go-jose/go-jose/security/adviso
+                        │     │                  │      ries/GHSA-c5q2-7r4c-mv6g 
+                        │     │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2024-28180 
+                        │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-28180 
                         │     ├ PublishedDate   : 2024-03-09T01:15:07.34Z 
                         │     ╰ LastModifiedDate: 2024-03-09T01:15:07.34Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2024-21626 
@@ -1099,8 +1105,7 @@
                               │                  ├ Name: GitHub Security Advisory Go 
                               │                  ╰ URL : https://github.com/advisories?query=type%3Areview
                               │                          ed+ecosystem%3Ago 
-                              ├ Title           : Package jose aims to provide an implementation of the
-                              │                   Javascript Objec ... 
+                              ├ Title           : jose-go: improper handling of highly compressed data 
                               ├ Description     : Package jose aims to provide an implementation of the
                               │                   Javascript Object Signing and Encryption set of standards. An
                               │                    attacker could send a JWE containing compressed data that
@@ -1112,19 +1117,26 @@
                               │                    
                               ├ Severity        : MEDIUM 
                               ├ CweIDs           ─ [0]: CWE-409 
-                              ├ VendorSeverity   ─ ghsa: 2 
-                              ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I
-                              │                         │           :N/A:L 
-                              │                         ╰ V3Score : 4.3 
-                              ├ References       ╭ [0]: https://github.com/go-jose/go-jose 
-                              │                  ├ [1]: https://github.com/go-jose/go-jose/commit/0dd4dd54
+                              ├ VendorSeverity   ╭ ghsa  : 2 
+                              │                  ╰ redhat: 2 
+                              ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N
+                              │                  │        │           /I:N/A:L 
+                              │                  │        ╰ V3Score : 4.3 
+                              │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N
+                              │                           │           /I:N/A:L 
+                              │                           ╰ V3Score : 4.3 
+                              ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-28180 
+                              │                  ├ [1]: https://github.com/go-jose/go-jose 
+                              │                  ├ [2]: https://github.com/go-jose/go-jose/commit/0dd4dd54
                               │                  │      1c665fb292d664f77604ba694726f298 
-                              │                  ├ [2]: https://github.com/go-jose/go-jose/commit/add6a284
+                              │                  ├ [3]: https://github.com/go-jose/go-jose/commit/add6a284
                               │                  │      ea0f844fd6628cba637be5451fe4b28a 
-                              │                  ├ [3]: https://github.com/go-jose/go-jose/commit/f4c051a0
+                              │                  ├ [4]: https://github.com/go-jose/go-jose/commit/f4c051a0
                               │                  │      653d78199a053892f7619ebf96339502 
-                              │                  ╰ [4]: https://github.com/go-jose/go-jose/security/adviso
-                              │                         ries/GHSA-c5q2-7r4c-mv6g 
+                              │                  ├ [5]: https://github.com/go-jose/go-jose/security/adviso
+                              │                  │      ries/GHSA-c5q2-7r4c-mv6g 
+                              │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2024-28180 
+                              │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-28180 
                               ├ PublishedDate   : 2024-03-09T01:15:07.34Z 
                               ╰ LastModifiedDate: 2024-03-09T01:15:07.34Z 
 ````
