@@ -36,16 +36,16 @@
 │                       │     ├ CweIDs           ─ [0]: CWE-835 
 │                       │     ├ VendorSeverity   ╭ ghsa  : 3 
 │                       │     │                  ├ nvd   : 2 
-│                       │     │                  ╰ redhat: 3 
+│                       │     │                  ╰ redhat: 2 
 │                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:H
 │                       │     │                  │        │           /I:H/A:H 
 │                       │     │                  │        ╰ V3Score : 8.1 
 │                       │     │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N
 │                       │     │                  │        │           /I:N/A:H 
 │                       │     │                  │        ╰ V3Score : 5.5 
-│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:H
-│                       │     │                           │           /I:H/A:H 
-│                       │     │                           ╰ V3Score : 8.1 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:N
+│                       │     │                           │           /I:N/A:H 
+│                       │     │                           ╰ V3Score : 5.9 
 │                       │     ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/02/19/1 
 │                       │     │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2024-25710 
 │                       │     │                  ├ [2]: https://github.com/apache/commons-compress 
@@ -723,7 +723,7 @@
                         │     │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2024-28180 
                         │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-28180 
                         │     ├ PublishedDate   : 2024-03-09T01:15:07.34Z 
-                        │     ╰ LastModifiedDate: 2024-03-09T01:15:07.34Z 
+                        │     ╰ LastModifiedDate: 2024-03-11T01:32:39.697Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2024-21626 
                         │     ├ PkgName         : github.com/opencontainers/runc 
                         │     ├ PkgIdentifier    ─ PURL: pkg:golang/github.com/opencontainers/runc@v1.1.10 
@@ -1249,5 +1249,5 @@
                               │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2024-28180 
                               │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-28180 
                               ├ PublishedDate   : 2024-03-09T01:15:07.34Z 
-                              ╰ LastModifiedDate: 2024-03-09T01:15:07.34Z 
+                              ╰ LastModifiedDate: 2024-03-11T01:32:39.697Z 
 ````
