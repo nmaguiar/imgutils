@@ -612,7 +612,7 @@
                         │     │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2024-28180 
                         │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-28180 
                         │     ├ PublishedDate   : 2024-03-09T01:15:07.34Z 
-                        │     ╰ LastModifiedDate: 2024-03-09T01:15:07.34Z 
+                        │     ╰ LastModifiedDate: 2024-03-11T01:32:39.697Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2024-21626 
                         │     ├ PkgName         : github.com/opencontainers/runc 
                         │     ├ PkgIdentifier    ─ PURL: pkg:golang/github.com/opencontainers/runc@v1.1.10 
@@ -1138,5 +1138,5 @@
                               │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2024-28180 
                               │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-28180 
                               ├ PublishedDate   : 2024-03-09T01:15:07.34Z 
-                              ╰ LastModifiedDate: 2024-03-09T01:15:07.34Z 
+                              ╰ LastModifiedDate: 2024-03-11T01:32:39.697Z 
 ````
