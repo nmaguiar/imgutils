@@ -13,8 +13,8 @@
     FixedVersion: 0.46.0
     Status: fixed
     Layer:
-      Digest: sha256:2e8c916cf6060b87b0eac06561e32852280b080add875705c6e89eeb96aa028e
-      DiffID: sha256:d2e3d339381bbc0a0afb540a17c0ed9384ea55e2f2aad19054fa884bf1ff836f
+      Digest: sha256:935259591895f842028e7780131e0346a2575b0de460b375cc34e29323efd7f6
+      DiffID: sha256:53465a1255def6f475e41e62bc68fdbf37ed4229edea2f24067c495c22c362ce
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-47108
     DataSource:
