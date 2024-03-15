@@ -28,6 +28,7 @@ If you just need _crictl_ you can also use the "nmaguiar/imgutils:lite" image.
 * [Accessing the Docker daemon](#accessing-the-docker-daemon)
 * [Accessing Kubernetes container runtime](#accessing-kubernetes-container-runtime)
 * [Checking images content](#checking-images-content)
+* [Using the local docker authentication](#using-the-local-docker-authentication)
 
 ## Copying images and charts between registries
 
@@ -235,4 +236,12 @@ $ ojob expand.yaml image=image.tar output=output json=image.json
 $ cd output
 $ mc
 # then use the midnight-commander UI to check the contents
+```
+
+## Using the local docker authentication
+
+To start imgutils/nmaguiar with the local host docker authentication:
+
+```bash
+docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock -v $HOME:/work nmaguiar/imgutils /bin/sh -c "mkdir /home/openaf/.docker && sudo cp /work/.docker/config.json /home/openaf/.docker/. && sudo chmod a+r /home/openaf/.docker/*&& /bin/bash"
 ```
