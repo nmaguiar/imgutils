@@ -279,12 +279,12 @@
                         │     │                  │       2/01/1 
                         │     │                  ├ [2] : http://www.openwall.com/lists/oss-security/2024/0
                         │     │                  │       2/02/3 
-                        │     │                  ├ [3] : https://access.redhat.com/errata/RHSA-2024:0752 
+                        │     │                  ├ [3] : https://access.redhat.com/errata/RHSA-2024:0670 
                         │     │                  ├ [4] : https://access.redhat.com/security/cve/CVE-2024-21626 
                         │     │                  ├ [5] : https://bugzilla.redhat.com/2258725 
                         │     │                  ├ [6] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
                         │     │                  │       E-2024-21626 
-                        │     │                  ├ [7] : https://errata.almalinux.org/8/ALSA-2024-0752.html 
+                        │     │                  ├ [7] : https://errata.almalinux.org/9/ALSA-2024-0670.html 
                         │     │                  ├ [8] : https://github.com/opencontainers/runc 
                         │     │                  ├ [9] : https://github.com/opencontainers/runc/commit/021
                         │     │                  │       20488a4c0fc487d1ed2867e901eeed7ce8ecf 
@@ -395,7 +395,7 @@
                         │     │                  │        12/19/5 
                         │     │                  ├ [4]  : http://www.openwall.com/lists/oss-security/2023/
                         │     │                  │        12/20/3 
-                        │     │                  ├ [5]  : https://access.redhat.com/errata/RHSA-2024:0628 
+                        │     │                  ├ [5]  : https://access.redhat.com/errata/RHSA-2024:1150 
                         │     │                  ├ [6]  : https://access.redhat.com/security/cve/CVE-2023-48795 
                         │     │                  ├ [7]  : https://access.redhat.com/security/cve/cve-2023-48795 
                         │     │                  ├ [8]  : https://arstechnica.com/security/2023/12/hackers
@@ -411,7 +411,7 @@
                         │     │                  ├ [14] : https://crates.io/crates/thrussh/versions 
                         │     │                  ├ [15] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=C
                         │     │                  │        VE-2023-48795 
-                        │     │                  ├ [16] : https://errata.almalinux.org/8/ALSA-2024-0628.html 
+                        │     │                  ├ [16] : https://errata.almalinux.org/9/ALSA-2024-1150.html 
                         │     │                  ├ [17] : https://errata.rockylinux.org/RLSA-2024:0628 
                         │     │                  ├ [18] : https://filezilla-project.org/versions.php 
                         │     │                  ├ [19] : https://forum.netgate.com/topic/184941/terrapin-
