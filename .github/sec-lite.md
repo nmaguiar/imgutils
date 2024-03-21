@@ -5,7 +5,75 @@
 ╰ [1] ╭ Target         : usr/bin/crictl 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
-      ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2023-47108 
+      ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-24557 
+                        │     ├ PkgName         : github.com/docker/docker 
+                        │     ├ PkgIdentifier    ─ PURL: pkg:golang/github.com/docker/docker@v24.0.7%2Binc
+                        │     │                          ompatible 
+                        │     ├ InstalledVersion: v24.0.7+incompatible 
+                        │     ├ FixedVersion    : 25.0.2, 24.0.9 
+                        │     ├ Status          : fixed 
+                        │     ├ Layer            ╭ Digest: sha256:935259591895f842028e7780131e0346a2575b0d
+                        │     │                  │         e460b375cc34e29323efd7f6 
+                        │     │                  ╰ DiffID: sha256:53465a1255def6f475e41e62bc68fdbf37ed4229
+                        │     │                            edea2f24067c495c22c362ce 
+                        │     ├ SeveritySource  : ghsa 
+                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24557 
+                        │     ├ DataSource       ╭ ID  : ghsa 
+                        │     │                  ├ Name: GitHub Security Advisory Go 
+                        │     │                  ╰ URL : https://github.com/advisories?query=type%3Areview
+                        │     │                          ed+ecosystem%3Ago 
+                        │     ├ Title           : moby: classic builder cache poisoning 
+                        │     ├ Description     : Moby is an open-source project created by Docker to
+                        │     │                   enable software containerization. The classic builder cache
+                        │     │                   system is prone to cache poisoning if the image is built FROM
+                        │     │                    scratch. Also, changes to some instructions (most important
+                        │     │                   being HEALTHCHECK and ONBUILD) would not cause a cache miss.
+                        │     │                   An attacker with the knowledge of the Dockerfile someone is
+                        │     │                   using could poison their cache by making them pull a
+                        │     │                   specially crafted image that would be considered as a valid
+                        │     │                   cache candidate for some build steps. 23.0+ users are only
+                        │     │                   affected if they explicitly opted out of Buildkit
+                        │     │                   (DOCKER_BUILDKIT=0 environment variable) or are using the
+                        │     │                   /build API endpoint. All users on versions older than 23.0
+                        │     │                   could be impacted. Image build API endpoint (/build) and
+                        │     │                   ImageBuild function from github.com/docker/docker/client is
+                        │     │                   also affected as it the uses classic builder by default.
+                        │     │                   Patches are included in 24.0.9 and 25.0.2 releases. 
+                        │     ├ Severity        : MEDIUM 
+                        │     ├ CweIDs           ╭ [0]: CWE-346 
+                        │     │                  ╰ [1]: CWE-345 
+                        │     ├ VendorSeverity   ╭ amazon     : 3 
+                        │     │                  ├ cbl-mariner: 3 
+                        │     │                  ├ ghsa       : 2 
+                        │     │                  ├ nvd        : 3 
+                        │     │                  ├ redhat     : 2 
+                        │     │                  ╰ ubuntu     : 2 
+                        │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:L
+                        │     │                  │        │           /I:H/A:L 
+                        │     │                  │        ╰ V3Score : 6.9 
+                        │     │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H
+                        │     │                  │        │           /I:H/A:H 
+                        │     │                  │        ╰ V3Score : 7.8 
+                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:L
+                        │     │                           │           /I:H/A:L 
+                        │     │                           ╰ V3Score : 6.9 
+                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-24557 
+                        │     │                  ├ [1]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE
+                        │     │                  │      -2024-24557 
+                        │     │                  ├ [2]: https://github.com/moby/moby 
+                        │     │                  ├ [3]: https://github.com/moby/moby/commit/3e230cfdcc989d
+                        │     │                  │      c524882f6579f9e0dac77400ae 
+                        │     │                  ├ [4]: https://github.com/moby/moby/commit/fca702de7f7136
+                        │     │                  │      2c8d103073c7e4a1d0a467fadd 
+                        │     │                  ├ [5]: https://github.com/moby/moby/commit/fce6e0ca9bc000
+                        │     │                  │      888de3daa157af14fa41fcd0ff 
+                        │     │                  ├ [6]: https://github.com/moby/moby/security/advisories/G
+                        │     │                  │      HSA-xw73-rw38-6vjc 
+                        │     │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2024-24557 
+                        │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-24557 
+                        │     ├ PublishedDate   : 2024-02-01T17:15:10.953Z 
+                        │     ╰ LastModifiedDate: 2024-02-09T20:21:32.97Z 
+                        ├ [1] ╭ VulnerabilityID : CVE-2023-47108 
                         │     ├ PkgName         : go.opentelemetry.io/contrib/instrumentation/google.golan
                         │     │                   g.org/grpc/otelgrpc 
                         │     ├ PkgIdentifier    ─ PURL: pkg:golang/go.opentelemetry.io/contrib/instrument
@@ -78,7 +146,7 @@
                         │     │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2023-47108 
                         │     ├ PublishedDate   : 2023-11-10T19:15:16.41Z 
                         │     ╰ LastModifiedDate: 2023-11-20T19:34:26.493Z 
-                        ╰ [1] ╭ VulnerabilityID : CVE-2024-24786 
+                        ╰ [2] ╭ VulnerabilityID : CVE-2024-24786 
                               ├ PkgName         : google.golang.org/protobuf 
                               ├ PkgIdentifier    ─ PURL: pkg:golang/google.golang.org/protobuf@v1.31.0 
                               ├ InstalledVersion: v1.31.0 
