@@ -5,6 +5,57 @@
   Class: lang-pkgs
   Type: gobinary
   Vulnerabilities:
+  - VulnerabilityID: CVE-2024-24557
+    PkgName: github.com/docker/docker
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/docker/docker@v24.0.7%2Bincompatible
+    InstalledVersion: v24.0.7+incompatible
+    FixedVersion: 25.0.2, 24.0.9
+    Status: fixed
+    Layer:
+      Digest: sha256:49d1fae4343cd6ad113d89e90e55844b62720df692a19abaae7ed63025a99971
+      DiffID: sha256:75a7c4f8eaf033ca3c190e090eecdcb5fed236d6f4cf1a9056e246b083f6d60f
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24557
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'moby: classic builder cache poisoning'
+    Description: Moby is an open-source project created by Docker to enable software containerization. The classic builder cache system is prone to cache poisoning if the image is built FROM scratch. Also, changes to some instructions (most important being HEALTHCHECK and ONBUILD) would not cause a cache miss. An attacker with the knowledge of the Dockerfile someone is using could poison their cache by making them pull a specially crafted image that would be considered as a valid cache candidate for some build steps. 23.0+ users are only affected if they explicitly opted out of Buildkit (DOCKER_BUILDKIT=0 environment variable) or are using the /build API endpoint. All users on versions older than 23.0 could be impacted. Image build API endpoint (/build) and ImageBuild function from github.com/docker/docker/client is also affected as it the uses classic builder by default. Patches are included in 24.0.9 and 25.0.2 releases.
+    Severity: MEDIUM
+    CweIDs:
+    - CWE-346
+    - CWE-345
+    VendorSeverity:
+      amazon: 3
+      cbl-mariner: 3
+      ghsa: 2
+      nvd: 3
+      redhat: 2
+      ubuntu: 2
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:L/I:H/A:L
+        V3Score: 6.9
+      nvd:
+        V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+        V3Score: 7.8
+      redhat:
+        V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:L/I:H/A:L
+        V3Score: 6.9
+    References:
+    - https://access.redhat.com/security/cve/CVE-2024-24557
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24557
+    - https://github.com/moby/moby
+    - https://github.com/moby/moby/commit/3e230cfdcc989dc524882f6579f9e0dac77400ae
+    - https://github.com/moby/moby/commit/fca702de7f71362c8d103073c7e4a1d0a467fadd
+    - https://github.com/moby/moby/commit/fce6e0ca9bc000888de3daa157af14fa41fcd0ff
+    - https://github.com/moby/moby/security/advisories/GHSA-xw73-rw38-6vjc
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-24557
+    - https://www.cve.org/CVERecord?id=CVE-2024-24557
+    PublishedDate: '2024-02-01T17:15:10.953Z'
+    LastModifiedDate: '2024-02-09T20:21:32.97Z'
   - VulnerabilityID: CVE-2023-47108
     PkgName: go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc
     PkgIdentifier:
@@ -93,10 +144,116 @@
     - https://www.cve.org/CVERecord?id=CVE-2024-24786
     PublishedDate: '2024-03-05T23:15:07.82Z'
     LastModifiedDate: '2024-03-06T15:18:08.093Z'
+- Target: usr/bin/dive
+  Class: lang-pkgs
+  Type: gobinary
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2024-24557
+    PkgName: github.com/docker/docker
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/docker/docker@v24.0.7%2Bincompatible
+    InstalledVersion: v24.0.7+incompatible
+    FixedVersion: 25.0.2, 24.0.9
+    Status: fixed
+    Layer:
+      Digest: sha256:49d1fae4343cd6ad113d89e90e55844b62720df692a19abaae7ed63025a99971
+      DiffID: sha256:75a7c4f8eaf033ca3c190e090eecdcb5fed236d6f4cf1a9056e246b083f6d60f
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24557
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'moby: classic builder cache poisoning'
+    Description: Moby is an open-source project created by Docker to enable software containerization. The classic builder cache system is prone to cache poisoning if the image is built FROM scratch. Also, changes to some instructions (most important being HEALTHCHECK and ONBUILD) would not cause a cache miss. An attacker with the knowledge of the Dockerfile someone is using could poison their cache by making them pull a specially crafted image that would be considered as a valid cache candidate for some build steps. 23.0+ users are only affected if they explicitly opted out of Buildkit (DOCKER_BUILDKIT=0 environment variable) or are using the /build API endpoint. All users on versions older than 23.0 could be impacted. Image build API endpoint (/build) and ImageBuild function from github.com/docker/docker/client is also affected as it the uses classic builder by default. Patches are included in 24.0.9 and 25.0.2 releases.
+    Severity: MEDIUM
+    CweIDs:
+    - CWE-346
+    - CWE-345
+    VendorSeverity:
+      amazon: 3
+      cbl-mariner: 3
+      ghsa: 2
+      nvd: 3
+      redhat: 2
+      ubuntu: 2
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:L/I:H/A:L
+        V3Score: 6.9
+      nvd:
+        V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+        V3Score: 7.8
+      redhat:
+        V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:L/I:H/A:L
+        V3Score: 6.9
+    References:
+    - https://access.redhat.com/security/cve/CVE-2024-24557
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24557
+    - https://github.com/moby/moby
+    - https://github.com/moby/moby/commit/3e230cfdcc989dc524882f6579f9e0dac77400ae
+    - https://github.com/moby/moby/commit/fca702de7f71362c8d103073c7e4a1d0a467fadd
+    - https://github.com/moby/moby/commit/fce6e0ca9bc000888de3daa157af14fa41fcd0ff
+    - https://github.com/moby/moby/security/advisories/GHSA-xw73-rw38-6vjc
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-24557
+    - https://www.cve.org/CVERecord?id=CVE-2024-24557
+    PublishedDate: '2024-02-01T17:15:10.953Z'
+    LastModifiedDate: '2024-02-09T20:21:32.97Z'
 - Target: usr/bin/helm
   Class: lang-pkgs
   Type: gobinary
   Vulnerabilities:
+  - VulnerabilityID: CVE-2024-24557
+    PkgName: github.com/docker/docker
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/docker/docker@v24.0.7%2Bincompatible
+    InstalledVersion: v24.0.7+incompatible
+    FixedVersion: 25.0.2, 24.0.9
+    Status: fixed
+    Layer:
+      Digest: sha256:49d1fae4343cd6ad113d89e90e55844b62720df692a19abaae7ed63025a99971
+      DiffID: sha256:75a7c4f8eaf033ca3c190e090eecdcb5fed236d6f4cf1a9056e246b083f6d60f
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24557
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'moby: classic builder cache poisoning'
+    Description: Moby is an open-source project created by Docker to enable software containerization. The classic builder cache system is prone to cache poisoning if the image is built FROM scratch. Also, changes to some instructions (most important being HEALTHCHECK and ONBUILD) would not cause a cache miss. An attacker with the knowledge of the Dockerfile someone is using could poison their cache by making them pull a specially crafted image that would be considered as a valid cache candidate for some build steps. 23.0+ users are only affected if they explicitly opted out of Buildkit (DOCKER_BUILDKIT=0 environment variable) or are using the /build API endpoint. All users on versions older than 23.0 could be impacted. Image build API endpoint (/build) and ImageBuild function from github.com/docker/docker/client is also affected as it the uses classic builder by default. Patches are included in 24.0.9 and 25.0.2 releases.
+    Severity: MEDIUM
+    CweIDs:
+    - CWE-346
+    - CWE-345
+    VendorSeverity:
+      amazon: 3
+      cbl-mariner: 3
+      ghsa: 2
+      nvd: 3
+      redhat: 2
+      ubuntu: 2
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:L/I:H/A:L
+        V3Score: 6.9
+      nvd:
+        V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+        V3Score: 7.8
+      redhat:
+        V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:L/I:H/A:L
+        V3Score: 6.9
+    References:
+    - https://access.redhat.com/security/cve/CVE-2024-24557
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24557
+    - https://github.com/moby/moby
+    - https://github.com/moby/moby/commit/3e230cfdcc989dc524882f6579f9e0dac77400ae
+    - https://github.com/moby/moby/commit/fca702de7f71362c8d103073c7e4a1d0a467fadd
+    - https://github.com/moby/moby/commit/fce6e0ca9bc000888de3daa157af14fa41fcd0ff
+    - https://github.com/moby/moby/security/advisories/GHSA-xw73-rw38-6vjc
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-24557
+    - https://www.cve.org/CVERecord?id=CVE-2024-24557
+    PublishedDate: '2024-02-01T17:15:10.953Z'
+    LastModifiedDate: '2024-02-09T20:21:32.97Z'
   - VulnerabilityID: CVE-2024-24786
     PkgName: google.golang.org/protobuf
     PkgIdentifier:
@@ -139,6 +296,57 @@
   Class: lang-pkgs
   Type: gobinary
   Vulnerabilities:
+  - VulnerabilityID: CVE-2024-24557
+    PkgName: github.com/docker/docker
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/docker/docker@v24.0.7%2Bincompatible
+    InstalledVersion: v24.0.7+incompatible
+    FixedVersion: 25.0.2, 24.0.9
+    Status: fixed
+    Layer:
+      Digest: sha256:49d1fae4343cd6ad113d89e90e55844b62720df692a19abaae7ed63025a99971
+      DiffID: sha256:75a7c4f8eaf033ca3c190e090eecdcb5fed236d6f4cf1a9056e246b083f6d60f
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24557
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'moby: classic builder cache poisoning'
+    Description: Moby is an open-source project created by Docker to enable software containerization. The classic builder cache system is prone to cache poisoning if the image is built FROM scratch. Also, changes to some instructions (most important being HEALTHCHECK and ONBUILD) would not cause a cache miss. An attacker with the knowledge of the Dockerfile someone is using could poison their cache by making them pull a specially crafted image that would be considered as a valid cache candidate for some build steps. 23.0+ users are only affected if they explicitly opted out of Buildkit (DOCKER_BUILDKIT=0 environment variable) or are using the /build API endpoint. All users on versions older than 23.0 could be impacted. Image build API endpoint (/build) and ImageBuild function from github.com/docker/docker/client is also affected as it the uses classic builder by default. Patches are included in 24.0.9 and 25.0.2 releases.
+    Severity: MEDIUM
+    CweIDs:
+    - CWE-346
+    - CWE-345
+    VendorSeverity:
+      amazon: 3
+      cbl-mariner: 3
+      ghsa: 2
+      nvd: 3
+      redhat: 2
+      ubuntu: 2
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:L/I:H/A:L
+        V3Score: 6.9
+      nvd:
+        V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+        V3Score: 7.8
+      redhat:
+        V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:L/I:H/A:L
+        V3Score: 6.9
+    References:
+    - https://access.redhat.com/security/cve/CVE-2024-24557
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24557
+    - https://github.com/moby/moby
+    - https://github.com/moby/moby/commit/3e230cfdcc989dc524882f6579f9e0dac77400ae
+    - https://github.com/moby/moby/commit/fca702de7f71362c8d103073c7e4a1d0a467fadd
+    - https://github.com/moby/moby/commit/fce6e0ca9bc000888de3daa157af14fa41fcd0ff
+    - https://github.com/moby/moby/security/advisories/GHSA-xw73-rw38-6vjc
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-24557
+    - https://www.cve.org/CVERecord?id=CVE-2024-24557
+    PublishedDate: '2024-02-01T17:15:10.953Z'
+    LastModifiedDate: '2024-02-09T20:21:32.97Z'
   - VulnerabilityID: CVE-2024-28180
     PkgName: github.com/go-jose/go-jose/v3
     PkgIdentifier:
