@@ -139,6 +139,7 @@
     - https://github.com/protocolbuffers/protobuf-go/releases/tag/v1.33.0
     - https://go.dev/cl/569356
     - https://groups.google.com/g/golang-announce/c/ArQ6CDgtEjY/
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JDMBHAVSDU2FBDZ45U3A2VLSM35OJ2HU
     - https://nvd.nist.gov/vuln/detail/CVE-2024-24786
     - https://pkg.go.dev/vuln/GO-2024-2611
     - https://www.cve.org/CVERecord?id=CVE-2024-24786
@@ -287,6 +288,7 @@
     - https://github.com/protocolbuffers/protobuf-go/releases/tag/v1.33.0
     - https://go.dev/cl/569356
     - https://groups.google.com/g/golang-announce/c/ArQ6CDgtEjY/
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JDMBHAVSDU2FBDZ45U3A2VLSM35OJ2HU
     - https://nvd.nist.gov/vuln/detail/CVE-2024-24786
     - https://pkg.go.dev/vuln/GO-2024-2611
     - https://www.cve.org/CVERecord?id=CVE-2024-24786
@@ -387,12 +389,13 @@
     - https://github.com/go-jose/go-jose/commit/f4c051a0653d78199a053892f7619ebf96339502
     - https://github.com/go-jose/go-jose/security/advisories/GHSA-c5q2-7r4c-mv6g
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KXKGNCRU7OTM5AHC7YIYBNOWI742PRMY
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KXKGNCRU7OTM5AHC7YIYBNOWI742PRMY/
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XJDO5VSIAOGT2WP63AXAAWNRSVJCNCRH
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XJDO5VSIAOGT2WP63AXAAWNRSVJCNCRH/
     - https://nvd.nist.gov/vuln/detail/CVE-2024-28180
     - https://www.cve.org/CVERecord?id=CVE-2024-28180
     PublishedDate: '2024-03-09T01:15:07.34Z'
-    LastModifiedDate: '2024-03-22T02:15:08.393Z'
+    LastModifiedDate: '2024-03-23T03:15:11.737Z'
   - VulnerabilityID: CVE-2024-21626
     PkgName: github.com/opencontainers/runc
     PkgIdentifier:
@@ -438,11 +441,11 @@
     - http://packetstormsecurity.com/files/176993/runc-1.1.11-File-Descriptor-Leak-Privilege-Escalation.html
     - http://www.openwall.com/lists/oss-security/2024/02/01/1
     - http://www.openwall.com/lists/oss-security/2024/02/02/3
-    - https://access.redhat.com/errata/RHSA-2024:0670
+    - https://access.redhat.com/errata/RHSA-2024:0752
     - https://access.redhat.com/security/cve/CVE-2024-21626
     - https://bugzilla.redhat.com/2258725
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21626
-    - https://errata.almalinux.org/9/ALSA-2024-0670.html
+    - https://errata.almalinux.org/8/ALSA-2024-0752.html
     - https://github.com/opencontainers/runc
     - https://github.com/opencontainers/runc/commit/02120488a4c0fc487d1ed2867e901eeed7ce8ecf
     - https://github.com/opencontainers/runc/releases/tag/v1.1.12
@@ -507,7 +510,7 @@
     - http://www.openwall.com/lists/oss-security/2023/12/18/3
     - http://www.openwall.com/lists/oss-security/2023/12/19/5
     - http://www.openwall.com/lists/oss-security/2023/12/20/3
-    - https://access.redhat.com/errata/RHSA-2024:1150
+    - https://access.redhat.com/errata/RHSA-2024:0628
     - https://access.redhat.com/security/cve/CVE-2023-48795
     - https://access.redhat.com/security/cve/cve-2023-48795
     - https://arstechnica.com/security/2023/12/hackers-can-break-ssh-channel-integrity-using-novel-data-corruption-attack
@@ -518,7 +521,7 @@
     - https://bugzilla.suse.com/show_bug.cgi?id=1217950
     - https://crates.io/crates/thrussh/versions
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-48795
-    - https://errata.almalinux.org/9/ALSA-2024-1150.html
+    - https://errata.almalinux.org/8/ALSA-2024-0628.html
     - https://errata.rockylinux.org/RLSA-2024:0628
     - https://filezilla-project.org/versions.php
     - https://forum.netgate.com/topic/184941/terrapin-ssh-attack
@@ -703,6 +706,7 @@
     - https://github.com/protocolbuffers/protobuf-go/releases/tag/v1.33.0
     - https://go.dev/cl/569356
     - https://groups.google.com/g/golang-announce/c/ArQ6CDgtEjY/
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JDMBHAVSDU2FBDZ45U3A2VLSM35OJ2HU
     - https://nvd.nist.gov/vuln/detail/CVE-2024-24786
     - https://pkg.go.dev/vuln/GO-2024-2611
     - https://www.cve.org/CVERecord?id=CVE-2024-24786
@@ -748,9 +752,10 @@
     - https://github.com/go-jose/go-jose/commit/f4c051a0653d78199a053892f7619ebf96339502
     - https://github.com/go-jose/go-jose/security/advisories/GHSA-c5q2-7r4c-mv6g
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KXKGNCRU7OTM5AHC7YIYBNOWI742PRMY
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KXKGNCRU7OTM5AHC7YIYBNOWI742PRMY/
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XJDO5VSIAOGT2WP63AXAAWNRSVJCNCRH
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XJDO5VSIAOGT2WP63AXAAWNRSVJCNCRH/
     - https://nvd.nist.gov/vuln/detail/CVE-2024-28180
     - https://www.cve.org/CVERecord?id=CVE-2024-28180
     PublishedDate: '2024-03-09T01:15:07.34Z'
-    LastModifiedDate: '2024-03-22T02:15:08.393Z'
+    LastModifiedDate: '2024-03-23T03:15:11.737Z'
