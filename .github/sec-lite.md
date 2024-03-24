@@ -185,9 +185,12 @@
                               │                  ├ [4]: https://go.dev/cl/569356 
                               │                  ├ [5]: https://groups.google.com/g/golang-announce/c/ArQ6
                               │                  │      CDgtEjY/ 
-                              │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2024-24786 
-                              │                  ├ [7]: https://pkg.go.dev/vuln/GO-2024-2611 
-                              │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
+                              │                  ├ [6]: https://lists.fedoraproject.org/archives/list/pack
+                              │                  │      age-announce@lists.fedoraproject.org/message/JDMBHAVSDU
+                              │                  │      2FBDZ45U3A2VLSM35OJ2HU 
+                              │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2024-24786 
+                              │                  ├ [8]: https://pkg.go.dev/vuln/GO-2024-2611 
+                              │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
                               ├ PublishedDate   : 2024-03-05T23:15:07.82Z 
                               ╰ LastModifiedDate: 2024-03-06T15:18:08.093Z 
 ````
