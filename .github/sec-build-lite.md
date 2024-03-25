@@ -176,21 +176,24 @@
                               ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N
                               │                           │           /I:N/A:H 
                               │                           ╰ V3Score : 5.9 
-                              ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-24786 
-                              │                  ├ [1]: https://github.com/protocolbuffers/protobuf-go 
-                              │                  ├ [2]: https://github.com/protocolbuffers/protobuf-go/com
-                              │                  │      mit/f01a588e5810b90996452eec4a28f22a0afae023 
-                              │                  ├ [3]: https://github.com/protocolbuffers/protobuf-go/rel
-                              │                  │      eases/tag/v1.33.0 
-                              │                  ├ [4]: https://go.dev/cl/569356 
-                              │                  ├ [5]: https://groups.google.com/g/golang-announce/c/ArQ6
-                              │                  │      CDgtEjY/ 
-                              │                  ├ [6]: https://lists.fedoraproject.org/archives/list/pack
-                              │                  │      age-announce@lists.fedoraproject.org/message/JDMBHAVSDU
-                              │                  │      2FBDZ45U3A2VLSM35OJ2HU 
-                              │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2024-24786 
-                              │                  ├ [8]: https://pkg.go.dev/vuln/GO-2024-2611 
-                              │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
+                              ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2024-24786 
+                              │                  ├ [1] : https://github.com/protocolbuffers/protobuf-go 
+                              │                  ├ [2] : https://github.com/protocolbuffers/protobuf-go/co
+                              │                  │       mmit/f01a588e5810b90996452eec4a28f22a0afae023 
+                              │                  ├ [3] : https://github.com/protocolbuffers/protobuf-go/re
+                              │                  │       leases/tag/v1.33.0 
+                              │                  ├ [4] : https://go.dev/cl/569356 
+                              │                  ├ [5] : https://groups.google.com/g/golang-announce/c/ArQ
+                              │                  │       6CDgtEjY/ 
+                              │                  ├ [6] : https://lists.fedoraproject.org/archives/list/pac
+                              │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
+                              │                  │       DU2FBDZ45U3A2VLSM35OJ2HU 
+                              │                  ├ [7] : https://lists.fedoraproject.org/archives/list/pac
+                              │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
+                              │                  │       DU2FBDZ45U3A2VLSM35OJ2HU/ 
+                              │                  ├ [8] : https://nvd.nist.gov/vuln/detail/CVE-2024-24786 
+                              │                  ├ [9] : https://pkg.go.dev/vuln/GO-2024-2611 
+                              │                  ╰ [10]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
                               ├ PublishedDate   : 2024-03-05T23:15:07.82Z 
-                              ╰ LastModifiedDate: 2024-03-06T15:18:08.093Z 
+                              ╰ LastModifiedDate: 2024-03-24T03:15:09.093Z 
 ````
