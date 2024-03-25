@@ -21,6 +21,11 @@ If you just need _crictl_ you can also use the "nmaguiar/imgutils:lite" image.
 [![.github/sec-build-lite.svg](.github/sec-build-lite.svg)](.github/sec-build-lite.md)<br>
 [![.github/sec-lite.svg](.github/sec-lite.svg)](.github/sec-lite.md)<br>
 
+## Versions
+
+![.github/build-versions.svg](.github/build-versions.svg)<br>
+![.github/latest-versions.svg](.github/latest-versions.svg)
+
 ## Guides
 
 * [Copying images and charts between registries](#copying-images-and-charts-between-registries)
