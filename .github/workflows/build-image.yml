@@ -35,6 +35,8 @@ jobs:
         push: true
         tags: nmaguiar/imgutils:build
 
+    - uses: .github/workflows/versions-images.yml
+      name: Generate version badges
     # - uses: docker/build-push-action@v3
     #   name: Build and push ubi
     #   with:

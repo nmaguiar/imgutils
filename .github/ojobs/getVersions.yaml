@@ -60,7 +60,7 @@ jobs:
   from :
   - (get): versions
   to   : 
-  - (template): "( oaf: {{openaf}} | docker: {{docker}} | helm: {{helm}} | skopeo: {{skopeo}} | crictl: {{crictl}} | dive: {{dive}} )"
+  - (template): " oaf: {{openaf}} | docker: {{docker}} | helm: {{helm}} | skopeo: {{skopeo}} | crictl: {{crictl}} | dive: {{dive}} "
     ((outPath): status
     ((key    ): args
     ((out    ): args
