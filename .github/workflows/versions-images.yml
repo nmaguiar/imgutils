@@ -1,0 +1,48 @@
+name: Version Images
+
+on:
+  workflow_dispatch:
+
+jobs:
+  Version-Images:
+    runs-on    : ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    name       : Version images
+    steps      :
+    - uses: actions/checkout@v3
+      name: Checkoout
+
+    - name: Cache OpenAF runtime
+      uses: actions/cache@v3
+      with:
+        key : oaf-nightly
+        path: /tmp/oaf
+
+    - name: Generate versions badge
+      uses: openaf/ojob-action@v4
+      env :
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        ojob: '.github/ojobs/getVersions.yaml'
+        args: 'tag=build file=.github/build-versions.svg'
+        dist: 'nightly'
+
+    - name: Generate versions badge
+      uses: openaf/ojob-action@v4
+      env :
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        ojob: '.github/ojobs/getVersions.yaml'
+        args: 'tag=lastest file=.github/lastest-versions.svg'
+        dist: 'nightly'
+
+    - uses: openaf/ojob-action@v4
+      name: Update badges
+      env :
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        ojob: 'ojob.io/git/hub/contentIn'
+        args: 'message="update\ badge\ {{date}}/{{time}}" title="Update\ badge" paths=.github/'
+        dist: 'nightly'

@@ -1,0 +1,76 @@
+# Author: Nuno Aguiar
+help:
+  text   : Get versions of the imgutils image
+  expects: 
+  - name     : tag
+    desc     : The imgutils tag to use
+    example  : latest
+    mandatory: true
+
+todo:
+- Check versions in imgutils image
+- Generate badges
+
+ojob:
+  opacks      :
+  - openaf: 20231222
+  - Badgen: 20230603
+  catch       : printErrnl("[" + job.name + "] "); if (isDef(exception.javaException)) exception.javaException.printStackTrace(); else printErr(exception)
+  logToConsole: true   # to change when finished
+
+include:
+- badgen.yaml  
+
+jobs:
+# ---------------------------------------
+- name : Check versions in imgutils image
+  check:
+    in:
+      tag: isString.default("latest")
+  exec : |
+    var data = {}
+
+    var oafpath = getOpenAFPath()
+    var res = $sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `oaf -v 2>&1 | /openaf/oafp in=yaml path=version`])
+              .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `sudo docker version -f json | /openaf/oafp path=Client.Version`])
+              .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `helm version | /openaf/oafp path=Version`])
+              .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `skopeo -v | /openaf/oafp path="split(@, ' ')[2]"`])
+              .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `crictl -v | /openaf/oafp path="split(@, ' ')[2]"`])
+              .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `dive -v | /openaf/oafp path="split(@,' ').split([1],'-')[0]"`])
+              .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `TERM=UTF-8 mc -V | /openaf/oafp in=lines linesjoin=true path="split([0], ' ')[3]"`])
+              .getJson()
+
+    var _r = {
+      openaf: res[0].stdout,
+      docker: res[1].stdout,
+      helm  : res[2].stdout,
+      skopeo: res[3].stdout,
+      crictl: res[4].stdout,
+      dive  : res[5].stdout,
+      mc    : res[6].stdout
+    }
+
+    $set("versions", _r)
+
+# ----------------------
+- name : Generate badges
+  check:
+    in:
+      tag: isString.default("latest")
+  from :
+  - (get): versions
+  to   : 
+  - (template): "( oaf: {{openaf}} | docker: {{docker}} | helm: {{helm}} | skopeo: {{skopeo}} | crictl: {{crictl}} | dive: {{dive}} )"
+    ((outPath): status
+    ((key    ): args
+    ((out    ): args
+
+  - (log     ): "Generating badge file '{{file}}'..."
+  - name      : Badgen generate file
+    args      :
+      labelColor: grey3
+      color     : blue
+      icon      : "openaf.svg"
+
+  exec    : |
+    args.label = "nmaguiar/imgutils:" + args.tag
