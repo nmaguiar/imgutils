@@ -1,6 +1,44 @@
 - Target: nmaguiar/imgutils:latest (alpine 3.19.1)
   Class: os-pkgs
   Type: alpine
+- Target: Java
+  Class: lang-pkgs
+  Type: jar
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2024-31033
+    PkgName: io.jsonwebtoken:jjwt-impl
+    PkgPath: openaf/openaf.jar
+    PkgIdentifier:
+      PURL: pkg:maven/io.jsonwebtoken/jjwt-impl@0.12.5
+    InstalledVersion: 0.12.5
+    Status: affected
+    Layer:
+      Digest: sha256:d6e7064055beb1b00890018f6bd7dfd46d76d827649195a207e0ce3484c1d52d
+      DiffID: sha256:baf178bebb0d1a373c0a6a4e9c1062cdafa74e99a4b60443228baaad32dcc8d0
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-31033
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Maven
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven
+    Title: JJWT improperly generates signing keys
+    Description: JJWT (aka Java JWT) through 0.12.5 ignores certain characters and thus a user might falsely conclude that they have a strong key. The impacted code is the setSigningKey() method within the DefaultJwtParser class and the signWith() method within the DefaultJwtBuilder class.
+    Severity: MEDIUM
+    VendorSeverity:
+      ghsa: 2
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N
+        V3Score: 6.8
+    References:
+    - https://github.com/2308652512/JJWT_BUG
+    - https://github.com/jwtk/jjwt
+    - https://github.com/jwtk/jjwt/blob/26948610fbef81eba867cbaad54b516d1874c70a/impl/src/main/java/io/jsonwebtoken/impl/DefaultJwtParserBuilder.java#L242
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-31033
+    - https://www.viralpatel.net/java-create-validate-jwt-token
+    - https://www.viralpatel.net/java-create-validate-jwt-token/
+    PublishedDate: '2024-04-01T02:15:07.85Z'
+    LastModifiedDate: '2024-04-01T12:49:09.583Z'
 - Target: usr/bin/crictl
   Class: lang-pkgs
   Type: gobinary
@@ -455,11 +493,11 @@
     - http://packetstormsecurity.com/files/176993/runc-1.1.11-File-Descriptor-Leak-Privilege-Escalation.html
     - http://www.openwall.com/lists/oss-security/2024/02/01/1
     - http://www.openwall.com/lists/oss-security/2024/02/02/3
-    - https://access.redhat.com/errata/RHSA-2024:0752
+    - https://access.redhat.com/errata/RHSA-2024:0670
     - https://access.redhat.com/security/cve/CVE-2024-21626
     - https://bugzilla.redhat.com/2258725
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21626
-    - https://errata.almalinux.org/8/ALSA-2024-0752.html
+    - https://errata.almalinux.org/9/ALSA-2024-0670.html
     - https://github.com/opencontainers/runc
     - https://github.com/opencontainers/runc/commit/02120488a4c0fc487d1ed2867e901eeed7ce8ecf
     - https://github.com/opencontainers/runc/releases/tag/v1.1.12
@@ -524,7 +562,7 @@
     - http://www.openwall.com/lists/oss-security/2023/12/18/3
     - http://www.openwall.com/lists/oss-security/2023/12/19/5
     - http://www.openwall.com/lists/oss-security/2023/12/20/3
-    - https://access.redhat.com/errata/RHSA-2024:0628
+    - https://access.redhat.com/errata/RHSA-2024:1150
     - https://access.redhat.com/security/cve/CVE-2023-48795
     - https://access.redhat.com/security/cve/cve-2023-48795
     - https://arstechnica.com/security/2023/12/hackers-can-break-ssh-channel-integrity-using-novel-data-corruption-attack
@@ -535,7 +573,7 @@
     - https://bugzilla.suse.com/show_bug.cgi?id=1217950
     - https://crates.io/crates/thrussh/versions
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-48795
-    - https://errata.almalinux.org/8/ALSA-2024-0628.html
+    - https://errata.almalinux.org/9/ALSA-2024-1150.html
     - https://errata.rockylinux.org/RLSA-2024:0628
     - https://filezilla-project.org/versions.php
     - https://forum.netgate.com/topic/184941/terrapin-ssh-attack
