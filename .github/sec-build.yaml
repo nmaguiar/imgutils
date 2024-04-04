@@ -1,44 +1,6 @@
 - Target: nmaguiar/imgutils:build (alpine 3.19.1)
   Class: os-pkgs
   Type: alpine
-- Target: Java
-  Class: lang-pkgs
-  Type: jar
-  Vulnerabilities:
-  - VulnerabilityID: CVE-2024-31033
-    PkgName: io.jsonwebtoken:jjwt-impl
-    PkgPath: openaf/openaf.jar
-    PkgIdentifier:
-      PURL: pkg:maven/io.jsonwebtoken/jjwt-impl@0.12.5
-    InstalledVersion: 0.12.5
-    Status: affected
-    Layer:
-      Digest: sha256:66b1ceac9e87d178b6eaa6b5c8a24fa44e3cbf4b469a708a4b4f41450552cb5a
-      DiffID: sha256:bac8f4fa4be8a1de14264f3131213feb8249d1e29aa98c5d9cd42f2c57e5bd30
-    SeveritySource: ghsa
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-31033
-    DataSource:
-      ID: ghsa
-      Name: GitHub Security Advisory Maven
-      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven
-    Title: JJWT improperly generates signing keys
-    Description: JJWT (aka Java JWT) through 0.12.5 ignores certain characters and thus a user might falsely conclude that they have a strong key. The impacted code is the setSigningKey() method within the DefaultJwtParser class and the signWith() method within the DefaultJwtBuilder class.
-    Severity: MEDIUM
-    VendorSeverity:
-      ghsa: 2
-    CVSS:
-      ghsa:
-        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N
-        V3Score: 6.8
-    References:
-    - https://github.com/2308652512/JJWT_BUG
-    - https://github.com/jwtk/jjwt
-    - https://github.com/jwtk/jjwt/blob/26948610fbef81eba867cbaad54b516d1874c70a/impl/src/main/java/io/jsonwebtoken/impl/DefaultJwtParserBuilder.java#L242
-    - https://nvd.nist.gov/vuln/detail/CVE-2024-31033
-    - https://www.viralpatel.net/java-create-validate-jwt-token
-    - https://www.viralpatel.net/java-create-validate-jwt-token/
-    PublishedDate: '2024-04-01T02:15:07.85Z'
-    LastModifiedDate: '2024-04-01T12:49:09.583Z'
 - Target: usr/bin/crictl
   Class: lang-pkgs
   Type: gobinary
