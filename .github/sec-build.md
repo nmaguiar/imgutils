@@ -2,49 +2,7 @@
 ╭ [0] ╭ Target: nmaguiar/imgutils:build (alpine 3.19.1) 
 │     ├ Class : os-pkgs 
 │     ╰ Type  : alpine 
-├ [1] ╭ Target         : Java 
-│     ├ Class          : lang-pkgs 
-│     ├ Type           : jar 
-│     ╰ Vulnerabilities ─ [0] ╭ VulnerabilityID : CVE-2024-31033 
-│                             ├ PkgName         : io.jsonwebtoken:jjwt-impl 
-│                             ├ PkgPath         : openaf/openaf.jar 
-│                             ├ PkgIdentifier    ─ PURL: pkg:maven/io.jsonwebtoken/jjwt-impl@0.12.5 
-│                             ├ InstalledVersion: 0.12.5 
-│                             ├ Status          : affected 
-│                             ├ Layer            ╭ Digest: sha256:66b1ceac9e87d178b6eaa6b5c8a24fa44e3cbf4b
-│                             │                  │         469a708a4b4f41450552cb5a 
-│                             │                  ╰ DiffID: sha256:bac8f4fa4be8a1de14264f3131213feb8249d1e2
-│                             │                            9aa98c5d9cd42f2c57e5bd30 
-│                             ├ SeveritySource  : ghsa 
-│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-31033 
-│                             ├ DataSource       ╭ ID  : ghsa 
-│                             │                  ├ Name: GitHub Security Advisory Maven 
-│                             │                  ╰ URL : https://github.com/advisories?query=type%3Areview
-│                             │                          ed+ecosystem%3Amaven 
-│                             ├ Title           : JJWT improperly generates signing keys 
-│                             ├ Description     : JJWT (aka Java JWT) through 0.12.5 ignores certain
-│                             │                   characters and thus a user might falsely conclude that they
-│                             │                   have a strong key. The impacted code is the setSigningKey()
-│                             │                   method within the DefaultJwtParser class and the signWith()
-│                             │                   method within the DefaultJwtBuilder class. 
-│                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ─ ghsa: 2 
-│                             ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I
-│                             │                         │           :H/A:N 
-│                             │                         ╰ V3Score : 6.8 
-│                             ├ References       ╭ [0]: https://github.com/2308652512/JJWT_BUG 
-│                             │                  ├ [1]: https://github.com/jwtk/jjwt 
-│                             │                  ├ [2]: https://github.com/jwtk/jjwt/blob/26948610fbef81eb
-│                             │                  │      a867cbaad54b516d1874c70a/impl/src/main/java/io/jsonwebt
-│                             │                  │      oken/impl/DefaultJwtParserBuilder.java#L242 
-│                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2024-31033 
-│                             │                  ├ [4]: https://www.viralpatel.net/java-create-validate-jw
-│                             │                  │      t-token 
-│                             │                  ╰ [5]: https://www.viralpatel.net/java-create-validate-jw
-│                             │                         t-token/ 
-│                             ├ PublishedDate   : 2024-04-01T02:15:07.85Z 
-│                             ╰ LastModifiedDate: 2024-04-01T12:49:09.583Z 
-├ [2] ╭ Target         : usr/bin/crictl 
+├ [1] ╭ Target         : usr/bin/crictl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
 │     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-24557 
@@ -238,7 +196,7 @@
 │                             │                  ╰ [10]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
 │                             ├ PublishedDate   : 2024-03-05T23:15:07.82Z 
 │                             ╰ LastModifiedDate: 2024-03-24T03:15:09.093Z 
-├ [3] ╭ Target         : usr/bin/dive 
+├ [2] ╭ Target         : usr/bin/dive 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
 │     ╰ Vulnerabilities ─ [0] ╭ VulnerabilityID : CVE-2024-24557 
@@ -309,7 +267,7 @@
 │                             │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-24557 
 │                             ├ PublishedDate   : 2024-02-01T17:15:10.953Z 
 │                             ╰ LastModifiedDate: 2024-02-09T20:21:32.97Z 
-├ [4] ╭ Target         : usr/bin/helm 
+├ [3] ╭ Target         : usr/bin/helm 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
 │     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-24557 
@@ -430,7 +388,7 @@
 │                             │                  ╰ [10]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
 │                             ├ PublishedDate   : 2024-03-05T23:15:07.82Z 
 │                             ╰ LastModifiedDate: 2024-03-24T03:15:09.093Z 
-╰ [5] ╭ Target         : usr/bin/skopeo 
+╰ [4] ╭ Target         : usr/bin/skopeo 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
       ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-24557 
