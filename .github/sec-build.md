@@ -12,10 +12,10 @@
 │                       │     ├ InstalledVersion: v24.0.7+incompatible 
 │                       │     ├ FixedVersion    : 25.0.2, 24.0.9 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:66b1ceac9e87d178b6eaa6b5c8a24fa44e3cbf4b
-│                       │     │                  │         469a708a4b4f41450552cb5a 
-│                       │     │                  ╰ DiffID: sha256:bac8f4fa4be8a1de14264f3131213feb8249d1e2
-│                       │     │                            9aa98c5d9cd42f2c57e5bd30 
+│                       │     ├ Layer            ╭ Digest: sha256:93ddd6f5d6ecaaeea3a4ae06b0195b68996ea29a
+│                       │     │                  │         5541a1f3878b0a2151f68b19 
+│                       │     │                  ╰ DiffID: sha256:c6a128786d8bb57a88a25b0bb76c1daa17725a49
+│                       │     │                            aece2f98613ef0b9f28b7706 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24557 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -81,10 +81,10 @@
 │                       │     ├ InstalledVersion: v0.42.0 
 │                       │     ├ FixedVersion    : 0.46.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:66b1ceac9e87d178b6eaa6b5c8a24fa44e3cbf4b
-│                       │     │                  │         469a708a4b4f41450552cb5a 
-│                       │     │                  ╰ DiffID: sha256:bac8f4fa4be8a1de14264f3131213feb8249d1e2
-│                       │     │                            9aa98c5d9cd42f2c57e5bd30 
+│                       │     ├ Layer            ╭ Digest: sha256:93ddd6f5d6ecaaeea3a4ae06b0195b68996ea29a
+│                       │     │                  │         5541a1f3878b0a2151f68b19 
+│                       │     │                  ╰ DiffID: sha256:c6a128786d8bb57a88a25b0bb76c1daa17725a49
+│                       │     │                            aece2f98613ef0b9f28b7706 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-47108 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -152,10 +152,10 @@
 │                             ├ InstalledVersion: v1.31.0 
 │                             ├ FixedVersion    : 1.33.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:66b1ceac9e87d178b6eaa6b5c8a24fa44e3cbf4b
-│                             │                  │         469a708a4b4f41450552cb5a 
-│                             │                  ╰ DiffID: sha256:bac8f4fa4be8a1de14264f3131213feb8249d1e2
-│                             │                            9aa98c5d9cd42f2c57e5bd30 
+│                             ├ Layer            ╭ Digest: sha256:93ddd6f5d6ecaaeea3a4ae06b0195b68996ea29a
+│                             │                  │         5541a1f3878b0a2151f68b19 
+│                             │                  ╰ DiffID: sha256:c6a128786d8bb57a88a25b0bb76c1daa17725a49
+│                             │                            aece2f98613ef0b9f28b7706 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24786 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -206,10 +206,10 @@
 │                             ├ InstalledVersion: v24.0.7+incompatible 
 │                             ├ FixedVersion    : 25.0.2, 24.0.9 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:66b1ceac9e87d178b6eaa6b5c8a24fa44e3cbf4b
-│                             │                  │         469a708a4b4f41450552cb5a 
-│                             │                  ╰ DiffID: sha256:bac8f4fa4be8a1de14264f3131213feb8249d1e2
-│                             │                            9aa98c5d9cd42f2c57e5bd30 
+│                             ├ Layer            ╭ Digest: sha256:93ddd6f5d6ecaaeea3a4ae06b0195b68996ea29a
+│                             │                  │         5541a1f3878b0a2151f68b19 
+│                             │                  ╰ DiffID: sha256:c6a128786d8bb57a88a25b0bb76c1daa17725a49
+│                             │                            aece2f98613ef0b9f28b7706 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24557 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -277,10 +277,10 @@
 │                       │     ├ InstalledVersion: v24.0.7+incompatible 
 │                       │     ├ FixedVersion    : 25.0.2, 24.0.9 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:66b1ceac9e87d178b6eaa6b5c8a24fa44e3cbf4b
-│                       │     │                  │         469a708a4b4f41450552cb5a 
-│                       │     │                  ╰ DiffID: sha256:bac8f4fa4be8a1de14264f3131213feb8249d1e2
-│                       │     │                            9aa98c5d9cd42f2c57e5bd30 
+│                       │     ├ Layer            ╭ Digest: sha256:93ddd6f5d6ecaaeea3a4ae06b0195b68996ea29a
+│                       │     │                  │         5541a1f3878b0a2151f68b19 
+│                       │     │                  ╰ DiffID: sha256:c6a128786d8bb57a88a25b0bb76c1daa17725a49
+│                       │     │                            aece2f98613ef0b9f28b7706 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24557 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -344,10 +344,10 @@
 │                             ├ InstalledVersion: v1.31.0 
 │                             ├ FixedVersion    : 1.33.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:66b1ceac9e87d178b6eaa6b5c8a24fa44e3cbf4b
-│                             │                  │         469a708a4b4f41450552cb5a 
-│                             │                  ╰ DiffID: sha256:bac8f4fa4be8a1de14264f3131213feb8249d1e2
-│                             │                            9aa98c5d9cd42f2c57e5bd30 
+│                             ├ Layer            ╭ Digest: sha256:93ddd6f5d6ecaaeea3a4ae06b0195b68996ea29a
+│                             │                  │         5541a1f3878b0a2151f68b19 
+│                             │                  ╰ DiffID: sha256:c6a128786d8bb57a88a25b0bb76c1daa17725a49
+│                             │                            aece2f98613ef0b9f28b7706 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24786 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -398,10 +398,10 @@
                         │     ├ InstalledVersion: v24.0.7+incompatible 
                         │     ├ FixedVersion    : 25.0.2, 24.0.9 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:66b1ceac9e87d178b6eaa6b5c8a24fa44e3cbf4b
-                        │     │                  │         469a708a4b4f41450552cb5a 
-                        │     │                  ╰ DiffID: sha256:bac8f4fa4be8a1de14264f3131213feb8249d1e2
-                        │     │                            9aa98c5d9cd42f2c57e5bd30 
+                        │     ├ Layer            ╭ Digest: sha256:93ddd6f5d6ecaaeea3a4ae06b0195b68996ea29a
+                        │     │                  │         5541a1f3878b0a2151f68b19 
+                        │     │                  ╰ DiffID: sha256:c6a128786d8bb57a88a25b0bb76c1daa17725a49
+                        │     │                            aece2f98613ef0b9f28b7706 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24557 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -465,10 +465,10 @@
                         │     ├ InstalledVersion: v3.0.1 
                         │     ├ FixedVersion    : 3.0.3 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:66b1ceac9e87d178b6eaa6b5c8a24fa44e3cbf4b
-                        │     │                  │         469a708a4b4f41450552cb5a 
-                        │     │                  ╰ DiffID: sha256:bac8f4fa4be8a1de14264f3131213feb8249d1e2
-                        │     │                            9aa98c5d9cd42f2c57e5bd30 
+                        │     ├ Layer            ╭ Digest: sha256:93ddd6f5d6ecaaeea3a4ae06b0195b68996ea29a
+                        │     │                  │         5541a1f3878b0a2151f68b19 
+                        │     │                  ╰ DiffID: sha256:c6a128786d8bb57a88a25b0bb76c1daa17725a49
+                        │     │                            aece2f98613ef0b9f28b7706 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-28180 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -563,10 +563,10 @@
                         │     ├ InstalledVersion: v1.1.10 
                         │     ├ FixedVersion    : 1.1.12 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:66b1ceac9e87d178b6eaa6b5c8a24fa44e3cbf4b
-                        │     │                  │         469a708a4b4f41450552cb5a 
-                        │     │                  ╰ DiffID: sha256:bac8f4fa4be8a1de14264f3131213feb8249d1e2
-                        │     │                            9aa98c5d9cd42f2c57e5bd30 
+                        │     ├ Layer            ╭ Digest: sha256:93ddd6f5d6ecaaeea3a4ae06b0195b68996ea29a
+                        │     │                  │         5541a1f3878b0a2151f68b19 
+                        │     │                  ╰ DiffID: sha256:c6a128786d8bb57a88a25b0bb76c1daa17725a49
+                        │     │                            aece2f98613ef0b9f28b7706 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-21626 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -654,10 +654,10 @@
                         │     ├ InstalledVersion: v0.15.0 
                         │     ├ FixedVersion    : 0.17.0 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:66b1ceac9e87d178b6eaa6b5c8a24fa44e3cbf4b
-                        │     │                  │         469a708a4b4f41450552cb5a 
-                        │     │                  ╰ DiffID: sha256:bac8f4fa4be8a1de14264f3131213feb8249d1e2
-                        │     │                            9aa98c5d9cd42f2c57e5bd30 
+                        │     ├ Layer            ╭ Digest: sha256:93ddd6f5d6ecaaeea3a4ae06b0195b68996ea29a
+                        │     │                  │         5541a1f3878b0a2151f68b19 
+                        │     │                  ╰ DiffID: sha256:c6a128786d8bb57a88a25b0bb76c1daa17725a49
+                        │     │                            aece2f98613ef0b9f28b7706 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-48795 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -1040,10 +1040,10 @@
                         │     ├ InstalledVersion: v1.31.0 
                         │     ├ FixedVersion    : 1.33.0 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:66b1ceac9e87d178b6eaa6b5c8a24fa44e3cbf4b
-                        │     │                  │         469a708a4b4f41450552cb5a 
-                        │     │                  ╰ DiffID: sha256:bac8f4fa4be8a1de14264f3131213feb8249d1e2
-                        │     │                            9aa98c5d9cd42f2c57e5bd30 
+                        │     ├ Layer            ╭ Digest: sha256:93ddd6f5d6ecaaeea3a4ae06b0195b68996ea29a
+                        │     │                  │         5541a1f3878b0a2151f68b19 
+                        │     │                  ╰ DiffID: sha256:c6a128786d8bb57a88a25b0bb76c1daa17725a49
+                        │     │                            aece2f98613ef0b9f28b7706 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24786 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -1090,10 +1090,10 @@
                               ├ InstalledVersion: v2.6.1 
                               ├ FixedVersion    : 2.6.3 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:66b1ceac9e87d178b6eaa6b5c8a24fa44e3cbf4b
-                              │                  │         469a708a4b4f41450552cb5a 
-                              │                  ╰ DiffID: sha256:bac8f4fa4be8a1de14264f3131213feb8249d1e2
-                              │                            9aa98c5d9cd42f2c57e5bd30 
+                              ├ Layer            ╭ Digest: sha256:93ddd6f5d6ecaaeea3a4ae06b0195b68996ea29a
+                              │                  │         5541a1f3878b0a2151f68b19 
+                              │                  ╰ DiffID: sha256:c6a128786d8bb57a88a25b0bb76c1daa17725a49
+                              │                            aece2f98613ef0b9f28b7706 
                               ├ SeveritySource  : ghsa 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-28180 
                               ├ DataSource       ╭ ID  : ghsa 
