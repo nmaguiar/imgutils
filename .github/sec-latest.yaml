@@ -126,6 +126,7 @@
     Description: The protojson.Unmarshal function can enter an infinite loop when unmarshaling certain forms of invalid JSON. This condition can occur when unmarshaling into a message which contains a google.protobuf.Any value, or when the UnmarshalOptions.DiscardUnknown option is set.
     Severity: MEDIUM
     VendorSeverity:
+      cbl-mariner: 2
       ghsa: 2
       redhat: 2
     CVSS:
@@ -276,6 +277,7 @@
     Description: The protojson.Unmarshal function can enter an infinite loop when unmarshaling certain forms of invalid JSON. This condition can occur when unmarshaling into a message which contains a google.protobuf.Any value, or when the UnmarshalOptions.DiscardUnknown option is set.
     Severity: MEDIUM
     VendorSeverity:
+      cbl-mariner: 2
       ghsa: 2
       redhat: 2
     CVSS:
@@ -707,6 +709,7 @@
     Description: The protojson.Unmarshal function can enter an infinite loop when unmarshaling certain forms of invalid JSON. This condition can occur when unmarshaling into a message which contains a google.protobuf.Any value, or when the UnmarshalOptions.DiscardUnknown option is set.
     Severity: MEDIUM
     VendorSeverity:
+      cbl-mariner: 2
       ghsa: 2
       redhat: 2
     CVSS:
