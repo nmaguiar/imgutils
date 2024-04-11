@@ -171,8 +171,9 @@
 │                             │                   contains a google.protobuf.Any value, or when the
 │                             │                   UnmarshalOptions.DiscardUnknown option is set. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ ghsa  : 2 
-│                             │                  ╰ redhat: 2 
+│                             ├ VendorSeverity   ╭ cbl-mariner: 2 
+│                             │                  ├ ghsa       : 2 
+│                             │                  ╰ redhat     : 2 
 │                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N
 │                             │                           │           /I:N/A:H 
 │                             │                           ╰ V3Score : 5.9 
@@ -363,8 +364,9 @@
 │                             │                   contains a google.protobuf.Any value, or when the
 │                             │                   UnmarshalOptions.DiscardUnknown option is set. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ ghsa  : 2 
-│                             │                  ╰ redhat: 2 
+│                             ├ VendorSeverity   ╭ cbl-mariner: 2 
+│                             │                  ├ ghsa       : 2 
+│                             │                  ╰ redhat     : 2 
 │                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N
 │                             │                           │           /I:N/A:H 
 │                             │                           ╰ V3Score : 5.9 
@@ -1059,8 +1061,9 @@
                         │     │                   contains a google.protobuf.Any value, or when the
                         │     │                   UnmarshalOptions.DiscardUnknown option is set. 
                         │     ├ Severity        : MEDIUM 
-                        │     ├ VendorSeverity   ╭ ghsa  : 2 
-                        │     │                  ╰ redhat: 2 
+                        │     ├ VendorSeverity   ╭ cbl-mariner: 2 
+                        │     │                  ├ ghsa       : 2 
+                        │     │                  ╰ redhat     : 2 
                         │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N
                         │     │                           │           /I:N/A:H 
                         │     │                           ╰ V3Score : 5.9 
