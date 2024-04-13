@@ -46,7 +46,6 @@
         V3Score: 6.9
     References:
     - https://access.redhat.com/security/cve/CVE-2024-24557
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24557
     - https://github.com/moby/moby
     - https://github.com/moby/moby/commit/3e230cfdcc989dc524882f6579f9e0dac77400ae
     - https://github.com/moby/moby/commit/fca702de7f71362c8d103073c7e4a1d0a467fadd
