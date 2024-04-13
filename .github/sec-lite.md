@@ -58,19 +58,17 @@
                         │     │                           │           /I:H/A:L 
                         │     │                           ╰ V3Score : 6.9 
                         │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-24557 
-                        │     │                  ├ [1]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE
-                        │     │                  │      -2024-24557 
-                        │     │                  ├ [2]: https://github.com/moby/moby 
-                        │     │                  ├ [3]: https://github.com/moby/moby/commit/3e230cfdcc989d
+                        │     │                  ├ [1]: https://github.com/moby/moby 
+                        │     │                  ├ [2]: https://github.com/moby/moby/commit/3e230cfdcc989d
                         │     │                  │      c524882f6579f9e0dac77400ae 
-                        │     │                  ├ [4]: https://github.com/moby/moby/commit/fca702de7f7136
+                        │     │                  ├ [3]: https://github.com/moby/moby/commit/fca702de7f7136
                         │     │                  │      2c8d103073c7e4a1d0a467fadd 
-                        │     │                  ├ [5]: https://github.com/moby/moby/commit/fce6e0ca9bc000
+                        │     │                  ├ [4]: https://github.com/moby/moby/commit/fce6e0ca9bc000
                         │     │                  │      888de3daa157af14fa41fcd0ff 
-                        │     │                  ├ [6]: https://github.com/moby/moby/security/advisories/G
+                        │     │                  ├ [5]: https://github.com/moby/moby/security/advisories/G
                         │     │                  │      HSA-xw73-rw38-6vjc 
-                        │     │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2024-24557 
-                        │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-24557 
+                        │     │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2024-24557 
+                        │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-24557 
                         │     ├ PublishedDate   : 2024-02-01T17:15:10.953Z 
                         │     ╰ LastModifiedDate: 2024-02-09T20:21:32.97Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2023-47108 
