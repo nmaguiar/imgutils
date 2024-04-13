@@ -12,10 +12,10 @@
                         │     ├ InstalledVersion: v24.0.7+incompatible 
                         │     ├ FixedVersion    : 25.0.2, 24.0.9 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:acee063c1b3ff107098539435a3b2722afce8290
-                        │     │                  │         8e97a578d818ccdb0fc714b9 
-                        │     │                  ╰ DiffID: sha256:552afde2c558dfca6b3766d7f52199a0fd7d473b
-                        │     │                            d67bec6c6bb0433e6c55e462 
+                        │     ├ Layer            ╭ Digest: sha256:e807ed65d6f39419038798a2a804fbca038bfc6d
+                        │     │                  │         735ec5d47dec54b8d7c46de5 
+                        │     │                  ╰ DiffID: sha256:e04dce966c02149bb6d774b0f0d55588b556571b
+                        │     │                            71d2253aeb2c772c4ba41932 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24557 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -58,19 +58,17 @@
                         │     │                           │           /I:H/A:L 
                         │     │                           ╰ V3Score : 6.9 
                         │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-24557 
-                        │     │                  ├ [1]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE
-                        │     │                  │      -2024-24557 
-                        │     │                  ├ [2]: https://github.com/moby/moby 
-                        │     │                  ├ [3]: https://github.com/moby/moby/commit/3e230cfdcc989d
+                        │     │                  ├ [1]: https://github.com/moby/moby 
+                        │     │                  ├ [2]: https://github.com/moby/moby/commit/3e230cfdcc989d
                         │     │                  │      c524882f6579f9e0dac77400ae 
-                        │     │                  ├ [4]: https://github.com/moby/moby/commit/fca702de7f7136
+                        │     │                  ├ [3]: https://github.com/moby/moby/commit/fca702de7f7136
                         │     │                  │      2c8d103073c7e4a1d0a467fadd 
-                        │     │                  ├ [5]: https://github.com/moby/moby/commit/fce6e0ca9bc000
+                        │     │                  ├ [4]: https://github.com/moby/moby/commit/fce6e0ca9bc000
                         │     │                  │      888de3daa157af14fa41fcd0ff 
-                        │     │                  ├ [6]: https://github.com/moby/moby/security/advisories/G
+                        │     │                  ├ [5]: https://github.com/moby/moby/security/advisories/G
                         │     │                  │      HSA-xw73-rw38-6vjc 
-                        │     │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2024-24557 
-                        │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-24557 
+                        │     │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2024-24557 
+                        │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-24557 
                         │     ├ PublishedDate   : 2024-02-01T17:15:10.953Z 
                         │     ╰ LastModifiedDate: 2024-02-09T20:21:32.97Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2023-47108 
@@ -81,10 +79,10 @@
                         │     ├ InstalledVersion: v0.42.0 
                         │     ├ FixedVersion    : 0.46.0 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:acee063c1b3ff107098539435a3b2722afce8290
-                        │     │                  │         8e97a578d818ccdb0fc714b9 
-                        │     │                  ╰ DiffID: sha256:552afde2c558dfca6b3766d7f52199a0fd7d473b
-                        │     │                            d67bec6c6bb0433e6c55e462 
+                        │     ├ Layer            ╭ Digest: sha256:e807ed65d6f39419038798a2a804fbca038bfc6d
+                        │     │                  │         735ec5d47dec54b8d7c46de5 
+                        │     │                  ╰ DiffID: sha256:e04dce966c02149bb6d774b0f0d55588b556571b
+                        │     │                            71d2253aeb2c772c4ba41932 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-47108 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -152,10 +150,10 @@
                               ├ InstalledVersion: v1.31.0 
                               ├ FixedVersion    : 1.33.0 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:acee063c1b3ff107098539435a3b2722afce8290
-                              │                  │         8e97a578d818ccdb0fc714b9 
-                              │                  ╰ DiffID: sha256:552afde2c558dfca6b3766d7f52199a0fd7d473b
-                              │                            d67bec6c6bb0433e6c55e462 
+                              ├ Layer            ╭ Digest: sha256:e807ed65d6f39419038798a2a804fbca038bfc6d
+                              │                  │         735ec5d47dec54b8d7c46de5 
+                              │                  ╰ DiffID: sha256:e04dce966c02149bb6d774b0f0d55588b556571b
+                              │                            71d2253aeb2c772c4ba41932 
                               ├ SeveritySource  : ghsa 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24786 
                               ├ DataSource       ╭ ID  : ghsa 
