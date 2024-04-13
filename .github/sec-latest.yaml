@@ -46,7 +46,6 @@
         V3Score: 6.9
     References:
     - https://access.redhat.com/security/cve/CVE-2024-24557
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24557
     - https://github.com/moby/moby
     - https://github.com/moby/moby/commit/3e230cfdcc989dc524882f6579f9e0dac77400ae
     - https://github.com/moby/moby/commit/fca702de7f71362c8d103073c7e4a1d0a467fadd
@@ -192,7 +191,6 @@
         V3Score: 6.9
     References:
     - https://access.redhat.com/security/cve/CVE-2024-24557
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24557
     - https://github.com/moby/moby
     - https://github.com/moby/moby/commit/3e230cfdcc989dc524882f6579f9e0dac77400ae
     - https://github.com/moby/moby/commit/fca702de7f71362c8d103073c7e4a1d0a467fadd
@@ -247,7 +245,6 @@
         V3Score: 6.9
     References:
     - https://access.redhat.com/security/cve/CVE-2024-24557
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24557
     - https://github.com/moby/moby
     - https://github.com/moby/moby/commit/3e230cfdcc989dc524882f6579f9e0dac77400ae
     - https://github.com/moby/moby/commit/fca702de7f71362c8d103073c7e4a1d0a467fadd
@@ -343,7 +340,6 @@
         V3Score: 6.9
     References:
     - https://access.redhat.com/security/cve/CVE-2024-24557
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24557
     - https://github.com/moby/moby
     - https://github.com/moby/moby/commit/3e230cfdcc989dc524882f6579f9e0dac77400ae
     - https://github.com/moby/moby/commit/fca702de7f71362c8d103073c7e4a1d0a467fadd
@@ -460,7 +456,6 @@
     - https://access.redhat.com/errata/RHSA-2024:0670
     - https://access.redhat.com/security/cve/CVE-2024-21626
     - https://bugzilla.redhat.com/2258725
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21626
     - https://errata.almalinux.org/9/ALSA-2024-0670.html
     - https://github.com/opencontainers/runc
     - https://github.com/opencontainers/runc/commit/02120488a4c0fc487d1ed2867e901eeed7ce8ecf
