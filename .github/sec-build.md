@@ -764,6 +764,7 @@
                         │     │                  ├ ghsa       : 3 
                         │     │                  ├ nvd        : 3 
                         │     │                  ├ oracle-oval: 3 
+                        │     │                  ├ photon     : 3 
                         │     │                  ├ redhat     : 3 
                         │     │                  ╰ ubuntu     : 3 
                         │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H
