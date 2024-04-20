@@ -186,20 +186,24 @@
 │                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
 │                       │     │                           │           /I:N/A:H 
 │                       │     │                           ╰ V3Score : 7.5 
-│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2023-45288 
-│                       │     │                  ├ [1]: https://go.dev/cl/576155 
-│                       │     │                  ├ [2]: https://go.dev/issue/65051 
-│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/YgW0
-│                       │     │                  │      sx8mN3M 
-│                       │     │                  ├ [4]: https://nowotarski.info/http2-continuation-flood-t
-│                       │     │                  │      echnical-details 
-│                       │     │                  ├ [5]: https://nowotarski.info/http2-continuation-flood/ 
-│                       │     │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
-│                       │     │                  ├ [7]: https://pkg.go.dev/vuln/GO-2024-2687 
-│                       │     │                  ├ [8]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
-│                       │     │                  ╰ [9]: https://www.kb.cert.org/vuls/id/421644 
+│                       │     ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2023-45288 
+│                       │     │                  ├ [1] : https://go.dev/cl/576155 
+│                       │     │                  ├ [2] : https://go.dev/issue/65051 
+│                       │     │                  ├ [3] : https://groups.google.com/g/golang-announce/c/YgW
+│                       │     │                  │       0sx8mN3M 
+│                       │     │                  ├ [4] : https://nowotarski.info/http2-continuation-flood-
+│                       │     │                  │       technical-details 
+│                       │     │                  ├ [5] : https://nowotarski.info/http2-continuation-flood/ 
+│                       │     │                  ├ [6] : https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
+│                       │     │                  ├ [7] : https://pkg.go.dev/vuln/GO-2024-2687 
+│                       │     │                  ├ [8] : https://security.netapp.com/advisory/ntap-2024041
+│                       │     │                  │       9-0009 
+│                       │     │                  ├ [9] : https://security.netapp.com/advisory/ntap-2024041
+│                       │     │                  │       9-0009/ 
+│                       │     │                  ├ [10]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
+│                       │     │                  ╰ [11]: https://www.kb.cert.org/vuls/id/421644 
 │                       │     ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
-│                       │     ╰ LastModifiedDate: 2024-04-05T12:40:52.763Z 
+│                       │     ╰ LastModifiedDate: 2024-04-19T07:15:08.747Z 
 │                       ╰ [3] ╭ VulnerabilityID : CVE-2024-24786 
 │                             ├ PkgName         : google.golang.org/protobuf 
 │                             ├ PkgIdentifier    ─ PURL: pkg:golang/google.golang.org/protobuf@v1.31.0 
@@ -365,20 +369,24 @@
 │                             │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
 │                             │                           │           /I:N/A:H 
 │                             │                           ╰ V3Score : 7.5 
-│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2023-45288 
-│                             │                  ├ [1]: https://go.dev/cl/576155 
-│                             │                  ├ [2]: https://go.dev/issue/65051 
-│                             │                  ├ [3]: https://groups.google.com/g/golang-announce/c/YgW0
-│                             │                  │      sx8mN3M 
-│                             │                  ├ [4]: https://nowotarski.info/http2-continuation-flood-t
-│                             │                  │      echnical-details 
-│                             │                  ├ [5]: https://nowotarski.info/http2-continuation-flood/ 
-│                             │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
-│                             │                  ├ [7]: https://pkg.go.dev/vuln/GO-2024-2687 
-│                             │                  ├ [8]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
-│                             │                  ╰ [9]: https://www.kb.cert.org/vuls/id/421644 
+│                             ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2023-45288 
+│                             │                  ├ [1] : https://go.dev/cl/576155 
+│                             │                  ├ [2] : https://go.dev/issue/65051 
+│                             │                  ├ [3] : https://groups.google.com/g/golang-announce/c/YgW
+│                             │                  │       0sx8mN3M 
+│                             │                  ├ [4] : https://nowotarski.info/http2-continuation-flood-
+│                             │                  │       technical-details 
+│                             │                  ├ [5] : https://nowotarski.info/http2-continuation-flood/ 
+│                             │                  ├ [6] : https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
+│                             │                  ├ [7] : https://pkg.go.dev/vuln/GO-2024-2687 
+│                             │                  ├ [8] : https://security.netapp.com/advisory/ntap-2024041
+│                             │                  │       9-0009 
+│                             │                  ├ [9] : https://security.netapp.com/advisory/ntap-2024041
+│                             │                  │       9-0009/ 
+│                             │                  ├ [10]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
+│                             │                  ╰ [11]: https://www.kb.cert.org/vuls/id/421644 
 │                             ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
-│                             ╰ LastModifiedDate: 2024-04-05T12:40:52.763Z 
+│                             ╰ LastModifiedDate: 2024-04-19T07:15:08.747Z 
 ├ [3] ╭ Target         : usr/bin/helm 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -490,20 +498,24 @@
 │                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
 │                       │     │                           │           /I:N/A:H 
 │                       │     │                           ╰ V3Score : 7.5 
-│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2023-45288 
-│                       │     │                  ├ [1]: https://go.dev/cl/576155 
-│                       │     │                  ├ [2]: https://go.dev/issue/65051 
-│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/YgW0
-│                       │     │                  │      sx8mN3M 
-│                       │     │                  ├ [4]: https://nowotarski.info/http2-continuation-flood-t
-│                       │     │                  │      echnical-details 
-│                       │     │                  ├ [5]: https://nowotarski.info/http2-continuation-flood/ 
-│                       │     │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
-│                       │     │                  ├ [7]: https://pkg.go.dev/vuln/GO-2024-2687 
-│                       │     │                  ├ [8]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
-│                       │     │                  ╰ [9]: https://www.kb.cert.org/vuls/id/421644 
+│                       │     ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2023-45288 
+│                       │     │                  ├ [1] : https://go.dev/cl/576155 
+│                       │     │                  ├ [2] : https://go.dev/issue/65051 
+│                       │     │                  ├ [3] : https://groups.google.com/g/golang-announce/c/YgW
+│                       │     │                  │       0sx8mN3M 
+│                       │     │                  ├ [4] : https://nowotarski.info/http2-continuation-flood-
+│                       │     │                  │       technical-details 
+│                       │     │                  ├ [5] : https://nowotarski.info/http2-continuation-flood/ 
+│                       │     │                  ├ [6] : https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
+│                       │     │                  ├ [7] : https://pkg.go.dev/vuln/GO-2024-2687 
+│                       │     │                  ├ [8] : https://security.netapp.com/advisory/ntap-2024041
+│                       │     │                  │       9-0009 
+│                       │     │                  ├ [9] : https://security.netapp.com/advisory/ntap-2024041
+│                       │     │                  │       9-0009/ 
+│                       │     │                  ├ [10]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
+│                       │     │                  ╰ [11]: https://www.kb.cert.org/vuls/id/421644 
 │                       │     ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
-│                       │     ╰ LastModifiedDate: 2024-04-05T12:40:52.763Z 
+│                       │     ╰ LastModifiedDate: 2024-04-19T07:15:08.747Z 
 │                       ╰ [2] ╭ VulnerabilityID : CVE-2024-24786 
 │                             ├ PkgName         : google.golang.org/protobuf 
 │                             ├ PkgIdentifier    ─ PURL: pkg:golang/google.golang.org/protobuf@v1.31.0 
@@ -1243,20 +1255,24 @@
                         │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
                         │     │                           │           /I:N/A:H 
                         │     │                           ╰ V3Score : 7.5 
-                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2023-45288 
-                        │     │                  ├ [1]: https://go.dev/cl/576155 
-                        │     │                  ├ [2]: https://go.dev/issue/65051 
-                        │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/YgW0
-                        │     │                  │      sx8mN3M 
-                        │     │                  ├ [4]: https://nowotarski.info/http2-continuation-flood-t
-                        │     │                  │      echnical-details 
-                        │     │                  ├ [5]: https://nowotarski.info/http2-continuation-flood/ 
-                        │     │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
-                        │     │                  ├ [7]: https://pkg.go.dev/vuln/GO-2024-2687 
-                        │     │                  ├ [8]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
-                        │     │                  ╰ [9]: https://www.kb.cert.org/vuls/id/421644 
+                        │     ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2023-45288 
+                        │     │                  ├ [1] : https://go.dev/cl/576155 
+                        │     │                  ├ [2] : https://go.dev/issue/65051 
+                        │     │                  ├ [3] : https://groups.google.com/g/golang-announce/c/YgW
+                        │     │                  │       0sx8mN3M 
+                        │     │                  ├ [4] : https://nowotarski.info/http2-continuation-flood-
+                        │     │                  │       technical-details 
+                        │     │                  ├ [5] : https://nowotarski.info/http2-continuation-flood/ 
+                        │     │                  ├ [6] : https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
+                        │     │                  ├ [7] : https://pkg.go.dev/vuln/GO-2024-2687 
+                        │     │                  ├ [8] : https://security.netapp.com/advisory/ntap-2024041
+                        │     │                  │       9-0009 
+                        │     │                  ├ [9] : https://security.netapp.com/advisory/ntap-2024041
+                        │     │                  │       9-0009/ 
+                        │     │                  ├ [10]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
+                        │     │                  ╰ [11]: https://www.kb.cert.org/vuls/id/421644 
                         │     ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
-                        │     ╰ LastModifiedDate: 2024-04-05T12:40:52.763Z 
+                        │     ╰ LastModifiedDate: 2024-04-19T07:15:08.747Z 
                         ├ [5] ╭ VulnerabilityID : CVE-2024-24786 
                         │     ├ PkgName         : google.golang.org/protobuf 
                         │     ├ PkgIdentifier    ─ PURL: pkg:golang/google.golang.org/protobuf@v1.31.0 
