@@ -5,56 +5,40 @@
   Class: lang-pkgs
   Type: gobinary
   Vulnerabilities:
-  - VulnerabilityID: CVE-2024-24557
+  - VulnerabilityID: CVE-2024-32473
     PkgName: github.com/docker/docker
     PkgIdentifier:
-      PURL: pkg:golang/github.com/docker/docker@v24.0.7%2Bincompatible
-    InstalledVersion: v24.0.7+incompatible
-    FixedVersion: 25.0.2, 24.0.9
+      PURL: pkg:golang/github.com/docker/docker@v26.0.1%2Bincompatible
+    InstalledVersion: v26.0.1+incompatible
+    FixedVersion: 26.0.2
     Status: fixed
     Layer:
-      Digest: sha256:58b3d027d8688e1b28429fb95a74af6a1561671bd92a2271b256ae5cb4601ba3
-      DiffID: sha256:a609b7baa3e4dbeb2deaa741afdb5ca7b72e0bab2007fce90e200067801f1009
+      Digest: sha256:27d361970e50add52925c20e7f8d7e3ae66a92e74279be127135875644cf6677
+      DiffID: sha256:d0968874251ee1104146550a7b604b806d9179eccdb5093eb444a8eca4569ed9
     SeveritySource: ghsa
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24557
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-32473
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Title: 'moby: classic builder cache poisoning'
-    Description: Moby is an open-source project created by Docker to enable software containerization. The classic builder cache system is prone to cache poisoning if the image is built FROM scratch. Also, changes to some instructions (most important being HEALTHCHECK and ONBUILD) would not cause a cache miss. An attacker with the knowledge of the Dockerfile someone is using could poison their cache by making them pull a specially crafted image that would be considered as a valid cache candidate for some build steps. 23.0+ users are only affected if they explicitly opted out of Buildkit (DOCKER_BUILDKIT=0 environment variable) or are using the /build API endpoint. All users on versions older than 23.0 could be impacted. Image build API endpoint (/build) and ImageBuild function from github.com/docker/docker/client is also affected as it the uses classic builder by default. Patches are included in 24.0.9 and 25.0.2 releases.
+    Title: IPv6 enabled on IPv4-only network interfaces
+    Description: Moby is an open source container framework that is a key component of Docker Engine, Docker Desktop, and other distributions of container tooling or runtimes. In 26.0.0, IPv6 is not disabled on network interfaces, including those belonging to networks where `--ipv6=false`. An container with an `ipvlan` or `macvlan` interface will normally be configured to share an external network link with the host machine. Because of this direct access, (1) Containers may be able to communicate with other hosts on the local network over link-local IPv6 addresses, (2) if router advertisements are being broadcast over the local network, containers may get SLAAC-assigned addresses, and (3) the interface  will be a member of IPv6 multicast groups. This means interfaces in IPv4-only networks present an unexpectedly and unnecessarily increased attack surface. The issue is patched in 26.0.2. To completely disable IPv6 in a container, use `--sysctl=net.ipv6.conf.all.disable_ipv6=1` in the `docker create` or `docker run` command. Or, in the service configuration of a `compose` file.
     Severity: MEDIUM
     CweIDs:
-    - CWE-346
-    - CWE-345
+    - CWE-668
     VendorSeverity:
-      amazon: 3
-      cbl-mariner: 3
       ghsa: 2
-      nvd: 3
-      redhat: 2
-      ubuntu: 2
     CVSS:
       ghsa:
-        V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:L/I:H/A:L
-        V3Score: 6.9
-      nvd:
-        V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-        V3Score: 7.8
-      redhat:
-        V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:L/I:H/A:L
-        V3Score: 6.9
+        V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N
+        V3Score: 4.7
     References:
-    - https://access.redhat.com/security/cve/CVE-2024-24557
     - https://github.com/moby/moby
-    - https://github.com/moby/moby/commit/3e230cfdcc989dc524882f6579f9e0dac77400ae
-    - https://github.com/moby/moby/commit/fca702de7f71362c8d103073c7e4a1d0a467fadd
-    - https://github.com/moby/moby/commit/fce6e0ca9bc000888de3daa157af14fa41fcd0ff
-    - https://github.com/moby/moby/security/advisories/GHSA-xw73-rw38-6vjc
-    - https://nvd.nist.gov/vuln/detail/CVE-2024-24557
-    - https://www.cve.org/CVERecord?id=CVE-2024-24557
-    PublishedDate: '2024-02-01T17:15:10.953Z'
-    LastModifiedDate: '2024-02-09T20:21:32.97Z'
+    - https://github.com/moby/moby/commit/7cef0d9cd1cf221d8c0b7b7aeda69552649e0642
+    - https://github.com/moby/moby/security/advisories/GHSA-x84c-p2g9-rqv9
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-32473
+    PublishedDate: '2024-04-18T22:15:10.4Z'
+    LastModifiedDate: '2024-04-19T13:10:25.637Z'
   - VulnerabilityID: CVE-2023-47108
     PkgName: go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc
     PkgIdentifier:
@@ -63,8 +47,8 @@
     FixedVersion: 0.46.0
     Status: fixed
     Layer:
-      Digest: sha256:58b3d027d8688e1b28429fb95a74af6a1561671bd92a2271b256ae5cb4601ba3
-      DiffID: sha256:a609b7baa3e4dbeb2deaa741afdb5ca7b72e0bab2007fce90e200067801f1009
+      Digest: sha256:27d361970e50add52925c20e7f8d7e3ae66a92e74279be127135875644cf6677
+      DiffID: sha256:d0968874251ee1104146550a7b604b806d9179eccdb5093eb444a8eca4569ed9
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-47108
     DataSource:
@@ -105,92 +89,3 @@
     - https://www.cve.org/CVERecord?id=CVE-2023-47108
     PublishedDate: '2023-11-10T19:15:16.41Z'
     LastModifiedDate: '2023-11-20T19:34:26.493Z'
-  - VulnerabilityID: CVE-2023-45288
-    PkgName: golang.org/x/net
-    PkgIdentifier:
-      PURL: pkg:golang/golang.org/x/net@v0.19.0
-    InstalledVersion: v0.19.0
-    FixedVersion: 0.23.0
-    Status: fixed
-    Layer:
-      Digest: sha256:58b3d027d8688e1b28429fb95a74af6a1561671bd92a2271b256ae5cb4601ba3
-      DiffID: sha256:a609b7baa3e4dbeb2deaa741afdb5ca7b72e0bab2007fce90e200067801f1009
-    SeveritySource: ghsa
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45288
-    DataSource:
-      ID: ghsa
-      Name: GitHub Security Advisory Go
-      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Title: 'golang: net/http, x/net/http2: unlimited number of CONTINUATION frames causes DoS'
-    Description: An attacker may cause an HTTP/2 endpoint to read arbitrary amounts of header data by sending an excessive number of CONTINUATION frames. Maintaining HPACK state requires parsing and processing all HEADERS and CONTINUATION frames on a connection. When a request's headers exceed MaxHeaderBytes, no memory is allocated to store the excess headers, but they are still parsed. This permits an attacker to cause an HTTP/2 endpoint to read arbitrary amounts of header data, all associated with a request which is going to be rejected. These headers can include Huffman-encoded data which is significantly more expensive for the receiver to decode than for an attacker to send. The fix sets a limit on the amount of excess header frames we will process before closing a connection.
-    Severity: MEDIUM
-    VendorSeverity:
-      ghsa: 2
-      photon: 3
-      redhat: 3
-    CVSS:
-      ghsa:
-        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
-        V3Score: 5.3
-      redhat:
-        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-        V3Score: 7.5
-    References:
-    - https://access.redhat.com/security/cve/CVE-2023-45288
-    - https://go.dev/cl/576155
-    - https://go.dev/issue/65051
-    - https://groups.google.com/g/golang-announce/c/YgW0sx8mN3M
-    - https://nowotarski.info/http2-continuation-flood-technical-details
-    - https://nowotarski.info/http2-continuation-flood/
-    - https://nvd.nist.gov/vuln/detail/CVE-2023-45288
-    - https://pkg.go.dev/vuln/GO-2024-2687
-    - https://security.netapp.com/advisory/ntap-20240419-0009
-    - https://security.netapp.com/advisory/ntap-20240419-0009/
-    - https://www.cve.org/CVERecord?id=CVE-2023-45288
-    - https://www.kb.cert.org/vuls/id/421644
-    PublishedDate: '2024-04-04T21:15:16.113Z'
-    LastModifiedDate: '2024-04-19T07:15:08.747Z'
-  - VulnerabilityID: CVE-2024-24786
-    PkgName: google.golang.org/protobuf
-    PkgIdentifier:
-      PURL: pkg:golang/google.golang.org/protobuf@v1.31.0
-    InstalledVersion: v1.31.0
-    FixedVersion: 1.33.0
-    Status: fixed
-    Layer:
-      Digest: sha256:58b3d027d8688e1b28429fb95a74af6a1561671bd92a2271b256ae5cb4601ba3
-      DiffID: sha256:a609b7baa3e4dbeb2deaa741afdb5ca7b72e0bab2007fce90e200067801f1009
-    SeveritySource: ghsa
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24786
-    DataSource:
-      ID: ghsa
-      Name: GitHub Security Advisory Go
-      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Title: 'golang-protobuf: encoding/protojson, internal/encoding/json: infinite loop in protojson.Unmarshal when unmarshaling certain forms of invalid JSON'
-    Description: The protojson.Unmarshal function can enter an infinite loop when unmarshaling certain forms of invalid JSON. This condition can occur when unmarshaling into a message which contains a google.protobuf.Any value, or when the UnmarshalOptions.DiscardUnknown option is set.
-    Severity: MEDIUM
-    VendorSeverity:
-      cbl-mariner: 2
-      ghsa: 2
-      oracle-oval: 3
-      redhat: 2
-    CVSS:
-      redhat:
-        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
-        V3Score: 5.9
-    References:
-    - https://access.redhat.com/security/cve/CVE-2024-24786
-    - https://github.com/protocolbuffers/protobuf-go
-    - https://github.com/protocolbuffers/protobuf-go/commit/f01a588e5810b90996452eec4a28f22a0afae023
-    - https://github.com/protocolbuffers/protobuf-go/releases/tag/v1.33.0
-    - https://go.dev/cl/569356
-    - https://groups.google.com/g/golang-announce/c/ArQ6CDgtEjY/
-    - https://linux.oracle.com/cve/CVE-2024-24786.html
-    - https://linux.oracle.com/errata/ELSA-2024-12329.html
-    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JDMBHAVSDU2FBDZ45U3A2VLSM35OJ2HU
-    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JDMBHAVSDU2FBDZ45U3A2VLSM35OJ2HU/
-    - https://nvd.nist.gov/vuln/detail/CVE-2024-24786
-    - https://pkg.go.dev/vuln/GO-2024-2611
-    - https://www.cve.org/CVERecord?id=CVE-2024-24786
-    PublishedDate: '2024-03-05T23:15:07.82Z'
-    LastModifiedDate: '2024-03-24T03:15:09.093Z'
