@@ -22,7 +22,7 @@
 │                       │     │                  ├ Name: GitHub Security Advisory Go 
 │                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areview
 │                       │     │                          ed+ecosystem%3Ago 
-│                       │     ├ Title           : IPv6 enabled on IPv4-only network interfaces 
+│                       │     ├ Title           : moby: IPv6 enabled on IPv4-only network interfaces 
 │                       │     ├ Description     : Moby is an open source container framework that is a key
 │                       │     │                    component of Docker Engine, Docker Desktop, and other
 │                       │     │                   distributions of container tooling or runtimes. In 26.0.0,
@@ -44,16 +44,22 @@
 │                       │     │                   configuration of a `compose` file. 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-668 
-│                       │     ├ VendorSeverity   ─ ghsa: 2 
-│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I
-│                       │     │                         │           :N/A:N 
-│                       │     │                         ╰ V3Score : 4.7 
-│                       │     ├ References       ╭ [0]: https://github.com/moby/moby 
-│                       │     │                  ├ [1]: https://github.com/moby/moby/commit/7cef0d9cd1cf22
+│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │     │                  ╰ redhat: 2 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H
+│                       │     │                  │        │           /I:N/A:N 
+│                       │     │                  │        ╰ V3Score : 4.7 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H
+│                       │     │                           │           /I:N/A:N 
+│                       │     │                           ╰ V3Score : 4.7 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-32473 
+│                       │     │                  ├ [1]: https://github.com/moby/moby 
+│                       │     │                  ├ [2]: https://github.com/moby/moby/commit/7cef0d9cd1cf22
 │                       │     │                  │      1d8c0b7b7aeda69552649e0642 
-│                       │     │                  ├ [2]: https://github.com/moby/moby/security/advisories/G
+│                       │     │                  ├ [3]: https://github.com/moby/moby/security/advisories/G
 │                       │     │                  │      HSA-x84c-p2g9-rqv9 
-│                       │     │                  ╰ [3]: https://nvd.nist.gov/vuln/detail/CVE-2024-32473 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-32473 
+│                       │     │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2024-32473 
 │                       │     ├ PublishedDate   : 2024-04-18T22:15:10.4Z 
 │                       │     ╰ LastModifiedDate: 2024-04-19T13:10:25.637Z 
 │                       ╰ [1] ╭ VulnerabilityID : CVE-2023-47108 
@@ -1041,46 +1047,47 @@
                         │     │                  ├ [138]: https://ubuntu.com/security/notices/USN-6585-1 
                         │     │                  ├ [139]: https://ubuntu.com/security/notices/USN-6589-1 
                         │     │                  ├ [140]: https://ubuntu.com/security/notices/USN-6598-1 
-                        │     │                  ├ [141]: https://winscp.net/eng/docs/history#6.2.2 
-                        │     │                  ├ [142]: https://www.bitvise.com/ssh-client-version-histo
+                        │     │                  ├ [141]: https://ubuntu.com/security/notices/USN-6738-1 
+                        │     │                  ├ [142]: https://winscp.net/eng/docs/history#6.2.2 
+                        │     │                  ├ [143]: https://www.bitvise.com/ssh-client-version-histo
                         │     │                  │        ry#933 
-                        │     │                  ├ [143]: https://www.bitvise.com/ssh-server-version-history 
-                        │     │                  ├ [144]: https://www.chiark.greenend.org.uk/~sgtatham/put
+                        │     │                  ├ [144]: https://www.bitvise.com/ssh-server-version-history 
+                        │     │                  ├ [145]: https://www.chiark.greenend.org.uk/~sgtatham/put
                         │     │                  │        ty/changes.html 
-                        │     │                  ├ [145]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
+                        │     │                  ├ [146]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
                         │     │                  │        ge=Update 
-                        │     │                  ├ [146]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
-                        │     │                  ├ [147]: https://www.debian.org/security/2023/dsa-5586 
-                        │     │                  ├ [148]: https://www.debian.org/security/2023/dsa-5588 
-                        │     │                  ├ [149]: https://www.freebsd.org/security/advisories/Free
+                        │     │                  ├ [147]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
+                        │     │                  ├ [148]: https://www.debian.org/security/2023/dsa-5586 
+                        │     │                  ├ [149]: https://www.debian.org/security/2023/dsa-5588 
+                        │     │                  ├ [150]: https://www.freebsd.org/security/advisories/Free
                         │     │                  │        BSD-SA-23:19.openssh.asc 
-                        │     │                  ├ [150]: https://www.lancom-systems.de/service-support/al
+                        │     │                  ├ [151]: https://www.lancom-systems.de/service-support/al
                         │     │                  │        lgemeine-sicherheitshinweise#c243508 
-                        │     │                  ├ [151]: https://www.netsarang.com/en/xshell-update-history 
-                        │     │                  ├ [152]: https://www.netsarang.com/en/xshell-update-history/ 
-                        │     │                  ├ [153]: https://www.openssh.com/openbsd.html 
-                        │     │                  ├ [154]: https://www.openssh.com/txt/release-9.6 
-                        │     │                  ├ [155]: https://www.openwall.com/lists/oss-security/2023
-                        │     │                  │        /12/18/2 
+                        │     │                  ├ [152]: https://www.netsarang.com/en/xshell-update-history 
+                        │     │                  ├ [153]: https://www.netsarang.com/en/xshell-update-history/ 
+                        │     │                  ├ [154]: https://www.openssh.com/openbsd.html 
+                        │     │                  ├ [155]: https://www.openssh.com/txt/release-9.6 
                         │     │                  ├ [156]: https://www.openwall.com/lists/oss-security/2023
-                        │     │                  │        /12/18/3 
+                        │     │                  │        /12/18/2 
                         │     │                  ├ [157]: https://www.openwall.com/lists/oss-security/2023
+                        │     │                  │        /12/18/3 
+                        │     │                  ├ [158]: https://www.openwall.com/lists/oss-security/2023
                         │     │                  │        /12/20/3 
-                        │     │                  ├ [158]: https://www.paramiko.org/changelog.html 
-                        │     │                  ├ [159]: https://www.reddit.com/r/sysadmin/comments/18idv
+                        │     │                  ├ [159]: https://www.paramiko.org/changelog.html 
+                        │     │                  ├ [160]: https://www.reddit.com/r/sysadmin/comments/18idv
                         │     │                  │        52/cve202348795_why_is_this_cve_still_undisclosed
                         │     │                  │        [m 
-                        │     │                  ├ [160]: https://www.reddit.com/r/sysadmin/comments/18idv
+                        │     │                  ├ [161]: https://www.reddit.com/r/sysadmin/comments/18idv
                         │     │                  │        52/cve202348795_why_is_this_cve_still_undisclosed/
                         │     │                  │         
-                        │     │                  ├ [161]: https://www.suse.com/c/suse-addresses-the-ssh-v2
-                        │     │                  │        -protocol-terrapin-attack-aka-cve-2023-48795 
                         │     │                  ├ [162]: https://www.suse.com/c/suse-addresses-the-ssh-v2
+                        │     │                  │        -protocol-terrapin-attack-aka-cve-2023-48795 
+                        │     │                  ├ [163]: https://www.suse.com/c/suse-addresses-the-ssh-v2
                         │     │                  │        -protocol-terrapin-attack-aka-cve-2023-48795/ 
-                        │     │                  ├ [163]: https://www.terrapin-attack.com 
-                        │     │                  ├ [164]: https://www.theregister.com/2023/12/20/terrapin_
+                        │     │                  ├ [164]: https://www.terrapin-attack.com 
+                        │     │                  ├ [165]: https://www.theregister.com/2023/12/20/terrapin_
                         │     │                  │        attack_ssh 
-                        │     │                  ╰ [165]: https://www.vandyke.com/products/securecrt/histo
+                        │     │                  ╰ [166]: https://www.vandyke.com/products/securecrt/histo
                         │     │                           ry.txt 
                         │     ├ PublishedDate   : 2023-12-18T16:15:10.897Z 
                         │     ╰ LastModifiedDate: 2024-03-13T21:15:54.047Z 
