@@ -22,7 +22,7 @@
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areview
                         │     │                          ed+ecosystem%3Ago 
-                        │     ├ Title           : IPv6 enabled on IPv4-only network interfaces 
+                        │     ├ Title           : moby: IPv6 enabled on IPv4-only network interfaces 
                         │     ├ Description     : Moby is an open source container framework that is a key
                         │     │                    component of Docker Engine, Docker Desktop, and other
                         │     │                   distributions of container tooling or runtimes. In 26.0.0,
@@ -44,16 +44,22 @@
                         │     │                   configuration of a `compose` file. 
                         │     ├ Severity        : MEDIUM 
                         │     ├ CweIDs           ─ [0]: CWE-668 
-                        │     ├ VendorSeverity   ─ ghsa: 2 
-                        │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I
-                        │     │                         │           :N/A:N 
-                        │     │                         ╰ V3Score : 4.7 
-                        │     ├ References       ╭ [0]: https://github.com/moby/moby 
-                        │     │                  ├ [1]: https://github.com/moby/moby/commit/7cef0d9cd1cf22
+                        │     ├ VendorSeverity   ╭ ghsa  : 2 
+                        │     │                  ╰ redhat: 2 
+                        │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H
+                        │     │                  │        │           /I:N/A:N 
+                        │     │                  │        ╰ V3Score : 4.7 
+                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H
+                        │     │                           │           /I:N/A:N 
+                        │     │                           ╰ V3Score : 4.7 
+                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-32473 
+                        │     │                  ├ [1]: https://github.com/moby/moby 
+                        │     │                  ├ [2]: https://github.com/moby/moby/commit/7cef0d9cd1cf22
                         │     │                  │      1d8c0b7b7aeda69552649e0642 
-                        │     │                  ├ [2]: https://github.com/moby/moby/security/advisories/G
+                        │     │                  ├ [3]: https://github.com/moby/moby/security/advisories/G
                         │     │                  │      HSA-x84c-p2g9-rqv9 
-                        │     │                  ╰ [3]: https://nvd.nist.gov/vuln/detail/CVE-2024-32473 
+                        │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-32473 
+                        │     │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2024-32473 
                         │     ├ PublishedDate   : 2024-04-18T22:15:10.4Z 
                         │     ╰ LastModifiedDate: 2024-04-19T13:10:25.637Z 
                         ╰ [1] ╭ VulnerabilityID : CVE-2023-47108 
