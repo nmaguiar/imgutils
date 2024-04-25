@@ -399,63 +399,129 @@
 │                       │     │                  ╰ [13]: https://www.kb.cert.org/vuls/id/421644 
 │                       │     ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
 │                       │     ╰ LastModifiedDate: 2024-04-19T07:15:08.747Z 
-│                       ╰ [2] ╭ VulnerabilityID : CVE-2024-24786 
-│                             ├ PkgName         : google.golang.org/protobuf 
-│                             ├ PkgIdentifier    ─ PURL: pkg:golang/google.golang.org/protobuf@v1.31.0 
-│                             ├ InstalledVersion: v1.31.0 
-│                             ├ FixedVersion    : 1.33.0 
+│                       ├ [2] ╭ VulnerabilityID : CVE-2024-24786 
+│                       │     ├ PkgName         : google.golang.org/protobuf 
+│                       │     ├ PkgIdentifier    ─ PURL: pkg:golang/google.golang.org/protobuf@v1.31.0 
+│                       │     ├ InstalledVersion: v1.31.0 
+│                       │     ├ FixedVersion    : 1.33.0 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc
+│                       │     │                  │         8837732ef23aca2d268abf05 
+│                       │     │                  ╰ DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388
+│                       │     │                            203b7fdce0a0b9a371c4a8a0 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24786 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Go 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areview
+│                       │     │                          ed+ecosystem%3Ago 
+│                       │     ├ Title           : golang-protobuf: encoding/protojson,
+│                       │     │                   internal/encoding/json: infinite loop in protojson.Unmarshal
+│                       │     │                   when unmarshaling certain forms of invalid JSON 
+│                       │     ├ Description     : The protojson.Unmarshal function can enter an infinite
+│                       │     │                   loop when unmarshaling certain forms of invalid JSON. This
+│                       │     │                   condition can occur when unmarshaling into a message which
+│                       │     │                   contains a google.protobuf.Any value, or when the
+│                       │     │                   UnmarshalOptions.DiscardUnknown option is set. 
+│                       │     ├ Severity        : MEDIUM 
+│                       │     ├ VendorSeverity   ╭ cbl-mariner: 2 
+│                       │     │                  ├ ghsa       : 2 
+│                       │     │                  ├ oracle-oval: 3 
+│                       │     │                  ├ redhat     : 2 
+│                       │     │                  ╰ ubuntu     : 2 
+│                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N
+│                       │     │                           │           /I:N/A:H 
+│                       │     │                           ╰ V3Score : 5.9 
+│                       │     ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2024-24786 
+│                       │     │                  ├ [1] : https://github.com/protocolbuffers/protobuf-go 
+│                       │     │                  ├ [2] : https://github.com/protocolbuffers/protobuf-go/co
+│                       │     │                  │       mmit/f01a588e5810b90996452eec4a28f22a0afae023 
+│                       │     │                  ├ [3] : https://github.com/protocolbuffers/protobuf-go/re
+│                       │     │                  │       leases/tag/v1.33.0 
+│                       │     │                  ├ [4] : https://go-review.googlesource.com/c/protobuf/+/569356 
+│                       │     │                  ├ [5] : https://go.dev/cl/569356 
+│                       │     │                  ├ [6] : https://groups.google.com/g/golang-announce/c/ArQ
+│                       │     │                  │       6CDgtEjY/ 
+│                       │     │                  ├ [7] : https://linux.oracle.com/cve/CVE-2024-24786.html 
+│                       │     │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2024-12329.html 
+│                       │     │                  ├ [9] : https://lists.fedoraproject.org/archives/list/pac
+│                       │     │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
+│                       │     │                  │       DU2FBDZ45U3A2VLSM35OJ2HU 
+│                       │     │                  ├ [10]: https://lists.fedoraproject.org/archives/list/pac
+│                       │     │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
+│                       │     │                  │       DU2FBDZ45U3A2VLSM35OJ2HU/ 
+│                       │     │                  ├ [11]: https://nvd.nist.gov/vuln/detail/CVE-2024-24786 
+│                       │     │                  ├ [12]: https://pkg.go.dev/vuln/GO-2024-2611 
+│                       │     │                  ├ [13]: https://ubuntu.com/security/notices/USN-6746-1 
+│                       │     │                  ╰ [14]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
+│                       │     ├ PublishedDate   : 2024-03-05T23:15:07.82Z 
+│                       │     ╰ LastModifiedDate: 2024-03-24T03:15:09.093Z 
+│                       ╰ [3] ╭ VulnerabilityID : CVE-2020-8559 
+│                             ├ PkgName         : k8s.io/apimachinery 
+│                             ├ PkgIdentifier    ─ PURL: pkg:golang/k8s.io/apimachinery@v0.29.0 
+│                             ├ InstalledVersion: v0.29.0 
+│                             ├ FixedVersion    : 1.16.13, 1.17.9, 1.18.7 
 │                             ├ Status          : fixed 
 │                             ├ Layer            ╭ Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc
 │                             │                  │         8837732ef23aca2d268abf05 
 │                             │                  ╰ DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388
 │                             │                            203b7fdce0a0b9a371c4a8a0 
 │                             ├ SeveritySource  : ghsa 
-│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24786 
+│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2020-8559 
 │                             ├ DataSource       ╭ ID  : ghsa 
 │                             │                  ├ Name: GitHub Security Advisory Go 
 │                             │                  ╰ URL : https://github.com/advisories?query=type%3Areview
 │                             │                          ed+ecosystem%3Ago 
-│                             ├ Title           : golang-protobuf: encoding/protojson,
-│                             │                   internal/encoding/json: infinite loop in protojson.Unmarshal
-│                             │                   when unmarshaling certain forms of invalid JSON 
-│                             ├ Description     : The protojson.Unmarshal function can enter an infinite
-│                             │                   loop when unmarshaling certain forms of invalid JSON. This
-│                             │                   condition can occur when unmarshaling into a message which
-│                             │                   contains a google.protobuf.Any value, or when the
-│                             │                   UnmarshalOptions.DiscardUnknown option is set. 
+│                             ├ Title           : kubernetes: compromised node could escalate to cluster
+│                             │                   level privileges 
+│                             ├ Description     : The Kubernetes kube-apiserver in versions v1.6-v1.15,
+│                             │                   and versions prior to v1.16.13, v1.17.9 and v1.18.6 are
+│                             │                   vulnerable to an unvalidated redirect on proxied upgrade
+│                             │                   requests that could allow an attacker to escalate privileges
+│                             │                   from a node compromise to a full cluster compromise. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ cbl-mariner: 2 
-│                             │                  ├ ghsa       : 2 
+│                             ├ CweIDs           ─ [0]: CWE-601 
+│                             ├ VendorSeverity   ╭ ghsa       : 2 
+│                             │                  ├ k8s        : 2 
+│                             │                  ├ nvd        : 2 
 │                             │                  ├ oracle-oval: 3 
-│                             │                  ├ redhat     : 2 
-│                             │                  ╰ ubuntu     : 2 
-│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N
-│                             │                           │           /I:N/A:H 
-│                             │                           ╰ V3Score : 5.9 
-│                             ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2024-24786 
-│                             │                  ├ [1] : https://github.com/protocolbuffers/protobuf-go 
-│                             │                  ├ [2] : https://github.com/protocolbuffers/protobuf-go/co
-│                             │                  │       mmit/f01a588e5810b90996452eec4a28f22a0afae023 
-│                             │                  ├ [3] : https://github.com/protocolbuffers/protobuf-go/re
-│                             │                  │       leases/tag/v1.33.0 
-│                             │                  ├ [4] : https://go-review.googlesource.com/c/protobuf/+/569356 
-│                             │                  ├ [5] : https://go.dev/cl/569356 
-│                             │                  ├ [6] : https://groups.google.com/g/golang-announce/c/ArQ
-│                             │                  │       6CDgtEjY/ 
-│                             │                  ├ [7] : https://linux.oracle.com/cve/CVE-2024-24786.html 
-│                             │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2024-12329.html 
-│                             │                  ├ [9] : https://lists.fedoraproject.org/archives/list/pac
-│                             │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
-│                             │                  │       DU2FBDZ45U3A2VLSM35OJ2HU 
-│                             │                  ├ [10]: https://lists.fedoraproject.org/archives/list/pac
-│                             │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
-│                             │                  │       DU2FBDZ45U3A2VLSM35OJ2HU/ 
-│                             │                  ├ [11]: https://nvd.nist.gov/vuln/detail/CVE-2024-24786 
-│                             │                  ├ [12]: https://pkg.go.dev/vuln/GO-2024-2611 
-│                             │                  ├ [13]: https://ubuntu.com/security/notices/USN-6746-1 
-│                             │                  ╰ [14]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
-│                             ├ PublishedDate   : 2024-03-05T23:15:07.82Z 
-│                             ╰ LastModifiedDate: 2024-03-24T03:15:09.093Z 
+│                             │                  ├ photon     : 2 
+│                             │                  ╰ redhat     : 2 
+│                             ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H
+│                             │                  │        │           /I:H/A:H 
+│                             │                  │        ╰ V3Score : 6.8 
+│                             │                  ├ k8s    ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:H
+│                             │                  │        │           /I:H/A:H 
+│                             │                  │        ╰ V3Score : 6.4 
+│                             │                  ├ nvd    ╭ V2Vector: AV:N/AC:M/Au:S/C:P/I:P/A:P 
+│                             │                  │        ├ V3Vector: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H
+│                             │                  │        │           /I:H/A:H 
+│                             │                  │        ├ V2Score : 6 
+│                             │                  │        ╰ V3Score : 6.8 
+│                             │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:H
+│                             │                           │           /I:H/A:H 
+│                             │                           ╰ V3Score : 6.4 
+│                             ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2020-8559 
+│                             │                  ├ [1] : https://bugzilla.redhat.com/show_bug.cgi?id=1851422 
+│                             │                  ├ [2] : https://github.com/kubernetes/kubernetes 
+│                             │                  ├ [3] : https://github.com/kubernetes/kubernetes/issues/92914 
+│                             │                  ├ [4] : https://github.com/kubernetes/kubernetes/pull/92941 
+│                             │                  ├ [5] : https://github.com/tdwyer/CVE-2020-8559 
+│                             │                  ├ [6] : https://groups.google.com/d/msg/kubernetes-securi
+│                             │                  │       ty-announce/JAIGG5yNROs/19nHQ5wkBwAJ 
+│                             │                  ├ [7] : https://groups.google.com/g/kubernetes-security-a
+│                             │                  │       nnounce/c/JAIGG5yNROs 
+│                             │                  ├ [8] : https://linux.oracle.com/cve/CVE-2020-8559.html 
+│                             │                  ├ [9] : https://linux.oracle.com/errata/ELSA-2020-5767.html 
+│                             │                  ├ [10]: https://nvd.nist.gov/vuln/detail/CVE-2020-8559 
+│                             │                  ├ [11]: https://security.netapp.com/advisory/ntap-2020081
+│                             │                  │       0-0004 
+│                             │                  ├ [12]: https://security.netapp.com/advisory/ntap-2020081
+│                             │                  │       0-0004/ 
+│                             │                  ├ [13]: https://www.cve.org/CVERecord?id=CVE-2020-8559 
+│                             │                  ╰ [14]: https://www.cve.org/cverecord?id=CVE-2020-8559 
+│                             ├ PublishedDate   : 2020-07-22T14:15:16.517Z 
+│                             ╰ LastModifiedDate: 2023-01-27T20:34:52.773Z 
 ╰ [4] ╭ Target         : usr/bin/skopeo 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
