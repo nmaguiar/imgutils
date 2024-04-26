@@ -254,19 +254,25 @@
 │                             │                  │       0sx8mN3M 
 │                             │                  ├ [4] : https://linux.oracle.com/cve/CVE-2023-45288.html 
 │                             │                  ├ [5] : https://linux.oracle.com/errata/ELSA-2024-1963.html 
-│                             │                  ├ [6] : https://nowotarski.info/http2-continuation-flood-
+│                             │                  ├ [6] : https://lists.fedoraproject.org/archives/list/pac
+│                             │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
+│                             │                  │       XRKRYBI2F5UESH67BJBQXUPT 
+│                             │                  ├ [7] : https://lists.fedoraproject.org/archives/list/pac
+│                             │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
+│                             │                  │       XRKRYBI2F5UESH67BJBQXUPT/ 
+│                             │                  ├ [8] : https://nowotarski.info/http2-continuation-flood-
 │                             │                  │       technical-details 
-│                             │                  ├ [7] : https://nowotarski.info/http2-continuation-flood/ 
-│                             │                  ├ [8] : https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
-│                             │                  ├ [9] : https://pkg.go.dev/vuln/GO-2024-2687 
-│                             │                  ├ [10]: https://security.netapp.com/advisory/ntap-2024041
+│                             │                  ├ [9] : https://nowotarski.info/http2-continuation-flood/ 
+│                             │                  ├ [10]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
+│                             │                  ├ [11]: https://pkg.go.dev/vuln/GO-2024-2687 
+│                             │                  ├ [12]: https://security.netapp.com/advisory/ntap-2024041
 │                             │                  │       9-0009 
-│                             │                  ├ [11]: https://security.netapp.com/advisory/ntap-2024041
+│                             │                  ├ [13]: https://security.netapp.com/advisory/ntap-2024041
 │                             │                  │       9-0009/ 
-│                             │                  ├ [12]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
-│                             │                  ╰ [13]: https://www.kb.cert.org/vuls/id/421644 
+│                             │                  ├ [14]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
+│                             │                  ╰ [15]: https://www.kb.cert.org/vuls/id/421644 
 │                             ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
-│                             ╰ LastModifiedDate: 2024-04-19T07:15:08.747Z 
+│                             ╰ LastModifiedDate: 2024-04-25T06:15:52.357Z 
 ├ [3] ╭ Target         : usr/bin/helm 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -386,142 +392,82 @@
 │                       │     │                  │       0sx8mN3M 
 │                       │     │                  ├ [4] : https://linux.oracle.com/cve/CVE-2023-45288.html 
 │                       │     │                  ├ [5] : https://linux.oracle.com/errata/ELSA-2024-1963.html 
-│                       │     │                  ├ [6] : https://nowotarski.info/http2-continuation-flood-
+│                       │     │                  ├ [6] : https://lists.fedoraproject.org/archives/list/pac
+│                       │     │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
+│                       │     │                  │       XRKRYBI2F5UESH67BJBQXUPT 
+│                       │     │                  ├ [7] : https://lists.fedoraproject.org/archives/list/pac
+│                       │     │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
+│                       │     │                  │       XRKRYBI2F5UESH67BJBQXUPT/ 
+│                       │     │                  ├ [8] : https://nowotarski.info/http2-continuation-flood-
 │                       │     │                  │       technical-details 
-│                       │     │                  ├ [7] : https://nowotarski.info/http2-continuation-flood/ 
-│                       │     │                  ├ [8] : https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
-│                       │     │                  ├ [9] : https://pkg.go.dev/vuln/GO-2024-2687 
-│                       │     │                  ├ [10]: https://security.netapp.com/advisory/ntap-2024041
+│                       │     │                  ├ [9] : https://nowotarski.info/http2-continuation-flood/ 
+│                       │     │                  ├ [10]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
+│                       │     │                  ├ [11]: https://pkg.go.dev/vuln/GO-2024-2687 
+│                       │     │                  ├ [12]: https://security.netapp.com/advisory/ntap-2024041
 │                       │     │                  │       9-0009 
-│                       │     │                  ├ [11]: https://security.netapp.com/advisory/ntap-2024041
+│                       │     │                  ├ [13]: https://security.netapp.com/advisory/ntap-2024041
 │                       │     │                  │       9-0009/ 
-│                       │     │                  ├ [12]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
-│                       │     │                  ╰ [13]: https://www.kb.cert.org/vuls/id/421644 
+│                       │     │                  ├ [14]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
+│                       │     │                  ╰ [15]: https://www.kb.cert.org/vuls/id/421644 
 │                       │     ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
-│                       │     ╰ LastModifiedDate: 2024-04-19T07:15:08.747Z 
-│                       ├ [2] ╭ VulnerabilityID : CVE-2024-24786 
-│                       │     ├ PkgName         : google.golang.org/protobuf 
-│                       │     ├ PkgIdentifier    ─ PURL: pkg:golang/google.golang.org/protobuf@v1.31.0 
-│                       │     ├ InstalledVersion: v1.31.0 
-│                       │     ├ FixedVersion    : 1.33.0 
-│                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc
-│                       │     │                  │         8837732ef23aca2d268abf05 
-│                       │     │                  ╰ DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388
-│                       │     │                            203b7fdce0a0b9a371c4a8a0 
-│                       │     ├ SeveritySource  : ghsa 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24786 
-│                       │     ├ DataSource       ╭ ID  : ghsa 
-│                       │     │                  ├ Name: GitHub Security Advisory Go 
-│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areview
-│                       │     │                          ed+ecosystem%3Ago 
-│                       │     ├ Title           : golang-protobuf: encoding/protojson,
-│                       │     │                   internal/encoding/json: infinite loop in protojson.Unmarshal
-│                       │     │                   when unmarshaling certain forms of invalid JSON 
-│                       │     ├ Description     : The protojson.Unmarshal function can enter an infinite
-│                       │     │                   loop when unmarshaling certain forms of invalid JSON. This
-│                       │     │                   condition can occur when unmarshaling into a message which
-│                       │     │                   contains a google.protobuf.Any value, or when the
-│                       │     │                   UnmarshalOptions.DiscardUnknown option is set. 
-│                       │     ├ Severity        : MEDIUM 
-│                       │     ├ VendorSeverity   ╭ cbl-mariner: 2 
-│                       │     │                  ├ ghsa       : 2 
-│                       │     │                  ├ oracle-oval: 3 
-│                       │     │                  ├ redhat     : 2 
-│                       │     │                  ╰ ubuntu     : 2 
-│                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N
-│                       │     │                           │           /I:N/A:H 
-│                       │     │                           ╰ V3Score : 5.9 
-│                       │     ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2024-24786 
-│                       │     │                  ├ [1] : https://github.com/protocolbuffers/protobuf-go 
-│                       │     │                  ├ [2] : https://github.com/protocolbuffers/protobuf-go/co
-│                       │     │                  │       mmit/f01a588e5810b90996452eec4a28f22a0afae023 
-│                       │     │                  ├ [3] : https://github.com/protocolbuffers/protobuf-go/re
-│                       │     │                  │       leases/tag/v1.33.0 
-│                       │     │                  ├ [4] : https://go-review.googlesource.com/c/protobuf/+/569356 
-│                       │     │                  ├ [5] : https://go.dev/cl/569356 
-│                       │     │                  ├ [6] : https://groups.google.com/g/golang-announce/c/ArQ
-│                       │     │                  │       6CDgtEjY/ 
-│                       │     │                  ├ [7] : https://linux.oracle.com/cve/CVE-2024-24786.html 
-│                       │     │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2024-12329.html 
-│                       │     │                  ├ [9] : https://lists.fedoraproject.org/archives/list/pac
-│                       │     │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
-│                       │     │                  │       DU2FBDZ45U3A2VLSM35OJ2HU 
-│                       │     │                  ├ [10]: https://lists.fedoraproject.org/archives/list/pac
-│                       │     │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
-│                       │     │                  │       DU2FBDZ45U3A2VLSM35OJ2HU/ 
-│                       │     │                  ├ [11]: https://nvd.nist.gov/vuln/detail/CVE-2024-24786 
-│                       │     │                  ├ [12]: https://pkg.go.dev/vuln/GO-2024-2611 
-│                       │     │                  ├ [13]: https://ubuntu.com/security/notices/USN-6746-1 
-│                       │     │                  ╰ [14]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
-│                       │     ├ PublishedDate   : 2024-03-05T23:15:07.82Z 
-│                       │     ╰ LastModifiedDate: 2024-03-24T03:15:09.093Z 
-│                       ╰ [3] ╭ VulnerabilityID : CVE-2020-8559 
-│                             ├ PkgName         : k8s.io/apimachinery 
-│                             ├ PkgIdentifier    ─ PURL: pkg:golang/k8s.io/apimachinery@v0.29.0 
-│                             ├ InstalledVersion: v0.29.0 
-│                             ├ FixedVersion    : 1.16.13, 1.17.9, 1.18.7 
+│                       │     ╰ LastModifiedDate: 2024-04-25T06:15:52.357Z 
+│                       ╰ [2] ╭ VulnerabilityID : CVE-2024-24786 
+│                             ├ PkgName         : google.golang.org/protobuf 
+│                             ├ PkgIdentifier    ─ PURL: pkg:golang/google.golang.org/protobuf@v1.31.0 
+│                             ├ InstalledVersion: v1.31.0 
+│                             ├ FixedVersion    : 1.33.0 
 │                             ├ Status          : fixed 
 │                             ├ Layer            ╭ Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc
 │                             │                  │         8837732ef23aca2d268abf05 
 │                             │                  ╰ DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388
 │                             │                            203b7fdce0a0b9a371c4a8a0 
 │                             ├ SeveritySource  : ghsa 
-│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2020-8559 
+│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24786 
 │                             ├ DataSource       ╭ ID  : ghsa 
 │                             │                  ├ Name: GitHub Security Advisory Go 
 │                             │                  ╰ URL : https://github.com/advisories?query=type%3Areview
 │                             │                          ed+ecosystem%3Ago 
-│                             ├ Title           : kubernetes: compromised node could escalate to cluster
-│                             │                   level privileges 
-│                             ├ Description     : The Kubernetes kube-apiserver in versions v1.6-v1.15,
-│                             │                   and versions prior to v1.16.13, v1.17.9 and v1.18.6 are
-│                             │                   vulnerable to an unvalidated redirect on proxied upgrade
-│                             │                   requests that could allow an attacker to escalate privileges
-│                             │                   from a node compromise to a full cluster compromise. 
+│                             ├ Title           : golang-protobuf: encoding/protojson,
+│                             │                   internal/encoding/json: infinite loop in protojson.Unmarshal
+│                             │                   when unmarshaling certain forms of invalid JSON 
+│                             ├ Description     : The protojson.Unmarshal function can enter an infinite
+│                             │                   loop when unmarshaling certain forms of invalid JSON. This
+│                             │                   condition can occur when unmarshaling into a message which
+│                             │                   contains a google.protobuf.Any value, or when the
+│                             │                   UnmarshalOptions.DiscardUnknown option is set. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ CweIDs           ─ [0]: CWE-601 
-│                             ├ VendorSeverity   ╭ ghsa       : 2 
-│                             │                  ├ k8s        : 2 
-│                             │                  ├ nvd        : 2 
+│                             ├ VendorSeverity   ╭ cbl-mariner: 2 
+│                             │                  ├ ghsa       : 2 
 │                             │                  ├ oracle-oval: 3 
-│                             │                  ├ photon     : 2 
-│                             │                  ╰ redhat     : 2 
-│                             ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H
-│                             │                  │        │           /I:H/A:H 
-│                             │                  │        ╰ V3Score : 6.8 
-│                             │                  ├ k8s    ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:H
-│                             │                  │        │           /I:H/A:H 
-│                             │                  │        ╰ V3Score : 6.4 
-│                             │                  ├ nvd    ╭ V2Vector: AV:N/AC:M/Au:S/C:P/I:P/A:P 
-│                             │                  │        ├ V3Vector: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H
-│                             │                  │        │           /I:H/A:H 
-│                             │                  │        ├ V2Score : 6 
-│                             │                  │        ╰ V3Score : 6.8 
-│                             │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:H
-│                             │                           │           /I:H/A:H 
-│                             │                           ╰ V3Score : 6.4 
-│                             ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2020-8559 
-│                             │                  ├ [1] : https://bugzilla.redhat.com/show_bug.cgi?id=1851422 
-│                             │                  ├ [2] : https://github.com/kubernetes/kubernetes 
-│                             │                  ├ [3] : https://github.com/kubernetes/kubernetes/issues/92914 
-│                             │                  ├ [4] : https://github.com/kubernetes/kubernetes/pull/92941 
-│                             │                  ├ [5] : https://github.com/tdwyer/CVE-2020-8559 
-│                             │                  ├ [6] : https://groups.google.com/d/msg/kubernetes-securi
-│                             │                  │       ty-announce/JAIGG5yNROs/19nHQ5wkBwAJ 
-│                             │                  ├ [7] : https://groups.google.com/g/kubernetes-security-a
-│                             │                  │       nnounce/c/JAIGG5yNROs 
-│                             │                  ├ [8] : https://linux.oracle.com/cve/CVE-2020-8559.html 
-│                             │                  ├ [9] : https://linux.oracle.com/errata/ELSA-2020-5767.html 
-│                             │                  ├ [10]: https://nvd.nist.gov/vuln/detail/CVE-2020-8559 
-│                             │                  ├ [11]: https://security.netapp.com/advisory/ntap-2020081
-│                             │                  │       0-0004 
-│                             │                  ├ [12]: https://security.netapp.com/advisory/ntap-2020081
-│                             │                  │       0-0004/ 
-│                             │                  ├ [13]: https://www.cve.org/CVERecord?id=CVE-2020-8559 
-│                             │                  ╰ [14]: https://www.cve.org/cverecord?id=CVE-2020-8559 
-│                             ├ PublishedDate   : 2020-07-22T14:15:16.517Z 
-│                             ╰ LastModifiedDate: 2023-01-27T20:34:52.773Z 
+│                             │                  ├ redhat     : 2 
+│                             │                  ╰ ubuntu     : 2 
+│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N
+│                             │                           │           /I:N/A:H 
+│                             │                           ╰ V3Score : 5.9 
+│                             ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2024-24786 
+│                             │                  ├ [1] : https://github.com/protocolbuffers/protobuf-go 
+│                             │                  ├ [2] : https://github.com/protocolbuffers/protobuf-go/co
+│                             │                  │       mmit/f01a588e5810b90996452eec4a28f22a0afae023 
+│                             │                  ├ [3] : https://github.com/protocolbuffers/protobuf-go/re
+│                             │                  │       leases/tag/v1.33.0 
+│                             │                  ├ [4] : https://go-review.googlesource.com/c/protobuf/+/569356 
+│                             │                  ├ [5] : https://go.dev/cl/569356 
+│                             │                  ├ [6] : https://groups.google.com/g/golang-announce/c/ArQ
+│                             │                  │       6CDgtEjY/ 
+│                             │                  ├ [7] : https://linux.oracle.com/cve/CVE-2024-24786.html 
+│                             │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2024-12329.html 
+│                             │                  ├ [9] : https://lists.fedoraproject.org/archives/list/pac
+│                             │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
+│                             │                  │       DU2FBDZ45U3A2VLSM35OJ2HU 
+│                             │                  ├ [10]: https://lists.fedoraproject.org/archives/list/pac
+│                             │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
+│                             │                  │       DU2FBDZ45U3A2VLSM35OJ2HU/ 
+│                             │                  ├ [11]: https://nvd.nist.gov/vuln/detail/CVE-2024-24786 
+│                             │                  ├ [12]: https://pkg.go.dev/vuln/GO-2024-2611 
+│                             │                  ├ [13]: https://ubuntu.com/security/notices/USN-6746-1 
+│                             │                  ╰ [14]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
+│                             ├ PublishedDate   : 2024-03-05T23:15:07.82Z 
+│                             ╰ LastModifiedDate: 2024-03-24T03:15:09.093Z 
 ╰ [4] ╭ Target         : usr/bin/skopeo 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
@@ -973,199 +919,201 @@
                         │     │                  │        4/01/msg00013.html 
                         │     │                  ├ [74] : https://lists.debian.org/debian-lts-announce/202
                         │     │                  │        4/01/msg00014.html 
-                        │     │                  ├ [75] : https://lists.fedoraproject.org/archives/list/pa
-                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/33XH
-                        │     │                  │        JUB6ROFUOH2OQNENFROTVH6MHSHA 
+                        │     │                  ├ [75] : https://lists.debian.org/debian-lts-announce/202
+                        │     │                  │        4/04/msg00016.html 
                         │     │                  ├ [76] : https://lists.fedoraproject.org/archives/list/pa
                         │     │                  │        ckage-announce%40lists.fedoraproject.org/message/33XH
-                        │     │                  │        JUB6ROFUOH2OQNENFROTVH6MHSHA/ 
+                        │     │                  │        JUB6ROFUOH2OQNENFROTVH6MHSHA 
                         │     │                  ├ [77] : https://lists.fedoraproject.org/archives/list/pa
-                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/3CAY
-                        │     │                  │        YW35MUTNO65RVAELICTNZZFMT2XS 
+                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/33XH
+                        │     │                  │        JUB6ROFUOH2OQNENFROTVH6MHSHA/ 
                         │     │                  ├ [78] : https://lists.fedoraproject.org/archives/list/pa
                         │     │                  │        ckage-announce%40lists.fedoraproject.org/message/3CAY
-                        │     │                  │        YW35MUTNO65RVAELICTNZZFMT2XS/ 
+                        │     │                  │        YW35MUTNO65RVAELICTNZZFMT2XS 
                         │     │                  ├ [79] : https://lists.fedoraproject.org/archives/list/pa
-                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/3JIM
-                        │     │                  │        LVBDWOP4FUPXPTB4PGHHIOMGFLQE 
+                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/3CAY
+                        │     │                  │        YW35MUTNO65RVAELICTNZZFMT2XS/ 
                         │     │                  ├ [80] : https://lists.fedoraproject.org/archives/list/pa
                         │     │                  │        ckage-announce%40lists.fedoraproject.org/message/3JIM
-                        │     │                  │        LVBDWOP4FUPXPTB4PGHHIOMGFLQE/ 
+                        │     │                  │        LVBDWOP4FUPXPTB4PGHHIOMGFLQE 
                         │     │                  ├ [81] : https://lists.fedoraproject.org/archives/list/pa
-                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/3YQL
-                        │     │                  │        UQWLIHDB5QCXQEX7HXHAWMOKPP5O 
+                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/3JIM
+                        │     │                  │        LVBDWOP4FUPXPTB4PGHHIOMGFLQE/ 
                         │     │                  ├ [82] : https://lists.fedoraproject.org/archives/list/pa
                         │     │                  │        ckage-announce%40lists.fedoraproject.org/message/3YQL
-                        │     │                  │        UQWLIHDB5QCXQEX7HXHAWMOKPP5O/ 
+                        │     │                  │        UQWLIHDB5QCXQEX7HXHAWMOKPP5O 
                         │     │                  ├ [83] : https://lists.fedoraproject.org/archives/list/pa
-                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/6Y74
-                        │     │                  │        KVCPEPT4MVU3LHDWCNNOXOE5ZLUR 
+                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/3YQL
+                        │     │                  │        UQWLIHDB5QCXQEX7HXHAWMOKPP5O/ 
                         │     │                  ├ [84] : https://lists.fedoraproject.org/archives/list/pa
                         │     │                  │        ckage-announce%40lists.fedoraproject.org/message/6Y74
-                        │     │                  │        KVCPEPT4MVU3LHDWCNNOXOE5ZLUR/ 
+                        │     │                  │        KVCPEPT4MVU3LHDWCNNOXOE5ZLUR 
                         │     │                  ├ [85] : https://lists.fedoraproject.org/archives/list/pa
-                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/APYI
-                        │     │                  │        XIQOVDCRWLHTGB4VYMAUIAQLKYJ3 
+                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/6Y74
+                        │     │                  │        KVCPEPT4MVU3LHDWCNNOXOE5ZLUR/ 
                         │     │                  ├ [86] : https://lists.fedoraproject.org/archives/list/pa
                         │     │                  │        ckage-announce%40lists.fedoraproject.org/message/APYI
-                        │     │                  │        XIQOVDCRWLHTGB4VYMAUIAQLKYJ3/ 
+                        │     │                  │        XIQOVDCRWLHTGB4VYMAUIAQLKYJ3 
                         │     │                  ├ [87] : https://lists.fedoraproject.org/archives/list/pa
-                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/BL5K
-                        │     │                  │        TLOSLH2KHRN4HCXJPK3JUVLDGEL6 
+                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/APYI
+                        │     │                  │        XIQOVDCRWLHTGB4VYMAUIAQLKYJ3/ 
                         │     │                  ├ [88] : https://lists.fedoraproject.org/archives/list/pa
                         │     │                  │        ckage-announce%40lists.fedoraproject.org/message/BL5K
-                        │     │                  │        TLOSLH2KHRN4HCXJPK3JUVLDGEL6/ 
+                        │     │                  │        TLOSLH2KHRN4HCXJPK3JUVLDGEL6 
                         │     │                  ├ [89] : https://lists.fedoraproject.org/archives/list/pa
-                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/C3AF
-                        │     │                  │        MZ6MH2UHHOPIWT5YLSFV3D2VB3AC 
+                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/BL5K
+                        │     │                  │        TLOSLH2KHRN4HCXJPK3JUVLDGEL6/ 
                         │     │                  ├ [90] : https://lists.fedoraproject.org/archives/list/pa
                         │     │                  │        ckage-announce%40lists.fedoraproject.org/message/C3AF
-                        │     │                  │        MZ6MH2UHHOPIWT5YLSFV3D2VB3AC/ 
+                        │     │                  │        MZ6MH2UHHOPIWT5YLSFV3D2VB3AC 
                         │     │                  ├ [91] : https://lists.fedoraproject.org/archives/list/pa
-                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/CHHI
-                        │     │                  │        TS4PUOZAKFIUBQAQZC7JWXMOYE4B 
+                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/C3AF
+                        │     │                  │        MZ6MH2UHHOPIWT5YLSFV3D2VB3AC/ 
                         │     │                  ├ [92] : https://lists.fedoraproject.org/archives/list/pa
                         │     │                  │        ckage-announce%40lists.fedoraproject.org/message/CHHI
-                        │     │                  │        TS4PUOZAKFIUBQAQZC7JWXMOYE4B/ 
+                        │     │                  │        TS4PUOZAKFIUBQAQZC7JWXMOYE4B 
                         │     │                  ├ [93] : https://lists.fedoraproject.org/archives/list/pa
-                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/F7EY
-                        │     │                  │        CFQCTSGJXWO3ZZ44MGKFC5HA7G3Y 
+                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/CHHI
+                        │     │                  │        TS4PUOZAKFIUBQAQZC7JWXMOYE4B/ 
                         │     │                  ├ [94] : https://lists.fedoraproject.org/archives/list/pa
                         │     │                  │        ckage-announce%40lists.fedoraproject.org/message/F7EY
-                        │     │                  │        CFQCTSGJXWO3ZZ44MGKFC5HA7G3Y/ 
+                        │     │                  │        CFQCTSGJXWO3ZZ44MGKFC5HA7G3Y 
                         │     │                  ├ [95] : https://lists.fedoraproject.org/archives/list/pa
-                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/HYED
-                        │     │                  │        EXIKFKTUJIN43RG4B7T5ZS6MHUSP 
+                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/F7EY
+                        │     │                  │        CFQCTSGJXWO3ZZ44MGKFC5HA7G3Y/ 
                         │     │                  ├ [96] : https://lists.fedoraproject.org/archives/list/pa
                         │     │                  │        ckage-announce%40lists.fedoraproject.org/message/HYED
-                        │     │                  │        EXIKFKTUJIN43RG4B7T5ZS6MHUSP/ 
+                        │     │                  │        EXIKFKTUJIN43RG4B7T5ZS6MHUSP 
                         │     │                  ├ [97] : https://lists.fedoraproject.org/archives/list/pa
-                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/I724
-                        │     │                  │        O3LSRCPO4WNVIXTZCT4VVRMXMMSG 
+                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/HYED
+                        │     │                  │        EXIKFKTUJIN43RG4B7T5ZS6MHUSP/ 
                         │     │                  ├ [98] : https://lists.fedoraproject.org/archives/list/pa
                         │     │                  │        ckage-announce%40lists.fedoraproject.org/message/I724
-                        │     │                  │        O3LSRCPO4WNVIXTZCT4VVRMXMMSG/ 
+                        │     │                  │        O3LSRCPO4WNVIXTZCT4VVRMXMMSG 
                         │     │                  ├ [99] : https://lists.fedoraproject.org/archives/list/pa
-                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/KEOT
-                        │     │                  │        KBUPZXHE3F352JBYNTSNRXYLWD6P 
+                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/I724
+                        │     │                  │        O3LSRCPO4WNVIXTZCT4VVRMXMMSG/ 
                         │     │                  ├ [100]: https://lists.fedoraproject.org/archives/list/pa
                         │     │                  │        ckage-announce%40lists.fedoraproject.org/message/KEOT
-                        │     │                  │        KBUPZXHE3F352JBYNTSNRXYLWD6P/ 
+                        │     │                  │        KBUPZXHE3F352JBYNTSNRXYLWD6P 
                         │     │                  ├ [101]: https://lists.fedoraproject.org/archives/list/pa
-                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/KMZC
-                        │     │                  │        VGUGJZZVDPCVDA7TEB22VUCNEXDD 
+                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/KEOT
+                        │     │                  │        KBUPZXHE3F352JBYNTSNRXYLWD6P/ 
                         │     │                  ├ [102]: https://lists.fedoraproject.org/archives/list/pa
                         │     │                  │        ckage-announce%40lists.fedoraproject.org/message/KMZC
-                        │     │                  │        VGUGJZZVDPCVDA7TEB22VUCNEXDD/ 
+                        │     │                  │        VGUGJZZVDPCVDA7TEB22VUCNEXDD 
                         │     │                  ├ [103]: https://lists.fedoraproject.org/archives/list/pa
-                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/L5Y6
-                        │     │                  │        MNNVAPIJSXJERQ6PKZVCIUXSNJK7 
+                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/KMZC
+                        │     │                  │        VGUGJZZVDPCVDA7TEB22VUCNEXDD/ 
                         │     │                  ├ [104]: https://lists.fedoraproject.org/archives/list/pa
                         │     │                  │        ckage-announce%40lists.fedoraproject.org/message/L5Y6
-                        │     │                  │        MNNVAPIJSXJERQ6PKZVCIUXSNJK7/ 
+                        │     │                  │        MNNVAPIJSXJERQ6PKZVCIUXSNJK7 
                         │     │                  ├ [105]: https://lists.fedoraproject.org/archives/list/pa
-                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/LZQV
-                        │     │                  │        UHWVWRH73YBXUQJOD6CKHDQBU3DM 
+                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/L5Y6
+                        │     │                  │        MNNVAPIJSXJERQ6PKZVCIUXSNJK7/ 
                         │     │                  ├ [106]: https://lists.fedoraproject.org/archives/list/pa
                         │     │                  │        ckage-announce%40lists.fedoraproject.org/message/LZQV
-                        │     │                  │        UHWVWRH73YBXUQJOD6CKHDQBU3DM/ 
+                        │     │                  │        UHWVWRH73YBXUQJOD6CKHDQBU3DM 
                         │     │                  ├ [107]: https://lists.fedoraproject.org/archives/list/pa
-                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/MKQR
-                        │     │                  │        BF3DWMWPH36LBCOBUTSIZRTPEZXB 
+                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/LZQV
+                        │     │                  │        UHWVWRH73YBXUQJOD6CKHDQBU3DM/ 
                         │     │                  ├ [108]: https://lists.fedoraproject.org/archives/list/pa
                         │     │                  │        ckage-announce%40lists.fedoraproject.org/message/MKQR
-                        │     │                  │        BF3DWMWPH36LBCOBUTSIZRTPEZXB/ 
+                        │     │                  │        BF3DWMWPH36LBCOBUTSIZRTPEZXB 
                         │     │                  ├ [109]: https://lists.fedoraproject.org/archives/list/pa
-                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/QI3E
-                        │     │                  │        HAHABFQK7OABNCSF5GMYP6TONTI7 
+                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/MKQR
+                        │     │                  │        BF3DWMWPH36LBCOBUTSIZRTPEZXB/ 
                         │     │                  ├ [110]: https://lists.fedoraproject.org/archives/list/pa
                         │     │                  │        ckage-announce%40lists.fedoraproject.org/message/QI3E
+                        │     │                  │        HAHABFQK7OABNCSF5GMYP6TONTI7 
+                        │     │                  ├ [111]: https://lists.fedoraproject.org/archives/list/pa
+                        │     │                  │        ckage-announce%40lists.fedoraproject.org/message/QI3E
                         │     │                  │        HAHABFQK7OABNCSF5GMYP6TONTI7/ 
-                        │     │                  ├ [111]: https://matt.ucc.asn.au/dropbear/CHANGES 
-                        │     │                  ├ [112]: https://nest.pijul.com/pijul/thrussh/changes/D6H
+                        │     │                  ├ [112]: https://matt.ucc.asn.au/dropbear/CHANGES 
+                        │     │                  ├ [113]: https://nest.pijul.com/pijul/thrussh/changes/D6H
                         │     │                  │        7OWTTMHHX6BTB3B6MNBOBX2L66CBL4LGSEUSAI2MCRCJDQFRQC
                         │     │                  │         
-                        │     │                  ├ [113]: https://news.ycombinator.com/item?id=38684904 
-                        │     │                  ├ [114]: https://news.ycombinator.com/item?id=38685286 
-                        │     │                  ├ [115]: https://news.ycombinator.com/item?id=38732005 
-                        │     │                  ├ [116]: https://nova.app/releases/#v11.8 
-                        │     │                  ├ [117]: https://nvd.nist.gov/vuln/detail/CVE-2023-48795 
-                        │     │                  ├ [118]: https://oryx-embedded.com/download/#changelog 
-                        │     │                  ├ [119]: https://psirt.global.sonicwall.com/vuln-detail/S
+                        │     │                  ├ [114]: https://news.ycombinator.com/item?id=38684904 
+                        │     │                  ├ [115]: https://news.ycombinator.com/item?id=38685286 
+                        │     │                  ├ [116]: https://news.ycombinator.com/item?id=38732005 
+                        │     │                  ├ [117]: https://nova.app/releases/#v11.8 
+                        │     │                  ├ [118]: https://nvd.nist.gov/vuln/detail/CVE-2023-48795 
+                        │     │                  ├ [119]: https://oryx-embedded.com/download/#changelog 
+                        │     │                  ├ [120]: https://psirt.global.sonicwall.com/vuln-detail/S
                         │     │                  │        NWLID-2024-0002 
-                        │     │                  ├ [120]: https://roumenpetrov.info/secsh/#news20231220 
-                        │     │                  ├ [121]: https://security-tracker.debian.org/tracker/CVE-
+                        │     │                  ├ [121]: https://roumenpetrov.info/secsh/#news20231220 
+                        │     │                  ├ [122]: https://security-tracker.debian.org/tracker/CVE-
                         │     │                  │        2023-48795 
-                        │     │                  ├ [122]: https://security-tracker.debian.org/tracker/sour
-                        │     │                  │        ce-package/libssh2 
                         │     │                  ├ [123]: https://security-tracker.debian.org/tracker/sour
-                        │     │                  │        ce-package/proftpd-dfsg 
+                        │     │                  │        ce-package/libssh2 
                         │     │                  ├ [124]: https://security-tracker.debian.org/tracker/sour
+                        │     │                  │        ce-package/proftpd-dfsg 
+                        │     │                  ├ [125]: https://security-tracker.debian.org/tracker/sour
                         │     │                  │        ce-package/trilead-ssh2 
-                        │     │                  ├ [125]: https://security.gentoo.org/glsa/202312-16 
-                        │     │                  ├ [126]: https://security.gentoo.org/glsa/202312-17 
-                        │     │                  ├ [127]: https://security.netapp.com/advisory/ntap-202401
-                        │     │                  │        05-0004 
+                        │     │                  ├ [126]: https://security.gentoo.org/glsa/202312-16 
+                        │     │                  ├ [127]: https://security.gentoo.org/glsa/202312-17 
                         │     │                  ├ [128]: https://security.netapp.com/advisory/ntap-202401
+                        │     │                  │        05-0004 
+                        │     │                  ├ [129]: https://security.netapp.com/advisory/ntap-202401
                         │     │                  │        05-0004/ 
-                        │     │                  ├ [129]: https://support.apple.com/kb/HT214084 
-                        │     │                  ├ [130]: https://terrapin-attack.com/ 
-                        │     │                  ├ [131]: https://thorntech.com/cve-2023-48795-and-sftp-gateway 
-                        │     │                  ├ [132]: https://thorntech.com/cve-2023-48795-and-sftp-ga
+                        │     │                  ├ [130]: https://support.apple.com/kb/HT214084 
+                        │     │                  ├ [131]: https://terrapin-attack.com/ 
+                        │     │                  ├ [132]: https://thorntech.com/cve-2023-48795-and-sftp-gateway 
+                        │     │                  ├ [133]: https://thorntech.com/cve-2023-48795-and-sftp-ga
                         │     │                  │        teway/ 
-                        │     │                  ├ [133]: https://twitter.com/TrueSkrillor/status/17367743
+                        │     │                  ├ [134]: https://twitter.com/TrueSkrillor/status/17367743
                         │     │                  │        89725565005 
-                        │     │                  ├ [134]: https://ubuntu.com/security/CVE-2023-48795 
-                        │     │                  ├ [135]: https://ubuntu.com/security/notices/USN-6560-1 
-                        │     │                  ├ [136]: https://ubuntu.com/security/notices/USN-6560-2 
-                        │     │                  ├ [137]: https://ubuntu.com/security/notices/USN-6561-1 
-                        │     │                  ├ [138]: https://ubuntu.com/security/notices/USN-6585-1 
-                        │     │                  ├ [139]: https://ubuntu.com/security/notices/USN-6589-1 
-                        │     │                  ├ [140]: https://ubuntu.com/security/notices/USN-6598-1 
-                        │     │                  ├ [141]: https://ubuntu.com/security/notices/USN-6738-1 
-                        │     │                  ├ [142]: https://winscp.net/eng/docs/history#6.2.2 
-                        │     │                  ├ [143]: https://www.bitvise.com/ssh-client-version-histo
+                        │     │                  ├ [135]: https://ubuntu.com/security/CVE-2023-48795 
+                        │     │                  ├ [136]: https://ubuntu.com/security/notices/USN-6560-1 
+                        │     │                  ├ [137]: https://ubuntu.com/security/notices/USN-6560-2 
+                        │     │                  ├ [138]: https://ubuntu.com/security/notices/USN-6561-1 
+                        │     │                  ├ [139]: https://ubuntu.com/security/notices/USN-6585-1 
+                        │     │                  ├ [140]: https://ubuntu.com/security/notices/USN-6589-1 
+                        │     │                  ├ [141]: https://ubuntu.com/security/notices/USN-6598-1 
+                        │     │                  ├ [142]: https://ubuntu.com/security/notices/USN-6738-1 
+                        │     │                  ├ [143]: https://winscp.net/eng/docs/history#6.2.2 
+                        │     │                  ├ [144]: https://www.bitvise.com/ssh-client-version-histo
                         │     │                  │        ry#933 
-                        │     │                  ├ [144]: https://www.bitvise.com/ssh-server-version-history 
-                        │     │                  ├ [145]: https://www.chiark.greenend.org.uk/~sgtatham/put
+                        │     │                  ├ [145]: https://www.bitvise.com/ssh-server-version-history 
+                        │     │                  ├ [146]: https://www.chiark.greenend.org.uk/~sgtatham/put
                         │     │                  │        ty/changes.html 
-                        │     │                  ├ [146]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
+                        │     │                  ├ [147]: https://www.crushftp.com/crush10wiki/Wiki.jsp?pa
                         │     │                  │        ge=Update 
-                        │     │                  ├ [147]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
-                        │     │                  ├ [148]: https://www.debian.org/security/2023/dsa-5586 
-                        │     │                  ├ [149]: https://www.debian.org/security/2023/dsa-5588 
-                        │     │                  ├ [150]: https://www.freebsd.org/security/advisories/Free
+                        │     │                  ├ [148]: https://www.cve.org/CVERecord?id=CVE-2023-48795 
+                        │     │                  ├ [149]: https://www.debian.org/security/2023/dsa-5586 
+                        │     │                  ├ [150]: https://www.debian.org/security/2023/dsa-5588 
+                        │     │                  ├ [151]: https://www.freebsd.org/security/advisories/Free
                         │     │                  │        BSD-SA-23:19.openssh.asc 
-                        │     │                  ├ [151]: https://www.lancom-systems.de/service-support/al
+                        │     │                  ├ [152]: https://www.lancom-systems.de/service-support/al
                         │     │                  │        lgemeine-sicherheitshinweise#c243508 
-                        │     │                  ├ [152]: https://www.netsarang.com/en/xshell-update-history 
-                        │     │                  ├ [153]: https://www.netsarang.com/en/xshell-update-history/ 
-                        │     │                  ├ [154]: https://www.openssh.com/openbsd.html 
-                        │     │                  ├ [155]: https://www.openssh.com/txt/release-9.6 
-                        │     │                  ├ [156]: https://www.openwall.com/lists/oss-security/2023
-                        │     │                  │        /12/18/2 
+                        │     │                  ├ [153]: https://www.netsarang.com/en/xshell-update-history 
+                        │     │                  ├ [154]: https://www.netsarang.com/en/xshell-update-history/ 
+                        │     │                  ├ [155]: https://www.openssh.com/openbsd.html 
+                        │     │                  ├ [156]: https://www.openssh.com/txt/release-9.6 
                         │     │                  ├ [157]: https://www.openwall.com/lists/oss-security/2023
-                        │     │                  │        /12/18/3 
+                        │     │                  │        /12/18/2 
                         │     │                  ├ [158]: https://www.openwall.com/lists/oss-security/2023
+                        │     │                  │        /12/18/3 
+                        │     │                  ├ [159]: https://www.openwall.com/lists/oss-security/2023
                         │     │                  │        /12/20/3 
-                        │     │                  ├ [159]: https://www.paramiko.org/changelog.html 
-                        │     │                  ├ [160]: https://www.reddit.com/r/sysadmin/comments/18idv
+                        │     │                  ├ [160]: https://www.paramiko.org/changelog.html 
+                        │     │                  ├ [161]: https://www.reddit.com/r/sysadmin/comments/18idv
                         │     │                  │        52/cve202348795_why_is_this_cve_still_undisclosed
                         │     │                  │        [m 
-                        │     │                  ├ [161]: https://www.reddit.com/r/sysadmin/comments/18idv
+                        │     │                  ├ [162]: https://www.reddit.com/r/sysadmin/comments/18idv
                         │     │                  │        52/cve202348795_why_is_this_cve_still_undisclosed/
                         │     │                  │         
-                        │     │                  ├ [162]: https://www.suse.com/c/suse-addresses-the-ssh-v2
-                        │     │                  │        -protocol-terrapin-attack-aka-cve-2023-48795 
                         │     │                  ├ [163]: https://www.suse.com/c/suse-addresses-the-ssh-v2
+                        │     │                  │        -protocol-terrapin-attack-aka-cve-2023-48795 
+                        │     │                  ├ [164]: https://www.suse.com/c/suse-addresses-the-ssh-v2
                         │     │                  │        -protocol-terrapin-attack-aka-cve-2023-48795/ 
-                        │     │                  ├ [164]: https://www.terrapin-attack.com 
-                        │     │                  ├ [165]: https://www.theregister.com/2023/12/20/terrapin_
+                        │     │                  ├ [165]: https://www.terrapin-attack.com 
+                        │     │                  ├ [166]: https://www.theregister.com/2023/12/20/terrapin_
                         │     │                  │        attack_ssh 
-                        │     │                  ╰ [166]: https://www.vandyke.com/products/securecrt/histo
+                        │     │                  ╰ [167]: https://www.vandyke.com/products/securecrt/histo
                         │     │                           ry.txt 
                         │     ├ PublishedDate   : 2023-12-18T16:15:10.897Z 
-                        │     ╰ LastModifiedDate: 2024-03-13T21:15:54.047Z 
+                        │     ╰ LastModifiedDate: 2024-04-25T22:15:08.13Z 
                         ├ [4] ╭ VulnerabilityID : CVE-2023-45288 
                         │     ├ PkgName         : golang.org/x/net 
                         │     ├ PkgIdentifier    ─ PURL: pkg:golang/golang.org/x/net@v0.18.0 
@@ -1216,19 +1164,25 @@
                         │     │                  │       0sx8mN3M 
                         │     │                  ├ [4] : https://linux.oracle.com/cve/CVE-2023-45288.html 
                         │     │                  ├ [5] : https://linux.oracle.com/errata/ELSA-2024-1963.html 
-                        │     │                  ├ [6] : https://nowotarski.info/http2-continuation-flood-
+                        │     │                  ├ [6] : https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
+                        │     │                  │       XRKRYBI2F5UESH67BJBQXUPT 
+                        │     │                  ├ [7] : https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
+                        │     │                  │       XRKRYBI2F5UESH67BJBQXUPT/ 
+                        │     │                  ├ [8] : https://nowotarski.info/http2-continuation-flood-
                         │     │                  │       technical-details 
-                        │     │                  ├ [7] : https://nowotarski.info/http2-continuation-flood/ 
-                        │     │                  ├ [8] : https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
-                        │     │                  ├ [9] : https://pkg.go.dev/vuln/GO-2024-2687 
-                        │     │                  ├ [10]: https://security.netapp.com/advisory/ntap-2024041
+                        │     │                  ├ [9] : https://nowotarski.info/http2-continuation-flood/ 
+                        │     │                  ├ [10]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
+                        │     │                  ├ [11]: https://pkg.go.dev/vuln/GO-2024-2687 
+                        │     │                  ├ [12]: https://security.netapp.com/advisory/ntap-2024041
                         │     │                  │       9-0009 
-                        │     │                  ├ [11]: https://security.netapp.com/advisory/ntap-2024041
+                        │     │                  ├ [13]: https://security.netapp.com/advisory/ntap-2024041
                         │     │                  │       9-0009/ 
-                        │     │                  ├ [12]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
-                        │     │                  ╰ [13]: https://www.kb.cert.org/vuls/id/421644 
+                        │     │                  ├ [14]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
+                        │     │                  ╰ [15]: https://www.kb.cert.org/vuls/id/421644 
                         │     ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
-                        │     ╰ LastModifiedDate: 2024-04-19T07:15:08.747Z 
+                        │     ╰ LastModifiedDate: 2024-04-25T06:15:52.357Z 
                         ├ [5] ╭ VulnerabilityID : CVE-2024-24786 
                         │     ├ PkgName         : google.golang.org/protobuf 
                         │     ├ PkgIdentifier    ─ PURL: pkg:golang/google.golang.org/protobuf@v1.31.0 
