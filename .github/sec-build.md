@@ -237,7 +237,8 @@
 │                             │                   the amount of excess header frames we will process before
 │                             │                   closing a connection. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ ghsa       : 2 
+│                             ├ VendorSeverity   ╭ alma       : 3 
+│                             │                  ├ ghsa       : 2 
 │                             │                  ├ oracle-oval: 3 
 │                             │                  ├ photon     : 3 
 │                             │                  ╰ redhat     : 3 
@@ -247,30 +248,33 @@
 │                             │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
 │                             │                           │           /I:N/A:H 
 │                             │                           ╰ V3Score : 7.5 
-│                             ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2023-45288 
-│                             │                  ├ [1] : https://go.dev/cl/576155 
-│                             │                  ├ [2] : https://go.dev/issue/65051 
-│                             │                  ├ [3] : https://groups.google.com/g/golang-announce/c/YgW
+│                             ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:1963 
+│                             │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2023-45288 
+│                             │                  ├ [2] : https://bugzilla.redhat.com/2268273 
+│                             │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2024-1963.html 
+│                             │                  ├ [4] : https://go.dev/cl/576155 
+│                             │                  ├ [5] : https://go.dev/issue/65051 
+│                             │                  ├ [6] : https://groups.google.com/g/golang-announce/c/YgW
 │                             │                  │       0sx8mN3M 
-│                             │                  ├ [4] : https://linux.oracle.com/cve/CVE-2023-45288.html 
-│                             │                  ├ [5] : https://linux.oracle.com/errata/ELSA-2024-1963.html 
-│                             │                  ├ [6] : https://lists.fedoraproject.org/archives/list/pac
+│                             │                  ├ [7] : https://linux.oracle.com/cve/CVE-2023-45288.html 
+│                             │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2024-1963.html 
+│                             │                  ├ [9] : https://lists.fedoraproject.org/archives/list/pac
 │                             │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
 │                             │                  │       XRKRYBI2F5UESH67BJBQXUPT 
-│                             │                  ├ [7] : https://lists.fedoraproject.org/archives/list/pac
+│                             │                  ├ [10]: https://lists.fedoraproject.org/archives/list/pac
 │                             │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
 │                             │                  │       XRKRYBI2F5UESH67BJBQXUPT/ 
-│                             │                  ├ [8] : https://nowotarski.info/http2-continuation-flood-
+│                             │                  ├ [11]: https://nowotarski.info/http2-continuation-flood-
 │                             │                  │       technical-details 
-│                             │                  ├ [9] : https://nowotarski.info/http2-continuation-flood/ 
-│                             │                  ├ [10]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
-│                             │                  ├ [11]: https://pkg.go.dev/vuln/GO-2024-2687 
-│                             │                  ├ [12]: https://security.netapp.com/advisory/ntap-2024041
+│                             │                  ├ [12]: https://nowotarski.info/http2-continuation-flood/ 
+│                             │                  ├ [13]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
+│                             │                  ├ [14]: https://pkg.go.dev/vuln/GO-2024-2687 
+│                             │                  ├ [15]: https://security.netapp.com/advisory/ntap-2024041
 │                             │                  │       9-0009 
-│                             │                  ├ [13]: https://security.netapp.com/advisory/ntap-2024041
+│                             │                  ├ [16]: https://security.netapp.com/advisory/ntap-2024041
 │                             │                  │       9-0009/ 
-│                             │                  ├ [14]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
-│                             │                  ╰ [15]: https://www.kb.cert.org/vuls/id/421644 
+│                             │                  ├ [17]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
+│                             │                  ╰ [18]: https://www.kb.cert.org/vuls/id/421644 
 │                             ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
 │                             ╰ LastModifiedDate: 2024-04-25T06:15:52.357Z 
 ├ [3] ╭ Target         : usr/bin/helm 
@@ -375,7 +379,8 @@
 │                       │     │                   the amount of excess header frames we will process before
 │                       │     │                   closing a connection. 
 │                       │     ├ Severity        : MEDIUM 
-│                       │     ├ VendorSeverity   ╭ ghsa       : 2 
+│                       │     ├ VendorSeverity   ╭ alma       : 3 
+│                       │     │                  ├ ghsa       : 2 
 │                       │     │                  ├ oracle-oval: 3 
 │                       │     │                  ├ photon     : 3 
 │                       │     │                  ╰ redhat     : 3 
@@ -385,30 +390,33 @@
 │                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
 │                       │     │                           │           /I:N/A:H 
 │                       │     │                           ╰ V3Score : 7.5 
-│                       │     ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2023-45288 
-│                       │     │                  ├ [1] : https://go.dev/cl/576155 
-│                       │     │                  ├ [2] : https://go.dev/issue/65051 
-│                       │     │                  ├ [3] : https://groups.google.com/g/golang-announce/c/YgW
+│                       │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:1963 
+│                       │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2023-45288 
+│                       │     │                  ├ [2] : https://bugzilla.redhat.com/2268273 
+│                       │     │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2024-1963.html 
+│                       │     │                  ├ [4] : https://go.dev/cl/576155 
+│                       │     │                  ├ [5] : https://go.dev/issue/65051 
+│                       │     │                  ├ [6] : https://groups.google.com/g/golang-announce/c/YgW
 │                       │     │                  │       0sx8mN3M 
-│                       │     │                  ├ [4] : https://linux.oracle.com/cve/CVE-2023-45288.html 
-│                       │     │                  ├ [5] : https://linux.oracle.com/errata/ELSA-2024-1963.html 
-│                       │     │                  ├ [6] : https://lists.fedoraproject.org/archives/list/pac
+│                       │     │                  ├ [7] : https://linux.oracle.com/cve/CVE-2023-45288.html 
+│                       │     │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2024-1963.html 
+│                       │     │                  ├ [9] : https://lists.fedoraproject.org/archives/list/pac
 │                       │     │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
 │                       │     │                  │       XRKRYBI2F5UESH67BJBQXUPT 
-│                       │     │                  ├ [7] : https://lists.fedoraproject.org/archives/list/pac
+│                       │     │                  ├ [10]: https://lists.fedoraproject.org/archives/list/pac
 │                       │     │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
 │                       │     │                  │       XRKRYBI2F5UESH67BJBQXUPT/ 
-│                       │     │                  ├ [8] : https://nowotarski.info/http2-continuation-flood-
+│                       │     │                  ├ [11]: https://nowotarski.info/http2-continuation-flood-
 │                       │     │                  │       technical-details 
-│                       │     │                  ├ [9] : https://nowotarski.info/http2-continuation-flood/ 
-│                       │     │                  ├ [10]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
-│                       │     │                  ├ [11]: https://pkg.go.dev/vuln/GO-2024-2687 
-│                       │     │                  ├ [12]: https://security.netapp.com/advisory/ntap-2024041
+│                       │     │                  ├ [12]: https://nowotarski.info/http2-continuation-flood/ 
+│                       │     │                  ├ [13]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
+│                       │     │                  ├ [14]: https://pkg.go.dev/vuln/GO-2024-2687 
+│                       │     │                  ├ [15]: https://security.netapp.com/advisory/ntap-2024041
 │                       │     │                  │       9-0009 
-│                       │     │                  ├ [13]: https://security.netapp.com/advisory/ntap-2024041
+│                       │     │                  ├ [16]: https://security.netapp.com/advisory/ntap-2024041
 │                       │     │                  │       9-0009/ 
-│                       │     │                  ├ [14]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
-│                       │     │                  ╰ [15]: https://www.kb.cert.org/vuls/id/421644 
+│                       │     │                  ├ [17]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
+│                       │     │                  ╰ [18]: https://www.kb.cert.org/vuls/id/421644 
 │                       │     ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
 │                       │     ╰ LastModifiedDate: 2024-04-25T06:15:52.357Z 
 │                       ╰ [2] ╭ VulnerabilityID : CVE-2024-24786 
@@ -455,7 +463,7 @@
 │                             │                  ├ [6] : https://groups.google.com/g/golang-announce/c/ArQ
 │                             │                  │       6CDgtEjY/ 
 │                             │                  ├ [7] : https://linux.oracle.com/cve/CVE-2024-24786.html 
-│                             │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2024-12329.html 
+│                             │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2024-12348.html 
 │                             │                  ├ [9] : https://lists.fedoraproject.org/archives/list/pac
 │                             │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
 │                             │                  │       DU2FBDZ45U3A2VLSM35OJ2HU 
@@ -1159,7 +1167,7 @@
                         │     │                  ╰ [167]: https://www.vandyke.com/products/securecrt/histo
                         │     │                           ry.txt 
                         │     ├ PublishedDate   : 2023-12-18T16:15:10.897Z 
-                        │     ╰ LastModifiedDate: 2024-04-25T22:15:08.13Z 
+                        │     ╰ LastModifiedDate: 2024-04-29T18:41:33.05Z 
                         ├ [5] ╭ VulnerabilityID : CVE-2023-45288 
                         │     ├ PkgName         : golang.org/x/net 
                         │     ├ PkgIdentifier    ─ PURL: pkg:golang/golang.org/x/net@v0.18.0 
@@ -1193,7 +1201,8 @@
                         │     │                   the amount of excess header frames we will process before
                         │     │                   closing a connection. 
                         │     ├ Severity        : MEDIUM 
-                        │     ├ VendorSeverity   ╭ ghsa       : 2 
+                        │     ├ VendorSeverity   ╭ alma       : 3 
+                        │     │                  ├ ghsa       : 2 
                         │     │                  ├ oracle-oval: 3 
                         │     │                  ├ photon     : 3 
                         │     │                  ╰ redhat     : 3 
@@ -1203,30 +1212,33 @@
                         │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
                         │     │                           │           /I:N/A:H 
                         │     │                           ╰ V3Score : 7.5 
-                        │     ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2023-45288 
-                        │     │                  ├ [1] : https://go.dev/cl/576155 
-                        │     │                  ├ [2] : https://go.dev/issue/65051 
-                        │     │                  ├ [3] : https://groups.google.com/g/golang-announce/c/YgW
+                        │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:1963 
+                        │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2023-45288 
+                        │     │                  ├ [2] : https://bugzilla.redhat.com/2268273 
+                        │     │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2024-1963.html 
+                        │     │                  ├ [4] : https://go.dev/cl/576155 
+                        │     │                  ├ [5] : https://go.dev/issue/65051 
+                        │     │                  ├ [6] : https://groups.google.com/g/golang-announce/c/YgW
                         │     │                  │       0sx8mN3M 
-                        │     │                  ├ [4] : https://linux.oracle.com/cve/CVE-2023-45288.html 
-                        │     │                  ├ [5] : https://linux.oracle.com/errata/ELSA-2024-1963.html 
-                        │     │                  ├ [6] : https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [7] : https://linux.oracle.com/cve/CVE-2023-45288.html 
+                        │     │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2024-1963.html 
+                        │     │                  ├ [9] : https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
                         │     │                  │       XRKRYBI2F5UESH67BJBQXUPT 
-                        │     │                  ├ [7] : https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [10]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
                         │     │                  │       XRKRYBI2F5UESH67BJBQXUPT/ 
-                        │     │                  ├ [8] : https://nowotarski.info/http2-continuation-flood-
+                        │     │                  ├ [11]: https://nowotarski.info/http2-continuation-flood-
                         │     │                  │       technical-details 
-                        │     │                  ├ [9] : https://nowotarski.info/http2-continuation-flood/ 
-                        │     │                  ├ [10]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
-                        │     │                  ├ [11]: https://pkg.go.dev/vuln/GO-2024-2687 
-                        │     │                  ├ [12]: https://security.netapp.com/advisory/ntap-2024041
+                        │     │                  ├ [12]: https://nowotarski.info/http2-continuation-flood/ 
+                        │     │                  ├ [13]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
+                        │     │                  ├ [14]: https://pkg.go.dev/vuln/GO-2024-2687 
+                        │     │                  ├ [15]: https://security.netapp.com/advisory/ntap-2024041
                         │     │                  │       9-0009 
-                        │     │                  ├ [13]: https://security.netapp.com/advisory/ntap-2024041
+                        │     │                  ├ [16]: https://security.netapp.com/advisory/ntap-2024041
                         │     │                  │       9-0009/ 
-                        │     │                  ├ [14]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
-                        │     │                  ╰ [15]: https://www.kb.cert.org/vuls/id/421644 
+                        │     │                  ├ [17]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
+                        │     │                  ╰ [18]: https://www.kb.cert.org/vuls/id/421644 
                         │     ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
                         │     ╰ LastModifiedDate: 2024-04-25T06:15:52.357Z 
                         ├ [6] ╭ VulnerabilityID : CVE-2024-24786 
@@ -1273,7 +1285,7 @@
                         │     │                  ├ [6] : https://groups.google.com/g/golang-announce/c/ArQ
                         │     │                  │       6CDgtEjY/ 
                         │     │                  ├ [7] : https://linux.oracle.com/cve/CVE-2024-24786.html 
-                        │     │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2024-12329.html 
+                        │     │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2024-12348.html 
                         │     │                  ├ [9] : https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
                         │     │                  │       DU2FBDZ45U3A2VLSM35OJ2HU 
