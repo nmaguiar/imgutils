@@ -537,49 +537,6 @@
     - https://www.cve.org/CVERecord?id=CVE-2024-21626
     PublishedDate: '2024-01-31T22:15:53.78Z'
     LastModifiedDate: '2024-02-19T03:15:08.413Z'
-  - VulnerabilityID: CVE-2024-3154
-    PkgName: github.com/opencontainers/runc
-    PkgIdentifier:
-      PURL: pkg:golang/github.com/opencontainers/runc@v1.1.10
-    InstalledVersion: v1.1.10
-    FixedVersion: 1.2.0-rc.1
-    Status: fixed
-    Layer:
-      Digest: sha256:9be4ab8dac974117f1a5f2dbe618a424ae411e98807fd6f7e3281a517b21e818
-      DiffID: sha256:20ca0b38638198ab0d530487553853c1e8fce5b8ecb98db89137a63eacb4a7f0
-    SeveritySource: ghsa
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-3154
-    DataSource:
-      ID: ghsa
-      Name: GitHub Security Advisory Go
-      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Title: 'cri-o: Arbitrary command injection via pod annotation'
-    Description: A flaw was found in cri-o, where an arbitrary systemd property can be injected via a Pod annotation. Any user who can create a pod with an arbitrary annotation may perform an arbitrary action on the host system.
-    Severity: HIGH
-    CweIDs:
-    - CWE-77
-    VendorSeverity:
-      ghsa: 3
-      redhat: 3
-    CVSS:
-      ghsa:
-        V3Vector: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
-        V3Score: 7.2
-      redhat:
-        V3Vector: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
-        V3Score: 7.2
-    References:
-    - https://access.redhat.com/security/cve/CVE-2024-3154
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2272532
-    - https://github.com/cri-o/cri-o/security/advisories/GHSA-2cgq-h8xw-2v5j
-    - https://github.com/opencontainers/runc
-    - https://github.com/opencontainers/runc/commit/3db0871f1cf25c7025861ba0d51d25794cb21623
-    - https://github.com/opencontainers/runc/pull/4217
-    - https://github.com/opencontainers/runtime-spec/blob/main/features.md#unsafe-annotations-in-configjson
-    - https://nvd.nist.gov/vuln/detail/CVE-2024-3154
-    - https://www.cve.org/CVERecord?id=CVE-2024-3154
-    PublishedDate: '2024-04-26T04:15:09.217Z'
-    LastModifiedDate: '2024-04-26T12:58:17.72Z'
   - VulnerabilityID: CVE-2023-48795
     PkgName: golang.org/x/crypto
     PkgIdentifier:
