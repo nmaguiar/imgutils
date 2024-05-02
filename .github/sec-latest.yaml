@@ -170,6 +170,7 @@
     Severity: MEDIUM
     VendorSeverity:
       alma: 3
+      cbl-mariner: 3
       ghsa: 2
       oracle-oval: 3
       photon: 3
@@ -182,6 +183,8 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
+    - http://www.openwall.com/lists/oss-security/2024/04/03/16
+    - http://www.openwall.com/lists/oss-security/2024/04/05/4
     - https://access.redhat.com/errata/RHSA-2024:1963
     - https://access.redhat.com/security/cve/CVE-2023-45288
     - https://bugzilla.redhat.com/2268273
@@ -202,7 +205,7 @@
     - https://www.cve.org/CVERecord?id=CVE-2023-45288
     - https://www.kb.cert.org/vuls/id/421644
     PublishedDate: '2024-04-04T21:15:16.113Z'
-    LastModifiedDate: '2024-04-25T06:15:52.357Z'
+    LastModifiedDate: '2024-05-01T18:15:10.493Z'
 - Target: usr/bin/helm
   Class: lang-pkgs
   Type: gobinary
@@ -278,6 +281,7 @@
     Severity: MEDIUM
     VendorSeverity:
       alma: 3
+      cbl-mariner: 3
       ghsa: 2
       oracle-oval: 3
       photon: 3
@@ -290,6 +294,8 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
+    - http://www.openwall.com/lists/oss-security/2024/04/03/16
+    - http://www.openwall.com/lists/oss-security/2024/04/05/4
     - https://access.redhat.com/errata/RHSA-2024:1963
     - https://access.redhat.com/security/cve/CVE-2023-45288
     - https://bugzilla.redhat.com/2268273
@@ -310,7 +316,7 @@
     - https://www.cve.org/CVERecord?id=CVE-2023-45288
     - https://www.kb.cert.org/vuls/id/421644
     PublishedDate: '2024-04-04T21:15:16.113Z'
-    LastModifiedDate: '2024-04-25T06:15:52.357Z'
+    LastModifiedDate: '2024-05-01T18:15:10.493Z'
   - VulnerabilityID: CVE-2024-24786
     PkgName: google.golang.org/protobuf
     PkgIdentifier:
@@ -341,6 +347,7 @@
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 5.9
     References:
+    - http://www.openwall.com/lists/oss-security/2024/03/08/4
     - https://access.redhat.com/security/cve/CVE-2024-24786
     - https://github.com/protocolbuffers/protobuf-go
     - https://github.com/protocolbuffers/protobuf-go/commit/f01a588e5810b90996452eec4a28f22a0afae023
@@ -357,7 +364,7 @@
     - https://ubuntu.com/security/notices/USN-6746-1
     - https://www.cve.org/CVERecord?id=CVE-2024-24786
     PublishedDate: '2024-03-05T23:15:07.82Z'
-    LastModifiedDate: '2024-03-24T03:15:09.093Z'
+    LastModifiedDate: '2024-05-01T17:15:29.667Z'
 - Target: usr/bin/skopeo
   Class: lang-pkgs
   Type: gobinary
@@ -435,6 +442,7 @@
     CweIDs:
     - CWE-409
     VendorSeverity:
+      cbl-mariner: 2
       ghsa: 2
       redhat: 2
     CVSS:
@@ -585,6 +593,8 @@
     - http://www.openwall.com/lists/oss-security/2023/12/18/3
     - http://www.openwall.com/lists/oss-security/2023/12/19/5
     - http://www.openwall.com/lists/oss-security/2023/12/20/3
+    - http://www.openwall.com/lists/oss-security/2024/03/06/3
+    - http://www.openwall.com/lists/oss-security/2024/04/17/8
     - https://access.redhat.com/errata/RHSA-2024:1150
     - https://access.redhat.com/security/cve/CVE-2023-48795
     - https://access.redhat.com/security/cve/cve-2023-48795
@@ -749,7 +759,7 @@
     - https://www.theregister.com/2023/12/20/terrapin_attack_ssh
     - https://www.vandyke.com/products/securecrt/history.txt
     PublishedDate: '2023-12-18T16:15:10.897Z'
-    LastModifiedDate: '2024-04-29T18:41:33.05Z'
+    LastModifiedDate: '2024-05-01T18:15:10.657Z'
   - VulnerabilityID: CVE-2023-45288
     PkgName: golang.org/x/net
     PkgIdentifier:
@@ -771,6 +781,7 @@
     Severity: MEDIUM
     VendorSeverity:
       alma: 3
+      cbl-mariner: 3
       ghsa: 2
       oracle-oval: 3
       photon: 3
@@ -783,6 +794,8 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
+    - http://www.openwall.com/lists/oss-security/2024/04/03/16
+    - http://www.openwall.com/lists/oss-security/2024/04/05/4
     - https://access.redhat.com/errata/RHSA-2024:1963
     - https://access.redhat.com/security/cve/CVE-2023-45288
     - https://bugzilla.redhat.com/2268273
@@ -803,7 +816,7 @@
     - https://www.cve.org/CVERecord?id=CVE-2023-45288
     - https://www.kb.cert.org/vuls/id/421644
     PublishedDate: '2024-04-04T21:15:16.113Z'
-    LastModifiedDate: '2024-04-25T06:15:52.357Z'
+    LastModifiedDate: '2024-05-01T18:15:10.493Z'
   - VulnerabilityID: CVE-2024-24786
     PkgName: google.golang.org/protobuf
     PkgIdentifier:
@@ -834,6 +847,7 @@
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 5.9
     References:
+    - http://www.openwall.com/lists/oss-security/2024/03/08/4
     - https://access.redhat.com/security/cve/CVE-2024-24786
     - https://github.com/protocolbuffers/protobuf-go
     - https://github.com/protocolbuffers/protobuf-go/commit/f01a588e5810b90996452eec4a28f22a0afae023
@@ -850,7 +864,7 @@
     - https://ubuntu.com/security/notices/USN-6746-1
     - https://www.cve.org/CVERecord?id=CVE-2024-24786
     PublishedDate: '2024-03-05T23:15:07.82Z'
-    LastModifiedDate: '2024-03-24T03:15:09.093Z'
+    LastModifiedDate: '2024-05-01T17:15:29.667Z'
   - VulnerabilityID: CVE-2024-28180
     PkgName: gopkg.in/go-jose/go-jose.v2
     PkgIdentifier:
@@ -874,6 +888,7 @@
     CweIDs:
     - CWE-409
     VendorSeverity:
+      cbl-mariner: 2
       ghsa: 2
       redhat: 2
     CVSS:
