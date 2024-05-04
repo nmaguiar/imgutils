@@ -7,15 +7,16 @@
       ├ Type           : gobinary 
       ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-32473 
                         │     ├ PkgName         : github.com/docker/docker 
-                        │     ├ PkgIdentifier    ─ PURL: pkg:golang/github.com/docker/docker@v26.0.1%2Binc
-                        │     │                          ompatible 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v26.0.1%2Binc
+                        │     │                  │       ompatible 
+                        │     │                  ╰ UID : 493f0dc0950fc8ce 
                         │     ├ InstalledVersion: v26.0.1+incompatible 
                         │     ├ FixedVersion    : 26.0.2 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:db32a6763654844c3ca0f57938c89510d05edac2
-                        │     │                  │         164a966360917976d8762d90 
-                        │     │                  ╰ DiffID: sha256:08bf869766e07d2d6877e43ab262b376accae28b
-                        │     │                            a250e47a209dde5baac2e218 
+                        │     ├ Layer            ╭ Digest: sha256:63be9c5a12b742321ffb13fc6255970ae4c9affb
+                        │     │                  │         739592e45686766eb3331a3f 
+                        │     │                  ╰ DiffID: sha256:29a3c6e596936b2444e80364a1c6962cfbd2455a
+                        │     │                            7561528579710bdb603531fc 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-32473 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -62,77 +63,155 @@
                         │     │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2024-32473 
                         │     ├ PublishedDate   : 2024-04-18T22:15:10.4Z 
                         │     ╰ LastModifiedDate: 2024-04-19T13:10:25.637Z 
-                        ╰ [1] ╭ VulnerabilityID : CVE-2023-47108 
-                              ├ PkgName         : go.opentelemetry.io/contrib/instrumentation/google.golan
-                              │                   g.org/grpc/otelgrpc 
-                              ├ PkgIdentifier    ─ PURL: pkg:golang/go.opentelemetry.io/contrib/instrument
-                              │                          ation/google.golang.org/grpc/otelgrpc@v0.42.0 
-                              ├ InstalledVersion: v0.42.0 
-                              ├ FixedVersion    : 0.46.0 
+                        ├ [1] ╭ VulnerabilityID : CVE-2023-47108 
+                        │     ├ PkgName         : go.opentelemetry.io/contrib/instrumentation/google.golan
+                        │     │                   g.org/grpc/otelgrpc 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/go.opentelemetry.io/contrib/instrument
+                        │     │                  │       ation/google.golang.org/grpc/otelgrpc@v0.42.0 
+                        │     │                  ╰ UID : a2b271a001beeba4 
+                        │     ├ InstalledVersion: v0.42.0 
+                        │     ├ FixedVersion    : 0.46.0 
+                        │     ├ Status          : fixed 
+                        │     ├ Layer            ╭ Digest: sha256:63be9c5a12b742321ffb13fc6255970ae4c9affb
+                        │     │                  │         739592e45686766eb3331a3f 
+                        │     │                  ╰ DiffID: sha256:29a3c6e596936b2444e80364a1c6962cfbd2455a
+                        │     │                            7561528579710bdb603531fc 
+                        │     ├ SeveritySource  : ghsa 
+                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-47108 
+                        │     ├ DataSource       ╭ ID  : ghsa 
+                        │     │                  ├ Name: GitHub Security Advisory Go 
+                        │     │                  ╰ URL : https://github.com/advisories?query=type%3Areview
+                        │     │                          ed+ecosystem%3Ago 
+                        │     ├ Title           : opentelemetry-go-contrib: DoS vulnerability in otelgrpc
+                        │     │                   due to unbound cardinality metrics 
+                        │     ├ Description     : OpenTelemetry-Go Contrib is a collection of third-party
+                        │     │                   packages for OpenTelemetry-Go. Prior to version 0.46.0, the
+                        │     │                   grpc Unary Server Interceptor out of the box adds labels
+                        │     │                   `net.peer.sock.addr` and `net.peer.sock.port` that have
+                        │     │                   unbound cardinality. It leads to the server's potential
+                        │     │                   memory exhaustion when many malicious requests are sent. An
+                        │     │                   attacker can easily flood the peer address and port for
+                        │     │                   requests. Version 0.46.0 contains a fix for this issue. As a
+                        │     │                   workaround to stop being affected, a view removing the
+                        │     │                   attributes can be used. The other possibility is to disable
+                        │     │                   grpc metrics instrumentation by passing
+                        │     │                   `otelgrpc.WithMeterProvider` option with
+                        │     │                   `noop.NewMeterProvider`. 
+                        │     ├ Severity        : HIGH 
+                        │     ├ CweIDs           ─ [0]: CWE-770 
+                        │     ├ VendorSeverity   ╭ amazon     : 3 
+                        │     │                  ├ cbl-mariner: 3 
+                        │     │                  ├ ghsa       : 3 
+                        │     │                  ├ nvd        : 3 
+                        │     │                  ╰ redhat     : 2 
+                        │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
+                        │     │                  │        │           /I:N/A:H 
+                        │     │                  │        ╰ V3Score : 7.5 
+                        │     │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
+                        │     │                  │        │           /I:N/A:H 
+                        │     │                  │        ╰ V3Score : 7.5 
+                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
+                        │     │                           │           /I:N/A:H 
+                        │     │                           ╰ V3Score : 7.5 
+                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2023-47108 
+                        │     │                  ├ [1]: https://github.com/open-telemetry/opentelemetry-go
+                        │     │                  │      -contrib 
+                        │     │                  ├ [2]: https://github.com/open-telemetry/opentelemetry-go
+                        │     │                  │      -contrib/blob/9d4eb7e7706038b07d33f83f76afbe13f53d171d/
+                        │     │                  │      instrumentation/google.golang.org/grpc/otelgrpc/interce
+                        │     │                  │      ptor.go#L327 
+                        │     │                  ├ [3]: https://github.com/open-telemetry/opentelemetry-go
+                        │     │                  │      -contrib/blob/instrumentation/google.golang.org/grpc/ot
+                        │     │                  │      elgrpc/v0.45.0/instrumentation/google.golang.org/grpc/o
+                        │     │                  │      telgrpc/config.go#L138 
+                        │     │                  ├ [4]: https://github.com/open-telemetry/opentelemetry-go
+                        │     │                  │      -contrib/commit/b44dfc9092b157625a5815cb437583cee663333
+                        │     │                  │      b 
+                        │     │                  ├ [5]: https://github.com/open-telemetry/opentelemetry-go
+                        │     │                  │      -contrib/pull/4322 
+                        │     │                  ├ [6]: https://github.com/open-telemetry/opentelemetry-go
+                        │     │                  │      -contrib/security/advisories/GHSA-8pgv-569h-w5rw 
+                        │     │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2023-47108 
+                        │     │                  ├ [8]: https://pkg.go.dev/go.opentelemetry.io/otel/metric
+                        │     │                  │      /noop#NewMeterProvider 
+                        │     │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2023-47108 
+                        │     ├ PublishedDate   : 2023-11-10T19:15:16.41Z 
+                        │     ╰ LastModifiedDate: 2023-11-20T19:34:26.493Z 
+                        ╰ [2] ╭ VulnerabilityID : CVE-2023-45288 
+                              ├ PkgName         : stdlib 
+                              ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
+                              │                  ╰ UID : cd28c68ec9dd2486 
+                              ├ InstalledVersion: 1.22.1 
+                              ├ FixedVersion    : 1.21.9, 1.22.2 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:db32a6763654844c3ca0f57938c89510d05edac2
-                              │                  │         164a966360917976d8762d90 
-                              │                  ╰ DiffID: sha256:08bf869766e07d2d6877e43ab262b376accae28b
-                              │                            a250e47a209dde5baac2e218 
-                              ├ SeveritySource  : ghsa 
-                              ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-47108 
-                              ├ DataSource       ╭ ID  : ghsa 
-                              │                  ├ Name: GitHub Security Advisory Go 
-                              │                  ╰ URL : https://github.com/advisories?query=type%3Areview
-                              │                          ed+ecosystem%3Ago 
-                              ├ Title           : opentelemetry-go-contrib: DoS vulnerability in otelgrpc
-                              │                   due to unbound cardinality metrics 
-                              ├ Description     : OpenTelemetry-Go Contrib is a collection of third-party
-                              │                   packages for OpenTelemetry-Go. Prior to version 0.46.0, the
-                              │                   grpc Unary Server Interceptor out of the box adds labels
-                              │                   `net.peer.sock.addr` and `net.peer.sock.port` that have
-                              │                   unbound cardinality. It leads to the server's potential
-                              │                   memory exhaustion when many malicious requests are sent. An
-                              │                   attacker can easily flood the peer address and port for
-                              │                   requests. Version 0.46.0 contains a fix for this issue. As a
-                              │                   workaround to stop being affected, a view removing the
-                              │                   attributes can be used. The other possibility is to disable
-                              │                   grpc metrics instrumentation by passing
-                              │                   `otelgrpc.WithMeterProvider` option with
-                              │                   `noop.NewMeterProvider`. 
+                              ├ Layer            ╭ Digest: sha256:63be9c5a12b742321ffb13fc6255970ae4c9affb
+                              │                  │         739592e45686766eb3331a3f 
+                              │                  ╰ DiffID: sha256:29a3c6e596936b2444e80364a1c6962cfbd2455a
+                              │                            7561528579710bdb603531fc 
+                              ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-45288 
+                              ├ DataSource       ╭ ID  : govulndb 
+                              │                  ├ Name: The Go Vulnerability Database 
+                              │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                              ├ Title           : golang: net/http, x/net/http2: unlimited number of
+                              │                   CONTINUATION frames causes DoS 
+                              ├ Description     : An attacker may cause an HTTP/2 endpoint to read
+                              │                   arbitrary amounts of header data by sending an excessive
+                              │                   number of CONTINUATION frames. Maintaining HPACK state
+                              │                   requires parsing and processing all HEADERS and CONTINUATION
+                              │                   frames on a connection. When a request's headers exceed
+                              │                   MaxHeaderBytes, no memory is allocated to store the excess
+                              │                   headers, but they are still parsed. This permits an attacker
+                              │                   to cause an HTTP/2 endpoint to read arbitrary amounts of
+                              │                   header data, all associated with a request which is going to
+                              │                   be rejected. These headers can include Huffman-encoded data
+                              │                   which is significantly more expensive for the receiver to
+                              │                   decode than for an attacker to send. The fix sets a limit on
+                              │                   the amount of excess header frames we will process before
+                              │                   closing a connection. 
                               ├ Severity        : HIGH 
-                              ├ CweIDs           ─ [0]: CWE-770 
-                              ├ VendorSeverity   ╭ amazon     : 3 
+                              ├ VendorSeverity   ╭ alma       : 3 
                               │                  ├ cbl-mariner: 3 
-                              │                  ├ ghsa       : 3 
-                              │                  ├ nvd        : 3 
-                              │                  ╰ redhat     : 2 
+                              │                  ├ ghsa       : 2 
+                              │                  ├ oracle-oval: 3 
+                              │                  ├ photon     : 3 
+                              │                  ╰ redhat     : 3 
                               ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
-                              │                  │        │           /I:N/A:H 
-                              │                  │        ╰ V3Score : 7.5 
-                              │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
-                              │                  │        │           /I:N/A:H 
-                              │                  │        ╰ V3Score : 7.5 
+                              │                  │        │           /I:N/A:L 
+                              │                  │        ╰ V3Score : 5.3 
                               │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
                               │                           │           /I:N/A:H 
                               │                           ╰ V3Score : 7.5 
-                              ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2023-47108 
-                              │                  ├ [1]: https://github.com/open-telemetry/opentelemetry-go
-                              │                  │      -contrib 
-                              │                  ├ [2]: https://github.com/open-telemetry/opentelemetry-go
-                              │                  │      -contrib/blob/9d4eb7e7706038b07d33f83f76afbe13f53d171d/
-                              │                  │      instrumentation/google.golang.org/grpc/otelgrpc/interce
-                              │                  │      ptor.go#L327 
-                              │                  ├ [3]: https://github.com/open-telemetry/opentelemetry-go
-                              │                  │      -contrib/blob/instrumentation/google.golang.org/grpc/ot
-                              │                  │      elgrpc/v0.45.0/instrumentation/google.golang.org/grpc/o
-                              │                  │      telgrpc/config.go#L138 
-                              │                  ├ [4]: https://github.com/open-telemetry/opentelemetry-go
-                              │                  │      -contrib/commit/b44dfc9092b157625a5815cb437583cee663333
-                              │                  │      b 
-                              │                  ├ [5]: https://github.com/open-telemetry/opentelemetry-go
-                              │                  │      -contrib/pull/4322 
-                              │                  ├ [6]: https://github.com/open-telemetry/opentelemetry-go
-                              │                  │      -contrib/security/advisories/GHSA-8pgv-569h-w5rw 
-                              │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2023-47108 
-                              │                  ├ [8]: https://pkg.go.dev/go.opentelemetry.io/otel/metric
-                              │                  │      /noop#NewMeterProvider 
-                              │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2023-47108 
-                              ├ PublishedDate   : 2023-11-10T19:15:16.41Z 
-                              ╰ LastModifiedDate: 2023-11-20T19:34:26.493Z 
+                              ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/0
+                              │                  │       4/03/16 
+                              │                  ├ [1] : http://www.openwall.com/lists/oss-security/2024/0
+                              │                  │       4/05/4 
+                              │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:1963 
+                              │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2023-45288 
+                              │                  ├ [4] : https://bugzilla.redhat.com/2268273 
+                              │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2024-1963.html 
+                              │                  ├ [6] : https://go.dev/cl/576155 
+                              │                  ├ [7] : https://go.dev/issue/65051 
+                              │                  ├ [8] : https://groups.google.com/g/golang-announce/c/YgW
+                              │                  │       0sx8mN3M 
+                              │                  ├ [9] : https://linux.oracle.com/cve/CVE-2023-45288.html 
+                              │                  ├ [10]: https://linux.oracle.com/errata/ELSA-2024-1963.html 
+                              │                  ├ [11]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
+                              │                  │       XRKRYBI2F5UESH67BJBQXUPT 
+                              │                  ├ [12]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
+                              │                  │       XRKRYBI2F5UESH67BJBQXUPT/ 
+                              │                  ├ [13]: https://nowotarski.info/http2-continuation-flood-
+                              │                  │       technical-details 
+                              │                  ├ [14]: https://nowotarski.info/http2-continuation-flood/ 
+                              │                  ├ [15]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
+                              │                  ├ [16]: https://pkg.go.dev/vuln/GO-2024-2687 
+                              │                  ├ [17]: https://security.netapp.com/advisory/ntap-2024041
+                              │                  │       9-0009 
+                              │                  ├ [18]: https://security.netapp.com/advisory/ntap-2024041
+                              │                  │       9-0009/ 
+                              │                  ├ [19]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
+                              │                  ╰ [20]: https://www.kb.cert.org/vuls/id/421644 
+                              ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
+                              ╰ LastModifiedDate: 2024-05-01T18:15:10.493Z 
 ````
