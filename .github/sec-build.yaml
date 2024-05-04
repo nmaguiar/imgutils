@@ -9,12 +9,13 @@
     PkgName: github.com/docker/docker
     PkgIdentifier:
       PURL: pkg:golang/github.com/docker/docker@v26.0.1%2Bincompatible
+      UID: 493f0dc0950fc8ce
     InstalledVersion: v26.0.1+incompatible
     FixedVersion: 26.0.2
     Status: fixed
     Layer:
-      Digest: sha256:9be4ab8dac974117f1a5f2dbe618a424ae411e98807fd6f7e3281a517b21e818
-      DiffID: sha256:20ca0b38638198ab0d530487553853c1e8fce5b8ecb98db89137a63eacb4a7f0
+      Digest: sha256:5e78d3bfabc8b502f7635110faa01a871b4240288905f46e67c32d09242f74f6
+      DiffID: sha256:2908561560892ee75df75eded34918af573b52852ff66dd3ebe0b7e8f6df4a66
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-32473
     DataSource:
@@ -49,12 +50,13 @@
     PkgName: go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc
     PkgIdentifier:
       PURL: pkg:golang/go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc@v0.42.0
+      UID: a2b271a001beeba4
     InstalledVersion: v0.42.0
     FixedVersion: 0.46.0
     Status: fixed
     Layer:
-      Digest: sha256:9be4ab8dac974117f1a5f2dbe618a424ae411e98807fd6f7e3281a517b21e818
-      DiffID: sha256:20ca0b38638198ab0d530487553853c1e8fce5b8ecb98db89137a63eacb4a7f0
+      Digest: sha256:5e78d3bfabc8b502f7635110faa01a871b4240288905f46e67c32d09242f74f6
+      DiffID: sha256:2908561560892ee75df75eded34918af573b52852ff66dd3ebe0b7e8f6df4a66
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-47108
     DataSource:
@@ -95,6 +97,63 @@
     - https://www.cve.org/CVERecord?id=CVE-2023-47108
     PublishedDate: '2023-11-10T19:15:16.41Z'
     LastModifiedDate: '2023-11-20T19:34:26.493Z'
+  - VulnerabilityID: CVE-2023-45288
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@1.22.1
+      UID: cd28c68ec9dd2486
+    InstalledVersion: 1.22.1
+    FixedVersion: 1.21.9, 1.22.2
+    Status: fixed
+    Layer:
+      Digest: sha256:5e78d3bfabc8b502f7635110faa01a871b4240288905f46e67c32d09242f74f6
+      DiffID: sha256:2908561560892ee75df75eded34918af573b52852ff66dd3ebe0b7e8f6df4a66
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45288
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'golang: net/http, x/net/http2: unlimited number of CONTINUATION frames causes DoS'
+    Description: An attacker may cause an HTTP/2 endpoint to read arbitrary amounts of header data by sending an excessive number of CONTINUATION frames. Maintaining HPACK state requires parsing and processing all HEADERS and CONTINUATION frames on a connection. When a request's headers exceed MaxHeaderBytes, no memory is allocated to store the excess headers, but they are still parsed. This permits an attacker to cause an HTTP/2 endpoint to read arbitrary amounts of header data, all associated with a request which is going to be rejected. These headers can include Huffman-encoded data which is significantly more expensive for the receiver to decode than for an attacker to send. The fix sets a limit on the amount of excess header frames we will process before closing a connection.
+    Severity: HIGH
+    VendorSeverity:
+      alma: 3
+      cbl-mariner: 3
+      ghsa: 2
+      oracle-oval: 3
+      photon: 3
+      redhat: 3
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+        V3Score: 5.3
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - http://www.openwall.com/lists/oss-security/2024/04/03/16
+    - http://www.openwall.com/lists/oss-security/2024/04/05/4
+    - https://access.redhat.com/errata/RHSA-2024:1963
+    - https://access.redhat.com/security/cve/CVE-2023-45288
+    - https://bugzilla.redhat.com/2268273
+    - https://errata.almalinux.org/9/ALSA-2024-1963.html
+    - https://go.dev/cl/576155
+    - https://go.dev/issue/65051
+    - https://groups.google.com/g/golang-announce/c/YgW0sx8mN3M
+    - https://linux.oracle.com/cve/CVE-2023-45288.html
+    - https://linux.oracle.com/errata/ELSA-2024-1963.html
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QRYFHIQ6XRKRYBI2F5UESH67BJBQXUPT
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QRYFHIQ6XRKRYBI2F5UESH67BJBQXUPT/
+    - https://nowotarski.info/http2-continuation-flood-technical-details
+    - https://nowotarski.info/http2-continuation-flood/
+    - https://nvd.nist.gov/vuln/detail/CVE-2023-45288
+    - https://pkg.go.dev/vuln/GO-2024-2687
+    - https://security.netapp.com/advisory/ntap-20240419-0009
+    - https://security.netapp.com/advisory/ntap-20240419-0009/
+    - https://www.cve.org/CVERecord?id=CVE-2023-45288
+    - https://www.kb.cert.org/vuls/id/421644
+    PublishedDate: '2024-04-04T21:15:16.113Z'
+    LastModifiedDate: '2024-05-01T18:15:10.493Z'
 - Target: usr/bin/dive
   Class: lang-pkgs
   Type: gobinary
@@ -103,12 +162,13 @@
     PkgName: github.com/docker/docker
     PkgIdentifier:
       PURL: pkg:golang/github.com/docker/docker@v24.0.7%2Bincompatible
+      UID: e28d01cbfe108506
     InstalledVersion: v24.0.7+incompatible
     FixedVersion: 25.0.2, 24.0.9
     Status: fixed
     Layer:
-      Digest: sha256:9be4ab8dac974117f1a5f2dbe618a424ae411e98807fd6f7e3281a517b21e818
-      DiffID: sha256:20ca0b38638198ab0d530487553853c1e8fce5b8ecb98db89137a63eacb4a7f0
+      Digest: sha256:5e78d3bfabc8b502f7635110faa01a871b4240288905f46e67c32d09242f74f6
+      DiffID: sha256:2908561560892ee75df75eded34918af573b52852ff66dd3ebe0b7e8f6df4a66
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24557
     DataSource:
@@ -153,12 +213,13 @@
     PkgName: golang.org/x/net
     PkgIdentifier:
       PURL: pkg:golang/golang.org/x/net@v0.17.0
+      UID: 38b9f84f386a711c
     InstalledVersion: v0.17.0
     FixedVersion: 0.23.0
     Status: fixed
     Layer:
-      Digest: sha256:9be4ab8dac974117f1a5f2dbe618a424ae411e98807fd6f7e3281a517b21e818
-      DiffID: sha256:20ca0b38638198ab0d530487553853c1e8fce5b8ecb98db89137a63eacb4a7f0
+      Digest: sha256:5e78d3bfabc8b502f7635110faa01a871b4240288905f46e67c32d09242f74f6
+      DiffID: sha256:2908561560892ee75df75eded34918af573b52852ff66dd3ebe0b7e8f6df4a66
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45288
     DataSource:
@@ -214,12 +275,13 @@
     PkgName: github.com/docker/docker
     PkgIdentifier:
       PURL: pkg:golang/github.com/docker/docker@v24.0.7%2Bincompatible
+      UID: beda8c661f869d1
     InstalledVersion: v24.0.7+incompatible
     FixedVersion: 25.0.2, 24.0.9
     Status: fixed
     Layer:
-      Digest: sha256:9be4ab8dac974117f1a5f2dbe618a424ae411e98807fd6f7e3281a517b21e818
-      DiffID: sha256:20ca0b38638198ab0d530487553853c1e8fce5b8ecb98db89137a63eacb4a7f0
+      Digest: sha256:5e78d3bfabc8b502f7635110faa01a871b4240288905f46e67c32d09242f74f6
+      DiffID: sha256:2908561560892ee75df75eded34918af573b52852ff66dd3ebe0b7e8f6df4a66
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24557
     DataSource:
@@ -264,12 +326,13 @@
     PkgName: golang.org/x/net
     PkgIdentifier:
       PURL: pkg:golang/golang.org/x/net@v0.17.0
+      UID: 9f7723ecc3b1b88f
     InstalledVersion: v0.17.0
     FixedVersion: 0.23.0
     Status: fixed
     Layer:
-      Digest: sha256:9be4ab8dac974117f1a5f2dbe618a424ae411e98807fd6f7e3281a517b21e818
-      DiffID: sha256:20ca0b38638198ab0d530487553853c1e8fce5b8ecb98db89137a63eacb4a7f0
+      Digest: sha256:5e78d3bfabc8b502f7635110faa01a871b4240288905f46e67c32d09242f74f6
+      DiffID: sha256:2908561560892ee75df75eded34918af573b52852ff66dd3ebe0b7e8f6df4a66
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45288
     DataSource:
@@ -321,12 +384,13 @@
     PkgName: google.golang.org/protobuf
     PkgIdentifier:
       PURL: pkg:golang/google.golang.org/protobuf@v1.31.0
+      UID: 2f46bbff95f26fcc
     InstalledVersion: v1.31.0
     FixedVersion: 1.33.0
     Status: fixed
     Layer:
-      Digest: sha256:9be4ab8dac974117f1a5f2dbe618a424ae411e98807fd6f7e3281a517b21e818
-      DiffID: sha256:20ca0b38638198ab0d530487553853c1e8fce5b8ecb98db89137a63eacb4a7f0
+      Digest: sha256:5e78d3bfabc8b502f7635110faa01a871b4240288905f46e67c32d09242f74f6
+      DiffID: sha256:2908561560892ee75df75eded34918af573b52852ff66dd3ebe0b7e8f6df4a66
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24786
     DataSource:
@@ -373,12 +437,13 @@
     PkgName: github.com/docker/docker
     PkgIdentifier:
       PURL: pkg:golang/github.com/docker/docker@v24.0.7%2Bincompatible
+      UID: a9af9c69a2686d3b
     InstalledVersion: v24.0.7+incompatible
     FixedVersion: 25.0.2, 24.0.9
     Status: fixed
     Layer:
-      Digest: sha256:9be4ab8dac974117f1a5f2dbe618a424ae411e98807fd6f7e3281a517b21e818
-      DiffID: sha256:20ca0b38638198ab0d530487553853c1e8fce5b8ecb98db89137a63eacb4a7f0
+      Digest: sha256:5e78d3bfabc8b502f7635110faa01a871b4240288905f46e67c32d09242f74f6
+      DiffID: sha256:2908561560892ee75df75eded34918af573b52852ff66dd3ebe0b7e8f6df4a66
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24557
     DataSource:
@@ -423,12 +488,13 @@
     PkgName: github.com/go-jose/go-jose/v3
     PkgIdentifier:
       PURL: pkg:golang/github.com/go-jose/go-jose/v3@v3.0.1
+      UID: 6dd435bc14175e7a
     InstalledVersion: v3.0.1
     FixedVersion: 3.0.3
     Status: fixed
     Layer:
-      Digest: sha256:9be4ab8dac974117f1a5f2dbe618a424ae411e98807fd6f7e3281a517b21e818
-      DiffID: sha256:20ca0b38638198ab0d530487553853c1e8fce5b8ecb98db89137a63eacb4a7f0
+      Digest: sha256:5e78d3bfabc8b502f7635110faa01a871b4240288905f46e67c32d09242f74f6
+      DiffID: sha256:2908561560892ee75df75eded34918af573b52852ff66dd3ebe0b7e8f6df4a66
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-28180
     DataSource:
@@ -483,12 +549,13 @@
     PkgName: github.com/opencontainers/runc
     PkgIdentifier:
       PURL: pkg:golang/github.com/opencontainers/runc@v1.1.10
+      UID: 8279ec352ebe6362
     InstalledVersion: v1.1.10
     FixedVersion: 1.1.12
     Status: fixed
     Layer:
-      Digest: sha256:9be4ab8dac974117f1a5f2dbe618a424ae411e98807fd6f7e3281a517b21e818
-      DiffID: sha256:20ca0b38638198ab0d530487553853c1e8fce5b8ecb98db89137a63eacb4a7f0
+      Digest: sha256:5e78d3bfabc8b502f7635110faa01a871b4240288905f46e67c32d09242f74f6
+      DiffID: sha256:2908561560892ee75df75eded34918af573b52852ff66dd3ebe0b7e8f6df4a66
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-21626
     DataSource:
@@ -549,12 +616,13 @@
     PkgName: golang.org/x/crypto
     PkgIdentifier:
       PURL: pkg:golang/golang.org/x/crypto@v0.15.0
+      UID: a8ac0a6aa43c7fc4
     InstalledVersion: v0.15.0
     FixedVersion: 0.17.0
     Status: fixed
     Layer:
-      Digest: sha256:9be4ab8dac974117f1a5f2dbe618a424ae411e98807fd6f7e3281a517b21e818
-      DiffID: sha256:20ca0b38638198ab0d530487553853c1e8fce5b8ecb98db89137a63eacb4a7f0
+      Digest: sha256:5e78d3bfabc8b502f7635110faa01a871b4240288905f46e67c32d09242f74f6
+      DiffID: sha256:2908561560892ee75df75eded34918af573b52852ff66dd3ebe0b7e8f6df4a66
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-48795
     DataSource:
@@ -764,12 +832,13 @@
     PkgName: golang.org/x/net
     PkgIdentifier:
       PURL: pkg:golang/golang.org/x/net@v0.18.0
+      UID: 939cee93e37a602b
     InstalledVersion: v0.18.0
     FixedVersion: 0.23.0
     Status: fixed
     Layer:
-      Digest: sha256:9be4ab8dac974117f1a5f2dbe618a424ae411e98807fd6f7e3281a517b21e818
-      DiffID: sha256:20ca0b38638198ab0d530487553853c1e8fce5b8ecb98db89137a63eacb4a7f0
+      Digest: sha256:5e78d3bfabc8b502f7635110faa01a871b4240288905f46e67c32d09242f74f6
+      DiffID: sha256:2908561560892ee75df75eded34918af573b52852ff66dd3ebe0b7e8f6df4a66
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45288
     DataSource:
@@ -821,12 +890,13 @@
     PkgName: google.golang.org/protobuf
     PkgIdentifier:
       PURL: pkg:golang/google.golang.org/protobuf@v1.31.0
+      UID: e9f3cc09ad8423ee
     InstalledVersion: v1.31.0
     FixedVersion: 1.33.0
     Status: fixed
     Layer:
-      Digest: sha256:9be4ab8dac974117f1a5f2dbe618a424ae411e98807fd6f7e3281a517b21e818
-      DiffID: sha256:20ca0b38638198ab0d530487553853c1e8fce5b8ecb98db89137a63eacb4a7f0
+      Digest: sha256:5e78d3bfabc8b502f7635110faa01a871b4240288905f46e67c32d09242f74f6
+      DiffID: sha256:2908561560892ee75df75eded34918af573b52852ff66dd3ebe0b7e8f6df4a66
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24786
     DataSource:
@@ -869,12 +939,13 @@
     PkgName: gopkg.in/go-jose/go-jose.v2
     PkgIdentifier:
       PURL: pkg:golang/gopkg.in/go-jose/go-jose.v2@v2.6.1
+      UID: cb30cc9d71796c7c
     InstalledVersion: v2.6.1
     FixedVersion: 2.6.3
     Status: fixed
     Layer:
-      Digest: sha256:9be4ab8dac974117f1a5f2dbe618a424ae411e98807fd6f7e3281a517b21e818
-      DiffID: sha256:20ca0b38638198ab0d530487553853c1e8fce5b8ecb98db89137a63eacb4a7f0
+      Digest: sha256:5e78d3bfabc8b502f7635110faa01a871b4240288905f46e67c32d09242f74f6
+      DiffID: sha256:2908561560892ee75df75eded34918af573b52852ff66dd3ebe0b7e8f6df4a66
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-28180
     DataSource:
