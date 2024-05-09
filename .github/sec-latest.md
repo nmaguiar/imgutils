@@ -225,7 +225,7 @@
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
 │                             │                  ╰ UID : cd28c68ec9dd2486 
 │                             ├ InstalledVersion: 1.22.1 
-│                             ├ FixedVersion    : 1.21.10, 1.22.3 
+│                             ├ FixedVersion    : 1.22.3 
 │                             ├ Status          : fixed 
 │                             ├ Layer            ╭ Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc
 │                             │                  │         8837732ef23aca2d268abf05 
@@ -235,7 +235,18 @@
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ╰ Severity        : UNKNOWN 
+│                             ├ Title           : A malformed DNS message in response to a query can cause
+│                             │                    the Lookup fu ... 
+│                             ├ Description     : A malformed DNS message in response to a query can cause
+│                             │                    the Lookup functions to get stuck in an infinite loop. 
+│                             ├ Severity        : UNKNOWN 
+│                             ├ References       ╭ [0]: https://go.dev/cl/578375 
+│                             │                  ├ [1]: https://go.dev/issue/66754 
+│                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/wkkO
+│                             │                  │      4P9stm0 
+│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2824 
+│                             ├ PublishedDate   : 2024-05-08T16:15:08.25Z 
+│                             ╰ LastModifiedDate: 2024-05-08T17:05:24.083Z 
 ├ [2] ╭ Target         : usr/bin/dive 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -396,7 +407,7 @@
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.2 
 │                             │                  ╰ UID : 16e338e43b449d0 
 │                             ├ InstalledVersion: 1.22.2 
-│                             ├ FixedVersion    : 1.21.10, 1.22.3 
+│                             ├ FixedVersion    : 1.22.3 
 │                             ├ Status          : fixed 
 │                             ├ Layer            ╭ Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc
 │                             │                  │         8837732ef23aca2d268abf05 
@@ -406,27 +417,19 @@
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ╰ Severity        : UNKNOWN 
-├ [3] ╭ Target         : usr/bin/docker 
-│     ├ Class          : lang-pkgs 
-│     ├ Type           : gobinary 
-│     ╰ Vulnerabilities ─ [0] ╭ VulnerabilityID : CVE-2024-24788 
-│                             ├ PkgName         : stdlib 
-│                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.21.9 
-│                             │                  ╰ UID : b3b37e1bfa35262a 
-│                             ├ InstalledVersion: 1.21.9 
-│                             ├ FixedVersion    : 1.21.10, 1.22.3 
-│                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc
-│                             │                  │         8837732ef23aca2d268abf05 
-│                             │                  ╰ DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388
-│                             │                            203b7fdce0a0b9a371c4a8a0 
-│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24788 
-│                             ├ DataSource       ╭ ID  : govulndb 
-│                             │                  ├ Name: The Go Vulnerability Database 
-│                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ╰ Severity        : UNKNOWN 
-├ [4] ╭ Target         : usr/bin/helm 
+│                             ├ Title           : A malformed DNS message in response to a query can cause
+│                             │                    the Lookup fu ... 
+│                             ├ Description     : A malformed DNS message in response to a query can cause
+│                             │                    the Lookup functions to get stuck in an infinite loop. 
+│                             ├ Severity        : UNKNOWN 
+│                             ├ References       ╭ [0]: https://go.dev/cl/578375 
+│                             │                  ├ [1]: https://go.dev/issue/66754 
+│                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/wkkO
+│                             │                  │      4P9stm0 
+│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2824 
+│                             ├ PublishedDate   : 2024-05-08T16:15:08.25Z 
+│                             ╰ LastModifiedDate: 2024-05-08T17:05:24.083Z 
+├ [3] ╭ Target         : usr/bin/helm 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
 │     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-24557 
@@ -581,87 +584,71 @@
 │                       │     │                  ╰ [26]: https://www.kb.cert.org/vuls/id/421644 
 │                       │     ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
 │                       │     ╰ LastModifiedDate: 2024-05-01T18:15:10.493Z 
-│                       ├ [2] ╭ VulnerabilityID : CVE-2024-24786 
-│                       │     ├ PkgName         : google.golang.org/protobuf 
-│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/google.golang.org/protobuf@v1.31.0 
-│                       │     │                  ╰ UID : 2f46bbff95f26fcc 
-│                       │     ├ InstalledVersion: v1.31.0 
-│                       │     ├ FixedVersion    : 1.33.0 
-│                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc
-│                       │     │                  │         8837732ef23aca2d268abf05 
-│                       │     │                  ╰ DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388
-│                       │     │                            203b7fdce0a0b9a371c4a8a0 
-│                       │     ├ SeveritySource  : ghsa 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24786 
-│                       │     ├ DataSource       ╭ ID  : ghsa 
-│                       │     │                  ├ Name: GitHub Security Advisory Go 
-│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areview
-│                       │     │                          ed+ecosystem%3Ago 
-│                       │     ├ Title           : golang-protobuf: encoding/protojson,
-│                       │     │                   internal/encoding/json: infinite loop in protojson.Unmarshal
-│                       │     │                   when unmarshaling certain forms of invalid JSON 
-│                       │     ├ Description     : The protojson.Unmarshal function can enter an infinite
-│                       │     │                   loop when unmarshaling certain forms of invalid JSON. This
-│                       │     │                   condition can occur when unmarshaling into a message which
-│                       │     │                   contains a google.protobuf.Any value, or when the
-│                       │     │                   UnmarshalOptions.DiscardUnknown option is set. 
-│                       │     ├ Severity        : MEDIUM 
-│                       │     ├ VendorSeverity   ╭ alma       : 2 
-│                       │     │                  ├ cbl-mariner: 2 
-│                       │     │                  ├ ghsa       : 2 
-│                       │     │                  ├ oracle-oval: 2 
-│                       │     │                  ├ redhat     : 2 
-│                       │     │                  ╰ ubuntu     : 2 
-│                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N
-│                       │     │                           │           /I:N/A:H 
-│                       │     │                           ╰ V3Score : 5.9 
-│                       │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/0
-│                       │     │                  │       3/08/4 
-│                       │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:2550 
-│                       │     │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2024-24786 
-│                       │     │                  ├ [3] : https://bugzilla.redhat.com/2268046 
-│                       │     │                  ├ [4] : https://errata.almalinux.org/9/ALSA-2024-2550.html 
-│                       │     │                  ├ [5] : https://github.com/protocolbuffers/protobuf-go 
-│                       │     │                  ├ [6] : https://github.com/protocolbuffers/protobuf-go/co
-│                       │     │                  │       mmit/f01a588e5810b90996452eec4a28f22a0afae023 
-│                       │     │                  ├ [7] : https://github.com/protocolbuffers/protobuf-go/re
-│                       │     │                  │       leases/tag/v1.33.0 
-│                       │     │                  ├ [8] : https://go-review.googlesource.com/c/protobuf/+/569356 
-│                       │     │                  ├ [9] : https://go.dev/cl/569356 
-│                       │     │                  ├ [10]: https://groups.google.com/g/golang-announce/c/ArQ
-│                       │     │                  │       6CDgtEjY/ 
-│                       │     │                  ├ [11]: https://linux.oracle.com/cve/CVE-2024-24786.html 
-│                       │     │                  ├ [12]: https://linux.oracle.com/errata/ELSA-2024-2549.html 
-│                       │     │                  ├ [13]: https://lists.fedoraproject.org/archives/list/pac
-│                       │     │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
-│                       │     │                  │       DU2FBDZ45U3A2VLSM35OJ2HU 
-│                       │     │                  ├ [14]: https://lists.fedoraproject.org/archives/list/pac
-│                       │     │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
-│                       │     │                  │       DU2FBDZ45U3A2VLSM35OJ2HU/ 
-│                       │     │                  ├ [15]: https://nvd.nist.gov/vuln/detail/CVE-2024-24786 
-│                       │     │                  ├ [16]: https://pkg.go.dev/vuln/GO-2024-2611 
-│                       │     │                  ├ [17]: https://ubuntu.com/security/notices/USN-6746-1 
-│                       │     │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
-│                       │     ├ PublishedDate   : 2024-03-05T23:15:07.82Z 
-│                       │     ╰ LastModifiedDate: 2024-05-01T17:15:29.667Z 
-│                       ╰ [3] ╭ VulnerabilityID : CVE-2024-24788 
-│                             ├ PkgName         : stdlib 
-│                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.21.9 
-│                             │                  ╰ UID : 8adb28ce6abb45a1 
-│                             ├ InstalledVersion: 1.21.9 
-│                             ├ FixedVersion    : 1.21.10, 1.22.3 
+│                       ╰ [2] ╭ VulnerabilityID : CVE-2024-24786 
+│                             ├ PkgName         : google.golang.org/protobuf 
+│                             ├ PkgIdentifier    ╭ PURL: pkg:golang/google.golang.org/protobuf@v1.31.0 
+│                             │                  ╰ UID : 2f46bbff95f26fcc 
+│                             ├ InstalledVersion: v1.31.0 
+│                             ├ FixedVersion    : 1.33.0 
 │                             ├ Status          : fixed 
 │                             ├ Layer            ╭ Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc
 │                             │                  │         8837732ef23aca2d268abf05 
 │                             │                  ╰ DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388
 │                             │                            203b7fdce0a0b9a371c4a8a0 
-│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24788 
-│                             ├ DataSource       ╭ ID  : govulndb 
-│                             │                  ├ Name: The Go Vulnerability Database 
-│                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ╰ Severity        : UNKNOWN 
-╰ [5] ╭ Target         : usr/bin/skopeo 
+│                             ├ SeveritySource  : ghsa 
+│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24786 
+│                             ├ DataSource       ╭ ID  : ghsa 
+│                             │                  ├ Name: GitHub Security Advisory Go 
+│                             │                  ╰ URL : https://github.com/advisories?query=type%3Areview
+│                             │                          ed+ecosystem%3Ago 
+│                             ├ Title           : golang-protobuf: encoding/protojson,
+│                             │                   internal/encoding/json: infinite loop in protojson.Unmarshal
+│                             │                   when unmarshaling certain forms of invalid JSON 
+│                             ├ Description     : The protojson.Unmarshal function can enter an infinite
+│                             │                   loop when unmarshaling certain forms of invalid JSON. This
+│                             │                   condition can occur when unmarshaling into a message which
+│                             │                   contains a google.protobuf.Any value, or when the
+│                             │                   UnmarshalOptions.DiscardUnknown option is set. 
+│                             ├ Severity        : MEDIUM 
+│                             ├ VendorSeverity   ╭ alma       : 2 
+│                             │                  ├ cbl-mariner: 2 
+│                             │                  ├ ghsa       : 2 
+│                             │                  ├ oracle-oval: 2 
+│                             │                  ├ redhat     : 2 
+│                             │                  ╰ ubuntu     : 2 
+│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N
+│                             │                           │           /I:N/A:H 
+│                             │                           ╰ V3Score : 5.9 
+│                             ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/0
+│                             │                  │       3/08/4 
+│                             │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:2550 
+│                             │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2024-24786 
+│                             │                  ├ [3] : https://bugzilla.redhat.com/2268046 
+│                             │                  ├ [4] : https://errata.almalinux.org/9/ALSA-2024-2550.html 
+│                             │                  ├ [5] : https://github.com/protocolbuffers/protobuf-go 
+│                             │                  ├ [6] : https://github.com/protocolbuffers/protobuf-go/co
+│                             │                  │       mmit/f01a588e5810b90996452eec4a28f22a0afae023 
+│                             │                  ├ [7] : https://github.com/protocolbuffers/protobuf-go/re
+│                             │                  │       leases/tag/v1.33.0 
+│                             │                  ├ [8] : https://go-review.googlesource.com/c/protobuf/+/569356 
+│                             │                  ├ [9] : https://go.dev/cl/569356 
+│                             │                  ├ [10]: https://groups.google.com/g/golang-announce/c/ArQ
+│                             │                  │       6CDgtEjY/ 
+│                             │                  ├ [11]: https://linux.oracle.com/cve/CVE-2024-24786.html 
+│                             │                  ├ [12]: https://linux.oracle.com/errata/ELSA-2024-2550.html 
+│                             │                  ├ [13]: https://lists.fedoraproject.org/archives/list/pac
+│                             │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
+│                             │                  │       DU2FBDZ45U3A2VLSM35OJ2HU 
+│                             │                  ├ [14]: https://lists.fedoraproject.org/archives/list/pac
+│                             │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
+│                             │                  │       DU2FBDZ45U3A2VLSM35OJ2HU/ 
+│                             │                  ├ [15]: https://nvd.nist.gov/vuln/detail/CVE-2024-24786 
+│                             │                  ├ [16]: https://pkg.go.dev/vuln/GO-2024-2611 
+│                             │                  ├ [17]: https://ubuntu.com/security/notices/USN-6746-1 
+│                             │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
+│                             ├ PublishedDate   : 2024-03-05T23:15:07.82Z 
+│                             ╰ LastModifiedDate: 2024-05-01T17:15:29.667Z 
+╰ [4] ╭ Target         : usr/bin/skopeo 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
       ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-24557 
@@ -1460,7 +1447,7 @@
                         │     │                  ├ [10]: https://groups.google.com/g/golang-announce/c/ArQ
                         │     │                  │       6CDgtEjY/ 
                         │     │                  ├ [11]: https://linux.oracle.com/cve/CVE-2024-24786.html 
-                        │     │                  ├ [12]: https://linux.oracle.com/errata/ELSA-2024-2549.html 
+                        │     │                  ├ [12]: https://linux.oracle.com/errata/ELSA-2024-2550.html 
                         │     │                  ├ [13]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
                         │     │                  │       DU2FBDZ45U3A2VLSM35OJ2HU 
@@ -1473,128 +1460,112 @@
                         │     │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
                         │     ├ PublishedDate   : 2024-03-05T23:15:07.82Z 
                         │     ╰ LastModifiedDate: 2024-05-01T17:15:29.667Z 
-                        ├ [6] ╭ VulnerabilityID : CVE-2024-28180 
-                        │     ├ PkgName         : gopkg.in/go-jose/go-jose.v2 
-                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/gopkg.in/go-jose/go-jose.v2@v2.6.1 
-                        │     │                  ╰ UID : cb30cc9d71796c7c 
-                        │     ├ InstalledVersion: v2.6.1 
-                        │     ├ FixedVersion    : 2.6.3 
-                        │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc
-                        │     │                  │         8837732ef23aca2d268abf05 
-                        │     │                  ╰ DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388
-                        │     │                            203b7fdce0a0b9a371c4a8a0 
-                        │     ├ SeveritySource  : ghsa 
-                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-28180 
-                        │     ├ DataSource       ╭ ID  : ghsa 
-                        │     │                  ├ Name: GitHub Security Advisory Go 
-                        │     │                  ╰ URL : https://github.com/advisories?query=type%3Areview
-                        │     │                          ed+ecosystem%3Ago 
-                        │     ├ Title           : jose-go: improper handling of highly compressed data 
-                        │     ├ Description     : Package jose aims to provide an implementation of the
-                        │     │                   Javascript Object Signing and Encryption set of standards. An
-                        │     │                    attacker could send a JWE containing compressed data that
-                        │     │                   used large amounts of memory and CPU when decompressed by
-                        │     │                   Decrypt or DecryptMulti. Those functions now return an error
-                        │     │                   if the decompressed data would exceed 250kB or 10x the
-                        │     │                   compressed size (whichever is larger). This vulnerability has
-                        │     │                    been patched in versions 4.0.1, 3.0.3 and 2.6.3.
-                        │     │                    
-                        │     ├ Severity        : MEDIUM 
-                        │     ├ CweIDs           ─ [0]: CWE-409 
-                        │     ├ VendorSeverity   ╭ alma       : 2 
-                        │     │                  ├ cbl-mariner: 2 
-                        │     │                  ├ ghsa       : 2 
-                        │     │                  ├ oracle-oval: 2 
-                        │     │                  ╰ redhat     : 2 
-                        │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N
-                        │     │                  │        │           /I:N/A:L 
-                        │     │                  │        ╰ V3Score : 4.3 
-                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N
-                        │     │                           │           /I:N/A:L 
-                        │     │                           ╰ V3Score : 4.3 
-                        │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:2549 
-                        │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-28180 
-                        │     │                  ├ [2] : https://bugzilla.redhat.com/2268046 
-                        │     │                  ├ [3] : https://bugzilla.redhat.com/2268854 
-                        │     │                  ├ [4] : https://errata.almalinux.org/9/ALSA-2024-2549.html 
-                        │     │                  ├ [5] : https://github.com/go-jose/go-jose 
-                        │     │                  ├ [6] : https://github.com/go-jose/go-jose/commit/0dd4dd5
-                        │     │                  │       41c665fb292d664f77604ba694726f298 
-                        │     │                  ├ [7] : https://github.com/go-jose/go-jose/commit/add6a28
-                        │     │                  │       4ea0f844fd6628cba637be5451fe4b28a 
-                        │     │                  ├ [8] : https://github.com/go-jose/go-jose/commit/f4c051a
-                        │     │                  │       0653d78199a053892f7619ebf96339502 
-                        │     │                  ├ [9] : https://github.com/go-jose/go-jose/security/advis
-                        │     │                  │       ories/GHSA-c5q2-7r4c-mv6g 
-                        │     │                  ├ [10]: https://linux.oracle.com/cve/CVE-2024-28180.html 
-                        │     │                  ├ [11]: https://linux.oracle.com/errata/ELSA-2024-2549.html 
-                        │     │                  ├ [12]: https://lists.fedoraproject.org/archives/list/pac
-                        │     │                  │       kage-announce@lists.fedoraproject.org/message/I6MMWFBO
-                        │     │                  │       XJA6ZCXNVPDFJ4XMK5PVG5RG 
-                        │     │                  ├ [13]: https://lists.fedoraproject.org/archives/list/pac
-                        │     │                  │       kage-announce@lists.fedoraproject.org/message/I6MMWFBO
-                        │     │                  │       XJA6ZCXNVPDFJ4XMK5PVG5RG/ 
-                        │     │                  ├ [14]: https://lists.fedoraproject.org/archives/list/pac
-                        │     │                  │       kage-announce@lists.fedoraproject.org/message/IJ6LAJJ2
-                        │     │                  │       FTA2JVVOACCV5RZTOIZLXUNJ 
-                        │     │                  ├ [15]: https://lists.fedoraproject.org/archives/list/pac
-                        │     │                  │       kage-announce@lists.fedoraproject.org/message/IJ6LAJJ2
-                        │     │                  │       FTA2JVVOACCV5RZTOIZLXUNJ/ 
-                        │     │                  ├ [16]: https://lists.fedoraproject.org/archives/list/pac
-                        │     │                  │       kage-announce@lists.fedoraproject.org/message/JNPMXL36
-                        │     │                  │       YGS3GQEVI3Q5HKHJ7YAAQXL5 
-                        │     │                  ├ [17]: https://lists.fedoraproject.org/archives/list/pac
-                        │     │                  │       kage-announce@lists.fedoraproject.org/message/JNPMXL36
-                        │     │                  │       YGS3GQEVI3Q5HKHJ7YAAQXL5/ 
-                        │     │                  ├ [18]: https://lists.fedoraproject.org/archives/list/pac
-                        │     │                  │       kage-announce@lists.fedoraproject.org/message/KXKGNCRU
-                        │     │                  │       7OTM5AHC7YIYBNOWI742PRMY 
-                        │     │                  ├ [19]: https://lists.fedoraproject.org/archives/list/pac
-                        │     │                  │       kage-announce@lists.fedoraproject.org/message/KXKGNCRU
-                        │     │                  │       7OTM5AHC7YIYBNOWI742PRMY/ 
-                        │     │                  ├ [20]: https://lists.fedoraproject.org/archives/list/pac
-                        │     │                  │       kage-announce@lists.fedoraproject.org/message/MSOMHDKR
-                        │     │                  │       PU3A2JEMRODT2IREDFBLVPGS 
-                        │     │                  ├ [21]: https://lists.fedoraproject.org/archives/list/pac
-                        │     │                  │       kage-announce@lists.fedoraproject.org/message/MSOMHDKR
-                        │     │                  │       PU3A2JEMRODT2IREDFBLVPGS/ 
-                        │     │                  ├ [22]: https://lists.fedoraproject.org/archives/list/pac
-                        │     │                  │       kage-announce@lists.fedoraproject.org/message/UG5FSEYJ
-                        │     │                  │       3GP27FZXC5YAAMMEC5XWKJHG 
-                        │     │                  ├ [23]: https://lists.fedoraproject.org/archives/list/pac
-                        │     │                  │       kage-announce@lists.fedoraproject.org/message/UG5FSEYJ
-                        │     │                  │       3GP27FZXC5YAAMMEC5XWKJHG/ 
-                        │     │                  ├ [24]: https://lists.fedoraproject.org/archives/list/pac
-                        │     │                  │       kage-announce@lists.fedoraproject.org/message/UJO2U5AC
-                        │     │                  │       ZVACNQXJ5EBRFLFW6DP5BROY 
-                        │     │                  ├ [25]: https://lists.fedoraproject.org/archives/list/pac
-                        │     │                  │       kage-announce@lists.fedoraproject.org/message/UJO2U5AC
-                        │     │                  │       ZVACNQXJ5EBRFLFW6DP5BROY/ 
-                        │     │                  ├ [26]: https://lists.fedoraproject.org/archives/list/pac
-                        │     │                  │       kage-announce@lists.fedoraproject.org/message/XJDO5VSI
-                        │     │                  │       AOGT2WP63AXAAWNRSVJCNCRH 
-                        │     │                  ├ [27]: https://lists.fedoraproject.org/archives/list/pac
-                        │     │                  │       kage-announce@lists.fedoraproject.org/message/XJDO5VSI
-                        │     │                  │       AOGT2WP63AXAAWNRSVJCNCRH/ 
-                        │     │                  ├ [28]: https://nvd.nist.gov/vuln/detail/CVE-2024-28180 
-                        │     │                  ╰ [29]: https://www.cve.org/CVERecord?id=CVE-2024-28180 
-                        │     ├ PublishedDate   : 2024-03-09T01:15:07.34Z 
-                        │     ╰ LastModifiedDate: 2024-03-31T03:15:07.68Z 
-                        ╰ [7] ╭ VulnerabilityID : CVE-2024-24788 
-                              ├ PkgName         : stdlib 
-                              ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.21.9 
-                              │                  ╰ UID : 47fdb05d24aa006f 
-                              ├ InstalledVersion: 1.21.9 
-                              ├ FixedVersion    : 1.21.10, 1.22.3 
+                        ╰ [6] ╭ VulnerabilityID : CVE-2024-28180 
+                              ├ PkgName         : gopkg.in/go-jose/go-jose.v2 
+                              ├ PkgIdentifier    ╭ PURL: pkg:golang/gopkg.in/go-jose/go-jose.v2@v2.6.1 
+                              │                  ╰ UID : cb30cc9d71796c7c 
+                              ├ InstalledVersion: v2.6.1 
+                              ├ FixedVersion    : 2.6.3 
                               ├ Status          : fixed 
                               ├ Layer            ╭ Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc
                               │                  │         8837732ef23aca2d268abf05 
                               │                  ╰ DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388
                               │                            203b7fdce0a0b9a371c4a8a0 
-                              ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24788 
-                              ├ DataSource       ╭ ID  : govulndb 
-                              │                  ├ Name: The Go Vulnerability Database 
-                              │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                              ╰ Severity        : UNKNOWN 
+                              ├ SeveritySource  : ghsa 
+                              ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-28180 
+                              ├ DataSource       ╭ ID  : ghsa 
+                              │                  ├ Name: GitHub Security Advisory Go 
+                              │                  ╰ URL : https://github.com/advisories?query=type%3Areview
+                              │                          ed+ecosystem%3Ago 
+                              ├ Title           : jose-go: improper handling of highly compressed data 
+                              ├ Description     : Package jose aims to provide an implementation of the
+                              │                   Javascript Object Signing and Encryption set of standards. An
+                              │                    attacker could send a JWE containing compressed data that
+                              │                   used large amounts of memory and CPU when decompressed by
+                              │                   Decrypt or DecryptMulti. Those functions now return an error
+                              │                   if the decompressed data would exceed 250kB or 10x the
+                              │                   compressed size (whichever is larger). This vulnerability has
+                              │                    been patched in versions 4.0.1, 3.0.3 and 2.6.3.
+                              │                    
+                              ├ Severity        : MEDIUM 
+                              ├ CweIDs           ─ [0]: CWE-409 
+                              ├ VendorSeverity   ╭ alma       : 2 
+                              │                  ├ cbl-mariner: 2 
+                              │                  ├ ghsa       : 2 
+                              │                  ├ oracle-oval: 2 
+                              │                  ╰ redhat     : 2 
+                              ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N
+                              │                  │        │           /I:N/A:L 
+                              │                  │        ╰ V3Score : 4.3 
+                              │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N
+                              │                           │           /I:N/A:L 
+                              │                           ╰ V3Score : 4.3 
+                              ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:2549 
+                              │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-28180 
+                              │                  ├ [2] : https://bugzilla.redhat.com/2268046 
+                              │                  ├ [3] : https://bugzilla.redhat.com/2268854 
+                              │                  ├ [4] : https://errata.almalinux.org/9/ALSA-2024-2549.html 
+                              │                  ├ [5] : https://github.com/go-jose/go-jose 
+                              │                  ├ [6] : https://github.com/go-jose/go-jose/commit/0dd4dd5
+                              │                  │       41c665fb292d664f77604ba694726f298 
+                              │                  ├ [7] : https://github.com/go-jose/go-jose/commit/add6a28
+                              │                  │       4ea0f844fd6628cba637be5451fe4b28a 
+                              │                  ├ [8] : https://github.com/go-jose/go-jose/commit/f4c051a
+                              │                  │       0653d78199a053892f7619ebf96339502 
+                              │                  ├ [9] : https://github.com/go-jose/go-jose/security/advis
+                              │                  │       ories/GHSA-c5q2-7r4c-mv6g 
+                              │                  ├ [10]: https://linux.oracle.com/cve/CVE-2024-28180.html 
+                              │                  ├ [11]: https://linux.oracle.com/errata/ELSA-2024-2549.html 
+                              │                  ├ [12]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  │       kage-announce@lists.fedoraproject.org/message/I6MMWFBO
+                              │                  │       XJA6ZCXNVPDFJ4XMK5PVG5RG 
+                              │                  ├ [13]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  │       kage-announce@lists.fedoraproject.org/message/I6MMWFBO
+                              │                  │       XJA6ZCXNVPDFJ4XMK5PVG5RG/ 
+                              │                  ├ [14]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  │       kage-announce@lists.fedoraproject.org/message/IJ6LAJJ2
+                              │                  │       FTA2JVVOACCV5RZTOIZLXUNJ 
+                              │                  ├ [15]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  │       kage-announce@lists.fedoraproject.org/message/IJ6LAJJ2
+                              │                  │       FTA2JVVOACCV5RZTOIZLXUNJ/ 
+                              │                  ├ [16]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  │       kage-announce@lists.fedoraproject.org/message/JNPMXL36
+                              │                  │       YGS3GQEVI3Q5HKHJ7YAAQXL5 
+                              │                  ├ [17]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  │       kage-announce@lists.fedoraproject.org/message/JNPMXL36
+                              │                  │       YGS3GQEVI3Q5HKHJ7YAAQXL5/ 
+                              │                  ├ [18]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  │       kage-announce@lists.fedoraproject.org/message/KXKGNCRU
+                              │                  │       7OTM5AHC7YIYBNOWI742PRMY 
+                              │                  ├ [19]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  │       kage-announce@lists.fedoraproject.org/message/KXKGNCRU
+                              │                  │       7OTM5AHC7YIYBNOWI742PRMY/ 
+                              │                  ├ [20]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  │       kage-announce@lists.fedoraproject.org/message/MSOMHDKR
+                              │                  │       PU3A2JEMRODT2IREDFBLVPGS 
+                              │                  ├ [21]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  │       kage-announce@lists.fedoraproject.org/message/MSOMHDKR
+                              │                  │       PU3A2JEMRODT2IREDFBLVPGS/ 
+                              │                  ├ [22]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  │       kage-announce@lists.fedoraproject.org/message/UG5FSEYJ
+                              │                  │       3GP27FZXC5YAAMMEC5XWKJHG 
+                              │                  ├ [23]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  │       kage-announce@lists.fedoraproject.org/message/UG5FSEYJ
+                              │                  │       3GP27FZXC5YAAMMEC5XWKJHG/ 
+                              │                  ├ [24]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  │       kage-announce@lists.fedoraproject.org/message/UJO2U5AC
+                              │                  │       ZVACNQXJ5EBRFLFW6DP5BROY 
+                              │                  ├ [25]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  │       kage-announce@lists.fedoraproject.org/message/UJO2U5AC
+                              │                  │       ZVACNQXJ5EBRFLFW6DP5BROY/ 
+                              │                  ├ [26]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  │       kage-announce@lists.fedoraproject.org/message/XJDO5VSI
+                              │                  │       AOGT2WP63AXAAWNRSVJCNCRH 
+                              │                  ├ [27]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  │       kage-announce@lists.fedoraproject.org/message/XJDO5VSI
+                              │                  │       AOGT2WP63AXAAWNRSVJCNCRH/ 
+                              │                  ├ [28]: https://nvd.nist.gov/vuln/detail/CVE-2024-28180 
+                              │                  ╰ [29]: https://www.cve.org/CVERecord?id=CVE-2024-28180 
+                              ├ PublishedDate   : 2024-03-09T01:15:07.34Z 
+                              ╰ LastModifiedDate: 2024-03-31T03:15:07.68Z 
 ````
