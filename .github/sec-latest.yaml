@@ -166,7 +166,7 @@
       PURL: pkg:golang/stdlib@1.22.1
       UID: cd28c68ec9dd2486
     InstalledVersion: 1.22.1
-    FixedVersion: 1.21.10, 1.22.3
+    FixedVersion: 1.22.3
     Status: fixed
     Layer:
       Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc8837732ef23aca2d268abf05
@@ -176,7 +176,16 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
+    Title: A malformed DNS message in response to a query can cause the Lookup fu ...
+    Description: A malformed DNS message in response to a query can cause the Lookup functions to get stuck in an infinite loop.
     Severity: UNKNOWN
+    References:
+    - https://go.dev/cl/578375
+    - https://go.dev/issue/66754
+    - https://groups.google.com/g/golang-announce/c/wkkO4P9stm0
+    - https://pkg.go.dev/vuln/GO-2024-2824
+    PublishedDate: '2024-05-08T16:15:08.25Z'
+    LastModifiedDate: '2024-05-08T17:05:24.083Z'
 - Target: usr/bin/dive
   Class: lang-pkgs
   Type: gobinary
@@ -302,7 +311,7 @@
       PURL: pkg:golang/stdlib@1.22.2
       UID: 16e338e43b449d0
     InstalledVersion: 1.22.2
-    FixedVersion: 1.21.10, 1.22.3
+    FixedVersion: 1.22.3
     Status: fixed
     Layer:
       Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc8837732ef23aca2d268abf05
@@ -312,28 +321,16 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
+    Title: A malformed DNS message in response to a query can cause the Lookup fu ...
+    Description: A malformed DNS message in response to a query can cause the Lookup functions to get stuck in an infinite loop.
     Severity: UNKNOWN
-- Target: usr/bin/docker
-  Class: lang-pkgs
-  Type: gobinary
-  Vulnerabilities:
-  - VulnerabilityID: CVE-2024-24788
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@1.21.9
-      UID: b3b37e1bfa35262a
-    InstalledVersion: 1.21.9
-    FixedVersion: 1.21.10, 1.22.3
-    Status: fixed
-    Layer:
-      Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc8837732ef23aca2d268abf05
-      DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388203b7fdce0a0b9a371c4a8a0
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24788
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Severity: UNKNOWN
+    References:
+    - https://go.dev/cl/578375
+    - https://go.dev/issue/66754
+    - https://groups.google.com/g/golang-announce/c/wkkO4P9stm0
+    - https://pkg.go.dev/vuln/GO-2024-2824
+    PublishedDate: '2024-05-08T16:15:08.25Z'
+    LastModifiedDate: '2024-05-08T17:05:24.083Z'
 - Target: usr/bin/helm
   Class: lang-pkgs
   Type: gobinary
@@ -497,7 +494,7 @@
     - https://go.dev/cl/569356
     - https://groups.google.com/g/golang-announce/c/ArQ6CDgtEjY/
     - https://linux.oracle.com/cve/CVE-2024-24786.html
-    - https://linux.oracle.com/errata/ELSA-2024-2549.html
+    - https://linux.oracle.com/errata/ELSA-2024-2550.html
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JDMBHAVSDU2FBDZ45U3A2VLSM35OJ2HU
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JDMBHAVSDU2FBDZ45U3A2VLSM35OJ2HU/
     - https://nvd.nist.gov/vuln/detail/CVE-2024-24786
@@ -506,23 +503,6 @@
     - https://www.cve.org/CVERecord?id=CVE-2024-24786
     PublishedDate: '2024-03-05T23:15:07.82Z'
     LastModifiedDate: '2024-05-01T17:15:29.667Z'
-  - VulnerabilityID: CVE-2024-24788
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@1.21.9
-      UID: 8adb28ce6abb45a1
-    InstalledVersion: 1.21.9
-    FixedVersion: 1.21.10, 1.22.3
-    Status: fixed
-    Layer:
-      Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc8837732ef23aca2d268abf05
-      DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388203b7fdce0a0b9a371c4a8a0
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24788
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Severity: UNKNOWN
 - Target: usr/bin/skopeo
   Class: lang-pkgs
   Type: gobinary
@@ -1038,7 +1018,7 @@
     - https://go.dev/cl/569356
     - https://groups.google.com/g/golang-announce/c/ArQ6CDgtEjY/
     - https://linux.oracle.com/cve/CVE-2024-24786.html
-    - https://linux.oracle.com/errata/ELSA-2024-2549.html
+    - https://linux.oracle.com/errata/ELSA-2024-2550.html
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JDMBHAVSDU2FBDZ45U3A2VLSM35OJ2HU
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JDMBHAVSDU2FBDZ45U3A2VLSM35OJ2HU/
     - https://nvd.nist.gov/vuln/detail/CVE-2024-24786
@@ -1116,20 +1096,3 @@
     - https://www.cve.org/CVERecord?id=CVE-2024-28180
     PublishedDate: '2024-03-09T01:15:07.34Z'
     LastModifiedDate: '2024-03-31T03:15:07.68Z'
-  - VulnerabilityID: CVE-2024-24788
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@1.21.9
-      UID: 47fdb05d24aa006f
-    InstalledVersion: 1.21.9
-    FixedVersion: 1.21.10, 1.22.3
-    Status: fixed
-    Layer:
-      Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc8837732ef23aca2d268abf05
-      DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388203b7fdce0a0b9a371c4a8a0
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24788
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Severity: UNKNOWN
