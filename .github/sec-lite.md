@@ -225,7 +225,7 @@
                               ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
                               │                  ╰ UID : cd28c68ec9dd2486 
                               ├ InstalledVersion: 1.22.1 
-                              ├ FixedVersion    : 1.21.10, 1.22.3 
+                              ├ FixedVersion    : 1.22.3 
                               ├ Status          : fixed 
                               ├ Layer            ╭ Digest: sha256:27d361970e50add52925c20e7f8d7e3ae66a92e7
                               │                  │         4279be127135875644cf6677 
@@ -235,5 +235,16 @@
                               ├ DataSource       ╭ ID  : govulndb 
                               │                  ├ Name: The Go Vulnerability Database 
                               │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                              ╰ Severity        : UNKNOWN 
+                              ├ Title           : A malformed DNS message in response to a query can cause
+                              │                    the Lookup fu ... 
+                              ├ Description     : A malformed DNS message in response to a query can cause
+                              │                    the Lookup functions to get stuck in an infinite loop. 
+                              ├ Severity        : UNKNOWN 
+                              ├ References       ╭ [0]: https://go.dev/cl/578375 
+                              │                  ├ [1]: https://go.dev/issue/66754 
+                              │                  ├ [2]: https://groups.google.com/g/golang-announce/c/wkkO
+                              │                  │      4P9stm0 
+                              │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2824 
+                              ├ PublishedDate   : 2024-05-08T16:15:08.25Z 
+                              ╰ LastModifiedDate: 2024-05-08T17:05:24.083Z 
 ````
