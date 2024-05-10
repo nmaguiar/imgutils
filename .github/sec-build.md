@@ -185,39 +185,36 @@
 │                       │     │                  │       4/03/16 
 │                       │     │                  ├ [1] : http://www.openwall.com/lists/oss-security/2024/0
 │                       │     │                  │       4/05/4 
-│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:2562 
+│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:2724 
 │                       │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2023-45288 
-│                       │     │                  ├ [4] : https://bugzilla.redhat.com/2262921 
-│                       │     │                  ├ [5] : https://bugzilla.redhat.com/2268017 
-│                       │     │                  ├ [6] : https://bugzilla.redhat.com/2268018 
-│                       │     │                  ├ [7] : https://bugzilla.redhat.com/2268019 
-│                       │     │                  ├ [8] : https://bugzilla.redhat.com/2268021 
-│                       │     │                  ├ [9] : https://bugzilla.redhat.com/2268022 
-│                       │     │                  ├ [10]: https://bugzilla.redhat.com/2268273 
-│                       │     │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2024-2562.html 
-│                       │     │                  ├ [12]: https://go.dev/cl/576155 
-│                       │     │                  ├ [13]: https://go.dev/issue/65051 
-│                       │     │                  ├ [14]: https://groups.google.com/g/golang-announce/c/YgW
+│                       │     │                  ├ [4] : https://bugzilla.redhat.com/2268017 
+│                       │     │                  ├ [5] : https://bugzilla.redhat.com/2268018 
+│                       │     │                  ├ [6] : https://bugzilla.redhat.com/2268019 
+│                       │     │                  ├ [7] : https://bugzilla.redhat.com/2268273 
+│                       │     │                  ├ [8] : https://errata.almalinux.org/9/ALSA-2024-2724.html 
+│                       │     │                  ├ [9] : https://go.dev/cl/576155 
+│                       │     │                  ├ [10]: https://go.dev/issue/65051 
+│                       │     │                  ├ [11]: https://groups.google.com/g/golang-announce/c/YgW
 │                       │     │                  │       0sx8mN3M 
-│                       │     │                  ├ [15]: https://linux.oracle.com/cve/CVE-2023-45288.html 
-│                       │     │                  ├ [16]: https://linux.oracle.com/errata/ELSA-2024-2724.html 
-│                       │     │                  ├ [17]: https://lists.fedoraproject.org/archives/list/pac
+│                       │     │                  ├ [12]: https://linux.oracle.com/cve/CVE-2023-45288.html 
+│                       │     │                  ├ [13]: https://linux.oracle.com/errata/ELSA-2024-2724.html 
+│                       │     │                  ├ [14]: https://lists.fedoraproject.org/archives/list/pac
 │                       │     │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
 │                       │     │                  │       XRKRYBI2F5UESH67BJBQXUPT 
-│                       │     │                  ├ [18]: https://lists.fedoraproject.org/archives/list/pac
+│                       │     │                  ├ [15]: https://lists.fedoraproject.org/archives/list/pac
 │                       │     │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
 │                       │     │                  │       XRKRYBI2F5UESH67BJBQXUPT/ 
-│                       │     │                  ├ [19]: https://nowotarski.info/http2-continuation-flood-
+│                       │     │                  ├ [16]: https://nowotarski.info/http2-continuation-flood-
 │                       │     │                  │       technical-details 
-│                       │     │                  ├ [20]: https://nowotarski.info/http2-continuation-flood/ 
-│                       │     │                  ├ [21]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
-│                       │     │                  ├ [22]: https://pkg.go.dev/vuln/GO-2024-2687 
-│                       │     │                  ├ [23]: https://security.netapp.com/advisory/ntap-2024041
+│                       │     │                  ├ [17]: https://nowotarski.info/http2-continuation-flood/ 
+│                       │     │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
+│                       │     │                  ├ [19]: https://pkg.go.dev/vuln/GO-2024-2687 
+│                       │     │                  ├ [20]: https://security.netapp.com/advisory/ntap-2024041
 │                       │     │                  │       9-0009 
-│                       │     │                  ├ [24]: https://security.netapp.com/advisory/ntap-2024041
+│                       │     │                  ├ [21]: https://security.netapp.com/advisory/ntap-2024041
 │                       │     │                  │       9-0009/ 
-│                       │     │                  ├ [25]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
-│                       │     │                  ╰ [26]: https://www.kb.cert.org/vuls/id/421644 
+│                       │     │                  ├ [22]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
+│                       │     │                  ╰ [23]: https://www.kb.cert.org/vuls/id/421644 
 │                       │     ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
 │                       │     ╰ LastModifiedDate: 2024-05-01T18:15:10.493Z 
 │                       ╰ [3] ╭ VulnerabilityID : CVE-2024-24788 
@@ -235,16 +232,22 @@
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ├ Title           : A malformed DNS message in response to a query can cause
-│                             │                    the Lookup fu ... 
+│                             ├ Title           : golang: net: malformed DNS message can cause infinite loop 
 │                             ├ Description     : A malformed DNS message in response to a query can cause
 │                             │                    the Lookup functions to get stuck in an infinite loop. 
-│                             ├ Severity        : UNKNOWN 
-│                             ├ References       ╭ [0]: https://go.dev/cl/578375 
-│                             │                  ├ [1]: https://go.dev/issue/66754 
-│                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/wkkO
+│                             ├ Severity        : HIGH 
+│                             ├ VendorSeverity   ─ redhat: 2 
+│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
+│                             │                           │           /I:N/A:H 
+│                             │                           ╰ V3Score : 7.5 
+│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-24788 
+│                             │                  ├ [1]: https://go.dev/cl/578375 
+│                             │                  ├ [2]: https://go.dev/issue/66754 
+│                             │                  ├ [3]: https://groups.google.com/g/golang-announce/c/wkkO
 │                             │                  │      4P9stm0 
-│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2824 
+│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-24788 
+│                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-2824 
+│                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-24788 
 │                             ├ PublishedDate   : 2024-05-08T16:15:08.25Z 
 │                             ╰ LastModifiedDate: 2024-05-08T17:05:24.083Z 
 ├ [2] ╭ Target         : usr/bin/dive 
@@ -367,39 +370,36 @@
 │                       │     │                  │       4/03/16 
 │                       │     │                  ├ [1] : http://www.openwall.com/lists/oss-security/2024/0
 │                       │     │                  │       4/05/4 
-│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:2562 
+│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:2724 
 │                       │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2023-45288 
-│                       │     │                  ├ [4] : https://bugzilla.redhat.com/2262921 
-│                       │     │                  ├ [5] : https://bugzilla.redhat.com/2268017 
-│                       │     │                  ├ [6] : https://bugzilla.redhat.com/2268018 
-│                       │     │                  ├ [7] : https://bugzilla.redhat.com/2268019 
-│                       │     │                  ├ [8] : https://bugzilla.redhat.com/2268021 
-│                       │     │                  ├ [9] : https://bugzilla.redhat.com/2268022 
-│                       │     │                  ├ [10]: https://bugzilla.redhat.com/2268273 
-│                       │     │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2024-2562.html 
-│                       │     │                  ├ [12]: https://go.dev/cl/576155 
-│                       │     │                  ├ [13]: https://go.dev/issue/65051 
-│                       │     │                  ├ [14]: https://groups.google.com/g/golang-announce/c/YgW
+│                       │     │                  ├ [4] : https://bugzilla.redhat.com/2268017 
+│                       │     │                  ├ [5] : https://bugzilla.redhat.com/2268018 
+│                       │     │                  ├ [6] : https://bugzilla.redhat.com/2268019 
+│                       │     │                  ├ [7] : https://bugzilla.redhat.com/2268273 
+│                       │     │                  ├ [8] : https://errata.almalinux.org/9/ALSA-2024-2724.html 
+│                       │     │                  ├ [9] : https://go.dev/cl/576155 
+│                       │     │                  ├ [10]: https://go.dev/issue/65051 
+│                       │     │                  ├ [11]: https://groups.google.com/g/golang-announce/c/YgW
 │                       │     │                  │       0sx8mN3M 
-│                       │     │                  ├ [15]: https://linux.oracle.com/cve/CVE-2023-45288.html 
-│                       │     │                  ├ [16]: https://linux.oracle.com/errata/ELSA-2024-2724.html 
-│                       │     │                  ├ [17]: https://lists.fedoraproject.org/archives/list/pac
+│                       │     │                  ├ [12]: https://linux.oracle.com/cve/CVE-2023-45288.html 
+│                       │     │                  ├ [13]: https://linux.oracle.com/errata/ELSA-2024-2724.html 
+│                       │     │                  ├ [14]: https://lists.fedoraproject.org/archives/list/pac
 │                       │     │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
 │                       │     │                  │       XRKRYBI2F5UESH67BJBQXUPT 
-│                       │     │                  ├ [18]: https://lists.fedoraproject.org/archives/list/pac
+│                       │     │                  ├ [15]: https://lists.fedoraproject.org/archives/list/pac
 │                       │     │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
 │                       │     │                  │       XRKRYBI2F5UESH67BJBQXUPT/ 
-│                       │     │                  ├ [19]: https://nowotarski.info/http2-continuation-flood-
+│                       │     │                  ├ [16]: https://nowotarski.info/http2-continuation-flood-
 │                       │     │                  │       technical-details 
-│                       │     │                  ├ [20]: https://nowotarski.info/http2-continuation-flood/ 
-│                       │     │                  ├ [21]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
-│                       │     │                  ├ [22]: https://pkg.go.dev/vuln/GO-2024-2687 
-│                       │     │                  ├ [23]: https://security.netapp.com/advisory/ntap-2024041
+│                       │     │                  ├ [17]: https://nowotarski.info/http2-continuation-flood/ 
+│                       │     │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
+│                       │     │                  ├ [19]: https://pkg.go.dev/vuln/GO-2024-2687 
+│                       │     │                  ├ [20]: https://security.netapp.com/advisory/ntap-2024041
 │                       │     │                  │       9-0009 
-│                       │     │                  ├ [24]: https://security.netapp.com/advisory/ntap-2024041
+│                       │     │                  ├ [21]: https://security.netapp.com/advisory/ntap-2024041
 │                       │     │                  │       9-0009/ 
-│                       │     │                  ├ [25]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
-│                       │     │                  ╰ [26]: https://www.kb.cert.org/vuls/id/421644 
+│                       │     │                  ├ [22]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
+│                       │     │                  ╰ [23]: https://www.kb.cert.org/vuls/id/421644 
 │                       │     ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
 │                       │     ╰ LastModifiedDate: 2024-05-01T18:15:10.493Z 
 │                       ╰ [2] ╭ VulnerabilityID : CVE-2024-24788 
@@ -417,16 +417,22 @@
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ├ Title           : A malformed DNS message in response to a query can cause
-│                             │                    the Lookup fu ... 
+│                             ├ Title           : golang: net: malformed DNS message can cause infinite loop 
 │                             ├ Description     : A malformed DNS message in response to a query can cause
 │                             │                    the Lookup functions to get stuck in an infinite loop. 
-│                             ├ Severity        : UNKNOWN 
-│                             ├ References       ╭ [0]: https://go.dev/cl/578375 
-│                             │                  ├ [1]: https://go.dev/issue/66754 
-│                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/wkkO
+│                             ├ Severity        : HIGH 
+│                             ├ VendorSeverity   ─ redhat: 2 
+│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
+│                             │                           │           /I:N/A:H 
+│                             │                           ╰ V3Score : 7.5 
+│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-24788 
+│                             │                  ├ [1]: https://go.dev/cl/578375 
+│                             │                  ├ [2]: https://go.dev/issue/66754 
+│                             │                  ├ [3]: https://groups.google.com/g/golang-announce/c/wkkO
 │                             │                  │      4P9stm0 
-│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2824 
+│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-24788 
+│                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-2824 
+│                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-24788 
 │                             ├ PublishedDate   : 2024-05-08T16:15:08.25Z 
 │                             ╰ LastModifiedDate: 2024-05-08T17:05:24.083Z 
 ├ [3] ╭ Target         : usr/bin/helm 
@@ -549,39 +555,36 @@
 │                       │     │                  │       4/03/16 
 │                       │     │                  ├ [1] : http://www.openwall.com/lists/oss-security/2024/0
 │                       │     │                  │       4/05/4 
-│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:2562 
+│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:2724 
 │                       │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2023-45288 
-│                       │     │                  ├ [4] : https://bugzilla.redhat.com/2262921 
-│                       │     │                  ├ [5] : https://bugzilla.redhat.com/2268017 
-│                       │     │                  ├ [6] : https://bugzilla.redhat.com/2268018 
-│                       │     │                  ├ [7] : https://bugzilla.redhat.com/2268019 
-│                       │     │                  ├ [8] : https://bugzilla.redhat.com/2268021 
-│                       │     │                  ├ [9] : https://bugzilla.redhat.com/2268022 
-│                       │     │                  ├ [10]: https://bugzilla.redhat.com/2268273 
-│                       │     │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2024-2562.html 
-│                       │     │                  ├ [12]: https://go.dev/cl/576155 
-│                       │     │                  ├ [13]: https://go.dev/issue/65051 
-│                       │     │                  ├ [14]: https://groups.google.com/g/golang-announce/c/YgW
+│                       │     │                  ├ [4] : https://bugzilla.redhat.com/2268017 
+│                       │     │                  ├ [5] : https://bugzilla.redhat.com/2268018 
+│                       │     │                  ├ [6] : https://bugzilla.redhat.com/2268019 
+│                       │     │                  ├ [7] : https://bugzilla.redhat.com/2268273 
+│                       │     │                  ├ [8] : https://errata.almalinux.org/9/ALSA-2024-2724.html 
+│                       │     │                  ├ [9] : https://go.dev/cl/576155 
+│                       │     │                  ├ [10]: https://go.dev/issue/65051 
+│                       │     │                  ├ [11]: https://groups.google.com/g/golang-announce/c/YgW
 │                       │     │                  │       0sx8mN3M 
-│                       │     │                  ├ [15]: https://linux.oracle.com/cve/CVE-2023-45288.html 
-│                       │     │                  ├ [16]: https://linux.oracle.com/errata/ELSA-2024-2724.html 
-│                       │     │                  ├ [17]: https://lists.fedoraproject.org/archives/list/pac
+│                       │     │                  ├ [12]: https://linux.oracle.com/cve/CVE-2023-45288.html 
+│                       │     │                  ├ [13]: https://linux.oracle.com/errata/ELSA-2024-2724.html 
+│                       │     │                  ├ [14]: https://lists.fedoraproject.org/archives/list/pac
 │                       │     │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
 │                       │     │                  │       XRKRYBI2F5UESH67BJBQXUPT 
-│                       │     │                  ├ [18]: https://lists.fedoraproject.org/archives/list/pac
+│                       │     │                  ├ [15]: https://lists.fedoraproject.org/archives/list/pac
 │                       │     │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
 │                       │     │                  │       XRKRYBI2F5UESH67BJBQXUPT/ 
-│                       │     │                  ├ [19]: https://nowotarski.info/http2-continuation-flood-
+│                       │     │                  ├ [16]: https://nowotarski.info/http2-continuation-flood-
 │                       │     │                  │       technical-details 
-│                       │     │                  ├ [20]: https://nowotarski.info/http2-continuation-flood/ 
-│                       │     │                  ├ [21]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
-│                       │     │                  ├ [22]: https://pkg.go.dev/vuln/GO-2024-2687 
-│                       │     │                  ├ [23]: https://security.netapp.com/advisory/ntap-2024041
+│                       │     │                  ├ [17]: https://nowotarski.info/http2-continuation-flood/ 
+│                       │     │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
+│                       │     │                  ├ [19]: https://pkg.go.dev/vuln/GO-2024-2687 
+│                       │     │                  ├ [20]: https://security.netapp.com/advisory/ntap-2024041
 │                       │     │                  │       9-0009 
-│                       │     │                  ├ [24]: https://security.netapp.com/advisory/ntap-2024041
+│                       │     │                  ├ [21]: https://security.netapp.com/advisory/ntap-2024041
 │                       │     │                  │       9-0009/ 
-│                       │     │                  ├ [25]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
-│                       │     │                  ╰ [26]: https://www.kb.cert.org/vuls/id/421644 
+│                       │     │                  ├ [22]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
+│                       │     │                  ╰ [23]: https://www.kb.cert.org/vuls/id/421644 
 │                       │     ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
 │                       │     ╰ LastModifiedDate: 2024-05-01T18:15:10.493Z 
 │                       ╰ [2] ╭ VulnerabilityID : CVE-2024-24786 
@@ -1361,39 +1364,36 @@
                         │     │                  │       4/03/16 
                         │     │                  ├ [1] : http://www.openwall.com/lists/oss-security/2024/0
                         │     │                  │       4/05/4 
-                        │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:2562 
+                        │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:2724 
                         │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2023-45288 
-                        │     │                  ├ [4] : https://bugzilla.redhat.com/2262921 
-                        │     │                  ├ [5] : https://bugzilla.redhat.com/2268017 
-                        │     │                  ├ [6] : https://bugzilla.redhat.com/2268018 
-                        │     │                  ├ [7] : https://bugzilla.redhat.com/2268019 
-                        │     │                  ├ [8] : https://bugzilla.redhat.com/2268021 
-                        │     │                  ├ [9] : https://bugzilla.redhat.com/2268022 
-                        │     │                  ├ [10]: https://bugzilla.redhat.com/2268273 
-                        │     │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2024-2562.html 
-                        │     │                  ├ [12]: https://go.dev/cl/576155 
-                        │     │                  ├ [13]: https://go.dev/issue/65051 
-                        │     │                  ├ [14]: https://groups.google.com/g/golang-announce/c/YgW
+                        │     │                  ├ [4] : https://bugzilla.redhat.com/2268017 
+                        │     │                  ├ [5] : https://bugzilla.redhat.com/2268018 
+                        │     │                  ├ [6] : https://bugzilla.redhat.com/2268019 
+                        │     │                  ├ [7] : https://bugzilla.redhat.com/2268273 
+                        │     │                  ├ [8] : https://errata.almalinux.org/9/ALSA-2024-2724.html 
+                        │     │                  ├ [9] : https://go.dev/cl/576155 
+                        │     │                  ├ [10]: https://go.dev/issue/65051 
+                        │     │                  ├ [11]: https://groups.google.com/g/golang-announce/c/YgW
                         │     │                  │       0sx8mN3M 
-                        │     │                  ├ [15]: https://linux.oracle.com/cve/CVE-2023-45288.html 
-                        │     │                  ├ [16]: https://linux.oracle.com/errata/ELSA-2024-2724.html 
-                        │     │                  ├ [17]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [12]: https://linux.oracle.com/cve/CVE-2023-45288.html 
+                        │     │                  ├ [13]: https://linux.oracle.com/errata/ELSA-2024-2724.html 
+                        │     │                  ├ [14]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
                         │     │                  │       XRKRYBI2F5UESH67BJBQXUPT 
-                        │     │                  ├ [18]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [15]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
                         │     │                  │       XRKRYBI2F5UESH67BJBQXUPT/ 
-                        │     │                  ├ [19]: https://nowotarski.info/http2-continuation-flood-
+                        │     │                  ├ [16]: https://nowotarski.info/http2-continuation-flood-
                         │     │                  │       technical-details 
-                        │     │                  ├ [20]: https://nowotarski.info/http2-continuation-flood/ 
-                        │     │                  ├ [21]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
-                        │     │                  ├ [22]: https://pkg.go.dev/vuln/GO-2024-2687 
-                        │     │                  ├ [23]: https://security.netapp.com/advisory/ntap-2024041
+                        │     │                  ├ [17]: https://nowotarski.info/http2-continuation-flood/ 
+                        │     │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
+                        │     │                  ├ [19]: https://pkg.go.dev/vuln/GO-2024-2687 
+                        │     │                  ├ [20]: https://security.netapp.com/advisory/ntap-2024041
                         │     │                  │       9-0009 
-                        │     │                  ├ [24]: https://security.netapp.com/advisory/ntap-2024041
+                        │     │                  ├ [21]: https://security.netapp.com/advisory/ntap-2024041
                         │     │                  │       9-0009/ 
-                        │     │                  ├ [25]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
-                        │     │                  ╰ [26]: https://www.kb.cert.org/vuls/id/421644 
+                        │     │                  ├ [22]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
+                        │     │                  ╰ [23]: https://www.kb.cert.org/vuls/id/421644 
                         │     ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
                         │     ╰ LastModifiedDate: 2024-05-01T18:15:10.493Z 
                         ├ [5] ╭ VulnerabilityID : CVE-2024-24786 
