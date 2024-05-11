@@ -123,6 +123,7 @@
       oracle-oval: 3
       photon: 3
       redhat: 3
+      rocky: 3
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
@@ -139,7 +140,16 @@
     - https://bugzilla.redhat.com/2268018
     - https://bugzilla.redhat.com/2268019
     - https://bugzilla.redhat.com/2268273
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2268017
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2268018
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2268019
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2268273
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45288
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45289
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45290
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24783
     - https://errata.almalinux.org/9/ALSA-2024-2724.html
+    - https://errata.rockylinux.org/RLSA-2024:2724
     - https://go.dev/cl/576155
     - https://go.dev/issue/65051
     - https://groups.google.com/g/golang-announce/c/YgW0sx8mN3M
@@ -274,6 +284,7 @@
       oracle-oval: 3
       photon: 3
       redhat: 3
+      rocky: 3
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
@@ -290,7 +301,16 @@
     - https://bugzilla.redhat.com/2268018
     - https://bugzilla.redhat.com/2268019
     - https://bugzilla.redhat.com/2268273
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2268017
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2268018
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2268019
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2268273
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45288
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45289
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45290
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24783
     - https://errata.almalinux.org/9/ALSA-2024-2724.html
+    - https://errata.rockylinux.org/RLSA-2024:2724
     - https://go.dev/cl/576155
     - https://go.dev/issue/65051
     - https://groups.google.com/g/golang-announce/c/YgW0sx8mN3M
@@ -425,6 +445,7 @@
       oracle-oval: 3
       photon: 3
       redhat: 3
+      rocky: 3
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
@@ -441,7 +462,16 @@
     - https://bugzilla.redhat.com/2268018
     - https://bugzilla.redhat.com/2268019
     - https://bugzilla.redhat.com/2268273
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2268017
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2268018
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2268019
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2268273
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45288
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45289
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45290
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24783
     - https://errata.almalinux.org/9/ALSA-2024-2724.html
+    - https://errata.rockylinux.org/RLSA-2024:2724
     - https://go.dev/cl/576155
     - https://go.dev/issue/65051
     - https://groups.google.com/g/golang-announce/c/YgW0sx8mN3M
@@ -485,6 +515,7 @@
       ghsa: 2
       oracle-oval: 2
       redhat: 2
+      rocky: 2
       ubuntu: 2
     CVSS:
       redhat:
@@ -495,7 +526,9 @@
     - https://access.redhat.com/errata/RHSA-2024:2550
     - https://access.redhat.com/security/cve/CVE-2024-24786
     - https://bugzilla.redhat.com/2268046
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24786
     - https://errata.almalinux.org/9/ALSA-2024-2550.html
+    - https://errata.rockylinux.org/RLSA-2024:2550
     - https://github.com/protocolbuffers/protobuf-go
     - https://github.com/protocolbuffers/protobuf-go/commit/f01a588e5810b90996452eec4a28f22a0afae023
     - https://github.com/protocolbuffers/protobuf-go/releases/tag/v1.33.0
@@ -596,6 +629,7 @@
       ghsa: 2
       oracle-oval: 2
       redhat: 2
+      rocky: 2
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L
@@ -608,7 +642,11 @@
     - https://access.redhat.com/security/cve/CVE-2024-28180
     - https://bugzilla.redhat.com/2268046
     - https://bugzilla.redhat.com/2268854
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2268046
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24786
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-28180
     - https://errata.almalinux.org/9/ALSA-2024-2549.html
+    - https://errata.rockylinux.org/RLSA-2024:2549
     - https://github.com/go-jose/go-jose
     - https://github.com/go-jose/go-jose/commit/0dd4dd541c665fb292d664f77604ba694726f298
     - https://github.com/go-jose/go-jose/commit/add6a284ea0f844fd6628cba637be5451fe4b28a
@@ -946,6 +984,7 @@
       oracle-oval: 3
       photon: 3
       redhat: 3
+      rocky: 3
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
@@ -962,7 +1001,16 @@
     - https://bugzilla.redhat.com/2268018
     - https://bugzilla.redhat.com/2268019
     - https://bugzilla.redhat.com/2268273
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2268017
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2268018
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2268019
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2268273
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45288
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45289
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45290
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24783
     - https://errata.almalinux.org/9/ALSA-2024-2724.html
+    - https://errata.rockylinux.org/RLSA-2024:2724
     - https://go.dev/cl/576155
     - https://go.dev/issue/65051
     - https://groups.google.com/g/golang-announce/c/YgW0sx8mN3M
@@ -1006,6 +1054,7 @@
       ghsa: 2
       oracle-oval: 2
       redhat: 2
+      rocky: 2
       ubuntu: 2
     CVSS:
       redhat:
@@ -1016,7 +1065,9 @@
     - https://access.redhat.com/errata/RHSA-2024:2550
     - https://access.redhat.com/security/cve/CVE-2024-24786
     - https://bugzilla.redhat.com/2268046
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24786
     - https://errata.almalinux.org/9/ALSA-2024-2550.html
+    - https://errata.rockylinux.org/RLSA-2024:2550
     - https://github.com/protocolbuffers/protobuf-go
     - https://github.com/protocolbuffers/protobuf-go/commit/f01a588e5810b90996452eec4a28f22a0afae023
     - https://github.com/protocolbuffers/protobuf-go/releases/tag/v1.33.0
@@ -1062,6 +1113,7 @@
       ghsa: 2
       oracle-oval: 2
       redhat: 2
+      rocky: 2
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L
@@ -1074,7 +1126,11 @@
     - https://access.redhat.com/security/cve/CVE-2024-28180
     - https://bugzilla.redhat.com/2268046
     - https://bugzilla.redhat.com/2268854
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2268046
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24786
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-28180
     - https://errata.almalinux.org/9/ALSA-2024-2549.html
+    - https://errata.rockylinux.org/RLSA-2024:2549
     - https://github.com/go-jose/go-jose
     - https://github.com/go-jose/go-jose/commit/0dd4dd541c665fb292d664f77604ba694726f298
     - https://github.com/go-jose/go-jose/commit/add6a284ea0f844fd6628cba637be5451fe4b28a
