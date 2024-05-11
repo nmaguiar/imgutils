@@ -14,8 +14,8 @@
     FixedVersion: 26.0.2
     Status: fixed
     Layer:
-      Digest: sha256:63be9c5a12b742321ffb13fc6255970ae4c9affb739592e45686766eb3331a3f
-      DiffID: sha256:29a3c6e596936b2444e80364a1c6962cfbd2455a7561528579710bdb603531fc
+      Digest: sha256:861054fb9242a5a7a92f63fcb50ca16aa9afb2f5631ea14afc756471d77ba21f
+      DiffID: sha256:f7cb579af68b5699371f7e891043fb3b3510994442ca27002f4ea48f41e2cb39
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-32473
     DataSource:
@@ -55,8 +55,8 @@
     FixedVersion: 0.46.0
     Status: fixed
     Layer:
-      Digest: sha256:63be9c5a12b742321ffb13fc6255970ae4c9affb739592e45686766eb3331a3f
-      DiffID: sha256:29a3c6e596936b2444e80364a1c6962cfbd2455a7561528579710bdb603531fc
+      Digest: sha256:861054fb9242a5a7a92f63fcb50ca16aa9afb2f5631ea14afc756471d77ba21f
+      DiffID: sha256:f7cb579af68b5699371f7e891043fb3b3510994442ca27002f4ea48f41e2cb39
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-47108
     DataSource:
@@ -106,8 +106,8 @@
     FixedVersion: 1.21.9, 1.22.2
     Status: fixed
     Layer:
-      Digest: sha256:63be9c5a12b742321ffb13fc6255970ae4c9affb739592e45686766eb3331a3f
-      DiffID: sha256:29a3c6e596936b2444e80364a1c6962cfbd2455a7561528579710bdb603531fc
+      Digest: sha256:861054fb9242a5a7a92f63fcb50ca16aa9afb2f5631ea14afc756471d77ba21f
+      DiffID: sha256:f7cb579af68b5699371f7e891043fb3b3510994442ca27002f4ea48f41e2cb39
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45288
     DataSource:
       ID: govulndb
@@ -123,6 +123,7 @@
       oracle-oval: 3
       photon: 3
       redhat: 3
+      rocky: 3
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
@@ -139,7 +140,16 @@
     - https://bugzilla.redhat.com/2268018
     - https://bugzilla.redhat.com/2268019
     - https://bugzilla.redhat.com/2268273
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2268017
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2268018
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2268019
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2268273
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45288
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45289
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45290
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24783
     - https://errata.almalinux.org/9/ALSA-2024-2724.html
+    - https://errata.rockylinux.org/RLSA-2024:2724
     - https://go.dev/cl/576155
     - https://go.dev/issue/65051
     - https://groups.google.com/g/golang-announce/c/YgW0sx8mN3M
@@ -166,8 +176,8 @@
     FixedVersion: 1.22.3
     Status: fixed
     Layer:
-      Digest: sha256:63be9c5a12b742321ffb13fc6255970ae4c9affb739592e45686766eb3331a3f
-      DiffID: sha256:29a3c6e596936b2444e80364a1c6962cfbd2455a7561528579710bdb603531fc
+      Digest: sha256:861054fb9242a5a7a92f63fcb50ca16aa9afb2f5631ea14afc756471d77ba21f
+      DiffID: sha256:f7cb579af68b5699371f7e891043fb3b3510994442ca27002f4ea48f41e2cb39
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24788
     DataSource:
       ID: govulndb
