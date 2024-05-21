@@ -514,6 +514,48 @@
   Class: lang-pkgs
   Type: gobinary
   Vulnerabilities:
+  - VulnerabilityID: CVE-2024-3727
+    PkgName: github.com/containers/image/v5
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/containers/image/v5@v5.29.0
+      UID: da671627be10cd54
+    InstalledVersion: v5.29.0
+    FixedVersion: 5.30.1
+    Status: fixed
+    Layer:
+      Digest: sha256:50e31d8dd87fa2c9910250439a8119a490be4c97e144b437cb396515762b068d
+      DiffID: sha256:6f7c3c8c6673153f71e41fdeb6ef67876df75c13d4ce9044ae76a569aabd0e02
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-3727
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'containers/image: digest type does not guarantee valid type'
+    Description: A flaw was found in the github.com/containers/image library. This flaw allows attackers to trigger unexpected authenticated registry accesses on behalf of a victim user, causing resource exhaustion, local path traversal, and other attacks.
+    Severity: HIGH
+    CweIDs:
+    - CWE-354
+    VendorSeverity:
+      ghsa: 3
+      redhat: 2
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H
+        V3Score: 8.3
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H
+        V3Score: 8.3
+    References:
+    - https://access.redhat.com/security/cve/CVE-2024-3727
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2274767
+    - https://github.com/containers/image
+    - https://github.com/containers/image/commit/132678b47bae29c710589012668cb85859d88385
+    - https://github.com/containers/image/releases/tag/v5.30.1
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-3727
+    - https://www.cve.org/CVERecord?id=CVE-2024-3727
+    PublishedDate: '2024-05-14T15:42:07.06Z'
+    LastModifiedDate: '2024-05-14T16:11:39.51Z'
   - VulnerabilityID: CVE-2024-24557
     PkgName: github.com/docker/docker
     PkgIdentifier:
