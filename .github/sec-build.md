@@ -667,7 +667,51 @@
 ╰ [4] ╭ Target         : usr/bin/skopeo 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
-      ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-24557 
+      ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-3727 
+                        │     ├ PkgName         : github.com/containers/image/v5 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/containers/image/v5@v5.29.0 
+                        │     │                  ╰ UID : da671627be10cd54 
+                        │     ├ InstalledVersion: v5.29.0 
+                        │     ├ FixedVersion    : 5.30.1 
+                        │     ├ Status          : fixed 
+                        │     ├ Layer            ╭ Digest: sha256:50e31d8dd87fa2c9910250439a8119a490be4c97
+                        │     │                  │         e144b437cb396515762b068d 
+                        │     │                  ╰ DiffID: sha256:6f7c3c8c6673153f71e41fdeb6ef67876df75c13
+                        │     │                            d4ce9044ae76a569aabd0e02 
+                        │     ├ SeveritySource  : ghsa 
+                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-3727 
+                        │     ├ DataSource       ╭ ID  : ghsa 
+                        │     │                  ├ Name: GitHub Security Advisory Go 
+                        │     │                  ╰ URL : https://github.com/advisories?query=type%3Areview
+                        │     │                          ed+ecosystem%3Ago 
+                        │     ├ Title           : containers/image: digest type does not guarantee valid type 
+                        │     ├ Description     : A flaw was found in the github.com/containers/image
+                        │     │                   library. This flaw allows attackers to trigger unexpected
+                        │     │                   authenticated registry accesses on behalf of a victim user,
+                        │     │                   causing resource exhaustion, local path traversal, and other
+                        │     │                   attacks. 
+                        │     ├ Severity        : HIGH 
+                        │     ├ CweIDs           ─ [0]: CWE-354 
+                        │     ├ VendorSeverity   ╭ ghsa  : 3 
+                        │     │                  ╰ redhat: 2 
+                        │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H
+                        │     │                  │        │           /I:H/A:H 
+                        │     │                  │        ╰ V3Score : 8.3 
+                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H
+                        │     │                           │           /I:H/A:H 
+                        │     │                           ╰ V3Score : 8.3 
+                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-3727 
+                        │     │                  ├ [1]: https://bugzilla.redhat.com/show_bug.cgi?id=2274767 
+                        │     │                  ├ [2]: https://github.com/containers/image 
+                        │     │                  ├ [3]: https://github.com/containers/image/commit/132678b
+                        │     │                  │      47bae29c710589012668cb85859d88385 
+                        │     │                  ├ [4]: https://github.com/containers/image/releases/tag/v
+                        │     │                  │      5.30.1 
+                        │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2024-3727 
+                        │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-3727 
+                        │     ├ PublishedDate   : 2024-05-14T15:42:07.06Z 
+                        │     ╰ LastModifiedDate: 2024-05-14T16:11:39.51Z 
+                        ├ [1] ╭ VulnerabilityID : CVE-2024-24557 
                         │     ├ PkgName         : github.com/docker/docker 
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v24.0.7%2Binc
                         │     │                  │       ompatible 
@@ -734,7 +778,7 @@
                         │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-24557 
                         │     ├ PublishedDate   : 2024-02-01T17:15:10.953Z 
                         │     ╰ LastModifiedDate: 2024-02-09T20:21:32.97Z 
-                        ├ [1] ╭ VulnerabilityID : CVE-2024-28180 
+                        ├ [2] ╭ VulnerabilityID : CVE-2024-28180 
                         │     ├ PkgName         : github.com/go-jose/go-jose/v3 
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/go-jose/go-jose/v3@v3.0.1 
                         │     │                  ╰ UID : 6dd435bc14175e7a 
@@ -849,7 +893,7 @@
                         │     │                  ╰ [33]: https://www.cve.org/CVERecord?id=CVE-2024-28180 
                         │     ├ PublishedDate   : 2024-03-09T01:15:07.34Z 
                         │     ╰ LastModifiedDate: 2024-03-31T03:15:07.68Z 
-                        ├ [2] ╭ VulnerabilityID : CVE-2024-21626 
+                        ├ [3] ╭ VulnerabilityID : CVE-2024-21626 
                         │     ├ PkgName         : github.com/opencontainers/runc 
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/opencontainers/runc@v1.1.10 
                         │     │                  ╰ UID : 8279ec352ebe6362 
@@ -940,7 +984,7 @@
                         │     │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2024-21626 
                         │     ├ PublishedDate   : 2024-01-31T22:15:53.78Z 
                         │     ╰ LastModifiedDate: 2024-02-19T03:15:08.413Z 
-                        ├ [3] ╭ VulnerabilityID : CVE-2023-48795 
+                        ├ [4] ╭ VulnerabilityID : CVE-2023-48795 
                         │     ├ PkgName         : golang.org/x/crypto 
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/crypto@v0.15.0 
                         │     │                  ╰ UID : a8ac0a6aa43c7fc4 
@@ -1334,7 +1378,7 @@
                         │     │                           ry.txt 
                         │     ├ PublishedDate   : 2023-12-18T16:15:10.897Z 
                         │     ╰ LastModifiedDate: 2024-05-01T18:15:10.657Z 
-                        ├ [4] ╭ VulnerabilityID : CVE-2023-45288 
+                        ├ [5] ╭ VulnerabilityID : CVE-2023-45288 
                         │     ├ PkgName         : golang.org/x/net 
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.18.0 
                         │     │                  ╰ UID : 939cee93e37a602b 
@@ -1430,7 +1474,7 @@
                         │     │                  ╰ [32]: https://www.kb.cert.org/vuls/id/421644 
                         │     ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
                         │     ╰ LastModifiedDate: 2024-05-01T18:15:10.493Z 
-                        ├ [5] ╭ VulnerabilityID : CVE-2024-24786 
+                        ├ [6] ╭ VulnerabilityID : CVE-2024-24786 
                         │     ├ PkgName         : google.golang.org/protobuf 
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/google.golang.org/protobuf@v1.31.0 
                         │     │                  ╰ UID : e9f3cc09ad8423ee 
@@ -1498,7 +1542,7 @@
                         │     │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
                         │     ├ PublishedDate   : 2024-03-05T23:15:07.82Z 
                         │     ╰ LastModifiedDate: 2024-05-01T17:15:29.667Z 
-                        ╰ [6] ╭ VulnerabilityID : CVE-2024-28180 
+                        ╰ [7] ╭ VulnerabilityID : CVE-2024-28180 
                               ├ PkgName         : gopkg.in/go-jose/go-jose.v2 
                               ├ PkgIdentifier    ╭ PURL: pkg:golang/gopkg.in/go-jose/go-jose.v2@v2.6.1 
                               │                  ╰ UID : cb30cc9d71796c7c 
