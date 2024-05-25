@@ -837,6 +837,7 @@
     - https://access.redhat.com/errata/RHSA-2024:1150
     - https://access.redhat.com/security/cve/CVE-2023-48795
     - https://access.redhat.com/security/cve/cve-2023-48795
+    - https://access.redhat.com/solutions/7071748
     - https://arstechnica.com/security/2023/12/hackers-can-break-ssh-channel-integrity-using-novel-data-corruption-attack
     - https://arstechnica.com/security/2023/12/hackers-can-break-ssh-channel-integrity-using-novel-data-corruption-attack/
     - https://bugs.gentoo.org/920280
