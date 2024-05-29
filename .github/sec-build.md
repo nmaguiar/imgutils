@@ -170,6 +170,7 @@
 │                       │     │                   closing a connection. 
 │                       │     ├ Severity        : HIGH 
 │                       │     ├ VendorSeverity   ╭ alma       : 3 
+│                       │     │                  ├ amazon     : 2 
 │                       │     │                  ├ cbl-mariner: 3 
 │                       │     │                  ├ ghsa       : 2 
 │                       │     │                  ├ oracle-oval: 3 
@@ -369,6 +370,7 @@
 │                             │                   closing a connection. 
 │                             ├ Severity        : MEDIUM 
 │                             ├ VendorSeverity   ╭ alma       : 3 
+│                             │                  ├ amazon     : 2 
 │                             │                  ├ cbl-mariner: 3 
 │                             │                  ├ ghsa       : 2 
 │                             │                  ├ oracle-oval: 3 
@@ -535,6 +537,7 @@
 │                       │     │                   closing a connection. 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ VendorSeverity   ╭ alma       : 3 
+│                       │     │                  ├ amazon     : 2 
 │                       │     │                  ├ cbl-mariner: 3 
 │                       │     │                  ├ ghsa       : 2 
 │                       │     │                  ├ oracle-oval: 3 
@@ -623,6 +626,7 @@
 │                             │                   UnmarshalOptions.DiscardUnknown option is set. 
 │                             ├ Severity        : MEDIUM 
 │                             ├ VendorSeverity   ╭ alma       : 2 
+│                             │                  ├ amazon     : 2 
 │                             │                  ├ cbl-mariner: 2 
 │                             │                  ├ ghsa       : 2 
 │                             │                  ├ oracle-oval: 2 
@@ -1414,6 +1418,7 @@
                         │     │                   closing a connection. 
                         │     ├ Severity        : MEDIUM 
                         │     ├ VendorSeverity   ╭ alma       : 3 
+                        │     │                  ├ amazon     : 2 
                         │     │                  ├ cbl-mariner: 3 
                         │     │                  ├ ghsa       : 2 
                         │     │                  ├ oracle-oval: 3 
@@ -1502,6 +1507,7 @@
                         │     │                   UnmarshalOptions.DiscardUnknown option is set. 
                         │     ├ Severity        : MEDIUM 
                         │     ├ VendorSeverity   ╭ alma       : 2 
+                        │     │                  ├ amazon     : 2 
                         │     │                  ├ cbl-mariner: 2 
                         │     │                  ├ ghsa       : 2 
                         │     │                  ├ oracle-oval: 2 
