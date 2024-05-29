@@ -170,6 +170,7 @@
                         │     │                   closing a connection. 
                         │     ├ Severity        : HIGH 
                         │     ├ VendorSeverity   ╭ alma       : 3 
+                        │     │                  ├ amazon     : 2 
                         │     │                  ├ cbl-mariner: 3 
                         │     │                  ├ ghsa       : 2 
                         │     │                  ├ oracle-oval: 3 
