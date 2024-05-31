@@ -212,7 +212,7 @@
                         │     │                  ├ [20]: https://groups.google.com/g/golang-announce/c/YgW
                         │     │                  │       0sx8mN3M 
                         │     │                  ├ [21]: https://linux.oracle.com/cve/CVE-2023-45288.html 
-                        │     │                  ├ [22]: https://linux.oracle.com/errata/ELSA-2024-2724.html 
+                        │     │                  ├ [22]: https://linux.oracle.com/errata/ELSA-2024-3346.html 
                         │     │                  ├ [23]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
                         │     │                  │       XRKRYBI2F5UESH67BJBQXUPT 
