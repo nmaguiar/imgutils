@@ -709,7 +709,7 @@
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/containers/image/v5@v5.29.0 
                         │     │                  ╰ UID : da671627be10cd54 
                         │     ├ InstalledVersion: v5.29.0 
-                        │     ├ FixedVersion    : 5.30.1 
+                        │     ├ FixedVersion    : 5.30.1, 5.29.3 
                         │     ├ Status          : fixed 
                         │     ├ Layer            ╭ Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc
                         │     │                  │         8837732ef23aca2d268abf05 
@@ -742,10 +742,14 @@
                         │     │                  ├ [2]: https://github.com/containers/image 
                         │     │                  ├ [3]: https://github.com/containers/image/commit/132678b
                         │     │                  │      47bae29c710589012668cb85859d88385 
-                        │     │                  ├ [4]: https://github.com/containers/image/releases/tag/v
+                        │     │                  ├ [4]: https://github.com/containers/image/commit/e894804
+                        │     │                  │      6055060605bd68289d406ce149590c33a 
+                        │     │                  ├ [5]: https://github.com/containers/image/releases/tag/v
+                        │     │                  │      5.29.3 
+                        │     │                  ├ [6]: https://github.com/containers/image/releases/tag/v
                         │     │                  │      5.30.1 
-                        │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2024-3727 
-                        │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-3727 
+                        │     │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2024-3727 
+                        │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-3727 
                         │     ├ PublishedDate   : 2024-05-14T15:42:07.06Z 
                         │     ╰ LastModifiedDate: 2024-05-14T16:11:39.51Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2024-24557 
