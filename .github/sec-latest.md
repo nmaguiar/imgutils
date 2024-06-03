@@ -187,7 +187,7 @@
 │                       │     │                  │       4/03/16 
 │                       │     │                  ├ [1] : http://www.openwall.com/lists/oss-security/2024/0
 │                       │     │                  │       4/05/4 
-│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:3346 
+│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:2724 
 │                       │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2023-45288 
 │                       │     │                  ├ [4] : https://bugzilla.redhat.com/2268017 
 │                       │     │                  ├ [5] : https://bugzilla.redhat.com/2268018 
@@ -196,7 +196,7 @@
 │                       │     │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2268273 
 │                       │     │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
 │                       │     │                  │       E-2023-45288 
-│                       │     │                  ├ [10]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
+│                       │     │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2024-2724.html 
 │                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2024:2699 
 │                       │     │                  ├ [12]: https://go.dev/cl/576155 
 │                       │     │                  ├ [13]: https://go.dev/issue/65051 
@@ -378,7 +378,7 @@
 │                       │     │                  │       4/03/16 
 │                       │     │                  ├ [1] : http://www.openwall.com/lists/oss-security/2024/0
 │                       │     │                  │       4/05/4 
-│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:3346 
+│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:2724 
 │                       │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2023-45288 
 │                       │     │                  ├ [4] : https://bugzilla.redhat.com/2268017 
 │                       │     │                  ├ [5] : https://bugzilla.redhat.com/2268018 
@@ -387,7 +387,7 @@
 │                       │     │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2268273 
 │                       │     │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
 │                       │     │                  │       E-2023-45288 
-│                       │     │                  ├ [10]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
+│                       │     │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2024-2724.html 
 │                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2024:2699 
 │                       │     │                  ├ [12]: https://go.dev/cl/576155 
 │                       │     │                  ├ [13]: https://go.dev/issue/65051 
@@ -569,7 +569,7 @@
 │                       │     │                  │       4/03/16 
 │                       │     │                  ├ [1] : http://www.openwall.com/lists/oss-security/2024/0
 │                       │     │                  │       4/05/4 
-│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:3346 
+│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:2724 
 │                       │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2023-45288 
 │                       │     │                  ├ [4] : https://bugzilla.redhat.com/2268017 
 │                       │     │                  ├ [5] : https://bugzilla.redhat.com/2268018 
@@ -578,7 +578,7 @@
 │                       │     │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2268273 
 │                       │     │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
 │                       │     │                  │       E-2023-45288 
-│                       │     │                  ├ [10]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
+│                       │     │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2024-2724.html 
 │                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2024:2699 
 │                       │     │                  ├ [12]: https://go.dev/cl/576155 
 │                       │     │                  ├ [13]: https://go.dev/issue/65051 
@@ -631,7 +631,7 @@
 │                             │                   contains a google.protobuf.Any value, or when the
 │                             │                   UnmarshalOptions.DiscardUnknown option is set. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ alma       : 3 
+│                             ├ VendorSeverity   ╭ alma       : 2 
 │                             │                  ├ amazon     : 2 
 │                             │                  ├ cbl-mariner: 2 
 │                             │                  ├ ghsa       : 2 
@@ -644,38 +644,34 @@
 │                             │                           ╰ V3Score : 5.9 
 │                             ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/0
 │                             │                  │       3/08/4 
-│                             │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:3254 
+│                             │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:2550 
 │                             │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2024-24786 
-│                             │                  ├ [3] : https://bugzilla.redhat.com/2132868 
-│                             │                  ├ [4] : https://bugzilla.redhat.com/2132872 
-│                             │                  ├ [5] : https://bugzilla.redhat.com/2265513 
-│                             │                  ├ [6] : https://bugzilla.redhat.com/2268046 
-│                             │                  ├ [7] : https://bugzilla.redhat.com/2268854 
-│                             │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
+│                             │                  ├ [3] : https://bugzilla.redhat.com/2268046 
+│                             │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
 │                             │                  │       E-2024-24786 
-│                             │                  ├ [9] : https://errata.almalinux.org/8/ALSA-2024-3254.html 
-│                             │                  ├ [10]: https://errata.rockylinux.org/RLSA-2024:2550 
-│                             │                  ├ [11]: https://github.com/protocolbuffers/protobuf-go 
-│                             │                  ├ [12]: https://github.com/protocolbuffers/protobuf-go/co
+│                             │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2024-2550.html 
+│                             │                  ├ [6] : https://errata.rockylinux.org/RLSA-2024:2550 
+│                             │                  ├ [7] : https://github.com/protocolbuffers/protobuf-go 
+│                             │                  ├ [8] : https://github.com/protocolbuffers/protobuf-go/co
 │                             │                  │       mmit/f01a588e5810b90996452eec4a28f22a0afae023 
-│                             │                  ├ [13]: https://github.com/protocolbuffers/protobuf-go/re
+│                             │                  ├ [9] : https://github.com/protocolbuffers/protobuf-go/re
 │                             │                  │       leases/tag/v1.33.0 
-│                             │                  ├ [14]: https://go-review.googlesource.com/c/protobuf/+/569356 
-│                             │                  ├ [15]: https://go.dev/cl/569356 
-│                             │                  ├ [16]: https://groups.google.com/g/golang-announce/c/ArQ
+│                             │                  ├ [10]: https://go-review.googlesource.com/c/protobuf/+/569356 
+│                             │                  ├ [11]: https://go.dev/cl/569356 
+│                             │                  ├ [12]: https://groups.google.com/g/golang-announce/c/ArQ
 │                             │                  │       6CDgtEjY/ 
-│                             │                  ├ [17]: https://linux.oracle.com/cve/CVE-2024-24786.html 
-│                             │                  ├ [18]: https://linux.oracle.com/errata/ELSA-2024-3254.html 
-│                             │                  ├ [19]: https://lists.fedoraproject.org/archives/list/pac
+│                             │                  ├ [13]: https://linux.oracle.com/cve/CVE-2024-24786.html 
+│                             │                  ├ [14]: https://linux.oracle.com/errata/ELSA-2024-3254.html 
+│                             │                  ├ [15]: https://lists.fedoraproject.org/archives/list/pac
 │                             │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
 │                             │                  │       DU2FBDZ45U3A2VLSM35OJ2HU 
-│                             │                  ├ [20]: https://lists.fedoraproject.org/archives/list/pac
+│                             │                  ├ [16]: https://lists.fedoraproject.org/archives/list/pac
 │                             │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
 │                             │                  │       DU2FBDZ45U3A2VLSM35OJ2HU/ 
-│                             │                  ├ [21]: https://nvd.nist.gov/vuln/detail/CVE-2024-24786 
-│                             │                  ├ [22]: https://pkg.go.dev/vuln/GO-2024-2611 
-│                             │                  ├ [23]: https://ubuntu.com/security/notices/USN-6746-1 
-│                             │                  ╰ [24]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
+│                             │                  ├ [17]: https://nvd.nist.gov/vuln/detail/CVE-2024-24786 
+│                             │                  ├ [18]: https://pkg.go.dev/vuln/GO-2024-2611 
+│                             │                  ├ [19]: https://ubuntu.com/security/notices/USN-6746-1 
+│                             │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
 │                             ├ PublishedDate   : 2024-03-05T23:15:07.82Z 
 │                             ╰ LastModifiedDate: 2024-05-01T17:15:29.667Z 
 ╰ [4] ╭ Target         : usr/bin/skopeo 
@@ -825,7 +821,7 @@
                         │     │                    
                         │     ├ Severity        : MEDIUM 
                         │     ├ CweIDs           ─ [0]: CWE-409 
-                        │     ├ VendorSeverity   ╭ alma       : 3 
+                        │     ├ VendorSeverity   ╭ alma       : 2 
                         │     │                  ├ cbl-mariner: 2 
                         │     │                  ├ ghsa       : 2 
                         │     │                  ├ oracle-oval: 3 
@@ -837,81 +833,78 @@
                         │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N
                         │     │                           │           /I:N/A:L 
                         │     │                           ╰ V3Score : 4.3 
-                        │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:3254 
+                        │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:2549 
                         │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-28180 
-                        │     │                  ├ [2] : https://bugzilla.redhat.com/2132868 
-                        │     │                  ├ [3] : https://bugzilla.redhat.com/2132872 
-                        │     │                  ├ [4] : https://bugzilla.redhat.com/2265513 
-                        │     │                  ├ [5] : https://bugzilla.redhat.com/2268046 
-                        │     │                  ├ [6] : https://bugzilla.redhat.com/2268854 
-                        │     │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2268046 
-                        │     │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
+                        │     │                  ├ [2] : https://bugzilla.redhat.com/2268046 
+                        │     │                  ├ [3] : https://bugzilla.redhat.com/2268854 
+                        │     │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2268046 
+                        │     │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
                         │     │                  │       E-2024-24786 
-                        │     │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
+                        │     │                  ├ [6] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
                         │     │                  │       E-2024-28180 
-                        │     │                  ├ [10]: https://errata.almalinux.org/8/ALSA-2024-3254.html 
-                        │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2024:2549 
-                        │     │                  ├ [12]: https://github.com/go-jose/go-jose 
-                        │     │                  ├ [13]: https://github.com/go-jose/go-jose/commit/0dd4dd5
+                        │     │                  ├ [7] : https://errata.almalinux.org/9/ALSA-2024-2549.html 
+                        │     │                  ├ [8] : https://errata.rockylinux.org/RLSA-2024:2549 
+                        │     │                  ├ [9] : https://github.com/go-jose/go-jose 
+                        │     │                  ├ [10]: https://github.com/go-jose/go-jose/commit/0dd4dd5
                         │     │                  │       41c665fb292d664f77604ba694726f298 
-                        │     │                  ├ [14]: https://github.com/go-jose/go-jose/commit/add6a28
+                        │     │                  ├ [11]: https://github.com/go-jose/go-jose/commit/add6a28
                         │     │                  │       4ea0f844fd6628cba637be5451fe4b28a 
-                        │     │                  ├ [15]: https://github.com/go-jose/go-jose/commit/f4c051a
+                        │     │                  ├ [12]: https://github.com/go-jose/go-jose/commit/f4c051a
                         │     │                  │       0653d78199a053892f7619ebf96339502 
-                        │     │                  ├ [16]: https://github.com/go-jose/go-jose/security/advis
+                        │     │                  ├ [13]: https://github.com/go-jose/go-jose/security/advis
                         │     │                  │       ories/GHSA-c5q2-7r4c-mv6g 
-                        │     │                  ├ [17]: https://linux.oracle.com/cve/CVE-2024-28180.html 
-                        │     │                  ├ [18]: https://linux.oracle.com/errata/ELSA-2024-3254.html 
-                        │     │                  ├ [19]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [14]: https://linux.oracle.com/cve/CVE-2024-28180.html 
+                        │     │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2024-3254.html 
+                        │     │                  ├ [16]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/I6MMWFBO
                         │     │                  │       XJA6ZCXNVPDFJ4XMK5PVG5RG 
-                        │     │                  ├ [20]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [17]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/I6MMWFBO
                         │     │                  │       XJA6ZCXNVPDFJ4XMK5PVG5RG/ 
-                        │     │                  ├ [21]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [18]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/IJ6LAJJ2
                         │     │                  │       FTA2JVVOACCV5RZTOIZLXUNJ 
-                        │     │                  ├ [22]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [19]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/IJ6LAJJ2
                         │     │                  │       FTA2JVVOACCV5RZTOIZLXUNJ/ 
-                        │     │                  ├ [23]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [20]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/JNPMXL36
                         │     │                  │       YGS3GQEVI3Q5HKHJ7YAAQXL5 
-                        │     │                  ├ [24]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [21]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/JNPMXL36
                         │     │                  │       YGS3GQEVI3Q5HKHJ7YAAQXL5/ 
-                        │     │                  ├ [25]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [22]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/KXKGNCRU
                         │     │                  │       7OTM5AHC7YIYBNOWI742PRMY 
-                        │     │                  ├ [26]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [23]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/KXKGNCRU
                         │     │                  │       7OTM5AHC7YIYBNOWI742PRMY/ 
-                        │     │                  ├ [27]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [24]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/MSOMHDKR
                         │     │                  │       PU3A2JEMRODT2IREDFBLVPGS 
-                        │     │                  ├ [28]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [25]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/MSOMHDKR
                         │     │                  │       PU3A2JEMRODT2IREDFBLVPGS/ 
-                        │     │                  ├ [29]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [26]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/UG5FSEYJ
                         │     │                  │       3GP27FZXC5YAAMMEC5XWKJHG 
-                        │     │                  ├ [30]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [27]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/UG5FSEYJ
                         │     │                  │       3GP27FZXC5YAAMMEC5XWKJHG/ 
-                        │     │                  ├ [31]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [28]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/UJO2U5AC
                         │     │                  │       ZVACNQXJ5EBRFLFW6DP5BROY 
-                        │     │                  ├ [32]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [29]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/UJO2U5AC
                         │     │                  │       ZVACNQXJ5EBRFLFW6DP5BROY/ 
-                        │     │                  ├ [33]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [30]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/XJDO5VSI
                         │     │                  │       AOGT2WP63AXAAWNRSVJCNCRH 
-                        │     │                  ├ [34]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [31]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/XJDO5VSI
                         │     │                  │       AOGT2WP63AXAAWNRSVJCNCRH/ 
-                        │     │                  ├ [35]: https://nvd.nist.gov/vuln/detail/CVE-2024-28180 
-                        │     │                  ╰ [36]: https://www.cve.org/CVERecord?id=CVE-2024-28180 
+                        │     │                  ├ [32]: https://nvd.nist.gov/vuln/detail/CVE-2024-28180 
+                        │     │                  ╰ [33]: https://www.cve.org/CVERecord?id=CVE-2024-28180 
                         │     ├ PublishedDate   : 2024-03-09T01:15:07.34Z 
                         │     ╰ LastModifiedDate: 2024-03-31T03:15:07.68Z 
                         ├ [3] ╭ VulnerabilityID : CVE-2024-21626 
@@ -973,10 +966,10 @@
                         │     │                  │       2/01/1 
                         │     │                  ├ [2] : http://www.openwall.com/lists/oss-security/2024/0
                         │     │                  │       2/02/3 
-                        │     │                  ├ [3] : https://access.redhat.com/errata/RHSA-2024:0752 
+                        │     │                  ├ [3] : https://access.redhat.com/errata/RHSA-2024:0670 
                         │     │                  ├ [4] : https://access.redhat.com/security/cve/CVE-2024-21626 
                         │     │                  ├ [5] : https://bugzilla.redhat.com/2258725 
-                        │     │                  ├ [6] : https://errata.almalinux.org/8/ALSA-2024-0752.html 
+                        │     │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2024-0670.html 
                         │     │                  ├ [7] : https://github.com/opencontainers/runc 
                         │     │                  ├ [8] : https://github.com/opencontainers/runc/commit/021
                         │     │                  │       20488a4c0fc487d1ed2867e901eeed7ce8ecf 
@@ -1092,7 +1085,7 @@
                         │     │                  │        03/06/3 
                         │     │                  ├ [6]  : http://www.openwall.com/lists/oss-security/2024/
                         │     │                  │        04/17/8 
-                        │     │                  ├ [7]  : https://access.redhat.com/errata/RHSA-2024:0628 
+                        │     │                  ├ [7]  : https://access.redhat.com/errata/RHSA-2024:1150 
                         │     │                  ├ [8]  : https://access.redhat.com/security/cve/CVE-2023-48795 
                         │     │                  ├ [9]  : https://access.redhat.com/security/cve/cve-2023-48795 
                         │     │                  ├ [10] : https://access.redhat.com/solutions/7071748 
@@ -1109,7 +1102,7 @@
                         │     │                  ├ [17] : https://crates.io/crates/thrussh/versions 
                         │     │                  ├ [18] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=C
                         │     │                  │        VE-2023-48795 
-                        │     │                  ├ [19] : https://errata.almalinux.org/8/ALSA-2024-0628.html 
+                        │     │                  ├ [19] : https://errata.almalinux.org/9/ALSA-2024-1150.html 
                         │     │                  ├ [20] : https://errata.rockylinux.org/RLSA-2024:0628 
                         │     │                  ├ [21] : https://filezilla-project.org/versions.php 
                         │     │                  ├ [22] : https://forum.netgate.com/topic/184941/terrapin-
@@ -1452,7 +1445,7 @@
                         │     │                  │       4/03/16 
                         │     │                  ├ [1] : http://www.openwall.com/lists/oss-security/2024/0
                         │     │                  │       4/05/4 
-                        │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:3346 
+                        │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:2724 
                         │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2023-45288 
                         │     │                  ├ [4] : https://bugzilla.redhat.com/2268017 
                         │     │                  ├ [5] : https://bugzilla.redhat.com/2268018 
@@ -1461,7 +1454,7 @@
                         │     │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2268273 
                         │     │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
                         │     │                  │       E-2023-45288 
-                        │     │                  ├ [10]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
+                        │     │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2024-2724.html 
                         │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2024:2699 
                         │     │                  ├ [12]: https://go.dev/cl/576155 
                         │     │                  ├ [13]: https://go.dev/issue/65051 
@@ -1514,7 +1507,7 @@
                         │     │                   contains a google.protobuf.Any value, or when the
                         │     │                   UnmarshalOptions.DiscardUnknown option is set. 
                         │     ├ Severity        : MEDIUM 
-                        │     ├ VendorSeverity   ╭ alma       : 3 
+                        │     ├ VendorSeverity   ╭ alma       : 2 
                         │     │                  ├ amazon     : 2 
                         │     │                  ├ cbl-mariner: 2 
                         │     │                  ├ ghsa       : 2 
@@ -1527,38 +1520,34 @@
                         │     │                           ╰ V3Score : 5.9 
                         │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/0
                         │     │                  │       3/08/4 
-                        │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:3254 
+                        │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:2550 
                         │     │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2024-24786 
-                        │     │                  ├ [3] : https://bugzilla.redhat.com/2132868 
-                        │     │                  ├ [4] : https://bugzilla.redhat.com/2132872 
-                        │     │                  ├ [5] : https://bugzilla.redhat.com/2265513 
-                        │     │                  ├ [6] : https://bugzilla.redhat.com/2268046 
-                        │     │                  ├ [7] : https://bugzilla.redhat.com/2268854 
-                        │     │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
+                        │     │                  ├ [3] : https://bugzilla.redhat.com/2268046 
+                        │     │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
                         │     │                  │       E-2024-24786 
-                        │     │                  ├ [9] : https://errata.almalinux.org/8/ALSA-2024-3254.html 
-                        │     │                  ├ [10]: https://errata.rockylinux.org/RLSA-2024:2550 
-                        │     │                  ├ [11]: https://github.com/protocolbuffers/protobuf-go 
-                        │     │                  ├ [12]: https://github.com/protocolbuffers/protobuf-go/co
+                        │     │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2024-2550.html 
+                        │     │                  ├ [6] : https://errata.rockylinux.org/RLSA-2024:2550 
+                        │     │                  ├ [7] : https://github.com/protocolbuffers/protobuf-go 
+                        │     │                  ├ [8] : https://github.com/protocolbuffers/protobuf-go/co
                         │     │                  │       mmit/f01a588e5810b90996452eec4a28f22a0afae023 
-                        │     │                  ├ [13]: https://github.com/protocolbuffers/protobuf-go/re
+                        │     │                  ├ [9] : https://github.com/protocolbuffers/protobuf-go/re
                         │     │                  │       leases/tag/v1.33.0 
-                        │     │                  ├ [14]: https://go-review.googlesource.com/c/protobuf/+/569356 
-                        │     │                  ├ [15]: https://go.dev/cl/569356 
-                        │     │                  ├ [16]: https://groups.google.com/g/golang-announce/c/ArQ
+                        │     │                  ├ [10]: https://go-review.googlesource.com/c/protobuf/+/569356 
+                        │     │                  ├ [11]: https://go.dev/cl/569356 
+                        │     │                  ├ [12]: https://groups.google.com/g/golang-announce/c/ArQ
                         │     │                  │       6CDgtEjY/ 
-                        │     │                  ├ [17]: https://linux.oracle.com/cve/CVE-2024-24786.html 
-                        │     │                  ├ [18]: https://linux.oracle.com/errata/ELSA-2024-3254.html 
-                        │     │                  ├ [19]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [13]: https://linux.oracle.com/cve/CVE-2024-24786.html 
+                        │     │                  ├ [14]: https://linux.oracle.com/errata/ELSA-2024-3254.html 
+                        │     │                  ├ [15]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
                         │     │                  │       DU2FBDZ45U3A2VLSM35OJ2HU 
-                        │     │                  ├ [20]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  ├ [16]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
                         │     │                  │       DU2FBDZ45U3A2VLSM35OJ2HU/ 
-                        │     │                  ├ [21]: https://nvd.nist.gov/vuln/detail/CVE-2024-24786 
-                        │     │                  ├ [22]: https://pkg.go.dev/vuln/GO-2024-2611 
-                        │     │                  ├ [23]: https://ubuntu.com/security/notices/USN-6746-1 
-                        │     │                  ╰ [24]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
+                        │     │                  ├ [17]: https://nvd.nist.gov/vuln/detail/CVE-2024-24786 
+                        │     │                  ├ [18]: https://pkg.go.dev/vuln/GO-2024-2611 
+                        │     │                  ├ [19]: https://ubuntu.com/security/notices/USN-6746-1 
+                        │     │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
                         │     ├ PublishedDate   : 2024-03-05T23:15:07.82Z 
                         │     ╰ LastModifiedDate: 2024-05-01T17:15:29.667Z 
                         ╰ [7] ╭ VulnerabilityID : CVE-2024-28180 
@@ -1590,7 +1579,7 @@
                               │                    
                               ├ Severity        : MEDIUM 
                               ├ CweIDs           ─ [0]: CWE-409 
-                              ├ VendorSeverity   ╭ alma       : 3 
+                              ├ VendorSeverity   ╭ alma       : 2 
                               │                  ├ cbl-mariner: 2 
                               │                  ├ ghsa       : 2 
                               │                  ├ oracle-oval: 3 
@@ -1602,81 +1591,78 @@
                               │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N
                               │                           │           /I:N/A:L 
                               │                           ╰ V3Score : 4.3 
-                              ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:3254 
+                              ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:2549 
                               │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-28180 
-                              │                  ├ [2] : https://bugzilla.redhat.com/2132868 
-                              │                  ├ [3] : https://bugzilla.redhat.com/2132872 
-                              │                  ├ [4] : https://bugzilla.redhat.com/2265513 
-                              │                  ├ [5] : https://bugzilla.redhat.com/2268046 
-                              │                  ├ [6] : https://bugzilla.redhat.com/2268854 
-                              │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2268046 
-                              │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
+                              │                  ├ [2] : https://bugzilla.redhat.com/2268046 
+                              │                  ├ [3] : https://bugzilla.redhat.com/2268854 
+                              │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2268046 
+                              │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
                               │                  │       E-2024-24786 
-                              │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
+                              │                  ├ [6] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
                               │                  │       E-2024-28180 
-                              │                  ├ [10]: https://errata.almalinux.org/8/ALSA-2024-3254.html 
-                              │                  ├ [11]: https://errata.rockylinux.org/RLSA-2024:2549 
-                              │                  ├ [12]: https://github.com/go-jose/go-jose 
-                              │                  ├ [13]: https://github.com/go-jose/go-jose/commit/0dd4dd5
+                              │                  ├ [7] : https://errata.almalinux.org/9/ALSA-2024-2549.html 
+                              │                  ├ [8] : https://errata.rockylinux.org/RLSA-2024:2549 
+                              │                  ├ [9] : https://github.com/go-jose/go-jose 
+                              │                  ├ [10]: https://github.com/go-jose/go-jose/commit/0dd4dd5
                               │                  │       41c665fb292d664f77604ba694726f298 
-                              │                  ├ [14]: https://github.com/go-jose/go-jose/commit/add6a28
+                              │                  ├ [11]: https://github.com/go-jose/go-jose/commit/add6a28
                               │                  │       4ea0f844fd6628cba637be5451fe4b28a 
-                              │                  ├ [15]: https://github.com/go-jose/go-jose/commit/f4c051a
+                              │                  ├ [12]: https://github.com/go-jose/go-jose/commit/f4c051a
                               │                  │       0653d78199a053892f7619ebf96339502 
-                              │                  ├ [16]: https://github.com/go-jose/go-jose/security/advis
+                              │                  ├ [13]: https://github.com/go-jose/go-jose/security/advis
                               │                  │       ories/GHSA-c5q2-7r4c-mv6g 
-                              │                  ├ [17]: https://linux.oracle.com/cve/CVE-2024-28180.html 
-                              │                  ├ [18]: https://linux.oracle.com/errata/ELSA-2024-3254.html 
-                              │                  ├ [19]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  ├ [14]: https://linux.oracle.com/cve/CVE-2024-28180.html 
+                              │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2024-3254.html 
+                              │                  ├ [16]: https://lists.fedoraproject.org/archives/list/pac
                               │                  │       kage-announce@lists.fedoraproject.org/message/I6MMWFBO
                               │                  │       XJA6ZCXNVPDFJ4XMK5PVG5RG 
-                              │                  ├ [20]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  ├ [17]: https://lists.fedoraproject.org/archives/list/pac
                               │                  │       kage-announce@lists.fedoraproject.org/message/I6MMWFBO
                               │                  │       XJA6ZCXNVPDFJ4XMK5PVG5RG/ 
-                              │                  ├ [21]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  ├ [18]: https://lists.fedoraproject.org/archives/list/pac
                               │                  │       kage-announce@lists.fedoraproject.org/message/IJ6LAJJ2
                               │                  │       FTA2JVVOACCV5RZTOIZLXUNJ 
-                              │                  ├ [22]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  ├ [19]: https://lists.fedoraproject.org/archives/list/pac
                               │                  │       kage-announce@lists.fedoraproject.org/message/IJ6LAJJ2
                               │                  │       FTA2JVVOACCV5RZTOIZLXUNJ/ 
-                              │                  ├ [23]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  ├ [20]: https://lists.fedoraproject.org/archives/list/pac
                               │                  │       kage-announce@lists.fedoraproject.org/message/JNPMXL36
                               │                  │       YGS3GQEVI3Q5HKHJ7YAAQXL5 
-                              │                  ├ [24]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  ├ [21]: https://lists.fedoraproject.org/archives/list/pac
                               │                  │       kage-announce@lists.fedoraproject.org/message/JNPMXL36
                               │                  │       YGS3GQEVI3Q5HKHJ7YAAQXL5/ 
-                              │                  ├ [25]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  ├ [22]: https://lists.fedoraproject.org/archives/list/pac
                               │                  │       kage-announce@lists.fedoraproject.org/message/KXKGNCRU
                               │                  │       7OTM5AHC7YIYBNOWI742PRMY 
-                              │                  ├ [26]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  ├ [23]: https://lists.fedoraproject.org/archives/list/pac
                               │                  │       kage-announce@lists.fedoraproject.org/message/KXKGNCRU
                               │                  │       7OTM5AHC7YIYBNOWI742PRMY/ 
-                              │                  ├ [27]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  ├ [24]: https://lists.fedoraproject.org/archives/list/pac
                               │                  │       kage-announce@lists.fedoraproject.org/message/MSOMHDKR
                               │                  │       PU3A2JEMRODT2IREDFBLVPGS 
-                              │                  ├ [28]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  ├ [25]: https://lists.fedoraproject.org/archives/list/pac
                               │                  │       kage-announce@lists.fedoraproject.org/message/MSOMHDKR
                               │                  │       PU3A2JEMRODT2IREDFBLVPGS/ 
-                              │                  ├ [29]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  ├ [26]: https://lists.fedoraproject.org/archives/list/pac
                               │                  │       kage-announce@lists.fedoraproject.org/message/UG5FSEYJ
                               │                  │       3GP27FZXC5YAAMMEC5XWKJHG 
-                              │                  ├ [30]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  ├ [27]: https://lists.fedoraproject.org/archives/list/pac
                               │                  │       kage-announce@lists.fedoraproject.org/message/UG5FSEYJ
                               │                  │       3GP27FZXC5YAAMMEC5XWKJHG/ 
-                              │                  ├ [31]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  ├ [28]: https://lists.fedoraproject.org/archives/list/pac
                               │                  │       kage-announce@lists.fedoraproject.org/message/UJO2U5AC
                               │                  │       ZVACNQXJ5EBRFLFW6DP5BROY 
-                              │                  ├ [32]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  ├ [29]: https://lists.fedoraproject.org/archives/list/pac
                               │                  │       kage-announce@lists.fedoraproject.org/message/UJO2U5AC
                               │                  │       ZVACNQXJ5EBRFLFW6DP5BROY/ 
-                              │                  ├ [33]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  ├ [30]: https://lists.fedoraproject.org/archives/list/pac
                               │                  │       kage-announce@lists.fedoraproject.org/message/XJDO5VSI
                               │                  │       AOGT2WP63AXAAWNRSVJCNCRH 
-                              │                  ├ [34]: https://lists.fedoraproject.org/archives/list/pac
+                              │                  ├ [31]: https://lists.fedoraproject.org/archives/list/pac
                               │                  │       kage-announce@lists.fedoraproject.org/message/XJDO5VSI
                               │                  │       AOGT2WP63AXAAWNRSVJCNCRH/ 
-                              │                  ├ [35]: https://nvd.nist.gov/vuln/detail/CVE-2024-28180 
-                              │                  ╰ [36]: https://www.cve.org/CVERecord?id=CVE-2024-28180 
+                              │                  ├ [32]: https://nvd.nist.gov/vuln/detail/CVE-2024-28180 
+                              │                  ╰ [33]: https://www.cve.org/CVERecord?id=CVE-2024-28180 
                               ├ PublishedDate   : 2024-03-09T01:15:07.34Z 
                               ╰ LastModifiedDate: 2024-03-31T03:15:07.68Z 
 ````
