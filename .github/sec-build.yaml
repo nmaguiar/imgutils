@@ -135,7 +135,7 @@
     References:
     - http://www.openwall.com/lists/oss-security/2024/04/03/16
     - http://www.openwall.com/lists/oss-security/2024/04/05/4
-    - https://access.redhat.com/errata/RHSA-2024:3346
+    - https://access.redhat.com/errata/RHSA-2024:2724
     - https://access.redhat.com/security/cve/CVE-2023-45288
     - https://bugzilla.redhat.com/2268017
     - https://bugzilla.redhat.com/2268018
@@ -143,7 +143,7 @@
     - https://bugzilla.redhat.com/2268273
     - https://bugzilla.redhat.com/show_bug.cgi?id=2268273
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45288
-    - https://errata.almalinux.org/8/ALSA-2024-3346.html
+    - https://errata.almalinux.org/9/ALSA-2024-2724.html
     - https://errata.rockylinux.org/RLSA-2024:2699
     - https://go.dev/cl/576155
     - https://go.dev/issue/65051
@@ -291,7 +291,7 @@
     References:
     - http://www.openwall.com/lists/oss-security/2024/04/03/16
     - http://www.openwall.com/lists/oss-security/2024/04/05/4
-    - https://access.redhat.com/errata/RHSA-2024:3346
+    - https://access.redhat.com/errata/RHSA-2024:2724
     - https://access.redhat.com/security/cve/CVE-2023-45288
     - https://bugzilla.redhat.com/2268017
     - https://bugzilla.redhat.com/2268018
@@ -299,7 +299,7 @@
     - https://bugzilla.redhat.com/2268273
     - https://bugzilla.redhat.com/show_bug.cgi?id=2268273
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45288
-    - https://errata.almalinux.org/8/ALSA-2024-3346.html
+    - https://errata.almalinux.org/9/ALSA-2024-2724.html
     - https://errata.rockylinux.org/RLSA-2024:2699
     - https://go.dev/cl/576155
     - https://go.dev/issue/65051
@@ -412,7 +412,7 @@
     References:
     - http://www.openwall.com/lists/oss-security/2024/04/03/16
     - http://www.openwall.com/lists/oss-security/2024/04/05/4
-    - https://access.redhat.com/errata/RHSA-2024:3346
+    - https://access.redhat.com/errata/RHSA-2024:2724
     - https://access.redhat.com/security/cve/CVE-2023-45288
     - https://bugzilla.redhat.com/2268017
     - https://bugzilla.redhat.com/2268018
@@ -420,7 +420,7 @@
     - https://bugzilla.redhat.com/2268273
     - https://bugzilla.redhat.com/show_bug.cgi?id=2268273
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45288
-    - https://errata.almalinux.org/8/ALSA-2024-3346.html
+    - https://errata.almalinux.org/9/ALSA-2024-2724.html
     - https://errata.rockylinux.org/RLSA-2024:2699
     - https://go.dev/cl/576155
     - https://go.dev/issue/65051
@@ -460,7 +460,7 @@
     Description: The protojson.Unmarshal function can enter an infinite loop when unmarshaling certain forms of invalid JSON. This condition can occur when unmarshaling into a message which contains a google.protobuf.Any value, or when the UnmarshalOptions.DiscardUnknown option is set.
     Severity: MEDIUM
     VendorSeverity:
-      alma: 3
+      alma: 2
       amazon: 2
       cbl-mariner: 2
       ghsa: 2
@@ -474,15 +474,11 @@
         V3Score: 5.9
     References:
     - http://www.openwall.com/lists/oss-security/2024/03/08/4
-    - https://access.redhat.com/errata/RHSA-2024:3254
+    - https://access.redhat.com/errata/RHSA-2024:2550
     - https://access.redhat.com/security/cve/CVE-2024-24786
-    - https://bugzilla.redhat.com/2132868
-    - https://bugzilla.redhat.com/2132872
-    - https://bugzilla.redhat.com/2265513
     - https://bugzilla.redhat.com/2268046
-    - https://bugzilla.redhat.com/2268854
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24786
-    - https://errata.almalinux.org/8/ALSA-2024-3254.html
+    - https://errata.almalinux.org/9/ALSA-2024-2550.html
     - https://errata.rockylinux.org/RLSA-2024:2550
     - https://github.com/protocolbuffers/protobuf-go
     - https://github.com/protocolbuffers/protobuf-go/commit/f01a588e5810b90996452eec4a28f22a0afae023
@@ -623,7 +619,7 @@
     CweIDs:
     - CWE-409
     VendorSeverity:
-      alma: 3
+      alma: 2
       cbl-mariner: 2
       ghsa: 2
       oracle-oval: 3
@@ -637,17 +633,14 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L
         V3Score: 4.3
     References:
-    - https://access.redhat.com/errata/RHSA-2024:3254
+    - https://access.redhat.com/errata/RHSA-2024:2549
     - https://access.redhat.com/security/cve/CVE-2024-28180
-    - https://bugzilla.redhat.com/2132868
-    - https://bugzilla.redhat.com/2132872
-    - https://bugzilla.redhat.com/2265513
     - https://bugzilla.redhat.com/2268046
     - https://bugzilla.redhat.com/2268854
     - https://bugzilla.redhat.com/show_bug.cgi?id=2268046
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24786
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-28180
-    - https://errata.almalinux.org/8/ALSA-2024-3254.html
+    - https://errata.almalinux.org/9/ALSA-2024-2549.html
     - https://errata.rockylinux.org/RLSA-2024:2549
     - https://github.com/go-jose/go-jose
     - https://github.com/go-jose/go-jose/commit/0dd4dd541c665fb292d664f77604ba694726f298
@@ -723,10 +716,10 @@
     - http://packetstormsecurity.com/files/176993/runc-1.1.11-File-Descriptor-Leak-Privilege-Escalation.html
     - http://www.openwall.com/lists/oss-security/2024/02/01/1
     - http://www.openwall.com/lists/oss-security/2024/02/02/3
-    - https://access.redhat.com/errata/RHSA-2024:0752
+    - https://access.redhat.com/errata/RHSA-2024:0670
     - https://access.redhat.com/security/cve/CVE-2024-21626
     - https://bugzilla.redhat.com/2258725
-    - https://errata.almalinux.org/8/ALSA-2024-0752.html
+    - https://errata.almalinux.org/9/ALSA-2024-0670.html
     - https://github.com/opencontainers/runc
     - https://github.com/opencontainers/runc/commit/02120488a4c0fc487d1ed2867e901eeed7ce8ecf
     - https://github.com/opencontainers/runc/releases/tag/v1.1.12
@@ -794,7 +787,7 @@
     - http://www.openwall.com/lists/oss-security/2023/12/20/3
     - http://www.openwall.com/lists/oss-security/2024/03/06/3
     - http://www.openwall.com/lists/oss-security/2024/04/17/8
-    - https://access.redhat.com/errata/RHSA-2024:0628
+    - https://access.redhat.com/errata/RHSA-2024:1150
     - https://access.redhat.com/security/cve/CVE-2023-48795
     - https://access.redhat.com/security/cve/cve-2023-48795
     - https://access.redhat.com/solutions/7071748
@@ -806,7 +799,7 @@
     - https://bugzilla.suse.com/show_bug.cgi?id=1217950
     - https://crates.io/crates/thrussh/versions
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-48795
-    - https://errata.almalinux.org/8/ALSA-2024-0628.html
+    - https://errata.almalinux.org/9/ALSA-2024-1150.html
     - https://errata.rockylinux.org/RLSA-2024:0628
     - https://filezilla-project.org/versions.php
     - https://forum.netgate.com/topic/184941/terrapin-ssh-attack
@@ -999,7 +992,7 @@
     References:
     - http://www.openwall.com/lists/oss-security/2024/04/03/16
     - http://www.openwall.com/lists/oss-security/2024/04/05/4
-    - https://access.redhat.com/errata/RHSA-2024:3346
+    - https://access.redhat.com/errata/RHSA-2024:2724
     - https://access.redhat.com/security/cve/CVE-2023-45288
     - https://bugzilla.redhat.com/2268017
     - https://bugzilla.redhat.com/2268018
@@ -1007,7 +1000,7 @@
     - https://bugzilla.redhat.com/2268273
     - https://bugzilla.redhat.com/show_bug.cgi?id=2268273
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45288
-    - https://errata.almalinux.org/8/ALSA-2024-3346.html
+    - https://errata.almalinux.org/9/ALSA-2024-2724.html
     - https://errata.rockylinux.org/RLSA-2024:2699
     - https://go.dev/cl/576155
     - https://go.dev/issue/65051
@@ -1047,7 +1040,7 @@
     Description: The protojson.Unmarshal function can enter an infinite loop when unmarshaling certain forms of invalid JSON. This condition can occur when unmarshaling into a message which contains a google.protobuf.Any value, or when the UnmarshalOptions.DiscardUnknown option is set.
     Severity: MEDIUM
     VendorSeverity:
-      alma: 3
+      alma: 2
       amazon: 2
       cbl-mariner: 2
       ghsa: 2
@@ -1061,15 +1054,11 @@
         V3Score: 5.9
     References:
     - http://www.openwall.com/lists/oss-security/2024/03/08/4
-    - https://access.redhat.com/errata/RHSA-2024:3254
+    - https://access.redhat.com/errata/RHSA-2024:2550
     - https://access.redhat.com/security/cve/CVE-2024-24786
-    - https://bugzilla.redhat.com/2132868
-    - https://bugzilla.redhat.com/2132872
-    - https://bugzilla.redhat.com/2265513
     - https://bugzilla.redhat.com/2268046
-    - https://bugzilla.redhat.com/2268854
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24786
-    - https://errata.almalinux.org/8/ALSA-2024-3254.html
+    - https://errata.almalinux.org/9/ALSA-2024-2550.html
     - https://errata.rockylinux.org/RLSA-2024:2550
     - https://github.com/protocolbuffers/protobuf-go
     - https://github.com/protocolbuffers/protobuf-go/commit/f01a588e5810b90996452eec4a28f22a0afae023
@@ -1111,7 +1100,7 @@
     CweIDs:
     - CWE-409
     VendorSeverity:
-      alma: 3
+      alma: 2
       cbl-mariner: 2
       ghsa: 2
       oracle-oval: 3
@@ -1125,17 +1114,14 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L
         V3Score: 4.3
     References:
-    - https://access.redhat.com/errata/RHSA-2024:3254
+    - https://access.redhat.com/errata/RHSA-2024:2549
     - https://access.redhat.com/security/cve/CVE-2024-28180
-    - https://bugzilla.redhat.com/2132868
-    - https://bugzilla.redhat.com/2132872
-    - https://bugzilla.redhat.com/2265513
     - https://bugzilla.redhat.com/2268046
     - https://bugzilla.redhat.com/2268854
     - https://bugzilla.redhat.com/show_bug.cgi?id=2268046
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24786
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-28180
-    - https://errata.almalinux.org/8/ALSA-2024-3254.html
+    - https://errata.almalinux.org/9/ALSA-2024-2549.html
     - https://errata.rockylinux.org/RLSA-2024:2549
     - https://github.com/go-jose/go-jose
     - https://github.com/go-jose/go-jose/commit/0dd4dd541c665fb292d664f77604ba694726f298
