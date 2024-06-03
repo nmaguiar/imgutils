@@ -187,7 +187,7 @@
                         │     │                  │       4/03/16 
                         │     │                  ├ [1] : http://www.openwall.com/lists/oss-security/2024/0
                         │     │                  │       4/05/4 
-                        │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:3346 
+                        │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:2724 
                         │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2023-45288 
                         │     │                  ├ [4] : https://bugzilla.redhat.com/2268017 
                         │     │                  ├ [5] : https://bugzilla.redhat.com/2268018 
@@ -196,7 +196,7 @@
                         │     │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2268273 
                         │     │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
                         │     │                  │       E-2023-45288 
-                        │     │                  ├ [10]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
+                        │     │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2024-2724.html 
                         │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2024:2699 
                         │     │                  ├ [12]: https://go.dev/cl/576155 
                         │     │                  ├ [13]: https://go.dev/issue/65051 
