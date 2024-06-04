@@ -2,7 +2,10 @@
 ╭ [0] ╭ Target: nmaguiar/imgutils:build (alpine 3.19.1) 
 │     ├ Class : os-pkgs 
 │     ╰ Type  : alpine 
-├ [1] ╭ Target         : usr/bin/crictl 
+├ [1] ╭ Target: Java 
+│     ├ Class : lang-pkgs 
+│     ╰ Type  : jar 
+├ [2] ╭ Target         : usr/bin/crictl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
 │     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-32473 
@@ -256,7 +259,7 @@
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-24788 
 │                             ├ PublishedDate   : 2024-05-08T16:15:08.25Z 
 │                             ╰ LastModifiedDate: 2024-05-08T17:05:24.083Z 
-├ [2] ╭ Target         : usr/bin/dive 
+├ [3] ╭ Target         : usr/bin/dive 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
 │     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-24557 
@@ -414,7 +417,10 @@
 │                             │                  ╰ [26]: https://www.kb.cert.org/vuls/id/421644 
 │                             ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
 │                             ╰ LastModifiedDate: 2024-05-01T18:15:10.493Z 
-├ [3] ╭ Target         : usr/bin/helm 
+├ [4] ╭ Target: usr/bin/docker 
+│     ├ Class : lang-pkgs 
+│     ╰ Type  : gobinary 
+├ [5] ╭ Target         : usr/bin/helm 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
 │     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-24557 
@@ -641,7 +647,7 @@
 │                             │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
 │                             ├ PublishedDate   : 2024-03-05T23:15:07.82Z 
 │                             ╰ LastModifiedDate: 2024-05-01T17:15:29.667Z 
-╰ [4] ╭ Target         : usr/bin/skopeo 
+╰ [6] ╭ Target         : usr/bin/skopeo 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
       ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-3727 
