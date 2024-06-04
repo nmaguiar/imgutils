@@ -1,6 +1,9 @@
 - Target: nmaguiar/imgutils:build (alpine 3.19.1)
   Class: os-pkgs
   Type: alpine
+- Target: Java
+  Class: lang-pkgs
+  Type: jar
 - Target: usr/bin/crictl
   Class: lang-pkgs
   Type: gobinary
@@ -318,6 +321,9 @@
     - https://www.kb.cert.org/vuls/id/421644
     PublishedDate: '2024-04-04T21:15:16.113Z'
     LastModifiedDate: '2024-05-01T18:15:10.493Z'
+- Target: usr/bin/docker
+  Class: lang-pkgs
+  Type: gobinary
 - Target: usr/bin/helm
   Class: lang-pkgs
   Type: gobinary
