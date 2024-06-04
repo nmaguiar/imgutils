@@ -1,6 +1,9 @@
 - Target: nmaguiar/imgutils:latest (alpine 3.19.1)
   Class: os-pkgs
   Type: alpine
+- Target: Java
+  Class: lang-pkgs
+  Type: jar
 - Target: usr/bin/crictl
   Class: lang-pkgs
   Type: gobinary
@@ -353,6 +356,9 @@
     - https://www.cve.org/CVERecord?id=CVE-2024-24788
     PublishedDate: '2024-05-08T16:15:08.25Z'
     LastModifiedDate: '2024-05-08T17:05:24.083Z'
+- Target: usr/bin/docker
+  Class: lang-pkgs
+  Type: gobinary
 - Target: usr/bin/helm
   Class: lang-pkgs
   Type: gobinary
