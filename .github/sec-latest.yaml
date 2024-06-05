@@ -200,6 +200,40 @@
     - https://www.cve.org/CVERecord?id=CVE-2024-24788
     PublishedDate: '2024-05-08T16:15:08.25Z'
     LastModifiedDate: '2024-05-08T17:05:24.083Z'
+  - VulnerabilityID: CVE-2024-24789
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@1.22.1
+      UID: cd28c68ec9dd2486
+    InstalledVersion: 1.22.1
+    FixedVersion: 1.21.11, 1.22.4
+    Status: fixed
+    Layer:
+      Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc8837732ef23aca2d268abf05
+      DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388203b7fdce0a0b9a371c4a8a0
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24789
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Severity: UNKNOWN
+  - VulnerabilityID: CVE-2024-24790
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@1.22.1
+      UID: cd28c68ec9dd2486
+    InstalledVersion: 1.22.1
+    FixedVersion: 1.21.11, 1.22.4
+    Status: fixed
+    Layer:
+      Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc8837732ef23aca2d268abf05
+      DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388203b7fdce0a0b9a371c4a8a0
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24790
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Severity: UNKNOWN
 - Target: usr/bin/dive
   Class: lang-pkgs
   Type: gobinary
@@ -356,9 +390,78 @@
     - https://www.cve.org/CVERecord?id=CVE-2024-24788
     PublishedDate: '2024-05-08T16:15:08.25Z'
     LastModifiedDate: '2024-05-08T17:05:24.083Z'
+  - VulnerabilityID: CVE-2024-24789
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@1.22.2
+      UID: 16e338e43b449d0
+    InstalledVersion: 1.22.2
+    FixedVersion: 1.21.11, 1.22.4
+    Status: fixed
+    Layer:
+      Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc8837732ef23aca2d268abf05
+      DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388203b7fdce0a0b9a371c4a8a0
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24789
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Severity: UNKNOWN
+  - VulnerabilityID: CVE-2024-24790
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@1.22.2
+      UID: 16e338e43b449d0
+    InstalledVersion: 1.22.2
+    FixedVersion: 1.21.11, 1.22.4
+    Status: fixed
+    Layer:
+      Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc8837732ef23aca2d268abf05
+      DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388203b7fdce0a0b9a371c4a8a0
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24790
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Severity: UNKNOWN
 - Target: usr/bin/docker
   Class: lang-pkgs
   Type: gobinary
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2024-24789
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@1.21.9
+      UID: b3b37e1bfa35262a
+    InstalledVersion: 1.21.9
+    FixedVersion: 1.21.11, 1.22.4
+    Status: fixed
+    Layer:
+      Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc8837732ef23aca2d268abf05
+      DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388203b7fdce0a0b9a371c4a8a0
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24789
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Severity: UNKNOWN
+  - VulnerabilityID: CVE-2024-24790
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@1.21.9
+      UID: b3b37e1bfa35262a
+    InstalledVersion: 1.21.9
+    FixedVersion: 1.21.11, 1.22.4
+    Status: fixed
+    Layer:
+      Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc8837732ef23aca2d268abf05
+      DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388203b7fdce0a0b9a371c4a8a0
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24790
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Severity: UNKNOWN
 - Target: usr/bin/helm
   Class: lang-pkgs
   Type: gobinary
@@ -537,6 +640,40 @@
     - https://www.cve.org/CVERecord?id=CVE-2024-24786
     PublishedDate: '2024-03-05T23:15:07.82Z'
     LastModifiedDate: '2024-05-01T17:15:29.667Z'
+  - VulnerabilityID: CVE-2024-24789
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@1.21.9
+      UID: 8adb28ce6abb45a1
+    InstalledVersion: 1.21.9
+    FixedVersion: 1.21.11, 1.22.4
+    Status: fixed
+    Layer:
+      Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc8837732ef23aca2d268abf05
+      DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388203b7fdce0a0b9a371c4a8a0
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24789
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Severity: UNKNOWN
+  - VulnerabilityID: CVE-2024-24790
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@1.21.9
+      UID: 8adb28ce6abb45a1
+    InstalledVersion: 1.21.9
+    FixedVersion: 1.21.11, 1.22.4
+    Status: fixed
+    Layer:
+      Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc8837732ef23aca2d268abf05
+      DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388203b7fdce0a0b9a371c4a8a0
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24790
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Severity: UNKNOWN
 - Target: usr/bin/skopeo
   Class: lang-pkgs
   Type: gobinary
@@ -1191,3 +1328,37 @@
     - https://www.cve.org/CVERecord?id=CVE-2024-28180
     PublishedDate: '2024-03-09T01:15:07.34Z'
     LastModifiedDate: '2024-03-31T03:15:07.68Z'
+  - VulnerabilityID: CVE-2024-24789
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@1.21.9
+      UID: 47fdb05d24aa006f
+    InstalledVersion: 1.21.9
+    FixedVersion: 1.21.11, 1.22.4
+    Status: fixed
+    Layer:
+      Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc8837732ef23aca2d268abf05
+      DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388203b7fdce0a0b9a371c4a8a0
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24789
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Severity: UNKNOWN
+  - VulnerabilityID: CVE-2024-24790
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@1.21.9
+      UID: 47fdb05d24aa006f
+    InstalledVersion: 1.21.9
+    FixedVersion: 1.21.11, 1.22.4
+    Status: fixed
+    Layer:
+      Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc8837732ef23aca2d268abf05
+      DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388203b7fdce0a0b9a371c4a8a0
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24790
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Severity: UNKNOWN
