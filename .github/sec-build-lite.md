@@ -223,37 +223,69 @@
                         │     │                  ╰ [26]: https://www.kb.cert.org/vuls/id/421644 
                         │     ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
                         │     ╰ LastModifiedDate: 2024-05-01T18:15:10.493Z 
-                        ╰ [3] ╭ VulnerabilityID : CVE-2024-24788 
+                        ├ [3] ╭ VulnerabilityID : CVE-2024-24788 
+                        │     ├ PkgName         : stdlib 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
+                        │     │                  ╰ UID : cd28c68ec9dd2486 
+                        │     ├ InstalledVersion: 1.22.1 
+                        │     ├ FixedVersion    : 1.22.3 
+                        │     ├ Status          : fixed 
+                        │     ├ Layer            ╭ Digest: sha256:c2ceda8ba0f357a76bc4fdcb4d0e3d5096644962
+                        │     │                  │         247fa6b3995bb939c5358c24 
+                        │     │                  ╰ DiffID: sha256:e9754a107eb42972c44eb2bba61059d89139af7a
+                        │     │                            209d8e46ccbc0cbfa10fe7e9 
+                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24788 
+                        │     ├ DataSource       ╭ ID  : govulndb 
+                        │     │                  ├ Name: The Go Vulnerability Database 
+                        │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │     ├ Title           : golang: net: malformed DNS message can cause infinite loop 
+                        │     ├ Description     : A malformed DNS message in response to a query can cause
+                        │     │                    the Lookup functions to get stuck in an infinite loop. 
+                        │     ├ Severity        : HIGH 
+                        │     ├ VendorSeverity   ─ redhat: 2 
+                        │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
+                        │     │                           │           /I:N/A:H 
+                        │     │                           ╰ V3Score : 7.5 
+                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-24788 
+                        │     │                  ├ [1]: https://go.dev/cl/578375 
+                        │     │                  ├ [2]: https://go.dev/issue/66754 
+                        │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/wkkO
+                        │     │                  │      4P9stm0 
+                        │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-24788 
+                        │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-2824 
+                        │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-24788 
+                        │     ├ PublishedDate   : 2024-05-08T16:15:08.25Z 
+                        │     ╰ LastModifiedDate: 2024-05-08T17:05:24.083Z 
+                        ├ [4] ╭ VulnerabilityID : CVE-2024-24789 
+                        │     ├ PkgName         : stdlib 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
+                        │     │                  ╰ UID : cd28c68ec9dd2486 
+                        │     ├ InstalledVersion: 1.22.1 
+                        │     ├ FixedVersion    : 1.21.11, 1.22.4 
+                        │     ├ Status          : fixed 
+                        │     ├ Layer            ╭ Digest: sha256:c2ceda8ba0f357a76bc4fdcb4d0e3d5096644962
+                        │     │                  │         247fa6b3995bb939c5358c24 
+                        │     │                  ╰ DiffID: sha256:e9754a107eb42972c44eb2bba61059d89139af7a
+                        │     │                            209d8e46ccbc0cbfa10fe7e9 
+                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24789 
+                        │     ├ DataSource       ╭ ID  : govulndb 
+                        │     │                  ├ Name: The Go Vulnerability Database 
+                        │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │     ╰ Severity        : UNKNOWN 
+                        ╰ [5] ╭ VulnerabilityID : CVE-2024-24790 
                               ├ PkgName         : stdlib 
                               ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
                               │                  ╰ UID : cd28c68ec9dd2486 
                               ├ InstalledVersion: 1.22.1 
-                              ├ FixedVersion    : 1.22.3 
+                              ├ FixedVersion    : 1.21.11, 1.22.4 
                               ├ Status          : fixed 
                               ├ Layer            ╭ Digest: sha256:c2ceda8ba0f357a76bc4fdcb4d0e3d5096644962
                               │                  │         247fa6b3995bb939c5358c24 
                               │                  ╰ DiffID: sha256:e9754a107eb42972c44eb2bba61059d89139af7a
                               │                            209d8e46ccbc0cbfa10fe7e9 
-                              ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24788 
+                              ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24790 
                               ├ DataSource       ╭ ID  : govulndb 
                               │                  ├ Name: The Go Vulnerability Database 
                               │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                              ├ Title           : golang: net: malformed DNS message can cause infinite loop 
-                              ├ Description     : A malformed DNS message in response to a query can cause
-                              │                    the Lookup functions to get stuck in an infinite loop. 
-                              ├ Severity        : HIGH 
-                              ├ VendorSeverity   ─ redhat: 2 
-                              ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
-                              │                           │           /I:N/A:H 
-                              │                           ╰ V3Score : 7.5 
-                              ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-24788 
-                              │                  ├ [1]: https://go.dev/cl/578375 
-                              │                  ├ [2]: https://go.dev/issue/66754 
-                              │                  ├ [3]: https://groups.google.com/g/golang-announce/c/wkkO
-                              │                  │      4P9stm0 
-                              │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-24788 
-                              │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-2824 
-                              │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-24788 
-                              ├ PublishedDate   : 2024-05-08T16:15:08.25Z 
-                              ╰ LastModifiedDate: 2024-05-08T17:05:24.083Z 
+                              ╰ Severity        : UNKNOWN 
 ````
