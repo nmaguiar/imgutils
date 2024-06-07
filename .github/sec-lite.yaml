@@ -228,7 +228,7 @@
     - https://groups.google.com/g/golang-announce/c/XbxouI9gY7k/m/TuoGEhxIEwAJ
     - https://pkg.go.dev/vuln/GO-2024-2888
     PublishedDate: '2024-06-05T16:15:10.47Z'
-    LastModifiedDate: '2024-06-05T16:15:10.47Z'
+    LastModifiedDate: '2024-06-06T14:17:35.017Z'
   - VulnerabilityID: CVE-2024-24790
     PkgName: stdlib
     PkgIdentifier:
@@ -254,4 +254,4 @@
     - https://groups.google.com/g/golang-announce/c/XbxouI9gY7k/m/TuoGEhxIEwAJ
     - https://pkg.go.dev/vuln/GO-2024-2887
     PublishedDate: '2024-06-05T16:15:10.56Z'
-    LastModifiedDate: '2024-06-05T16:15:10.56Z'
+    LastModifiedDate: '2024-06-06T14:17:35.017Z'
