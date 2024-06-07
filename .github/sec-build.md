@@ -298,7 +298,7 @@
 │                       │     │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
 │                       │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2888 
 │                       │     ├ PublishedDate   : 2024-06-05T16:15:10.47Z 
-│                       │     ╰ LastModifiedDate: 2024-06-05T16:15:10.47Z 
+│                       │     ╰ LastModifiedDate: 2024-06-06T14:17:35.017Z 
 │                       ╰ [5] ╭ VulnerabilityID : CVE-2024-24790 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
@@ -327,7 +327,7 @@
 │                             │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
 │                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2887 
 │                             ├ PublishedDate   : 2024-06-05T16:15:10.56Z 
-│                             ╰ LastModifiedDate: 2024-06-05T16:15:10.56Z 
+│                             ╰ LastModifiedDate: 2024-06-06T14:17:35.017Z 
 ├ [3] ╭ Target         : usr/bin/dive 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -525,7 +525,7 @@
 │                       │     │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
 │                       │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2888 
 │                       │     ├ PublishedDate   : 2024-06-05T16:15:10.47Z 
-│                       │     ╰ LastModifiedDate: 2024-06-05T16:15:10.47Z 
+│                       │     ╰ LastModifiedDate: 2024-06-06T14:17:35.017Z 
 │                       ╰ [3] ╭ VulnerabilityID : CVE-2024-24790 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.3 
@@ -554,7 +554,7 @@
 │                             │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
 │                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2887 
 │                             ├ PublishedDate   : 2024-06-05T16:15:10.56Z 
-│                             ╰ LastModifiedDate: 2024-06-05T16:15:10.56Z 
+│                             ╰ LastModifiedDate: 2024-06-06T14:17:35.017Z 
 ├ [4] ╭ Target         : usr/bin/docker 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -588,7 +588,7 @@
 │                       │     │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
 │                       │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2888 
 │                       │     ├ PublishedDate   : 2024-06-05T16:15:10.47Z 
-│                       │     ╰ LastModifiedDate: 2024-06-05T16:15:10.47Z 
+│                       │     ╰ LastModifiedDate: 2024-06-06T14:17:35.017Z 
 │                       ╰ [1] ╭ VulnerabilityID : CVE-2024-24790 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.21.10 
@@ -617,7 +617,7 @@
 │                             │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
 │                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2887 
 │                             ├ PublishedDate   : 2024-06-05T16:15:10.56Z 
-│                             ╰ LastModifiedDate: 2024-06-05T16:15:10.56Z 
+│                             ╰ LastModifiedDate: 2024-06-06T14:17:35.017Z 
 ├ [5] ╭ Target         : usr/bin/helm 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -884,7 +884,7 @@
 │                       │     │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
 │                       │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2888 
 │                       │     ├ PublishedDate   : 2024-06-05T16:15:10.47Z 
-│                       │     ╰ LastModifiedDate: 2024-06-05T16:15:10.47Z 
+│                       │     ╰ LastModifiedDate: 2024-06-06T14:17:35.017Z 
 │                       ╰ [4] ╭ VulnerabilityID : CVE-2024-24790 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.21.10 
@@ -913,7 +913,7 @@
 │                             │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
 │                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2887 
 │                             ├ PublishedDate   : 2024-06-05T16:15:10.56Z 
-│                             ╰ LastModifiedDate: 2024-06-05T16:15:10.56Z 
+│                             ╰ LastModifiedDate: 2024-06-06T14:17:35.017Z 
 ╰ [6] ╭ Target         : usr/bin/skopeo 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
@@ -1944,7 +1944,7 @@
                         │     │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
                         │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2888 
                         │     ├ PublishedDate   : 2024-06-05T16:15:10.47Z 
-                        │     ╰ LastModifiedDate: 2024-06-05T16:15:10.47Z 
+                        │     ╰ LastModifiedDate: 2024-06-06T14:17:35.017Z 
                         ╰ [9] ╭ VulnerabilityID : CVE-2024-24790 
                               ├ PkgName         : stdlib 
                               ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.21.10 
@@ -1973,5 +1973,5 @@
                               │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
                               │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2887 
                               ├ PublishedDate   : 2024-06-05T16:15:10.56Z 
-                              ╰ LastModifiedDate: 2024-06-05T16:15:10.56Z 
+                              ╰ LastModifiedDate: 2024-06-06T14:17:35.017Z 
 ````
