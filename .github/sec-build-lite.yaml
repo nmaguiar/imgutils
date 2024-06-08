@@ -14,8 +14,8 @@
     FixedVersion: 26.0.2
     Status: fixed
     Layer:
-      Digest: sha256:c2ceda8ba0f357a76bc4fdcb4d0e3d5096644962247fa6b3995bb939c5358c24
-      DiffID: sha256:e9754a107eb42972c44eb2bba61059d89139af7a209d8e46ccbc0cbfa10fe7e9
+      Digest: sha256:ae8b4c95ed7008358a5875bd06fa51ecf712e01209c3d8257efb6eed39142d91
+      DiffID: sha256:67847fb7c15cc15161176676dcb0b161dda81b925b8e8aba28e7a7d3b978a337
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-32473
     DataSource:
@@ -55,8 +55,8 @@
     FixedVersion: 0.46.0
     Status: fixed
     Layer:
-      Digest: sha256:c2ceda8ba0f357a76bc4fdcb4d0e3d5096644962247fa6b3995bb939c5358c24
-      DiffID: sha256:e9754a107eb42972c44eb2bba61059d89139af7a209d8e46ccbc0cbfa10fe7e9
+      Digest: sha256:ae8b4c95ed7008358a5875bd06fa51ecf712e01209c3d8257efb6eed39142d91
+      DiffID: sha256:67847fb7c15cc15161176676dcb0b161dda81b925b8e8aba28e7a7d3b978a337
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-47108
     DataSource:
@@ -106,8 +106,8 @@
     FixedVersion: 1.21.9, 1.22.2
     Status: fixed
     Layer:
-      Digest: sha256:c2ceda8ba0f357a76bc4fdcb4d0e3d5096644962247fa6b3995bb939c5358c24
-      DiffID: sha256:e9754a107eb42972c44eb2bba61059d89139af7a209d8e46ccbc0cbfa10fe7e9
+      Digest: sha256:ae8b4c95ed7008358a5875bd06fa51ecf712e01209c3d8257efb6eed39142d91
+      DiffID: sha256:67847fb7c15cc15161176676dcb0b161dda81b925b8e8aba28e7a7d3b978a337
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45288
     DataSource:
       ID: govulndb
@@ -141,16 +141,10 @@
     - https://bugzilla.redhat.com/2268018
     - https://bugzilla.redhat.com/2268019
     - https://bugzilla.redhat.com/2268273
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2268017
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2268018
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2268019
     - https://bugzilla.redhat.com/show_bug.cgi?id=2268273
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45288
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45289
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45290
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24783
     - https://errata.almalinux.org/9/ALSA-2024-2724.html
-    - https://errata.rockylinux.org/RLSA-2024:2724
+    - https://errata.rockylinux.org/RLSA-2024:2699
     - https://go.dev/cl/576155
     - https://go.dev/issue/65051
     - https://groups.google.com/g/golang-announce/c/YgW0sx8mN3M
@@ -177,8 +171,8 @@
     FixedVersion: 1.22.3
     Status: fixed
     Layer:
-      Digest: sha256:c2ceda8ba0f357a76bc4fdcb4d0e3d5096644962247fa6b3995bb939c5358c24
-      DiffID: sha256:e9754a107eb42972c44eb2bba61059d89139af7a209d8e46ccbc0cbfa10fe7e9
+      Digest: sha256:ae8b4c95ed7008358a5875bd06fa51ecf712e01209c3d8257efb6eed39142d91
+      DiffID: sha256:67847fb7c15cc15161176676dcb0b161dda81b925b8e8aba28e7a7d3b978a337
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24788
     DataSource:
       ID: govulndb
@@ -212,8 +206,8 @@
     FixedVersion: 1.21.11, 1.22.4
     Status: fixed
     Layer:
-      Digest: sha256:c2ceda8ba0f357a76bc4fdcb4d0e3d5096644962247fa6b3995bb939c5358c24
-      DiffID: sha256:e9754a107eb42972c44eb2bba61059d89139af7a209d8e46ccbc0cbfa10fe7e9
+      Digest: sha256:ae8b4c95ed7008358a5875bd06fa51ecf712e01209c3d8257efb6eed39142d91
+      DiffID: sha256:67847fb7c15cc15161176676dcb0b161dda81b925b8e8aba28e7a7d3b978a337
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24789
     DataSource:
       ID: govulndb
@@ -238,8 +232,8 @@
     FixedVersion: 1.21.11, 1.22.4
     Status: fixed
     Layer:
-      Digest: sha256:c2ceda8ba0f357a76bc4fdcb4d0e3d5096644962247fa6b3995bb939c5358c24
-      DiffID: sha256:e9754a107eb42972c44eb2bba61059d89139af7a209d8e46ccbc0cbfa10fe7e9
+      Digest: sha256:ae8b4c95ed7008358a5875bd06fa51ecf712e01209c3d8257efb6eed39142d91
+      DiffID: sha256:67847fb7c15cc15161176676dcb0b161dda81b925b8e8aba28e7a7d3b978a337
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24790
     DataSource:
       ID: govulndb
