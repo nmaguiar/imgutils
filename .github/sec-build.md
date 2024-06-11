@@ -258,16 +258,19 @@
 │                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
 │                       │     │                           │           /I:N/A:H 
 │                       │     │                           ╰ V3Score : 7.5 
-│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-24788 
-│                       │     │                  ├ [1]: https://go.dev/cl/578375 
-│                       │     │                  ├ [2]: https://go.dev/issue/66754 
-│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/wkkO
+│                       │     ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/05/08/3 
+│                       │     │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2024-24788 
+│                       │     │                  ├ [2]: https://go.dev/cl/578375 
+│                       │     │                  ├ [3]: https://go.dev/issue/66754 
+│                       │     │                  ├ [4]: https://groups.google.com/g/golang-announce/c/wkkO
 │                       │     │                  │      4P9stm0 
-│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-24788 
-│                       │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-2824 
-│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-24788 
+│                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2024-24788 
+│                       │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2024-2824 
+│                       │     │                  ├ [7]: https://security.netapp.com/advisory/ntap-20240605
+│                       │     │                  │      -0002/ 
+│                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-24788 
 │                       │     ├ PublishedDate   : 2024-05-08T16:15:08.25Z 
-│                       │     ╰ LastModifiedDate: 2024-05-08T17:05:24.083Z 
+│                       │     ╰ LastModifiedDate: 2024-06-10T17:16:20.32Z 
 │                       ├ [4] ╭ VulnerabilityID : CVE-2024-24789 
 │                       │     ├ PkgName         : stdlib 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
@@ -292,13 +295,14 @@
 │                       │     │                   implementation reading the file. The archive/zip package now
 │                       │     │                   rejects files containing these errors. 
 │                       │     ├ Severity        : UNKNOWN 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/585397 
-│                       │     │                  ├ [1]: https://go.dev/issue/66869 
-│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/Xbxo
+│                       │     ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/06/04/1 
+│                       │     │                  ├ [1]: https://go.dev/cl/585397 
+│                       │     │                  ├ [2]: https://go.dev/issue/66869 
+│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/Xbxo
 │                       │     │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
-│                       │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2888 
+│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2024-2888 
 │                       │     ├ PublishedDate   : 2024-06-05T16:15:10.47Z 
-│                       │     ╰ LastModifiedDate: 2024-06-06T14:17:35.017Z 
+│                       │     ╰ LastModifiedDate: 2024-06-10T18:15:26.897Z 
 │                       ╰ [5] ╭ VulnerabilityID : CVE-2024-24790 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
@@ -321,17 +325,94 @@
 │                             │                   returning false for addresses which would return true in
 │                             │                   their traditional IPv4 forms. 
 │                             ├ Severity        : UNKNOWN 
-│                             ├ References       ╭ [0]: https://go.dev/cl/590316 
-│                             │                  ├ [1]: https://go.dev/issue/67680 
-│                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/Xbxo
+│                             ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/06/04/1 
+│                             │                  ├ [1]: https://go.dev/cl/590316 
+│                             │                  ├ [2]: https://go.dev/issue/67680 
+│                             │                  ├ [3]: https://groups.google.com/g/golang-announce/c/Xbxo
 │                             │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
-│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2887 
+│                             │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2024-2887 
 │                             ├ PublishedDate   : 2024-06-05T16:15:10.56Z 
-│                             ╰ LastModifiedDate: 2024-06-06T14:17:35.017Z 
+│                             ╰ LastModifiedDate: 2024-06-10T18:15:26.953Z 
 ├ [3] ╭ Target         : usr/bin/dive 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
-│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-24557 
+│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2021-41092 
+│                       │     ├ PkgName         : github.com/docker/cli 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/cli@v0.0.0-201909061
+│                       │     │                  │       53656-016a3232168d 
+│                       │     │                  ╰ UID : eab768a93593f30a 
+│                       │     ├ InstalledVersion: v0.0.0-20190906153656-016a3232168d 
+│                       │     ├ FixedVersion    : 20.10.9 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:4c5d4165265a827dda26f14764f94c8fb90e56aa
+│                       │     │                  │         b84500c92ab2fde06f33cfde 
+│                       │     │                  ╰ DiffID: sha256:5ea1ebe4a5624daef2e7a2779957871f519a8e8d
+│                       │     │                            5d1b3be707abde0241a71ede 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2021-41092 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Go 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areview
+│                       │     │                          ed+ecosystem%3Ago 
+│                       │     ├ Title           : docker: cli leaks private registry credentials to
+│                       │     │                   registry-1.docker.io 
+│                       │     ├ Description     : Docker CLI is the command line interface for the docker
+│                       │     │                   container runtime. A bug was found in the Docker CLI where
+│                       │     │                   running `docker login my-private-registry.example.com` with a
+│                       │     │                    misconfigured configuration file (typically
+│                       │     │                   `~/.docker/config.json`) listing a `credsStore` or
+│                       │     │                   `credHelpers` that could not be executed would result in any
+│                       │     │                   provided credentials being sent to `registry-1.docker.io`
+│                       │     │                   rather than the intended private registry. This bug has been
+│                       │     │                   fixed in Docker CLI 20.10.9. Users should update to this
+│                       │     │                   version as soon as possible. For users unable to update
+│                       │     │                   ensure that any configured credsStore or credHelpers entries
+│                       │     │                   in the configuration file reference an installed credential
+│                       │     │                   helper that is executable and on the PATH. 
+│                       │     ├ Severity        : MEDIUM 
+│                       │     ├ CweIDs           ╭ [0]: CWE-200 
+│                       │     │                  ╰ [1]: CWE-522 
+│                       │     ├ VendorSeverity   ╭ amazon: 2 
+│                       │     │                  ├ ghsa  : 2 
+│                       │     │                  ├ nvd   : 3 
+│                       │     │                  ├ redhat: 2 
+│                       │     │                  ╰ ubuntu: 2 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:H
+│                       │     │                  │        │           /I:N/A:N 
+│                       │     │                  │        ╰ V3Score : 5.4 
+│                       │     │                  ├ nvd    ╭ V2Vector: AV:N/AC:L/Au:N/C:P/I:N/A:N 
+│                       │     │                  │        ├ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H
+│                       │     │                  │        │           /I:N/A:N 
+│                       │     │                  │        ├ V2Score : 5 
+│                       │     │                  │        ╰ V3Score : 7.5 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H
+│                       │     │                           │           /I:N/A:N 
+│                       │     │                           ╰ V3Score : 7.5 
+│                       │     ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2021-41092 
+│                       │     │                  ├ [1] : https://cert-portal.siemens.com/productcert/pdf/s
+│                       │     │                  │       sa-222547.pdf 
+│                       │     │                  ├ [2] : https://github.com/docker/cli/commit/893e52cf4ba4
+│                       │     │                  │       b048d72e99748e0f86b2767c6c6b 
+│                       │     │                  ├ [3] : https://github.com/docker/cli/security/advisories
+│                       │     │                  │       /GHSA-99pg-grm5-qq3v 
+│                       │     │                  ├ [4] : https://lists.fedoraproject.org/archives/list/pac
+│                       │     │                  │       kage-announce%40lists.fedoraproject.org/message/B5Q6G6
+│                       │     │                  │       I4W5COQE25QMC7FJY3I3PAYFBB/ 
+│                       │     │                  ├ [5] : https://lists.fedoraproject.org/archives/list/pac
+│                       │     │                  │       kage-announce%40lists.fedoraproject.org/message/ZNFADT
+│                       │     │                  │       CHHYWVM6W4NJ6CB4FNFM2VMBIB/ 
+│                       │     │                  ├ [6] : https://lists.fedoraproject.org/archives/list/pac
+│                       │     │                  │       kage-announce@lists.fedoraproject.org/message/B5Q6G6I4
+│                       │     │                  │       W5COQE25QMC7FJY3I3PAYFBB 
+│                       │     │                  ├ [7] : https://lists.fedoraproject.org/archives/list/pac
+│                       │     │                  │       kage-announce@lists.fedoraproject.org/message/ZNFADTCH
+│                       │     │                  │       HYWVM6W4NJ6CB4FNFM2VMBIB 
+│                       │     │                  ├ [8] : https://nvd.nist.gov/vuln/detail/CVE-2021-41092 
+│                       │     │                  ├ [9] : https://ubuntu.com/security/notices/USN-5134-1 
+│                       │     │                  ╰ [10]: https://www.cve.org/CVERecord?id=CVE-2021-41092 
+│                       │     ├ PublishedDate   : 2021-10-04T20:15:07.757Z 
+│                       │     ╰ LastModifiedDate: 2023-11-07T03:38:49.683Z 
+│                       ├ [1] ╭ VulnerabilityID : CVE-2024-24557 
 │                       │     ├ PkgName         : github.com/docker/docker 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v24.0.7%2Binc
 │                       │     │                  │       ompatible 
@@ -398,7 +479,7 @@
 │                       │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-24557 
 │                       │     ├ PublishedDate   : 2024-02-01T17:15:10.953Z 
 │                       │     ╰ LastModifiedDate: 2024-02-09T20:21:32.97Z 
-│                       ╰ [1] ╭ VulnerabilityID : CVE-2023-45288 
+│                       ╰ [2] ╭ VulnerabilityID : CVE-2023-45288 
 │                             ├ PkgName         : golang.org/x/net 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.17.0 
 │                             │                  ╰ UID : 38b9f84f386a711c 
@@ -522,13 +603,14 @@
 │                       │     │                   implementation reading the file. The archive/zip package now
 │                       │     │                   rejects files containing these errors. 
 │                       │     ├ Severity        : UNKNOWN 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/585397 
-│                       │     │                  ├ [1]: https://go.dev/issue/66869 
-│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/Xbxo
+│                       │     ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/06/04/1 
+│                       │     │                  ├ [1]: https://go.dev/cl/585397 
+│                       │     │                  ├ [2]: https://go.dev/issue/66869 
+│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/Xbxo
 │                       │     │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
-│                       │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2888 
+│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2024-2888 
 │                       │     ├ PublishedDate   : 2024-06-05T16:15:10.47Z 
-│                       │     ╰ LastModifiedDate: 2024-06-06T14:17:35.017Z 
+│                       │     ╰ LastModifiedDate: 2024-06-10T18:15:26.897Z 
 │                       ╰ [1] ╭ VulnerabilityID : CVE-2024-24790 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.21.10 
@@ -551,13 +633,14 @@
 │                             │                   returning false for addresses which would return true in
 │                             │                   their traditional IPv4 forms. 
 │                             ├ Severity        : UNKNOWN 
-│                             ├ References       ╭ [0]: https://go.dev/cl/590316 
-│                             │                  ├ [1]: https://go.dev/issue/67680 
-│                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/Xbxo
+│                             ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/06/04/1 
+│                             │                  ├ [1]: https://go.dev/cl/590316 
+│                             │                  ├ [2]: https://go.dev/issue/67680 
+│                             │                  ├ [3]: https://groups.google.com/g/golang-announce/c/Xbxo
 │                             │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
-│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2887 
+│                             │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2024-2887 
 │                             ├ PublishedDate   : 2024-06-05T16:15:10.56Z 
-│                             ╰ LastModifiedDate: 2024-06-06T14:17:35.017Z 
+│                             ╰ LastModifiedDate: 2024-06-10T18:15:26.953Z 
 ├ [5] ╭ Target         : usr/bin/helm 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -790,10 +873,14 @@
 │                       │     │                  │       DU2FBDZ45U3A2VLSM35OJ2HU/ 
 │                       │     │                  ├ [17]: https://nvd.nist.gov/vuln/detail/CVE-2024-24786 
 │                       │     │                  ├ [18]: https://pkg.go.dev/vuln/GO-2024-2611 
-│                       │     │                  ├ [19]: https://ubuntu.com/security/notices/USN-6746-1 
-│                       │     │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
+│                       │     │                  ├ [19]: https://security.netapp.com/advisory/ntap-2024051
+│                       │     │                  │       7-0002 
+│                       │     │                  ├ [20]: https://security.netapp.com/advisory/ntap-2024051
+│                       │     │                  │       7-0002/ 
+│                       │     │                  ├ [21]: https://ubuntu.com/security/notices/USN-6746-1 
+│                       │     │                  ╰ [22]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
 │                       │     ├ PublishedDate   : 2024-03-05T23:15:07.82Z 
-│                       │     ╰ LastModifiedDate: 2024-05-01T17:15:29.667Z 
+│                       │     ╰ LastModifiedDate: 2024-06-10T18:15:26.83Z 
 │                       ├ [3] ╭ VulnerabilityID : CVE-2024-24789 
 │                       │     ├ PkgName         : stdlib 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.21.10 
@@ -818,13 +905,14 @@
 │                       │     │                   implementation reading the file. The archive/zip package now
 │                       │     │                   rejects files containing these errors. 
 │                       │     ├ Severity        : UNKNOWN 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/585397 
-│                       │     │                  ├ [1]: https://go.dev/issue/66869 
-│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/Xbxo
+│                       │     ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/06/04/1 
+│                       │     │                  ├ [1]: https://go.dev/cl/585397 
+│                       │     │                  ├ [2]: https://go.dev/issue/66869 
+│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/Xbxo
 │                       │     │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
-│                       │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2888 
+│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2024-2888 
 │                       │     ├ PublishedDate   : 2024-06-05T16:15:10.47Z 
-│                       │     ╰ LastModifiedDate: 2024-06-06T14:17:35.017Z 
+│                       │     ╰ LastModifiedDate: 2024-06-10T18:15:26.897Z 
 │                       ╰ [4] ╭ VulnerabilityID : CVE-2024-24790 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.21.10 
@@ -847,13 +935,14 @@
 │                             │                   returning false for addresses which would return true in
 │                             │                   their traditional IPv4 forms. 
 │                             ├ Severity        : UNKNOWN 
-│                             ├ References       ╭ [0]: https://go.dev/cl/590316 
-│                             │                  ├ [1]: https://go.dev/issue/67680 
-│                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/Xbxo
+│                             ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/06/04/1 
+│                             │                  ├ [1]: https://go.dev/cl/590316 
+│                             │                  ├ [2]: https://go.dev/issue/67680 
+│                             │                  ├ [3]: https://groups.google.com/g/golang-announce/c/Xbxo
 │                             │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
-│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2887 
+│                             │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2024-2887 
 │                             ├ PublishedDate   : 2024-06-05T16:15:10.56Z 
-│                             ╰ LastModifiedDate: 2024-06-06T14:17:35.017Z 
+│                             ╰ LastModifiedDate: 2024-06-10T18:15:26.953Z 
 ╰ [6] ╭ Target         : usr/bin/skopeo 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
@@ -890,21 +979,51 @@
                         │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H
                         │     │                           │           /I:H/A:H 
                         │     │                           ╰ V3Score : 8.3 
-                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-3727 
-                        │     │                  ├ [1]: https://bugzilla.redhat.com/show_bug.cgi?id=2274767 
-                        │     │                  ├ [2]: https://github.com/containers/image 
-                        │     │                  ├ [3]: https://github.com/containers/image/commit/132678b
-                        │     │                  │      47bae29c710589012668cb85859d88385 
-                        │     │                  ├ [4]: https://github.com/containers/image/commit/e894804
-                        │     │                  │      6055060605bd68289d406ce149590c33a 
-                        │     │                  ├ [5]: https://github.com/containers/image/releases/tag/v
-                        │     │                  │      5.29.3 
-                        │     │                  ├ [6]: https://github.com/containers/image/releases/tag/v
-                        │     │                  │      5.30.1 
-                        │     │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2024-3727 
-                        │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-3727 
+                        │     ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2024-3727 
+                        │     │                  ├ [1] : https://bugzilla.redhat.com/show_bug.cgi?id=2274767 
+                        │     │                  ├ [2] : https://github.com/containers/image 
+                        │     │                  ├ [3] : https://github.com/containers/image/commit/132678
+                        │     │                  │       b47bae29c710589012668cb85859d88385 
+                        │     │                  ├ [4] : https://github.com/containers/image/commit/e89480
+                        │     │                  │       46055060605bd68289d406ce149590c33a 
+                        │     │                  ├ [5] : https://github.com/containers/image/releases/tag/
+                        │     │                  │       v5.29.3 
+                        │     │                  ├ [6] : https://github.com/containers/image/releases/tag/
+                        │     │                  │       v5.30.1 
+                        │     │                  ├ [7] : https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  │       kage-announce@lists.fedoraproject.org/message/4HEYS34N
+                        │     │                  │       55G7NOQZKNEXZKQVNDGEICCD 
+                        │     │                  ├ [8] : https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  │       kage-announce@lists.fedoraproject.org/message/4HEYS34N
+                        │     │                  │       55G7NOQZKNEXZKQVNDGEICCD/ 
+                        │     │                  ├ [9] : https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  │       kage-announce@lists.fedoraproject.org/message/6B37TXOK
+                        │     │                  │       TKDBE2V26X2NSP7JKNMZOFVP 
+                        │     │                  ├ [10]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  │       kage-announce@lists.fedoraproject.org/message/6B37TXOK
+                        │     │                  │       TKDBE2V26X2NSP7JKNMZOFVP/ 
+                        │     │                  ├ [11]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  │       kage-announce@lists.fedoraproject.org/message/CYT3D2P3
+                        │     │                  │       OJKISNFKOOHGY6HCUCQZYAVR 
+                        │     │                  ├ [12]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  │       kage-announce@lists.fedoraproject.org/message/CYT3D2P3
+                        │     │                  │       OJKISNFKOOHGY6HCUCQZYAVR/ 
+                        │     │                  ├ [13]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  │       kage-announce@lists.fedoraproject.org/message/DLND3YDQ
+                        │     │                  │       QRWVRIUPL2G5UKXP5L3VSBBT 
+                        │     │                  ├ [14]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  │       kage-announce@lists.fedoraproject.org/message/DLND3YDQ
+                        │     │                  │       QRWVRIUPL2G5UKXP5L3VSBBT/ 
+                        │     │                  ├ [15]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  │       kage-announce@lists.fedoraproject.org/message/QFXMF3VV
+                        │     │                  │       KIZN7ZMB7PKZCSWV6MOMTGMQ 
+                        │     │                  ├ [16]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  │       kage-announce@lists.fedoraproject.org/message/QFXMF3VV
+                        │     │                  │       KIZN7ZMB7PKZCSWV6MOMTGMQ/ 
+                        │     │                  ├ [17]: https://nvd.nist.gov/vuln/detail/CVE-2024-3727 
+                        │     │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2024-3727 
                         │     ├ PublishedDate   : 2024-05-14T15:42:07.06Z 
-                        │     ╰ LastModifiedDate: 2024-05-14T16:11:39.51Z 
+                        │     ╰ LastModifiedDate: 2024-06-10T18:15:36.16Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2024-24557 
                         │     ├ PkgName         : github.com/docker/docker 
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v24.0.7%2Binc
@@ -1735,10 +1854,14 @@
                         │     │                  │       DU2FBDZ45U3A2VLSM35OJ2HU/ 
                         │     │                  ├ [17]: https://nvd.nist.gov/vuln/detail/CVE-2024-24786 
                         │     │                  ├ [18]: https://pkg.go.dev/vuln/GO-2024-2611 
-                        │     │                  ├ [19]: https://ubuntu.com/security/notices/USN-6746-1 
-                        │     │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
+                        │     │                  ├ [19]: https://security.netapp.com/advisory/ntap-2024051
+                        │     │                  │       7-0002 
+                        │     │                  ├ [20]: https://security.netapp.com/advisory/ntap-2024051
+                        │     │                  │       7-0002/ 
+                        │     │                  ├ [21]: https://ubuntu.com/security/notices/USN-6746-1 
+                        │     │                  ╰ [22]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
                         │     ├ PublishedDate   : 2024-03-05T23:15:07.82Z 
-                        │     ╰ LastModifiedDate: 2024-05-01T17:15:29.667Z 
+                        │     ╰ LastModifiedDate: 2024-06-10T18:15:26.83Z 
                         ├ [7] ╭ VulnerabilityID : CVE-2024-28180 
                         │     ├ PkgName         : gopkg.in/go-jose/go-jose.v2 
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/gopkg.in/go-jose/go-jose.v2@v2.6.1 
@@ -1878,13 +2001,14 @@
                         │     │                   implementation reading the file. The archive/zip package now
                         │     │                   rejects files containing these errors. 
                         │     ├ Severity        : UNKNOWN 
-                        │     ├ References       ╭ [0]: https://go.dev/cl/585397 
-                        │     │                  ├ [1]: https://go.dev/issue/66869 
-                        │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/Xbxo
+                        │     ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/06/04/1 
+                        │     │                  ├ [1]: https://go.dev/cl/585397 
+                        │     │                  ├ [2]: https://go.dev/issue/66869 
+                        │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/Xbxo
                         │     │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
-                        │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2888 
+                        │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2024-2888 
                         │     ├ PublishedDate   : 2024-06-05T16:15:10.47Z 
-                        │     ╰ LastModifiedDate: 2024-06-06T14:17:35.017Z 
+                        │     ╰ LastModifiedDate: 2024-06-10T18:15:26.897Z 
                         ╰ [9] ╭ VulnerabilityID : CVE-2024-24790 
                               ├ PkgName         : stdlib 
                               ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.21.10 
@@ -1907,11 +2031,12 @@
                               │                   returning false for addresses which would return true in
                               │                   their traditional IPv4 forms. 
                               ├ Severity        : UNKNOWN 
-                              ├ References       ╭ [0]: https://go.dev/cl/590316 
-                              │                  ├ [1]: https://go.dev/issue/67680 
-                              │                  ├ [2]: https://groups.google.com/g/golang-announce/c/Xbxo
+                              ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/06/04/1 
+                              │                  ├ [1]: https://go.dev/cl/590316 
+                              │                  ├ [2]: https://go.dev/issue/67680 
+                              │                  ├ [3]: https://groups.google.com/g/golang-announce/c/Xbxo
                               │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
-                              │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2887 
+                              │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2024-2887 
                               ├ PublishedDate   : 2024-06-05T16:15:10.56Z 
-                              ╰ LastModifiedDate: 2024-06-06T14:17:35.017Z 
+                              ╰ LastModifiedDate: 2024-06-10T18:15:26.953Z 
 ````
