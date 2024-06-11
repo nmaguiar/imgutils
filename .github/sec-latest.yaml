@@ -197,15 +197,17 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
+    - http://www.openwall.com/lists/oss-security/2024/05/08/3
     - https://access.redhat.com/security/cve/CVE-2024-24788
     - https://go.dev/cl/578375
     - https://go.dev/issue/66754
     - https://groups.google.com/g/golang-announce/c/wkkO4P9stm0
     - https://nvd.nist.gov/vuln/detail/CVE-2024-24788
     - https://pkg.go.dev/vuln/GO-2024-2824
+    - https://security.netapp.com/advisory/ntap-20240605-0002/
     - https://www.cve.org/CVERecord?id=CVE-2024-24788
     PublishedDate: '2024-05-08T16:15:08.25Z'
-    LastModifiedDate: '2024-05-08T17:05:24.083Z'
+    LastModifiedDate: '2024-06-10T17:16:20.32Z'
   - VulnerabilityID: CVE-2024-24789
     PkgName: stdlib
     PkgIdentifier:
@@ -226,12 +228,13 @@
     Description: The archive/zip package's handling of certain types of invalid zip files differs from the behavior of most zip implementations. This misalignment could be exploited to create an zip file with contents that vary depending on the implementation reading the file. The archive/zip package now rejects files containing these errors.
     Severity: UNKNOWN
     References:
+    - http://www.openwall.com/lists/oss-security/2024/06/04/1
     - https://go.dev/cl/585397
     - https://go.dev/issue/66869
     - https://groups.google.com/g/golang-announce/c/XbxouI9gY7k/m/TuoGEhxIEwAJ
     - https://pkg.go.dev/vuln/GO-2024-2888
     PublishedDate: '2024-06-05T16:15:10.47Z'
-    LastModifiedDate: '2024-06-06T14:17:35.017Z'
+    LastModifiedDate: '2024-06-10T18:15:26.897Z'
   - VulnerabilityID: CVE-2024-24790
     PkgName: stdlib
     PkgIdentifier:
@@ -252,16 +255,72 @@
     Description: The various Is methods (IsPrivate, IsLoopback, etc) did not work as expected for IPv4-mapped IPv6 addresses, returning false for addresses which would return true in their traditional IPv4 forms.
     Severity: UNKNOWN
     References:
+    - http://www.openwall.com/lists/oss-security/2024/06/04/1
     - https://go.dev/cl/590316
     - https://go.dev/issue/67680
     - https://groups.google.com/g/golang-announce/c/XbxouI9gY7k/m/TuoGEhxIEwAJ
     - https://pkg.go.dev/vuln/GO-2024-2887
     PublishedDate: '2024-06-05T16:15:10.56Z'
-    LastModifiedDate: '2024-06-06T14:17:35.017Z'
+    LastModifiedDate: '2024-06-10T18:15:26.953Z'
 - Target: usr/bin/dive
   Class: lang-pkgs
   Type: gobinary
   Vulnerabilities:
+  - VulnerabilityID: CVE-2021-41092
+    PkgName: github.com/docker/cli
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/docker/cli@v0.0.0-20190906153656-016a3232168d
+      UID: eab768a93593f30a
+    InstalledVersion: v0.0.0-20190906153656-016a3232168d
+    FixedVersion: 20.10.9
+    Status: fixed
+    Layer:
+      Digest: sha256:2e9a766ebd0182e2d29388587dd8dd374d68d0bc8837732ef23aca2d268abf05
+      DiffID: sha256:d64ca7d57bcb4a34cabbbae604d59c27a24a1388203b7fdce0a0b9a371c4a8a0
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2021-41092
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'docker: cli leaks private registry credentials to registry-1.docker.io'
+    Description: Docker CLI is the command line interface for the docker container runtime. A bug was found in the Docker CLI where running `docker login my-private-registry.example.com` with a misconfigured configuration file (typically `~/.docker/config.json`) listing a `credsStore` or `credHelpers` that could not be executed would result in any provided credentials being sent to `registry-1.docker.io` rather than the intended private registry. This bug has been fixed in Docker CLI 20.10.9. Users should update to this version as soon as possible. For users unable to update ensure that any configured credsStore or credHelpers entries in the configuration file reference an installed credential helper that is executable and on the PATH.
+    Severity: MEDIUM
+    CweIDs:
+    - CWE-200
+    - CWE-522
+    VendorSeverity:
+      amazon: 2
+      ghsa: 2
+      nvd: 3
+      redhat: 2
+      ubuntu: 2
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:H/I:N/A:N
+        V3Score: 5.4
+      nvd:
+        V2Vector: AV:N/AC:L/Au:N/C:P/I:N/A:N
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+        V2Score: 5
+        V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+        V3Score: 7.5
+    References:
+    - https://access.redhat.com/security/cve/CVE-2021-41092
+    - https://cert-portal.siemens.com/productcert/pdf/ssa-222547.pdf
+    - https://github.com/docker/cli/commit/893e52cf4ba4b048d72e99748e0f86b2767c6c6b
+    - https://github.com/docker/cli/security/advisories/GHSA-99pg-grm5-qq3v
+    - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/B5Q6G6I4W5COQE25QMC7FJY3I3PAYFBB/
+    - https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZNFADTCHHYWVM6W4NJ6CB4FNFM2VMBIB/
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/B5Q6G6I4W5COQE25QMC7FJY3I3PAYFBB
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZNFADTCHHYWVM6W4NJ6CB4FNFM2VMBIB
+    - https://nvd.nist.gov/vuln/detail/CVE-2021-41092
+    - https://ubuntu.com/security/notices/USN-5134-1
+    - https://www.cve.org/CVERecord?id=CVE-2021-41092
+    PublishedDate: '2021-10-04T20:15:07.757Z'
+    LastModifiedDate: '2023-11-07T03:38:49.683Z'
   - VulnerabilityID: CVE-2024-24557
     PkgName: github.com/docker/docker
     PkgIdentifier:
@@ -411,15 +470,17 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
+    - http://www.openwall.com/lists/oss-security/2024/05/08/3
     - https://access.redhat.com/security/cve/CVE-2024-24788
     - https://go.dev/cl/578375
     - https://go.dev/issue/66754
     - https://groups.google.com/g/golang-announce/c/wkkO4P9stm0
     - https://nvd.nist.gov/vuln/detail/CVE-2024-24788
     - https://pkg.go.dev/vuln/GO-2024-2824
+    - https://security.netapp.com/advisory/ntap-20240605-0002/
     - https://www.cve.org/CVERecord?id=CVE-2024-24788
     PublishedDate: '2024-05-08T16:15:08.25Z'
-    LastModifiedDate: '2024-05-08T17:05:24.083Z'
+    LastModifiedDate: '2024-06-10T17:16:20.32Z'
   - VulnerabilityID: CVE-2024-24789
     PkgName: stdlib
     PkgIdentifier:
@@ -440,12 +501,13 @@
     Description: The archive/zip package's handling of certain types of invalid zip files differs from the behavior of most zip implementations. This misalignment could be exploited to create an zip file with contents that vary depending on the implementation reading the file. The archive/zip package now rejects files containing these errors.
     Severity: UNKNOWN
     References:
+    - http://www.openwall.com/lists/oss-security/2024/06/04/1
     - https://go.dev/cl/585397
     - https://go.dev/issue/66869
     - https://groups.google.com/g/golang-announce/c/XbxouI9gY7k/m/TuoGEhxIEwAJ
     - https://pkg.go.dev/vuln/GO-2024-2888
     PublishedDate: '2024-06-05T16:15:10.47Z'
-    LastModifiedDate: '2024-06-06T14:17:35.017Z'
+    LastModifiedDate: '2024-06-10T18:15:26.897Z'
   - VulnerabilityID: CVE-2024-24790
     PkgName: stdlib
     PkgIdentifier:
@@ -466,12 +528,13 @@
     Description: The various Is methods (IsPrivate, IsLoopback, etc) did not work as expected for IPv4-mapped IPv6 addresses, returning false for addresses which would return true in their traditional IPv4 forms.
     Severity: UNKNOWN
     References:
+    - http://www.openwall.com/lists/oss-security/2024/06/04/1
     - https://go.dev/cl/590316
     - https://go.dev/issue/67680
     - https://groups.google.com/g/golang-announce/c/XbxouI9gY7k/m/TuoGEhxIEwAJ
     - https://pkg.go.dev/vuln/GO-2024-2887
     PublishedDate: '2024-06-05T16:15:10.56Z'
-    LastModifiedDate: '2024-06-06T14:17:35.017Z'
+    LastModifiedDate: '2024-06-10T18:15:26.953Z'
 - Target: usr/bin/docker
   Class: lang-pkgs
   Type: gobinary
@@ -496,12 +559,13 @@
     Description: The archive/zip package's handling of certain types of invalid zip files differs from the behavior of most zip implementations. This misalignment could be exploited to create an zip file with contents that vary depending on the implementation reading the file. The archive/zip package now rejects files containing these errors.
     Severity: UNKNOWN
     References:
+    - http://www.openwall.com/lists/oss-security/2024/06/04/1
     - https://go.dev/cl/585397
     - https://go.dev/issue/66869
     - https://groups.google.com/g/golang-announce/c/XbxouI9gY7k/m/TuoGEhxIEwAJ
     - https://pkg.go.dev/vuln/GO-2024-2888
     PublishedDate: '2024-06-05T16:15:10.47Z'
-    LastModifiedDate: '2024-06-06T14:17:35.017Z'
+    LastModifiedDate: '2024-06-10T18:15:26.897Z'
   - VulnerabilityID: CVE-2024-24790
     PkgName: stdlib
     PkgIdentifier:
@@ -522,12 +586,13 @@
     Description: The various Is methods (IsPrivate, IsLoopback, etc) did not work as expected for IPv4-mapped IPv6 addresses, returning false for addresses which would return true in their traditional IPv4 forms.
     Severity: UNKNOWN
     References:
+    - http://www.openwall.com/lists/oss-security/2024/06/04/1
     - https://go.dev/cl/590316
     - https://go.dev/issue/67680
     - https://groups.google.com/g/golang-announce/c/XbxouI9gY7k/m/TuoGEhxIEwAJ
     - https://pkg.go.dev/vuln/GO-2024-2887
     PublishedDate: '2024-06-05T16:15:10.56Z'
-    LastModifiedDate: '2024-06-06T14:17:35.017Z'
+    LastModifiedDate: '2024-06-10T18:15:26.953Z'
 - Target: usr/bin/helm
   Class: lang-pkgs
   Type: gobinary
@@ -708,10 +773,12 @@
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JDMBHAVSDU2FBDZ45U3A2VLSM35OJ2HU/
     - https://nvd.nist.gov/vuln/detail/CVE-2024-24786
     - https://pkg.go.dev/vuln/GO-2024-2611
+    - https://security.netapp.com/advisory/ntap-20240517-0002
+    - https://security.netapp.com/advisory/ntap-20240517-0002/
     - https://ubuntu.com/security/notices/USN-6746-1
     - https://www.cve.org/CVERecord?id=CVE-2024-24786
     PublishedDate: '2024-03-05T23:15:07.82Z'
-    LastModifiedDate: '2024-05-01T17:15:29.667Z'
+    LastModifiedDate: '2024-06-10T18:15:26.83Z'
   - VulnerabilityID: CVE-2024-24789
     PkgName: stdlib
     PkgIdentifier:
@@ -732,12 +799,13 @@
     Description: The archive/zip package's handling of certain types of invalid zip files differs from the behavior of most zip implementations. This misalignment could be exploited to create an zip file with contents that vary depending on the implementation reading the file. The archive/zip package now rejects files containing these errors.
     Severity: UNKNOWN
     References:
+    - http://www.openwall.com/lists/oss-security/2024/06/04/1
     - https://go.dev/cl/585397
     - https://go.dev/issue/66869
     - https://groups.google.com/g/golang-announce/c/XbxouI9gY7k/m/TuoGEhxIEwAJ
     - https://pkg.go.dev/vuln/GO-2024-2888
     PublishedDate: '2024-06-05T16:15:10.47Z'
-    LastModifiedDate: '2024-06-06T14:17:35.017Z'
+    LastModifiedDate: '2024-06-10T18:15:26.897Z'
   - VulnerabilityID: CVE-2024-24790
     PkgName: stdlib
     PkgIdentifier:
@@ -758,12 +826,13 @@
     Description: The various Is methods (IsPrivate, IsLoopback, etc) did not work as expected for IPv4-mapped IPv6 addresses, returning false for addresses which would return true in their traditional IPv4 forms.
     Severity: UNKNOWN
     References:
+    - http://www.openwall.com/lists/oss-security/2024/06/04/1
     - https://go.dev/cl/590316
     - https://go.dev/issue/67680
     - https://groups.google.com/g/golang-announce/c/XbxouI9gY7k/m/TuoGEhxIEwAJ
     - https://pkg.go.dev/vuln/GO-2024-2887
     PublishedDate: '2024-06-05T16:15:10.56Z'
-    LastModifiedDate: '2024-06-06T14:17:35.017Z'
+    LastModifiedDate: '2024-06-10T18:15:26.953Z'
 - Target: usr/bin/skopeo
   Class: lang-pkgs
   Type: gobinary
@@ -808,10 +877,20 @@
     - https://github.com/containers/image/commit/e8948046055060605bd68289d406ce149590c33a
     - https://github.com/containers/image/releases/tag/v5.29.3
     - https://github.com/containers/image/releases/tag/v5.30.1
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4HEYS34N55G7NOQZKNEXZKQVNDGEICCD
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4HEYS34N55G7NOQZKNEXZKQVNDGEICCD/
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6B37TXOKTKDBE2V26X2NSP7JKNMZOFVP
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6B37TXOKTKDBE2V26X2NSP7JKNMZOFVP/
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CYT3D2P3OJKISNFKOOHGY6HCUCQZYAVR
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CYT3D2P3OJKISNFKOOHGY6HCUCQZYAVR/
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DLND3YDQQRWVRIUPL2G5UKXP5L3VSBBT
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DLND3YDQQRWVRIUPL2G5UKXP5L3VSBBT/
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QFXMF3VVKIZN7ZMB7PKZCSWV6MOMTGMQ
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QFXMF3VVKIZN7ZMB7PKZCSWV6MOMTGMQ/
     - https://nvd.nist.gov/vuln/detail/CVE-2024-3727
     - https://www.cve.org/CVERecord?id=CVE-2024-3727
     PublishedDate: '2024-05-14T15:42:07.06Z'
-    LastModifiedDate: '2024-05-14T16:11:39.51Z'
+    LastModifiedDate: '2024-06-10T18:15:36.16Z'
   - VulnerabilityID: CVE-2024-24557
     PkgName: github.com/docker/docker
     PkgIdentifier:
@@ -1346,10 +1425,12 @@
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JDMBHAVSDU2FBDZ45U3A2VLSM35OJ2HU/
     - https://nvd.nist.gov/vuln/detail/CVE-2024-24786
     - https://pkg.go.dev/vuln/GO-2024-2611
+    - https://security.netapp.com/advisory/ntap-20240517-0002
+    - https://security.netapp.com/advisory/ntap-20240517-0002/
     - https://ubuntu.com/security/notices/USN-6746-1
     - https://www.cve.org/CVERecord?id=CVE-2024-24786
     PublishedDate: '2024-03-05T23:15:07.82Z'
-    LastModifiedDate: '2024-05-01T17:15:29.667Z'
+    LastModifiedDate: '2024-06-10T18:15:26.83Z'
   - VulnerabilityID: CVE-2024-28180
     PkgName: gopkg.in/go-jose/go-jose.v2
     PkgIdentifier:
@@ -1444,12 +1525,13 @@
     Description: The archive/zip package's handling of certain types of invalid zip files differs from the behavior of most zip implementations. This misalignment could be exploited to create an zip file with contents that vary depending on the implementation reading the file. The archive/zip package now rejects files containing these errors.
     Severity: UNKNOWN
     References:
+    - http://www.openwall.com/lists/oss-security/2024/06/04/1
     - https://go.dev/cl/585397
     - https://go.dev/issue/66869
     - https://groups.google.com/g/golang-announce/c/XbxouI9gY7k/m/TuoGEhxIEwAJ
     - https://pkg.go.dev/vuln/GO-2024-2888
     PublishedDate: '2024-06-05T16:15:10.47Z'
-    LastModifiedDate: '2024-06-06T14:17:35.017Z'
+    LastModifiedDate: '2024-06-10T18:15:26.897Z'
   - VulnerabilityID: CVE-2024-24790
     PkgName: stdlib
     PkgIdentifier:
@@ -1470,9 +1552,10 @@
     Description: The various Is methods (IsPrivate, IsLoopback, etc) did not work as expected for IPv4-mapped IPv6 addresses, returning false for addresses which would return true in their traditional IPv4 forms.
     Severity: UNKNOWN
     References:
+    - http://www.openwall.com/lists/oss-security/2024/06/04/1
     - https://go.dev/cl/590316
     - https://go.dev/issue/67680
     - https://groups.google.com/g/golang-announce/c/XbxouI9gY7k/m/TuoGEhxIEwAJ
     - https://pkg.go.dev/vuln/GO-2024-2887
     PublishedDate: '2024-06-05T16:15:10.56Z'
-    LastModifiedDate: '2024-06-06T14:17:35.017Z'
+    LastModifiedDate: '2024-06-10T18:15:26.953Z'
