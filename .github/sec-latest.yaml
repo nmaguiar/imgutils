@@ -890,6 +890,7 @@
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/FBZQ2ZRMFEUQ35235B2HWPSXGDCBZHFV
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/FBZQ2ZRMFEUQ35235B2HWPSXGDCBZHFV/
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GD2GSBQTBLYADASUBHHZV2CZPTSLIPQJ
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GD2GSBQTBLYADASUBHHZV2CZPTSLIPQJ/
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QFXMF3VVKIZN7ZMB7PKZCSWV6MOMTGMQ
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QFXMF3VVKIZN7ZMB7PKZCSWV6MOMTGMQ/
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SFVSMR7TNLO2KPWJSW4CF64C2QMQXCIN
@@ -897,7 +898,7 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2024-3727
     - https://www.cve.org/CVERecord?id=CVE-2024-3727
     PublishedDate: '2024-05-14T15:42:07.06Z'
-    LastModifiedDate: '2024-06-11T04:15:13.247Z'
+    LastModifiedDate: '2024-06-12T02:15:10.053Z'
   - VulnerabilityID: CVE-2024-24557
     PkgName: github.com/docker/docker
     PkgIdentifier:
@@ -976,7 +977,7 @@
       alma: 2
       cbl-mariner: 2
       ghsa: 2
-      oracle-oval: 3
+      oracle-oval: 2
       redhat: 2
       rocky: 2
     CVSS:
@@ -1002,8 +1003,9 @@
     - https://github.com/go-jose/go-jose/commit/f4c051a0653d78199a053892f7619ebf96339502
     - https://github.com/go-jose/go-jose/security/advisories/GHSA-c5q2-7r4c-mv6g
     - https://linux.oracle.com/cve/CVE-2024-28180.html
-    - https://linux.oracle.com/errata/ELSA-2024-3254.html
+    - https://linux.oracle.com/errata/ELSA-2024-3827.html
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GD2GSBQTBLYADASUBHHZV2CZPTSLIPQJ
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GD2GSBQTBLYADASUBHHZV2CZPTSLIPQJ/
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/I6MMWFBOXJA6ZCXNVPDFJ4XMK5PVG5RG
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/I6MMWFBOXJA6ZCXNVPDFJ4XMK5PVG5RG/
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/IJ6LAJJ2FTA2JVVOACCV5RZTOIZLXUNJ
@@ -1023,7 +1025,7 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2024-28180
     - https://www.cve.org/CVERecord?id=CVE-2024-28180
     PublishedDate: '2024-03-09T01:15:07.34Z'
-    LastModifiedDate: '2024-03-31T03:15:07.68Z'
+    LastModifiedDate: '2024-06-12T02:15:09.82Z'
   - VulnerabilityID: CVE-2024-21626
     PkgName: github.com/opencontainers/runc
     PkgIdentifier:
@@ -1466,7 +1468,7 @@
       alma: 2
       cbl-mariner: 2
       ghsa: 2
-      oracle-oval: 3
+      oracle-oval: 2
       redhat: 2
       rocky: 2
     CVSS:
@@ -1492,8 +1494,9 @@
     - https://github.com/go-jose/go-jose/commit/f4c051a0653d78199a053892f7619ebf96339502
     - https://github.com/go-jose/go-jose/security/advisories/GHSA-c5q2-7r4c-mv6g
     - https://linux.oracle.com/cve/CVE-2024-28180.html
-    - https://linux.oracle.com/errata/ELSA-2024-3254.html
+    - https://linux.oracle.com/errata/ELSA-2024-3827.html
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GD2GSBQTBLYADASUBHHZV2CZPTSLIPQJ
+    - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GD2GSBQTBLYADASUBHHZV2CZPTSLIPQJ/
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/I6MMWFBOXJA6ZCXNVPDFJ4XMK5PVG5RG
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/I6MMWFBOXJA6ZCXNVPDFJ4XMK5PVG5RG/
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/IJ6LAJJ2FTA2JVVOACCV5RZTOIZLXUNJ
@@ -1513,7 +1516,7 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2024-28180
     - https://www.cve.org/CVERecord?id=CVE-2024-28180
     PublishedDate: '2024-03-09T01:15:07.34Z'
-    LastModifiedDate: '2024-03-31T03:15:07.68Z'
+    LastModifiedDate: '2024-06-12T02:15:09.82Z'
   - VulnerabilityID: CVE-2024-24789
     PkgName: stdlib
     PkgIdentifier:
