@@ -191,6 +191,7 @@
     Description: A malformed DNS message in response to a query can cause the Lookup functions to get stuck in an infinite loop.
     Severity: HIGH
     VendorSeverity:
+      cbl-mariner: 2
       redhat: 2
     CVSS:
       redhat:
@@ -205,9 +206,10 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2024-24788
     - https://pkg.go.dev/vuln/GO-2024-2824
     - https://security.netapp.com/advisory/ntap-20240605-0002/
+    - https://security.netapp.com/advisory/ntap-20240614-0001/
     - https://www.cve.org/CVERecord?id=CVE-2024-24788
     PublishedDate: '2024-05-08T16:15:08.25Z'
-    LastModifiedDate: '2024-06-10T17:16:20.32Z'
+    LastModifiedDate: '2024-06-14T13:15:50.67Z'
   - VulnerabilityID: CVE-2024-24789
     PkgName: stdlib
     PkgIdentifier:
@@ -464,6 +466,7 @@
     Description: A malformed DNS message in response to a query can cause the Lookup functions to get stuck in an infinite loop.
     Severity: HIGH
     VendorSeverity:
+      cbl-mariner: 2
       redhat: 2
     CVSS:
       redhat:
@@ -478,9 +481,10 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2024-24788
     - https://pkg.go.dev/vuln/GO-2024-2824
     - https://security.netapp.com/advisory/ntap-20240605-0002/
+    - https://security.netapp.com/advisory/ntap-20240614-0001/
     - https://www.cve.org/CVERecord?id=CVE-2024-24788
     PublishedDate: '2024-05-08T16:15:08.25Z'
-    LastModifiedDate: '2024-06-10T17:16:20.32Z'
+    LastModifiedDate: '2024-06-14T13:15:50.67Z'
   - VulnerabilityID: CVE-2024-24789
     PkgName: stdlib
     PkgIdentifier:
@@ -988,14 +992,15 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L
         V3Score: 4.3
     References:
-    - https://access.redhat.com/errata/RHSA-2024:2549
+    - https://access.redhat.com/errata/RHSA-2024:3827
     - https://access.redhat.com/security/cve/CVE-2024-28180
-    - https://bugzilla.redhat.com/2268046
+    - https://bugzilla.redhat.com/2268017
+    - https://bugzilla.redhat.com/2268820
     - https://bugzilla.redhat.com/2268854
     - https://bugzilla.redhat.com/show_bug.cgi?id=2268046
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24786
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-28180
-    - https://errata.almalinux.org/9/ALSA-2024-2549.html
+    - https://errata.almalinux.org/9/ALSA-2024-3827.html
     - https://errata.rockylinux.org/RLSA-2024:2549
     - https://github.com/go-jose/go-jose
     - https://github.com/go-jose/go-jose/commit/0dd4dd541c665fb292d664f77604ba694726f298
@@ -1479,14 +1484,15 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L
         V3Score: 4.3
     References:
-    - https://access.redhat.com/errata/RHSA-2024:2549
+    - https://access.redhat.com/errata/RHSA-2024:3827
     - https://access.redhat.com/security/cve/CVE-2024-28180
-    - https://bugzilla.redhat.com/2268046
+    - https://bugzilla.redhat.com/2268017
+    - https://bugzilla.redhat.com/2268820
     - https://bugzilla.redhat.com/2268854
     - https://bugzilla.redhat.com/show_bug.cgi?id=2268046
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24786
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-28180
-    - https://errata.almalinux.org/9/ALSA-2024-2549.html
+    - https://errata.almalinux.org/9/ALSA-2024-3827.html
     - https://errata.rockylinux.org/RLSA-2024:2549
     - https://github.com/go-jose/go-jose
     - https://github.com/go-jose/go-jose/commit/0dd4dd541c665fb292d664f77604ba694726f298
