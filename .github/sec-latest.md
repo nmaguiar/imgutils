@@ -140,7 +140,49 @@
 │                       │     │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2023-47108 
 │                       │     ├ PublishedDate   : 2023-11-10T19:15:16.41Z 
 │                       │     ╰ LastModifiedDate: 2023-11-20T19:34:26.493Z 
-│                       ├ [2] ╭ VulnerabilityID : CVE-2023-45288 
+│                       ├ [2] ╭ VulnerabilityID : CVE-2024-24790 
+│                       │     ├ PkgName         : stdlib 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
+│                       │     │                  ╰ UID : cd28c68ec9dd2486 
+│                       │     ├ InstalledVersion: 1.22.1 
+│                       │     ├ FixedVersion    : 1.21.11, 1.22.4 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:d855aaa74d178735c45d45574f15cbaebddac675
+│                       │     │                  │         dae9053ef39a6c66975365ea 
+│                       │     │                  ╰ DiffID: sha256:4a8b708f1a83dfb07302e3a0941589b4686f24d6
+│                       │     │                            d4ca3a4779ad9ad37e81d50b 
+│                       │     ├ SeveritySource  : nvd 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24790 
+│                       │     ├ DataSource       ╭ ID  : govulndb 
+│                       │     │                  ├ Name: The Go Vulnerability Database 
+│                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │     ├ Title           : golang: net/netip: Unexpected behavior from Is methods
+│                       │     │                   for IPv4-mapped IPv6 addresses 
+│                       │     ├ Description     : The various Is methods (IsPrivate, IsLoopback, etc) did
+│                       │     │                   not work as expected for IPv4-mapped IPv6 addresses,
+│                       │     │                   returning false for addresses which would return true in
+│                       │     │                   their traditional IPv4 forms. 
+│                       │     ├ Severity        : CRITICAL 
+│                       │     ├ VendorSeverity   ╭ nvd   : 4 
+│                       │     │                  ╰ redhat: 2 
+│                       │     ├ CVSS             ╭ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H
+│                       │     │                  │        │           /I:H/A:H 
+│                       │     │                  │        ╰ V3Score : 9.8 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H
+│                       │     │                           │           /I:H/A:N 
+│                       │     │                           ╰ V3Score : 6.7 
+│                       │     ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/06/04/1 
+│                       │     │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2024-24790 
+│                       │     │                  ├ [2]: https://go.dev/cl/590316 
+│                       │     │                  ├ [3]: https://go.dev/issue/67680 
+│                       │     │                  ├ [4]: https://groups.google.com/g/golang-announce/c/Xbxo
+│                       │     │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
+│                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2024-24790 
+│                       │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2024-2887 
+│                       │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-24790 
+│                       │     ├ PublishedDate   : 2024-06-05T16:15:10.56Z 
+│                       │     ╰ LastModifiedDate: 2024-06-18T17:59:12.547Z 
+│                       ├ [3] ╭ VulnerabilityID : CVE-2023-45288 
 │                       │     ├ PkgName         : stdlib 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
 │                       │     │                  ╰ UID : cd28c68ec9dd2486 
@@ -235,7 +277,7 @@
 │                       │     │                  ╰ [32]: https://www.kb.cert.org/vuls/id/421644 
 │                       │     ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
 │                       │     ╰ LastModifiedDate: 2024-05-01T18:15:10.493Z 
-│                       ├ [3] ╭ VulnerabilityID : CVE-2024-24788 
+│                       ├ [4] ╭ VulnerabilityID : CVE-2024-24788 
 │                       │     ├ PkgName         : stdlib 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
 │                       │     │                  ╰ UID : cd28c68ec9dd2486 
@@ -274,39 +316,7 @@
 │                       │     │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2024-24788 
 │                       │     ├ PublishedDate   : 2024-05-08T16:15:08.25Z 
 │                       │     ╰ LastModifiedDate: 2024-06-14T13:15:50.67Z 
-│                       ├ [4] ╭ VulnerabilityID : CVE-2024-24789 
-│                       │     ├ PkgName         : stdlib 
-│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
-│                       │     │                  ╰ UID : cd28c68ec9dd2486 
-│                       │     ├ InstalledVersion: 1.22.1 
-│                       │     ├ FixedVersion    : 1.21.11, 1.22.4 
-│                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:d855aaa74d178735c45d45574f15cbaebddac675
-│                       │     │                  │         dae9053ef39a6c66975365ea 
-│                       │     │                  ╰ DiffID: sha256:4a8b708f1a83dfb07302e3a0941589b4686f24d6
-│                       │     │                            d4ca3a4779ad9ad37e81d50b 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24789 
-│                       │     ├ DataSource       ╭ ID  : govulndb 
-│                       │     │                  ├ Name: The Go Vulnerability Database 
-│                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │     ├ Title           : The archive/zip package's handling of certain types of
-│                       │     │                   invalid zip fil ... 
-│                       │     ├ Description     : The archive/zip package's handling of certain types of
-│                       │     │                   invalid zip files differs from the behavior of most zip
-│                       │     │                   implementations. This misalignment could be exploited to
-│                       │     │                   create an zip file with contents that vary depending on the
-│                       │     │                   implementation reading the file. The archive/zip package now
-│                       │     │                   rejects files containing these errors. 
-│                       │     ├ Severity        : UNKNOWN 
-│                       │     ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/06/04/1 
-│                       │     │                  ├ [1]: https://go.dev/cl/585397 
-│                       │     │                  ├ [2]: https://go.dev/issue/66869 
-│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/Xbxo
-│                       │     │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
-│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2024-2888 
-│                       │     ├ PublishedDate   : 2024-06-05T16:15:10.47Z 
-│                       │     ╰ LastModifiedDate: 2024-06-10T18:15:26.897Z 
-│                       ╰ [5] ╭ VulnerabilityID : CVE-2024-24790 
+│                       ╰ [5] ╭ VulnerabilityID : CVE-2024-24789 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
 │                             │                  ╰ UID : cd28c68ec9dd2486 
@@ -317,25 +327,38 @@
 │                             │                  │         dae9053ef39a6c66975365ea 
 │                             │                  ╰ DiffID: sha256:4a8b708f1a83dfb07302e3a0941589b4686f24d6
 │                             │                            d4ca3a4779ad9ad37e81d50b 
-│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24790 
+│                             ├ SeveritySource  : nvd 
+│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24789 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ├ Title           : The various Is methods (IsPrivate, IsLoopback, etc) did
-│                             │                   not work as ex ... 
-│                             ├ Description     : The various Is methods (IsPrivate, IsLoopback, etc) did
-│                             │                   not work as expected for IPv4-mapped IPv6 addresses,
-│                             │                   returning false for addresses which would return true in
-│                             │                   their traditional IPv4 forms. 
-│                             ├ Severity        : UNKNOWN 
+│                             ├ Title           : golang: archive/zip: Incorrect handling of certain ZIP files 
+│                             ├ Description     : The archive/zip package's handling of certain types of
+│                             │                   invalid zip files differs from the behavior of most zip
+│                             │                   implementations. This misalignment could be exploited to
+│                             │                   create an zip file with contents that vary depending on the
+│                             │                   implementation reading the file. The archive/zip package now
+│                             │                   rejects files containing these errors. 
+│                             ├ Severity        : MEDIUM 
+│                             ├ VendorSeverity   ╭ nvd   : 2 
+│                             │                  ╰ redhat: 2 
+│                             ├ CVSS             ╭ nvd    ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N
+│                             │                  │        │           /I:H/A:N 
+│                             │                  │        ╰ V3Score : 5.5 
+│                             │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
+│                             │                           │           /I:H/A:N 
+│                             │                           ╰ V3Score : 7.5 
 │                             ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/06/04/1 
-│                             │                  ├ [1]: https://go.dev/cl/590316 
-│                             │                  ├ [2]: https://go.dev/issue/67680 
-│                             │                  ├ [3]: https://groups.google.com/g/golang-announce/c/Xbxo
+│                             │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2024-24789 
+│                             │                  ├ [2]: https://go.dev/cl/585397 
+│                             │                  ├ [3]: https://go.dev/issue/66869 
+│                             │                  ├ [4]: https://groups.google.com/g/golang-announce/c/Xbxo
 │                             │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
-│                             │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2024-2887 
-│                             ├ PublishedDate   : 2024-06-05T16:15:10.56Z 
-│                             ╰ LastModifiedDate: 2024-06-10T18:15:26.953Z 
+│                             │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2024-24789 
+│                             │                  ├ [6]: https://pkg.go.dev/vuln/GO-2024-2888 
+│                             │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-24789 
+│                             ├ PublishedDate   : 2024-06-05T16:15:10.47Z 
+│                             ╰ LastModifiedDate: 2024-06-18T17:58:22.417Z 
 ├ [3] ╭ Target         : usr/bin/dive 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
