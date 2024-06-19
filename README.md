@@ -12,7 +12,7 @@ Alpine based image ("nmaguiar/imgutils") with:
 
 This should be enough tools to be able to manage images on a Kubernetes cluster running inside the cluster (with the right permissions).
 
-If you just need _crictl_ you can also use the "nmaguiar/imgutils:lite" image.
+**If you just need _crictl_ you can also use the "nmaguiar/imgutils:lite" image.**
 
 ## Image security scans
 
