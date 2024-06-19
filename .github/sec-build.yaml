@@ -100,6 +100,47 @@
     - https://www.cve.org/CVERecord?id=CVE-2023-47108
     PublishedDate: '2023-11-10T19:15:16.41Z'
     LastModifiedDate: '2023-11-20T19:34:26.493Z'
+  - VulnerabilityID: CVE-2024-24790
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@1.22.1
+      UID: cd28c68ec9dd2486
+    InstalledVersion: 1.22.1
+    FixedVersion: 1.21.11, 1.22.4
+    Status: fixed
+    Layer:
+      Digest: sha256:d855aaa74d178735c45d45574f15cbaebddac675dae9053ef39a6c66975365ea
+      DiffID: sha256:4a8b708f1a83dfb07302e3a0941589b4686f24d6d4ca3a4779ad9ad37e81d50b
+    SeveritySource: nvd
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24790
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'golang: net/netip: Unexpected behavior from Is methods for IPv4-mapped IPv6 addresses'
+    Description: The various Is methods (IsPrivate, IsLoopback, etc) did not work as expected for IPv4-mapped IPv6 addresses, returning false for addresses which would return true in their traditional IPv4 forms.
+    Severity: CRITICAL
+    VendorSeverity:
+      nvd: 4
+      redhat: 2
+    CVSS:
+      nvd:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+        V3Score: 9.8
+      redhat:
+        V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N
+        V3Score: 6.7
+    References:
+    - http://www.openwall.com/lists/oss-security/2024/06/04/1
+    - https://access.redhat.com/security/cve/CVE-2024-24790
+    - https://go.dev/cl/590316
+    - https://go.dev/issue/67680
+    - https://groups.google.com/g/golang-announce/c/XbxouI9gY7k/m/TuoGEhxIEwAJ
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-24790
+    - https://pkg.go.dev/vuln/GO-2024-2887
+    - https://www.cve.org/CVERecord?id=CVE-2024-24790
+    PublishedDate: '2024-06-05T16:15:10.56Z'
+    LastModifiedDate: '2024-06-18T17:59:12.547Z'
   - VulnerabilityID: CVE-2023-45288
     PkgName: stdlib
     PkgIdentifier:
@@ -221,49 +262,36 @@
     Layer:
       Digest: sha256:d855aaa74d178735c45d45574f15cbaebddac675dae9053ef39a6c66975365ea
       DiffID: sha256:4a8b708f1a83dfb07302e3a0941589b4686f24d6d4ca3a4779ad9ad37e81d50b
+    SeveritySource: nvd
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24789
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Title: The archive/zip package's handling of certain types of invalid zip fil ...
+    Title: 'golang: archive/zip: Incorrect handling of certain ZIP files'
     Description: The archive/zip package's handling of certain types of invalid zip files differs from the behavior of most zip implementations. This misalignment could be exploited to create an zip file with contents that vary depending on the implementation reading the file. The archive/zip package now rejects files containing these errors.
-    Severity: UNKNOWN
+    Severity: MEDIUM
+    VendorSeverity:
+      nvd: 2
+      redhat: 2
+    CVSS:
+      nvd:
+        V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N
+        V3Score: 5.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
+        V3Score: 7.5
     References:
     - http://www.openwall.com/lists/oss-security/2024/06/04/1
+    - https://access.redhat.com/security/cve/CVE-2024-24789
     - https://go.dev/cl/585397
     - https://go.dev/issue/66869
     - https://groups.google.com/g/golang-announce/c/XbxouI9gY7k/m/TuoGEhxIEwAJ
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-24789
     - https://pkg.go.dev/vuln/GO-2024-2888
+    - https://www.cve.org/CVERecord?id=CVE-2024-24789
     PublishedDate: '2024-06-05T16:15:10.47Z'
-    LastModifiedDate: '2024-06-10T18:15:26.897Z'
-  - VulnerabilityID: CVE-2024-24790
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@1.22.1
-      UID: cd28c68ec9dd2486
-    InstalledVersion: 1.22.1
-    FixedVersion: 1.21.11, 1.22.4
-    Status: fixed
-    Layer:
-      Digest: sha256:d855aaa74d178735c45d45574f15cbaebddac675dae9053ef39a6c66975365ea
-      DiffID: sha256:4a8b708f1a83dfb07302e3a0941589b4686f24d6d4ca3a4779ad9ad37e81d50b
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24790
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Title: The various Is methods (IsPrivate, IsLoopback, etc) did not work as ex ...
-    Description: The various Is methods (IsPrivate, IsLoopback, etc) did not work as expected for IPv4-mapped IPv6 addresses, returning false for addresses which would return true in their traditional IPv4 forms.
-    Severity: UNKNOWN
-    References:
-    - http://www.openwall.com/lists/oss-security/2024/06/04/1
-    - https://go.dev/cl/590316
-    - https://go.dev/issue/67680
-    - https://groups.google.com/g/golang-announce/c/XbxouI9gY7k/m/TuoGEhxIEwAJ
-    - https://pkg.go.dev/vuln/GO-2024-2887
-    PublishedDate: '2024-06-05T16:15:10.56Z'
-    LastModifiedDate: '2024-06-10T18:15:26.953Z'
+    LastModifiedDate: '2024-06-18T17:58:22.417Z'
 - Target: usr/bin/dive
   Class: lang-pkgs
   Type: gobinary
