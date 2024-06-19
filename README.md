@@ -85,7 +85,11 @@ NODENAME=k3s-server-0 NAME=imgutils HPATH=/run/k3s/containerd/containerd.sock  /
 NODENAME=server-0 NAME=imgutils HPATH=/var/run/crio/crio.sock  /bin/sh -c './kubectl run -n kube-system $NAME --rm -ti --image=nmaguiar/imgutils  --overrides="{\"apiVersion\":\"v1\",\"spec\":{\"nodeName\":\"$NODENAME\",\"containers\":[{\"name\":\"$NAME\",\"image\":\"nmaguiar/imgutils:lite\",\"securityContext\":{\"privileged\":true},\"stdin\":true,\"stdinOnce\":true,\"tty\":true,\"args\":[\"sudo\",\"-E\",\"/bin/bash\"],\"env\":[{\"name\":\"CONTAINER_RUNTIME_ENDPOINT\",\"value\":\"unix:///run/crio/crio.sock\"}],\"volumeMounts\":[{\"name\":\"cri\",\"mountPath\":\"/run/crio/crio.sock\"}]}],\"volumes\":[{\"name\":\"cri\",\"hostPath\":{\"path\":\"$HPATH\"}}]}}" -- sudo -E /bin/bash'
 ```
 
-## Copying images and charts between registries
+---
+
+## Examples
+
+### Copying images and charts between registries
 
 1. Execute:
 
@@ -123,7 +127,7 @@ skopeo copy --all docker://a.registry/some/chart:1.2.3 docker://b.registry/some/
 exit
 ```
 
-## Copying images and charts from file to a registry
+### Copying images and charts from file to a registry
 
 1. Execute:
 
@@ -175,7 +179,7 @@ helm push /tmp/myChart.tgz oci://some/chart
 exit
 ```
 
-## Accessing the Docker daemon
+### Accessing the Docker daemon
 
 With docker you can execute directly:
 
@@ -200,9 +204,9 @@ To exit just execute:
 exit
 ```
 
-## Accessing Kubernetes container runtime
+### Accessing Kubernetes container runtime
 
-### AWS EKS with crictl
+#### AWS EKS with crictl
 
 To use crictl on a specific node (change from "server-0" to the specific node you want):
 
@@ -227,7 +231,7 @@ To exit just execute:
 exit
 ```
 
-### K3S with crictl
+#### K3S with crictl
 
 To use crictl on a specific node (change from "k3s-server-0" to the specific node you want):
 
@@ -252,7 +256,7 @@ To exit just execute:
 exit
 ```
 
-### OpenShift with crictl
+#### OpenShift with crictl
 
 To use crictl on a specific OpenShift node (change from "server-0" to the specific node you want):
 
@@ -277,7 +281,7 @@ To exit just execute:
 exit
 ```
 
-## Checking images content
+### Checking images content
 
 To check images use the following commands within the imgutils/nmaguiar:
 
@@ -293,7 +297,7 @@ $ mc
 # then use the midnight-commander UI to check the contents
 ```
 
-## Using the local docker authentication
+### Using the local docker authentication
 
 To start imgutils/nmaguiar with the local host docker authentication:
 
