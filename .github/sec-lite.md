@@ -160,14 +160,18 @@
                         │     │                   returning false for addresses which would return true in
                         │     │                   their traditional IPv4 forms. 
                         │     ├ Severity        : CRITICAL 
-                        │     ├ VendorSeverity   ╭ nvd   : 4 
-                        │     │                  ╰ redhat: 2 
-                        │     ├ CVSS             ╭ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H
-                        │     │                  │        │           /I:H/A:H 
-                        │     │                  │        ╰ V3Score : 9.8 
-                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H
-                        │     │                           │           /I:H/A:N 
-                        │     │                           ╰ V3Score : 6.7 
+                        │     ├ VendorSeverity   ╭ bitnami: 4 
+                        │     │                  ├ nvd    : 4 
+                        │     │                  ╰ redhat : 2 
+                        │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:
+                        │     │                  │         │           H/I:H/A:H 
+                        │     │                  │         ╰ V3Score : 9.8 
+                        │     │                  ├ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:
+                        │     │                  │         │           H/I:H/A:H 
+                        │     │                  │         ╰ V3Score : 9.8 
+                        │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:
+                        │     │                            │           H/I:H/A:N 
+                        │     │                            ╰ V3Score : 6.7 
                         │     ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/06/04/1 
                         │     │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2024-24790 
                         │     │                  ├ [2]: https://go.dev/cl/590316 
@@ -248,7 +252,7 @@
                         │     │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
                         │     │                  │       E-2024-24783 
                         │     │                  ├ [16]: https://errata.almalinux.org/9/ALSA-2024-2724.html 
-                        │     │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:2724 
+                        │     │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:3346 
                         │     │                  ├ [18]: https://go.dev/cl/576155 
                         │     │                  ├ [19]: https://go.dev/issue/65051 
                         │     │                  ├ [20]: https://groups.google.com/g/golang-announce/c/YgW
@@ -337,23 +341,30 @@
                               │                   implementation reading the file. The archive/zip package now
                               │                   rejects files containing these errors. 
                               ├ Severity        : MEDIUM 
-                              ├ VendorSeverity   ╭ nvd   : 2 
-                              │                  ╰ redhat: 2 
-                              ├ CVSS             ╭ nvd    ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N
-                              │                  │        │           /I:H/A:N 
-                              │                  │        ╰ V3Score : 5.5 
-                              │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
-                              │                           │           /I:H/A:N 
-                              │                           ╰ V3Score : 7.5 
+                              ├ VendorSeverity   ╭ bitnami: 2 
+                              │                  ├ nvd    : 2 
+                              │                  ╰ redhat : 2 
+                              ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:
+                              │                  │         │           N/I:H/A:N 
+                              │                  │         ╰ V3Score : 5.5 
+                              │                  ├ nvd     ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:
+                              │                  │         │           N/I:H/A:N 
+                              │                  │         ╰ V3Score : 5.5 
+                              │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:
+                              │                            │           N/I:H/A:N 
+                              │                            ╰ V3Score : 7.5 
                               ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/06/04/1 
                               │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2024-24789 
                               │                  ├ [2]: https://go.dev/cl/585397 
                               │                  ├ [3]: https://go.dev/issue/66869 
                               │                  ├ [4]: https://groups.google.com/g/golang-announce/c/Xbxo
                               │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
-                              │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2024-24789 
-                              │                  ├ [6]: https://pkg.go.dev/vuln/GO-2024-2888 
-                              │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-24789 
+                              │                  ├ [5]: https://lists.fedoraproject.org/archives/list/pack
+                              │                  │      age-announce@lists.fedoraproject.org/message/U5YAEIA6IU
+                              │                  │      HUNGJ7AIXXPQT6D2GYENX7/ 
+                              │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2024-24789 
+                              │                  ├ [7]: https://pkg.go.dev/vuln/GO-2024-2888 
+                              │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-24789 
                               ├ PublishedDate   : 2024-06-05T16:15:10.47Z 
-                              ╰ LastModifiedDate: 2024-06-18T17:58:22.417Z 
+                              ╰ LastModifiedDate: 2024-06-19T03:15:09.183Z 
 ````
