@@ -160,7 +160,8 @@
                         │     │                   returning false for addresses which would return true in
                         │     │                   their traditional IPv4 forms. 
                         │     ├ Severity        : CRITICAL 
-                        │     ├ VendorSeverity   ╭ bitnami: 4 
+                        │     ├ VendorSeverity   ╭ amazon : 2 
+                        │     │                  ├ bitnami: 4 
                         │     │                  ├ nvd    : 4 
                         │     │                  ╰ redhat : 2 
                         │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:
@@ -233,7 +234,7 @@
                         │     │                  │       4/03/16 
                         │     │                  ├ [1] : http://www.openwall.com/lists/oss-security/2024/0
                         │     │                  │       4/05/4 
-                        │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:2724 
+                        │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:3346 
                         │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2023-45288 
                         │     │                  ├ [4] : https://bugzilla.redhat.com/2268017 
                         │     │                  ├ [5] : https://bugzilla.redhat.com/2268018 
@@ -251,7 +252,7 @@
                         │     │                  │       E-2023-45290 
                         │     │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
                         │     │                  │       E-2024-24783 
-                        │     │                  ├ [16]: https://errata.almalinux.org/9/ALSA-2024-2724.html 
+                        │     │                  ├ [16]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
                         │     │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:2724 
                         │     │                  ├ [18]: https://go.dev/cl/576155 
                         │     │                  ├ [19]: https://go.dev/issue/65051 
@@ -341,7 +342,8 @@
                               │                   implementation reading the file. The archive/zip package now
                               │                   rejects files containing these errors. 
                               ├ Severity        : MEDIUM 
-                              ├ VendorSeverity   ╭ bitnami: 2 
+                              ├ VendorSeverity   ╭ amazon : 2 
+                              │                  ├ bitnami: 2 
                               │                  ├ nvd    : 2 
                               │                  ╰ redhat : 2 
                               ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:
