@@ -1010,10 +1010,14 @@
                         │     ├ Severity        : MEDIUM 
                         │     ├ CweIDs           ─ [0]: CWE-532 
                         │     ├ VendorSeverity   ╭ ghsa  : 2 
+                        │     │                  ├ nvd   : 2 
                         │     │                  ╰ redhat: 2 
                         │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H
                         │     │                  │        │           /I:N/A:N 
                         │     │                  │        ╰ V3Score : 6 
+                        │     │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H
+                        │     │                  │        │           /I:N/A:N 
+                        │     │                  │        ╰ V3Score : 5.5 
                         │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H
                         │     │                           │           /I:N/A:N 
                         │     │                           ╰ V3Score : 6 
@@ -1029,7 +1033,7 @@
                         │     │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2024-6104 
                         │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-6104 
                         │     ├ PublishedDate   : 2024-06-24T17:15:11.087Z 
-                        │     ╰ LastModifiedDate: 2024-06-24T19:26:35.967Z 
+                        │     ╰ LastModifiedDate: 2024-06-26T17:19:40.85Z 
                         ╰ [2] ╭ VulnerabilityID : CVE-2023-45288 
                               ├ PkgName         : golang.org/x/net 
                               ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.22.0 
