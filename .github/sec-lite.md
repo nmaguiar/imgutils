@@ -160,11 +160,13 @@
                         │     │                   returning false for addresses which would return true in
                         │     │                   their traditional IPv4 forms. 
                         │     ├ Severity        : CRITICAL 
-                        │     ├ VendorSeverity   ╭ amazon : 2 
-                        │     │                  ├ bitnami: 4 
-                        │     │                  ├ nvd    : 4 
-                        │     │                  ├ photon : 4 
-                        │     │                  ╰ redhat : 2 
+                        │     ├ VendorSeverity   ╭ alma       : 2 
+                        │     │                  ├ amazon     : 2 
+                        │     │                  ├ bitnami    : 4 
+                        │     │                  ├ nvd        : 4 
+                        │     │                  ├ oracle-oval: 2 
+                        │     │                  ├ photon     : 4 
+                        │     │                  ╰ redhat     : 2 
                         │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:
                         │     │                  │         │           H/I:H/A:H 
                         │     │                  │         ╰ V3Score : 9.8 
@@ -174,15 +176,22 @@
                         │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:
                         │     │                            │           H/I:H/A:N 
                         │     │                            ╰ V3Score : 6.7 
-                        │     ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/06/04/1 
-                        │     │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2024-24790 
-                        │     │                  ├ [2]: https://go.dev/cl/590316 
-                        │     │                  ├ [3]: https://go.dev/issue/67680 
-                        │     │                  ├ [4]: https://groups.google.com/g/golang-announce/c/Xbxo
-                        │     │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
-                        │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2024-24790 
-                        │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2024-2887 
-                        │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-24790 
+                        │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/0
+                        │     │                  │       6/04/1 
+                        │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:4212 
+                        │     │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2024-24790 
+                        │     │                  ├ [3] : https://bugzilla.redhat.com/2292668 
+                        │     │                  ├ [4] : https://bugzilla.redhat.com/2292787 
+                        │     │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2024-4212.html 
+                        │     │                  ├ [6] : https://go.dev/cl/590316 
+                        │     │                  ├ [7] : https://go.dev/issue/67680 
+                        │     │                  ├ [8] : https://groups.google.com/g/golang-announce/c/Xbx
+                        │     │                  │       ouI9gY7k/m/TuoGEhxIEwAJ 
+                        │     │                  ├ [9] : https://linux.oracle.com/cve/CVE-2024-24790.html 
+                        │     │                  ├ [10]: https://linux.oracle.com/errata/ELSA-2024-4212.html 
+                        │     │                  ├ [11]: https://nvd.nist.gov/vuln/detail/CVE-2024-24790 
+                        │     │                  ├ [12]: https://pkg.go.dev/vuln/GO-2024-2887 
+                        │     │                  ╰ [13]: https://www.cve.org/CVERecord?id=CVE-2024-24790 
                         │     ├ PublishedDate   : 2024-06-05T16:15:10.56Z 
                         │     ╰ LastModifiedDate: 2024-06-18T17:59:12.547Z 
                         ├ [3] ╭ VulnerabilityID : CVE-2023-45288 
@@ -235,7 +244,7 @@
                         │     │                  │       4/03/16 
                         │     │                  ├ [1] : http://www.openwall.com/lists/oss-security/2024/0
                         │     │                  │       4/05/4 
-                        │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:2724 
+                        │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:3346 
                         │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2023-45288 
                         │     │                  ├ [4] : https://bugzilla.redhat.com/2268017 
                         │     │                  ├ [5] : https://bugzilla.redhat.com/2268018 
@@ -253,7 +262,7 @@
                         │     │                  │       E-2023-45290 
                         │     │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
                         │     │                  │       E-2024-24783 
-                        │     │                  ├ [16]: https://errata.almalinux.org/9/ALSA-2024-2724.html 
+                        │     │                  ├ [16]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
                         │     │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:2724 
                         │     │                  ├ [18]: https://go.dev/cl/576155 
                         │     │                  ├ [19]: https://go.dev/issue/65051 
@@ -319,56 +328,100 @@
                         │     │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2024-24788 
                         │     ├ PublishedDate   : 2024-05-08T16:15:08.25Z 
                         │     ╰ LastModifiedDate: 2024-06-14T13:15:50.67Z 
-                        ╰ [5] ╭ VulnerabilityID : CVE-2024-24789 
+                        ├ [5] ╭ VulnerabilityID : CVE-2024-24789 
+                        │     ├ PkgName         : stdlib 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
+                        │     │                  ╰ UID : cd28c68ec9dd2486 
+                        │     ├ InstalledVersion: 1.22.1 
+                        │     ├ FixedVersion    : 1.21.11, 1.22.4 
+                        │     ├ Status          : fixed 
+                        │     ├ Layer            ╭ Digest: sha256:40121cbeab93e389405f93a388ea0322289e5c78
+                        │     │                  │         68893235ffe9093f241c84e9 
+                        │     │                  ╰ DiffID: sha256:dabe2d5497a098b6ca6d0b4ba5ac5031c81f70dc
+                        │     │                            98e873bf1c1c1305b868d3d1 
+                        │     ├ SeveritySource  : nvd 
+                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24789 
+                        │     ├ DataSource       ╭ ID  : govulndb 
+                        │     │                  ├ Name: The Go Vulnerability Database 
+                        │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │     ├ Title           : golang: archive/zip: Incorrect handling of certain ZIP files 
+                        │     ├ Description     : The archive/zip package's handling of certain types of
+                        │     │                   invalid zip files differs from the behavior of most zip
+                        │     │                   implementations. This misalignment could be exploited to
+                        │     │                   create an zip file with contents that vary depending on the
+                        │     │                   implementation reading the file. The archive/zip package now
+                        │     │                   rejects files containing these errors. 
+                        │     ├ Severity        : MEDIUM 
+                        │     ├ VendorSeverity   ╭ alma       : 2 
+                        │     │                  ├ amazon     : 2 
+                        │     │                  ├ bitnami    : 2 
+                        │     │                  ├ nvd        : 2 
+                        │     │                  ├ oracle-oval: 2 
+                        │     │                  ├ photon     : 2 
+                        │     │                  ╰ redhat     : 2 
+                        │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:
+                        │     │                  │         │           N/I:H/A:N 
+                        │     │                  │         ╰ V3Score : 5.5 
+                        │     │                  ├ nvd     ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:
+                        │     │                  │         │           N/I:H/A:N 
+                        │     │                  │         ╰ V3Score : 5.5 
+                        │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:
+                        │     │                            │           N/I:H/A:N 
+                        │     │                            ╰ V3Score : 7.5 
+                        │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/0
+                        │     │                  │       6/04/1 
+                        │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:4212 
+                        │     │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2024-24789 
+                        │     │                  ├ [3] : https://bugzilla.redhat.com/2292668 
+                        │     │                  ├ [4] : https://bugzilla.redhat.com/2292787 
+                        │     │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2024-4212.html 
+                        │     │                  ├ [6] : https://go.dev/cl/585397 
+                        │     │                  ├ [7] : https://go.dev/issue/66869 
+                        │     │                  ├ [8] : https://groups.google.com/g/golang-announce/c/Xbx
+                        │     │                  │       ouI9gY7k/m/TuoGEhxIEwAJ 
+                        │     │                  ├ [9] : https://linux.oracle.com/cve/CVE-2024-24789.html 
+                        │     │                  ├ [10]: https://linux.oracle.com/errata/ELSA-2024-4212.html 
+                        │     │                  ├ [11]: https://lists.fedoraproject.org/archives/list/pac
+                        │     │                  │       kage-announce@lists.fedoraproject.org/message/U5YAEIA6
+                        │     │                  │       IUHUNGJ7AIXXPQT6D2GYENX7/ 
+                        │     │                  ├ [12]: https://nvd.nist.gov/vuln/detail/CVE-2024-24789 
+                        │     │                  ├ [13]: https://pkg.go.dev/vuln/GO-2024-2888 
+                        │     │                  ╰ [14]: https://www.cve.org/CVERecord?id=CVE-2024-24789 
+                        │     ├ PublishedDate   : 2024-06-05T16:15:10.47Z 
+                        │     ╰ LastModifiedDate: 2024-06-19T03:15:09.183Z 
+                        ╰ [6] ╭ VulnerabilityID : CVE-2024-24791 
                               ├ PkgName         : stdlib 
                               ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
                               │                  ╰ UID : cd28c68ec9dd2486 
                               ├ InstalledVersion: 1.22.1 
-                              ├ FixedVersion    : 1.21.11, 1.22.4 
+                              ├ FixedVersion    : 1.21.12, 1.22.5 
                               ├ Status          : fixed 
                               ├ Layer            ╭ Digest: sha256:40121cbeab93e389405f93a388ea0322289e5c78
                               │                  │         68893235ffe9093f241c84e9 
                               │                  ╰ DiffID: sha256:dabe2d5497a098b6ca6d0b4ba5ac5031c81f70dc
                               │                            98e873bf1c1c1305b868d3d1 
-                              ├ SeveritySource  : nvd 
-                              ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24789 
+                              ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24791 
                               ├ DataSource       ╭ ID  : govulndb 
                               │                  ├ Name: The Go Vulnerability Database 
                               │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                              ├ Title           : golang: archive/zip: Incorrect handling of certain ZIP files 
-                              ├ Description     : The archive/zip package's handling of certain types of
-                              │                   invalid zip files differs from the behavior of most zip
-                              │                   implementations. This misalignment could be exploited to
-                              │                   create an zip file with contents that vary depending on the
-                              │                   implementation reading the file. The archive/zip package now
-                              │                   rejects files containing these errors. 
-                              ├ Severity        : MEDIUM 
-                              ├ VendorSeverity   ╭ amazon : 2 
-                              │                  ├ bitnami: 2 
-                              │                  ├ nvd    : 2 
-                              │                  ├ photon : 2 
-                              │                  ╰ redhat : 2 
-                              ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:
-                              │                  │         │           N/I:H/A:N 
-                              │                  │         ╰ V3Score : 5.5 
-                              │                  ├ nvd     ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:
-                              │                  │         │           N/I:H/A:N 
-                              │                  │         ╰ V3Score : 5.5 
-                              │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:
-                              │                            │           N/I:H/A:N 
-                              │                            ╰ V3Score : 7.5 
-                              ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/06/04/1 
-                              │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2024-24789 
-                              │                  ├ [2]: https://go.dev/cl/585397 
-                              │                  ├ [3]: https://go.dev/issue/66869 
-                              │                  ├ [4]: https://groups.google.com/g/golang-announce/c/Xbxo
-                              │                  │      uI9gY7k/m/TuoGEhxIEwAJ 
-                              │                  ├ [5]: https://lists.fedoraproject.org/archives/list/pack
-                              │                  │      age-announce@lists.fedoraproject.org/message/U5YAEIA6IU
-                              │                  │      HUNGJ7AIXXPQT6D2GYENX7/ 
-                              │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2024-24789 
-                              │                  ├ [7]: https://pkg.go.dev/vuln/GO-2024-2888 
-                              │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-24789 
-                              ├ PublishedDate   : 2024-06-05T16:15:10.47Z 
-                              ╰ LastModifiedDate: 2024-06-19T03:15:09.183Z 
+                              ├ Description     : The net/http HTTP/1.1 client mishandled the case where a
+                              │                    server responds to a request with an "Expect: 100-continue"
+                              │                   header with a non-informational (200 or higher) status. This
+                              │                   mishandling could leave a client connection in an invalid
+                              │                   state, where the next request sent on the connection will
+                              │                   fail. An attacker sending a request to a
+                              │                   net/http/httputil.ReverseProxy proxy can exploit this
+                              │                   mishandling to cause a denial of service by sending "Expect:
+                              │                   100-continue" requests which elicit a non-informational
+                              │                   response from the backend. Each such request leaves the proxy
+                              │                    with an invalid connection, and causes one subsequent
+                              │                   request using that connection to fail. 
+                              ├ Severity        : UNKNOWN 
+                              ├ References       ╭ [0]: https://go.dev/cl/591255 
+                              │                  ├ [1]: https://go.dev/issue/67555 
+                              │                  ├ [2]: https://groups.google.com/g/golang-dev/c/t0rK-qHBq
+                              │                  │      zY/m/6MMoAZkMAgAJ 
+                              │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2963 
+                              ├ PublishedDate   : 2024-07-02T22:15:04.833Z 
+                              ╰ LastModifiedDate: 2024-07-02T22:15:04.833Z 
 ````
