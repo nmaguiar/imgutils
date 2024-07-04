@@ -22,10 +22,12 @@ COPY README.md /README.md
 
 USER root
 RUN apk update\
- && apk --no-cache add docker-cli skopeo helm curl tar bash gzip mc\
+ && apk --no-cache add docker-cli skopeo curl tar bash gzip mc\
  && /openaf/ojob ojob.io/kube/getCriCtl path=/usr/bin\
+ && /openaf/ojob ojob.io/kube/getHelm path=/usr/bin\
  && /openaf/opack install DockerRegistry\
  && /openaf/opack install Kube\
+ && /openaf/opack install BouncyCastle\
  && /openaf/opack install oafproc\
  && mkdir /openaf/ojobs\
  && /openaf/ojob ojob.io/get job=ojob.io/docker/expand.yaml > /openaf/ojobs/expand.yaml\
