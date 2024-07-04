@@ -247,7 +247,7 @@
 │                       │     │                  │       4/03/16 
 │                       │     │                  ├ [1] : http://www.openwall.com/lists/oss-security/2024/0
 │                       │     │                  │       4/05/4 
-│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:3346 
+│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:2724 
 │                       │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2023-45288 
 │                       │     │                  ├ [4] : https://bugzilla.redhat.com/2268017 
 │                       │     │                  ├ [5] : https://bugzilla.redhat.com/2268018 
@@ -265,7 +265,7 @@
 │                       │     │                  │       E-2023-45290 
 │                       │     │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
 │                       │     │                  │       E-2024-24783 
-│                       │     │                  ├ [16]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
+│                       │     │                  ├ [16]: https://errata.almalinux.org/9/ALSA-2024-2724.html 
 │                       │     │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:2724 
 │                       │     │                  ├ [18]: https://go.dev/cl/576155 
 │                       │     │                  ├ [19]: https://go.dev/issue/65051 
@@ -391,7 +391,7 @@
 │                       │     │                  ├ [13]: https://pkg.go.dev/vuln/GO-2024-2888 
 │                       │     │                  ╰ [14]: https://www.cve.org/CVERecord?id=CVE-2024-24789 
 │                       │     ├ PublishedDate   : 2024-06-05T16:15:10.47Z 
-│                       │     ╰ LastModifiedDate: 2024-06-19T03:15:09.183Z 
+│                       │     ╰ LastModifiedDate: 2024-07-03T01:48:25.51Z 
 │                       ╰ [6] ╭ VulnerabilityID : CVE-2024-24791 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
@@ -426,7 +426,7 @@
 │                             │                  │      zY/m/6MMoAZkMAgAJ 
 │                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2963 
 │                             ├ PublishedDate   : 2024-07-02T22:15:04.833Z 
-│                             ╰ LastModifiedDate: 2024-07-02T22:15:04.833Z 
+│                             ╰ LastModifiedDate: 2024-07-03T12:53:24.977Z 
 ├ [3] ╭ Target         : usr/bin/dive 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -625,7 +625,7 @@
 │                       │     │                  │       4/03/16 
 │                       │     │                  ├ [1] : http://www.openwall.com/lists/oss-security/2024/0
 │                       │     │                  │       4/05/4 
-│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:3346 
+│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:2724 
 │                       │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2023-45288 
 │                       │     │                  ├ [4] : https://bugzilla.redhat.com/2268017 
 │                       │     │                  ├ [5] : https://bugzilla.redhat.com/2268018 
@@ -643,7 +643,7 @@
 │                       │     │                  │       E-2023-45290 
 │                       │     │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
 │                       │     │                  │       E-2024-24783 
-│                       │     │                  ├ [16]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
+│                       │     │                  ├ [16]: https://errata.almalinux.org/9/ALSA-2024-2724.html 
 │                       │     │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:2724 
 │                       │     │                  ├ [18]: https://go.dev/cl/576155 
 │                       │     │                  ├ [19]: https://go.dev/issue/65051 
@@ -704,7 +704,7 @@
 │                             │                  │      zY/m/6MMoAZkMAgAJ 
 │                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2963 
 │                             ├ PublishedDate   : 2024-07-02T22:15:04.833Z 
-│                             ╰ LastModifiedDate: 2024-07-02T22:15:04.833Z 
+│                             ╰ LastModifiedDate: 2024-07-03T12:53:24.977Z 
 ├ [4] ╭ Target         : usr/bin/docker 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -742,7 +742,7 @@
 │                             │                  │      zY/m/6MMoAZkMAgAJ 
 │                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2963 
 │                             ├ PublishedDate   : 2024-07-02T22:15:04.833Z 
-│                             ╰ LastModifiedDate: 2024-07-02T22:15:04.833Z 
+│                             ╰ LastModifiedDate: 2024-07-03T12:53:24.977Z 
 ├ [5] ╭ Target         : usr/bin/helm 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -865,7 +865,7 @@
 │                       │     │                  │       4/03/16 
 │                       │     │                  ├ [1] : http://www.openwall.com/lists/oss-security/2024/0
 │                       │     │                  │       4/05/4 
-│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:3346 
+│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:2724 
 │                       │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2023-45288 
 │                       │     │                  ├ [4] : https://bugzilla.redhat.com/2268017 
 │                       │     │                  ├ [5] : https://bugzilla.redhat.com/2268018 
@@ -883,7 +883,7 @@
 │                       │     │                  │       E-2023-45290 
 │                       │     │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
 │                       │     │                  │       E-2024-24783 
-│                       │     │                  ├ [16]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
+│                       │     │                  ├ [16]: https://errata.almalinux.org/9/ALSA-2024-2724.html 
 │                       │     │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:2724 
 │                       │     │                  ├ [18]: https://go.dev/cl/576155 
 │                       │     │                  ├ [19]: https://go.dev/issue/65051 
@@ -936,7 +936,7 @@
 │                       │     │                   contains a google.protobuf.Any value, or when the
 │                       │     │                   UnmarshalOptions.DiscardUnknown option is set. 
 │                       │     ├ Severity        : MEDIUM 
-│                       │     ├ VendorSeverity   ╭ alma       : 3 
+│                       │     ├ VendorSeverity   ╭ alma       : 2 
 │                       │     │                  ├ amazon     : 2 
 │                       │     │                  ├ cbl-mariner: 2 
 │                       │     │                  ├ ghsa       : 2 
@@ -949,43 +949,39 @@
 │                       │     │                           ╰ V3Score : 5.9 
 │                       │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/0
 │                       │     │                  │       3/08/4 
-│                       │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:3254 
+│                       │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:2550 
 │                       │     │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2024-24786 
-│                       │     │                  ├ [3] : https://bugzilla.redhat.com/2132868 
-│                       │     │                  ├ [4] : https://bugzilla.redhat.com/2132872 
-│                       │     │                  ├ [5] : https://bugzilla.redhat.com/2265513 
-│                       │     │                  ├ [6] : https://bugzilla.redhat.com/2268046 
-│                       │     │                  ├ [7] : https://bugzilla.redhat.com/2268854 
-│                       │     │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
+│                       │     │                  ├ [3] : https://bugzilla.redhat.com/2268046 
+│                       │     │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
 │                       │     │                  │       E-2024-24786 
-│                       │     │                  ├ [9] : https://errata.almalinux.org/8/ALSA-2024-3254.html 
-│                       │     │                  ├ [10]: https://errata.rockylinux.org/RLSA-2024:2550 
-│                       │     │                  ├ [11]: https://github.com/protocolbuffers/protobuf-go 
-│                       │     │                  ├ [12]: https://github.com/protocolbuffers/protobuf-go/co
+│                       │     │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2024-2550.html 
+│                       │     │                  ├ [6] : https://errata.rockylinux.org/RLSA-2024:2550 
+│                       │     │                  ├ [7] : https://github.com/protocolbuffers/protobuf-go 
+│                       │     │                  ├ [8] : https://github.com/protocolbuffers/protobuf-go/co
 │                       │     │                  │       mmit/f01a588e5810b90996452eec4a28f22a0afae023 
-│                       │     │                  ├ [13]: https://github.com/protocolbuffers/protobuf-go/re
+│                       │     │                  ├ [9] : https://github.com/protocolbuffers/protobuf-go/re
 │                       │     │                  │       leases/tag/v1.33.0 
-│                       │     │                  ├ [14]: https://go-review.googlesource.com/c/protobuf/+/569356 
-│                       │     │                  ├ [15]: https://go.dev/cl/569356 
-│                       │     │                  ├ [16]: https://groups.google.com/g/golang-announce/c/ArQ
+│                       │     │                  ├ [10]: https://go-review.googlesource.com/c/protobuf/+/569356 
+│                       │     │                  ├ [11]: https://go.dev/cl/569356 
+│                       │     │                  ├ [12]: https://groups.google.com/g/golang-announce/c/ArQ
 │                       │     │                  │       6CDgtEjY/ 
-│                       │     │                  ├ [17]: https://linux.oracle.com/cve/CVE-2024-24786.html 
-│                       │     │                  ├ [18]: https://linux.oracle.com/errata/ELSA-2024-3254.html 
-│                       │     │                  ├ [19]: https://lists.fedoraproject.org/archives/list/pac
+│                       │     │                  ├ [13]: https://linux.oracle.com/cve/CVE-2024-24786.html 
+│                       │     │                  ├ [14]: https://linux.oracle.com/errata/ELSA-2024-3254.html 
+│                       │     │                  ├ [15]: https://lists.fedoraproject.org/archives/list/pac
 │                       │     │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
 │                       │     │                  │       DU2FBDZ45U3A2VLSM35OJ2HU 
-│                       │     │                  ├ [20]: https://lists.fedoraproject.org/archives/list/pac
+│                       │     │                  ├ [16]: https://lists.fedoraproject.org/archives/list/pac
 │                       │     │                  │       kage-announce@lists.fedoraproject.org/message/JDMBHAVS
 │                       │     │                  │       DU2FBDZ45U3A2VLSM35OJ2HU/ 
-│                       │     │                  ├ [21]: https://nvd.nist.gov/vuln/detail/CVE-2024-24786 
-│                       │     │                  ├ [22]: https://pkg.go.dev/vuln/GO-2024-2611 
-│                       │     │                  ├ [23]: https://security.netapp.com/advisory/ntap-2024051
+│                       │     │                  ├ [17]: https://nvd.nist.gov/vuln/detail/CVE-2024-24786 
+│                       │     │                  ├ [18]: https://pkg.go.dev/vuln/GO-2024-2611 
+│                       │     │                  ├ [19]: https://security.netapp.com/advisory/ntap-2024051
 │                       │     │                  │       7-0002 
-│                       │     │                  ├ [24]: https://security.netapp.com/advisory/ntap-2024051
+│                       │     │                  ├ [20]: https://security.netapp.com/advisory/ntap-2024051
 │                       │     │                  │       7-0002/ 
-│                       │     │                  ├ [25]: https://ubuntu.com/security/notices/USN-6746-1 
-│                       │     │                  ├ [26]: https://ubuntu.com/security/notices/USN-6746-2 
-│                       │     │                  ╰ [27]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
+│                       │     │                  ├ [21]: https://ubuntu.com/security/notices/USN-6746-1 
+│                       │     │                  ├ [22]: https://ubuntu.com/security/notices/USN-6746-2 
+│                       │     │                  ╰ [23]: https://www.cve.org/CVERecord?id=CVE-2024-24786 
 │                       │     ├ PublishedDate   : 2024-03-05T23:15:07.82Z 
 │                       │     ╰ LastModifiedDate: 2024-06-10T18:15:26.83Z 
 │                       ╰ [3] ╭ VulnerabilityID : CVE-2024-24791 
@@ -1022,7 +1018,7 @@
 │                             │                  │      zY/m/6MMoAZkMAgAJ 
 │                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2963 
 │                             ├ PublishedDate   : 2024-07-02T22:15:04.833Z 
-│                             ╰ LastModifiedDate: 2024-07-02T22:15:04.833Z 
+│                             ╰ LastModifiedDate: 2024-07-03T12:53:24.977Z 
 ╰ [6] ╭ Target         : usr/bin/skopeo 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
@@ -1248,7 +1244,7 @@
                         │     │                  │       4/03/16 
                         │     │                  ├ [1] : http://www.openwall.com/lists/oss-security/2024/0
                         │     │                  │       4/05/4 
-                        │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:3346 
+                        │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:2724 
                         │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2023-45288 
                         │     │                  ├ [4] : https://bugzilla.redhat.com/2268017 
                         │     │                  ├ [5] : https://bugzilla.redhat.com/2268018 
@@ -1266,7 +1262,7 @@
                         │     │                  │       E-2023-45290 
                         │     │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
                         │     │                  │       E-2024-24783 
-                        │     │                  ├ [16]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
+                        │     │                  ├ [16]: https://errata.almalinux.org/9/ALSA-2024-2724.html 
                         │     │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:2724 
                         │     │                  ├ [18]: https://go.dev/cl/576155 
                         │     │                  ├ [19]: https://go.dev/issue/65051 
@@ -1327,5 +1323,5 @@
                               │                  │      zY/m/6MMoAZkMAgAJ 
                               │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2963 
                               ├ PublishedDate   : 2024-07-02T22:15:04.833Z 
-                              ╰ LastModifiedDate: 2024-07-02T22:15:04.833Z 
+                              ╰ LastModifiedDate: 2024-07-03T12:53:24.977Z 
 ````
