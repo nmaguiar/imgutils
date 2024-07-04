@@ -193,7 +193,7 @@
     References:
     - http://www.openwall.com/lists/oss-security/2024/04/03/16
     - http://www.openwall.com/lists/oss-security/2024/04/05/4
-    - https://access.redhat.com/errata/RHSA-2024:3346
+    - https://access.redhat.com/errata/RHSA-2024:2724
     - https://access.redhat.com/security/cve/CVE-2023-45288
     - https://bugzilla.redhat.com/2268017
     - https://bugzilla.redhat.com/2268018
@@ -207,7 +207,7 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45289
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45290
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24783
-    - https://errata.almalinux.org/8/ALSA-2024-3346.html
+    - https://errata.almalinux.org/9/ALSA-2024-2724.html
     - https://errata.rockylinux.org/RLSA-2024:2724
     - https://go.dev/cl/576155
     - https://go.dev/issue/65051
@@ -320,7 +320,7 @@
     - https://pkg.go.dev/vuln/GO-2024-2888
     - https://www.cve.org/CVERecord?id=CVE-2024-24789
     PublishedDate: '2024-06-05T16:15:10.47Z'
-    LastModifiedDate: '2024-06-19T03:15:09.183Z'
+    LastModifiedDate: '2024-07-03T01:48:25.51Z'
   - VulnerabilityID: CVE-2024-24791
     PkgName: stdlib
     PkgIdentifier:
@@ -345,7 +345,7 @@
     - https://groups.google.com/g/golang-dev/c/t0rK-qHBqzY/m/6MMoAZkMAgAJ
     - https://pkg.go.dev/vuln/GO-2024-2963
     PublishedDate: '2024-07-02T22:15:04.833Z'
-    LastModifiedDate: '2024-07-02T22:15:04.833Z'
+    LastModifiedDate: '2024-07-03T12:53:24.977Z'
 - Target: usr/bin/dive
   Class: lang-pkgs
   Type: gobinary
@@ -495,7 +495,7 @@
     References:
     - http://www.openwall.com/lists/oss-security/2024/04/03/16
     - http://www.openwall.com/lists/oss-security/2024/04/05/4
-    - https://access.redhat.com/errata/RHSA-2024:3346
+    - https://access.redhat.com/errata/RHSA-2024:2724
     - https://access.redhat.com/security/cve/CVE-2023-45288
     - https://bugzilla.redhat.com/2268017
     - https://bugzilla.redhat.com/2268018
@@ -509,7 +509,7 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45289
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45290
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24783
-    - https://errata.almalinux.org/8/ALSA-2024-3346.html
+    - https://errata.almalinux.org/9/ALSA-2024-2724.html
     - https://errata.rockylinux.org/RLSA-2024:2724
     - https://go.dev/cl/576155
     - https://go.dev/issue/65051
@@ -552,7 +552,7 @@
     - https://groups.google.com/g/golang-dev/c/t0rK-qHBqzY/m/6MMoAZkMAgAJ
     - https://pkg.go.dev/vuln/GO-2024-2963
     PublishedDate: '2024-07-02T22:15:04.833Z'
-    LastModifiedDate: '2024-07-02T22:15:04.833Z'
+    LastModifiedDate: '2024-07-03T12:53:24.977Z'
 - Target: usr/bin/docker
   Class: lang-pkgs
   Type: gobinary
@@ -581,7 +581,7 @@
     - https://groups.google.com/g/golang-dev/c/t0rK-qHBqzY/m/6MMoAZkMAgAJ
     - https://pkg.go.dev/vuln/GO-2024-2963
     PublishedDate: '2024-07-02T22:15:04.833Z'
-    LastModifiedDate: '2024-07-02T22:15:04.833Z'
+    LastModifiedDate: '2024-07-03T12:53:24.977Z'
 - Target: usr/bin/helm
   Class: lang-pkgs
   Type: gobinary
@@ -676,7 +676,7 @@
     References:
     - http://www.openwall.com/lists/oss-security/2024/04/03/16
     - http://www.openwall.com/lists/oss-security/2024/04/05/4
-    - https://access.redhat.com/errata/RHSA-2024:3346
+    - https://access.redhat.com/errata/RHSA-2024:2724
     - https://access.redhat.com/security/cve/CVE-2023-45288
     - https://bugzilla.redhat.com/2268017
     - https://bugzilla.redhat.com/2268018
@@ -690,7 +690,7 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45289
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45290
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24783
-    - https://errata.almalinux.org/8/ALSA-2024-3346.html
+    - https://errata.almalinux.org/9/ALSA-2024-2724.html
     - https://errata.rockylinux.org/RLSA-2024:2724
     - https://go.dev/cl/576155
     - https://go.dev/issue/65051
@@ -730,7 +730,7 @@
     Description: The protojson.Unmarshal function can enter an infinite loop when unmarshaling certain forms of invalid JSON. This condition can occur when unmarshaling into a message which contains a google.protobuf.Any value, or when the UnmarshalOptions.DiscardUnknown option is set.
     Severity: MEDIUM
     VendorSeverity:
-      alma: 3
+      alma: 2
       amazon: 2
       cbl-mariner: 2
       ghsa: 2
@@ -744,15 +744,11 @@
         V3Score: 5.9
     References:
     - http://www.openwall.com/lists/oss-security/2024/03/08/4
-    - https://access.redhat.com/errata/RHSA-2024:3254
+    - https://access.redhat.com/errata/RHSA-2024:2550
     - https://access.redhat.com/security/cve/CVE-2024-24786
-    - https://bugzilla.redhat.com/2132868
-    - https://bugzilla.redhat.com/2132872
-    - https://bugzilla.redhat.com/2265513
     - https://bugzilla.redhat.com/2268046
-    - https://bugzilla.redhat.com/2268854
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24786
-    - https://errata.almalinux.org/8/ALSA-2024-3254.html
+    - https://errata.almalinux.org/9/ALSA-2024-2550.html
     - https://errata.rockylinux.org/RLSA-2024:2550
     - https://github.com/protocolbuffers/protobuf-go
     - https://github.com/protocolbuffers/protobuf-go/commit/f01a588e5810b90996452eec4a28f22a0afae023
@@ -797,7 +793,7 @@
     - https://groups.google.com/g/golang-dev/c/t0rK-qHBqzY/m/6MMoAZkMAgAJ
     - https://pkg.go.dev/vuln/GO-2024-2963
     PublishedDate: '2024-07-02T22:15:04.833Z'
-    LastModifiedDate: '2024-07-02T22:15:04.833Z'
+    LastModifiedDate: '2024-07-03T12:53:24.977Z'
 - Target: usr/bin/skopeo
   Class: lang-pkgs
   Type: gobinary
@@ -948,7 +944,7 @@
     References:
     - http://www.openwall.com/lists/oss-security/2024/04/03/16
     - http://www.openwall.com/lists/oss-security/2024/04/05/4
-    - https://access.redhat.com/errata/RHSA-2024:3346
+    - https://access.redhat.com/errata/RHSA-2024:2724
     - https://access.redhat.com/security/cve/CVE-2023-45288
     - https://bugzilla.redhat.com/2268017
     - https://bugzilla.redhat.com/2268018
@@ -962,7 +958,7 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45289
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45290
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24783
-    - https://errata.almalinux.org/8/ALSA-2024-3346.html
+    - https://errata.almalinux.org/9/ALSA-2024-2724.html
     - https://errata.rockylinux.org/RLSA-2024:2724
     - https://go.dev/cl/576155
     - https://go.dev/issue/65051
@@ -1005,4 +1001,4 @@
     - https://groups.google.com/g/golang-dev/c/t0rK-qHBqzY/m/6MMoAZkMAgAJ
     - https://pkg.go.dev/vuln/GO-2024-2963
     PublishedDate: '2024-07-02T22:15:04.833Z'
-    LastModifiedDate: '2024-07-02T22:15:04.833Z'
+    LastModifiedDate: '2024-07-03T12:53:24.977Z'
