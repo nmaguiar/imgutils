@@ -40,6 +40,7 @@ RUN apk update\
  && chmod -R a+rx /openaf/.docker\
  && sudo chmod g+w /openaf/.opack.db\
  && chmod a+x /usr/bin/crictl\
+ && chmod a+x /usr/bin/helm\
  && rm /lib/apk/db/*
 
 RUN cd /tmp\
