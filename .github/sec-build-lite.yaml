@@ -146,7 +146,7 @@
     - https://go.dev/issue/67680
     - https://groups.google.com/g/golang-announce/c/XbxouI9gY7k/m/TuoGEhxIEwAJ
     - https://linux.oracle.com/cve/CVE-2024-24790.html
-    - https://linux.oracle.com/errata/ELSA-2024-4212.html
+    - https://linux.oracle.com/errata/ELSA-2024-4237.html
     - https://nvd.nist.gov/vuln/detail/CVE-2024-24790
     - https://pkg.go.dev/vuln/GO-2024-2887
     - https://www.cve.org/CVERecord?id=CVE-2024-24790
@@ -311,7 +311,7 @@
     - https://go.dev/issue/66869
     - https://groups.google.com/g/golang-announce/c/XbxouI9gY7k/m/TuoGEhxIEwAJ
     - https://linux.oracle.com/cve/CVE-2024-24789.html
-    - https://linux.oracle.com/errata/ELSA-2024-4212.html
+    - https://linux.oracle.com/errata/ELSA-2024-4237.html
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/U5YAEIA6IUHUNGJ7AIXXPQT6D2GYENX7/
     - https://nvd.nist.gov/vuln/detail/CVE-2024-24789
     - https://pkg.go.dev/vuln/GO-2024-2888
