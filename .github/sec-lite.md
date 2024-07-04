@@ -188,7 +188,7 @@
                         │     │                  ├ [8] : https://groups.google.com/g/golang-announce/c/Xbx
                         │     │                  │       ouI9gY7k/m/TuoGEhxIEwAJ 
                         │     │                  ├ [9] : https://linux.oracle.com/cve/CVE-2024-24790.html 
-                        │     │                  ├ [10]: https://linux.oracle.com/errata/ELSA-2024-4212.html 
+                        │     │                  ├ [10]: https://linux.oracle.com/errata/ELSA-2024-4237.html 
                         │     │                  ├ [11]: https://nvd.nist.gov/vuln/detail/CVE-2024-24790 
                         │     │                  ├ [12]: https://pkg.go.dev/vuln/GO-2024-2887 
                         │     │                  ╰ [13]: https://www.cve.org/CVERecord?id=CVE-2024-24790 
@@ -380,7 +380,7 @@
                         │     │                  ├ [8] : https://groups.google.com/g/golang-announce/c/Xbx
                         │     │                  │       ouI9gY7k/m/TuoGEhxIEwAJ 
                         │     │                  ├ [9] : https://linux.oracle.com/cve/CVE-2024-24789.html 
-                        │     │                  ├ [10]: https://linux.oracle.com/errata/ELSA-2024-4212.html 
+                        │     │                  ├ [10]: https://linux.oracle.com/errata/ELSA-2024-4237.html 
                         │     │                  ├ [11]: https://lists.fedoraproject.org/archives/list/pac
                         │     │                  │       kage-announce@lists.fedoraproject.org/message/U5YAEIA6
                         │     │                  │       IUHUNGJ7AIXXPQT6D2GYENX7/ 
