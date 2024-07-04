@@ -1,23 +1,23 @@
 # ------------------------
-FROM golang:alpine as dive
+# FROM golang:alpine as dive
 
-RUN apk update\
- && apk add git make bash ncurses curl\
- && cd /go/src\
- && git clone https://github.com/wagoodman/dive.git\
- && cd dive\
- && mkdir .tmp\
- && go install github.com/goreleaser/goreleaser@latest\
- && ln -s /go/bin/goreleaser .tmp/goreleaser\
- && curl https://ojob.io/getStatic.sh | sh\
- && ./oaf -c "var o=io.readFileYAML('.goreleaser.yaml');delete o.dockers;o.builds[0].goos=['linux'];io.writeFileYAML('.goreleaser.yaml',o)"\
- && make build\
- && arch=$(uname -m) && if [ "$arch" == "aarch64" ]; then cp snapshot/dive_linux_arm64/dive /dive; elif [ "$arch" == "x86_64" ]; then cp snapshot/dive_linux_amd64_v1/dive /dive; fi
+# RUN apk update\
+#  && apk add git make bash ncurses curl\
+#  && cd /go/src\
+#  && git clone https://github.com/wagoodman/dive.git\
+#  && cd dive\
+#  && mkdir .tmp\
+#  && go install github.com/goreleaser/goreleaser@latest\
+#  && ln -s /go/bin/goreleaser .tmp/goreleaser\
+#  && curl https://ojob.io/getStatic.sh | sh\
+#  && ./oaf -c "var o=io.readFileYAML('.goreleaser.yaml');delete o.dockers;o.builds[0].goos=['linux'];io.writeFileYAML('.goreleaser.yaml',o)"\
+#  && make build\
+#  && arch=$(uname -m) && if [ "$arch" == "aarch64" ]; then cp snapshot/dive_linux_arm64/dive /dive; elif [ "$arch" == "x86_64" ]; then cp snapshot/dive_linux_amd64_v1/dive /dive; fi
 
 # ---------------------
 FROM openaf/oaf as main
 
-COPY --from=dive /dive /usr/bin/dive
+#COPY --from=dive /dive /usr/bin/dive
 COPY README.md /README.md
 
 USER root
@@ -41,6 +41,13 @@ RUN apk update\
  && sudo chmod g+w /openaf/.opack.db\
  && chmod a+x /usr/bin/crictl\
  && rm /lib/apk/db/*
+
+RUN cd /tmp\
+ && skopeo copy docker://wagoodman/dive docker-archive:dive.tar\
+ && ojob ojob.io/docker/expand image=dive.tar output=output\
+ && cp /tmp/output/usr/local/bin/dive /usr/bin/dive\
+ && rm -rf output\
+ && rm dive.tar
 
 # -------------------
 FROM scratch as final
