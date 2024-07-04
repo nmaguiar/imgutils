@@ -190,7 +190,7 @@
     References:
     - http://www.openwall.com/lists/oss-security/2024/04/03/16
     - http://www.openwall.com/lists/oss-security/2024/04/05/4
-    - https://access.redhat.com/errata/RHSA-2024:3346
+    - https://access.redhat.com/errata/RHSA-2024:2724
     - https://access.redhat.com/security/cve/CVE-2023-45288
     - https://bugzilla.redhat.com/2268017
     - https://bugzilla.redhat.com/2268018
@@ -204,7 +204,7 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45289
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45290
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24783
-    - https://errata.almalinux.org/8/ALSA-2024-3346.html
+    - https://errata.almalinux.org/9/ALSA-2024-2724.html
     - https://errata.rockylinux.org/RLSA-2024:2724
     - https://go.dev/cl/576155
     - https://go.dev/issue/65051
@@ -317,7 +317,7 @@
     - https://pkg.go.dev/vuln/GO-2024-2888
     - https://www.cve.org/CVERecord?id=CVE-2024-24789
     PublishedDate: '2024-06-05T16:15:10.47Z'
-    LastModifiedDate: '2024-06-19T03:15:09.183Z'
+    LastModifiedDate: '2024-07-03T01:48:25.51Z'
   - VulnerabilityID: CVE-2024-24791
     PkgName: stdlib
     PkgIdentifier:
@@ -342,4 +342,4 @@
     - https://groups.google.com/g/golang-dev/c/t0rK-qHBqzY/m/6MMoAZkMAgAJ
     - https://pkg.go.dev/vuln/GO-2024-2963
     PublishedDate: '2024-07-02T22:15:04.833Z'
-    LastModifiedDate: '2024-07-02T22:15:04.833Z'
+    LastModifiedDate: '2024-07-03T12:53:24.977Z'
