@@ -44,7 +44,7 @@ RUN apk update\
 
 RUN cd /tmp\
  && skopeo copy docker://wagoodman/dive docker-archive:dive.tar\
- && ojob ojob.io/docker/expand image=dive.tar output=output\
+ && /openaf/ojob ojob.io/docker/expand image=dive.tar output=output\
  && cp /tmp/output/usr/local/bin/dive /usr/bin/dive\
  && rm -rf output\
  && rm dive.tar
