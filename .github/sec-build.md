@@ -407,6 +407,8 @@
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                             ├ Title           : net/http: Denial of service due to improper 100-continue
+│                             │                    handling in net/http 
 │                             ├ Description     : The net/http HTTP/1.1 client mishandled the case where a
 │                             │                    server responds to a request with an "Expect: 100-continue"
 │                             │                   header with a non-informational (200 or higher) status. This
@@ -419,12 +421,16 @@
 │                             │                   response from the backend. Each such request leaves the proxy
 │                             │                    with an invalid connection, and causes one subsequent
 │                             │                   request using that connection to fail. 
-│                             ├ Severity        : UNKNOWN 
-│                             ├ References       ╭ [0]: https://go.dev/cl/591255 
-│                             │                  ├ [1]: https://go.dev/issue/67555 
-│                             │                  ├ [2]: https://groups.google.com/g/golang-dev/c/t0rK-qHBq
+│                             ├ Severity        : MEDIUM 
+│                             ├ VendorSeverity   ─ redhat: 2 
+│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-24791 
+│                             │                  ├ [1]: https://go.dev/cl/591255 
+│                             │                  ├ [2]: https://go.dev/issue/67555 
+│                             │                  ├ [3]: https://groups.google.com/g/golang-dev/c/t0rK-qHBq
 │                             │                  │      zY/m/6MMoAZkMAgAJ 
-│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2963 
+│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-24791 
+│                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-2963 
+│                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-24791 
 │                             ├ PublishedDate   : 2024-07-02T22:15:04.833Z 
 │                             ╰ LastModifiedDate: 2024-07-03T12:53:24.977Z 
 ├ [3] ╭ Target         : usr/bin/dive 
@@ -1270,6 +1276,8 @@
 │                              ├ DataSource       ╭ ID  : govulndb 
 │                              │                  ├ Name: The Go Vulnerability Database 
 │                              │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                              ├ Title           : net/http: Denial of service due to improper
+│                              │                   100-continue handling in net/http 
 │                              ├ Description     : The net/http HTTP/1.1 client mishandled the case where
 │                              │                   a server responds to a request with an "Expect:
 │                              │                   100-continue" header with a non-informational (200 or
@@ -1282,12 +1290,16 @@
 │                              │                   response from the backend. Each such request leaves the
 │                              │                   proxy with an invalid connection, and causes one subsequent
 │                              │                   request using that connection to fail. 
-│                              ├ Severity        : UNKNOWN 
-│                              ├ References       ╭ [0]: https://go.dev/cl/591255 
-│                              │                  ├ [1]: https://go.dev/issue/67555 
-│                              │                  ├ [2]: https://groups.google.com/g/golang-dev/c/t0rK-qHB
+│                              ├ Severity        : MEDIUM 
+│                              ├ VendorSeverity   ─ redhat: 2 
+│                              ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-24791 
+│                              │                  ├ [1]: https://go.dev/cl/591255 
+│                              │                  ├ [2]: https://go.dev/issue/67555 
+│                              │                  ├ [3]: https://groups.google.com/g/golang-dev/c/t0rK-qHB
 │                              │                  │      qzY/m/6MMoAZkMAgAJ 
-│                              │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2963 
+│                              │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-24791 
+│                              │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-2963 
+│                              │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-24791 
 │                              ├ PublishedDate   : 2024-07-02T22:15:04.833Z 
 │                              ╰ LastModifiedDate: 2024-07-03T12:53:24.977Z 
 ├ [4] ╭ Target         : usr/bin/docker 
@@ -1308,6 +1320,8 @@
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                             ├ Title           : net/http: Denial of service due to improper 100-continue
+│                             │                    handling in net/http 
 │                             ├ Description     : The net/http HTTP/1.1 client mishandled the case where a
 │                             │                    server responds to a request with an "Expect: 100-continue"
 │                             │                   header with a non-informational (200 or higher) status. This
@@ -1320,12 +1334,16 @@
 │                             │                   response from the backend. Each such request leaves the proxy
 │                             │                    with an invalid connection, and causes one subsequent
 │                             │                   request using that connection to fail. 
-│                             ├ Severity        : UNKNOWN 
-│                             ├ References       ╭ [0]: https://go.dev/cl/591255 
-│                             │                  ├ [1]: https://go.dev/issue/67555 
-│                             │                  ├ [2]: https://groups.google.com/g/golang-dev/c/t0rK-qHBq
+│                             ├ Severity        : MEDIUM 
+│                             ├ VendorSeverity   ─ redhat: 2 
+│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-24791 
+│                             │                  ├ [1]: https://go.dev/cl/591255 
+│                             │                  ├ [2]: https://go.dev/issue/67555 
+│                             │                  ├ [3]: https://groups.google.com/g/golang-dev/c/t0rK-qHBq
 │                             │                  │      zY/m/6MMoAZkMAgAJ 
-│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2963 
+│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-24791 
+│                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-2963 
+│                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-24791 
 │                             ├ PublishedDate   : 2024-07-02T22:15:04.833Z 
 │                             ╰ LastModifiedDate: 2024-07-03T12:53:24.977Z 
 ├ [5] ╭ Target         : usr/bin/helm 
@@ -1346,6 +1364,8 @@
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                             ├ Title           : net/http: Denial of service due to improper 100-continue
+│                             │                    handling in net/http 
 │                             ├ Description     : The net/http HTTP/1.1 client mishandled the case where a
 │                             │                    server responds to a request with an "Expect: 100-continue"
 │                             │                   header with a non-informational (200 or higher) status. This
@@ -1358,12 +1378,16 @@
 │                             │                   response from the backend. Each such request leaves the proxy
 │                             │                    with an invalid connection, and causes one subsequent
 │                             │                   request using that connection to fail. 
-│                             ├ Severity        : UNKNOWN 
-│                             ├ References       ╭ [0]: https://go.dev/cl/591255 
-│                             │                  ├ [1]: https://go.dev/issue/67555 
-│                             │                  ├ [2]: https://groups.google.com/g/golang-dev/c/t0rK-qHBq
+│                             ├ Severity        : MEDIUM 
+│                             ├ VendorSeverity   ─ redhat: 2 
+│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-24791 
+│                             │                  ├ [1]: https://go.dev/cl/591255 
+│                             │                  ├ [2]: https://go.dev/issue/67555 
+│                             │                  ├ [3]: https://groups.google.com/g/golang-dev/c/t0rK-qHBq
 │                             │                  │      zY/m/6MMoAZkMAgAJ 
-│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2963 
+│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-24791 
+│                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-2963 
+│                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-24791 
 │                             ├ PublishedDate   : 2024-07-02T22:15:04.833Z 
 │                             ╰ LastModifiedDate: 2024-07-03T12:53:24.977Z 
 ╰ [6] ╭ Target         : usr/bin/skopeo 
@@ -1651,6 +1675,8 @@
                               ├ DataSource       ╭ ID  : govulndb 
                               │                  ├ Name: The Go Vulnerability Database 
                               │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                              ├ Title           : net/http: Denial of service due to improper 100-continue
+                              │                    handling in net/http 
                               ├ Description     : The net/http HTTP/1.1 client mishandled the case where a
                               │                    server responds to a request with an "Expect: 100-continue"
                               │                   header with a non-informational (200 or higher) status. This
@@ -1663,12 +1689,16 @@
                               │                   response from the backend. Each such request leaves the proxy
                               │                    with an invalid connection, and causes one subsequent
                               │                   request using that connection to fail. 
-                              ├ Severity        : UNKNOWN 
-                              ├ References       ╭ [0]: https://go.dev/cl/591255 
-                              │                  ├ [1]: https://go.dev/issue/67555 
-                              │                  ├ [2]: https://groups.google.com/g/golang-dev/c/t0rK-qHBq
+                              ├ Severity        : MEDIUM 
+                              ├ VendorSeverity   ─ redhat: 2 
+                              ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-24791 
+                              │                  ├ [1]: https://go.dev/cl/591255 
+                              │                  ├ [2]: https://go.dev/issue/67555 
+                              │                  ├ [3]: https://groups.google.com/g/golang-dev/c/t0rK-qHBq
                               │                  │      zY/m/6MMoAZkMAgAJ 
-                              │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2024-2963 
+                              │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-24791 
+                              │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-2963 
+                              │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-24791 
                               ├ PublishedDate   : 2024-07-02T22:15:04.833Z 
                               ╰ LastModifiedDate: 2024-07-03T12:53:24.977Z 
 ````
