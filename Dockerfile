@@ -21,6 +21,8 @@ FROM openaf/oaf as main
 COPY README.md /README.md
 
 USER root
+# Setup all tools
+# ---------------
 RUN apk update\
  && apk --no-cache add docker-cli skopeo curl tar bash gzip mc\
  && /openaf/ojob ojob.io/kube/getCriCtl path=/usr/bin\
@@ -30,9 +32,12 @@ RUN apk update\
  && /openaf/opack install BouncyCastle\
  && /openaf/opack install oafproc\
  && mkdir /openaf/ojobs\
- && /openaf/ojob ojob.io/get job=ojob.io/docker/expand.yaml > /openaf/ojobs/expand.yaml\
- && /openaf/ojob ojob.io/get job=ojob.io/docker/collapse.yaml > /openaf/ojobs/collapse.yaml\
+ && /openaf/ojob ojob.io/get job=ojob.io/docker/expand.yaml > /openaf/ojobs/imgExpand.yaml\
+ && /openaf/ojob ojob.io/get job=ojob.io/docker/collapse.yaml > /openaf/ojobs/imgCollapse.yaml\
  && /openaf/ojob ojob.io/get job=ojob.io/docker/listHubRepo.yaml > /openaf/ojobs/listHubRepo.yaml\
+ && /openaf/oaf --sb /openaf/ojobs/imgExpand.yaml\
+ && /openaf/oaf --sb /openaf/ojobs/imgCollapse.yaml\
+ && /openaf/oaf --sb /openaf/ojobs/listHubRepo.yaml\
  && chown -R openaf:0 /openaf\
  && chown openaf:0 /openaf/.opack.db\
  && chmod -R u+rwx,g+rwx,o+rx,o-w /openaf/*\
@@ -43,6 +48,8 @@ RUN apk update\
  && chmod a+x /usr/bin/helm\
  && rm /lib/apk/db/*
 
+# Setup Dive
+# ----------
 RUN cd /tmp\
  && skopeo copy docker://wagoodman/dive docker-archive:dive.tar\
  && /openaf/ojob ojob.io/docker/expand image=dive.tar output=output\
@@ -50,13 +57,40 @@ RUN cd /tmp\
  && rm -rf output\
  && rm dive.tar
 
+# Setup imgutils folder
+# ---------------------
+RUN mkdir /imgutils\
+ && chmod a+rwx /imgutils\
+ && chown openaf:0 /imgutils
+
+# Setup welcome message
+# ---------------------
+COPY welcome.txt /etc/imgutils
+RUN gzip /etc/imgutils\
+ && echo "zcat /etc/imgutils.gz" >> /etc/bash/start.sh\
+ && echo "/status" >> /etc/bash/start.sh\
+ && echo "echo ''" >> /etc/bash/start.sh
+
+COPY USAGE.md /USAGE.md
+COPY EXAMPLES.md /EXAMPLES.md
+COPY status.sh /status
+RUN gzip /USAGE.md\
+ && gzip /EXAMPLES.md\
+ && echo "#!/bin/sh" > /usr/bin/usage-help\
+ && echo "zcat /USAGE.md.gz | oafp in=md mdtemplate=true | less -r" >> /usr/bin/usage-help\
+ && echo "#!/bin/sh" > /usr/bin/examples-help\
+ && echo "zcat /EXAMPLES.md.gz | oafp in=md mdtemplate=true | less -r" > /usr/bin/examples-help\
+ && chmod a+x /usr/bin/usage-help\
+ && chmod a+x /usr/bin/examples-help\
+ && chmod a+x /status
+
 # -------------------
 FROM scratch as final
 
 COPY --from=main / /
 
 ENV OAF_HOME=/openaf
-ENV PATH=$PATH:$OAF_HOME
+ENV PATH=$PATH:$OAF_HOME:$OAF_HOME/ojobs
 USER openaf
 
-WORKDIR /openaf
+WORKDIR /imgutils
