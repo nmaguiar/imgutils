@@ -24,7 +24,7 @@ USER root
 # Setup all tools
 # ---------------
 RUN apk update\
- && apk --no-cache add docker-cli skopeo curl tar bash gzip mc containerd-ctr\
+ && apk --no-cache add docker-cli skopeo curl tar bash gzip mc containerd-ctr bash-completion\
  && /openaf/ojob ojob.io/kube/getCriCtl path=/usr/bin\
  && /openaf/ojob ojob.io/kube/getHelm path=/usr/bin\
  && /openaf/opack install DockerRegistry\
@@ -50,6 +50,15 @@ RUN apk update\
  && apk del containerd-ctr\
  && mv /tmp/ctr /usr/bin/ctr\
  && rm /lib/apk/db/*
+
+# Setup bash completion
+# ---------------------
+RUN echo "source <(crictl completion bash)" >> /etc/bash/start.sh\
+ && echo "source <(helm completion bash)" >> /etc/bash/start.sh\
+ && echo "source <(docker completion bash)" >> /etc/bash/start.sh\
+ && echo "source <(skopeo completion bash)" >> /etc/bash/start.sh\
+ && curl -s https://ojob.io/autoComplete.sh -o ~/.openaf-ojobio-complete\
+ && echo "source ~/.openaf-ojobio-complete" >> /etc/bash/start.sh
 
 # Setup Dive
 # ----------
@@ -97,3 +106,4 @@ ENV PATH=$PATH:$OAF_HOME:$OAF_HOME/ojobs
 USER openaf
 
 WORKDIR /imgutils
+CMD ["/usr/bin/usage-help"]
