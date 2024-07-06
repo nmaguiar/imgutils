@@ -24,7 +24,7 @@ USER root
 # Setup all tools
 # ---------------
 RUN apk update\
- && apk --no-cache add docker-cli skopeo curl tar bash gzip mc\
+ && apk --no-cache add docker-cli skopeo curl tar bash gzip mc containerd-ctr\
  && /openaf/ojob ojob.io/kube/getCriCtl path=/usr/bin\
  && /openaf/ojob ojob.io/kube/getHelm path=/usr/bin\
  && /openaf/opack install DockerRegistry\
@@ -46,6 +46,9 @@ RUN apk update\
  && sudo chmod g+w /openaf/.opack.db\
  && chmod a+x /usr/bin/crictl\
  && chmod a+x /usr/bin/helm\
+ && cp /usr/bin/ctr /tmp/ctr\
+ && apk del containerd-ctr\
+ && mv /tmp/ctr /usr/bin/ctr\
  && rm /lib/apk/db/*
 
 # Setup Dive

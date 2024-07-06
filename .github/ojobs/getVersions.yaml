@@ -36,6 +36,7 @@ jobs:
               .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `helm version | /openaf/oafp path=Version`])
               .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `skopeo -v | /openaf/oafp path="split(@, ' ')[2]"`])
               .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `crictl -v | /openaf/oafp path="split(@, ' ')[2]"`])
+              .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `ctr -v | /openaf/oafp path="replace(split(@, ' ')[2],'v','','')"`])
               .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `dive -v | /openaf/oafp path="split(@,' ').split([1],'-')[0]"`])
               .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `TERM=UTF-8 mc -V | /openaf/oafp in=lines linesjoin=true path="split([0], ' ')[3]"`])
               .getJson()
