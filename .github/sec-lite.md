@@ -7,25 +7,25 @@
       ├ Type           : gobinary 
       ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-32473 
                         │     ├ PkgName         : github.com/docker/docker 
-                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v26.0.1%2Binc
-                        │     │                  │       ompatible 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v26.0.1%2Bincompat
+                        │     │                  │       ible 
                         │     │                  ╰ UID : 493f0dc0950fc8ce 
                         │     ├ InstalledVersion: v26.0.1+incompatible 
                         │     ├ FixedVersion    : 26.0.2 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:67448822fc4746baee45beceb63c55d03600ecdb
-                        │     │                  │         60c54055259b34ccf0610428 
-                        │     │                  ╰ DiffID: sha256:3dc2a7b92bd37de62ee0697ba8df744863e54c61
-                        │     │                            259730e23b923676800582d5 
+                        │     ├ Layer            ╭ Digest: sha256:67448822fc4746baee45beceb63c55d03600ecdb60c54
+                        │     │                  │         055259b34ccf0610428 
+                        │     │                  ╰ DiffID: sha256:3dc2a7b92bd37de62ee0697ba8df744863e54c6125973
+                        │     │                            0e23b923676800582d5 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-32473 
                         │     ├ DataSource       ╭ ID  : ghsa 
                         │     │                  ├ Name: GitHub Security Advisory Go 
-                        │     │                  ╰ URL : https://github.com/advisories?query=type%3Areview
-                        │     │                          ed+ecosystem%3Ago 
+                        │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+                        │     │                          osystem%3Ago 
                         │     ├ Title           : moby: IPv6 enabled on IPv4-only network interfaces 
                         │     ├ Description     : Moby is an open source container framework that is a key
-                        │     │                    component of Docker Engine, Docker Desktop, and other
+                        │     │                   component of Docker Engine, Docker Desktop, and other
                         │     │                   distributions of container tooling or runtimes. In 26.0.0,
                         │     │                   IPv6 is not disabled on network interfaces, including those
                         │     │                   belonging to networks where `--ipv6=false`. An container with
@@ -47,43 +47,43 @@
                         │     ├ CweIDs           ─ [0]: CWE-668 
                         │     ├ VendorSeverity   ╭ ghsa  : 2 
                         │     │                  ╰ redhat: 2 
-                        │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H
-                        │     │                  │        │           /I:N/A:N 
+                        │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:N/
+                        │     │                  │        │           A:N 
                         │     │                  │        ╰ V3Score : 4.7 
-                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H
-                        │     │                           │           /I:N/A:N 
+                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:N/
+                        │     │                           │           A:N 
                         │     │                           ╰ V3Score : 4.7 
                         │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-32473 
                         │     │                  ├ [1]: https://github.com/moby/moby 
-                        │     │                  ├ [2]: https://github.com/moby/moby/commit/7cef0d9cd1cf22
-                        │     │                  │      1d8c0b7b7aeda69552649e0642 
-                        │     │                  ├ [3]: https://github.com/moby/moby/security/advisories/G
-                        │     │                  │      HSA-x84c-p2g9-rqv9 
+                        │     │                  ├ [2]: https://github.com/moby/moby/commit/7cef0d9cd1cf221d8c0
+                        │     │                  │      b7b7aeda69552649e0642 
+                        │     │                  ├ [3]: https://github.com/moby/moby/security/advisories/GHSA-x
+                        │     │                  │      84c-p2g9-rqv9 
                         │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-32473 
                         │     │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2024-32473 
                         │     ├ PublishedDate   : 2024-04-18T22:15:10.4Z 
                         │     ╰ LastModifiedDate: 2024-04-19T13:10:25.637Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2023-47108 
-                        │     ├ PkgName         : go.opentelemetry.io/contrib/instrumentation/google.golan
-                        │     │                   g.org/grpc/otelgrpc 
-                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/go.opentelemetry.io/contrib/instrument
-                        │     │                  │       ation/google.golang.org/grpc/otelgrpc@v0.42.0 
+                        │     ├ PkgName         : go.opentelemetry.io/contrib/instrumentation/google.golang.org
+                        │     │                   /grpc/otelgrpc 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/go.opentelemetry.io/contrib/instrumentation
+                        │     │                  │       /google.golang.org/grpc/otelgrpc@v0.42.0 
                         │     │                  ╰ UID : a2b271a001beeba4 
                         │     ├ InstalledVersion: v0.42.0 
                         │     ├ FixedVersion    : 0.46.0 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:67448822fc4746baee45beceb63c55d03600ecdb
-                        │     │                  │         60c54055259b34ccf0610428 
-                        │     │                  ╰ DiffID: sha256:3dc2a7b92bd37de62ee0697ba8df744863e54c61
-                        │     │                            259730e23b923676800582d5 
+                        │     ├ Layer            ╭ Digest: sha256:67448822fc4746baee45beceb63c55d03600ecdb60c54
+                        │     │                  │         055259b34ccf0610428 
+                        │     │                  ╰ DiffID: sha256:3dc2a7b92bd37de62ee0697ba8df744863e54c6125973
+                        │     │                            0e23b923676800582d5 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-47108 
                         │     ├ DataSource       ╭ ID  : ghsa 
                         │     │                  ├ Name: GitHub Security Advisory Go 
-                        │     │                  ╰ URL : https://github.com/advisories?query=type%3Areview
-                        │     │                          ed+ecosystem%3Ago 
-                        │     ├ Title           : opentelemetry-go-contrib: DoS vulnerability in otelgrpc
-                        │     │                   due to unbound cardinality metrics 
+                        │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+                        │     │                          osystem%3Ago 
+                        │     ├ Title           : opentelemetry-go-contrib: DoS vulnerability in otelgrpc due
+                        │     │                   to unbound cardinality metrics 
                         │     ├ Description     : OpenTelemetry-Go Contrib is a collection of third-party
                         │     │                   packages for OpenTelemetry-Go. Prior to version 0.46.0, the
                         │     │                   grpc Unary Server Interceptor out of the box adds labels
@@ -104,36 +104,35 @@
                         │     │                  ├ ghsa       : 3 
                         │     │                  ├ nvd        : 3 
                         │     │                  ╰ redhat     : 2 
-                        │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
-                        │     │                  │        │           /I:N/A:H 
+                        │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+                        │     │                  │        │           A:H 
                         │     │                  │        ╰ V3Score : 7.5 
-                        │     │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
-                        │     │                  │        │           /I:N/A:H 
+                        │     │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+                        │     │                  │        │           A:H 
                         │     │                  │        ╰ V3Score : 7.5 
-                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
-                        │     │                           │           /I:N/A:H 
+                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+                        │     │                           │           A:H 
                         │     │                           ╰ V3Score : 7.5 
                         │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2023-47108 
-                        │     │                  ├ [1]: https://github.com/open-telemetry/opentelemetry-go
-                        │     │                  │      -contrib 
-                        │     │                  ├ [2]: https://github.com/open-telemetry/opentelemetry-go
-                        │     │                  │      -contrib/blob/9d4eb7e7706038b07d33f83f76afbe13f53d171d/
-                        │     │                  │      instrumentation/google.golang.org/grpc/otelgrpc/interce
-                        │     │                  │      ptor.go#L327 
-                        │     │                  ├ [3]: https://github.com/open-telemetry/opentelemetry-go
-                        │     │                  │      -contrib/blob/instrumentation/google.golang.org/grpc/ot
-                        │     │                  │      elgrpc/v0.45.0/instrumentation/google.golang.org/grpc/o
-                        │     │                  │      telgrpc/config.go#L138 
-                        │     │                  ├ [4]: https://github.com/open-telemetry/opentelemetry-go
-                        │     │                  │      -contrib/commit/b44dfc9092b157625a5815cb437583cee663333
-                        │     │                  │      b 
-                        │     │                  ├ [5]: https://github.com/open-telemetry/opentelemetry-go
-                        │     │                  │      -contrib/pull/4322 
-                        │     │                  ├ [6]: https://github.com/open-telemetry/opentelemetry-go
-                        │     │                  │      -contrib/security/advisories/GHSA-8pgv-569h-w5rw 
+                        │     │                  ├ [1]: https://github.com/open-telemetry/opentelemetry-go-cont
+                        │     │                  │      rib 
+                        │     │                  ├ [2]: https://github.com/open-telemetry/opentelemetry-go-cont
+                        │     │                  │      rib/blob/9d4eb7e7706038b07d33f83f76afbe13f53d171d/instr
+                        │     │                  │      umentation/google.golang.org/grpc/otelgrpc/interceptor.
+                        │     │                  │      go#L327 
+                        │     │                  ├ [3]: https://github.com/open-telemetry/opentelemetry-go-cont
+                        │     │                  │      rib/blob/instrumentation/google.golang.org/grpc/otelgrp
+                        │     │                  │      c/v0.45.0/instrumentation/google.golang.org/grpc/otelgr
+                        │     │                  │      pc/config.go#L138 
+                        │     │                  ├ [4]: https://github.com/open-telemetry/opentelemetry-go-cont
+                        │     │                  │      rib/commit/b44dfc9092b157625a5815cb437583cee663333b 
+                        │     │                  ├ [5]: https://github.com/open-telemetry/opentelemetry-go-cont
+                        │     │                  │      rib/pull/4322 
+                        │     │                  ├ [6]: https://github.com/open-telemetry/opentelemetry-go-cont
+                        │     │                  │      rib/security/advisories/GHSA-8pgv-569h-w5rw 
                         │     │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2023-47108 
-                        │     │                  ├ [8]: https://pkg.go.dev/go.opentelemetry.io/otel/metric
-                        │     │                  │      /noop#NewMeterProvider 
+                        │     │                  ├ [8]: https://pkg.go.dev/go.opentelemetry.io/otel/metric/noop
+                        │     │                  │      #NewMeterProvider 
                         │     │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2023-47108 
                         │     ├ PublishedDate   : 2023-11-10T19:15:16.41Z 
                         │     ╰ LastModifiedDate: 2023-11-20T19:34:26.493Z 
@@ -144,21 +143,21 @@
                         │     ├ InstalledVersion: 1.22.1 
                         │     ├ FixedVersion    : 1.21.11, 1.22.4 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:67448822fc4746baee45beceb63c55d03600ecdb
-                        │     │                  │         60c54055259b34ccf0610428 
-                        │     │                  ╰ DiffID: sha256:3dc2a7b92bd37de62ee0697ba8df744863e54c61
-                        │     │                            259730e23b923676800582d5 
+                        │     ├ Layer            ╭ Digest: sha256:67448822fc4746baee45beceb63c55d03600ecdb60c54
+                        │     │                  │         055259b34ccf0610428 
+                        │     │                  ╰ DiffID: sha256:3dc2a7b92bd37de62ee0697ba8df744863e54c6125973
+                        │     │                            0e23b923676800582d5 
                         │     ├ SeveritySource  : nvd 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24790 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
                         │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │     ├ Title           : golang: net/netip: Unexpected behavior from Is methods
-                        │     │                   for IPv4-mapped IPv6 addresses 
-                        │     ├ Description     : The various Is methods (IsPrivate, IsLoopback, etc) did
-                        │     │                   not work as expected for IPv4-mapped IPv6 addresses,
-                        │     │                   returning false for addresses which would return true in
-                        │     │                   their traditional IPv4 forms. 
+                        │     ├ Title           : golang: net/netip: Unexpected behavior from Is methods for
+                        │     │                   IPv4-mapped IPv6 addresses 
+                        │     ├ Description     : The various Is methods (IsPrivate, IsLoopback, etc) did not
+                        │     │                   work as expected for IPv4-mapped IPv6 addresses, returning
+                        │     │                   false for addresses which would return true in their
+                        │     │                   traditional IPv4 forms. 
                         │     ├ Severity        : CRITICAL 
                         │     ├ VendorSeverity   ╭ alma       : 2 
                         │     │                  ├ amazon     : 2 
@@ -167,17 +166,16 @@
                         │     │                  ├ oracle-oval: 2 
                         │     │                  ├ photon     : 4 
                         │     │                  ╰ redhat     : 2 
-                        │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:
-                        │     │                  │         │           H/I:H/A:H 
+                        │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
+                        │     │                  │         │           /A:H 
                         │     │                  │         ╰ V3Score : 9.8 
-                        │     │                  ├ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:
-                        │     │                  │         │           H/I:H/A:H 
+                        │     │                  ├ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
+                        │     │                  │         │           /A:H 
                         │     │                  │         ╰ V3Score : 9.8 
-                        │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:
-                        │     │                            │           H/I:H/A:N 
+                        │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H
+                        │     │                            │           /A:N 
                         │     │                            ╰ V3Score : 6.7 
-                        │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/0
-                        │     │                  │       6/04/1 
+                        │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/06/04/1 
                         │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:4212 
                         │     │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2024-24790 
                         │     │                  ├ [3] : https://bugzilla.redhat.com/2292668 
@@ -185,8 +183,8 @@
                         │     │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2024-4212.html 
                         │     │                  ├ [6] : https://go.dev/cl/590316 
                         │     │                  ├ [7] : https://go.dev/issue/67680 
-                        │     │                  ├ [8] : https://groups.google.com/g/golang-announce/c/Xbx
-                        │     │                  │       ouI9gY7k/m/TuoGEhxIEwAJ 
+                        │     │                  ├ [8] : https://groups.google.com/g/golang-announce/c/XbxouI9g
+                        │     │                  │       Y7k/m/TuoGEhxIEwAJ 
                         │     │                  ├ [9] : https://linux.oracle.com/cve/CVE-2024-24790.html 
                         │     │                  ├ [10]: https://linux.oracle.com/errata/ELSA-2024-4237.html 
                         │     │                  ├ [11]: https://nvd.nist.gov/vuln/detail/CVE-2024-24790 
@@ -201,30 +199,30 @@
                         │     ├ InstalledVersion: 1.22.1 
                         │     ├ FixedVersion    : 1.21.9, 1.22.2 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:67448822fc4746baee45beceb63c55d03600ecdb
-                        │     │                  │         60c54055259b34ccf0610428 
-                        │     │                  ╰ DiffID: sha256:3dc2a7b92bd37de62ee0697ba8df744863e54c61
-                        │     │                            259730e23b923676800582d5 
+                        │     ├ Layer            ╭ Digest: sha256:67448822fc4746baee45beceb63c55d03600ecdb60c54
+                        │     │                  │         055259b34ccf0610428 
+                        │     │                  ╰ DiffID: sha256:3dc2a7b92bd37de62ee0697ba8df744863e54c6125973
+                        │     │                            0e23b923676800582d5 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-45288 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
                         │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
                         │     ├ Title           : golang: net/http, x/net/http2: unlimited number of
                         │     │                   CONTINUATION frames causes DoS 
-                        │     ├ Description     : An attacker may cause an HTTP/2 endpoint to read
-                        │     │                   arbitrary amounts of header data by sending an excessive
-                        │     │                   number of CONTINUATION frames. Maintaining HPACK state
-                        │     │                   requires parsing and processing all HEADERS and CONTINUATION
-                        │     │                   frames on a connection. When a request's headers exceed
-                        │     │                   MaxHeaderBytes, no memory is allocated to store the excess
-                        │     │                   headers, but they are still parsed. This permits an attacker
-                        │     │                   to cause an HTTP/2 endpoint to read arbitrary amounts of
-                        │     │                   header data, all associated with a request which is going to
-                        │     │                   be rejected. These headers can include Huffman-encoded data
-                        │     │                   which is significantly more expensive for the receiver to
-                        │     │                   decode than for an attacker to send. The fix sets a limit on
-                        │     │                   the amount of excess header frames we will process before
-                        │     │                   closing a connection. 
+                        │     ├ Description     : An attacker may cause an HTTP/2 endpoint to read arbitrary
+                        │     │                   amounts of header data by sending an excessive number of
+                        │     │                   CONTINUATION frames. Maintaining HPACK state requires parsing
+                        │     │                    and processing all HEADERS and CONTINUATION frames on a
+                        │     │                   connection. When a request's headers exceed MaxHeaderBytes,
+                        │     │                   no memory is allocated to store the excess headers, but they
+                        │     │                   are still parsed. This permits an attacker to cause an HTTP/2
+                        │     │                    endpoint to read arbitrary amounts of header data, all
+                        │     │                   associated with a request which is going to be rejected.
+                        │     │                   These headers can include Huffman-encoded data which is
+                        │     │                   significantly more expensive for the receiver to decode than
+                        │     │                   for an attacker to send. The fix sets a limit on the amount
+                        │     │                   of excess header frames we will process before closing a
+                        │     │                   connection. 
                         │     ├ Severity        : HIGH 
                         │     ├ VendorSeverity   ╭ alma       : 3 
                         │     │                  ├ amazon     : 2 
@@ -234,16 +232,14 @@
                         │     │                  ├ photon     : 3 
                         │     │                  ├ redhat     : 3 
                         │     │                  ╰ rocky      : 3 
-                        │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
-                        │     │                  │        │           /I:N/A:L 
+                        │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+                        │     │                  │        │           A:L 
                         │     │                  │        ╰ V3Score : 5.3 
-                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
-                        │     │                           │           /I:N/A:H 
+                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+                        │     │                           │           A:H 
                         │     │                           ╰ V3Score : 7.5 
-                        │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/0
-                        │     │                  │       4/03/16 
-                        │     │                  ├ [1] : http://www.openwall.com/lists/oss-security/2024/0
-                        │     │                  │       4/05/4 
+                        │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/04/03/16 
+                        │     │                  ├ [1] : http://www.openwall.com/lists/oss-security/2024/04/05/4 
                         │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:2724 
                         │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2023-45288 
                         │     │                  ├ [4] : https://bugzilla.redhat.com/2268017 
@@ -254,37 +250,35 @@
                         │     │                  ├ [9] : https://bugzilla.redhat.com/show_bug.cgi?id=2268018 
                         │     │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2268019 
                         │     │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2268273 
-                        │     │                  ├ [12]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
-                        │     │                  │       E-2023-45288 
-                        │     │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
-                        │     │                  │       E-2023-45289 
-                        │     │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
-                        │     │                  │       E-2023-45290 
-                        │     │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CV
-                        │     │                  │       E-2024-24783 
+                        │     │                  ├ [12]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
+                        │     │                  │       3-45288 
+                        │     │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
+                        │     │                  │       3-45289 
+                        │     │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
+                        │     │                  │       3-45290 
+                        │     │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
+                        │     │                  │       4-24783 
                         │     │                  ├ [16]: https://errata.almalinux.org/9/ALSA-2024-2724.html 
                         │     │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:2724 
                         │     │                  ├ [18]: https://go.dev/cl/576155 
                         │     │                  ├ [19]: https://go.dev/issue/65051 
-                        │     │                  ├ [20]: https://groups.google.com/g/golang-announce/c/YgW
-                        │     │                  │       0sx8mN3M 
+                        │     │                  ├ [20]: https://groups.google.com/g/golang-announce/c/YgW0sx8m
+                        │     │                  │       N3M 
                         │     │                  ├ [21]: https://linux.oracle.com/cve/CVE-2023-45288.html 
                         │     │                  ├ [22]: https://linux.oracle.com/errata/ELSA-2024-3346.html 
-                        │     │                  ├ [23]: https://lists.fedoraproject.org/archives/list/pac
-                        │     │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
-                        │     │                  │       XRKRYBI2F5UESH67BJBQXUPT 
-                        │     │                  ├ [24]: https://lists.fedoraproject.org/archives/list/pac
-                        │     │                  │       kage-announce@lists.fedoraproject.org/message/QRYFHIQ6
-                        │     │                  │       XRKRYBI2F5UESH67BJBQXUPT/ 
-                        │     │                  ├ [25]: https://nowotarski.info/http2-continuation-flood-
-                        │     │                  │       technical-details 
+                        │     │                  ├ [23]: https://lists.fedoraproject.org/archives/list/package-
+                        │     │                  │       announce@lists.fedoraproject.org/message/QRYFHIQ6XRKRY
+                        │     │                  │       BI2F5UESH67BJBQXUPT 
+                        │     │                  ├ [24]: https://lists.fedoraproject.org/archives/list/package-
+                        │     │                  │       announce@lists.fedoraproject.org/message/QRYFHIQ6XRKRY
+                        │     │                  │       BI2F5UESH67BJBQXUPT/ 
+                        │     │                  ├ [25]: https://nowotarski.info/http2-continuation-flood-techn
+                        │     │                  │       ical-details 
                         │     │                  ├ [26]: https://nowotarski.info/http2-continuation-flood/ 
                         │     │                  ├ [27]: https://nvd.nist.gov/vuln/detail/CVE-2023-45288 
                         │     │                  ├ [28]: https://pkg.go.dev/vuln/GO-2024-2687 
-                        │     │                  ├ [29]: https://security.netapp.com/advisory/ntap-2024041
-                        │     │                  │       9-0009 
-                        │     │                  ├ [30]: https://security.netapp.com/advisory/ntap-2024041
-                        │     │                  │       9-0009/ 
+                        │     │                  ├ [29]: https://security.netapp.com/advisory/ntap-20240419-0009 
+                        │     │                  ├ [30]: https://security.netapp.com/advisory/ntap-20240419-0009/ 
                         │     │                  ├ [31]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
                         │     │                  ╰ [32]: https://www.kb.cert.org/vuls/id/421644 
                         │     ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
@@ -296,35 +290,32 @@
                         │     ├ InstalledVersion: 1.22.1 
                         │     ├ FixedVersion    : 1.22.3 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:67448822fc4746baee45beceb63c55d03600ecdb
-                        │     │                  │         60c54055259b34ccf0610428 
-                        │     │                  ╰ DiffID: sha256:3dc2a7b92bd37de62ee0697ba8df744863e54c61
-                        │     │                            259730e23b923676800582d5 
+                        │     ├ Layer            ╭ Digest: sha256:67448822fc4746baee45beceb63c55d03600ecdb60c54
+                        │     │                  │         055259b34ccf0610428 
+                        │     │                  ╰ DiffID: sha256:3dc2a7b92bd37de62ee0697ba8df744863e54c6125973
+                        │     │                            0e23b923676800582d5 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24788 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
                         │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
                         │     ├ Title           : golang: net: malformed DNS message can cause infinite loop 
-                        │     ├ Description     : A malformed DNS message in response to a query can cause
-                        │     │                    the Lookup functions to get stuck in an infinite loop. 
+                        │     ├ Description     : A malformed DNS message in response to a query can cause the
+                        │     │                   Lookup functions to get stuck in an infinite loop. 
                         │     ├ Severity        : HIGH 
                         │     ├ VendorSeverity   ╭ cbl-mariner: 2 
                         │     │                  ╰ redhat     : 2 
-                        │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N
-                        │     │                           │           /I:N/A:H 
+                        │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+                        │     │                           │           A:H 
                         │     │                           ╰ V3Score : 7.5 
                         │     ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/05/08/3 
                         │     │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2024-24788 
                         │     │                  ├ [2]: https://go.dev/cl/578375 
                         │     │                  ├ [3]: https://go.dev/issue/66754 
-                        │     │                  ├ [4]: https://groups.google.com/g/golang-announce/c/wkkO
-                        │     │                  │      4P9stm0 
+                        │     │                  ├ [4]: https://groups.google.com/g/golang-announce/c/wkkO4P9stm0 
                         │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2024-24788 
                         │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2024-2824 
-                        │     │                  ├ [7]: https://security.netapp.com/advisory/ntap-20240605
-                        │     │                  │      -0002/ 
-                        │     │                  ├ [8]: https://security.netapp.com/advisory/ntap-20240614
-                        │     │                  │      -0001/ 
+                        │     │                  ├ [7]: https://security.netapp.com/advisory/ntap-20240605-0002/ 
+                        │     │                  ├ [8]: https://security.netapp.com/advisory/ntap-20240614-0001/ 
                         │     │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2024-24788 
                         │     ├ PublishedDate   : 2024-05-08T16:15:08.25Z 
                         │     ╰ LastModifiedDate: 2024-06-14T13:15:50.67Z 
@@ -335,10 +326,10 @@
                         │     ├ InstalledVersion: 1.22.1 
                         │     ├ FixedVersion    : 1.21.11, 1.22.4 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:67448822fc4746baee45beceb63c55d03600ecdb
-                        │     │                  │         60c54055259b34ccf0610428 
-                        │     │                  ╰ DiffID: sha256:3dc2a7b92bd37de62ee0697ba8df744863e54c61
-                        │     │                            259730e23b923676800582d5 
+                        │     ├ Layer            ╭ Digest: sha256:67448822fc4746baee45beceb63c55d03600ecdb60c54
+                        │     │                  │         055259b34ccf0610428 
+                        │     │                  ╰ DiffID: sha256:3dc2a7b92bd37de62ee0697ba8df744863e54c6125973
+                        │     │                            0e23b923676800582d5 
                         │     ├ SeveritySource  : nvd 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24789 
                         │     ├ DataSource       ╭ ID  : govulndb 
@@ -359,17 +350,16 @@
                         │     │                  ├ oracle-oval: 2 
                         │     │                  ├ photon     : 2 
                         │     │                  ╰ redhat     : 2 
-                        │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:
-                        │     │                  │         │           N/I:H/A:N 
+                        │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H
+                        │     │                  │         │           /A:N 
                         │     │                  │         ╰ V3Score : 5.5 
-                        │     │                  ├ nvd     ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:
-                        │     │                  │         │           N/I:H/A:N 
+                        │     │                  ├ nvd     ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H
+                        │     │                  │         │           /A:N 
                         │     │                  │         ╰ V3Score : 5.5 
-                        │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:
-                        │     │                            │           N/I:H/A:N 
+                        │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H
+                        │     │                            │           /A:N 
                         │     │                            ╰ V3Score : 7.5 
-                        │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/0
-                        │     │                  │       6/04/1 
+                        │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/06/04/1 
                         │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:4212 
                         │     │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2024-24789 
                         │     │                  ├ [3] : https://bugzilla.redhat.com/2292668 
@@ -377,13 +367,13 @@
                         │     │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2024-4212.html 
                         │     │                  ├ [6] : https://go.dev/cl/585397 
                         │     │                  ├ [7] : https://go.dev/issue/66869 
-                        │     │                  ├ [8] : https://groups.google.com/g/golang-announce/c/Xbx
-                        │     │                  │       ouI9gY7k/m/TuoGEhxIEwAJ 
+                        │     │                  ├ [8] : https://groups.google.com/g/golang-announce/c/XbxouI9g
+                        │     │                  │       Y7k/m/TuoGEhxIEwAJ 
                         │     │                  ├ [9] : https://linux.oracle.com/cve/CVE-2024-24789.html 
                         │     │                  ├ [10]: https://linux.oracle.com/errata/ELSA-2024-4237.html 
-                        │     │                  ├ [11]: https://lists.fedoraproject.org/archives/list/pac
-                        │     │                  │       kage-announce@lists.fedoraproject.org/message/U5YAEIA6
-                        │     │                  │       IUHUNGJ7AIXXPQT6D2GYENX7/ 
+                        │     │                  ├ [11]: https://lists.fedoraproject.org/archives/list/package-
+                        │     │                  │       announce@lists.fedoraproject.org/message/U5YAEIA6IUHUN
+                        │     │                  │       GJ7AIXXPQT6D2GYENX7/ 
                         │     │                  ├ [12]: https://nvd.nist.gov/vuln/detail/CVE-2024-24789 
                         │     │                  ├ [13]: https://pkg.go.dev/vuln/GO-2024-2888 
                         │     │                  ╰ [14]: https://www.cve.org/CVERecord?id=CVE-2024-24789 
@@ -396,18 +386,18 @@
                               ├ InstalledVersion: 1.22.1 
                               ├ FixedVersion    : 1.21.12, 1.22.5 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:67448822fc4746baee45beceb63c55d03600ecdb
-                              │                  │         60c54055259b34ccf0610428 
-                              │                  ╰ DiffID: sha256:3dc2a7b92bd37de62ee0697ba8df744863e54c61
-                              │                            259730e23b923676800582d5 
+                              ├ Layer            ╭ Digest: sha256:67448822fc4746baee45beceb63c55d03600ecdb60c54
+                              │                  │         055259b34ccf0610428 
+                              │                  ╰ DiffID: sha256:3dc2a7b92bd37de62ee0697ba8df744863e54c6125973
+                              │                            0e23b923676800582d5 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24791 
                               ├ DataSource       ╭ ID  : govulndb 
                               │                  ├ Name: The Go Vulnerability Database 
                               │                  ╰ URL : https://pkg.go.dev/vuln/ 
                               ├ Title           : net/http: Denial of service due to improper 100-continue
-                              │                    handling in net/http 
+                              │                   handling in net/http 
                               ├ Description     : The net/http HTTP/1.1 client mishandled the case where a
-                              │                    server responds to a request with an "Expect: 100-continue"
+                              │                   server responds to a request with an "Expect: 100-continue"
                               │                   header with a non-informational (200 or higher) status. This
                               │                   mishandling could leave a client connection in an invalid
                               │                   state, where the next request sent on the connection will
@@ -423,8 +413,8 @@
                               ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-24791 
                               │                  ├ [1]: https://go.dev/cl/591255 
                               │                  ├ [2]: https://go.dev/issue/67555 
-                              │                  ├ [3]: https://groups.google.com/g/golang-dev/c/t0rK-qHBq
-                              │                  │      zY/m/6MMoAZkMAgAJ 
+                              │                  ├ [3]: https://groups.google.com/g/golang-dev/c/t0rK-qHBqzY/m/
+                              │                  │      6MMoAZkMAgAJ 
                               │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-24791 
                               │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-2963 
                               │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-24791 
