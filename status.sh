@@ -6,12 +6,12 @@ GREEN='\033[0;32m'
 NC='\033[0m' 
 FAINT='\033[2m'
 
-docker_sock="${YELLOW}not connected${NC}${FAINT}"
-crio_sock="${YELLOW}not connected${NC}${FAINT}"
-containerd_sock="${YELLOW}not connected${NC}${FAINT}"
+docker_sock="${YELLOW}not present${NC}${FAINT}"
+crio_sock="${YELLOW}not present${NC}${FAINT}"
+containerd_sock="${YELLOW}not present${NC}${FAINT}"
 
-[ -e /var/run/docker.sock ] && docker_sock="${GREEN}connected${NC}${FAINT}"
-[ -e /run/crio/crio.sock ] && crio_sock="${GREEN}connected${NC}${FAINT}"
-[ -e /run/containerd/containerd.sock ] && containerd_sock="${GREEN}connected${NC}${FAINT}"
+[ -S /var/run/docker.sock ] && docker_sock="${GREEN}present${NC}${FAINT}"
+[ -S /run/crio/crio.sock ] && crio_sock="${GREEN}present${NC}${FAINT}"
+[ -S /run/containerd/containerd.sock ] && containerd_sock="${GREEN}present${NC}${FAINT}"
 
-echo -e " ${FAINT}(docker: $docker_sock, crictl: ( cri-o: $crio_sock , containerd: $containerd_sock ))${NC}"
+echo -e " ${FAINT}connections:  (docker: $docker_sock, crictl: ( cri-o: $crio_sock , containerd: $containerd_sock ))${NC}"

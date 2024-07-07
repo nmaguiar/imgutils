@@ -18,13 +18,13 @@
 FROM openaf/oaf as main
 
 #COPY --from=dive /dive /usr/bin/dive
-COPY README.md /README.md
+#COPY README.md /README.md
 
 USER root
 # Setup all tools
 # ---------------
 RUN apk update\
- && apk --no-cache add docker-cli skopeo curl tar bash gzip mc containerd-ctr bash-completion\
+ && apk --no-cache add docker-cli skopeo curl tar bash gzip mc containerd-ctr nerdctl bash-completion\
  && /openaf/ojob ojob.io/kube/getCriCtl path=/usr/bin\
  && /openaf/ojob ojob.io/kube/getHelm path=/usr/bin\
  && /openaf/opack install DockerRegistry\
@@ -49,6 +49,9 @@ RUN apk update\
  && cp /usr/bin/ctr /tmp/ctr\
  && apk del containerd-ctr\
  && mv /tmp/ctr /usr/bin/ctr\
+ && cp /usr/bin/nerdctl /tmp/nerdctl\
+ && apk del nerdctl\
+ && mv /tmp/nerdctl /usr/bin/nerdctl\
  && rm /lib/apk/db/*
 
 # Setup bash completion
@@ -81,7 +84,8 @@ COPY welcome.txt /etc/imgutils
 RUN gzip /etc/imgutils\
  && echo "zcat /etc/imgutils.gz" >> /etc/bash/start.sh\
  && echo "/status" >> /etc/bash/start.sh\
- && echo "echo ''" >> /etc/bash/start.sh
+ && echo "echo ''" >> /etc/bash/start.sh\
+ && cp /etc/bash/start.sh /etc/profile.d/start.sh
 
 COPY USAGE.md /USAGE.md
 COPY EXAMPLES.md /EXAMPLES.md

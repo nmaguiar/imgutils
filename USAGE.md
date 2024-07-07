@@ -4,13 +4,19 @@ Welcome to the ImgUtils image. Check the deployment options available and the li
 
 ---
 
-## 🐳 Deploy using with docker
+## 🐳 Deploy using docker
 
 {{{$acolor 'FAINT,ITALIC' 'docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock nmaguiar/imgutils sudo /bin/bash'}}}
 
 ---
 
-## ⚙️ Deploy using with kubectl
+## Deploy using nerdctl
+
+{{{$acolor 'FAINT,ITALIC' 'nerdctl run --rm -ti -v /run/k3s/containerd/containerd.sock:/run/containerd/containerd.sock nmaguiar/imgutils:build sudo /bin/bash'}}}
+
+---
+
+## ⚙️ Deploy using kubectl
 
 First check the nodes' names with 'kubectl get nodes'
 
@@ -33,10 +39,11 @@ First check the nodes' names with 'kubectl get nodes'
 | Utility | Use for     |
 |---------|-------------|
 | skopeo  | Copy from/to container registries, archive files and from/to docker daemon |
-| helm    | The most popular Kubernetes package manager  |
-| docker  | Docker client to interact with a docker daemon (see below 'Deploy using with docker') |
-| crictl  | Client to interact with containerd/cri-o (see below 'Deploy using with kubectl') |
-| ctr     | Containerd client tool |
+| helm    | The most popular Kubernetes package manager (for use to pull/push charts) |
+| docker  | Docker client to interact with a docker daemon (see above 'Deploy using docker') |
+| crictl  | Client to interact with containerd/cri-o with Kubernetes (see above 'Deploy using kubectl') |
+| ctr     | Containerd low-level client tool |
+| nerdctl | Containerd high-level client tool (see above 'Deploy using nerdctl' and/or 'Deploy using kubectl') |
 | dive    | A tool for exploring each layer in a docker image |
 | mc      | Midnight Commander visual file manager |
 | openaf  | A "swiss-army knife" devops tool & runtime |
