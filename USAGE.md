@@ -10,13 +10,13 @@ Welcome to the ImgUtils image. Check the deployment options available and the li
 
 ---
 
-## Deploy using nerdctl
+## 🤓 Deploy using nerdctl
 
 {{{$acolor 'FAINT,ITALIC' 'nerdctl run --rm -ti -v /run/k3s/containerd/containerd.sock:/run/containerd/containerd.sock nmaguiar/imgutils:build sudo /bin/bash'}}}
 
 ---
 
-## ⚙️ Deploy using kubectl
+## ⚙️  Deploy using kubectl
 
 First check the nodes' names with 'kubectl get nodes'
 
