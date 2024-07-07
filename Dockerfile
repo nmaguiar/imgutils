@@ -52,7 +52,8 @@ RUN apk update\
  && cp /usr/bin/nerdctl /tmp/nerdctl\
  && apk del nerdctl\
  && mv /tmp/nerdctl /usr/bin/nerdctl\
- && rm /lib/apk/db/*
+ && rm /lib/apk/db/*\
+ && sed -i "s/\/bin\/sh/\/bin\/bash/g" /etc/passwd
 
 # Setup bash completion
 # ---------------------
@@ -60,8 +61,8 @@ RUN echo "source <(crictl completion bash)" >> /etc/bash/start.sh\
  && echo "source <(helm completion bash)" >> /etc/bash/start.sh\
  && echo "source <(docker completion bash)" >> /etc/bash/start.sh\
  && echo "source <(skopeo completion bash)" >> /etc/bash/start.sh\
- && curl -s https://ojob.io/autoComplete.sh -o ~/.openaf-ojobio-complete\
- && echo "source ~/.openaf-ojobio-complete" >> /etc/bash/start.sh
+ && curl -s https://ojob.io/autoComplete.sh -o /etc/.openaf-ojobio-complete\
+ && echo "source /etc/.openaf-ojobio-complete" >> /etc/bash/start.sh
 
 # Setup Dive
 # ----------
@@ -87,6 +88,8 @@ RUN gzip /etc/imgutils\
  && echo "echo ''" >> /etc/bash/start.sh\
  && cp /etc/bash/start.sh /etc/profile.d/start.sh
 
+# Setup usage and examples
+# ------------------------
 COPY USAGE.md /USAGE.md
 COPY EXAMPLES.md /EXAMPLES.md
 COPY status.sh /status
