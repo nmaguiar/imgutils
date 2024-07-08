@@ -63,3 +63,5 @@ First check the nodes' names with 'kubectl get nodes'
 | Alias | oafptab | Parses the stdin input ascii table (e.g. crictl images) into an ascii table with oafp query functionality |
 | Command | usage-help | Displays the image's usage help |
 | Command | examples-help | Displays the image's examples help |
+
+---
