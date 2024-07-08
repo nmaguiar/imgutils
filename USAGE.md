@@ -12,7 +12,7 @@ Welcome to the ImgUtils image. Check the deployment options available and the li
 
 ## 🤓 Deploy using nerdctl
 
-{{{$acolor 'FAINT,ITALIC' 'nerdctl run --rm -ti -v /run/k3s/containerd/containerd.sock:/run/containerd/containerd.sock nmaguiar/imgutils:build sudo /bin/bash'}}}
+{{{$acolor 'FAINT,ITALIC' 'nerdctl run --rm -ti -v /run/k3s/containerd/containerd.sock:/run/containerd/containerd.sock nmaguiar/imgutils sudo /bin/bash'}}}
 
 ---
 
