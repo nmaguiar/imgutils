@@ -306,3 +306,9 @@ To start imgutils/nmaguiar with the local host docker authentication:
 ```bash
 docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock -v $HOME:/work nmaguiar/imgutils /bin/sh -c "mkdir /home/openaf/.docker && sudo cp /work/.docker/config.json /home/openaf/.docker/. && sudo chmod a+r /home/openaf/.docker/*&& /bin/bash"
 ```
+
+---
+
+📚  See more documentation in https://github.com/nmaguiar/imgutils
+
+---
