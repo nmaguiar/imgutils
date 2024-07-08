@@ -7,6 +7,7 @@ Alpine based image ("nmaguiar/imgutils") with:
 * docker-cli
 * crictl
 * ctr
+* nerdctl
 * dive (https://github.com/wagoodman/dive)
 * openaf (with DockerRegistry, Kube, oafp)
 * mc (Midnight Commander)
