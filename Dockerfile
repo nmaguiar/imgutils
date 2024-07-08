@@ -79,13 +79,16 @@ RUN mkdir /imgutils\
  && chmod a+rwx /imgutils\
  && chown openaf:0 /imgutils
 
-# Setup welcome message
-# ---------------------
+# Setup welcome message and vars
+# ------------------------------
 COPY welcome.txt /etc/imgutils
 RUN gzip /etc/imgutils\
  && echo "zcat /etc/imgutils.gz" >> /etc/bash/start.sh\
  && echo "/status" >> /etc/bash/start.sh\
  && echo "echo ''" >> /etc/bash/start.sh\
+ && echo "export CONTAINER_RUNTIME_ENDPOINT=unix:///run/containerd/containerd.sock" >> /etc/bash/start.sh\
+ && echo "export IMAGE_SERVICE_ENDPOINT=unix:///run/containerd/containerd.sock" >> /etc/bash/start.sh\
+ && echo "alias oafptab='oafp in=lines linesvisual=true linesjoin=true out=ctable'" >> /etc/bash/start.sh\
  && cp /etc/bash/start.sh /etc/profile.d/start.sh
 
 # Setup usage and examples
