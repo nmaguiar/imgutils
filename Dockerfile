@@ -91,6 +91,8 @@ RUN gzip /etc/imgutils\
  && echo "export CONTAINER_RUNTIME_ENDPOINT=unix:///run/containerd/containerd.sock" >> /etc/bash/start.sh\
  && echo "export IMAGE_SERVICE_ENDPOINT=unix:///run/containerd/containerd.sock" >> /etc/bash/start.sh\
  && echo "alias oafptab='oafp in=lines linesvisual=true linesjoin=true out=ctable'" >> /etc/bash/start.sh\
+ && echo "alias oaf-light-theme='colorFormats.yaml op=set theme=thin-light-bold'" >> /etc/bash/start.sh\
+ && echo "alias oaf-dark-theme='colorFormats.yaml op=set theme=thin-intense-bold'" >> /etc/bash/start.sh\
  && cp /etc/bash/start.sh /etc/profile.d/start.sh
 
 # Setup usage and examples
