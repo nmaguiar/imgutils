@@ -14,8 +14,8 @@
     FixedVersion: 26.0.2
     Status: fixed
     Layer:
-      Digest: sha256:a7c168559388b005905540cab74d7a116995945dfe7067c9b30b6fd04e7b5793
-      DiffID: sha256:b71e1f223f7f5ea72ad5a6266fe5849cc1154733371fda0bc1a24fc0f13e04ad
+      Digest: sha256:5c7a8dece4706d703d091be058323502c616848d4d8e84f626c856c27e6a4f30
+      DiffID: sha256:47b21909491c7ce60a06a9a8051fe9cd16915c9d079031767f98b182d6625ad8
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-32473
     DataSource:
@@ -55,8 +55,8 @@
     FixedVersion: 0.46.0
     Status: fixed
     Layer:
-      Digest: sha256:a7c168559388b005905540cab74d7a116995945dfe7067c9b30b6fd04e7b5793
-      DiffID: sha256:b71e1f223f7f5ea72ad5a6266fe5849cc1154733371fda0bc1a24fc0f13e04ad
+      Digest: sha256:5c7a8dece4706d703d091be058323502c616848d4d8e84f626c856c27e6a4f30
+      DiffID: sha256:47b21909491c7ce60a06a9a8051fe9cd16915c9d079031767f98b182d6625ad8
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-47108
     DataSource:
@@ -106,8 +106,8 @@
     FixedVersion: 1.21.11, 1.22.4
     Status: fixed
     Layer:
-      Digest: sha256:a7c168559388b005905540cab74d7a116995945dfe7067c9b30b6fd04e7b5793
-      DiffID: sha256:b71e1f223f7f5ea72ad5a6266fe5849cc1154733371fda0bc1a24fc0f13e04ad
+      Digest: sha256:5c7a8dece4706d703d091be058323502c616848d4d8e84f626c856c27e6a4f30
+      DiffID: sha256:47b21909491c7ce60a06a9a8051fe9cd16915c9d079031767f98b182d6625ad8
     SeveritySource: nvd
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24790
     DataSource:
@@ -125,6 +125,7 @@
       oracle-oval: 2
       photon: 4
       redhat: 2
+      ubuntu: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
@@ -137,13 +138,17 @@
         V3Score: 6.7
     References:
     - http://www.openwall.com/lists/oss-security/2024/06/04/1
-    - https://access.redhat.com/errata/RHSA-2024:4212
+    - https://access.redhat.com/errata/RHSA-2024:4237
     - https://access.redhat.com/security/cve/CVE-2024-24790
     - https://bugzilla.redhat.com/2292668
     - https://bugzilla.redhat.com/2292787
-    - https://errata.almalinux.org/9/ALSA-2024-4212.html
+    - https://errata.almalinux.org/8/ALSA-2024-4237.html
+    - https://github.com/golang/go/commit/051bdf3fd12a40307606ff9381138039c5f452f0 (1.21)
+    - https://github.com/golang/go/commit/12d5810cdb1f73cf23d7a86462143e9463317fca (1.22)
+    - https://github.com/golang/go/issues/67680
     - https://go.dev/cl/590316
     - https://go.dev/issue/67680
+    - https://groups.google.com/g/golang-announce/c/XbxouI9gY7k
     - https://groups.google.com/g/golang-announce/c/XbxouI9gY7k/m/TuoGEhxIEwAJ
     - https://linux.oracle.com/cve/CVE-2024-24790.html
     - https://linux.oracle.com/errata/ELSA-2024-4237.html
@@ -161,8 +166,8 @@
     FixedVersion: 1.21.9, 1.22.2
     Status: fixed
     Layer:
-      Digest: sha256:a7c168559388b005905540cab74d7a116995945dfe7067c9b30b6fd04e7b5793
-      DiffID: sha256:b71e1f223f7f5ea72ad5a6266fe5849cc1154733371fda0bc1a24fc0f13e04ad
+      Digest: sha256:5c7a8dece4706d703d091be058323502c616848d4d8e84f626c856c27e6a4f30
+      DiffID: sha256:47b21909491c7ce60a06a9a8051fe9cd16915c9d079031767f98b182d6625ad8
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45288
     DataSource:
       ID: govulndb
@@ -180,6 +185,7 @@
       photon: 3
       redhat: 3
       rocky: 3
+      ubuntu: 2
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
@@ -190,7 +196,7 @@
     References:
     - http://www.openwall.com/lists/oss-security/2024/04/03/16
     - http://www.openwall.com/lists/oss-security/2024/04/05/4
-    - https://access.redhat.com/errata/RHSA-2024:2724
+    - https://access.redhat.com/errata/RHSA-2024:3346
     - https://access.redhat.com/security/cve/CVE-2023-45288
     - https://bugzilla.redhat.com/2268017
     - https://bugzilla.redhat.com/2268018
@@ -204,11 +210,12 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45289
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45290
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24783
-    - https://errata.almalinux.org/9/ALSA-2024-2724.html
-    - https://errata.rockylinux.org/RLSA-2024:2724
+    - https://errata.almalinux.org/8/ALSA-2024-3346.html
+    - https://errata.rockylinux.org/RLSA-2024:3346
     - https://go.dev/cl/576155
     - https://go.dev/issue/65051
     - https://groups.google.com/g/golang-announce/c/YgW0sx8mN3M
+    - https://kb.cert.org/vuls/id/421644
     - https://linux.oracle.com/cve/CVE-2023-45288.html
     - https://linux.oracle.com/errata/ELSA-2024-3346.html
     - https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QRYFHIQ6XRKRYBI2F5UESH67BJBQXUPT
@@ -232,8 +239,8 @@
     FixedVersion: 1.22.3
     Status: fixed
     Layer:
-      Digest: sha256:a7c168559388b005905540cab74d7a116995945dfe7067c9b30b6fd04e7b5793
-      DiffID: sha256:b71e1f223f7f5ea72ad5a6266fe5849cc1154733371fda0bc1a24fc0f13e04ad
+      Digest: sha256:5c7a8dece4706d703d091be058323502c616848d4d8e84f626c856c27e6a4f30
+      DiffID: sha256:47b21909491c7ce60a06a9a8051fe9cd16915c9d079031767f98b182d6625ad8
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24788
     DataSource:
       ID: govulndb
@@ -245,6 +252,7 @@
     VendorSeverity:
       cbl-mariner: 2
       redhat: 2
+      ubuntu: 2
     CVSS:
       redhat:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -252,6 +260,9 @@
     References:
     - http://www.openwall.com/lists/oss-security/2024/05/08/3
     - https://access.redhat.com/security/cve/CVE-2024-24788
+    - https://github.com/golang/go/commit/93d8777d244962d1b706c0b695c8b72e9702577e (1.22)
+    - https://github.com/golang/go/issues/66754
+    - https://go-review.googlesource.com/c/go/+/578375
     - https://go.dev/cl/578375
     - https://go.dev/issue/66754
     - https://groups.google.com/g/golang-announce/c/wkkO4P9stm0
@@ -271,8 +282,8 @@
     FixedVersion: 1.21.11, 1.22.4
     Status: fixed
     Layer:
-      Digest: sha256:a7c168559388b005905540cab74d7a116995945dfe7067c9b30b6fd04e7b5793
-      DiffID: sha256:b71e1f223f7f5ea72ad5a6266fe5849cc1154733371fda0bc1a24fc0f13e04ad
+      Digest: sha256:5c7a8dece4706d703d091be058323502c616848d4d8e84f626c856c27e6a4f30
+      DiffID: sha256:47b21909491c7ce60a06a9a8051fe9cd16915c9d079031767f98b182d6625ad8
     SeveritySource: nvd
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24789
     DataSource:
@@ -290,6 +301,7 @@
       oracle-oval: 2
       photon: 2
       redhat: 2
+      ubuntu: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N
@@ -302,13 +314,17 @@
         V3Score: 7.5
     References:
     - http://www.openwall.com/lists/oss-security/2024/06/04/1
-    - https://access.redhat.com/errata/RHSA-2024:4212
+    - https://access.redhat.com/errata/RHSA-2024:4237
     - https://access.redhat.com/security/cve/CVE-2024-24789
     - https://bugzilla.redhat.com/2292668
     - https://bugzilla.redhat.com/2292787
-    - https://errata.almalinux.org/9/ALSA-2024-4212.html
+    - https://errata.almalinux.org/8/ALSA-2024-4237.html
+    - https://github.com/golang/go/commit/c8e40338cf00f3c1d86c8fb23863ad67a4c72bcc (1.21)
+    - https://github.com/golang/go/commit/cf501ac0c5fe351a8582d20b43562027927906e7 (1.22)
+    - https://github.com/golang/go/issues/66869
     - https://go.dev/cl/585397
     - https://go.dev/issue/66869
+    - https://groups.google.com/g/golang-announce/c/XbxouI9gY7k
     - https://groups.google.com/g/golang-announce/c/XbxouI9gY7k/m/TuoGEhxIEwAJ
     - https://linux.oracle.com/cve/CVE-2024-24789.html
     - https://linux.oracle.com/errata/ELSA-2024-4237.html
@@ -327,8 +343,8 @@
     FixedVersion: 1.21.12, 1.22.5
     Status: fixed
     Layer:
-      Digest: sha256:a7c168559388b005905540cab74d7a116995945dfe7067c9b30b6fd04e7b5793
-      DiffID: sha256:b71e1f223f7f5ea72ad5a6266fe5849cc1154733371fda0bc1a24fc0f13e04ad
+      Digest: sha256:5c7a8dece4706d703d091be058323502c616848d4d8e84f626c856c27e6a4f30
+      DiffID: sha256:47b21909491c7ce60a06a9a8051fe9cd16915c9d079031767f98b182d6625ad8
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24791
     DataSource:
       ID: govulndb
