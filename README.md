@@ -47,6 +47,12 @@ This should be enough tools to be able to manage images on a Kubernetes cluster 
 docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock nmaguiar/imgutils sudo /bin/bash
 ```
 
+#### Nerdctl
+
+```bash
+nerdctl run --rm -ti -v /run/k3s/containerd/containerd.sock:/run/containerd/containerd.sock nmaguiar/imgutils sudo /bin/bash
+```
+
 #### Kubectl
 
 > Check the nodes' names with 'kubectl get nodes'
