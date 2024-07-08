@@ -35,9 +35,11 @@ RUN apk update\
  && /openaf/ojob ojob.io/get job=ojob.io/docker/expand.yaml > /openaf/ojobs/imgExpand.yaml\
  && /openaf/ojob ojob.io/get job=ojob.io/docker/collapse.yaml > /openaf/ojobs/imgCollapse.yaml\
  && /openaf/ojob ojob.io/get job=ojob.io/docker/listHubRepo.yaml > /openaf/ojobs/listHubRepo.yaml\
+ && /openaf/ojob ojob.io/get job=ojob.io/oaf/colorFormats.yaml > /openaf/ojobs/colorFormats.yaml\
  && /openaf/oaf --sb /openaf/ojobs/imgExpand.yaml\
  && /openaf/oaf --sb /openaf/ojobs/imgCollapse.yaml\
  && /openaf/oaf --sb /openaf/ojobs/listHubRepo.yaml\
+ && /openaf/oaf --sb /openaf/ojobs/colorFormats.yaml\
  && chown -R openaf:0 /openaf\
  && chown openaf:0 /openaf/.opack.db\
  && chmod -R u+rwx,g+rwx,o+rx,o-w /openaf/*\
