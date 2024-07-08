@@ -43,13 +43,15 @@ jobs:
               .getJson()
 
     var _r = {
-      openaf: res[0].stdout,
-      docker: res[1].stdout,
-      helm  : res[2].stdout,
-      skopeo: res[3].stdout,
-      crictl: res[4].stdout,
-      dive  : res[5].stdout,
-      mc    : res[6].stdout
+      openaf : res[0].stdout,
+      docker : res[1].stdout,
+      helm   : res[2].stdout,
+      skopeo : res[3].stdout,
+      crictl : res[4].stdout,
+      ctr    : res[5].stdout,
+      nerdctl: res[6].stdout,
+      dive   : res[7].stdout,
+      mc     : res[8].stdout
     }
 
     $set("versions", _r)
