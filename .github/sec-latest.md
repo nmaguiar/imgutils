@@ -271,7 +271,7 @@
 │                       │     │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
 │                       │     │                  │       4-24783 
 │                       │     │                  ├ [16]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
-│                       │     │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:3346 
+│                       │     │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:2724 
 │                       │     │                  ├ [18]: https://go.dev/cl/576155 
 │                       │     │                  ├ [19]: https://go.dev/issue/65051 
 │                       │     │                  ├ [20]: https://groups.google.com/g/golang-announce/c/YgW0sx8m
@@ -446,7 +446,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-2963 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-24791 
 │                             ├ PublishedDate   : 2024-07-02T22:15:04.833Z 
-│                             ╰ LastModifiedDate: 2024-07-03T12:53:24.977Z 
+│                             ╰ LastModifiedDate: 2024-07-08T14:17:39.083Z 
 ├ [3] ╭ Target: usr/bin/ctr 
 │     ├ Class : lang-pkgs 
 │     ╰ Type  : gobinary 
@@ -667,7 +667,7 @@
 │                       │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       24-24783 
 │                       │      │                  ├ [16]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
-│                       │      │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:3346 
+│                       │      │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:2724 
 │                       │      │                  ├ [18]: https://go.dev/cl/576155 
 │                       │      │                  ├ [19]: https://go.dev/issue/65051 
 │                       │      │                  ├ [20]: https://groups.google.com/g/golang-announce/c/YgW0sx8
@@ -826,7 +826,7 @@
 │                       │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       24-24783 
 │                       │      │                  ├ [16]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
-│                       │      │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:3346 
+│                       │      │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:2724 
 │                       │      │                  ├ [18]: https://go.dev/cl/576155 
 │                       │      │                  ├ [19]: https://go.dev/issue/65051 
 │                       │      │                  ├ [20]: https://groups.google.com/g/golang-announce/c/YgW0sx8
@@ -908,7 +908,7 @@
 │                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       24-24783 
 │                       │      │                  ├ [15]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
-│                       │      │                  ├ [16]: https://errata.rockylinux.org/RLSA-2024:3346 
+│                       │      │                  ├ [16]: https://errata.rockylinux.org/RLSA-2024:2724 
 │                       │      │                  ├ [17]: https://github.com/golang/go/commit/20586c0dbe03d144f
 │                       │      │                  │       914155f879fa5ee287591a1 (go1.21.8) 
 │                       │      │                  ├ [18]: https://github.com/golang/go/commit/3a855208e3efed2e9
@@ -985,7 +985,7 @@
 │                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       24-24783 
 │                       │      │                  ├ [15]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
-│                       │      │                  ├ [16]: https://errata.rockylinux.org/RLSA-2024:3346 
+│                       │      │                  ├ [16]: https://errata.rockylinux.org/RLSA-2024:2724 
 │                       │      │                  ├ [17]: https://github.com/golang/go/commit/041a47712e765e94f
 │                       │      │                  │       86d841c3110c840e76d8f82 (go1.22.1) 
 │                       │      │                  ├ [18]: https://github.com/golang/go/commit/bf80213b121074f4a
@@ -1060,7 +1060,7 @@
 │                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       24-24783 
 │                       │      │                  ├ [15]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
-│                       │      │                  ├ [16]: https://errata.rockylinux.org/RLSA-2024:3346 
+│                       │      │                  ├ [16]: https://errata.rockylinux.org/RLSA-2024:2724 
 │                       │      │                  ├ [17]: https://github.com/advisories/GHSA-3q2c-pvp5-3cqp 
 │                       │      │                  ├ [18]: https://github.com/golang/go/commit/337b8e9cbfa749d9d
 │                       │      │                  │       5c899e0dc358e2208d5e54f (go1.22.1) 
@@ -1356,7 +1356,7 @@
 │                              │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-2963 
 │                              │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-24791 
 │                              ├ PublishedDate   : 2024-07-02T22:15:04.833Z 
-│                              ╰ LastModifiedDate: 2024-07-03T12:53:24.977Z 
+│                              ╰ LastModifiedDate: 2024-07-08T14:17:39.083Z 
 ├ [5] ╭ Target: usr/bin/docker 
 │     ├ Class : lang-pkgs 
 │     ╰ Type  : gobinary 
@@ -1403,7 +1403,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-2963 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-24791 
 │                             ├ PublishedDate   : 2024-07-02T22:15:04.833Z 
-│                             ╰ LastModifiedDate: 2024-07-03T12:53:24.977Z 
+│                             ╰ LastModifiedDate: 2024-07-08T14:17:39.083Z 
 ├ [7] ╭ Target         : usr/bin/nerdctl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -1716,7 +1716,7 @@
                               │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
                               │                  │       4-24783 
                               │                  ├ [16]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
-                              │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:3346 
+                              │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:2724 
                               │                  ├ [18]: https://go.dev/cl/576155 
                               │                  ├ [19]: https://go.dev/issue/65051 
                               │                  ├ [20]: https://groups.google.com/g/golang-announce/c/YgW0sx8m
