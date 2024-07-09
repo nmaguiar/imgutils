@@ -16,10 +16,10 @@
 │                       │     ├ InstalledVersion: v26.0.1+incompatible 
 │                       │     ├ FixedVersion    : 26.0.2 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a8271290519
-│                       │     │                  │         8a1980473b3ba75fe2f 
-│                       │     │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33ab
-│                       │     │                            5dbbaa818b2666d033b 
+│                       │     ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b67
+│                       │     │                  │         08e0bb3f367e408351f 
+│                       │     │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb63
+│                       │     │                            870e1ef14521005e2f3 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-32473 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -75,10 +75,10 @@
 │                       │     ├ InstalledVersion: v0.42.0 
 │                       │     ├ FixedVersion    : 0.46.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a8271290519
-│                       │     │                  │         8a1980473b3ba75fe2f 
-│                       │     │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33ab
-│                       │     │                            5dbbaa818b2666d033b 
+│                       │     ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b67
+│                       │     │                  │         08e0bb3f367e408351f 
+│                       │     │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb63
+│                       │     │                            870e1ef14521005e2f3 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-47108 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -146,10 +146,10 @@
 │                       │     ├ InstalledVersion: 1.22.1 
 │                       │     ├ FixedVersion    : 1.21.11, 1.22.4 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a8271290519
-│                       │     │                  │         8a1980473b3ba75fe2f 
-│                       │     │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33ab
-│                       │     │                            5dbbaa818b2666d033b 
+│                       │     ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b67
+│                       │     │                  │         08e0bb3f367e408351f 
+│                       │     │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb63
+│                       │     │                            870e1ef14521005e2f3 
 │                       │     ├ SeveritySource  : nvd 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24790 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
@@ -210,10 +210,10 @@
 │                       │     ├ InstalledVersion: 1.22.1 
 │                       │     ├ FixedVersion    : 1.21.9, 1.22.2 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a8271290519
-│                       │     │                  │         8a1980473b3ba75fe2f 
-│                       │     │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33ab
-│                       │     │                            5dbbaa818b2666d033b 
+│                       │     ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b67
+│                       │     │                  │         08e0bb3f367e408351f 
+│                       │     │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb63
+│                       │     │                            870e1ef14521005e2f3 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-45288 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -271,7 +271,7 @@
 │                       │     │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
 │                       │     │                  │       4-24783 
 │                       │     │                  ├ [16]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
-│                       │     │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:3346 
+│                       │     │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:2724 
 │                       │     │                  ├ [18]: https://go.dev/cl/576155 
 │                       │     │                  ├ [19]: https://go.dev/issue/65051 
 │                       │     │                  ├ [20]: https://groups.google.com/g/golang-announce/c/YgW0sx8m
@@ -303,10 +303,10 @@
 │                       │     ├ InstalledVersion: 1.22.1 
 │                       │     ├ FixedVersion    : 1.22.3 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a8271290519
-│                       │     │                  │         8a1980473b3ba75fe2f 
-│                       │     │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33ab
-│                       │     │                            5dbbaa818b2666d033b 
+│                       │     ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b67
+│                       │     │                  │         08e0bb3f367e408351f 
+│                       │     │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb63
+│                       │     │                            870e1ef14521005e2f3 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24788 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -345,10 +345,10 @@
 │                       │     ├ InstalledVersion: 1.22.1 
 │                       │     ├ FixedVersion    : 1.21.11, 1.22.4 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a8271290519
-│                       │     │                  │         8a1980473b3ba75fe2f 
-│                       │     │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33ab
-│                       │     │                            5dbbaa818b2666d033b 
+│                       │     ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b67
+│                       │     │                  │         08e0bb3f367e408351f 
+│                       │     │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb63
+│                       │     │                            870e1ef14521005e2f3 
 │                       │     ├ SeveritySource  : nvd 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24789 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
@@ -413,10 +413,10 @@
 │                             ├ InstalledVersion: 1.22.1 
 │                             ├ FixedVersion    : 1.21.12, 1.22.5 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a8271290519
-│                             │                  │         8a1980473b3ba75fe2f 
-│                             │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33ab
-│                             │                            5dbbaa818b2666d033b 
+│                             ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b67
+│                             │                  │         08e0bb3f367e408351f 
+│                             │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb63
+│                             │                            870e1ef14521005e2f3 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24791 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
@@ -446,7 +446,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-2963 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-24791 
 │                             ├ PublishedDate   : 2024-07-02T22:15:04.833Z 
-│                             ╰ LastModifiedDate: 2024-07-03T12:53:24.977Z 
+│                             ╰ LastModifiedDate: 2024-07-08T14:17:39.083Z 
 ├ [3] ╭ Target: usr/bin/ctr 
 │     ├ Class : lang-pkgs 
 │     ╰ Type  : gobinary 
@@ -461,10 +461,10 @@
 │                       │      ├ InstalledVersion: v0.0.0-20190906153656-016a3232168d 
 │                       │      ├ FixedVersion    : 20.10.9 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a827129051
-│                       │      │                  │         98a1980473b3ba75fe2f 
-│                       │      │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33a
-│                       │      │                            b5dbbaa818b2666d033b 
+│                       │      ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b6
+│                       │      │                  │         708e0bb3f367e408351f 
+│                       │      │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb6
+│                       │      │                            3870e1ef14521005e2f3 
 │                       │      ├ SeveritySource  : ghsa 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2021-41092 
 │                       │      ├ DataSource       ╭ ID  : ghsa 
@@ -537,10 +537,10 @@
 │                       │      ├ InstalledVersion: v24.0.7+incompatible 
 │                       │      ├ FixedVersion    : 24.0.9, 25.0.2 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a827129051
-│                       │      │                  │         98a1980473b3ba75fe2f 
-│                       │      │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33a
-│                       │      │                            b5dbbaa818b2666d033b 
+│                       │      ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b6
+│                       │      │                  │         708e0bb3f367e408351f 
+│                       │      │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb6
+│                       │      │                            3870e1ef14521005e2f3 
 │                       │      ├ SeveritySource  : ghsa 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24557 
 │                       │      ├ DataSource       ╭ ID  : ghsa 
@@ -603,10 +603,10 @@
 │                       │      ├ InstalledVersion: v0.17.0 
 │                       │      ├ FixedVersion    : 0.23.0 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a827129051
-│                       │      │                  │         98a1980473b3ba75fe2f 
-│                       │      │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33a
-│                       │      │                            b5dbbaa818b2666d033b 
+│                       │      ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b6
+│                       │      │                  │         708e0bb3f367e408351f 
+│                       │      │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb6
+│                       │      │                            3870e1ef14521005e2f3 
 │                       │      ├ SeveritySource  : ghsa 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-45288 
 │                       │      ├ DataSource       ╭ ID  : ghsa 
@@ -667,7 +667,7 @@
 │                       │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       24-24783 
 │                       │      │                  ├ [16]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
-│                       │      │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:3346 
+│                       │      │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:2724 
 │                       │      │                  ├ [18]: https://go.dev/cl/576155 
 │                       │      │                  ├ [19]: https://go.dev/issue/65051 
 │                       │      │                  ├ [20]: https://groups.google.com/g/golang-announce/c/YgW0sx8
@@ -700,10 +700,10 @@
 │                       │      ├ InstalledVersion: 1.20.13 
 │                       │      ├ FixedVersion    : 1.21.11, 1.22.4 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a827129051
-│                       │      │                  │         98a1980473b3ba75fe2f 
-│                       │      │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33a
-│                       │      │                            b5dbbaa818b2666d033b 
+│                       │      ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b6
+│                       │      │                  │         708e0bb3f367e408351f 
+│                       │      │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb6
+│                       │      │                            3870e1ef14521005e2f3 
 │                       │      ├ SeveritySource  : nvd 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24790 
 │                       │      ├ DataSource       ╭ ID  : govulndb 
@@ -764,10 +764,10 @@
 │                       │      ├ InstalledVersion: 1.20.13 
 │                       │      ├ FixedVersion    : 1.21.9, 1.22.2 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a827129051
-│                       │      │                  │         98a1980473b3ba75fe2f 
-│                       │      │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33a
-│                       │      │                            b5dbbaa818b2666d033b 
+│                       │      ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b6
+│                       │      │                  │         708e0bb3f367e408351f 
+│                       │      │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb6
+│                       │      │                            3870e1ef14521005e2f3 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-45288 
 │                       │      ├ DataSource       ╭ ID  : govulndb 
 │                       │      │                  ├ Name: The Go Vulnerability Database 
@@ -826,7 +826,7 @@
 │                       │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       24-24783 
 │                       │      │                  ├ [16]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
-│                       │      │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:3346 
+│                       │      │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:2724 
 │                       │      │                  ├ [18]: https://go.dev/cl/576155 
 │                       │      │                  ├ [19]: https://go.dev/issue/65051 
 │                       │      │                  ├ [20]: https://groups.google.com/g/golang-announce/c/YgW0sx8
@@ -859,10 +859,10 @@
 │                       │      ├ InstalledVersion: 1.20.13 
 │                       │      ├ FixedVersion    : 1.21.8, 1.22.1 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a827129051
-│                       │      │                  │         98a1980473b3ba75fe2f 
-│                       │      │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33a
-│                       │      │                            b5dbbaa818b2666d033b 
+│                       │      ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b6
+│                       │      │                  │         708e0bb3f367e408351f 
+│                       │      │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb6
+│                       │      │                            3870e1ef14521005e2f3 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-45289 
 │                       │      ├ DataSource       ╭ ID  : govulndb 
 │                       │      │                  ├ Name: The Go Vulnerability Database 
@@ -908,7 +908,7 @@
 │                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       24-24783 
 │                       │      │                  ├ [15]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
-│                       │      │                  ├ [16]: https://errata.rockylinux.org/RLSA-2024:3346 
+│                       │      │                  ├ [16]: https://errata.rockylinux.org/RLSA-2024:2724 
 │                       │      │                  ├ [17]: https://github.com/golang/go/commit/20586c0dbe03d144f
 │                       │      │                  │       914155f879fa5ee287591a1 (go1.21.8) 
 │                       │      │                  ├ [18]: https://github.com/golang/go/commit/3a855208e3efed2e9
@@ -934,10 +934,10 @@
 │                       │      ├ InstalledVersion: 1.20.13 
 │                       │      ├ FixedVersion    : 1.21.8, 1.22.1 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a827129051
-│                       │      │                  │         98a1980473b3ba75fe2f 
-│                       │      │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33a
-│                       │      │                            b5dbbaa818b2666d033b 
+│                       │      ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b6
+│                       │      │                  │         708e0bb3f367e408351f 
+│                       │      │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb6
+│                       │      │                            3870e1ef14521005e2f3 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-45290 
 │                       │      ├ DataSource       ╭ ID  : govulndb 
 │                       │      │                  ├ Name: The Go Vulnerability Database 
@@ -985,7 +985,7 @@
 │                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       24-24783 
 │                       │      │                  ├ [15]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
-│                       │      │                  ├ [16]: https://errata.rockylinux.org/RLSA-2024:3346 
+│                       │      │                  ├ [16]: https://errata.rockylinux.org/RLSA-2024:2724 
 │                       │      │                  ├ [17]: https://github.com/golang/go/commit/041a47712e765e94f
 │                       │      │                  │       86d841c3110c840e76d8f82 (go1.22.1) 
 │                       │      │                  ├ [18]: https://github.com/golang/go/commit/bf80213b121074f4a
@@ -1012,10 +1012,10 @@
 │                       │      ├ InstalledVersion: 1.20.13 
 │                       │      ├ FixedVersion    : 1.21.8, 1.22.1 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a827129051
-│                       │      │                  │         98a1980473b3ba75fe2f 
-│                       │      │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33a
-│                       │      │                            b5dbbaa818b2666d033b 
+│                       │      ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b6
+│                       │      │                  │         708e0bb3f367e408351f 
+│                       │      │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb6
+│                       │      │                            3870e1ef14521005e2f3 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24783 
 │                       │      ├ DataSource       ╭ ID  : govulndb 
 │                       │      │                  ├ Name: The Go Vulnerability Database 
@@ -1060,7 +1060,7 @@
 │                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       24-24783 
 │                       │      │                  ├ [15]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
-│                       │      │                  ├ [16]: https://errata.rockylinux.org/RLSA-2024:3346 
+│                       │      │                  ├ [16]: https://errata.rockylinux.org/RLSA-2024:2724 
 │                       │      │                  ├ [17]: https://github.com/advisories/GHSA-3q2c-pvp5-3cqp 
 │                       │      │                  ├ [18]: https://github.com/golang/go/commit/337b8e9cbfa749d9d
 │                       │      │                  │       5c899e0dc358e2208d5e54f (go1.22.1) 
@@ -1088,10 +1088,10 @@
 │                       │      ├ InstalledVersion: 1.20.13 
 │                       │      ├ FixedVersion    : 1.21.8, 1.22.1 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a827129051
-│                       │      │                  │         98a1980473b3ba75fe2f 
-│                       │      │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33a
-│                       │      │                            b5dbbaa818b2666d033b 
+│                       │      ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b6
+│                       │      │                  │         708e0bb3f367e408351f 
+│                       │      │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb6
+│                       │      │                            3870e1ef14521005e2f3 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24784 
 │                       │      ├ DataSource       ╭ ID  : govulndb 
 │                       │      │                  ├ Name: The Go Vulnerability Database 
@@ -1171,10 +1171,10 @@
 │                       │      ├ InstalledVersion: 1.20.13 
 │                       │      ├ FixedVersion    : 1.21.8, 1.22.1 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a827129051
-│                       │      │                  │         98a1980473b3ba75fe2f 
-│                       │      │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33a
-│                       │      │                            b5dbbaa818b2666d033b 
+│                       │      ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b6
+│                       │      │                  │         708e0bb3f367e408351f 
+│                       │      │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb6
+│                       │      │                            3870e1ef14521005e2f3 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24785 
 │                       │      ├ DataSource       ╭ ID  : govulndb 
 │                       │      │                  ├ Name: The Go Vulnerability Database 
@@ -1255,10 +1255,10 @@
 │                       │      ├ InstalledVersion: 1.20.13 
 │                       │      ├ FixedVersion    : 1.21.11, 1.22.4 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a827129051
-│                       │      │                  │         98a1980473b3ba75fe2f 
-│                       │      │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33a
-│                       │      │                            b5dbbaa818b2666d033b 
+│                       │      ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b6
+│                       │      │                  │         708e0bb3f367e408351f 
+│                       │      │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb6
+│                       │      │                            3870e1ef14521005e2f3 
 │                       │      ├ SeveritySource  : nvd 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24789 
 │                       │      ├ DataSource       ╭ ID  : govulndb 
@@ -1323,10 +1323,10 @@
 │                              ├ InstalledVersion: 1.20.13 
 │                              ├ FixedVersion    : 1.21.12, 1.22.5 
 │                              ├ Status          : fixed 
-│                              ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a827129051
-│                              │                  │         98a1980473b3ba75fe2f 
-│                              │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33a
-│                              │                            b5dbbaa818b2666d033b 
+│                              ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b6
+│                              │                  │         708e0bb3f367e408351f 
+│                              │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb6
+│                              │                            3870e1ef14521005e2f3 
 │                              ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24791 
 │                              ├ DataSource       ╭ ID  : govulndb 
 │                              │                  ├ Name: The Go Vulnerability Database 
@@ -1356,7 +1356,7 @@
 │                              │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-2963 
 │                              │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-24791 
 │                              ├ PublishedDate   : 2024-07-02T22:15:04.833Z 
-│                              ╰ LastModifiedDate: 2024-07-03T12:53:24.977Z 
+│                              ╰ LastModifiedDate: 2024-07-08T14:17:39.083Z 
 ├ [5] ╭ Target: usr/bin/docker 
 │     ├ Class : lang-pkgs 
 │     ╰ Type  : gobinary 
@@ -1370,10 +1370,10 @@
 │                             ├ InstalledVersion: 1.22.4 
 │                             ├ FixedVersion    : 1.21.12, 1.22.5 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a8271290519
-│                             │                  │         8a1980473b3ba75fe2f 
-│                             │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33ab
-│                             │                            5dbbaa818b2666d033b 
+│                             ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b67
+│                             │                  │         08e0bb3f367e408351f 
+│                             │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb63
+│                             │                            870e1ef14521005e2f3 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24791 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
@@ -1403,7 +1403,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-2963 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-24791 
 │                             ├ PublishedDate   : 2024-07-02T22:15:04.833Z 
-│                             ╰ LastModifiedDate: 2024-07-03T12:53:24.977Z 
+│                             ╰ LastModifiedDate: 2024-07-08T14:17:39.083Z 
 ├ [7] ╭ Target         : usr/bin/nerdctl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -1415,10 +1415,10 @@
 │                             ├ InstalledVersion: v24.0.7+incompatible 
 │                             ├ FixedVersion    : 24.0.9, 25.0.2 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a8271290519
-│                             │                  │         8a1980473b3ba75fe2f 
-│                             │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33ab
-│                             │                            5dbbaa818b2666d033b 
+│                             ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b67
+│                             │                  │         08e0bb3f367e408351f 
+│                             │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb63
+│                             │                            870e1ef14521005e2f3 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24557 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -1485,10 +1485,10 @@
                         │     ├ InstalledVersion: v25.0.3+incompatible 
                         │     ├ FixedVersion    : 26.0.0-rc3, 25.0.5, 23.0.11 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a8271290519
-                        │     │                  │         8a1980473b3ba75fe2f 
-                        │     │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33ab
-                        │     │                            5dbbaa818b2666d033b 
+                        │     ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b67
+                        │     │                  │         08e0bb3f367e408351f 
+                        │     │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb63
+                        │     │                            870e1ef14521005e2f3 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-29018 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -1602,10 +1602,10 @@
                         │     ├ InstalledVersion: v0.7.5 
                         │     ├ FixedVersion    : 0.7.7 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a8271290519
-                        │     │                  │         8a1980473b3ba75fe2f 
-                        │     │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33ab
-                        │     │                            5dbbaa818b2666d033b 
+                        │     ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b67
+                        │     │                  │         08e0bb3f367e408351f 
+                        │     │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb63
+                        │     │                            870e1ef14521005e2f3 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-6104 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -1653,10 +1653,10 @@
                               ├ InstalledVersion: v0.22.0 
                               ├ FixedVersion    : 0.23.0 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:456125a91034e3d4702134b6319aa1aa40a8271290519
-                              │                  │         8a1980473b3ba75fe2f 
-                              │                  ╰ DiffID: sha256:6f9df7b3c3aa3475e089a6951a758967c724c8edd33ab
-                              │                            5dbbaa818b2666d033b 
+                              ├ Layer            ╭ Digest: sha256:6cae6e9790c23548b40f8623d9e084db457c582fc9b67
+                              │                  │         08e0bb3f367e408351f 
+                              │                  ╰ DiffID: sha256:0fa8ee2ce61f339646883f59f7d90df72258c4e14eb63
+                              │                            870e1ef14521005e2f3 
                               ├ SeveritySource  : ghsa 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-45288 
                               ├ DataSource       ╭ ID  : ghsa 
@@ -1716,7 +1716,7 @@
                               │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
                               │                  │       4-24783 
                               │                  ├ [16]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
-                              │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:3346 
+                              │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:2724 
                               │                  ├ [18]: https://go.dev/cl/576155 
                               │                  ├ [19]: https://go.dev/issue/65051 
                               │                  ├ [20]: https://groups.google.com/g/golang-announce/c/YgW0sx8m
