@@ -268,7 +268,7 @@
                         │     │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
                         │     │                  │       4-24783 
                         │     │                  ├ [16]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
-                        │     │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:3346 
+                        │     │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:2724 
                         │     │                  ├ [18]: https://go.dev/cl/576155 
                         │     │                  ├ [19]: https://go.dev/issue/65051 
                         │     │                  ├ [20]: https://groups.google.com/g/golang-announce/c/YgW0sx8m
@@ -443,5 +443,5 @@
                               │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-2963 
                               │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-24791 
                               ├ PublishedDate   : 2024-07-02T22:15:04.833Z 
-                              ╰ LastModifiedDate: 2024-07-03T12:53:24.977Z 
+                              ╰ LastModifiedDate: 2024-07-08T14:17:39.083Z 
 ````
