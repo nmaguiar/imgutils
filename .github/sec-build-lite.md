@@ -177,11 +177,11 @@
                         │     │                            │           /A:N 
                         │     │                            ╰ V3Score : 6.7 
                         │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/06/04/1 
-                        │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:4237 
+                        │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:4212 
                         │     │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2024-24790 
                         │     │                  ├ [3] : https://bugzilla.redhat.com/2292668 
                         │     │                  ├ [4] : https://bugzilla.redhat.com/2292787 
-                        │     │                  ├ [5] : https://errata.almalinux.org/8/ALSA-2024-4237.html 
+                        │     │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2024-4212.html 
                         │     │                  ├ [6] : https://github.com/golang/go/commit/051bdf3fd12a403076
                         │     │                  │       06ff9381138039c5f452f0 (1.21) 
                         │     │                  ├ [7] : https://github.com/golang/go/commit/12d5810cdb1f73cf23
@@ -197,7 +197,8 @@
                         │     │                  ├ [14]: https://linux.oracle.com/errata/ELSA-2024-4237.html 
                         │     │                  ├ [15]: https://nvd.nist.gov/vuln/detail/CVE-2024-24790 
                         │     │                  ├ [16]: https://pkg.go.dev/vuln/GO-2024-2887 
-                        │     │                  ╰ [17]: https://www.cve.org/CVERecord?id=CVE-2024-24790 
+                        │     │                  ├ [17]: https://ubuntu.com/security/notices/USN-6886-1 
+                        │     │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2024-24790 
                         │     ├ PublishedDate   : 2024-06-05T16:15:10.56Z 
                         │     ╰ LastModifiedDate: 2024-06-18T17:59:12.547Z 
                         ├ [3] ╭ VulnerabilityID : CVE-2023-45288 
@@ -249,7 +250,7 @@
                         │     │                           ╰ V3Score : 7.5 
                         │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/04/03/16 
                         │     │                  ├ [1] : http://www.openwall.com/lists/oss-security/2024/04/05/4 
-                        │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:3346 
+                        │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:2724 
                         │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2023-45288 
                         │     │                  ├ [4] : https://bugzilla.redhat.com/2268017 
                         │     │                  ├ [5] : https://bugzilla.redhat.com/2268018 
@@ -267,7 +268,7 @@
                         │     │                  │       3-45290 
                         │     │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
                         │     │                  │       4-24783 
-                        │     │                  ├ [16]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
+                        │     │                  ├ [16]: https://errata.almalinux.org/9/ALSA-2024-2724.html 
                         │     │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:2724 
                         │     │                  ├ [18]: https://go.dev/cl/576155 
                         │     │                  ├ [19]: https://go.dev/issue/65051 
@@ -289,8 +290,9 @@
                         │     │                  ├ [29]: https://pkg.go.dev/vuln/GO-2024-2687 
                         │     │                  ├ [30]: https://security.netapp.com/advisory/ntap-20240419-0009 
                         │     │                  ├ [31]: https://security.netapp.com/advisory/ntap-20240419-0009/ 
-                        │     │                  ├ [32]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
-                        │     │                  ╰ [33]: https://www.kb.cert.org/vuls/id/421644 
+                        │     │                  ├ [32]: https://ubuntu.com/security/notices/USN-6886-1 
+                        │     │                  ├ [33]: https://www.cve.org/CVERecord?id=CVE-2023-45288 
+                        │     │                  ╰ [34]: https://www.kb.cert.org/vuls/id/421644 
                         │     ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
                         │     ╰ LastModifiedDate: 2024-05-01T18:15:10.493Z 
                         ├ [4] ╭ VulnerabilityID : CVE-2024-24788 
@@ -332,7 +334,8 @@
                         │     │                  ├ [9] : https://pkg.go.dev/vuln/GO-2024-2824 
                         │     │                  ├ [10]: https://security.netapp.com/advisory/ntap-20240605-0002/ 
                         │     │                  ├ [11]: https://security.netapp.com/advisory/ntap-20240614-0001/ 
-                        │     │                  ╰ [12]: https://www.cve.org/CVERecord?id=CVE-2024-24788 
+                        │     │                  ├ [12]: https://ubuntu.com/security/notices/USN-6886-1 
+                        │     │                  ╰ [13]: https://www.cve.org/CVERecord?id=CVE-2024-24788 
                         │     ├ PublishedDate   : 2024-05-08T16:15:08.25Z 
                         │     ╰ LastModifiedDate: 2024-06-14T13:15:50.67Z 
                         ├ [5] ╭ VulnerabilityID : CVE-2024-24789 
@@ -377,11 +380,11 @@
                         │     │                            │           /A:N 
                         │     │                            ╰ V3Score : 7.5 
                         │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/06/04/1 
-                        │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:4237 
+                        │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:4212 
                         │     │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2024-24789 
                         │     │                  ├ [3] : https://bugzilla.redhat.com/2292668 
                         │     │                  ├ [4] : https://bugzilla.redhat.com/2292787 
-                        │     │                  ├ [5] : https://errata.almalinux.org/8/ALSA-2024-4237.html 
+                        │     │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2024-4212.html 
                         │     │                  ├ [6] : https://github.com/golang/go/commit/c8e40338cf00f3c1d8
                         │     │                  │       6c8fb23863ad67a4c72bcc (1.21) 
                         │     │                  ├ [7] : https://github.com/golang/go/commit/cf501ac0c5fe351a85
@@ -400,7 +403,8 @@
                         │     │                  │       GJ7AIXXPQT6D2GYENX7/ 
                         │     │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2024-24789 
                         │     │                  ├ [17]: https://pkg.go.dev/vuln/GO-2024-2888 
-                        │     │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2024-24789 
+                        │     │                  ├ [18]: https://ubuntu.com/security/notices/USN-6886-1 
+                        │     │                  ╰ [19]: https://www.cve.org/CVERecord?id=CVE-2024-24789 
                         │     ├ PublishedDate   : 2024-06-05T16:15:10.47Z 
                         │     ╰ LastModifiedDate: 2024-07-03T01:48:25.51Z 
                         ╰ [6] ╭ VulnerabilityID : CVE-2024-24791 
@@ -433,7 +437,11 @@
                               │                    with an invalid connection, and causes one subsequent
                               │                   request using that connection to fail. 
                               ├ Severity        : MEDIUM 
-                              ├ VendorSeverity   ─ redhat: 2 
+                              ├ VendorSeverity   ╭ bitnami: 3 
+                              │                  ╰ redhat : 2 
+                              ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+                              │                            │           /A:H 
+                              │                            ╰ V3Score : 7.5 
                               ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-24791 
                               │                  ├ [1]: https://go.dev/cl/591255 
                               │                  ├ [2]: https://go.dev/issue/67555 
