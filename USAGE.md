@@ -48,6 +48,7 @@ First check the nodes' names with 'kubectl get nodes'
 | mc      | Midnight Commander visual file manager |
 | openaf  | A "swiss-army knife" devops tool & runtime |
 | imgExpand.yaml | Expands a docker container archive file, layer by layer, into an output folder (uses OpenAF's oJob) |
+| imgInfo.yaml | Expands a docker container archive file, layer by layer, to return the list of files (uses OpenAF's oJob) |
 | imgCollapse.yaml | Collapse a previously expanded docker container archive file, layer by layer, into an output image file (uses OpenAF's oJob) |
 | listHubRepo.yaml | Check when was the last pull and push, on docker hub, for a specific image (uses OpenAF's oJob) |
 
