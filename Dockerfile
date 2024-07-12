@@ -39,7 +39,7 @@ RUN apk update\
  && /openaf/ojob ojob.io/get job=ojob.io/oaf/colorFormats.yaml > /openaf/ojobs/colorFormats.yaml\
  && /openaf/oaf --sb /openaf/ojobs/imgExpand.yaml\
  && /openaf/oaf --sb /openaf/ojobs/imgCollapse.yaml\
- && /openaf/oaf --sb /openaf/ojobs/imgInfoyaml\
+ && /openaf/oaf --sb /openaf/ojobs/imgInfo.yaml\
  && /openaf/oaf --sb /openaf/ojobs/listHubRepo.yaml\
  && /openaf/oaf --sb /openaf/ojobs/colorFormats.yaml\
  && chown -R openaf:0 /openaf\
