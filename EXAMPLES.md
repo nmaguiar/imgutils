@@ -13,7 +13,7 @@ List of examples:
 | Kubernetes | Checking the images 'cached' on the current Kubernetes node |
 | Kubernetse | Loop the cpu, memory and storage metrics of each container on the current Kubernetes node |
 | Images   | Checking images content |
-| Images   | Changing files on an existing image |
+| Images   | Checkout the files per layer on an existing image |
 
 > To search for a specific example type '/Checking images content<ENTER>' and use the arrow keys to navigate
 
@@ -271,11 +271,32 @@ $ dive docker.io/some/image:latest
 [...]
 $ docker image save some/image:latest > image.tar
 [...]
+$ imgInfo.yaml image=image.tar __format=json > image.json
+
+# Check the manifest of the image
+$ oafp image.json path=info out=ctree
+# Check how many entries are there of each layer
+$ oafp image.json path=layers out=ctable sql='select "layer", "layerFile" id, count(*) "numberOfEntries" group by "layer"'
+# List the files on layer 1 (layer numbering starts in 0)
+$ oafp image.json path="layers[?layer==\`1\`].filepath" out=yaml
+# List the file entry differences between layer 2 and layer 3
+$ oafp image.json path="layers | { a: [?layer==\`2\`].filepath, b: [?layer==\`3\`].filepath }" diff="(a:a,b:b)" color=true
+# List the file entry differences between layer 2 and layer 3 including file size
+$ oafp image.json path="layers | { a: [?layer==\`3\`].{filepath:filepath,size:size}, b: [?layer==\`4\`].{filepath:filepath,size:size} }" diff="(a:a,b:b)" color=true
+```
+
+---
+
+## Checkout the files per layer on an existing image
+
+```bash
+
+$ skopeo copy docker://library/nginx:latest docker-archive:image.tar
 $ imgExpand.yaml image=image.tar output=output json=image.json
 # Check the output for the entrypoint and other information about the image
 $ cd output
 $ mc
-# then use the midnight-commander UI to check the contents
+# then use the midnight-commander UI to check the contents on each layer
 
 ```
 
