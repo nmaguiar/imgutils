@@ -17,8 +17,8 @@
     FixedVersion: 26.0.2
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-32473
     DataSource:
@@ -58,8 +58,8 @@
     FixedVersion: 0.46.0
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-47108
     DataSource:
@@ -109,8 +109,8 @@
     FixedVersion: 1.21.11, 1.22.4
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     SeveritySource: nvd
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24790
     DataSource:
@@ -124,6 +124,7 @@
       alma: 2
       amazon: 2
       bitnami: 4
+      cbl-mariner: 4
       nvd: 4
       oracle-oval: 2
       photon: 4
@@ -170,8 +171,8 @@
     FixedVersion: 1.21.9, 1.22.2
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45288
     DataSource:
       ID: govulndb
@@ -244,8 +245,8 @@
     FixedVersion: 1.22.3
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24788
     DataSource:
       ID: govulndb
@@ -288,8 +289,8 @@
     FixedVersion: 1.21.11, 1.22.4
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     SeveritySource: nvd
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24789
     DataSource:
@@ -303,6 +304,7 @@
       alma: 2
       amazon: 2
       bitnami: 2
+      cbl-mariner: 2
       nvd: 2
       oracle-oval: 2
       photon: 2
@@ -350,8 +352,8 @@
     FixedVersion: 1.21.12, 1.22.5
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24791
     DataSource:
       ID: govulndb
@@ -367,6 +369,9 @@
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 5.9
     References:
     - https://access.redhat.com/security/cve/CVE-2024-24791
     - https://go.dev/cl/591255
@@ -393,8 +398,8 @@
     FixedVersion: 20.10.9
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2021-41092
     DataSource:
@@ -448,8 +453,8 @@
     FixedVersion: 24.0.9, 25.0.2
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24557
     DataSource:
@@ -499,8 +504,8 @@
     FixedVersion: 0.23.0
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45288
     DataSource:
@@ -574,8 +579,8 @@
     FixedVersion: 1.21.11, 1.22.4
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     SeveritySource: nvd
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24790
     DataSource:
@@ -589,6 +594,7 @@
       alma: 2
       amazon: 2
       bitnami: 4
+      cbl-mariner: 4
       nvd: 4
       oracle-oval: 2
       photon: 4
@@ -635,8 +641,8 @@
     FixedVersion: 1.21.9, 1.22.2
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45288
     DataSource:
       ID: govulndb
@@ -709,8 +715,8 @@
     FixedVersion: 1.21.8, 1.22.1
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45289
     DataSource:
       ID: govulndb
@@ -773,8 +779,8 @@
     FixedVersion: 1.21.8, 1.22.1
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45290
     DataSource:
       ID: govulndb
@@ -829,8 +835,8 @@
     FixedVersion: 1.21.8, 1.22.1
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24783
     DataSource:
       ID: govulndb
@@ -895,8 +901,8 @@
     FixedVersion: 1.21.8, 1.22.1
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24784
     DataSource:
       ID: govulndb
@@ -968,8 +974,8 @@
     FixedVersion: 1.21.8, 1.22.1
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24785
     DataSource:
       ID: govulndb
@@ -1042,8 +1048,8 @@
     FixedVersion: 1.21.11, 1.22.4
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     SeveritySource: nvd
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24789
     DataSource:
@@ -1057,6 +1063,7 @@
       alma: 2
       amazon: 2
       bitnami: 2
+      cbl-mariner: 2
       nvd: 2
       oracle-oval: 2
       photon: 2
@@ -1104,8 +1111,8 @@
     FixedVersion: 1.21.12, 1.22.5
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24791
     DataSource:
       ID: govulndb
@@ -1121,6 +1128,9 @@
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 5.9
     References:
     - https://access.redhat.com/security/cve/CVE-2024-24791
     - https://go.dev/cl/591255
@@ -1150,8 +1160,8 @@
     FixedVersion: 24.0.9, 25.0.2
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24557
     DataSource:
@@ -1205,8 +1215,8 @@
     FixedVersion: 26.0.0-rc3, 25.0.5, 23.0.11
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-29018
     DataSource:
@@ -1265,8 +1275,8 @@
     FixedVersion: 0.7.7
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-6104
     DataSource:
@@ -1312,8 +1322,8 @@
     FixedVersion: 0.23.0
     Status: fixed
     Layer:
-      Digest: sha256:199e8590647fb9cc06c5ba08f7dee4ad67e2fa55bb8c21f27f76dba6d35c4f1c
-      DiffID: sha256:1f8d344b7773351b1e5f62cd19992fd9e04f9da861b3548916b602798abc3ab2
+      Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd97449e6042f07e50ec310f
+      DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41b7ee8072a345ee529a3
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45288
     DataSource:
