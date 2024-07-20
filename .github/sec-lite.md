@@ -162,30 +162,35 @@
                         │     ├ Severity        : MEDIUM 
                         │     ├ CweIDs           ─ [0]: CWE-276 
                         │     ├ VendorSeverity   ╭ ghsa  : 2 
+                        │     │                  ├ k8s   : 2 
                         │     │                  ╰ redhat: 2 
                         │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/
+                        │     │                  │        │           A:N 
+                        │     │                  │        ╰ V3Score : 6.1 
+                        │     │                  ├ k8s    ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/
                         │     │                  │        │           A:N 
                         │     │                  │        ╰ V3Score : 6.1 
                         │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/
                         │     │                           │           A:N 
                         │     │                           ╰ V3Score : 6.1 
-                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-5321 
-                        │     │                  ├ [1]: https://github.com/kubernetes/kubernetes 
-                        │     │                  ├ [2]: https://github.com/kubernetes/kubernetes/commit/23660a7
-                        │     │                  │      8ae462a6c8c75ac7ffd9af97550dda1aa 
-                        │     │                  ├ [3]: https://github.com/kubernetes/kubernetes/commit/84beb29
-                        │     │                  │      15fa28ae477fe0676be8ba94ccd2b811a 
-                        │     │                  ├ [4]: https://github.com/kubernetes/kubernetes/commit/90589b8
-                        │     │                  │      f63d28bcd3db89749950ebc48ed07c190 
-                        │     │                  ├ [5]: https://github.com/kubernetes/kubernetes/commit/de20330
-                        │     │                  │      33b1d202ecaaa79d41861a075df8b49c1 
-                        │     │                  ├ [6]: https://github.com/kubernetes/kubernetes/issues/126161 
-                        │     │                  ├ [7]: https://groups.google.com/g/kubernetes-security-announc
-                        │     │                  │      e/c/81c0BHkKNt0 
-                        │     │                  ├ [8]: https://nvd.nist.gov/vuln/detail/CVE-2024-5321 
-                        │     │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2024-5321 
+                        │     ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2024-5321 
+                        │     │                  ├ [1] : https://github.com/kubernetes/kubernetes 
+                        │     │                  ├ [2] : https://github.com/kubernetes/kubernetes/commit/23660a
+                        │     │                  │       78ae462a6c8c75ac7ffd9af97550dda1aa 
+                        │     │                  ├ [3] : https://github.com/kubernetes/kubernetes/commit/84beb2
+                        │     │                  │       915fa28ae477fe0676be8ba94ccd2b811a 
+                        │     │                  ├ [4] : https://github.com/kubernetes/kubernetes/commit/90589b
+                        │     │                  │       8f63d28bcd3db89749950ebc48ed07c190 
+                        │     │                  ├ [5] : https://github.com/kubernetes/kubernetes/commit/de2033
+                        │     │                  │       033b1d202ecaaa79d41861a075df8b49c1 
+                        │     │                  ├ [6] : https://github.com/kubernetes/kubernetes/issues/126161 
+                        │     │                  ├ [7] : https://groups.google.com/g/kubernetes-security-announ
+                        │     │                  │       ce/c/81c0BHkKNt0 
+                        │     │                  ├ [8] : https://nvd.nist.gov/vuln/detail/CVE-2024-5321 
+                        │     │                  ├ [9] : https://www.cve.org/CVERecord?id=CVE-2024-5321 
+                        │     │                  ╰ [10]: https://www.cve.org/cverecord?id=CVE-2024-5321 
                         │     ├ PublishedDate   : 2024-07-18T19:15:12.607Z 
-                        │     ╰ LastModifiedDate: 2024-07-18T19:15:12.607Z 
+                        │     ╰ LastModifiedDate: 2024-07-19T13:01:44.567Z 
                         ├ [3] ╭ VulnerabilityID : CVE-2024-24790 
                         │     ├ PkgName         : stdlib 
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
@@ -229,7 +234,7 @@
                         │     │                            │           /A:N 
                         │     │                            ╰ V3Score : 6.7 
                         │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/06/04/1 
-                        │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:4237 
+                        │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:4212 
                         │     │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2024-24790 
                         │     │                  ├ [3] : https://bugzilla.redhat.com/2292668 
                         │     │                  ├ [4] : https://bugzilla.redhat.com/2292787 
@@ -239,7 +244,7 @@
                         │     │                  │       4-24789 
                         │     │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
                         │     │                  │       4-24790 
-                        │     │                  ├ [9] : https://errata.almalinux.org/8/ALSA-2024-4237.html 
+                        │     │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2024-4212.html 
                         │     │                  ├ [10]: https://errata.rockylinux.org/RLSA-2024:4212 
                         │     │                  ├ [11]: https://github.com/golang/go/commit/051bdf3fd12a403076
                         │     │                  │       06ff9381138039c5f452f0 (1.21) 
@@ -310,7 +315,7 @@
                         │     │                           ╰ V3Score : 7.5 
                         │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/04/03/16 
                         │     │                  ├ [1] : http://www.openwall.com/lists/oss-security/2024/04/05/4 
-                        │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:3346 
+                        │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:2724 
                         │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2023-45288 
                         │     │                  ├ [4] : https://bugzilla.redhat.com/2268017 
                         │     │                  ├ [5] : https://bugzilla.redhat.com/2268018 
@@ -328,8 +333,8 @@
                         │     │                  │       3-45290 
                         │     │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
                         │     │                  │       4-24783 
-                        │     │                  ├ [16]: https://errata.almalinux.org/8/ALSA-2024-3346.html 
-                        │     │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:2724 
+                        │     │                  ├ [16]: https://errata.almalinux.org/9/ALSA-2024-2724.html 
+                        │     │                  ├ [17]: https://errata.rockylinux.org/RLSA-2024:3346 
                         │     │                  ├ [18]: https://go.dev/cl/576155 
                         │     │                  ├ [19]: https://go.dev/issue/65051 
                         │     │                  ├ [20]: https://groups.google.com/g/golang-announce/c/YgW0sx8m
@@ -444,7 +449,7 @@
                         │     │                            │           /A:N 
                         │     │                            ╰ V3Score : 7.5 
                         │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/06/04/1 
-                        │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:4237 
+                        │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:4212 
                         │     │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2024-24789 
                         │     │                  ├ [3] : https://bugzilla.redhat.com/2292668 
                         │     │                  ├ [4] : https://bugzilla.redhat.com/2292787 
@@ -454,7 +459,7 @@
                         │     │                  │       4-24789 
                         │     │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
                         │     │                  │       4-24790 
-                        │     │                  ├ [9] : https://errata.almalinux.org/8/ALSA-2024-4237.html 
+                        │     │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2024-4212.html 
                         │     │                  ├ [10]: https://errata.rockylinux.org/RLSA-2024:4212 
                         │     │                  ├ [11]: https://github.com/golang/go/commit/c8e40338cf00f3c1d8
                         │     │                  │       6c8fb23863ad67a4c72bcc (1.21) 
