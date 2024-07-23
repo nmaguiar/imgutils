@@ -513,7 +513,8 @@
                               │                    with an invalid connection, and causes one subsequent
                               │                   request using that connection to fail. 
                               ├ Severity        : MEDIUM 
-                              ├ VendorSeverity   ╭ bitnami: 3 
+                              ├ VendorSeverity   ╭ amazon : 2 
+                              │                  ├ bitnami: 3 
                               │                  ╰ redhat : 2 
                               ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
                               │                  │         │           /A:H 
