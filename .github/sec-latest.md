@@ -2,9 +2,141 @@
 ╭ [0] ╭ Target: nmaguiar/imgutils:latest (alpine 3.20.1) 
 │     ├ Class : os-pkgs 
 │     ╰ Type  : alpine 
-├ [1] ╭ Target: Java 
-│     ├ Class : lang-pkgs 
-│     ╰ Type  : jar 
+├ [1] ╭ Target         : Java 
+│     ├ Class          : lang-pkgs 
+│     ├ Type           : jar 
+│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-25638 
+│                       │     ├ PkgName         : dnsjava:dnsjava 
+│                       │     ├ PkgPath         : openaf/openaf.jar 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/dnsjava/dnsjava@3.5.3 
+│                       │     │                  ╰ UID : fcd3d0c2bf50859 
+│                       │     ├ InstalledVersion: 3.5.3 
+│                       │     ├ FixedVersion    : 3.6.0 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd974
+│                       │     │                  │         49e6042f07e50ec310f 
+│                       │     │                  ╰ DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41
+│                       │     │                            b7ee8072a345ee529a3 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-25638 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Maven 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Amaven 
+│                       │     ├ Title           : dnsjava: Improper response validation allowing DNSSEC bypass 
+│                       │     ├ Description     : dnsjava is an implementation of DNS in Java. Records in DNS
+│                       │     │                   replies are not checked for their relevance to the query,
+│                       │     │                   allowing an attacker to respond with RRs from different
+│                       │     │                   zones. This vulnerability is fixed in 3.6.0. 
+│                       │     ├ Severity        : HIGH 
+│                       │     ├ CweIDs           ╭ [0]: CWE-345 
+│                       │     │                  ╰ [1]: CWE-349 
+│                       │     ├ VendorSeverity   ╭ ghsa  : 3 
+│                       │     │                  ╰ redhat: 3 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/
+│                       │     │                  │        │           A:L 
+│                       │     │                  │        ╰ V3Score : 8.9 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/
+│                       │     │                           │           A:L 
+│                       │     │                           ╰ V3Score : 8.9 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-25638 
+│                       │     │                  ├ [1]: https://github.com/dnsjava/dnsjava 
+│                       │     │                  ├ [2]: https://github.com/dnsjava/dnsjava/commit/bc51df1c455e6
+│                       │     │                  │      c9fb7cbd42fcb6d62d16047818d 
+│                       │     │                  ├ [3]: https://github.com/dnsjava/dnsjava/security/advisories/
+│                       │     │                  │      GHSA-cfxw-4h78-h7fw 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-25638 
+│                       │     │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2024-25638 
+│                       │     ├ PublishedDate   : 2024-07-22T14:15:04.593Z 
+│                       │     ╰ LastModifiedDate: 2024-07-22T14:15:04.593Z 
+│                       ├ [1] ╭ VulnerabilityID : GHSA-crjg-w57m-rqqf 
+│                       │     ├ PkgName         : dnsjava:dnsjava 
+│                       │     ├ PkgPath         : openaf/openaf.jar 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/dnsjava/dnsjava@3.5.3 
+│                       │     │                  ╰ UID : fcd3d0c2bf50859 
+│                       │     ├ InstalledVersion: 3.5.3 
+│                       │     ├ FixedVersion    : 3.6.0 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd974
+│                       │     │                  │         49e6042f07e50ec310f 
+│                       │     │                  ╰ DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41
+│                       │     │                            b7ee8072a345ee529a3 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://github.com/advisories/GHSA-crjg-w57m-rqqf 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Maven 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Amaven 
+│                       │     ├ Title           : DNSJava vulnerable to KeyTrap - Denial-of-Service Algorithmic
+│                       │     │                    Complexity Attacks 
+│                       │     ├ Description     : ### Impact
+│                       │     │                   Users using the `ValidatingResolver` for DNSSEC validation
+│                       │     │                   can run into CPU exhaustion with specially crafted
+│                       │     │                   DNSSEC-signed zones.
+│                       │     │                   
+│                       │     │                   ### Patches
+│                       │     │                   Users should upgrade to dnsjava v3.6.0
+│                       │     │                   
+│                       │     │                   ### Workarounds
+│                       │     │                   Although not recommended, only using a non-validating
+│                       │     │                   resolver, will remove the vulnerability. 
+│                       │     │                   
+│                       │     │                   ### References
+│                       │     │                   https://www.athene-center.de/en/keytrap 
+│                       │     ├ Severity        : MEDIUM 
+│                       │     ├ VendorSeverity   ─ ghsa: 2 
+│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H 
+│                       │     │                         ╰ V3Score : 6.5 
+│                       │     ╰ References       ╭ [0]: https://github.com/dnsjava/dnsjava 
+│                       │                        ├ [1]: https://github.com/dnsjava/dnsjava/commit/07ac36a11578c
+│                       │                        │      c1bce0cd8ddf2fe568f062aee78 
+│                       │                        ├ [2]: https://github.com/dnsjava/dnsjava/commit/3ddc45ce8cdb5
+│                       │                        │      c2274e10b7401416f497694e1cf 
+│                       │                        ╰ [3]: https://github.com/dnsjava/dnsjava/security/advisories/
+│                       │                               GHSA-crjg-w57m-rqqf 
+│                       ╰ [2] ╭ VulnerabilityID : GHSA-mmwx-rj87-vfgr 
+│                             ├ PkgName         : dnsjava:dnsjava 
+│                             ├ PkgPath         : openaf/openaf.jar 
+│                             ├ PkgIdentifier    ╭ PURL: pkg:maven/dnsjava/dnsjava@3.5.3 
+│                             │                  ╰ UID : fcd3d0c2bf50859 
+│                             ├ InstalledVersion: 3.5.3 
+│                             ├ FixedVersion    : 3.6.0 
+│                             ├ Status          : fixed 
+│                             ├ Layer            ╭ Digest: sha256:89c6b141b07bcbd5da5e77c5127b88a07b11a00dfd974
+│                             │                  │         49e6042f07e50ec310f 
+│                             │                  ╰ DiffID: sha256:298c62b9ff4a8d0eceebfe838a78b2076a13c13a0bf41
+│                             │                            b7ee8072a345ee529a3 
+│                             ├ SeveritySource  : ghsa 
+│                             ├ PrimaryURL      : https://github.com/advisories/GHSA-mmwx-rj87-vfgr 
+│                             ├ DataSource       ╭ ID  : ghsa 
+│                             │                  ├ Name: GitHub Security Advisory Maven 
+│                             │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                             │                          osystem%3Amaven 
+│                             ├ Title           : DNSJava affected by KeyTrap - NSEC3 closest encloser proof
+│                             │                   can exhaust CPU resources 
+│                             ├ Description     : ### Impact
+│                             │                   Users using the `ValidatingResolver` for DNSSEC validation
+│                             │                   can run into CPU exhaustion with specially crafted
+│                             │                   DNSSEC-signed zones.
+│                             │                   
+│                             │                   ### Patches
+│                             │                   Users should upgrade to dnsjava v3.6.0
+│                             │                   
+│                             │                   ### Workarounds
+│                             │                   Although not recommended, only using a non-validating
+│                             │                   resolver, will remove the vulnerability.
+│                             │                   
+│                             │                   ### References
+│                             │                   https://www.athene-center.de/en/keytrap 
+│                             ├ Severity        : MEDIUM 
+│                             ├ VendorSeverity   ─ ghsa: 2 
+│                             ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H 
+│                             │                         ╰ V3Score : 6.5 
+│                             ╰ References       ╭ [0]: https://github.com/dnsjava/dnsjava 
+│                                                ├ [1]: https://github.com/dnsjava/dnsjava/commit/711af79be3214
+│                                                │      f52daa5c846b95766dc0a075116 
+│                                                ╰ [2]: https://github.com/dnsjava/dnsjava/security/advisories/
+│                                                       GHSA-mmwx-rj87-vfgr 
 ├ [2] ╭ Target         : usr/bin/crictl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -516,7 +648,8 @@
 │                             │                    with an invalid connection, and causes one subsequent
 │                             │                   request using that connection to fail. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ bitnami: 3 
+│                             ├ VendorSeverity   ╭ amazon : 2 
+│                             │                  ├ bitnami: 3 
 │                             │                  ╰ redhat : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                             │                  │         │           /A:H 
@@ -1454,7 +1587,8 @@
 │                              │                   proxy with an invalid connection, and causes one subsequent
 │                              │                   request using that connection to fail. 
 │                              ├ Severity        : MEDIUM 
-│                              ├ VendorSeverity   ╭ bitnami: 3 
+│                              ├ VendorSeverity   ╭ amazon : 2 
+│                              │                  ├ bitnami: 3 
 │                              │                  ╰ redhat : 2 
 │                              ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                              │                  │         │           N/A:H 
