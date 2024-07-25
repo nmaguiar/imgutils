@@ -48,7 +48,7 @@
 │                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-25638 
 │                       │     │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2024-25638 
 │                       │     ├ PublishedDate   : 2024-07-22T14:15:04.593Z 
-│                       │     ╰ LastModifiedDate: 2024-07-22T14:15:04.593Z 
+│                       │     ╰ LastModifiedDate: 2024-07-24T12:55:13.223Z 
 │                       ├ [1] ╭ VulnerabilityID : GHSA-crjg-w57m-rqqf 
 │                       │     ├ PkgName         : dnsjava:dnsjava 
 │                       │     ├ PkgPath         : openaf/openaf.jar 
