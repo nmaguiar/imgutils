@@ -560,6 +560,7 @@
     VendorSeverity:
       amazon: 2
       bitnami: 3
+      photon: 3
       redhat: 2
     CVSS:
       bitnami:
@@ -1336,6 +1337,7 @@
     VendorSeverity:
       amazon: 2
       bitnami: 3
+      photon: 3
       redhat: 2
     CVSS:
       bitnami:
