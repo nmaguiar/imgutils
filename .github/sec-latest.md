@@ -650,6 +650,7 @@
 │                             ├ Severity        : MEDIUM 
 │                             ├ VendorSeverity   ╭ amazon : 2 
 │                             │                  ├ bitnami: 3 
+│                             │                  ├ photon : 3 
 │                             │                  ╰ redhat : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                             │                  │         │           /A:H 
@@ -1589,6 +1590,7 @@
 │                              ├ Severity        : MEDIUM 
 │                              ├ VendorSeverity   ╭ amazon : 2 
 │                              │                  ├ bitnami: 3 
+│                              │                  ├ photon : 3 
 │                              │                  ╰ redhat : 2 
 │                              ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                              │                  │         │           N/A:H 
