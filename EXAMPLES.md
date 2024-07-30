@@ -11,7 +11,7 @@ List of examples:
 | Docker   | Using the host docker authentication |
 | Kubernetes | Accessing Kubernetes container runtime |
 | Kubernetes | Checking the images 'cached' on the current Kubernetes node |
-| Kubernetse | Loop the cpu, memory and storage metrics of each container on the current Kubernetes node |
+| Kubernetes | Loop the cpu, memory and storage metrics of each container on the current Kubernetes node |
 | Images   | Checking images content |
 | Images   | Checkout the files per layer on an existing image |
 
