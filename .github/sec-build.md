@@ -13,10 +13,10 @@
 │                       │     ├ InstalledVersion: 3.5.3 
 │                       │     ├ FixedVersion    : 3.6.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155
-│                       │     │                  │         058958166aafc6a2687 
-│                       │     │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb12808
-│                       │     │                            56ca5a9ab2bee849769 
+│                       │     ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1f
+│                       │     │                  │         a8f2d88736097c32b12 
+│                       │     │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70
+│                       │     │                            a962c23e192dffb9118 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-25638 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -57,10 +57,10 @@
 │                       │     ├ InstalledVersion: 3.5.3 
 │                       │     ├ FixedVersion    : 3.6.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155
-│                       │     │                  │         058958166aafc6a2687 
-│                       │     │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb12808
-│                       │     │                            56ca5a9ab2bee849769 
+│                       │     ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1f
+│                       │     │                  │         a8f2d88736097c32b12 
+│                       │     │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70
+│                       │     │                            a962c23e192dffb9118 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://github.com/advisories/GHSA-crjg-w57m-rqqf 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -102,10 +102,10 @@
 │                             ├ InstalledVersion: 3.5.3 
 │                             ├ FixedVersion    : 3.6.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155
-│                             │                  │         058958166aafc6a2687 
-│                             │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb12808
-│                             │                            56ca5a9ab2bee849769 
+│                             ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1f
+│                             │                  │         a8f2d88736097c32b12 
+│                             │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70
+│                             │                            a962c23e192dffb9118 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://github.com/advisories/GHSA-mmwx-rj87-vfgr 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -140,7 +140,101 @@
 ├ [2] ╭ Target         : usr/bin/crictl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
-│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-32473 
+│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-41110 
+│                       │     ├ PkgName         : github.com/docker/docker 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v26.0.1%2Bincompat
+│                       │     │                  │       ible 
+│                       │     │                  ╰ UID : 493f0dc0950fc8ce 
+│                       │     ├ InstalledVersion: v26.0.1+incompatible 
+│                       │     ├ FixedVersion    : 23.0.14, 26.1.4, 27.1.0 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1f
+│                       │     │                  │         a8f2d88736097c32b12 
+│                       │     │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70
+│                       │     │                            a962c23e192dffb9118 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-41110 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Go 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Ago 
+│                       │     ├ Title           : moby: Authz zero length regression 
+│                       │     ├ Description     : Moby is an open-source project created by Docker for software
+│                       │     │                    containerization. A security vulnerability has been detected
+│                       │     │                    in certain versions of Docker Engine, which could allow an
+│                       │     │                   attacker to bypass authorization plugins (AuthZ) under
+│                       │     │                   specific circumstances. The base likelihood of this being
+│                       │     │                   exploited is low.
+│                       │     │                   
+│                       │     │                   Using a specially-crafted API request, an Engine API client
+│                       │     │                   could make the daemon forward the request or response to an
+│                       │     │                   authorization plugin without the body. In certain
+│                       │     │                   circumstances, the authorization plugin may allow a request
+│                       │     │                   which it would have otherwise denied if the body had been
+│                       │     │                   forwarded to it.
+│                       │     │                   
+│                       │     │                   A security issue was discovered In 2018, where an attacker
+│                       │     │                   could bypass AuthZ plugins using a specially crafted API
+│                       │     │                   request. This could lead to unauthorized actions, including
+│                       │     │                   privilege escalation. Although this issue was fixed in Docker
+│                       │     │                    Engine v18.09.1 in January 2019, the fix was not carried
+│                       │     │                   forward to later major versions, resulting in a regression.
+│                       │     │                   Anyone who depends on authorization plugins that introspect
+│                       │     │                   the request and/or response body to make access control
+│                       │     │                   decisions is potentially impacted.
+│                       │     │                   
+│                       │     │                   Docker EE v19.03.x and all versions of Mirantis Container
+│                       │     │                   Runtime are not vulnerable.
+│                       │     │                   
+│                       │     │                   docker-ce v27.1.1 containes patches to fix the vulnerability.
+│                       │     │                    Patches have also been merged into the master, 19.03, 20.0,
+│                       │     │                   23.0, 24.0, 25.0, 26.0, and 26.1 release branches. If one is
+│                       │     │                   unable to upgrade immediately, avoid using AuthZ plugins
+│                       │     │                   and/or restrict access to the Docker API to trusted parties,
+│                       │     │                   following the principle of least privilege. 
+│                       │     ├ Severity        : CRITICAL 
+│                       │     ├ CweIDs           ╭ [0]: CWE-187 
+│                       │     │                  ├ [1]: CWE-444 
+│                       │     │                  ╰ [2]: CWE-863 
+│                       │     ├ VendorSeverity   ╭ ghsa  : 4 
+│                       │     │                  ╰ redhat: 4 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/
+│                       │     │                  │        │           A:H 
+│                       │     │                  │        ╰ V3Score : 10 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/
+│                       │     │                           │           A:H 
+│                       │     │                           ╰ V3Score : 9.9 
+│                       │     ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2024-41110 
+│                       │     │                  ├ [1] : https://github.com/moby/moby 
+│                       │     │                  ├ [2] : https://github.com/moby/moby/commit/411e817ddf710ff8e0
+│                       │     │                  │       8fa193da80cb78af708191 
+│                       │     │                  ├ [3] : https://github.com/moby/moby/commit/42f40b1d6dd7562342
+│                       │     │                  │       f832b9cd2adf9e668eeb76 
+│                       │     │                  ├ [4] : https://github.com/moby/moby/commit/65cc597cea28cdc25b
+│                       │     │                  │       ea3b8a86384b4251872919 
+│                       │     │                  ├ [5] : https://github.com/moby/moby/commit/852759a7df454cbf88
+│                       │     │                  │       db4e954c919becd48faa9b 
+│                       │     │                  ├ [6] : https://github.com/moby/moby/commit/a31260625655cff9ae
+│                       │     │                  │       226b51757915e275e304b0 
+│                       │     │                  ├ [7] : https://github.com/moby/moby/commit/a79fabbfe84117696a
+│                       │     │                  │       19671f4aa88b82d0f64fc1 
+│                       │     │                  ├ [8] : https://github.com/moby/moby/commit/ae160b4edddb72ef4b
+│                       │     │                  │       d71f66b975a1a1cc434f00 
+│                       │     │                  ├ [9] : https://github.com/moby/moby/commit/ae2b3666c517c96cbc
+│                       │     │                  │       2adf1af5591a6b00d4ec0f 
+│                       │     │                  ├ [10]: https://github.com/moby/moby/commit/cc13f952511154a286
+│                       │     │                  │       6bddbb7dddebfe9e83b801 
+│                       │     │                  ├ [11]: https://github.com/moby/moby/commit/fc274cd2ff4cf3b48c
+│                       │     │                  │       91697fb327dd1fb95588fb 
+│                       │     │                  ├ [12]: https://github.com/moby/moby/security/advisories/GHSA-
+│                       │     │                  │       v23v-6jw2-98fq 
+│                       │     │                  ├ [13]: https://nvd.nist.gov/vuln/detail/CVE-2024-41110 
+│                       │     │                  ├ [14]: https://www.cve.org/CVERecord?id=CVE-2024-41110 
+│                       │     │                  ╰ [15]: https://www.docker.com/blog/docker-security-advisory-d
+│                       │     │                          ocker-engine-authz-plugin 
+│                       │     ├ PublishedDate   : 2024-07-24T17:15:11.053Z 
+│                       │     ╰ LastModifiedDate: 2024-07-30T20:15:04.567Z 
+│                       ├ [1] ╭ VulnerabilityID : CVE-2024-32473 
 │                       │     ├ PkgName         : github.com/docker/docker 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v26.0.1%2Bincompat
 │                       │     │                  │       ible 
@@ -148,10 +242,10 @@
 │                       │     ├ InstalledVersion: v26.0.1+incompatible 
 │                       │     ├ FixedVersion    : 26.0.2 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155
-│                       │     │                  │         058958166aafc6a2687 
-│                       │     │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb12808
-│                       │     │                            56ca5a9ab2bee849769 
+│                       │     ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1f
+│                       │     │                  │         a8f2d88736097c32b12 
+│                       │     │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70
+│                       │     │                            a962c23e192dffb9118 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-32473 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -198,7 +292,7 @@
 │                       │     │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2024-32473 
 │                       │     ├ PublishedDate   : 2024-04-18T22:15:10.4Z 
 │                       │     ╰ LastModifiedDate: 2024-04-19T13:10:25.637Z 
-│                       ├ [1] ╭ VulnerabilityID : CVE-2023-47108 
+│                       ├ [2] ╭ VulnerabilityID : CVE-2023-47108 
 │                       │     ├ PkgName         : go.opentelemetry.io/contrib/instrumentation/google.golang.org
 │                       │     │                   /grpc/otelgrpc 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/go.opentelemetry.io/contrib/instrumentation
@@ -207,10 +301,10 @@
 │                       │     ├ InstalledVersion: v0.42.0 
 │                       │     ├ FixedVersion    : 0.46.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155
-│                       │     │                  │         058958166aafc6a2687 
-│                       │     │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb12808
-│                       │     │                            56ca5a9ab2bee849769 
+│                       │     ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1f
+│                       │     │                  │         a8f2d88736097c32b12 
+│                       │     │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70
+│                       │     │                            a962c23e192dffb9118 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-47108 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -272,17 +366,17 @@
 │                       │     │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2023-47108 
 │                       │     ├ PublishedDate   : 2023-11-10T19:15:16.41Z 
 │                       │     ╰ LastModifiedDate: 2023-11-20T19:34:26.493Z 
-│                       ├ [2] ╭ VulnerabilityID : CVE-2024-5321 
+│                       ├ [3] ╭ VulnerabilityID : CVE-2024-5321 
 │                       │     ├ PkgName         : k8s.io/kubernetes 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/k8s.io/kubernetes@v1.30.0 
 │                       │     │                  ╰ UID : f356cbc0e9a9ee03 
 │                       │     ├ InstalledVersion: v1.30.0 
 │                       │     ├ FixedVersion    : 1.27.16, 1.28.12, 1.29.7, 1.30.3 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155
-│                       │     │                  │         058958166aafc6a2687 
-│                       │     │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb12808
-│                       │     │                            56ca5a9ab2bee849769 
+│                       │     ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1f
+│                       │     │                  │         a8f2d88736097c32b12 
+│                       │     │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70
+│                       │     │                            a962c23e192dffb9118 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-5321 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -326,17 +420,17 @@
 │                       │     │                  ╰ [10]: https://www.cve.org/cverecord?id=CVE-2024-5321 
 │                       │     ├ PublishedDate   : 2024-07-18T19:15:12.607Z 
 │                       │     ╰ LastModifiedDate: 2024-07-19T13:01:44.567Z 
-│                       ├ [3] ╭ VulnerabilityID : CVE-2024-24790 
+│                       ├ [4] ╭ VulnerabilityID : CVE-2024-24790 
 │                       │     ├ PkgName         : stdlib 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
 │                       │     │                  ╰ UID : cd28c68ec9dd2486 
 │                       │     ├ InstalledVersion: 1.22.1 
 │                       │     ├ FixedVersion    : 1.21.11, 1.22.4 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155
-│                       │     │                  │         058958166aafc6a2687 
-│                       │     │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb12808
-│                       │     │                            56ca5a9ab2bee849769 
+│                       │     ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1f
+│                       │     │                  │         a8f2d88736097c32b12 
+│                       │     │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70
+│                       │     │                            a962c23e192dffb9118 
 │                       │     ├ SeveritySource  : nvd 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24790 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
@@ -400,17 +494,17 @@
 │                       │     │                  ╰ [23]: https://www.cve.org/CVERecord?id=CVE-2024-24790 
 │                       │     ├ PublishedDate   : 2024-06-05T16:15:10.56Z 
 │                       │     ╰ LastModifiedDate: 2024-06-18T17:59:12.547Z 
-│                       ├ [4] ╭ VulnerabilityID : CVE-2023-45288 
+│                       ├ [5] ╭ VulnerabilityID : CVE-2023-45288 
 │                       │     ├ PkgName         : stdlib 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
 │                       │     │                  ╰ UID : cd28c68ec9dd2486 
 │                       │     ├ InstalledVersion: 1.22.1 
 │                       │     ├ FixedVersion    : 1.21.9, 1.22.2 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155
-│                       │     │                  │         058958166aafc6a2687 
-│                       │     │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb12808
-│                       │     │                            56ca5a9ab2bee849769 
+│                       │     ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1f
+│                       │     │                  │         a8f2d88736097c32b12 
+│                       │     │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70
+│                       │     │                            a962c23e192dffb9118 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-45288 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -495,17 +589,17 @@
 │                       │     │                  ╰ [34]: https://www.kb.cert.org/vuls/id/421644 
 │                       │     ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
 │                       │     ╰ LastModifiedDate: 2024-05-01T18:15:10.493Z 
-│                       ├ [5] ╭ VulnerabilityID : CVE-2024-24788 
+│                       ├ [6] ╭ VulnerabilityID : CVE-2024-24788 
 │                       │     ├ PkgName         : stdlib 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
 │                       │     │                  ╰ UID : cd28c68ec9dd2486 
 │                       │     ├ InstalledVersion: 1.22.1 
 │                       │     ├ FixedVersion    : 1.22.3 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155
-│                       │     │                  │         058958166aafc6a2687 
-│                       │     │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb12808
-│                       │     │                            56ca5a9ab2bee849769 
+│                       │     ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1f
+│                       │     │                  │         a8f2d88736097c32b12 
+│                       │     │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70
+│                       │     │                            a962c23e192dffb9118 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24788 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -539,17 +633,17 @@
 │                       │     │                  ╰ [13]: https://www.cve.org/CVERecord?id=CVE-2024-24788 
 │                       │     ├ PublishedDate   : 2024-05-08T16:15:08.25Z 
 │                       │     ╰ LastModifiedDate: 2024-06-14T13:15:50.67Z 
-│                       ├ [6] ╭ VulnerabilityID : CVE-2024-24789 
+│                       ├ [7] ╭ VulnerabilityID : CVE-2024-24789 
 │                       │     ├ PkgName         : stdlib 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
 │                       │     │                  ╰ UID : cd28c68ec9dd2486 
 │                       │     ├ InstalledVersion: 1.22.1 
 │                       │     ├ FixedVersion    : 1.21.11, 1.22.4 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155
-│                       │     │                  │         058958166aafc6a2687 
-│                       │     │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb12808
-│                       │     │                            56ca5a9ab2bee849769 
+│                       │     ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1f
+│                       │     │                  │         a8f2d88736097c32b12 
+│                       │     │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70
+│                       │     │                            a962c23e192dffb9118 
 │                       │     ├ SeveritySource  : nvd 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24789 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
@@ -618,17 +712,17 @@
 │                       │     │                  ╰ [24]: https://www.cve.org/CVERecord?id=CVE-2024-24789 
 │                       │     ├ PublishedDate   : 2024-06-05T16:15:10.47Z 
 │                       │     ╰ LastModifiedDate: 2024-07-03T01:48:25.51Z 
-│                       ╰ [7] ╭ VulnerabilityID : CVE-2024-24791 
+│                       ╰ [8] ╭ VulnerabilityID : CVE-2024-24791 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.1 
 │                             │                  ╰ UID : cd28c68ec9dd2486 
 │                             ├ InstalledVersion: 1.22.1 
 │                             ├ FixedVersion    : 1.21.12, 1.22.5 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155
-│                             │                  │         058958166aafc6a2687 
-│                             │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb12808
-│                             │                            56ca5a9ab2bee849769 
+│                             ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1f
+│                             │                  │         a8f2d88736097c32b12 
+│                             │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70
+│                             │                            a962c23e192dffb9118 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24791 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
@@ -682,10 +776,10 @@
 │                       │      ├ InstalledVersion: v0.0.0-20190906153656-016a3232168d 
 │                       │      ├ FixedVersion    : 20.10.9 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f15
-│                       │      │                  │         5058958166aafc6a2687 
-│                       │      │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280
-│                       │      │                            856ca5a9ab2bee849769 
+│                       │      ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1
+│                       │      │                  │         fa8f2d88736097c32b12 
+│                       │      │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb7
+│                       │      │                            0a962c23e192dffb9118 
 │                       │      ├ SeveritySource  : ghsa 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2021-41092 
 │                       │      ├ DataSource       ╭ ID  : ghsa 
@@ -750,7 +844,102 @@
 │                       │      │                  ╰ [10]: https://www.cve.org/CVERecord?id=CVE-2021-41092 
 │                       │      ├ PublishedDate   : 2021-10-04T20:15:07.757Z 
 │                       │      ╰ LastModifiedDate: 2023-11-07T03:38:49.683Z 
-│                       ├ [1]  ╭ VulnerabilityID : CVE-2024-24557 
+│                       ├ [1]  ╭ VulnerabilityID : CVE-2024-41110 
+│                       │      ├ PkgName         : github.com/docker/docker 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v24.0.7%2Bincompa
+│                       │      │                  │       tible 
+│                       │      │                  ╰ UID : e28d01cbfe108506 
+│                       │      ├ InstalledVersion: v24.0.7+incompatible 
+│                       │      ├ FixedVersion    : 23.0.14, 26.1.4, 27.1.0 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1
+│                       │      │                  │         fa8f2d88736097c32b12 
+│                       │      │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb7
+│                       │      │                            0a962c23e192dffb9118 
+│                       │      ├ SeveritySource  : ghsa 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-41110 
+│                       │      ├ DataSource       ╭ ID  : ghsa 
+│                       │      │                  ├ Name: GitHub Security Advisory Go 
+│                       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                       │      │                          cosystem%3Ago 
+│                       │      ├ Title           : moby: Authz zero length regression 
+│                       │      ├ Description     : Moby is an open-source project created by Docker for
+│                       │      │                   software containerization. A security vulnerability has been
+│                       │      │                    detected in certain versions of Docker Engine, which could
+│                       │      │                   allow an attacker to bypass authorization plugins (AuthZ)
+│                       │      │                   under specific circumstances. The base likelihood of this
+│                       │      │                   being exploited is low.
+│                       │      │                   
+│                       │      │                   Using a specially-crafted API request, an Engine API client
+│                       │      │                   could make the daemon forward the request or response to an
+│                       │      │                   authorization plugin without the body. In certain
+│                       │      │                   circumstances, the authorization plugin may allow a request
+│                       │      │                   which it would have otherwise denied if the body had been
+│                       │      │                   forwarded to it.
+│                       │      │                   
+│                       │      │                   A security issue was discovered In 2018, where an attacker
+│                       │      │                   could bypass AuthZ plugins using a specially crafted API
+│                       │      │                   request. This could lead to unauthorized actions, including
+│                       │      │                   privilege escalation. Although this issue was fixed in
+│                       │      │                   Docker Engine v18.09.1 in January 2019, the fix was not
+│                       │      │                   carried forward to later major versions, resulting in a
+│                       │      │                   regression. Anyone who depends on authorization plugins that
+│                       │      │                    introspect the request and/or response body to make access
+│                       │      │                   control decisions is potentially impacted.
+│                       │      │                   
+│                       │      │                   Docker EE v19.03.x and all versions of Mirantis Container
+│                       │      │                   Runtime are not vulnerable.
+│                       │      │                   
+│                       │      │                   docker-ce v27.1.1 containes patches to fix the
+│                       │      │                   vulnerability. Patches have also been merged into the
+│                       │      │                   master, 19.03, 20.0, 23.0, 24.0, 25.0, 26.0, and 26.1
+│                       │      │                   release branches. If one is unable to upgrade immediately,
+│                       │      │                   avoid using AuthZ plugins and/or restrict access to the
+│                       │      │                   Docker API to trusted parties, following the principle of
+│                       │      │                   least privilege. 
+│                       │      ├ Severity        : CRITICAL 
+│                       │      ├ CweIDs           ╭ [0]: CWE-187 
+│                       │      │                  ├ [1]: CWE-444 
+│                       │      │                  ╰ [2]: CWE-863 
+│                       │      ├ VendorSeverity   ╭ ghsa  : 4 
+│                       │      │                  ╰ redhat: 4 
+│                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H
+│                       │      │                  │        │           /A:H 
+│                       │      │                  │        ╰ V3Score : 10 
+│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H
+│                       │      │                           │           /A:H 
+│                       │      │                           ╰ V3Score : 9.9 
+│                       │      ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2024-41110 
+│                       │      │                  ├ [1] : https://github.com/moby/moby 
+│                       │      │                  ├ [2] : https://github.com/moby/moby/commit/411e817ddf710ff8e
+│                       │      │                  │       08fa193da80cb78af708191 
+│                       │      │                  ├ [3] : https://github.com/moby/moby/commit/42f40b1d6dd756234
+│                       │      │                  │       2f832b9cd2adf9e668eeb76 
+│                       │      │                  ├ [4] : https://github.com/moby/moby/commit/65cc597cea28cdc25
+│                       │      │                  │       bea3b8a86384b4251872919 
+│                       │      │                  ├ [5] : https://github.com/moby/moby/commit/852759a7df454cbf8
+│                       │      │                  │       8db4e954c919becd48faa9b 
+│                       │      │                  ├ [6] : https://github.com/moby/moby/commit/a31260625655cff9a
+│                       │      │                  │       e226b51757915e275e304b0 
+│                       │      │                  ├ [7] : https://github.com/moby/moby/commit/a79fabbfe84117696
+│                       │      │                  │       a19671f4aa88b82d0f64fc1 
+│                       │      │                  ├ [8] : https://github.com/moby/moby/commit/ae160b4edddb72ef4
+│                       │      │                  │       bd71f66b975a1a1cc434f00 
+│                       │      │                  ├ [9] : https://github.com/moby/moby/commit/ae2b3666c517c96cb
+│                       │      │                  │       c2adf1af5591a6b00d4ec0f 
+│                       │      │                  ├ [10]: https://github.com/moby/moby/commit/cc13f952511154a28
+│                       │      │                  │       66bddbb7dddebfe9e83b801 
+│                       │      │                  ├ [11]: https://github.com/moby/moby/commit/fc274cd2ff4cf3b48
+│                       │      │                  │       c91697fb327dd1fb95588fb 
+│                       │      │                  ├ [12]: https://github.com/moby/moby/security/advisories/GHSA
+│                       │      │                  │       -v23v-6jw2-98fq 
+│                       │      │                  ├ [13]: https://nvd.nist.gov/vuln/detail/CVE-2024-41110 
+│                       │      │                  ├ [14]: https://www.cve.org/CVERecord?id=CVE-2024-41110 
+│                       │      │                  ╰ [15]: https://www.docker.com/blog/docker-security-advisory-
+│                       │      │                          docker-engine-authz-plugin 
+│                       │      ├ PublishedDate   : 2024-07-24T17:15:11.053Z 
+│                       │      ╰ LastModifiedDate: 2024-07-30T20:15:04.567Z 
+│                       ├ [2]  ╭ VulnerabilityID : CVE-2024-24557 
 │                       │      ├ PkgName         : github.com/docker/docker 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v24.0.7%2Bincompa
 │                       │      │                  │       tible 
@@ -758,10 +947,10 @@
 │                       │      ├ InstalledVersion: v24.0.7+incompatible 
 │                       │      ├ FixedVersion    : 24.0.9, 25.0.2 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f15
-│                       │      │                  │         5058958166aafc6a2687 
-│                       │      │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280
-│                       │      │                            856ca5a9ab2bee849769 
+│                       │      ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1
+│                       │      │                  │         fa8f2d88736097c32b12 
+│                       │      │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb7
+│                       │      │                            0a962c23e192dffb9118 
 │                       │      ├ SeveritySource  : ghsa 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24557 
 │                       │      ├ DataSource       ╭ ID  : ghsa 
@@ -818,17 +1007,17 @@
 │                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-24557 
 │                       │      ├ PublishedDate   : 2024-02-01T17:15:10.953Z 
 │                       │      ╰ LastModifiedDate: 2024-02-09T20:21:32.97Z 
-│                       ├ [2]  ╭ VulnerabilityID : CVE-2023-45288 
+│                       ├ [3]  ╭ VulnerabilityID : CVE-2023-45288 
 │                       │      ├ PkgName         : golang.org/x/net 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.17.0 
 │                       │      │                  ╰ UID : 38b9f84f386a711c 
 │                       │      ├ InstalledVersion: v0.17.0 
 │                       │      ├ FixedVersion    : 0.23.0 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f15
-│                       │      │                  │         5058958166aafc6a2687 
-│                       │      │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280
-│                       │      │                            856ca5a9ab2bee849769 
+│                       │      ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1
+│                       │      │                  │         fa8f2d88736097c32b12 
+│                       │      │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb7
+│                       │      │                            0a962c23e192dffb9118 
 │                       │      ├ SeveritySource  : ghsa 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-45288 
 │                       │      ├ DataSource       ╭ ID  : ghsa 
@@ -917,17 +1106,17 @@
 │                       │      │                  ╰ [34]: https://www.kb.cert.org/vuls/id/421644 
 │                       │      ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
 │                       │      ╰ LastModifiedDate: 2024-05-01T18:15:10.493Z 
-│                       ├ [3]  ╭ VulnerabilityID : CVE-2024-24790 
+│                       ├ [4]  ╭ VulnerabilityID : CVE-2024-24790 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.20.13 
 │                       │      │                  ╰ UID : be83ae9c5df5c612 
 │                       │      ├ InstalledVersion: 1.20.13 
 │                       │      ├ FixedVersion    : 1.21.11, 1.22.4 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f15
-│                       │      │                  │         5058958166aafc6a2687 
-│                       │      │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280
-│                       │      │                            856ca5a9ab2bee849769 
+│                       │      ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1
+│                       │      │                  │         fa8f2d88736097c32b12 
+│                       │      │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb7
+│                       │      │                            0a962c23e192dffb9118 
 │                       │      ├ SeveritySource  : nvd 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24790 
 │                       │      ├ DataSource       ╭ ID  : govulndb 
@@ -991,17 +1180,17 @@
 │                       │      │                  ╰ [23]: https://www.cve.org/CVERecord?id=CVE-2024-24790 
 │                       │      ├ PublishedDate   : 2024-06-05T16:15:10.56Z 
 │                       │      ╰ LastModifiedDate: 2024-06-18T17:59:12.547Z 
-│                       ├ [4]  ╭ VulnerabilityID : CVE-2023-45288 
+│                       ├ [5]  ╭ VulnerabilityID : CVE-2023-45288 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.20.13 
 │                       │      │                  ╰ UID : be83ae9c5df5c612 
 │                       │      ├ InstalledVersion: 1.20.13 
 │                       │      ├ FixedVersion    : 1.21.9, 1.22.2 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f15
-│                       │      │                  │         5058958166aafc6a2687 
-│                       │      │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280
-│                       │      │                            856ca5a9ab2bee849769 
+│                       │      ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1
+│                       │      │                  │         fa8f2d88736097c32b12 
+│                       │      │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb7
+│                       │      │                            0a962c23e192dffb9118 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-45288 
 │                       │      ├ DataSource       ╭ ID  : govulndb 
 │                       │      │                  ├ Name: The Go Vulnerability Database 
@@ -1088,17 +1277,17 @@
 │                       │      │                  ╰ [34]: https://www.kb.cert.org/vuls/id/421644 
 │                       │      ├ PublishedDate   : 2024-04-04T21:15:16.113Z 
 │                       │      ╰ LastModifiedDate: 2024-05-01T18:15:10.493Z 
-│                       ├ [5]  ╭ VulnerabilityID : CVE-2023-45289 
+│                       ├ [6]  ╭ VulnerabilityID : CVE-2023-45289 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.20.13 
 │                       │      │                  ╰ UID : be83ae9c5df5c612 
 │                       │      ├ InstalledVersion: 1.20.13 
 │                       │      ├ FixedVersion    : 1.21.8, 1.22.1 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f15
-│                       │      │                  │         5058958166aafc6a2687 
-│                       │      │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280
-│                       │      │                            856ca5a9ab2bee849769 
+│                       │      ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1
+│                       │      │                  │         fa8f2d88736097c32b12 
+│                       │      │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb7
+│                       │      │                            0a962c23e192dffb9118 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-45289 
 │                       │      ├ DataSource       ╭ ID  : govulndb 
 │                       │      │                  ├ Name: The Go Vulnerability Database 
@@ -1164,17 +1353,17 @@
 │                       │      │                  ╰ [29]: https://www.cve.org/CVERecord?id=CVE-2023-45289 
 │                       │      ├ PublishedDate   : 2024-03-05T23:15:07.137Z 
 │                       │      ╰ LastModifiedDate: 2024-05-01T17:15:25.983Z 
-│                       ├ [6]  ╭ VulnerabilityID : CVE-2023-45290 
+│                       ├ [7]  ╭ VulnerabilityID : CVE-2023-45290 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.20.13 
 │                       │      │                  ╰ UID : be83ae9c5df5c612 
 │                       │      ├ InstalledVersion: 1.20.13 
 │                       │      ├ FixedVersion    : 1.21.8, 1.22.1 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f15
-│                       │      │                  │         5058958166aafc6a2687 
-│                       │      │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280
-│                       │      │                            856ca5a9ab2bee849769 
+│                       │      ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1
+│                       │      │                  │         fa8f2d88736097c32b12 
+│                       │      │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb7
+│                       │      │                            0a962c23e192dffb9118 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-45290 
 │                       │      ├ DataSource       ╭ ID  : govulndb 
 │                       │      │                  ├ Name: The Go Vulnerability Database 
@@ -1234,17 +1423,17 @@
 │                       │      │                  ╰ [24]: https://www.cve.org/CVERecord?id=CVE-2023-45290 
 │                       │      ├ PublishedDate   : 2024-03-05T23:15:07.21Z 
 │                       │      ╰ LastModifiedDate: 2024-05-01T17:15:26.04Z 
-│                       ├ [7]  ╭ VulnerabilityID : CVE-2024-24783 
+│                       ├ [8]  ╭ VulnerabilityID : CVE-2024-24783 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.20.13 
 │                       │      │                  ╰ UID : be83ae9c5df5c612 
 │                       │      ├ InstalledVersion: 1.20.13 
 │                       │      ├ FixedVersion    : 1.21.8, 1.22.1 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f15
-│                       │      │                  │         5058958166aafc6a2687 
-│                       │      │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280
-│                       │      │                            856ca5a9ab2bee849769 
+│                       │      ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1
+│                       │      │                  │         fa8f2d88736097c32b12 
+│                       │      │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb7
+│                       │      │                            0a962c23e192dffb9118 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24783 
 │                       │      ├ DataSource       ╭ ID  : govulndb 
 │                       │      │                  ├ Name: The Go Vulnerability Database 
@@ -1311,17 +1500,17 @@
 │                       │      │                  ╰ [31]: https://www.cve.org/CVERecord?id=CVE-2024-24783 
 │                       │      ├ PublishedDate   : 2024-03-05T23:15:07.683Z 
 │                       │      ╰ LastModifiedDate: 2024-05-01T17:15:29.45Z 
-│                       ├ [8]  ╭ VulnerabilityID : CVE-2024-24784 
+│                       ├ [9]  ╭ VulnerabilityID : CVE-2024-24784 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.20.13 
 │                       │      │                  ╰ UID : be83ae9c5df5c612 
 │                       │      ├ InstalledVersion: 1.20.13 
 │                       │      ├ FixedVersion    : 1.21.8, 1.22.1 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f15
-│                       │      │                  │         5058958166aafc6a2687 
-│                       │      │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280
-│                       │      │                            856ca5a9ab2bee849769 
+│                       │      ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1
+│                       │      │                  │         fa8f2d88736097c32b12 
+│                       │      │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb7
+│                       │      │                            0a962c23e192dffb9118 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24784 
 │                       │      ├ DataSource       ╭ ID  : govulndb 
 │                       │      │                  ├ Name: The Go Vulnerability Database 
@@ -1395,17 +1584,17 @@
 │                       │      │                  ╰ [37]: https://www.cve.org/CVERecord?id=CVE-2024-24784 
 │                       │      ├ PublishedDate   : 2024-03-05T23:15:07.733Z 
 │                       │      ╰ LastModifiedDate: 2024-05-01T17:15:29.527Z 
-│                       ├ [9]  ╭ VulnerabilityID : CVE-2024-24785 
+│                       ├ [10] ╭ VulnerabilityID : CVE-2024-24785 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.20.13 
 │                       │      │                  ╰ UID : be83ae9c5df5c612 
 │                       │      ├ InstalledVersion: 1.20.13 
 │                       │      ├ FixedVersion    : 1.21.8, 1.22.1 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f15
-│                       │      │                  │         5058958166aafc6a2687 
-│                       │      │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280
-│                       │      │                            856ca5a9ab2bee849769 
+│                       │      ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1
+│                       │      │                  │         fa8f2d88736097c32b12 
+│                       │      │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb7
+│                       │      │                            0a962c23e192dffb9118 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24785 
 │                       │      ├ DataSource       ╭ ID  : govulndb 
 │                       │      │                  ├ Name: The Go Vulnerability Database 
@@ -1480,17 +1669,17 @@
 │                       │      │                  ╰ [38]: https://www.cve.org/CVERecord?id=CVE-2024-24785 
 │                       │      ├ PublishedDate   : 2024-03-05T23:15:07.777Z 
 │                       │      ╰ LastModifiedDate: 2024-05-01T17:15:29.61Z 
-│                       ├ [10] ╭ VulnerabilityID : CVE-2024-24789 
+│                       ├ [11] ╭ VulnerabilityID : CVE-2024-24789 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.20.13 
 │                       │      │                  ╰ UID : be83ae9c5df5c612 
 │                       │      ├ InstalledVersion: 1.20.13 
 │                       │      ├ FixedVersion    : 1.21.11, 1.22.4 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f15
-│                       │      │                  │         5058958166aafc6a2687 
-│                       │      │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280
-│                       │      │                            856ca5a9ab2bee849769 
+│                       │      ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1
+│                       │      │                  │         fa8f2d88736097c32b12 
+│                       │      │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb7
+│                       │      │                            0a962c23e192dffb9118 
 │                       │      ├ SeveritySource  : nvd 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24789 
 │                       │      ├ DataSource       ╭ ID  : govulndb 
@@ -1559,17 +1748,17 @@
 │                       │      │                  ╰ [24]: https://www.cve.org/CVERecord?id=CVE-2024-24789 
 │                       │      ├ PublishedDate   : 2024-06-05T16:15:10.47Z 
 │                       │      ╰ LastModifiedDate: 2024-07-03T01:48:25.51Z 
-│                       ╰ [11] ╭ VulnerabilityID : CVE-2024-24791 
+│                       ╰ [12] ╭ VulnerabilityID : CVE-2024-24791 
 │                              ├ PkgName         : stdlib 
 │                              ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.20.13 
 │                              │                  ╰ UID : be83ae9c5df5c612 
 │                              ├ InstalledVersion: 1.20.13 
 │                              ├ FixedVersion    : 1.21.12, 1.22.5 
 │                              ├ Status          : fixed 
-│                              ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f15
-│                              │                  │         5058958166aafc6a2687 
-│                              │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280
-│                              │                            856ca5a9ab2bee849769 
+│                              ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1
+│                              │                  │         fa8f2d88736097c32b12 
+│                              │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb7
+│                              │                            0a962c23e192dffb9118 
 │                              ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24791 
 │                              ├ DataSource       ╭ ID  : govulndb 
 │                              │                  ├ Name: The Go Vulnerability Database 
@@ -1612,13 +1801,201 @@
 ├ [5] ╭ Target: usr/bin/docker 
 │     ├ Class : lang-pkgs 
 │     ╰ Type  : gobinary 
-├ [6] ╭ Target: usr/bin/helm 
-│     ├ Class : lang-pkgs 
-│     ╰ Type  : gobinary 
+├ [6] ╭ Target         : usr/bin/helm 
+│     ├ Class          : lang-pkgs 
+│     ├ Type           : gobinary 
+│     ╰ Vulnerabilities ─ [0] ╭ VulnerabilityID : CVE-2024-41110 
+│                             ├ PkgName         : github.com/docker/docker 
+│                             ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v25.0.5%2Bincompat
+│                             │                  │       ible 
+│                             │                  ╰ UID : e4c7c8ca065174dd 
+│                             ├ InstalledVersion: v25.0.5+incompatible 
+│                             ├ FixedVersion    : 23.0.14, 26.1.4, 27.1.0 
+│                             ├ Status          : fixed 
+│                             ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1f
+│                             │                  │         a8f2d88736097c32b12 
+│                             │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70
+│                             │                            a962c23e192dffb9118 
+│                             ├ SeveritySource  : ghsa 
+│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-41110 
+│                             ├ DataSource       ╭ ID  : ghsa 
+│                             │                  ├ Name: GitHub Security Advisory Go 
+│                             │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                             │                          osystem%3Ago 
+│                             ├ Title           : moby: Authz zero length regression 
+│                             ├ Description     : Moby is an open-source project created by Docker for software
+│                             │                    containerization. A security vulnerability has been detected
+│                             │                    in certain versions of Docker Engine, which could allow an
+│                             │                   attacker to bypass authorization plugins (AuthZ) under
+│                             │                   specific circumstances. The base likelihood of this being
+│                             │                   exploited is low.
+│                             │                   
+│                             │                   Using a specially-crafted API request, an Engine API client
+│                             │                   could make the daemon forward the request or response to an
+│                             │                   authorization plugin without the body. In certain
+│                             │                   circumstances, the authorization plugin may allow a request
+│                             │                   which it would have otherwise denied if the body had been
+│                             │                   forwarded to it.
+│                             │                   
+│                             │                   A security issue was discovered In 2018, where an attacker
+│                             │                   could bypass AuthZ plugins using a specially crafted API
+│                             │                   request. This could lead to unauthorized actions, including
+│                             │                   privilege escalation. Although this issue was fixed in Docker
+│                             │                    Engine v18.09.1 in January 2019, the fix was not carried
+│                             │                   forward to later major versions, resulting in a regression.
+│                             │                   Anyone who depends on authorization plugins that introspect
+│                             │                   the request and/or response body to make access control
+│                             │                   decisions is potentially impacted.
+│                             │                   
+│                             │                   Docker EE v19.03.x and all versions of Mirantis Container
+│                             │                   Runtime are not vulnerable.
+│                             │                   
+│                             │                   docker-ce v27.1.1 containes patches to fix the vulnerability.
+│                             │                    Patches have also been merged into the master, 19.03, 20.0,
+│                             │                   23.0, 24.0, 25.0, 26.0, and 26.1 release branches. If one is
+│                             │                   unable to upgrade immediately, avoid using AuthZ plugins
+│                             │                   and/or restrict access to the Docker API to trusted parties,
+│                             │                   following the principle of least privilege. 
+│                             ├ Severity        : CRITICAL 
+│                             ├ CweIDs           ╭ [0]: CWE-187 
+│                             │                  ├ [1]: CWE-444 
+│                             │                  ╰ [2]: CWE-863 
+│                             ├ VendorSeverity   ╭ ghsa  : 4 
+│                             │                  ╰ redhat: 4 
+│                             ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/
+│                             │                  │        │           A:H 
+│                             │                  │        ╰ V3Score : 10 
+│                             │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/
+│                             │                           │           A:H 
+│                             │                           ╰ V3Score : 9.9 
+│                             ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2024-41110 
+│                             │                  ├ [1] : https://github.com/moby/moby 
+│                             │                  ├ [2] : https://github.com/moby/moby/commit/411e817ddf710ff8e0
+│                             │                  │       8fa193da80cb78af708191 
+│                             │                  ├ [3] : https://github.com/moby/moby/commit/42f40b1d6dd7562342
+│                             │                  │       f832b9cd2adf9e668eeb76 
+│                             │                  ├ [4] : https://github.com/moby/moby/commit/65cc597cea28cdc25b
+│                             │                  │       ea3b8a86384b4251872919 
+│                             │                  ├ [5] : https://github.com/moby/moby/commit/852759a7df454cbf88
+│                             │                  │       db4e954c919becd48faa9b 
+│                             │                  ├ [6] : https://github.com/moby/moby/commit/a31260625655cff9ae
+│                             │                  │       226b51757915e275e304b0 
+│                             │                  ├ [7] : https://github.com/moby/moby/commit/a79fabbfe84117696a
+│                             │                  │       19671f4aa88b82d0f64fc1 
+│                             │                  ├ [8] : https://github.com/moby/moby/commit/ae160b4edddb72ef4b
+│                             │                  │       d71f66b975a1a1cc434f00 
+│                             │                  ├ [9] : https://github.com/moby/moby/commit/ae2b3666c517c96cbc
+│                             │                  │       2adf1af5591a6b00d4ec0f 
+│                             │                  ├ [10]: https://github.com/moby/moby/commit/cc13f952511154a286
+│                             │                  │       6bddbb7dddebfe9e83b801 
+│                             │                  ├ [11]: https://github.com/moby/moby/commit/fc274cd2ff4cf3b48c
+│                             │                  │       91697fb327dd1fb95588fb 
+│                             │                  ├ [12]: https://github.com/moby/moby/security/advisories/GHSA-
+│                             │                  │       v23v-6jw2-98fq 
+│                             │                  ├ [13]: https://nvd.nist.gov/vuln/detail/CVE-2024-41110 
+│                             │                  ├ [14]: https://www.cve.org/CVERecord?id=CVE-2024-41110 
+│                             │                  ╰ [15]: https://www.docker.com/blog/docker-security-advisory-d
+│                             │                          ocker-engine-authz-plugin 
+│                             ├ PublishedDate   : 2024-07-24T17:15:11.053Z 
+│                             ╰ LastModifiedDate: 2024-07-30T20:15:04.567Z 
 ├ [7] ╭ Target         : usr/bin/nerdctl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
-│     ╰ Vulnerabilities ─ [0] ╭ VulnerabilityID : CVE-2024-24557 
+│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-41110 
+│                       │     ├ PkgName         : github.com/docker/docker 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v24.0.7%2Bincompat
+│                       │     │                  │       ible 
+│                       │     │                  ╰ UID : 4fd2c1b8945eafa2 
+│                       │     ├ InstalledVersion: v24.0.7+incompatible 
+│                       │     ├ FixedVersion    : 23.0.14, 26.1.4, 27.1.0 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1f
+│                       │     │                  │         a8f2d88736097c32b12 
+│                       │     │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70
+│                       │     │                            a962c23e192dffb9118 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-41110 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Go 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Ago 
+│                       │     ├ Title           : moby: Authz zero length regression 
+│                       │     ├ Description     : Moby is an open-source project created by Docker for software
+│                       │     │                    containerization. A security vulnerability has been detected
+│                       │     │                    in certain versions of Docker Engine, which could allow an
+│                       │     │                   attacker to bypass authorization plugins (AuthZ) under
+│                       │     │                   specific circumstances. The base likelihood of this being
+│                       │     │                   exploited is low.
+│                       │     │                   
+│                       │     │                   Using a specially-crafted API request, an Engine API client
+│                       │     │                   could make the daemon forward the request or response to an
+│                       │     │                   authorization plugin without the body. In certain
+│                       │     │                   circumstances, the authorization plugin may allow a request
+│                       │     │                   which it would have otherwise denied if the body had been
+│                       │     │                   forwarded to it.
+│                       │     │                   
+│                       │     │                   A security issue was discovered In 2018, where an attacker
+│                       │     │                   could bypass AuthZ plugins using a specially crafted API
+│                       │     │                   request. This could lead to unauthorized actions, including
+│                       │     │                   privilege escalation. Although this issue was fixed in Docker
+│                       │     │                    Engine v18.09.1 in January 2019, the fix was not carried
+│                       │     │                   forward to later major versions, resulting in a regression.
+│                       │     │                   Anyone who depends on authorization plugins that introspect
+│                       │     │                   the request and/or response body to make access control
+│                       │     │                   decisions is potentially impacted.
+│                       │     │                   
+│                       │     │                   Docker EE v19.03.x and all versions of Mirantis Container
+│                       │     │                   Runtime are not vulnerable.
+│                       │     │                   
+│                       │     │                   docker-ce v27.1.1 containes patches to fix the vulnerability.
+│                       │     │                    Patches have also been merged into the master, 19.03, 20.0,
+│                       │     │                   23.0, 24.0, 25.0, 26.0, and 26.1 release branches. If one is
+│                       │     │                   unable to upgrade immediately, avoid using AuthZ plugins
+│                       │     │                   and/or restrict access to the Docker API to trusted parties,
+│                       │     │                   following the principle of least privilege. 
+│                       │     ├ Severity        : CRITICAL 
+│                       │     ├ CweIDs           ╭ [0]: CWE-187 
+│                       │     │                  ├ [1]: CWE-444 
+│                       │     │                  ╰ [2]: CWE-863 
+│                       │     ├ VendorSeverity   ╭ ghsa  : 4 
+│                       │     │                  ╰ redhat: 4 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/
+│                       │     │                  │        │           A:H 
+│                       │     │                  │        ╰ V3Score : 10 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/
+│                       │     │                           │           A:H 
+│                       │     │                           ╰ V3Score : 9.9 
+│                       │     ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2024-41110 
+│                       │     │                  ├ [1] : https://github.com/moby/moby 
+│                       │     │                  ├ [2] : https://github.com/moby/moby/commit/411e817ddf710ff8e0
+│                       │     │                  │       8fa193da80cb78af708191 
+│                       │     │                  ├ [3] : https://github.com/moby/moby/commit/42f40b1d6dd7562342
+│                       │     │                  │       f832b9cd2adf9e668eeb76 
+│                       │     │                  ├ [4] : https://github.com/moby/moby/commit/65cc597cea28cdc25b
+│                       │     │                  │       ea3b8a86384b4251872919 
+│                       │     │                  ├ [5] : https://github.com/moby/moby/commit/852759a7df454cbf88
+│                       │     │                  │       db4e954c919becd48faa9b 
+│                       │     │                  ├ [6] : https://github.com/moby/moby/commit/a31260625655cff9ae
+│                       │     │                  │       226b51757915e275e304b0 
+│                       │     │                  ├ [7] : https://github.com/moby/moby/commit/a79fabbfe84117696a
+│                       │     │                  │       19671f4aa88b82d0f64fc1 
+│                       │     │                  ├ [8] : https://github.com/moby/moby/commit/ae160b4edddb72ef4b
+│                       │     │                  │       d71f66b975a1a1cc434f00 
+│                       │     │                  ├ [9] : https://github.com/moby/moby/commit/ae2b3666c517c96cbc
+│                       │     │                  │       2adf1af5591a6b00d4ec0f 
+│                       │     │                  ├ [10]: https://github.com/moby/moby/commit/cc13f952511154a286
+│                       │     │                  │       6bddbb7dddebfe9e83b801 
+│                       │     │                  ├ [11]: https://github.com/moby/moby/commit/fc274cd2ff4cf3b48c
+│                       │     │                  │       91697fb327dd1fb95588fb 
+│                       │     │                  ├ [12]: https://github.com/moby/moby/security/advisories/GHSA-
+│                       │     │                  │       v23v-6jw2-98fq 
+│                       │     │                  ├ [13]: https://nvd.nist.gov/vuln/detail/CVE-2024-41110 
+│                       │     │                  ├ [14]: https://www.cve.org/CVERecord?id=CVE-2024-41110 
+│                       │     │                  ╰ [15]: https://www.docker.com/blog/docker-security-advisory-d
+│                       │     │                          ocker-engine-authz-plugin 
+│                       │     ├ PublishedDate   : 2024-07-24T17:15:11.053Z 
+│                       │     ╰ LastModifiedDate: 2024-07-30T20:15:04.567Z 
+│                       ╰ [1] ╭ VulnerabilityID : CVE-2024-24557 
 │                             ├ PkgName         : github.com/docker/docker 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v24.0.7%2Bincompat
 │                             │                  │       ible 
@@ -1626,10 +2003,10 @@
 │                             ├ InstalledVersion: v24.0.7+incompatible 
 │                             ├ FixedVersion    : 24.0.9, 25.0.2 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155
-│                             │                  │         058958166aafc6a2687 
-│                             │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb12808
-│                             │                            56ca5a9ab2bee849769 
+│                             ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1f
+│                             │                  │         a8f2d88736097c32b12 
+│                             │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70
+│                             │                            a962c23e192dffb9118 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-24557 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -1689,7 +2066,101 @@
 ╰ [8] ╭ Target         : usr/bin/skopeo 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
-      ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-29018 
+      ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-41110 
+                        │     ├ PkgName         : github.com/docker/docker 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v25.0.3%2Bincompat
+                        │     │                  │       ible 
+                        │     │                  ╰ UID : 8e42d9d752aeeb3 
+                        │     ├ InstalledVersion: v25.0.3+incompatible 
+                        │     ├ FixedVersion    : 23.0.14, 26.1.4, 27.1.0 
+                        │     ├ Status          : fixed 
+                        │     ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1f
+                        │     │                  │         a8f2d88736097c32b12 
+                        │     │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70
+                        │     │                            a962c23e192dffb9118 
+                        │     ├ SeveritySource  : ghsa 
+                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-41110 
+                        │     ├ DataSource       ╭ ID  : ghsa 
+                        │     │                  ├ Name: GitHub Security Advisory Go 
+                        │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+                        │     │                          osystem%3Ago 
+                        │     ├ Title           : moby: Authz zero length regression 
+                        │     ├ Description     : Moby is an open-source project created by Docker for software
+                        │     │                    containerization. A security vulnerability has been detected
+                        │     │                    in certain versions of Docker Engine, which could allow an
+                        │     │                   attacker to bypass authorization plugins (AuthZ) under
+                        │     │                   specific circumstances. The base likelihood of this being
+                        │     │                   exploited is low.
+                        │     │                   
+                        │     │                   Using a specially-crafted API request, an Engine API client
+                        │     │                   could make the daemon forward the request or response to an
+                        │     │                   authorization plugin without the body. In certain
+                        │     │                   circumstances, the authorization plugin may allow a request
+                        │     │                   which it would have otherwise denied if the body had been
+                        │     │                   forwarded to it.
+                        │     │                   
+                        │     │                   A security issue was discovered In 2018, where an attacker
+                        │     │                   could bypass AuthZ plugins using a specially crafted API
+                        │     │                   request. This could lead to unauthorized actions, including
+                        │     │                   privilege escalation. Although this issue was fixed in Docker
+                        │     │                    Engine v18.09.1 in January 2019, the fix was not carried
+                        │     │                   forward to later major versions, resulting in a regression.
+                        │     │                   Anyone who depends on authorization plugins that introspect
+                        │     │                   the request and/or response body to make access control
+                        │     │                   decisions is potentially impacted.
+                        │     │                   
+                        │     │                   Docker EE v19.03.x and all versions of Mirantis Container
+                        │     │                   Runtime are not vulnerable.
+                        │     │                   
+                        │     │                   docker-ce v27.1.1 containes patches to fix the vulnerability.
+                        │     │                    Patches have also been merged into the master, 19.03, 20.0,
+                        │     │                   23.0, 24.0, 25.0, 26.0, and 26.1 release branches. If one is
+                        │     │                   unable to upgrade immediately, avoid using AuthZ plugins
+                        │     │                   and/or restrict access to the Docker API to trusted parties,
+                        │     │                   following the principle of least privilege. 
+                        │     ├ Severity        : CRITICAL 
+                        │     ├ CweIDs           ╭ [0]: CWE-187 
+                        │     │                  ├ [1]: CWE-444 
+                        │     │                  ╰ [2]: CWE-863 
+                        │     ├ VendorSeverity   ╭ ghsa  : 4 
+                        │     │                  ╰ redhat: 4 
+                        │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/
+                        │     │                  │        │           A:H 
+                        │     │                  │        ╰ V3Score : 10 
+                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/
+                        │     │                           │           A:H 
+                        │     │                           ╰ V3Score : 9.9 
+                        │     ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2024-41110 
+                        │     │                  ├ [1] : https://github.com/moby/moby 
+                        │     │                  ├ [2] : https://github.com/moby/moby/commit/411e817ddf710ff8e0
+                        │     │                  │       8fa193da80cb78af708191 
+                        │     │                  ├ [3] : https://github.com/moby/moby/commit/42f40b1d6dd7562342
+                        │     │                  │       f832b9cd2adf9e668eeb76 
+                        │     │                  ├ [4] : https://github.com/moby/moby/commit/65cc597cea28cdc25b
+                        │     │                  │       ea3b8a86384b4251872919 
+                        │     │                  ├ [5] : https://github.com/moby/moby/commit/852759a7df454cbf88
+                        │     │                  │       db4e954c919becd48faa9b 
+                        │     │                  ├ [6] : https://github.com/moby/moby/commit/a31260625655cff9ae
+                        │     │                  │       226b51757915e275e304b0 
+                        │     │                  ├ [7] : https://github.com/moby/moby/commit/a79fabbfe84117696a
+                        │     │                  │       19671f4aa88b82d0f64fc1 
+                        │     │                  ├ [8] : https://github.com/moby/moby/commit/ae160b4edddb72ef4b
+                        │     │                  │       d71f66b975a1a1cc434f00 
+                        │     │                  ├ [9] : https://github.com/moby/moby/commit/ae2b3666c517c96cbc
+                        │     │                  │       2adf1af5591a6b00d4ec0f 
+                        │     │                  ├ [10]: https://github.com/moby/moby/commit/cc13f952511154a286
+                        │     │                  │       6bddbb7dddebfe9e83b801 
+                        │     │                  ├ [11]: https://github.com/moby/moby/commit/fc274cd2ff4cf3b48c
+                        │     │                  │       91697fb327dd1fb95588fb 
+                        │     │                  ├ [12]: https://github.com/moby/moby/security/advisories/GHSA-
+                        │     │                  │       v23v-6jw2-98fq 
+                        │     │                  ├ [13]: https://nvd.nist.gov/vuln/detail/CVE-2024-41110 
+                        │     │                  ├ [14]: https://www.cve.org/CVERecord?id=CVE-2024-41110 
+                        │     │                  ╰ [15]: https://www.docker.com/blog/docker-security-advisory-d
+                        │     │                          ocker-engine-authz-plugin 
+                        │     ├ PublishedDate   : 2024-07-24T17:15:11.053Z 
+                        │     ╰ LastModifiedDate: 2024-07-30T20:15:04.567Z 
+                        ├ [1] ╭ VulnerabilityID : CVE-2024-29018 
                         │     ├ PkgName         : github.com/docker/docker 
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v25.0.3%2Bincompat
                         │     │                  │       ible 
@@ -1697,10 +2168,10 @@
                         │     ├ InstalledVersion: v25.0.3+incompatible 
                         │     ├ FixedVersion    : 26.0.0-rc3, 25.0.5, 23.0.11 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155
-                        │     │                  │         058958166aafc6a2687 
-                        │     │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb12808
-                        │     │                            56ca5a9ab2bee849769 
+                        │     ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1f
+                        │     │                  │         a8f2d88736097c32b12 
+                        │     │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70
+                        │     │                            a962c23e192dffb9118 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-29018 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -1807,17 +2278,17 @@
                         │     │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2024-29018 
                         │     ├ PublishedDate   : 2024-03-20T21:15:31.113Z 
                         │     ╰ LastModifiedDate: 2024-03-21T12:58:51.093Z 
-                        ├ [1] ╭ VulnerabilityID : CVE-2024-6104 
+                        ├ [2] ╭ VulnerabilityID : CVE-2024-6104 
                         │     ├ PkgName         : github.com/hashicorp/go-retryablehttp 
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/hashicorp/go-retryablehttp@v0.7.5 
                         │     │                  ╰ UID : 40753a4c30f32406 
                         │     ├ InstalledVersion: v0.7.5 
                         │     ├ FixedVersion    : 0.7.7 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155
-                        │     │                  │         058958166aafc6a2687 
-                        │     │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb12808
-                        │     │                            56ca5a9ab2bee849769 
+                        │     ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1f
+                        │     │                  │         a8f2d88736097c32b12 
+                        │     │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70
+                        │     │                            a962c23e192dffb9118 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-6104 
                         │     ├ DataSource       ╭ ID  : ghsa 
@@ -1858,17 +2329,17 @@
                         │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-6104 
                         │     ├ PublishedDate   : 2024-06-24T17:15:11.087Z 
                         │     ╰ LastModifiedDate: 2024-06-26T17:19:40.85Z 
-                        ╰ [2] ╭ VulnerabilityID : CVE-2023-45288 
+                        ╰ [3] ╭ VulnerabilityID : CVE-2023-45288 
                               ├ PkgName         : golang.org/x/net 
                               ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.22.0 
                               │                  ╰ UID : af7b68281fb703a 
                               ├ InstalledVersion: v0.22.0 
                               ├ FixedVersion    : 0.23.0 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155
-                              │                  │         058958166aafc6a2687 
-                              │                  ╰ DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb12808
-                              │                            56ca5a9ab2bee849769 
+                              ├ Layer            ╭ Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1f
+                              │                  │         a8f2d88736097c32b12 
+                              │                  ╰ DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70
+                              │                            a962c23e192dffb9118 
                               ├ SeveritySource  : ghsa 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2023-45288 
                               ├ DataSource       ╭ ID  : ghsa 
