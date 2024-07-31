@@ -15,8 +15,8 @@
     FixedVersion: 3.6.0
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-25638
     DataSource:
@@ -58,8 +58,8 @@
     FixedVersion: 3.6.0
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     SeveritySource: ghsa
     PrimaryURL: https://github.com/advisories/GHSA-crjg-w57m-rqqf
     DataSource:
@@ -101,8 +101,8 @@
     FixedVersion: 3.6.0
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     SeveritySource: ghsa
     PrimaryURL: https://github.com/advisories/GHSA-mmwx-rj87-vfgr
     DataSource:
@@ -137,6 +137,68 @@
   Class: lang-pkgs
   Type: gobinary
   Vulnerabilities:
+  - VulnerabilityID: CVE-2024-41110
+    PkgName: github.com/docker/docker
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/docker/docker@v26.0.1%2Bincompatible
+      UID: 493f0dc0950fc8ce
+    InstalledVersion: v26.0.1+incompatible
+    FixedVersion: 23.0.14, 26.1.4, 27.1.0
+    Status: fixed
+    Layer:
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-41110
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'moby: Authz zero length regression'
+    Description: |-
+      Moby is an open-source project created by Docker for software containerization. A security vulnerability has been detected in certain versions of Docker Engine, which could allow an attacker to bypass authorization plugins (AuthZ) under specific circumstances. The base likelihood of this being exploited is low.
+
+      Using a specially-crafted API request, an Engine API client could make the daemon forward the request or response to an authorization plugin without the body. In certain circumstances, the authorization plugin may allow a request which it would have otherwise denied if the body had been forwarded to it.
+
+      A security issue was discovered In 2018, where an attacker could bypass AuthZ plugins using a specially crafted API request. This could lead to unauthorized actions, including privilege escalation. Although this issue was fixed in Docker Engine v18.09.1 in January 2019, the fix was not carried forward to later major versions, resulting in a regression. Anyone who depends on authorization plugins that introspect the request and/or response body to make access control decisions is potentially impacted.
+
+      Docker EE v19.03.x and all versions of Mirantis Container Runtime are not vulnerable.
+
+      docker-ce v27.1.1 containes patches to fix the vulnerability. Patches have also been merged into the master, 19.03, 20.0, 23.0, 24.0, 25.0, 26.0, and 26.1 release branches. If one is unable to upgrade immediately, avoid using AuthZ plugins and/or restrict access to the Docker API to trusted parties, following the principle of least privilege.
+    Severity: CRITICAL
+    CweIDs:
+    - CWE-187
+    - CWE-444
+    - CWE-863
+    VendorSeverity:
+      ghsa: 4
+      redhat: 4
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
+        V3Score: 10
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
+        V3Score: 9.9
+    References:
+    - https://access.redhat.com/security/cve/CVE-2024-41110
+    - https://github.com/moby/moby
+    - https://github.com/moby/moby/commit/411e817ddf710ff8e08fa193da80cb78af708191
+    - https://github.com/moby/moby/commit/42f40b1d6dd7562342f832b9cd2adf9e668eeb76
+    - https://github.com/moby/moby/commit/65cc597cea28cdc25bea3b8a86384b4251872919
+    - https://github.com/moby/moby/commit/852759a7df454cbf88db4e954c919becd48faa9b
+    - https://github.com/moby/moby/commit/a31260625655cff9ae226b51757915e275e304b0
+    - https://github.com/moby/moby/commit/a79fabbfe84117696a19671f4aa88b82d0f64fc1
+    - https://github.com/moby/moby/commit/ae160b4edddb72ef4bd71f66b975a1a1cc434f00
+    - https://github.com/moby/moby/commit/ae2b3666c517c96cbc2adf1af5591a6b00d4ec0f
+    - https://github.com/moby/moby/commit/cc13f952511154a2866bddbb7dddebfe9e83b801
+    - https://github.com/moby/moby/commit/fc274cd2ff4cf3b48c91697fb327dd1fb95588fb
+    - https://github.com/moby/moby/security/advisories/GHSA-v23v-6jw2-98fq
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-41110
+    - https://www.cve.org/CVERecord?id=CVE-2024-41110
+    - https://www.docker.com/blog/docker-security-advisory-docker-engine-authz-plugin
+    PublishedDate: '2024-07-24T17:15:11.053Z'
+    LastModifiedDate: '2024-07-30T20:15:04.567Z'
   - VulnerabilityID: CVE-2024-32473
     PkgName: github.com/docker/docker
     PkgIdentifier:
@@ -146,8 +208,8 @@
     FixedVersion: 26.0.2
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-32473
     DataSource:
@@ -187,8 +249,8 @@
     FixedVersion: 0.46.0
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-47108
     DataSource:
@@ -239,8 +301,8 @@
     FixedVersion: 1.27.16, 1.28.12, 1.29.7, 1.30.3
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-5321
     DataSource:
@@ -289,8 +351,8 @@
     FixedVersion: 1.21.11, 1.22.4
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     SeveritySource: nvd
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24790
     DataSource:
@@ -357,8 +419,8 @@
     FixedVersion: 1.21.9, 1.22.2
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45288
     DataSource:
       ID: govulndb
@@ -432,8 +494,8 @@
     FixedVersion: 1.22.3
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24788
     DataSource:
       ID: govulndb
@@ -477,8 +539,8 @@
     FixedVersion: 1.21.11, 1.22.4
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     SeveritySource: nvd
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24789
     DataSource:
@@ -547,8 +609,8 @@
     FixedVersion: 1.21.12, 1.22.5
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24791
     DataSource:
       ID: govulndb
@@ -595,8 +657,8 @@
     FixedVersion: 20.10.9
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2021-41092
     DataSource:
@@ -641,6 +703,68 @@
     - https://www.cve.org/CVERecord?id=CVE-2021-41092
     PublishedDate: '2021-10-04T20:15:07.757Z'
     LastModifiedDate: '2023-11-07T03:38:49.683Z'
+  - VulnerabilityID: CVE-2024-41110
+    PkgName: github.com/docker/docker
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/docker/docker@v24.0.7%2Bincompatible
+      UID: e28d01cbfe108506
+    InstalledVersion: v24.0.7+incompatible
+    FixedVersion: 23.0.14, 26.1.4, 27.1.0
+    Status: fixed
+    Layer:
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-41110
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'moby: Authz zero length regression'
+    Description: |-
+      Moby is an open-source project created by Docker for software containerization. A security vulnerability has been detected in certain versions of Docker Engine, which could allow an attacker to bypass authorization plugins (AuthZ) under specific circumstances. The base likelihood of this being exploited is low.
+
+      Using a specially-crafted API request, an Engine API client could make the daemon forward the request or response to an authorization plugin without the body. In certain circumstances, the authorization plugin may allow a request which it would have otherwise denied if the body had been forwarded to it.
+
+      A security issue was discovered In 2018, where an attacker could bypass AuthZ plugins using a specially crafted API request. This could lead to unauthorized actions, including privilege escalation. Although this issue was fixed in Docker Engine v18.09.1 in January 2019, the fix was not carried forward to later major versions, resulting in a regression. Anyone who depends on authorization plugins that introspect the request and/or response body to make access control decisions is potentially impacted.
+
+      Docker EE v19.03.x and all versions of Mirantis Container Runtime are not vulnerable.
+
+      docker-ce v27.1.1 containes patches to fix the vulnerability. Patches have also been merged into the master, 19.03, 20.0, 23.0, 24.0, 25.0, 26.0, and 26.1 release branches. If one is unable to upgrade immediately, avoid using AuthZ plugins and/or restrict access to the Docker API to trusted parties, following the principle of least privilege.
+    Severity: CRITICAL
+    CweIDs:
+    - CWE-187
+    - CWE-444
+    - CWE-863
+    VendorSeverity:
+      ghsa: 4
+      redhat: 4
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
+        V3Score: 10
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
+        V3Score: 9.9
+    References:
+    - https://access.redhat.com/security/cve/CVE-2024-41110
+    - https://github.com/moby/moby
+    - https://github.com/moby/moby/commit/411e817ddf710ff8e08fa193da80cb78af708191
+    - https://github.com/moby/moby/commit/42f40b1d6dd7562342f832b9cd2adf9e668eeb76
+    - https://github.com/moby/moby/commit/65cc597cea28cdc25bea3b8a86384b4251872919
+    - https://github.com/moby/moby/commit/852759a7df454cbf88db4e954c919becd48faa9b
+    - https://github.com/moby/moby/commit/a31260625655cff9ae226b51757915e275e304b0
+    - https://github.com/moby/moby/commit/a79fabbfe84117696a19671f4aa88b82d0f64fc1
+    - https://github.com/moby/moby/commit/ae160b4edddb72ef4bd71f66b975a1a1cc434f00
+    - https://github.com/moby/moby/commit/ae2b3666c517c96cbc2adf1af5591a6b00d4ec0f
+    - https://github.com/moby/moby/commit/cc13f952511154a2866bddbb7dddebfe9e83b801
+    - https://github.com/moby/moby/commit/fc274cd2ff4cf3b48c91697fb327dd1fb95588fb
+    - https://github.com/moby/moby/security/advisories/GHSA-v23v-6jw2-98fq
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-41110
+    - https://www.cve.org/CVERecord?id=CVE-2024-41110
+    - https://www.docker.com/blog/docker-security-advisory-docker-engine-authz-plugin
+    PublishedDate: '2024-07-24T17:15:11.053Z'
+    LastModifiedDate: '2024-07-30T20:15:04.567Z'
   - VulnerabilityID: CVE-2024-24557
     PkgName: github.com/docker/docker
     PkgIdentifier:
@@ -650,8 +774,8 @@
     FixedVersion: 24.0.9, 25.0.2
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24557
     DataSource:
@@ -702,8 +826,8 @@
     FixedVersion: 0.23.0
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45288
     DataSource:
@@ -778,8 +902,8 @@
     FixedVersion: 1.21.11, 1.22.4
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     SeveritySource: nvd
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24790
     DataSource:
@@ -846,8 +970,8 @@
     FixedVersion: 1.21.9, 1.22.2
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45288
     DataSource:
       ID: govulndb
@@ -921,8 +1045,8 @@
     FixedVersion: 1.21.8, 1.22.1
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45289
     DataSource:
       ID: govulndb
@@ -985,8 +1109,8 @@
     FixedVersion: 1.21.8, 1.22.1
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45290
     DataSource:
       ID: govulndb
@@ -1044,8 +1168,8 @@
     FixedVersion: 1.21.8, 1.22.1
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24783
     DataSource:
       ID: govulndb
@@ -1110,8 +1234,8 @@
     FixedVersion: 1.21.8, 1.22.1
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24784
     DataSource:
       ID: govulndb
@@ -1182,8 +1306,8 @@
     FixedVersion: 1.21.8, 1.22.1
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24785
     DataSource:
       ID: govulndb
@@ -1255,8 +1379,8 @@
     FixedVersion: 1.21.11, 1.22.4
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     SeveritySource: nvd
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24789
     DataSource:
@@ -1325,8 +1449,8 @@
     FixedVersion: 1.21.12, 1.22.5
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24791
     DataSource:
       ID: govulndb
@@ -1363,10 +1487,135 @@
 - Target: usr/bin/helm
   Class: lang-pkgs
   Type: gobinary
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2024-41110
+    PkgName: github.com/docker/docker
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/docker/docker@v25.0.5%2Bincompatible
+      UID: e4c7c8ca065174dd
+    InstalledVersion: v25.0.5+incompatible
+    FixedVersion: 23.0.14, 26.1.4, 27.1.0
+    Status: fixed
+    Layer:
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-41110
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'moby: Authz zero length regression'
+    Description: |-
+      Moby is an open-source project created by Docker for software containerization. A security vulnerability has been detected in certain versions of Docker Engine, which could allow an attacker to bypass authorization plugins (AuthZ) under specific circumstances. The base likelihood of this being exploited is low.
+
+      Using a specially-crafted API request, an Engine API client could make the daemon forward the request or response to an authorization plugin without the body. In certain circumstances, the authorization plugin may allow a request which it would have otherwise denied if the body had been forwarded to it.
+
+      A security issue was discovered In 2018, where an attacker could bypass AuthZ plugins using a specially crafted API request. This could lead to unauthorized actions, including privilege escalation. Although this issue was fixed in Docker Engine v18.09.1 in January 2019, the fix was not carried forward to later major versions, resulting in a regression. Anyone who depends on authorization plugins that introspect the request and/or response body to make access control decisions is potentially impacted.
+
+      Docker EE v19.03.x and all versions of Mirantis Container Runtime are not vulnerable.
+
+      docker-ce v27.1.1 containes patches to fix the vulnerability. Patches have also been merged into the master, 19.03, 20.0, 23.0, 24.0, 25.0, 26.0, and 26.1 release branches. If one is unable to upgrade immediately, avoid using AuthZ plugins and/or restrict access to the Docker API to trusted parties, following the principle of least privilege.
+    Severity: CRITICAL
+    CweIDs:
+    - CWE-187
+    - CWE-444
+    - CWE-863
+    VendorSeverity:
+      ghsa: 4
+      redhat: 4
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
+        V3Score: 10
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
+        V3Score: 9.9
+    References:
+    - https://access.redhat.com/security/cve/CVE-2024-41110
+    - https://github.com/moby/moby
+    - https://github.com/moby/moby/commit/411e817ddf710ff8e08fa193da80cb78af708191
+    - https://github.com/moby/moby/commit/42f40b1d6dd7562342f832b9cd2adf9e668eeb76
+    - https://github.com/moby/moby/commit/65cc597cea28cdc25bea3b8a86384b4251872919
+    - https://github.com/moby/moby/commit/852759a7df454cbf88db4e954c919becd48faa9b
+    - https://github.com/moby/moby/commit/a31260625655cff9ae226b51757915e275e304b0
+    - https://github.com/moby/moby/commit/a79fabbfe84117696a19671f4aa88b82d0f64fc1
+    - https://github.com/moby/moby/commit/ae160b4edddb72ef4bd71f66b975a1a1cc434f00
+    - https://github.com/moby/moby/commit/ae2b3666c517c96cbc2adf1af5591a6b00d4ec0f
+    - https://github.com/moby/moby/commit/cc13f952511154a2866bddbb7dddebfe9e83b801
+    - https://github.com/moby/moby/commit/fc274cd2ff4cf3b48c91697fb327dd1fb95588fb
+    - https://github.com/moby/moby/security/advisories/GHSA-v23v-6jw2-98fq
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-41110
+    - https://www.cve.org/CVERecord?id=CVE-2024-41110
+    - https://www.docker.com/blog/docker-security-advisory-docker-engine-authz-plugin
+    PublishedDate: '2024-07-24T17:15:11.053Z'
+    LastModifiedDate: '2024-07-30T20:15:04.567Z'
 - Target: usr/bin/nerdctl
   Class: lang-pkgs
   Type: gobinary
   Vulnerabilities:
+  - VulnerabilityID: CVE-2024-41110
+    PkgName: github.com/docker/docker
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/docker/docker@v24.0.7%2Bincompatible
+      UID: 4fd2c1b8945eafa2
+    InstalledVersion: v24.0.7+incompatible
+    FixedVersion: 23.0.14, 26.1.4, 27.1.0
+    Status: fixed
+    Layer:
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-41110
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'moby: Authz zero length regression'
+    Description: |-
+      Moby is an open-source project created by Docker for software containerization. A security vulnerability has been detected in certain versions of Docker Engine, which could allow an attacker to bypass authorization plugins (AuthZ) under specific circumstances. The base likelihood of this being exploited is low.
+
+      Using a specially-crafted API request, an Engine API client could make the daemon forward the request or response to an authorization plugin without the body. In certain circumstances, the authorization plugin may allow a request which it would have otherwise denied if the body had been forwarded to it.
+
+      A security issue was discovered In 2018, where an attacker could bypass AuthZ plugins using a specially crafted API request. This could lead to unauthorized actions, including privilege escalation. Although this issue was fixed in Docker Engine v18.09.1 in January 2019, the fix was not carried forward to later major versions, resulting in a regression. Anyone who depends on authorization plugins that introspect the request and/or response body to make access control decisions is potentially impacted.
+
+      Docker EE v19.03.x and all versions of Mirantis Container Runtime are not vulnerable.
+
+      docker-ce v27.1.1 containes patches to fix the vulnerability. Patches have also been merged into the master, 19.03, 20.0, 23.0, 24.0, 25.0, 26.0, and 26.1 release branches. If one is unable to upgrade immediately, avoid using AuthZ plugins and/or restrict access to the Docker API to trusted parties, following the principle of least privilege.
+    Severity: CRITICAL
+    CweIDs:
+    - CWE-187
+    - CWE-444
+    - CWE-863
+    VendorSeverity:
+      ghsa: 4
+      redhat: 4
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
+        V3Score: 10
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
+        V3Score: 9.9
+    References:
+    - https://access.redhat.com/security/cve/CVE-2024-41110
+    - https://github.com/moby/moby
+    - https://github.com/moby/moby/commit/411e817ddf710ff8e08fa193da80cb78af708191
+    - https://github.com/moby/moby/commit/42f40b1d6dd7562342f832b9cd2adf9e668eeb76
+    - https://github.com/moby/moby/commit/65cc597cea28cdc25bea3b8a86384b4251872919
+    - https://github.com/moby/moby/commit/852759a7df454cbf88db4e954c919becd48faa9b
+    - https://github.com/moby/moby/commit/a31260625655cff9ae226b51757915e275e304b0
+    - https://github.com/moby/moby/commit/a79fabbfe84117696a19671f4aa88b82d0f64fc1
+    - https://github.com/moby/moby/commit/ae160b4edddb72ef4bd71f66b975a1a1cc434f00
+    - https://github.com/moby/moby/commit/ae2b3666c517c96cbc2adf1af5591a6b00d4ec0f
+    - https://github.com/moby/moby/commit/cc13f952511154a2866bddbb7dddebfe9e83b801
+    - https://github.com/moby/moby/commit/fc274cd2ff4cf3b48c91697fb327dd1fb95588fb
+    - https://github.com/moby/moby/security/advisories/GHSA-v23v-6jw2-98fq
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-41110
+    - https://www.cve.org/CVERecord?id=CVE-2024-41110
+    - https://www.docker.com/blog/docker-security-advisory-docker-engine-authz-plugin
+    PublishedDate: '2024-07-24T17:15:11.053Z'
+    LastModifiedDate: '2024-07-30T20:15:04.567Z'
   - VulnerabilityID: CVE-2024-24557
     PkgName: github.com/docker/docker
     PkgIdentifier:
@@ -1376,8 +1625,8 @@
     FixedVersion: 24.0.9, 25.0.2
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24557
     DataSource:
@@ -1423,6 +1672,68 @@
   Class: lang-pkgs
   Type: gobinary
   Vulnerabilities:
+  - VulnerabilityID: CVE-2024-41110
+    PkgName: github.com/docker/docker
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/docker/docker@v25.0.3%2Bincompatible
+      UID: 8e42d9d752aeeb3
+    InstalledVersion: v25.0.3+incompatible
+    FixedVersion: 23.0.14, 26.1.4, 27.1.0
+    Status: fixed
+    Layer:
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-41110
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'moby: Authz zero length regression'
+    Description: |-
+      Moby is an open-source project created by Docker for software containerization. A security vulnerability has been detected in certain versions of Docker Engine, which could allow an attacker to bypass authorization plugins (AuthZ) under specific circumstances. The base likelihood of this being exploited is low.
+
+      Using a specially-crafted API request, an Engine API client could make the daemon forward the request or response to an authorization plugin without the body. In certain circumstances, the authorization plugin may allow a request which it would have otherwise denied if the body had been forwarded to it.
+
+      A security issue was discovered In 2018, where an attacker could bypass AuthZ plugins using a specially crafted API request. This could lead to unauthorized actions, including privilege escalation. Although this issue was fixed in Docker Engine v18.09.1 in January 2019, the fix was not carried forward to later major versions, resulting in a regression. Anyone who depends on authorization plugins that introspect the request and/or response body to make access control decisions is potentially impacted.
+
+      Docker EE v19.03.x and all versions of Mirantis Container Runtime are not vulnerable.
+
+      docker-ce v27.1.1 containes patches to fix the vulnerability. Patches have also been merged into the master, 19.03, 20.0, 23.0, 24.0, 25.0, 26.0, and 26.1 release branches. If one is unable to upgrade immediately, avoid using AuthZ plugins and/or restrict access to the Docker API to trusted parties, following the principle of least privilege.
+    Severity: CRITICAL
+    CweIDs:
+    - CWE-187
+    - CWE-444
+    - CWE-863
+    VendorSeverity:
+      ghsa: 4
+      redhat: 4
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
+        V3Score: 10
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
+        V3Score: 9.9
+    References:
+    - https://access.redhat.com/security/cve/CVE-2024-41110
+    - https://github.com/moby/moby
+    - https://github.com/moby/moby/commit/411e817ddf710ff8e08fa193da80cb78af708191
+    - https://github.com/moby/moby/commit/42f40b1d6dd7562342f832b9cd2adf9e668eeb76
+    - https://github.com/moby/moby/commit/65cc597cea28cdc25bea3b8a86384b4251872919
+    - https://github.com/moby/moby/commit/852759a7df454cbf88db4e954c919becd48faa9b
+    - https://github.com/moby/moby/commit/a31260625655cff9ae226b51757915e275e304b0
+    - https://github.com/moby/moby/commit/a79fabbfe84117696a19671f4aa88b82d0f64fc1
+    - https://github.com/moby/moby/commit/ae160b4edddb72ef4bd71f66b975a1a1cc434f00
+    - https://github.com/moby/moby/commit/ae2b3666c517c96cbc2adf1af5591a6b00d4ec0f
+    - https://github.com/moby/moby/commit/cc13f952511154a2866bddbb7dddebfe9e83b801
+    - https://github.com/moby/moby/commit/fc274cd2ff4cf3b48c91697fb327dd1fb95588fb
+    - https://github.com/moby/moby/security/advisories/GHSA-v23v-6jw2-98fq
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-41110
+    - https://www.cve.org/CVERecord?id=CVE-2024-41110
+    - https://www.docker.com/blog/docker-security-advisory-docker-engine-authz-plugin
+    PublishedDate: '2024-07-24T17:15:11.053Z'
+    LastModifiedDate: '2024-07-30T20:15:04.567Z'
   - VulnerabilityID: CVE-2024-29018
     PkgName: github.com/docker/docker
     PkgIdentifier:
@@ -1432,8 +1743,8 @@
     FixedVersion: 26.0.0-rc3, 25.0.5, 23.0.11
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-29018
     DataSource:
@@ -1492,8 +1803,8 @@
     FixedVersion: 0.7.7
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-6104
     DataSource:
@@ -1539,8 +1850,8 @@
     FixedVersion: 0.23.0
     Status: fixed
     Layer:
-      Digest: sha256:d0a9ddf05e7cb7560aad12f2cb6b12c3df104afd7f155058958166aafc6a2687
-      DiffID: sha256:ded57f5ac97d6cc9d946ed4919580fe4a59aabfb1280856ca5a9ab2bee849769
+      Digest: sha256:39fee1b979a7f71e432b009f03b48007cdb1cb7364d1fa8f2d88736097c32b12
+      DiffID: sha256:b11655ceba3fde1f39aacde2daa960b028b0ce0b2cb70a962c23e192dffb9118
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-45288
     DataSource:
