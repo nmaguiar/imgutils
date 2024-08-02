@@ -15,7 +15,7 @@
 #  && arch=$(uname -m) && if [ "$arch" == "aarch64" ]; then cp snapshot/dive_linux_arm64/dive /dive; elif [ "$arch" == "x86_64" ]; then cp snapshot/dive_linux_amd64_v1/dive /dive; fi
 
 # ---------------------
-FROM openaf/oaf as main
+FROM openaf/oaf:nightly as main
 
 #COPY --from=dive /dive /usr/bin/dive
 #COPY README.md /README.md
