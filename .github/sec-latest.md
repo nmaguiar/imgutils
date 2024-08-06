@@ -1583,7 +1583,7 @@
 │                       │      │                  ├ [37]: https://ubuntu.com/security/notices/USN-6886-1 
 │                       │      │                  ╰ [38]: https://www.cve.org/CVERecord?id=CVE-2024-24784 
 │                       │      ├ PublishedDate   : 2024-03-05T23:15:07.733Z 
-│                       │      ╰ LastModifiedDate: 2024-05-01T17:15:29.527Z 
+│                       │      ╰ LastModifiedDate: 2024-08-05T21:35:04.457Z 
 │                       ├ [10] ╭ VulnerabilityID : CVE-2024-24785 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.20.13 
