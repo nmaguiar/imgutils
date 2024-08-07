@@ -172,6 +172,7 @@
     - CWE-863
     VendorSeverity:
       amazon: 3
+      cbl-mariner: 4
       ghsa: 4
       redhat: 4
     CVSS:
@@ -739,6 +740,7 @@
     - CWE-863
     VendorSeverity:
       amazon: 3
+      cbl-mariner: 4
       ghsa: 4
       redhat: 4
     CVSS:
@@ -1246,12 +1248,16 @@
     VendorSeverity:
       alma: 3
       amazon: 2
+      bitnami: 3
       cbl-mariner: 2
       oracle-oval: 3
       redhat: 2
       rocky: 3
       ubuntu: 2
     CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
+        V3Score: 7.5
       redhat:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N
         V3Score: 5.4
@@ -1524,6 +1530,7 @@
     - CWE-863
     VendorSeverity:
       amazon: 3
+      cbl-mariner: 4
       ghsa: 4
       redhat: 4
     CVSS:
@@ -1591,6 +1598,7 @@
     - CWE-863
     VendorSeverity:
       amazon: 3
+      cbl-mariner: 4
       ghsa: 4
       redhat: 4
     CVSS:
@@ -1710,6 +1718,7 @@
     - CWE-863
     VendorSeverity:
       amazon: 3
+      cbl-mariner: 4
       ghsa: 4
       redhat: 4
     CVSS:
@@ -1821,6 +1830,7 @@
     CweIDs:
     - CWE-532
     VendorSeverity:
+      cbl-mariner: 2
       ghsa: 2
       nvd: 2
       redhat: 2
