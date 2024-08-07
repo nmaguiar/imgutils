@@ -40,6 +40,7 @@
     - CWE-863
     VendorSeverity:
       amazon: 3
+      cbl-mariner: 4
       ghsa: 4
       redhat: 4
     CVSS:
