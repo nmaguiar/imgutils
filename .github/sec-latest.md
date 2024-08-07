@@ -196,9 +196,10 @@
 │                       │     ├ CweIDs           ╭ [0]: CWE-187 
 │                       │     │                  ├ [1]: CWE-444 
 │                       │     │                  ╰ [2]: CWE-863 
-│                       │     ├ VendorSeverity   ╭ amazon: 3 
-│                       │     │                  ├ ghsa  : 4 
-│                       │     │                  ╰ redhat: 4 
+│                       │     ├ VendorSeverity   ╭ amazon     : 3 
+│                       │     │                  ├ cbl-mariner: 4 
+│                       │     │                  ├ ghsa       : 4 
+│                       │     │                  ╰ redhat     : 4 
 │                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/
 │                       │     │                  │        │           A:H 
 │                       │     │                  │        ╰ V3Score : 10 
@@ -902,9 +903,10 @@
 │                       │      ├ CweIDs           ╭ [0]: CWE-187 
 │                       │      │                  ├ [1]: CWE-444 
 │                       │      │                  ╰ [2]: CWE-863 
-│                       │      ├ VendorSeverity   ╭ amazon: 3 
-│                       │      │                  ├ ghsa  : 4 
-│                       │      │                  ╰ redhat: 4 
+│                       │      ├ VendorSeverity   ╭ amazon     : 3 
+│                       │      │                  ├ cbl-mariner: 4 
+│                       │      │                  ├ ghsa       : 4 
+│                       │      │                  ╰ redhat     : 4 
 │                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H
 │                       │      │                  │        │           /A:H 
 │                       │      │                  │        ╰ V3Score : 10 
@@ -1524,14 +1526,18 @@
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
 │                       │      │                  ├ amazon     : 2 
+│                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ cbl-mariner: 2 
 │                       │      │                  ├ oracle-oval: 3 
 │                       │      │                  ├ redhat     : 2 
 │                       │      │                  ├ rocky      : 3 
 │                       │      │                  ╰ ubuntu     : 2 
-│                       │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L
-│                       │      │                           │           /A:N 
-│                       │      │                           ╰ V3Score : 5.4 
+│                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+│                       │      │                  │         │           H/A:N 
+│                       │      │                  │         ╰ V3Score : 7.5 
+│                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:
+│                       │      │                            │           L/A:N 
+│                       │      │                            ╰ V3Score : 5.4 
 │                       │      ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/03/08/4 
 │                       │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:2562 
 │                       │      │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2024-24784 
@@ -1861,9 +1867,10 @@
 │                             ├ CweIDs           ╭ [0]: CWE-187 
 │                             │                  ├ [1]: CWE-444 
 │                             │                  ╰ [2]: CWE-863 
-│                             ├ VendorSeverity   ╭ amazon: 3 
-│                             │                  ├ ghsa  : 4 
-│                             │                  ╰ redhat: 4 
+│                             ├ VendorSeverity   ╭ amazon     : 3 
+│                             │                  ├ cbl-mariner: 4 
+│                             │                  ├ ghsa       : 4 
+│                             │                  ╰ redhat     : 4 
 │                             ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/
 │                             │                  │        │           A:H 
 │                             │                  │        ╰ V3Score : 10 
@@ -1959,9 +1966,10 @@
 │                       │     ├ CweIDs           ╭ [0]: CWE-187 
 │                       │     │                  ├ [1]: CWE-444 
 │                       │     │                  ╰ [2]: CWE-863 
-│                       │     ├ VendorSeverity   ╭ amazon: 3 
-│                       │     │                  ├ ghsa  : 4 
-│                       │     │                  ╰ redhat: 4 
+│                       │     ├ VendorSeverity   ╭ amazon     : 3 
+│                       │     │                  ├ cbl-mariner: 4 
+│                       │     │                  ├ ghsa       : 4 
+│                       │     │                  ╰ redhat     : 4 
 │                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/
 │                       │     │                  │        │           A:H 
 │                       │     │                  │        ╰ V3Score : 10 
@@ -2125,9 +2133,10 @@
                         │     ├ CweIDs           ╭ [0]: CWE-187 
                         │     │                  ├ [1]: CWE-444 
                         │     │                  ╰ [2]: CWE-863 
-                        │     ├ VendorSeverity   ╭ amazon: 3 
-                        │     │                  ├ ghsa  : 4 
-                        │     │                  ╰ redhat: 4 
+                        │     ├ VendorSeverity   ╭ amazon     : 3 
+                        │     │                  ├ cbl-mariner: 4 
+                        │     │                  ├ ghsa       : 4 
+                        │     │                  ╰ redhat     : 4 
                         │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/
                         │     │                  │        │           A:H 
                         │     │                  │        ╰ V3Score : 10 
@@ -2308,9 +2317,10 @@
                         │     │                   CVE-2024-6104, was fixed in go-retryablehttp 0.7.7. 
                         │     ├ Severity        : MEDIUM 
                         │     ├ CweIDs           ─ [0]: CWE-532 
-                        │     ├ VendorSeverity   ╭ ghsa  : 2 
-                        │     │                  ├ nvd   : 2 
-                        │     │                  ╰ redhat: 2 
+                        │     ├ VendorSeverity   ╭ cbl-mariner: 2 
+                        │     │                  ├ ghsa       : 2 
+                        │     │                  ├ nvd        : 2 
+                        │     │                  ╰ redhat     : 2 
                         │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:N/
                         │     │                  │        │           A:N 
                         │     │                  │        ╰ V3Score : 6 
