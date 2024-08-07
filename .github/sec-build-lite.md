@@ -61,9 +61,10 @@
                         │     ├ CweIDs           ╭ [0]: CWE-187 
                         │     │                  ├ [1]: CWE-444 
                         │     │                  ╰ [2]: CWE-863 
-                        │     ├ VendorSeverity   ╭ amazon: 3 
-                        │     │                  ├ ghsa  : 4 
-                        │     │                  ╰ redhat: 4 
+                        │     ├ VendorSeverity   ╭ amazon     : 3 
+                        │     │                  ├ cbl-mariner: 4 
+                        │     │                  ├ ghsa       : 4 
+                        │     │                  ╰ redhat     : 4 
                         │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/
                         │     │                  │        │           A:H 
                         │     │                  │        ╰ V3Score : 10 
