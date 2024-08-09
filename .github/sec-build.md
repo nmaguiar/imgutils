@@ -1395,7 +1395,7 @@
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
 │                       │      │                  ├ amazon     : 2 
 │                       │      │                  ├ bitnami    : 3 
-│                       │      │                  ├ cbl-mariner: 2 
+│                       │      │                  ├ cbl-mariner: 3 
 │                       │      │                  ├ oracle-oval: 3 
 │                       │      │                  ├ redhat     : 2 
 │                       │      │                  ├ rocky      : 3 
