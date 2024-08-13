@@ -15,7 +15,7 @@
 #  && arch=$(uname -m) && if [ "$arch" == "aarch64" ]; then cp snapshot/dive_linux_arm64/dive /dive; elif [ "$arch" == "x86_64" ]; then cp snapshot/dive_linux_amd64_v1/dive /dive; fi
 
 # ---------------------
-FROM openaf/oaf:nightly as main
+FROM openaf/oaf as main
 
 #COPY --from=dive /dive /usr/bin/dive
 #COPY README.md /README.md
@@ -24,6 +24,7 @@ USER root
 # Setup all tools
 # ---------------
 RUN apk update\
+ && apk upgrade\
  && apk --no-cache add docker-cli skopeo curl tar bash gzip mc containerd-ctr nerdctl bash-completion\
  && /openaf/ojob ojob.io/kube/getCriCtl path=/usr/bin\
  && /openaf/ojob ojob.io/kube/getHelm path=/usr/bin\
