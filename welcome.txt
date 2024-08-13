@@ -2,7 +2,7 @@
  .,-.-.,---..   .|--- .|    ,---.
  || | ||   ||   ||    ||    `---.
  `` ' '`---|`---'`---'``---'`---'
-       `---'                       (v0.1.2)
+       `---'                       (v0.1.3)
   
  For image deploy usage type & execute [1m'usage-help'[m
  For examples of usage type & execute [1m'examples-help'[m
