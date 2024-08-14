@@ -17,7 +17,7 @@
 # ---------------------
 FROM openaf/oaf as main
 
-COPY ./dive /usr/bin/dive
+#COPY ./dive /usr/bin/dive
 #COPY README.md /README.md
 
 USER root
@@ -71,12 +71,13 @@ RUN echo "source <(crictl completion bash)" >> /etc/bash/start.sh\
 
 # Setup Dive
 # ----------
-RUN cd /tmp\
- && skopeo copy docker://wagoodman/dive docker-archive:dive.tar\
- && /openaf/ojob ojob.io/docker/expand image=dive.tar output=output\
- && cp /tmp/output/usr/local/bin/dive /usr/bin/dive\
- && rm -rf output\
- && rm dive.tar
+# RUN cd /tmp\
+#  && skopeo copy docker://wagoodman/dive docker-archive:dive.tar\
+#  && /openaf/ojob ojob.io/docker/expand image=dive.tar output=output\
+#  && cp /tmp/output/usr/local/bin/dive /usr/bin/dive\
+#  && rm -rf output\
+#  && rm dive.tar
+COPY dive /usr/bin/dive
 
 # Setup imgutils folder
 # ---------------------
