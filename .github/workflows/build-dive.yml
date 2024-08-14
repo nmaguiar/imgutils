@@ -21,7 +21,7 @@ jobs:
             docker cp dev:/dive dive
 
         - name: Cache dive save
-          uses: actions/cache/save@v3
+          uses: actions/cache/save@v4
           with:
             key : dive-${{ runner.arch }}
             path: |
@@ -44,7 +44,7 @@ jobs:
             docker cp dev:/dive dive
 
         - name: Cache dive save
-          uses: actions/cache/save@v3
+          uses: actions/cache/save@v4
           with:
             key : dive-${{ runner.arch }}
             path: |
