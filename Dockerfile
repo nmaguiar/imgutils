@@ -17,7 +17,7 @@
 # ---------------------
 FROM openaf/oaf as main
 
-COPY dive /usr/bin/dive
+COPY ./dive /usr/bin/dive
 #COPY README.md /README.md
 
 USER root
