@@ -18,7 +18,7 @@ jobs:
             rm -rf dive
             docker build --no-cache -t dev -f Dockerfile.dive .
             docker create --name dev dev
-            docker cp dev:/usr/bin/dive dive
+            docker cp dev:/dive dive
 
         - name: Cache dive save
           uses: actions/cache/save@v3
