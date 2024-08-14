@@ -7,6 +7,7 @@ List of examples:
 | Registry | Copying images and charts between registries |
 | Registry | Copying images and charts from a file to a registry |
 | Registry | Checking available repositories on a docker private registry |
+| Registry | List all private registry repositories and corresponding tags |
 | Docker   | Accessing the Docker daemon |
 | Docker   | Using the host docker authentication |
 | Kubernetes | Accessing Kubernetes container runtime |
@@ -388,3 +389,24 @@ If you are currently running on a Kubernetes node (following the deploy instruct
 oafp cmd="crictl stats -o json" path="stats[].{ns:attributes.labels.\"io.kubernetes.pod.namespace\",pod:attributes.labels.\"io.kubernetes.pod.name\",name:attributes.metadata.name,cpuUsageCores:cpu.usageNanoCores.value,memWorkSet:memory.workingSetBytes.value,memAvail:memory.availableBytes.value,memUsage:memory.usageBytes.value,memRss:memory.rssBytes.value,memPageFault:memory.pageFaults.value,memMajorPageFaults:memory.majorPageFaults.value,ephUsed:writableLayer.usedBytes.value,ephInodes:writableLayer.inodesUsed.value}" from="sort(ns,pod,name)" out=ctable loop=2 loopcls=true
 
 ```
+
+---
+
+## List all private registry repositories and corresponding tags
+
+Given a private container registry you can list a table of all repositories and corresponding tags to visualize and/or import it, as csv, to other tools.
+
+### As a table
+
+```bash
+oafp libs=dockerregistry in=registryrepos data={} inregistrytags=true out=ctable inregistryurl=http://my.registry:5000
+```
+
+### As a CSV
+
+```bash
+oafp libs=dockerregistry in=registryrepos data={} inregistrytags=true out=csv inregistryurl=http://my.registry:5000
+```
+
+> You can check more options by executing 'oafp libs=dockerregistry help=dockerregistry'
+
