@@ -26,3 +26,26 @@ jobs:
             key : dive-${{ runner.arch }}
             path: |
               dive
+              
+    build-aarch64:
+
+        runs-on: self-hosted
+    
+        steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+
+        - name: build
+          run : |
+            docker system prune -f
+            rm -rf dive
+            docker build --no-cache -t dev -f Dockerfile.dive .
+            docker create --name dev dev
+            docker cp dev:/dive dive
+
+        - name: Cache dive save
+          uses: actions/cache/save@v3
+          with:
+            key : dive-${{ runner.arch }}
+            path: |
+              dive
