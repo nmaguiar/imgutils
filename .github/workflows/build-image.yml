@@ -22,6 +22,13 @@ jobs:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
 
+    - name: Cache mitmproxy
+      uses: actions/cache@v4
+      with:
+        key : div-${{ runner.arch }}
+        path: |
+          dive
+
     - name: Login to DockerHub
       uses: docker/login-action@v2
       with:
