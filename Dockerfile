@@ -17,15 +17,14 @@
 # ---------------------
 FROM openaf/oaf as main
 
-# Switch to edge
-RUN sed -i 's/v[0-9]*\.[0-9]*/edge/g' /etc/apk/repositories
 #COPY ./dive /usr/bin/dive
 #COPY README.md /README.md
 
 USER root
 # Setup all tools
 # ---------------
-RUN apk update\
+RUN sed -i 's/v[0-9]*\.[0-9]*/edge/g' /etc/apk/repositories\
+ && apk update\
  && apk upgrade --available\
  && apk --no-cache add docker-cli skopeo curl tar bash gzip mc containerd-ctr nerdctl bash-completion\
  && /openaf/ojob ojob.io/kube/getCriCtl path=/usr/bin\
