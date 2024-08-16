@@ -1030,6 +1030,7 @@
 │                              │                   request using that connection to fail. 
 │                              ├ Severity        : MEDIUM 
 │                              ├ VendorSeverity   ╭ amazon : 2 
+│                              │                  ├ azure  : 3 
 │                              │                  ├ bitnami: 3 
 │                              │                  ├ photon : 3 
 │                              │                  ╰ redhat : 2 
@@ -1562,6 +1563,7 @@
                         │     ├ Severity        : MEDIUM 
                         │     ├ CweIDs           ─ [0]: CWE-532 
                         │     ├ VendorSeverity   ╭ alma       : 3 
+                        │     │                  ├ azure      : 2 
                         │     │                  ├ cbl-mariner: 2 
                         │     │                  ├ ghsa       : 2 
                         │     │                  ├ nvd        : 2 
