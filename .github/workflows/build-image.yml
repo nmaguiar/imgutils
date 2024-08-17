@@ -28,13 +28,13 @@ jobs:
     - name: Cache dive
       uses: actions/cache@v4
       with:
-        key : dive-${{ runner.arch }}
+        key : dive
         path: |
           dive
 
     - name: list dive
       run : |
-        find .
+        arch=$(uname -m) && if [ "$arch" == "aarch64" ]; then cp dive_linux_arm64 /tmp/dive; elif [ "$arch" == "x86_64" ]; then cp dive_linux_amd64 /tmp/dive; fi
 
     - name: Login to DockerHub
       uses: docker/login-action@v2

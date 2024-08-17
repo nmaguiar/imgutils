@@ -4,15 +4,22 @@ FROM golang:alpine as dive
 RUN apk update\
  && apk add git make bash ncurses curl\
  && cd /go/src\
- && git clone https://github.com/wagoodman/dive.git\
+ #&& git clone https://github.com/wagoodman/dive.git\
+ && git clone https://github.com/jauderho/dive.git\
  && cd dive\
+ #&& sed -i "s/github.com\/docker\/docker v24.0.7+incompatible/github.com\/docker\/docker v27.1.2+incompatible/g" go.mod\
+ #&& sed -i "s/github.com\/docker\/cli v0.0.0-20190906153656-016a3232168d/github.com\/docker\/cli v27.1.2+incompatible/g" go.mod\ 
+ #&& sed -i "s/golang.org\/x\/net v0.17.0/golang.org\/x\/net v0.28.0/g" go.mod\
+ #&& go mod tidy\
  && mkdir .tmp\
  && go install github.com/goreleaser/goreleaser@latest\
  && ln -s /go/bin/goreleaser .tmp/goreleaser\
  && curl https://ojob.io/getStatic.sh | sh\
  && ./oaf -c "var o=io.readFileYAML('.goreleaser.yaml');delete o.dockers;o.builds[0].goos=['linux'];io.writeFileYAML('.goreleaser.yaml',o)"\
  && make build\
- && arch=$(uname -m) && if [ "$arch" == "aarch64" ]; then cp snapshot/dive_linux_arm64/dive /dive; elif [ "$arch" == "x86_64" ]; then cp snapshot/dive_linux_amd64_v1/dive /dive; fi
+ && cp snapshot/dive_linux_arm64/dive /dive_linux_arm64\
+ && cp snapshot/dive_linux_amd64_v1/dive /dive_linux_amd64
+# && arch=$(uname -m) && if [ "$arch" == "aarch64" ]; then cp snapshot/dive_linux_arm64/dive /dive; elif [ "$arch" == "x86_64" ]; then cp snapshot/dive_linux_amd64_v1/dive /dive; fi
 
 # ---------------------
 #    FROM openaf/oaf as main
