@@ -10,7 +10,7 @@ jobs:
     
         steps:
         - name: Checkout
-          uses: actions/checkout@v2
+          uses: actions/checkout@v4
 
         - name: build
           run : |
@@ -24,9 +24,9 @@ jobs:
         - name: Cache dive save
           uses: actions/cache/save@v4
           with:
-            key : dive-${{ runner.arch }}
+            key : dive
             path: |
-              dive
+              dive_linux_*
               
     # build-aarch64:
 
