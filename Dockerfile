@@ -78,7 +78,7 @@ RUN echo "source <(crictl completion bash)" >> /etc/bash/start.sh\
 #  && cp /tmp/output/usr/local/bin/dive /usr/bin/dive\
 #  && rm -rf output\
 #  && rm dive.tar
-COPY /tmp/dive /usr/bin/dive
+COPY dive /usr/bin/dive
 
 # Setup imgutils folder
 # ---------------------
