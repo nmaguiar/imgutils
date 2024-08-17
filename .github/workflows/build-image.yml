@@ -34,6 +34,7 @@ jobs:
 
     - name: list dive
       run : |
+        find .
         arch=$(uname -m) && if [ "$arch" == "aarch64" ]; then cp dive_linux_arm64 /tmp/dive; elif [ "$arch" == "x86_64" ]; then cp dive_linux_amd64 /tmp/dive; fi
 
     - name: Login to DockerHub
