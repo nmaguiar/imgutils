@@ -30,7 +30,7 @@ jobs:
       with:
         key : dive
         path: |
-          dive
+          dive_linux_*
 
     - name: list dive
       run : |
