@@ -12,8 +12,8 @@ RUN apk update\
  #&& mkdir .tmp\
  #&& go install github.com/goreleaser/goreleaser@latest\
  #&& ln -s /go/bin/goreleaser .tmp/goreleaser\
- && curl https://ojob.io/getStatic.sh | sh\
- && ./oaf -c "var o=io.readFileYAML('.goreleaser.yaml');delete o.dockers;o.builds[0].goos=['linux'];io.writeFileYAML('.goreleaser.yaml',o)"\
+ #&& curl https://ojob.io/getStatic.sh | sh\
+ #&& ./oaf -c "var o=io.readFileYAML('.goreleaser.yaml');delete o.dockers;o.builds[0].goos=['linux'];io.writeFileYAML('.goreleaser.yaml',o)"\
  && make build\
  && cp snapshot/dive_linux_arm64/dive /dive_linux_arm64\
  && cp snapshot/dive_linux_amd64_v1/dive /dive_linux_amd64
