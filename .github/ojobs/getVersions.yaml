@@ -38,20 +38,20 @@ jobs:
               .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `crictl -v | /openaf/oafp path="split(@, ' ')[2]"`])
               .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `ctr -v | /openaf/oafp path="replace(split(@, ' ')[2],'v','','')"`])
               .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `nerdctl -v | /openaf/oafp path="split(@,' ')[2]"`])
-              .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `dive -v | /openaf/oafp path="split(@,' ').split([1],'-')[0]"`])
+              .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `/openaf/oafp cmd="/usr/bin/dive -v" path="split(@,' ').split([1],'-')[0]"`])
               .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `TERM=UTF-8 mc -V | /openaf/oafp in=lines linesjoin=true path="split([0], ' ')[3]"`])
-              .getJson()
+              .get()
 
     var _r = {
-      openaf : res[0].stdout,
-      docker : res[1].stdout,
-      helm   : res[2].stdout,
-      skopeo : res[3].stdout,
-      crictl : res[4].stdout,
-      ctr    : res[5].stdout,
-      nerdctl: res[6].stdout,
-      dive   : res[7].stdout,
-      mc     : res[8].stdout
+      openaf : res[0].stdout.trim(),
+      docker : res[1].stdout.trim(),
+      helm   : res[2].stdout.trim(),
+      skopeo : res[3].stdout.trim(),
+      crictl : res[4].stdout.trim(),
+      ctr    : res[5].stdout.trim(),
+      nerdctl: res[6].stdout.trim(),
+      dive   : res[7].stdout.trim(),
+      mc     : res[8].stdout.trim()
     }
 
     $set("versions", _r)
