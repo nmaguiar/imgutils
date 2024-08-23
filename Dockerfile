@@ -26,7 +26,7 @@ USER root
 RUN sed -i 's/v[0-9]*\.[0-9]*/edge/g' /etc/apk/repositories\
  && apk update\
  && apk upgrade --available\
- && apk --no-cache add docker-cli skopeo curl tar bash gzip mc containerd-ctr nerdctl bash-completion\
+ && apk --no-cache add docker-cli skopeo curl tar bash gzip mc tmux containerd-ctr nerdctl bash-completion\
  && /openaf/ojob ojob.io/kube/getCriCtl path=/usr/bin\
  && /openaf/ojob ojob.io/kube/getHelm path=/usr/bin\
  && /openaf/opack install DockerRegistry\
