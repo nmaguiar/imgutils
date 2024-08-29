@@ -1,6 +1,10 @@
-- Target: nmaguiar/imgutils:build-lite (alpine 3.20.2)
-  Class: os-pkgs
-  Type: alpine
-- Target: usr/bin/crictl
-  Class: lang-pkgs
-  Type: gobinary
+ojob.io/sec/genSecBadge: ''
+image: nmaguiar/imgutils:build-lite
+file: .github/sec-build-lite.svg
+reportFile: .github/sec-build-lite.yaml
+init: {}
+msg: Producing a summary of the results...
+__key: report
+level: info
+options: {}
+__format: pm
