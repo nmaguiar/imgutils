@@ -1,10 +1,6 @@
-ojob.io/sec/genSecBadge: ''
-image: nmaguiar/imgutils:lite
-file: .github/sec-lite.svg
-reportFile: .github/sec-lite.yaml
-init: {}
-msg: Producing a summary of the results...
-__key: report
-level: info
-options: {}
-__format: pm
+- Target: nmaguiar/imgutils:lite (alpine 3.20.2)
+  Class: os-pkgs
+  Type: alpine
+- Target: usr/bin/crictl
+  Class: lang-pkgs
+  Type: gobinary
