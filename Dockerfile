@@ -106,6 +106,7 @@ RUN gzip /etc/imgutils\
  && echo "alias oaf-light-theme='colorFormats.yaml op=set theme=thin-light-bold'" >> /etc/bash/start.sh\
  && echo "alias oaf-dark-theme='colorFormats.yaml op=set theme=thin-intense-bold'" >> /etc/bash/start.sh\
  && echo "alias help='source /etc/bash/start.sh'" >> /etc/bash/start.sh\
+ && echo "export PATH=$PATH:/openaf:/openaf/ojobs" >> /etc/bash/start.sh\
  && cp /etc/bash/start.sh /etc/profile.d/start.sh
 
 # Setup usage and examples
