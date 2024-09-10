@@ -39,7 +39,7 @@
                         │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-3106 
                         │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-34156 
                         │     ├ PublishedDate   : 2024-09-06T21:15:12.02Z 
-                        │     ╰ LastModifiedDate: 2024-09-06T21:15:12.02Z 
+                        │     ╰ LastModifiedDate: 2024-09-09T15:35:07.573Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2024-34155 
                         │     ├ PkgName         : stdlib 
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.5 
@@ -74,7 +74,7 @@
                         │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-3105 
                         │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-34155 
                         │     ├ PublishedDate   : 2024-09-06T21:15:11.947Z 
-                        │     ╰ LastModifiedDate: 2024-09-06T21:15:11.947Z 
+                        │     ╰ LastModifiedDate: 2024-09-09T13:03:38.303Z 
                         ╰ [2] ╭ VulnerabilityID : CVE-2024-34158 
                               ├ PkgName         : stdlib 
                               ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.5 
@@ -96,6 +96,7 @@
                               ├ Description     : Calling Parse on a "// +build" build tag line with deeply
                               │                   nested expressions can cause a panic due to stack exhaustion. 
                               ├ Severity        : MEDIUM 
+                              ├ CweIDs           ─ [0]: CWE-674 
                               ├ VendorSeverity   ─ redhat: 2 
                               ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/
                               │                           │           A:H 
@@ -108,5 +109,5 @@
                               │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-3107 
                               │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-34158 
                               ├ PublishedDate   : 2024-09-06T21:15:12.083Z 
-                              ╰ LastModifiedDate: 2024-09-06T21:15:12.083Z 
+                              ╰ LastModifiedDate: 2024-09-09T14:35:01.17Z 
 ````
