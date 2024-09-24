@@ -27,8 +27,9 @@
                         │     │                   nested structures can cause a panic due to stack exhaustion.
                         │     │                   This is a follow-up to CVE-2022-30635. 
                         │     ├ Severity        : HIGH 
-                        │     ├ VendorSeverity   ╭ bitnami: 3 
-                        │     │                  ╰ redhat : 3 
+                        │     ├ VendorSeverity   ╭ bitnami    : 3 
+                        │     │                  ├ oracle-oval: 3 
+                        │     │                  ╰ redhat     : 3 
                         │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
                         │     │                  │         │           /A:H 
                         │     │                  │         ╰ V3Score : 7.5 
@@ -39,9 +40,11 @@
                         │     │                  ├ [1]: https://go.dev/cl/611239 
                         │     │                  ├ [2]: https://go.dev/issue/69139 
                         │     │                  ├ [3]: https://groups.google.com/g/golang-dev/c/S9POB9NCTdk 
-                        │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-34156 
-                        │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-3106 
-                        │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-34156 
+                        │     │                  ├ [4]: https://linux.oracle.com/cve/CVE-2024-34156.html 
+                        │     │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2024-6947.html 
+                        │     │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2024-34156 
+                        │     │                  ├ [7]: https://pkg.go.dev/vuln/GO-2024-3106 
+                        │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-34156 
                         │     ├ PublishedDate   : 2024-09-06T21:15:12.02Z 
                         │     ╰ LastModifiedDate: 2024-09-09T15:35:07.573Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2024-34155 
@@ -66,7 +69,8 @@
                         │     │                   contains deeply nested literals can cause a panic due to
                         │     │                   stack exhaustion. 
                         │     ├ Severity        : MEDIUM 
-                        │     ├ VendorSeverity   ─ redhat: 2 
+                        │     ├ VendorSeverity   ╭ oracle-oval: 3 
+                        │     │                  ╰ redhat     : 2 
                         │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/
                         │     │                           │           A:H 
                         │     │                           ╰ V3Score : 5.9 
@@ -74,9 +78,11 @@
                         │     │                  ├ [1]: https://go.dev/cl/611238 
                         │     │                  ├ [2]: https://go.dev/issue/69138 
                         │     │                  ├ [3]: https://groups.google.com/g/golang-dev/c/S9POB9NCTdk 
-                        │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-34155 
-                        │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-3105 
-                        │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-34155 
+                        │     │                  ├ [4]: https://linux.oracle.com/cve/CVE-2024-34155.html 
+                        │     │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2024-6913.html 
+                        │     │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2024-34155 
+                        │     │                  ├ [7]: https://pkg.go.dev/vuln/GO-2024-3105 
+                        │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-34155 
                         │     ├ PublishedDate   : 2024-09-06T21:15:11.947Z 
                         │     ╰ LastModifiedDate: 2024-09-09T13:03:38.303Z 
                         ╰ [2] ╭ VulnerabilityID : CVE-2024-34158 
@@ -101,8 +107,9 @@
                               │                   nested expressions can cause a panic due to stack exhaustion. 
                               ├ Severity        : MEDIUM 
                               ├ CweIDs           ─ [0]: CWE-674 
-                              ├ VendorSeverity   ╭ bitnami: 3 
-                              │                  ╰ redhat : 2 
+                              ├ VendorSeverity   ╭ bitnami    : 3 
+                              │                  ├ oracle-oval: 3 
+                              │                  ╰ redhat     : 2 
                               ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
                               │                  │         │           /A:H 
                               │                  │         ╰ V3Score : 7.5 
@@ -113,9 +120,11 @@
                               │                  ├ [1]: https://go.dev/cl/611240 
                               │                  ├ [2]: https://go.dev/issue/69141 
                               │                  ├ [3]: https://groups.google.com/g/golang-dev/c/S9POB9NCTdk 
-                              │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2024-34158 
-                              │                  ├ [5]: https://pkg.go.dev/vuln/GO-2024-3107 
-                              │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2024-34158 
+                              │                  ├ [4]: https://linux.oracle.com/cve/CVE-2024-34158.html 
+                              │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2024-6913.html 
+                              │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2024-34158 
+                              │                  ├ [7]: https://pkg.go.dev/vuln/GO-2024-3107 
+                              │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-34158 
                               ├ PublishedDate   : 2024-09-06T21:15:12.083Z 
                               ╰ LastModifiedDate: 2024-09-09T14:35:01.17Z 
 ````
