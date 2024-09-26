@@ -28,6 +28,7 @@
     Description: Calling Decoder.Decode on a message which contains deeply nested structures can cause a panic due to stack exhaustion. This is a follow-up to CVE-2022-30635.
     Severity: HIGH
     VendorSeverity:
+      alma: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
@@ -39,7 +40,10 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
+    - https://access.redhat.com/errata/RHSA-2024:6947
     - https://access.redhat.com/security/cve/CVE-2024-34156
+    - https://bugzilla.redhat.com/2310528
+    - https://errata.almalinux.org/9/ALSA-2024-6947.html
     - https://go.dev/cl/611239
     - https://go.dev/issue/69139
     - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
@@ -70,6 +74,7 @@
     Description: Calling any of the Parse functions on Go source code which contains deeply nested literals can cause a panic due to stack exhaustion.
     Severity: MEDIUM
     VendorSeverity:
+      alma: 3
       oracle-oval: 3
       redhat: 2
     CVSS:
@@ -77,7 +82,13 @@
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 5.9
     References:
+    - https://access.redhat.com/errata/RHSA-2024:6913
     - https://access.redhat.com/security/cve/CVE-2024-34155
+    - https://bugzilla.redhat.com/2295310
+    - https://bugzilla.redhat.com/2310527
+    - https://bugzilla.redhat.com/2310528
+    - https://bugzilla.redhat.com/2310529
+    - https://errata.almalinux.org/9/ALSA-2024-6913.html
     - https://go.dev/cl/611238
     - https://go.dev/issue/69138
     - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
@@ -110,6 +121,7 @@
     CweIDs:
     - CWE-674
     VendorSeverity:
+      alma: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 2
@@ -121,7 +133,13 @@
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 5.9
     References:
+    - https://access.redhat.com/errata/RHSA-2024:6913
     - https://access.redhat.com/security/cve/CVE-2024-34158
+    - https://bugzilla.redhat.com/2295310
+    - https://bugzilla.redhat.com/2310527
+    - https://bugzilla.redhat.com/2310528
+    - https://bugzilla.redhat.com/2310529
+    - https://errata.almalinux.org/9/ALSA-2024-6913.html
     - https://go.dev/cl/611240
     - https://go.dev/issue/69141
     - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
@@ -159,6 +177,7 @@
     Description: Calling Decoder.Decode on a message which contains deeply nested structures can cause a panic due to stack exhaustion. This is a follow-up to CVE-2022-30635.
     Severity: HIGH
     VendorSeverity:
+      alma: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
@@ -170,7 +189,10 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
+    - https://access.redhat.com/errata/RHSA-2024:6947
     - https://access.redhat.com/security/cve/CVE-2024-34156
+    - https://bugzilla.redhat.com/2310528
+    - https://errata.almalinux.org/9/ALSA-2024-6947.html
     - https://go.dev/cl/611239
     - https://go.dev/issue/69139
     - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
@@ -201,6 +223,7 @@
     Description: Calling any of the Parse functions on Go source code which contains deeply nested literals can cause a panic due to stack exhaustion.
     Severity: MEDIUM
     VendorSeverity:
+      alma: 3
       oracle-oval: 3
       redhat: 2
     CVSS:
@@ -208,7 +231,13 @@
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 5.9
     References:
+    - https://access.redhat.com/errata/RHSA-2024:6913
     - https://access.redhat.com/security/cve/CVE-2024-34155
+    - https://bugzilla.redhat.com/2295310
+    - https://bugzilla.redhat.com/2310527
+    - https://bugzilla.redhat.com/2310528
+    - https://bugzilla.redhat.com/2310529
+    - https://errata.almalinux.org/9/ALSA-2024-6913.html
     - https://go.dev/cl/611238
     - https://go.dev/issue/69138
     - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
@@ -241,6 +270,7 @@
     CweIDs:
     - CWE-674
     VendorSeverity:
+      alma: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 2
@@ -252,7 +282,13 @@
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 5.9
     References:
+    - https://access.redhat.com/errata/RHSA-2024:6913
     - https://access.redhat.com/security/cve/CVE-2024-34158
+    - https://bugzilla.redhat.com/2295310
+    - https://bugzilla.redhat.com/2310527
+    - https://bugzilla.redhat.com/2310528
+    - https://bugzilla.redhat.com/2310529
+    - https://errata.almalinux.org/9/ALSA-2024-6913.html
     - https://go.dev/cl/611240
     - https://go.dev/issue/69141
     - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
@@ -410,6 +446,7 @@
     Description: Calling Decoder.Decode on a message which contains deeply nested structures can cause a panic due to stack exhaustion. This is a follow-up to CVE-2022-30635.
     Severity: HIGH
     VendorSeverity:
+      alma: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
@@ -421,7 +458,10 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
+    - https://access.redhat.com/errata/RHSA-2024:6947
     - https://access.redhat.com/security/cve/CVE-2024-34156
+    - https://bugzilla.redhat.com/2310528
+    - https://errata.almalinux.org/9/ALSA-2024-6947.html
     - https://go.dev/cl/611239
     - https://go.dev/issue/69139
     - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
@@ -452,6 +492,7 @@
     Description: Calling any of the Parse functions on Go source code which contains deeply nested literals can cause a panic due to stack exhaustion.
     Severity: MEDIUM
     VendorSeverity:
+      alma: 3
       oracle-oval: 3
       redhat: 2
     CVSS:
@@ -459,7 +500,13 @@
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 5.9
     References:
+    - https://access.redhat.com/errata/RHSA-2024:6913
     - https://access.redhat.com/security/cve/CVE-2024-34155
+    - https://bugzilla.redhat.com/2295310
+    - https://bugzilla.redhat.com/2310527
+    - https://bugzilla.redhat.com/2310528
+    - https://bugzilla.redhat.com/2310529
+    - https://errata.almalinux.org/9/ALSA-2024-6913.html
     - https://go.dev/cl/611238
     - https://go.dev/issue/69138
     - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
@@ -492,6 +539,7 @@
     CweIDs:
     - CWE-674
     VendorSeverity:
+      alma: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 2
@@ -503,7 +551,13 @@
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 5.9
     References:
+    - https://access.redhat.com/errata/RHSA-2024:6913
     - https://access.redhat.com/security/cve/CVE-2024-34158
+    - https://bugzilla.redhat.com/2295310
+    - https://bugzilla.redhat.com/2310527
+    - https://bugzilla.redhat.com/2310528
+    - https://bugzilla.redhat.com/2310529
+    - https://errata.almalinux.org/9/ALSA-2024-6913.html
     - https://go.dev/cl/611240
     - https://go.dev/issue/69141
     - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
@@ -538,6 +592,7 @@
     Description: Calling Decoder.Decode on a message which contains deeply nested structures can cause a panic due to stack exhaustion. This is a follow-up to CVE-2022-30635.
     Severity: HIGH
     VendorSeverity:
+      alma: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
@@ -549,7 +604,10 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
+    - https://access.redhat.com/errata/RHSA-2024:6947
     - https://access.redhat.com/security/cve/CVE-2024-34156
+    - https://bugzilla.redhat.com/2310528
+    - https://errata.almalinux.org/9/ALSA-2024-6947.html
     - https://go.dev/cl/611239
     - https://go.dev/issue/69139
     - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
@@ -580,6 +638,7 @@
     Description: Calling any of the Parse functions on Go source code which contains deeply nested literals can cause a panic due to stack exhaustion.
     Severity: MEDIUM
     VendorSeverity:
+      alma: 3
       oracle-oval: 3
       redhat: 2
     CVSS:
@@ -587,7 +646,13 @@
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 5.9
     References:
+    - https://access.redhat.com/errata/RHSA-2024:6913
     - https://access.redhat.com/security/cve/CVE-2024-34155
+    - https://bugzilla.redhat.com/2295310
+    - https://bugzilla.redhat.com/2310527
+    - https://bugzilla.redhat.com/2310528
+    - https://bugzilla.redhat.com/2310529
+    - https://errata.almalinux.org/9/ALSA-2024-6913.html
     - https://go.dev/cl/611238
     - https://go.dev/issue/69138
     - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
@@ -620,6 +685,7 @@
     CweIDs:
     - CWE-674
     VendorSeverity:
+      alma: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 2
@@ -631,7 +697,13 @@
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 5.9
     References:
+    - https://access.redhat.com/errata/RHSA-2024:6913
     - https://access.redhat.com/security/cve/CVE-2024-34158
+    - https://bugzilla.redhat.com/2295310
+    - https://bugzilla.redhat.com/2310527
+    - https://bugzilla.redhat.com/2310528
+    - https://bugzilla.redhat.com/2310529
+    - https://errata.almalinux.org/9/ALSA-2024-6913.html
     - https://go.dev/cl/611240
     - https://go.dev/issue/69141
     - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
