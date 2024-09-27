@@ -40,15 +40,15 @@
 │                       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │     │                            │           /A:H 
 │                       │     │                            ╰ V3Score : 7.5 
-│                       │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:6947 
+│                       │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:7136 
 │                       │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-34156 
 │                       │     │                  ├ [2] : https://bugzilla.redhat.com/2310528 
-│                       │     │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2024-6947.html 
+│                       │     │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2024-7136.html 
 │                       │     │                  ├ [4] : https://go.dev/cl/611239 
 │                       │     │                  ├ [5] : https://go.dev/issue/69139 
 │                       │     │                  ├ [6] : https://groups.google.com/g/golang-dev/c/S9POB9NCTdk 
 │                       │     │                  ├ [7] : https://linux.oracle.com/cve/CVE-2024-34156.html 
-│                       │     │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2024-6947.html 
+│                       │     │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2024-7204.html 
 │                       │     │                  ├ [9] : https://nvd.nist.gov/vuln/detail/CVE-2024-34156 
 │                       │     │                  ├ [10]: https://pkg.go.dev/vuln/GO-2024-3106 
 │                       │     │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2024-34156 
@@ -186,15 +186,15 @@
 │                       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │     │                            │           /A:H 
 │                       │     │                            ╰ V3Score : 7.5 
-│                       │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:6947 
+│                       │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:7136 
 │                       │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-34156 
 │                       │     │                  ├ [2] : https://bugzilla.redhat.com/2310528 
-│                       │     │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2024-6947.html 
+│                       │     │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2024-7136.html 
 │                       │     │                  ├ [4] : https://go.dev/cl/611239 
 │                       │     │                  ├ [5] : https://go.dev/issue/69139 
 │                       │     │                  ├ [6] : https://groups.google.com/g/golang-dev/c/S9POB9NCTdk 
 │                       │     │                  ├ [7] : https://linux.oracle.com/cve/CVE-2024-34156.html 
-│                       │     │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2024-6947.html 
+│                       │     │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2024-7204.html 
 │                       │     │                  ├ [9] : https://nvd.nist.gov/vuln/detail/CVE-2024-34156 
 │                       │     │                  ├ [10]: https://pkg.go.dev/vuln/GO-2024-3106 
 │                       │     │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2024-34156 
@@ -500,15 +500,15 @@
 │                       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │     │                            │           /A:H 
 │                       │     │                            ╰ V3Score : 7.5 
-│                       │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:6947 
+│                       │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:7136 
 │                       │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-34156 
 │                       │     │                  ├ [2] : https://bugzilla.redhat.com/2310528 
-│                       │     │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2024-6947.html 
+│                       │     │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2024-7136.html 
 │                       │     │                  ├ [4] : https://go.dev/cl/611239 
 │                       │     │                  ├ [5] : https://go.dev/issue/69139 
 │                       │     │                  ├ [6] : https://groups.google.com/g/golang-dev/c/S9POB9NCTdk 
 │                       │     │                  ├ [7] : https://linux.oracle.com/cve/CVE-2024-34156.html 
-│                       │     │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2024-6947.html 
+│                       │     │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2024-7204.html 
 │                       │     │                  ├ [9] : https://nvd.nist.gov/vuln/detail/CVE-2024-34156 
 │                       │     │                  ├ [10]: https://pkg.go.dev/vuln/GO-2024-3106 
 │                       │     │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2024-34156 
@@ -643,15 +643,15 @@
                         │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
                         │     │                            │           /A:H 
                         │     │                            ╰ V3Score : 7.5 
-                        │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:6947 
+                        │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:7136 
                         │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-34156 
                         │     │                  ├ [2] : https://bugzilla.redhat.com/2310528 
-                        │     │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2024-6947.html 
+                        │     │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2024-7136.html 
                         │     │                  ├ [4] : https://go.dev/cl/611239 
                         │     │                  ├ [5] : https://go.dev/issue/69139 
                         │     │                  ├ [6] : https://groups.google.com/g/golang-dev/c/S9POB9NCTdk 
                         │     │                  ├ [7] : https://linux.oracle.com/cve/CVE-2024-34156.html 
-                        │     │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2024-6947.html 
+                        │     │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2024-7204.html 
                         │     │                  ├ [9] : https://nvd.nist.gov/vuln/detail/CVE-2024-34156 
                         │     │                  ├ [10]: https://pkg.go.dev/vuln/GO-2024-3106 
                         │     │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2024-34156 
