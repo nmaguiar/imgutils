@@ -40,10 +40,10 @@
 │                       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │     │                            │           /A:H 
 │                       │     │                            ╰ V3Score : 7.5 
-│                       │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:7136 
+│                       │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:7204 
 │                       │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-34156 
 │                       │     │                  ├ [2] : https://bugzilla.redhat.com/2310528 
-│                       │     │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2024-7136.html 
+│                       │     │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2024-7204.html 
 │                       │     │                  ├ [4] : https://go.dev/cl/611239 
 │                       │     │                  ├ [5] : https://go.dev/issue/69139 
 │                       │     │                  ├ [6] : https://groups.google.com/g/golang-dev/c/S9POB9NCTdk 
@@ -186,10 +186,10 @@
 │                       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │     │                            │           /A:H 
 │                       │     │                            ╰ V3Score : 7.5 
-│                       │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:7136 
+│                       │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:7204 
 │                       │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-34156 
 │                       │     │                  ├ [2] : https://bugzilla.redhat.com/2310528 
-│                       │     │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2024-7136.html 
+│                       │     │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2024-7204.html 
 │                       │     │                  ├ [4] : https://go.dev/cl/611239 
 │                       │     │                  ├ [5] : https://go.dev/issue/69139 
 │                       │     │                  ├ [6] : https://groups.google.com/g/golang-dev/c/S9POB9NCTdk 
@@ -500,10 +500,10 @@
 │                       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │     │                            │           /A:H 
 │                       │     │                            ╰ V3Score : 7.5 
-│                       │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:7136 
+│                       │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:7204 
 │                       │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-34156 
 │                       │     │                  ├ [2] : https://bugzilla.redhat.com/2310528 
-│                       │     │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2024-7136.html 
+│                       │     │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2024-7204.html 
 │                       │     │                  ├ [4] : https://go.dev/cl/611239 
 │                       │     │                  ├ [5] : https://go.dev/issue/69139 
 │                       │     │                  ├ [6] : https://groups.google.com/g/golang-dev/c/S9POB9NCTdk 
@@ -643,10 +643,10 @@
                         │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
                         │     │                            │           /A:H 
                         │     │                            ╰ V3Score : 7.5 
-                        │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:7136 
+                        │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:7204 
                         │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-34156 
                         │     │                  ├ [2] : https://bugzilla.redhat.com/2310528 
-                        │     │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2024-7136.html 
+                        │     │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2024-7204.html 
                         │     │                  ├ [4] : https://go.dev/cl/611239 
                         │     │                  ├ [5] : https://go.dev/issue/69139 
                         │     │                  ├ [6] : https://groups.google.com/g/golang-dev/c/S9POB9NCTdk 
