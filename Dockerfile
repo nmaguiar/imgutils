@@ -114,6 +114,7 @@ RUN gzip /etc/imgutils\
 COPY USAGE.md /USAGE.md
 COPY EXAMPLES.md /EXAMPLES.md
 COPY status.sh /status
+COPY entrypoint.sh /.entrypoint.sh
 RUN gzip /USAGE.md\
  && gzip /EXAMPLES.md\
  && echo "#!/bin/sh" > /usr/bin/usage-help\
@@ -134,4 +135,5 @@ ENV PATH=$PATH:$OAF_HOME:$OAF_HOME/ojobs
 USER openaf
 
 WORKDIR /imgutils
-CMD ["/usr/bin/usage-help"]
+#CMD ["/usr/bin/usage-help"]
+ENTRYPOINT ["/.entrypoint.sh"]
