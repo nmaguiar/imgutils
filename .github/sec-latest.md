@@ -2,112 +2,31 @@
 ╭ stdout   
 ├ stderr  : latest: Pulling from aquasec/trivy
 │           43c4264eed91: Already exists
-│           a614f65bf3d4: Pulling fs layer
-│           b3805e8267bc: Pulling fs layer
-│           da758d7eb143: Pulling fs layer
-│           da758d7eb143: Verifying Checksum
-│           da758d7eb143: Download complete
-│           a614f65bf3d4: Verifying Checksum
-│           a614f65bf3d4: Download complete
-│           b3805e8267bc: Verifying Checksum
-│           b3805e8267bc: Download complete
-│           a614f65bf3d4: Pull complete
-│           b3805e8267bc: Pull complete
-│           da758d7eb143: Pull complete
-│           Digest: sha256:e682a9f8db9db6f09731fe2f63e4234d240ec67a811d90974b5af3d40497f843
+│           958beee14847: Pulling fs layer
+│           adc406921242: Pulling fs layer
+│           e1d9543056a1: Pulling fs layer
+│           e1d9543056a1: Verifying Checksum
+│           e1d9543056a1: Download complete
+│           958beee14847: Verifying Checksum
+│           958beee14847: Download complete
+│           adc406921242: Verifying Checksum
+│           adc406921242: Download complete
+│           958beee14847: Pull complete
+│           adc406921242: Pull complete
+│           e1d9543056a1: Pull complete
+│           Digest: sha256:c42bb3221509b0a9fa2291cd79a3a818b30a172ab87e9aac8a43997a5b56f293
 │           Status: Downloaded newer image for aquasec/trivy:latest
-│           2024-10-03T07:06:10Z	INFO	[vulndb] Need to update DB
-│           2024-10-03T07:06:10Z	INFO	[vulndb] Downloading vulnerability DB...
-│           2024-10-03T07:06:10Z	INFO	[vulndb] Downloading artifact...	repo="ghcr.io/aquasecurity/trivy-db:2"
-│           53.95 MiB / 53.95 MiB [----------------------------------------------------------->] 100.00% ? p/s
-│           ?53.95 MiB / 53.95 MiB [----------------------------------------------------------->] 100.00% ? p/s
-│            ?53.95 MiB / 53.95 MiB [----------------------------------------------------------->] 100.00% ?
-│           p/s ?53.95 MiB / 53.95 MiB [----------------------------------------------------------->] 100.00% ?
-│            p/s ?53.95 MiB / 53.95 MiB [----------------------------------------------------------->] 100.00%
-│           ? p/s ?53.95 MiB / 53.95 MiB [----------------------------------------------------------->] 100.00%
-│            ? p/s ?53.95 MiB / 53.95 MiB [----------------------------------------------------------->]
-│           100.00% ? p/s ?53.95 MiB / 53.95 MiB [----------------------------------------------------------->]
-│            100.00% ? p/s ?53.95 MiB / 53.95 MiB [-------------------------------------------------] 100.00%
-│           35.11 MiB p/s 1.7s2024-10-03T07:06:13Z	INFO	[vulndb] Artifact successfully
-│           downloaded	repo="ghcr.io/aquasecurity/trivy-db:2"
-│           2024-10-03T07:06:13Z	INFO	[vuln] Vulnerability scanning is enabled
-│           2024-10-03T07:06:13Z	INFO	[secret] Secret scanning is enabled
-│           2024-10-03T07:06:13Z	INFO	[secret] If your scanning is slow, please try '--scanners vuln' to
-│           disable secret scanning
-│           2024-10-03T07:06:13Z	INFO	[secret] Please see also
-│           https://aquasecurity.github.io/trivy/v0.56/docs/scanner/secret#recommendation for faster secret
-│           detection
-│           2024-10-03T07:06:19Z	INFO	[javadb] Downloading Java DB...
-│           2024-10-03T07:06:19Z	INFO	[javadb] Downloading
-│           artifact...	repo="ghcr.io/aquasecurity/trivy-java-db:1"
-│           54.31 MiB / 649.13 MiB [----->_______________________________________________________] 8.37% ? p/s
-│           ?116.14 MiB / 649.13 MiB [---------->________________________________________________] 17.89% ? p/s
-│            ?180.85 MiB / 649.13 MiB [---------------->__________________________________________] 27.86% ?
-│           p/s ?247.12 MiB / 649.13 MiB [----------------->___________________________] 38.07% 321.24 MiB p/s
-│           ETA 1s314.14 MiB / 649.13 MiB [--------------------->_______________________] 48.39% 321.24 MiB p/s
-│            ETA 1s377.23 MiB / 649.13 MiB [-------------------------->__________________] 58.11% 321.24 MiB
-│           p/s ETA 0s444.85 MiB / 649.13 MiB [------------------------------>______________] 68.53% 321.77 MiB
-│            p/s ETA 0s507.62 MiB / 649.13 MiB [----------------------------------->_________] 78.20% 321.77
-│           MiB p/s ETA 0s559.33 MiB / 649.13 MiB [-------------------------------------->______] 86.17% 321.77
-│            MiB p/s ETA 0s610.75 MiB / 649.13 MiB [------------------------------------------>__] 94.09%
-│           318.85 MiB p/s ETA 0s649.13 MiB / 649.13 MiB [------------------------------------------->] 100.00%
-│            318.85 MiB p/s ETA 0s649.13 MiB / 649.13 MiB [------------------------------------------->]
-│           100.00% 318.85 MiB p/s ETA 0s649.13 MiB / 649.13 MiB [------------------------------------------->]
-│            100.00% 302.41 MiB p/s ETA 0s649.13 MiB / 649.13 MiB
-│           [------------------------------------------->] 100.00% 302.41 MiB p/s ETA 0s649.13 MiB / 649.13 MiB
-│            [------------------------------------------->] 100.00% 302.41 MiB p/s ETA 0s649.13 MiB / 649.13
-│           MiB [------------------------------------------->] 100.00% 282.90 MiB p/s ETA 0s649.13 MiB / 649.13
-│            MiB [------------------------------------------->] 100.00% 282.90 MiB p/s ETA 0s649.13 MiB /
-│           649.13 MiB [------------------------------------------->] 100.00% 282.90 MiB p/s ETA 0s649.13 MiB /
-│            649.13 MiB [------------------------------------------->] 100.00% 264.65 MiB p/s ETA 0s649.13 MiB
-│           / 649.13 MiB [------------------------------------------->] 100.00% 264.65 MiB p/s ETA 0s649.13 MiB
-│            / 649.13 MiB [------------------------------------------->] 100.00% 264.65 MiB p/s ETA 0s649.13
-│           MiB / 649.13 MiB [------------------------------------------->] 100.00% 247.57 MiB p/s ETA 0s649.13
-│            MiB / 649.13 MiB [------------------------------------------->] 100.00% 247.57 MiB p/s ETA
-│           0s649.13 MiB / 649.13 MiB [------------------------------------------->] 100.00% 247.57 MiB p/s ETA
-│            0s649.13 MiB / 649.13 MiB [------------------------------------------->] 100.00% 231.60 MiB p/s
-│           ETA 0s649.13 MiB / 649.13 MiB [------------------------------------------->] 100.00% 231.60 MiB p/s
-│            ETA 0s649.13 MiB / 649.13 MiB [------------------------------------------->] 100.00% 231.60 MiB
-│           p/s ETA 0s649.13 MiB / 649.13 MiB [------------------------------------------->] 100.00% 216.66 MiB
-│            p/s ETA 0s649.13 MiB / 649.13 MiB [------------------------------------------->] 100.00% 216.66
-│           MiB p/s ETA 0s649.13 MiB / 649.13 MiB [------------------------------------------->] 100.00% 216.66
-│            MiB p/s ETA 0s649.13 MiB / 649.13 MiB [------------------------------------------->] 100.00%
-│           202.68 MiB p/s ETA 0s649.13 MiB / 649.13 MiB [------------------------------------------->] 100.00%
-│            202.68 MiB p/s ETA 0s649.13 MiB / 649.13 MiB [------------------------------------------->]
-│           100.00% 202.68 MiB p/s ETA 0s649.13 MiB / 649.13 MiB [------------------------------------------->]
-│            100.00% 189.60 MiB p/s ETA 0s649.13 MiB / 649.13 MiB
-│           [------------------------------------------->] 100.00% 189.60 MiB p/s ETA 0s649.13 MiB / 649.13 MiB
-│            [------------------------------------------->] 100.00% 189.60 MiB p/s ETA 0s649.13 MiB / 649.13
-│           MiB [------------------------------------------->] 100.00% 177.37 MiB p/s ETA 0s649.13 MiB / 649.13
-│            MiB [------------------------------------------->] 100.00% 177.37 MiB p/s ETA 0s649.13 MiB /
-│           649.13 MiB [------------------------------------------->] 100.00% 177.37 MiB p/s ETA 0s649.13 MiB /
-│            649.13 MiB [------------------------------------------->] 100.00% 165.93 MiB p/s ETA 0s649.13 MiB
-│           / 649.13 MiB [------------------------------------------->] 100.00% 165.93 MiB p/s ETA 0s649.13 MiB
-│            / 649.13 MiB [------------------------------------------->] 100.00% 165.93 MiB p/s ETA 0s649.13
-│           MiB / 649.13 MiB [------------------------------------------->] 100.00% 155.22 MiB p/s ETA 0s649.13
-│            MiB / 649.13 MiB [------------------------------------------->] 100.00% 155.22 MiB p/s ETA
-│           0s649.13 MiB / 649.13 MiB [------------------------------------------->] 100.00% 155.22 MiB p/s ETA
-│            0s649.13 MiB / 649.13 MiB [------------------------------------------->] 100.00% 145.21 MiB p/s
-│           ETA 0s649.13 MiB / 649.13 MiB [------------------------------------------->] 100.00% 145.21 MiB p/s
-│            ETA 0s649.13 MiB / 649.13 MiB [------------------------------------------->] 100.00% 145.21 MiB
-│           p/s ETA 0s649.13 MiB / 649.13 MiB [------------------------------------------->] 100.00% 135.84 MiB
-│            p/s ETA 0s649.13 MiB / 649.13 MiB [------------------------------------------->] 100.00% 135.84
-│           MiB p/s ETA 0s649.13 MiB / 649.13 MiB [------------------------------------------->] 100.00% 135.84
-│            MiB p/s ETA 0s649.13 MiB / 649.13 MiB [------------------------------------------->] 100.00%
-│           127.08 MiB p/s ETA 0s649.13 MiB / 649.13 MiB [------------------------------------------->] 100.00%
-│            127.08 MiB p/s ETA 0s649.13 MiB / 649.13 MiB [------------------------------------------->]
-│           100.00% 127.08 MiB p/s ETA 0s649.13 MiB / 649.13 MiB [------------------------------------------->]
-│            100.00% 118.88 MiB p/s ETA 0s649.13 MiB / 649.13 MiB
-│           [------------------------------------------->] 100.00% 118.88 MiB p/s ETA 0s649.13 MiB / 649.13 MiB
-│            [------------------------------------------->] 100.00% 118.88 MiB p/s ETA 0s649.13 MiB / 649.13
-│           MiB [------------------------------------------------] 100.00% 56.97 MiB p/s
-│           12s2024-10-03T07:06:31Z	INFO	[javadb] Artifact successfully
-│           downloaded	repo="ghcr.io/aquasecurity/trivy-java-db:1"
-│           2024-10-03T07:06:31Z	FATAL	Fatal error	image scan error: scan error: scan failed: failed analysis:
-│           analyze error: pipeline error: failed to analyze layer
-│           (sha256:ccd21cb8ea7072088f442833600346b5c76122a94d6565dbbe2dbe1f6db3316e): post analysis error:
-│           post analysis error: Unable to initialize the Java DB: Java DB update failed: OCI artifact error:
-│           failed to download Java DB from any source 
+│           2024-10-04T07:06:14Z	INFO	[vulndb] Need to update DB
+│           2024-10-04T07:06:14Z	INFO	[vulndb] Downloading vulnerability DB...
+│           2024-10-04T07:06:14Z	INFO	[vulndb] Downloading artifact...	repo="ghcr.io/aquasecurity/trivy-db:2"
+│           2024-10-04T07:06:14Z	ERROR	[vulndb] Failed to download
+│           artifact	repo="ghcr.io/aquasecurity/trivy-db:2" err="oci download error: failed to fetch the layer:
+│            GET
+│           https://ghcr.io/v2/aquasecurity/trivy-db/blobs/sha256:9823908c39d767e1430e67e797a8ac0cb5d9c3761821a
+│           9d520dd3bb4278ae387: TOOMANYREQUESTS: retry-after: 112.473µs, allowed: 44000/minute"
+│           2024-10-04T07:06:14Z	FATAL	Fatal error	init error: DB error: failed to download vulnerability DB:
+│           OCI artifact error: failed to download vulnerability DB: failed to download artifact from any
+│           source 
 ├ exitcode: 1 
 ╰ cmd     : docker run --pull always --rm  aquasec/trivy -f json  image nmaguiar/imgutils:latest 
 ````
