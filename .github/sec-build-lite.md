@@ -1,156 +1,19 @@
 ````yaml
-╭ [0] ╭ Target: nmaguiar/imgutils:build-lite (alpine 3.20.3) 
-│     ├ Class : os-pkgs 
-│     ╰ Type  : alpine 
-╰ [1] ╭ Target         : usr/bin/crictl 
-      ├ Class          : lang-pkgs 
-      ├ Type           : gobinary 
-      ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-34156 
-                        │     ├ PkgName         : stdlib 
-                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.5 
-                        │     │                  ╰ UID : 409aacc5453c55c9 
-                        │     ├ InstalledVersion: 1.22.5 
-                        │     ├ FixedVersion    : 1.22.7, 1.23.1 
-                        │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:8766be487a542630c9f807368886cd569e1570f82922f
-                        │     │                  │         975c0523370128664f6 
-                        │     │                  ╰ DiffID: sha256:11e11853b131f88c34bf1062ebdd0f34eb6ad79f81020
-                        │     │                            1daf1de882e5f93136f 
-                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-34156 
-                        │     ├ DataSource       ╭ ID  : govulndb 
-                        │     │                  ├ Name: The Go Vulnerability Database 
-                        │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │     ├ Title           : encoding/gob: golang: Calling Decoder.Decode on a message
-                        │     │                   which contains deeply nested structures can cause a panic due
-                        │     │                    to stack exhaustion 
-                        │     ├ Description     : Calling Decoder.Decode on a message which contains deeply
-                        │     │                   nested structures can cause a panic due to stack exhaustion.
-                        │     │                   This is a follow-up to CVE-2022-30635. 
-                        │     ├ Severity        : HIGH 
-                        │     ├ VendorSeverity   ╭ alma       : 3 
-                        │     │                  ├ bitnami    : 3 
-                        │     │                  ├ oracle-oval: 3 
-                        │     │                  ├ redhat     : 3 
-                        │     │                  ╰ rocky      : 3 
-                        │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
-                        │     │                  │         │           /A:H 
-                        │     │                  │         ╰ V3Score : 7.5 
-                        │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
-                        │     │                            │           /A:H 
-                        │     │                            ╰ V3Score : 7.5 
-                        │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:7204 
-                        │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-34156 
-                        │     │                  ├ [2] : https://bugzilla.redhat.com/2310528 
-                        │     │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2262921 
-                        │     │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2310528 
-                        │     │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
-                        │     │                  │       4-1394 
-                        │     │                  ├ [6] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
-                        │     │                  │       4-34156 
-                        │     │                  ├ [7] : https://errata.almalinux.org/9/ALSA-2024-7204.html 
-                        │     │                  ├ [8] : https://errata.rockylinux.org/RLSA-2024:7262 
-                        │     │                  ├ [9] : https://go.dev/cl/611239 
-                        │     │                  ├ [10]: https://go.dev/issue/69139 
-                        │     │                  ├ [11]: https://groups.google.com/g/golang-dev/c/S9POB9NCTdk 
-                        │     │                  ├ [12]: https://linux.oracle.com/cve/CVE-2024-34156.html 
-                        │     │                  ├ [13]: https://linux.oracle.com/errata/ELSA-2024-7262.html 
-                        │     │                  ├ [14]: https://nvd.nist.gov/vuln/detail/CVE-2024-34156 
-                        │     │                  ├ [15]: https://pkg.go.dev/vuln/GO-2024-3106 
-                        │     │                  ╰ [16]: https://www.cve.org/CVERecord?id=CVE-2024-34156 
-                        │     ├ PublishedDate   : 2024-09-06T21:15:12.02Z 
-                        │     ╰ LastModifiedDate: 2024-09-09T15:35:07.573Z 
-                        ├ [1] ╭ VulnerabilityID : CVE-2024-34155 
-                        │     ├ PkgName         : stdlib 
-                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.5 
-                        │     │                  ╰ UID : 409aacc5453c55c9 
-                        │     ├ InstalledVersion: 1.22.5 
-                        │     ├ FixedVersion    : 1.22.7, 1.23.1 
-                        │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:8766be487a542630c9f807368886cd569e1570f82922f
-                        │     │                  │         975c0523370128664f6 
-                        │     │                  ╰ DiffID: sha256:11e11853b131f88c34bf1062ebdd0f34eb6ad79f81020
-                        │     │                            1daf1de882e5f93136f 
-                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-34155 
-                        │     ├ DataSource       ╭ ID  : govulndb 
-                        │     │                  ├ Name: The Go Vulnerability Database 
-                        │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │     ├ Title           : go/parser: golang: Calling any of the Parse functions
-                        │     │                   containing deeply nested literals can cause a panic/stack
-                        │     │                   exhaustion 
-                        │     ├ Description     : Calling any of the Parse functions on Go source code which
-                        │     │                   contains deeply nested literals can cause a panic due to
-                        │     │                   stack exhaustion. 
-                        │     ├ Severity        : MEDIUM 
-                        │     ├ VendorSeverity   ╭ alma       : 3 
-                        │     │                  ├ oracle-oval: 3 
-                        │     │                  ╰ redhat     : 2 
-                        │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/
-                        │     │                           │           A:H 
-                        │     │                           ╰ V3Score : 5.9 
-                        │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:6913 
-                        │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-34155 
-                        │     │                  ├ [2] : https://bugzilla.redhat.com/2295310 
-                        │     │                  ├ [3] : https://bugzilla.redhat.com/2310527 
-                        │     │                  ├ [4] : https://bugzilla.redhat.com/2310528 
-                        │     │                  ├ [5] : https://bugzilla.redhat.com/2310529 
-                        │     │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2024-6913.html 
-                        │     │                  ├ [7] : https://go.dev/cl/611238 
-                        │     │                  ├ [8] : https://go.dev/issue/69138 
-                        │     │                  ├ [9] : https://groups.google.com/g/golang-dev/c/S9POB9NCTdk 
-                        │     │                  ├ [10]: https://linux.oracle.com/cve/CVE-2024-34155.html 
-                        │     │                  ├ [11]: https://linux.oracle.com/errata/ELSA-2024-6913.html 
-                        │     │                  ├ [12]: https://nvd.nist.gov/vuln/detail/CVE-2024-34155 
-                        │     │                  ├ [13]: https://pkg.go.dev/vuln/GO-2024-3105 
-                        │     │                  ╰ [14]: https://www.cve.org/CVERecord?id=CVE-2024-34155 
-                        │     ├ PublishedDate   : 2024-09-06T21:15:11.947Z 
-                        │     ╰ LastModifiedDate: 2024-09-09T13:03:38.303Z 
-                        ╰ [2] ╭ VulnerabilityID : CVE-2024-34158 
-                              ├ PkgName         : stdlib 
-                              ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.5 
-                              │                  ╰ UID : 409aacc5453c55c9 
-                              ├ InstalledVersion: 1.22.5 
-                              ├ FixedVersion    : 1.22.7, 1.23.1 
-                              ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:8766be487a542630c9f807368886cd569e1570f82922f
-                              │                  │         975c0523370128664f6 
-                              │                  ╰ DiffID: sha256:11e11853b131f88c34bf1062ebdd0f34eb6ad79f81020
-                              │                            1daf1de882e5f93136f 
-                              ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-34158 
-                              ├ DataSource       ╭ ID  : govulndb 
-                              │                  ├ Name: The Go Vulnerability Database 
-                              │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                              ├ Title           : go/build/constraint: golang: Calling Parse on a "// +build"
-                              │                   build tag line with deeply nested expressions can cause a
-                              │                   panic due to stack exhaustion 
-                              ├ Description     : Calling Parse on a "// +build" build tag line with deeply
-                              │                   nested expressions can cause a panic due to stack exhaustion. 
-                              ├ Severity        : MEDIUM 
-                              ├ CweIDs           ─ [0]: CWE-674 
-                              ├ VendorSeverity   ╭ alma       : 3 
-                              │                  ├ bitnami    : 3 
-                              │                  ├ oracle-oval: 3 
-                              │                  ╰ redhat     : 2 
-                              ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
-                              │                  │         │           /A:H 
-                              │                  │         ╰ V3Score : 7.5 
-                              │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N
-                              │                            │           /A:H 
-                              │                            ╰ V3Score : 5.9 
-                              ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:6913 
-                              │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-34158 
-                              │                  ├ [2] : https://bugzilla.redhat.com/2295310 
-                              │                  ├ [3] : https://bugzilla.redhat.com/2310527 
-                              │                  ├ [4] : https://bugzilla.redhat.com/2310528 
-                              │                  ├ [5] : https://bugzilla.redhat.com/2310529 
-                              │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2024-6913.html 
-                              │                  ├ [7] : https://go.dev/cl/611240 
-                              │                  ├ [8] : https://go.dev/issue/69141 
-                              │                  ├ [9] : https://groups.google.com/g/golang-dev/c/S9POB9NCTdk 
-                              │                  ├ [10]: https://linux.oracle.com/cve/CVE-2024-34158.html 
-                              │                  ├ [11]: https://linux.oracle.com/errata/ELSA-2024-6913.html 
-                              │                  ├ [12]: https://nvd.nist.gov/vuln/detail/CVE-2024-34158 
-                              │                  ├ [13]: https://pkg.go.dev/vuln/GO-2024-3107 
-                              │                  ╰ [14]: https://www.cve.org/CVERecord?id=CVE-2024-34158 
-                              ├ PublishedDate   : 2024-09-06T21:15:12.083Z 
-                              ╰ LastModifiedDate: 2024-09-09T14:35:01.17Z 
+╭ stdout   
+├ stderr  : latest: Pulling from aquasec/trivy
+│           Digest: sha256:c42bb3221509b0a9fa2291cd79a3a818b30a172ab87e9aac8a43997a5b56f293
+│           Status: Image is up to date for aquasec/trivy:latest
+│           2024-10-04T07:07:03Z	INFO	[vulndb] Need to update DB
+│           2024-10-04T07:07:03Z	INFO	[vulndb] Downloading vulnerability DB...
+│           2024-10-04T07:07:03Z	INFO	[vulndb] Downloading artifact...	repo="ghcr.io/aquasecurity/trivy-db:2"
+│           2024-10-04T07:07:03Z	ERROR	[vulndb] Failed to download
+│           artifact	repo="ghcr.io/aquasecurity/trivy-db:2" err="oci download error: failed to fetch the layer:
+│            GET
+│           https://ghcr.io/v2/aquasecurity/trivy-db/blobs/sha256:9823908c39d767e1430e67e797a8ac0cb5d9c3761821a
+│           9d520dd3bb4278ae387: TOOMANYREQUESTS: retry-after: 180.363µs, allowed: 44000/minute"
+│           2024-10-04T07:07:03Z	FATAL	Fatal error	init error: DB error: failed to download vulnerability DB:
+│           OCI artifact error: failed to download vulnerability DB: failed to download artifact from any
+│           source 
+├ exitcode: 1 
+╰ cmd     : docker run --pull always --rm  aquasec/trivy -f json  image nmaguiar/imgutils:build-lite 
 ````
