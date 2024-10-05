@@ -10,6 +10,7 @@ if [ -n "$REGAUTH" ]; then
     echo -n "  helm  : " && echo "$password" | sudo helm registry login "$registry" --username "$username" --password-stdin --insecure
     echo ""
   done
+  unset REGAUTH
 fi
 
 # Execute /usr/bin/usage-help if no argument is provided otherwise execute the provided command
@@ -18,7 +19,7 @@ if [ $# -eq 0 ]; then
 else
   # if doesn't include sudo include sudo
   if [ "$1" != "sudo" ]; then
-    set -- sudo "$@"
+    set -- sudo -E "$@"
   fi
   exec "$@"
 fi
