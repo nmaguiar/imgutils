@@ -78,6 +78,7 @@ RUN echo "source <(crictl completion bash)" >> /etc/bash/start.sh\
 #  && cp /tmp/output/usr/local/bin/dive /usr/bin/dive\
 #  && rm -rf output\
 #  && rm dive.tar
+
 COPY dive_linux_* /usr/bin
 RUN if [ "`uname -m`" = "x86_64" ]; then \
       mv /usr/bin/dive_linux_amd64 /usr/bin/dive; \
@@ -123,7 +124,8 @@ RUN gzip /USAGE.md\
  && echo "zcat /EXAMPLES.md.gz | oafp in=md mdtemplate=true | less -r" > /usr/bin/examples-help\
  && chmod a+x /usr/bin/usage-help\
  && chmod a+x /usr/bin/examples-help\
- && chmod a+x /status
+ && chmod a+x /status\
+ && chmod a+x /.entrypoint.sh
 
 # -------------------
 FROM scratch as final
