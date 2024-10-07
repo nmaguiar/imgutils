@@ -5,9 +5,9 @@
 if [ -n "$REGAUTH" ]; then
   echo "$REGAUTH" | while IFS=: read -r registry username password; do
     echo "Logging into $registry"
-    echo -n "  docker: " && echo "$password" | sudo docker login "$registry" --username "$username" --password-stdin
-    echo -n "  skopeo: " && echo "$password" | sudo skopeo login --username "$username" --password-stdin "$registry" --tls-verify=false
-    echo -n "  helm  : " && echo "$password" | sudo helm registry login "$registry" --username "$username" --password-stdin --insecure
+    echo -n "  docker: " && echo "$password" | docker login "$registry" --username "$username" --password-stdin
+    echo -n "  skopeo: " && echo "$password" | skopeo login --username "$username" --password-stdin "$registry" --tls-verify=false
+    echo -n "  helm  : " && echo "$password" | helm registry login "$registry" --username "$username" --password-stdin --insecure
     echo ""
   done
   unset REGAUTH
@@ -18,8 +18,8 @@ if [ $# -eq 0 ]; then
   /usr/bin/usage-help
 else
   # if doesn't include sudo include sudo
-  if [ "$1" != "sudo" ]; then
-    set -- sudo -E "$@"
-  fi
+  #if [ "$1" != "sudo" ]; then
+  #  set -- sudo -E "$@"
+  #fi
   exec "$@"
 fi
