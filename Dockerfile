@@ -59,7 +59,9 @@ RUN sed -i 's/v[0-9]*\.[0-9]*/edge/g' /etc/apk/repositories\
  && apk del nerdctl\
  && mv /tmp/nerdctl /usr/bin/nerdctl\
  && rm /lib/apk/db/*\
- && sed -i "s/\/bin\/sh/\/bin\/bash/g" /etc/passwd
+ && sed -i "s/\/bin\/sh/\/bin\/bash/g" /etc/passwd\
+ && chown root:openaf /run\
+ && chmod g+w /run
 
 # Setup bash completion
 # ---------------------
