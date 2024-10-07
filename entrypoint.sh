@@ -4,6 +4,9 @@
 # the format "registry:username:password" to login to the registry
 if [ -n "$REGAUTH" ]; then
   echo "$REGAUTH" | while IFS=: read -r registry username password; do
+    if [ -e /var/run/docker.sock ]; then
+      sudo chown root:openaf /var/run/docker.sock
+    fi
     echo "Logging into $registry"
     echo -n "  docker: " && echo "$password" | docker login "$registry" --username "$username" --password-stdin
     echo -n "  skopeo: " && echo "$password" | skopeo login --username "$username" --password-stdin "$registry" --tls-verify=false
