@@ -407,7 +407,6 @@
 │                       │     │                   circumstances, the authorization plugin may allow a request
 │                       │     │                   which it would have otherwise denied if the body had been
 │                       │     │                   forwarded to it.
-│                       │     │                   
 │                       │     │                   A security issue was discovered In 2018, where an attacker
 │                       │     │                   could bypass AuthZ plugins using a specially crafted API
 │                       │     │                   request. This could lead to unauthorized actions, including
@@ -417,10 +416,8 @@
 │                       │     │                   Anyone who depends on authorization plugins that introspect
 │                       │     │                   the request and/or response body to make access control
 │                       │     │                   decisions is potentially impacted.
-│                       │     │                   
 │                       │     │                   Docker EE v19.03.x and all versions of Mirantis Container
 │                       │     │                   Runtime are not vulnerable.
-│                       │     │                   
 │                       │     │                   docker-ce v27.1.1 containes patches to fix the vulnerability.
 │                       │     │                    Patches have also been merged into the master, 19.03, 20.0,
 │                       │     │                   23.0, 24.0, 25.0, 26.0, and 26.1 release branches. If one is
