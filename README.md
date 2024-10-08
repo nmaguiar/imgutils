@@ -53,6 +53,12 @@ docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock nmaguiar/imguti
 nerdctl run --rm -ti -v /run/k3s/containerd/containerd.sock:/run/containerd/containerd.sock nmaguiar/imgutils sudo /bin/bash
 ```
 
+#### AWS EC2
+
+```bash
+docker run --rm -ti --pull always -v /var/run/docker.sock:/var/run/docker.sock -e REGAUTH="$(aws sts get-caller-identity --query Account --output text).dkr.ecr.$(curl -s http://169.254.169.254/latest/meta-data/placement/region).amazonaws.com:AWS:$(aws ecr get-login-password)" nmaguiar/imgutils /bin/bash
+```
+
 #### Kubectl
 
 > Check the nodes' names with 'kubectl get nodes'
