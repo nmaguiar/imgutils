@@ -56,7 +56,7 @@ nerdctl run --rm -ti -v /run/k3s/containerd/containerd.sock:/run/containerd/cont
 #### AWS EC2
 
 ```bash
-docker run --rm -ti --pull always -v /var/run/docker.sock:/var/run/docker.sock -e REGAUTH="$(aws sts get-caller-identity --query Account --output text).dkr.ecr.$(curl -s http://169.254.169.254/latest/meta-data/placement/region).amazonaws.com:AWS:$(aws ecr get-login-password)" nmaguiar/imgutils /bin/bash
+docker run --rm -ti --pull always -v /var/run/docker.sock:/var/run/docker.sock -e REGAUTH="$(aws sts get-caller-identity --query Account --output text).dkr.ecr.$(curl -s http://169.254.169.254/latest/meta-data/placement/region).amazonaws.com,AWS,$(aws ecr get-login-password)" nmaguiar/imgutils /bin/bash
 ```
 
 #### Kubectl
@@ -86,7 +86,7 @@ NODENAME=microk8s-server-0 NAME=imgutils HPATH=/var/snap/microk8s/common/run/con
 
 #### For AWS ECR
 ```bash
-REG=$(aws ecr describe-repositories | oafp path="replace(repositories[0].repositoryUri,'([^/]+).+','','\$1')") && docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock -e REGAUTH="$REG:AWS:$(aws ecr get-login-password)" --pull always nmaguiar/imgutils:build /bin/bash
+REG=$(aws ecr describe-repositories | oafp path="replace(repositories[0].repositoryUri,'([^/]+).+','','\$1')") && docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock -e REGAUTH="$REG,AWS,$(aws ecr get-login-password)" --pull always nmaguiar/imgutils:build /bin/bash
 ```
 
 ### nmaguiar/imgutils:lite

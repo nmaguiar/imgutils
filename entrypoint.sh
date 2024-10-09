@@ -16,9 +16,9 @@ if [ -e /run/containerd/containerd.sock ]; then
 fi
 
 # Using the env variable REGAUTH is a list of new-line separated registries where each line follows 
-# the format "registry:username:password" to login to the registry
+# the format "registry,username,password" to login to the registry
 if [ -n "$REGAUTH" ]; then
-  echo "$REGAUTH" | while IFS=: read -r registry username password; do
+  echo "$REGAUTH" | while IFS=, read -r registry username password; do
     echo "Logging into $registry"
     echo -n "  docker: " && echo "$password" | docker login "$registry" --username "$username" --password-stdin 2>/dev/null
     echo -n "  skopeo: " && echo "$password" | skopeo login --username "$username" --password-stdin "$registry" --tls-verify=false

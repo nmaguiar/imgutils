@@ -18,7 +18,7 @@ Welcome to the ImgUtils image. Check the deployment options available and the li
 
 ## 😶‍🌫️ Deploy on an AWS EC2
 
-{{{$acolor 'FAINT,ITALIC' 'docker run --rm -ti --pull always -v /var/run/docker.sock:/var/run/docker.sock -e REGAUTH="$(aws sts get-caller-identity --query Account --output text).dkr.ecr.$(curl -s http://169.254.169.254/latest/meta-data/placement/region).amazonaws.com:AWS:$(aws ecr get-login-password)" nmaguiar/imgutils /bin/bash'}}}
+{{{$acolor 'FAINT,ITALIC' 'docker run --rm -ti --pull always -v /var/run/docker.sock:/var/run/docker.sock -e REGAUTH="$(aws sts get-caller-identity --query Account --output text).dkr.ecr.$(curl -s http://169.254.169.254/latest/meta-data/placement/region).amazonaws.com,AWS,$(aws ecr get-login-password)" nmaguiar/imgutils /bin/bash'}}}
 
 ---
 
