@@ -14,8 +14,8 @@
     FixedVersion: 1.22.7, 1.23.1
     Status: fixed
     Layer:
-      Digest: sha256:efebc08905287a7e51f78f8a4099e15f8f1a8be5b9c12faeba14e5b5aede7ddd
-      DiffID: sha256:1ceffbad927e6e9acc31ef178f49509025295c137bf06f265d8a6b9dc6cc7888
+      Digest: sha256:b27603a42abaf8f642a7a67dcb27e79b6a555eed6b593b8edcab84e8aa9349bb
+      DiffID: sha256:c42f9d4f48dc0f787e2246593ef0c5c63044c1f466741fc527f4afb2d6a108a0
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34156
     DataSource:
       ID: govulndb
@@ -42,12 +42,10 @@
     - https://access.redhat.com/errata/RHSA-2024:7204
     - https://access.redhat.com/security/cve/CVE-2024-34156
     - https://bugzilla.redhat.com/2310528
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2262921
     - https://bugzilla.redhat.com/show_bug.cgi?id=2310528
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1394
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34156
     - https://errata.almalinux.org/9/ALSA-2024-7204.html
-    - https://errata.rockylinux.org/RLSA-2024:7262
+    - https://errata.rockylinux.org/RLSA-2024:7204
     - https://go.dev/cl/611239
     - https://go.dev/issue/69139
     - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
@@ -67,8 +65,8 @@
     FixedVersion: 1.22.7, 1.23.1
     Status: fixed
     Layer:
-      Digest: sha256:efebc08905287a7e51f78f8a4099e15f8f1a8be5b9c12faeba14e5b5aede7ddd
-      DiffID: sha256:1ceffbad927e6e9acc31ef178f49509025295c137bf06f265d8a6b9dc6cc7888
+      Digest: sha256:b27603a42abaf8f642a7a67dcb27e79b6a555eed6b593b8edcab84e8aa9349bb
+      DiffID: sha256:c42f9d4f48dc0f787e2246593ef0c5c63044c1f466741fc527f4afb2d6a108a0
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34155
     DataSource:
       ID: govulndb
@@ -123,8 +121,8 @@
     FixedVersion: 1.22.7, 1.23.1
     Status: fixed
     Layer:
-      Digest: sha256:efebc08905287a7e51f78f8a4099e15f8f1a8be5b9c12faeba14e5b5aede7ddd
-      DiffID: sha256:1ceffbad927e6e9acc31ef178f49509025295c137bf06f265d8a6b9dc6cc7888
+      Digest: sha256:b27603a42abaf8f642a7a67dcb27e79b6a555eed6b593b8edcab84e8aa9349bb
+      DiffID: sha256:c42f9d4f48dc0f787e2246593ef0c5c63044c1f466741fc527f4afb2d6a108a0
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34158
     DataSource:
       ID: govulndb
