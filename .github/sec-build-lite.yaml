@@ -14,8 +14,8 @@
     FixedVersion: 1.22.7, 1.23.1
     Status: fixed
     Layer:
-      Digest: sha256:da61e03a57385e67f597c891e1b19896686507ede5eb4e147a789317b248fa9d
-      DiffID: sha256:fabb9645613b3d61c267537d9afe37af00cc89d5a0a0db5cc58c412a43a9327a
+      Digest: sha256:63b0afaae0d76a2a5e49fe7a2246331edb3c9582d09ec5a47f3ddbd2029a7d40
+      DiffID: sha256:d86cfea683e740b93ed75a5a2cb937873ff332a582cefb5054ad4551ff5abb1e
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34156
     DataSource:
       ID: govulndb
@@ -39,20 +39,21 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2024:7204
+    - https://access.redhat.com/errata/RHSA-2024:8039
     - https://access.redhat.com/security/cve/CVE-2024-34156
+    - https://bugzilla.redhat.com/2310527
     - https://bugzilla.redhat.com/2310528
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2262921
+    - https://bugzilla.redhat.com/2310529
+    - https://bugzilla.redhat.com/2315691
     - https://bugzilla.redhat.com/show_bug.cgi?id=2310528
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1394
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34156
-    - https://errata.almalinux.org/9/ALSA-2024-7204.html
-    - https://errata.rockylinux.org/RLSA-2024:7262
+    - https://errata.almalinux.org/9/ALSA-2024-8039.html
+    - https://errata.rockylinux.org/RLSA-2024:7204
     - https://go.dev/cl/611239
     - https://go.dev/issue/69139
     - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
     - https://linux.oracle.com/cve/CVE-2024-34156.html
-    - https://linux.oracle.com/errata/ELSA-2024-7262.html
+    - https://linux.oracle.com/errata/ELSA-2024-8112.html
     - https://nvd.nist.gov/vuln/detail/CVE-2024-34156
     - https://pkg.go.dev/vuln/GO-2024-3106
     - https://www.cve.org/CVERecord?id=CVE-2024-34156
@@ -67,8 +68,8 @@
     FixedVersion: 1.22.7, 1.23.1
     Status: fixed
     Layer:
-      Digest: sha256:da61e03a57385e67f597c891e1b19896686507ede5eb4e147a789317b248fa9d
-      DiffID: sha256:fabb9645613b3d61c267537d9afe37af00cc89d5a0a0db5cc58c412a43a9327a
+      Digest: sha256:63b0afaae0d76a2a5e49fe7a2246331edb3c9582d09ec5a47f3ddbd2029a7d40
+      DiffID: sha256:d86cfea683e740b93ed75a5a2cb937873ff332a582cefb5054ad4551ff5abb1e
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34155
     DataSource:
       ID: govulndb
@@ -88,12 +89,12 @@
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 5.9
     References:
-    - https://access.redhat.com/errata/RHSA-2024:6913
+    - https://access.redhat.com/errata/RHSA-2024:8039
     - https://access.redhat.com/security/cve/CVE-2024-34155
-    - https://bugzilla.redhat.com/2295310
     - https://bugzilla.redhat.com/2310527
     - https://bugzilla.redhat.com/2310528
     - https://bugzilla.redhat.com/2310529
+    - https://bugzilla.redhat.com/2315691
     - https://bugzilla.redhat.com/show_bug.cgi?id=2295310
     - https://bugzilla.redhat.com/show_bug.cgi?id=2310527
     - https://bugzilla.redhat.com/show_bug.cgi?id=2310528
@@ -102,13 +103,13 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34155
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34156
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34158
-    - https://errata.almalinux.org/9/ALSA-2024-6913.html
+    - https://errata.almalinux.org/9/ALSA-2024-8039.html
     - https://errata.rockylinux.org/RLSA-2024:6913
     - https://go.dev/cl/611238
     - https://go.dev/issue/69138
     - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
     - https://linux.oracle.com/cve/CVE-2024-34155.html
-    - https://linux.oracle.com/errata/ELSA-2024-6913.html
+    - https://linux.oracle.com/errata/ELSA-2024-8112.html
     - https://nvd.nist.gov/vuln/detail/CVE-2024-34155
     - https://pkg.go.dev/vuln/GO-2024-3105
     - https://www.cve.org/CVERecord?id=CVE-2024-34155
@@ -123,8 +124,8 @@
     FixedVersion: 1.22.7, 1.23.1
     Status: fixed
     Layer:
-      Digest: sha256:da61e03a57385e67f597c891e1b19896686507ede5eb4e147a789317b248fa9d
-      DiffID: sha256:fabb9645613b3d61c267537d9afe37af00cc89d5a0a0db5cc58c412a43a9327a
+      Digest: sha256:63b0afaae0d76a2a5e49fe7a2246331edb3c9582d09ec5a47f3ddbd2029a7d40
+      DiffID: sha256:d86cfea683e740b93ed75a5a2cb937873ff332a582cefb5054ad4551ff5abb1e
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34158
     DataSource:
       ID: govulndb
@@ -150,12 +151,12 @@
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 5.9
     References:
-    - https://access.redhat.com/errata/RHSA-2024:6913
+    - https://access.redhat.com/errata/RHSA-2024:8039
     - https://access.redhat.com/security/cve/CVE-2024-34158
-    - https://bugzilla.redhat.com/2295310
     - https://bugzilla.redhat.com/2310527
     - https://bugzilla.redhat.com/2310528
     - https://bugzilla.redhat.com/2310529
+    - https://bugzilla.redhat.com/2315691
     - https://bugzilla.redhat.com/show_bug.cgi?id=2295310
     - https://bugzilla.redhat.com/show_bug.cgi?id=2310527
     - https://bugzilla.redhat.com/show_bug.cgi?id=2310528
@@ -164,13 +165,13 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34155
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34156
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34158
-    - https://errata.almalinux.org/9/ALSA-2024-6913.html
+    - https://errata.almalinux.org/9/ALSA-2024-8039.html
     - https://errata.rockylinux.org/RLSA-2024:6913
     - https://go.dev/cl/611240
     - https://go.dev/issue/69141
     - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
     - https://linux.oracle.com/cve/CVE-2024-34158.html
-    - https://linux.oracle.com/errata/ELSA-2024-6913.html
+    - https://linux.oracle.com/errata/ELSA-2024-8112.html
     - https://nvd.nist.gov/vuln/detail/CVE-2024-34158
     - https://pkg.go.dev/vuln/GO-2024-3107
     - https://www.cve.org/CVERecord?id=CVE-2024-34158
