@@ -39,7 +39,7 @@
                         │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
                         │     │                            │           /A:H 
                         │     │                            ╰ V3Score : 7.5 
-                        │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:8039 
+                        │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:8112 
                         │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-34156 
                         │     │                  ├ [2] : https://bugzilla.redhat.com/2310527 
                         │     │                  ├ [3] : https://bugzilla.redhat.com/2310528 
@@ -48,7 +48,7 @@
                         │     │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2310528 
                         │     │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
                         │     │                  │       4-34156 
-                        │     │                  ├ [8] : https://errata.almalinux.org/9/ALSA-2024-8039.html 
+                        │     │                  ├ [8] : https://errata.almalinux.org/9/ALSA-2024-8112.html 
                         │     │                  ├ [9] : https://errata.rockylinux.org/RLSA-2024:7204 
                         │     │                  ├ [10]: https://go.dev/cl/611239 
                         │     │                  ├ [11]: https://go.dev/issue/69139 
@@ -90,7 +90,7 @@
                         │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/
                         │     │                           │           A:H 
                         │     │                           ╰ V3Score : 5.9 
-                        │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:8039 
+                        │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:8112 
                         │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-34155 
                         │     │                  ├ [2] : https://bugzilla.redhat.com/2310527 
                         │     │                  ├ [3] : https://bugzilla.redhat.com/2310528 
@@ -108,7 +108,7 @@
                         │     │                  │       4-34156 
                         │     │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
                         │     │                  │       4-34158 
-                        │     │                  ├ [14]: https://errata.almalinux.org/9/ALSA-2024-8039.html 
+                        │     │                  ├ [14]: https://errata.almalinux.org/9/ALSA-2024-8112.html 
                         │     │                  ├ [15]: https://errata.rockylinux.org/RLSA-2024:6913 
                         │     │                  ├ [16]: https://go.dev/cl/611238 
                         │     │                  ├ [17]: https://go.dev/issue/69138 
@@ -154,7 +154,7 @@
                               │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N
                               │                            │           /A:H 
                               │                            ╰ V3Score : 5.9 
-                              ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:8039 
+                              ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:8112 
                               │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-34158 
                               │                  ├ [2] : https://bugzilla.redhat.com/2310527 
                               │                  ├ [3] : https://bugzilla.redhat.com/2310528 
@@ -172,7 +172,7 @@
                               │                  │       4-34156 
                               │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
                               │                  │       4-34158 
-                              │                  ├ [14]: https://errata.almalinux.org/9/ALSA-2024-8039.html 
+                              │                  ├ [14]: https://errata.almalinux.org/9/ALSA-2024-8112.html 
                               │                  ├ [15]: https://errata.rockylinux.org/RLSA-2024:6913 
                               │                  ├ [16]: https://go.dev/cl/611240 
                               │                  ├ [17]: https://go.dev/issue/69141 
