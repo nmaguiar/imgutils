@@ -41,16 +41,16 @@
                         │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
                         │     │                            │           /A:H 
                         │     │                            ╰ V3Score : 7.5 
-                        │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:8112 
+                        │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:8038 
                         │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-34156 
-                        │     │                  ├ [2] : https://bugzilla.redhat.com/2310527 
-                        │     │                  ├ [3] : https://bugzilla.redhat.com/2310528 
-                        │     │                  ├ [4] : https://bugzilla.redhat.com/2310529 
-                        │     │                  ├ [5] : https://bugzilla.redhat.com/2315691 
+                        │     │                  ├ [2] : https://bugzilla.redhat.com/2268017 
+                        │     │                  ├ [3] : https://bugzilla.redhat.com/2310527 
+                        │     │                  ├ [4] : https://bugzilla.redhat.com/2310528 
+                        │     │                  ├ [5] : https://bugzilla.redhat.com/2310529 
                         │     │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2310528 
                         │     │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
                         │     │                  │       4-34156 
-                        │     │                  ├ [8] : https://errata.almalinux.org/9/ALSA-2024-8112.html 
+                        │     │                  ├ [8] : https://errata.almalinux.org/8/ALSA-2024-8038.html 
                         │     │                  ├ [9] : https://errata.rockylinux.org/RLSA-2024:7204 
                         │     │                  ├ [10]: https://github.com/golang/go/commit/2092294f2b097c5828
                         │     │                  │       f4eace6c98a322c1510b01 (go1.22.7) 
@@ -100,12 +100,12 @@
                         │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/
                         │     │                           │           A:H 
                         │     │                           ╰ V3Score : 5.9 
-                        │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:8112 
+                        │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:8038 
                         │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-34155 
-                        │     │                  ├ [2] : https://bugzilla.redhat.com/2310527 
-                        │     │                  ├ [3] : https://bugzilla.redhat.com/2310528 
-                        │     │                  ├ [4] : https://bugzilla.redhat.com/2310529 
-                        │     │                  ├ [5] : https://bugzilla.redhat.com/2315691 
+                        │     │                  ├ [2] : https://bugzilla.redhat.com/2268017 
+                        │     │                  ├ [3] : https://bugzilla.redhat.com/2310527 
+                        │     │                  ├ [4] : https://bugzilla.redhat.com/2310528 
+                        │     │                  ├ [5] : https://bugzilla.redhat.com/2310529 
                         │     │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2295310 
                         │     │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2310527 
                         │     │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2310528 
@@ -118,7 +118,7 @@
                         │     │                  │       4-34156 
                         │     │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
                         │     │                  │       4-34158 
-                        │     │                  ├ [14]: https://errata.almalinux.org/9/ALSA-2024-8112.html 
+                        │     │                  ├ [14]: https://errata.almalinux.org/8/ALSA-2024-8038.html 
                         │     │                  ├ [15]: https://errata.rockylinux.org/RLSA-2024:6913 
                         │     │                  ├ [16]: https://github.com/golang/go/commit/53487e5477151ed75d
                         │     │                  │       a50e50a0ba8f1ca64c00a3 (go1.23.1) 
@@ -173,12 +173,12 @@
                               │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N
                               │                            │           /A:H 
                               │                            ╰ V3Score : 5.9 
-                              ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:8112 
+                              ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:8038 
                               │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-34158 
-                              │                  ├ [2] : https://bugzilla.redhat.com/2310527 
-                              │                  ├ [3] : https://bugzilla.redhat.com/2310528 
-                              │                  ├ [4] : https://bugzilla.redhat.com/2310529 
-                              │                  ├ [5] : https://bugzilla.redhat.com/2315691 
+                              │                  ├ [2] : https://bugzilla.redhat.com/2268017 
+                              │                  ├ [3] : https://bugzilla.redhat.com/2310527 
+                              │                  ├ [4] : https://bugzilla.redhat.com/2310528 
+                              │                  ├ [5] : https://bugzilla.redhat.com/2310529 
                               │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2295310 
                               │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2310527 
                               │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2310528 
@@ -191,7 +191,7 @@
                               │                  │       4-34156 
                               │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
                               │                  │       4-34158 
-                              │                  ├ [14]: https://errata.almalinux.org/9/ALSA-2024-8112.html 
+                              │                  ├ [14]: https://errata.almalinux.org/8/ALSA-2024-8038.html 
                               │                  ├ [15]: https://errata.rockylinux.org/RLSA-2024:6913 
                               │                  ├ [16]: https://github.com/golang/go/commit/032ac075c20c01c6c3
                               │                  │       5a672d1542d3e98eab84ea (go1.23.1) 
