@@ -103,10 +103,12 @@
     - https://bugzilla.redhat.com/2310528
     - https://bugzilla.redhat.com/2310529
     - https://bugzilla.redhat.com/2315691
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2262921
     - https://bugzilla.redhat.com/show_bug.cgi?id=2310528
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1394
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34156
     - https://errata.almalinux.org/9/ALSA-2024-8112.html
-    - https://errata.rockylinux.org/RLSA-2024:7204
+    - https://errata.rockylinux.org/RLSA-2024:7262
     - https://github.com/golang/go/commit/2092294f2b097c5828f4eace6c98a322c1510b01 (go1.22.7)
     - https://github.com/golang/go/commit/fa8ff1a46deb6c816304441ec6740ec112e19012 (go1.23.1)
     - https://go.dev/cl/611239
@@ -425,10 +427,12 @@
     - https://bugzilla.redhat.com/2310528
     - https://bugzilla.redhat.com/2310529
     - https://bugzilla.redhat.com/2315691
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2262921
     - https://bugzilla.redhat.com/show_bug.cgi?id=2310528
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1394
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34156
     - https://errata.almalinux.org/9/ALSA-2024-8112.html
-    - https://errata.rockylinux.org/RLSA-2024:7204
+    - https://errata.rockylinux.org/RLSA-2024:7262
     - https://github.com/golang/go/commit/2092294f2b097c5828f4eace6c98a322c1510b01 (go1.22.7)
     - https://github.com/golang/go/commit/fa8ff1a46deb6c816304441ec6740ec112e19012 (go1.23.1)
     - https://go.dev/cl/611239
@@ -676,10 +680,12 @@
     - https://bugzilla.redhat.com/2310528
     - https://bugzilla.redhat.com/2310529
     - https://bugzilla.redhat.com/2315691
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2262921
     - https://bugzilla.redhat.com/show_bug.cgi?id=2310528
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1394
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34156
     - https://errata.almalinux.org/9/ALSA-2024-8112.html
-    - https://errata.rockylinux.org/RLSA-2024:7204
+    - https://errata.rockylinux.org/RLSA-2024:7262
     - https://github.com/golang/go/commit/2092294f2b097c5828f4eace6c98a322c1510b01 (go1.22.7)
     - https://github.com/golang/go/commit/fa8ff1a46deb6c816304441ec6740ec112e19012 (go1.23.1)
     - https://go.dev/cl/611239
