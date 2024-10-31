@@ -481,6 +481,7 @@
     - https://access.redhat.com/errata/RHSA-2024:8112
     - https://access.redhat.com/errata/RHSA-2024:8238
     - https://access.redhat.com/errata/RHSA-2024:8263
+    - https://access.redhat.com/errata/RHSA-2024:8428
     - https://access.redhat.com/security/cve/CVE-2024-9341
     - https://bugzilla.redhat.com/2310527
     - https://bugzilla.redhat.com/2310528
@@ -498,7 +499,7 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2024-9341
     - https://www.cve.org/CVERecord?id=CVE-2024-9341
     PublishedDate: '2024-10-01T19:15:09.5Z'
-    LastModifiedDate: '2024-10-24T17:15:17.773Z'
+    LastModifiedDate: '2024-10-31T05:15:05.683Z'
   - VulnerabilityID: CVE-2024-34156
     PkgName: stdlib
     PkgIdentifier:
