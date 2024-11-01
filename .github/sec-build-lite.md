@@ -7,9 +7,9 @@
       ├ Type           : gobinary 
       ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-34156 
                         │     ├ PkgName         : stdlib 
-                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.5 
-                        │     │                  ╰ UID : 409aacc5453c55c9 
-                        │     ├ InstalledVersion: 1.22.5 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.22.5 
+                        │     │                  ╰ UID : 1cb23866172f0022 
+                        │     ├ InstalledVersion: v1.22.5 
                         │     ├ FixedVersion    : 1.22.7, 1.23.1 
                         │     ├ Status          : fixed 
                         │     ├ Layer            ╭ Digest: sha256:b37d781bff9c3e211eb19268c9c142189a8c084a77882
@@ -71,9 +71,9 @@
                         │     ╰ LastModifiedDate: 2024-09-09T15:35:07.573Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2024-34155 
                         │     ├ PkgName         : stdlib 
-                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.5 
-                        │     │                  ╰ UID : 409aacc5453c55c9 
-                        │     ├ InstalledVersion: 1.22.5 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.22.5 
+                        │     │                  ╰ UID : 1cb23866172f0022 
+                        │     ├ InstalledVersion: v1.22.5 
                         │     ├ FixedVersion    : 1.22.7, 1.23.1 
                         │     ├ Status          : fixed 
                         │     ├ Layer            ╭ Digest: sha256:b37d781bff9c3e211eb19268c9c142189a8c084a77882
@@ -139,9 +139,9 @@
                         │     ╰ LastModifiedDate: 2024-09-09T13:03:38.303Z 
                         ╰ [2] ╭ VulnerabilityID : CVE-2024-34158 
                               ├ PkgName         : stdlib 
-                              ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.5 
-                              │                  ╰ UID : 409aacc5453c55c9 
-                              ├ InstalledVersion: 1.22.5 
+                              ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.22.5 
+                              │                  ╰ UID : 1cb23866172f0022 
+                              ├ InstalledVersion: v1.22.5 
                               ├ FixedVersion    : 1.22.7, 1.23.1 
                               ├ Status          : fixed 
                               ├ Layer            ╭ Digest: sha256:b37d781bff9c3e211eb19268c9c142189a8c084a77882
