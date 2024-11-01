@@ -126,9 +126,9 @@
 │     ├ Type           : gobinary 
 │     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-34156 
 │                       │     ├ PkgName         : stdlib 
-│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.5 
-│                       │     │                  ╰ UID : 409aacc5453c55c9 
-│                       │     ├ InstalledVersion: 1.22.5 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.22.5 
+│                       │     │                  ╰ UID : 1cb23866172f0022 
+│                       │     ├ InstalledVersion: v1.22.5 
 │                       │     ├ FixedVersion    : 1.22.7, 1.23.1 
 │                       │     ├ Status          : fixed 
 │                       │     ├ Layer            ╭ Digest: sha256:b2dc6983c9af88207b426cc0430ae285753530af66ba4
@@ -190,9 +190,9 @@
 │                       │     ╰ LastModifiedDate: 2024-09-09T15:35:07.573Z 
 │                       ├ [1] ╭ VulnerabilityID : CVE-2024-34155 
 │                       │     ├ PkgName         : stdlib 
-│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.5 
-│                       │     │                  ╰ UID : 409aacc5453c55c9 
-│                       │     ├ InstalledVersion: 1.22.5 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.22.5 
+│                       │     │                  ╰ UID : 1cb23866172f0022 
+│                       │     ├ InstalledVersion: v1.22.5 
 │                       │     ├ FixedVersion    : 1.22.7, 1.23.1 
 │                       │     ├ Status          : fixed 
 │                       │     ├ Layer            ╭ Digest: sha256:b2dc6983c9af88207b426cc0430ae285753530af66ba4
@@ -258,9 +258,9 @@
 │                       │     ╰ LastModifiedDate: 2024-09-09T13:03:38.303Z 
 │                       ╰ [2] ╭ VulnerabilityID : CVE-2024-34158 
 │                             ├ PkgName         : stdlib 
-│                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.5 
-│                             │                  ╰ UID : 409aacc5453c55c9 
-│                             ├ InstalledVersion: 1.22.5 
+│                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.22.5 
+│                             │                  ╰ UID : 1cb23866172f0022 
+│                             ├ InstalledVersion: v1.22.5 
 │                             ├ FixedVersion    : 1.22.7, 1.23.1 
 │                             ├ Status          : fixed 
 │                             ├ Layer            ╭ Digest: sha256:b2dc6983c9af88207b426cc0430ae285753530af66ba4
@@ -580,9 +580,9 @@
                         │     ╰ LastModifiedDate: 2024-10-31T05:15:05.683Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2024-34156 
                         │     ├ PkgName         : stdlib 
-                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.6 
-                        │     │                  ╰ UID : 914953355bc6b01d 
-                        │     ├ InstalledVersion: 1.22.6 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.22.6 
+                        │     │                  ╰ UID : c5cee28550978709 
+                        │     ├ InstalledVersion: v1.22.6 
                         │     ├ FixedVersion    : 1.22.7, 1.23.1 
                         │     ├ Status          : fixed 
                         │     ├ Layer            ╭ Digest: sha256:b2dc6983c9af88207b426cc0430ae285753530af66ba4
@@ -644,9 +644,9 @@
                         │     ╰ LastModifiedDate: 2024-09-09T15:35:07.573Z 
                         ├ [2] ╭ VulnerabilityID : CVE-2024-34155 
                         │     ├ PkgName         : stdlib 
-                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.6 
-                        │     │                  ╰ UID : 914953355bc6b01d 
-                        │     ├ InstalledVersion: 1.22.6 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.22.6 
+                        │     │                  ╰ UID : c5cee28550978709 
+                        │     ├ InstalledVersion: v1.22.6 
                         │     ├ FixedVersion    : 1.22.7, 1.23.1 
                         │     ├ Status          : fixed 
                         │     ├ Layer            ╭ Digest: sha256:b2dc6983c9af88207b426cc0430ae285753530af66ba4
@@ -712,9 +712,9 @@
                         │     ╰ LastModifiedDate: 2024-09-09T13:03:38.303Z 
                         ╰ [3] ╭ VulnerabilityID : CVE-2024-34158 
                               ├ PkgName         : stdlib 
-                              ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@1.22.6 
-                              │                  ╰ UID : 914953355bc6b01d 
-                              ├ InstalledVersion: 1.22.6 
+                              ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.22.6 
+                              │                  ╰ UID : c5cee28550978709 
+                              ├ InstalledVersion: v1.22.6 
                               ├ FixedVersion    : 1.22.7, 1.23.1 
                               ├ Status          : fixed 
                               ├ Layer            ╭ Digest: sha256:b2dc6983c9af88207b426cc0430ae285753530af66ba4
