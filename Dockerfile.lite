@@ -9,7 +9,7 @@ RUN apk update\
  && rm /lib/apk/db/*
 
 # ------------------
-FROM alpine as clean
+FROM alpine:edge as clean
 
 RUN apk update\
  && apk --no-cache add tar bash gzip\
