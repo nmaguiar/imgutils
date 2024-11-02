@@ -1,4 +1,832 @@
-stdout: {}
-stderr: "latest: Pulling from aquasec/trivy\n43c4264eed91: Already exists\n3096be5fd896: Pulling fs layer\nfcffdfba928a: Pulling fs layer\n51a9e5e8c7fc: Pulling fs layer\n51a9e5e8c7fc: Verifying Checksum\n51a9e5e8c7fc: Download complete\n3096be5fd896: Verifying Checksum\n3096be5fd896: Download complete\n3096be5fd896: Pull complete\nfcffdfba928a: Verifying Checksum\nfcffdfba928a: Download complete\nfcffdfba928a: Pull complete\n51a9e5e8c7fc: Pull complete\nDigest: sha256:cbb2d9abe8880825a76a49b4a11fa1542e884e4831120668d505f3156a5a3a2f\nStatus: Downloaded newer image for aquasec/trivy:latest\n2024-11-01T07:07:20Z\tINFO\t[vulndb] Need to update DB\n2024-11-01T07:07:20Z\tINFO\t[vulndb] Downloading vulnerability DB...\n2024-11-01T07:07:20Z\tINFO\t[vulndb] Downloading artifact...\trepo=\"ghcr.io/aquasecurity/trivy-db:2\"\n2024-11-01T07:07:21Z\tERROR\t[vulndb] Failed to download artifact\trepo=\"ghcr.io/aquasecurity/trivy-db:2\" err=\"OCI repository error: 1 error occurred:\\n\\t* GET https://ghcr.io/v2/aquasecurity/trivy-db/manifests/2: TOOMANYREQUESTS: retry-after: 876.963µs, allowed: 44000/minute\\n\\n\"\n2024-11-01T07:07:21Z\tFATAL\tFatal error\tinit error: DB error: failed to download vulnerability DB: OCI artifact error: failed to download vulnerability DB: failed to download artifact from any source: 1 error occurred:\n\t* OCI repository error: 1 error occurred:\n\t* GET https://ghcr.io/v2/aquasecurity/trivy-db/manifests/2: TOOMANYREQUESTS: retry-after: 876.963µs, allowed: 44000/minute\n\n\n\n\n"
-exitcode: 1
-cmd: docker run --pull always --rm -v trivy-db:/root/.cache/trivy aquasec/trivy -f json  image nmaguiar/imgutils:latest
+- Target: nmaguiar/imgutils:latest (alpine 3.20.3)
+  Class: os-pkgs
+  Type: alpine
+- Target: Java
+  Class: lang-pkgs
+  Type: jar
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2024-6763
+    PkgName: org.eclipse.jetty:jetty-http
+    PkgPath: openaf/openaf.jar
+    PkgIdentifier:
+      PURL: pkg:maven/org.eclipse.jetty/jetty-http@9.4.55.v20240627
+      UID: f7c6df4b894e0ce
+    InstalledVersion: 9.4.55.v20240627
+    FixedVersion: 12.0.12
+    Status: fixed
+    Layer:
+      Digest: sha256:66c511d03c7f502a50df9a7541f3db9eb4c0d60d8c81cc443957e231cded18c6
+      DiffID: sha256:c28eef017d4f63fb35ef2ea6cf7d736919c25a6532123949b8354d80a1cf5e20
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-6763
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Maven
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven
+    Title: 'org.eclipse.jetty:jetty-http: jetty: Jetty URI parsing of invalid authority'
+    Description: |-
+      Eclipse Jetty is a lightweight, highly scalable, Java-based web server and Servlet engine . It includes a utility class, HttpURI, for URI/URL parsing.
+
+      The HttpURI class does insufficient validation on the authority segment of a URI.  However the behaviour of HttpURI
+       differs from the common browsers in how it handles a URI that would be 
+      considered invalid if fully validated against the RRC.  Specifically HttpURI
+       and the browser may differ on the value of the host extracted from an 
+      invalid URI and thus a combination of Jetty and a vulnerable browser may
+       be vulnerable to a open redirect attack or to a SSRF attack if the URI 
+      is used after passing validation checks.
+    Severity: LOW
+    CweIDs:
+    - CWE-1286
+    VendorSeverity:
+      ghsa: 1
+      redhat: 1
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N
+        V3Score: 3.7
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N
+        V3Score: 3.7
+    References:
+    - https://access.redhat.com/security/cve/CVE-2024-6763
+    - https://github.com/jetty/jetty.project
+    - https://github.com/jetty/jetty.project/pull/12012
+    - https://github.com/jetty/jetty.project/security/advisories/GHSA-qh8g-58pp-2wxh
+    - https://gitlab.eclipse.org/security/cve-assignement/-/issues/25
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-6763
+    - https://www.cve.org/CVERecord?id=CVE-2024-6763
+    PublishedDate: '2024-10-14T16:15:04.163Z'
+    LastModifiedDate: '2024-10-15T12:57:46.88Z'
+- Target: usr/bin/crictl
+  Class: lang-pkgs
+  Type: gobinary
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2024-34156
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.22.5
+      UID: 1cb23866172f0022
+    InstalledVersion: v1.22.5
+    FixedVersion: 1.22.7, 1.23.1
+    Status: fixed
+    Layer:
+      Digest: sha256:66c511d03c7f502a50df9a7541f3db9eb4c0d60d8c81cc443957e231cded18c6
+      DiffID: sha256:c28eef017d4f63fb35ef2ea6cf7d736919c25a6532123949b8354d80a1cf5e20
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34156
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'encoding/gob: golang: Calling Decoder.Decode on a message which contains deeply nested structures can cause a panic due to stack exhaustion'
+    Description: Calling Decoder.Decode on a message which contains deeply nested structures can cause a panic due to stack exhaustion. This is a follow-up to CVE-2022-30635.
+    Severity: HIGH
+    VendorSeverity:
+      alma: 3
+      amazon: 3
+      bitnami: 3
+      oracle-oval: 3
+      photon: 3
+      redhat: 3
+      rocky: 3
+      ubuntu: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://access.redhat.com/errata/RHSA-2024:8112
+    - https://access.redhat.com/security/cve/CVE-2024-34156
+    - https://bugzilla.redhat.com/2310527
+    - https://bugzilla.redhat.com/2310528
+    - https://bugzilla.redhat.com/2310529
+    - https://bugzilla.redhat.com/2315691
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2262921
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2310528
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1394
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34156
+    - https://errata.almalinux.org/9/ALSA-2024-8112.html
+    - https://errata.rockylinux.org/RLSA-2024:7262
+    - https://github.com/golang/go/commit/2092294f2b097c5828f4eace6c98a322c1510b01 (go1.22.7)
+    - https://github.com/golang/go/commit/fa8ff1a46deb6c816304441ec6740ec112e19012 (go1.23.1)
+    - https://go.dev/cl/611239
+    - https://go.dev/issue/69139
+    - https://groups.google.com/g/golang-announce/c/K-cEzDeCtpc
+    - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
+    - https://linux.oracle.com/cve/CVE-2024-34156.html
+    - https://linux.oracle.com/errata/ELSA-2024-8112.html
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-34156
+    - https://pkg.go.dev/vuln/GO-2024-3106
+    - https://ubuntu.com/security/notices/USN-7081-1
+    - https://www.cve.org/CVERecord?id=CVE-2024-34156
+    PublishedDate: '2024-09-06T21:15:12.02Z'
+    LastModifiedDate: '2024-09-09T15:35:07.573Z'
+  - VulnerabilityID: CVE-2024-34155
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.22.5
+      UID: 1cb23866172f0022
+    InstalledVersion: v1.22.5
+    FixedVersion: 1.22.7, 1.23.1
+    Status: fixed
+    Layer:
+      Digest: sha256:66c511d03c7f502a50df9a7541f3db9eb4c0d60d8c81cc443957e231cded18c6
+      DiffID: sha256:c28eef017d4f63fb35ef2ea6cf7d736919c25a6532123949b8354d80a1cf5e20
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34155
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'go/parser: golang: Calling any of the Parse functions containing deeply nested literals can cause a panic/stack exhaustion'
+    Description: Calling any of the Parse functions on Go source code which contains deeply nested literals can cause a panic due to stack exhaustion.
+    Severity: MEDIUM
+    VendorSeverity:
+      alma: 3
+      amazon: 3
+      oracle-oval: 3
+      redhat: 2
+      rocky: 3
+      ubuntu: 2
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 5.9
+    References:
+    - https://access.redhat.com/errata/RHSA-2024:8112
+    - https://access.redhat.com/security/cve/CVE-2024-34155
+    - https://bugzilla.redhat.com/2310527
+    - https://bugzilla.redhat.com/2310528
+    - https://bugzilla.redhat.com/2310529
+    - https://bugzilla.redhat.com/2315691
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2295310
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2310527
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2310528
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2310529
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24791
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34155
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34156
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34158
+    - https://errata.almalinux.org/9/ALSA-2024-8112.html
+    - https://errata.rockylinux.org/RLSA-2024:6913
+    - https://github.com/golang/go/commit/53487e5477151ed75da50e50a0ba8f1ca64c00a3 (go1.23.1)
+    - https://github.com/golang/go/commit/b232596139dbe96a62edbe3a2a203e856bf556eb (go1.22.7)
+    - https://go.dev/cl/611238
+    - https://go.dev/issue/69138
+    - https://groups.google.com/g/golang-announce/c/K-cEzDeCtpc
+    - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
+    - https://linux.oracle.com/cve/CVE-2024-34155.html
+    - https://linux.oracle.com/errata/ELSA-2024-8112.html
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-34155
+    - https://pkg.go.dev/vuln/GO-2024-3105
+    - https://ubuntu.com/security/notices/USN-7081-1
+    - https://www.cve.org/CVERecord?id=CVE-2024-34155
+    PublishedDate: '2024-09-06T21:15:11.947Z'
+    LastModifiedDate: '2024-09-09T13:03:38.303Z'
+  - VulnerabilityID: CVE-2024-34158
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.22.5
+      UID: 1cb23866172f0022
+    InstalledVersion: v1.22.5
+    FixedVersion: 1.22.7, 1.23.1
+    Status: fixed
+    Layer:
+      Digest: sha256:66c511d03c7f502a50df9a7541f3db9eb4c0d60d8c81cc443957e231cded18c6
+      DiffID: sha256:c28eef017d4f63fb35ef2ea6cf7d736919c25a6532123949b8354d80a1cf5e20
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34158
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'go/build/constraint: golang: Calling Parse on a "// +build" build tag line with deeply nested expressions can cause a panic due to stack exhaustion'
+    Description: Calling Parse on a "// +build" build tag line with deeply nested expressions can cause a panic due to stack exhaustion.
+    Severity: MEDIUM
+    CweIDs:
+    - CWE-674
+    VendorSeverity:
+      alma: 3
+      amazon: 3
+      bitnami: 3
+      oracle-oval: 3
+      photon: 3
+      redhat: 2
+      rocky: 3
+      ubuntu: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 5.9
+    References:
+    - https://access.redhat.com/errata/RHSA-2024:8112
+    - https://access.redhat.com/security/cve/CVE-2024-34158
+    - https://bugzilla.redhat.com/2310527
+    - https://bugzilla.redhat.com/2310528
+    - https://bugzilla.redhat.com/2310529
+    - https://bugzilla.redhat.com/2315691
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2295310
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2310527
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2310528
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2310529
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24791
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34155
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34156
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34158
+    - https://errata.almalinux.org/9/ALSA-2024-8112.html
+    - https://errata.rockylinux.org/RLSA-2024:6913
+    - https://github.com/golang/go/commit/032ac075c20c01c6c35a672d1542d3e98eab84ea (go1.23.1)
+    - https://github.com/golang/go/commit/d4c53812e6ce2ac368173d7fcd31d0ecfcffb002 (go1.22.7)
+    - https://go.dev/cl/611240
+    - https://go.dev/issue/69141
+    - https://groups.google.com/g/golang-announce/c/K-cEzDeCtpc
+    - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
+    - https://linux.oracle.com/cve/CVE-2024-34158.html
+    - https://linux.oracle.com/errata/ELSA-2024-8112.html
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-34158
+    - https://pkg.go.dev/vuln/GO-2024-3107
+    - https://ubuntu.com/security/notices/USN-7081-1
+    - https://www.cve.org/CVERecord?id=CVE-2024-34158
+    PublishedDate: '2024-09-06T21:15:12.083Z'
+    LastModifiedDate: '2024-09-09T14:35:01.17Z'
+- Target: usr/bin/ctr
+  Class: lang-pkgs
+  Type: gobinary
+- Target: usr/bin/dive
+  Class: lang-pkgs
+  Type: gobinary
+- Target: usr/bin/docker
+  Class: lang-pkgs
+  Type: gobinary
+- Target: usr/bin/helm
+  Class: lang-pkgs
+  Type: gobinary
+- Target: usr/bin/nerdctl
+  Class: lang-pkgs
+  Type: gobinary
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2024-41110
+    PkgName: github.com/docker/docker
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/docker/docker@v24.0.7%2Bincompatible
+      UID: 4fd2c1b8945eafa2
+    InstalledVersion: v24.0.7+incompatible
+    FixedVersion: 23.0.15, 26.1.5, 27.1.1, 25.0.6
+    Status: fixed
+    Layer:
+      Digest: sha256:66c511d03c7f502a50df9a7541f3db9eb4c0d60d8c81cc443957e231cded18c6
+      DiffID: sha256:c28eef017d4f63fb35ef2ea6cf7d736919c25a6532123949b8354d80a1cf5e20
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-41110
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'moby: Authz zero length regression'
+    Description: |-
+      Moby is an open-source project created by Docker for software containerization. A security vulnerability has been detected in certain versions of Docker Engine, which could allow an attacker to bypass authorization plugins (AuthZ) under specific circumstances. The base likelihood of this being exploited is low.
+
+      Using a specially-crafted API request, an Engine API client could make the daemon forward the request or response to an authorization plugin without the body. In certain circumstances, the authorization plugin may allow a request which it would have otherwise denied if the body had been forwarded to it.
+
+      A security issue was discovered In 2018, where an attacker could bypass AuthZ plugins using a specially crafted API request. This could lead to unauthorized actions, including privilege escalation. Although this issue was fixed in Docker Engine v18.09.1 in January 2019, the fix was not carried forward to later major versions, resulting in a regression. Anyone who depends on authorization plugins that introspect the request and/or response body to make access control decisions is potentially impacted.
+
+      Docker EE v19.03.x and all versions of Mirantis Container Runtime are not vulnerable.
+
+      docker-ce v27.1.1 containes patches to fix the vulnerability. Patches have also been merged into the master, 19.03, 20.0, 23.0, 24.0, 25.0, 26.0, and 26.1 release branches. If one is unable to upgrade immediately, avoid using AuthZ plugins and/or restrict access to the Docker API to trusted parties, following the principle of least privilege.
+    Severity: CRITICAL
+    CweIDs:
+    - CWE-187
+    - CWE-444
+    - CWE-863
+    VendorSeverity:
+      amazon: 3
+      azure: 4
+      cbl-mariner: 4
+      ghsa: 4
+      redhat: 4
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
+        V3Score: 10
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
+        V3Score: 9.9
+    References:
+    - https://access.redhat.com/security/cve/CVE-2024-41110
+    - https://github.com/moby/moby
+    - https://github.com/moby/moby/commit/411e817ddf710ff8e08fa193da80cb78af708191
+    - https://github.com/moby/moby/commit/42f40b1d6dd7562342f832b9cd2adf9e668eeb76
+    - https://github.com/moby/moby/commit/65cc597cea28cdc25bea3b8a86384b4251872919
+    - https://github.com/moby/moby/commit/852759a7df454cbf88db4e954c919becd48faa9b
+    - https://github.com/moby/moby/commit/a31260625655cff9ae226b51757915e275e304b0
+    - https://github.com/moby/moby/commit/a79fabbfe84117696a19671f4aa88b82d0f64fc1
+    - https://github.com/moby/moby/commit/ae160b4edddb72ef4bd71f66b975a1a1cc434f00
+    - https://github.com/moby/moby/commit/ae2b3666c517c96cbc2adf1af5591a6b00d4ec0f
+    - https://github.com/moby/moby/commit/cc13f952511154a2866bddbb7dddebfe9e83b801
+    - https://github.com/moby/moby/commit/fc274cd2ff4cf3b48c91697fb327dd1fb95588fb
+    - https://github.com/moby/moby/security/advisories/GHSA-v23v-6jw2-98fq
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-41110
+    - https://www.cve.org/CVERecord?id=CVE-2024-41110
+    - https://www.docker.com/blog/docker-security-advisory-docker-engine-authz-plugin
+    PublishedDate: '2024-07-24T17:15:11.053Z'
+    LastModifiedDate: '2024-07-30T20:15:04.567Z'
+  - VulnerabilityID: CVE-2024-24557
+    PkgName: github.com/docker/docker
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/docker/docker@v24.0.7%2Bincompatible
+      UID: 4fd2c1b8945eafa2
+    InstalledVersion: v24.0.7+incompatible
+    FixedVersion: 24.0.9, 25.0.2
+    Status: fixed
+    Layer:
+      Digest: sha256:66c511d03c7f502a50df9a7541f3db9eb4c0d60d8c81cc443957e231cded18c6
+      DiffID: sha256:c28eef017d4f63fb35ef2ea6cf7d736919c25a6532123949b8354d80a1cf5e20
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24557
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'moby: classic builder cache poisoning'
+    Description: Moby is an open-source project created by Docker to enable software containerization. The classic builder cache system is prone to cache poisoning if the image is built FROM scratch. Also, changes to some instructions (most important being HEALTHCHECK and ONBUILD) would not cause a cache miss. An attacker with the knowledge of the Dockerfile someone is using could poison their cache by making them pull a specially crafted image that would be considered as a valid cache candidate for some build steps. 23.0+ users are only affected if they explicitly opted out of Buildkit (DOCKER_BUILDKIT=0 environment variable) or are using the /build API endpoint. All users on versions older than 23.0 could be impacted. Image build API endpoint (/build) and ImageBuild function from github.com/docker/docker/client is also affected as it the uses classic builder by default. Patches are included in 24.0.9 and 25.0.2 releases.
+    Severity: MEDIUM
+    CweIDs:
+    - CWE-346
+    - CWE-345
+    VendorSeverity:
+      amazon: 3
+      azure: 3
+      cbl-mariner: 3
+      ghsa: 2
+      nvd: 3
+      redhat: 2
+      ubuntu: 2
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:L/I:H/A:L
+        V3Score: 6.9
+      nvd:
+        V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+        V3Score: 7.8
+      redhat:
+        V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:L/I:H/A:L
+        V3Score: 6.9
+    References:
+    - https://access.redhat.com/security/cve/CVE-2024-24557
+    - https://github.com/moby/moby
+    - https://github.com/moby/moby/commit/3e230cfdcc989dc524882f6579f9e0dac77400ae
+    - https://github.com/moby/moby/commit/fca702de7f71362c8d103073c7e4a1d0a467fadd
+    - https://github.com/moby/moby/commit/fce6e0ca9bc000888de3daa157af14fa41fcd0ff
+    - https://github.com/moby/moby/security/advisories/GHSA-xw73-rw38-6vjc
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-24557
+    - https://www.cve.org/CVERecord?id=CVE-2024-24557
+    PublishedDate: '2024-02-01T17:15:10.953Z'
+    LastModifiedDate: '2024-02-09T20:21:32.97Z'
+  - VulnerabilityID: CVE-2024-34156
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.22.5
+      UID: 37ae47251ed8e807
+    InstalledVersion: v1.22.5
+    FixedVersion: 1.22.7, 1.23.1
+    Status: fixed
+    Layer:
+      Digest: sha256:66c511d03c7f502a50df9a7541f3db9eb4c0d60d8c81cc443957e231cded18c6
+      DiffID: sha256:c28eef017d4f63fb35ef2ea6cf7d736919c25a6532123949b8354d80a1cf5e20
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34156
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'encoding/gob: golang: Calling Decoder.Decode on a message which contains deeply nested structures can cause a panic due to stack exhaustion'
+    Description: Calling Decoder.Decode on a message which contains deeply nested structures can cause a panic due to stack exhaustion. This is a follow-up to CVE-2022-30635.
+    Severity: HIGH
+    VendorSeverity:
+      alma: 3
+      amazon: 3
+      bitnami: 3
+      oracle-oval: 3
+      photon: 3
+      redhat: 3
+      rocky: 3
+      ubuntu: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://access.redhat.com/errata/RHSA-2024:8112
+    - https://access.redhat.com/security/cve/CVE-2024-34156
+    - https://bugzilla.redhat.com/2310527
+    - https://bugzilla.redhat.com/2310528
+    - https://bugzilla.redhat.com/2310529
+    - https://bugzilla.redhat.com/2315691
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2262921
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2310528
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1394
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34156
+    - https://errata.almalinux.org/9/ALSA-2024-8112.html
+    - https://errata.rockylinux.org/RLSA-2024:7262
+    - https://github.com/golang/go/commit/2092294f2b097c5828f4eace6c98a322c1510b01 (go1.22.7)
+    - https://github.com/golang/go/commit/fa8ff1a46deb6c816304441ec6740ec112e19012 (go1.23.1)
+    - https://go.dev/cl/611239
+    - https://go.dev/issue/69139
+    - https://groups.google.com/g/golang-announce/c/K-cEzDeCtpc
+    - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
+    - https://linux.oracle.com/cve/CVE-2024-34156.html
+    - https://linux.oracle.com/errata/ELSA-2024-8112.html
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-34156
+    - https://pkg.go.dev/vuln/GO-2024-3106
+    - https://ubuntu.com/security/notices/USN-7081-1
+    - https://www.cve.org/CVERecord?id=CVE-2024-34156
+    PublishedDate: '2024-09-06T21:15:12.02Z'
+    LastModifiedDate: '2024-09-09T15:35:07.573Z'
+  - VulnerabilityID: CVE-2024-34155
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.22.5
+      UID: 37ae47251ed8e807
+    InstalledVersion: v1.22.5
+    FixedVersion: 1.22.7, 1.23.1
+    Status: fixed
+    Layer:
+      Digest: sha256:66c511d03c7f502a50df9a7541f3db9eb4c0d60d8c81cc443957e231cded18c6
+      DiffID: sha256:c28eef017d4f63fb35ef2ea6cf7d736919c25a6532123949b8354d80a1cf5e20
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34155
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'go/parser: golang: Calling any of the Parse functions containing deeply nested literals can cause a panic/stack exhaustion'
+    Description: Calling any of the Parse functions on Go source code which contains deeply nested literals can cause a panic due to stack exhaustion.
+    Severity: MEDIUM
+    VendorSeverity:
+      alma: 3
+      amazon: 3
+      oracle-oval: 3
+      redhat: 2
+      rocky: 3
+      ubuntu: 2
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 5.9
+    References:
+    - https://access.redhat.com/errata/RHSA-2024:8112
+    - https://access.redhat.com/security/cve/CVE-2024-34155
+    - https://bugzilla.redhat.com/2310527
+    - https://bugzilla.redhat.com/2310528
+    - https://bugzilla.redhat.com/2310529
+    - https://bugzilla.redhat.com/2315691
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2295310
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2310527
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2310528
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2310529
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24791
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34155
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34156
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34158
+    - https://errata.almalinux.org/9/ALSA-2024-8112.html
+    - https://errata.rockylinux.org/RLSA-2024:6913
+    - https://github.com/golang/go/commit/53487e5477151ed75da50e50a0ba8f1ca64c00a3 (go1.23.1)
+    - https://github.com/golang/go/commit/b232596139dbe96a62edbe3a2a203e856bf556eb (go1.22.7)
+    - https://go.dev/cl/611238
+    - https://go.dev/issue/69138
+    - https://groups.google.com/g/golang-announce/c/K-cEzDeCtpc
+    - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
+    - https://linux.oracle.com/cve/CVE-2024-34155.html
+    - https://linux.oracle.com/errata/ELSA-2024-8112.html
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-34155
+    - https://pkg.go.dev/vuln/GO-2024-3105
+    - https://ubuntu.com/security/notices/USN-7081-1
+    - https://www.cve.org/CVERecord?id=CVE-2024-34155
+    PublishedDate: '2024-09-06T21:15:11.947Z'
+    LastModifiedDate: '2024-09-09T13:03:38.303Z'
+  - VulnerabilityID: CVE-2024-34158
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.22.5
+      UID: 37ae47251ed8e807
+    InstalledVersion: v1.22.5
+    FixedVersion: 1.22.7, 1.23.1
+    Status: fixed
+    Layer:
+      Digest: sha256:66c511d03c7f502a50df9a7541f3db9eb4c0d60d8c81cc443957e231cded18c6
+      DiffID: sha256:c28eef017d4f63fb35ef2ea6cf7d736919c25a6532123949b8354d80a1cf5e20
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34158
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'go/build/constraint: golang: Calling Parse on a "// +build" build tag line with deeply nested expressions can cause a panic due to stack exhaustion'
+    Description: Calling Parse on a "// +build" build tag line with deeply nested expressions can cause a panic due to stack exhaustion.
+    Severity: MEDIUM
+    CweIDs:
+    - CWE-674
+    VendorSeverity:
+      alma: 3
+      amazon: 3
+      bitnami: 3
+      oracle-oval: 3
+      photon: 3
+      redhat: 2
+      rocky: 3
+      ubuntu: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 5.9
+    References:
+    - https://access.redhat.com/errata/RHSA-2024:8112
+    - https://access.redhat.com/security/cve/CVE-2024-34158
+    - https://bugzilla.redhat.com/2310527
+    - https://bugzilla.redhat.com/2310528
+    - https://bugzilla.redhat.com/2310529
+    - https://bugzilla.redhat.com/2315691
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2295310
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2310527
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2310528
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2310529
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24791
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34155
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34156
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34158
+    - https://errata.almalinux.org/9/ALSA-2024-8112.html
+    - https://errata.rockylinux.org/RLSA-2024:6913
+    - https://github.com/golang/go/commit/032ac075c20c01c6c35a672d1542d3e98eab84ea (go1.23.1)
+    - https://github.com/golang/go/commit/d4c53812e6ce2ac368173d7fcd31d0ecfcffb002 (go1.22.7)
+    - https://go.dev/cl/611240
+    - https://go.dev/issue/69141
+    - https://groups.google.com/g/golang-announce/c/K-cEzDeCtpc
+    - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
+    - https://linux.oracle.com/cve/CVE-2024-34158.html
+    - https://linux.oracle.com/errata/ELSA-2024-8112.html
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-34158
+    - https://pkg.go.dev/vuln/GO-2024-3107
+    - https://ubuntu.com/security/notices/USN-7081-1
+    - https://www.cve.org/CVERecord?id=CVE-2024-34158
+    PublishedDate: '2024-09-06T21:15:12.083Z'
+    LastModifiedDate: '2024-09-09T14:35:01.17Z'
+- Target: usr/bin/skopeo
+  Class: lang-pkgs
+  Type: gobinary
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2024-9341
+    PkgName: github.com/containers/common
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/containers/common@v0.60.2
+      UID: 36804207b334b6aa
+    InstalledVersion: v0.60.2
+    FixedVersion: 0.60.4
+    Status: fixed
+    Layer:
+      Digest: sha256:66c511d03c7f502a50df9a7541f3db9eb4c0d60d8c81cc443957e231cded18c6
+      DiffID: sha256:c28eef017d4f63fb35ef2ea6cf7d736919c25a6532123949b8354d80a1cf5e20
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-9341
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'Podman: Buildah: cri-o: FIPS Crypto-Policy Directory Mounting Issue in containers/common Go Library'
+    Description: A flaw was found in Go. When FIPS mode is enabled on a system, container runtimes may incorrectly handle certain file paths due to improper validation in the containers/common Go library. This flaw allows an attacker to exploit symbolic links and trick the system into mounting sensitive host directories inside a container. This issue also allows attackers to access critical host files, bypassing the intended isolation between containers and the host system.
+    Severity: MEDIUM
+    CweIDs:
+    - CWE-59
+    VendorSeverity:
+      alma: 3
+      ghsa: 2
+      oracle-oval: 3
+      redhat: 2
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:N
+        V3Score: 5.4
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:N
+        V3Score: 5.4
+    References:
+    - https://access.redhat.com/errata/RHSA-2024:7925
+    - https://access.redhat.com/errata/RHSA-2024:8039
+    - https://access.redhat.com/errata/RHSA-2024:8112
+    - https://access.redhat.com/errata/RHSA-2024:8238
+    - https://access.redhat.com/errata/RHSA-2024:8263
+    - https://access.redhat.com/errata/RHSA-2024:8428
+    - https://access.redhat.com/security/cve/CVE-2024-9341
+    - https://bugzilla.redhat.com/2310527
+    - https://bugzilla.redhat.com/2310528
+    - https://bugzilla.redhat.com/2310529
+    - https://bugzilla.redhat.com/2315691
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2315691
+    - https://errata.almalinux.org/9/ALSA-2024-8112.html
+    - https://github.com/advisories/GHSA-mc76-5925-c5p6
+    - https://github.com/containers/common
+    - https://github.com/containers/common/blob/384f77532f67afc8a73d8e0c4adb0d195df57714/pkg/subscriptions/subscriptions.go#L169
+    - https://github.com/containers/common/blob/384f77532f67afc8a73d8e0c4adb0d195df57714/pkg/subscriptions/subscriptions.go#L349
+    - https://github.com/containers/common/commit/e7db06585c32e1a782c1d9aa3b71ccd708f5e23f
+    - https://linux.oracle.com/cve/CVE-2024-9341.html
+    - https://linux.oracle.com/errata/ELSA-2024-8112.html
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-9341
+    - https://www.cve.org/CVERecord?id=CVE-2024-9341
+    PublishedDate: '2024-10-01T19:15:09.5Z'
+    LastModifiedDate: '2024-10-31T05:15:05.683Z'
+  - VulnerabilityID: CVE-2024-34156
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.22.6
+      UID: c5cee28550978709
+    InstalledVersion: v1.22.6
+    FixedVersion: 1.22.7, 1.23.1
+    Status: fixed
+    Layer:
+      Digest: sha256:66c511d03c7f502a50df9a7541f3db9eb4c0d60d8c81cc443957e231cded18c6
+      DiffID: sha256:c28eef017d4f63fb35ef2ea6cf7d736919c25a6532123949b8354d80a1cf5e20
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34156
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'encoding/gob: golang: Calling Decoder.Decode on a message which contains deeply nested structures can cause a panic due to stack exhaustion'
+    Description: Calling Decoder.Decode on a message which contains deeply nested structures can cause a panic due to stack exhaustion. This is a follow-up to CVE-2022-30635.
+    Severity: HIGH
+    VendorSeverity:
+      alma: 3
+      amazon: 3
+      bitnami: 3
+      oracle-oval: 3
+      photon: 3
+      redhat: 3
+      rocky: 3
+      ubuntu: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://access.redhat.com/errata/RHSA-2024:8112
+    - https://access.redhat.com/security/cve/CVE-2024-34156
+    - https://bugzilla.redhat.com/2310527
+    - https://bugzilla.redhat.com/2310528
+    - https://bugzilla.redhat.com/2310529
+    - https://bugzilla.redhat.com/2315691
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2262921
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2310528
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1394
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34156
+    - https://errata.almalinux.org/9/ALSA-2024-8112.html
+    - https://errata.rockylinux.org/RLSA-2024:7262
+    - https://github.com/golang/go/commit/2092294f2b097c5828f4eace6c98a322c1510b01 (go1.22.7)
+    - https://github.com/golang/go/commit/fa8ff1a46deb6c816304441ec6740ec112e19012 (go1.23.1)
+    - https://go.dev/cl/611239
+    - https://go.dev/issue/69139
+    - https://groups.google.com/g/golang-announce/c/K-cEzDeCtpc
+    - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
+    - https://linux.oracle.com/cve/CVE-2024-34156.html
+    - https://linux.oracle.com/errata/ELSA-2024-8112.html
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-34156
+    - https://pkg.go.dev/vuln/GO-2024-3106
+    - https://ubuntu.com/security/notices/USN-7081-1
+    - https://www.cve.org/CVERecord?id=CVE-2024-34156
+    PublishedDate: '2024-09-06T21:15:12.02Z'
+    LastModifiedDate: '2024-09-09T15:35:07.573Z'
+  - VulnerabilityID: CVE-2024-34155
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.22.6
+      UID: c5cee28550978709
+    InstalledVersion: v1.22.6
+    FixedVersion: 1.22.7, 1.23.1
+    Status: fixed
+    Layer:
+      Digest: sha256:66c511d03c7f502a50df9a7541f3db9eb4c0d60d8c81cc443957e231cded18c6
+      DiffID: sha256:c28eef017d4f63fb35ef2ea6cf7d736919c25a6532123949b8354d80a1cf5e20
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34155
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'go/parser: golang: Calling any of the Parse functions containing deeply nested literals can cause a panic/stack exhaustion'
+    Description: Calling any of the Parse functions on Go source code which contains deeply nested literals can cause a panic due to stack exhaustion.
+    Severity: MEDIUM
+    VendorSeverity:
+      alma: 3
+      amazon: 3
+      oracle-oval: 3
+      redhat: 2
+      rocky: 3
+      ubuntu: 2
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 5.9
+    References:
+    - https://access.redhat.com/errata/RHSA-2024:8112
+    - https://access.redhat.com/security/cve/CVE-2024-34155
+    - https://bugzilla.redhat.com/2310527
+    - https://bugzilla.redhat.com/2310528
+    - https://bugzilla.redhat.com/2310529
+    - https://bugzilla.redhat.com/2315691
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2295310
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2310527
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2310528
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2310529
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24791
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34155
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34156
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34158
+    - https://errata.almalinux.org/9/ALSA-2024-8112.html
+    - https://errata.rockylinux.org/RLSA-2024:6913
+    - https://github.com/golang/go/commit/53487e5477151ed75da50e50a0ba8f1ca64c00a3 (go1.23.1)
+    - https://github.com/golang/go/commit/b232596139dbe96a62edbe3a2a203e856bf556eb (go1.22.7)
+    - https://go.dev/cl/611238
+    - https://go.dev/issue/69138
+    - https://groups.google.com/g/golang-announce/c/K-cEzDeCtpc
+    - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
+    - https://linux.oracle.com/cve/CVE-2024-34155.html
+    - https://linux.oracle.com/errata/ELSA-2024-8112.html
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-34155
+    - https://pkg.go.dev/vuln/GO-2024-3105
+    - https://ubuntu.com/security/notices/USN-7081-1
+    - https://www.cve.org/CVERecord?id=CVE-2024-34155
+    PublishedDate: '2024-09-06T21:15:11.947Z'
+    LastModifiedDate: '2024-09-09T13:03:38.303Z'
+  - VulnerabilityID: CVE-2024-34158
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.22.6
+      UID: c5cee28550978709
+    InstalledVersion: v1.22.6
+    FixedVersion: 1.22.7, 1.23.1
+    Status: fixed
+    Layer:
+      Digest: sha256:66c511d03c7f502a50df9a7541f3db9eb4c0d60d8c81cc443957e231cded18c6
+      DiffID: sha256:c28eef017d4f63fb35ef2ea6cf7d736919c25a6532123949b8354d80a1cf5e20
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34158
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'go/build/constraint: golang: Calling Parse on a "// +build" build tag line with deeply nested expressions can cause a panic due to stack exhaustion'
+    Description: Calling Parse on a "// +build" build tag line with deeply nested expressions can cause a panic due to stack exhaustion.
+    Severity: MEDIUM
+    CweIDs:
+    - CWE-674
+    VendorSeverity:
+      alma: 3
+      amazon: 3
+      bitnami: 3
+      oracle-oval: 3
+      photon: 3
+      redhat: 2
+      rocky: 3
+      ubuntu: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 5.9
+    References:
+    - https://access.redhat.com/errata/RHSA-2024:8112
+    - https://access.redhat.com/security/cve/CVE-2024-34158
+    - https://bugzilla.redhat.com/2310527
+    - https://bugzilla.redhat.com/2310528
+    - https://bugzilla.redhat.com/2310529
+    - https://bugzilla.redhat.com/2315691
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2295310
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2310527
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2310528
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2310529
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24791
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34155
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34156
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34158
+    - https://errata.almalinux.org/9/ALSA-2024-8112.html
+    - https://errata.rockylinux.org/RLSA-2024:6913
+    - https://github.com/golang/go/commit/032ac075c20c01c6c35a672d1542d3e98eab84ea (go1.23.1)
+    - https://github.com/golang/go/commit/d4c53812e6ce2ac368173d7fcd31d0ecfcffb002 (go1.22.7)
+    - https://go.dev/cl/611240
+    - https://go.dev/issue/69141
+    - https://groups.google.com/g/golang-announce/c/K-cEzDeCtpc
+    - https://groups.google.com/g/golang-dev/c/S9POB9NCTdk
+    - https://linux.oracle.com/cve/CVE-2024-34158.html
+    - https://linux.oracle.com/errata/ELSA-2024-8112.html
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-34158
+    - https://pkg.go.dev/vuln/GO-2024-3107
+    - https://ubuntu.com/security/notices/USN-7081-1
+    - https://www.cve.org/CVERecord?id=CVE-2024-34158
+    PublishedDate: '2024-09-06T21:15:12.083Z'
+    LastModifiedDate: '2024-09-09T14:35:01.17Z'
