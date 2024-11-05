@@ -136,7 +136,7 @@
                         │     │                  ├ [26]: https://ubuntu.com/security/notices/USN-7081-1 
                         │     │                  ╰ [27]: https://www.cve.org/CVERecord?id=CVE-2024-34155 
                         │     ├ PublishedDate   : 2024-09-06T21:15:11.947Z 
-                        │     ╰ LastModifiedDate: 2024-09-09T13:03:38.303Z 
+                        │     ╰ LastModifiedDate: 2024-11-04T17:35:17.887Z 
                         ╰ [2] ╭ VulnerabilityID : CVE-2024-34158 
                               ├ PkgName         : stdlib 
                               ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.22.5 
