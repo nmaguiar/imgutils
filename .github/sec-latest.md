@@ -489,6 +489,7 @@
 │                             │                  ├ cbl-mariner: 3 
 │                             │                  ├ ghsa       : 2 
 │                             │                  ├ nvd        : 3 
+│                             │                  ├ photon     : 3 
 │                             │                  ├ redhat     : 2 
 │                             │                  ╰ ubuntu     : 2 
 │                             ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:L/I:H/
@@ -566,27 +567,29 @@
                         │     │                  ├ [6] : https://access.redhat.com/errata/RHSA-2024:8690 
                         │     │                  ├ [7] : https://access.redhat.com/errata/RHSA-2024:8694 
                         │     │                  ├ [8] : https://access.redhat.com/errata/RHSA-2024:8846 
-                        │     │                  ├ [9] : https://access.redhat.com/security/cve/CVE-2024-9341 
-                        │     │                  ├ [10]: https://bugzilla.redhat.com/2310527 
-                        │     │                  ├ [11]: https://bugzilla.redhat.com/2310528 
-                        │     │                  ├ [12]: https://bugzilla.redhat.com/2310529 
-                        │     │                  ├ [13]: https://bugzilla.redhat.com/2315691 
-                        │     │                  ├ [14]: https://bugzilla.redhat.com/show_bug.cgi?id=2315691 
-                        │     │                  ├ [15]: https://errata.almalinux.org/9/ALSA-2024-8112.html 
-                        │     │                  ├ [16]: https://github.com/advisories/GHSA-mc76-5925-c5p6 
-                        │     │                  ├ [17]: https://github.com/containers/common 
-                        │     │                  ├ [18]: https://github.com/containers/common/blob/384f77532f67
+                        │     │                  ├ [9] : https://access.redhat.com/errata/RHSA-2024:9454 
+                        │     │                  ├ [10]: https://access.redhat.com/errata/RHSA-2024:9459 
+                        │     │                  ├ [11]: https://access.redhat.com/security/cve/CVE-2024-9341 
+                        │     │                  ├ [12]: https://bugzilla.redhat.com/2310527 
+                        │     │                  ├ [13]: https://bugzilla.redhat.com/2310528 
+                        │     │                  ├ [14]: https://bugzilla.redhat.com/2310529 
+                        │     │                  ├ [15]: https://bugzilla.redhat.com/2315691 
+                        │     │                  ├ [16]: https://bugzilla.redhat.com/show_bug.cgi?id=2315691 
+                        │     │                  ├ [17]: https://errata.almalinux.org/9/ALSA-2024-8112.html 
+                        │     │                  ├ [18]: https://github.com/advisories/GHSA-mc76-5925-c5p6 
+                        │     │                  ├ [19]: https://github.com/containers/common 
+                        │     │                  ├ [20]: https://github.com/containers/common/blob/384f77532f67
                         │     │                  │       afc8a73d8e0c4adb0d195df57714/pkg/subscriptions/subscri
                         │     │                  │       ptions.go#L169 
-                        │     │                  ├ [19]: https://github.com/containers/common/blob/384f77532f67
+                        │     │                  ├ [21]: https://github.com/containers/common/blob/384f77532f67
                         │     │                  │       afc8a73d8e0c4adb0d195df57714/pkg/subscriptions/subscri
                         │     │                  │       ptions.go#L349 
-                        │     │                  ├ [20]: https://github.com/containers/common/commit/e7db06585c
+                        │     │                  ├ [22]: https://github.com/containers/common/commit/e7db06585c
                         │     │                  │       32e1a782c1d9aa3b71ccd708f5e23f 
-                        │     │                  ├ [21]: https://linux.oracle.com/cve/CVE-2024-9341.html 
-                        │     │                  ├ [22]: https://linux.oracle.com/errata/ELSA-2024-8846.html 
-                        │     │                  ├ [23]: https://nvd.nist.gov/vuln/detail/CVE-2024-9341 
-                        │     │                  ╰ [24]: https://www.cve.org/CVERecord?id=CVE-2024-9341 
+                        │     │                  ├ [23]: https://linux.oracle.com/cve/CVE-2024-9341.html 
+                        │     │                  ├ [24]: https://linux.oracle.com/errata/ELSA-2024-8846.html 
+                        │     │                  ├ [25]: https://nvd.nist.gov/vuln/detail/CVE-2024-9341 
+                        │     │                  ╰ [26]: https://www.cve.org/CVERecord?id=CVE-2024-9341 
                         │     ├ PublishedDate   : 2024-10-01T19:15:09.5Z 
                         │     ╰ LastModifiedDate: 2024-11-07T08:15:13.577Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2024-34156 
