@@ -422,6 +422,7 @@
       cbl-mariner: 3
       ghsa: 2
       nvd: 3
+      photon: 3
       redhat: 2
       ubuntu: 2
     CVSS:
@@ -493,6 +494,8 @@
     - https://access.redhat.com/errata/RHSA-2024:8690
     - https://access.redhat.com/errata/RHSA-2024:8694
     - https://access.redhat.com/errata/RHSA-2024:8846
+    - https://access.redhat.com/errata/RHSA-2024:9454
+    - https://access.redhat.com/errata/RHSA-2024:9459
     - https://access.redhat.com/security/cve/CVE-2024-9341
     - https://bugzilla.redhat.com/2310527
     - https://bugzilla.redhat.com/2310528
