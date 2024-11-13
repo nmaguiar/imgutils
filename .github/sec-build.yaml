@@ -5,6 +5,60 @@
   Class: lang-pkgs
   Type: jar
   Vulnerabilities:
+  - VulnerabilityID: CVE-2023-3635
+    PkgName: com.squareup.okio:okio
+    PkgPath: openaf/Kube/okio-1.15.0.jar
+    PkgIdentifier:
+      PURL: pkg:maven/com.squareup.okio/okio@1.15.0
+      UID: 54d0708001bc0aec
+    InstalledVersion: 1.15.0
+    FixedVersion: 3.4.0, 1.17.6
+    Status: fixed
+    Layer:
+      Digest: sha256:59be79d241343d7ba99a4df23ac5562616c458aab604af99ca2d60c4e16a03f9
+      DiffID: sha256:811051654c5505cfc5fe5ab400478f016192b9b9f9c1aae7d60ea0443ba9539a
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-3635
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Maven
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven
+    Title: 'okio: GzipSource class improper exception handling'
+    Description: |+
+      GzipSource does not handle an exception that might be raised when parsing a malformed gzip buffer. This may lead to denial of service of the Okio client when handling a crafted GZIP archive, by using the GzipSource class.
+
+    Severity: MEDIUM
+    CweIDs:
+    - CWE-681
+    - CWE-195
+    VendorSeverity:
+      ghsa: 2
+      nvd: 3
+      redhat: 3
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 5.9
+      nvd:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://access.redhat.com/security/cve/CVE-2023-3635
+    - https://github.com/square/okio
+    - https://github.com/square/okio/blob/master/CHANGELOG.md#version-1176
+    - https://github.com/square/okio/commit/81bce1a30af244550b0324597720e4799281da7b
+    - https://github.com/square/okio/commit/b4fa875dc24950680c386e4b1c593660ce4f7839
+    - https://github.com/square/okio/pull/1280
+    - https://github.com/square/okio/pull/1334
+    - https://nvd.nist.gov/vuln/detail/CVE-2023-3635
+    - https://research.jfrog.com/vulnerabilities/okio-gzip-source-unhandled-exception-dos-xray-523195
+    - https://research.jfrog.com/vulnerabilities/okio-gzip-source-unhandled-exception-dos-xray-523195/
+    - https://www.cve.org/CVERecord?id=CVE-2023-3635
+    PublishedDate: '2023-07-12T19:15:08.983Z'
+    LastModifiedDate: '2023-10-25T15:17:42.17Z'
   - VulnerabilityID: CVE-2024-6763
     PkgName: org.eclipse.jetty:jetty-http
     PkgPath: openaf/openaf.jar
@@ -15,8 +69,8 @@
     FixedVersion: 12.0.12
     Status: fixed
     Layer:
-      Digest: sha256:4fec7f268040e60a66502451a6b19fb4ec290e1c63cc05b4f66e51fb156870e4
-      DiffID: sha256:6a67e76532d51ad7af1b74aa6f7bc339444d41f3b032ed08614a1742d01f10f2
+      Digest: sha256:59be79d241343d7ba99a4df23ac5562616c458aab604af99ca2d60c4e16a03f9
+      DiffID: sha256:811051654c5505cfc5fe5ab400478f016192b9b9f9c1aae7d60ea0443ba9539a
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-6763
     DataSource:
@@ -74,8 +128,8 @@
     FixedVersion: 1.22.7, 1.23.1
     Status: fixed
     Layer:
-      Digest: sha256:4fec7f268040e60a66502451a6b19fb4ec290e1c63cc05b4f66e51fb156870e4
-      DiffID: sha256:6a67e76532d51ad7af1b74aa6f7bc339444d41f3b032ed08614a1742d01f10f2
+      Digest: sha256:59be79d241343d7ba99a4df23ac5562616c458aab604af99ca2d60c4e16a03f9
+      DiffID: sha256:811051654c5505cfc5fe5ab400478f016192b9b9f9c1aae7d60ea0443ba9539a
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34156
     DataSource:
       ID: govulndb
@@ -134,8 +188,8 @@
     FixedVersion: 1.22.7, 1.23.1
     Status: fixed
     Layer:
-      Digest: sha256:4fec7f268040e60a66502451a6b19fb4ec290e1c63cc05b4f66e51fb156870e4
-      DiffID: sha256:6a67e76532d51ad7af1b74aa6f7bc339444d41f3b032ed08614a1742d01f10f2
+      Digest: sha256:59be79d241343d7ba99a4df23ac5562616c458aab604af99ca2d60c4e16a03f9
+      DiffID: sha256:811051654c5505cfc5fe5ab400478f016192b9b9f9c1aae7d60ea0443ba9539a
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34155
     DataSource:
       ID: govulndb
@@ -199,8 +253,8 @@
     FixedVersion: 1.22.7, 1.23.1
     Status: fixed
     Layer:
-      Digest: sha256:4fec7f268040e60a66502451a6b19fb4ec290e1c63cc05b4f66e51fb156870e4
-      DiffID: sha256:6a67e76532d51ad7af1b74aa6f7bc339444d41f3b032ed08614a1742d01f10f2
+      Digest: sha256:59be79d241343d7ba99a4df23ac5562616c458aab604af99ca2d60c4e16a03f9
+      DiffID: sha256:811051654c5505cfc5fe5ab400478f016192b9b9f9c1aae7d60ea0443ba9539a
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34158
     DataSource:
       ID: govulndb
@@ -283,8 +337,8 @@
     FixedVersion: 23.0.15, 26.1.5, 27.1.1, 25.0.6
     Status: fixed
     Layer:
-      Digest: sha256:4fec7f268040e60a66502451a6b19fb4ec290e1c63cc05b4f66e51fb156870e4
-      DiffID: sha256:6a67e76532d51ad7af1b74aa6f7bc339444d41f3b032ed08614a1742d01f10f2
+      Digest: sha256:59be79d241343d7ba99a4df23ac5562616c458aab604af99ca2d60c4e16a03f9
+      DiffID: sha256:811051654c5505cfc5fe5ab400478f016192b9b9f9c1aae7d60ea0443ba9539a
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-41110
     DataSource:
@@ -348,8 +402,8 @@
     FixedVersion: 24.0.9, 25.0.2
     Status: fixed
     Layer:
-      Digest: sha256:4fec7f268040e60a66502451a6b19fb4ec290e1c63cc05b4f66e51fb156870e4
-      DiffID: sha256:6a67e76532d51ad7af1b74aa6f7bc339444d41f3b032ed08614a1742d01f10f2
+      Digest: sha256:59be79d241343d7ba99a4df23ac5562616c458aab604af99ca2d60c4e16a03f9
+      DiffID: sha256:811051654c5505cfc5fe5ab400478f016192b9b9f9c1aae7d60ea0443ba9539a
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24557
     DataSource:
@@ -368,6 +422,7 @@
       cbl-mariner: 3
       ghsa: 2
       nvd: 3
+      photon: 3
       redhat: 2
       ubuntu: 2
     CVSS:
@@ -404,8 +459,8 @@
     FixedVersion: 0.60.4
     Status: fixed
     Layer:
-      Digest: sha256:4fec7f268040e60a66502451a6b19fb4ec290e1c63cc05b4f66e51fb156870e4
-      DiffID: sha256:6a67e76532d51ad7af1b74aa6f7bc339444d41f3b032ed08614a1742d01f10f2
+      Digest: sha256:59be79d241343d7ba99a4df23ac5562616c458aab604af99ca2d60c4e16a03f9
+      DiffID: sha256:811051654c5505cfc5fe5ab400478f016192b9b9f9c1aae7d60ea0443ba9539a
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-9341
     DataSource:
@@ -439,6 +494,8 @@
     - https://access.redhat.com/errata/RHSA-2024:8690
     - https://access.redhat.com/errata/RHSA-2024:8694
     - https://access.redhat.com/errata/RHSA-2024:8846
+    - https://access.redhat.com/errata/RHSA-2024:9454
+    - https://access.redhat.com/errata/RHSA-2024:9459
     - https://access.redhat.com/security/cve/CVE-2024-9341
     - https://bugzilla.redhat.com/2310527
     - https://bugzilla.redhat.com/2310528
@@ -466,8 +523,8 @@
     FixedVersion: 1.22.7, 1.23.1
     Status: fixed
     Layer:
-      Digest: sha256:4fec7f268040e60a66502451a6b19fb4ec290e1c63cc05b4f66e51fb156870e4
-      DiffID: sha256:6a67e76532d51ad7af1b74aa6f7bc339444d41f3b032ed08614a1742d01f10f2
+      Digest: sha256:59be79d241343d7ba99a4df23ac5562616c458aab604af99ca2d60c4e16a03f9
+      DiffID: sha256:811051654c5505cfc5fe5ab400478f016192b9b9f9c1aae7d60ea0443ba9539a
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34156
     DataSource:
       ID: govulndb
@@ -526,8 +583,8 @@
     FixedVersion: 1.22.7, 1.23.1
     Status: fixed
     Layer:
-      Digest: sha256:4fec7f268040e60a66502451a6b19fb4ec290e1c63cc05b4f66e51fb156870e4
-      DiffID: sha256:6a67e76532d51ad7af1b74aa6f7bc339444d41f3b032ed08614a1742d01f10f2
+      Digest: sha256:59be79d241343d7ba99a4df23ac5562616c458aab604af99ca2d60c4e16a03f9
+      DiffID: sha256:811051654c5505cfc5fe5ab400478f016192b9b9f9c1aae7d60ea0443ba9539a
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34155
     DataSource:
       ID: govulndb
@@ -591,8 +648,8 @@
     FixedVersion: 1.22.7, 1.23.1
     Status: fixed
     Layer:
-      Digest: sha256:4fec7f268040e60a66502451a6b19fb4ec290e1c63cc05b4f66e51fb156870e4
-      DiffID: sha256:6a67e76532d51ad7af1b74aa6f7bc339444d41f3b032ed08614a1742d01f10f2
+      Digest: sha256:59be79d241343d7ba99a4df23ac5562616c458aab604af99ca2d60c4e16a03f9
+      DiffID: sha256:811051654c5505cfc5fe5ab400478f016192b9b9f9c1aae7d60ea0443ba9539a
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34158
     DataSource:
       ID: govulndb
