@@ -591,7 +591,7 @@
                         │     │                  ├ [25]: https://nvd.nist.gov/vuln/detail/CVE-2024-9341 
                         │     │                  ╰ [26]: https://www.cve.org/CVERecord?id=CVE-2024-9341 
                         │     ├ PublishedDate   : 2024-10-01T19:15:09.5Z 
-                        │     ╰ LastModifiedDate: 2024-11-07T08:15:13.577Z 
+                        │     ╰ LastModifiedDate: 2024-11-12T18:15:47.84Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2024-34156 
                         │     ├ PkgName         : stdlib 
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.22.6 
