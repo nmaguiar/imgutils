@@ -12,10 +12,10 @@
                         │     ├ InstalledVersion: v1.22.5 
                         │     ├ FixedVersion    : 1.22.7, 1.23.1 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:61509c96d06bc800b1338dd4b849af62ea8424c882b56
-                        │     │                  │         153aa97baf832c1f3fc 
-                        │     │                  ╰ DiffID: sha256:6b7dcaa0e33c7a54f8c67710f02b090b568a7ee218274
-                        │     │                            10d1110b61b44f0f9c0 
+                        │     ├ Layer            ╭ Digest: sha256:cca138be0d284554e106845a197e17e75727836a406e5
+                        │     │                  │         637b705ef7b9ac24c9b 
+                        │     │                  ╰ DiffID: sha256:bf665ef26250fd6d86a390317759afd1e30e46facb6e8
+                        │     │                            297731495eff0f6e113 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-34156 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
@@ -66,7 +66,9 @@
                         │     │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2024-34156 
                         │     │                  ├ [19]: https://pkg.go.dev/vuln/GO-2024-3106 
                         │     │                  ├ [20]: https://ubuntu.com/security/notices/USN-7081-1 
-                        │     │                  ╰ [21]: https://www.cve.org/CVERecord?id=CVE-2024-34156 
+                        │     │                  ├ [21]: https://ubuntu.com/security/notices/USN-7109-1 
+                        │     │                  ├ [22]: https://ubuntu.com/security/notices/USN-7111-1 
+                        │     │                  ╰ [23]: https://www.cve.org/CVERecord?id=CVE-2024-34156 
                         │     ├ PublishedDate   : 2024-09-06T21:15:12.02Z 
                         │     ╰ LastModifiedDate: 2024-09-09T15:35:07.573Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2024-34155 
@@ -76,10 +78,10 @@
                         │     ├ InstalledVersion: v1.22.5 
                         │     ├ FixedVersion    : 1.22.7, 1.23.1 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:61509c96d06bc800b1338dd4b849af62ea8424c882b56
-                        │     │                  │         153aa97baf832c1f3fc 
-                        │     │                  ╰ DiffID: sha256:6b7dcaa0e33c7a54f8c67710f02b090b568a7ee218274
-                        │     │                            10d1110b61b44f0f9c0 
+                        │     ├ Layer            ╭ Digest: sha256:cca138be0d284554e106845a197e17e75727836a406e5
+                        │     │                  │         637b705ef7b9ac24c9b 
+                        │     │                  ╰ DiffID: sha256:bf665ef26250fd6d86a390317759afd1e30e46facb6e8
+                        │     │                            297731495eff0f6e113 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-34155 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
@@ -138,7 +140,9 @@
                         │     │                  ├ [24]: https://nvd.nist.gov/vuln/detail/CVE-2024-34155 
                         │     │                  ├ [25]: https://pkg.go.dev/vuln/GO-2024-3105 
                         │     │                  ├ [26]: https://ubuntu.com/security/notices/USN-7081-1 
-                        │     │                  ╰ [27]: https://www.cve.org/CVERecord?id=CVE-2024-34155 
+                        │     │                  ├ [27]: https://ubuntu.com/security/notices/USN-7109-1 
+                        │     │                  ├ [28]: https://ubuntu.com/security/notices/USN-7111-1 
+                        │     │                  ╰ [29]: https://www.cve.org/CVERecord?id=CVE-2024-34155 
                         │     ├ PublishedDate   : 2024-09-06T21:15:11.947Z 
                         │     ╰ LastModifiedDate: 2024-11-04T17:35:17.887Z 
                         ╰ [2] ╭ VulnerabilityID : CVE-2024-34158 
@@ -148,10 +152,10 @@
                               ├ InstalledVersion: v1.22.5 
                               ├ FixedVersion    : 1.22.7, 1.23.1 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:61509c96d06bc800b1338dd4b849af62ea8424c882b56
-                              │                  │         153aa97baf832c1f3fc 
-                              │                  ╰ DiffID: sha256:6b7dcaa0e33c7a54f8c67710f02b090b568a7ee218274
-                              │                            10d1110b61b44f0f9c0 
+                              ├ Layer            ╭ Digest: sha256:cca138be0d284554e106845a197e17e75727836a406e5
+                              │                  │         637b705ef7b9ac24c9b 
+                              │                  ╰ DiffID: sha256:bf665ef26250fd6d86a390317759afd1e30e46facb6e8
+                              │                            297731495eff0f6e113 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-34158 
                               ├ DataSource       ╭ ID  : govulndb 
                               │                  ├ Name: The Go Vulnerability Database 
@@ -211,7 +215,9 @@
                               │                  ├ [24]: https://nvd.nist.gov/vuln/detail/CVE-2024-34158 
                               │                  ├ [25]: https://pkg.go.dev/vuln/GO-2024-3107 
                               │                  ├ [26]: https://ubuntu.com/security/notices/USN-7081-1 
-                              │                  ╰ [27]: https://www.cve.org/CVERecord?id=CVE-2024-34158 
+                              │                  ├ [27]: https://ubuntu.com/security/notices/USN-7109-1 
+                              │                  ├ [28]: https://ubuntu.com/security/notices/USN-7111-1 
+                              │                  ╰ [29]: https://www.cve.org/CVERecord?id=CVE-2024-34158 
                               ├ PublishedDate   : 2024-09-06T21:15:12.083Z 
                               ╰ LastModifiedDate: 2024-09-09T14:35:01.17Z 
 ````
