@@ -15,8 +15,8 @@
     FixedVersion: 3.4.0, 1.17.6
     Status: fixed
     Layer:
-      Digest: sha256:59be79d241343d7ba99a4df23ac5562616c458aab604af99ca2d60c4e16a03f9
-      DiffID: sha256:811051654c5505cfc5fe5ab400478f016192b9b9f9c1aae7d60ea0443ba9539a
+      Digest: sha256:6170ad214fcfceaa38b91e6d1eb72f5fb34377e74bce3113db578e04066edc8d
+      DiffID: sha256:e95bccdf49c0c28c25a43e9866a95553c184d799d6199e4e5b200e68c1a5dda8
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2023-3635
     DataSource:
@@ -69,8 +69,8 @@
     FixedVersion: 12.0.12
     Status: fixed
     Layer:
-      Digest: sha256:59be79d241343d7ba99a4df23ac5562616c458aab604af99ca2d60c4e16a03f9
-      DiffID: sha256:811051654c5505cfc5fe5ab400478f016192b9b9f9c1aae7d60ea0443ba9539a
+      Digest: sha256:6170ad214fcfceaa38b91e6d1eb72f5fb34377e74bce3113db578e04066edc8d
+      DiffID: sha256:e95bccdf49c0c28c25a43e9866a95553c184d799d6199e4e5b200e68c1a5dda8
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-6763
     DataSource:
@@ -128,8 +128,8 @@
     FixedVersion: 1.22.7, 1.23.1
     Status: fixed
     Layer:
-      Digest: sha256:59be79d241343d7ba99a4df23ac5562616c458aab604af99ca2d60c4e16a03f9
-      DiffID: sha256:811051654c5505cfc5fe5ab400478f016192b9b9f9c1aae7d60ea0443ba9539a
+      Digest: sha256:6170ad214fcfceaa38b91e6d1eb72f5fb34377e74bce3113db578e04066edc8d
+      DiffID: sha256:e95bccdf49c0c28c25a43e9866a95553c184d799d6199e4e5b200e68c1a5dda8
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34156
     DataSource:
       ID: govulndb
@@ -176,6 +176,8 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2024-34156
     - https://pkg.go.dev/vuln/GO-2024-3106
     - https://ubuntu.com/security/notices/USN-7081-1
+    - https://ubuntu.com/security/notices/USN-7109-1
+    - https://ubuntu.com/security/notices/USN-7111-1
     - https://www.cve.org/CVERecord?id=CVE-2024-34156
     PublishedDate: '2024-09-06T21:15:12.02Z'
     LastModifiedDate: '2024-09-09T15:35:07.573Z'
@@ -188,8 +190,8 @@
     FixedVersion: 1.22.7, 1.23.1
     Status: fixed
     Layer:
-      Digest: sha256:59be79d241343d7ba99a4df23ac5562616c458aab604af99ca2d60c4e16a03f9
-      DiffID: sha256:811051654c5505cfc5fe5ab400478f016192b9b9f9c1aae7d60ea0443ba9539a
+      Digest: sha256:6170ad214fcfceaa38b91e6d1eb72f5fb34377e74bce3113db578e04066edc8d
+      DiffID: sha256:e95bccdf49c0c28c25a43e9866a95553c184d799d6199e4e5b200e68c1a5dda8
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34155
     DataSource:
       ID: govulndb
@@ -241,6 +243,8 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2024-34155
     - https://pkg.go.dev/vuln/GO-2024-3105
     - https://ubuntu.com/security/notices/USN-7081-1
+    - https://ubuntu.com/security/notices/USN-7109-1
+    - https://ubuntu.com/security/notices/USN-7111-1
     - https://www.cve.org/CVERecord?id=CVE-2024-34155
     PublishedDate: '2024-09-06T21:15:11.947Z'
     LastModifiedDate: '2024-11-04T17:35:17.887Z'
@@ -253,8 +257,8 @@
     FixedVersion: 1.22.7, 1.23.1
     Status: fixed
     Layer:
-      Digest: sha256:59be79d241343d7ba99a4df23ac5562616c458aab604af99ca2d60c4e16a03f9
-      DiffID: sha256:811051654c5505cfc5fe5ab400478f016192b9b9f9c1aae7d60ea0443ba9539a
+      Digest: sha256:6170ad214fcfceaa38b91e6d1eb72f5fb34377e74bce3113db578e04066edc8d
+      DiffID: sha256:e95bccdf49c0c28c25a43e9866a95553c184d799d6199e4e5b200e68c1a5dda8
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34158
     DataSource:
       ID: govulndb
@@ -309,6 +313,8 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2024-34158
     - https://pkg.go.dev/vuln/GO-2024-3107
     - https://ubuntu.com/security/notices/USN-7081-1
+    - https://ubuntu.com/security/notices/USN-7109-1
+    - https://ubuntu.com/security/notices/USN-7111-1
     - https://www.cve.org/CVERecord?id=CVE-2024-34158
     PublishedDate: '2024-09-06T21:15:12.083Z'
     LastModifiedDate: '2024-09-09T14:35:01.17Z'
@@ -337,8 +343,8 @@
     FixedVersion: 23.0.15, 26.1.5, 27.1.1, 25.0.6
     Status: fixed
     Layer:
-      Digest: sha256:59be79d241343d7ba99a4df23ac5562616c458aab604af99ca2d60c4e16a03f9
-      DiffID: sha256:811051654c5505cfc5fe5ab400478f016192b9b9f9c1aae7d60ea0443ba9539a
+      Digest: sha256:6170ad214fcfceaa38b91e6d1eb72f5fb34377e74bce3113db578e04066edc8d
+      DiffID: sha256:e95bccdf49c0c28c25a43e9866a95553c184d799d6199e4e5b200e68c1a5dda8
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-41110
     DataSource:
@@ -402,8 +408,8 @@
     FixedVersion: 24.0.9, 25.0.2
     Status: fixed
     Layer:
-      Digest: sha256:59be79d241343d7ba99a4df23ac5562616c458aab604af99ca2d60c4e16a03f9
-      DiffID: sha256:811051654c5505cfc5fe5ab400478f016192b9b9f9c1aae7d60ea0443ba9539a
+      Digest: sha256:6170ad214fcfceaa38b91e6d1eb72f5fb34377e74bce3113db578e04066edc8d
+      DiffID: sha256:e95bccdf49c0c28c25a43e9866a95553c184d799d6199e4e5b200e68c1a5dda8
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-24557
     DataSource:
@@ -459,8 +465,8 @@
     FixedVersion: 0.60.4
     Status: fixed
     Layer:
-      Digest: sha256:59be79d241343d7ba99a4df23ac5562616c458aab604af99ca2d60c4e16a03f9
-      DiffID: sha256:811051654c5505cfc5fe5ab400478f016192b9b9f9c1aae7d60ea0443ba9539a
+      Digest: sha256:6170ad214fcfceaa38b91e6d1eb72f5fb34377e74bce3113db578e04066edc8d
+      DiffID: sha256:e95bccdf49c0c28c25a43e9866a95553c184d799d6199e4e5b200e68c1a5dda8
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-9341
     DataSource:
@@ -523,8 +529,8 @@
     FixedVersion: 1.22.7, 1.23.1
     Status: fixed
     Layer:
-      Digest: sha256:59be79d241343d7ba99a4df23ac5562616c458aab604af99ca2d60c4e16a03f9
-      DiffID: sha256:811051654c5505cfc5fe5ab400478f016192b9b9f9c1aae7d60ea0443ba9539a
+      Digest: sha256:6170ad214fcfceaa38b91e6d1eb72f5fb34377e74bce3113db578e04066edc8d
+      DiffID: sha256:e95bccdf49c0c28c25a43e9866a95553c184d799d6199e4e5b200e68c1a5dda8
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34156
     DataSource:
       ID: govulndb
@@ -571,6 +577,8 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2024-34156
     - https://pkg.go.dev/vuln/GO-2024-3106
     - https://ubuntu.com/security/notices/USN-7081-1
+    - https://ubuntu.com/security/notices/USN-7109-1
+    - https://ubuntu.com/security/notices/USN-7111-1
     - https://www.cve.org/CVERecord?id=CVE-2024-34156
     PublishedDate: '2024-09-06T21:15:12.02Z'
     LastModifiedDate: '2024-09-09T15:35:07.573Z'
@@ -583,8 +591,8 @@
     FixedVersion: 1.22.7, 1.23.1
     Status: fixed
     Layer:
-      Digest: sha256:59be79d241343d7ba99a4df23ac5562616c458aab604af99ca2d60c4e16a03f9
-      DiffID: sha256:811051654c5505cfc5fe5ab400478f016192b9b9f9c1aae7d60ea0443ba9539a
+      Digest: sha256:6170ad214fcfceaa38b91e6d1eb72f5fb34377e74bce3113db578e04066edc8d
+      DiffID: sha256:e95bccdf49c0c28c25a43e9866a95553c184d799d6199e4e5b200e68c1a5dda8
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34155
     DataSource:
       ID: govulndb
@@ -636,6 +644,8 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2024-34155
     - https://pkg.go.dev/vuln/GO-2024-3105
     - https://ubuntu.com/security/notices/USN-7081-1
+    - https://ubuntu.com/security/notices/USN-7109-1
+    - https://ubuntu.com/security/notices/USN-7111-1
     - https://www.cve.org/CVERecord?id=CVE-2024-34155
     PublishedDate: '2024-09-06T21:15:11.947Z'
     LastModifiedDate: '2024-11-04T17:35:17.887Z'
@@ -648,8 +658,8 @@
     FixedVersion: 1.22.7, 1.23.1
     Status: fixed
     Layer:
-      Digest: sha256:59be79d241343d7ba99a4df23ac5562616c458aab604af99ca2d60c4e16a03f9
-      DiffID: sha256:811051654c5505cfc5fe5ab400478f016192b9b9f9c1aae7d60ea0443ba9539a
+      Digest: sha256:6170ad214fcfceaa38b91e6d1eb72f5fb34377e74bce3113db578e04066edc8d
+      DiffID: sha256:e95bccdf49c0c28c25a43e9866a95553c184d799d6199e4e5b200e68c1a5dda8
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-34158
     DataSource:
       ID: govulndb
@@ -704,6 +714,8 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2024-34158
     - https://pkg.go.dev/vuln/GO-2024-3107
     - https://ubuntu.com/security/notices/USN-7081-1
+    - https://ubuntu.com/security/notices/USN-7109-1
+    - https://ubuntu.com/security/notices/USN-7111-1
     - https://www.cve.org/CVERecord?id=CVE-2024-34158
     PublishedDate: '2024-09-06T21:15:12.083Z'
     LastModifiedDate: '2024-09-09T14:35:01.17Z'
