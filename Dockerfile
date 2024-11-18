@@ -69,8 +69,10 @@ RUN echo "source <(crictl completion bash)" >> /etc/bash/start.sh\
  && echo "source <(helm completion bash)" >> /etc/bash/start.sh\
  && echo "source <(docker completion bash)" >> /etc/bash/start.sh\
  && echo "source <(skopeo completion bash)" >> /etc/bash/start.sh\
- && curl -s https://ojob.io/autoComplete.sh -o /etc/.openaf-ojobio-complete\
- && echo "source /etc/.openaf-ojobio-complete" >> /etc/bash/start.sh
+ && /openaf/oaf --bashcompletion all > /openaf/.openaf_completion.sh\
+ && chmod a+x /openaf/.openaf_*.sh\
+ && chown openaf:openaf /openaf/.openaf_*.sh\
+ && echo ". /openaf/.openaf_completion.sh" >> /etc/bash/start.sh
 
 # Setup Dive
 # ----------
@@ -81,14 +83,14 @@ RUN echo "source <(crictl completion bash)" >> /etc/bash/start.sh\
 #  && rm -rf output\
 #  && rm dive.tar
 
-COPY dive_linux_* /usr/bin
-RUN if [ "`uname -m`" = "x86_64" ]; then \
-      mv /usr/bin/dive_linux_amd64 /usr/bin/dive; \
-      rm /usr/bin/dive_linux_arm64; \
-    else \
-      mv /usr/bin/dive_linux_arm64 /usr/bin/dive; \
-      rm /usr/bin/dive_linux_amd64; \
-    fi
+# COPY dive_linux_* /usr/bin
+# RUN if [ "`uname -m`" = "x86_64" ]; then \
+#       mv /usr/bin/dive_linux_amd64 /usr/bin/dive; \
+#       rm /usr/bin/dive_linux_arm64; \
+#     else \
+#       mv /usr/bin/dive_linux_arm64 /usr/bin/dive; \
+#       rm /usr/bin/dive_linux_amd64; \
+#     fi
 
 # Setup imgutils folder
 # ---------------------
