@@ -83,14 +83,14 @@ RUN echo "source <(crictl completion bash)" >> /etc/bash/start.sh\
 #  && rm -rf output\
 #  && rm dive.tar
 
-# COPY dive_linux_* /usr/bin
-# RUN if [ "`uname -m`" = "x86_64" ]; then \
-#       mv /usr/bin/dive_linux_amd64 /usr/bin/dive; \
-#       rm /usr/bin/dive_linux_arm64; \
-#     else \
-#       mv /usr/bin/dive_linux_arm64 /usr/bin/dive; \
-#       rm /usr/bin/dive_linux_amd64; \
-#     fi
+COPY dive_linux_* /usr/bin
+RUN if [ "`uname -m`" = "x86_64" ]; then \
+      mv /usr/bin/dive_linux_amd64 /usr/bin/dive; \
+      rm /usr/bin/dive_linux_arm64; \
+    else \
+      mv /usr/bin/dive_linux_arm64 /usr/bin/dive; \
+      rm /usr/bin/dive_linux_amd64; \
+    fi
 
 # Setup imgutils folder
 # ---------------------
