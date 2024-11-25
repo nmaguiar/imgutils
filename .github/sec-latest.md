@@ -560,11 +560,15 @@
                         │     ├ CweIDs           ─ [0]: CWE-59 
                         │     ├ VendorSeverity   ╭ alma       : 3 
                         │     │                  ├ ghsa       : 2 
+                        │     │                  ├ nvd        : 3 
                         │     │                  ├ oracle-oval: 3 
                         │     │                  ╰ redhat     : 2 
                         │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:L/
                         │     │                  │        │           A:N 
                         │     │                  │        ╰ V3Score : 5.4 
+                        │     │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/
+                        │     │                  │        │           A:N 
+                        │     │                  │        ╰ V3Score : 8.2 
                         │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:L/
                         │     │                           │           A:N 
                         │     │                           ╰ V3Score : 5.4 
@@ -589,22 +593,21 @@
                         │     │                  ├ [18]: https://bugzilla.redhat.com/2317467 
                         │     │                  ├ [19]: https://bugzilla.redhat.com/show_bug.cgi?id=2315691 
                         │     │                  ├ [20]: https://errata.almalinux.org/9/ALSA-2024-9459.html 
-                        │     │                  ├ [21]: https://github.com/advisories/GHSA-mc76-5925-c5p6 
-                        │     │                  ├ [22]: https://github.com/containers/common 
-                        │     │                  ├ [23]: https://github.com/containers/common/blob/384f77532f67
+                        │     │                  ├ [21]: https://github.com/containers/common 
+                        │     │                  ├ [22]: https://github.com/containers/common/blob/384f77532f67
                         │     │                  │       afc8a73d8e0c4adb0d195df57714/pkg/subscriptions/subscri
                         │     │                  │       ptions.go#L169 
-                        │     │                  ├ [24]: https://github.com/containers/common/blob/384f77532f67
+                        │     │                  ├ [23]: https://github.com/containers/common/blob/384f77532f67
                         │     │                  │       afc8a73d8e0c4adb0d195df57714/pkg/subscriptions/subscri
                         │     │                  │       ptions.go#L349 
-                        │     │                  ├ [25]: https://github.com/containers/common/commit/e7db06585c
+                        │     │                  ├ [24]: https://github.com/containers/common/commit/e7db06585c
                         │     │                  │       32e1a782c1d9aa3b71ccd708f5e23f 
-                        │     │                  ├ [26]: https://linux.oracle.com/cve/CVE-2024-9341.html 
-                        │     │                  ├ [27]: https://linux.oracle.com/errata/ELSA-2024-9459.html 
-                        │     │                  ├ [28]: https://nvd.nist.gov/vuln/detail/CVE-2024-9341 
-                        │     │                  ╰ [29]: https://www.cve.org/CVERecord?id=CVE-2024-9341 
+                        │     │                  ├ [25]: https://linux.oracle.com/cve/CVE-2024-9341.html 
+                        │     │                  ├ [26]: https://linux.oracle.com/errata/ELSA-2024-9459.html 
+                        │     │                  ├ [27]: https://nvd.nist.gov/vuln/detail/CVE-2024-9341 
+                        │     │                  ╰ [28]: https://www.cve.org/CVERecord?id=CVE-2024-9341 
                         │     ├ PublishedDate   : 2024-10-01T19:15:09.5Z 
-                        │     ╰ LastModifiedDate: 2024-11-12T18:15:47.84Z 
+                        │     ╰ LastModifiedDate: 2024-11-22T19:34:40.52Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2024-34156 
                         │     ├ PkgName         : stdlib 
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.22.6 
