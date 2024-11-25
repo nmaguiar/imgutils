@@ -485,12 +485,16 @@
     VendorSeverity:
       alma: 3
       ghsa: 2
+      nvd: 3
       oracle-oval: 3
       redhat: 2
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:N
         V3Score: 5.4
+      nvd:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N
+        V3Score: 8.2
       redhat:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:N
         V3Score: 5.4
@@ -516,7 +520,6 @@
     - https://bugzilla.redhat.com/2317467
     - https://bugzilla.redhat.com/show_bug.cgi?id=2315691
     - https://errata.almalinux.org/9/ALSA-2024-9459.html
-    - https://github.com/advisories/GHSA-mc76-5925-c5p6
     - https://github.com/containers/common
     - https://github.com/containers/common/blob/384f77532f67afc8a73d8e0c4adb0d195df57714/pkg/subscriptions/subscriptions.go#L169
     - https://github.com/containers/common/blob/384f77532f67afc8a73d8e0c4adb0d195df57714/pkg/subscriptions/subscriptions.go#L349
@@ -526,7 +529,7 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2024-9341
     - https://www.cve.org/CVERecord?id=CVE-2024-9341
     PublishedDate: '2024-10-01T19:15:09.5Z'
-    LastModifiedDate: '2024-11-12T18:15:47.84Z'
+    LastModifiedDate: '2024-11-22T19:34:40.52Z'
   - VulnerabilityID: CVE-2024-34156
     PkgName: stdlib
     PkgIdentifier:
