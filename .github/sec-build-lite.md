@@ -12,10 +12,10 @@
                         │     ├ InstalledVersion: v1.22.5 
                         │     ├ FixedVersion    : 1.22.7, 1.23.1 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:c76658bec4d098929baf3b4640d2b1507d8472032a1e8
-                        │     │                  │         011e0b9e0517841d5d8 
-                        │     │                  ╰ DiffID: sha256:5c8e67caa706915f0d729da91f358096c15e78cfc7266
-                        │     │                            104440413a063f219a3 
+                        │     ├ Layer            ╭ Digest: sha256:acd953e6ad7c29243bfe2f3cfee214392f8d016334701
+                        │     │                  │         60e65b1312f2b4b06d3 
+                        │     │                  ╰ DiffID: sha256:282ed71256f4dc6ab6ed85544172c40722c200fd1a71f
+                        │     │                            8424af4831223562884 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-34156 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
@@ -45,28 +45,31 @@
                         │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-34156 
                         │     │                  ├ [2] : https://bugzilla.redhat.com/2310528 
                         │     │                  ├ [3] : https://bugzilla.redhat.com/2318052 
-                        │     │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2310528 
-                        │     │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
+                        │     │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2262921 
+                        │     │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2310528 
+                        │     │                  ├ [6] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
+                        │     │                  │       4-1394 
+                        │     │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
                         │     │                  │       4-34156 
-                        │     │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2024-9473.html 
-                        │     │                  ├ [7] : https://errata.rockylinux.org/RLSA-2024:7204 
-                        │     │                  ├ [8] : https://github.com/golang/go/commit/2092294f2b097c5828
+                        │     │                  ├ [8] : https://errata.almalinux.org/9/ALSA-2024-9473.html 
+                        │     │                  ├ [9] : https://errata.rockylinux.org/RLSA-2024:7262 
+                        │     │                  ├ [10]: https://github.com/golang/go/commit/2092294f2b097c5828
                         │     │                  │       f4eace6c98a322c1510b01 (go1.22.7) 
-                        │     │                  ├ [9] : https://github.com/golang/go/commit/fa8ff1a46deb6c8163
+                        │     │                  ├ [11]: https://github.com/golang/go/commit/fa8ff1a46deb6c8163
                         │     │                  │       04441ec6740ec112e19012 (go1.23.1) 
-                        │     │                  ├ [10]: https://go.dev/cl/611239 
-                        │     │                  ├ [11]: https://go.dev/issue/69139 
-                        │     │                  ├ [12]: https://groups.google.com/g/golang-announce/c/K-cEzDeC
+                        │     │                  ├ [12]: https://go.dev/cl/611239 
+                        │     │                  ├ [13]: https://go.dev/issue/69139 
+                        │     │                  ├ [14]: https://groups.google.com/g/golang-announce/c/K-cEzDeC
                         │     │                  │       tpc 
-                        │     │                  ├ [13]: https://groups.google.com/g/golang-dev/c/S9POB9NCTdk 
-                        │     │                  ├ [14]: https://linux.oracle.com/cve/CVE-2024-34156.html 
-                        │     │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2024-9473.html 
-                        │     │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2024-34156 
-                        │     │                  ├ [17]: https://pkg.go.dev/vuln/GO-2024-3106 
-                        │     │                  ├ [18]: https://ubuntu.com/security/notices/USN-7081-1 
-                        │     │                  ├ [19]: https://ubuntu.com/security/notices/USN-7109-1 
-                        │     │                  ├ [20]: https://ubuntu.com/security/notices/USN-7111-1 
-                        │     │                  ╰ [21]: https://www.cve.org/CVERecord?id=CVE-2024-34156 
+                        │     │                  ├ [15]: https://groups.google.com/g/golang-dev/c/S9POB9NCTdk 
+                        │     │                  ├ [16]: https://linux.oracle.com/cve/CVE-2024-34156.html 
+                        │     │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2024-9473.html 
+                        │     │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2024-34156 
+                        │     │                  ├ [19]: https://pkg.go.dev/vuln/GO-2024-3106 
+                        │     │                  ├ [20]: https://ubuntu.com/security/notices/USN-7081-1 
+                        │     │                  ├ [21]: https://ubuntu.com/security/notices/USN-7109-1 
+                        │     │                  ├ [22]: https://ubuntu.com/security/notices/USN-7111-1 
+                        │     │                  ╰ [23]: https://www.cve.org/CVERecord?id=CVE-2024-34156 
                         │     ├ PublishedDate   : 2024-09-06T21:15:12.02Z 
                         │     ╰ LastModifiedDate: 2024-09-09T15:35:07.573Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2024-34155 
@@ -76,10 +79,10 @@
                         │     ├ InstalledVersion: v1.22.5 
                         │     ├ FixedVersion    : 1.22.7, 1.23.1 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:c76658bec4d098929baf3b4640d2b1507d8472032a1e8
-                        │     │                  │         011e0b9e0517841d5d8 
-                        │     │                  ╰ DiffID: sha256:5c8e67caa706915f0d729da91f358096c15e78cfc7266
-                        │     │                            104440413a063f219a3 
+                        │     ├ Layer            ╭ Digest: sha256:acd953e6ad7c29243bfe2f3cfee214392f8d016334701
+                        │     │                  │         60e65b1312f2b4b06d3 
+                        │     │                  ╰ DiffID: sha256:282ed71256f4dc6ab6ed85544172c40722c200fd1a71f
+                        │     │                            8424af4831223562884 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-34155 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
@@ -153,10 +156,10 @@
                               ├ InstalledVersion: v1.22.5 
                               ├ FixedVersion    : 1.22.7, 1.23.1 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:c76658bec4d098929baf3b4640d2b1507d8472032a1e8
-                              │                  │         011e0b9e0517841d5d8 
-                              │                  ╰ DiffID: sha256:5c8e67caa706915f0d729da91f358096c15e78cfc7266
-                              │                            104440413a063f219a3 
+                              ├ Layer            ╭ Digest: sha256:acd953e6ad7c29243bfe2f3cfee214392f8d016334701
+                              │                  │         60e65b1312f2b4b06d3 
+                              │                  ╰ DiffID: sha256:282ed71256f4dc6ab6ed85544172c40722c200fd1a71f
+                              │                            8424af4831223562884 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-34158 
                               ├ DataSource       ╭ ID  : govulndb 
                               │                  ├ Name: The Go Vulnerability Database 
