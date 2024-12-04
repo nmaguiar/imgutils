@@ -129,9 +129,10 @@
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
 │     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-34156 
+│                       │     ├ PkgID           : stdlib@v1.22.5 
 │                       │     ├ PkgName         : stdlib 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.22.5 
-│                       │     │                  ╰ UID : 1cb23866172f0022 
+│                       │     │                  ╰ UID : 4d257cd5230ba4d6 
 │                       │     ├ InstalledVersion: v1.22.5 
 │                       │     ├ FixedVersion    : 1.22.7, 1.23.1 
 │                       │     ├ Status          : fixed 
@@ -193,9 +194,10 @@
 │                       │     ├ PublishedDate   : 2024-09-06T21:15:12.02Z 
 │                       │     ╰ LastModifiedDate: 2024-09-09T15:35:07.573Z 
 │                       ├ [1] ╭ VulnerabilityID : CVE-2024-34155 
+│                       │     ├ PkgID           : stdlib@v1.22.5 
 │                       │     ├ PkgName         : stdlib 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.22.5 
-│                       │     │                  ╰ UID : 1cb23866172f0022 
+│                       │     │                  ╰ UID : 4d257cd5230ba4d6 
 │                       │     ├ InstalledVersion: v1.22.5 
 │                       │     ├ FixedVersion    : 1.22.7, 1.23.1 
 │                       │     ├ Status          : fixed 
@@ -270,9 +272,10 @@
 │                       │     ├ PublishedDate   : 2024-09-06T21:15:11.947Z 
 │                       │     ╰ LastModifiedDate: 2024-11-04T17:35:17.887Z 
 │                       ╰ [2] ╭ VulnerabilityID : CVE-2024-34158 
+│                             ├ PkgID           : stdlib@v1.22.5 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.22.5 
-│                             │                  ╰ UID : 1cb23866172f0022 
+│                             │                  ╰ UID : 4d257cd5230ba4d6 
 │                             ├ InstalledVersion: v1.22.5 
 │                             ├ FixedVersion    : 1.22.7, 1.23.1 
 │                             ├ Status          : fixed 
@@ -363,10 +366,11 @@
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
 │     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-41110 
+│                       │     ├ PkgID           : github.com/docker/docker@v24.0.7+incompatible 
 │                       │     ├ PkgName         : github.com/docker/docker 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v24.0.7%2Bincompat
 │                       │     │                  │       ible 
-│                       │     │                  ╰ UID : 4fd2c1b8945eafa2 
+│                       │     │                  ╰ UID : 6cc3d4ce3f80cb4f 
 │                       │     ├ InstalledVersion: v24.0.7+incompatible 
 │                       │     ├ FixedVersion    : 23.0.15, 26.1.5, 27.1.1, 25.0.6 
 │                       │     ├ Status          : fixed 
@@ -457,10 +461,11 @@
 │                       │     ├ PublishedDate   : 2024-07-24T17:15:11.053Z 
 │                       │     ╰ LastModifiedDate: 2024-07-30T20:15:04.567Z 
 │                       ╰ [1] ╭ VulnerabilityID : CVE-2024-24557 
+│                             ├ PkgID           : github.com/docker/docker@v24.0.7+incompatible 
 │                             ├ PkgName         : github.com/docker/docker 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v24.0.7%2Bincompat
 │                             │                  │       ible 
-│                             │                  ╰ UID : 4fd2c1b8945eafa2 
+│                             │                  ╰ UID : 6cc3d4ce3f80cb4f 
 │                             ├ InstalledVersion: v24.0.7+incompatible 
 │                             ├ FixedVersion    : 24.0.9, 25.0.2 
 │                             ├ Status          : fixed 
@@ -529,9 +534,10 @@
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
       ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-9341 
+                        │     ├ PkgID           : github.com/containers/common@v0.60.2 
                         │     ├ PkgName         : github.com/containers/common 
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/containers/common@v0.60.2 
-                        │     │                  ╰ UID : 36804207b334b6aa 
+                        │     │                  ╰ UID : ffe29a85239ff00 
                         │     ├ InstalledVersion: v0.60.2 
                         │     ├ FixedVersion    : 0.60.4 
                         │     ├ Status          : fixed 
@@ -610,9 +616,10 @@
                         │     ├ PublishedDate   : 2024-10-01T19:15:09.5Z 
                         │     ╰ LastModifiedDate: 2024-11-26T19:15:32.637Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2024-34156 
+                        │     ├ PkgID           : stdlib@v1.22.6 
                         │     ├ PkgName         : stdlib 
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.22.6 
-                        │     │                  ╰ UID : c5cee28550978709 
+                        │     │                  ╰ UID : bc2e71cb817860c2 
                         │     ├ InstalledVersion: v1.22.6 
                         │     ├ FixedVersion    : 1.22.7, 1.23.1 
                         │     ├ Status          : fixed 
@@ -674,9 +681,10 @@
                         │     ├ PublishedDate   : 2024-09-06T21:15:12.02Z 
                         │     ╰ LastModifiedDate: 2024-09-09T15:35:07.573Z 
                         ├ [2] ╭ VulnerabilityID : CVE-2024-34155 
+                        │     ├ PkgID           : stdlib@v1.22.6 
                         │     ├ PkgName         : stdlib 
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.22.6 
-                        │     │                  ╰ UID : c5cee28550978709 
+                        │     │                  ╰ UID : bc2e71cb817860c2 
                         │     ├ InstalledVersion: v1.22.6 
                         │     ├ FixedVersion    : 1.22.7, 1.23.1 
                         │     ├ Status          : fixed 
@@ -751,9 +759,10 @@
                         │     ├ PublishedDate   : 2024-09-06T21:15:11.947Z 
                         │     ╰ LastModifiedDate: 2024-11-04T17:35:17.887Z 
                         ╰ [3] ╭ VulnerabilityID : CVE-2024-34158 
+                              ├ PkgID           : stdlib@v1.22.6 
                               ├ PkgName         : stdlib 
                               ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.22.6 
-                              │                  ╰ UID : c5cee28550978709 
+                              │                  ╰ UID : bc2e71cb817860c2 
                               ├ InstalledVersion: v1.22.6 
                               ├ FixedVersion    : 1.22.7, 1.23.1 
                               ├ Status          : fixed 
