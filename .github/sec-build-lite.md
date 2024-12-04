@@ -6,9 +6,10 @@
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
       ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-34156 
+                        │     ├ PkgID           : stdlib@v1.22.5 
                         │     ├ PkgName         : stdlib 
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.22.5 
-                        │     │                  ╰ UID : 1cb23866172f0022 
+                        │     │                  ╰ UID : 4d257cd5230ba4d6 
                         │     ├ InstalledVersion: v1.22.5 
                         │     ├ FixedVersion    : 1.22.7, 1.23.1 
                         │     ├ Status          : fixed 
@@ -70,9 +71,10 @@
                         │     ├ PublishedDate   : 2024-09-06T21:15:12.02Z 
                         │     ╰ LastModifiedDate: 2024-09-09T15:35:07.573Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2024-34155 
+                        │     ├ PkgID           : stdlib@v1.22.5 
                         │     ├ PkgName         : stdlib 
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.22.5 
-                        │     │                  ╰ UID : 1cb23866172f0022 
+                        │     │                  ╰ UID : 4d257cd5230ba4d6 
                         │     ├ InstalledVersion: v1.22.5 
                         │     ├ FixedVersion    : 1.22.7, 1.23.1 
                         │     ├ Status          : fixed 
@@ -147,9 +149,10 @@
                         │     ├ PublishedDate   : 2024-09-06T21:15:11.947Z 
                         │     ╰ LastModifiedDate: 2024-11-04T17:35:17.887Z 
                         ╰ [2] ╭ VulnerabilityID : CVE-2024-34158 
+                              ├ PkgID           : stdlib@v1.22.5 
                               ├ PkgName         : stdlib 
                               ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.22.5 
-                              │                  ╰ UID : 1cb23866172f0022 
+                              │                  ╰ UID : 4d257cd5230ba4d6 
                               ├ InstalledVersion: v1.22.5 
                               ├ FixedVersion    : 1.22.7, 1.23.1 
                               ├ Status          : fixed 
