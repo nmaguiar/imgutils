@@ -423,7 +423,8 @@
 │                       │     │                  ├ azure      : 4 
 │                       │     │                  ├ cbl-mariner: 4 
 │                       │     │                  ├ ghsa       : 4 
-│                       │     │                  ╰ redhat     : 4 
+│                       │     │                  ├ redhat     : 4 
+│                       │     │                  ╰ ubuntu     : 3 
 │                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/
 │                       │     │                  │        │           A:H 
 │                       │     │                  │        ╰ V3Score : 10 
@@ -456,8 +457,10 @@
 │                       │     │                  │       v23v-6jw2-98fq 
 │                       │     │                  ├ [13]: https://nvd.nist.gov/vuln/detail/CVE-2024-41110 
 │                       │     │                  ├ [14]: https://www.cve.org/CVERecord?id=CVE-2024-41110 
-│                       │     │                  ╰ [15]: https://www.docker.com/blog/docker-security-advisory-d
-│                       │     │                          ocker-engine-authz-plugin 
+│                       │     │                  ├ [15]: https://www.docker.com/blog/docker-security-advisory-d
+│                       │     │                  │       ocker-engine-authz-plugin 
+│                       │     │                  ╰ [16]: https://www.docker.com/blog/docker-security-advisory-d
+│                       │     │                          ocker-engine-authz-plugin/ 
 │                       │     ├ PublishedDate   : 2024-07-24T17:15:11.053Z 
 │                       │     ╰ LastModifiedDate: 2024-07-30T20:15:04.567Z 
 │                       ╰ [1] ╭ VulnerabilityID : CVE-2024-24557 
