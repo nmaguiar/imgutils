@@ -26,9 +26,10 @@ USER root
 RUN sed -i 's/v[0-9]*\.[0-9]*/edge/g' /etc/apk/repositories\
  && apk update\
  && apk upgrade --available\
- && apk --no-cache add docker-cli skopeo curl tar bash gzip mc tmux containerd-ctr nerdctl bash-completion\
+ && apk --no-cache add docker-cli skopeo curl tar bash gzip mc tmux containerd-ctr bash-completion\
  && /openaf/ojob ojob.io/kube/getCriCtl path=/usr/bin\
  && /openaf/ojob ojob.io/kube/getHelm path=/usr/bin\
+ && /openaf/ojob ojob.io/kube/getNerdCtl path=/usr/bin\
  && /openaf/opack install DockerRegistry\
  && /openaf/opack install Kube\
  && /openaf/opack install BouncyCastle\
@@ -52,14 +53,10 @@ RUN sed -i 's/v[0-9]*\.[0-9]*/edge/g' /etc/apk/repositories\
  && sudo chmod g+w /openaf/.opack.db\
  && chmod a+x /usr/bin/crictl\
  && chmod a+x /usr/bin/helm\
+ && chmod a+x /usr/bin/nerdctl\
  && cp /usr/bin/ctr /tmp/ctr\
  && apk del containerd-ctr\
  && mv /tmp/ctr /usr/bin/ctr\
- && cp /usr/bin/nerdctl /tmp/nerdctl\
- && cp /usr/share/bash-completion/completions/nerdctl /tmp/completion-nerdctl\
- && apk del nerdctl\
- && mv /tmp/nerdctl /usr/bin/nerdctl\
- && mv /tmp/completion-nerdctl /usr/share/bash-completion/completions/nerdctl\
  && rm /lib/apk/db/*\
  && sed -i "s/\/bin\/sh/\/bin\/bash/g" /etc/passwd\
  && chown root:openaf /run\
