@@ -59,7 +59,7 @@ RUN sed -i 's/v[0-9]*\.[0-9]*/edge/g' /etc/apk/repositories\
  && cp /usr/share/bash-completion/completions/nerdctl /tmp/completion-nerdctl\
  && apk del nerdctl\
  && mv /tmp/nerdctl /usr/bin/nerdctl\
- && mv /tmp/completion-nerdctl /usr/share/bash-completion/complentions/completions\
+ && mv /tmp/completion-nerdctl /usr/share/bash-completion/completions/nerdctl\
  && rm /lib/apk/db/*\
  && sed -i "s/\/bin\/sh/\/bin\/bash/g" /etc/passwd\
  && chown root:openaf /run\
