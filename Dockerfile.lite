@@ -13,7 +13,8 @@ FROM alpine:edge as clean
 
 RUN apk update\
  && apk --no-cache add tar bash gzip\
- && rm /lib/apk/db/*
+ && rm /lib/apk/db/*\
+ && touch /etc/crictl.yaml
 COPY --from=main /usr/bin/crictl /usr/bin/crictl
 
 # -------------------
