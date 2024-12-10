@@ -19,11 +19,11 @@ fi
 # the format "registry,username,password" to login to the registry
 if [ -n "$REGAUTH" ]; then
   echo "$REGAUTH" | while IFS=, read -r registry username password; do
-    echo "Logging into $registry"
-    echo -n "  docker: " && echo "$password" | docker login "$registry" --username "$username" --password-stdin 2>/dev/null
-    echo -n "  skopeo: " && echo "$password" | skopeo login --username "$username" --password-stdin "$registry" --tls-verify=false
-    echo -n "  helm  : " && echo "$password" | helm registry login "$registry" --username "$username" --password-stdin --insecure
-    echo ""
+    echo "Logins into $registry" >&2
+    echo -n "  docker: " >&2 && echo "$password" | docker login "$registry" --username "$username" --password-stdin 2>/dev/null
+    echo -n "  skopeo: " >&2 && echo "$password" | skopeo login --username "$username" --password-stdin "$registry" --tls-verify=false
+    echo -n "  helm  : " >&2 && echo "$password" | helm registry login "$registry" --username "$username" --password-stdin --insecure
+    echo "" >&2
   done
   unset REGAUTH
 fi
