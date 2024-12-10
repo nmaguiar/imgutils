@@ -60,7 +60,8 @@ RUN sed -i 's/v[0-9]*\.[0-9]*/edge/g' /etc/apk/repositories\
  && rm /lib/apk/db/*\
  && sed -i "s/\/bin\/sh/\/bin\/bash/g" /etc/passwd\
  && chown root:openaf /run\
- && chmod g+w /run
+ && chmod g+w /run\
+ && touch /etc/crictl.yaml
 
 # Setup bash completion
 # ---------------------
