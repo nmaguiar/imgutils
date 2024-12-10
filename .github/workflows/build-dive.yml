@@ -1,7 +1,9 @@
 name: Build dive
 
 on:
-    workflow_dispatch:
+  workflow_dispatch:
+  schedule:
+  - cron: '32 0 * * 6'
 
 jobs:
     build:

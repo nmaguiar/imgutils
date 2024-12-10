@@ -26,7 +26,7 @@ USER root
 RUN sed -i 's/v[0-9]*\.[0-9]*/edge/g' /etc/apk/repositories\
  && apk update\
  && apk upgrade --available\
- && apk --no-cache add docker-cli skopeo curl tar bash gzip mc tmux containerd-ctr bash-completion\
+ && apk --no-cache add skopeo docker-cli curl tar bash gzip mc tmux containerd-ctr bash-completion\
  && /openaf/ojob ojob.io/kube/getCriCtl path=/usr/bin\
  && /openaf/ojob ojob.io/kube/getHelm path=/usr/bin\
  && /openaf/ojob ojob.io/kube/getNerdCtl path=/usr/bin\
@@ -91,6 +91,18 @@ RUN if [ "`uname -m`" = "x86_64" ]; then \
     else \
       mv /usr/bin/dive_linux_arm64 /usr/bin/dive; \
       rm /usr/bin/dive_linux_amd64; \
+    fi
+
+# Setup skopeo
+# ------------
+
+COPY skopeo_* /usr/bin
+RUN if [ "`uname -m`" = "x86_64" ]; then \
+      mv /usr/bin/skopeo_amd64 /usr/bin/skopeo; \
+      rm /usr/bin/skopeo_arm64; \
+    else \
+      mv /usr/bin/skopeo_arm64 /usr/bin/skopeo; \
+      rm /usr/bin/skopeo_amd64; \
     fi
 
 # Setup imgutils folder

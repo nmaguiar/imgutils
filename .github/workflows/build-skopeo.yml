@@ -1,0 +1,33 @@
+name: Build skopeo
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '07 0 * * 6'
+
+jobs:
+    build:
+
+        runs-on: ubuntu-latest
+    
+        steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+
+        - name: build
+          run : |
+            docker system prune -f
+            rm -rf skopeo
+            docker build --no-cache -t dev -f Dockerfile.skopeo .
+            docker create --name dev dev
+            docker cp dev:/skopeo_arm64 skopeo_arm64
+            docker cp dev:/skopeo_amd64 skopeo_amd64
+
+        - name: Cache skopeo save
+          uses: actions/cache/save@v4
+          with:
+            key : skopeo
+            path: |
+              skopeo_*
+              
+    

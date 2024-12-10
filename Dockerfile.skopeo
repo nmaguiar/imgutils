@@ -1,0 +1,33 @@
+# First stage: Build Skopeo in a fully equipped Alpine environment
+FROM alpine:edge AS builder
+
+# Install build tools and dependencies
+RUN apk add --no-cache \
+    git \
+    go \
+    make \
+    gcc \
+    libc-dev \
+    pkgconfig \
+    btrfs-progs-dev \
+    gpgme-dev \
+    libassuan-dev \
+    libgpg-error-dev \
+    libseccomp-dev \
+    bash \
+    jq \
+    curl
+
+# Set up Go workspace
+WORKDIR /go/src/github.com/containers/skopeo
+
+# Clone Skopeo source & Vendor all Go dependencies & Build Skopeo binary
+RUN git clone https://github.com/containers/skopeo.git .\
+ && SKOPEO_VERSION=$(curl -s https://api.github.com/repos/containers/skopeo/releases/latest | jq -r .tag_name)\
+ && git checkout tags/${SKOPEO_VERSION} -b build-branch\
+ && sed -i "s/^GIT_COMMIT := .*/GIT_COMMIT := ''/" Makefile\
+ && make vendor\
+ && make bin/skopeo\
+ && cp bin/skopeo /skopeo_amd64\
+ && make bin/skopeo.linux.arm64\
+ && cp bin/skopeo.linux.arm64 /skopeo_arm64
