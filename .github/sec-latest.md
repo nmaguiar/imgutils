@@ -294,42 +294,43 @@
                         │     │                           │           A:N 
                         │     │                           ╰ V3Score : 5.4 
                         │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2024:10147 
-                        │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:7925 
-                        │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:8039 
-                        │     │                  ├ [3] : https://access.redhat.com/errata/RHSA-2024:8112 
-                        │     │                  ├ [4] : https://access.redhat.com/errata/RHSA-2024:8238 
-                        │     │                  ├ [5] : https://access.redhat.com/errata/RHSA-2024:8263 
-                        │     │                  ├ [6] : https://access.redhat.com/errata/RHSA-2024:8428 
-                        │     │                  ├ [7] : https://access.redhat.com/errata/RHSA-2024:8690 
-                        │     │                  ├ [8] : https://access.redhat.com/errata/RHSA-2024:8694 
-                        │     │                  ├ [9] : https://access.redhat.com/errata/RHSA-2024:8846 
-                        │     │                  ├ [10]: https://access.redhat.com/errata/RHSA-2024:9454 
-                        │     │                  ├ [11]: https://access.redhat.com/errata/RHSA-2024:9459 
-                        │     │                  ├ [12]: https://access.redhat.com/security/cve/CVE-2024-9341 
-                        │     │                  ├ [13]: https://bugzilla.redhat.com/2310527 
-                        │     │                  ├ [14]: https://bugzilla.redhat.com/2310528 
-                        │     │                  ├ [15]: https://bugzilla.redhat.com/2310529 
-                        │     │                  ├ [16]: https://bugzilla.redhat.com/2315691 
-                        │     │                  ├ [17]: https://bugzilla.redhat.com/2315887 
-                        │     │                  ├ [18]: https://bugzilla.redhat.com/2317458 
-                        │     │                  ├ [19]: https://bugzilla.redhat.com/2317467 
-                        │     │                  ├ [20]: https://bugzilla.redhat.com/show_bug.cgi?id=2315691 
-                        │     │                  ├ [21]: https://errata.almalinux.org/9/ALSA-2024-9459.html 
-                        │     │                  ├ [22]: https://github.com/containers/common 
-                        │     │                  ├ [23]: https://github.com/containers/common/blob/384f77532f67
-                        │     │                  │       afc8a73d8e0c4adb0d195df57714/pkg/subscriptions/subscri
-                        │     │                  │       ptions.go#L169 
+                        │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2024:10818 
+                        │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2024:7925 
+                        │     │                  ├ [3] : https://access.redhat.com/errata/RHSA-2024:8039 
+                        │     │                  ├ [4] : https://access.redhat.com/errata/RHSA-2024:8112 
+                        │     │                  ├ [5] : https://access.redhat.com/errata/RHSA-2024:8238 
+                        │     │                  ├ [6] : https://access.redhat.com/errata/RHSA-2024:8263 
+                        │     │                  ├ [7] : https://access.redhat.com/errata/RHSA-2024:8428 
+                        │     │                  ├ [8] : https://access.redhat.com/errata/RHSA-2024:8690 
+                        │     │                  ├ [9] : https://access.redhat.com/errata/RHSA-2024:8694 
+                        │     │                  ├ [10]: https://access.redhat.com/errata/RHSA-2024:8846 
+                        │     │                  ├ [11]: https://access.redhat.com/errata/RHSA-2024:9454 
+                        │     │                  ├ [12]: https://access.redhat.com/errata/RHSA-2024:9459 
+                        │     │                  ├ [13]: https://access.redhat.com/security/cve/CVE-2024-9341 
+                        │     │                  ├ [14]: https://bugzilla.redhat.com/2310527 
+                        │     │                  ├ [15]: https://bugzilla.redhat.com/2310528 
+                        │     │                  ├ [16]: https://bugzilla.redhat.com/2310529 
+                        │     │                  ├ [17]: https://bugzilla.redhat.com/2315691 
+                        │     │                  ├ [18]: https://bugzilla.redhat.com/2315887 
+                        │     │                  ├ [19]: https://bugzilla.redhat.com/2317458 
+                        │     │                  ├ [20]: https://bugzilla.redhat.com/2317467 
+                        │     │                  ├ [21]: https://bugzilla.redhat.com/show_bug.cgi?id=2315691 
+                        │     │                  ├ [22]: https://errata.almalinux.org/9/ALSA-2024-9459.html 
+                        │     │                  ├ [23]: https://github.com/containers/common 
                         │     │                  ├ [24]: https://github.com/containers/common/blob/384f77532f67
                         │     │                  │       afc8a73d8e0c4adb0d195df57714/pkg/subscriptions/subscri
+                        │     │                  │       ptions.go#L169 
+                        │     │                  ├ [25]: https://github.com/containers/common/blob/384f77532f67
+                        │     │                  │       afc8a73d8e0c4adb0d195df57714/pkg/subscriptions/subscri
                         │     │                  │       ptions.go#L349 
-                        │     │                  ├ [25]: https://github.com/containers/common/commit/e7db06585c
+                        │     │                  ├ [26]: https://github.com/containers/common/commit/e7db06585c
                         │     │                  │       32e1a782c1d9aa3b71ccd708f5e23f 
-                        │     │                  ├ [26]: https://linux.oracle.com/cve/CVE-2024-9341.html 
-                        │     │                  ├ [27]: https://linux.oracle.com/errata/ELSA-2024-9459.html 
-                        │     │                  ├ [28]: https://nvd.nist.gov/vuln/detail/CVE-2024-9341 
-                        │     │                  ╰ [29]: https://www.cve.org/CVERecord?id=CVE-2024-9341 
+                        │     │                  ├ [27]: https://linux.oracle.com/cve/CVE-2024-9341.html 
+                        │     │                  ├ [28]: https://linux.oracle.com/errata/ELSA-2024-9459.html 
+                        │     │                  ├ [29]: https://nvd.nist.gov/vuln/detail/CVE-2024-9341 
+                        │     │                  ╰ [30]: https://www.cve.org/CVERecord?id=CVE-2024-9341 
                         │     ├ PublishedDate   : 2024-10-01T19:15:09.5Z 
-                        │     ╰ LastModifiedDate: 2024-11-26T19:15:32.637Z 
+                        │     ╰ LastModifiedDate: 2024-12-11T04:15:06.09Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2024-34156 
                         │     ├ PkgID           : stdlib@v1.22.6 
                         │     ├ PkgName         : stdlib 
