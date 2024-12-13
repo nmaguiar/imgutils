@@ -15,10 +15,10 @@ if [ -e /run/containerd/containerd.sock ]; then
   sudo chown root:openaf /run/containerd/containerd.sock
 fi
 
-# Using the env variable REGAUTH is a list of new-line separated registries where each line follows 
+# Using the env variable REGAUTH is a list of new-line separated or '|||' separated registries where each line follows 
 # the format "registry,username,password" to login to the registry
 if [ -n "$REGAUTH" ]; then
-  echo "$REGAUTH" | while IFS=, read -r registry username password; do
+  echo "$REGAUTH" | tr '|||' '\n' | while IFS=, read -r registry username password; do
     echo "Logins into $registry" >&2
     echo -n "  docker: " >&2 && echo "$password" | docker login "$registry" --username "$username" --password-stdin 2>/dev/null
     echo -n "  skopeo: " >&2 && echo "$password" | skopeo login --username "$username" --password-stdin "$registry" --tls-verify=false
