@@ -260,24 +260,69 @@
 │                             │                  ├ Name: GitHub Security Advisory Go 
 │                             │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
 │                             │                          osystem%3Ago 
-│                             ├ Title           : Applications and libraries which misuse the
-│                             │                   ServerConfig.PublicKeyCall ... 
+│                             ├ Title           : golang.org/x/crypto/ssh: Misuse of
+│                             │                   ServerConfig.PublicKeyCallback may cause authorization bypass
+│                             │                    in golang.org/x/crypto 
 │                             ├ Description     : Applications and libraries which misuse the
 │                             │                   ServerConfig.PublicKeyCallback callback may be susceptible to
-│                             │                    an authorization bypass. 
+│                             │                    an authorization bypass. The documentation for
+│                             │                   ServerConfig.PublicKeyCallback says that "A call to this
+│                             │                   function does not guarantee that the key offered is in fact
+│                             │                   used to authenticate." Specifically, the SSH protocol allows
+│                             │                   clients to inquire about whether a public key is acceptable
+│                             │                   before proving control of the corresponding private key.
+│                             │                   PublicKeyCallback may be called with multiple keys, and the
+│                             │                   order in which the keys were provided cannot be used to infer
+│                             │                    which key the client successfully authenticated with, if
+│                             │                   any. Some applications, which store the key(s) passed to
+│                             │                   PublicKeyCallback (or derived information) and make security
+│                             │                   relevant determinations based on it once the connection is
+│                             │                   established, may make incorrect assumptions. For example, an
+│                             │                   attacker may send public keys A and B, and then authenticate
+│                             │                   with A. PublicKeyCallback would be called only twice, first
+│                             │                   with A and then with B. A vulnerable application may then
+│                             │                   make authorization decisions based on key B for which the
+│                             │                   attacker does not actually control the private key. Since
+│                             │                   this API is widely misused, as a partial mitigation
+│                             │                   golang.org/x/cry...@v0.31.0 enforces the property that, when
+│                             │                   successfully authenticating via public key, the last key
+│                             │                   passed to ServerConfig.PublicKeyCallback will be the key used
+│                             │                    to authenticate the connection. PublicKeyCallback will now
+│                             │                   be called multiple times with the same key, if necessary.
+│                             │                   Note that the client may still not control the last key
+│                             │                   passed to PublicKeyCallback if the connection is then
+│                             │                   authenticated with a different method, such as
+│                             │                   PasswordCallback, KeyboardInteractiveCallback, or
+│                             │                   NoClientAuth. Users should be using the Extensions field of
+│                             │                   the Permissions return value from the various authentication
+│                             │                   callbacks to record data associated with the authentication
+│                             │                   attempt instead of referencing external state. Once the
+│                             │                   connection is established the state corresponding to the
+│                             │                   successful authentication attempt can be retrieved via the
+│                             │                   ServerConn.Permissions field. Note that some third-party
+│                             │                   libraries misuse the Permissions type by sharing it across
+│                             │                   authentication attempts; users of third-party libraries
+│                             │                   should refer to the relevant projects for guidance. 
 │                             ├ Severity        : HIGH 
-│                             ├ VendorSeverity   ─ ghsa: 3 
+│                             ├ VendorSeverity   ╭ ghsa  : 3 
+│                             │                  ╰ redhat: 3 
+│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/
+│                             │                           │           A:N 
+│                             │                           ╰ V3Score : 7.7 
 │                             ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/12/11/2 
-│                             │                  ├ [1]: https://github.com/golang/crypto 
-│                             │                  ├ [2]: https://github.com/golang/crypto/commit/b4f1988a35dee11
+│                             │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2024-45337 
+│                             │                  ├ [2]: https://github.com/golang/crypto 
+│                             │                  ├ [3]: https://github.com/golang/crypto/commit/b4f1988a35dee11
 │                             │                  │      ec3e05d6bf3e90b695fbd8909 
-│                             │                  ├ [3]: https://go.dev/cl/635315 
-│                             │                  ├ [4]: https://go.dev/issue/70779 
-│                             │                  ├ [5]: https://groups.google.com/g/golang-announce/c/-nPEi39gI
+│                             │                  ├ [4]: https://go.dev/cl/635315 
+│                             │                  ├ [5]: https://go.dev/issue/70779 
+│                             │                  ├ [6]: https://groups.google.com/g/golang-announce/c/-nPEi39gI
 │                             │                  │      4Q/m/cGVPJCqdAQAJ 
-│                             │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2024-3321 
+│                             │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2024-45337 
+│                             │                  ├ [8]: https://pkg.go.dev/vuln/GO-2024-3321 
+│                             │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2024-45337 
 │                             ├ PublishedDate   : 2024-12-12T02:02:07.97Z 
-│                             ╰ LastModifiedDate: 2024-12-12T02:15:24.673Z 
+│                             ╰ LastModifiedDate: 2024-12-12T21:15:08.5Z 
 ├ [7] ╭ Target         : usr/bin/nerdctl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -299,24 +344,69 @@
 │                             │                  ├ Name: GitHub Security Advisory Go 
 │                             │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
 │                             │                          osystem%3Ago 
-│                             ├ Title           : Applications and libraries which misuse the
-│                             │                   ServerConfig.PublicKeyCall ... 
+│                             ├ Title           : golang.org/x/crypto/ssh: Misuse of
+│                             │                   ServerConfig.PublicKeyCallback may cause authorization bypass
+│                             │                    in golang.org/x/crypto 
 │                             ├ Description     : Applications and libraries which misuse the
 │                             │                   ServerConfig.PublicKeyCallback callback may be susceptible to
-│                             │                    an authorization bypass. 
+│                             │                    an authorization bypass. The documentation for
+│                             │                   ServerConfig.PublicKeyCallback says that "A call to this
+│                             │                   function does not guarantee that the key offered is in fact
+│                             │                   used to authenticate." Specifically, the SSH protocol allows
+│                             │                   clients to inquire about whether a public key is acceptable
+│                             │                   before proving control of the corresponding private key.
+│                             │                   PublicKeyCallback may be called with multiple keys, and the
+│                             │                   order in which the keys were provided cannot be used to infer
+│                             │                    which key the client successfully authenticated with, if
+│                             │                   any. Some applications, which store the key(s) passed to
+│                             │                   PublicKeyCallback (or derived information) and make security
+│                             │                   relevant determinations based on it once the connection is
+│                             │                   established, may make incorrect assumptions. For example, an
+│                             │                   attacker may send public keys A and B, and then authenticate
+│                             │                   with A. PublicKeyCallback would be called only twice, first
+│                             │                   with A and then with B. A vulnerable application may then
+│                             │                   make authorization decisions based on key B for which the
+│                             │                   attacker does not actually control the private key. Since
+│                             │                   this API is widely misused, as a partial mitigation
+│                             │                   golang.org/x/cry...@v0.31.0 enforces the property that, when
+│                             │                   successfully authenticating via public key, the last key
+│                             │                   passed to ServerConfig.PublicKeyCallback will be the key used
+│                             │                    to authenticate the connection. PublicKeyCallback will now
+│                             │                   be called multiple times with the same key, if necessary.
+│                             │                   Note that the client may still not control the last key
+│                             │                   passed to PublicKeyCallback if the connection is then
+│                             │                   authenticated with a different method, such as
+│                             │                   PasswordCallback, KeyboardInteractiveCallback, or
+│                             │                   NoClientAuth. Users should be using the Extensions field of
+│                             │                   the Permissions return value from the various authentication
+│                             │                   callbacks to record data associated with the authentication
+│                             │                   attempt instead of referencing external state. Once the
+│                             │                   connection is established the state corresponding to the
+│                             │                   successful authentication attempt can be retrieved via the
+│                             │                   ServerConn.Permissions field. Note that some third-party
+│                             │                   libraries misuse the Permissions type by sharing it across
+│                             │                   authentication attempts; users of third-party libraries
+│                             │                   should refer to the relevant projects for guidance. 
 │                             ├ Severity        : HIGH 
-│                             ├ VendorSeverity   ─ ghsa: 3 
+│                             ├ VendorSeverity   ╭ ghsa  : 3 
+│                             │                  ╰ redhat: 3 
+│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/
+│                             │                           │           A:N 
+│                             │                           ╰ V3Score : 7.7 
 │                             ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/12/11/2 
-│                             │                  ├ [1]: https://github.com/golang/crypto 
-│                             │                  ├ [2]: https://github.com/golang/crypto/commit/b4f1988a35dee11
+│                             │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2024-45337 
+│                             │                  ├ [2]: https://github.com/golang/crypto 
+│                             │                  ├ [3]: https://github.com/golang/crypto/commit/b4f1988a35dee11
 │                             │                  │      ec3e05d6bf3e90b695fbd8909 
-│                             │                  ├ [3]: https://go.dev/cl/635315 
-│                             │                  ├ [4]: https://go.dev/issue/70779 
-│                             │                  ├ [5]: https://groups.google.com/g/golang-announce/c/-nPEi39gI
+│                             │                  ├ [4]: https://go.dev/cl/635315 
+│                             │                  ├ [5]: https://go.dev/issue/70779 
+│                             │                  ├ [6]: https://groups.google.com/g/golang-announce/c/-nPEi39gI
 │                             │                  │      4Q/m/cGVPJCqdAQAJ 
-│                             │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2024-3321 
+│                             │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2024-45337 
+│                             │                  ├ [8]: https://pkg.go.dev/vuln/GO-2024-3321 
+│                             │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2024-45337 
 │                             ├ PublishedDate   : 2024-12-12T02:02:07.97Z 
-│                             ╰ LastModifiedDate: 2024-12-12T02:15:24.673Z 
+│                             ╰ LastModifiedDate: 2024-12-12T21:15:08.5Z 
 ╰ [8] ╭ Target         : usr/bin/skopeo 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
@@ -421,24 +511,69 @@
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
                         │     │                          osystem%3Ago 
-                        │     ├ Title           : Applications and libraries which misuse the
-                        │     │                   ServerConfig.PublicKeyCall ... 
+                        │     ├ Title           : golang.org/x/crypto/ssh: Misuse of
+                        │     │                   ServerConfig.PublicKeyCallback may cause authorization bypass
+                        │     │                    in golang.org/x/crypto 
                         │     ├ Description     : Applications and libraries which misuse the
                         │     │                   ServerConfig.PublicKeyCallback callback may be susceptible to
-                        │     │                    an authorization bypass. 
+                        │     │                    an authorization bypass. The documentation for
+                        │     │                   ServerConfig.PublicKeyCallback says that "A call to this
+                        │     │                   function does not guarantee that the key offered is in fact
+                        │     │                   used to authenticate." Specifically, the SSH protocol allows
+                        │     │                   clients to inquire about whether a public key is acceptable
+                        │     │                   before proving control of the corresponding private key.
+                        │     │                   PublicKeyCallback may be called with multiple keys, and the
+                        │     │                   order in which the keys were provided cannot be used to infer
+                        │     │                    which key the client successfully authenticated with, if
+                        │     │                   any. Some applications, which store the key(s) passed to
+                        │     │                   PublicKeyCallback (or derived information) and make security
+                        │     │                   relevant determinations based on it once the connection is
+                        │     │                   established, may make incorrect assumptions. For example, an
+                        │     │                   attacker may send public keys A and B, and then authenticate
+                        │     │                   with A. PublicKeyCallback would be called only twice, first
+                        │     │                   with A and then with B. A vulnerable application may then
+                        │     │                   make authorization decisions based on key B for which the
+                        │     │                   attacker does not actually control the private key. Since
+                        │     │                   this API is widely misused, as a partial mitigation
+                        │     │                   golang.org/x/cry...@v0.31.0 enforces the property that, when
+                        │     │                   successfully authenticating via public key, the last key
+                        │     │                   passed to ServerConfig.PublicKeyCallback will be the key used
+                        │     │                    to authenticate the connection. PublicKeyCallback will now
+                        │     │                   be called multiple times with the same key, if necessary.
+                        │     │                   Note that the client may still not control the last key
+                        │     │                   passed to PublicKeyCallback if the connection is then
+                        │     │                   authenticated with a different method, such as
+                        │     │                   PasswordCallback, KeyboardInteractiveCallback, or
+                        │     │                   NoClientAuth. Users should be using the Extensions field of
+                        │     │                   the Permissions return value from the various authentication
+                        │     │                   callbacks to record data associated with the authentication
+                        │     │                   attempt instead of referencing external state. Once the
+                        │     │                   connection is established the state corresponding to the
+                        │     │                   successful authentication attempt can be retrieved via the
+                        │     │                   ServerConn.Permissions field. Note that some third-party
+                        │     │                   libraries misuse the Permissions type by sharing it across
+                        │     │                   authentication attempts; users of third-party libraries
+                        │     │                   should refer to the relevant projects for guidance. 
                         │     ├ Severity        : HIGH 
-                        │     ├ VendorSeverity   ─ ghsa: 3 
+                        │     ├ VendorSeverity   ╭ ghsa  : 3 
+                        │     │                  ╰ redhat: 3 
+                        │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/
+                        │     │                           │           A:N 
+                        │     │                           ╰ V3Score : 7.7 
                         │     ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/12/11/2 
-                        │     │                  ├ [1]: https://github.com/golang/crypto 
-                        │     │                  ├ [2]: https://github.com/golang/crypto/commit/b4f1988a35dee11
+                        │     │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2024-45337 
+                        │     │                  ├ [2]: https://github.com/golang/crypto 
+                        │     │                  ├ [3]: https://github.com/golang/crypto/commit/b4f1988a35dee11
                         │     │                  │      ec3e05d6bf3e90b695fbd8909 
-                        │     │                  ├ [3]: https://go.dev/cl/635315 
-                        │     │                  ├ [4]: https://go.dev/issue/70779 
-                        │     │                  ├ [5]: https://groups.google.com/g/golang-announce/c/-nPEi39gI
+                        │     │                  ├ [4]: https://go.dev/cl/635315 
+                        │     │                  ├ [5]: https://go.dev/issue/70779 
+                        │     │                  ├ [6]: https://groups.google.com/g/golang-announce/c/-nPEi39gI
                         │     │                  │      4Q/m/cGVPJCqdAQAJ 
-                        │     │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2024-3321 
+                        │     │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2024-45337 
+                        │     │                  ├ [8]: https://pkg.go.dev/vuln/GO-2024-3321 
+                        │     │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2024-45337 
                         │     ├ PublishedDate   : 2024-12-12T02:02:07.97Z 
-                        │     ╰ LastModifiedDate: 2024-12-12T02:15:24.673Z 
+                        │     ╰ LastModifiedDate: 2024-12-12T21:15:08.5Z 
                         ├ [2] ╭ VulnerabilityID : CVE-2024-34156 
                         │     ├ PkgID           : stdlib@v1.22.6 
                         │     ├ PkgName         : stdlib 
