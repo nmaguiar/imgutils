@@ -70,6 +70,7 @@ RUN echo "source <(crictl completion bash)" >> /etc/bash/start.sh\
  && echo "source <(docker completion bash)" >> /etc/bash/start.sh\
  && echo "source <(skopeo completion bash)" >> /etc/bash/start.sh\
  && echo "source <(nerdctl completion bash)" >> /etc/bash/start.sh\
+ && echo "srouce <(syft completion bash)" >> /etc/bash/start.sh\
  && /openaf/oaf --bashcompletion all > /openaf/.openaf_completion.sh\
  && chmod a+x /openaf/.openaf_*.sh\
  && chown openaf:openaf /openaf/.openaf_*.sh\
