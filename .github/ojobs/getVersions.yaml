@@ -40,6 +40,7 @@ jobs:
               .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `nerdctl -v | /openaf/oafp path="split(@,' ')[2]"`])
               .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `/openaf/oafp cmd="/usr/bin/dive -v" path="split(@,' ').split([1],'-')[0]"`])
               .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `TERM=UTF-8 mc -V | /openaf/oafp in=lines linesjoin=true path="split([0], ' ')[3]"`])
+              .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `syft --version | /openaf/oafp path="split(@, ' ')[1]"`])
               .get()
 
     var _r = {
@@ -51,7 +52,8 @@ jobs:
       ctr    : res[5].stdout.trim(),
       nerdctl: res[6].stdout.trim(),
       dive   : res[7].stdout.trim(),
-      mc     : res[8].stdout.trim()
+      mc     : res[8].stdout.trim(),
+      syft   : res[9].stdout.trim()
     }
 
     $set("versions", _r)
@@ -64,7 +66,7 @@ jobs:
   from :
   - (get): versions
   to   : 
-  - (template): " oaf: {{openaf}} | docker: {{docker}} | helm: {{helm}} | skopeo: {{skopeo}} | crictl: {{crictl}} | ctr: {{ctr}} | nerdctl: {{nerdctl}} | dive: {{dive}} "
+  - (template): " oaf: {{openaf}} | docker: {{docker}} | helm: {{helm}} | skopeo: {{skopeo}} | crictl: {{crictl}} | ctr: {{ctr}} | nerdctl: {{nerdctl}} | dive: {{dive}} | syft: {{syft}} "
     ((outPath): status
     ((key    ): args
     ((out    ): args

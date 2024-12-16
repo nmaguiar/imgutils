@@ -105,6 +105,10 @@ RUN if [ "`uname -m`" = "x86_64" ]; then \
       rm /usr/bin/skopeo_amd64; \
     fi
 
+# Setup the lastest syft
+# -----------------------
+RUN curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/bin
+
 # Setup imgutils folder
 # ---------------------
 RUN mkdir /imgutils\
