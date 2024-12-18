@@ -1,5 +1,5 @@
 ````yaml
-╭ [0] ╭ Target: nmaguiar/imgutils:build (alpine 3.20.3) 
+╭ [0] ╭ Target: nmaguiar/imgutils:build (alpine 3.21.0) 
 │     ├ Class : os-pkgs 
 │     ╰ Type  : alpine 
 ├ [1] ╭ Target: Java 
@@ -31,10 +31,10 @@
 │                             ├ InstalledVersion: v0.30.0 
 │                             ├ FixedVersion    : 0.31.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:337e8552e65c8f9fde60b31978a703750b2a721191720
-│                             │                  │         081afab0ed26c5ec09c 
-│                             │                  ╰ DiffID: sha256:7d9ef5a9479ccb50592235ddc17efe83f582feaf006b0
-│                             │                            3b5e393ae9ae8d455f7 
+│                             ├ Layer            ╭ Digest: sha256:2cba9f6a75e1800ab16e75f72af623d8cad9a35f9a2c5
+│                             │                  │         a9cb1f14e5d967cc07e 
+│                             │                  ╰ DiffID: sha256:c748eb400a443295a462a85a449ce678582f4946f2ae0
+│                             │                            7df78a7c454dc89a0d6 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45337 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -118,10 +118,10 @@
 │                             ├ InstalledVersion: v0.29.0 
 │                             ├ FixedVersion    : 0.31.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:337e8552e65c8f9fde60b31978a703750b2a721191720
-│                             │                  │         081afab0ed26c5ec09c 
-│                             │                  ╰ DiffID: sha256:7d9ef5a9479ccb50592235ddc17efe83f582feaf006b0
-│                             │                            3b5e393ae9ae8d455f7 
+│                             ├ Layer            ╭ Digest: sha256:2cba9f6a75e1800ab16e75f72af623d8cad9a35f9a2c5
+│                             │                  │         a9cb1f14e5d967cc07e 
+│                             │                  ╰ DiffID: sha256:c748eb400a443295a462a85a449ce678582f4946f2ae0
+│                             │                            7df78a7c454dc89a0d6 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45337 
 │                             ├ DataSource       ╭ ID  : ghsa 
