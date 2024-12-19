@@ -90,9 +90,9 @@
 │                             ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/
 │                             │                  │        │           A:N 
 │                             │                  │        ╰ V3Score : 9.1 
-│                             │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/
+│                             │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/
 │                             │                           │           A:N 
-│                             │                           ╰ V3Score : 7.7 
+│                             │                           ╰ V3Score : 8.2 
 │                             ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/12/11/2 
 │                             │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2024-45337 
 │                             │                  ├ [2]: https://github.com/golang/crypto 
@@ -177,9 +177,9 @@
 │                             ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/
 │                             │                  │        │           A:N 
 │                             │                  │        ╰ V3Score : 9.1 
-│                             │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/
+│                             │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/
 │                             │                           │           A:N 
-│                             │                           ╰ V3Score : 7.7 
+│                             │                           ╰ V3Score : 8.2 
 │                             ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/12/11/2 
 │                             │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2024-45337 
 │                             │                  ├ [2]: https://github.com/golang/crypto 
