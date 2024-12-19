@@ -13,8 +13,8 @@ jobs:
       pull-requests: write
     name       : Version images
     steps      :
-    - uses: actions/checkout@v3
-      name: Checkoout
+    - uses: actions/checkout@v4
+      name: Checkout
 
     - name: Cache OpenAF runtime
       uses: actions/cache@v3
