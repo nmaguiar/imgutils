@@ -59,6 +59,7 @@ First check the nodes' names with 'kubectl get nodes'
 | dive    | A tool for exploring each layer in a docker image |
 | mc      | Midnight Commander visual file manager |
 | openaf  | A "swiss-army knife" devops tool & runtime |
+| syft    | Syft is a tool that generates a Software Bill of Materials (SBOM) from container images and filesystems, providing detailed insights into software components and dependencies |
 | imgExpand.yaml | Expands a docker container archive file, layer by layer, into an output folder (uses OpenAF's oJob) |
 | imgInfo.yaml | Expands a docker container archive file, layer by layer, to return the list of files (uses OpenAF's oJob) |
 | imgCollapse.yaml | Collapse a previously expanded docker container archive file, layer by layer, into an output image file (uses OpenAF's oJob) |
