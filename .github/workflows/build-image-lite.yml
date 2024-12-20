@@ -15,6 +15,11 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    permissions:
+      id-token: write
+      attestations: write
+      contents: read
+
     steps:
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v2
