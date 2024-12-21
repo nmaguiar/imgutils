@@ -190,8 +190,9 @@
 │                       │     │                   authentication attempts; users of third-party libraries
 │                       │     │                   should refer to the relevant projects for guidance. 
 │                       │     ├ Severity        : CRITICAL 
-│                       │     ├ VendorSeverity   ╭ ghsa  : 4 
-│                       │     │                  ╰ redhat: 3 
+│                       │     ├ VendorSeverity   ╭ cbl-mariner: 4 
+│                       │     │                  ├ ghsa       : 4 
+│                       │     │                  ╰ redhat     : 3 
 │                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/
 │                       │     │                  │        │           A:N 
 │                       │     │                  │        ╰ V3Score : 9.1 
@@ -313,8 +314,9 @@
 │                       │     │                   authentication attempts; users of third-party libraries
 │                       │     │                   should refer to the relevant projects for guidance. 
 │                       │     ├ Severity        : CRITICAL 
-│                       │     ├ VendorSeverity   ╭ ghsa  : 4 
-│                       │     │                  ╰ redhat: 3 
+│                       │     ├ VendorSeverity   ╭ cbl-mariner: 4 
+│                       │     │                  ├ ghsa       : 4 
+│                       │     │                  ╰ redhat     : 3 
 │                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/
 │                       │     │                  │        │           A:N 
 │                       │     │                  │        ╰ V3Score : 9.1 
@@ -436,8 +438,9 @@
                         │     │                   authentication attempts; users of third-party libraries
                         │     │                   should refer to the relevant projects for guidance. 
                         │     ├ Severity        : CRITICAL 
-                        │     ├ VendorSeverity   ╭ ghsa  : 4 
-                        │     │                  ╰ redhat: 3 
+                        │     ├ VendorSeverity   ╭ cbl-mariner: 4 
+                        │     │                  ├ ghsa       : 4 
+                        │     │                  ╰ redhat     : 3 
                         │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/
                         │     │                  │        │           A:N 
                         │     │                  │        ╰ V3Score : 9.1 
