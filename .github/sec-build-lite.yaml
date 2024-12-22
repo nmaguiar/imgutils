@@ -23,12 +23,18 @@
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Title: Non-linear parsing of case-insensitive content in golang.org/x/net/html
+    Title: 'golang.org/x/net/html: Non-linear parsing of case-insensitive content in golang.org/x/net/html'
     Description: An attacker can craft an input to the Parse functions that would be processed non-linearly with respect to its length, resulting in extremely slow parsing. This could cause a denial of service.
     Severity: HIGH
     VendorSeverity:
       ghsa: 3
+      redhat: 3
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2024-45338
     - https://cs.opensource.google/go/x/net
     - https://github.com/golang/go/issues/70906
     - https://go.dev/cl/637536
@@ -36,5 +42,6 @@
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45338
     - https://pkg.go.dev/vuln/GO-2024-3333
+    - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
     LastModifiedDate: '2024-12-18T21:15:08.173Z'
