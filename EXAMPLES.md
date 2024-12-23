@@ -15,6 +15,7 @@ List of examples:
 | Kubernetes | Loop the cpu, memory and storage metrics of each container on the current Kubernetes node |
 | Images   | Checking images content |
 | Images   | Checkout the files per layer on an existing image |
+| Images   | Generate a BOM (Bill Of Materials) for a provided image |
 
 > To search for a specific example type '/Checking images content<ENTER>' and use the arrow keys to navigate
 
@@ -410,3 +411,14 @@ oafp libs=dockerregistry in=registryrepos data={} inregistrytags=true out=csv in
 
 > You can check more options by executing 'oafp libs=dockerregistry help=dockerregistry'
 
+---
+
+## Generate a BOM (Bill Of Materials) for a provided image
+
+You can use the _syft_ tool to generate a CycloneDX JSON BOM (Bill Of Materials) file:
+
+```bash
+syft scan nmaguiar/imgutils -o cyclonedx-json
+```
+
+---
