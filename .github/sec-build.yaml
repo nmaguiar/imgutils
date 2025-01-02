@@ -29,6 +29,8 @@
     Title: 'golang.org/x/net/html: Non-linear parsing of case-insensitive content in golang.org/x/net/html'
     Description: An attacker can craft an input to the Parse functions that would be processed non-linearly with respect to its length, resulting in extremely slow parsing. This could cause a denial of service.
     Severity: HIGH
+    CweIDs:
+    - CWE-1333
     VendorSeverity:
       ghsa: 3
       redhat: 3
@@ -47,7 +49,7 @@
     - https://pkg.go.dev/vuln/GO-2024-3333
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
-    LastModifiedDate: '2024-12-18T21:15:08.173Z'
+    LastModifiedDate: '2024-12-31T20:16:06.603Z'
 - Target: usr/bin/ctr
   Class: lang-pkgs
   Type: gobinary
@@ -73,6 +75,8 @@
     Title: 'golang.org/x/net/html: Non-linear parsing of case-insensitive content in golang.org/x/net/html'
     Description: An attacker can craft an input to the Parse functions that would be processed non-linearly with respect to its length, resulting in extremely slow parsing. This could cause a denial of service.
     Severity: HIGH
+    CweIDs:
+    - CWE-1333
     VendorSeverity:
       ghsa: 3
       redhat: 3
@@ -91,7 +95,7 @@
     - https://pkg.go.dev/vuln/GO-2024-3333
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
-    LastModifiedDate: '2024-12-18T21:15:08.173Z'
+    LastModifiedDate: '2024-12-31T20:16:06.603Z'
 - Target: usr/bin/dive
   Class: lang-pkgs
   Type: gobinary
@@ -117,6 +121,8 @@
     Title: 'golang.org/x/net/html: Non-linear parsing of case-insensitive content in golang.org/x/net/html'
     Description: An attacker can craft an input to the Parse functions that would be processed non-linearly with respect to its length, resulting in extremely slow parsing. This could cause a denial of service.
     Severity: HIGH
+    CweIDs:
+    - CWE-1333
     VendorSeverity:
       ghsa: 3
       redhat: 3
@@ -135,7 +141,7 @@
     - https://pkg.go.dev/vuln/GO-2024-3333
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
-    LastModifiedDate: '2024-12-18T21:15:08.173Z'
+    LastModifiedDate: '2024-12-31T20:16:06.603Z'
 - Target: usr/bin/docker
   Class: lang-pkgs
   Type: gobinary
@@ -164,6 +170,8 @@
     Title: 'golang.org/x/net/html: Non-linear parsing of case-insensitive content in golang.org/x/net/html'
     Description: An attacker can craft an input to the Parse functions that would be processed non-linearly with respect to its length, resulting in extremely slow parsing. This could cause a denial of service.
     Severity: HIGH
+    CweIDs:
+    - CWE-1333
     VendorSeverity:
       ghsa: 3
       redhat: 3
@@ -182,7 +190,7 @@
     - https://pkg.go.dev/vuln/GO-2024-3333
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
-    LastModifiedDate: '2024-12-18T21:15:08.173Z'
+    LastModifiedDate: '2024-12-31T20:16:06.603Z'
 - Target: usr/bin/nerdctl
   Class: lang-pkgs
   Type: gobinary
@@ -254,6 +262,8 @@
     Title: 'golang.org/x/net/html: Non-linear parsing of case-insensitive content in golang.org/x/net/html'
     Description: An attacker can craft an input to the Parse functions that would be processed non-linearly with respect to its length, resulting in extremely slow parsing. This could cause a denial of service.
     Severity: HIGH
+    CweIDs:
+    - CWE-1333
     VendorSeverity:
       ghsa: 3
       redhat: 3
@@ -272,7 +282,7 @@
     - https://pkg.go.dev/vuln/GO-2024-3333
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
-    LastModifiedDate: '2024-12-18T21:15:08.173Z'
+    LastModifiedDate: '2024-12-31T20:16:06.603Z'
 - Target: usr/bin/skopeo
   Class: lang-pkgs
   Type: gobinary
@@ -344,6 +354,8 @@
     Title: 'golang.org/x/net/html: Non-linear parsing of case-insensitive content in golang.org/x/net/html'
     Description: An attacker can craft an input to the Parse functions that would be processed non-linearly with respect to its length, resulting in extremely slow parsing. This could cause a denial of service.
     Severity: HIGH
+    CweIDs:
+    - CWE-1333
     VendorSeverity:
       ghsa: 3
       redhat: 3
@@ -362,7 +374,7 @@
     - https://pkg.go.dev/vuln/GO-2024-3333
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
-    LastModifiedDate: '2024-12-18T21:15:08.173Z'
+    LastModifiedDate: '2024-12-31T20:16:06.603Z'
 - Target: usr/bin/syft
   Class: lang-pkgs
   Type: gobinary
@@ -388,6 +400,8 @@
     Title: 'golang.org/x/net/html: Non-linear parsing of case-insensitive content in golang.org/x/net/html'
     Description: An attacker can craft an input to the Parse functions that would be processed non-linearly with respect to its length, resulting in extremely slow parsing. This could cause a denial of service.
     Severity: HIGH
+    CweIDs:
+    - CWE-1333
     VendorSeverity:
       ghsa: 3
       redhat: 3
@@ -406,4 +420,4 @@
     - https://pkg.go.dev/vuln/GO-2024-3333
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
-    LastModifiedDate: '2024-12-18T21:15:08.173Z'
+    LastModifiedDate: '2024-12-31T20:16:06.603Z'
