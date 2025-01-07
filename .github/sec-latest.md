@@ -459,7 +459,87 @@
 ╰ [9] ╭ Target         : usr/bin/syft 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
-      ╰ Vulnerabilities ─ [0] ╭ VulnerabilityID : CVE-2024-45338 
+      ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2025-21613 
+                        │     ├ PkgID           : github.com/go-git/go-git/v5@v5.12.0 
+                        │     ├ PkgName         : github.com/go-git/go-git/v5 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/go-git/go-git/v5@v5.12.0 
+                        │     │                  ╰ UID : baa08bd087dfadab 
+                        │     ├ InstalledVersion: v5.12.0 
+                        │     ├ FixedVersion    : 5.13.0 
+                        │     ├ Status          : fixed 
+                        │     ├ Layer            ╭ Digest: sha256:97fa13ad5f7dcc8387b1844153e92c082e5bcf3d916b9
+                        │     │                  │         5fc406181f7a2067cd8 
+                        │     │                  ╰ DiffID: sha256:bc1e9762f9f1e9aedc6eb4b1899807c117bf5c71c1f76
+                        │     │                            9764f05f4a89bc44e2e 
+                        │     ├ SeveritySource  : ghsa 
+                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-21613 
+                        │     ├ DataSource       ╭ ID  : ghsa 
+                        │     │                  ├ Name: GitHub Security Advisory Go 
+                        │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+                        │     │                          osystem%3Ago 
+                        │     ├ Title           : go-git is a highly extensible git implementation library
+                        │     │                   written in pu ... 
+                        │     ├ Description     : go-git is a highly extensible git implementation library
+                        │     │                   written in pure Go. An argument injection vulnerability was
+                        │     │                   discovered in go-git versions prior to v5.13. Successful
+                        │     │                   exploitation of this vulnerability could allow an attacker to
+                        │     │                    set arbitrary values to git-upload-pack flags. This only
+                        │     │                   happens when the file transport protocol is being used, as
+                        │     │                   that is the only protocol that shells out to git binaries.
+                        │     │                   This vulnerability is fixed in 5.13.0. 
+                        │     ├ Severity        : CRITICAL 
+                        │     ├ CweIDs           ─ [0]: CWE-88 
+                        │     ├ VendorSeverity   ─ ghsa: 4 
+                        │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H 
+                        │     │                         ╰ V3Score : 9.8 
+                        │     ├ References       ╭ [0]: https://github.com/go-git/go-git 
+                        │     │                  ├ [1]: https://github.com/go-git/go-git/security/advisories/GH
+                        │     │                  │      SA-v725-9546-7q7m 
+                        │     │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2025-21613 
+                        │     ├ PublishedDate   : 2025-01-06T17:15:47.043Z 
+                        │     ╰ LastModifiedDate: 2025-01-06T17:15:47.043Z 
+                        ├ [1] ╭ VulnerabilityID : CVE-2025-21614 
+                        │     ├ PkgID           : github.com/go-git/go-git/v5@v5.12.0 
+                        │     ├ PkgName         : github.com/go-git/go-git/v5 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/go-git/go-git/v5@v5.12.0 
+                        │     │                  ╰ UID : baa08bd087dfadab 
+                        │     ├ InstalledVersion: v5.12.0 
+                        │     ├ FixedVersion    : 5.13.0 
+                        │     ├ Status          : fixed 
+                        │     ├ Layer            ╭ Digest: sha256:97fa13ad5f7dcc8387b1844153e92c082e5bcf3d916b9
+                        │     │                  │         5fc406181f7a2067cd8 
+                        │     │                  ╰ DiffID: sha256:bc1e9762f9f1e9aedc6eb4b1899807c117bf5c71c1f76
+                        │     │                            9764f05f4a89bc44e2e 
+                        │     ├ SeveritySource  : ghsa 
+                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-21614 
+                        │     ├ DataSource       ╭ ID  : ghsa 
+                        │     │                  ├ Name: GitHub Security Advisory Go 
+                        │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+                        │     │                          osystem%3Ago 
+                        │     ├ Title           : go-git is a highly extensible git implementation library
+                        │     │                   written in pu ... 
+                        │     ├ Description     : go-git is a highly extensible git implementation library
+                        │     │                   written in pure Go. A denial of service (DoS) vulnerability
+                        │     │                   was discovered in go-git versions prior to v5.13. This
+                        │     │                   vulnerability allows an attacker to perform denial of service
+                        │     │                    attacks by providing specially crafted responses from a Git
+                        │     │                   server which triggers resource exhaustion in go-git clients.
+                        │     │                   Users running versions of go-git from v4 and above are
+                        │     │                   recommended to upgrade to v5.13 in order to mitigate this
+                        │     │                   vulnerability. 
+                        │     ├ Severity        : HIGH 
+                        │     ├ CweIDs           ╭ [0]: CWE-400 
+                        │     │                  ╰ [1]: CWE-770 
+                        │     ├ VendorSeverity   ─ ghsa: 3 
+                        │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
+                        │     │                         ╰ V3Score : 7.5 
+                        │     ├ References       ╭ [0]: https://github.com/go-git/go-git 
+                        │     │                  ├ [1]: https://github.com/go-git/go-git/security/advisories/GH
+                        │     │                  │      SA-r9px-m959-cxf4 
+                        │     │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2025-21614 
+                        │     ├ PublishedDate   : 2025-01-06T17:15:47.31Z 
+                        │     ╰ LastModifiedDate: 2025-01-06T17:15:47.31Z 
+                        ╰ [2] ╭ VulnerabilityID : CVE-2024-45338 
                               ├ PkgID           : golang.org/x/net@v0.32.0 
                               ├ PkgName         : golang.org/x/net 
                               ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.32.0 
