@@ -477,8 +477,7 @@
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
                         │     │                          osystem%3Ago 
-                        │     ├ Title           : go-git is a highly extensible git implementation library
-                        │     │                   written in pu ... 
+                        │     ├ Title           : go-git: argument injection via the URL field 
                         │     ├ Description     : go-git is a highly extensible git implementation library
                         │     │                   written in pure Go. An argument injection vulnerability was
                         │     │                   discovered in go-git versions prior to v5.13. Successful
@@ -489,13 +488,20 @@
                         │     │                   This vulnerability is fixed in 5.13.0. 
                         │     ├ Severity        : CRITICAL 
                         │     ├ CweIDs           ─ [0]: CWE-88 
-                        │     ├ VendorSeverity   ─ ghsa: 4 
-                        │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H 
-                        │     │                         ╰ V3Score : 9.8 
-                        │     ├ References       ╭ [0]: https://github.com/go-git/go-git 
-                        │     │                  ├ [1]: https://github.com/go-git/go-git/security/advisories/GH
+                        │     ├ VendorSeverity   ╭ ghsa  : 4 
+                        │     │                  ╰ redhat: 3 
+                        │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/
+                        │     │                  │        │           A:H 
+                        │     │                  │        ╰ V3Score : 9.8 
+                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/
+                        │     │                           │           A:H 
+                        │     │                           ╰ V3Score : 8.1 
+                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-21613 
+                        │     │                  ├ [1]: https://github.com/go-git/go-git 
+                        │     │                  ├ [2]: https://github.com/go-git/go-git/security/advisories/GH
                         │     │                  │      SA-v725-9546-7q7m 
-                        │     │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2025-21613 
+                        │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-21613 
+                        │     │                  ╰ [4]: https://www.cve.org/CVERecord?id=CVE-2025-21613 
                         │     ├ PublishedDate   : 2025-01-06T17:15:47.043Z 
                         │     ╰ LastModifiedDate: 2025-01-06T17:15:47.043Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2025-21614 
