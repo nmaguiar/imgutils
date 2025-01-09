@@ -18,8 +18,8 @@
     FixedVersion: 0.33.0
     Status: fixed
     Layer:
-      Digest: sha256:51bdb8917c08f231f8245bc283e068921c3856d933cf05f9bc2fb9ab9ab8f1c5
-      DiffID: sha256:4c29780d62e591bd05a900c92761941fd5abaeb1e388133cf4f38d1ddf402055
+      Digest: sha256:cf8802c5e98e9ab2e76e97824d506ccf05f521f3f0928076613db92cdcd9df48
+      DiffID: sha256:3f932026f9dbac194d287bf2a1fedbb4c7552370bf9ccbd7a9c366c2258ae357
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45338
     DataSource:
@@ -34,6 +34,7 @@
     VendorSeverity:
       ghsa: 3
       redhat: 3
+      ubuntu: 2
     CVSS:
       redhat:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -42,6 +43,7 @@
     - https://access.redhat.com/security/cve/CVE-2024-45338
     - https://cs.opensource.google/go/x/net
     - https://github.com/golang/go/issues/70906
+    - https://go-review.googlesource.com/c/net/+/637536
     - https://go.dev/cl/637536
     - https://go.dev/issue/70906
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
@@ -64,8 +66,8 @@
     FixedVersion: 0.33.0
     Status: fixed
     Layer:
-      Digest: sha256:51bdb8917c08f231f8245bc283e068921c3856d933cf05f9bc2fb9ab9ab8f1c5
-      DiffID: sha256:4c29780d62e591bd05a900c92761941fd5abaeb1e388133cf4f38d1ddf402055
+      Digest: sha256:cf8802c5e98e9ab2e76e97824d506ccf05f521f3f0928076613db92cdcd9df48
+      DiffID: sha256:3f932026f9dbac194d287bf2a1fedbb4c7552370bf9ccbd7a9c366c2258ae357
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45338
     DataSource:
@@ -80,6 +82,7 @@
     VendorSeverity:
       ghsa: 3
       redhat: 3
+      ubuntu: 2
     CVSS:
       redhat:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -88,6 +91,7 @@
     - https://access.redhat.com/security/cve/CVE-2024-45338
     - https://cs.opensource.google/go/x/net
     - https://github.com/golang/go/issues/70906
+    - https://go-review.googlesource.com/c/net/+/637536
     - https://go.dev/cl/637536
     - https://go.dev/issue/70906
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
@@ -110,8 +114,8 @@
     FixedVersion: 0.33.0
     Status: fixed
     Layer:
-      Digest: sha256:51bdb8917c08f231f8245bc283e068921c3856d933cf05f9bc2fb9ab9ab8f1c5
-      DiffID: sha256:4c29780d62e591bd05a900c92761941fd5abaeb1e388133cf4f38d1ddf402055
+      Digest: sha256:cf8802c5e98e9ab2e76e97824d506ccf05f521f3f0928076613db92cdcd9df48
+      DiffID: sha256:3f932026f9dbac194d287bf2a1fedbb4c7552370bf9ccbd7a9c366c2258ae357
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45338
     DataSource:
@@ -126,6 +130,7 @@
     VendorSeverity:
       ghsa: 3
       redhat: 3
+      ubuntu: 2
     CVSS:
       redhat:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -134,6 +139,7 @@
     - https://access.redhat.com/security/cve/CVE-2024-45338
     - https://cs.opensource.google/go/x/net
     - https://github.com/golang/go/issues/70906
+    - https://go-review.googlesource.com/c/net/+/637536
     - https://go.dev/cl/637536
     - https://go.dev/issue/70906
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
@@ -159,8 +165,8 @@
     FixedVersion: 0.33.0
     Status: fixed
     Layer:
-      Digest: sha256:51bdb8917c08f231f8245bc283e068921c3856d933cf05f9bc2fb9ab9ab8f1c5
-      DiffID: sha256:4c29780d62e591bd05a900c92761941fd5abaeb1e388133cf4f38d1ddf402055
+      Digest: sha256:cf8802c5e98e9ab2e76e97824d506ccf05f521f3f0928076613db92cdcd9df48
+      DiffID: sha256:3f932026f9dbac194d287bf2a1fedbb4c7552370bf9ccbd7a9c366c2258ae357
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45338
     DataSource:
@@ -175,6 +181,7 @@
     VendorSeverity:
       ghsa: 3
       redhat: 3
+      ubuntu: 2
     CVSS:
       redhat:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -183,6 +190,7 @@
     - https://access.redhat.com/security/cve/CVE-2024-45338
     - https://cs.opensource.google/go/x/net
     - https://github.com/golang/go/issues/70906
+    - https://go-review.googlesource.com/c/net/+/637536
     - https://go.dev/cl/637536
     - https://go.dev/issue/70906
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
@@ -205,8 +213,8 @@
     FixedVersion: 0.31.0
     Status: fixed
     Layer:
-      Digest: sha256:51bdb8917c08f231f8245bc283e068921c3856d933cf05f9bc2fb9ab9ab8f1c5
-      DiffID: sha256:4c29780d62e591bd05a900c92761941fd5abaeb1e388133cf4f38d1ddf402055
+      Digest: sha256:cf8802c5e98e9ab2e76e97824d506ccf05f521f3f0928076613db92cdcd9df48
+      DiffID: sha256:3f932026f9dbac194d287bf2a1fedbb4c7552370bf9ccbd7a9c366c2258ae357
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45337
     DataSource:
@@ -251,8 +259,8 @@
     FixedVersion: 0.33.0
     Status: fixed
     Layer:
-      Digest: sha256:51bdb8917c08f231f8245bc283e068921c3856d933cf05f9bc2fb9ab9ab8f1c5
-      DiffID: sha256:4c29780d62e591bd05a900c92761941fd5abaeb1e388133cf4f38d1ddf402055
+      Digest: sha256:cf8802c5e98e9ab2e76e97824d506ccf05f521f3f0928076613db92cdcd9df48
+      DiffID: sha256:3f932026f9dbac194d287bf2a1fedbb4c7552370bf9ccbd7a9c366c2258ae357
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45338
     DataSource:
@@ -267,6 +275,7 @@
     VendorSeverity:
       ghsa: 3
       redhat: 3
+      ubuntu: 2
     CVSS:
       redhat:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -275,6 +284,7 @@
     - https://access.redhat.com/security/cve/CVE-2024-45338
     - https://cs.opensource.google/go/x/net
     - https://github.com/golang/go/issues/70906
+    - https://go-review.googlesource.com/c/net/+/637536
     - https://go.dev/cl/637536
     - https://go.dev/issue/70906
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
@@ -297,8 +307,8 @@
     FixedVersion: 0.31.0
     Status: fixed
     Layer:
-      Digest: sha256:51bdb8917c08f231f8245bc283e068921c3856d933cf05f9bc2fb9ab9ab8f1c5
-      DiffID: sha256:4c29780d62e591bd05a900c92761941fd5abaeb1e388133cf4f38d1ddf402055
+      Digest: sha256:cf8802c5e98e9ab2e76e97824d506ccf05f521f3f0928076613db92cdcd9df48
+      DiffID: sha256:3f932026f9dbac194d287bf2a1fedbb4c7552370bf9ccbd7a9c366c2258ae357
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45337
     DataSource:
@@ -343,8 +353,8 @@
     FixedVersion: 0.33.0
     Status: fixed
     Layer:
-      Digest: sha256:51bdb8917c08f231f8245bc283e068921c3856d933cf05f9bc2fb9ab9ab8f1c5
-      DiffID: sha256:4c29780d62e591bd05a900c92761941fd5abaeb1e388133cf4f38d1ddf402055
+      Digest: sha256:cf8802c5e98e9ab2e76e97824d506ccf05f521f3f0928076613db92cdcd9df48
+      DiffID: sha256:3f932026f9dbac194d287bf2a1fedbb4c7552370bf9ccbd7a9c366c2258ae357
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45338
     DataSource:
@@ -359,6 +369,7 @@
     VendorSeverity:
       ghsa: 3
       redhat: 3
+      ubuntu: 2
     CVSS:
       redhat:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -367,6 +378,7 @@
     - https://access.redhat.com/security/cve/CVE-2024-45338
     - https://cs.opensource.google/go/x/net
     - https://github.com/golang/go/issues/70906
+    - https://go-review.googlesource.com/c/net/+/637536
     - https://go.dev/cl/637536
     - https://go.dev/issue/70906
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
@@ -389,8 +401,8 @@
     FixedVersion: 5.13.0
     Status: fixed
     Layer:
-      Digest: sha256:51bdb8917c08f231f8245bc283e068921c3856d933cf05f9bc2fb9ab9ab8f1c5
-      DiffID: sha256:4c29780d62e591bd05a900c92761941fd5abaeb1e388133cf4f38d1ddf402055
+      Digest: sha256:cf8802c5e98e9ab2e76e97824d506ccf05f521f3f0928076613db92cdcd9df48
+      DiffID: sha256:3f932026f9dbac194d287bf2a1fedbb4c7552370bf9ccbd7a9c366c2258ae357
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-21613
     DataSource:
@@ -430,8 +442,8 @@
     FixedVersion: 5.13.0
     Status: fixed
     Layer:
-      Digest: sha256:51bdb8917c08f231f8245bc283e068921c3856d933cf05f9bc2fb9ab9ab8f1c5
-      DiffID: sha256:4c29780d62e591bd05a900c92761941fd5abaeb1e388133cf4f38d1ddf402055
+      Digest: sha256:cf8802c5e98e9ab2e76e97824d506ccf05f521f3f0928076613db92cdcd9df48
+      DiffID: sha256:3f932026f9dbac194d287bf2a1fedbb4c7552370bf9ccbd7a9c366c2258ae357
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-21614
     DataSource:
@@ -466,8 +478,8 @@
     FixedVersion: 0.33.0
     Status: fixed
     Layer:
-      Digest: sha256:51bdb8917c08f231f8245bc283e068921c3856d933cf05f9bc2fb9ab9ab8f1c5
-      DiffID: sha256:4c29780d62e591bd05a900c92761941fd5abaeb1e388133cf4f38d1ddf402055
+      Digest: sha256:cf8802c5e98e9ab2e76e97824d506ccf05f521f3f0928076613db92cdcd9df48
+      DiffID: sha256:3f932026f9dbac194d287bf2a1fedbb4c7552370bf9ccbd7a9c366c2258ae357
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45338
     DataSource:
@@ -482,6 +494,7 @@
     VendorSeverity:
       ghsa: 3
       redhat: 3
+      ubuntu: 2
     CVSS:
       redhat:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -490,6 +503,7 @@
     - https://access.redhat.com/security/cve/CVE-2024-45338
     - https://cs.opensource.google/go/x/net
     - https://github.com/golang/go/issues/70906
+    - https://go-review.googlesource.com/c/net/+/637536
     - https://go.dev/cl/637536
     - https://go.dev/issue/70906
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
