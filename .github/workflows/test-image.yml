@@ -1,17 +1,19 @@
-  on:
-    push:
-      branches:
-      - main
-    workflow_dispatch:
+name: Test images
 
-  jobs:
-    test-syft:
-      name   : test syft
-      runs-on: ubuntu-latest
+on:
+  push:
+    branches:
+    - main
+  workflow_dispatch:
 
-      steps:
-      - uses: actions/checkout@v4
-      - name: Test syft
-        uses: ./
-        with:
-          cmd: syft scan nmaguiar/imgutils -o cyclonedx-json
+jobs:
+  test-syft:
+    name   : test syft
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Test syft
+      uses: ./
+      with:
+        cmd: syft scan nmaguiar/imgutils -o cyclonedx-json
