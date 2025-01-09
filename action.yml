@@ -1,0 +1,14 @@
+name: 'imgutils'
+description: 'A set of tools to operate container images'
+branding:
+  icon: command
+  color: gray-dark
+inputs:
+  cmd:
+    description: 'The command which should be run'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+  - ${{ inputs.cmd }}
