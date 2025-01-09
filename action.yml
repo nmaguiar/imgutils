@@ -11,4 +11,6 @@ runs:
   using: 'docker'
   image: 'docker://nmaguiar/imgutils:build'
   args:
+  - /bin/sh
+  - -c
   - ${{ inputs.cmd }}
