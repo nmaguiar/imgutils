@@ -80,11 +80,11 @@ jobs:
     - name: Test skopeo inspect
       uses: ./
       with:
-        cmd: skopeo inspect docker://nmaguiar/imgutils:build > /dev/null
+        cmd: sudo skopeo inspect docker://nmaguiar/imgutils:build > /dev/null
     - name: Test skopeo copy
       uses: ./
       with:
-        cmd: skopeo copy docker://library/alpine:latest docker-archive:image.tar
+        cmd: sudo skopeo copy docker://library/alpine:latest docker-archive:image.tar
 
   test-helm:
     name   : test helm
@@ -96,7 +96,7 @@ jobs:
     - name: Test helm
       uses: ./
       with:
-        cmd: helm repo add bitnami https://charts.bitnami.com/bitnami && helm pull bitnami/nginx
+        cmd: sudo helm repo add bitnami https://charts.bitnami.com/bitnami && sudo helm pull bitnami/nginx
 
   test-docker:
     name   : test docker
