@@ -9,6 +9,6 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker://nmaguiar/imgutils:build'
   args:
   - ${{ inputs.cmd }}
