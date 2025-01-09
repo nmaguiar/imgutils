@@ -16,4 +16,4 @@ jobs:
     - name: Test syft
       uses: ./
       with:
-        cmd: /usr/bin/syft scan nmaguiar/imgutils -o cyclonedx-json
+        cmd: sudo syft scan nmaguiar/imgutils -o cyclonedx-json
