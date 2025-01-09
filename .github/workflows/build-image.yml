@@ -69,3 +69,14 @@ jobs:
     #     file: Dockerfile.ubi
     #     push: true
     #     tags: nmaguiar/imgutils:ubi-build
+
+  test-syft:
+    name   : test syft
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Test syft
+      uses: ./
+      with:
+        cmd: sudo syft scan nmaguiar/imgutils -o syft-table > /dev/null
