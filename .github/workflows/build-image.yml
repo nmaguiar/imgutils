@@ -70,6 +70,94 @@ jobs:
     #     push: true
     #     tags: nmaguiar/imgutils:ubi-build
 
+  test-skopeo:
+    name   : test skopeo
+    runs-on: ubuntu-latest
+    needs  : build
+
+    steps  :
+    - uses: actions/checkout@v4
+    - name: Test skopeo inspect
+      uses: ./
+      with:
+        cmd: skopeo inspect docker://nmaguiar/imgutils:build > /dev/null
+    - name: Test skopeo copy
+      uses: ./
+      with:
+        cmd: skopeo copy docker://library/alpine:latest docker-archive:image.tar
+
+  test-helm:
+    name   : test helm
+    runs-on: ubuntu-latest
+    needs  : build
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Test helm
+      uses: ./
+      with:
+        cmd: helm repo add bitnami https://charts.bitnami.com/bitnami && helm pull bitnami/nginx
+
+  test-docker:
+    name   : test docker
+    runs-on: ubuntu-latest
+    needs  : build
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Test docker
+      uses: ./
+      with:
+        cmd: docker run --rm nmaguiar/imgutils:build id
+
+  test-crictl:
+    name   : test crictl
+    runs-on: ubuntu-latest
+    needs  : build
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Test crictl
+      uses: ./
+      with:
+        cmd: crictl -v
+
+  test-ctr:
+    name   : test ctr
+    runs-on: ubuntu-latest
+    needs  : build
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Test ctr
+      uses: ./
+      with:
+        cmd: ctr -v
+
+  test-nerdctl:
+    name   : test nerdctl
+    runs-on: ubuntu-latest
+    needs  : build
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Test nerdctl
+      uses: ./
+      with:
+        cmd: nerdctl -v
+  
+  test-openaf:
+    name   : test openaf
+    runs-on: ubuntu-latest
+    needs  : build
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Test openaf
+      uses: ./
+      with:
+        cmd: oaf -v
+
   test-syft:
     name   : test syft
     runs-on: ubuntu-latest
