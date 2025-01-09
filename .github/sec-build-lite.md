@@ -1,5 +1,5 @@
 ````yaml
-╭ [0] ╭ Target: nmaguiar/imgutils:build-lite (alpine 3.21.0_alpha20240923) 
+╭ [0] ╭ Target: nmaguiar/imgutils:build-lite (alpine 3.22.0_alpha20250108) 
 │     ├ Class : os-pkgs 
 │     ╰ Type  : alpine 
 ╰ [1] ╭ Target         : usr/bin/crictl 
@@ -13,10 +13,10 @@
                               ├ InstalledVersion: v0.30.0 
                               ├ FixedVersion    : 0.33.0 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:4ec4f7df73e2ddcb8de88fef209388188c9c1a862ed85
-                              │                  │         189c59a6e5136ee3f2e 
-                              │                  ╰ DiffID: sha256:93cf5872d8cd6b87118068a157d97028edb6a2084c9c4
-                              │                            481a0a311e7bba9896f 
+                              ├ Layer            ╭ Digest: sha256:46f3b0549c58e69a2651014d8aaec8b7a999a8c269adb
+                              │                  │         940789f5497e241ef33 
+                              │                  ╰ DiffID: sha256:623c5bf22c906b418d07a6415760f760c5396a020a308
+                              │                            702b12eb1ec90d5a2a1 
                               ├ SeveritySource  : ghsa 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45338 
                               ├ DataSource       ╭ ID  : ghsa 
@@ -32,20 +32,22 @@
                               ├ Severity        : HIGH 
                               ├ CweIDs           ─ [0]: CWE-1333 
                               ├ VendorSeverity   ╭ ghsa  : 3 
-                              │                  ╰ redhat: 3 
+                              │                  ├ redhat: 3 
+                              │                  ╰ ubuntu: 2 
                               ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
                               │                           │           A:H 
                               │                           ╰ V3Score : 7.5 
                               ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-45338 
                               │                  ├ [1]: https://cs.opensource.google/go/x/net 
                               │                  ├ [2]: https://github.com/golang/go/issues/70906 
-                              │                  ├ [3]: https://go.dev/cl/637536 
-                              │                  ├ [4]: https://go.dev/issue/70906 
-                              │                  ├ [5]: https://groups.google.com/g/golang-announce/c/wSCRmFnNm
+                              │                  ├ [3]: https://go-review.googlesource.com/c/net/+/637536 
+                              │                  ├ [4]: https://go.dev/cl/637536 
+                              │                  ├ [5]: https://go.dev/issue/70906 
+                              │                  ├ [6]: https://groups.google.com/g/golang-announce/c/wSCRmFnNm
                               │                  │      PA/m/Lvcd0mRMAwAJ 
-                              │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2024-45338 
-                              │                  ├ [7]: https://pkg.go.dev/vuln/GO-2024-3333 
-                              │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-45338 
+                              │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2024-45338 
+                              │                  ├ [8]: https://pkg.go.dev/vuln/GO-2024-3333 
+                              │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2024-45338 
                               ├ PublishedDate   : 2024-12-18T21:15:08.173Z 
                               ╰ LastModifiedDate: 2024-12-31T20:16:06.603Z 
 ````
