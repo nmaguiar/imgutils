@@ -34,9 +34,10 @@
 │                             │                   denial of service. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-1333 
-│                             ├ VendorSeverity   ╭ ghsa  : 3 
-│                             │                  ├ redhat: 3 
-│                             │                  ╰ ubuntu: 2 
+│                             ├ VendorSeverity   ╭ cbl-mariner: 3 
+│                             │                  ├ ghsa       : 3 
+│                             │                  ├ redhat     : 3 
+│                             │                  ╰ ubuntu     : 2 
 │                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
 │                             │                           │           A:H 
 │                             │                           ╰ V3Score : 7.5 
@@ -82,9 +83,10 @@
 │                             │                   denial of service. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-1333 
-│                             ├ VendorSeverity   ╭ ghsa  : 3 
-│                             │                  ├ redhat: 3 
-│                             │                  ╰ ubuntu: 2 
+│                             ├ VendorSeverity   ╭ cbl-mariner: 3 
+│                             │                  ├ ghsa       : 3 
+│                             │                  ├ redhat     : 3 
+│                             │                  ╰ ubuntu     : 2 
 │                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
 │                             │                           │           A:H 
 │                             │                           ╰ V3Score : 7.5 
@@ -130,9 +132,10 @@
 │                             │                   denial of service. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-1333 
-│                             ├ VendorSeverity   ╭ ghsa  : 3 
-│                             │                  ├ redhat: 3 
-│                             │                  ╰ ubuntu: 2 
+│                             ├ VendorSeverity   ╭ cbl-mariner: 3 
+│                             │                  ├ ghsa       : 3 
+│                             │                  ├ redhat     : 3 
+│                             │                  ╰ ubuntu     : 2 
 │                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
 │                             │                           │           A:H 
 │                             │                           ╰ V3Score : 7.5 
@@ -181,9 +184,10 @@
 │                             │                   denial of service. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-1333 
-│                             ├ VendorSeverity   ╭ ghsa  : 3 
-│                             │                  ├ redhat: 3 
-│                             │                  ╰ ubuntu: 2 
+│                             ├ VendorSeverity   ╭ cbl-mariner: 3 
+│                             │                  ├ ghsa       : 3 
+│                             │                  ├ redhat     : 3 
+│                             │                  ╰ ubuntu     : 2 
 │                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
 │                             │                           │           A:H 
 │                             │                           ╰ V3Score : 7.5 
@@ -315,9 +319,10 @@
 │                             │                   denial of service. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-1333 
-│                             ├ VendorSeverity   ╭ ghsa  : 3 
-│                             │                  ├ redhat: 3 
-│                             │                  ╰ ubuntu: 2 
+│                             ├ VendorSeverity   ╭ cbl-mariner: 3 
+│                             │                  ├ ghsa       : 3 
+│                             │                  ├ redhat     : 3 
+│                             │                  ╰ ubuntu     : 2 
 │                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
 │                             │                           │           A:H 
 │                             │                           ╰ V3Score : 7.5 
@@ -449,9 +454,10 @@
 │                             │                   denial of service. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-1333 
-│                             ├ VendorSeverity   ╭ ghsa  : 3 
-│                             │                  ├ redhat: 3 
-│                             │                  ╰ ubuntu: 2 
+│                             ├ VendorSeverity   ╭ cbl-mariner: 3 
+│                             │                  ├ ghsa       : 3 
+│                             │                  ├ redhat     : 3 
+│                             │                  ╰ ubuntu     : 2 
 │                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
 │                             │                           │           A:H 
 │                             │                           ╰ V3Score : 7.5 
@@ -534,8 +540,8 @@
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
                         │     │                          osystem%3Ago 
-                        │     ├ Title           : go-git is a highly extensible git implementation library
-                        │     │                   written in pu ... 
+                        │     ├ Title           : go-git: go-git clients vulnerable to DoS via maliciously
+                        │     │                   crafted Git server replies 
                         │     ├ Description     : go-git is a highly extensible git implementation library
                         │     │                   written in pure Go. A denial of service (DoS) vulnerability
                         │     │                   was discovered in go-git versions prior to v5.13. This
@@ -548,13 +554,20 @@
                         │     ├ Severity        : HIGH 
                         │     ├ CweIDs           ╭ [0]: CWE-400 
                         │     │                  ╰ [1]: CWE-770 
-                        │     ├ VendorSeverity   ─ ghsa: 3 
-                        │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
-                        │     │                         ╰ V3Score : 7.5 
-                        │     ├ References       ╭ [0]: https://github.com/go-git/go-git 
-                        │     │                  ├ [1]: https://github.com/go-git/go-git/security/advisories/GH
+                        │     ├ VendorSeverity   ╭ ghsa  : 3 
+                        │     │                  ╰ redhat: 3 
+                        │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+                        │     │                  │        │           A:H 
+                        │     │                  │        ╰ V3Score : 7.5 
+                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+                        │     │                           │           A:H 
+                        │     │                           ╰ V3Score : 7.5 
+                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-21614 
+                        │     │                  ├ [1]: https://github.com/go-git/go-git 
+                        │     │                  ├ [2]: https://github.com/go-git/go-git/security/advisories/GH
                         │     │                  │      SA-r9px-m959-cxf4 
-                        │     │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2025-21614 
+                        │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-21614 
+                        │     │                  ╰ [4]: https://www.cve.org/CVERecord?id=CVE-2025-21614 
                         │     ├ PublishedDate   : 2025-01-06T17:15:47.31Z 
                         │     ╰ LastModifiedDate: 2025-01-06T17:15:47.31Z 
                         ╰ [2] ╭ VulnerabilityID : CVE-2024-45338 
@@ -583,9 +596,10 @@
                               │                   denial of service. 
                               ├ Severity        : HIGH 
                               ├ CweIDs           ─ [0]: CWE-1333 
-                              ├ VendorSeverity   ╭ ghsa  : 3 
-                              │                  ├ redhat: 3 
-                              │                  ╰ ubuntu: 2 
+                              ├ VendorSeverity   ╭ cbl-mariner: 3 
+                              │                  ├ ghsa       : 3 
+                              │                  ├ redhat     : 3 
+                              │                  ╰ ubuntu     : 2 
                               ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
                               │                           │           A:H 
                               │                           ╰ V3Score : 7.5 
