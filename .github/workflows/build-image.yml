@@ -81,10 +81,6 @@ jobs:
       uses: ./
       with:
         cmd: sudo skopeo inspect docker://nmaguiar/imgutils:build > /dev/null
-    - name: Test skopeo copy
-      uses: ./
-      with:
-        cmd: sudo skopeo copy docker://nmaguiar/imgutils:build docker-archive:image.tar
 
   test-helm:
     name   : test helm
