@@ -84,7 +84,7 @@ jobs:
     - name: Test skopeo copy
       uses: ./
       with:
-        cmd: sudo skopeo copy docker://library/alpine:latest docker-archive:image.tar
+        cmd: sudo skopeo copy docker://nmaguiar/imgutils:build docker-archive:image.tar
 
   test-helm:
     name   : test helm
