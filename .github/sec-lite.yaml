@@ -29,6 +29,7 @@
     CweIDs:
     - CWE-1333
     VendorSeverity:
+      cbl-mariner: 3
       ghsa: 3
       redhat: 3
       ubuntu: 2
