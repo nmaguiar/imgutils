@@ -32,6 +32,7 @@
     CweIDs:
     - CWE-1333
     VendorSeverity:
+      cbl-mariner: 3
       ghsa: 3
       redhat: 3
       ubuntu: 2
@@ -80,6 +81,7 @@
     CweIDs:
     - CWE-1333
     VendorSeverity:
+      cbl-mariner: 3
       ghsa: 3
       redhat: 3
       ubuntu: 2
@@ -128,6 +130,7 @@
     CweIDs:
     - CWE-1333
     VendorSeverity:
+      cbl-mariner: 3
       ghsa: 3
       redhat: 3
       ubuntu: 2
@@ -179,6 +182,7 @@
     CweIDs:
     - CWE-1333
     VendorSeverity:
+      cbl-mariner: 3
       ghsa: 3
       redhat: 3
       ubuntu: 2
@@ -273,6 +277,7 @@
     CweIDs:
     - CWE-1333
     VendorSeverity:
+      cbl-mariner: 3
       ghsa: 3
       redhat: 3
       ubuntu: 2
@@ -367,6 +372,7 @@
     CweIDs:
     - CWE-1333
     VendorSeverity:
+      cbl-mariner: 3
       ghsa: 3
       redhat: 3
       ubuntu: 2
@@ -450,7 +456,7 @@
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Title: go-git is a highly extensible git implementation library written in pu ...
+    Title: 'go-git: go-git clients vulnerable to DoS via maliciously crafted Git server replies'
     Description: go-git is a highly extensible git implementation library written in pure Go. A denial of service (DoS) vulnerability was discovered in go-git versions prior to v5.13. This vulnerability allows an attacker to perform denial of service attacks by providing specially crafted responses from a Git server which triggers resource exhaustion in go-git clients. Users running versions of go-git from v4 and above are recommended to upgrade to v5.13 in order to mitigate this vulnerability.
     Severity: HIGH
     CweIDs:
@@ -458,14 +464,20 @@
     - CWE-770
     VendorSeverity:
       ghsa: 3
+      redhat: 3
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-21614
     - https://github.com/go-git/go-git
     - https://github.com/go-git/go-git/security/advisories/GHSA-r9px-m959-cxf4
     - https://nvd.nist.gov/vuln/detail/CVE-2025-21614
+    - https://www.cve.org/CVERecord?id=CVE-2025-21614
     PublishedDate: '2025-01-06T17:15:47.31Z'
     LastModifiedDate: '2025-01-06T17:15:47.31Z'
   - VulnerabilityID: CVE-2024-45338
@@ -492,6 +504,7 @@
     CweIDs:
     - CWE-1333
     VendorSeverity:
+      cbl-mariner: 3
       ghsa: 3
       redhat: 3
       ubuntu: 2
