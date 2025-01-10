@@ -13,10 +13,10 @@
                               ├ InstalledVersion: v0.30.0 
                               ├ FixedVersion    : 0.33.0 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:46f3b0549c58e69a2651014d8aaec8b7a999a8c269adb
-                              │                  │         940789f5497e241ef33 
-                              │                  ╰ DiffID: sha256:623c5bf22c906b418d07a6415760f760c5396a020a308
-                              │                            702b12eb1ec90d5a2a1 
+                              ├ Layer            ╭ Digest: sha256:0bc73bc60a855d72e3c90710e3d9d16844ab906bc856f
+                              │                  │         4c524f1c169584dd614 
+                              │                  ╰ DiffID: sha256:edea3c4d908ccee9c7874f0a96a2125607f2b489e5d9c
+                              │                            6f1c46a2c0989266a51 
                               ├ SeveritySource  : ghsa 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45338 
                               ├ DataSource       ╭ ID  : ghsa 
@@ -31,9 +31,10 @@
                               │                   denial of service. 
                               ├ Severity        : HIGH 
                               ├ CweIDs           ─ [0]: CWE-1333 
-                              ├ VendorSeverity   ╭ ghsa  : 3 
-                              │                  ├ redhat: 3 
-                              │                  ╰ ubuntu: 2 
+                              ├ VendorSeverity   ╭ cbl-mariner: 3 
+                              │                  ├ ghsa       : 3 
+                              │                  ├ redhat     : 3 
+                              │                  ╰ ubuntu     : 2 
                               ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
                               │                           │           A:H 
                               │                           ╰ V3Score : 7.5 
