@@ -23,7 +23,7 @@ jobs:
         path: /tmp/oaf
     
     - name: Setup OpenAF
-      uses: openaf/action-setup@v1.2
+      uses: openaf/action-setup@v2
       with:
         dist: t8
 
@@ -82,7 +82,7 @@ jobs:
             out=mdtable\
             sql="select * where tool <> 'mc' order by tool" > .github/compare-versions.md
 
-    - uses: openaf/ojob-action@v4
+    - uses: openaf/ojob-action@v7
       name: Update table
       env :
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
