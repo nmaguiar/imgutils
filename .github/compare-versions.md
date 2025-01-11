@@ -1,5 +1,5 @@
-| tool | latestOnline | version |
-|------|--------------|---------|
+| tool | latestOnline | buildVersion |
+|------|--------------|--------------|
 | crictl | v1.32.0 | v1.32.0 |
 | ctr | containerd 2.0.1 | 2.0.1 |
 | docker | v27.5.0-rc.2 | 27.4.1 |
