@@ -3,15 +3,15 @@ name: Version Images
 on:
   workflow_dispatch:
   schedule:
-    - cron: '37 3 * * 6'
+    - cron: '42 5 * * *'
 
 jobs:
-  Version-Images:
+  Compare-Versions::
     runs-on    : ubuntu-latest
     permissions:
       contents: write
       pull-requests: write
-    name       : Version images
+    name       : Compare Versions
     steps      :
     - uses: actions/checkout@v4
       name: Checkout
