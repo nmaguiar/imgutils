@@ -50,6 +50,7 @@
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45338
     - https://pkg.go.dev/vuln/GO-2024-3333
+    - https://ubuntu.com/security/notices/USN-7197-1
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
     LastModifiedDate: '2024-12-31T20:16:06.603Z'
@@ -99,6 +100,7 @@
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45338
     - https://pkg.go.dev/vuln/GO-2024-3333
+    - https://ubuntu.com/security/notices/USN-7197-1
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
     LastModifiedDate: '2024-12-31T20:16:06.603Z'
@@ -148,6 +150,7 @@
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45338
     - https://pkg.go.dev/vuln/GO-2024-3333
+    - https://ubuntu.com/security/notices/USN-7197-1
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
     LastModifiedDate: '2024-12-31T20:16:06.603Z'
@@ -200,6 +203,7 @@
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45338
     - https://pkg.go.dev/vuln/GO-2024-3333
+    - https://ubuntu.com/security/notices/USN-7197-1
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
     LastModifiedDate: '2024-12-31T20:16:06.603Z'
@@ -295,6 +299,7 @@
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45338
     - https://pkg.go.dev/vuln/GO-2024-3333
+    - https://ubuntu.com/security/notices/USN-7197-1
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
     LastModifiedDate: '2024-12-31T20:16:06.603Z'
@@ -390,6 +395,7 @@
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45338
     - https://pkg.go.dev/vuln/GO-2024-3333
+    - https://ubuntu.com/security/notices/USN-7197-1
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
     LastModifiedDate: '2024-12-31T20:16:06.603Z'
@@ -522,6 +528,7 @@
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45338
     - https://pkg.go.dev/vuln/GO-2024-3333
+    - https://ubuntu.com/security/notices/USN-7197-1
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
     LastModifiedDate: '2024-12-31T20:16:06.603Z'
