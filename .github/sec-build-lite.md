@@ -13,10 +13,10 @@
                               ├ InstalledVersion: v0.30.0 
                               ├ FixedVersion    : 0.33.0 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:0bc73bc60a855d72e3c90710e3d9d16844ab906bc856f
-                              │                  │         4c524f1c169584dd614 
-                              │                  ╰ DiffID: sha256:edea3c4d908ccee9c7874f0a96a2125607f2b489e5d9c
-                              │                            6f1c46a2c0989266a51 
+                              ├ Layer            ╭ Digest: sha256:7de3a4a12fc0bc965ab4c53709fceea66fc00f5cee56c
+                              │                  │         00e054ab2cd1cfb3c79 
+                              │                  ╰ DiffID: sha256:40957a6f1ecfe753d4848eab6604c02ccf6d6f1071aea
+                              │                            44a6a49d140a720db6b 
                               ├ SeveritySource  : ghsa 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45338 
                               ├ DataSource       ╭ ID  : ghsa 
@@ -38,17 +38,18 @@
                               ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
                               │                           │           A:H 
                               │                           ╰ V3Score : 7.5 
-                              ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-45338 
-                              │                  ├ [1]: https://cs.opensource.google/go/x/net 
-                              │                  ├ [2]: https://github.com/golang/go/issues/70906 
-                              │                  ├ [3]: https://go-review.googlesource.com/c/net/+/637536 
-                              │                  ├ [4]: https://go.dev/cl/637536 
-                              │                  ├ [5]: https://go.dev/issue/70906 
-                              │                  ├ [6]: https://groups.google.com/g/golang-announce/c/wSCRmFnNm
-                              │                  │      PA/m/Lvcd0mRMAwAJ 
-                              │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2024-45338 
-                              │                  ├ [8]: https://pkg.go.dev/vuln/GO-2024-3333 
-                              │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2024-45338 
+                              ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2024-45338 
+                              │                  ├ [1] : https://cs.opensource.google/go/x/net 
+                              │                  ├ [2] : https://github.com/golang/go/issues/70906 
+                              │                  ├ [3] : https://go-review.googlesource.com/c/net/+/637536 
+                              │                  ├ [4] : https://go.dev/cl/637536 
+                              │                  ├ [5] : https://go.dev/issue/70906 
+                              │                  ├ [6] : https://groups.google.com/g/golang-announce/c/wSCRmFnN
+                              │                  │       mPA/m/Lvcd0mRMAwAJ 
+                              │                  ├ [7] : https://nvd.nist.gov/vuln/detail/CVE-2024-45338 
+                              │                  ├ [8] : https://pkg.go.dev/vuln/GO-2024-3333 
+                              │                  ├ [9] : https://ubuntu.com/security/notices/USN-7197-1 
+                              │                  ╰ [10]: https://www.cve.org/CVERecord?id=CVE-2024-45338 
                               ├ PublishedDate   : 2024-12-18T21:15:08.173Z 
                               ╰ LastModifiedDate: 2024-12-31T20:16:06.603Z 
 ````
