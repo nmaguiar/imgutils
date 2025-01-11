@@ -1,4 +1,4 @@
-name: Version Images
+name: Compare Versions
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     - cron: '42 5 * * *'
 
 jobs:
-  Compare-Versions::
+  Compare-Versions:
     runs-on    : ubuntu-latest
     permissions:
       contents: write
