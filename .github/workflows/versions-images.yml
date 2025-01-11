@@ -28,7 +28,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         ojob: '.github/ojobs/getVersions.yaml'
-        args: 'tag=build file=.github/build-versions.svg'
+        args: 'tag=build file=.github/build-versions.svg jsonfile=.github/build-versions.json'
         dist: 'nightly'
 
     - name: Generate latest versions badge
@@ -37,7 +37,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         ojob: '.github/ojobs/getVersions.yaml'
-        args: 'tag=latest file=.github/latest-versions.svg'
+        args: 'tag=latest file=.github/latest-versions.svg jsonfile=.github/latest-versions.json'
         dist: 'nightly'
 
     - uses: openaf/ojob-action@v4

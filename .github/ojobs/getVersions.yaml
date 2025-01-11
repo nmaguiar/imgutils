@@ -10,6 +10,7 @@ help:
 todo:
 - Check versions in imgutils image
 - Generate badges
+- Generate JSON
 
 ojob:
   opacks      :
@@ -57,6 +58,34 @@ jobs:
     }
 
     $set("versions", _r)
+
+# --------------------
+- name : Generate JSON
+  check:
+    in:
+      tag     : isString.default("latest")
+      jsonfile: isString 
+  from :  
+  - (get           ): versions
+  - (pass          ):
+      aJSONFile: "{{jsonfile}}"
+      aObj:
+        versions:
+          oaf    : "{{openaf}}"
+          docker : "{{docker}}"
+          helm   : "{{helm}}"
+          skopeo : "{{skopeo}}"
+          crictl : "{{crictl}}"
+          ctr    : "{{ctr}}"
+          nerdctl: "{{nerdctl}}"
+          syft   : "{{syft}}"
+      aSpace: ""
+    ((templateArgs)): true
+  #to   :
+  #- (fn    ): io.writeFileJSON
+  #  ((key )): args
+  exec : |
+    io.writeFileJSON(args.aJSONFile, args.aObj, args.aSpace)
 
 # ----------------------
 - name : Generate badges
