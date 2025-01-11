@@ -23,7 +23,7 @@ jobs:
         path: /tmp/oaf
     
     - name: Setup OpenAF
-      uses: openaf/action-setup@v1
+      uses: openaf/action-setup@v1.2
       with:
         dist: 'nightly'
 
