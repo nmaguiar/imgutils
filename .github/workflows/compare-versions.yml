@@ -19,13 +19,13 @@ jobs:
     - name: Cache OpenAF runtime
       uses: actions/cache@v3
       with:
-        key : oaf-nightly
+        key : oaf-t8
         path: /tmp/oaf
     
     - name: Setup OpenAF
       uses: openaf/action-setup@v1.2
       with:
-        dist: 'nightly'
+        dist: t8
 
     - name: Retrieving the latest version of the used tools to /tmp/_tmpMain.json
       run : |
@@ -89,4 +89,4 @@ jobs:
       with:
         ojob: 'ojob.io/git/hub/contentIn'
         args: 'message="update\ versions\ table\ {{date}}/{{time}}" title="Update\ table" paths=.github/'
-        dist: 'nightly'
+        dist: t8
