@@ -18,8 +18,8 @@
     FixedVersion: 0.33.0
     Status: fixed
     Layer:
-      Digest: sha256:4469bb1a676fe17467804c4e35737daae3df0ebf18c1c24ebb38345ea5294c99
-      DiffID: sha256:2c31bd3cd376712bb1ef008588a7df2ee6830b4d08b920201e4f0161bca61db1
+      Digest: sha256:f1c867faea0cfda95d539e6c2d515ff5cb59d41af6ea2892e28bec9fccff3d12
+      DiffID: sha256:5c4f327ae183e5d188ee5dd43583468eb9572bdc2ab110df063f1899a56d9382
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45338
     DataSource:
@@ -50,6 +50,7 @@
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45338
     - https://pkg.go.dev/vuln/GO-2024-3333
+    - https://ubuntu.com/security/notices/USN-7197-1
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
     LastModifiedDate: '2024-12-31T20:16:06.603Z'
@@ -67,8 +68,8 @@
     FixedVersion: 0.33.0
     Status: fixed
     Layer:
-      Digest: sha256:4469bb1a676fe17467804c4e35737daae3df0ebf18c1c24ebb38345ea5294c99
-      DiffID: sha256:2c31bd3cd376712bb1ef008588a7df2ee6830b4d08b920201e4f0161bca61db1
+      Digest: sha256:f1c867faea0cfda95d539e6c2d515ff5cb59d41af6ea2892e28bec9fccff3d12
+      DiffID: sha256:5c4f327ae183e5d188ee5dd43583468eb9572bdc2ab110df063f1899a56d9382
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45338
     DataSource:
@@ -99,6 +100,7 @@
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45338
     - https://pkg.go.dev/vuln/GO-2024-3333
+    - https://ubuntu.com/security/notices/USN-7197-1
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
     LastModifiedDate: '2024-12-31T20:16:06.603Z'
@@ -116,8 +118,8 @@
     FixedVersion: 0.33.0
     Status: fixed
     Layer:
-      Digest: sha256:4469bb1a676fe17467804c4e35737daae3df0ebf18c1c24ebb38345ea5294c99
-      DiffID: sha256:2c31bd3cd376712bb1ef008588a7df2ee6830b4d08b920201e4f0161bca61db1
+      Digest: sha256:f1c867faea0cfda95d539e6c2d515ff5cb59d41af6ea2892e28bec9fccff3d12
+      DiffID: sha256:5c4f327ae183e5d188ee5dd43583468eb9572bdc2ab110df063f1899a56d9382
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45338
     DataSource:
@@ -148,6 +150,7 @@
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45338
     - https://pkg.go.dev/vuln/GO-2024-3333
+    - https://ubuntu.com/security/notices/USN-7197-1
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
     LastModifiedDate: '2024-12-31T20:16:06.603Z'
@@ -168,8 +171,8 @@
     FixedVersion: 0.33.0
     Status: fixed
     Layer:
-      Digest: sha256:4469bb1a676fe17467804c4e35737daae3df0ebf18c1c24ebb38345ea5294c99
-      DiffID: sha256:2c31bd3cd376712bb1ef008588a7df2ee6830b4d08b920201e4f0161bca61db1
+      Digest: sha256:f1c867faea0cfda95d539e6c2d515ff5cb59d41af6ea2892e28bec9fccff3d12
+      DiffID: sha256:5c4f327ae183e5d188ee5dd43583468eb9572bdc2ab110df063f1899a56d9382
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45338
     DataSource:
@@ -200,6 +203,7 @@
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45338
     - https://pkg.go.dev/vuln/GO-2024-3333
+    - https://ubuntu.com/security/notices/USN-7197-1
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
     LastModifiedDate: '2024-12-31T20:16:06.603Z'
@@ -217,8 +221,8 @@
     FixedVersion: 0.31.0
     Status: fixed
     Layer:
-      Digest: sha256:4469bb1a676fe17467804c4e35737daae3df0ebf18c1c24ebb38345ea5294c99
-      DiffID: sha256:2c31bd3cd376712bb1ef008588a7df2ee6830b4d08b920201e4f0161bca61db1
+      Digest: sha256:f1c867faea0cfda95d539e6c2d515ff5cb59d41af6ea2892e28bec9fccff3d12
+      DiffID: sha256:5c4f327ae183e5d188ee5dd43583468eb9572bdc2ab110df063f1899a56d9382
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45337
     DataSource:
@@ -263,8 +267,8 @@
     FixedVersion: 0.33.0
     Status: fixed
     Layer:
-      Digest: sha256:4469bb1a676fe17467804c4e35737daae3df0ebf18c1c24ebb38345ea5294c99
-      DiffID: sha256:2c31bd3cd376712bb1ef008588a7df2ee6830b4d08b920201e4f0161bca61db1
+      Digest: sha256:f1c867faea0cfda95d539e6c2d515ff5cb59d41af6ea2892e28bec9fccff3d12
+      DiffID: sha256:5c4f327ae183e5d188ee5dd43583468eb9572bdc2ab110df063f1899a56d9382
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45338
     DataSource:
@@ -295,6 +299,7 @@
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45338
     - https://pkg.go.dev/vuln/GO-2024-3333
+    - https://ubuntu.com/security/notices/USN-7197-1
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
     LastModifiedDate: '2024-12-31T20:16:06.603Z'
@@ -312,8 +317,8 @@
     FixedVersion: 0.31.0
     Status: fixed
     Layer:
-      Digest: sha256:4469bb1a676fe17467804c4e35737daae3df0ebf18c1c24ebb38345ea5294c99
-      DiffID: sha256:2c31bd3cd376712bb1ef008588a7df2ee6830b4d08b920201e4f0161bca61db1
+      Digest: sha256:f1c867faea0cfda95d539e6c2d515ff5cb59d41af6ea2892e28bec9fccff3d12
+      DiffID: sha256:5c4f327ae183e5d188ee5dd43583468eb9572bdc2ab110df063f1899a56d9382
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45337
     DataSource:
@@ -358,8 +363,8 @@
     FixedVersion: 0.33.0
     Status: fixed
     Layer:
-      Digest: sha256:4469bb1a676fe17467804c4e35737daae3df0ebf18c1c24ebb38345ea5294c99
-      DiffID: sha256:2c31bd3cd376712bb1ef008588a7df2ee6830b4d08b920201e4f0161bca61db1
+      Digest: sha256:f1c867faea0cfda95d539e6c2d515ff5cb59d41af6ea2892e28bec9fccff3d12
+      DiffID: sha256:5c4f327ae183e5d188ee5dd43583468eb9572bdc2ab110df063f1899a56d9382
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45338
     DataSource:
@@ -390,6 +395,7 @@
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45338
     - https://pkg.go.dev/vuln/GO-2024-3333
+    - https://ubuntu.com/security/notices/USN-7197-1
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
     LastModifiedDate: '2024-12-31T20:16:06.603Z'
@@ -407,8 +413,8 @@
     FixedVersion: 5.13.0
     Status: fixed
     Layer:
-      Digest: sha256:4469bb1a676fe17467804c4e35737daae3df0ebf18c1c24ebb38345ea5294c99
-      DiffID: sha256:2c31bd3cd376712bb1ef008588a7df2ee6830b4d08b920201e4f0161bca61db1
+      Digest: sha256:f1c867faea0cfda95d539e6c2d515ff5cb59d41af6ea2892e28bec9fccff3d12
+      DiffID: sha256:5c4f327ae183e5d188ee5dd43583468eb9572bdc2ab110df063f1899a56d9382
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-21613
     DataSource:
@@ -448,8 +454,8 @@
     FixedVersion: 5.13.0
     Status: fixed
     Layer:
-      Digest: sha256:4469bb1a676fe17467804c4e35737daae3df0ebf18c1c24ebb38345ea5294c99
-      DiffID: sha256:2c31bd3cd376712bb1ef008588a7df2ee6830b4d08b920201e4f0161bca61db1
+      Digest: sha256:f1c867faea0cfda95d539e6c2d515ff5cb59d41af6ea2892e28bec9fccff3d12
+      DiffID: sha256:5c4f327ae183e5d188ee5dd43583468eb9572bdc2ab110df063f1899a56d9382
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-21614
     DataSource:
@@ -490,8 +496,8 @@
     FixedVersion: 0.33.0
     Status: fixed
     Layer:
-      Digest: sha256:4469bb1a676fe17467804c4e35737daae3df0ebf18c1c24ebb38345ea5294c99
-      DiffID: sha256:2c31bd3cd376712bb1ef008588a7df2ee6830b4d08b920201e4f0161bca61db1
+      Digest: sha256:f1c867faea0cfda95d539e6c2d515ff5cb59d41af6ea2892e28bec9fccff3d12
+      DiffID: sha256:5c4f327ae183e5d188ee5dd43583468eb9572bdc2ab110df063f1899a56d9382
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45338
     DataSource:
@@ -522,6 +528,7 @@
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45338
     - https://pkg.go.dev/vuln/GO-2024-3333
+    - https://ubuntu.com/security/notices/USN-7197-1
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
     LastModifiedDate: '2024-12-31T20:16:06.603Z'
