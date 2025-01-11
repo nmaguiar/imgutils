@@ -67,10 +67,12 @@ jobs:
         - url : https://api.github.com/repos/anchore/syft/releases/latest
           path: "{tool:'syft',lastVer:name}"
         _EOF_
+        oafp /tmp/_tmpMain.json out=ctable
 
     - name: Preparing a lookup table for the latest versions of the tools
       run : |
         oafp .github/build-versions.json out=ch ch="(type: file, options: (file: /tmp/_tmp.json))" chkey="tool" path=versions
+        oafp /tmp/_tmp.json
 
     - name: Joining the versions retrieved to produce a markdown table
       run : |
