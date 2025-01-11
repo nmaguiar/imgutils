@@ -71,14 +71,22 @@ jobs:
       aJSONFile: "{{jsonfile}}"
       aObj:
         versions:
-          oaf    : "{{openaf}}"
-          docker : "{{docker}}"
-          helm   : "{{helm}}"
-          skopeo : "{{skopeo}}"
-          crictl : "{{crictl}}"
-          ctr    : "{{ctr}}"
-          nerdctl: "{{nerdctl}}"
-          syft   : "{{syft}}"
+        - tool   : 'oaf'
+          version: "{{openaf}}"
+        - tool   : 'docker'
+          version: "{{docker}}"
+        - tool   : 'helm'
+          version: "{{helm}}"
+        - tool   : 'skopeo'
+          version: "{{skopeo}}"
+        - tool   : 'crictl'
+          version: "{{crictl}}"
+        - tool   : 'ctr'
+          version: "{{ctr}}"
+        - tool   : 'nerdctl'
+          version: "{{nerdctl}}"
+        - tool   : 'syft'
+          version: "{{syft}}"
       aSpace: ""
     ((templateArgs)): true
   #to   :
