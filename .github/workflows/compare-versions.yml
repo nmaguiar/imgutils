@@ -1,0 +1,90 @@
+name: Version Images
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '37 3 * * 6'
+
+jobs:
+  Version-Images:
+    runs-on    : ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    name       : Version images
+    steps      :
+    - uses: actions/checkout@v4
+      name: Checkout
+
+    - name: Cache OpenAF runtime
+      uses: actions/cache@v3
+      with:
+        key : oaf-nightly
+        path: /tmp/oaf
+    
+    - name: Setup OpenAF
+      uses: openaf/action-setup@v1
+      with:
+        dist: 'nightly'
+
+    - name: Retrieving the latest version of the used tools to /tmp/_tmpMain.json
+      run : |
+        cat <<_EOF_ | oafp in=yaml out=json | oafp in=oafp out=json > /tmp/_tmpMain.json
+        # Skopeo
+        - url : https://api.github.com/repos/containers/skopeo/releases/latest
+        path: "{tool:'skopeo',lastVer:tag_name}"
+        
+        # OpenAF
+        - url : https://openaf.io/release
+        in  : raw
+        path: "{tool:'oaf',lastVer:@}"
+
+        # Helm
+        - url : https://api.github.com/repos/helm/helm/releases/latest
+        path: "{tool:'helm',lastVer:tag_name}"
+
+        # Docker
+        - url : https://api.github.com/repos/docker/cli/tags
+        path: "[0].{tool:'docker',lastVer:name}"
+
+        # CriCtl
+        - url : https://api.github.com/repos/kubernetes-sigs/cri-tools/releases/latest
+        path: "{tool:'crictl',lastVer:name}"
+
+        # Ctr
+        - url : https://api.github.com/repos/containerd/containerd/releases/latest
+        path: "{tool:'ctr',lastVer:name}"
+
+        # NerdCtl
+        - url : https://api.github.com/repos/containerd/nerdctl/releases/latest
+        path: "{tool:'nerdctl',lastVer:name}"
+
+        # Midnight Commander
+        - url : https://api.github.com/repos/MidnightCommander/mc/tags
+        path: "[0].{tool:'mc',lastVer:name}"
+
+        # Syft
+        - url : https://api.github.com/repos/anchore/syft/releases/latest
+        path: "{tool:'syft',lastVer:name}"
+        _EOF_
+
+    - name: Preparing a lookup table for the latest versions of the tools
+      run : |
+        oafp .github/build-versions.json out=ch ch="(type: file, options: (file: /tmp/_tmp.json))" chkey="tool" path=versions
+
+    - name: Joining the versions retrieved to produce a markdown table
+      run : |
+        oafp chs="(name: v, type: file, options: (file: /tmp/_tmp.json))"\
+            /tmp/_tmpMain.json\
+            path="[].{tool:tool,latestOnline:lastVer,version:ch('v','get',{tool:tool},__).version}"\
+            out=mdtable\
+            sql="select * where tool <> 'mc' order by tool" > .github/compare-versions.md
+
+    - uses: openaf/ojob-action@v4
+      name: Update table
+      env :
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        ojob: 'ojob.io/git/hub/contentIn'
+        args: 'message="update\ versions\ table\ {{date}}/{{time}}" title="Update\ table" paths=.github/'
+        dist: 'nightly'
