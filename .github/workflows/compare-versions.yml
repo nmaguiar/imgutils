@@ -78,7 +78,7 @@ jobs:
       run : |
         oafp chs="(name: v, type: file, options: (file: /tmp/_tmp.json))"\
             /tmp/_tmpMain.json\
-            path="[].{tool:tool,latestOnline:lastVer,version:ch('v','get',{tool:tool},__).version}"\
+            path="[].{tool:tool,latestOnline:lastVer,buildVersion:ch('v','get',{tool:tool},__).version}"\
             out=mdtable\
             sql="select * where tool <> 'mc' order by tool" > .github/compare-versions.md
 
