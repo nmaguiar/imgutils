@@ -3,7 +3,7 @@ name: Compare Versions
 on:
   workflow_dispatch:
   schedule:
-    - cron: '42 5 * * *'
+    - cron: '02 8 * * *'
 
 jobs:
   Compare-Versions:
