@@ -9,7 +9,7 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'docker://nmaguiar/imgutils:build'
+  image: 'docker://nmaguiar/imgutils:latest'
   args:
   - /bin/sh
   - -c
