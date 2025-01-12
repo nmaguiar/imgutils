@@ -77,13 +77,13 @@ jobs:
     - name: Preparing a lookup table for the latest versions of the tools
       run : |
         oafp .github/latest-versions.json out=ch ch="(type: file, options: (file: /tmp/_tmpl.json))" chkey="tool" path=versions
-        oafp /tmp/_tmp.json
+        oafp /tmp/_tmpl.json
 
     - name: Joining the versions retrieved to produce a markdown table
       run : |
         oafp chs="[(name: v, type: file, options: (file: /tmp/_tmp.json))|(name: l, type: file, options: (file: /tmp/_tmpl.json))]"\
             /tmp/_tmpMain.json\
-            path="[].{tool:tool,latestOnline:lastVer,buildVersion:ch('v','get',{tool:tool},__).version,latestversion:ch('l','get',%7Btool%3Atool%7D,__).version}"\
+            path="[].{tool:tool,latestOnline:lastVer,buildVersion:ch('v','get',{tool:tool},__).version,latestversion:ch('l','get',{tool:tool},__).version}"\
             out=mdtable\
             sql="select * where tool <> 'mc' order by tool" > .github/compare-versions.md
 
