@@ -427,6 +427,7 @@
     CweIDs:
     - CWE-88
     VendorSeverity:
+      azure: 3
       cbl-mariner: 3
       ghsa: 4
       redhat: 3
@@ -470,6 +471,7 @@
     - CWE-400
     - CWE-770
     VendorSeverity:
+      azure: 3
       cbl-mariner: 3
       ghsa: 3
       redhat: 3
