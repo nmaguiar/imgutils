@@ -465,9 +465,11 @@
                         │     │                   This vulnerability is fixed in 5.13.0. 
                         │     ├ Severity        : CRITICAL 
                         │     ├ CweIDs           ─ [0]: CWE-88 
-                        │     ├ VendorSeverity   ╭ azure      : 3 
+                        │     ├ VendorSeverity   ╭ alma       : 3 
+                        │     │                  ├ azure      : 3 
                         │     │                  ├ cbl-mariner: 3 
                         │     │                  ├ ghsa       : 4 
+                        │     │                  ├ oracle-oval: 3 
                         │     │                  ╰ redhat     : 3 
                         │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/
                         │     │                  │        │           A:H 
@@ -475,12 +477,18 @@
                         │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/
                         │     │                           │           A:H 
                         │     │                           ╰ V3Score : 8.1 
-                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-21613 
-                        │     │                  ├ [1]: https://github.com/go-git/go-git 
-                        │     │                  ├ [2]: https://github.com/go-git/go-git/security/advisories/GH
-                        │     │                  │      SA-v725-9546-7q7m 
-                        │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-21613 
-                        │     │                  ╰ [4]: https://www.cve.org/CVERecord?id=CVE-2025-21613 
+                        │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:0401 
+                        │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2025-21613 
+                        │     │                  ├ [2] : https://bugzilla.redhat.com/2335888 
+                        │     │                  ├ [3] : https://bugzilla.redhat.com/2335901 
+                        │     │                  ├ [4] : https://errata.almalinux.org/8/ALSA-2025-0401.html 
+                        │     │                  ├ [5] : https://github.com/go-git/go-git 
+                        │     │                  ├ [6] : https://github.com/go-git/go-git/security/advisories/G
+                        │     │                  │       HSA-v725-9546-7q7m 
+                        │     │                  ├ [7] : https://linux.oracle.com/cve/CVE-2025-21613.html 
+                        │     │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2025-0401.html 
+                        │     │                  ├ [9] : https://nvd.nist.gov/vuln/detail/CVE-2025-21613 
+                        │     │                  ╰ [10]: https://www.cve.org/CVERecord?id=CVE-2025-21613 
                         │     ├ PublishedDate   : 2025-01-06T17:15:47.043Z 
                         │     ╰ LastModifiedDate: 2025-01-06T17:15:47.043Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2025-21614 
@@ -515,9 +523,11 @@
                         │     ├ Severity        : HIGH 
                         │     ├ CweIDs           ╭ [0]: CWE-400 
                         │     │                  ╰ [1]: CWE-770 
-                        │     ├ VendorSeverity   ╭ azure      : 3 
+                        │     ├ VendorSeverity   ╭ alma       : 3 
+                        │     │                  ├ azure      : 3 
                         │     │                  ├ cbl-mariner: 3 
                         │     │                  ├ ghsa       : 3 
+                        │     │                  ├ oracle-oval: 3 
                         │     │                  ╰ redhat     : 3 
                         │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
                         │     │                  │        │           A:H 
@@ -525,12 +535,18 @@
                         │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
                         │     │                           │           A:H 
                         │     │                           ╰ V3Score : 7.5 
-                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-21614 
-                        │     │                  ├ [1]: https://github.com/go-git/go-git 
-                        │     │                  ├ [2]: https://github.com/go-git/go-git/security/advisories/GH
-                        │     │                  │      SA-r9px-m959-cxf4 
-                        │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-21614 
-                        │     │                  ╰ [4]: https://www.cve.org/CVERecord?id=CVE-2025-21614 
+                        │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:0401 
+                        │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2025-21614 
+                        │     │                  ├ [2] : https://bugzilla.redhat.com/2335888 
+                        │     │                  ├ [3] : https://bugzilla.redhat.com/2335901 
+                        │     │                  ├ [4] : https://errata.almalinux.org/8/ALSA-2025-0401.html 
+                        │     │                  ├ [5] : https://github.com/go-git/go-git 
+                        │     │                  ├ [6] : https://github.com/go-git/go-git/security/advisories/G
+                        │     │                  │       HSA-r9px-m959-cxf4 
+                        │     │                  ├ [7] : https://linux.oracle.com/cve/CVE-2025-21614.html 
+                        │     │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2025-0401.html 
+                        │     │                  ├ [9] : https://nvd.nist.gov/vuln/detail/CVE-2025-21614 
+                        │     │                  ╰ [10]: https://www.cve.org/CVERecord?id=CVE-2025-21614 
                         │     ├ PublishedDate   : 2025-01-06T17:15:47.31Z 
                         │     ╰ LastModifiedDate: 2025-01-06T17:15:47.31Z 
                         ╰ [2] ╭ VulnerabilityID : CVE-2024-45338 
