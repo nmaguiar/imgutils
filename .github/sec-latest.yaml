@@ -427,9 +427,11 @@
     CweIDs:
     - CWE-88
     VendorSeverity:
+      alma: 3
       azure: 3
       cbl-mariner: 3
       ghsa: 4
+      oracle-oval: 3
       redhat: 3
     CVSS:
       ghsa:
@@ -439,9 +441,15 @@
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
         V3Score: 8.1
     References:
+    - https://access.redhat.com/errata/RHSA-2025:0401
     - https://access.redhat.com/security/cve/CVE-2025-21613
+    - https://bugzilla.redhat.com/2335888
+    - https://bugzilla.redhat.com/2335901
+    - https://errata.almalinux.org/8/ALSA-2025-0401.html
     - https://github.com/go-git/go-git
     - https://github.com/go-git/go-git/security/advisories/GHSA-v725-9546-7q7m
+    - https://linux.oracle.com/cve/CVE-2025-21613.html
+    - https://linux.oracle.com/errata/ELSA-2025-0401.html
     - https://nvd.nist.gov/vuln/detail/CVE-2025-21613
     - https://www.cve.org/CVERecord?id=CVE-2025-21613
     PublishedDate: '2025-01-06T17:15:47.043Z'
@@ -471,9 +479,11 @@
     - CWE-400
     - CWE-770
     VendorSeverity:
+      alma: 3
       azure: 3
       cbl-mariner: 3
       ghsa: 3
+      oracle-oval: 3
       redhat: 3
     CVSS:
       ghsa:
@@ -483,9 +493,15 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
+    - https://access.redhat.com/errata/RHSA-2025:0401
     - https://access.redhat.com/security/cve/CVE-2025-21614
+    - https://bugzilla.redhat.com/2335888
+    - https://bugzilla.redhat.com/2335901
+    - https://errata.almalinux.org/8/ALSA-2025-0401.html
     - https://github.com/go-git/go-git
     - https://github.com/go-git/go-git/security/advisories/GHSA-r9px-m959-cxf4
+    - https://linux.oracle.com/cve/CVE-2025-21614.html
+    - https://linux.oracle.com/errata/ELSA-2025-0401.html
     - https://nvd.nist.gov/vuln/detail/CVE-2025-21614
     - https://www.cve.org/CVERecord?id=CVE-2025-21614
     PublishedDate: '2025-01-06T17:15:47.31Z'
