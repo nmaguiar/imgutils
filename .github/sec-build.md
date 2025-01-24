@@ -34,7 +34,8 @@
 │                             │                   denial of service. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-1333 
-│                             ├ VendorSeverity   ╭ cbl-mariner: 3 
+│                             ├ VendorSeverity   ╭ azure      : 3 
+│                             │                  ├ cbl-mariner: 3 
 │                             │                  ├ ghsa       : 3 
 │                             │                  ├ redhat     : 3 
 │                             │                  ╰ ubuntu     : 2 
@@ -84,7 +85,8 @@
 │                             │                   denial of service. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-1333 
-│                             ├ VendorSeverity   ╭ cbl-mariner: 3 
+│                             ├ VendorSeverity   ╭ azure      : 3 
+│                             │                  ├ cbl-mariner: 3 
 │                             │                  ├ ghsa       : 3 
 │                             │                  ├ redhat     : 3 
 │                             │                  ╰ ubuntu     : 2 
@@ -134,7 +136,8 @@
 │                             │                   denial of service. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-1333 
-│                             ├ VendorSeverity   ╭ cbl-mariner: 3 
+│                             ├ VendorSeverity   ╭ azure      : 3 
+│                             │                  ├ cbl-mariner: 3 
 │                             │                  ├ ghsa       : 3 
 │                             │                  ├ redhat     : 3 
 │                             │                  ╰ ubuntu     : 2 
@@ -279,7 +282,8 @@
 │                             │                   denial of service. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-1333 
-│                             ├ VendorSeverity   ╭ cbl-mariner: 3 
+│                             ├ VendorSeverity   ╭ azure      : 3 
+│                             │                  ├ cbl-mariner: 3 
 │                             │                  ├ ghsa       : 3 
 │                             │                  ├ redhat     : 3 
 │                             │                  ╰ ubuntu     : 2 
@@ -442,7 +446,8 @@
                               │                   denial of service. 
                               ├ Severity        : HIGH 
                               ├ CweIDs           ─ [0]: CWE-1333 
-                              ├ VendorSeverity   ╭ cbl-mariner: 3 
+                              ├ VendorSeverity   ╭ azure      : 3 
+                              │                  ├ cbl-mariner: 3 
                               │                  ├ ghsa       : 3 
                               │                  ├ redhat     : 3 
                               │                  ╰ ubuntu     : 2 
