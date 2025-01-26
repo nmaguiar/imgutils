@@ -34,7 +34,8 @@
 │                             │                   denial of service. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-1333 
-│                             ├ VendorSeverity   ╭ azure      : 3 
+│                             ├ VendorSeverity   ╭ amazon     : 2 
+│                             │                  ├ azure      : 3 
 │                             │                  ├ cbl-mariner: 3 
 │                             │                  ├ ghsa       : 3 
 │                             │                  ├ redhat     : 3 
@@ -85,7 +86,8 @@
 │                             │                   denial of service. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-1333 
-│                             ├ VendorSeverity   ╭ azure      : 3 
+│                             ├ VendorSeverity   ╭ amazon     : 2 
+│                             │                  ├ azure      : 3 
 │                             │                  ├ cbl-mariner: 3 
 │                             │                  ├ ghsa       : 3 
 │                             │                  ├ redhat     : 3 
@@ -136,7 +138,8 @@
 │                             │                   denial of service. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-1333 
-│                             ├ VendorSeverity   ╭ azure      : 3 
+│                             ├ VendorSeverity   ╭ amazon     : 2 
+│                             │                  ├ azure      : 3 
 │                             │                  ├ cbl-mariner: 3 
 │                             │                  ├ ghsa       : 3 
 │                             │                  ├ redhat     : 3 
@@ -190,7 +193,8 @@
 │                             │                   denial of service. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-1333 
-│                             ├ VendorSeverity   ╭ azure      : 3 
+│                             ├ VendorSeverity   ╭ amazon     : 2 
+│                             │                  ├ azure      : 3 
 │                             │                  ├ cbl-mariner: 3 
 │                             │                  ├ ghsa       : 3 
 │                             │                  ├ redhat     : 3 
@@ -327,7 +331,8 @@
 │                             │                   denial of service. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-1333 
-│                             ├ VendorSeverity   ╭ azure      : 3 
+│                             ├ VendorSeverity   ╭ amazon     : 2 
+│                             │                  ├ azure      : 3 
 │                             │                  ├ cbl-mariner: 3 
 │                             │                  ├ ghsa       : 3 
 │                             │                  ├ redhat     : 3 
@@ -464,7 +469,8 @@
 │                             │                   denial of service. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-1333 
-│                             ├ VendorSeverity   ╭ azure      : 3 
+│                             ├ VendorSeverity   ╭ amazon     : 2 
+│                             │                  ├ azure      : 3 
 │                             │                  ├ cbl-mariner: 3 
 │                             │                  ├ ghsa       : 3 
 │                             │                  ├ redhat     : 3 
@@ -628,7 +634,8 @@
                               │                   denial of service. 
                               ├ Severity        : HIGH 
                               ├ CweIDs           ─ [0]: CWE-1333 
-                              ├ VendorSeverity   ╭ azure      : 3 
+                              ├ VendorSeverity   ╭ amazon     : 2 
+                              │                  ├ azure      : 3 
                               │                  ├ cbl-mariner: 3 
                               │                  ├ ghsa       : 3 
                               │                  ├ redhat     : 3 
