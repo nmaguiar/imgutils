@@ -63,7 +63,7 @@
       PURL: pkg:golang/stdlib@v1.23.3
       UID: c32ee6844a95cf7d
     InstalledVersion: v1.23.3
-    FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc2
+    FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
     Status: fixed
     Layer:
       Digest: sha256:67745f33db87269d29b3cec8a6ee9ff37466af991b8e3fe935202ee09b74937d
@@ -77,8 +77,12 @@
     Description: The HTTP client drops sensitive headers after following a cross-domain redirect. For example, a request to a.com/ containing an Authorization header which is redirected to b.com/ will not send that header to b.com. In the event that the client received a subsequent same-domain redirect, however, the sensitive headers would be restored. For example, a chain of redirects from a.com/, to b.com/1, and finally to b.com/2 would incorrectly send the Authorization header to b.com/2.
     Severity: MEDIUM
     VendorSeverity:
+      bitnami: 2
       redhat: 2
     CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
       redhat:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N
         V3Score: 5.9
@@ -100,7 +104,7 @@
       PURL: pkg:golang/stdlib@v1.23.3
       UID: c32ee6844a95cf7d
     InstalledVersion: v1.23.3
-    FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc2
+    FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
     Status: fixed
     Layer:
       Digest: sha256:67745f33db87269d29b3cec8a6ee9ff37466af991b8e3fe935202ee09b74937d
@@ -114,8 +118,12 @@
     Description: A certificate with a URI which has a IPv6 address with a zone ID may incorrectly satisfy a URI name constraint that applies to the certificate chain. Certificates containing URIs are not permitted in the web PKI, so this only affects users of private PKIs which make use of URIs.
     Severity: MEDIUM
     VendorSeverity:
+      bitnami: 2
       redhat: 1
     CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
       redhat:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N
         V3Score: 4.2
@@ -248,7 +256,7 @@
       PURL: pkg:golang/stdlib@v1.23.4
       UID: ad4de8aeb2324474
     InstalledVersion: v1.23.4
-    FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc2
+    FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
     Status: fixed
     Layer:
       Digest: sha256:67745f33db87269d29b3cec8a6ee9ff37466af991b8e3fe935202ee09b74937d
@@ -262,8 +270,12 @@
     Description: The HTTP client drops sensitive headers after following a cross-domain redirect. For example, a request to a.com/ containing an Authorization header which is redirected to b.com/ will not send that header to b.com. In the event that the client received a subsequent same-domain redirect, however, the sensitive headers would be restored. For example, a chain of redirects from a.com/, to b.com/1, and finally to b.com/2 would incorrectly send the Authorization header to b.com/2.
     Severity: MEDIUM
     VendorSeverity:
+      bitnami: 2
       redhat: 2
     CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
       redhat:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N
         V3Score: 5.9
@@ -285,7 +297,7 @@
       PURL: pkg:golang/stdlib@v1.23.4
       UID: ad4de8aeb2324474
     InstalledVersion: v1.23.4
-    FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc2
+    FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
     Status: fixed
     Layer:
       Digest: sha256:67745f33db87269d29b3cec8a6ee9ff37466af991b8e3fe935202ee09b74937d
@@ -299,8 +311,12 @@
     Description: A certificate with a URI which has a IPv6 address with a zone ID may incorrectly satisfy a URI name constraint that applies to the certificate chain. Certificates containing URIs are not permitted in the web PKI, so this only affects users of private PKIs which make use of URIs.
     Severity: MEDIUM
     VendorSeverity:
+      bitnami: 2
       redhat: 1
     CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
       redhat:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N
         V3Score: 4.2
@@ -326,7 +342,7 @@
       PURL: pkg:golang/stdlib@v1.23.4
       UID: a2477af159b4ca1b
     InstalledVersion: v1.23.4
-    FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc2
+    FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
     Status: fixed
     Layer:
       Digest: sha256:67745f33db87269d29b3cec8a6ee9ff37466af991b8e3fe935202ee09b74937d
@@ -340,8 +356,12 @@
     Description: The HTTP client drops sensitive headers after following a cross-domain redirect. For example, a request to a.com/ containing an Authorization header which is redirected to b.com/ will not send that header to b.com. In the event that the client received a subsequent same-domain redirect, however, the sensitive headers would be restored. For example, a chain of redirects from a.com/, to b.com/1, and finally to b.com/2 would incorrectly send the Authorization header to b.com/2.
     Severity: MEDIUM
     VendorSeverity:
+      bitnami: 2
       redhat: 2
     CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
       redhat:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N
         V3Score: 5.9
@@ -363,7 +383,7 @@
       PURL: pkg:golang/stdlib@v1.23.4
       UID: a2477af159b4ca1b
     InstalledVersion: v1.23.4
-    FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc2
+    FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
     Status: fixed
     Layer:
       Digest: sha256:67745f33db87269d29b3cec8a6ee9ff37466af991b8e3fe935202ee09b74937d
@@ -377,8 +397,12 @@
     Description: A certificate with a URI which has a IPv6 address with a zone ID may incorrectly satisfy a URI name constraint that applies to the certificate chain. Certificates containing URIs are not permitted in the web PKI, so this only affects users of private PKIs which make use of URIs.
     Severity: MEDIUM
     VendorSeverity:
+      bitnami: 2
       redhat: 1
     CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
       redhat:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N
         V3Score: 4.2
@@ -502,7 +526,7 @@
       PURL: pkg:golang/stdlib@v1.23.4
       UID: 41c223d59c4dbf4f
     InstalledVersion: v1.23.4
-    FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc2
+    FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
     Status: fixed
     Layer:
       Digest: sha256:67745f33db87269d29b3cec8a6ee9ff37466af991b8e3fe935202ee09b74937d
@@ -516,8 +540,12 @@
     Description: The HTTP client drops sensitive headers after following a cross-domain redirect. For example, a request to a.com/ containing an Authorization header which is redirected to b.com/ will not send that header to b.com. In the event that the client received a subsequent same-domain redirect, however, the sensitive headers would be restored. For example, a chain of redirects from a.com/, to b.com/1, and finally to b.com/2 would incorrectly send the Authorization header to b.com/2.
     Severity: MEDIUM
     VendorSeverity:
+      bitnami: 2
       redhat: 2
     CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
       redhat:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N
         V3Score: 5.9
@@ -539,7 +567,7 @@
       PURL: pkg:golang/stdlib@v1.23.4
       UID: 41c223d59c4dbf4f
     InstalledVersion: v1.23.4
-    FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc2
+    FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
     Status: fixed
     Layer:
       Digest: sha256:67745f33db87269d29b3cec8a6ee9ff37466af991b8e3fe935202ee09b74937d
@@ -553,8 +581,12 @@
     Description: A certificate with a URI which has a IPv6 address with a zone ID may incorrectly satisfy a URI name constraint that applies to the certificate chain. Certificates containing URIs are not permitted in the web PKI, so this only affects users of private PKIs which make use of URIs.
     Severity: MEDIUM
     VendorSeverity:
+      bitnami: 2
       redhat: 1
     CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
       redhat:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N
         V3Score: 4.2
