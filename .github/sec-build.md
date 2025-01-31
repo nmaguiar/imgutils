@@ -63,7 +63,7 @@
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.3 
 │                       │     │                  ╰ UID : c32ee6844a95cf7d 
 │                       │     ├ InstalledVersion: v1.23.3 
-│                       │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc2 
+│                       │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
 │                       │     ├ Status          : fixed 
 │                       │     ├ Layer            ╭ Digest: sha256:d3135dacd83d88eff995c75f7e40c7de05ec69954a9ce
 │                       │     │                  │         bb17f0df39496f09d2a 
@@ -85,10 +85,14 @@
 │                       │     │                   finally to b.com/2 would incorrectly send the Authorization
 │                       │     │                   header to b.com/2. 
 │                       │     ├ Severity        : MEDIUM 
-│                       │     ├ VendorSeverity   ─ redhat: 2 
-│                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/
-│                       │     │                           │           A:N 
-│                       │     │                           ╰ V3Score : 5.9 
+│                       │     ├ VendorSeverity   ╭ bitnami: 2 
+│                       │     │                  ╰ redhat : 2 
+│                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
+│                       │     │                  │         │           /A:N 
+│                       │     │                  │         ╰ V3Score : 6.1 
+│                       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N
+│                       │     │                            │           /A:N 
+│                       │     │                            ╰ V3Score : 5.9 
 │                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-45336 
 │                       │     │                  ├ [1]: https://go.dev/cl/643100 
 │                       │     │                  ├ [2]: https://go.dev/issue/70530 
@@ -107,7 +111,7 @@
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.3 
 │                             │                  ╰ UID : c32ee6844a95cf7d 
 │                             ├ InstalledVersion: v1.23.3 
-│                             ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc2 
+│                             ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
 │                             ├ Status          : fixed 
 │                             ├ Layer            ╭ Digest: sha256:d3135dacd83d88eff995c75f7e40c7de05ec69954a9ce
 │                             │                  │         bb17f0df39496f09d2a 
@@ -125,10 +129,14 @@
 │                             │                   URIs are not permitted in the web PKI, so this only affects
 │                             │                   users of private PKIs which make use of URIs. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ─ redhat: 1 
-│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/
-│                             │                           │           A:N 
-│                             │                           ╰ V3Score : 4.2 
+│                             ├ VendorSeverity   ╭ bitnami: 2 
+│                             │                  ╰ redhat : 1 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
+│                             │                  │         │           /A:N 
+│                             │                  │         ╰ V3Score : 6.1 
+│                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 4.2 
 │                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-45341 
 │                             │                  ├ [1]: https://go.dev/cl/643099 
 │                             │                  ├ [2]: https://go.dev/issue/71156 
@@ -257,7 +265,7 @@
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.4 
 │                       │     │                  ╰ UID : ad4de8aeb2324474 
 │                       │     ├ InstalledVersion: v1.23.4 
-│                       │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc2 
+│                       │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
 │                       │     ├ Status          : fixed 
 │                       │     ├ Layer            ╭ Digest: sha256:d3135dacd83d88eff995c75f7e40c7de05ec69954a9ce
 │                       │     │                  │         bb17f0df39496f09d2a 
@@ -279,10 +287,14 @@
 │                       │     │                   finally to b.com/2 would incorrectly send the Authorization
 │                       │     │                   header to b.com/2. 
 │                       │     ├ Severity        : MEDIUM 
-│                       │     ├ VendorSeverity   ─ redhat: 2 
-│                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/
-│                       │     │                           │           A:N 
-│                       │     │                           ╰ V3Score : 5.9 
+│                       │     ├ VendorSeverity   ╭ bitnami: 2 
+│                       │     │                  ╰ redhat : 2 
+│                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
+│                       │     │                  │         │           /A:N 
+│                       │     │                  │         ╰ V3Score : 6.1 
+│                       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N
+│                       │     │                            │           /A:N 
+│                       │     │                            ╰ V3Score : 5.9 
 │                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-45336 
 │                       │     │                  ├ [1]: https://go.dev/cl/643100 
 │                       │     │                  ├ [2]: https://go.dev/issue/70530 
@@ -301,7 +313,7 @@
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.4 
 │                             │                  ╰ UID : ad4de8aeb2324474 
 │                             ├ InstalledVersion: v1.23.4 
-│                             ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc2 
+│                             ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
 │                             ├ Status          : fixed 
 │                             ├ Layer            ╭ Digest: sha256:d3135dacd83d88eff995c75f7e40c7de05ec69954a9ce
 │                             │                  │         bb17f0df39496f09d2a 
@@ -319,10 +331,14 @@
 │                             │                   URIs are not permitted in the web PKI, so this only affects
 │                             │                   users of private PKIs which make use of URIs. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ─ redhat: 1 
-│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/
-│                             │                           │           A:N 
-│                             │                           ╰ V3Score : 4.2 
+│                             ├ VendorSeverity   ╭ bitnami: 2 
+│                             │                  ╰ redhat : 1 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
+│                             │                  │         │           /A:N 
+│                             │                  │         ╰ V3Score : 6.1 
+│                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 4.2 
 │                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-45341 
 │                             │                  ├ [1]: https://go.dev/cl/643099 
 │                             │                  ├ [2]: https://go.dev/issue/71156 
@@ -344,7 +360,7 @@
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.4 
 │                       │     │                  ╰ UID : a2477af159b4ca1b 
 │                       │     ├ InstalledVersion: v1.23.4 
-│                       │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc2 
+│                       │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
 │                       │     ├ Status          : fixed 
 │                       │     ├ Layer            ╭ Digest: sha256:d3135dacd83d88eff995c75f7e40c7de05ec69954a9ce
 │                       │     │                  │         bb17f0df39496f09d2a 
@@ -366,10 +382,14 @@
 │                       │     │                   finally to b.com/2 would incorrectly send the Authorization
 │                       │     │                   header to b.com/2. 
 │                       │     ├ Severity        : MEDIUM 
-│                       │     ├ VendorSeverity   ─ redhat: 2 
-│                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/
-│                       │     │                           │           A:N 
-│                       │     │                           ╰ V3Score : 5.9 
+│                       │     ├ VendorSeverity   ╭ bitnami: 2 
+│                       │     │                  ╰ redhat : 2 
+│                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
+│                       │     │                  │         │           /A:N 
+│                       │     │                  │         ╰ V3Score : 6.1 
+│                       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N
+│                       │     │                            │           /A:N 
+│                       │     │                            ╰ V3Score : 5.9 
 │                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-45336 
 │                       │     │                  ├ [1]: https://go.dev/cl/643100 
 │                       │     │                  ├ [2]: https://go.dev/issue/70530 
@@ -388,7 +408,7 @@
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.4 
 │                             │                  ╰ UID : a2477af159b4ca1b 
 │                             ├ InstalledVersion: v1.23.4 
-│                             ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc2 
+│                             ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
 │                             ├ Status          : fixed 
 │                             ├ Layer            ╭ Digest: sha256:d3135dacd83d88eff995c75f7e40c7de05ec69954a9ce
 │                             │                  │         bb17f0df39496f09d2a 
@@ -406,10 +426,14 @@
 │                             │                   URIs are not permitted in the web PKI, so this only affects
 │                             │                   users of private PKIs which make use of URIs. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ─ redhat: 1 
-│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/
-│                             │                           │           A:N 
-│                             │                           ╰ V3Score : 4.2 
+│                             ├ VendorSeverity   ╭ bitnami: 2 
+│                             │                  ╰ redhat : 1 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
+│                             │                  │         │           /A:N 
+│                             │                  │         ╰ V3Score : 6.1 
+│                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 4.2 
 │                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-45341 
 │                             │                  ├ [1]: https://go.dev/cl/643099 
 │                             │                  ├ [2]: https://go.dev/issue/71156 
@@ -569,7 +593,7 @@
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.4 
                         │     │                  ╰ UID : 41c223d59c4dbf4f 
                         │     ├ InstalledVersion: v1.23.4 
-                        │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc2 
+                        │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
                         │     ├ Status          : fixed 
                         │     ├ Layer            ╭ Digest: sha256:d3135dacd83d88eff995c75f7e40c7de05ec69954a9ce
                         │     │                  │         bb17f0df39496f09d2a 
@@ -591,10 +615,14 @@
                         │     │                   finally to b.com/2 would incorrectly send the Authorization
                         │     │                   header to b.com/2. 
                         │     ├ Severity        : MEDIUM 
-                        │     ├ VendorSeverity   ─ redhat: 2 
-                        │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/
-                        │     │                           │           A:N 
-                        │     │                           ╰ V3Score : 5.9 
+                        │     ├ VendorSeverity   ╭ bitnami: 2 
+                        │     │                  ╰ redhat : 2 
+                        │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
+                        │     │                  │         │           /A:N 
+                        │     │                  │         ╰ V3Score : 6.1 
+                        │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N
+                        │     │                            │           /A:N 
+                        │     │                            ╰ V3Score : 5.9 
                         │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-45336 
                         │     │                  ├ [1]: https://go.dev/cl/643100 
                         │     │                  ├ [2]: https://go.dev/issue/70530 
@@ -613,7 +641,7 @@
                               ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.4 
                               │                  ╰ UID : 41c223d59c4dbf4f 
                               ├ InstalledVersion: v1.23.4 
-                              ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc2 
+                              ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
                               ├ Status          : fixed 
                               ├ Layer            ╭ Digest: sha256:d3135dacd83d88eff995c75f7e40c7de05ec69954a9ce
                               │                  │         bb17f0df39496f09d2a 
@@ -631,10 +659,14 @@
                               │                   URIs are not permitted in the web PKI, so this only affects
                               │                   users of private PKIs which make use of URIs. 
                               ├ Severity        : MEDIUM 
-                              ├ VendorSeverity   ─ redhat: 1 
-                              ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/
-                              │                           │           A:N 
-                              │                           ╰ V3Score : 4.2 
+                              ├ VendorSeverity   ╭ bitnami: 2 
+                              │                  ╰ redhat : 1 
+                              ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
+                              │                  │         │           /A:N 
+                              │                  │         ╰ V3Score : 6.1 
+                              │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L
+                              │                            │           /A:N 
+                              │                            ╰ V3Score : 4.2 
                               ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-45341 
                               │                  ├ [1]: https://go.dev/cl/643099 
                               │                  ├ [2]: https://go.dev/issue/71156 
