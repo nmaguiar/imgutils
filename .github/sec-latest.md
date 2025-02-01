@@ -521,20 +521,22 @@
 │                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/
 │                       │     │                           │           A:N 
 │                       │     │                           ╰ V3Score : 8.2 
-│                       │     ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2024/12/11/2 
-│                       │     │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2024-45337 
-│                       │     │                  ├ [2]: https://github.com/golang/crypto 
-│                       │     │                  ├ [3]: https://github.com/golang/crypto/commit/b4f1988a35dee11
-│                       │     │                  │      ec3e05d6bf3e90b695fbd8909 
-│                       │     │                  ├ [4]: https://go.dev/cl/635315 
-│                       │     │                  ├ [5]: https://go.dev/issue/70779 
-│                       │     │                  ├ [6]: https://groups.google.com/g/golang-announce/c/-nPEi39gI
-│                       │     │                  │      4Q/m/cGVPJCqdAQAJ 
-│                       │     │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2024-45337 
-│                       │     │                  ├ [8]: https://pkg.go.dev/vuln/GO-2024-3321 
-│                       │     │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2024-45337 
+│                       │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2024/12/11/2 
+│                       │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-45337 
+│                       │     │                  ├ [2] : https://github.com/golang/crypto 
+│                       │     │                  ├ [3] : https://github.com/golang/crypto/commit/b4f1988a35dee1
+│                       │     │                  │       1ec3e05d6bf3e90b695fbd8909 
+│                       │     │                  ├ [4] : https://go.dev/cl/635315 
+│                       │     │                  ├ [5] : https://go.dev/issue/70779 
+│                       │     │                  ├ [6] : https://groups.google.com/g/golang-announce/c/-nPEi39g
+│                       │     │                  │       I4Q/m/cGVPJCqdAQAJ 
+│                       │     │                  ├ [7] : https://nvd.nist.gov/vuln/detail/CVE-2024-45337 
+│                       │     │                  ├ [8] : https://pkg.go.dev/vuln/GO-2024-3321 
+│                       │     │                  ├ [9] : https://security.netapp.com/advisory/ntap-20250131-0007 
+│                       │     │                  ├ [10]: https://security.netapp.com/advisory/ntap-20250131-0007/ 
+│                       │     │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2024-45337 
 │                       │     ├ PublishedDate   : 2024-12-12T02:02:07.97Z 
-│                       │     ╰ LastModifiedDate: 2024-12-12T21:15:08.5Z 
+│                       │     ╰ LastModifiedDate: 2025-01-31T15:15:13.19Z 
 │                       ╰ [1] ╭ VulnerabilityID : CVE-2024-45338 
 │                             ├ PkgID           : golang.org/x/net@v0.30.0 
 │                             ├ PkgName         : golang.org/x/net 
