@@ -464,9 +464,11 @@
     - https://groups.google.com/g/golang-announce/c/-nPEi39gI4Q/m/cGVPJCqdAQAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45337
     - https://pkg.go.dev/vuln/GO-2024-3321
+    - https://security.netapp.com/advisory/ntap-20250131-0007
+    - https://security.netapp.com/advisory/ntap-20250131-0007/
     - https://www.cve.org/CVERecord?id=CVE-2024-45337
     PublishedDate: '2024-12-12T02:02:07.97Z'
-    LastModifiedDate: '2024-12-12T21:15:08.5Z'
+    LastModifiedDate: '2025-01-31T15:15:13.19Z'
   - VulnerabilityID: CVE-2024-45338
     PkgID: golang.org/x/net@v0.30.0
     PkgName: golang.org/x/net
