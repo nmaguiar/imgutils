@@ -511,7 +511,8 @@
 │                       │     │                   authentication attempts; users of third-party libraries
 │                       │     │                   should refer to the relevant projects for guidance. 
 │                       │     ├ Severity        : CRITICAL 
-│                       │     ├ VendorSeverity   ╭ azure      : 4 
+│                       │     ├ VendorSeverity   ╭ amazon     : 3 
+│                       │     │                  ├ azure      : 4 
 │                       │     │                  ├ cbl-mariner: 4 
 │                       │     │                  ├ ghsa       : 4 
 │                       │     │                  ╰ redhat     : 3 
