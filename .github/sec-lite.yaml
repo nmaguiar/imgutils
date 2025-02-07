@@ -29,7 +29,7 @@
     CweIDs:
     - CWE-1333
     VendorSeverity:
-      amazon: 2
+      amazon: 3
       azure: 3
       cbl-mariner: 3
       ghsa: 3
@@ -135,3 +135,30 @@
     - https://www.cve.org/CVERecord?id=CVE-2024-45341
     PublishedDate: '2025-01-28T02:15:29.147Z'
     LastModifiedDate: '2025-01-28T16:15:38.65Z'
+  - VulnerabilityID: CVE-2025-22866
+    PkgID: stdlib@v1.23.3
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.23.3
+      UID: c32ee6844a95cf7d
+    InstalledVersion: v1.23.3
+    FixedVersion: 1.22.12, 1.23.6, 1.24.0-rc.3
+    Status: fixed
+    Layer:
+      Digest: sha256:1f383918363ac911be51cac15c9dff19f16778bfed1ab9f3e1b9200fb8868c96
+      DiffID: sha256:ac8c4e6ab28289487a8db7966647ea46d388098db92d5174c650c9c25b560436
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22866
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: Timing sidechannel for P-256 on ppc64le in crypto/internal/nistec
+    Description: Due to the usage of a variable time instruction in the assembly implementation of an internal function, a small number of bits of secret scalars are leaked on the ppc64le architecture. Due to the way this function is used, we do not believe this leakage is enough to allow recovery of the private key when P-256 is used in any well known protocols.
+    Severity: UNKNOWN
+    References:
+    - https://go.dev/cl/643735
+    - https://go.dev/issue/71383
+    - https://groups.google.com/g/golang-announce/c/xU1ZCHUZw3k
+    - https://pkg.go.dev/vuln/GO-2025-3447
+    PublishedDate: '2025-02-06T17:15:21.41Z'
+    LastModifiedDate: '2025-02-06T17:15:21.41Z'
