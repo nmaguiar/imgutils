@@ -31,7 +31,7 @@
                         │     │                   denial of service. 
                         │     ├ Severity        : HIGH 
                         │     ├ CweIDs           ─ [0]: CWE-1333 
-                        │     ├ VendorSeverity   ╭ amazon     : 2 
+                        │     ├ VendorSeverity   ╭ amazon     : 3 
                         │     │                  ├ azure      : 3 
                         │     │                  ├ cbl-mariner: 3 
                         │     │                  ├ ghsa       : 3 
@@ -102,48 +102,79 @@
                         │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-45336 
                         │     ├ PublishedDate   : 2025-01-28T02:15:28.807Z 
                         │     ╰ LastModifiedDate: 2025-01-28T16:15:38.22Z 
-                        ╰ [2] ╭ VulnerabilityID : CVE-2024-45341 
+                        ├ [2] ╭ VulnerabilityID : CVE-2024-45341 
+                        │     ├ PkgID           : stdlib@v1.23.3 
+                        │     ├ PkgName         : stdlib 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.3 
+                        │     │                  ╰ UID : c32ee6844a95cf7d 
+                        │     ├ InstalledVersion: v1.23.3 
+                        │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
+                        │     ├ Status          : fixed 
+                        │     ├ Layer            ╭ Digest: sha256:208a38c534b0b4c213d2cfc0ed1e6a356dc0e39990dd1
+                        │     │                  │         641692c93d1cf825171 
+                        │     │                  ╰ DiffID: sha256:9180ebf4d51168299a843d172c2a82e431c13a99765cc
+                        │     │                            a7d9c57a40aa260698a 
+                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45341 
+                        │     ├ DataSource       ╭ ID  : govulndb 
+                        │     │                  ├ Name: The Go Vulnerability Database 
+                        │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │     ├ Title           : golang: crypto/x509: crypto/x509: usage of IPv6 zone IDs can
+                        │     │                   bypass URI name constraints 
+                        │     ├ Description     : A certificate with a URI which has a IPv6 address with a zone
+                        │     │                    ID may incorrectly satisfy a URI name constraint that
+                        │     │                   applies to the certificate chain. Certificates containing
+                        │     │                   URIs are not permitted in the web PKI, so this only affects
+                        │     │                   users of private PKIs which make use of URIs. 
+                        │     ├ Severity        : MEDIUM 
+                        │     ├ VendorSeverity   ╭ bitnami: 2 
+                        │     │                  ╰ redhat : 1 
+                        │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
+                        │     │                  │         │           /A:N 
+                        │     │                  │         ╰ V3Score : 6.1 
+                        │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L
+                        │     │                            │           /A:N 
+                        │     │                            ╰ V3Score : 4.2 
+                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-45341 
+                        │     │                  ├ [1]: https://go.dev/cl/643099 
+                        │     │                  ├ [2]: https://go.dev/issue/71156 
+                        │     │                  ├ [3]: https://groups.google.com/g/golang-dev/c/CAWXhan3Jww/m/
+                        │     │                  │      bk9LAa-lCgAJ 
+                        │     │                  ├ [4]: https://groups.google.com/g/golang-dev/c/bG8cv1muIBM/m/
+                        │     │                  │      G461hA6lCgAJ 
+                        │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2024-45341 
+                        │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3373 
+                        │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-45341 
+                        │     ├ PublishedDate   : 2025-01-28T02:15:29.147Z 
+                        │     ╰ LastModifiedDate: 2025-01-28T16:15:38.65Z 
+                        ╰ [3] ╭ VulnerabilityID : CVE-2025-22866 
                               ├ PkgID           : stdlib@v1.23.3 
                               ├ PkgName         : stdlib 
                               ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.3 
                               │                  ╰ UID : c32ee6844a95cf7d 
                               ├ InstalledVersion: v1.23.3 
-                              ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
+                              ├ FixedVersion    : 1.22.12, 1.23.6, 1.24.0-rc.3 
                               ├ Status          : fixed 
                               ├ Layer            ╭ Digest: sha256:208a38c534b0b4c213d2cfc0ed1e6a356dc0e39990dd1
                               │                  │         641692c93d1cf825171 
                               │                  ╰ DiffID: sha256:9180ebf4d51168299a843d172c2a82e431c13a99765cc
                               │                            a7d9c57a40aa260698a 
-                              ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45341 
+                              ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22866 
                               ├ DataSource       ╭ ID  : govulndb 
                               │                  ├ Name: The Go Vulnerability Database 
                               │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                              ├ Title           : golang: crypto/x509: crypto/x509: usage of IPv6 zone IDs can
-                              │                   bypass URI name constraints 
-                              ├ Description     : A certificate with a URI which has a IPv6 address with a zone
-                              │                    ID may incorrectly satisfy a URI name constraint that
-                              │                   applies to the certificate chain. Certificates containing
-                              │                   URIs are not permitted in the web PKI, so this only affects
-                              │                   users of private PKIs which make use of URIs. 
-                              ├ Severity        : MEDIUM 
-                              ├ VendorSeverity   ╭ bitnami: 2 
-                              │                  ╰ redhat : 1 
-                              ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
-                              │                  │         │           /A:N 
-                              │                  │         ╰ V3Score : 6.1 
-                              │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L
-                              │                            │           /A:N 
-                              │                            ╰ V3Score : 4.2 
-                              ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-45341 
-                              │                  ├ [1]: https://go.dev/cl/643099 
-                              │                  ├ [2]: https://go.dev/issue/71156 
-                              │                  ├ [3]: https://groups.google.com/g/golang-dev/c/CAWXhan3Jww/m/
-                              │                  │      bk9LAa-lCgAJ 
-                              │                  ├ [4]: https://groups.google.com/g/golang-dev/c/bG8cv1muIBM/m/
-                              │                  │      G461hA6lCgAJ 
-                              │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2024-45341 
-                              │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3373 
-                              │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-45341 
-                              ├ PublishedDate   : 2025-01-28T02:15:29.147Z 
-                              ╰ LastModifiedDate: 2025-01-28T16:15:38.65Z 
+                              ├ Title           : Timing sidechannel for P-256 on ppc64le in
+                              │                   crypto/internal/nistec 
+                              ├ Description     : Due to the usage of a variable time instruction in the
+                              │                   assembly implementation of an internal function, a small
+                              │                   number of bits of secret scalars are leaked on the ppc64le
+                              │                   architecture. Due to the way this function is used, we do not
+                              │                    believe this leakage is enough to allow recovery of the
+                              │                   private key when P-256 is used in any well known protocols. 
+                              ├ Severity        : UNKNOWN 
+                              ├ References       ╭ [0]: https://go.dev/cl/643735 
+                              │                  ├ [1]: https://go.dev/issue/71383 
+                              │                  ├ [2]: https://groups.google.com/g/golang-announce/c/xU1ZCHUZw3k 
+                              │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3447 
+                              ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
+                              ╰ LastModifiedDate: 2025-02-06T17:15:21.41Z 
 ````
