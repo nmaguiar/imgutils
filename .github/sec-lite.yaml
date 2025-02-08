@@ -116,6 +116,7 @@
     Severity: MEDIUM
     VendorSeverity:
       bitnami: 2
+      cbl-mariner: 2
       redhat: 1
     CVSS:
       bitnami:
@@ -152,7 +153,7 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Title: Timing sidechannel for P-256 on ppc64le in crypto/internal/nistec
+    Title: Due to the usage of a variable time instruction in the assembly implem ...
     Description: Due to the usage of a variable time instruction in the assembly implementation of an internal function, a small number of bits of secret scalars are leaked on the ppc64le architecture. Due to the way this function is used, we do not believe this leakage is enough to allow recovery of the private key when P-256 is used in any well known protocols.
     Severity: UNKNOWN
     References:
