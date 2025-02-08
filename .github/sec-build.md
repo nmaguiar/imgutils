@@ -16,10 +16,10 @@
 │                       │     ├ InstalledVersion: v0.30.0 
 │                       │     ├ FixedVersion    : 0.33.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:c775b9202a8d5b8ae5e2d0cc2689866480daf0f3435e2
-│                       │     │                  │         79424045194dbffae9a 
-│                       │     │                  ╰ DiffID: sha256:31220c31fe8970f7164c4a6964b5e077af3ae8ecd17e4
-│                       │     │                            237de7bf7f969a88fb0 
+│                       │     ├ Layer            ╭ Digest: sha256:8e47d2a37d135200a94a2226695da34f0e2fc185890d1
+│                       │     │                  │         0d1351ecc2064eccf94 
+│                       │     │                  ╰ DiffID: sha256:61a5c59e6e65e6e130bf4be84a928790acc4fee341d18
+│                       │     │                            13571c1d4981a28278a 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45338 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -65,10 +65,10 @@
 │                       │     ├ InstalledVersion: v1.23.3 
 │                       │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:c775b9202a8d5b8ae5e2d0cc2689866480daf0f3435e2
-│                       │     │                  │         79424045194dbffae9a 
-│                       │     │                  ╰ DiffID: sha256:31220c31fe8970f7164c4a6964b5e077af3ae8ecd17e4
-│                       │     │                            237de7bf7f969a88fb0 
+│                       │     ├ Layer            ╭ Digest: sha256:8e47d2a37d135200a94a2226695da34f0e2fc185890d1
+│                       │     │                  │         0d1351ecc2064eccf94 
+│                       │     │                  ╰ DiffID: sha256:61a5c59e6e65e6e130bf4be84a928790acc4fee341d18
+│                       │     │                            13571c1d4981a28278a 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45336 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -113,10 +113,10 @@
 │                       │     ├ InstalledVersion: v1.23.3 
 │                       │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:c775b9202a8d5b8ae5e2d0cc2689866480daf0f3435e2
-│                       │     │                  │         79424045194dbffae9a 
-│                       │     │                  ╰ DiffID: sha256:31220c31fe8970f7164c4a6964b5e077af3ae8ecd17e4
-│                       │     │                            237de7bf7f969a88fb0 
+│                       │     ├ Layer            ╭ Digest: sha256:8e47d2a37d135200a94a2226695da34f0e2fc185890d1
+│                       │     │                  │         0d1351ecc2064eccf94 
+│                       │     │                  ╰ DiffID: sha256:61a5c59e6e65e6e130bf4be84a928790acc4fee341d18
+│                       │     │                            13571c1d4981a28278a 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45341 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -129,8 +129,9 @@
 │                       │     │                   URIs are not permitted in the web PKI, so this only affects
 │                       │     │                   users of private PKIs which make use of URIs. 
 │                       │     ├ Severity        : MEDIUM 
-│                       │     ├ VendorSeverity   ╭ bitnami: 2 
-│                       │     │                  ╰ redhat : 1 
+│                       │     ├ VendorSeverity   ╭ bitnami    : 2 
+│                       │     │                  ├ cbl-mariner: 2 
+│                       │     │                  ╰ redhat     : 1 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
 │                       │     │                  │         │           /A:N 
 │                       │     │                  │         ╰ V3Score : 6.1 
@@ -157,16 +158,16 @@
 │                             ├ InstalledVersion: v1.23.3 
 │                             ├ FixedVersion    : 1.22.12, 1.23.6, 1.24.0-rc.3 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:c775b9202a8d5b8ae5e2d0cc2689866480daf0f3435e2
-│                             │                  │         79424045194dbffae9a 
-│                             │                  ╰ DiffID: sha256:31220c31fe8970f7164c4a6964b5e077af3ae8ecd17e4
-│                             │                            237de7bf7f969a88fb0 
+│                             ├ Layer            ╭ Digest: sha256:8e47d2a37d135200a94a2226695da34f0e2fc185890d1
+│                             │                  │         0d1351ecc2064eccf94 
+│                             │                  ╰ DiffID: sha256:61a5c59e6e65e6e130bf4be84a928790acc4fee341d18
+│                             │                            13571c1d4981a28278a 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22866 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ├ Title           : Timing sidechannel for P-256 on ppc64le in
-│                             │                   crypto/internal/nistec 
+│                             ├ Title           : Due to the usage of a variable time instruction in the
+│                             │                   assembly implem ... 
 │                             ├ Description     : Due to the usage of a variable time instruction in the
 │                             │                   assembly implementation of an internal function, a small
 │                             │                   number of bits of secret scalars are leaked on the ppc64le
@@ -191,10 +192,10 @@
 │                       │     ├ InstalledVersion: v0.30.0 
 │                       │     ├ FixedVersion    : 0.33.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:c775b9202a8d5b8ae5e2d0cc2689866480daf0f3435e2
-│                       │     │                  │         79424045194dbffae9a 
-│                       │     │                  ╰ DiffID: sha256:31220c31fe8970f7164c4a6964b5e077af3ae8ecd17e4
-│                       │     │                            237de7bf7f969a88fb0 
+│                       │     ├ Layer            ╭ Digest: sha256:8e47d2a37d135200a94a2226695da34f0e2fc185890d1
+│                       │     │                  │         0d1351ecc2064eccf94 
+│                       │     │                  ╰ DiffID: sha256:61a5c59e6e65e6e130bf4be84a928790acc4fee341d18
+│                       │     │                            13571c1d4981a28278a 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45338 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -240,16 +241,16 @@
 │                             ├ InstalledVersion: v1.23.5 
 │                             ├ FixedVersion    : 1.22.12, 1.23.6, 1.24.0-rc.3 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:c775b9202a8d5b8ae5e2d0cc2689866480daf0f3435e2
-│                             │                  │         79424045194dbffae9a 
-│                             │                  ╰ DiffID: sha256:31220c31fe8970f7164c4a6964b5e077af3ae8ecd17e4
-│                             │                            237de7bf7f969a88fb0 
+│                             ├ Layer            ╭ Digest: sha256:8e47d2a37d135200a94a2226695da34f0e2fc185890d1
+│                             │                  │         0d1351ecc2064eccf94 
+│                             │                  ╰ DiffID: sha256:61a5c59e6e65e6e130bf4be84a928790acc4fee341d18
+│                             │                            13571c1d4981a28278a 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22866 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ├ Title           : Timing sidechannel for P-256 on ppc64le in
-│                             │                   crypto/internal/nistec 
+│                             ├ Title           : Due to the usage of a variable time instruction in the
+│                             │                   assembly implem ... 
 │                             ├ Description     : Due to the usage of a variable time instruction in the
 │                             │                   assembly implementation of an internal function, a small
 │                             │                   number of bits of secret scalars are leaked on the ppc64le
@@ -274,10 +275,10 @@
 │                       │     ├ InstalledVersion: v0.28.0 
 │                       │     ├ FixedVersion    : 0.33.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:c775b9202a8d5b8ae5e2d0cc2689866480daf0f3435e2
-│                       │     │                  │         79424045194dbffae9a 
-│                       │     │                  ╰ DiffID: sha256:31220c31fe8970f7164c4a6964b5e077af3ae8ecd17e4
-│                       │     │                            237de7bf7f969a88fb0 
+│                       │     ├ Layer            ╭ Digest: sha256:8e47d2a37d135200a94a2226695da34f0e2fc185890d1
+│                       │     │                  │         0d1351ecc2064eccf94 
+│                       │     │                  ╰ DiffID: sha256:61a5c59e6e65e6e130bf4be84a928790acc4fee341d18
+│                       │     │                            13571c1d4981a28278a 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45338 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -323,16 +324,16 @@
 │                             ├ InstalledVersion: v1.23.5 
 │                             ├ FixedVersion    : 1.22.12, 1.23.6, 1.24.0-rc.3 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:c775b9202a8d5b8ae5e2d0cc2689866480daf0f3435e2
-│                             │                  │         79424045194dbffae9a 
-│                             │                  ╰ DiffID: sha256:31220c31fe8970f7164c4a6964b5e077af3ae8ecd17e4
-│                             │                            237de7bf7f969a88fb0 
+│                             ├ Layer            ╭ Digest: sha256:8e47d2a37d135200a94a2226695da34f0e2fc185890d1
+│                             │                  │         0d1351ecc2064eccf94 
+│                             │                  ╰ DiffID: sha256:61a5c59e6e65e6e130bf4be84a928790acc4fee341d18
+│                             │                            13571c1d4981a28278a 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22866 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ├ Title           : Timing sidechannel for P-256 on ppc64le in
-│                             │                   crypto/internal/nistec 
+│                             ├ Title           : Due to the usage of a variable time instruction in the
+│                             │                   assembly implem ... 
 │                             ├ Description     : Due to the usage of a variable time instruction in the
 │                             │                   assembly implementation of an internal function, a small
 │                             │                   number of bits of secret scalars are leaked on the ppc64le
@@ -357,16 +358,16 @@
 │                             ├ InstalledVersion: v1.23.5 
 │                             ├ FixedVersion    : 1.22.12, 1.23.6, 1.24.0-rc.3 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:c775b9202a8d5b8ae5e2d0cc2689866480daf0f3435e2
-│                             │                  │         79424045194dbffae9a 
-│                             │                  ╰ DiffID: sha256:31220c31fe8970f7164c4a6964b5e077af3ae8ecd17e4
-│                             │                            237de7bf7f969a88fb0 
+│                             ├ Layer            ╭ Digest: sha256:8e47d2a37d135200a94a2226695da34f0e2fc185890d1
+│                             │                  │         0d1351ecc2064eccf94 
+│                             │                  ╰ DiffID: sha256:61a5c59e6e65e6e130bf4be84a928790acc4fee341d18
+│                             │                            13571c1d4981a28278a 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22866 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ├ Title           : Timing sidechannel for P-256 on ppc64le in
-│                             │                   crypto/internal/nistec 
+│                             ├ Title           : Due to the usage of a variable time instruction in the
+│                             │                   assembly implem ... 
 │                             ├ Description     : Due to the usage of a variable time instruction in the
 │                             │                   assembly implementation of an internal function, a small
 │                             │                   number of bits of secret scalars are leaked on the ppc64le
@@ -391,10 +392,10 @@
 │                       │     ├ InstalledVersion: v1.23.4 
 │                       │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:c775b9202a8d5b8ae5e2d0cc2689866480daf0f3435e2
-│                       │     │                  │         79424045194dbffae9a 
-│                       │     │                  ╰ DiffID: sha256:31220c31fe8970f7164c4a6964b5e077af3ae8ecd17e4
-│                       │     │                            237de7bf7f969a88fb0 
+│                       │     ├ Layer            ╭ Digest: sha256:8e47d2a37d135200a94a2226695da34f0e2fc185890d1
+│                       │     │                  │         0d1351ecc2064eccf94 
+│                       │     │                  ╰ DiffID: sha256:61a5c59e6e65e6e130bf4be84a928790acc4fee341d18
+│                       │     │                            13571c1d4981a28278a 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45336 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -439,10 +440,10 @@
 │                       │     ├ InstalledVersion: v1.23.4 
 │                       │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:c775b9202a8d5b8ae5e2d0cc2689866480daf0f3435e2
-│                       │     │                  │         79424045194dbffae9a 
-│                       │     │                  ╰ DiffID: sha256:31220c31fe8970f7164c4a6964b5e077af3ae8ecd17e4
-│                       │     │                            237de7bf7f969a88fb0 
+│                       │     ├ Layer            ╭ Digest: sha256:8e47d2a37d135200a94a2226695da34f0e2fc185890d1
+│                       │     │                  │         0d1351ecc2064eccf94 
+│                       │     │                  ╰ DiffID: sha256:61a5c59e6e65e6e130bf4be84a928790acc4fee341d18
+│                       │     │                            13571c1d4981a28278a 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45341 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -455,8 +456,9 @@
 │                       │     │                   URIs are not permitted in the web PKI, so this only affects
 │                       │     │                   users of private PKIs which make use of URIs. 
 │                       │     ├ Severity        : MEDIUM 
-│                       │     ├ VendorSeverity   ╭ bitnami: 2 
-│                       │     │                  ╰ redhat : 1 
+│                       │     ├ VendorSeverity   ╭ bitnami    : 2 
+│                       │     │                  ├ cbl-mariner: 2 
+│                       │     │                  ╰ redhat     : 1 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
 │                       │     │                  │         │           /A:N 
 │                       │     │                  │         ╰ V3Score : 6.1 
@@ -483,16 +485,16 @@
 │                             ├ InstalledVersion: v1.23.4 
 │                             ├ FixedVersion    : 1.22.12, 1.23.6, 1.24.0-rc.3 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:c775b9202a8d5b8ae5e2d0cc2689866480daf0f3435e2
-│                             │                  │         79424045194dbffae9a 
-│                             │                  ╰ DiffID: sha256:31220c31fe8970f7164c4a6964b5e077af3ae8ecd17e4
-│                             │                            237de7bf7f969a88fb0 
+│                             ├ Layer            ╭ Digest: sha256:8e47d2a37d135200a94a2226695da34f0e2fc185890d1
+│                             │                  │         0d1351ecc2064eccf94 
+│                             │                  ╰ DiffID: sha256:61a5c59e6e65e6e130bf4be84a928790acc4fee341d18
+│                             │                            13571c1d4981a28278a 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22866 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ├ Title           : Timing sidechannel for P-256 on ppc64le in
-│                             │                   crypto/internal/nistec 
+│                             ├ Title           : Due to the usage of a variable time instruction in the
+│                             │                   assembly implem ... 
 │                             ├ Description     : Due to the usage of a variable time instruction in the
 │                             │                   assembly implementation of an internal function, a small
 │                             │                   number of bits of secret scalars are leaked on the ppc64le
@@ -517,10 +519,10 @@
 │                       │     ├ InstalledVersion: v1.23.4 
 │                       │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:c775b9202a8d5b8ae5e2d0cc2689866480daf0f3435e2
-│                       │     │                  │         79424045194dbffae9a 
-│                       │     │                  ╰ DiffID: sha256:31220c31fe8970f7164c4a6964b5e077af3ae8ecd17e4
-│                       │     │                            237de7bf7f969a88fb0 
+│                       │     ├ Layer            ╭ Digest: sha256:8e47d2a37d135200a94a2226695da34f0e2fc185890d1
+│                       │     │                  │         0d1351ecc2064eccf94 
+│                       │     │                  ╰ DiffID: sha256:61a5c59e6e65e6e130bf4be84a928790acc4fee341d18
+│                       │     │                            13571c1d4981a28278a 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45336 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -565,10 +567,10 @@
 │                       │     ├ InstalledVersion: v1.23.4 
 │                       │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:c775b9202a8d5b8ae5e2d0cc2689866480daf0f3435e2
-│                       │     │                  │         79424045194dbffae9a 
-│                       │     │                  ╰ DiffID: sha256:31220c31fe8970f7164c4a6964b5e077af3ae8ecd17e4
-│                       │     │                            237de7bf7f969a88fb0 
+│                       │     ├ Layer            ╭ Digest: sha256:8e47d2a37d135200a94a2226695da34f0e2fc185890d1
+│                       │     │                  │         0d1351ecc2064eccf94 
+│                       │     │                  ╰ DiffID: sha256:61a5c59e6e65e6e130bf4be84a928790acc4fee341d18
+│                       │     │                            13571c1d4981a28278a 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45341 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -581,8 +583,9 @@
 │                       │     │                   URIs are not permitted in the web PKI, so this only affects
 │                       │     │                   users of private PKIs which make use of URIs. 
 │                       │     ├ Severity        : MEDIUM 
-│                       │     ├ VendorSeverity   ╭ bitnami: 2 
-│                       │     │                  ╰ redhat : 1 
+│                       │     ├ VendorSeverity   ╭ bitnami    : 2 
+│                       │     │                  ├ cbl-mariner: 2 
+│                       │     │                  ╰ redhat     : 1 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
 │                       │     │                  │         │           /A:N 
 │                       │     │                  │         ╰ V3Score : 6.1 
@@ -609,16 +612,16 @@
 │                             ├ InstalledVersion: v1.23.4 
 │                             ├ FixedVersion    : 1.22.12, 1.23.6, 1.24.0-rc.3 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:c775b9202a8d5b8ae5e2d0cc2689866480daf0f3435e2
-│                             │                  │         79424045194dbffae9a 
-│                             │                  ╰ DiffID: sha256:31220c31fe8970f7164c4a6964b5e077af3ae8ecd17e4
-│                             │                            237de7bf7f969a88fb0 
+│                             ├ Layer            ╭ Digest: sha256:8e47d2a37d135200a94a2226695da34f0e2fc185890d1
+│                             │                  │         0d1351ecc2064eccf94 
+│                             │                  ╰ DiffID: sha256:61a5c59e6e65e6e130bf4be84a928790acc4fee341d18
+│                             │                            13571c1d4981a28278a 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22866 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ├ Title           : Timing sidechannel for P-256 on ppc64le in
-│                             │                   crypto/internal/nistec 
+│                             ├ Title           : Due to the usage of a variable time instruction in the
+│                             │                   assembly implem ... 
 │                             ├ Description     : Due to the usage of a variable time instruction in the
 │                             │                   assembly implementation of an internal function, a small
 │                             │                   number of bits of secret scalars are leaked on the ppc64le
@@ -643,10 +646,10 @@
 │                       │     ├ InstalledVersion: v0.29.0 
 │                       │     ├ FixedVersion    : 0.31.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:c775b9202a8d5b8ae5e2d0cc2689866480daf0f3435e2
-│                       │     │                  │         79424045194dbffae9a 
-│                       │     │                  ╰ DiffID: sha256:31220c31fe8970f7164c4a6964b5e077af3ae8ecd17e4
-│                       │     │                            237de7bf7f969a88fb0 
+│                       │     ├ Layer            ╭ Digest: sha256:8e47d2a37d135200a94a2226695da34f0e2fc185890d1
+│                       │     │                  │         0d1351ecc2064eccf94 
+│                       │     │                  ╰ DiffID: sha256:61a5c59e6e65e6e130bf4be84a928790acc4fee341d18
+│                       │     │                            13571c1d4981a28278a 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45337 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -732,10 +735,10 @@
 │                       │     ├ InstalledVersion: v0.30.0 
 │                       │     ├ FixedVersion    : 0.33.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:c775b9202a8d5b8ae5e2d0cc2689866480daf0f3435e2
-│                       │     │                  │         79424045194dbffae9a 
-│                       │     │                  ╰ DiffID: sha256:31220c31fe8970f7164c4a6964b5e077af3ae8ecd17e4
-│                       │     │                            237de7bf7f969a88fb0 
+│                       │     ├ Layer            ╭ Digest: sha256:8e47d2a37d135200a94a2226695da34f0e2fc185890d1
+│                       │     │                  │         0d1351ecc2064eccf94 
+│                       │     │                  ╰ DiffID: sha256:61a5c59e6e65e6e130bf4be84a928790acc4fee341d18
+│                       │     │                            13571c1d4981a28278a 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45338 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -781,16 +784,16 @@
 │                             ├ InstalledVersion: v1.23.5 
 │                             ├ FixedVersion    : 1.22.12, 1.23.6, 1.24.0-rc.3 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:c775b9202a8d5b8ae5e2d0cc2689866480daf0f3435e2
-│                             │                  │         79424045194dbffae9a 
-│                             │                  ╰ DiffID: sha256:31220c31fe8970f7164c4a6964b5e077af3ae8ecd17e4
-│                             │                            237de7bf7f969a88fb0 
+│                             ├ Layer            ╭ Digest: sha256:8e47d2a37d135200a94a2226695da34f0e2fc185890d1
+│                             │                  │         0d1351ecc2064eccf94 
+│                             │                  ╰ DiffID: sha256:61a5c59e6e65e6e130bf4be84a928790acc4fee341d18
+│                             │                            13571c1d4981a28278a 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22866 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ├ Title           : Timing sidechannel for P-256 on ppc64le in
-│                             │                   crypto/internal/nistec 
+│                             ├ Title           : Due to the usage of a variable time instruction in the
+│                             │                   assembly implem ... 
 │                             ├ Description     : Due to the usage of a variable time instruction in the
 │                             │                   assembly implementation of an internal function, a small
 │                             │                   number of bits of secret scalars are leaked on the ppc64le
@@ -815,10 +818,10 @@
                         │     ├ InstalledVersion: v1.23.4 
                         │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:c775b9202a8d5b8ae5e2d0cc2689866480daf0f3435e2
-                        │     │                  │         79424045194dbffae9a 
-                        │     │                  ╰ DiffID: sha256:31220c31fe8970f7164c4a6964b5e077af3ae8ecd17e4
-                        │     │                            237de7bf7f969a88fb0 
+                        │     ├ Layer            ╭ Digest: sha256:8e47d2a37d135200a94a2226695da34f0e2fc185890d1
+                        │     │                  │         0d1351ecc2064eccf94 
+                        │     │                  ╰ DiffID: sha256:61a5c59e6e65e6e130bf4be84a928790acc4fee341d18
+                        │     │                            13571c1d4981a28278a 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45336 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
@@ -863,10 +866,10 @@
                         │     ├ InstalledVersion: v1.23.4 
                         │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:c775b9202a8d5b8ae5e2d0cc2689866480daf0f3435e2
-                        │     │                  │         79424045194dbffae9a 
-                        │     │                  ╰ DiffID: sha256:31220c31fe8970f7164c4a6964b5e077af3ae8ecd17e4
-                        │     │                            237de7bf7f969a88fb0 
+                        │     ├ Layer            ╭ Digest: sha256:8e47d2a37d135200a94a2226695da34f0e2fc185890d1
+                        │     │                  │         0d1351ecc2064eccf94 
+                        │     │                  ╰ DiffID: sha256:61a5c59e6e65e6e130bf4be84a928790acc4fee341d18
+                        │     │                            13571c1d4981a28278a 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45341 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
@@ -879,8 +882,9 @@
                         │     │                   URIs are not permitted in the web PKI, so this only affects
                         │     │                   users of private PKIs which make use of URIs. 
                         │     ├ Severity        : MEDIUM 
-                        │     ├ VendorSeverity   ╭ bitnami: 2 
-                        │     │                  ╰ redhat : 1 
+                        │     ├ VendorSeverity   ╭ bitnami    : 2 
+                        │     │                  ├ cbl-mariner: 2 
+                        │     │                  ╰ redhat     : 1 
                         │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
                         │     │                  │         │           /A:N 
                         │     │                  │         ╰ V3Score : 6.1 
@@ -907,16 +911,16 @@
                               ├ InstalledVersion: v1.23.4 
                               ├ FixedVersion    : 1.22.12, 1.23.6, 1.24.0-rc.3 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:c775b9202a8d5b8ae5e2d0cc2689866480daf0f3435e2
-                              │                  │         79424045194dbffae9a 
-                              │                  ╰ DiffID: sha256:31220c31fe8970f7164c4a6964b5e077af3ae8ecd17e4
-                              │                            237de7bf7f969a88fb0 
+                              ├ Layer            ╭ Digest: sha256:8e47d2a37d135200a94a2226695da34f0e2fc185890d1
+                              │                  │         0d1351ecc2064eccf94 
+                              │                  ╰ DiffID: sha256:61a5c59e6e65e6e130bf4be84a928790acc4fee341d18
+                              │                            13571c1d4981a28278a 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22866 
                               ├ DataSource       ╭ ID  : govulndb 
                               │                  ├ Name: The Go Vulnerability Database 
                               │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                              ├ Title           : Timing sidechannel for P-256 on ppc64le in
-                              │                   crypto/internal/nistec 
+                              ├ Title           : Due to the usage of a variable time instruction in the
+                              │                   assembly implem ... 
                               ├ Description     : Due to the usage of a variable time instruction in the
                               │                   assembly implementation of an internal function, a small
                               │                   number of bits of secret scalars are leaked on the ppc64le
