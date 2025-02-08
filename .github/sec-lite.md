@@ -126,8 +126,9 @@
                         │     │                   URIs are not permitted in the web PKI, so this only affects
                         │     │                   users of private PKIs which make use of URIs. 
                         │     ├ Severity        : MEDIUM 
-                        │     ├ VendorSeverity   ╭ bitnami: 2 
-                        │     │                  ╰ redhat : 1 
+                        │     ├ VendorSeverity   ╭ bitnami    : 2 
+                        │     │                  ├ cbl-mariner: 2 
+                        │     │                  ╰ redhat     : 1 
                         │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
                         │     │                  │         │           /A:N 
                         │     │                  │         ╰ V3Score : 6.1 
@@ -162,8 +163,8 @@
                               ├ DataSource       ╭ ID  : govulndb 
                               │                  ├ Name: The Go Vulnerability Database 
                               │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                              ├ Title           : Timing sidechannel for P-256 on ppc64le in
-                              │                   crypto/internal/nistec 
+                              ├ Title           : Due to the usage of a variable time instruction in the
+                              │                   assembly implem ... 
                               ├ Description     : Due to the usage of a variable time instruction in the
                               │                   assembly implementation of an internal function, a small
                               │                   number of bits of secret scalars are leaked on the ppc64le
