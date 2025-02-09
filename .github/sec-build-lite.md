@@ -163,19 +163,26 @@
                               ├ DataSource       ╭ ID  : govulndb 
                               │                  ├ Name: The Go Vulnerability Database 
                               │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                              ├ Title           : Due to the usage of a variable time instruction in the
-                              │                   assembly implem ... 
+                              ├ Title           : crypto/internal/nistec: golang: Timing sidechannel for P-256
+                              │                   on ppc64le in crypto/internal/nistec 
                               ├ Description     : Due to the usage of a variable time instruction in the
                               │                   assembly implementation of an internal function, a small
                               │                   number of bits of secret scalars are leaked on the ppc64le
                               │                   architecture. Due to the way this function is used, we do not
                               │                    believe this leakage is enough to allow recovery of the
                               │                   private key when P-256 is used in any well known protocols. 
-                              ├ Severity        : UNKNOWN 
-                              ├ References       ╭ [0]: https://go.dev/cl/643735 
-                              │                  ├ [1]: https://go.dev/issue/71383 
-                              │                  ├ [2]: https://groups.google.com/g/golang-announce/c/xU1ZCHUZw3k 
-                              │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3447 
+                              ├ Severity        : MEDIUM 
+                              ├ VendorSeverity   ─ redhat: 2 
+                              ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/
+                              │                           │           A:N 
+                              │                           ╰ V3Score : 5.3 
+                              ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-22866 
+                              │                  ├ [1]: https://go.dev/cl/643735 
+                              │                  ├ [2]: https://go.dev/issue/71383 
+                              │                  ├ [3]: https://groups.google.com/g/golang-announce/c/xU1ZCHUZw3k 
+                              │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-22866 
+                              │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
+                              │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
                               ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
                               ╰ LastModifiedDate: 2025-02-06T17:15:21.41Z 
 ````
