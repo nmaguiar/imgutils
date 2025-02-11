@@ -2,9 +2,94 @@
 ╭ [0] ╭ Target: nmaguiar/imgutils:latest (alpine 3.22.0_alpha20250108) 
 │     ├ Class : os-pkgs 
 │     ╰ Type  : alpine 
-├ [1] ╭ Target: Java 
-│     ├ Class : lang-pkgs 
-│     ╰ Type  : jar 
+├ [1] ╭ Target         : Java 
+│     ├ Class          : lang-pkgs 
+│     ├ Type           : jar 
+│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2025-25193 
+│                       │     ├ PkgName         : io.netty:netty-common 
+│                       │     ├ PkgPath         : openaf/Kube/netty-common-4.1.115.Final.jar 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-common@4.1.115.Final 
+│                       │     │                  ╰ UID : ddba42e9c4528b76 
+│                       │     ├ InstalledVersion: 4.1.115.Final 
+│                       │     ├ Status          : affected 
+│                       │     ├ Layer            ╭ Digest: sha256:67745f33db87269d29b3cec8a6ee9ff37466af991b8e3
+│                       │     │                  │         fe935202ee09b74937d 
+│                       │     │                  ╰ DiffID: sha256:a56dd5b884f421b1a1ddd57dafd3f97b066e4a94b0eea
+│                       │     │                            885bee677ce5feea9ac 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-25193 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Maven 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Amaven 
+│                       │     ├ Title           : Denial of Service attack on windows app using Netty 
+│                       │     ├ Description     : Netty, an asynchronous, event-driven network application
+│                       │     │                   framework, has a vulnerability in versions up to and
+│                       │     │                   including 4.1.118.Final. An unsafe reading of environment
+│                       │     │                   file could potentially cause a denial of service in Netty.
+│                       │     │                   When loaded on an Windows application, Netty attempts to load
+│                       │     │                    a file that does not exist. If an attacker creates such a
+│                       │     │                   large file, the Netty application crash. A similar issue was
+│                       │     │                   previously reported as CVE-2024-47535. This issue was fixed,
+│                       │     │                   but the fix was incomplete in that null-bytes were not
+│                       │     │                   counted against the input limit. Commit
+│                       │     │                   d1fbda62d3a47835d3fb35db8bd42ecc205a5386 contains an updated
+│                       │     │                   fix. 
+│                       │     ├ Severity        : MEDIUM 
+│                       │     ├ CweIDs           ─ [0]: CWE-400 
+│                       │     ├ VendorSeverity   ─ ghsa: 2 
+│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H 
+│                       │     │                         ╰ V3Score : 5.5 
+│                       │     ├ References       ╭ [0]: https://github.com/netty/netty 
+│                       │     │                  ├ [1]: https://github.com/netty/netty/commit/d1fbda62d3a47835d
+│                       │     │                  │      3fb35db8bd42ecc205a5386 
+│                       │     │                  ├ [2]: https://github.com/netty/netty/security/advisories/GHSA
+│                       │     │                  │      -389x-839f-4rhx 
+│                       │     │                  ╰ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-25193 
+│                       │     ├ PublishedDate   : 2025-02-10T22:15:38.45Z 
+│                       │     ╰ LastModifiedDate: 2025-02-10T22:15:38.45Z 
+│                       ╰ [1] ╭ VulnerabilityID : CVE-2025-24970 
+│                             ├ PkgName         : io.netty:netty-handler 
+│                             ├ PkgPath         : openaf/Kube/netty-handler-4.1.115.Final.jar 
+│                             ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-handler@4.1.115.Final 
+│                             │                  ╰ UID : fd229ca8f6181102 
+│                             ├ InstalledVersion: 4.1.115.Final 
+│                             ├ FixedVersion    : 4.1.118.Final 
+│                             ├ Status          : fixed 
+│                             ├ Layer            ╭ Digest: sha256:67745f33db87269d29b3cec8a6ee9ff37466af991b8e3
+│                             │                  │         fe935202ee09b74937d 
+│                             │                  ╰ DiffID: sha256:a56dd5b884f421b1a1ddd57dafd3f97b066e4a94b0eea
+│                             │                            885bee677ce5feea9ac 
+│                             ├ SeveritySource  : ghsa 
+│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-24970 
+│                             ├ DataSource       ╭ ID  : ghsa 
+│                             │                  ├ Name: GitHub Security Advisory Maven 
+│                             │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                             │                          osystem%3Amaven 
+│                             ├ Title           : SslHandler doesn't correctly validate packets which can lead
+│                             │                   to native crash when using native SSLEngine 
+│                             ├ Description     : Netty, an asynchronous, event-driven network application
+│                             │                   framework, has a vulnerability starting in version
+│                             │                   4.1.91.Final and prior to version 4.1.118.Final. When a
+│                             │                   special crafted packet is received via SslHandler it doesn't
+│                             │                   correctly handle validation of such a packet in all cases
+│                             │                   which can lead to a native crash. Version 4.1.118.Final
+│                             │                   contains a patch. As workaround its possible to either
+│                             │                   disable the usage of the native SSLEngine or change the code
+│                             │                   manually. 
+│                             ├ Severity        : HIGH 
+│                             ├ CweIDs           ─ [0]: CWE-20 
+│                             ├ VendorSeverity   ─ ghsa: 3 
+│                             ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
+│                             │                         ╰ V3Score : 7.5 
+│                             ├ References       ╭ [0]: https://github.com/netty/netty 
+│                             │                  ├ [1]: https://github.com/netty/netty/commit/87f40725155b2f89a
+│                             │                  │      dfde68c7732f97c153676c4 
+│                             │                  ├ [2]: https://github.com/netty/netty/security/advisories/GHSA
+│                             │                  │      -4g8c-wm8x-jfhw 
+│                             │                  ╰ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-24970 
+│                             ├ PublishedDate   : 2025-02-10T22:15:38.057Z 
+│                             ╰ LastModifiedDate: 2025-02-10T22:15:38.057Z 
 ├ [2] ╭ Target         : usr/bin/crictl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -187,7 +272,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
 │                             ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
-│                             ╰ LastModifiedDate: 2025-02-06T17:15:21.41Z 
+│                             ╰ LastModifiedDate: 2025-02-10T21:15:22.477Z 
 ├ [3] ╭ Target         : usr/bin/ctr 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -277,7 +362,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
 │                             ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
-│                             ╰ LastModifiedDate: 2025-02-06T17:15:21.41Z 
+│                             ╰ LastModifiedDate: 2025-02-10T21:15:22.477Z 
 ├ [4] ╭ Target         : usr/bin/dive 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -367,7 +452,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
 │                             ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
-│                             ╰ LastModifiedDate: 2025-02-06T17:15:21.41Z 
+│                             ╰ LastModifiedDate: 2025-02-10T21:15:22.477Z 
 ├ [5] ╭ Target         : usr/bin/docker 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -408,7 +493,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
 │                             ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
-│                             ╰ LastModifiedDate: 2025-02-06T17:15:21.41Z 
+│                             ╰ LastModifiedDate: 2025-02-10T21:15:22.477Z 
 ├ [6] ╭ Target         : usr/bin/helm 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -542,7 +627,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
 │                             ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
-│                             ╰ LastModifiedDate: 2025-02-06T17:15:21.41Z 
+│                             ╰ LastModifiedDate: 2025-02-10T21:15:22.477Z 
 ├ [7] ╭ Target         : usr/bin/nerdctl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -676,7 +761,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
 │                             ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
-│                             ╰ LastModifiedDate: 2025-02-06T17:15:21.41Z 
+│                             ╰ LastModifiedDate: 2025-02-10T21:15:22.477Z 
 ├ [8] ╭ Target         : usr/bin/skopeo 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -855,7 +940,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
 │                             ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
-│                             ╰ LastModifiedDate: 2025-02-06T17:15:21.41Z 
+│                             ╰ LastModifiedDate: 2025-02-10T21:15:22.477Z 
 ╰ [9] ╭ Target         : usr/bin/syft 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
@@ -989,5 +1074,5 @@
                               │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
                               │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
                               ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
-                              ╰ LastModifiedDate: 2025-02-06T17:15:21.41Z 
+                              ╰ LastModifiedDate: 2025-02-10T21:15:22.477Z 
 ````
