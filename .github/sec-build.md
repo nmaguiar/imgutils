@@ -22,7 +22,8 @@
 │                       │     │                  ├ Name: GitHub Security Advisory Maven 
 │                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
 │                       │     │                          osystem%3Amaven 
-│                       │     ├ Title           : Denial of Service attack on windows app using Netty 
+│                       │     ├ Title           : Netty, an asynchronous, event-driven network application
+│                       │     │                   framework, ha ... 
 │                       │     ├ Description     : Netty, an asynchronous, event-driven network application
 │                       │     │                   framework, has a vulnerability in versions up to and
 │                       │     │                   including 4.1.118.Final. An unsafe reading of environment
@@ -47,7 +48,7 @@
 │                       │     │                  │      -389x-839f-4rhx 
 │                       │     │                  ╰ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-25193 
 │                       │     ├ PublishedDate   : 2025-02-10T22:15:38.45Z 
-│                       │     ╰ LastModifiedDate: 2025-02-10T22:15:38.45Z 
+│                       │     ╰ LastModifiedDate: 2025-02-11T16:15:52.523Z 
 │                       ╰ [1] ╭ VulnerabilityID : CVE-2025-24970 
 │                             ├ PkgName         : io.netty:netty-handler 
 │                             ├ PkgPath         : openaf/Kube/netty-handler-4.1.117.Final.jar 
@@ -66,8 +67,9 @@
 │                             │                  ├ Name: GitHub Security Advisory Maven 
 │                             │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
 │                             │                          osystem%3Amaven 
-│                             ├ Title           : SslHandler doesn't correctly validate packets which can lead
-│                             │                   to native crash when using native SSLEngine 
+│                             ├ Title           : io.netty:netty-handler: SslHandler doesn't correctly validate
+│                             │                    packets which can lead to native crash when using native
+│                             │                   SSLEngine 
 │                             ├ Description     : Netty, an asynchronous, event-driven network application
 │                             │                   framework, has a vulnerability starting in version
 │                             │                   4.1.91.Final and prior to version 4.1.118.Final. When a
@@ -79,17 +81,24 @@
 │                             │                   manually. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-20 
-│                             ├ VendorSeverity   ─ ghsa: 3 
-│                             ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
-│                             │                         ╰ V3Score : 7.5 
-│                             ├ References       ╭ [0]: https://github.com/netty/netty 
-│                             │                  ├ [1]: https://github.com/netty/netty/commit/87f40725155b2f89a
+│                             ├ VendorSeverity   ╭ ghsa  : 3 
+│                             │                  ╰ redhat: 3 
+│                             ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                             │                  │        │           A:H 
+│                             │                  │        ╰ V3Score : 7.5 
+│                             │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                             │                           │           A:H 
+│                             │                           ╰ V3Score : 7.5 
+│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-24970 
+│                             │                  ├ [1]: https://github.com/netty/netty 
+│                             │                  ├ [2]: https://github.com/netty/netty/commit/87f40725155b2f89a
 │                             │                  │      dfde68c7732f97c153676c4 
-│                             │                  ├ [2]: https://github.com/netty/netty/security/advisories/GHSA
+│                             │                  ├ [3]: https://github.com/netty/netty/security/advisories/GHSA
 │                             │                  │      -4g8c-wm8x-jfhw 
-│                             │                  ╰ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-24970 
+│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-24970 
+│                             │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2025-24970 
 │                             ├ PublishedDate   : 2025-02-10T22:15:38.057Z 
-│                             ╰ LastModifiedDate: 2025-02-10T22:15:38.057Z 
+│                             ╰ LastModifiedDate: 2025-02-11T16:15:51.92Z 
 ├ [2] ╭ Target         : usr/bin/crictl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -260,10 +269,14 @@
 │                             │                    believe this leakage is enough to allow recovery of the
 │                             │                   private key when P-256 is used in any well known protocols. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ─ redhat: 2 
-│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/
-│                             │                           │           A:N 
-│                             │                           ╰ V3Score : 5.3 
+│                             ├ VendorSeverity   ╭ bitnami: 3 
+│                             │                  ╰ redhat : 2 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H
+│                             │                  │         │           /A:H 
+│                             │                  │         ╰ V3Score : 8.4 
+│                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 5.3 
 │                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-22866 
 │                             │                  ├ [1]: https://go.dev/cl/643735 
 │                             │                  ├ [2]: https://go.dev/issue/71383 
@@ -272,7 +285,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
 │                             ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
-│                             ╰ LastModifiedDate: 2025-02-10T21:15:22.477Z 
+│                             ╰ LastModifiedDate: 2025-02-11T15:15:20.87Z 
 ├ [3] ╭ Target         : usr/bin/ctr 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -350,10 +363,14 @@
 │                             │                    believe this leakage is enough to allow recovery of the
 │                             │                   private key when P-256 is used in any well known protocols. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ─ redhat: 2 
-│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/
-│                             │                           │           A:N 
-│                             │                           ╰ V3Score : 5.3 
+│                             ├ VendorSeverity   ╭ bitnami: 3 
+│                             │                  ╰ redhat : 2 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H
+│                             │                  │         │           /A:H 
+│                             │                  │         ╰ V3Score : 8.4 
+│                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 5.3 
 │                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-22866 
 │                             │                  ├ [1]: https://go.dev/cl/643735 
 │                             │                  ├ [2]: https://go.dev/issue/71383 
@@ -362,7 +379,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
 │                             ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
-│                             ╰ LastModifiedDate: 2025-02-10T21:15:22.477Z 
+│                             ╰ LastModifiedDate: 2025-02-11T15:15:20.87Z 
 ├ [4] ╭ Target         : usr/bin/dive 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -440,10 +457,14 @@
 │                             │                    believe this leakage is enough to allow recovery of the
 │                             │                   private key when P-256 is used in any well known protocols. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ─ redhat: 2 
-│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/
-│                             │                           │           A:N 
-│                             │                           ╰ V3Score : 5.3 
+│                             ├ VendorSeverity   ╭ bitnami: 3 
+│                             │                  ╰ redhat : 2 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H
+│                             │                  │         │           /A:H 
+│                             │                  │         ╰ V3Score : 8.4 
+│                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 5.3 
 │                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-22866 
 │                             │                  ├ [1]: https://go.dev/cl/643735 
 │                             │                  ├ [2]: https://go.dev/issue/71383 
@@ -452,7 +473,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
 │                             ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
-│                             ╰ LastModifiedDate: 2025-02-10T21:15:22.477Z 
+│                             ╰ LastModifiedDate: 2025-02-11T15:15:20.87Z 
 ├ [5] ╭ Target         : usr/bin/docker 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -481,10 +502,14 @@
 │                             │                    believe this leakage is enough to allow recovery of the
 │                             │                   private key when P-256 is used in any well known protocols. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ─ redhat: 2 
-│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/
-│                             │                           │           A:N 
-│                             │                           ╰ V3Score : 5.3 
+│                             ├ VendorSeverity   ╭ bitnami: 3 
+│                             │                  ╰ redhat : 2 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H
+│                             │                  │         │           /A:H 
+│                             │                  │         ╰ V3Score : 8.4 
+│                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 5.3 
 │                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-22866 
 │                             │                  ├ [1]: https://go.dev/cl/643735 
 │                             │                  ├ [2]: https://go.dev/issue/71383 
@@ -493,7 +518,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
 │                             ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
-│                             ╰ LastModifiedDate: 2025-02-10T21:15:22.477Z 
+│                             ╰ LastModifiedDate: 2025-02-11T15:15:20.87Z 
 ├ [6] ╭ Target         : usr/bin/helm 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -615,10 +640,14 @@
 │                             │                    believe this leakage is enough to allow recovery of the
 │                             │                   private key when P-256 is used in any well known protocols. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ─ redhat: 2 
-│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/
-│                             │                           │           A:N 
-│                             │                           ╰ V3Score : 5.3 
+│                             ├ VendorSeverity   ╭ bitnami: 3 
+│                             │                  ╰ redhat : 2 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H
+│                             │                  │         │           /A:H 
+│                             │                  │         ╰ V3Score : 8.4 
+│                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 5.3 
 │                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-22866 
 │                             │                  ├ [1]: https://go.dev/cl/643735 
 │                             │                  ├ [2]: https://go.dev/issue/71383 
@@ -627,7 +656,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
 │                             ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
-│                             ╰ LastModifiedDate: 2025-02-10T21:15:22.477Z 
+│                             ╰ LastModifiedDate: 2025-02-11T15:15:20.87Z 
 ├ [7] ╭ Target         : usr/bin/nerdctl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -749,10 +778,14 @@
 │                             │                    believe this leakage is enough to allow recovery of the
 │                             │                   private key when P-256 is used in any well known protocols. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ─ redhat: 2 
-│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/
-│                             │                           │           A:N 
-│                             │                           ╰ V3Score : 5.3 
+│                             ├ VendorSeverity   ╭ bitnami: 3 
+│                             │                  ╰ redhat : 2 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H
+│                             │                  │         │           /A:H 
+│                             │                  │         ╰ V3Score : 8.4 
+│                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 5.3 
 │                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-22866 
 │                             │                  ├ [1]: https://go.dev/cl/643735 
 │                             │                  ├ [2]: https://go.dev/issue/71383 
@@ -761,7 +794,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
 │                             ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
-│                             ╰ LastModifiedDate: 2025-02-10T21:15:22.477Z 
+│                             ╰ LastModifiedDate: 2025-02-11T15:15:20.87Z 
 ├ [8] ╭ Target         : usr/bin/skopeo 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -928,10 +961,14 @@
 │                             │                    believe this leakage is enough to allow recovery of the
 │                             │                   private key when P-256 is used in any well known protocols. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ─ redhat: 2 
-│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/
-│                             │                           │           A:N 
-│                             │                           ╰ V3Score : 5.3 
+│                             ├ VendorSeverity   ╭ bitnami: 3 
+│                             │                  ╰ redhat : 2 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H
+│                             │                  │         │           /A:H 
+│                             │                  │         ╰ V3Score : 8.4 
+│                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 5.3 
 │                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-22866 
 │                             │                  ├ [1]: https://go.dev/cl/643735 
 │                             │                  ├ [2]: https://go.dev/issue/71383 
@@ -940,7 +977,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
 │                             ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
-│                             ╰ LastModifiedDate: 2025-02-10T21:15:22.477Z 
+│                             ╰ LastModifiedDate: 2025-02-11T15:15:20.87Z 
 ╰ [9] ╭ Target         : usr/bin/syft 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
@@ -1062,10 +1099,14 @@
                               │                    believe this leakage is enough to allow recovery of the
                               │                   private key when P-256 is used in any well known protocols. 
                               ├ Severity        : MEDIUM 
-                              ├ VendorSeverity   ─ redhat: 2 
-                              ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/
-                              │                           │           A:N 
-                              │                           ╰ V3Score : 5.3 
+                              ├ VendorSeverity   ╭ bitnami: 3 
+                              │                  ╰ redhat : 2 
+                              ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H
+                              │                  │         │           /A:H 
+                              │                  │         ╰ V3Score : 8.4 
+                              │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N
+                              │                            │           /A:N 
+                              │                            ╰ V3Score : 5.3 
                               ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-22866 
                               │                  ├ [1]: https://go.dev/cl/643735 
                               │                  ├ [2]: https://go.dev/issue/71383 
@@ -1074,5 +1115,5 @@
                               │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
                               │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
                               ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
-                              ╰ LastModifiedDate: 2025-02-10T21:15:22.477Z 
+                              ╰ LastModifiedDate: 2025-02-11T15:15:20.87Z 
 ````
