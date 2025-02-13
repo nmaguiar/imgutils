@@ -269,11 +269,11 @@
 │                             │                    believe this leakage is enough to allow recovery of the
 │                             │                   private key when P-256 is used in any well known protocols. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ bitnami: 3 
+│                             ├ VendorSeverity   ╭ bitnami: 2 
 │                             │                  ╰ redhat : 2 
-│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H
-│                             │                  │         │           /A:H 
-│                             │                  │         ╰ V3Score : 8.4 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N
+│                             │                  │         │           /A:N 
+│                             │                  │         ╰ V3Score : 4 
 │                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N
 │                             │                            │           /A:N 
 │                             │                            ╰ V3Score : 5.3 
@@ -363,11 +363,11 @@
 │                             │                    believe this leakage is enough to allow recovery of the
 │                             │                   private key when P-256 is used in any well known protocols. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ bitnami: 3 
+│                             ├ VendorSeverity   ╭ bitnami: 2 
 │                             │                  ╰ redhat : 2 
-│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H
-│                             │                  │         │           /A:H 
-│                             │                  │         ╰ V3Score : 8.4 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N
+│                             │                  │         │           /A:N 
+│                             │                  │         ╰ V3Score : 4 
 │                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N
 │                             │                            │           /A:N 
 │                             │                            ╰ V3Score : 5.3 
@@ -457,11 +457,11 @@
 │                             │                    believe this leakage is enough to allow recovery of the
 │                             │                   private key when P-256 is used in any well known protocols. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ bitnami: 3 
+│                             ├ VendorSeverity   ╭ bitnami: 2 
 │                             │                  ╰ redhat : 2 
-│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H
-│                             │                  │         │           /A:H 
-│                             │                  │         ╰ V3Score : 8.4 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N
+│                             │                  │         │           /A:N 
+│                             │                  │         ╰ V3Score : 4 
 │                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N
 │                             │                            │           /A:N 
 │                             │                            ╰ V3Score : 5.3 
@@ -502,11 +502,11 @@
 │                             │                    believe this leakage is enough to allow recovery of the
 │                             │                   private key when P-256 is used in any well known protocols. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ bitnami: 3 
+│                             ├ VendorSeverity   ╭ bitnami: 2 
 │                             │                  ╰ redhat : 2 
-│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H
-│                             │                  │         │           /A:H 
-│                             │                  │         ╰ V3Score : 8.4 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N
+│                             │                  │         │           /A:N 
+│                             │                  │         ╰ V3Score : 4 
 │                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N
 │                             │                            │           /A:N 
 │                             │                            ╰ V3Score : 5.3 
@@ -640,11 +640,11 @@
 │                             │                    believe this leakage is enough to allow recovery of the
 │                             │                   private key when P-256 is used in any well known protocols. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ bitnami: 3 
+│                             ├ VendorSeverity   ╭ bitnami: 2 
 │                             │                  ╰ redhat : 2 
-│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H
-│                             │                  │         │           /A:H 
-│                             │                  │         ╰ V3Score : 8.4 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N
+│                             │                  │         │           /A:N 
+│                             │                  │         ╰ V3Score : 4 
 │                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N
 │                             │                            │           /A:N 
 │                             │                            ╰ V3Score : 5.3 
@@ -778,11 +778,11 @@
 │                             │                    believe this leakage is enough to allow recovery of the
 │                             │                   private key when P-256 is used in any well known protocols. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ bitnami: 3 
+│                             ├ VendorSeverity   ╭ bitnami: 2 
 │                             │                  ╰ redhat : 2 
-│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H
-│                             │                  │         │           /A:H 
-│                             │                  │         ╰ V3Score : 8.4 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N
+│                             │                  │         │           /A:N 
+│                             │                  │         ╰ V3Score : 4 
 │                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N
 │                             │                            │           /A:N 
 │                             │                            ╰ V3Score : 5.3 
@@ -961,11 +961,11 @@
 │                             │                    believe this leakage is enough to allow recovery of the
 │                             │                   private key when P-256 is used in any well known protocols. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ bitnami: 3 
+│                             ├ VendorSeverity   ╭ bitnami: 2 
 │                             │                  ╰ redhat : 2 
-│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H
-│                             │                  │         │           /A:H 
-│                             │                  │         ╰ V3Score : 8.4 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N
+│                             │                  │         │           /A:N 
+│                             │                  │         ╰ V3Score : 4 
 │                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N
 │                             │                            │           /A:N 
 │                             │                            ╰ V3Score : 5.3 
@@ -1099,11 +1099,11 @@
                               │                    believe this leakage is enough to allow recovery of the
                               │                   private key when P-256 is used in any well known protocols. 
                               ├ Severity        : MEDIUM 
-                              ├ VendorSeverity   ╭ bitnami: 3 
+                              ├ VendorSeverity   ╭ bitnami: 2 
                               │                  ╰ redhat : 2 
-                              ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H
-                              │                  │         │           /A:H 
-                              │                  │         ╰ V3Score : 8.4 
+                              ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N
+                              │                  │         │           /A:N 
+                              │                  │         ╰ V3Score : 4 
                               │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N
                               │                            │           /A:N 
                               │                            ╰ V3Score : 5.3 
