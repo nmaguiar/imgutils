@@ -75,6 +75,7 @@
     Severity: MEDIUM
     VendorSeverity:
       bitnami: 2
+      cbl-mariner: 3
       redhat: 2
     CVSS:
       bitnami:
