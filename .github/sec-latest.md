@@ -11,7 +11,8 @@
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-common@4.1.115.Final 
 │                       │     │                  ╰ UID : ddba42e9c4528b76 
 │                       │     ├ InstalledVersion: 4.1.115.Final 
-│                       │     ├ Status          : affected 
+│                       │     ├ FixedVersion    : 4.1.118 
+│                       │     ├ Status          : fixed 
 │                       │     ├ Layer            ╭ Digest: sha256:67745f33db87269d29b3cec8a6ee9ff37466af991b8e3
 │                       │     │                  │         fe935202ee09b74937d 
 │                       │     │                  ╰ DiffID: sha256:a56dd5b884f421b1a1ddd57dafd3f97b066e4a94b0eea
@@ -179,8 +180,9 @@
 │                       │     │                   finally to b.com/2 would incorrectly send the Authorization
 │                       │     │                   header to b.com/2. 
 │                       │     ├ Severity        : MEDIUM 
-│                       │     ├ VendorSeverity   ╭ bitnami: 2 
-│                       │     │                  ╰ redhat : 2 
+│                       │     ├ VendorSeverity   ╭ bitnami    : 2 
+│                       │     │                  ├ cbl-mariner: 3 
+│                       │     │                  ╰ redhat     : 2 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
 │                       │     │                  │         │           /A:N 
 │                       │     │                  │         ╰ V3Score : 6.1 
@@ -550,8 +552,9 @@
 │                       │     │                   finally to b.com/2 would incorrectly send the Authorization
 │                       │     │                   header to b.com/2. 
 │                       │     ├ Severity        : MEDIUM 
-│                       │     ├ VendorSeverity   ╭ bitnami: 2 
-│                       │     │                  ╰ redhat : 2 
+│                       │     ├ VendorSeverity   ╭ bitnami    : 2 
+│                       │     │                  ├ cbl-mariner: 3 
+│                       │     │                  ╰ redhat     : 2 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
 │                       │     │                  │         │           /A:N 
 │                       │     │                  │         ╰ V3Score : 6.1 
@@ -688,8 +691,9 @@
 │                       │     │                   finally to b.com/2 would incorrectly send the Authorization
 │                       │     │                   header to b.com/2. 
 │                       │     ├ Severity        : MEDIUM 
-│                       │     ├ VendorSeverity   ╭ bitnami: 2 
-│                       │     │                  ╰ redhat : 2 
+│                       │     ├ VendorSeverity   ╭ bitnami    : 2 
+│                       │     │                  ├ cbl-mariner: 3 
+│                       │     │                  ╰ redhat     : 2 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
 │                       │     │                  │         │           /A:N 
 │                       │     │                  │         ╰ V3Score : 6.1 
@@ -1009,8 +1013,9 @@
                         │     │                   finally to b.com/2 would incorrectly send the Authorization
                         │     │                   header to b.com/2. 
                         │     ├ Severity        : MEDIUM 
-                        │     ├ VendorSeverity   ╭ bitnami: 2 
-                        │     │                  ╰ redhat : 2 
+                        │     ├ VendorSeverity   ╭ bitnami    : 2 
+                        │     │                  ├ cbl-mariner: 3 
+                        │     │                  ╰ redhat     : 2 
                         │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
                         │     │                  │         │           /A:N 
                         │     │                  │         ╰ V3Score : 6.1 
