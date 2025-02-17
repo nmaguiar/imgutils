@@ -81,6 +81,7 @@ jobs:
 
     - name: Joining the versions retrieved to produce a markdown table
       run : |
+        ls -lad /tmp/*.json
         oafp chs="[(name: v, type: file, options: (file: /tmp/_tmp.json))|(name: l, type: file, options: (file: /tmp/_tmpl.json))]"\
             /tmp/_tmpMain.json\
             path="[].{tool:tool,latestOnline:lastVer,buildVersion:ch('v','get',{tool:tool},__).version,latestversion:ch('l','get',{tool:tool},__).version}"\
