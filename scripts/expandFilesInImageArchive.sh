@@ -28,6 +28,9 @@ fi
 
 # Loop through all .tar files in the provider docker archive file
 for tarFile in $(tar -tf $1 | grep '\.tar$'); do
+    if [ $(basename $tarFile .tar) == "layer" ]; then
+        continue
+    fi
     # Extract the tar file to the output directory
     tar -xOf $1 $tarFile | tar -xf - -C $2 2>/dev/null
 done

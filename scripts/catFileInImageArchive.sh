@@ -32,12 +32,16 @@ fi
 
 # Loop through all .tar files in the provider docker archive file
 for tarFile in $(tar -tf $1 | grep '\.tar$'); do
+    if [ $(basename $tarFile .tar) == "layer" ]; then
+        continue
+    fi
     # Check if the file to extract exists in the tar file
     if tar -xOf $1 $tarFile | tar -tf - | grep -q $fileToExtract; then
         # Extract the file from the tar file and write it to stdout
-        tar -xOf $1 $tarFile | tar -xO $fileToExtract
+        tar -xOf $1 $tarFile | tar -xO $fileToExtract 2>/dev/null
         exit 0
-    else
-        echo "File $2 not found in $tarFile"
     fi
 done
+
+# If not found
+echo "File $2 not found!"
