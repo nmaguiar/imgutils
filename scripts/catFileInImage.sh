@@ -23,12 +23,13 @@ else
 fi
 
 # Expand image with imgExpand.yaml to extract the file.
-/openaf/ojobs/imgExpand.yaml image="$IMAGE" output="$TMPDIR" file="$2" 1>&2
+# /openaf/ojobs/imgExpand.yaml image="$IMAGE" output="$TMPDIR" file="$2" 1>&2
+/usr/local/bin/catFileInImageArchive.sh $IMAGE "$2" > $TMPDIR/file 1>&2
 
 if [ -z "$3" ]; then
-    cat "$TMPDIR/$2"
+    cat "$TMPDIR/file"
 else
-    cp "$TMPDIR/$2" "$3"
+    cp "$TMPDIR/file" "$3"
 fi
 
 rm -rf "$TMPDIR"
