@@ -86,6 +86,7 @@ jobs:
             path="[].{tool:tool,latestOnline:lastVer,buildVersion:ch('v','get',{tool:tool},__).version,latestversion:ch('l','get',{tool:tool},__).version}"\
             out=mdtable\
             sql="select * where tool <> 'mc' order by tool" > .github/compare-versions.md
+        oafp .github/compare-versions.md
 
     - uses: openaf/ojob-action@v7
       name: Update table
