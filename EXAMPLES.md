@@ -16,10 +16,11 @@ List of examples:
 | Images   | Checking images content |
 | Images   | Checkout the files per layer on an existing image |
 | Images   | Generate a BOM (Bill Of Materials) for a provided image |
+| Images   | Retrieve a specific file from an image |
 
 > To search for a specific example type '/Checking images content<ENTER>' and use the arrow keys to navigate
 
-## Copying images and charts between registries
+## 📸 Copying images and charts between registries
 
 1. Execute:
 
@@ -67,7 +68,7 @@ exit
 
 ---
 
-## Copying images and charts from a file to a registry
+## 📸 Copying images and charts from a file to a registry
 
 1. Execute:
 
@@ -133,7 +134,7 @@ exit
 
 ---
 
-## Accessing the Docker daemon
+## 🐳 Accessing the Docker daemon
 
 With docker you can execute directly:
 
@@ -166,7 +167,7 @@ exit
 
 ---
 
-## Accessing Kubernetes container runtime
+## ⚙️ Accessing Kubernetes container runtime
 
 ### AWS EKS with crictl
 
@@ -263,7 +264,7 @@ exit
 
 ---
 
-## Checking images content
+## 🔎 Checking images content
 
 To check images use the following commands within the imgutils/nmaguiar:
 
@@ -289,7 +290,7 @@ $ oafp image.json path="layers | { a: [?layer==\`3\`].{filepath:filepath,size:si
 
 ---
 
-## Checkout the files per layer on an existing image
+## 🔎 Checkout the files per layer on an existing image
 
 ```bash
 
@@ -304,7 +305,7 @@ $ mc
 
 ---
 
-## Changing files on an existing image
+## ✏️ Changing files on an existing image
 
 To create a new image with changes to files on an existing image:
 
@@ -325,7 +326,7 @@ $ docker run --rm -ti my-image:v2
 
 ---
 
-## Using the host docker authentication
+## 🐳 Using the host docker authentication
 
 To start imgutils/nmaguiar with the local host docker authentication:
 
@@ -337,7 +338,7 @@ docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock -v $HOME:/work 
 
 ---
 
-## Checking available repositories on a docker private registry
+## 🐳 Checking available repositories on a docker private registry
 
 Not all private container registries allow the listing of their repositories. But if they do you can try:
 
@@ -351,7 +352,7 @@ oafp libs=dockerregistry in=registryrepos inregistryurl=http://registry:5000 dat
 
 ---
 
-## Checking the images 'cached' on the current Kubernetes node
+## ⚙️ Checking the images 'cached' on the current Kubernetes node
 
 If you are currently running on a Kubernetes node (following the deploy instructions in 'usage-help') you can list the 'cached' images on it by executing:
 
@@ -381,7 +382,7 @@ crictl rmi 6b963af3240f2
 
 ---
 
-## Loop the cpu, memory and storage metrics of each container on the current Kubernetes node
+## ⚙️ Loop the cpu, memory and storage metrics of each container on the current Kubernetes node
 
 If you are currently running on a Kubernetes node (following the deploy instructions in 'usage-help') you can obtain each containers' metrics:
 
@@ -393,7 +394,7 @@ oafp cmd="crictl stats -o json" path="stats[].{ns:attributes.labels.\"io.kuberne
 
 ---
 
-## List all private registry repositories and corresponding tags
+## 🐳 List all private registry repositories and corresponding tags
 
 Given a private container registry you can list a table of all repositories and corresponding tags to visualize and/or import it, as csv, to other tools.
 
@@ -413,12 +414,37 @@ oafp libs=dockerregistry in=registryrepos data={} inregistrytags=true out=csv in
 
 ---
 
-## Generate a BOM (Bill Of Materials) for a provided image
+## 🐳 Generate a BOM (Bill Of Materials) for a provided image
 
 You can use the _syft_ tool to generate a CycloneDX JSON BOM (Bill Of Materials) file:
 
 ```bash
 syft scan nmaguiar/imgutils -o cyclonedx-json
+```
+
+---
+
+## 🐳 Retrieve a specific file from an image 
+
+**From a registry image**
+
+```
+docker run --rm -ti --pull always -e REGAUTH="user,pass,my.registry" -v $(pwd):/output nmaguiar/imgutils catFileInImage.sh ubuntu:latest /etc/lsb-release /output/lsb-release
+cat lsb-release
+```
+
+**From the local docker daemon**
+
+```
+docker run --rm -ti --pull always -v /var/run/docker.sock:/var/run/docker.sock nmaguiar/imgutils oafp cmd="catFileInImage.sh docker-daemon:ubuntu:latest /etc/lsb-release" in=ini out=ctree
+```
+
+**From a local container image file**
+
+```
+# docker run --rm -ti --pull always -v $(pwd):/output nmaguiar/imgutils skopeo copy docker://ubuntu:late
+st docker-archive:/output/image.tar
+docker run --rm -ti --pull always -v $(pwd):/input nmaguiar/imgutils oafp cmd="catFileInImage.sh /input/image.tar /etc/lsb-release" in=ini out=map
 ```
 
 ---
