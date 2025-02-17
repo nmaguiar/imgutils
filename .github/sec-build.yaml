@@ -1,4 +1,671 @@
-stdout: {}
-stderr: "[vuln] Vulnerability scanning is enabled\n2025-02-17T03:17:36Z\tINFO\t[secret] Secret scanning is enabled\n2025-02-17T03:17:36Z\tINFO\t[secret] If your scanning is slow, please try '--scanners vuln' to disable secret scanning\n2025-02-17T03:17:36Z\tINFO\t[secret] Please see also https://aquasecurity.github.io/trivy/v0.59/docs/scanner/secret#recommendation for faster secret detection\n2025-02-17T03:17:36Z\tFATAL\tFatal error\timage scan error: scan error: unable to initialize a scanner: unable to initialize an image scanner: unable to find the specified image \"nmaguiar/imgutils:build\" in [\"docker\" \"containerd\" \"podman\" \"remote\"]"
-exitcode: 1
-cmd: docker run --pull always --rm -v trivy-db:/root/.cache/trivy aquasec/trivy -f json  image nmaguiar/imgutils:build
+- Target: nmaguiar/imgutils:build (alpine 3.22.0_alpha20250108)
+  Class: os-pkgs
+  Type: alpine
+- Target: Java
+  Class: lang-pkgs
+  Type: jar
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2025-25193
+    PkgName: io.netty:netty-common
+    PkgPath: openaf/Kube/netty-common-4.1.117.Final.jar
+    PkgIdentifier:
+      PURL: pkg:maven/io.netty/netty-common@4.1.117.Final
+      UID: 5d017f309cb752bc
+    InstalledVersion: 4.1.117.Final
+    FixedVersion: 4.1.118
+    Status: fixed
+    Layer:
+      Digest: sha256:f8e463ee58718fe62663c94d5efa9bee0e4b96a94826c740ec19a946f03a6141
+      DiffID: sha256:444f9b6b10738837a05080bf1f52a36c43c85cd161075dc990fa2940d1e2b2b0
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-25193
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Maven
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven
+    Title: Netty, an asynchronous, event-driven network application framework, ha ...
+    Description: Netty, an asynchronous, event-driven network application framework, has a vulnerability in versions up to and including 4.1.118.Final. An unsafe reading of environment file could potentially cause a denial of service in Netty. When loaded on an Windows application, Netty attempts to load a file that does not exist. If an attacker creates such a large file, the Netty application crash. A similar issue was previously reported as CVE-2024-47535. This issue was fixed, but the fix was incomplete in that null-bytes were not counted against the input limit. Commit d1fbda62d3a47835d3fb35db8bd42ecc205a5386 contains an updated fix.
+    Severity: MEDIUM
+    CweIDs:
+    - CWE-400
+    VendorSeverity:
+      ghsa: 2
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 5.5
+    References:
+    - https://github.com/netty/netty
+    - https://github.com/netty/netty/commit/d1fbda62d3a47835d3fb35db8bd42ecc205a5386
+    - https://github.com/netty/netty/security/advisories/GHSA-389x-839f-4rhx
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-25193
+    PublishedDate: '2025-02-10T22:15:38.45Z'
+    LastModifiedDate: '2025-02-11T16:15:52.523Z'
+  - VulnerabilityID: CVE-2025-24970
+    PkgName: io.netty:netty-handler
+    PkgPath: openaf/Kube/netty-handler-4.1.117.Final.jar
+    PkgIdentifier:
+      PURL: pkg:maven/io.netty/netty-handler@4.1.117.Final
+      UID: 7034d8e7fca7c42b
+    InstalledVersion: 4.1.117.Final
+    FixedVersion: 4.1.118.Final
+    Status: fixed
+    Layer:
+      Digest: sha256:f8e463ee58718fe62663c94d5efa9bee0e4b96a94826c740ec19a946f03a6141
+      DiffID: sha256:444f9b6b10738837a05080bf1f52a36c43c85cd161075dc990fa2940d1e2b2b0
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-24970
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Maven
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven
+    Title: 'io.netty:netty-handler: SslHandler doesn''t correctly validate packets which can lead to native crash when using native SSLEngine'
+    Description: Netty, an asynchronous, event-driven network application framework, has a vulnerability starting in version 4.1.91.Final and prior to version 4.1.118.Final. When a special crafted packet is received via SslHandler it doesn't correctly handle validation of such a packet in all cases which can lead to a native crash. Version 4.1.118.Final contains a patch. As workaround its possible to either disable the usage of the native SSLEngine or change the code manually.
+    Severity: HIGH
+    CweIDs:
+    - CWE-20
+    VendorSeverity:
+      ghsa: 3
+      redhat: 3
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://access.redhat.com/security/cve/CVE-2025-24970
+    - https://github.com/netty/netty
+    - https://github.com/netty/netty/commit/87f40725155b2f89adfde68c7732f97c153676c4
+    - https://github.com/netty/netty/security/advisories/GHSA-4g8c-wm8x-jfhw
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-24970
+    - https://www.cve.org/CVERecord?id=CVE-2025-24970
+    PublishedDate: '2025-02-10T22:15:38.057Z'
+    LastModifiedDate: '2025-02-11T16:15:51.92Z'
+- Target: usr/bin/crictl
+  Class: lang-pkgs
+  Type: gobinary
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2024-45338
+    PkgID: golang.org/x/net@v0.30.0
+    PkgName: golang.org/x/net
+    PkgIdentifier:
+      PURL: pkg:golang/golang.org/x/net@v0.30.0
+      UID: 9ce1984a5172bc7c
+    InstalledVersion: v0.30.0
+    FixedVersion: 0.33.0
+    Status: fixed
+    Layer:
+      Digest: sha256:f8e463ee58718fe62663c94d5efa9bee0e4b96a94826c740ec19a946f03a6141
+      DiffID: sha256:444f9b6b10738837a05080bf1f52a36c43c85cd161075dc990fa2940d1e2b2b0
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45338
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'golang.org/x/net/html: Non-linear parsing of case-insensitive content in golang.org/x/net/html'
+    Description: An attacker can craft an input to the Parse functions that would be processed non-linearly with respect to its length, resulting in extremely slow parsing. This could cause a denial of service.
+    Severity: HIGH
+    CweIDs:
+    - CWE-1333
+    VendorSeverity:
+      amazon: 3
+      azure: 3
+      cbl-mariner: 3
+      ghsa: 3
+      redhat: 3
+      ubuntu: 2
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://access.redhat.com/security/cve/CVE-2024-45338
+    - https://cs.opensource.google/go/x/net
+    - https://github.com/golang/go/issues/70906
+    - https://go-review.googlesource.com/c/net/+/637536
+    - https://go.dev/cl/637536
+    - https://go.dev/issue/70906
+    - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-45338
+    - https://pkg.go.dev/vuln/GO-2024-3333
+    - https://ubuntu.com/security/notices/USN-7197-1
+    - https://www.cve.org/CVERecord?id=CVE-2024-45338
+    PublishedDate: '2024-12-18T21:15:08.173Z'
+    LastModifiedDate: '2024-12-31T20:16:06.603Z'
+  - VulnerabilityID: CVE-2024-45336
+    PkgID: stdlib@v1.23.3
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.23.3
+      UID: c32ee6844a95cf7d
+    InstalledVersion: v1.23.3
+    FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
+    Status: fixed
+    Layer:
+      Digest: sha256:f8e463ee58718fe62663c94d5efa9bee0e4b96a94826c740ec19a946f03a6141
+      DiffID: sha256:444f9b6b10738837a05080bf1f52a36c43c85cd161075dc990fa2940d1e2b2b0
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45336
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'golang: net/http: net/http: sensitive headers incorrectly sent after cross-domain redirect'
+    Description: The HTTP client drops sensitive headers after following a cross-domain redirect. For example, a request to a.com/ containing an Authorization header which is redirected to b.com/ will not send that header to b.com. In the event that the client received a subsequent same-domain redirect, however, the sensitive headers would be restored. For example, a chain of redirects from a.com/, to b.com/1, and finally to b.com/2 would incorrectly send the Authorization header to b.com/2.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+      cbl-mariner: 3
+      redhat: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N
+        V3Score: 5.9
+    References:
+    - https://access.redhat.com/security/cve/CVE-2024-45336
+    - https://go.dev/cl/643100
+    - https://go.dev/issue/70530
+    - https://groups.google.com/g/golang-dev/c/CAWXhan3Jww/m/bk9LAa-lCgAJ
+    - https://groups.google.com/g/golang-dev/c/bG8cv1muIBM/m/G461hA6lCgAJ
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-45336
+    - https://pkg.go.dev/vuln/GO-2025-3420
+    - https://www.cve.org/CVERecord?id=CVE-2024-45336
+    PublishedDate: '2025-01-28T02:15:28.807Z'
+    LastModifiedDate: '2025-01-28T16:15:38.22Z'
+  - VulnerabilityID: CVE-2024-45341
+    PkgID: stdlib@v1.23.3
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.23.3
+      UID: c32ee6844a95cf7d
+    InstalledVersion: v1.23.3
+    FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
+    Status: fixed
+    Layer:
+      Digest: sha256:f8e463ee58718fe62663c94d5efa9bee0e4b96a94826c740ec19a946f03a6141
+      DiffID: sha256:444f9b6b10738837a05080bf1f52a36c43c85cd161075dc990fa2940d1e2b2b0
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45341
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'golang: crypto/x509: crypto/x509: usage of IPv6 zone IDs can bypass URI name constraints'
+    Description: A certificate with a URI which has a IPv6 address with a zone ID may incorrectly satisfy a URI name constraint that applies to the certificate chain. Certificates containing URIs are not permitted in the web PKI, so this only affects users of private PKIs which make use of URIs.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+      cbl-mariner: 2
+      redhat: 1
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N
+        V3Score: 4.2
+    References:
+    - https://access.redhat.com/security/cve/CVE-2024-45341
+    - https://go.dev/cl/643099
+    - https://go.dev/issue/71156
+    - https://groups.google.com/g/golang-dev/c/CAWXhan3Jww/m/bk9LAa-lCgAJ
+    - https://groups.google.com/g/golang-dev/c/bG8cv1muIBM/m/G461hA6lCgAJ
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-45341
+    - https://pkg.go.dev/vuln/GO-2025-3373
+    - https://www.cve.org/CVERecord?id=CVE-2024-45341
+    PublishedDate: '2025-01-28T02:15:29.147Z'
+    LastModifiedDate: '2025-01-28T16:15:38.65Z'
+  - VulnerabilityID: CVE-2025-22866
+    PkgID: stdlib@v1.23.3
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.23.3
+      UID: c32ee6844a95cf7d
+    InstalledVersion: v1.23.3
+    FixedVersion: 1.22.12, 1.23.6, 1.24.0-rc.3
+    Status: fixed
+    Layer:
+      Digest: sha256:f8e463ee58718fe62663c94d5efa9bee0e4b96a94826c740ec19a946f03a6141
+      DiffID: sha256:444f9b6b10738837a05080bf1f52a36c43c85cd161075dc990fa2940d1e2b2b0
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22866
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'crypto/internal/nistec: golang: Timing sidechannel for P-256 on ppc64le in crypto/internal/nistec'
+    Description: Due to the usage of a variable time instruction in the assembly implementation of an internal function, a small number of bits of secret scalars are leaked on the ppc64le architecture. Due to the way this function is used, we do not believe this leakage is enough to allow recovery of the private key when P-256 is used in any well known protocols.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+      redhat: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+        V3Score: 4
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+        V3Score: 5.3
+    References:
+    - https://access.redhat.com/security/cve/CVE-2025-22866
+    - https://go.dev/cl/643735
+    - https://go.dev/issue/71383
+    - https://groups.google.com/g/golang-announce/c/xU1ZCHUZw3k
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-22866
+    - https://pkg.go.dev/vuln/GO-2025-3447
+    - https://www.cve.org/CVERecord?id=CVE-2025-22866
+    PublishedDate: '2025-02-06T17:15:21.41Z'
+    LastModifiedDate: '2025-02-11T15:15:20.87Z'
+- Target: usr/bin/ctr
+  Class: lang-pkgs
+  Type: gobinary
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2024-45338
+    PkgID: golang.org/x/net@v0.30.0
+    PkgName: golang.org/x/net
+    PkgIdentifier:
+      PURL: pkg:golang/golang.org/x/net@v0.30.0
+      UID: 9c86bc80f39c3b9e
+    InstalledVersion: v0.30.0
+    FixedVersion: 0.33.0
+    Status: fixed
+    Layer:
+      Digest: sha256:f8e463ee58718fe62663c94d5efa9bee0e4b96a94826c740ec19a946f03a6141
+      DiffID: sha256:444f9b6b10738837a05080bf1f52a36c43c85cd161075dc990fa2940d1e2b2b0
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45338
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'golang.org/x/net/html: Non-linear parsing of case-insensitive content in golang.org/x/net/html'
+    Description: An attacker can craft an input to the Parse functions that would be processed non-linearly with respect to its length, resulting in extremely slow parsing. This could cause a denial of service.
+    Severity: HIGH
+    CweIDs:
+    - CWE-1333
+    VendorSeverity:
+      amazon: 3
+      azure: 3
+      cbl-mariner: 3
+      ghsa: 3
+      redhat: 3
+      ubuntu: 2
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://access.redhat.com/security/cve/CVE-2024-45338
+    - https://cs.opensource.google/go/x/net
+    - https://github.com/golang/go/issues/70906
+    - https://go-review.googlesource.com/c/net/+/637536
+    - https://go.dev/cl/637536
+    - https://go.dev/issue/70906
+    - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-45338
+    - https://pkg.go.dev/vuln/GO-2024-3333
+    - https://ubuntu.com/security/notices/USN-7197-1
+    - https://www.cve.org/CVERecord?id=CVE-2024-45338
+    PublishedDate: '2024-12-18T21:15:08.173Z'
+    LastModifiedDate: '2024-12-31T20:16:06.603Z'
+- Target: usr/bin/dive
+  Class: lang-pkgs
+  Type: gobinary
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2024-45338
+    PkgID: golang.org/x/net@v0.28.0
+    PkgName: golang.org/x/net
+    PkgIdentifier:
+      PURL: pkg:golang/golang.org/x/net@v0.28.0
+      UID: 2fe24708cb92b4b0
+    InstalledVersion: v0.28.0
+    FixedVersion: 0.33.0
+    Status: fixed
+    Layer:
+      Digest: sha256:f8e463ee58718fe62663c94d5efa9bee0e4b96a94826c740ec19a946f03a6141
+      DiffID: sha256:444f9b6b10738837a05080bf1f52a36c43c85cd161075dc990fa2940d1e2b2b0
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45338
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'golang.org/x/net/html: Non-linear parsing of case-insensitive content in golang.org/x/net/html'
+    Description: An attacker can craft an input to the Parse functions that would be processed non-linearly with respect to its length, resulting in extremely slow parsing. This could cause a denial of service.
+    Severity: HIGH
+    CweIDs:
+    - CWE-1333
+    VendorSeverity:
+      amazon: 3
+      azure: 3
+      cbl-mariner: 3
+      ghsa: 3
+      redhat: 3
+      ubuntu: 2
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://access.redhat.com/security/cve/CVE-2024-45338
+    - https://cs.opensource.google/go/x/net
+    - https://github.com/golang/go/issues/70906
+    - https://go-review.googlesource.com/c/net/+/637536
+    - https://go.dev/cl/637536
+    - https://go.dev/issue/70906
+    - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-45338
+    - https://pkg.go.dev/vuln/GO-2024-3333
+    - https://ubuntu.com/security/notices/USN-7197-1
+    - https://www.cve.org/CVERecord?id=CVE-2024-45338
+    PublishedDate: '2024-12-18T21:15:08.173Z'
+    LastModifiedDate: '2024-12-31T20:16:06.603Z'
+- Target: usr/bin/docker
+  Class: lang-pkgs
+  Type: gobinary
+- Target: usr/bin/helm
+  Class: lang-pkgs
+  Type: gobinary
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2025-22866
+    PkgID: stdlib@v1.23.5
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.23.5
+      UID: 44e9bcda2169408b
+    InstalledVersion: v1.23.5
+    FixedVersion: 1.22.12, 1.23.6, 1.24.0-rc.3
+    Status: fixed
+    Layer:
+      Digest: sha256:f8e463ee58718fe62663c94d5efa9bee0e4b96a94826c740ec19a946f03a6141
+      DiffID: sha256:444f9b6b10738837a05080bf1f52a36c43c85cd161075dc990fa2940d1e2b2b0
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22866
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'crypto/internal/nistec: golang: Timing sidechannel for P-256 on ppc64le in crypto/internal/nistec'
+    Description: Due to the usage of a variable time instruction in the assembly implementation of an internal function, a small number of bits of secret scalars are leaked on the ppc64le architecture. Due to the way this function is used, we do not believe this leakage is enough to allow recovery of the private key when P-256 is used in any well known protocols.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+      redhat: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+        V3Score: 4
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+        V3Score: 5.3
+    References:
+    - https://access.redhat.com/security/cve/CVE-2025-22866
+    - https://go.dev/cl/643735
+    - https://go.dev/issue/71383
+    - https://groups.google.com/g/golang-announce/c/xU1ZCHUZw3k
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-22866
+    - https://pkg.go.dev/vuln/GO-2025-3447
+    - https://www.cve.org/CVERecord?id=CVE-2025-22866
+    PublishedDate: '2025-02-06T17:15:21.41Z'
+    LastModifiedDate: '2025-02-11T15:15:20.87Z'
+- Target: usr/bin/nerdctl
+  Class: lang-pkgs
+  Type: gobinary
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2024-45336
+    PkgID: stdlib@v1.23.4
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.23.4
+      UID: a2477af159b4ca1b
+    InstalledVersion: v1.23.4
+    FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
+    Status: fixed
+    Layer:
+      Digest: sha256:f8e463ee58718fe62663c94d5efa9bee0e4b96a94826c740ec19a946f03a6141
+      DiffID: sha256:444f9b6b10738837a05080bf1f52a36c43c85cd161075dc990fa2940d1e2b2b0
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45336
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'golang: net/http: net/http: sensitive headers incorrectly sent after cross-domain redirect'
+    Description: The HTTP client drops sensitive headers after following a cross-domain redirect. For example, a request to a.com/ containing an Authorization header which is redirected to b.com/ will not send that header to b.com. In the event that the client received a subsequent same-domain redirect, however, the sensitive headers would be restored. For example, a chain of redirects from a.com/, to b.com/1, and finally to b.com/2 would incorrectly send the Authorization header to b.com/2.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+      cbl-mariner: 3
+      redhat: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N
+        V3Score: 5.9
+    References:
+    - https://access.redhat.com/security/cve/CVE-2024-45336
+    - https://go.dev/cl/643100
+    - https://go.dev/issue/70530
+    - https://groups.google.com/g/golang-dev/c/CAWXhan3Jww/m/bk9LAa-lCgAJ
+    - https://groups.google.com/g/golang-dev/c/bG8cv1muIBM/m/G461hA6lCgAJ
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-45336
+    - https://pkg.go.dev/vuln/GO-2025-3420
+    - https://www.cve.org/CVERecord?id=CVE-2024-45336
+    PublishedDate: '2025-01-28T02:15:28.807Z'
+    LastModifiedDate: '2025-01-28T16:15:38.22Z'
+  - VulnerabilityID: CVE-2024-45341
+    PkgID: stdlib@v1.23.4
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.23.4
+      UID: a2477af159b4ca1b
+    InstalledVersion: v1.23.4
+    FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
+    Status: fixed
+    Layer:
+      Digest: sha256:f8e463ee58718fe62663c94d5efa9bee0e4b96a94826c740ec19a946f03a6141
+      DiffID: sha256:444f9b6b10738837a05080bf1f52a36c43c85cd161075dc990fa2940d1e2b2b0
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45341
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'golang: crypto/x509: crypto/x509: usage of IPv6 zone IDs can bypass URI name constraints'
+    Description: A certificate with a URI which has a IPv6 address with a zone ID may incorrectly satisfy a URI name constraint that applies to the certificate chain. Certificates containing URIs are not permitted in the web PKI, so this only affects users of private PKIs which make use of URIs.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+      cbl-mariner: 2
+      redhat: 1
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N
+        V3Score: 4.2
+    References:
+    - https://access.redhat.com/security/cve/CVE-2024-45341
+    - https://go.dev/cl/643099
+    - https://go.dev/issue/71156
+    - https://groups.google.com/g/golang-dev/c/CAWXhan3Jww/m/bk9LAa-lCgAJ
+    - https://groups.google.com/g/golang-dev/c/bG8cv1muIBM/m/G461hA6lCgAJ
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-45341
+    - https://pkg.go.dev/vuln/GO-2025-3373
+    - https://www.cve.org/CVERecord?id=CVE-2024-45341
+    PublishedDate: '2025-01-28T02:15:29.147Z'
+    LastModifiedDate: '2025-01-28T16:15:38.65Z'
+  - VulnerabilityID: CVE-2025-22866
+    PkgID: stdlib@v1.23.4
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.23.4
+      UID: a2477af159b4ca1b
+    InstalledVersion: v1.23.4
+    FixedVersion: 1.22.12, 1.23.6, 1.24.0-rc.3
+    Status: fixed
+    Layer:
+      Digest: sha256:f8e463ee58718fe62663c94d5efa9bee0e4b96a94826c740ec19a946f03a6141
+      DiffID: sha256:444f9b6b10738837a05080bf1f52a36c43c85cd161075dc990fa2940d1e2b2b0
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22866
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'crypto/internal/nistec: golang: Timing sidechannel for P-256 on ppc64le in crypto/internal/nistec'
+    Description: Due to the usage of a variable time instruction in the assembly implementation of an internal function, a small number of bits of secret scalars are leaked on the ppc64le architecture. Due to the way this function is used, we do not believe this leakage is enough to allow recovery of the private key when P-256 is used in any well known protocols.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+      redhat: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+        V3Score: 4
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+        V3Score: 5.3
+    References:
+    - https://access.redhat.com/security/cve/CVE-2025-22866
+    - https://go.dev/cl/643735
+    - https://go.dev/issue/71383
+    - https://groups.google.com/g/golang-announce/c/xU1ZCHUZw3k
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-22866
+    - https://pkg.go.dev/vuln/GO-2025-3447
+    - https://www.cve.org/CVERecord?id=CVE-2025-22866
+    PublishedDate: '2025-02-06T17:15:21.41Z'
+    LastModifiedDate: '2025-02-11T15:15:20.87Z'
+- Target: usr/bin/skopeo
+  Class: lang-pkgs
+  Type: gobinary
+- Target: usr/bin/syft
+  Class: lang-pkgs
+  Type: gobinary
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2024-45336
+    PkgID: stdlib@v1.23.4
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.23.4
+      UID: 41c223d59c4dbf4f
+    InstalledVersion: v1.23.4
+    FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
+    Status: fixed
+    Layer:
+      Digest: sha256:f8e463ee58718fe62663c94d5efa9bee0e4b96a94826c740ec19a946f03a6141
+      DiffID: sha256:444f9b6b10738837a05080bf1f52a36c43c85cd161075dc990fa2940d1e2b2b0
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45336
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'golang: net/http: net/http: sensitive headers incorrectly sent after cross-domain redirect'
+    Description: The HTTP client drops sensitive headers after following a cross-domain redirect. For example, a request to a.com/ containing an Authorization header which is redirected to b.com/ will not send that header to b.com. In the event that the client received a subsequent same-domain redirect, however, the sensitive headers would be restored. For example, a chain of redirects from a.com/, to b.com/1, and finally to b.com/2 would incorrectly send the Authorization header to b.com/2.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+      cbl-mariner: 3
+      redhat: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N
+        V3Score: 5.9
+    References:
+    - https://access.redhat.com/security/cve/CVE-2024-45336
+    - https://go.dev/cl/643100
+    - https://go.dev/issue/70530
+    - https://groups.google.com/g/golang-dev/c/CAWXhan3Jww/m/bk9LAa-lCgAJ
+    - https://groups.google.com/g/golang-dev/c/bG8cv1muIBM/m/G461hA6lCgAJ
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-45336
+    - https://pkg.go.dev/vuln/GO-2025-3420
+    - https://www.cve.org/CVERecord?id=CVE-2024-45336
+    PublishedDate: '2025-01-28T02:15:28.807Z'
+    LastModifiedDate: '2025-01-28T16:15:38.22Z'
+  - VulnerabilityID: CVE-2024-45341
+    PkgID: stdlib@v1.23.4
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.23.4
+      UID: 41c223d59c4dbf4f
+    InstalledVersion: v1.23.4
+    FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
+    Status: fixed
+    Layer:
+      Digest: sha256:f8e463ee58718fe62663c94d5efa9bee0e4b96a94826c740ec19a946f03a6141
+      DiffID: sha256:444f9b6b10738837a05080bf1f52a36c43c85cd161075dc990fa2940d1e2b2b0
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45341
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'golang: crypto/x509: crypto/x509: usage of IPv6 zone IDs can bypass URI name constraints'
+    Description: A certificate with a URI which has a IPv6 address with a zone ID may incorrectly satisfy a URI name constraint that applies to the certificate chain. Certificates containing URIs are not permitted in the web PKI, so this only affects users of private PKIs which make use of URIs.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+      cbl-mariner: 2
+      redhat: 1
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N
+        V3Score: 4.2
+    References:
+    - https://access.redhat.com/security/cve/CVE-2024-45341
+    - https://go.dev/cl/643099
+    - https://go.dev/issue/71156
+    - https://groups.google.com/g/golang-dev/c/CAWXhan3Jww/m/bk9LAa-lCgAJ
+    - https://groups.google.com/g/golang-dev/c/bG8cv1muIBM/m/G461hA6lCgAJ
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-45341
+    - https://pkg.go.dev/vuln/GO-2025-3373
+    - https://www.cve.org/CVERecord?id=CVE-2024-45341
+    PublishedDate: '2025-01-28T02:15:29.147Z'
+    LastModifiedDate: '2025-01-28T16:15:38.65Z'
+  - VulnerabilityID: CVE-2025-22866
+    PkgID: stdlib@v1.23.4
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.23.4
+      UID: 41c223d59c4dbf4f
+    InstalledVersion: v1.23.4
+    FixedVersion: 1.22.12, 1.23.6, 1.24.0-rc.3
+    Status: fixed
+    Layer:
+      Digest: sha256:f8e463ee58718fe62663c94d5efa9bee0e4b96a94826c740ec19a946f03a6141
+      DiffID: sha256:444f9b6b10738837a05080bf1f52a36c43c85cd161075dc990fa2940d1e2b2b0
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22866
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'crypto/internal/nistec: golang: Timing sidechannel for P-256 on ppc64le in crypto/internal/nistec'
+    Description: Due to the usage of a variable time instruction in the assembly implementation of an internal function, a small number of bits of secret scalars are leaked on the ppc64le architecture. Due to the way this function is used, we do not believe this leakage is enough to allow recovery of the private key when P-256 is used in any well known protocols.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+      redhat: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+        V3Score: 4
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+        V3Score: 5.3
+    References:
+    - https://access.redhat.com/security/cve/CVE-2025-22866
+    - https://go.dev/cl/643735
+    - https://go.dev/issue/71383
+    - https://groups.google.com/g/golang-announce/c/xU1ZCHUZw3k
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-22866
+    - https://pkg.go.dev/vuln/GO-2025-3447
+    - https://www.cve.org/CVERecord?id=CVE-2025-22866
+    PublishedDate: '2025-02-06T17:15:21.41Z'
+    LastModifiedDate: '2025-02-11T15:15:20.87Z'
