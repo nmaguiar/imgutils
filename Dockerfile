@@ -78,6 +78,11 @@ RUN echo "source <(crictl completion bash)" >> /etc/bash/start.sh\
  && chown openaf:openaf /openaf/.openaf_*.sh\
  && echo ". /openaf/.openaf_completion.sh" >> /etc/bash/start.sh
 
+# Copy scripts
+# ------------
+COPY scripts /usr/local/bin
+RUN chmod a+x /usr/local/bin/*.sh
+
 # Setup Dive
 # ----------
 # RUN cd /tmp\
