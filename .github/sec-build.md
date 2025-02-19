@@ -23,8 +23,7 @@
 │                       │     │                  ├ Name: GitHub Security Advisory Maven 
 │                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
 │                       │     │                          osystem%3Amaven 
-│                       │     ├ Title           : Netty, an asynchronous, event-driven network application
-│                       │     │                   framework, ha ... 
+│                       │     ├ Title           : Denial of Service attack on windows app using Netty 
 │                       │     ├ Description     : Netty, an asynchronous, event-driven network application
 │                       │     │                   framework, has a vulnerability in versions up to and
 │                       │     │                   including 4.1.118.Final. An unsafe reading of environment
