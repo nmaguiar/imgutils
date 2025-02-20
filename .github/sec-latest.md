@@ -11,7 +11,7 @@
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-common@4.1.117.Final 
 │                       │     │                  ╰ UID : 5d017f309cb752bc 
 │                       │     ├ InstalledVersion: 4.1.117.Final 
-│                       │     ├ FixedVersion    : 4.1.118 
+│                       │     ├ FixedVersion    : 4.1.118.Final 
 │                       │     ├ Status          : fixed 
 │                       │     ├ Layer            ╭ Digest: sha256:944ebc0f42de4b0f3d92786acbc0a1e91845ffd44876e
 │                       │     │                  │         dffe146de29385657d3 
