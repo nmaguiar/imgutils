@@ -46,7 +46,8 @@
 │                       │     │                  │      3fb35db8bd42ecc205a5386 
 │                       │     │                  ├ [2]: https://github.com/netty/netty/security/advisories/GHSA
 │                       │     │                  │      -389x-839f-4rhx 
-│                       │     │                  ╰ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-25193 
+│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-25193 
+│                       │     │                  ╰ [4]: https://security.netapp.com/advisory/ntap-20250221-0006 
 │                       │     ├ PublishedDate   : 2025-02-10T22:15:38.45Z 
 │                       │     ╰ LastModifiedDate: 2025-02-11T16:15:52.523Z 
 │                       ╰ [1] ╭ VulnerabilityID : CVE-2025-24970 
@@ -96,7 +97,8 @@
 │                             │                  ├ [3]: https://github.com/netty/netty/security/advisories/GHSA
 │                             │                  │      -4g8c-wm8x-jfhw 
 │                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-24970 
-│                             │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2025-24970 
+│                             │                  ├ [5]: https://security.netapp.com/advisory/ntap-20250221-0005 
+│                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-24970 
 │                             ├ PublishedDate   : 2025-02-10T22:15:38.057Z 
 │                             ╰ LastModifiedDate: 2025-02-11T16:15:51.92Z 
 ├ [2] ╭ Target         : usr/bin/crictl 
