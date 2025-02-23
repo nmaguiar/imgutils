@@ -18,8 +18,8 @@
     FixedVersion: 0.33.0
     Status: fixed
     Layer:
-      Digest: sha256:03f4ec7896ddf92c36957a1e673c6aff0ff0d15fcd701d51f804df5ce217d7fa
-      DiffID: sha256:5b74881f7333c2f81f380a5ba2a73cfa8e33657183ae823f1d4810e4feeec077
+      Digest: sha256:2d08f19f95c560469f75e13360234396e8cc251a9bbb3cde828e3cf424f38326
+      DiffID: sha256:902d24cd5f5dea653c0f80ee5e6a12f268c188dbe553c21e767b968a5f93d530
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45338
     DataSource:
@@ -32,7 +32,7 @@
     CweIDs:
     - CWE-1333
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       azure: 3
       cbl-mariner: 3
       ghsa: 3
@@ -52,10 +52,11 @@
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45338
     - https://pkg.go.dev/vuln/GO-2024-3333
+    - https://security.netapp.com/advisory/ntap-20250221-0001/
     - https://ubuntu.com/security/notices/USN-7197-1
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
-    LastModifiedDate: '2024-12-31T20:16:06.603Z'
+    LastModifiedDate: '2025-02-21T18:15:17.717Z'
   - VulnerabilityID: CVE-2024-45336
     PkgID: stdlib@v1.23.3
     PkgName: stdlib
@@ -66,8 +67,8 @@
     FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
     Status: fixed
     Layer:
-      Digest: sha256:03f4ec7896ddf92c36957a1e673c6aff0ff0d15fcd701d51f804df5ce217d7fa
-      DiffID: sha256:5b74881f7333c2f81f380a5ba2a73cfa8e33657183ae823f1d4810e4feeec077
+      Digest: sha256:2d08f19f95c560469f75e13360234396e8cc251a9bbb3cde828e3cf424f38326
+      DiffID: sha256:902d24cd5f5dea653c0f80ee5e6a12f268c188dbe553c21e767b968a5f93d530
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45336
     DataSource:
       ID: govulndb
@@ -95,9 +96,10 @@
     - https://groups.google.com/g/golang-dev/c/bG8cv1muIBM/m/G461hA6lCgAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45336
     - https://pkg.go.dev/vuln/GO-2025-3420
+    - https://security.netapp.com/advisory/ntap-20250221-0003/
     - https://www.cve.org/CVERecord?id=CVE-2024-45336
     PublishedDate: '2025-01-28T02:15:28.807Z'
-    LastModifiedDate: '2025-01-28T16:15:38.22Z'
+    LastModifiedDate: '2025-02-21T18:15:17.4Z'
   - VulnerabilityID: CVE-2024-45341
     PkgID: stdlib@v1.23.3
     PkgName: stdlib
@@ -108,8 +110,8 @@
     FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
     Status: fixed
     Layer:
-      Digest: sha256:03f4ec7896ddf92c36957a1e673c6aff0ff0d15fcd701d51f804df5ce217d7fa
-      DiffID: sha256:5b74881f7333c2f81f380a5ba2a73cfa8e33657183ae823f1d4810e4feeec077
+      Digest: sha256:2d08f19f95c560469f75e13360234396e8cc251a9bbb3cde828e3cf424f38326
+      DiffID: sha256:902d24cd5f5dea653c0f80ee5e6a12f268c188dbe553c21e767b968a5f93d530
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45341
     DataSource:
       ID: govulndb
@@ -137,9 +139,10 @@
     - https://groups.google.com/g/golang-dev/c/bG8cv1muIBM/m/G461hA6lCgAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45341
     - https://pkg.go.dev/vuln/GO-2025-3373
+    - https://security.netapp.com/advisory/ntap-20250221-0004/
     - https://www.cve.org/CVERecord?id=CVE-2024-45341
     PublishedDate: '2025-01-28T02:15:29.147Z'
-    LastModifiedDate: '2025-01-28T16:15:38.65Z'
+    LastModifiedDate: '2025-02-21T18:15:17.96Z'
   - VulnerabilityID: CVE-2025-22866
     PkgID: stdlib@v1.23.3
     PkgName: stdlib
@@ -150,8 +153,8 @@
     FixedVersion: 1.22.12, 1.23.6, 1.24.0-rc.3
     Status: fixed
     Layer:
-      Digest: sha256:03f4ec7896ddf92c36957a1e673c6aff0ff0d15fcd701d51f804df5ce217d7fa
-      DiffID: sha256:5b74881f7333c2f81f380a5ba2a73cfa8e33657183ae823f1d4810e4feeec077
+      Digest: sha256:2d08f19f95c560469f75e13360234396e8cc251a9bbb3cde828e3cf424f38326
+      DiffID: sha256:902d24cd5f5dea653c0f80ee5e6a12f268c188dbe553c21e767b968a5f93d530
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22866
     DataSource:
       ID: govulndb
@@ -177,9 +180,10 @@
     - https://groups.google.com/g/golang-announce/c/xU1ZCHUZw3k
     - https://nvd.nist.gov/vuln/detail/CVE-2025-22866
     - https://pkg.go.dev/vuln/GO-2025-3447
+    - https://security.netapp.com/advisory/ntap-20250221-0002/
     - https://www.cve.org/CVERecord?id=CVE-2025-22866
     PublishedDate: '2025-02-06T17:15:21.41Z'
-    LastModifiedDate: '2025-02-11T15:15:20.87Z'
+    LastModifiedDate: '2025-02-21T18:15:32.243Z'
 - Target: usr/bin/ctr
   Class: lang-pkgs
   Type: gobinary
@@ -194,8 +198,8 @@
     FixedVersion: 0.33.0
     Status: fixed
     Layer:
-      Digest: sha256:03f4ec7896ddf92c36957a1e673c6aff0ff0d15fcd701d51f804df5ce217d7fa
-      DiffID: sha256:5b74881f7333c2f81f380a5ba2a73cfa8e33657183ae823f1d4810e4feeec077
+      Digest: sha256:2d08f19f95c560469f75e13360234396e8cc251a9bbb3cde828e3cf424f38326
+      DiffID: sha256:902d24cd5f5dea653c0f80ee5e6a12f268c188dbe553c21e767b968a5f93d530
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45338
     DataSource:
@@ -208,7 +212,7 @@
     CweIDs:
     - CWE-1333
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       azure: 3
       cbl-mariner: 3
       ghsa: 3
@@ -228,10 +232,11 @@
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45338
     - https://pkg.go.dev/vuln/GO-2024-3333
+    - https://security.netapp.com/advisory/ntap-20250221-0001/
     - https://ubuntu.com/security/notices/USN-7197-1
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
-    LastModifiedDate: '2024-12-31T20:16:06.603Z'
+    LastModifiedDate: '2025-02-21T18:15:17.717Z'
 - Target: usr/bin/dive
   Class: lang-pkgs
   Type: gobinary
@@ -246,8 +251,8 @@
     FixedVersion: 0.33.0
     Status: fixed
     Layer:
-      Digest: sha256:03f4ec7896ddf92c36957a1e673c6aff0ff0d15fcd701d51f804df5ce217d7fa
-      DiffID: sha256:5b74881f7333c2f81f380a5ba2a73cfa8e33657183ae823f1d4810e4feeec077
+      Digest: sha256:2d08f19f95c560469f75e13360234396e8cc251a9bbb3cde828e3cf424f38326
+      DiffID: sha256:902d24cd5f5dea653c0f80ee5e6a12f268c188dbe553c21e767b968a5f93d530
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45338
     DataSource:
@@ -260,7 +265,7 @@
     CweIDs:
     - CWE-1333
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       azure: 3
       cbl-mariner: 3
       ghsa: 3
@@ -280,10 +285,11 @@
     - https://groups.google.com/g/golang-announce/c/wSCRmFnNmPA/m/Lvcd0mRMAwAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45338
     - https://pkg.go.dev/vuln/GO-2024-3333
+    - https://security.netapp.com/advisory/ntap-20250221-0001/
     - https://ubuntu.com/security/notices/USN-7197-1
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
-    LastModifiedDate: '2024-12-31T20:16:06.603Z'
+    LastModifiedDate: '2025-02-21T18:15:17.717Z'
 - Target: usr/bin/docker
   Class: lang-pkgs
   Type: gobinary
@@ -301,8 +307,8 @@
     FixedVersion: 1.22.12, 1.23.6, 1.24.0-rc.3
     Status: fixed
     Layer:
-      Digest: sha256:03f4ec7896ddf92c36957a1e673c6aff0ff0d15fcd701d51f804df5ce217d7fa
-      DiffID: sha256:5b74881f7333c2f81f380a5ba2a73cfa8e33657183ae823f1d4810e4feeec077
+      Digest: sha256:2d08f19f95c560469f75e13360234396e8cc251a9bbb3cde828e3cf424f38326
+      DiffID: sha256:902d24cd5f5dea653c0f80ee5e6a12f268c188dbe553c21e767b968a5f93d530
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22866
     DataSource:
       ID: govulndb
@@ -328,9 +334,10 @@
     - https://groups.google.com/g/golang-announce/c/xU1ZCHUZw3k
     - https://nvd.nist.gov/vuln/detail/CVE-2025-22866
     - https://pkg.go.dev/vuln/GO-2025-3447
+    - https://security.netapp.com/advisory/ntap-20250221-0002/
     - https://www.cve.org/CVERecord?id=CVE-2025-22866
     PublishedDate: '2025-02-06T17:15:21.41Z'
-    LastModifiedDate: '2025-02-11T15:15:20.87Z'
+    LastModifiedDate: '2025-02-21T18:15:32.243Z'
 - Target: usr/bin/nerdctl
   Class: lang-pkgs
   Type: gobinary
@@ -345,8 +352,8 @@
     FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
     Status: fixed
     Layer:
-      Digest: sha256:03f4ec7896ddf92c36957a1e673c6aff0ff0d15fcd701d51f804df5ce217d7fa
-      DiffID: sha256:5b74881f7333c2f81f380a5ba2a73cfa8e33657183ae823f1d4810e4feeec077
+      Digest: sha256:2d08f19f95c560469f75e13360234396e8cc251a9bbb3cde828e3cf424f38326
+      DiffID: sha256:902d24cd5f5dea653c0f80ee5e6a12f268c188dbe553c21e767b968a5f93d530
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45336
     DataSource:
       ID: govulndb
@@ -374,9 +381,10 @@
     - https://groups.google.com/g/golang-dev/c/bG8cv1muIBM/m/G461hA6lCgAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45336
     - https://pkg.go.dev/vuln/GO-2025-3420
+    - https://security.netapp.com/advisory/ntap-20250221-0003/
     - https://www.cve.org/CVERecord?id=CVE-2024-45336
     PublishedDate: '2025-01-28T02:15:28.807Z'
-    LastModifiedDate: '2025-01-28T16:15:38.22Z'
+    LastModifiedDate: '2025-02-21T18:15:17.4Z'
   - VulnerabilityID: CVE-2024-45341
     PkgID: stdlib@v1.23.4
     PkgName: stdlib
@@ -387,8 +395,8 @@
     FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
     Status: fixed
     Layer:
-      Digest: sha256:03f4ec7896ddf92c36957a1e673c6aff0ff0d15fcd701d51f804df5ce217d7fa
-      DiffID: sha256:5b74881f7333c2f81f380a5ba2a73cfa8e33657183ae823f1d4810e4feeec077
+      Digest: sha256:2d08f19f95c560469f75e13360234396e8cc251a9bbb3cde828e3cf424f38326
+      DiffID: sha256:902d24cd5f5dea653c0f80ee5e6a12f268c188dbe553c21e767b968a5f93d530
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45341
     DataSource:
       ID: govulndb
@@ -416,9 +424,10 @@
     - https://groups.google.com/g/golang-dev/c/bG8cv1muIBM/m/G461hA6lCgAJ
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45341
     - https://pkg.go.dev/vuln/GO-2025-3373
+    - https://security.netapp.com/advisory/ntap-20250221-0004/
     - https://www.cve.org/CVERecord?id=CVE-2024-45341
     PublishedDate: '2025-01-28T02:15:29.147Z'
-    LastModifiedDate: '2025-01-28T16:15:38.65Z'
+    LastModifiedDate: '2025-02-21T18:15:17.96Z'
   - VulnerabilityID: CVE-2025-22866
     PkgID: stdlib@v1.23.4
     PkgName: stdlib
@@ -429,8 +438,8 @@
     FixedVersion: 1.22.12, 1.23.6, 1.24.0-rc.3
     Status: fixed
     Layer:
-      Digest: sha256:03f4ec7896ddf92c36957a1e673c6aff0ff0d15fcd701d51f804df5ce217d7fa
-      DiffID: sha256:5b74881f7333c2f81f380a5ba2a73cfa8e33657183ae823f1d4810e4feeec077
+      Digest: sha256:2d08f19f95c560469f75e13360234396e8cc251a9bbb3cde828e3cf424f38326
+      DiffID: sha256:902d24cd5f5dea653c0f80ee5e6a12f268c188dbe553c21e767b968a5f93d530
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22866
     DataSource:
       ID: govulndb
@@ -456,9 +465,10 @@
     - https://groups.google.com/g/golang-announce/c/xU1ZCHUZw3k
     - https://nvd.nist.gov/vuln/detail/CVE-2025-22866
     - https://pkg.go.dev/vuln/GO-2025-3447
+    - https://security.netapp.com/advisory/ntap-20250221-0002/
     - https://www.cve.org/CVERecord?id=CVE-2025-22866
     PublishedDate: '2025-02-06T17:15:21.41Z'
-    LastModifiedDate: '2025-02-11T15:15:20.87Z'
+    LastModifiedDate: '2025-02-21T18:15:32.243Z'
 - Target: usr/bin/skopeo
   Class: lang-pkgs
   Type: gobinary
