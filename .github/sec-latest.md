@@ -47,9 +47,10 @@
 │                       │     │                  ├ [2]: https://github.com/netty/netty/security/advisories/GHSA
 │                       │     │                  │      -389x-839f-4rhx 
 │                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-25193 
-│                       │     │                  ╰ [4]: https://security.netapp.com/advisory/ntap-20250221-0006 
+│                       │     │                  ├ [4]: https://security.netapp.com/advisory/ntap-20250221-0006 
+│                       │     │                  ╰ [5]: https://security.netapp.com/advisory/ntap-20250221-0006/ 
 │                       │     ├ PublishedDate   : 2025-02-10T22:15:38.45Z 
-│                       │     ╰ LastModifiedDate: 2025-02-11T16:15:52.523Z 
+│                       │     ╰ LastModifiedDate: 2025-02-21T18:15:37.253Z 
 │                       ╰ [1] ╭ VulnerabilityID : CVE-2025-24970 
 │                             ├ PkgName         : io.netty:netty-handler 
 │                             ├ PkgPath         : openaf/Kube/netty-handler-4.1.117.Final.jar 
@@ -98,9 +99,10 @@
 │                             │                  │      -4g8c-wm8x-jfhw 
 │                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-24970 
 │                             │                  ├ [5]: https://security.netapp.com/advisory/ntap-20250221-0005 
-│                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-24970 
+│                             │                  ├ [6]: https://security.netapp.com/advisory/ntap-20250221-0005/ 
+│                             │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-24970 
 │                             ├ PublishedDate   : 2025-02-10T22:15:38.057Z 
-│                             ╰ LastModifiedDate: 2025-02-11T16:15:51.92Z 
+│                             ╰ LastModifiedDate: 2025-02-21T18:15:36.383Z 
 ├ [2] ╭ Target         : usr/bin/crictl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -130,7 +132,7 @@
 │                       │     │                   denial of service. 
 │                       │     ├ Severity        : HIGH 
 │                       │     ├ CweIDs           ─ [0]: CWE-1333 
-│                       │     ├ VendorSeverity   ╭ amazon     : 3 
+│                       │     ├ VendorSeverity   ╭ amazon     : 2 
 │                       │     │                  ├ azure      : 3 
 │                       │     │                  ├ cbl-mariner: 3 
 │                       │     │                  ├ ghsa       : 3 
@@ -149,10 +151,11 @@
 │                       │     │                  │       mPA/m/Lvcd0mRMAwAJ 
 │                       │     │                  ├ [7] : https://nvd.nist.gov/vuln/detail/CVE-2024-45338 
 │                       │     │                  ├ [8] : https://pkg.go.dev/vuln/GO-2024-3333 
-│                       │     │                  ├ [9] : https://ubuntu.com/security/notices/USN-7197-1 
-│                       │     │                  ╰ [10]: https://www.cve.org/CVERecord?id=CVE-2024-45338 
+│                       │     │                  ├ [9] : https://security.netapp.com/advisory/ntap-20250221-0001/ 
+│                       │     │                  ├ [10]: https://ubuntu.com/security/notices/USN-7197-1 
+│                       │     │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2024-45338 
 │                       │     ├ PublishedDate   : 2024-12-18T21:15:08.173Z 
-│                       │     ╰ LastModifiedDate: 2024-12-31T20:16:06.603Z 
+│                       │     ╰ LastModifiedDate: 2025-02-21T18:15:17.717Z 
 │                       ├ [1] ╭ VulnerabilityID : CVE-2024-45336 
 │                       │     ├ PkgID           : stdlib@v1.23.3 
 │                       │     ├ PkgName         : stdlib 
@@ -199,9 +202,10 @@
 │                       │     │                  │      G461hA6lCgAJ 
 │                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2024-45336 
 │                       │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3420 
-│                       │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-45336 
+│                       │     │                  ├ [7]: https://security.netapp.com/advisory/ntap-20250221-0003/ 
+│                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-45336 
 │                       │     ├ PublishedDate   : 2025-01-28T02:15:28.807Z 
-│                       │     ╰ LastModifiedDate: 2025-01-28T16:15:38.22Z 
+│                       │     ╰ LastModifiedDate: 2025-02-21T18:15:17.4Z 
 │                       ├ [2] ╭ VulnerabilityID : CVE-2024-45341 
 │                       │     ├ PkgID           : stdlib@v1.23.3 
 │                       │     ├ PkgName         : stdlib 
@@ -244,9 +248,10 @@
 │                       │     │                  │      G461hA6lCgAJ 
 │                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2024-45341 
 │                       │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3373 
-│                       │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-45341 
+│                       │     │                  ├ [7]: https://security.netapp.com/advisory/ntap-20250221-0004/ 
+│                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-45341 
 │                       │     ├ PublishedDate   : 2025-01-28T02:15:29.147Z 
-│                       │     ╰ LastModifiedDate: 2025-01-28T16:15:38.65Z 
+│                       │     ╰ LastModifiedDate: 2025-02-21T18:15:17.96Z 
 │                       ╰ [3] ╭ VulnerabilityID : CVE-2025-22866 
 │                             ├ PkgID           : stdlib@v1.23.3 
 │                             ├ PkgName         : stdlib 
@@ -286,9 +291,10 @@
 │                             │                  ├ [3]: https://groups.google.com/g/golang-announce/c/xU1ZCHUZw3k 
 │                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-22866 
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
-│                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
+│                             │                  ├ [6]: https://security.netapp.com/advisory/ntap-20250221-0002/ 
+│                             │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
 │                             ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
-│                             ╰ LastModifiedDate: 2025-02-11T15:15:20.87Z 
+│                             ╰ LastModifiedDate: 2025-02-21T18:15:32.243Z 
 ├ [3] ╭ Target         : usr/bin/ctr 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -318,7 +324,7 @@
 │                             │                   denial of service. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-1333 
-│                             ├ VendorSeverity   ╭ amazon     : 3 
+│                             ├ VendorSeverity   ╭ amazon     : 2 
 │                             │                  ├ azure      : 3 
 │                             │                  ├ cbl-mariner: 3 
 │                             │                  ├ ghsa       : 3 
@@ -337,10 +343,11 @@
 │                             │                  │       mPA/m/Lvcd0mRMAwAJ 
 │                             │                  ├ [7] : https://nvd.nist.gov/vuln/detail/CVE-2024-45338 
 │                             │                  ├ [8] : https://pkg.go.dev/vuln/GO-2024-3333 
-│                             │                  ├ [9] : https://ubuntu.com/security/notices/USN-7197-1 
-│                             │                  ╰ [10]: https://www.cve.org/CVERecord?id=CVE-2024-45338 
+│                             │                  ├ [9] : https://security.netapp.com/advisory/ntap-20250221-0001/ 
+│                             │                  ├ [10]: https://ubuntu.com/security/notices/USN-7197-1 
+│                             │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2024-45338 
 │                             ├ PublishedDate   : 2024-12-18T21:15:08.173Z 
-│                             ╰ LastModifiedDate: 2024-12-31T20:16:06.603Z 
+│                             ╰ LastModifiedDate: 2025-02-21T18:15:17.717Z 
 ├ [4] ╭ Target         : usr/bin/dive 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -370,7 +377,7 @@
 │                             │                   denial of service. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-1333 
-│                             ├ VendorSeverity   ╭ amazon     : 3 
+│                             ├ VendorSeverity   ╭ amazon     : 2 
 │                             │                  ├ azure      : 3 
 │                             │                  ├ cbl-mariner: 3 
 │                             │                  ├ ghsa       : 3 
@@ -389,10 +396,11 @@
 │                             │                  │       mPA/m/Lvcd0mRMAwAJ 
 │                             │                  ├ [7] : https://nvd.nist.gov/vuln/detail/CVE-2024-45338 
 │                             │                  ├ [8] : https://pkg.go.dev/vuln/GO-2024-3333 
-│                             │                  ├ [9] : https://ubuntu.com/security/notices/USN-7197-1 
-│                             │                  ╰ [10]: https://www.cve.org/CVERecord?id=CVE-2024-45338 
+│                             │                  ├ [9] : https://security.netapp.com/advisory/ntap-20250221-0001/ 
+│                             │                  ├ [10]: https://ubuntu.com/security/notices/USN-7197-1 
+│                             │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2024-45338 
 │                             ├ PublishedDate   : 2024-12-18T21:15:08.173Z 
-│                             ╰ LastModifiedDate: 2024-12-31T20:16:06.603Z 
+│                             ╰ LastModifiedDate: 2025-02-21T18:15:17.717Z 
 ├ [5] ╭ Target: usr/bin/docker 
 │     ├ Class : lang-pkgs 
 │     ╰ Type  : gobinary 
@@ -438,9 +446,10 @@
 │                             │                  ├ [3]: https://groups.google.com/g/golang-announce/c/xU1ZCHUZw3k 
 │                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-22866 
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
-│                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
+│                             │                  ├ [6]: https://security.netapp.com/advisory/ntap-20250221-0002/ 
+│                             │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
 │                             ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
-│                             ╰ LastModifiedDate: 2025-02-11T15:15:20.87Z 
+│                             ╰ LastModifiedDate: 2025-02-21T18:15:32.243Z 
 ├ [7] ╭ Target         : usr/bin/nerdctl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -490,9 +499,10 @@
 │                       │     │                  │      G461hA6lCgAJ 
 │                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2024-45336 
 │                       │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3420 
-│                       │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-45336 
+│                       │     │                  ├ [7]: https://security.netapp.com/advisory/ntap-20250221-0003/ 
+│                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-45336 
 │                       │     ├ PublishedDate   : 2025-01-28T02:15:28.807Z 
-│                       │     ╰ LastModifiedDate: 2025-01-28T16:15:38.22Z 
+│                       │     ╰ LastModifiedDate: 2025-02-21T18:15:17.4Z 
 │                       ├ [1] ╭ VulnerabilityID : CVE-2024-45341 
 │                       │     ├ PkgID           : stdlib@v1.23.4 
 │                       │     ├ PkgName         : stdlib 
@@ -535,9 +545,10 @@
 │                       │     │                  │      G461hA6lCgAJ 
 │                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2024-45341 
 │                       │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3373 
-│                       │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-45341 
+│                       │     │                  ├ [7]: https://security.netapp.com/advisory/ntap-20250221-0004/ 
+│                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-45341 
 │                       │     ├ PublishedDate   : 2025-01-28T02:15:29.147Z 
-│                       │     ╰ LastModifiedDate: 2025-01-28T16:15:38.65Z 
+│                       │     ╰ LastModifiedDate: 2025-02-21T18:15:17.96Z 
 │                       ╰ [2] ╭ VulnerabilityID : CVE-2025-22866 
 │                             ├ PkgID           : stdlib@v1.23.4 
 │                             ├ PkgName         : stdlib 
@@ -577,9 +588,10 @@
 │                             │                  ├ [3]: https://groups.google.com/g/golang-announce/c/xU1ZCHUZw3k 
 │                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-22866 
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
-│                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
+│                             │                  ├ [6]: https://security.netapp.com/advisory/ntap-20250221-0002/ 
+│                             │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
 │                             ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
-│                             ╰ LastModifiedDate: 2025-02-11T15:15:20.87Z 
+│                             ╰ LastModifiedDate: 2025-02-21T18:15:32.243Z 
 ├ [8] ╭ Target: usr/bin/skopeo 
 │     ├ Class : lang-pkgs 
 │     ╰ Type  : gobinary 
@@ -632,9 +644,10 @@
                         │     │                  │      G461hA6lCgAJ 
                         │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2024-45336 
                         │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3420 
-                        │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-45336 
+                        │     │                  ├ [7]: https://security.netapp.com/advisory/ntap-20250221-0003/ 
+                        │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-45336 
                         │     ├ PublishedDate   : 2025-01-28T02:15:28.807Z 
-                        │     ╰ LastModifiedDate: 2025-01-28T16:15:38.22Z 
+                        │     ╰ LastModifiedDate: 2025-02-21T18:15:17.4Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2024-45341 
                         │     ├ PkgID           : stdlib@v1.23.4 
                         │     ├ PkgName         : stdlib 
@@ -677,9 +690,10 @@
                         │     │                  │      G461hA6lCgAJ 
                         │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2024-45341 
                         │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3373 
-                        │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-45341 
+                        │     │                  ├ [7]: https://security.netapp.com/advisory/ntap-20250221-0004/ 
+                        │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-45341 
                         │     ├ PublishedDate   : 2025-01-28T02:15:29.147Z 
-                        │     ╰ LastModifiedDate: 2025-01-28T16:15:38.65Z 
+                        │     ╰ LastModifiedDate: 2025-02-21T18:15:17.96Z 
                         ╰ [2] ╭ VulnerabilityID : CVE-2025-22866 
                               ├ PkgID           : stdlib@v1.23.4 
                               ├ PkgName         : stdlib 
@@ -719,7 +733,8 @@
                               │                  ├ [3]: https://groups.google.com/g/golang-announce/c/xU1ZCHUZw3k 
                               │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-22866 
                               │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
-                              │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
+                              │                  ├ [6]: https://security.netapp.com/advisory/ntap-20250221-0002/ 
+                              │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
                               ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
-                              ╰ LastModifiedDate: 2025-02-11T15:15:20.87Z 
+                              ╰ LastModifiedDate: 2025-02-21T18:15:32.243Z 
 ````
