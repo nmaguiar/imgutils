@@ -99,6 +99,9 @@ echo "[1m🗄️  -- Storing list of files changed, added or removed in B compa
 echo 
 oafp in=oafp data="[(file:'A.csv')|(file:'B.csv')]" set="(a:'[0]', b:'[1]')" setop=diffa out=csv > AB-diff.csv
 
-shift
-shift
-oafp AB-diff.csv in=csv out=ctable "$@"
+# Execute only if there are additional arguments
+if [ "$#" -gt 2 ]; then
+    shift
+    shift
+    oafp AB-diff.csv in=csv path="[].insert(@,'lastModified',to_datef(lastModified,'yyyy-MM-dd HH:mm:ss.SSSSSSSSS X'))" "$@"
+fi
