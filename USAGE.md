@@ -64,7 +64,10 @@ First check the nodes' names with 'kubectl get nodes'
 | imgInfo.yaml | Expands a docker container archive file, layer by layer, to return the list of files (uses OpenAF's oJob) |
 | imgCollapse.yaml | Collapse a previously expanded docker container archive file, layer by layer, into an output image file (uses OpenAF's oJob) |
 | listHubRepo.yaml | Check when was the last pull and push, on docker hub, for a specific image (uses OpenAF's oJob) |
-| catFileInImage.sh | Given a registry image (e.g. image:tag), a local docker-daemon:image:tag or an image.tar file retrives a specific file from the last layer where it's found. |
+| catFileInImage.sh | Given a registry image (e.g. image:tag), a local docker-daemon:image:tag or an image.tar file retrives a specific file from the last layer where it's found |
+| compareImages.sh | Given two registry image (e.g. image:tag), local docker-daemon:image:tag or image.tar will expand their contents, compare and produce a CSV diff file |
+| expandFilesInImage.sh | Given a registry image (e.g. image:tag), a local docker-daemon:image:tag or an image.tar file retrieves all files from the last layer where they are found to an output folder |
+| expandLayersInImage.sh | Given a registry image (e.g. image:tag), a local docker-daemon:image:tag or an image.tar file retrieves all layers to an output folder |
 
 ---
 
