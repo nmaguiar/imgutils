@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Author : Nuno Aguiar
-# Version: 20250215
+# Version: 20250224
 #
 # Usage  :
 #   compareImages.sh <image1> <image2>
