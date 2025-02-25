@@ -9,6 +9,12 @@
 # Description :
 #   This script extracts the files from a docker image archive file to a directory.
 
+# If $2 is not provided then exit
+if [ -z "$2" ]; then
+    echo "Output directory not provided"
+    exit 1
+fi
+
 TMPIMG=""
 
 # If $1 is not a file and contains a colon then use skopeo to copy the image to a temporary file.
@@ -22,12 +28,6 @@ if [ ! -f "$1" ] && [[ "$1" == *:* ]]; then
     IMAGE="$TMPIMG"
 else
     IMAGE="$1"
-fi
-
-# If $2 is not provided then exit
-if [ -z "$2" ]; then
-    echo "Output directory not provided"
-    exit 1
 fi
 
 /usr/local/bin/expandFilesInImageArchive.sh $IMAGE "$2"
