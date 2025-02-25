@@ -95,7 +95,7 @@ find "$DIR" -type f | while read -r file; do
 done | sort > B.csv
 echo "file,size,lastModified,permissions,user,group,md5" | cat - B.csv > B.csv.tmp && mv B.csv.tmp B.csv
 
-echo "[1m🗄️  -- Storing list of files changed, added or removed in B compared to A in AB-diff.csv[m"
+echo "[1m🗄️ -- Storing list of files changed, added or removed in B compared to A in AB-diff.csv[m"
 echo 
 oafp in=oafp data="[(file:'A.csv')|(file:'B.csv')]" set="(a:'[0]', b:'[1]')" setop=diffa out=csv > AB-diff.csv
 
