@@ -17,6 +17,7 @@ List of examples:
 | Images   | Checkout the files per layer on an existing image |
 | Images   | Generate a BOM (Bill Of Materials) for a provided image |
 | Images   | Retrieve a specific file from an image |
+| Images   | Comparing file contents between two image tags |
 
 > To search for a specific example type '/Checking images content<ENTER>' and use the arrow keys to navigate
 
@@ -446,5 +447,47 @@ docker run --rm -ti --pull always -v /var/run/docker.sock:/var/run/docker.sock n
 st docker-archive:/output/image.tar
 docker run --rm -ti --pull always -v $(pwd):/input nmaguiar/imgutils oafp cmd="catFileInImage.sh /input/image.tar /etc/lsb-release" in=ini out=map
 ```
+
+---
+
+## 🐳 Comparing file contents between two image tags
+
+If you have two image with different tabs for which you would like to understand which files are different, at the file content level, you can use _compareImages.sh_:
+
+**From registry images**
+
+```
+docker run --rm -ti --pull always -e REGAUTH="user,pass,my.registry" -v $(pwd):/output nmaguiar/imgutils /bin/sh -c "compareImages.sh ubuntu:latest ubuntu:rolling && cp *.csv /output"
+```
+
+> The first and the second arguments are the images to compare
+
+As a result you will obtain:
+
+| File | Description |
+|------|-------------|
+| A.csv | A list of files with full path, size, date, permissions, user, group and md5 checksum from the first provided image on the arguments |
+| B.csv | A list of files with full path, size, date, permissions, user, group and md5 checksum from the second provided image on the arguments |
+| AB-diff.csv | An equivalent list to A.csv and B.csv but filtering for records that are different. It adds a first column with 'a' or 'b' to indicate in which list the records differ. This let's you know if files were added, removed or changed. |
+
+> Besides the two images to compare if you provide a third argument, like 'out=ctable', it will be used as an _oafp_ option to show the AB-diff.csv result at the end of processing.
+
+**From the local docker daemon**
+
+```
+docker run --rm -ti --pull always -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd):/output nmaguiar/imgutils /bin/sh -c "compareImages.sh docker-daemon:ubuntu:latest ubuntu:rolling && cp *.csv /output"
+```
+
+> The options and output files are equal to the 'From registry images'
+
+**From local container images**
+
+```
+# docker run --rm -ti --pull always -v $(pwd):/output nmaguiar/imgutils skopeo copy docker://ubuntu:late
+st docker-archive:/output/image.tar
+docker run --rm -ti --pull always -v $(pwd):/input nmaguiar/imgutils /bin/sh -c "compareImages.sh /input/imageA.tar /input/imageB.tar && cp *.csv /input"
+```
+
+> The options and output files are equal to the 'From registry images'
 
 ---
