@@ -81,7 +81,7 @@ echo
 
 DIR=A
 find "$DIR" -type f | while read -r file; do
-    md5=$(md5sum "$file" | cut -f1 -d ' ')
+    md5=$(sudo md5sum "$file" | cut -f1 -d ' ')
     stat=$(stat -c "%n,%s,%y,%A,%U,%G" "$file")
     echo "${stat},${md5}" | sed "s|^$DIR||"
 done | sort > A.csv
@@ -89,7 +89,7 @@ echo "file,size,lastModified,permissions,user,group,md5" | cat - A.csv > A.csv.t
 
 DIR=B
 find "$DIR" -type f | while read -r file; do
-    md5=$(md5sum "$file" | cut -f1 -d ' ')
+    md5=$(sudo md5sum "$file" | cut -f1 -d ' ')
     stat=$(stat -c "%n,%s,%y,%A,%U,%G" "$file")
     echo "${stat},${md5}" | sed "s|^$DIR||"
 done | sort > B.csv
