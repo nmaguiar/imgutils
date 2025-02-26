@@ -97,7 +97,7 @@ echo "file,size,lastModified,permissions,user,group,md5" | cat - B.csv > B.csv.t
 
 echo "[1m🗄️ -- Storing list of files changed, added or removed in B compared to A in AB-diff.csv[m"
 echo 
-oafp in=oafp data="[(file:'A.csv')|(file:'B.csv')]" set="(a:'[0]', b:'[1]')" setop=diffa out=csv > AB-diff.csv
+oafp in=oafp data="[(file:'A.csv')|(file:'B.csv')]" set="(a:'[0]', b:'[1]')" setop=diff out=csv > AB-diff.csv
 
 # Execute only if there are additional arguments
 if [ "$#" -gt 2 ]; then
