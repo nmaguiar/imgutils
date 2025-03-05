@@ -132,7 +132,7 @@
 │                       │     │                   denial of service. 
 │                       │     ├ Severity        : HIGH 
 │                       │     ├ CweIDs           ─ [0]: CWE-1333 
-│                       │     ├ VendorSeverity   ╭ amazon     : 3 
+│                       │     ├ VendorSeverity   ╭ amazon     : 2 
 │                       │     │                  ├ azure      : 3 
 │                       │     │                  ├ cbl-mariner: 3 
 │                       │     │                  ├ ghsa       : 3 
@@ -324,7 +324,7 @@
 │                             │                   denial of service. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-1333 
-│                             ├ VendorSeverity   ╭ amazon     : 3 
+│                             ├ VendorSeverity   ╭ amazon     : 2 
 │                             │                  ├ azure      : 3 
 │                             │                  ├ cbl-mariner: 3 
 │                             │                  ├ ghsa       : 3 
@@ -377,7 +377,7 @@
 │                             │                   denial of service. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-1333 
-│                             ├ VendorSeverity   ╭ amazon     : 3 
+│                             ├ VendorSeverity   ╭ amazon     : 2 
 │                             │                  ├ azure      : 3 
 │                             │                  ├ cbl-mariner: 3 
 │                             │                  ├ ghsa       : 3 
@@ -489,8 +489,9 @@
 │                       │     │                   characters. 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-770 
-│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
-│                       │     │                  ╰ redhat: 2 
+│                       │     ├ VendorSeverity   ╭ cbl-mariner: 2 
+│                       │     │                  ├ ghsa       : 2 
+│                       │     │                  ╰ redhat     : 2 
 │                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
 │                       │     │                           │           A:H 
 │                       │     │                           ╰ V3Score : 7.5 
@@ -685,8 +686,9 @@
 │                       │     │                   characters. 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-770 
-│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
-│                       │     │                  ╰ redhat: 2 
+│                       │     ├ VendorSeverity   ╭ cbl-mariner: 2 
+│                       │     │                  ├ ghsa       : 2 
+│                       │     │                  ╰ redhat     : 2 
 │                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
 │                       │     │                           │           A:H 
 │                       │     │                           ╰ V3Score : 7.5 
@@ -739,8 +741,9 @@
 │                             │                   characters. 
 │                             ├ Severity        : MEDIUM 
 │                             ├ CweIDs           ─ [0]: CWE-770 
-│                             ├ VendorSeverity   ╭ ghsa  : 2 
-│                             │                  ╰ redhat: 2 
+│                             ├ VendorSeverity   ╭ cbl-mariner: 2 
+│                             │                  ├ ghsa       : 2 
+│                             │                  ╰ redhat     : 2 
 │                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
 │                             │                           │           A:H 
 │                             │                           ╰ V3Score : 7.5 
