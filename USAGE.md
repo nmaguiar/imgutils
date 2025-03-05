@@ -22,6 +22,10 @@ Welcome to the ImgUtils image. Check the deployment options available and the li
 
 If you need to login in AWS ECR and another registry at the same time (use ```"$'\n'"``` or ```|||``` to separate multiple registries logins)
 
+### AWS CloudShell
+
+{{{$acolor 'FAINT,ITALIC' 'sudo docker run --rm -ti --pull always -v /var/run/docker.sock:/var/run/docker.sock -e REGAUTH="$(aws sts get-caller-identity --query Account --output text).dkr.ecr.$AWS_REGION.amazonaws.com,AWS,$(aws ecr get-login-password)" nmaguiar/imgutils:build /bin/bash'}}}
+
 ---
 
 ## ⚙️  Deploy using kubectl 
