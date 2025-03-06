@@ -29,7 +29,7 @@
     CweIDs:
     - CWE-1333
     VendorSeverity:
-      amazon: 2
+      amazon: 3
       azure: 3
       cbl-mariner: 3
       ghsa: 3
