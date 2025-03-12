@@ -23,7 +23,7 @@
 │                       │     │                  ├ Name: GitHub Security Advisory Maven 
 │                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
 │                       │     │                          osystem%3Amaven 
-│                       │     ├ Title           : Denial of Service attack on windows app using Netty 
+│                       │     ├ Title           : netty: Denial of Service attack on windows app using Netty 
 │                       │     ├ Description     : Netty, an asynchronous, event-driven network application
 │                       │     │                   framework, has a vulnerability in versions up to and
 │                       │     │                   including 4.1.118.Final. An unsafe reading of environment
@@ -38,17 +38,24 @@
 │                       │     │                   fix. 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-400 
-│                       │     ├ VendorSeverity   ─ ghsa: 2 
-│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H 
-│                       │     │                         ╰ V3Score : 5.5 
-│                       │     ├ References       ╭ [0]: https://github.com/netty/netty 
-│                       │     │                  ├ [1]: https://github.com/netty/netty/commit/d1fbda62d3a47835d
+│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │     │                  ╰ redhat: 2 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/
+│                       │     │                  │        │           A:H 
+│                       │     │                  │        ╰ V3Score : 5.5 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/
+│                       │     │                           │           A:H 
+│                       │     │                           ╰ V3Score : 5.5 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-25193 
+│                       │     │                  ├ [1]: https://github.com/netty/netty 
+│                       │     │                  ├ [2]: https://github.com/netty/netty/commit/d1fbda62d3a47835d
 │                       │     │                  │      3fb35db8bd42ecc205a5386 
-│                       │     │                  ├ [2]: https://github.com/netty/netty/security/advisories/GHSA
+│                       │     │                  ├ [3]: https://github.com/netty/netty/security/advisories/GHSA
 │                       │     │                  │      -389x-839f-4rhx 
-│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-25193 
-│                       │     │                  ├ [4]: https://security.netapp.com/advisory/ntap-20250221-0006 
-│                       │     │                  ╰ [5]: https://security.netapp.com/advisory/ntap-20250221-0006/ 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-25193 
+│                       │     │                  ├ [5]: https://security.netapp.com/advisory/ntap-20250221-0006 
+│                       │     │                  ├ [6]: https://security.netapp.com/advisory/ntap-20250221-0006/ 
+│                       │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-25193 
 │                       │     ├ PublishedDate   : 2025-02-10T22:15:38.45Z 
 │                       │     ╰ LastModifiedDate: 2025-02-21T18:15:37.253Z 
 │                       ╰ [1] ╭ VulnerabilityID : CVE-2025-24970 
