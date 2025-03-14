@@ -58,7 +58,42 @@
 │                       │     │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2024-45338 
 │                       │     ├ PublishedDate   : 2024-12-18T21:15:08.173Z 
 │                       │     ╰ LastModifiedDate: 2025-02-21T18:15:17.717Z 
-│                       ├ [1] ╭ VulnerabilityID : CVE-2024-45336 
+│                       ├ [1] ╭ VulnerabilityID : CVE-2025-22870 
+│                       │     ├ PkgID           : golang.org/x/net@v0.30.0 
+│                       │     ├ PkgName         : golang.org/x/net 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.30.0 
+│                       │     │                  ╰ UID : 9ce1984a5172bc7c 
+│                       │     ├ InstalledVersion: v0.30.0 
+│                       │     ├ FixedVersion    : 0.36.0 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:a8952374dfe1896ef57a52ca794752128b06d5f5294d6
+│                       │     │                  │         df5b9da8c62a0502a65 
+│                       │     │                  ╰ DiffID: sha256:dc39c9f0495439f157422d33f44a5090a729faeb75e74
+│                       │     │                            db0cee16cf9a9de02c6 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Go 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Ago 
+│                       │     ├ Title           : Matching of hosts against proxy patterns can improperly treat
+│                       │     │                    an IPv6  ... 
+│                       │     ├ Description     : Matching of hosts against proxy patterns can improperly treat
+│                       │     │                    an IPv6 zone ID as a hostname component. For example, when
+│                       │     │                   the NO_PROXY environment variable is set to "*.example.com",
+│                       │     │                   a request to "[::1%25.example.com]:80` will incorrectly match
+│                       │     │                    and not be proxied. 
+│                       │     ├ Severity        : MEDIUM 
+│                       │     ├ VendorSeverity   ─ ghsa: 2 
+│                       │     ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/03/07/2 
+│                       │     │                  ├ [1]: https://go-review.googlesource.com/q/project:net 
+│                       │     │                  ├ [2]: https://go.dev/cl/654697 
+│                       │     │                  ├ [3]: https://go.dev/issue/71984 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-22870 
+│                       │     │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-3503 
+│                       │     ├ PublishedDate   : 2025-03-12T19:15:38.31Z 
+│                       │     ╰ LastModifiedDate: 2025-03-12T19:15:38.31Z 
+│                       ├ [2] ╭ VulnerabilityID : CVE-2024-45336 
 │                       │     ├ PkgID           : stdlib@v1.23.3 
 │                       │     ├ PkgName         : stdlib 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.3 
@@ -109,7 +144,7 @@
 │                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-45336 
 │                       │     ├ PublishedDate   : 2025-01-28T02:15:28.807Z 
 │                       │     ╰ LastModifiedDate: 2025-02-21T18:15:17.4Z 
-│                       ├ [2] ╭ VulnerabilityID : CVE-2024-45341 
+│                       ├ [3] ╭ VulnerabilityID : CVE-2024-45341 
 │                       │     ├ PkgID           : stdlib@v1.23.3 
 │                       │     ├ PkgName         : stdlib 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.3 
@@ -156,7 +191,7 @@
 │                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-45341 
 │                       │     ├ PublishedDate   : 2025-01-28T02:15:29.147Z 
 │                       │     ╰ LastModifiedDate: 2025-02-21T18:15:17.96Z 
-│                       ╰ [3] ╭ VulnerabilityID : CVE-2025-22866 
+│                       ╰ [4] ╭ VulnerabilityID : CVE-2025-22866 
 │                             ├ PkgID           : stdlib@v1.23.3 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.3 
@@ -199,69 +234,174 @@
 │                             │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
 │                             ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
 │                             ╰ LastModifiedDate: 2025-02-21T18:15:32.243Z 
-├ [3] ╭ Target: usr/bin/ctr 
-│     ├ Class : lang-pkgs 
-│     ╰ Type  : gobinary 
-├ [4] ╭ Target         : usr/bin/dive 
+├ [3] ╭ Target         : usr/bin/ctr 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
-│     ╰ Vulnerabilities ─ [0] ╭ VulnerabilityID : CVE-2024-45338 
-│                             ├ PkgID           : golang.org/x/net@v0.28.0 
+│     ╰ Vulnerabilities ─ [0] ╭ VulnerabilityID : CVE-2025-22870 
+│                             ├ PkgID           : golang.org/x/net@v0.33.0 
 │                             ├ PkgName         : golang.org/x/net 
-│                             ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.28.0 
-│                             │                  ╰ UID : 2fe24708cb92b4b0 
-│                             ├ InstalledVersion: v0.28.0 
-│                             ├ FixedVersion    : 0.33.0 
+│                             ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.33.0 
+│                             │                  ╰ UID : cf82c5de062ee905 
+│                             ├ InstalledVersion: v0.33.0 
+│                             ├ FixedVersion    : 0.36.0 
 │                             ├ Status          : fixed 
 │                             ├ Layer            ╭ Digest: sha256:a8952374dfe1896ef57a52ca794752128b06d5f5294d6
 │                             │                  │         df5b9da8c62a0502a65 
 │                             │                  ╰ DiffID: sha256:dc39c9f0495439f157422d33f44a5090a729faeb75e74
 │                             │                            db0cee16cf9a9de02c6 
 │                             ├ SeveritySource  : ghsa 
-│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45338 
+│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
 │                             ├ DataSource       ╭ ID  : ghsa 
 │                             │                  ├ Name: GitHub Security Advisory Go 
 │                             │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
 │                             │                          osystem%3Ago 
-│                             ├ Title           : golang.org/x/net/html: Non-linear parsing of case-insensitive
-│                             │                    content in golang.org/x/net/html 
-│                             ├ Description     : An attacker can craft an input to the Parse functions that
-│                             │                   would be processed non-linearly with respect to its length,
-│                             │                   resulting in extremely slow parsing. This could cause a
-│                             │                   denial of service. 
-│                             ├ Severity        : HIGH 
-│                             ├ CweIDs           ─ [0]: CWE-1333 
-│                             ├ VendorSeverity   ╭ amazon     : 3 
-│                             │                  ├ azure      : 3 
-│                             │                  ├ cbl-mariner: 3 
-│                             │                  ├ ghsa       : 3 
-│                             │                  ├ redhat     : 3 
-│                             │                  ╰ ubuntu     : 2 
-│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
-│                             │                           │           A:H 
-│                             │                           ╰ V3Score : 7.5 
-│                             ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2024-45338 
-│                             │                  ├ [1] : https://cs.opensource.google/go/x/net 
-│                             │                  ├ [2] : https://github.com/golang/go/issues/70906 
-│                             │                  ├ [3] : https://go-review.googlesource.com/c/net/+/637536 
-│                             │                  ├ [4] : https://go.dev/cl/637536 
-│                             │                  ├ [5] : https://go.dev/issue/70906 
-│                             │                  ├ [6] : https://groups.google.com/g/golang-announce/c/wSCRmFnN
-│                             │                  │       mPA/m/Lvcd0mRMAwAJ 
-│                             │                  ├ [7] : https://nvd.nist.gov/vuln/detail/CVE-2024-45338 
-│                             │                  ├ [8] : https://pkg.go.dev/vuln/GO-2024-3333 
-│                             │                  ├ [9] : https://security.netapp.com/advisory/ntap-20250221-0001/ 
-│                             │                  ├ [10]: https://ubuntu.com/security/notices/USN-7197-1 
-│                             │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2024-45338 
-│                             ├ PublishedDate   : 2024-12-18T21:15:08.173Z 
-│                             ╰ LastModifiedDate: 2025-02-21T18:15:17.717Z 
+│                             ├ Title           : Matching of hosts against proxy patterns can improperly treat
+│                             │                    an IPv6  ... 
+│                             ├ Description     : Matching of hosts against proxy patterns can improperly treat
+│                             │                    an IPv6 zone ID as a hostname component. For example, when
+│                             │                   the NO_PROXY environment variable is set to "*.example.com",
+│                             │                   a request to "[::1%25.example.com]:80` will incorrectly match
+│                             │                    and not be proxied. 
+│                             ├ Severity        : MEDIUM 
+│                             ├ VendorSeverity   ─ ghsa: 2 
+│                             ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/03/07/2 
+│                             │                  ├ [1]: https://go-review.googlesource.com/q/project:net 
+│                             │                  ├ [2]: https://go.dev/cl/654697 
+│                             │                  ├ [3]: https://go.dev/issue/71984 
+│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-22870 
+│                             │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-3503 
+│                             ├ PublishedDate   : 2025-03-12T19:15:38.31Z 
+│                             ╰ LastModifiedDate: 2025-03-12T19:15:38.31Z 
+├ [4] ╭ Target         : usr/bin/dive 
+│     ├ Class          : lang-pkgs 
+│     ├ Type           : gobinary 
+│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-45338 
+│                       │     ├ PkgID           : golang.org/x/net@v0.28.0 
+│                       │     ├ PkgName         : golang.org/x/net 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.28.0 
+│                       │     │                  ╰ UID : 2fe24708cb92b4b0 
+│                       │     ├ InstalledVersion: v0.28.0 
+│                       │     ├ FixedVersion    : 0.33.0 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:a8952374dfe1896ef57a52ca794752128b06d5f5294d6
+│                       │     │                  │         df5b9da8c62a0502a65 
+│                       │     │                  ╰ DiffID: sha256:dc39c9f0495439f157422d33f44a5090a729faeb75e74
+│                       │     │                            db0cee16cf9a9de02c6 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45338 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Go 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Ago 
+│                       │     ├ Title           : golang.org/x/net/html: Non-linear parsing of case-insensitive
+│                       │     │                    content in golang.org/x/net/html 
+│                       │     ├ Description     : An attacker can craft an input to the Parse functions that
+│                       │     │                   would be processed non-linearly with respect to its length,
+│                       │     │                   resulting in extremely slow parsing. This could cause a
+│                       │     │                   denial of service. 
+│                       │     ├ Severity        : HIGH 
+│                       │     ├ CweIDs           ─ [0]: CWE-1333 
+│                       │     ├ VendorSeverity   ╭ amazon     : 3 
+│                       │     │                  ├ azure      : 3 
+│                       │     │                  ├ cbl-mariner: 3 
+│                       │     │                  ├ ghsa       : 3 
+│                       │     │                  ├ redhat     : 3 
+│                       │     │                  ╰ ubuntu     : 2 
+│                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                       │     │                           │           A:H 
+│                       │     │                           ╰ V3Score : 7.5 
+│                       │     ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2024-45338 
+│                       │     │                  ├ [1] : https://cs.opensource.google/go/x/net 
+│                       │     │                  ├ [2] : https://github.com/golang/go/issues/70906 
+│                       │     │                  ├ [3] : https://go-review.googlesource.com/c/net/+/637536 
+│                       │     │                  ├ [4] : https://go.dev/cl/637536 
+│                       │     │                  ├ [5] : https://go.dev/issue/70906 
+│                       │     │                  ├ [6] : https://groups.google.com/g/golang-announce/c/wSCRmFnN
+│                       │     │                  │       mPA/m/Lvcd0mRMAwAJ 
+│                       │     │                  ├ [7] : https://nvd.nist.gov/vuln/detail/CVE-2024-45338 
+│                       │     │                  ├ [8] : https://pkg.go.dev/vuln/GO-2024-3333 
+│                       │     │                  ├ [9] : https://security.netapp.com/advisory/ntap-20250221-0001/ 
+│                       │     │                  ├ [10]: https://ubuntu.com/security/notices/USN-7197-1 
+│                       │     │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2024-45338 
+│                       │     ├ PublishedDate   : 2024-12-18T21:15:08.173Z 
+│                       │     ╰ LastModifiedDate: 2025-02-21T18:15:17.717Z 
+│                       ╰ [1] ╭ VulnerabilityID : CVE-2025-22870 
+│                             ├ PkgID           : golang.org/x/net@v0.28.0 
+│                             ├ PkgName         : golang.org/x/net 
+│                             ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.28.0 
+│                             │                  ╰ UID : 2fe24708cb92b4b0 
+│                             ├ InstalledVersion: v0.28.0 
+│                             ├ FixedVersion    : 0.36.0 
+│                             ├ Status          : fixed 
+│                             ├ Layer            ╭ Digest: sha256:a8952374dfe1896ef57a52ca794752128b06d5f5294d6
+│                             │                  │         df5b9da8c62a0502a65 
+│                             │                  ╰ DiffID: sha256:dc39c9f0495439f157422d33f44a5090a729faeb75e74
+│                             │                            db0cee16cf9a9de02c6 
+│                             ├ SeveritySource  : ghsa 
+│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
+│                             ├ DataSource       ╭ ID  : ghsa 
+│                             │                  ├ Name: GitHub Security Advisory Go 
+│                             │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                             │                          osystem%3Ago 
+│                             ├ Title           : Matching of hosts against proxy patterns can improperly treat
+│                             │                    an IPv6  ... 
+│                             ├ Description     : Matching of hosts against proxy patterns can improperly treat
+│                             │                    an IPv6 zone ID as a hostname component. For example, when
+│                             │                   the NO_PROXY environment variable is set to "*.example.com",
+│                             │                   a request to "[::1%25.example.com]:80` will incorrectly match
+│                             │                    and not be proxied. 
+│                             ├ Severity        : MEDIUM 
+│                             ├ VendorSeverity   ─ ghsa: 2 
+│                             ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/03/07/2 
+│                             │                  ├ [1]: https://go-review.googlesource.com/q/project:net 
+│                             │                  ├ [2]: https://go.dev/cl/654697 
+│                             │                  ├ [3]: https://go.dev/issue/71984 
+│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-22870 
+│                             │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-3503 
+│                             ├ PublishedDate   : 2025-03-12T19:15:38.31Z 
+│                             ╰ LastModifiedDate: 2025-03-12T19:15:38.31Z 
 ├ [5] ╭ Target: usr/bin/docker 
 │     ├ Class : lang-pkgs 
 │     ╰ Type  : gobinary 
 ├ [6] ╭ Target         : usr/bin/helm 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
-│     ╰ Vulnerabilities ─ [0] ╭ VulnerabilityID : CVE-2025-22866 
+│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2025-22870 
+│                       │     ├ PkgID           : golang.org/x/net@v0.33.0 
+│                       │     ├ PkgName         : golang.org/x/net 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.33.0 
+│                       │     │                  ╰ UID : 5f4e3d9bb22dafc1 
+│                       │     ├ InstalledVersion: v0.33.0 
+│                       │     ├ FixedVersion    : 0.36.0 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:a8952374dfe1896ef57a52ca794752128b06d5f5294d6
+│                       │     │                  │         df5b9da8c62a0502a65 
+│                       │     │                  ╰ DiffID: sha256:dc39c9f0495439f157422d33f44a5090a729faeb75e74
+│                       │     │                            db0cee16cf9a9de02c6 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Go 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Ago 
+│                       │     ├ Title           : Matching of hosts against proxy patterns can improperly treat
+│                       │     │                    an IPv6  ... 
+│                       │     ├ Description     : Matching of hosts against proxy patterns can improperly treat
+│                       │     │                    an IPv6 zone ID as a hostname component. For example, when
+│                       │     │                   the NO_PROXY environment variable is set to "*.example.com",
+│                       │     │                   a request to "[::1%25.example.com]:80` will incorrectly match
+│                       │     │                    and not be proxied. 
+│                       │     ├ Severity        : MEDIUM 
+│                       │     ├ VendorSeverity   ─ ghsa: 2 
+│                       │     ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/03/07/2 
+│                       │     │                  ├ [1]: https://go-review.googlesource.com/q/project:net 
+│                       │     │                  ├ [2]: https://go.dev/cl/654697 
+│                       │     │                  ├ [3]: https://go.dev/issue/71984 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-22870 
+│                       │     │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-3503 
+│                       │     ├ PublishedDate   : 2025-03-12T19:15:38.31Z 
+│                       │     ╰ LastModifiedDate: 2025-03-12T19:15:38.31Z 
+│                       ╰ [1] ╭ VulnerabilityID : CVE-2025-22866 
 │                             ├ PkgID           : stdlib@v1.23.5 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.5 
@@ -362,7 +502,42 @@
 │                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-27144 
 │                       │     ├ PublishedDate   : 2025-02-24T23:15:11.427Z 
 │                       │     ╰ LastModifiedDate: 2025-02-24T23:15:11.427Z 
-│                       ├ [1] ╭ VulnerabilityID : CVE-2024-45336 
+│                       ├ [1] ╭ VulnerabilityID : CVE-2025-22870 
+│                       │     ├ PkgID           : golang.org/x/net@v0.34.0 
+│                       │     ├ PkgName         : golang.org/x/net 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.34.0 
+│                       │     │                  ╰ UID : 4377ca837bf6d242 
+│                       │     ├ InstalledVersion: v0.34.0 
+│                       │     ├ FixedVersion    : 0.36.0 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:a8952374dfe1896ef57a52ca794752128b06d5f5294d6
+│                       │     │                  │         df5b9da8c62a0502a65 
+│                       │     │                  ╰ DiffID: sha256:dc39c9f0495439f157422d33f44a5090a729faeb75e74
+│                       │     │                            db0cee16cf9a9de02c6 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Go 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Ago 
+│                       │     ├ Title           : Matching of hosts against proxy patterns can improperly treat
+│                       │     │                    an IPv6  ... 
+│                       │     ├ Description     : Matching of hosts against proxy patterns can improperly treat
+│                       │     │                    an IPv6 zone ID as a hostname component. For example, when
+│                       │     │                   the NO_PROXY environment variable is set to "*.example.com",
+│                       │     │                   a request to "[::1%25.example.com]:80` will incorrectly match
+│                       │     │                    and not be proxied. 
+│                       │     ├ Severity        : MEDIUM 
+│                       │     ├ VendorSeverity   ─ ghsa: 2 
+│                       │     ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/03/07/2 
+│                       │     │                  ├ [1]: https://go-review.googlesource.com/q/project:net 
+│                       │     │                  ├ [2]: https://go.dev/cl/654697 
+│                       │     │                  ├ [3]: https://go.dev/issue/71984 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-22870 
+│                       │     │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-3503 
+│                       │     ├ PublishedDate   : 2025-03-12T19:15:38.31Z 
+│                       │     ╰ LastModifiedDate: 2025-03-12T19:15:38.31Z 
+│                       ├ [2] ╭ VulnerabilityID : CVE-2024-45336 
 │                       │     ├ PkgID           : stdlib@v1.23.4 
 │                       │     ├ PkgName         : stdlib 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.4 
@@ -413,7 +588,7 @@
 │                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-45336 
 │                       │     ├ PublishedDate   : 2025-01-28T02:15:28.807Z 
 │                       │     ╰ LastModifiedDate: 2025-02-21T18:15:17.4Z 
-│                       ├ [2] ╭ VulnerabilityID : CVE-2024-45341 
+│                       ├ [3] ╭ VulnerabilityID : CVE-2024-45341 
 │                       │     ├ PkgID           : stdlib@v1.23.4 
 │                       │     ├ PkgName         : stdlib 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.4 
@@ -460,7 +635,7 @@
 │                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-45341 
 │                       │     ├ PublishedDate   : 2025-01-28T02:15:29.147Z 
 │                       │     ╰ LastModifiedDate: 2025-02-21T18:15:17.96Z 
-│                       ╰ [3] ╭ VulnerabilityID : CVE-2025-22866 
+│                       ╰ [4] ╭ VulnerabilityID : CVE-2025-22866 
 │                             ├ PkgID           : stdlib@v1.23.4 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.4 
@@ -561,62 +736,132 @@
 │                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-27144 
 │                       │     ├ PublishedDate   : 2025-02-24T23:15:11.427Z 
 │                       │     ╰ LastModifiedDate: 2025-02-24T23:15:11.427Z 
-│                       ╰ [1] ╭ VulnerabilityID : CVE-2025-27144 
-│                             ├ PkgID           : github.com/go-jose/go-jose/v4@v4.0.4 
-│                             ├ PkgName         : github.com/go-jose/go-jose/v4 
-│                             ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/go-jose/go-jose/v4@v4.0.4 
-│                             │                  ╰ UID : d54c479ca4e279a6 
-│                             ├ InstalledVersion: v4.0.4 
-│                             ├ FixedVersion    : 4.0.5 
+│                       ├ [1] ╭ VulnerabilityID : CVE-2025-27144 
+│                       │     ├ PkgID           : github.com/go-jose/go-jose/v4@v4.0.4 
+│                       │     ├ PkgName         : github.com/go-jose/go-jose/v4 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/go-jose/go-jose/v4@v4.0.4 
+│                       │     │                  ╰ UID : d54c479ca4e279a6 
+│                       │     ├ InstalledVersion: v4.0.4 
+│                       │     ├ FixedVersion    : 4.0.5 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:a8952374dfe1896ef57a52ca794752128b06d5f5294d6
+│                       │     │                  │         df5b9da8c62a0502a65 
+│                       │     │                  ╰ DiffID: sha256:dc39c9f0495439f157422d33f44a5090a729faeb75e74
+│                       │     │                            db0cee16cf9a9de02c6 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-27144 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Go 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Ago 
+│                       │     ├ Title           : go-jose: Go JOSE's Parsing Vulnerable to Denial of Service 
+│                       │     ├ Description     : Go JOSE provides an implementation of the Javascript Object
+│                       │     │                   Signing and Encryption set of standards in Go, including
+│                       │     │                   support for JSON Web Encryption (JWE), JSON Web Signature
+│                       │     │                   (JWS), and JSON Web Token (JWT) standards. In versions on the
+│                       │     │                    4.x branch prior to version 4.0.5, when parsing compact JWS
+│                       │     │                   or JWE input, Go JOSE could use excessive memory. The code
+│                       │     │                   used strings.Split(token, ".") to split JWT tokens, which is
+│                       │     │                   vulnerable to excessive memory consumption when processing
+│                       │     │                   maliciously crafted tokens with a large number of `.`
+│                       │     │                   characters.  An attacker could exploit this by sending
+│                       │     │                   numerous malformed tokens, leading to memory exhaustion and a
+│                       │     │                    Denial of Service. Version 4.0.5 fixes this issue. As a
+│                       │     │                   workaround, applications could pre-validate that payloads
+│                       │     │                   passed to Go JOSE do not contain an excessive number of `.`
+│                       │     │                   characters. 
+│                       │     ├ Severity        : MEDIUM 
+│                       │     ├ CweIDs           ─ [0]: CWE-770 
+│                       │     ├ VendorSeverity   ╭ cbl-mariner: 2 
+│                       │     │                  ├ ghsa       : 2 
+│                       │     │                  ╰ redhat     : 2 
+│                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                       │     │                           │           A:H 
+│                       │     │                           ╰ V3Score : 7.5 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-27144 
+│                       │     │                  ├ [1]: https://github.com/go-jose/go-jose 
+│                       │     │                  ├ [2]: https://github.com/go-jose/go-jose/commit/99b346cec4e86
+│                       │     │                  │      d102284642c5dcbe9bb0cacfc22 
+│                       │     │                  ├ [3]: https://github.com/go-jose/go-jose/releases/tag/v4.0.5 
+│                       │     │                  ├ [4]: https://github.com/go-jose/go-jose/security/advisories/
+│                       │     │                  │      GHSA-c6gw-w398-hv78 
+│                       │     │                  ├ [5]: https://github.com/golang/go/issues/71490 
+│                       │     │                  ├ [6]: https://go.dev/issue/71490 
+│                       │     │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2025-27144 
+│                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-27144 
+│                       │     ├ PublishedDate   : 2025-02-24T23:15:11.427Z 
+│                       │     ╰ LastModifiedDate: 2025-02-24T23:15:11.427Z 
+│                       ╰ [2] ╭ VulnerabilityID : CVE-2025-22870 
+│                             ├ PkgID           : golang.org/x/net@v0.34.0 
+│                             ├ PkgName         : golang.org/x/net 
+│                             ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.34.0 
+│                             │                  ╰ UID : 2b031e2b2a7076df 
+│                             ├ InstalledVersion: v0.34.0 
+│                             ├ FixedVersion    : 0.36.0 
 │                             ├ Status          : fixed 
 │                             ├ Layer            ╭ Digest: sha256:a8952374dfe1896ef57a52ca794752128b06d5f5294d6
 │                             │                  │         df5b9da8c62a0502a65 
 │                             │                  ╰ DiffID: sha256:dc39c9f0495439f157422d33f44a5090a729faeb75e74
 │                             │                            db0cee16cf9a9de02c6 
 │                             ├ SeveritySource  : ghsa 
-│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-27144 
+│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
 │                             ├ DataSource       ╭ ID  : ghsa 
 │                             │                  ├ Name: GitHub Security Advisory Go 
 │                             │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
 │                             │                          osystem%3Ago 
-│                             ├ Title           : go-jose: Go JOSE's Parsing Vulnerable to Denial of Service 
-│                             ├ Description     : Go JOSE provides an implementation of the Javascript Object
-│                             │                   Signing and Encryption set of standards in Go, including
-│                             │                   support for JSON Web Encryption (JWE), JSON Web Signature
-│                             │                   (JWS), and JSON Web Token (JWT) standards. In versions on the
-│                             │                    4.x branch prior to version 4.0.5, when parsing compact JWS
-│                             │                   or JWE input, Go JOSE could use excessive memory. The code
-│                             │                   used strings.Split(token, ".") to split JWT tokens, which is
-│                             │                   vulnerable to excessive memory consumption when processing
-│                             │                   maliciously crafted tokens with a large number of `.`
-│                             │                   characters.  An attacker could exploit this by sending
-│                             │                   numerous malformed tokens, leading to memory exhaustion and a
-│                             │                    Denial of Service. Version 4.0.5 fixes this issue. As a
-│                             │                   workaround, applications could pre-validate that payloads
-│                             │                   passed to Go JOSE do not contain an excessive number of `.`
-│                             │                   characters. 
+│                             ├ Title           : Matching of hosts against proxy patterns can improperly treat
+│                             │                    an IPv6  ... 
+│                             ├ Description     : Matching of hosts against proxy patterns can improperly treat
+│                             │                    an IPv6 zone ID as a hostname component. For example, when
+│                             │                   the NO_PROXY environment variable is set to "*.example.com",
+│                             │                   a request to "[::1%25.example.com]:80` will incorrectly match
+│                             │                    and not be proxied. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ CweIDs           ─ [0]: CWE-770 
-│                             ├ VendorSeverity   ╭ cbl-mariner: 2 
-│                             │                  ├ ghsa       : 2 
-│                             │                  ╰ redhat     : 2 
-│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
-│                             │                           │           A:H 
-│                             │                           ╰ V3Score : 7.5 
-│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-27144 
-│                             │                  ├ [1]: https://github.com/go-jose/go-jose 
-│                             │                  ├ [2]: https://github.com/go-jose/go-jose/commit/99b346cec4e86
-│                             │                  │      d102284642c5dcbe9bb0cacfc22 
-│                             │                  ├ [3]: https://github.com/go-jose/go-jose/releases/tag/v4.0.5 
-│                             │                  ├ [4]: https://github.com/go-jose/go-jose/security/advisories/
-│                             │                  │      GHSA-c6gw-w398-hv78 
-│                             │                  ├ [5]: https://github.com/golang/go/issues/71490 
-│                             │                  ├ [6]: https://go.dev/issue/71490 
-│                             │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2025-27144 
-│                             │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-27144 
-│                             ├ PublishedDate   : 2025-02-24T23:15:11.427Z 
-│                             ╰ LastModifiedDate: 2025-02-24T23:15:11.427Z 
-╰ [9] ╭ Target: usr/bin/syft 
-      ├ Class : lang-pkgs 
-      ╰ Type  : gobinary 
+│                             ├ VendorSeverity   ─ ghsa: 2 
+│                             ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/03/07/2 
+│                             │                  ├ [1]: https://go-review.googlesource.com/q/project:net 
+│                             │                  ├ [2]: https://go.dev/cl/654697 
+│                             │                  ├ [3]: https://go.dev/issue/71984 
+│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-22870 
+│                             │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-3503 
+│                             ├ PublishedDate   : 2025-03-12T19:15:38.31Z 
+│                             ╰ LastModifiedDate: 2025-03-12T19:15:38.31Z 
+╰ [9] ╭ Target         : usr/bin/syft 
+      ├ Class          : lang-pkgs 
+      ├ Type           : gobinary 
+      ╰ Vulnerabilities ─ [0] ╭ VulnerabilityID : CVE-2025-22870 
+                              ├ PkgID           : golang.org/x/net@v0.35.0 
+                              ├ PkgName         : golang.org/x/net 
+                              ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.35.0 
+                              │                  ╰ UID : 7d2d5895ed519e74 
+                              ├ InstalledVersion: v0.35.0 
+                              ├ FixedVersion    : 0.36.0 
+                              ├ Status          : fixed 
+                              ├ Layer            ╭ Digest: sha256:a8952374dfe1896ef57a52ca794752128b06d5f5294d6
+                              │                  │         df5b9da8c62a0502a65 
+                              │                  ╰ DiffID: sha256:dc39c9f0495439f157422d33f44a5090a729faeb75e74
+                              │                            db0cee16cf9a9de02c6 
+                              ├ SeveritySource  : ghsa 
+                              ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
+                              ├ DataSource       ╭ ID  : ghsa 
+                              │                  ├ Name: GitHub Security Advisory Go 
+                              │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+                              │                          osystem%3Ago 
+                              ├ Title           : Matching of hosts against proxy patterns can improperly treat
+                              │                    an IPv6  ... 
+                              ├ Description     : Matching of hosts against proxy patterns can improperly treat
+                              │                    an IPv6 zone ID as a hostname component. For example, when
+                              │                   the NO_PROXY environment variable is set to "*.example.com",
+                              │                   a request to "[::1%25.example.com]:80` will incorrectly match
+                              │                    and not be proxied. 
+                              ├ Severity        : MEDIUM 
+                              ├ VendorSeverity   ─ ghsa: 2 
+                              ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/03/07/2 
+                              │                  ├ [1]: https://go-review.googlesource.com/q/project:net 
+                              │                  ├ [2]: https://go.dev/cl/654697 
+                              │                  ├ [3]: https://go.dev/issue/71984 
+                              │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-22870 
+                              │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-3503 
+                              ├ PublishedDate   : 2025-03-12T19:15:38.31Z 
+                              ╰ LastModifiedDate: 2025-03-12T19:15:38.31Z 
 ````
