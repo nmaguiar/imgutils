@@ -55,7 +55,42 @@
                         │     │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2024-45338 
                         │     ├ PublishedDate   : 2024-12-18T21:15:08.173Z 
                         │     ╰ LastModifiedDate: 2025-02-21T18:15:17.717Z 
-                        ├ [1] ╭ VulnerabilityID : CVE-2024-45336 
+                        ├ [1] ╭ VulnerabilityID : CVE-2025-22870 
+                        │     ├ PkgID           : golang.org/x/net@v0.30.0 
+                        │     ├ PkgName         : golang.org/x/net 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.30.0 
+                        │     │                  ╰ UID : 9ce1984a5172bc7c 
+                        │     ├ InstalledVersion: v0.30.0 
+                        │     ├ FixedVersion    : 0.36.0 
+                        │     ├ Status          : fixed 
+                        │     ├ Layer            ╭ Digest: sha256:71ce658a8f6a1141a2887f73761a6cd065fcde02c1ac6
+                        │     │                  │         1f35e1924b100701ff6 
+                        │     │                  ╰ DiffID: sha256:7e68c62174cb5713c34000fe9221e1274de5182cd2ee4
+                        │     │                            b5e32408c56289d1815 
+                        │     ├ SeveritySource  : ghsa 
+                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
+                        │     ├ DataSource       ╭ ID  : ghsa 
+                        │     │                  ├ Name: GitHub Security Advisory Go 
+                        │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+                        │     │                          osystem%3Ago 
+                        │     ├ Title           : Matching of hosts against proxy patterns can improperly treat
+                        │     │                    an IPv6  ... 
+                        │     ├ Description     : Matching of hosts against proxy patterns can improperly treat
+                        │     │                    an IPv6 zone ID as a hostname component. For example, when
+                        │     │                   the NO_PROXY environment variable is set to "*.example.com",
+                        │     │                   a request to "[::1%25.example.com]:80` will incorrectly match
+                        │     │                    and not be proxied. 
+                        │     ├ Severity        : MEDIUM 
+                        │     ├ VendorSeverity   ─ ghsa: 2 
+                        │     ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/03/07/2 
+                        │     │                  ├ [1]: https://go-review.googlesource.com/q/project:net 
+                        │     │                  ├ [2]: https://go.dev/cl/654697 
+                        │     │                  ├ [3]: https://go.dev/issue/71984 
+                        │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-22870 
+                        │     │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-3503 
+                        │     ├ PublishedDate   : 2025-03-12T19:15:38.31Z 
+                        │     ╰ LastModifiedDate: 2025-03-12T19:15:38.31Z 
+                        ├ [2] ╭ VulnerabilityID : CVE-2024-45336 
                         │     ├ PkgID           : stdlib@v1.23.3 
                         │     ├ PkgName         : stdlib 
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.3 
@@ -106,7 +141,7 @@
                         │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-45336 
                         │     ├ PublishedDate   : 2025-01-28T02:15:28.807Z 
                         │     ╰ LastModifiedDate: 2025-02-21T18:15:17.4Z 
-                        ├ [2] ╭ VulnerabilityID : CVE-2024-45341 
+                        ├ [3] ╭ VulnerabilityID : CVE-2024-45341 
                         │     ├ PkgID           : stdlib@v1.23.3 
                         │     ├ PkgName         : stdlib 
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.3 
@@ -153,7 +188,7 @@
                         │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-45341 
                         │     ├ PublishedDate   : 2025-01-28T02:15:29.147Z 
                         │     ╰ LastModifiedDate: 2025-02-21T18:15:17.96Z 
-                        ╰ [3] ╭ VulnerabilityID : CVE-2025-22866 
+                        ╰ [4] ╭ VulnerabilityID : CVE-2025-22866 
                               ├ PkgID           : stdlib@v1.23.3 
                               ├ PkgName         : stdlib 
                               ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.3 
