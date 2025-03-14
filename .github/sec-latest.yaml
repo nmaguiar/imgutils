@@ -146,6 +146,38 @@
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
     LastModifiedDate: '2025-02-21T18:15:17.717Z'
+  - VulnerabilityID: CVE-2025-22870
+    PkgID: golang.org/x/net@v0.30.0
+    PkgName: golang.org/x/net
+    PkgIdentifier:
+      PURL: pkg:golang/golang.org/x/net@v0.30.0
+      UID: 9ce1984a5172bc7c
+    InstalledVersion: v0.30.0
+    FixedVersion: 0.36.0
+    Status: fixed
+    Layer:
+      Digest: sha256:944ebc0f42de4b0f3d92786acbc0a1e91845ffd44876edffe146de29385657d3
+      DiffID: sha256:a1db74b75b79e58305ec1e80725712705f0865aaf183ae5a09e15ec875c8f2fb
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22870
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: Matching of hosts against proxy patterns can improperly treat an IPv6  ...
+    Description: Matching of hosts against proxy patterns can improperly treat an IPv6 zone ID as a hostname component. For example, when the NO_PROXY environment variable is set to "*.example.com", a request to "[::1%25.example.com]:80` will incorrectly match and not be proxied.
+    Severity: MEDIUM
+    VendorSeverity:
+      ghsa: 2
+    References:
+    - http://www.openwall.com/lists/oss-security/2025/03/07/2
+    - https://go-review.googlesource.com/q/project:net
+    - https://go.dev/cl/654697
+    - https://go.dev/issue/71984
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-22870
+    - https://pkg.go.dev/vuln/GO-2025-3503
+    PublishedDate: '2025-03-12T19:15:38.31Z'
+    LastModifiedDate: '2025-03-12T19:15:38.31Z'
   - VulnerabilityID: CVE-2024-45336
     PkgID: stdlib@v1.23.3
     PkgName: stdlib
@@ -328,6 +360,38 @@
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
     LastModifiedDate: '2025-02-21T18:15:17.717Z'
+  - VulnerabilityID: CVE-2025-22870
+    PkgID: golang.org/x/net@v0.30.0
+    PkgName: golang.org/x/net
+    PkgIdentifier:
+      PURL: pkg:golang/golang.org/x/net@v0.30.0
+      UID: 9c86bc80f39c3b9e
+    InstalledVersion: v0.30.0
+    FixedVersion: 0.36.0
+    Status: fixed
+    Layer:
+      Digest: sha256:944ebc0f42de4b0f3d92786acbc0a1e91845ffd44876edffe146de29385657d3
+      DiffID: sha256:a1db74b75b79e58305ec1e80725712705f0865aaf183ae5a09e15ec875c8f2fb
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22870
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: Matching of hosts against proxy patterns can improperly treat an IPv6  ...
+    Description: Matching of hosts against proxy patterns can improperly treat an IPv6 zone ID as a hostname component. For example, when the NO_PROXY environment variable is set to "*.example.com", a request to "[::1%25.example.com]:80` will incorrectly match and not be proxied.
+    Severity: MEDIUM
+    VendorSeverity:
+      ghsa: 2
+    References:
+    - http://www.openwall.com/lists/oss-security/2025/03/07/2
+    - https://go-review.googlesource.com/q/project:net
+    - https://go.dev/cl/654697
+    - https://go.dev/issue/71984
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-22870
+    - https://pkg.go.dev/vuln/GO-2025-3503
+    PublishedDate: '2025-03-12T19:15:38.31Z'
+    LastModifiedDate: '2025-03-12T19:15:38.31Z'
 - Target: usr/bin/dive
   Class: lang-pkgs
   Type: gobinary
@@ -381,6 +445,38 @@
     - https://www.cve.org/CVERecord?id=CVE-2024-45338
     PublishedDate: '2024-12-18T21:15:08.173Z'
     LastModifiedDate: '2025-02-21T18:15:17.717Z'
+  - VulnerabilityID: CVE-2025-22870
+    PkgID: golang.org/x/net@v0.28.0
+    PkgName: golang.org/x/net
+    PkgIdentifier:
+      PURL: pkg:golang/golang.org/x/net@v0.28.0
+      UID: 2fe24708cb92b4b0
+    InstalledVersion: v0.28.0
+    FixedVersion: 0.36.0
+    Status: fixed
+    Layer:
+      Digest: sha256:944ebc0f42de4b0f3d92786acbc0a1e91845ffd44876edffe146de29385657d3
+      DiffID: sha256:a1db74b75b79e58305ec1e80725712705f0865aaf183ae5a09e15ec875c8f2fb
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22870
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: Matching of hosts against proxy patterns can improperly treat an IPv6  ...
+    Description: Matching of hosts against proxy patterns can improperly treat an IPv6 zone ID as a hostname component. For example, when the NO_PROXY environment variable is set to "*.example.com", a request to "[::1%25.example.com]:80` will incorrectly match and not be proxied.
+    Severity: MEDIUM
+    VendorSeverity:
+      ghsa: 2
+    References:
+    - http://www.openwall.com/lists/oss-security/2025/03/07/2
+    - https://go-review.googlesource.com/q/project:net
+    - https://go.dev/cl/654697
+    - https://go.dev/issue/71984
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-22870
+    - https://pkg.go.dev/vuln/GO-2025-3503
+    PublishedDate: '2025-03-12T19:15:38.31Z'
+    LastModifiedDate: '2025-03-12T19:15:38.31Z'
 - Target: usr/bin/docker
   Class: lang-pkgs
   Type: gobinary
@@ -388,6 +484,38 @@
   Class: lang-pkgs
   Type: gobinary
   Vulnerabilities:
+  - VulnerabilityID: CVE-2025-22870
+    PkgID: golang.org/x/net@v0.33.0
+    PkgName: golang.org/x/net
+    PkgIdentifier:
+      PURL: pkg:golang/golang.org/x/net@v0.33.0
+      UID: 5f4e3d9bb22dafc1
+    InstalledVersion: v0.33.0
+    FixedVersion: 0.36.0
+    Status: fixed
+    Layer:
+      Digest: sha256:944ebc0f42de4b0f3d92786acbc0a1e91845ffd44876edffe146de29385657d3
+      DiffID: sha256:a1db74b75b79e58305ec1e80725712705f0865aaf183ae5a09e15ec875c8f2fb
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22870
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: Matching of hosts against proxy patterns can improperly treat an IPv6  ...
+    Description: Matching of hosts against proxy patterns can improperly treat an IPv6 zone ID as a hostname component. For example, when the NO_PROXY environment variable is set to "*.example.com", a request to "[::1%25.example.com]:80` will incorrectly match and not be proxied.
+    Severity: MEDIUM
+    VendorSeverity:
+      ghsa: 2
+    References:
+    - http://www.openwall.com/lists/oss-security/2025/03/07/2
+    - https://go-review.googlesource.com/q/project:net
+    - https://go.dev/cl/654697
+    - https://go.dev/issue/71984
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-22870
+    - https://pkg.go.dev/vuln/GO-2025-3503
+    PublishedDate: '2025-03-12T19:15:38.31Z'
+    LastModifiedDate: '2025-03-12T19:15:38.31Z'
   - VulnerabilityID: CVE-2025-22866
     PkgID: stdlib@v1.23.5
     PkgName: stdlib
@@ -476,6 +604,38 @@
     - https://www.cve.org/CVERecord?id=CVE-2025-27144
     PublishedDate: '2025-02-24T23:15:11.427Z'
     LastModifiedDate: '2025-02-24T23:15:11.427Z'
+  - VulnerabilityID: CVE-2025-22870
+    PkgID: golang.org/x/net@v0.34.0
+    PkgName: golang.org/x/net
+    PkgIdentifier:
+      PURL: pkg:golang/golang.org/x/net@v0.34.0
+      UID: 4377ca837bf6d242
+    InstalledVersion: v0.34.0
+    FixedVersion: 0.36.0
+    Status: fixed
+    Layer:
+      Digest: sha256:944ebc0f42de4b0f3d92786acbc0a1e91845ffd44876edffe146de29385657d3
+      DiffID: sha256:a1db74b75b79e58305ec1e80725712705f0865aaf183ae5a09e15ec875c8f2fb
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22870
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: Matching of hosts against proxy patterns can improperly treat an IPv6  ...
+    Description: Matching of hosts against proxy patterns can improperly treat an IPv6 zone ID as a hostname component. For example, when the NO_PROXY environment variable is set to "*.example.com", a request to "[::1%25.example.com]:80` will incorrectly match and not be proxied.
+    Severity: MEDIUM
+    VendorSeverity:
+      ghsa: 2
+    References:
+    - http://www.openwall.com/lists/oss-security/2025/03/07/2
+    - https://go-review.googlesource.com/q/project:net
+    - https://go.dev/cl/654697
+    - https://go.dev/issue/71984
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-22870
+    - https://pkg.go.dev/vuln/GO-2025-3503
+    PublishedDate: '2025-03-12T19:15:38.31Z'
+    LastModifiedDate: '2025-03-12T19:15:38.31Z'
   - VulnerabilityID: CVE-2024-45336
     PkgID: stdlib@v1.23.4
     PkgName: stdlib
@@ -695,10 +855,74 @@
     - https://www.cve.org/CVERecord?id=CVE-2025-27144
     PublishedDate: '2025-02-24T23:15:11.427Z'
     LastModifiedDate: '2025-02-24T23:15:11.427Z'
+  - VulnerabilityID: CVE-2025-22870
+    PkgID: golang.org/x/net@v0.34.0
+    PkgName: golang.org/x/net
+    PkgIdentifier:
+      PURL: pkg:golang/golang.org/x/net@v0.34.0
+      UID: 2b031e2b2a7076df
+    InstalledVersion: v0.34.0
+    FixedVersion: 0.36.0
+    Status: fixed
+    Layer:
+      Digest: sha256:944ebc0f42de4b0f3d92786acbc0a1e91845ffd44876edffe146de29385657d3
+      DiffID: sha256:a1db74b75b79e58305ec1e80725712705f0865aaf183ae5a09e15ec875c8f2fb
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22870
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: Matching of hosts against proxy patterns can improperly treat an IPv6  ...
+    Description: Matching of hosts against proxy patterns can improperly treat an IPv6 zone ID as a hostname component. For example, when the NO_PROXY environment variable is set to "*.example.com", a request to "[::1%25.example.com]:80` will incorrectly match and not be proxied.
+    Severity: MEDIUM
+    VendorSeverity:
+      ghsa: 2
+    References:
+    - http://www.openwall.com/lists/oss-security/2025/03/07/2
+    - https://go-review.googlesource.com/q/project:net
+    - https://go.dev/cl/654697
+    - https://go.dev/issue/71984
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-22870
+    - https://pkg.go.dev/vuln/GO-2025-3503
+    PublishedDate: '2025-03-12T19:15:38.31Z'
+    LastModifiedDate: '2025-03-12T19:15:38.31Z'
 - Target: usr/bin/syft
   Class: lang-pkgs
   Type: gobinary
   Vulnerabilities:
+  - VulnerabilityID: CVE-2025-22870
+    PkgID: golang.org/x/net@v0.34.0
+    PkgName: golang.org/x/net
+    PkgIdentifier:
+      PURL: pkg:golang/golang.org/x/net@v0.34.0
+      UID: 316a6e27c1e7b7ba
+    InstalledVersion: v0.34.0
+    FixedVersion: 0.36.0
+    Status: fixed
+    Layer:
+      Digest: sha256:944ebc0f42de4b0f3d92786acbc0a1e91845ffd44876edffe146de29385657d3
+      DiffID: sha256:a1db74b75b79e58305ec1e80725712705f0865aaf183ae5a09e15ec875c8f2fb
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22870
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: Matching of hosts against proxy patterns can improperly treat an IPv6  ...
+    Description: Matching of hosts against proxy patterns can improperly treat an IPv6 zone ID as a hostname component. For example, when the NO_PROXY environment variable is set to "*.example.com", a request to "[::1%25.example.com]:80` will incorrectly match and not be proxied.
+    Severity: MEDIUM
+    VendorSeverity:
+      ghsa: 2
+    References:
+    - http://www.openwall.com/lists/oss-security/2025/03/07/2
+    - https://go-review.googlesource.com/q/project:net
+    - https://go.dev/cl/654697
+    - https://go.dev/issue/71984
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-22870
+    - https://pkg.go.dev/vuln/GO-2025-3503
+    PublishedDate: '2025-03-12T19:15:38.31Z'
+    LastModifiedDate: '2025-03-12T19:15:38.31Z'
   - VulnerabilityID: CVE-2024-45336
     PkgID: stdlib@v1.23.4
     PkgName: stdlib
