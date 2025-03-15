@@ -73,21 +73,27 @@
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
                         │     │                          osystem%3Ago 
-                        │     ├ Title           : Matching of hosts against proxy patterns can improperly treat
-                        │     │                    an IPv6  ... 
+                        │     ├ Title           : golang.org/x/net/http/httpproxy: golang.org/x/net/proxy: HTTP
+                        │     │                    Proxy bypass using IPv6 Zone IDs in golang.org/x/net 
                         │     ├ Description     : Matching of hosts against proxy patterns can improperly treat
                         │     │                    an IPv6 zone ID as a hostname component. For example, when
                         │     │                   the NO_PROXY environment variable is set to "*.example.com",
                         │     │                   a request to "[::1%25.example.com]:80` will incorrectly match
                         │     │                    and not be proxied. 
                         │     ├ Severity        : MEDIUM 
-                        │     ├ VendorSeverity   ─ ghsa: 2 
+                        │     ├ VendorSeverity   ╭ ghsa  : 2 
+                        │     │                  ╰ redhat: 2 
+                        │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/
+                        │     │                           │           A:L 
+                        │     │                           ╰ V3Score : 4.4 
                         │     ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/03/07/2 
-                        │     │                  ├ [1]: https://go-review.googlesource.com/q/project:net 
-                        │     │                  ├ [2]: https://go.dev/cl/654697 
-                        │     │                  ├ [3]: https://go.dev/issue/71984 
-                        │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-22870 
-                        │     │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-3503 
+                        │     │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2025-22870 
+                        │     │                  ├ [2]: https://go-review.googlesource.com/q/project:net 
+                        │     │                  ├ [3]: https://go.dev/cl/654697 
+                        │     │                  ├ [4]: https://go.dev/issue/71984 
+                        │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-22870 
+                        │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3503 
+                        │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-22870 
                         │     ├ PublishedDate   : 2025-03-12T19:15:38.31Z 
                         │     ╰ LastModifiedDate: 2025-03-12T19:15:38.31Z 
                         ├ [2] ╭ VulnerabilityID : CVE-2024-45336 
