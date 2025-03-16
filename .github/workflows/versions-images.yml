@@ -23,7 +23,7 @@ jobs:
         path: /tmp/oaf
 
     - name: Generate build versions badge
-      uses: openaf/ojob-action@v4
+      uses: openaf/ojob-action@v7
       env :
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -32,7 +32,7 @@ jobs:
         dist: 'nightly'
 
     - name: Generate latest versions badge
-      uses: openaf/ojob-action@v4
+      uses: openaf/ojob-action@v7
       env :
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -40,7 +40,7 @@ jobs:
         args: 'tag=latest file=.github/latest-versions.svg jsonfile=.github/latest-versions.json'
         dist: 'nightly'
 
-    - uses: openaf/ojob-action@v4
+    - uses: openaf/ojob-action@v7
       name: Update badges
       env :
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

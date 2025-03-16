@@ -27,91 +27,91 @@ jobs:
         wget https://openaf.io/trivy-db.tgz
         docker run --rm -v trivy-db:/volume -v $(pwd):/backup busybox tar xzf /backup/trivy-db.tgz -C /volume
 
-    - uses: openaf/ojob-action@v4
+    - uses: openaf/ojob-action@v7
       name: Check latest
       with:
         ojob: 'ojob.io/sec/genSecBadge'
         args: 'image=nmaguiar/imgutils:latest file=.github/sec-latest.svg reportFile=.github/sec-latest.yaml'
         dist: 'nightly'
 
-    - uses: openaf/ojob-action@v4
+    - uses: openaf/ojob-action@v7
       name: Generate sec-latest.md
       with:
         ojob: 'ojob.io/util/toMDTree'
         args: 'inputFile=.github/sec-latest.yaml file=.github/sec-latest.md'
         dist: 'nightly'
 
-    - uses: openaf/ojob-action@v4
+    - uses: openaf/ojob-action@v7
       name: Check latest
       with:
         ojob: 'ojob.io/sec/genSecBadge'
         args: 'image=nmaguiar/imgutils:lite file=.github/sec-lite.svg reportFile=.github/sec-lite.yaml'
         dist: 'nightly'
 
-    - uses: openaf/ojob-action@v4
+    - uses: openaf/ojob-action@v7
       name: Generate sec-lite.md
       with:
         ojob: 'ojob.io/util/toMDTree'
         args: 'inputFile=.github/sec-lite.yaml file=.github/sec-lite.md'
         dist: 'nightly'
 
-    # - uses: openaf/ojob-action@v4
+    # - uses: openaf/ojob-action@v7
     #   name: Check latest ubi
     #   with:
     #     ojob: 'ojob.io/sec/genSecBadge'
     #     args: 'image=nmaguiar/imgutils:ubi file=.github/sec-ubi-latest.svg reportFile=.github/sec-ubi-latest.yaml'
     #     dist: 'nightly'
   
-    # - uses: openaf/ojob-action@v4
+    # - uses: openaf/ojob-action@v7
     #   name: Generate sec-ubi-latest.md
     #   with:
     #     ojob: 'ojob.io/util/toMDTree'
     #     args: 'inputFile=.github/sec-ubi-latest.yaml file=.github/sec-ubi-latest.md'
     #     dist: 'nightly'
 
-    - uses: openaf/ojob-action@v4
+    - uses: openaf/ojob-action@v7
       name: Check build
       with:
         ojob: 'ojob.io/sec/genSecBadge'
         args: 'image=nmaguiar/imgutils:build file=.github/sec-build.svg reportFile=.github/sec-build.yaml'
         dist: 'nightly'
 
-    - uses: openaf/ojob-action@v4
+    - uses: openaf/ojob-action@v7
       name: Generate sec-build.md
       with:
         ojob: 'ojob.io/util/toMDTree'
         args: 'inputFile=.github/sec-build.yaml file=.github/sec-build.md'
         dist: 'nightly'
 
-    - uses: openaf/ojob-action@v4
+    - uses: openaf/ojob-action@v7
       name: Check build
       with:
         ojob: 'ojob.io/sec/genSecBadge'
         args: 'image=nmaguiar/imgutils:build-lite file=.github/sec-build-lite.svg reportFile=.github/sec-build-lite.yaml'
         dist: 'nightly'
 
-    - uses: openaf/ojob-action@v4
+    - uses: openaf/ojob-action@v7
       name: Generate sec-build.md
       with:
         ojob: 'ojob.io/util/toMDTree'
         args: 'inputFile=.github/sec-build-lite.yaml file=.github/sec-build-lite.md'
         dist: 'nightly'
 
-    # - uses: openaf/ojob-action@v4
+    # - uses: openaf/ojob-action@v7
     #   name: Check build ubi
     #   with:
     #     ojob: 'ojob.io/sec/genSecBadge'
     #     args: 'image=nmaguiar/imgutils:ubi-build file=.github/sec-ubi-build.svg reportFile=.github/sec-ubi-build.yaml'
     #     dist: 'nightly'
   
-    # - uses: openaf/ojob-action@v4
+    # - uses: openaf/ojob-action@v7
     #   name: Generate sec-ubi-build.md
     #   with:
     #     ojob: 'ojob.io/util/toMDTree'
     #     args: 'inputFile=.github/sec-ubi-build.yaml file=.github/sec-ubi-build.md'
     #     dist: 'nightly'
 
-    - uses: openaf/ojob-action@v4
+    - uses: openaf/ojob-action@v7
       name: Update badges
       env :
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
