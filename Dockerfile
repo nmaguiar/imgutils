@@ -30,17 +30,14 @@ RUN sed -i 's/v[0-9]*\.[0-9]*/edge/g' /etc/apk/repositories\
  && /openaf/ojob ojob.io/kube/getCriCtl path=/usr/bin\
  && /openaf/ojob ojob.io/kube/getHelm path=/usr/bin\
  && /openaf/ojob ojob.io/kube/getNerdCtl path=/usr/bin\
- && /openaf/opack install DockerRegistry\
- && /openaf/opack install Kube\
- && /openaf/opack install BouncyCastle\
- && /openaf/opack install oafproc\
+ && /openaf/opack install DockerRegistry Kube BouncyCastle oafproc\
  && mkdir /openaf/ojobs\
- && /openaf/ojob ojob.io/get job=ojob.io/docker/expand.yaml > /openaf/ojobs/imgExpand.yaml\
- && /openaf/ojob ojob.io/get job=ojob.io/docker/collapse.yaml > /openaf/ojobs/imgCollapse.yaml\
- && /openaf/ojob ojob.io/get job=ojob.io/docker/info.yaml > /openaf/ojobs/imgInfo.yaml\
- && /openaf/ojob ojob.io/get job=ojob.io/docker/listHubRepo.yaml > /openaf/ojobs/listHubRepo.yaml\
- && /openaf/ojob ojob.io/get job=ojob.io/oaf/colorFormats.yaml > /openaf/ojobs/colorFormats.yaml\
- && /openaf/ojob ojob.io/get job=ojob.io/sec/add2dtrack.yaml > /openaf/ojobs/add2dtrack.yaml\
+ && curl -s https://ojob.io/docker/expand.yaml > /openaf/ojobs/imgExpand.yaml\
+ && curl -s https://ojob.io/docker/collapse.yaml > /openaf/ojobs/imgCollapse.yaml\
+ && curl -s https://ojob.io/docker/info.yaml > /openaf/ojobs/imgInfo.yaml\
+ && curl -s https://ojob.io/docker/listHubRepo.yaml > /openaf/ojobs/listHubRepo.yaml\
+ && curl -s https://ojob.io/oaf/colorFormats.yaml > /openaf/ojobs/colorFormats.yaml\
+ && curl -s https://ojob.io/sec/add2dtrack.yaml > /openaf/ojobs/add2dtrack.yaml\
  && /openaf/oaf --sb /openaf/ojobs/imgExpand.yaml\
  && /openaf/oaf --sb /openaf/ojobs/imgCollapse.yaml\
  && /openaf/oaf --sb /openaf/ojobs/imgInfo.yaml\
