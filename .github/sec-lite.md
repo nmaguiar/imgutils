@@ -217,7 +217,8 @@
                               │                   number of bits of secret scalars are leaked on the ppc64le
                               │                   architecture. Due to the way this function is used, we do not
                               │                    believe this leakage is enough to allow recovery of the
-                              │                   private key when P-256 is used in any well known protocols. 
+                              │                   private key when P-256 is used in any well known protocols.[
+                              │                   m 
                               ├ Severity        : MEDIUM 
                               ├ VendorSeverity   ╭ bitnami: 2 
                               │                  ╰ redhat : 2 
