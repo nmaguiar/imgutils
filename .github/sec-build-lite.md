@@ -31,6 +31,7 @@
                         │     │                   a request to "[::1%25.example.com]:80` will incorrectly match
                         │     │                    and not be proxied. 
                         │     ├ Severity        : MEDIUM 
+                        │     ├ CweIDs           ─ [0]: CWE-115 
                         │     ├ VendorSeverity   ╭ ghsa  : 2 
                         │     │                  ╰ redhat: 2 
                         │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/
@@ -45,7 +46,7 @@
                         │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3503 
                         │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-22870 
                         │     ├ PublishedDate   : 2025-03-12T19:15:38.31Z 
-                        │     ╰ LastModifiedDate: 2025-03-12T19:15:38.31Z 
+                        │     ╰ LastModifiedDate: 2025-03-18T17:15:45.467Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2024-45336 
                         │     ├ PkgID           : stdlib@v1.23.3 
                         │     ├ PkgName         : stdlib 
