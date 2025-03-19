@@ -16,10 +16,10 @@
 │                       │     ├ InstalledVersion: v0.30.0 
 │                       │     ├ FixedVersion    : 0.36.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:cc8bfb49224d14013c48419c497f52e2be2d9ebd67c96
-│                       │     │                  │         160b8a227d933c4e5a4 
-│                       │     │                  ╰ DiffID: sha256:cc0850104e3174a9b1c2f27bf4644b321bf152da16a12
-│                       │     │                            3a0c6b8d4f9c66ad3ff 
+│                       │     ├ Layer            ╭ Digest: sha256:172562832289544a0a3d4f989f07ce4d8a4e840a93a58
+│                       │     │                  │         60a82f55fc1135d1803 
+│                       │     │                  ╰ DiffID: sha256:4a431a35d25124d561c2153bde0817920510ff1d38833
+│                       │     │                            b7167838b29880c6fd1 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -34,6 +34,7 @@
 │                       │     │                   a request to "[::1%25.example.com]:80` will incorrectly match
 │                       │     │                    and not be proxied. 
 │                       │     ├ Severity        : MEDIUM 
+│                       │     ├ CweIDs           ─ [0]: CWE-115 
 │                       │     ├ VendorSeverity   ╭ ghsa  : 2 
 │                       │     │                  ╰ redhat: 2 
 │                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/
@@ -48,7 +49,7 @@
 │                       │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3503 
 │                       │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-22870 
 │                       │     ├ PublishedDate   : 2025-03-12T19:15:38.31Z 
-│                       │     ╰ LastModifiedDate: 2025-03-12T19:15:38.31Z 
+│                       │     ╰ LastModifiedDate: 2025-03-18T17:15:45.467Z 
 │                       ├ [1] ╭ VulnerabilityID : CVE-2024-45336 
 │                       │     ├ PkgID           : stdlib@v1.23.3 
 │                       │     ├ PkgName         : stdlib 
@@ -57,10 +58,10 @@
 │                       │     ├ InstalledVersion: v1.23.3 
 │                       │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:cc8bfb49224d14013c48419c497f52e2be2d9ebd67c96
-│                       │     │                  │         160b8a227d933c4e5a4 
-│                       │     │                  ╰ DiffID: sha256:cc0850104e3174a9b1c2f27bf4644b321bf152da16a12
-│                       │     │                            3a0c6b8d4f9c66ad3ff 
+│                       │     ├ Layer            ╭ Digest: sha256:172562832289544a0a3d4f989f07ce4d8a4e840a93a58
+│                       │     │                  │         60a82f55fc1135d1803 
+│                       │     │                  ╰ DiffID: sha256:4a431a35d25124d561c2153bde0817920510ff1d38833
+│                       │     │                            b7167838b29880c6fd1 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45336 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -108,10 +109,10 @@
 │                       │     ├ InstalledVersion: v1.23.3 
 │                       │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:cc8bfb49224d14013c48419c497f52e2be2d9ebd67c96
-│                       │     │                  │         160b8a227d933c4e5a4 
-│                       │     │                  ╰ DiffID: sha256:cc0850104e3174a9b1c2f27bf4644b321bf152da16a12
-│                       │     │                            3a0c6b8d4f9c66ad3ff 
+│                       │     ├ Layer            ╭ Digest: sha256:172562832289544a0a3d4f989f07ce4d8a4e840a93a58
+│                       │     │                  │         60a82f55fc1135d1803 
+│                       │     │                  ╰ DiffID: sha256:4a431a35d25124d561c2153bde0817920510ff1d38833
+│                       │     │                            b7167838b29880c6fd1 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45341 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -155,10 +156,10 @@
 │                             ├ InstalledVersion: v1.23.3 
 │                             ├ FixedVersion    : 1.22.12, 1.23.6, 1.24.0-rc.3 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:cc8bfb49224d14013c48419c497f52e2be2d9ebd67c96
-│                             │                  │         160b8a227d933c4e5a4 
-│                             │                  ╰ DiffID: sha256:cc0850104e3174a9b1c2f27bf4644b321bf152da16a12
-│                             │                            3a0c6b8d4f9c66ad3ff 
+│                             ├ Layer            ╭ Digest: sha256:172562832289544a0a3d4f989f07ce4d8a4e840a93a58
+│                             │                  │         60a82f55fc1135d1803 
+│                             │                  ╰ DiffID: sha256:4a431a35d25124d561c2153bde0817920510ff1d38833
+│                             │                            b7167838b29880c6fd1 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22866 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
@@ -202,10 +203,10 @@
 │                             ├ InstalledVersion: v0.33.0 
 │                             ├ FixedVersion    : 0.36.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:cc8bfb49224d14013c48419c497f52e2be2d9ebd67c96
-│                             │                  │         160b8a227d933c4e5a4 
-│                             │                  ╰ DiffID: sha256:cc0850104e3174a9b1c2f27bf4644b321bf152da16a12
-│                             │                            3a0c6b8d4f9c66ad3ff 
+│                             ├ Layer            ╭ Digest: sha256:172562832289544a0a3d4f989f07ce4d8a4e840a93a58
+│                             │                  │         60a82f55fc1135d1803 
+│                             │                  ╰ DiffID: sha256:4a431a35d25124d561c2153bde0817920510ff1d38833
+│                             │                            b7167838b29880c6fd1 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -220,6 +221,7 @@
 │                             │                   a request to "[::1%25.example.com]:80` will incorrectly match
 │                             │                    and not be proxied. 
 │                             ├ Severity        : MEDIUM 
+│                             ├ CweIDs           ─ [0]: CWE-115 
 │                             ├ VendorSeverity   ╭ ghsa  : 2 
 │                             │                  ╰ redhat: 2 
 │                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/
@@ -234,7 +236,7 @@
 │                             │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3503 
 │                             │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-22870 
 │                             ├ PublishedDate   : 2025-03-12T19:15:38.31Z 
-│                             ╰ LastModifiedDate: 2025-03-12T19:15:38.31Z 
+│                             ╰ LastModifiedDate: 2025-03-18T17:15:45.467Z 
 ├ [4] ╭ Target         : usr/bin/dive 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -246,10 +248,10 @@
 │                             ├ InstalledVersion: v0.28.0 
 │                             ├ FixedVersion    : 0.36.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:cc8bfb49224d14013c48419c497f52e2be2d9ebd67c96
-│                             │                  │         160b8a227d933c4e5a4 
-│                             │                  ╰ DiffID: sha256:cc0850104e3174a9b1c2f27bf4644b321bf152da16a12
-│                             │                            3a0c6b8d4f9c66ad3ff 
+│                             ├ Layer            ╭ Digest: sha256:172562832289544a0a3d4f989f07ce4d8a4e840a93a58
+│                             │                  │         60a82f55fc1135d1803 
+│                             │                  ╰ DiffID: sha256:4a431a35d25124d561c2153bde0817920510ff1d38833
+│                             │                            b7167838b29880c6fd1 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -264,6 +266,7 @@
 │                             │                   a request to "[::1%25.example.com]:80` will incorrectly match
 │                             │                    and not be proxied. 
 │                             ├ Severity        : MEDIUM 
+│                             ├ CweIDs           ─ [0]: CWE-115 
 │                             ├ VendorSeverity   ╭ ghsa  : 2 
 │                             │                  ╰ redhat: 2 
 │                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/
@@ -278,17 +281,111 @@
 │                             │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3503 
 │                             │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-22870 
 │                             ├ PublishedDate   : 2025-03-12T19:15:38.31Z 
-│                             ╰ LastModifiedDate: 2025-03-12T19:15:38.31Z 
+│                             ╰ LastModifiedDate: 2025-03-18T17:15:45.467Z 
 ├ [5] ╭ Target: usr/bin/docker 
 │     ├ Class : lang-pkgs 
 │     ╰ Type  : gobinary 
-├ [6] ╭ Target: usr/bin/helm 
-│     ├ Class : lang-pkgs 
-│     ╰ Type  : gobinary 
+├ [6] ╭ Target         : usr/bin/helm 
+│     ├ Class          : lang-pkgs 
+│     ├ Type           : gobinary 
+│     ╰ Vulnerabilities ─ [0] ╭ VulnerabilityID : CVE-2024-40635 
+│                             ├ PkgID           : github.com/containerd/containerd@v1.7.24 
+│                             ├ PkgName         : github.com/containerd/containerd 
+│                             ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/containerd/containerd@v1.7.24 
+│                             │                  ╰ UID : f4932271e34afc46 
+│                             ├ InstalledVersion: v1.7.24 
+│                             ├ FixedVersion    : 1.7.27, 1.6.38 
+│                             ├ Status          : fixed 
+│                             ├ Layer            ╭ Digest: sha256:172562832289544a0a3d4f989f07ce4d8a4e840a93a58
+│                             │                  │         60a82f55fc1135d1803 
+│                             │                  ╰ DiffID: sha256:4a431a35d25124d561c2153bde0817920510ff1d38833
+│                             │                            b7167838b29880c6fd1 
+│                             ├ SeveritySource  : ghsa 
+│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-40635 
+│                             ├ DataSource       ╭ ID  : ghsa 
+│                             │                  ├ Name: GitHub Security Advisory Go 
+│                             │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                             │                          osystem%3Ago 
+│                             ├ Title           : containerd is an open-source container runtime. A bug was
+│                             │                   found in con ... 
+│                             ├ Description     : containerd is an open-source container runtime. A bug was
+│                             │                   found in containerd prior to versions 1.6.38, 1.7.27, and
+│                             │                   2.0.4 where containers launched with a User set as a
+│                             │                   `UID:GID` larger than the maximum 32-bit signed integer can
+│                             │                   cause an overflow condition where the container ultimately
+│                             │                   runs as root (UID 0). This could cause unexpected behavior
+│                             │                   for environments that require containers to run as a non-root
+│                             │                    user. This bug has been fixed in containerd 1.6.38, 1.7.27,
+│                             │                   and 2.04. As a workaround, ensure that only trusted images
+│                             │                   are used and that only trusted users have permissions to
+│                             │                   import images. 
+│                             ├ Severity        : MEDIUM 
+│                             ├ CweIDs           ─ [0]: CWE-190 
+│                             ├ VendorSeverity   ─ ghsa: 2 
+│                             ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N 
+│                             │                         ╰ V3Score : 4.6 
+│                             ├ References       ╭ [0]: https://github.com/containerd/containerd 
+│                             │                  ├ [1]: https://github.com/containerd/containerd/commit/05044ec
+│                             │                  │      0a9a75232cad458027ca83437aae3f4da 
+│                             │                  ├ [2]: https://github.com/containerd/containerd/commit/1a43cb6
+│                             │                  │      a1035441f9aca8f5666a9b3ef9e70ab20 
+│                             │                  ├ [3]: https://github.com/containerd/containerd/commit/cf158e8
+│                             │                  │      84cfe4812a6c371b59e4ea9bc4c46e51a 
+│                             │                  ╰ [4]: https://github.com/containerd/containerd/security/advis
+│                             │                         ories/GHSA-265r-hfxg-fhmg 
+│                             ├ PublishedDate   : 2025-03-17T22:15:13.15Z 
+│                             ╰ LastModifiedDate: 2025-03-17T22:15:13.15Z 
 ├ [7] ╭ Target         : usr/bin/nerdctl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
-│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2025-27144 
+│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2024-40635 
+│                       │     ├ PkgID           : github.com/containerd/containerd/v2@v2.0.2 
+│                       │     ├ PkgName         : github.com/containerd/containerd/v2 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/containerd/containerd/v2@v2.0.2 
+│                       │     │                  ╰ UID : ba2d7b58185b6789 
+│                       │     ├ InstalledVersion: v2.0.2 
+│                       │     ├ FixedVersion    : 2.0.4 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:172562832289544a0a3d4f989f07ce4d8a4e840a93a58
+│                       │     │                  │         60a82f55fc1135d1803 
+│                       │     │                  ╰ DiffID: sha256:4a431a35d25124d561c2153bde0817920510ff1d38833
+│                       │     │                            b7167838b29880c6fd1 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-40635 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Go 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Ago 
+│                       │     ├ Title           : containerd is an open-source container runtime. A bug was
+│                       │     │                   found in con ... 
+│                       │     ├ Description     : containerd is an open-source container runtime. A bug was
+│                       │     │                   found in containerd prior to versions 1.6.38, 1.7.27, and
+│                       │     │                   2.0.4 where containers launched with a User set as a
+│                       │     │                   `UID:GID` larger than the maximum 32-bit signed integer can
+│                       │     │                   cause an overflow condition where the container ultimately
+│                       │     │                   runs as root (UID 0). This could cause unexpected behavior
+│                       │     │                   for environments that require containers to run as a non-root
+│                       │     │                    user. This bug has been fixed in containerd 1.6.38, 1.7.27,
+│                       │     │                   and 2.04. As a workaround, ensure that only trusted images
+│                       │     │                   are used and that only trusted users have permissions to
+│                       │     │                   import images. 
+│                       │     ├ Severity        : MEDIUM 
+│                       │     ├ CweIDs           ─ [0]: CWE-190 
+│                       │     ├ VendorSeverity   ─ ghsa: 2 
+│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N 
+│                       │     │                         ╰ V3Score : 4.6 
+│                       │     ├ References       ╭ [0]: https://github.com/containerd/containerd 
+│                       │     │                  ├ [1]: https://github.com/containerd/containerd/commit/05044ec
+│                       │     │                  │      0a9a75232cad458027ca83437aae3f4da 
+│                       │     │                  ├ [2]: https://github.com/containerd/containerd/commit/1a43cb6
+│                       │     │                  │      a1035441f9aca8f5666a9b3ef9e70ab20 
+│                       │     │                  ├ [3]: https://github.com/containerd/containerd/commit/cf158e8
+│                       │     │                  │      84cfe4812a6c371b59e4ea9bc4c46e51a 
+│                       │     │                  ╰ [4]: https://github.com/containerd/containerd/security/advis
+│                       │     │                         ories/GHSA-265r-hfxg-fhmg 
+│                       │     ├ PublishedDate   : 2025-03-17T22:15:13.15Z 
+│                       │     ╰ LastModifiedDate: 2025-03-17T22:15:13.15Z 
+│                       ├ [1] ╭ VulnerabilityID : CVE-2025-27144 
 │                       │     ├ PkgID           : github.com/go-jose/go-jose/v4@v4.0.4 
 │                       │     ├ PkgName         : github.com/go-jose/go-jose/v4 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/go-jose/go-jose/v4@v4.0.4 
@@ -296,10 +393,10 @@
 │                       │     ├ InstalledVersion: v4.0.4 
 │                       │     ├ FixedVersion    : 4.0.5 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:cc8bfb49224d14013c48419c497f52e2be2d9ebd67c96
-│                       │     │                  │         160b8a227d933c4e5a4 
-│                       │     │                  ╰ DiffID: sha256:cc0850104e3174a9b1c2f27bf4644b321bf152da16a12
-│                       │     │                            3a0c6b8d4f9c66ad3ff 
+│                       │     ├ Layer            ╭ Digest: sha256:172562832289544a0a3d4f989f07ce4d8a4e840a93a58
+│                       │     │                  │         60a82f55fc1135d1803 
+│                       │     │                  ╰ DiffID: sha256:4a431a35d25124d561c2153bde0817920510ff1d38833
+│                       │     │                            b7167838b29880c6fd1 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-27144 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -344,7 +441,7 @@
 │                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-27144 
 │                       │     ├ PublishedDate   : 2025-02-24T23:15:11.427Z 
 │                       │     ╰ LastModifiedDate: 2025-02-24T23:15:11.427Z 
-│                       ├ [1] ╭ VulnerabilityID : CVE-2025-22870 
+│                       ├ [2] ╭ VulnerabilityID : CVE-2025-22870 
 │                       │     ├ PkgID           : golang.org/x/net@v0.34.0 
 │                       │     ├ PkgName         : golang.org/x/net 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.34.0 
@@ -352,10 +449,10 @@
 │                       │     ├ InstalledVersion: v0.34.0 
 │                       │     ├ FixedVersion    : 0.36.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:cc8bfb49224d14013c48419c497f52e2be2d9ebd67c96
-│                       │     │                  │         160b8a227d933c4e5a4 
-│                       │     │                  ╰ DiffID: sha256:cc0850104e3174a9b1c2f27bf4644b321bf152da16a12
-│                       │     │                            3a0c6b8d4f9c66ad3ff 
+│                       │     ├ Layer            ╭ Digest: sha256:172562832289544a0a3d4f989f07ce4d8a4e840a93a58
+│                       │     │                  │         60a82f55fc1135d1803 
+│                       │     │                  ╰ DiffID: sha256:4a431a35d25124d561c2153bde0817920510ff1d38833
+│                       │     │                            b7167838b29880c6fd1 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -370,6 +467,7 @@
 │                       │     │                   a request to "[::1%25.example.com]:80` will incorrectly match
 │                       │     │                    and not be proxied. 
 │                       │     ├ Severity        : MEDIUM 
+│                       │     ├ CweIDs           ─ [0]: CWE-115 
 │                       │     ├ VendorSeverity   ╭ ghsa  : 2 
 │                       │     │                  ╰ redhat: 2 
 │                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/
@@ -384,8 +482,8 @@
 │                       │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3503 
 │                       │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-22870 
 │                       │     ├ PublishedDate   : 2025-03-12T19:15:38.31Z 
-│                       │     ╰ LastModifiedDate: 2025-03-12T19:15:38.31Z 
-│                       ├ [2] ╭ VulnerabilityID : CVE-2024-45336 
+│                       │     ╰ LastModifiedDate: 2025-03-18T17:15:45.467Z 
+│                       ├ [3] ╭ VulnerabilityID : CVE-2024-45336 
 │                       │     ├ PkgID           : stdlib@v1.23.4 
 │                       │     ├ PkgName         : stdlib 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.4 
@@ -393,10 +491,10 @@
 │                       │     ├ InstalledVersion: v1.23.4 
 │                       │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:cc8bfb49224d14013c48419c497f52e2be2d9ebd67c96
-│                       │     │                  │         160b8a227d933c4e5a4 
-│                       │     │                  ╰ DiffID: sha256:cc0850104e3174a9b1c2f27bf4644b321bf152da16a12
-│                       │     │                            3a0c6b8d4f9c66ad3ff 
+│                       │     ├ Layer            ╭ Digest: sha256:172562832289544a0a3d4f989f07ce4d8a4e840a93a58
+│                       │     │                  │         60a82f55fc1135d1803 
+│                       │     │                  ╰ DiffID: sha256:4a431a35d25124d561c2153bde0817920510ff1d38833
+│                       │     │                            b7167838b29880c6fd1 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45336 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -436,7 +534,7 @@
 │                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-45336 
 │                       │     ├ PublishedDate   : 2025-01-28T02:15:28.807Z 
 │                       │     ╰ LastModifiedDate: 2025-02-21T18:15:17.4Z 
-│                       ├ [3] ╭ VulnerabilityID : CVE-2024-45341 
+│                       ├ [4] ╭ VulnerabilityID : CVE-2024-45341 
 │                       │     ├ PkgID           : stdlib@v1.23.4 
 │                       │     ├ PkgName         : stdlib 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.4 
@@ -444,10 +542,10 @@
 │                       │     ├ InstalledVersion: v1.23.4 
 │                       │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:cc8bfb49224d14013c48419c497f52e2be2d9ebd67c96
-│                       │     │                  │         160b8a227d933c4e5a4 
-│                       │     │                  ╰ DiffID: sha256:cc0850104e3174a9b1c2f27bf4644b321bf152da16a12
-│                       │     │                            3a0c6b8d4f9c66ad3ff 
+│                       │     ├ Layer            ╭ Digest: sha256:172562832289544a0a3d4f989f07ce4d8a4e840a93a58
+│                       │     │                  │         60a82f55fc1135d1803 
+│                       │     │                  ╰ DiffID: sha256:4a431a35d25124d561c2153bde0817920510ff1d38833
+│                       │     │                            b7167838b29880c6fd1 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45341 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -483,7 +581,7 @@
 │                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-45341 
 │                       │     ├ PublishedDate   : 2025-01-28T02:15:29.147Z 
 │                       │     ╰ LastModifiedDate: 2025-02-21T18:15:17.96Z 
-│                       ╰ [4] ╭ VulnerabilityID : CVE-2025-22866 
+│                       ╰ [5] ╭ VulnerabilityID : CVE-2025-22866 
 │                             ├ PkgID           : stdlib@v1.23.4 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.4 
@@ -491,10 +589,10 @@
 │                             ├ InstalledVersion: v1.23.4 
 │                             ├ FixedVersion    : 1.22.12, 1.23.6, 1.24.0-rc.3 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:cc8bfb49224d14013c48419c497f52e2be2d9ebd67c96
-│                             │                  │         160b8a227d933c4e5a4 
-│                             │                  ╰ DiffID: sha256:cc0850104e3174a9b1c2f27bf4644b321bf152da16a12
-│                             │                            3a0c6b8d4f9c66ad3ff 
+│                             ├ Layer            ╭ Digest: sha256:172562832289544a0a3d4f989f07ce4d8a4e840a93a58
+│                             │                  │         60a82f55fc1135d1803 
+│                             │                  ╰ DiffID: sha256:4a431a35d25124d561c2153bde0817920510ff1d38833
+│                             │                            b7167838b29880c6fd1 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22866 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
@@ -538,10 +636,10 @@
 │                       │     ├ InstalledVersion: v3.0.3 
 │                       │     ├ FixedVersion    : 3.0.4 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:cc8bfb49224d14013c48419c497f52e2be2d9ebd67c96
-│                       │     │                  │         160b8a227d933c4e5a4 
-│                       │     │                  ╰ DiffID: sha256:cc0850104e3174a9b1c2f27bf4644b321bf152da16a12
-│                       │     │                            3a0c6b8d4f9c66ad3ff 
+│                       │     ├ Layer            ╭ Digest: sha256:172562832289544a0a3d4f989f07ce4d8a4e840a93a58
+│                       │     │                  │         60a82f55fc1135d1803 
+│                       │     │                  ╰ DiffID: sha256:4a431a35d25124d561c2153bde0817920510ff1d38833
+│                       │     │                            b7167838b29880c6fd1 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-27144 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -594,10 +692,10 @@
 │                       │     ├ InstalledVersion: v4.0.4 
 │                       │     ├ FixedVersion    : 4.0.5 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:cc8bfb49224d14013c48419c497f52e2be2d9ebd67c96
-│                       │     │                  │         160b8a227d933c4e5a4 
-│                       │     │                  ╰ DiffID: sha256:cc0850104e3174a9b1c2f27bf4644b321bf152da16a12
-│                       │     │                            3a0c6b8d4f9c66ad3ff 
+│                       │     ├ Layer            ╭ Digest: sha256:172562832289544a0a3d4f989f07ce4d8a4e840a93a58
+│                       │     │                  │         60a82f55fc1135d1803 
+│                       │     │                  ╰ DiffID: sha256:4a431a35d25124d561c2153bde0817920510ff1d38833
+│                       │     │                            b7167838b29880c6fd1 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-27144 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -650,10 +748,10 @@
 │                             ├ InstalledVersion: v0.34.0 
 │                             ├ FixedVersion    : 0.36.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:cc8bfb49224d14013c48419c497f52e2be2d9ebd67c96
-│                             │                  │         160b8a227d933c4e5a4 
-│                             │                  ╰ DiffID: sha256:cc0850104e3174a9b1c2f27bf4644b321bf152da16a12
-│                             │                            3a0c6b8d4f9c66ad3ff 
+│                             ├ Layer            ╭ Digest: sha256:172562832289544a0a3d4f989f07ce4d8a4e840a93a58
+│                             │                  │         60a82f55fc1135d1803 
+│                             │                  ╰ DiffID: sha256:4a431a35d25124d561c2153bde0817920510ff1d38833
+│                             │                            b7167838b29880c6fd1 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -668,6 +766,7 @@
 │                             │                   a request to "[::1%25.example.com]:80` will incorrectly match
 │                             │                    and not be proxied. 
 │                             ├ Severity        : MEDIUM 
+│                             ├ CweIDs           ─ [0]: CWE-115 
 │                             ├ VendorSeverity   ╭ ghsa  : 2 
 │                             │                  ╰ redhat: 2 
 │                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/
@@ -682,8 +781,55 @@
 │                             │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3503 
 │                             │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-22870 
 │                             ├ PublishedDate   : 2025-03-12T19:15:38.31Z 
-│                             ╰ LastModifiedDate: 2025-03-12T19:15:38.31Z 
-╰ [9] ╭ Target: usr/bin/syft 
-      ├ Class : lang-pkgs 
-      ╰ Type  : gobinary 
+│                             ╰ LastModifiedDate: 2025-03-18T17:15:45.467Z 
+╰ [9] ╭ Target         : usr/bin/syft 
+      ├ Class          : lang-pkgs 
+      ├ Type           : gobinary 
+      ╰ Vulnerabilities ─ [0] ╭ VulnerabilityID : CVE-2024-40635 
+                              ├ PkgID           : github.com/containerd/containerd@v1.7.26 
+                              ├ PkgName         : github.com/containerd/containerd 
+                              ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/containerd/containerd@v1.7.26 
+                              │                  ╰ UID : 1816dbc8dcaf0317 
+                              ├ InstalledVersion: v1.7.26 
+                              ├ FixedVersion    : 1.7.27, 1.6.38 
+                              ├ Status          : fixed 
+                              ├ Layer            ╭ Digest: sha256:172562832289544a0a3d4f989f07ce4d8a4e840a93a58
+                              │                  │         60a82f55fc1135d1803 
+                              │                  ╰ DiffID: sha256:4a431a35d25124d561c2153bde0817920510ff1d38833
+                              │                            b7167838b29880c6fd1 
+                              ├ SeveritySource  : ghsa 
+                              ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-40635 
+                              ├ DataSource       ╭ ID  : ghsa 
+                              │                  ├ Name: GitHub Security Advisory Go 
+                              │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+                              │                          osystem%3Ago 
+                              ├ Title           : containerd is an open-source container runtime. A bug was
+                              │                   found in con ... 
+                              ├ Description     : containerd is an open-source container runtime. A bug was
+                              │                   found in containerd prior to versions 1.6.38, 1.7.27, and
+                              │                   2.0.4 where containers launched with a User set as a
+                              │                   `UID:GID` larger than the maximum 32-bit signed integer can
+                              │                   cause an overflow condition where the container ultimately
+                              │                   runs as root (UID 0). This could cause unexpected behavior
+                              │                   for environments that require containers to run as a non-root
+                              │                    user. This bug has been fixed in containerd 1.6.38, 1.7.27,
+                              │                   and 2.04. As a workaround, ensure that only trusted images
+                              │                   are used and that only trusted users have permissions to
+                              │                   import images. 
+                              ├ Severity        : MEDIUM 
+                              ├ CweIDs           ─ [0]: CWE-190 
+                              ├ VendorSeverity   ─ ghsa: 2 
+                              ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N 
+                              │                         ╰ V3Score : 4.6 
+                              ├ References       ╭ [0]: https://github.com/containerd/containerd 
+                              │                  ├ [1]: https://github.com/containerd/containerd/commit/05044ec
+                              │                  │      0a9a75232cad458027ca83437aae3f4da 
+                              │                  ├ [2]: https://github.com/containerd/containerd/commit/1a43cb6
+                              │                  │      a1035441f9aca8f5666a9b3ef9e70ab20 
+                              │                  ├ [3]: https://github.com/containerd/containerd/commit/cf158e8
+                              │                  │      84cfe4812a6c371b59e4ea9bc4c46e51a 
+                              │                  ╰ [4]: https://github.com/containerd/containerd/security/advis
+                              │                         ories/GHSA-265r-hfxg-fhmg 
+                              ├ PublishedDate   : 2025-03-17T22:15:13.15Z 
+                              ╰ LastModifiedDate: 2025-03-17T22:15:13.15Z 
 ````
