@@ -23,7 +23,7 @@
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
                         │     │                          osystem%3Ago 
-                        │     ├ Title           : golang.org/x/net/http/httpproxy: golang.org/x/net/proxy: HTTP
+                        │     ├ Title           : golang.org/x/net/proxy: golang.org/x/net/http/httpproxy: HTTP
                         │     │                    Proxy bypass using IPv6 Zone IDs in golang.org/x/net 
                         │     ├ Description     : Matching of hosts against proxy patterns can improperly treat
                         │     │                    an IPv6 zone ID as a hostname component. For example, when
@@ -34,7 +34,10 @@
                         │     ├ CweIDs           ─ [0]: CWE-115 
                         │     ├ VendorSeverity   ╭ ghsa  : 2 
                         │     │                  ╰ redhat: 2 
-                        │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/
+                        │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/
+                        │     │                  │        │           A:L 
+                        │     │                  │        ╰ V3Score : 4.4 
+                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/
                         │     │                           │           A:L 
                         │     │                           ╰ V3Score : 4.4 
                         │     ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/03/07/2 
