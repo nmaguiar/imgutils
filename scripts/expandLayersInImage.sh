@@ -9,6 +9,21 @@
 #   This script extracts the layers from a docker image to a directory.
 #   The script also extracts the image json (excluding the manifest) to an output file.
 
+# Check if the number of arguments is correct.
+# Print usage if not.
+if [ "$#" -lt 2 ]; then
+    cat <<EOF >&2
+[1mUsage:[m [3m$(basename "$0") <image> <output>[m
+
+Extracts the layers from a docker image to a directory.
+
+  [3m<image>[m  - Path to an image file or a reference with a colon (e.g., docker-daemon:).
+  [3m<output>[m - Path to the output directory.
+
+EOF
+    exit 1
+fi
+
 # If $2 is not provided then exit
 if [ -z "$2" ]; then
     echo "Output directory not provided"

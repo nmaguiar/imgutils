@@ -11,6 +11,22 @@
 
 TMPIMG=""
 
+# Check if the number of arguments is correct.
+# Print usage if not.
+if [ "$#" -lt 2 ]; then
+    cat <<EOF >&2
+[1mUsage:[m [3m$(basename "$0") <image1> <image2> [output_format][m
+
+Extracts the files from both docker image archive file to two directories to compare them.
+
+  [3m<image1>[m        - Path to an image file or a reference with a colon (e.g., docker-daemon:).
+  [3m<image2>[m        - Path to an image file or a reference with a colon (e.g., docker-daemon:).
+  [3m[output_format][m - Optional output format for the comparison. If not provided, the output is in CSV format.
+
+EOF
+    exit 1
+fi
+
 # Check if directory A exists, if not create it
 if [ ! -e "A" ]; then
     mkdir A

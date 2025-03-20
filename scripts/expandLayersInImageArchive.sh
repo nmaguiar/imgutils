@@ -9,6 +9,21 @@
 #   This script extracts the layers from a docker image archive file to a directory.
 #   The script also extracts the image json (excluding the manifest) to an output file.
 
+# Check if the number of arguments is correct.
+# Print usage if not.
+if [ "$#" -lt 2 ]; then
+    cat <<EOF >&2
+[1mUsage:[m [3m$(basename "$0") <image> <output-dir>[m
+
+Extracts the layers from a docker image archive file to a directory.
+
+  [3m<image>[m      - Path to a docker image archive file.
+  [3m<output-dir>[m - Path to the output directory.
+
+EOF
+    exit 1
+fi
+
 # Check if the provider docker archive file exists
 if [ ! -f $1 ]; then
   echo "Provider docker archive file $1 does not exist"

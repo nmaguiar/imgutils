@@ -9,6 +9,21 @@
 # Description :
 #   This script extracts the files from a docker image archive file to a directory.
 
+# Check if the number of arguments is correct.
+# Print usage if not.
+if [ "$#" -lt 2 ]; then
+    cat <<EOF >&2
+[1mUsage:[m [3m$(basename "$0") <image> <output>[m
+
+Extracts the files from a docker image archive file to a directory.
+
+  [3m<image>[m  - Path to an image file or a reference with a colon (e.g., docker-daemon:).
+  [3m<output>[m - Path to the output directory.
+
+EOF
+    exit 1
+fi
+
 # If $2 is not provided then exit
 if [ -z "$2" ]; then
     echo "Output directory not provided"

@@ -11,6 +11,21 @@
 #   the output directory. This is useful for extracting all files from a provider docker archive file
 #   and copying them to a directory.
 
+# Check if the number of arguments is correct.
+# Print usage if not.
+if [ "$#" -lt 2 ]; then
+    cat <<EOF >&2
+[1mUsage:[m [3m$(basename "$0") <provider-docker-archive> <output-dir>[m
+
+Extracts all files from a provider docker archive file and writes them to the output directory.
+
+  [3m<provider-docker-archive>[m - Path to a provider docker archive file.
+  [3m<output-dir>[m              - Path to the output directory.
+
+EOF
+    exit 1
+fi
+
 # Check if the provider docker archive file exists
 if [ ! -f $1 ]; then
   echo "Provider docker archive file $1 does not exist"
