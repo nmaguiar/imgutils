@@ -15,8 +15,8 @@
     FixedVersion: 0.36.0
     Status: fixed
     Layer:
-      Digest: sha256:d9b45c1ffda1d82355b113b603e237946e0278540afb4c36d3e7908042a8ce6e
-      DiffID: sha256:5ecf64eceb103e0ce1ba5a9e7d4f63f2955f216ba40987bfb97ce4092b08f41c
+      Digest: sha256:a07783d6e00effbc5825f539406ec7630bd2aa3970d869216c2c504df0cfabed
+      DiffID: sha256:681f41fa1132c3550d8ad861ce94a635b8d56cf855c7b39c8c3b671e0a649102
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22870
     DataSource:
@@ -59,8 +59,8 @@
     FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
     Status: fixed
     Layer:
-      Digest: sha256:d9b45c1ffda1d82355b113b603e237946e0278540afb4c36d3e7908042a8ce6e
-      DiffID: sha256:5ecf64eceb103e0ce1ba5a9e7d4f63f2955f216ba40987bfb97ce4092b08f41c
+      Digest: sha256:a07783d6e00effbc5825f539406ec7630bd2aa3970d869216c2c504df0cfabed
+      DiffID: sha256:681f41fa1132c3550d8ad861ce94a635b8d56cf855c7b39c8c3b671e0a649102
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45336
     DataSource:
       ID: govulndb
@@ -103,8 +103,8 @@
     FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
     Status: fixed
     Layer:
-      Digest: sha256:d9b45c1ffda1d82355b113b603e237946e0278540afb4c36d3e7908042a8ce6e
-      DiffID: sha256:5ecf64eceb103e0ce1ba5a9e7d4f63f2955f216ba40987bfb97ce4092b08f41c
+      Digest: sha256:a07783d6e00effbc5825f539406ec7630bd2aa3970d869216c2c504df0cfabed
+      DiffID: sha256:681f41fa1132c3550d8ad861ce94a635b8d56cf855c7b39c8c3b671e0a649102
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45341
     DataSource:
       ID: govulndb
@@ -147,8 +147,8 @@
     FixedVersion: 1.22.12, 1.23.6, 1.24.0-rc.3
     Status: fixed
     Layer:
-      Digest: sha256:d9b45c1ffda1d82355b113b603e237946e0278540afb4c36d3e7908042a8ce6e
-      DiffID: sha256:5ecf64eceb103e0ce1ba5a9e7d4f63f2955f216ba40987bfb97ce4092b08f41c
+      Digest: sha256:a07783d6e00effbc5825f539406ec7630bd2aa3970d869216c2c504df0cfabed
+      DiffID: sha256:681f41fa1132c3550d8ad861ce94a635b8d56cf855c7b39c8c3b671e0a649102
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22866
     DataSource:
       ID: govulndb
