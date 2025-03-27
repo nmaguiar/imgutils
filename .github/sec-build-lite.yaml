@@ -29,6 +29,7 @@
     CweIDs:
     - CWE-115
     VendorSeverity:
+      amazon: 2
       ghsa: 2
       redhat: 2
     CVSS:
