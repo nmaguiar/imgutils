@@ -313,6 +313,7 @@
     VendorSeverity:
       ghsa: 2
       redhat: 2
+      ubuntu: 2
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N
@@ -324,10 +325,13 @@
     - https://access.redhat.com/security/cve/CVE-2024-40635
     - https://github.com/containerd/containerd
     - https://github.com/containerd/containerd/commit/05044ec0a9a75232cad458027ca83437aae3f4da
+    - https://github.com/containerd/containerd/commit/11504c3fc5f45634f2d93d57743a998194430b82 (v1.7.27)
     - https://github.com/containerd/containerd/commit/1a43cb6a1035441f9aca8f5666a9b3ef9e70ab20
+    - https://github.com/containerd/containerd/commit/9639b9625554183d0c4d8d072dccb84fedd2320f (v1.6.38)
     - https://github.com/containerd/containerd/commit/cf158e884cfe4812a6c371b59e4ea9bc4c46e51a
     - https://github.com/containerd/containerd/security/advisories/GHSA-265r-hfxg-fhmg
     - https://nvd.nist.gov/vuln/detail/CVE-2024-40635
+    - https://ubuntu.com/security/notices/USN-7374-1
     - https://www.cve.org/CVERecord?id=CVE-2024-40635
     PublishedDate: '2025-03-17T22:15:13.15Z'
     LastModifiedDate: '2025-03-17T22:15:13.15Z'
@@ -361,6 +365,7 @@
     VendorSeverity:
       ghsa: 2
       redhat: 2
+      ubuntu: 2
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N
@@ -372,10 +377,13 @@
     - https://access.redhat.com/security/cve/CVE-2024-40635
     - https://github.com/containerd/containerd
     - https://github.com/containerd/containerd/commit/05044ec0a9a75232cad458027ca83437aae3f4da
+    - https://github.com/containerd/containerd/commit/11504c3fc5f45634f2d93d57743a998194430b82 (v1.7.27)
     - https://github.com/containerd/containerd/commit/1a43cb6a1035441f9aca8f5666a9b3ef9e70ab20
+    - https://github.com/containerd/containerd/commit/9639b9625554183d0c4d8d072dccb84fedd2320f (v1.6.38)
     - https://github.com/containerd/containerd/commit/cf158e884cfe4812a6c371b59e4ea9bc4c46e51a
     - https://github.com/containerd/containerd/security/advisories/GHSA-265r-hfxg-fhmg
     - https://nvd.nist.gov/vuln/detail/CVE-2024-40635
+    - https://ubuntu.com/security/notices/USN-7374-1
     - https://www.cve.org/CVERecord?id=CVE-2024-40635
     PublishedDate: '2025-03-17T22:15:13.15Z'
     LastModifiedDate: '2025-03-17T22:15:13.15Z'
@@ -764,6 +772,7 @@
     VendorSeverity:
       ghsa: 2
       redhat: 2
+      ubuntu: 2
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N
@@ -775,10 +784,13 @@
     - https://access.redhat.com/security/cve/CVE-2024-40635
     - https://github.com/containerd/containerd
     - https://github.com/containerd/containerd/commit/05044ec0a9a75232cad458027ca83437aae3f4da
+    - https://github.com/containerd/containerd/commit/11504c3fc5f45634f2d93d57743a998194430b82 (v1.7.27)
     - https://github.com/containerd/containerd/commit/1a43cb6a1035441f9aca8f5666a9b3ef9e70ab20
+    - https://github.com/containerd/containerd/commit/9639b9625554183d0c4d8d072dccb84fedd2320f (v1.6.38)
     - https://github.com/containerd/containerd/commit/cf158e884cfe4812a6c371b59e4ea9bc4c46e51a
     - https://github.com/containerd/containerd/security/advisories/GHSA-265r-hfxg-fhmg
     - https://nvd.nist.gov/vuln/detail/CVE-2024-40635
+    - https://ubuntu.com/security/notices/USN-7374-1
     - https://www.cve.org/CVERecord?id=CVE-2024-40635
     PublishedDate: '2025-03-17T22:15:13.15Z'
     LastModifiedDate: '2025-03-17T22:15:13.15Z'
