@@ -334,25 +334,31 @@
 │                             ├ Severity        : MEDIUM 
 │                             ├ CweIDs           ─ [0]: CWE-190 
 │                             ├ VendorSeverity   ╭ ghsa  : 2 
-│                             │                  ╰ redhat: 2 
+│                             │                  ├ redhat: 2 
+│                             │                  ╰ ubuntu: 2 
 │                             ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:L/I:L/
 │                             │                  │        │           A:N 
 │                             │                  │        ╰ V3Score : 4.6 
 │                             │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:L/I:L/
 │                             │                           │           A:N 
 │                             │                           ╰ V3Score : 4.6 
-│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-40635 
-│                             │                  ├ [1]: https://github.com/containerd/containerd 
-│                             │                  ├ [2]: https://github.com/containerd/containerd/commit/05044ec
-│                             │                  │      0a9a75232cad458027ca83437aae3f4da 
-│                             │                  ├ [3]: https://github.com/containerd/containerd/commit/1a43cb6
-│                             │                  │      a1035441f9aca8f5666a9b3ef9e70ab20 
-│                             │                  ├ [4]: https://github.com/containerd/containerd/commit/cf158e8
-│                             │                  │      84cfe4812a6c371b59e4ea9bc4c46e51a 
-│                             │                  ├ [5]: https://github.com/containerd/containerd/security/advis
-│                             │                  │      ories/GHSA-265r-hfxg-fhmg 
-│                             │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2024-40635 
-│                             │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-40635 
+│                             ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2024-40635 
+│                             │                  ├ [1] : https://github.com/containerd/containerd 
+│                             │                  ├ [2] : https://github.com/containerd/containerd/commit/05044e
+│                             │                  │       c0a9a75232cad458027ca83437aae3f4da 
+│                             │                  ├ [3] : https://github.com/containerd/containerd/commit/11504c
+│                             │                  │       3fc5f45634f2d93d57743a998194430b82 (v1.7.27) 
+│                             │                  ├ [4] : https://github.com/containerd/containerd/commit/1a43cb
+│                             │                  │       6a1035441f9aca8f5666a9b3ef9e70ab20 
+│                             │                  ├ [5] : https://github.com/containerd/containerd/commit/9639b9
+│                             │                  │       625554183d0c4d8d072dccb84fedd2320f (v1.6.38) 
+│                             │                  ├ [6] : https://github.com/containerd/containerd/commit/cf158e
+│                             │                  │       884cfe4812a6c371b59e4ea9bc4c46e51a 
+│                             │                  ├ [7] : https://github.com/containerd/containerd/security/advi
+│                             │                  │       sories/GHSA-265r-hfxg-fhmg 
+│                             │                  ├ [8] : https://nvd.nist.gov/vuln/detail/CVE-2024-40635 
+│                             │                  ├ [9] : https://ubuntu.com/security/notices/USN-7374-1 
+│                             │                  ╰ [10]: https://www.cve.org/CVERecord?id=CVE-2024-40635 
 │                             ├ PublishedDate   : 2025-03-17T22:15:13.15Z 
 │                             ╰ LastModifiedDate: 2025-03-17T22:15:13.15Z 
 ├ [7] ╭ Target: usr/bin/nerdctl 
@@ -556,25 +562,31 @@
                               ├ Severity        : MEDIUM 
                               ├ CweIDs           ─ [0]: CWE-190 
                               ├ VendorSeverity   ╭ ghsa  : 2 
-                              │                  ╰ redhat: 2 
+                              │                  ├ redhat: 2 
+                              │                  ╰ ubuntu: 2 
                               ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:L/I:L/
                               │                  │        │           A:N 
                               │                  │        ╰ V3Score : 4.6 
                               │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:L/I:L/
                               │                           │           A:N 
                               │                           ╰ V3Score : 4.6 
-                              ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-40635 
-                              │                  ├ [1]: https://github.com/containerd/containerd 
-                              │                  ├ [2]: https://github.com/containerd/containerd/commit/05044ec
-                              │                  │      0a9a75232cad458027ca83437aae3f4da 
-                              │                  ├ [3]: https://github.com/containerd/containerd/commit/1a43cb6
-                              │                  │      a1035441f9aca8f5666a9b3ef9e70ab20 
-                              │                  ├ [4]: https://github.com/containerd/containerd/commit/cf158e8
-                              │                  │      84cfe4812a6c371b59e4ea9bc4c46e51a 
-                              │                  ├ [5]: https://github.com/containerd/containerd/security/advis
-                              │                  │      ories/GHSA-265r-hfxg-fhmg 
-                              │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2024-40635 
-                              │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2024-40635 
+                              ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2024-40635 
+                              │                  ├ [1] : https://github.com/containerd/containerd 
+                              │                  ├ [2] : https://github.com/containerd/containerd/commit/05044e
+                              │                  │       c0a9a75232cad458027ca83437aae3f4da 
+                              │                  ├ [3] : https://github.com/containerd/containerd/commit/11504c
+                              │                  │       3fc5f45634f2d93d57743a998194430b82 (v1.7.27) 
+                              │                  ├ [4] : https://github.com/containerd/containerd/commit/1a43cb
+                              │                  │       6a1035441f9aca8f5666a9b3ef9e70ab20 
+                              │                  ├ [5] : https://github.com/containerd/containerd/commit/9639b9
+                              │                  │       625554183d0c4d8d072dccb84fedd2320f (v1.6.38) 
+                              │                  ├ [6] : https://github.com/containerd/containerd/commit/cf158e
+                              │                  │       884cfe4812a6c371b59e4ea9bc4c46e51a 
+                              │                  ├ [7] : https://github.com/containerd/containerd/security/advi
+                              │                  │       sories/GHSA-265r-hfxg-fhmg 
+                              │                  ├ [8] : https://nvd.nist.gov/vuln/detail/CVE-2024-40635 
+                              │                  ├ [9] : https://ubuntu.com/security/notices/USN-7374-1 
+                              │                  ╰ [10]: https://www.cve.org/CVERecord?id=CVE-2024-40635 
                               ├ PublishedDate   : 2025-03-17T22:15:13.15Z 
                               ╰ LastModifiedDate: 2025-03-17T22:15:13.15Z 
 ````
