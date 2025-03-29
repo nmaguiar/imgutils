@@ -33,6 +33,7 @@
     - CWE-115
     VendorSeverity:
       amazon: 2
+      cbl-mariner: 2
       ghsa: 2
       redhat: 2
     CVSS:
@@ -211,6 +212,7 @@
     - CWE-115
     VendorSeverity:
       amazon: 2
+      cbl-mariner: 2
       ghsa: 2
       redhat: 2
     CVSS:
@@ -260,6 +262,7 @@
     - CWE-115
     VendorSeverity:
       amazon: 2
+      cbl-mariner: 2
       ghsa: 2
       redhat: 2
     CVSS:
@@ -455,6 +458,7 @@
     - CWE-115
     VendorSeverity:
       amazon: 2
+      cbl-mariner: 2
       ghsa: 2
       redhat: 2
     CVSS:
