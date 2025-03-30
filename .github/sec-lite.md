@@ -33,6 +33,7 @@
                         │     ├ Severity        : MEDIUM 
                         │     ├ CweIDs           ─ [0]: CWE-115 
                         │     ├ VendorSeverity   ╭ amazon     : 2 
+                        │     │                  ├ azure      : 1 
                         │     │                  ├ cbl-mariner: 2 
                         │     │                  ├ ghsa       : 2 
                         │     │                  ╰ redhat     : 2 
