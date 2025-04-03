@@ -16,10 +16,10 @@
 │                       │     ├ InstalledVersion: v0.30.0 
 │                       │     ├ FixedVersion    : 0.36.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:916b9cea6a816a9e5e468c99889fb9d8bedb3b2684e39
-│                       │     │                  │         f6df1f6af2a46a5499e 
-│                       │     │                  ╰ DiffID: sha256:54ea534c43a45c47f060e285fe9eb93c8b48646444cdd
-│                       │     │                            a24820376b0e2baf1e9 
+│                       │     ├ Layer            ╭ Digest: sha256:648e9f5c73de3cdac859cc84046035bed3e5232b8b724
+│                       │     │                  │         176e50ac33a19fddcb3 
+│                       │     │                  ╰ DiffID: sha256:f8db81905370f2dae2d9ab17f33850c1d9703c2f5d154
+│                       │     │                            7a5c8f7703c3f9a582a 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -64,10 +64,10 @@
 │                       │     ├ InstalledVersion: v1.23.3 
 │                       │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:916b9cea6a816a9e5e468c99889fb9d8bedb3b2684e39
-│                       │     │                  │         f6df1f6af2a46a5499e 
-│                       │     │                  ╰ DiffID: sha256:54ea534c43a45c47f060e285fe9eb93c8b48646444cdd
-│                       │     │                            a24820376b0e2baf1e9 
+│                       │     ├ Layer            ╭ Digest: sha256:648e9f5c73de3cdac859cc84046035bed3e5232b8b724
+│                       │     │                  │         176e50ac33a19fddcb3 
+│                       │     │                  ╰ DiffID: sha256:f8db81905370f2dae2d9ab17f33850c1d9703c2f5d154
+│                       │     │                            7a5c8f7703c3f9a582a 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45336 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -115,10 +115,10 @@
 │                       │     ├ InstalledVersion: v1.23.3 
 │                       │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:916b9cea6a816a9e5e468c99889fb9d8bedb3b2684e39
-│                       │     │                  │         f6df1f6af2a46a5499e 
-│                       │     │                  ╰ DiffID: sha256:54ea534c43a45c47f060e285fe9eb93c8b48646444cdd
-│                       │     │                            a24820376b0e2baf1e9 
+│                       │     ├ Layer            ╭ Digest: sha256:648e9f5c73de3cdac859cc84046035bed3e5232b8b724
+│                       │     │                  │         176e50ac33a19fddcb3 
+│                       │     │                  ╰ DiffID: sha256:f8db81905370f2dae2d9ab17f33850c1d9703c2f5d154
+│                       │     │                            7a5c8f7703c3f9a582a 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45341 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -162,10 +162,10 @@
 │                             ├ InstalledVersion: v1.23.3 
 │                             ├ FixedVersion    : 1.22.12, 1.23.6, 1.24.0-rc.3 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:916b9cea6a816a9e5e468c99889fb9d8bedb3b2684e39
-│                             │                  │         f6df1f6af2a46a5499e 
-│                             │                  ╰ DiffID: sha256:54ea534c43a45c47f060e285fe9eb93c8b48646444cdd
-│                             │                            a24820376b0e2baf1e9 
+│                             ├ Layer            ╭ Digest: sha256:648e9f5c73de3cdac859cc84046035bed3e5232b8b724
+│                             │                  │         176e50ac33a19fddcb3 
+│                             │                  ╰ DiffID: sha256:f8db81905370f2dae2d9ab17f33850c1d9703c2f5d154
+│                             │                            7a5c8f7703c3f9a582a 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22866 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
@@ -209,10 +209,10 @@
 │                             ├ InstalledVersion: v0.33.0 
 │                             ├ FixedVersion    : 0.36.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:916b9cea6a816a9e5e468c99889fb9d8bedb3b2684e39
-│                             │                  │         f6df1f6af2a46a5499e 
-│                             │                  ╰ DiffID: sha256:54ea534c43a45c47f060e285fe9eb93c8b48646444cdd
-│                             │                            a24820376b0e2baf1e9 
+│                             ├ Layer            ╭ Digest: sha256:648e9f5c73de3cdac859cc84046035bed3e5232b8b724
+│                             │                  │         176e50ac33a19fddcb3 
+│                             │                  ╰ DiffID: sha256:f8db81905370f2dae2d9ab17f33850c1d9703c2f5d154
+│                             │                            7a5c8f7703c3f9a582a 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -260,10 +260,10 @@
 │                             ├ InstalledVersion: v0.28.0 
 │                             ├ FixedVersion    : 0.36.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:916b9cea6a816a9e5e468c99889fb9d8bedb3b2684e39
-│                             │                  │         f6df1f6af2a46a5499e 
-│                             │                  ╰ DiffID: sha256:54ea534c43a45c47f060e285fe9eb93c8b48646444cdd
-│                             │                            a24820376b0e2baf1e9 
+│                             ├ Layer            ╭ Digest: sha256:648e9f5c73de3cdac859cc84046035bed3e5232b8b724
+│                             │                  │         176e50ac33a19fddcb3 
+│                             │                  ╰ DiffID: sha256:f8db81905370f2dae2d9ab17f33850c1d9703c2f5d154
+│                             │                            7a5c8f7703c3f9a582a 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -314,10 +314,10 @@
 │                             ├ InstalledVersion: v1.7.24 
 │                             ├ FixedVersion    : 1.7.27, 1.6.38 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:916b9cea6a816a9e5e468c99889fb9d8bedb3b2684e39
-│                             │                  │         f6df1f6af2a46a5499e 
-│                             │                  ╰ DiffID: sha256:54ea534c43a45c47f060e285fe9eb93c8b48646444cdd
-│                             │                            a24820376b0e2baf1e9 
+│                             ├ Layer            ╭ Digest: sha256:648e9f5c73de3cdac859cc84046035bed3e5232b8b724
+│                             │                  │         176e50ac33a19fddcb3 
+│                             │                  ╰ DiffID: sha256:f8db81905370f2dae2d9ab17f33850c1d9703c2f5d154
+│                             │                            7a5c8f7703c3f9a582a 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-40635 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -339,7 +339,8 @@
 │                             │                   import images. 
 │                             ├ Severity        : MEDIUM 
 │                             ├ CweIDs           ─ [0]: CWE-190 
-│                             ├ VendorSeverity   ╭ ghsa  : 2 
+│                             ├ VendorSeverity   ╭ amazon: 2 
+│                             │                  ├ ghsa  : 2 
 │                             │                  ├ redhat: 2 
 │                             │                  ╰ ubuntu: 2 
 │                             ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:L/I:L/
@@ -381,10 +382,10 @@
 │                       │     ├ InstalledVersion: v3.0.3 
 │                       │     ├ FixedVersion    : 3.0.4 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:916b9cea6a816a9e5e468c99889fb9d8bedb3b2684e39
-│                       │     │                  │         f6df1f6af2a46a5499e 
-│                       │     │                  ╰ DiffID: sha256:54ea534c43a45c47f060e285fe9eb93c8b48646444cdd
-│                       │     │                            a24820376b0e2baf1e9 
+│                       │     ├ Layer            ╭ Digest: sha256:648e9f5c73de3cdac859cc84046035bed3e5232b8b724
+│                       │     │                  │         176e50ac33a19fddcb3 
+│                       │     │                  ╰ DiffID: sha256:f8db81905370f2dae2d9ab17f33850c1d9703c2f5d154
+│                       │     │                            7a5c8f7703c3f9a582a 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-27144 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -409,7 +410,8 @@
 │                       │     │                   characters. 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-770 
-│                       │     ├ VendorSeverity   ╭ azure      : 2 
+│                       │     ├ VendorSeverity   ╭ amazon     : 3 
+│                       │     │                  ├ azure      : 2 
 │                       │     │                  ├ cbl-mariner: 2 
 │                       │     │                  ├ ghsa       : 2 
 │                       │     │                  ╰ redhat     : 2 
@@ -437,10 +439,10 @@
 │                       │     ├ InstalledVersion: v4.0.4 
 │                       │     ├ FixedVersion    : 4.0.5 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:916b9cea6a816a9e5e468c99889fb9d8bedb3b2684e39
-│                       │     │                  │         f6df1f6af2a46a5499e 
-│                       │     │                  ╰ DiffID: sha256:54ea534c43a45c47f060e285fe9eb93c8b48646444cdd
-│                       │     │                            a24820376b0e2baf1e9 
+│                       │     ├ Layer            ╭ Digest: sha256:648e9f5c73de3cdac859cc84046035bed3e5232b8b724
+│                       │     │                  │         176e50ac33a19fddcb3 
+│                       │     │                  ╰ DiffID: sha256:f8db81905370f2dae2d9ab17f33850c1d9703c2f5d154
+│                       │     │                            7a5c8f7703c3f9a582a 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-27144 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -465,7 +467,8 @@
 │                       │     │                   characters. 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-770 
-│                       │     ├ VendorSeverity   ╭ azure      : 2 
+│                       │     ├ VendorSeverity   ╭ amazon     : 3 
+│                       │     │                  ├ azure      : 2 
 │                       │     │                  ├ cbl-mariner: 2 
 │                       │     │                  ├ ghsa       : 2 
 │                       │     │                  ╰ redhat     : 2 
@@ -493,10 +496,10 @@
 │                             ├ InstalledVersion: v0.34.0 
 │                             ├ FixedVersion    : 0.36.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:916b9cea6a816a9e5e468c99889fb9d8bedb3b2684e39
-│                             │                  │         f6df1f6af2a46a5499e 
-│                             │                  ╰ DiffID: sha256:54ea534c43a45c47f060e285fe9eb93c8b48646444cdd
-│                             │                            a24820376b0e2baf1e9 
+│                             ├ Layer            ╭ Digest: sha256:648e9f5c73de3cdac859cc84046035bed3e5232b8b724
+│                             │                  │         176e50ac33a19fddcb3 
+│                             │                  ╰ DiffID: sha256:f8db81905370f2dae2d9ab17f33850c1d9703c2f5d154
+│                             │                            7a5c8f7703c3f9a582a 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -533,68 +536,7 @@
 │                             │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-22870 
 │                             ├ PublishedDate   : 2025-03-12T19:15:38.31Z 
 │                             ╰ LastModifiedDate: 2025-03-18T17:15:45.467Z 
-╰ [9] ╭ Target         : usr/bin/syft 
-      ├ Class          : lang-pkgs 
-      ├ Type           : gobinary 
-      ╰ Vulnerabilities ─ [0] ╭ VulnerabilityID : CVE-2024-40635 
-                              ├ PkgID           : github.com/containerd/containerd@v1.7.26 
-                              ├ PkgName         : github.com/containerd/containerd 
-                              ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/containerd/containerd@v1.7.26 
-                              │                  ╰ UID : 1816dbc8dcaf0317 
-                              ├ InstalledVersion: v1.7.26 
-                              ├ FixedVersion    : 1.7.27, 1.6.38 
-                              ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:916b9cea6a816a9e5e468c99889fb9d8bedb3b2684e39
-                              │                  │         f6df1f6af2a46a5499e 
-                              │                  ╰ DiffID: sha256:54ea534c43a45c47f060e285fe9eb93c8b48646444cdd
-                              │                            a24820376b0e2baf1e9 
-                              ├ SeveritySource  : ghsa 
-                              ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-40635 
-                              ├ DataSource       ╭ ID  : ghsa 
-                              │                  ├ Name: GitHub Security Advisory Go 
-                              │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
-                              │                          osystem%3Ago 
-                              ├ Title           : containerd: containerd has an integer overflow in User ID
-                              │                   handling 
-                              ├ Description     : containerd is an open-source container runtime. A bug was
-                              │                   found in containerd prior to versions 1.6.38, 1.7.27, and
-                              │                   2.0.4 where containers launched with a User set as a
-                              │                   `UID:GID` larger than the maximum 32-bit signed integer can
-                              │                   cause an overflow condition where the container ultimately
-                              │                   runs as root (UID 0). This could cause unexpected behavior
-                              │                   for environments that require containers to run as a non-root
-                              │                    user. This bug has been fixed in containerd 1.6.38, 1.7.27,
-                              │                   and 2.04. As a workaround, ensure that only trusted images
-                              │                   are used and that only trusted users have permissions to
-                              │                   import images. 
-                              ├ Severity        : MEDIUM 
-                              ├ CweIDs           ─ [0]: CWE-190 
-                              ├ VendorSeverity   ╭ ghsa  : 2 
-                              │                  ├ redhat: 2 
-                              │                  ╰ ubuntu: 2 
-                              ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:L/I:L/
-                              │                  │        │           A:N 
-                              │                  │        ╰ V3Score : 4.6 
-                              │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:L/I:L/
-                              │                           │           A:N 
-                              │                           ╰ V3Score : 4.6 
-                              ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2024-40635 
-                              │                  ├ [1] : https://github.com/containerd/containerd 
-                              │                  ├ [2] : https://github.com/containerd/containerd/commit/05044e
-                              │                  │       c0a9a75232cad458027ca83437aae3f4da 
-                              │                  ├ [3] : https://github.com/containerd/containerd/commit/11504c
-                              │                  │       3fc5f45634f2d93d57743a998194430b82 (v1.7.27) 
-                              │                  ├ [4] : https://github.com/containerd/containerd/commit/1a43cb
-                              │                  │       6a1035441f9aca8f5666a9b3ef9e70ab20 
-                              │                  ├ [5] : https://github.com/containerd/containerd/commit/9639b9
-                              │                  │       625554183d0c4d8d072dccb84fedd2320f (v1.6.38) 
-                              │                  ├ [6] : https://github.com/containerd/containerd/commit/cf158e
-                              │                  │       884cfe4812a6c371b59e4ea9bc4c46e51a 
-                              │                  ├ [7] : https://github.com/containerd/containerd/security/advi
-                              │                  │       sories/GHSA-265r-hfxg-fhmg 
-                              │                  ├ [8] : https://nvd.nist.gov/vuln/detail/CVE-2024-40635 
-                              │                  ├ [9] : https://ubuntu.com/security/notices/USN-7374-1 
-                              │                  ╰ [10]: https://www.cve.org/CVERecord?id=CVE-2024-40635 
-                              ├ PublishedDate   : 2025-03-17T22:15:13.15Z 
-                              ╰ LastModifiedDate: 2025-03-17T22:15:13.15Z 
+╰ [9] ╭ Target: usr/bin/syft 
+      ├ Class : lang-pkgs 
+      ╰ Type  : gobinary 
 ````
