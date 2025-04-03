@@ -18,8 +18,8 @@
     FixedVersion: 0.36.0
     Status: fixed
     Layer:
-      Digest: sha256:916b9cea6a816a9e5e468c99889fb9d8bedb3b2684e39f6df1f6af2a46a5499e
-      DiffID: sha256:54ea534c43a45c47f060e285fe9eb93c8b48646444cdda24820376b0e2baf1e9
+      Digest: sha256:648e9f5c73de3cdac859cc84046035bed3e5232b8b724176e50ac33a19fddcb3
+      DiffID: sha256:f8db81905370f2dae2d9ab17f33850c1d9703c2f5d1547a5c8f7703c3f9a582a
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22870
     DataSource:
@@ -65,8 +65,8 @@
     FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
     Status: fixed
     Layer:
-      Digest: sha256:916b9cea6a816a9e5e468c99889fb9d8bedb3b2684e39f6df1f6af2a46a5499e
-      DiffID: sha256:54ea534c43a45c47f060e285fe9eb93c8b48646444cdda24820376b0e2baf1e9
+      Digest: sha256:648e9f5c73de3cdac859cc84046035bed3e5232b8b724176e50ac33a19fddcb3
+      DiffID: sha256:f8db81905370f2dae2d9ab17f33850c1d9703c2f5d1547a5c8f7703c3f9a582a
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45336
     DataSource:
       ID: govulndb
@@ -109,8 +109,8 @@
     FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
     Status: fixed
     Layer:
-      Digest: sha256:916b9cea6a816a9e5e468c99889fb9d8bedb3b2684e39f6df1f6af2a46a5499e
-      DiffID: sha256:54ea534c43a45c47f060e285fe9eb93c8b48646444cdda24820376b0e2baf1e9
+      Digest: sha256:648e9f5c73de3cdac859cc84046035bed3e5232b8b724176e50ac33a19fddcb3
+      DiffID: sha256:f8db81905370f2dae2d9ab17f33850c1d9703c2f5d1547a5c8f7703c3f9a582a
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45341
     DataSource:
       ID: govulndb
@@ -153,8 +153,8 @@
     FixedVersion: 1.22.12, 1.23.6, 1.24.0-rc.3
     Status: fixed
     Layer:
-      Digest: sha256:916b9cea6a816a9e5e468c99889fb9d8bedb3b2684e39f6df1f6af2a46a5499e
-      DiffID: sha256:54ea534c43a45c47f060e285fe9eb93c8b48646444cdda24820376b0e2baf1e9
+      Digest: sha256:648e9f5c73de3cdac859cc84046035bed3e5232b8b724176e50ac33a19fddcb3
+      DiffID: sha256:f8db81905370f2dae2d9ab17f33850c1d9703c2f5d1547a5c8f7703c3f9a582a
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22866
     DataSource:
       ID: govulndb
@@ -198,8 +198,8 @@
     FixedVersion: 0.36.0
     Status: fixed
     Layer:
-      Digest: sha256:916b9cea6a816a9e5e468c99889fb9d8bedb3b2684e39f6df1f6af2a46a5499e
-      DiffID: sha256:54ea534c43a45c47f060e285fe9eb93c8b48646444cdda24820376b0e2baf1e9
+      Digest: sha256:648e9f5c73de3cdac859cc84046035bed3e5232b8b724176e50ac33a19fddcb3
+      DiffID: sha256:f8db81905370f2dae2d9ab17f33850c1d9703c2f5d1547a5c8f7703c3f9a582a
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22870
     DataSource:
@@ -249,8 +249,8 @@
     FixedVersion: 0.36.0
     Status: fixed
     Layer:
-      Digest: sha256:916b9cea6a816a9e5e468c99889fb9d8bedb3b2684e39f6df1f6af2a46a5499e
-      DiffID: sha256:54ea534c43a45c47f060e285fe9eb93c8b48646444cdda24820376b0e2baf1e9
+      Digest: sha256:648e9f5c73de3cdac859cc84046035bed3e5232b8b724176e50ac33a19fddcb3
+      DiffID: sha256:f8db81905370f2dae2d9ab17f33850c1d9703c2f5d1547a5c8f7703c3f9a582a
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22870
     DataSource:
@@ -303,8 +303,8 @@
     FixedVersion: 1.7.27, 1.6.38
     Status: fixed
     Layer:
-      Digest: sha256:916b9cea6a816a9e5e468c99889fb9d8bedb3b2684e39f6df1f6af2a46a5499e
-      DiffID: sha256:54ea534c43a45c47f060e285fe9eb93c8b48646444cdda24820376b0e2baf1e9
+      Digest: sha256:648e9f5c73de3cdac859cc84046035bed3e5232b8b724176e50ac33a19fddcb3
+      DiffID: sha256:f8db81905370f2dae2d9ab17f33850c1d9703c2f5d1547a5c8f7703c3f9a582a
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-40635
     DataSource:
@@ -317,6 +317,7 @@
     CweIDs:
     - CWE-190
     VendorSeverity:
+      amazon: 2
       ghsa: 2
       redhat: 2
       ubuntu: 2
@@ -358,8 +359,8 @@
     FixedVersion: 3.0.4
     Status: fixed
     Layer:
-      Digest: sha256:916b9cea6a816a9e5e468c99889fb9d8bedb3b2684e39f6df1f6af2a46a5499e
-      DiffID: sha256:54ea534c43a45c47f060e285fe9eb93c8b48646444cdda24820376b0e2baf1e9
+      Digest: sha256:648e9f5c73de3cdac859cc84046035bed3e5232b8b724176e50ac33a19fddcb3
+      DiffID: sha256:f8db81905370f2dae2d9ab17f33850c1d9703c2f5d1547a5c8f7703c3f9a582a
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-27144
     DataSource:
@@ -372,6 +373,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       azure: 2
       cbl-mariner: 2
       ghsa: 2
@@ -402,8 +404,8 @@
     FixedVersion: 4.0.5
     Status: fixed
     Layer:
-      Digest: sha256:916b9cea6a816a9e5e468c99889fb9d8bedb3b2684e39f6df1f6af2a46a5499e
-      DiffID: sha256:54ea534c43a45c47f060e285fe9eb93c8b48646444cdda24820376b0e2baf1e9
+      Digest: sha256:648e9f5c73de3cdac859cc84046035bed3e5232b8b724176e50ac33a19fddcb3
+      DiffID: sha256:f8db81905370f2dae2d9ab17f33850c1d9703c2f5d1547a5c8f7703c3f9a582a
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-27144
     DataSource:
@@ -416,6 +418,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       azure: 2
       cbl-mariner: 2
       ghsa: 2
@@ -446,8 +449,8 @@
     FixedVersion: 0.36.0
     Status: fixed
     Layer:
-      Digest: sha256:916b9cea6a816a9e5e468c99889fb9d8bedb3b2684e39f6df1f6af2a46a5499e
-      DiffID: sha256:54ea534c43a45c47f060e285fe9eb93c8b48646444cdda24820376b0e2baf1e9
+      Digest: sha256:648e9f5c73de3cdac859cc84046035bed3e5232b8b724176e50ac33a19fddcb3
+      DiffID: sha256:f8db81905370f2dae2d9ab17f33850c1d9703c2f5d1547a5c8f7703c3f9a582a
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22870
     DataSource:
@@ -486,52 +489,3 @@
 - Target: usr/bin/syft
   Class: lang-pkgs
   Type: gobinary
-  Vulnerabilities:
-  - VulnerabilityID: CVE-2024-40635
-    PkgID: github.com/containerd/containerd@v1.7.26
-    PkgName: github.com/containerd/containerd
-    PkgIdentifier:
-      PURL: pkg:golang/github.com/containerd/containerd@v1.7.26
-      UID: 1816dbc8dcaf0317
-    InstalledVersion: v1.7.26
-    FixedVersion: 1.7.27, 1.6.38
-    Status: fixed
-    Layer:
-      Digest: sha256:916b9cea6a816a9e5e468c99889fb9d8bedb3b2684e39f6df1f6af2a46a5499e
-      DiffID: sha256:54ea534c43a45c47f060e285fe9eb93c8b48646444cdda24820376b0e2baf1e9
-    SeveritySource: ghsa
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-40635
-    DataSource:
-      ID: ghsa
-      Name: GitHub Security Advisory Go
-      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Title: 'containerd: containerd has an integer overflow in User ID handling'
-    Description: containerd is an open-source container runtime. A bug was found in containerd prior to versions 1.6.38, 1.7.27, and 2.0.4 where containers launched with a User set as a `UID:GID` larger than the maximum 32-bit signed integer can cause an overflow condition where the container ultimately runs as root (UID 0). This could cause unexpected behavior for environments that require containers to run as a non-root user. This bug has been fixed in containerd 1.6.38, 1.7.27, and 2.04. As a workaround, ensure that only trusted images are used and that only trusted users have permissions to import images.
-    Severity: MEDIUM
-    CweIDs:
-    - CWE-190
-    VendorSeverity:
-      ghsa: 2
-      redhat: 2
-      ubuntu: 2
-    CVSS:
-      ghsa:
-        V3Vector: CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N
-        V3Score: 4.6
-      redhat:
-        V3Vector: CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N
-        V3Score: 4.6
-    References:
-    - https://access.redhat.com/security/cve/CVE-2024-40635
-    - https://github.com/containerd/containerd
-    - https://github.com/containerd/containerd/commit/05044ec0a9a75232cad458027ca83437aae3f4da
-    - https://github.com/containerd/containerd/commit/11504c3fc5f45634f2d93d57743a998194430b82 (v1.7.27)
-    - https://github.com/containerd/containerd/commit/1a43cb6a1035441f9aca8f5666a9b3ef9e70ab20
-    - https://github.com/containerd/containerd/commit/9639b9625554183d0c4d8d072dccb84fedd2320f (v1.6.38)
-    - https://github.com/containerd/containerd/commit/cf158e884cfe4812a6c371b59e4ea9bc4c46e51a
-    - https://github.com/containerd/containerd/security/advisories/GHSA-265r-hfxg-fhmg
-    - https://nvd.nist.gov/vuln/detail/CVE-2024-40635
-    - https://ubuntu.com/security/notices/USN-7374-1
-    - https://www.cve.org/CVERecord?id=CVE-2024-40635
-    PublishedDate: '2025-03-17T22:15:13.15Z'
-    LastModifiedDate: '2025-03-17T22:15:13.15Z'
