@@ -16,10 +16,10 @@
 │                       │     ├ InstalledVersion: v0.30.0 
 │                       │     ├ FixedVersion    : 0.36.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:9998472525a2f64881d610964c53c77351de1b8c7cd8c
-│                       │     │                  │         1c8e4191b2c2731a651 
-│                       │     │                  ╰ DiffID: sha256:1b1cbe22d2db23ecbd73511362605cbcc01f071d193d0
-│                       │     │                            643b2fefe5c4dfe1a8e 
+│                       │     ├ Layer            ╭ Digest: sha256:5c571cc8ebf5ab7b442f943616e951c78f658abebae7b
+│                       │     │                  │         98988f37608c5c0d1c0 
+│                       │     │                  ╰ DiffID: sha256:35d1e237edc0a1b2bffcf4aca6a420acb93c9bf2d9064
+│                       │     │                            5ccddb30527def99ba0 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -64,10 +64,10 @@
 │                       │     ├ InstalledVersion: v1.23.3 
 │                       │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:9998472525a2f64881d610964c53c77351de1b8c7cd8c
-│                       │     │                  │         1c8e4191b2c2731a651 
-│                       │     │                  ╰ DiffID: sha256:1b1cbe22d2db23ecbd73511362605cbcc01f071d193d0
-│                       │     │                            643b2fefe5c4dfe1a8e 
+│                       │     ├ Layer            ╭ Digest: sha256:5c571cc8ebf5ab7b442f943616e951c78f658abebae7b
+│                       │     │                  │         98988f37608c5c0d1c0 
+│                       │     │                  ╰ DiffID: sha256:35d1e237edc0a1b2bffcf4aca6a420acb93c9bf2d9064
+│                       │     │                            5ccddb30527def99ba0 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45336 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -115,10 +115,10 @@
 │                       │     ├ InstalledVersion: v1.23.3 
 │                       │     ├ FixedVersion    : 1.22.11, 1.23.5, 1.24.0-rc.2 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:9998472525a2f64881d610964c53c77351de1b8c7cd8c
-│                       │     │                  │         1c8e4191b2c2731a651 
-│                       │     │                  ╰ DiffID: sha256:1b1cbe22d2db23ecbd73511362605cbcc01f071d193d0
-│                       │     │                            643b2fefe5c4dfe1a8e 
+│                       │     ├ Layer            ╭ Digest: sha256:5c571cc8ebf5ab7b442f943616e951c78f658abebae7b
+│                       │     │                  │         98988f37608c5c0d1c0 
+│                       │     │                  ╰ DiffID: sha256:35d1e237edc0a1b2bffcf4aca6a420acb93c9bf2d9064
+│                       │     │                            5ccddb30527def99ba0 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-45341 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -162,10 +162,10 @@
 │                             ├ InstalledVersion: v1.23.3 
 │                             ├ FixedVersion    : 1.22.12, 1.23.6, 1.24.0-rc.3 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:9998472525a2f64881d610964c53c77351de1b8c7cd8c
-│                             │                  │         1c8e4191b2c2731a651 
-│                             │                  ╰ DiffID: sha256:1b1cbe22d2db23ecbd73511362605cbcc01f071d193d0
-│                             │                            643b2fefe5c4dfe1a8e 
+│                             ├ Layer            ╭ Digest: sha256:5c571cc8ebf5ab7b442f943616e951c78f658abebae7b
+│                             │                  │         98988f37608c5c0d1c0 
+│                             │                  ╰ DiffID: sha256:35d1e237edc0a1b2bffcf4aca6a420acb93c9bf2d9064
+│                             │                            5ccddb30527def99ba0 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22866 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
@@ -209,10 +209,10 @@
 │                             ├ InstalledVersion: v0.33.0 
 │                             ├ FixedVersion    : 0.36.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:9998472525a2f64881d610964c53c77351de1b8c7cd8c
-│                             │                  │         1c8e4191b2c2731a651 
-│                             │                  ╰ DiffID: sha256:1b1cbe22d2db23ecbd73511362605cbcc01f071d193d0
-│                             │                            643b2fefe5c4dfe1a8e 
+│                             ├ Layer            ╭ Digest: sha256:5c571cc8ebf5ab7b442f943616e951c78f658abebae7b
+│                             │                  │         98988f37608c5c0d1c0 
+│                             │                  ╰ DiffID: sha256:35d1e237edc0a1b2bffcf4aca6a420acb93c9bf2d9064
+│                             │                            5ccddb30527def99ba0 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -260,10 +260,10 @@
 │                             ├ InstalledVersion: v0.28.0 
 │                             ├ FixedVersion    : 0.36.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:9998472525a2f64881d610964c53c77351de1b8c7cd8c
-│                             │                  │         1c8e4191b2c2731a651 
-│                             │                  ╰ DiffID: sha256:1b1cbe22d2db23ecbd73511362605cbcc01f071d193d0
-│                             │                            643b2fefe5c4dfe1a8e 
+│                             ├ Layer            ╭ Digest: sha256:5c571cc8ebf5ab7b442f943616e951c78f658abebae7b
+│                             │                  │         98988f37608c5c0d1c0 
+│                             │                  ╰ DiffID: sha256:35d1e237edc0a1b2bffcf4aca6a420acb93c9bf2d9064
+│                             │                            5ccddb30527def99ba0 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -314,10 +314,10 @@
 │                             ├ InstalledVersion: v1.7.24 
 │                             ├ FixedVersion    : 1.7.27, 1.6.38 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:9998472525a2f64881d610964c53c77351de1b8c7cd8c
-│                             │                  │         1c8e4191b2c2731a651 
-│                             │                  ╰ DiffID: sha256:1b1cbe22d2db23ecbd73511362605cbcc01f071d193d0
-│                             │                            643b2fefe5c4dfe1a8e 
+│                             ├ Layer            ╭ Digest: sha256:5c571cc8ebf5ab7b442f943616e951c78f658abebae7b
+│                             │                  │         98988f37608c5c0d1c0 
+│                             │                  ╰ DiffID: sha256:35d1e237edc0a1b2bffcf4aca6a420acb93c9bf2d9064
+│                             │                            5ccddb30527def99ba0 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2024-40635 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -382,10 +382,10 @@
 │                       │     ├ InstalledVersion: v3.0.3 
 │                       │     ├ FixedVersion    : 3.0.4 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:9998472525a2f64881d610964c53c77351de1b8c7cd8c
-│                       │     │                  │         1c8e4191b2c2731a651 
-│                       │     │                  ╰ DiffID: sha256:1b1cbe22d2db23ecbd73511362605cbcc01f071d193d0
-│                       │     │                            643b2fefe5c4dfe1a8e 
+│                       │     ├ Layer            ╭ Digest: sha256:5c571cc8ebf5ab7b442f943616e951c78f658abebae7b
+│                       │     │                  │         98988f37608c5c0d1c0 
+│                       │     │                  ╰ DiffID: sha256:35d1e237edc0a1b2bffcf4aca6a420acb93c9bf2d9064
+│                       │     │                            5ccddb30527def99ba0 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-27144 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -439,10 +439,10 @@
 │                       │     ├ InstalledVersion: v4.0.4 
 │                       │     ├ FixedVersion    : 4.0.5 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:9998472525a2f64881d610964c53c77351de1b8c7cd8c
-│                       │     │                  │         1c8e4191b2c2731a651 
-│                       │     │                  ╰ DiffID: sha256:1b1cbe22d2db23ecbd73511362605cbcc01f071d193d0
-│                       │     │                            643b2fefe5c4dfe1a8e 
+│                       │     ├ Layer            ╭ Digest: sha256:5c571cc8ebf5ab7b442f943616e951c78f658abebae7b
+│                       │     │                  │         98988f37608c5c0d1c0 
+│                       │     │                  ╰ DiffID: sha256:35d1e237edc0a1b2bffcf4aca6a420acb93c9bf2d9064
+│                       │     │                            5ccddb30527def99ba0 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-27144 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -496,10 +496,10 @@
 │                             ├ InstalledVersion: v0.34.0 
 │                             ├ FixedVersion    : 0.36.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:9998472525a2f64881d610964c53c77351de1b8c7cd8c
-│                             │                  │         1c8e4191b2c2731a651 
-│                             │                  ╰ DiffID: sha256:1b1cbe22d2db23ecbd73511362605cbcc01f071d193d0
-│                             │                            643b2fefe5c4dfe1a8e 
+│                             ├ Layer            ╭ Digest: sha256:5c571cc8ebf5ab7b442f943616e951c78f658abebae7b
+│                             │                  │         98988f37608c5c0d1c0 
+│                             │                  ╰ DiffID: sha256:35d1e237edc0a1b2bffcf4aca6a420acb93c9bf2d9064
+│                             │                            5ccddb30527def99ba0 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
 │                             ├ DataSource       ╭ ID  : ghsa 
