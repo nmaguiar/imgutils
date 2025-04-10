@@ -151,48 +151,79 @@
                         │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-45341 
                         │     ├ PublishedDate   : 2025-01-28T02:15:29.147Z 
                         │     ╰ LastModifiedDate: 2025-02-21T18:15:17.96Z 
-                        ╰ [3] ╭ VulnerabilityID : CVE-2025-22866 
+                        ├ [3] ╭ VulnerabilityID : CVE-2025-22866 
+                        │     ├ PkgID           : stdlib@v1.23.3 
+                        │     ├ PkgName         : stdlib 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.3 
+                        │     │                  ╰ UID : c32ee6844a95cf7d 
+                        │     ├ InstalledVersion: v1.23.3 
+                        │     ├ FixedVersion    : 1.22.12, 1.23.6, 1.24.0-rc.3 
+                        │     ├ Status          : fixed 
+                        │     ├ Layer            ╭ Digest: sha256:39c96a4301290354f27271f03ad6906b411e4e2e78a1e
+                        │     │                  │         9c15fd2bd09d65e6078 
+                        │     │                  ╰ DiffID: sha256:5f93d9005cecf86e968f6edac47fd44fe03c67ee13899
+                        │     │                            7bf0161fb0118223b3d 
+                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22866 
+                        │     ├ DataSource       ╭ ID  : govulndb 
+                        │     │                  ├ Name: The Go Vulnerability Database 
+                        │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │     ├ Title           : crypto/internal/nistec: golang: Timing sidechannel for P-256
+                        │     │                   on ppc64le in crypto/internal/nistec 
+                        │     ├ Description     : Due to the usage of a variable time instruction in the
+                        │     │                   assembly implementation of an internal function, a small
+                        │     │                   number of bits of secret scalars are leaked on the ppc64le
+                        │     │                   architecture. Due to the way this function is used, we do not
+                        │     │                    believe this leakage is enough to allow recovery of the
+                        │     │                   private key when P-256 is used in any well known protocols.[
+                        │     │                   m 
+                        │     ├ Severity        : MEDIUM 
+                        │     ├ VendorSeverity   ╭ bitnami: 2 
+                        │     │                  ╰ redhat : 2 
+                        │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N
+                        │     │                  │         │           /A:N 
+                        │     │                  │         ╰ V3Score : 4 
+                        │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N
+                        │     │                            │           /A:N 
+                        │     │                            ╰ V3Score : 5.3 
+                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-22866 
+                        │     │                  ├ [1]: https://go.dev/cl/643735 
+                        │     │                  ├ [2]: https://go.dev/issue/71383 
+                        │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/xU1ZCHUZw3k 
+                        │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-22866 
+                        │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
+                        │     │                  ├ [6]: https://security.netapp.com/advisory/ntap-20250221-0002/ 
+                        │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
+                        │     ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
+                        │     ╰ LastModifiedDate: 2025-02-21T18:15:32.243Z 
+                        ╰ [4] ╭ VulnerabilityID : CVE-2025-22871 
                               ├ PkgID           : stdlib@v1.23.3 
                               ├ PkgName         : stdlib 
                               ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.23.3 
                               │                  ╰ UID : c32ee6844a95cf7d 
                               ├ InstalledVersion: v1.23.3 
-                              ├ FixedVersion    : 1.22.12, 1.23.6, 1.24.0-rc.3 
+                              ├ FixedVersion    : 1.23.8, 1.24.2 
                               ├ Status          : fixed 
                               ├ Layer            ╭ Digest: sha256:39c96a4301290354f27271f03ad6906b411e4e2e78a1e
                               │                  │         9c15fd2bd09d65e6078 
                               │                  ╰ DiffID: sha256:5f93d9005cecf86e968f6edac47fd44fe03c67ee13899
                               │                            7bf0161fb0118223b3d 
-                              ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22866 
+                              ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22871 
                               ├ DataSource       ╭ ID  : govulndb 
                               │                  ├ Name: The Go Vulnerability Database 
                               │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                              ├ Title           : crypto/internal/nistec: golang: Timing sidechannel for P-256
-                              │                   on ppc64le in crypto/internal/nistec 
-                              ├ Description     : Due to the usage of a variable time instruction in the
-                              │                   assembly implementation of an internal function, a small
-                              │                   number of bits of secret scalars are leaked on the ppc64le
-                              │                   architecture. Due to the way this function is used, we do not
-                              │                    believe this leakage is enough to allow recovery of the
-                              │                   private key when P-256 is used in any well known protocols.[
-                              │                   m 
-                              ├ Severity        : MEDIUM 
-                              ├ VendorSeverity   ╭ bitnami: 2 
-                              │                  ╰ redhat : 2 
-                              ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N
-                              │                  │         │           /A:N 
-                              │                  │         ╰ V3Score : 4 
-                              │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N
-                              │                            │           /A:N 
-                              │                            ╰ V3Score : 5.3 
-                              ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-22866 
-                              │                  ├ [1]: https://go.dev/cl/643735 
-                              │                  ├ [2]: https://go.dev/issue/71383 
-                              │                  ├ [3]: https://groups.google.com/g/golang-announce/c/xU1ZCHUZw3k 
-                              │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-22866 
-                              │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3447 
-                              │                  ├ [6]: https://security.netapp.com/advisory/ntap-20250221-0002/ 
-                              │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-22866 
-                              ├ PublishedDate   : 2025-02-06T17:15:21.41Z 
-                              ╰ LastModifiedDate: 2025-02-21T18:15:32.243Z 
+                              ├ Title           : The net/http package improperly accepts a bare LF as a line
+                              │                   terminator ... 
+                              ├ Description     : The net/http package improperly accepts a bare LF as a line
+                              │                   terminator in chunked data chunk-size lines. This can permit
+                              │                   request smuggling if a net/http server is used in conjunction
+                              │                    with a server that incorrectly accepts a bare LF as part of
+                              │                   a chunk-ext. 
+                              ├ Severity        : UNKNOWN 
+                              ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/04/04/4 
+                              │                  ├ [1]: https://go.dev/cl/652998 
+                              │                  ├ [2]: https://go.dev/issue/71988 
+                              │                  ├ [3]: https://groups.google.com/g/golang-announce/c/Y2uBTVKjBQk 
+                              │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-3563 
+                              ├ PublishedDate   : 2025-04-08T20:15:20.183Z 
+                              ╰ LastModifiedDate: 2025-04-08T21:15:48.173Z 
 ````
