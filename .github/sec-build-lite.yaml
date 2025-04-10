@@ -181,3 +181,31 @@
     - https://www.cve.org/CVERecord?id=CVE-2025-22866
     PublishedDate: '2025-02-06T17:15:21.41Z'
     LastModifiedDate: '2025-02-21T18:15:32.243Z'
+  - VulnerabilityID: CVE-2025-22871
+    PkgID: stdlib@v1.23.3
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.23.3
+      UID: c32ee6844a95cf7d
+    InstalledVersion: v1.23.3
+    FixedVersion: 1.23.8, 1.24.2
+    Status: fixed
+    Layer:
+      Digest: sha256:c796f7ec7264833489c050926a5b2eb16b54b31cb51ef9a8aef7f239fe92284d
+      DiffID: sha256:0d64fd72f98b1165310b9be78ce12c7611bb34746bf27f8201c7ac759da80419
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22871
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: The net/http package improperly accepts a bare LF as a line terminator ...
+    Description: The net/http package improperly accepts a bare LF as a line terminator in chunked data chunk-size lines. This can permit request smuggling if a net/http server is used in conjunction with a server that incorrectly accepts a bare LF as part of a chunk-ext.
+    Severity: UNKNOWN
+    References:
+    - http://www.openwall.com/lists/oss-security/2025/04/04/4
+    - https://go.dev/cl/652998
+    - https://go.dev/issue/71988
+    - https://groups.google.com/g/golang-announce/c/Y2uBTVKjBQk
+    - https://pkg.go.dev/vuln/GO-2025-3563
+    PublishedDate: '2025-04-08T20:15:20.183Z'
+    LastModifiedDate: '2025-04-08T21:15:48.173Z'
