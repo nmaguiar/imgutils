@@ -15,8 +15,8 @@
     FixedVersion: 0.36.0
     Status: fixed
     Layer:
-      Digest: sha256:c796f7ec7264833489c050926a5b2eb16b54b31cb51ef9a8aef7f239fe92284d
-      DiffID: sha256:0d64fd72f98b1165310b9be78ce12c7611bb34746bf27f8201c7ac759da80419
+      Digest: sha256:866fbb52b5aac29f665df98520b048dd53c1d472ffee863474d0e46b91c9d080
+      DiffID: sha256:3b7d49ec09b0c8e314c0e0bf82a216a0470ffbcb8f12d0270cac70939abf4570
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22870
     DataSource:
@@ -62,8 +62,8 @@
     FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
     Status: fixed
     Layer:
-      Digest: sha256:c796f7ec7264833489c050926a5b2eb16b54b31cb51ef9a8aef7f239fe92284d
-      DiffID: sha256:0d64fd72f98b1165310b9be78ce12c7611bb34746bf27f8201c7ac759da80419
+      Digest: sha256:866fbb52b5aac29f665df98520b048dd53c1d472ffee863474d0e46b91c9d080
+      DiffID: sha256:3b7d49ec09b0c8e314c0e0bf82a216a0470ffbcb8f12d0270cac70939abf4570
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45336
     DataSource:
       ID: govulndb
@@ -73,9 +73,11 @@
     Description: The HTTP client drops sensitive headers after following a cross-domain redirect. For example, a request to a.com/ containing an Authorization header which is redirected to b.com/ will not send that header to b.com. In the event that the client received a subsequent same-domain redirect, however, the sensitive headers would be restored. For example, a chain of redirects from a.com/, to b.com/1, and finally to b.com/2 would incorrectly send the Authorization header to b.com/2.
     Severity: MEDIUM
     VendorSeverity:
+      alma: 2
       amazon: 2
       bitnami: 2
       cbl-mariner: 3
+      oracle-oval: 2
       redhat: 2
     CVSS:
       bitnami:
@@ -85,11 +87,17 @@
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N
         V3Score: 5.9
     References:
+    - https://access.redhat.com/errata/RHSA-2025:3772
     - https://access.redhat.com/security/cve/CVE-2024-45336
+    - https://bugzilla.redhat.com/2341750
+    - https://bugzilla.redhat.com/2341751
+    - https://errata.almalinux.org/8/ALSA-2025-3772.html
     - https://go.dev/cl/643100
     - https://go.dev/issue/70530
     - https://groups.google.com/g/golang-dev/c/CAWXhan3Jww/m/bk9LAa-lCgAJ
     - https://groups.google.com/g/golang-dev/c/bG8cv1muIBM/m/G461hA6lCgAJ
+    - https://linux.oracle.com/cve/CVE-2024-45336.html
+    - https://linux.oracle.com/errata/ELSA-2025-3772.html
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45336
     - https://pkg.go.dev/vuln/GO-2025-3420
     - https://security.netapp.com/advisory/ntap-20250221-0003/
@@ -106,8 +114,8 @@
     FixedVersion: 1.22.11, 1.23.5, 1.24.0-rc.2
     Status: fixed
     Layer:
-      Digest: sha256:c796f7ec7264833489c050926a5b2eb16b54b31cb51ef9a8aef7f239fe92284d
-      DiffID: sha256:0d64fd72f98b1165310b9be78ce12c7611bb34746bf27f8201c7ac759da80419
+      Digest: sha256:866fbb52b5aac29f665df98520b048dd53c1d472ffee863474d0e46b91c9d080
+      DiffID: sha256:3b7d49ec09b0c8e314c0e0bf82a216a0470ffbcb8f12d0270cac70939abf4570
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-45341
     DataSource:
       ID: govulndb
@@ -117,9 +125,11 @@
     Description: A certificate with a URI which has a IPv6 address with a zone ID may incorrectly satisfy a URI name constraint that applies to the certificate chain. Certificates containing URIs are not permitted in the web PKI, so this only affects users of private PKIs which make use of URIs.
     Severity: MEDIUM
     VendorSeverity:
+      alma: 2
       amazon: 2
       bitnami: 2
       cbl-mariner: 2
+      oracle-oval: 2
       redhat: 1
     CVSS:
       bitnami:
@@ -129,11 +139,17 @@
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N
         V3Score: 4.2
     References:
+    - https://access.redhat.com/errata/RHSA-2025:3772
     - https://access.redhat.com/security/cve/CVE-2024-45341
+    - https://bugzilla.redhat.com/2341750
+    - https://bugzilla.redhat.com/2341751
+    - https://errata.almalinux.org/8/ALSA-2025-3772.html
     - https://go.dev/cl/643099
     - https://go.dev/issue/71156
     - https://groups.google.com/g/golang-dev/c/CAWXhan3Jww/m/bk9LAa-lCgAJ
     - https://groups.google.com/g/golang-dev/c/bG8cv1muIBM/m/G461hA6lCgAJ
+    - https://linux.oracle.com/cve/CVE-2024-45341.html
+    - https://linux.oracle.com/errata/ELSA-2025-3772.html
     - https://nvd.nist.gov/vuln/detail/CVE-2024-45341
     - https://pkg.go.dev/vuln/GO-2025-3373
     - https://security.netapp.com/advisory/ntap-20250221-0004/
@@ -150,8 +166,8 @@
     FixedVersion: 1.22.12, 1.23.6, 1.24.0-rc.3
     Status: fixed
     Layer:
-      Digest: sha256:c796f7ec7264833489c050926a5b2eb16b54b31cb51ef9a8aef7f239fe92284d
-      DiffID: sha256:0d64fd72f98b1165310b9be78ce12c7611bb34746bf27f8201c7ac759da80419
+      Digest: sha256:866fbb52b5aac29f665df98520b048dd53c1d472ffee863474d0e46b91c9d080
+      DiffID: sha256:3b7d49ec09b0c8e314c0e0bf82a216a0470ffbcb8f12d0270cac70939abf4570
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22866
     DataSource:
       ID: govulndb
@@ -191,8 +207,8 @@
     FixedVersion: 1.23.8, 1.24.2
     Status: fixed
     Layer:
-      Digest: sha256:c796f7ec7264833489c050926a5b2eb16b54b31cb51ef9a8aef7f239fe92284d
-      DiffID: sha256:0d64fd72f98b1165310b9be78ce12c7611bb34746bf27f8201c7ac759da80419
+      Digest: sha256:866fbb52b5aac29f665df98520b048dd53c1d472ffee863474d0e46b91c9d080
+      DiffID: sha256:3b7d49ec09b0c8e314c0e0bf82a216a0470ffbcb8f12d0270cac70939abf4570
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22871
     DataSource:
       ID: govulndb
