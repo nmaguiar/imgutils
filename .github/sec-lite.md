@@ -81,9 +81,11 @@
                         │     │                   finally to b.com/2 would incorrectly send the Authorization
                         │     │                   header to b.com/2. 
                         │     ├ Severity        : MEDIUM 
-                        │     ├ VendorSeverity   ╭ amazon     : 2 
+                        │     ├ VendorSeverity   ╭ alma       : 2 
+                        │     │                  ├ amazon     : 2 
                         │     │                  ├ bitnami    : 2 
                         │     │                  ├ cbl-mariner: 3 
+                        │     │                  ├ oracle-oval: 2 
                         │     │                  ╰ redhat     : 2 
                         │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
                         │     │                  │         │           /A:N 
@@ -91,17 +93,23 @@
                         │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N
                         │     │                            │           /A:N 
                         │     │                            ╰ V3Score : 5.9 
-                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-45336 
-                        │     │                  ├ [1]: https://go.dev/cl/643100 
-                        │     │                  ├ [2]: https://go.dev/issue/70530 
-                        │     │                  ├ [3]: https://groups.google.com/g/golang-dev/c/CAWXhan3Jww/m/
-                        │     │                  │      bk9LAa-lCgAJ 
-                        │     │                  ├ [4]: https://groups.google.com/g/golang-dev/c/bG8cv1muIBM/m/
-                        │     │                  │      G461hA6lCgAJ 
-                        │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2024-45336 
-                        │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3420 
-                        │     │                  ├ [7]: https://security.netapp.com/advisory/ntap-20250221-0003/ 
-                        │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-45336 
+                        │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:3772 
+                        │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-45336 
+                        │     │                  ├ [2] : https://bugzilla.redhat.com/2341750 
+                        │     │                  ├ [3] : https://bugzilla.redhat.com/2341751 
+                        │     │                  ├ [4] : https://errata.almalinux.org/8/ALSA-2025-3772.html 
+                        │     │                  ├ [5] : https://go.dev/cl/643100 
+                        │     │                  ├ [6] : https://go.dev/issue/70530 
+                        │     │                  ├ [7] : https://groups.google.com/g/golang-dev/c/CAWXhan3Jww/m
+                        │     │                  │       /bk9LAa-lCgAJ 
+                        │     │                  ├ [8] : https://groups.google.com/g/golang-dev/c/bG8cv1muIBM/m
+                        │     │                  │       /G461hA6lCgAJ 
+                        │     │                  ├ [9] : https://linux.oracle.com/cve/CVE-2024-45336.html 
+                        │     │                  ├ [10]: https://linux.oracle.com/errata/ELSA-2025-3772.html 
+                        │     │                  ├ [11]: https://nvd.nist.gov/vuln/detail/CVE-2024-45336 
+                        │     │                  ├ [12]: https://pkg.go.dev/vuln/GO-2025-3420 
+                        │     │                  ├ [13]: https://security.netapp.com/advisory/ntap-20250221-0003/ 
+                        │     │                  ╰ [14]: https://www.cve.org/CVERecord?id=CVE-2024-45336 
                         │     ├ PublishedDate   : 2025-01-28T02:15:28.807Z 
                         │     ╰ LastModifiedDate: 2025-02-21T18:15:17.4Z 
                         ├ [2] ╭ VulnerabilityID : CVE-2024-45341 
@@ -128,9 +136,11 @@
                         │     │                   URIs are not permitted in the web PKI, so this only affects
                         │     │                   users of private PKIs which make use of URIs. 
                         │     ├ Severity        : MEDIUM 
-                        │     ├ VendorSeverity   ╭ amazon     : 2 
+                        │     ├ VendorSeverity   ╭ alma       : 2 
+                        │     │                  ├ amazon     : 2 
                         │     │                  ├ bitnami    : 2 
                         │     │                  ├ cbl-mariner: 2 
+                        │     │                  ├ oracle-oval: 2 
                         │     │                  ╰ redhat     : 1 
                         │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
                         │     │                  │         │           /A:N 
@@ -138,17 +148,23 @@
                         │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L
                         │     │                            │           /A:N 
                         │     │                            ╰ V3Score : 4.2 
-                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2024-45341 
-                        │     │                  ├ [1]: https://go.dev/cl/643099 
-                        │     │                  ├ [2]: https://go.dev/issue/71156 
-                        │     │                  ├ [3]: https://groups.google.com/g/golang-dev/c/CAWXhan3Jww/m/
-                        │     │                  │      bk9LAa-lCgAJ 
-                        │     │                  ├ [4]: https://groups.google.com/g/golang-dev/c/bG8cv1muIBM/m/
-                        │     │                  │      G461hA6lCgAJ 
-                        │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2024-45341 
-                        │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3373 
-                        │     │                  ├ [7]: https://security.netapp.com/advisory/ntap-20250221-0004/ 
-                        │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2024-45341 
+                        │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:3772 
+                        │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2024-45341 
+                        │     │                  ├ [2] : https://bugzilla.redhat.com/2341750 
+                        │     │                  ├ [3] : https://bugzilla.redhat.com/2341751 
+                        │     │                  ├ [4] : https://errata.almalinux.org/8/ALSA-2025-3772.html 
+                        │     │                  ├ [5] : https://go.dev/cl/643099 
+                        │     │                  ├ [6] : https://go.dev/issue/71156 
+                        │     │                  ├ [7] : https://groups.google.com/g/golang-dev/c/CAWXhan3Jww/m
+                        │     │                  │       /bk9LAa-lCgAJ 
+                        │     │                  ├ [8] : https://groups.google.com/g/golang-dev/c/bG8cv1muIBM/m
+                        │     │                  │       /G461hA6lCgAJ 
+                        │     │                  ├ [9] : https://linux.oracle.com/cve/CVE-2024-45341.html 
+                        │     │                  ├ [10]: https://linux.oracle.com/errata/ELSA-2025-3772.html 
+                        │     │                  ├ [11]: https://nvd.nist.gov/vuln/detail/CVE-2024-45341 
+                        │     │                  ├ [12]: https://pkg.go.dev/vuln/GO-2025-3373 
+                        │     │                  ├ [13]: https://security.netapp.com/advisory/ntap-20250221-0004/ 
+                        │     │                  ╰ [14]: https://www.cve.org/CVERecord?id=CVE-2024-45341 
                         │     ├ PublishedDate   : 2025-01-28T02:15:29.147Z 
                         │     ╰ LastModifiedDate: 2025-02-21T18:15:17.96Z 
                         ├ [3] ╭ VulnerabilityID : CVE-2025-22866 
