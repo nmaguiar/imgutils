@@ -238,7 +238,8 @@
 │                             │                    with a server that incorrectly accepts a bare LF as part of
 │                             │                   a chunk-ext. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ─ redhat: 2 
+│                             ├ VendorSeverity   ╭ amazon: 3 
+│                             │                  ╰ redhat: 2 
 │                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/
 │                             │                           │           A:N 
 │                             │                           ╰ V3Score : 5.4 
@@ -327,7 +328,8 @@
 │                             │                    with a server that incorrectly accepts a bare LF as part of
 │                             │                   a chunk-ext. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ─ redhat: 2 
+│                             ├ VendorSeverity   ╭ amazon: 3 
+│                             │                  ╰ redhat: 2 
 │                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/
 │                             │                           │           A:N 
 │                             │                           ╰ V3Score : 5.4 
@@ -419,7 +421,8 @@
 │                             │                    with a server that incorrectly accepts a bare LF as part of
 │                             │                   a chunk-ext. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ─ redhat: 2 
+│                             ├ VendorSeverity   ╭ amazon: 3 
+│                             │                  ╰ redhat: 2 
 │                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/
 │                             │                           │           A:N 
 │                             │                           ╰ V3Score : 5.4 
@@ -522,7 +525,8 @@
 │                             │                    with a server that incorrectly accepts a bare LF as part of
 │                             │                   a chunk-ext. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ─ redhat: 2 
+│                             ├ VendorSeverity   ╭ amazon: 3 
+│                             │                  ╰ redhat: 2 
 │                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/
 │                             │                           │           A:N 
 │                             │                           ╰ V3Score : 5.4 
@@ -563,7 +567,8 @@
 │                             │                    with a server that incorrectly accepts a bare LF as part of
 │                             │                   a chunk-ext. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ─ redhat: 2 
+│                             ├ VendorSeverity   ╭ amazon: 3 
+│                             │                  ╰ redhat: 2 
 │                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/
 │                             │                           │           A:N 
 │                             │                           ╰ V3Score : 5.4 
@@ -616,7 +621,7 @@
 │                       │     │                   characters. 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-770 
-│                       │     ├ VendorSeverity   ╭ amazon     : 3 
+│                       │     ├ VendorSeverity   ╭ amazon     : 2 
 │                       │     │                  ├ azure      : 2 
 │                       │     │                  ├ cbl-mariner: 2 
 │                       │     │                  ├ ghsa       : 2 
@@ -673,7 +678,7 @@
 │                       │     │                   characters. 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-770 
-│                       │     ├ VendorSeverity   ╭ amazon     : 3 
+│                       │     ├ VendorSeverity   ╭ amazon     : 2 
 │                       │     │                  ├ azure      : 2 
 │                       │     │                  ├ cbl-mariner: 2 
 │                       │     │                  ├ ghsa       : 2 
@@ -694,7 +699,62 @@
 │                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-27144 
 │                       │     ├ PublishedDate   : 2025-02-24T23:15:11.427Z 
 │                       │     ╰ LastModifiedDate: 2025-02-24T23:15:11.427Z 
-│                       ├ [2] ╭ VulnerabilityID : CVE-2025-22870 
+│                       ├ [2] ╭ VulnerabilityID : CVE-2025-22869 
+│                       │     ├ PkgID           : golang.org/x/crypto@v0.32.0 
+│                       │     ├ PkgName         : golang.org/x/crypto 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/crypto@v0.32.0 
+│                       │     │                  ╰ UID : 78579533788ee726 
+│                       │     ├ InstalledVersion: v0.32.0 
+│                       │     ├ FixedVersion    : 0.35.0 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:9998472525a2f64881d610964c53c77351de1b8c7cd8c
+│                       │     │                  │         1c8e4191b2c2731a651 
+│                       │     │                  ╰ DiffID: sha256:1b1cbe22d2db23ecbd73511362605cbcc01f071d193d0
+│                       │     │                            643b2fefe5c4dfe1a8e 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22869 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Go 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Ago 
+│                       │     ├ Title           : golang.org/x/crypto/ssh: Denial of Service in the Key
+│                       │     │                   Exchange of golang.org/x/crypto/ssh 
+│                       │     ├ Description     : SSH servers which implement file transfer protocols are
+│                       │     │                   vulnerable to a denial of service attack from clients which
+│                       │     │                   complete the key exchange slowly, or not at all, causing
+│                       │     │                   pending content to be read into memory, but never
+│                       │     │                   transmitted. 
+│                       │     ├ Severity        : HIGH 
+│                       │     ├ CweIDs           ─ [0]: CWE-770 
+│                       │     ├ VendorSeverity   ╭ amazon     : 3 
+│                       │     │                  ├ azure      : 3 
+│                       │     │                  ├ cbl-mariner: 3 
+│                       │     │                  ├ ghsa       : 3 
+│                       │     │                  ├ oracle-oval: 3 
+│                       │     │                  ╰ redhat     : 3 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                       │     │                  │        │           A:H 
+│                       │     │                  │        ╰ V3Score : 7.5 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                       │     │                           │           A:H 
+│                       │     │                           ╰ V3Score : 7.5 
+│                       │     ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2025-22869 
+│                       │     │                  ├ [1] : https://github.com/golang/crypto 
+│                       │     │                  ├ [2] : https://github.com/golang/crypto/commit/7292932d45d55c
+│                       │     │                  │       7199324ab0027cc86e8198aa22 
+│                       │     │                  ├ [3] : https://go-review.googlesource.com/c/crypto/+/652135 
+│                       │     │                  ├ [4] : https://go.dev/cl/652135 
+│                       │     │                  ├ [5] : https://go.dev/issue/71931 
+│                       │     │                  ├ [6] : https://linux.oracle.com/cve/CVE-2025-22869.html 
+│                       │     │                  ├ [7] : https://linux.oracle.com/errata/ELSA-2025-3833.html 
+│                       │     │                  ├ [8] : https://nvd.nist.gov/vuln/detail/CVE-2025-22869 
+│                       │     │                  ├ [9] : https://pkg.go.dev/vuln/GO-2025-3487 
+│                       │     │                  ├ [10]: https://security.netapp.com/advisory/ntap-20250411-0010 
+│                       │     │                  ├ [11]: https://security.netapp.com/advisory/ntap-20250411-0010/ 
+│                       │     │                  ╰ [12]: https://www.cve.org/CVERecord?id=CVE-2025-22869 
+│                       │     ├ PublishedDate   : 2025-02-26T08:14:24.997Z 
+│                       │     ╰ LastModifiedDate: 2025-04-11T22:15:29.837Z 
+│                       ├ [3] ╭ VulnerabilityID : CVE-2025-22870 
 │                       │     ├ PkgID           : golang.org/x/net@v0.34.0 
 │                       │     ├ PkgName         : golang.org/x/net 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.34.0 
@@ -742,7 +802,7 @@
 │                       │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-22870 
 │                       │     ├ PublishedDate   : 2025-03-12T19:15:38.31Z 
 │                       │     ╰ LastModifiedDate: 2025-03-18T17:15:45.467Z 
-│                       ╰ [3] ╭ VulnerabilityID : CVE-2025-22871 
+│                       ╰ [4] ╭ VulnerabilityID : CVE-2025-22871 
 │                             ├ PkgID           : stdlib@v1.24.1 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -766,7 +826,8 @@
 │                             │                    with a server that incorrectly accepts a bare LF as part of
 │                             │                   a chunk-ext. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ─ redhat: 2 
+│                             ├ VendorSeverity   ╭ amazon: 3 
+│                             │                  ╰ redhat: 2 
 │                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/
 │                             │                           │           A:N 
 │                             │                           ╰ V3Score : 5.4 
@@ -807,7 +868,8 @@
                               │                    with a server that incorrectly accepts a bare LF as part of
                               │                   a chunk-ext. 
                               ├ Severity        : MEDIUM 
-                              ├ VendorSeverity   ─ redhat: 2 
+                              ├ VendorSeverity   ╭ amazon: 3 
+                              │                  ╰ redhat: 2 
                               ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/
                               │                           │           A:N 
                               │                           ╰ V3Score : 5.4 
