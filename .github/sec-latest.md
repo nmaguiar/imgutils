@@ -74,7 +74,8 @@
 │                       │     │                  ├ Name: GitHub Security Advisory Go 
 │                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
 │                       │     │                          osystem%3Ago 
-│                       │     ├ Title           : golang.org/x/net vulnerable to Cross-site Scripting 
+│                       │     ├ Title           : The tokenizer incorrectly interprets tags with unquoted
+│                       │     │                   attribute valu ... 
 │                       │     ├ Description     : The tokenizer incorrectly interprets tags with unquoted
 │                       │     │                   attribute values that end with a solidus character (/) as
 │                       │     │                   self-closing. When directly using Tokenizer, this can result
@@ -91,7 +92,7 @@
 │                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-22872 
 │                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-3595 
 │                       │     ├ PublishedDate   : 2025-04-16T18:16:04.183Z 
-│                       │     ╰ LastModifiedDate: 2025-04-16T21:15:46.64Z 
+│                       │     ╰ LastModifiedDate: 2025-04-17T20:22:16.24Z 
 │                       ├ [2] ╭ VulnerabilityID : CVE-2024-45336 
 │                       │     ├ PkgID           : stdlib@v1.23.3 
 │                       │     ├ PkgName         : stdlib 
@@ -358,7 +359,8 @@
 │                       │     │                  ├ Name: GitHub Security Advisory Go 
 │                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
 │                       │     │                          osystem%3Ago 
-│                       │     ├ Title           : golang.org/x/net vulnerable to Cross-site Scripting 
+│                       │     ├ Title           : The tokenizer incorrectly interprets tags with unquoted
+│                       │     │                   attribute valu ... 
 │                       │     ├ Description     : The tokenizer incorrectly interprets tags with unquoted
 │                       │     │                   attribute values that end with a solidus character (/) as
 │                       │     │                   self-closing. When directly using Tokenizer, this can result
@@ -375,7 +377,7 @@
 │                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-22872 
 │                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-3595 
 │                       │     ├ PublishedDate   : 2025-04-16T18:16:04.183Z 
-│                       │     ╰ LastModifiedDate: 2025-04-16T21:15:46.64Z 
+│                       │     ╰ LastModifiedDate: 2025-04-17T20:22:16.24Z 
 │                       ╰ [2] ╭ VulnerabilityID : CVE-2025-22871 
 │                             ├ PkgID           : stdlib@v1.24.1 
 │                             ├ PkgName         : stdlib 
@@ -484,7 +486,8 @@
 │                             │                  ├ Name: GitHub Security Advisory Go 
 │                             │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
 │                             │                          osystem%3Ago 
-│                             ├ Title           : golang.org/x/net vulnerable to Cross-site Scripting 
+│                             ├ Title           : The tokenizer incorrectly interprets tags with unquoted
+│                             │                   attribute valu ... 
 │                             ├ Description     : The tokenizer incorrectly interprets tags with unquoted
 │                             │                   attribute values that end with a solidus character (/) as
 │                             │                   self-closing. When directly using Tokenizer, this can result
@@ -501,7 +504,7 @@
 │                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-22872 
 │                             │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-3595 
 │                             ├ PublishedDate   : 2025-04-16T18:16:04.183Z 
-│                             ╰ LastModifiedDate: 2025-04-16T21:15:46.64Z 
+│                             ╰ LastModifiedDate: 2025-04-17T20:22:16.24Z 
 ├ [5] ╭ Target         : usr/bin/docker 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -627,7 +630,8 @@
 │                       │     │                  ├ Name: GitHub Security Advisory Go 
 │                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
 │                       │     │                          osystem%3Ago 
-│                       │     ├ Title           : golang.org/x/net vulnerable to Cross-site Scripting 
+│                       │     ├ Title           : The tokenizer incorrectly interprets tags with unquoted
+│                       │     │                   attribute valu ... 
 │                       │     ├ Description     : The tokenizer incorrectly interprets tags with unquoted
 │                       │     │                   attribute values that end with a solidus character (/) as
 │                       │     │                   self-closing. When directly using Tokenizer, this can result
@@ -644,7 +648,7 @@
 │                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-22872 
 │                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-3595 
 │                       │     ├ PublishedDate   : 2025-04-16T18:16:04.183Z 
-│                       │     ╰ LastModifiedDate: 2025-04-16T21:15:46.64Z 
+│                       │     ╰ LastModifiedDate: 2025-04-17T20:22:16.24Z 
 │                       ╰ [2] ╭ VulnerabilityID : CVE-2025-22871 
 │                             ├ PkgID           : stdlib@v1.23.7 
 │                             ├ PkgName         : stdlib 
@@ -705,7 +709,8 @@
 │                       │     │                  ├ Name: GitHub Security Advisory Go 
 │                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
 │                       │     │                          osystem%3Ago 
-│                       │     ├ Title           : golang.org/x/net vulnerable to Cross-site Scripting 
+│                       │     ├ Title           : The tokenizer incorrectly interprets tags with unquoted
+│                       │     │                   attribute valu ... 
 │                       │     ├ Description     : The tokenizer incorrectly interprets tags with unquoted
 │                       │     │                   attribute values that end with a solidus character (/) as
 │                       │     │                   self-closing. When directly using Tokenizer, this can result
@@ -722,7 +727,7 @@
 │                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-22872 
 │                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-3595 
 │                       │     ├ PublishedDate   : 2025-04-16T18:16:04.183Z 
-│                       │     ╰ LastModifiedDate: 2025-04-16T21:15:46.64Z 
+│                       │     ╰ LastModifiedDate: 2025-04-17T20:22:16.24Z 
 │                       ╰ [1] ╭ VulnerabilityID : CVE-2025-22871 
 │                             ├ PkgID           : stdlib@v1.24.1 
 │                             ├ PkgName         : stdlib 
@@ -1004,7 +1009,8 @@
 │                       │     │                  ├ Name: GitHub Security Advisory Go 
 │                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
 │                       │     │                          osystem%3Ago 
-│                       │     ├ Title           : golang.org/x/net vulnerable to Cross-site Scripting 
+│                       │     ├ Title           : The tokenizer incorrectly interprets tags with unquoted
+│                       │     │                   attribute valu ... 
 │                       │     ├ Description     : The tokenizer incorrectly interprets tags with unquoted
 │                       │     │                   attribute values that end with a solidus character (/) as
 │                       │     │                   self-closing. When directly using Tokenizer, this can result
@@ -1021,7 +1027,7 @@
 │                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-22872 
 │                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-3595 
 │                       │     ├ PublishedDate   : 2025-04-16T18:16:04.183Z 
-│                       │     ╰ LastModifiedDate: 2025-04-16T21:15:46.64Z 
+│                       │     ╰ LastModifiedDate: 2025-04-17T20:22:16.24Z 
 │                       ╰ [5] ╭ VulnerabilityID : CVE-2025-22871 
 │                             ├ PkgID           : stdlib@v1.24.1 
 │                             ├ PkgName         : stdlib 
