@@ -275,11 +275,15 @@
 │                             │                    with a server that incorrectly accepts a bare LF as part of
 │                             │                   a chunk-ext. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon: 3 
-│                             │                  ╰ redhat: 2 
-│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/
-│                             │                           │           A:N 
-│                             │                           ╰ V3Score : 5.4 
+│                             ├ VendorSeverity   ╭ amazon : 3 
+│                             │                  ├ bitnami: 4 
+│                             │                  ╰ redhat : 2 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
+│                             │                  │         │           /A:N 
+│                             │                  │         ╰ V3Score : 9.1 
+│                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 5.4 
 │                             ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/04/04/4 
 │                             │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2025-22871 
 │                             │                  ├ [2]: https://go.dev/cl/652998 
@@ -289,7 +293,7 @@
 │                             │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3563 
 │                             │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-22871 
 │                             ├ PublishedDate   : 2025-04-08T20:15:20.183Z 
-│                             ╰ LastModifiedDate: 2025-04-09T20:02:41.86Z 
+│                             ╰ LastModifiedDate: 2025-04-18T15:15:57.923Z 
 ├ [3] ╭ Target         : usr/bin/ctr 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -547,11 +551,15 @@
 │                             │                    with a server that incorrectly accepts a bare LF as part of
 │                             │                   a chunk-ext. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon: 3 
-│                             │                  ╰ redhat: 2 
-│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/
-│                             │                           │           A:N 
-│                             │                           ╰ V3Score : 5.4 
+│                             ├ VendorSeverity   ╭ amazon : 3 
+│                             │                  ├ bitnami: 4 
+│                             │                  ╰ redhat : 2 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
+│                             │                  │         │           /A:N 
+│                             │                  │         ╰ V3Score : 9.1 
+│                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 5.4 
 │                             ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/04/04/4 
 │                             │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2025-22871 
 │                             │                  ├ [2]: https://go.dev/cl/652998 
@@ -561,7 +569,7 @@
 │                             │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3563 
 │                             │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-22871 
 │                             ├ PublishedDate   : 2025-04-08T20:15:20.183Z 
-│                             ╰ LastModifiedDate: 2025-04-09T20:02:41.86Z 
+│                             ╰ LastModifiedDate: 2025-04-18T15:15:57.923Z 
 ├ [7] ╭ Target         : usr/bin/nerdctl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -626,11 +634,15 @@
 │                             │                    with a server that incorrectly accepts a bare LF as part of
 │                             │                   a chunk-ext. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon: 3 
-│                             │                  ╰ redhat: 2 
-│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/
-│                             │                           │           A:N 
-│                             │                           ╰ V3Score : 5.4 
+│                             ├ VendorSeverity   ╭ amazon : 3 
+│                             │                  ├ bitnami: 4 
+│                             │                  ╰ redhat : 2 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
+│                             │                  │         │           /A:N 
+│                             │                  │         ╰ V3Score : 9.1 
+│                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 5.4 
 │                             ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/04/04/4 
 │                             │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2025-22871 
 │                             │                  ├ [2]: https://go.dev/cl/652998 
@@ -640,7 +652,7 @@
 │                             │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3563 
 │                             │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-22871 
 │                             ├ PublishedDate   : 2025-04-08T20:15:20.183Z 
-│                             ╰ LastModifiedDate: 2025-04-09T20:02:41.86Z 
+│                             ╰ LastModifiedDate: 2025-04-18T15:15:57.923Z 
 ├ [8] ╭ Target         : usr/bin/skopeo 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -926,11 +938,15 @@
 │                             │                    with a server that incorrectly accepts a bare LF as part of
 │                             │                   a chunk-ext. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon: 3 
-│                             │                  ╰ redhat: 2 
-│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/
-│                             │                           │           A:N 
-│                             │                           ╰ V3Score : 5.4 
+│                             ├ VendorSeverity   ╭ amazon : 3 
+│                             │                  ├ bitnami: 4 
+│                             │                  ╰ redhat : 2 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
+│                             │                  │         │           /A:N 
+│                             │                  │         ╰ V3Score : 9.1 
+│                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 5.4 
 │                             ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/04/04/4 
 │                             │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2025-22871 
 │                             │                  ├ [2]: https://go.dev/cl/652998 
@@ -940,7 +956,7 @@
 │                             │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3563 
 │                             │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-22871 
 │                             ├ PublishedDate   : 2025-04-08T20:15:20.183Z 
-│                             ╰ LastModifiedDate: 2025-04-09T20:02:41.86Z 
+│                             ╰ LastModifiedDate: 2025-04-18T15:15:57.923Z 
 ╰ [9] ╭ Target         : usr/bin/syft 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
@@ -968,11 +984,15 @@
                               │                    with a server that incorrectly accepts a bare LF as part of
                               │                   a chunk-ext. 
                               ├ Severity        : MEDIUM 
-                              ├ VendorSeverity   ╭ amazon: 3 
-                              │                  ╰ redhat: 2 
-                              ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/
-                              │                           │           A:N 
-                              │                           ╰ V3Score : 5.4 
+                              ├ VendorSeverity   ╭ amazon : 3 
+                              │                  ├ bitnami: 4 
+                              │                  ╰ redhat : 2 
+                              ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
+                              │                  │         │           /A:N 
+                              │                  │         ╰ V3Score : 9.1 
+                              │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L
+                              │                            │           /A:N 
+                              │                            ╰ V3Score : 5.4 
                               ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/04/04/4 
                               │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2025-22871 
                               │                  ├ [2]: https://go.dev/cl/652998 
@@ -982,5 +1002,5 @@
                               │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3563 
                               │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-22871 
                               ├ PublishedDate   : 2025-04-08T20:15:20.183Z 
-                              ╰ LastModifiedDate: 2025-04-09T20:02:41.86Z 
+                              ╰ LastModifiedDate: 2025-04-18T15:15:57.923Z 
 ````
