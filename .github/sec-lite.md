@@ -71,8 +71,8 @@
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
                         │     │                          osystem%3Ago 
-                        │     ├ Title           : The tokenizer incorrectly interprets tags with unquoted
-                        │     │                   attribute valu ... 
+                        │     ├ Title           : golang.org/x/net/html: Incorrect Neutralization of Input
+                        │     │                   During Web Page Generation in x/net in golang.org/x/net 
                         │     ├ Description     : The tokenizer incorrectly interprets tags with unquoted
                         │     │                   attribute values that end with a solidus character (/) as
                         │     │                   self-closing. When directly using Tokenizer, this can result
@@ -82,12 +82,19 @@
                         │     │                    DOM construction, but only when tags are in foreign content
                         │     │                   (e.g. <math>, <svg>, etc contexts). 
                         │     ├ Severity        : MEDIUM 
-                        │     ├ VendorSeverity   ─ ghsa: 2 
-                        │     ├ References       ╭ [0]: https://go.dev/cl/662715 
-                        │     │                  ├ [1]: https://go.dev/issue/73070 
-                        │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/ezSKR9vqbqA 
-                        │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-22872 
-                        │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-3595 
+                        │     ├ VendorSeverity   ╭ ghsa  : 2 
+                        │     │                  ╰ redhat: 2 
+                        │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/
+                        │     │                           │           A:L 
+                        │     │                           ╰ V3Score : 6.5 
+                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-22872 
+                        │     │                  ├ [1]: https://github.com/advisories/GHSA-vvgc-356p-c3xw 
+                        │     │                  ├ [2]: https://go.dev/cl/662715 
+                        │     │                  ├ [3]: https://go.dev/issue/73070 
+                        │     │                  ├ [4]: https://groups.google.com/g/golang-announce/c/ezSKR9vqbqA 
+                        │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-22872 
+                        │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3595 
+                        │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-22872 
                         │     ├ PublishedDate   : 2025-04-16T18:16:04.183Z 
                         │     ╰ LastModifiedDate: 2025-04-17T20:22:16.24Z 
                         ├ [2] ╭ VulnerabilityID : CVE-2024-45336 
