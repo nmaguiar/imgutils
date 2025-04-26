@@ -13,10 +13,10 @@
                               ├ InstalledVersion: v1.24.1 
                               ├ FixedVersion    : 1.23.8, 1.24.2 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:92c0d8c5a215aba5282635b806cd448f9d55e98609a8e
-                              │                  │         459e1153c7ed020a72d 
-                              │                  ╰ DiffID: sha256:bbb59b74fefc4f10f750c68360f8948d54dba40445fd8
-                              │                            4ae671e369c54755c58 
+                              ├ Layer            ╭ Digest: sha256:1bbd30b7b298655925421e02207eebca19f8edd3cba69
+                              │                  │         f3b69d6ae0a3d102c89 
+                              │                  ╰ DiffID: sha256:077c211b039c2eaa6f6280a8e42c3ef01c374054d1a7d
+                              │                            d142f57f4084eb8ccb3 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22871 
                               ├ DataSource       ╭ ID  : govulndb 
                               │                  ├ Name: The Go Vulnerability Database 
