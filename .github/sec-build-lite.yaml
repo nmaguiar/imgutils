@@ -28,6 +28,7 @@
     VendorSeverity:
       amazon: 3
       bitnami: 4
+      cbl-mariner: 3
       redhat: 2
     CVSS:
       bitnami:
