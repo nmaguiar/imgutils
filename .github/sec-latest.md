@@ -36,7 +36,7 @@
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-115 
 │                       │     ├ VendorSeverity   ╭ amazon     : 2 
-│                       │     │                  ├ azure      : 1 
+│                       │     │                  ├ azure      : 2 
 │                       │     │                  ├ cbl-mariner: 2 
 │                       │     │                  ├ ghsa       : 2 
 │                       │     │                  ╰ redhat     : 2 
@@ -130,6 +130,7 @@
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ VendorSeverity   ╭ alma       : 2 
 │                       │     │                  ├ amazon     : 2 
+│                       │     │                  ├ azure      : 3 
 │                       │     │                  ├ bitnami    : 2 
 │                       │     │                  ├ cbl-mariner: 3 
 │                       │     │                  ├ oracle-oval: 2 
@@ -282,9 +283,10 @@
 │                             │                    with a server that incorrectly accepts a bare LF as part of
 │                             │                   a chunk-ext. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon : 3 
-│                             │                  ├ bitnami: 4 
-│                             │                  ╰ redhat : 2 
+│                             ├ VendorSeverity   ╭ amazon     : 3 
+│                             │                  ├ bitnami    : 4 
+│                             │                  ├ cbl-mariner: 3 
+│                             │                  ╰ redhat     : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
 │                             │                  │         │           /A:N 
 │                             │                  │         ╰ V3Score : 9.1 
@@ -332,7 +334,7 @@
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-115 
 │                       │     ├ VendorSeverity   ╭ amazon     : 2 
-│                       │     │                  ├ azure      : 1 
+│                       │     │                  ├ azure      : 2 
 │                       │     │                  ├ cbl-mariner: 2 
 │                       │     │                  ├ ghsa       : 2 
 │                       │     │                  ╰ redhat     : 2 
@@ -420,9 +422,10 @@
 │                             │                    with a server that incorrectly accepts a bare LF as part of
 │                             │                   a chunk-ext. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon : 3 
-│                             │                  ├ bitnami: 4 
-│                             │                  ╰ redhat : 2 
+│                             ├ VendorSeverity   ╭ amazon     : 3 
+│                             │                  ├ bitnami    : 4 
+│                             │                  ├ cbl-mariner: 3 
+│                             │                  ╰ redhat     : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
 │                             │                  │         │           /A:N 
 │                             │                  │         ╰ V3Score : 9.1 
@@ -470,7 +473,7 @@
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-115 
 │                       │     ├ VendorSeverity   ╭ amazon     : 2 
-│                       │     │                  ├ azure      : 1 
+│                       │     │                  ├ azure      : 2 
 │                       │     │                  ├ cbl-mariner: 2 
 │                       │     │                  ├ ghsa       : 2 
 │                       │     │                  ╰ redhat     : 2 
@@ -561,9 +564,10 @@
 │                             │                    with a server that incorrectly accepts a bare LF as part of
 │                             │                   a chunk-ext. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon : 3 
-│                             │                  ├ bitnami: 4 
-│                             │                  ╰ redhat : 2 
+│                             ├ VendorSeverity   ╭ amazon     : 3 
+│                             │                  ├ bitnami    : 4 
+│                             │                  ├ cbl-mariner: 3 
+│                             │                  ╰ redhat     : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
 │                             │                  │         │           /A:N 
 │                             │                  │         ╰ V3Score : 9.1 
@@ -713,9 +717,10 @@
 │                             │                    with a server that incorrectly accepts a bare LF as part of
 │                             │                   a chunk-ext. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon : 3 
-│                             │                  ├ bitnami: 4 
-│                             │                  ╰ redhat : 2 
+│                             ├ VendorSeverity   ╭ amazon     : 3 
+│                             │                  ├ bitnami    : 4 
+│                             │                  ├ cbl-mariner: 3 
+│                             │                  ╰ redhat     : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
 │                             │                  │         │           /A:N 
 │                             │                  │         ╰ V3Score : 9.1 
@@ -803,9 +808,10 @@
 │                             │                    with a server that incorrectly accepts a bare LF as part of
 │                             │                   a chunk-ext. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon : 3 
-│                             │                  ├ bitnami: 4 
-│                             │                  ╰ redhat : 2 
+│                             ├ VendorSeverity   ╭ amazon     : 3 
+│                             │                  ├ bitnami    : 4 
+│                             │                  ├ cbl-mariner: 3 
+│                             │                  ╰ redhat     : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
 │                             │                  │         │           /A:N 
 │                             │                  │         ╰ V3Score : 9.1 
@@ -1026,7 +1032,7 @@
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-115 
 │                       │     ├ VendorSeverity   ╭ amazon     : 2 
-│                       │     │                  ├ azure      : 1 
+│                       │     │                  ├ azure      : 2 
 │                       │     │                  ├ cbl-mariner: 2 
 │                       │     │                  ├ ghsa       : 2 
 │                       │     │                  ╰ redhat     : 2 
@@ -1114,9 +1120,10 @@
 │                             │                    with a server that incorrectly accepts a bare LF as part of
 │                             │                   a chunk-ext. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon : 3 
-│                             │                  ├ bitnami: 4 
-│                             │                  ╰ redhat : 2 
+│                             ├ VendorSeverity   ╭ amazon     : 3 
+│                             │                  ├ bitnami    : 4 
+│                             │                  ├ cbl-mariner: 3 
+│                             │                  ╰ redhat     : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
 │                             │                  │         │           /A:N 
 │                             │                  │         ╰ V3Score : 9.1 
@@ -1160,9 +1167,10 @@
                               │                    with a server that incorrectly accepts a bare LF as part of
                               │                   a chunk-ext. 
                               ├ Severity        : MEDIUM 
-                              ├ VendorSeverity   ╭ amazon : 3 
-                              │                  ├ bitnami: 4 
-                              │                  ╰ redhat : 2 
+                              ├ VendorSeverity   ╭ amazon     : 3 
+                              │                  ├ bitnami    : 4 
+                              │                  ├ cbl-mariner: 3 
+                              │                  ╰ redhat     : 2 
                               ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
                               │                  │         │           /A:N 
                               │                  │         ╰ V3Score : 9.1 
