@@ -31,6 +31,7 @@
     VendorSeverity:
       amazon: 3
       bitnami: 4
+      cbl-mariner: 3
       redhat: 2
     CVSS:
       bitnami:
@@ -122,7 +123,7 @@
     - CWE-115
     VendorSeverity:
       amazon: 2
-      azure: 1
+      azure: 2
       cbl-mariner: 2
       ghsa: 2
       redhat: 2
@@ -301,6 +302,7 @@
     VendorSeverity:
       amazon: 3
       bitnami: 4
+      cbl-mariner: 3
       redhat: 2
     CVSS:
       bitnami:
@@ -386,6 +388,7 @@
     VendorSeverity:
       amazon: 3
       bitnami: 4
+      cbl-mariner: 3
       redhat: 2
     CVSS:
       bitnami:
@@ -581,7 +584,7 @@
     - CWE-115
     VendorSeverity:
       amazon: 2
-      azure: 1
+      azure: 2
       cbl-mariner: 2
       ghsa: 2
       redhat: 2
@@ -665,6 +668,7 @@
     VendorSeverity:
       amazon: 3
       bitnami: 4
+      cbl-mariner: 3
       redhat: 2
     CVSS:
       bitnami:
