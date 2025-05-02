@@ -82,7 +82,8 @@
                         │     │                    DOM construction, but only when tags are in foreign content
                         │     │                   (e.g. <math>, <svg>, etc contexts). 
                         │     ├ Severity        : MEDIUM 
-                        │     ├ VendorSeverity   ╭ ghsa  : 2 
+                        │     ├ VendorSeverity   ╭ azure : 2 
+                        │     │                  ├ ghsa  : 2 
                         │     │                  ╰ redhat: 2 
                         │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/
                         │     │                           │           A:L 
