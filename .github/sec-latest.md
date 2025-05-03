@@ -1008,7 +1008,7 @@
 │                       │     │                  ├ [14]: https://security.netapp.com/advisory/ntap-20250411-0010/ 
 │                       │     │                  ╰ [15]: https://www.cve.org/CVERecord?id=CVE-2025-22869 
 │                       │     ├ PublishedDate   : 2025-02-26T08:14:24.997Z 
-│                       │     ╰ LastModifiedDate: 2025-04-11T22:15:29.837Z 
+│                       │     ╰ LastModifiedDate: 2025-05-01T19:28:20.74Z 
 │                       ├ [3] ╭ VulnerabilityID : CVE-2025-22870 
 │                       │     ├ PkgID           : golang.org/x/net@v0.34.0 
 │                       │     ├ PkgName         : golang.org/x/net 
