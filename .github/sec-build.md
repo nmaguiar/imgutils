@@ -259,11 +259,13 @@
 │                       │     │                  │       884cfe4812a6c371b59e4ea9bc4c46e51a 
 │                       │     │                  ├ [7] : https://github.com/containerd/containerd/security/advi
 │                       │     │                  │       sories/GHSA-265r-hfxg-fhmg 
-│                       │     │                  ├ [8] : https://nvd.nist.gov/vuln/detail/CVE-2024-40635 
-│                       │     │                  ├ [9] : https://ubuntu.com/security/notices/USN-7374-1 
-│                       │     │                  ╰ [10]: https://www.cve.org/CVERecord?id=CVE-2024-40635 
+│                       │     │                  ├ [8] : https://lists.debian.org/debian-lts-announce/2025/05/m
+│                       │     │                  │       sg00005.html 
+│                       │     │                  ├ [9] : https://nvd.nist.gov/vuln/detail/CVE-2024-40635 
+│                       │     │                  ├ [10]: https://ubuntu.com/security/notices/USN-7374-1 
+│                       │     │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2024-40635 
 │                       │     ├ PublishedDate   : 2025-03-17T22:15:13.15Z 
-│                       │     ╰ LastModifiedDate: 2025-03-17T22:15:13.15Z 
+│                       │     ╰ LastModifiedDate: 2025-05-04T22:15:31.84Z 
 │                       ├ [1] ╭ VulnerabilityID : CVE-2025-22872 
 │                       │     ├ PkgID           : golang.org/x/net@v0.37.0 
 │                       │     ├ PkgName         : golang.org/x/net 
