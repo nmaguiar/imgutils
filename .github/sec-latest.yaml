@@ -78,6 +78,7 @@
     Severity: MEDIUM
     VendorSeverity:
       azure: 2
+      cbl-mariner: 2
       ghsa: 2
       redhat: 2
     CVSS:
@@ -358,6 +359,7 @@
     Severity: MEDIUM
     VendorSeverity:
       azure: 2
+      cbl-mariner: 2
       ghsa: 2
       redhat: 2
     CVSS:
@@ -492,6 +494,7 @@
     Severity: MEDIUM
     VendorSeverity:
       azure: 2
+      cbl-mariner: 2
       ghsa: 2
       redhat: 2
     CVSS:
@@ -585,6 +588,8 @@
     - CWE-190
     VendorSeverity:
       amazon: 2
+      azure: 2
+      cbl-mariner: 2
       ghsa: 2
       redhat: 2
       ubuntu: 2
@@ -633,6 +638,7 @@
     Severity: MEDIUM
     VendorSeverity:
       azure: 2
+      cbl-mariner: 2
       ghsa: 2
       redhat: 2
     CVSS:
@@ -720,6 +726,7 @@
     Severity: MEDIUM
     VendorSeverity:
       azure: 2
+      cbl-mariner: 2
       ghsa: 2
       redhat: 2
     CVSS:
@@ -1001,6 +1008,7 @@
     Severity: MEDIUM
     VendorSeverity:
       azure: 2
+      cbl-mariner: 2
       ghsa: 2
       redhat: 2
     CVSS:
