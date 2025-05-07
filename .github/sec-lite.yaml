@@ -75,6 +75,7 @@
     Severity: MEDIUM
     VendorSeverity:
       azure: 2
+      cbl-mariner: 2
       ghsa: 2
       redhat: 2
     CVSS:
