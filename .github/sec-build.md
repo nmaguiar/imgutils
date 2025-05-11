@@ -150,9 +150,10 @@
 │                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-22870 
 │                       │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3503 
 │                       │     │                  ├ [7]: https://security.netapp.com/advisory/ntap-20250509-0007 
-│                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-22870 
+│                       │     │                  ├ [8]: https://security.netapp.com/advisory/ntap-20250509-0007/ 
+│                       │     │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2025-22870 
 │                       │     ├ PublishedDate   : 2025-03-12T19:15:38.31Z 
-│                       │     ╰ LastModifiedDate: 2025-03-18T17:15:45.467Z 
+│                       │     ╰ LastModifiedDate: 2025-05-09T20:15:38.727Z 
 │                       ╰ [1] ╭ VulnerabilityID : CVE-2025-22872 
 │                             ├ PkgID           : golang.org/x/net@v0.28.0 
 │                             ├ PkgName         : golang.org/x/net 
@@ -586,9 +587,10 @@
 │                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-22870 
 │                       │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3503 
 │                       │     │                  ├ [7]: https://security.netapp.com/advisory/ntap-20250509-0007 
-│                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-22870 
+│                       │     │                  ├ [8]: https://security.netapp.com/advisory/ntap-20250509-0007/ 
+│                       │     │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2025-22870 
 │                       │     ├ PublishedDate   : 2025-03-12T19:15:38.31Z 
-│                       │     ╰ LastModifiedDate: 2025-03-18T17:15:45.467Z 
+│                       │     ╰ LastModifiedDate: 2025-05-09T20:15:38.727Z 
 │                       ├ [4] ╭ VulnerabilityID : CVE-2025-22872 
 │                       │     ├ PkgID           : golang.org/x/net@v0.34.0 
 │                       │     ├ PkgName         : golang.org/x/net 
