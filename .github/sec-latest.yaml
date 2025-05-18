@@ -93,9 +93,11 @@
     - https://groups.google.com/g/golang-announce/c/ezSKR9vqbqA
     - https://nvd.nist.gov/vuln/detail/CVE-2025-22872
     - https://pkg.go.dev/vuln/GO-2025-3595
+    - https://security.netapp.com/advisory/ntap-20250516-0007
+    - https://security.netapp.com/advisory/ntap-20250516-0007/
     - https://www.cve.org/CVERecord?id=CVE-2025-22872
     PublishedDate: '2025-04-16T18:16:04.183Z'
-    LastModifiedDate: '2025-04-17T20:22:16.24Z'
+    LastModifiedDate: '2025-05-16T23:15:19.707Z'
 - Target: usr/bin/dive
   Class: lang-pkgs
   Type: gobinary
@@ -187,9 +189,11 @@
     - https://groups.google.com/g/golang-announce/c/ezSKR9vqbqA
     - https://nvd.nist.gov/vuln/detail/CVE-2025-22872
     - https://pkg.go.dev/vuln/GO-2025-3595
+    - https://security.netapp.com/advisory/ntap-20250516-0007
+    - https://security.netapp.com/advisory/ntap-20250516-0007/
     - https://www.cve.org/CVERecord?id=CVE-2025-22872
     PublishedDate: '2025-04-16T18:16:04.183Z'
-    LastModifiedDate: '2025-04-17T20:22:16.24Z'
+    LastModifiedDate: '2025-05-16T23:15:19.707Z'
 - Target: usr/bin/docker
   Class: lang-pkgs
   Type: gobinary
@@ -287,9 +291,11 @@
     - https://groups.google.com/g/golang-announce/c/ezSKR9vqbqA
     - https://nvd.nist.gov/vuln/detail/CVE-2025-22872
     - https://pkg.go.dev/vuln/GO-2025-3595
+    - https://security.netapp.com/advisory/ntap-20250516-0007
+    - https://security.netapp.com/advisory/ntap-20250516-0007/
     - https://www.cve.org/CVERecord?id=CVE-2025-22872
     PublishedDate: '2025-04-16T18:16:04.183Z'
-    LastModifiedDate: '2025-04-17T20:22:16.24Z'
+    LastModifiedDate: '2025-05-16T23:15:19.707Z'
   - VulnerabilityID: CVE-2025-22871
     PkgID: stdlib@v1.23.7
     PkgName: stdlib
@@ -574,9 +580,11 @@
     - https://groups.google.com/g/golang-announce/c/ezSKR9vqbqA
     - https://nvd.nist.gov/vuln/detail/CVE-2025-22872
     - https://pkg.go.dev/vuln/GO-2025-3595
+    - https://security.netapp.com/advisory/ntap-20250516-0007
+    - https://security.netapp.com/advisory/ntap-20250516-0007/
     - https://www.cve.org/CVERecord?id=CVE-2025-22872
     PublishedDate: '2025-04-16T18:16:04.183Z'
-    LastModifiedDate: '2025-04-17T20:22:16.24Z'
+    LastModifiedDate: '2025-05-16T23:15:19.707Z'
   - VulnerabilityID: CVE-2025-22871
     PkgID: stdlib@v1.24.1
     PkgName: stdlib
