@@ -410,25 +410,32 @@
 │                       │     │                   characters. 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-770 
-│                       │     ├ VendorSeverity   ╭ amazon     : 2 
+│                       │     ├ VendorSeverity   ╭ alma       : 2 
+│                       │     │                  ├ amazon     : 2 
 │                       │     │                  ├ azure      : 2 
 │                       │     │                  ├ cbl-mariner: 2 
 │                       │     │                  ├ ghsa       : 2 
+│                       │     │                  ├ oracle-oval: 2 
 │                       │     │                  ╰ redhat     : 2 
 │                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
 │                       │     │                           │           A:H 
 │                       │     │                           ╰ V3Score : 7.5 
-│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-27144 
-│                       │     │                  ├ [1]: https://github.com/go-jose/go-jose 
-│                       │     │                  ├ [2]: https://github.com/go-jose/go-jose/commit/99b346cec4e86
-│                       │     │                  │      d102284642c5dcbe9bb0cacfc22 
-│                       │     │                  ├ [3]: https://github.com/go-jose/go-jose/releases/tag/v4.0.5 
-│                       │     │                  ├ [4]: https://github.com/go-jose/go-jose/security/advisories/
-│                       │     │                  │      GHSA-c6gw-w398-hv78 
-│                       │     │                  ├ [5]: https://github.com/golang/go/issues/71490 
-│                       │     │                  ├ [6]: https://go.dev/issue/71490 
-│                       │     │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2025-27144 
-│                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-27144 
+│                       │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:7397 
+│                       │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2025-27144 
+│                       │     │                  ├ [2] : https://bugzilla.redhat.com/2347423 
+│                       │     │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2025-7397.html 
+│                       │     │                  ├ [4] : https://github.com/go-jose/go-jose 
+│                       │     │                  ├ [5] : https://github.com/go-jose/go-jose/commit/99b346cec4e8
+│                       │     │                  │       6d102284642c5dcbe9bb0cacfc22 
+│                       │     │                  ├ [6] : https://github.com/go-jose/go-jose/releases/tag/v4.0.5 
+│                       │     │                  ├ [7] : https://github.com/go-jose/go-jose/security/advisories
+│                       │     │                  │       /GHSA-c6gw-w398-hv78 
+│                       │     │                  ├ [8] : https://github.com/golang/go/issues/71490 
+│                       │     │                  ├ [9] : https://go.dev/issue/71490 
+│                       │     │                  ├ [10]: https://linux.oracle.com/cve/CVE-2025-27144.html 
+│                       │     │                  ├ [11]: https://linux.oracle.com/errata/ELSA-2025-7397.html 
+│                       │     │                  ├ [12]: https://nvd.nist.gov/vuln/detail/CVE-2025-27144 
+│                       │     │                  ╰ [13]: https://www.cve.org/CVERecord?id=CVE-2025-27144 
 │                       │     ├ PublishedDate   : 2025-02-24T23:15:11.427Z 
 │                       │     ╰ LastModifiedDate: 2025-02-24T23:15:11.427Z 
 │                       ├ [1] ╭ VulnerabilityID : CVE-2025-27144 
@@ -467,25 +474,32 @@
 │                       │     │                   characters. 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-770 
-│                       │     ├ VendorSeverity   ╭ amazon     : 2 
+│                       │     ├ VendorSeverity   ╭ alma       : 2 
+│                       │     │                  ├ amazon     : 2 
 │                       │     │                  ├ azure      : 2 
 │                       │     │                  ├ cbl-mariner: 2 
 │                       │     │                  ├ ghsa       : 2 
+│                       │     │                  ├ oracle-oval: 2 
 │                       │     │                  ╰ redhat     : 2 
 │                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
 │                       │     │                           │           A:H 
 │                       │     │                           ╰ V3Score : 7.5 
-│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-27144 
-│                       │     │                  ├ [1]: https://github.com/go-jose/go-jose 
-│                       │     │                  ├ [2]: https://github.com/go-jose/go-jose/commit/99b346cec4e86
-│                       │     │                  │      d102284642c5dcbe9bb0cacfc22 
-│                       │     │                  ├ [3]: https://github.com/go-jose/go-jose/releases/tag/v4.0.5 
-│                       │     │                  ├ [4]: https://github.com/go-jose/go-jose/security/advisories/
-│                       │     │                  │      GHSA-c6gw-w398-hv78 
-│                       │     │                  ├ [5]: https://github.com/golang/go/issues/71490 
-│                       │     │                  ├ [6]: https://go.dev/issue/71490 
-│                       │     │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2025-27144 
-│                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-27144 
+│                       │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:7397 
+│                       │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2025-27144 
+│                       │     │                  ├ [2] : https://bugzilla.redhat.com/2347423 
+│                       │     │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2025-7397.html 
+│                       │     │                  ├ [4] : https://github.com/go-jose/go-jose 
+│                       │     │                  ├ [5] : https://github.com/go-jose/go-jose/commit/99b346cec4e8
+│                       │     │                  │       6d102284642c5dcbe9bb0cacfc22 
+│                       │     │                  ├ [6] : https://github.com/go-jose/go-jose/releases/tag/v4.0.5 
+│                       │     │                  ├ [7] : https://github.com/go-jose/go-jose/security/advisories
+│                       │     │                  │       /GHSA-c6gw-w398-hv78 
+│                       │     │                  ├ [8] : https://github.com/golang/go/issues/71490 
+│                       │     │                  ├ [9] : https://go.dev/issue/71490 
+│                       │     │                  ├ [10]: https://linux.oracle.com/cve/CVE-2025-27144.html 
+│                       │     │                  ├ [11]: https://linux.oracle.com/errata/ELSA-2025-7397.html 
+│                       │     │                  ├ [12]: https://nvd.nist.gov/vuln/detail/CVE-2025-27144 
+│                       │     │                  ╰ [13]: https://www.cve.org/CVERecord?id=CVE-2025-27144 
 │                       │     ├ PublishedDate   : 2025-02-24T23:15:11.427Z 
 │                       │     ╰ LastModifiedDate: 2025-02-24T23:15:11.427Z 
 │                       ├ [2] ╭ VulnerabilityID : CVE-2025-22869 
@@ -539,7 +553,7 @@
 │                       │     │                  ├ [7] : https://go.dev/cl/652135 
 │                       │     │                  ├ [8] : https://go.dev/issue/71931 
 │                       │     │                  ├ [9] : https://linux.oracle.com/cve/CVE-2025-22869.html 
-│                       │     │                  ├ [10]: https://linux.oracle.com/errata/ELSA-2025-3833.html 
+│                       │     │                  ├ [10]: https://linux.oracle.com/errata/ELSA-2025-7416.html 
 │                       │     │                  ├ [11]: https://nvd.nist.gov/vuln/detail/CVE-2025-22869 
 │                       │     │                  ├ [12]: https://pkg.go.dev/vuln/GO-2025-3487 
 │                       │     │                  ├ [13]: https://security.netapp.com/advisory/ntap-20250411-0010 
