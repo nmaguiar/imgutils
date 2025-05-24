@@ -15,8 +15,8 @@
     FixedVersion: 1.23.8, 1.24.2
     Status: fixed
     Layer:
-      Digest: sha256:a66362ca5dd54712a90a3dccfe4743517a1f2a97ea7858edb99243c6d32be231
-      DiffID: sha256:3a35c3b26f833cb179a9fcde1665cc81daa92fd5062d8127fe023f2e065dd4e4
+      Digest: sha256:ede7c320587b010ab83d6a385b97fbf92b452be4b8167e72bd3fd187ddf617a2
+      DiffID: sha256:994c2079860fee0b02cd46c070d60aef594ceba28a6c1d07ec992637417c86b8
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22871
     DataSource:
       ID: govulndb
