@@ -45,10 +45,10 @@
 │                             │                            │           /A:N 
 │                             │                            ╰ V3Score : 5.4 
 │                             ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2025/04/04/4 
-│                             │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:8476 
+│                             │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:8478 
 │                             │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-22871 
 │                             │                  ├ [3] : https://bugzilla.redhat.com/2358493 
-│                             │                  ├ [4] : https://errata.almalinux.org/9/ALSA-2025-8476.html 
+│                             │                  ├ [4] : https://errata.almalinux.org/8/ALSA-2025-8478.html 
 │                             │                  ├ [5] : https://go.dev/cl/652998 
 │                             │                  ├ [6] : https://go.dev/issue/71988 
 │                             │                  ├ [7] : https://groups.google.com/g/golang-announce/c/Y2uBTVKj
