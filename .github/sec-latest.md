@@ -54,7 +54,7 @@
 │                             │                  ├ [7] : https://groups.google.com/g/golang-announce/c/Y2uBTVKj
 │                             │                  │       BQk 
 │                             │                  ├ [8] : https://linux.oracle.com/cve/CVE-2025-22871.html 
-│                             │                  ├ [9] : https://linux.oracle.com/errata/ELSA-2025-8478.html 
+│                             │                  ├ [9] : https://linux.oracle.com/errata/ELSA-2025-8682.html 
 │                             │                  ├ [10]: https://nvd.nist.gov/vuln/detail/CVE-2025-22871 
 │                             │                  ├ [11]: https://pkg.go.dev/vuln/GO-2025-3563 
 │                             │                  ╰ [12]: https://www.cve.org/CVERecord?id=CVE-2025-22871 
@@ -97,23 +97,27 @@
 │                       │     │                  ├ azure      : 2 
 │                       │     │                  ├ cbl-mariner: 2 
 │                       │     │                  ├ ghsa       : 2 
-│                       │     │                  ╰ redhat     : 2 
+│                       │     │                  ├ redhat     : 2 
+│                       │     │                  ╰ ubuntu     : 2 
 │                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/
 │                       │     │                  │        │           A:L 
 │                       │     │                  │        ╰ V3Score : 4.4 
 │                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/
 │                       │     │                           │           A:L 
 │                       │     │                           ╰ V3Score : 4.4 
-│                       │     ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/03/07/2 
-│                       │     │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2025-22870 
-│                       │     │                  ├ [2]: https://go-review.googlesource.com/q/project:net 
-│                       │     │                  ├ [3]: https://go.dev/cl/654697 
-│                       │     │                  ├ [4]: https://go.dev/issue/71984 
-│                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-22870 
-│                       │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3503 
-│                       │     │                  ├ [7]: https://security.netapp.com/advisory/ntap-20250509-0007 
-│                       │     │                  ├ [8]: https://security.netapp.com/advisory/ntap-20250509-0007/ 
-│                       │     │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2025-22870 
+│                       │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2025/03/07/2 
+│                       │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2025-22870 
+│                       │     │                  ├ [2] : https://github.com/golang/go/issues/71984 
+│                       │     │                  ├ [3] : https://go-review.googlesource.com/q/project:net 
+│                       │     │                  ├ [4] : https://go.dev/cl/654697 
+│                       │     │                  ├ [5] : https://go.dev/issue/71984 
+│                       │     │                  ├ [6] : https://groups.google.com/g/golang-announce/c/4t3lzH3I
+│                       │     │                  │       0eI/m/b42ImqrBAQAJ 
+│                       │     │                  ├ [7] : https://nvd.nist.gov/vuln/detail/CVE-2025-22870 
+│                       │     │                  ├ [8] : https://pkg.go.dev/vuln/GO-2025-3503 
+│                       │     │                  ├ [9] : https://security.netapp.com/advisory/ntap-20250509-0007 
+│                       │     │                  ├ [10]: https://security.netapp.com/advisory/ntap-20250509-0007/ 
+│                       │     │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2025-22870 
 │                       │     ├ PublishedDate   : 2025-03-12T19:15:38.31Z 
 │                       │     ╰ LastModifiedDate: 2025-05-09T20:15:38.727Z 
 │                       ╰ [1] ╭ VulnerabilityID : CVE-2025-22872 
