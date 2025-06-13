@@ -14,26 +14,26 @@ fi
 
 # Check if the provider docker archive file exists
 if [ ! -f "$1" ]; then
-  echo "Provider docker archive file $1 does not exist"
+  echo "⚠️ Provider docker archive file $1 does not exist"
   exit 1
 fi
 
 # Check if the file is an OCI archive
 if tar -tf "$1" | grep -q '^blobs/'; then
-    echo "Converting OCI archive to Docker archive..."
+    echo "🔄 Converting OCI archive to Docker archive..."
     tempDir=$(mktemp)
 
     skopeo copy "oci-archive:$1" "docker-archive:$tempDir" 1>&2
     if [ $? -ne 0 ]; then
-        echo "Failed to convert OCI archive to Docker archive."
+        echo "❗️ Failed to convert OCI archive to Docker archive."
         rm -rf "$tempDir"
         exit 1
     fi
-    echo "Conversion successful. Creating Docker archive..."
+    echo "✅ Conversion successful. Creating Docker archive..."
     # Create a Docker archive from the temporary directory
     cp $tempDir "$1"
     rm -rf "$tempDir"
-    echo "Docker archive created successfully: $1"
+    echo "✅ Docker archive created successfully: $1"
 else
-    echo "The file is already a Docker archive."
+    echo "✅ The file is already a Docker archive."
 fi

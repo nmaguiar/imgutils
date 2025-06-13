@@ -39,6 +39,9 @@ else
   mkdir -p $2
 fi
 
+# Check if it's a docker archive or an OCI archive and converting to docker archive
+convert2dockerarchive.sh $1
+
 # Loop through all .tar files in the provider docker archive file
 for tarFile in $(tar -tf $1 | grep '\.tar$'); do
     if [ $(basename $tarFile .tar) == "layer" ]; then

@@ -56,6 +56,12 @@ if [ ! -f "$1" ] && [[ "$1" == *:* ]]; then
     IMAGE="$TMPIMG"
 else
     IMAGE="$1"
+    echo "[1m🔎 -- Checking archive format: $IMAGE[m"
+    convert2dockerarchive.sh "$IMAGE"
+    if [ $? -ne 0 ]; then
+        echo "Failed to convert image to Docker archive."
+        exit 1
+    fi
 fi
 
 # Extract the files from the image archive to directory A
@@ -81,6 +87,12 @@ if [ ! -f "$2" ] && [[ "$2" == *:* ]]; then
     IMAGE="$TMPIMG"
 else
     IMAGE="$2"
+    echo "[1m🔎 -- Checking archive format: $IMAGE[m"
+    convert2dockerarchive.sh "$IMAGE"
+    if [ $? -ne 0 ]; then
+        echo "Failed to convert image to Docker archive."
+        exit 1
+    fi
 fi
 
 # Extract the files from the image archive to directory B
