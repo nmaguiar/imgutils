@@ -72,6 +72,8 @@ First check the nodes' names with 'kubectl get nodes'
 | compareImages.sh | Given two registry image (e.g. image:tag), local docker-daemon:image:tag or image.tar will expand their contents, compare and produce a CSV diff file |
 | expandFilesInImage.sh | Given a registry image (e.g. image:tag), a local docker-daemon:image:tag or an image.tar file retrieves all files from the last layer where they are found to an output folder |
 | expandLayersInImage.sh | Given a registry image (e.g. image:tag), a local docker-daemon:image:tag or an image.tar file retrieves all layers to an output folder |
+| convert2dockerarchive.sh | Given a container image tar file, converts it to a docker archive tar from an oci image tar file |
+| convert2ociarchive.sh | Given a container image tar file, converts it to an oci archive tar from a docker image tar file |
 
 ---
 
