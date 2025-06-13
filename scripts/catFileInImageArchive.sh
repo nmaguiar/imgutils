@@ -1,62 +1,84 @@
 #!/bin/bash
 # Author : Nuno Aguiar
-# Version: 20250215 
+# Version: 20250215
 #
 # Usage  :
-#  catFileInImageArchive.sh <provider-docker-archive-file> <file-to-extract>
+#  catFileInImageArchive.sh <image-archive-file> <file-to-extract>
 #
 # Description:
-#  Extracts a file from a provider docker archive file and writes it to stdout
-#  This script is used to extract a file from a provider docker archive file
-#  and write it to stdout. This is useful for extracting a file from a provider
-#  docker archive file and piping it to another command.
 
-# Check if the number of arguments is correct.
-# Print usage if not.
+#  Extracts a file from an OCI or Docker image archive and writes it to stdout.
+
+set -e
+
 if [ "$#" -ne 2 ]; then
-    cat <<EOF >&2
-[1mUsage:[m [3m$(basename "$0") <provider-docker-archive-file> <file-to-extract>[m
+    cat <<USAGE >&2
+Usage: $(basename "$0") <image-archive-file> <file-to-extract>
 
-Extract a file from a provider docker archive file.
-
-  [3m<provider-docker-archive-file>[m - Path to a provider docker archive file.
-  [3m<file-to-extract>[m              - The file to extract from the provider docker archive file.
-
-EOF
+Extract a file from a container image archive (OCI or Docker).
+USAGE
     exit 1
 fi
 
-# Check if the provider docker archive file exists
-if [ ! -f $1 ]; then
-  echo "Provider docker archive file $1 does not exist"
-  exit 1
+IMAGE="$1"
+TARGET="${2#/}"
+
+if [ ! -e "$IMAGE" ]; then
+    echo "Image archive $IMAGE does not exist" >&2
+    exit 1
 fi
 
-# Check if the file to extract was provided
-if [ -z $2 ]; then
-  echo "File to extract not provided"
-  exit 1
-fi
+# Helper to extract from a layer tar stream
+extract_from_layer() {
+    local layerPath="$1"
+    local tmpFile
+    tmpFile=$(mktemp)
 
-# Remove any '/' prefix from the file to extract
-if [ ${2:0:1} == "/" ]; then
-  fileToExtract=${2:1}
-else
-  fileToExtract=$2
-fi
-
-# Loop through all .tar files in the provider docker archive file
-for tarFile in $(tar -tf $1 | grep '\.tar$'); do
-    if [ $(basename $tarFile .tar) == "layer" ]; then
-        continue
+    if [ -d "$IMAGE" ]; then
+        cat "$IMAGE/$layerPath" > "$tmpFile" || { rm -f "$tmpFile"; return 1; }
+    else
+        tar -xOf "$IMAGE" "$layerPath" > "$tmpFile" 2>/dev/null || { rm -f "$tmpFile"; return 1; }
     fi
-    # Check if the file to extract exists in the tar file
-    if tar -xOf $1 $tarFile | tar -tf - | grep -q $fileToExtract; then
-        # Extract the file from the tar file and write it to stdout
-        tar -xOf $1 $tarFile | tar -xO $fileToExtract 2>/dev/null
+
+    if gzip -t "$tmpFile" 2>/dev/null; then
+        if tar -tzf "$tmpFile" | grep -q "^$TARGET$"; then
+            tar -xzOf "$tmpFile" "$TARGET"
+            rm -f "$tmpFile"
+            return 0
+        fi
+    else
+        if tar -tf "$tmpFile" | grep -q "^$TARGET$"; then
+            tar -xOf "$tmpFile" "$TARGET"
+            rm -f "$tmpFile"
+            return 0
+        fi
+    fi
+
+    rm -f "$tmpFile"
+    return 1
+}
+
+# Candidate layer paths are searched without parsing manifests
+list_layers() {
+    if [ -d "$IMAGE" ]; then
+        find "$IMAGE" -type f \( -name "layer.tar" -o -name "layer.tar.gz" -o -path "*/blobs/*/*" \)
+    else
+        tar -tf "$IMAGE" | grep -E 'layer\.tar(\.gz)?$|^blobs/.+/.+'
+    fi
+}
+
+readarray -t layer_array < <(list_layers)
+for (( idx=${#layer_array[@]}-1; idx>=0; idx-- )); do
+    layer="${layer_array[$idx]}"
+    [ -z "$layer" ] && continue
+    if extract_from_layer "$layer"; then
         exit 0
     fi
 done
 
 # If not found
-echo "File $2 not found!"
+echo "File $2 not found!" >&2
+exit 1
+
+
+
