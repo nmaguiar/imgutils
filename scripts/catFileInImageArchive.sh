@@ -1,6 +1,6 @@
 #!/bin/bash
 # Author : Nuno Aguiar
-# Version: 20250215 
+# Version: 20250612
 #
 # Usage  :
 #  catFileInImageArchive.sh <provider-docker-archive-file> <file-to-extract>
@@ -45,18 +45,27 @@ else
   fileToExtract=$2
 fi
 
-# Loop through all .tar files in the provider docker archive file
-for tarFile in $(tar -tf $1 | grep '\.tar$'); do
-    if [ $(basename $tarFile .tar) == "layer" ]; then
-        continue
-    fi
-    # Check if the file to extract exists in the tar file
-    if tar -xOf $1 $tarFile | tar -tf - | grep -q $fileToExtract; then
-        # Extract the file from the tar file and write it to stdout
-        tar -xOf $1 $tarFile | tar -xO $fileToExtract 2>/dev/null
-        exit 0
-    fi
-done
+# Detect archive type (Docker or OCI)
+if tar -tf "$1" | grep -q '^blobs/'; then
+    # OCI archive: look for all blobs/sha256/*.tar files (layers)
+    for layer in $(tar -tf "$1" | grep '^blobs/sha256/.\+.$' 2> /dev/null); do
+        if tar -xOf "$1" "$layer" | tar -tzf - 2> /dev/null | grep -qx "$fileToExtract"; then
+            tar -xOf "$1" "$layer" | tar -zxO "$fileToExtract" 2>/dev/null
+            exit 0
+        fi
+    done
+else
+    # Docker archive: look for all *.tar files (layers)
+    for tarFile in $(tar -tf "$1" | grep '\.tar$'); do
+        if [ "$(basename "$tarFile" .tar)" == "layer" ]; then
+            continue
+        fi
+        if tar -xOf "$1" "$tarFile" | tar -tf - | grep -qx "$fileToExtract"; then
+            tar -xOf "$1" "$tarFile" | tar -xO "$fileToExtract" 2>/dev/null
+            exit 0
+        fi
+    done
+fi
 
 # If not found
 echo "File $2 not found!"
