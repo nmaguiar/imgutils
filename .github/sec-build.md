@@ -31,10 +31,14 @@
 │                       │     │                   This only affected certificate chains which contain policy
 │                       │     │                   graphs, which are rather uncommon. 
 │                       │     ├ Severity        : HIGH 
-│                       │     ├ VendorSeverity   ─ redhat: 3 
-│                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/
-│                       │     │                           │           A:N 
-│                       │     │                           ╰ V3Score : 7.5 
+│                       │     ├ VendorSeverity   ╭ bitnami: 3 
+│                       │     │                  ╰ redhat : 3 
+│                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H
+│                       │     │                  │         │           /A:N 
+│                       │     │                  │         ╰ V3Score : 7.5 
+│                       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H
+│                       │     │                            │           /A:N 
+│                       │     │                            ╰ V3Score : 7.5 
 │                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-22874 
 │                       │     │                  ├ [1]: https://go.dev/cl/670375 
 │                       │     │                  ├ [2]: https://go.dev/issue/73612 
@@ -44,7 +48,45 @@
 │                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22874 
 │                       │     ├ PublishedDate   : 2025-06-11T17:15:42.167Z 
 │                       │     ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
-│                       ├ [1] ╭ VulnerabilityID : CVE-2025-22871 
+│                       ├ [1] ╭ VulnerabilityID : CVE-2025-0913 
+│                       │     ├ PkgID           : stdlib@v1.24.1 
+│                       │     ├ PkgName         : stdlib 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
+│                       │     │                  ╰ UID : 969259d6a3318a6c 
+│                       │     ├ InstalledVersion: v1.24.1 
+│                       │     ├ FixedVersion    : 1.23.10, 1.24.4 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:1042a59aed360ed072365a687fc92487528920dbb85d7
+│                       │     │                  │         2a400dd6e14b1dd6770 
+│                       │     │                  ╰ DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394
+│                       │     │                            127a88c2b67a0d83d30 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-0913 
+│                       │     ├ DataSource       ╭ ID  : govulndb 
+│                       │     │                  ├ Name: The Go Vulnerability Database 
+│                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │     ├ Title           : Inconsistent handling of O_CREATE|O_EXCL on Unix and Windows
+│                       │     │                   in os in syscall 
+│                       │     ├ Description     : os.OpenFile(path, os.O_CREATE|O_EXCL) behaved differently on
+│                       │     │                   Unix and Windows systems when the target path was a dangling
+│                       │     │                   symlink. On Unix systems, OpenFile with O_CREATE and O_EXCL
+│                       │     │                   flags never follows symlinks. On Windows, when the target
+│                       │     │                   path was a symlink to a nonexistent location, OpenFile would
+│                       │     │                   create a file in that location. OpenFile now always returns
+│                       │     │                   an error when the O_CREATE and O_EXCL flags are both set and
+│                       │     │                   the target path is a symlink. 
+│                       │     ├ Severity        : MEDIUM 
+│                       │     ├ VendorSeverity   ─ bitnami: 2 
+│                       │     ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H
+│                       │     │                            │           /A:N 
+│                       │     │                            ╰ V3Score : 5.5 
+│                       │     ├ References       ╭ [0]: https://go.dev/cl/672396 
+│                       │     │                  ├ [1]: https://go.dev/issue/73702 
+│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A 
+│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-0913 
+│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-3750 
+│                       │     ├ PublishedDate   : 2025-06-11T18:15:24.627Z 
+│                       │     ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
+│                       ├ [2] ╭ VulnerabilityID : CVE-2025-22871 
 │                       │     ├ PkgID           : stdlib@v1.24.1 
 │                       │     ├ PkgName         : stdlib 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -96,37 +138,7 @@
 │                       │     │                  ╰ [12]: https://www.cve.org/CVERecord?id=CVE-2025-22871 
 │                       │     ├ PublishedDate   : 2025-04-08T20:15:20.183Z 
 │                       │     ╰ LastModifiedDate: 2025-04-18T15:15:57.923Z 
-│                       ├ [2] ╭ VulnerabilityID : CVE-2025-4673 
-│                       │     ├ PkgID           : stdlib@v1.24.1 
-│                       │     ├ PkgName         : stdlib 
-│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
-│                       │     │                  ╰ UID : 969259d6a3318a6c 
-│                       │     ├ InstalledVersion: v1.24.1 
-│                       │     ├ FixedVersion    : 1.23.10, 1.24.4 
-│                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:1042a59aed360ed072365a687fc92487528920dbb85d7
-│                       │     │                  │         2a400dd6e14b1dd6770 
-│                       │     │                  ╰ DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394
-│                       │     │                            127a88c2b67a0d83d30 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-4673 
-│                       │     ├ DataSource       ╭ ID  : govulndb 
-│                       │     │                  ├ Name: The Go Vulnerability Database 
-│                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │     ├ Title           : Proxy-Authorization and Proxy-Authenticate headers persisted
-│                       │     │                   on cross- ... 
-│                       │     ├ Description     : Proxy-Authorization and Proxy-Authenticate headers persisted
-│                       │     │                   on cross-origin redirects potentially leaking sensitive
-│                       │     │                   information. 
-│                       │     ├ Severity        : MEDIUM 
-│                       │     ├ VendorSeverity   ─ ubuntu: 2 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/679257 
-│                       │     │                  ├ [1]: https://go.dev/issue/73816 
-│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A 
-│                       │     │                  ├ [3]: https://pkg.go.dev/vuln/GO-2025-3751 
-│                       │     │                  ╰ [4]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
-│                       │     ├ PublishedDate   : 2025-06-11T17:15:42.993Z 
-│                       │     ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
-│                       ╰ [3] ╭ VulnerabilityID : CVE-2025-0913 
+│                       ╰ [3] ╭ VulnerabilityID : CVE-2025-4673 
 │                             ├ PkgID           : stdlib@v1.24.1 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -138,26 +150,28 @@
 │                             │                  │         2a400dd6e14b1dd6770 
 │                             │                  ╰ DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394
 │                             │                            127a88c2b67a0d83d30 
-│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-0913 
+│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-4673 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ├ Title           : Inconsistent handling of O_CREATE|O_EXCL on Unix and Windows
-│                             │                   in os in syscall 
-│                             ├ Description     : os.OpenFile(path, os.O_CREATE|O_EXCL) behaved differently on
-│                             │                   Unix and Windows systems when the target path was a dangling
-│                             │                   symlink. On Unix systems, OpenFile with O_CREATE and O_EXCL
-│                             │                   flags never follows symlinks. On Windows, when the target
-│                             │                   path was a symlink to a nonexistent location, OpenFile would
-│                             │                   create a file in that location. OpenFile now always returns
-│                             │                   an error when the O_CREATE and O_EXCL flags are both set and
-│                             │                   the target path is a symlink. 
-│                             ├ Severity        : UNKNOWN 
-│                             ├ References       ╭ [0]: https://go.dev/cl/672396 
-│                             │                  ├ [1]: https://go.dev/issue/73702 
+│                             ├ Title           : Proxy-Authorization and Proxy-Authenticate headers persisted
+│                             │                   on cross- ... 
+│                             ├ Description     : Proxy-Authorization and Proxy-Authenticate headers persisted
+│                             │                   on cross-origin redirects potentially leaking sensitive
+│                             │                   information. 
+│                             ├ Severity        : MEDIUM 
+│                             ├ VendorSeverity   ╭ bitnami: 2 
+│                             │                  ╰ ubuntu : 2 
+│                             ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 6.8 
+│                             ├ References       ╭ [0]: https://go.dev/cl/679257 
+│                             │                  ├ [1]: https://go.dev/issue/73816 
 │                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A 
-│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3750 
-│                             ├ PublishedDate   : 2025-06-11T18:15:24.627Z 
+│                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-4673 
+│                             │                  ├ [4]: https://pkg.go.dev/vuln/GO-2025-3751 
+│                             │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
+│                             ├ PublishedDate   : 2025-06-11T17:15:42.993Z 
 │                             ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
 ├ [3] ╭ Target: usr/bin/ctr 
 │     ├ Class : lang-pkgs 
@@ -294,10 +308,14 @@
 │                       │     │                   This only affected certificate chains which contain policy
 │                       │     │                   graphs, which are rather uncommon. 
 │                       │     ├ Severity        : HIGH 
-│                       │     ├ VendorSeverity   ─ redhat: 3 
-│                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/
-│                       │     │                           │           A:N 
-│                       │     │                           ╰ V3Score : 7.5 
+│                       │     ├ VendorSeverity   ╭ bitnami: 3 
+│                       │     │                  ╰ redhat : 3 
+│                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H
+│                       │     │                  │         │           /A:N 
+│                       │     │                  │         ╰ V3Score : 7.5 
+│                       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H
+│                       │     │                            │           /A:N 
+│                       │     │                            ╰ V3Score : 7.5 
 │                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-22874 
 │                       │     │                  ├ [1]: https://go.dev/cl/670375 
 │                       │     │                  ├ [2]: https://go.dev/issue/73612 
@@ -307,7 +325,7 @@
 │                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22874 
 │                       │     ├ PublishedDate   : 2025-06-11T17:15:42.167Z 
 │                       │     ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
-│                       ├ [1] ╭ VulnerabilityID : CVE-2025-4673 
+│                       ├ [1] ╭ VulnerabilityID : CVE-2025-0913 
 │                       │     ├ PkgID           : stdlib@v1.24.3 
 │                       │     ├ PkgName         : stdlib 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.3 
@@ -319,25 +337,33 @@
 │                       │     │                  │         2a400dd6e14b1dd6770 
 │                       │     │                  ╰ DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394
 │                       │     │                            127a88c2b67a0d83d30 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-4673 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-0913 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
 │                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │     ├ Title           : Proxy-Authorization and Proxy-Authenticate headers persisted
-│                       │     │                   on cross- ... 
-│                       │     ├ Description     : Proxy-Authorization and Proxy-Authenticate headers persisted
-│                       │     │                   on cross-origin redirects potentially leaking sensitive
-│                       │     │                   information. 
+│                       │     ├ Title           : Inconsistent handling of O_CREATE|O_EXCL on Unix and Windows
+│                       │     │                   in os in syscall 
+│                       │     ├ Description     : os.OpenFile(path, os.O_CREATE|O_EXCL) behaved differently on
+│                       │     │                   Unix and Windows systems when the target path was a dangling
+│                       │     │                   symlink. On Unix systems, OpenFile with O_CREATE and O_EXCL
+│                       │     │                   flags never follows symlinks. On Windows, when the target
+│                       │     │                   path was a symlink to a nonexistent location, OpenFile would
+│                       │     │                   create a file in that location. OpenFile now always returns
+│                       │     │                   an error when the O_CREATE and O_EXCL flags are both set and
+│                       │     │                   the target path is a symlink. 
 │                       │     ├ Severity        : MEDIUM 
-│                       │     ├ VendorSeverity   ─ ubuntu: 2 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/679257 
-│                       │     │                  ├ [1]: https://go.dev/issue/73816 
+│                       │     ├ VendorSeverity   ─ bitnami: 2 
+│                       │     ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H
+│                       │     │                            │           /A:N 
+│                       │     │                            ╰ V3Score : 5.5 
+│                       │     ├ References       ╭ [0]: https://go.dev/cl/672396 
+│                       │     │                  ├ [1]: https://go.dev/issue/73702 
 │                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A 
-│                       │     │                  ├ [3]: https://pkg.go.dev/vuln/GO-2025-3751 
-│                       │     │                  ╰ [4]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
-│                       │     ├ PublishedDate   : 2025-06-11T17:15:42.993Z 
+│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-0913 
+│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-3750 
+│                       │     ├ PublishedDate   : 2025-06-11T18:15:24.627Z 
 │                       │     ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
-│                       ╰ [2] ╭ VulnerabilityID : CVE-2025-0913 
+│                       ╰ [2] ╭ VulnerabilityID : CVE-2025-4673 
 │                             ├ PkgID           : stdlib@v1.24.3 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.3 
@@ -349,26 +375,28 @@
 │                             │                  │         2a400dd6e14b1dd6770 
 │                             │                  ╰ DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394
 │                             │                            127a88c2b67a0d83d30 
-│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-0913 
+│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-4673 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ├ Title           : Inconsistent handling of O_CREATE|O_EXCL on Unix and Windows
-│                             │                   in os in syscall 
-│                             ├ Description     : os.OpenFile(path, os.O_CREATE|O_EXCL) behaved differently on
-│                             │                   Unix and Windows systems when the target path was a dangling
-│                             │                   symlink. On Unix systems, OpenFile with O_CREATE and O_EXCL
-│                             │                   flags never follows symlinks. On Windows, when the target
-│                             │                   path was a symlink to a nonexistent location, OpenFile would
-│                             │                   create a file in that location. OpenFile now always returns
-│                             │                   an error when the O_CREATE and O_EXCL flags are both set and
-│                             │                   the target path is a symlink. 
-│                             ├ Severity        : UNKNOWN 
-│                             ├ References       ╭ [0]: https://go.dev/cl/672396 
-│                             │                  ├ [1]: https://go.dev/issue/73702 
+│                             ├ Title           : Proxy-Authorization and Proxy-Authenticate headers persisted
+│                             │                   on cross- ... 
+│                             ├ Description     : Proxy-Authorization and Proxy-Authenticate headers persisted
+│                             │                   on cross-origin redirects potentially leaking sensitive
+│                             │                   information. 
+│                             ├ Severity        : MEDIUM 
+│                             ├ VendorSeverity   ╭ bitnami: 2 
+│                             │                  ╰ ubuntu : 2 
+│                             ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 6.8 
+│                             ├ References       ╭ [0]: https://go.dev/cl/679257 
+│                             │                  ├ [1]: https://go.dev/issue/73816 
 │                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A 
-│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3750 
-│                             ├ PublishedDate   : 2025-06-11T18:15:24.627Z 
+│                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-4673 
+│                             │                  ├ [4]: https://pkg.go.dev/vuln/GO-2025-3751 
+│                             │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
+│                             ├ PublishedDate   : 2025-06-11T17:15:42.993Z 
 │                             ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
 ├ [6] ╭ Target         : usr/bin/helm 
 │     ├ Class          : lang-pkgs 
@@ -396,10 +424,14 @@
 │                       │     │                   This only affected certificate chains which contain policy
 │                       │     │                   graphs, which are rather uncommon. 
 │                       │     ├ Severity        : HIGH 
-│                       │     ├ VendorSeverity   ─ redhat: 3 
-│                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/
-│                       │     │                           │           A:N 
-│                       │     │                           ╰ V3Score : 7.5 
+│                       │     ├ VendorSeverity   ╭ bitnami: 3 
+│                       │     │                  ╰ redhat : 3 
+│                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H
+│                       │     │                  │         │           /A:N 
+│                       │     │                  │         ╰ V3Score : 7.5 
+│                       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H
+│                       │     │                            │           /A:N 
+│                       │     │                            ╰ V3Score : 7.5 
 │                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-22874 
 │                       │     │                  ├ [1]: https://go.dev/cl/670375 
 │                       │     │                  ├ [2]: https://go.dev/issue/73612 
@@ -409,7 +441,7 @@
 │                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22874 
 │                       │     ├ PublishedDate   : 2025-06-11T17:15:42.167Z 
 │                       │     ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
-│                       ├ [1] ╭ VulnerabilityID : CVE-2025-4673 
+│                       ├ [1] ╭ VulnerabilityID : CVE-2025-0913 
 │                       │     ├ PkgID           : stdlib@v1.24.3 
 │                       │     ├ PkgName         : stdlib 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.3 
@@ -421,25 +453,33 @@
 │                       │     │                  │         2a400dd6e14b1dd6770 
 │                       │     │                  ╰ DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394
 │                       │     │                            127a88c2b67a0d83d30 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-4673 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-0913 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
 │                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │     ├ Title           : Proxy-Authorization and Proxy-Authenticate headers persisted
-│                       │     │                   on cross- ... 
-│                       │     ├ Description     : Proxy-Authorization and Proxy-Authenticate headers persisted
-│                       │     │                   on cross-origin redirects potentially leaking sensitive
-│                       │     │                   information. 
+│                       │     ├ Title           : Inconsistent handling of O_CREATE|O_EXCL on Unix and Windows
+│                       │     │                   in os in syscall 
+│                       │     ├ Description     : os.OpenFile(path, os.O_CREATE|O_EXCL) behaved differently on
+│                       │     │                   Unix and Windows systems when the target path was a dangling
+│                       │     │                   symlink. On Unix systems, OpenFile with O_CREATE and O_EXCL
+│                       │     │                   flags never follows symlinks. On Windows, when the target
+│                       │     │                   path was a symlink to a nonexistent location, OpenFile would
+│                       │     │                   create a file in that location. OpenFile now always returns
+│                       │     │                   an error when the O_CREATE and O_EXCL flags are both set and
+│                       │     │                   the target path is a symlink. 
 │                       │     ├ Severity        : MEDIUM 
-│                       │     ├ VendorSeverity   ─ ubuntu: 2 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/679257 
-│                       │     │                  ├ [1]: https://go.dev/issue/73816 
+│                       │     ├ VendorSeverity   ─ bitnami: 2 
+│                       │     ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H
+│                       │     │                            │           /A:N 
+│                       │     │                            ╰ V3Score : 5.5 
+│                       │     ├ References       ╭ [0]: https://go.dev/cl/672396 
+│                       │     │                  ├ [1]: https://go.dev/issue/73702 
 │                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A 
-│                       │     │                  ├ [3]: https://pkg.go.dev/vuln/GO-2025-3751 
-│                       │     │                  ╰ [4]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
-│                       │     ├ PublishedDate   : 2025-06-11T17:15:42.993Z 
+│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-0913 
+│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-3750 
+│                       │     ├ PublishedDate   : 2025-06-11T18:15:24.627Z 
 │                       │     ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
-│                       ╰ [2] ╭ VulnerabilityID : CVE-2025-0913 
+│                       ╰ [2] ╭ VulnerabilityID : CVE-2025-4673 
 │                             ├ PkgID           : stdlib@v1.24.3 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.3 
@@ -451,26 +491,28 @@
 │                             │                  │         2a400dd6e14b1dd6770 
 │                             │                  ╰ DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394
 │                             │                            127a88c2b67a0d83d30 
-│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-0913 
+│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-4673 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ├ Title           : Inconsistent handling of O_CREATE|O_EXCL on Unix and Windows
-│                             │                   in os in syscall 
-│                             ├ Description     : os.OpenFile(path, os.O_CREATE|O_EXCL) behaved differently on
-│                             │                   Unix and Windows systems when the target path was a dangling
-│                             │                   symlink. On Unix systems, OpenFile with O_CREATE and O_EXCL
-│                             │                   flags never follows symlinks. On Windows, when the target
-│                             │                   path was a symlink to a nonexistent location, OpenFile would
-│                             │                   create a file in that location. OpenFile now always returns
-│                             │                   an error when the O_CREATE and O_EXCL flags are both set and
-│                             │                   the target path is a symlink. 
-│                             ├ Severity        : UNKNOWN 
-│                             ├ References       ╭ [0]: https://go.dev/cl/672396 
-│                             │                  ├ [1]: https://go.dev/issue/73702 
+│                             ├ Title           : Proxy-Authorization and Proxy-Authenticate headers persisted
+│                             │                   on cross- ... 
+│                             ├ Description     : Proxy-Authorization and Proxy-Authenticate headers persisted
+│                             │                   on cross-origin redirects potentially leaking sensitive
+│                             │                   information. 
+│                             ├ Severity        : MEDIUM 
+│                             ├ VendorSeverity   ╭ bitnami: 2 
+│                             │                  ╰ ubuntu : 2 
+│                             ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 6.8 
+│                             ├ References       ╭ [0]: https://go.dev/cl/679257 
+│                             │                  ├ [1]: https://go.dev/issue/73816 
 │                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A 
-│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3750 
-│                             ├ PublishedDate   : 2025-06-11T18:15:24.627Z 
+│                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-4673 
+│                             │                  ├ [4]: https://pkg.go.dev/vuln/GO-2025-3751 
+│                             │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
+│                             ├ PublishedDate   : 2025-06-11T17:15:42.993Z 
 │                             ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
 ├ [7] ╭ Target         : usr/bin/nerdctl 
 │     ├ Class          : lang-pkgs 
@@ -498,10 +540,14 @@
 │                       │     │                   This only affected certificate chains which contain policy
 │                       │     │                   graphs, which are rather uncommon. 
 │                       │     ├ Severity        : HIGH 
-│                       │     ├ VendorSeverity   ─ redhat: 3 
-│                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/
-│                       │     │                           │           A:N 
-│                       │     │                           ╰ V3Score : 7.5 
+│                       │     ├ VendorSeverity   ╭ bitnami: 3 
+│                       │     │                  ╰ redhat : 3 
+│                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H
+│                       │     │                  │         │           /A:N 
+│                       │     │                  │         ╰ V3Score : 7.5 
+│                       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H
+│                       │     │                            │           /A:N 
+│                       │     │                            ╰ V3Score : 7.5 
 │                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-22874 
 │                       │     │                  ├ [1]: https://go.dev/cl/670375 
 │                       │     │                  ├ [2]: https://go.dev/issue/73612 
@@ -511,7 +557,7 @@
 │                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22874 
 │                       │     ├ PublishedDate   : 2025-06-11T17:15:42.167Z 
 │                       │     ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
-│                       ├ [1] ╭ VulnerabilityID : CVE-2025-4673 
+│                       ├ [1] ╭ VulnerabilityID : CVE-2025-0913 
 │                       │     ├ PkgID           : stdlib@v1.24.3 
 │                       │     ├ PkgName         : stdlib 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.3 
@@ -523,25 +569,33 @@
 │                       │     │                  │         2a400dd6e14b1dd6770 
 │                       │     │                  ╰ DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394
 │                       │     │                            127a88c2b67a0d83d30 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-4673 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-0913 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
 │                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │     ├ Title           : Proxy-Authorization and Proxy-Authenticate headers persisted
-│                       │     │                   on cross- ... 
-│                       │     ├ Description     : Proxy-Authorization and Proxy-Authenticate headers persisted
-│                       │     │                   on cross-origin redirects potentially leaking sensitive
-│                       │     │                   information. 
+│                       │     ├ Title           : Inconsistent handling of O_CREATE|O_EXCL on Unix and Windows
+│                       │     │                   in os in syscall 
+│                       │     ├ Description     : os.OpenFile(path, os.O_CREATE|O_EXCL) behaved differently on
+│                       │     │                   Unix and Windows systems when the target path was a dangling
+│                       │     │                   symlink. On Unix systems, OpenFile with O_CREATE and O_EXCL
+│                       │     │                   flags never follows symlinks. On Windows, when the target
+│                       │     │                   path was a symlink to a nonexistent location, OpenFile would
+│                       │     │                   create a file in that location. OpenFile now always returns
+│                       │     │                   an error when the O_CREATE and O_EXCL flags are both set and
+│                       │     │                   the target path is a symlink. 
 │                       │     ├ Severity        : MEDIUM 
-│                       │     ├ VendorSeverity   ─ ubuntu: 2 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/679257 
-│                       │     │                  ├ [1]: https://go.dev/issue/73816 
+│                       │     ├ VendorSeverity   ─ bitnami: 2 
+│                       │     ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H
+│                       │     │                            │           /A:N 
+│                       │     │                            ╰ V3Score : 5.5 
+│                       │     ├ References       ╭ [0]: https://go.dev/cl/672396 
+│                       │     │                  ├ [1]: https://go.dev/issue/73702 
 │                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A 
-│                       │     │                  ├ [3]: https://pkg.go.dev/vuln/GO-2025-3751 
-│                       │     │                  ╰ [4]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
-│                       │     ├ PublishedDate   : 2025-06-11T17:15:42.993Z 
+│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-0913 
+│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-3750 
+│                       │     ├ PublishedDate   : 2025-06-11T18:15:24.627Z 
 │                       │     ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
-│                       ╰ [2] ╭ VulnerabilityID : CVE-2025-0913 
+│                       ╰ [2] ╭ VulnerabilityID : CVE-2025-4673 
 │                             ├ PkgID           : stdlib@v1.24.3 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.3 
@@ -553,26 +607,28 @@
 │                             │                  │         2a400dd6e14b1dd6770 
 │                             │                  ╰ DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394
 │                             │                            127a88c2b67a0d83d30 
-│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-0913 
+│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-4673 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ├ Title           : Inconsistent handling of O_CREATE|O_EXCL on Unix and Windows
-│                             │                   in os in syscall 
-│                             ├ Description     : os.OpenFile(path, os.O_CREATE|O_EXCL) behaved differently on
-│                             │                   Unix and Windows systems when the target path was a dangling
-│                             │                   symlink. On Unix systems, OpenFile with O_CREATE and O_EXCL
-│                             │                   flags never follows symlinks. On Windows, when the target
-│                             │                   path was a symlink to a nonexistent location, OpenFile would
-│                             │                   create a file in that location. OpenFile now always returns
-│                             │                   an error when the O_CREATE and O_EXCL flags are both set and
-│                             │                   the target path is a symlink. 
-│                             ├ Severity        : UNKNOWN 
-│                             ├ References       ╭ [0]: https://go.dev/cl/672396 
-│                             │                  ├ [1]: https://go.dev/issue/73702 
+│                             ├ Title           : Proxy-Authorization and Proxy-Authenticate headers persisted
+│                             │                   on cross- ... 
+│                             ├ Description     : Proxy-Authorization and Proxy-Authenticate headers persisted
+│                             │                   on cross-origin redirects potentially leaking sensitive
+│                             │                   information. 
+│                             ├ Severity        : MEDIUM 
+│                             ├ VendorSeverity   ╭ bitnami: 2 
+│                             │                  ╰ ubuntu : 2 
+│                             ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 6.8 
+│                             ├ References       ╭ [0]: https://go.dev/cl/679257 
+│                             │                  ├ [1]: https://go.dev/issue/73816 
 │                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A 
-│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3750 
-│                             ├ PublishedDate   : 2025-06-11T18:15:24.627Z 
+│                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-4673 
+│                             │                  ├ [4]: https://pkg.go.dev/vuln/GO-2025-3751 
+│                             │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
+│                             ├ PublishedDate   : 2025-06-11T17:15:42.993Z 
 │                             ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
 ├ [8] ╭ Target         : usr/bin/skopeo 
 │     ├ Class          : lang-pkgs 
@@ -600,10 +656,14 @@
 │                       │     │                   This only affected certificate chains which contain policy
 │                       │     │                   graphs, which are rather uncommon. 
 │                       │     ├ Severity        : HIGH 
-│                       │     ├ VendorSeverity   ─ redhat: 3 
-│                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/
-│                       │     │                           │           A:N 
-│                       │     │                           ╰ V3Score : 7.5 
+│                       │     ├ VendorSeverity   ╭ bitnami: 3 
+│                       │     │                  ╰ redhat : 3 
+│                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H
+│                       │     │                  │         │           /A:N 
+│                       │     │                  │         ╰ V3Score : 7.5 
+│                       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H
+│                       │     │                            │           /A:N 
+│                       │     │                            ╰ V3Score : 7.5 
 │                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-22874 
 │                       │     │                  ├ [1]: https://go.dev/cl/670375 
 │                       │     │                  ├ [2]: https://go.dev/issue/73612 
@@ -613,7 +673,7 @@
 │                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22874 
 │                       │     ├ PublishedDate   : 2025-06-11T17:15:42.167Z 
 │                       │     ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
-│                       ├ [1] ╭ VulnerabilityID : CVE-2025-4673 
+│                       ├ [1] ╭ VulnerabilityID : CVE-2025-0913 
 │                       │     ├ PkgID           : stdlib@v1.24.3 
 │                       │     ├ PkgName         : stdlib 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.3 
@@ -625,25 +685,33 @@
 │                       │     │                  │         2a400dd6e14b1dd6770 
 │                       │     │                  ╰ DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394
 │                       │     │                            127a88c2b67a0d83d30 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-4673 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-0913 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
 │                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │     ├ Title           : Proxy-Authorization and Proxy-Authenticate headers persisted
-│                       │     │                   on cross- ... 
-│                       │     ├ Description     : Proxy-Authorization and Proxy-Authenticate headers persisted
-│                       │     │                   on cross-origin redirects potentially leaking sensitive
-│                       │     │                   information. 
+│                       │     ├ Title           : Inconsistent handling of O_CREATE|O_EXCL on Unix and Windows
+│                       │     │                   in os in syscall 
+│                       │     ├ Description     : os.OpenFile(path, os.O_CREATE|O_EXCL) behaved differently on
+│                       │     │                   Unix and Windows systems when the target path was a dangling
+│                       │     │                   symlink. On Unix systems, OpenFile with O_CREATE and O_EXCL
+│                       │     │                   flags never follows symlinks. On Windows, when the target
+│                       │     │                   path was a symlink to a nonexistent location, OpenFile would
+│                       │     │                   create a file in that location. OpenFile now always returns
+│                       │     │                   an error when the O_CREATE and O_EXCL flags are both set and
+│                       │     │                   the target path is a symlink. 
 │                       │     ├ Severity        : MEDIUM 
-│                       │     ├ VendorSeverity   ─ ubuntu: 2 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/679257 
-│                       │     │                  ├ [1]: https://go.dev/issue/73816 
+│                       │     ├ VendorSeverity   ─ bitnami: 2 
+│                       │     ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H
+│                       │     │                            │           /A:N 
+│                       │     │                            ╰ V3Score : 5.5 
+│                       │     ├ References       ╭ [0]: https://go.dev/cl/672396 
+│                       │     │                  ├ [1]: https://go.dev/issue/73702 
 │                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A 
-│                       │     │                  ├ [3]: https://pkg.go.dev/vuln/GO-2025-3751 
-│                       │     │                  ╰ [4]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
-│                       │     ├ PublishedDate   : 2025-06-11T17:15:42.993Z 
+│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-0913 
+│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-3750 
+│                       │     ├ PublishedDate   : 2025-06-11T18:15:24.627Z 
 │                       │     ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
-│                       ╰ [2] ╭ VulnerabilityID : CVE-2025-0913 
+│                       ╰ [2] ╭ VulnerabilityID : CVE-2025-4673 
 │                             ├ PkgID           : stdlib@v1.24.3 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.3 
@@ -655,26 +723,28 @@
 │                             │                  │         2a400dd6e14b1dd6770 
 │                             │                  ╰ DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394
 │                             │                            127a88c2b67a0d83d30 
-│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-0913 
+│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-4673 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ├ Title           : Inconsistent handling of O_CREATE|O_EXCL on Unix and Windows
-│                             │                   in os in syscall 
-│                             ├ Description     : os.OpenFile(path, os.O_CREATE|O_EXCL) behaved differently on
-│                             │                   Unix and Windows systems when the target path was a dangling
-│                             │                   symlink. On Unix systems, OpenFile with O_CREATE and O_EXCL
-│                             │                   flags never follows symlinks. On Windows, when the target
-│                             │                   path was a symlink to a nonexistent location, OpenFile would
-│                             │                   create a file in that location. OpenFile now always returns
-│                             │                   an error when the O_CREATE and O_EXCL flags are both set and
-│                             │                   the target path is a symlink. 
-│                             ├ Severity        : UNKNOWN 
-│                             ├ References       ╭ [0]: https://go.dev/cl/672396 
-│                             │                  ├ [1]: https://go.dev/issue/73702 
+│                             ├ Title           : Proxy-Authorization and Proxy-Authenticate headers persisted
+│                             │                   on cross- ... 
+│                             ├ Description     : Proxy-Authorization and Proxy-Authenticate headers persisted
+│                             │                   on cross-origin redirects potentially leaking sensitive
+│                             │                   information. 
+│                             ├ Severity        : MEDIUM 
+│                             ├ VendorSeverity   ╭ bitnami: 2 
+│                             │                  ╰ ubuntu : 2 
+│                             ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 6.8 
+│                             ├ References       ╭ [0]: https://go.dev/cl/679257 
+│                             │                  ├ [1]: https://go.dev/issue/73816 
 │                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A 
-│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3750 
-│                             ├ PublishedDate   : 2025-06-11T18:15:24.627Z 
+│                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-4673 
+│                             │                  ├ [4]: https://pkg.go.dev/vuln/GO-2025-3751 
+│                             │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
+│                             ├ PublishedDate   : 2025-06-11T17:15:42.993Z 
 │                             ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
 ╰ [9] ╭ Target: usr/bin/syft 
       ├ Class : lang-pkgs 
