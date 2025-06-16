@@ -11,8 +11,8 @@ on:
 
 jobs:
 
-  build:
-
+  build-x64:
+    name: Build x64
     runs-on: ubuntu-latest
 
     steps:
@@ -58,17 +58,77 @@ jobs:
       with:
         context: .
         file: ./Dockerfile
-        platforms: linux/amd64,linux/arm64
+        platforms: linux/amd64
         push: true
-        tags: nmaguiar/imgutils:build
+        tags: nmaguiar/imgutils:build-x64
 
-    # - uses: docker/build-push-action@v3
-    #   name: Build and push ubi
-    #   with:
-    #     platforms: linux/amd64,linux/arm64
-    #     file: Dockerfile.ubi
-    #     push: true
-    #     tags: nmaguiar/imgutils:ubi-build
+  build-arm:
+    name: Build arm64
+    runs-on: ubuntu-24.04-arm
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v2
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+
+    - name: Cache dive
+      uses: actions/cache@v4
+      with:
+        key : dive
+        path: |
+          dive_linux_*
+
+    - name: Cache skopeo
+      uses: actions/cache@v4
+      with:
+        key : skopeo
+        path: |
+          skopeo_*
+
+    - name: list dive
+      run : |
+        arch=$(uname -m) && if [ "$arch" == "aarch64" ]; then cp dive_linux_arm64 dive; elif [ "$arch" == "x86_64" ]; then cp dive_linux_amd64 dive; fi
+
+    - name: list skopeo
+      run : |
+        arch=$(uname -m) && if [ "$arch" == "aarch64" ]; then cp skopeo_arm64 skopeo; elif [ "$arch" == "x86_64" ]; then cp skopeo_amd64 skopeo; fi
+
+    - name: Login to DockerHub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    - uses: docker/build-push-action@v3
+      name: Build and push
+      with:
+        context: .
+        file: ./Dockerfile
+        platforms: linux/arm64
+        push: true
+        tags: nmaguiar/imgutils:build-arm
+
+  build:
+    runs-on: ubuntu-latest
+    needs  : [build-arm, build-x64]
+    steps  :
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+
+    - name: Login to DockerHub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    - name: Create and push multi-arch manifest
+      run : |
+        docker buildx imagetools create --tag nmaguiar/imgutils:build nmaguiar/imgutils:build-x64 nmaguiar/imgutils:build-arm64
 
   test-skopeo:
     name   : test skopeo
