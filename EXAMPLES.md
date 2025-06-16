@@ -18,6 +18,7 @@ List of examples:
 | Images   | Generate a BOM (Bill Of Materials) for a provided image |
 | Images   | Retrieve a specific file from an image |
 | Images   | Comparing file contents between two image tags |
+| Images   | Add/Change files to specific layers on an image |
 
 > To search for a specific example type '/Checking images content<ENTER>' and use the arrow keys to navigate
 
@@ -446,6 +447,44 @@ docker run --rm -ti --pull always -v /var/run/docker.sock:/var/run/docker.sock n
 # docker run --rm -ti --pull always -v $(pwd):/output nmaguiar/imgutils skopeo copy docker://ubuntu:late
 st docker-archive:/output/image.tar
 docker run --rm -ti --pull always -v $(pwd):/input nmaguiar/imgutils oafp cmd="catFileInImage.sh /input/image.tar /etc/lsb-release" in=ini out=map
+```
+
+---
+
+## + Add/Change files to specific layers on an image
+
+For debugging proposes you quickly add or change files, on specific layers, without the need to rebuild an image.
+
+Steps:
+
+1. Obtain the source docker image archive and expand the corresponding layers to a folder:
+
+```bash
+expandLayersInImage.sh alpine:latest image
+```
+
+2. In the layer(s) you want change or add the necessary files:
+
+```bash
+echo world > image/123*/root/hello
+```
+
+> Check the layers of your source image on the 'image' folder to determine where to add or change files
+
+3. Collapse the layers back into a new docker image archive:
+
+```bash
+imgCollapse.yaml image=new-image.tar input=image json=image.json
+```
+
+4. Test the new image:
+
+```bash
+docker copy docker-archive:new-image.tar docker-daemon:test:latest
+docker run --rm -ti test
+
+$ cat /root/hello
+world
 ```
 
 ---
