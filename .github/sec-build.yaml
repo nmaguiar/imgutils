@@ -18,8 +18,8 @@
     FixedVersion: 1.23.10, 1.24.4
     Status: fixed
     Layer:
-      Digest: sha256:1042a59aed360ed072365a687fc92487528920dbb85d72a400dd6e14b1dd6770
-      DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394127a88c2b67a0d83d30
+      Digest: sha256:14a22ad8ecfb425a57530b32b3afb93cfbb5b986bbaa9503dd41a714e6eef49d
+      DiffID: sha256:769c3b80f9f998757bf217cfebe0ded187530d3d2a87c52ddfdbe1dfec9e690d
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22874
     DataSource:
       ID: govulndb
@@ -58,8 +58,8 @@
     FixedVersion: 1.23.10, 1.24.4
     Status: fixed
     Layer:
-      Digest: sha256:1042a59aed360ed072365a687fc92487528920dbb85d72a400dd6e14b1dd6770
-      DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394127a88c2b67a0d83d30
+      Digest: sha256:14a22ad8ecfb425a57530b32b3afb93cfbb5b986bbaa9503dd41a714e6eef49d
+      DiffID: sha256:769c3b80f9f998757bf217cfebe0ded187530d3d2a87c52ddfdbe1dfec9e690d
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-0913
     DataSource:
       ID: govulndb
@@ -92,8 +92,8 @@
     FixedVersion: 1.23.8, 1.24.2
     Status: fixed
     Layer:
-      Digest: sha256:1042a59aed360ed072365a687fc92487528920dbb85d72a400dd6e14b1dd6770
-      DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394127a88c2b67a0d83d30
+      Digest: sha256:14a22ad8ecfb425a57530b32b3afb93cfbb5b986bbaa9503dd41a714e6eef49d
+      DiffID: sha256:769c3b80f9f998757bf217cfebe0ded187530d3d2a87c52ddfdbe1dfec9e690d
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22871
     DataSource:
       ID: govulndb
@@ -142,8 +142,8 @@
     FixedVersion: 1.23.10, 1.24.4
     Status: fixed
     Layer:
-      Digest: sha256:1042a59aed360ed072365a687fc92487528920dbb85d72a400dd6e14b1dd6770
-      DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394127a88c2b67a0d83d30
+      Digest: sha256:14a22ad8ecfb425a57530b32b3afb93cfbb5b986bbaa9503dd41a714e6eef49d
+      DiffID: sha256:769c3b80f9f998757bf217cfebe0ded187530d3d2a87c52ddfdbe1dfec9e690d
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-4673
     DataSource:
       ID: govulndb
@@ -185,8 +185,8 @@
     FixedVersion: 0.36.0
     Status: fixed
     Layer:
-      Digest: sha256:1042a59aed360ed072365a687fc92487528920dbb85d72a400dd6e14b1dd6770
-      DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394127a88c2b67a0d83d30
+      Digest: sha256:14a22ad8ecfb425a57530b32b3afb93cfbb5b986bbaa9503dd41a714e6eef49d
+      DiffID: sha256:769c3b80f9f998757bf217cfebe0ded187530d3d2a87c52ddfdbe1dfec9e690d
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22870
     DataSource:
@@ -237,8 +237,8 @@
     FixedVersion: 0.38.0
     Status: fixed
     Layer:
-      Digest: sha256:1042a59aed360ed072365a687fc92487528920dbb85d72a400dd6e14b1dd6770
-      DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394127a88c2b67a0d83d30
+      Digest: sha256:14a22ad8ecfb425a57530b32b3afb93cfbb5b986bbaa9503dd41a714e6eef49d
+      DiffID: sha256:769c3b80f9f998757bf217cfebe0ded187530d3d2a87c52ddfdbe1dfec9e690d
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22872
     DataSource:
@@ -285,8 +285,8 @@
     FixedVersion: 1.23.10, 1.24.4
     Status: fixed
     Layer:
-      Digest: sha256:1042a59aed360ed072365a687fc92487528920dbb85d72a400dd6e14b1dd6770
-      DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394127a88c2b67a0d83d30
+      Digest: sha256:14a22ad8ecfb425a57530b32b3afb93cfbb5b986bbaa9503dd41a714e6eef49d
+      DiffID: sha256:769c3b80f9f998757bf217cfebe0ded187530d3d2a87c52ddfdbe1dfec9e690d
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22874
     DataSource:
       ID: govulndb
@@ -325,8 +325,8 @@
     FixedVersion: 1.23.10, 1.24.4
     Status: fixed
     Layer:
-      Digest: sha256:1042a59aed360ed072365a687fc92487528920dbb85d72a400dd6e14b1dd6770
-      DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394127a88c2b67a0d83d30
+      Digest: sha256:14a22ad8ecfb425a57530b32b3afb93cfbb5b986bbaa9503dd41a714e6eef49d
+      DiffID: sha256:769c3b80f9f998757bf217cfebe0ded187530d3d2a87c52ddfdbe1dfec9e690d
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-0913
     DataSource:
       ID: govulndb
@@ -359,8 +359,8 @@
     FixedVersion: 1.23.10, 1.24.4
     Status: fixed
     Layer:
-      Digest: sha256:1042a59aed360ed072365a687fc92487528920dbb85d72a400dd6e14b1dd6770
-      DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394127a88c2b67a0d83d30
+      Digest: sha256:14a22ad8ecfb425a57530b32b3afb93cfbb5b986bbaa9503dd41a714e6eef49d
+      DiffID: sha256:769c3b80f9f998757bf217cfebe0ded187530d3d2a87c52ddfdbe1dfec9e690d
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-4673
     DataSource:
       ID: govulndb
@@ -399,8 +399,8 @@
     FixedVersion: 1.23.10, 1.24.4
     Status: fixed
     Layer:
-      Digest: sha256:1042a59aed360ed072365a687fc92487528920dbb85d72a400dd6e14b1dd6770
-      DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394127a88c2b67a0d83d30
+      Digest: sha256:14a22ad8ecfb425a57530b32b3afb93cfbb5b986bbaa9503dd41a714e6eef49d
+      DiffID: sha256:769c3b80f9f998757bf217cfebe0ded187530d3d2a87c52ddfdbe1dfec9e690d
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22874
     DataSource:
       ID: govulndb
@@ -439,8 +439,8 @@
     FixedVersion: 1.23.10, 1.24.4
     Status: fixed
     Layer:
-      Digest: sha256:1042a59aed360ed072365a687fc92487528920dbb85d72a400dd6e14b1dd6770
-      DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394127a88c2b67a0d83d30
+      Digest: sha256:14a22ad8ecfb425a57530b32b3afb93cfbb5b986bbaa9503dd41a714e6eef49d
+      DiffID: sha256:769c3b80f9f998757bf217cfebe0ded187530d3d2a87c52ddfdbe1dfec9e690d
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-0913
     DataSource:
       ID: govulndb
@@ -473,8 +473,8 @@
     FixedVersion: 1.23.10, 1.24.4
     Status: fixed
     Layer:
-      Digest: sha256:1042a59aed360ed072365a687fc92487528920dbb85d72a400dd6e14b1dd6770
-      DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394127a88c2b67a0d83d30
+      Digest: sha256:14a22ad8ecfb425a57530b32b3afb93cfbb5b986bbaa9503dd41a714e6eef49d
+      DiffID: sha256:769c3b80f9f998757bf217cfebe0ded187530d3d2a87c52ddfdbe1dfec9e690d
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-4673
     DataSource:
       ID: govulndb
@@ -513,8 +513,8 @@
     FixedVersion: 1.23.10, 1.24.4
     Status: fixed
     Layer:
-      Digest: sha256:1042a59aed360ed072365a687fc92487528920dbb85d72a400dd6e14b1dd6770
-      DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394127a88c2b67a0d83d30
+      Digest: sha256:14a22ad8ecfb425a57530b32b3afb93cfbb5b986bbaa9503dd41a714e6eef49d
+      DiffID: sha256:769c3b80f9f998757bf217cfebe0ded187530d3d2a87c52ddfdbe1dfec9e690d
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22874
     DataSource:
       ID: govulndb
@@ -553,8 +553,8 @@
     FixedVersion: 1.23.10, 1.24.4
     Status: fixed
     Layer:
-      Digest: sha256:1042a59aed360ed072365a687fc92487528920dbb85d72a400dd6e14b1dd6770
-      DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394127a88c2b67a0d83d30
+      Digest: sha256:14a22ad8ecfb425a57530b32b3afb93cfbb5b986bbaa9503dd41a714e6eef49d
+      DiffID: sha256:769c3b80f9f998757bf217cfebe0ded187530d3d2a87c52ddfdbe1dfec9e690d
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-0913
     DataSource:
       ID: govulndb
@@ -587,8 +587,8 @@
     FixedVersion: 1.23.10, 1.24.4
     Status: fixed
     Layer:
-      Digest: sha256:1042a59aed360ed072365a687fc92487528920dbb85d72a400dd6e14b1dd6770
-      DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394127a88c2b67a0d83d30
+      Digest: sha256:14a22ad8ecfb425a57530b32b3afb93cfbb5b986bbaa9503dd41a714e6eef49d
+      DiffID: sha256:769c3b80f9f998757bf217cfebe0ded187530d3d2a87c52ddfdbe1dfec9e690d
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-4673
     DataSource:
       ID: govulndb
@@ -616,117 +616,6 @@
 - Target: usr/bin/skopeo
   Class: lang-pkgs
   Type: gobinary
-  Vulnerabilities:
-  - VulnerabilityID: CVE-2025-22874
-    PkgID: stdlib@v1.24.3
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.24.3
-      UID: 94d3665cbb4a29b7
-    InstalledVersion: v1.24.3
-    FixedVersion: 1.23.10, 1.24.4
-    Status: fixed
-    Layer:
-      Digest: sha256:1042a59aed360ed072365a687fc92487528920dbb85d72a400dd6e14b1dd6770
-      DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394127a88c2b67a0d83d30
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22874
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Title: 'crypto/x509: Usage of ExtKeyUsageAny disables policy validation in crypto/x509'
-    Description: Calling Verify with a VerifyOptions.KeyUsages that contains ExtKeyUsageAny unintentionally disabledpolicy validation. This only affected certificate chains which contain policy graphs, which are rather uncommon.
-    Severity: HIGH
-    VendorSeverity:
-      bitnami: 3
-      redhat: 3
-    CVSS:
-      bitnami:
-        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
-        V3Score: 7.5
-      redhat:
-        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
-        V3Score: 7.5
-    References:
-    - https://access.redhat.com/security/cve/CVE-2025-22874
-    - https://go.dev/cl/670375
-    - https://go.dev/issue/73612
-    - https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A
-    - https://nvd.nist.gov/vuln/detail/CVE-2025-22874
-    - https://pkg.go.dev/vuln/GO-2025-3749
-    - https://www.cve.org/CVERecord?id=CVE-2025-22874
-    PublishedDate: '2025-06-11T17:15:42.167Z'
-    LastModifiedDate: '2025-06-12T16:06:20.18Z'
-  - VulnerabilityID: CVE-2025-0913
-    PkgID: stdlib@v1.24.3
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.24.3
-      UID: 94d3665cbb4a29b7
-    InstalledVersion: v1.24.3
-    FixedVersion: 1.23.10, 1.24.4
-    Status: fixed
-    Layer:
-      Digest: sha256:1042a59aed360ed072365a687fc92487528920dbb85d72a400dd6e14b1dd6770
-      DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394127a88c2b67a0d83d30
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-0913
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Title: Inconsistent handling of O_CREATE|O_EXCL on Unix and Windows in os in syscall
-    Description: os.OpenFile(path, os.O_CREATE|O_EXCL) behaved differently on Unix and Windows systems when the target path was a dangling symlink. On Unix systems, OpenFile with O_CREATE and O_EXCL flags never follows symlinks. On Windows, when the target path was a symlink to a nonexistent location, OpenFile would create a file in that location. OpenFile now always returns an error when the O_CREATE and O_EXCL flags are both set and the target path is a symlink.
-    Severity: MEDIUM
-    VendorSeverity:
-      bitnami: 2
-    CVSS:
-      bitnami:
-        V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N
-        V3Score: 5.5
-    References:
-    - https://go.dev/cl/672396
-    - https://go.dev/issue/73702
-    - https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A
-    - https://nvd.nist.gov/vuln/detail/CVE-2025-0913
-    - https://pkg.go.dev/vuln/GO-2025-3750
-    PublishedDate: '2025-06-11T18:15:24.627Z'
-    LastModifiedDate: '2025-06-12T16:06:20.18Z'
-  - VulnerabilityID: CVE-2025-4673
-    PkgID: stdlib@v1.24.3
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.24.3
-      UID: 94d3665cbb4a29b7
-    InstalledVersion: v1.24.3
-    FixedVersion: 1.23.10, 1.24.4
-    Status: fixed
-    Layer:
-      Digest: sha256:1042a59aed360ed072365a687fc92487528920dbb85d72a400dd6e14b1dd6770
-      DiffID: sha256:30fdb0d76bc5cc0ac218a537460343cbbcafbff5d7394127a88c2b67a0d83d30
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-4673
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Title: Proxy-Authorization and Proxy-Authenticate headers persisted on cross- ...
-    Description: Proxy-Authorization and Proxy-Authenticate headers persisted on cross-origin redirects potentially leaking sensitive information.
-    Severity: MEDIUM
-    VendorSeverity:
-      bitnami: 2
-      ubuntu: 2
-    CVSS:
-      bitnami:
-        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N
-        V3Score: 6.8
-    References:
-    - https://go.dev/cl/679257
-    - https://go.dev/issue/73816
-    - https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A
-    - https://nvd.nist.gov/vuln/detail/CVE-2025-4673
-    - https://pkg.go.dev/vuln/GO-2025-3751
-    - https://www.cve.org/CVERecord?id=CVE-2025-4673
-    PublishedDate: '2025-06-11T17:15:42.993Z'
-    LastModifiedDate: '2025-06-12T16:06:20.18Z'
 - Target: usr/bin/syft
   Class: lang-pkgs
   Type: gobinary
