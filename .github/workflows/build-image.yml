@@ -128,7 +128,7 @@ jobs:
 
     - name: Create and push multi-arch manifest
       run : |
-        docker buildx imagetools create --tag nmaguiar/imgutils:build nmaguiar/imgutils:build-x64 nmaguiar/imgutils:build-arm64
+        docker buildx imagetools create --tag nmaguiar/imgutils:build nmaguiar/imgutils:build-x64 nmaguiar/imgutils:build-arm
 
   test-skopeo:
     name   : test skopeo
