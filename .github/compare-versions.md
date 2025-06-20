@@ -1,7 +1,7 @@
 | tool | latestOnline | buildVersion | latestversion |
 |------|--------------|--------------|---------------|
 | crictl | v1.33.0 | v1.33.0 | v1.33.0 |
-| ctr | containerd 2.1.2 | 2.1.2 | 2.1.2 |
+| ctr | containerd 2.1.3 | 2.1.2 | 2.1.2 |
 | docker | v28.3.0-rc.1 | 28.2.2 | 28.2.2 |
 | helm | v3.18.3 | v3.18.2 | v3.18.2 |
 | nerdctl | v2.1.2 | 2.1.2 | 2.1.2 |
