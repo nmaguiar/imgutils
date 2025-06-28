@@ -130,7 +130,7 @@
                         │     │                  ├ [7] : https://groups.google.com/g/golang-announce/c/Y2uBTVKj
                         │     │                  │       BQk 
                         │     │                  ├ [8] : https://linux.oracle.com/cve/CVE-2025-22871.html 
-                        │     │                  ├ [9] : https://linux.oracle.com/errata/ELSA-2025-9635.html 
+                        │     │                  ├ [9] : https://linux.oracle.com/errata/ELSA-2025-9845.html 
                         │     │                  ├ [10]: https://nvd.nist.gov/vuln/detail/CVE-2025-22871 
                         │     │                  ├ [11]: https://pkg.go.dev/vuln/GO-2025-3563 
                         │     │                  ╰ [12]: https://www.cve.org/CVERecord?id=CVE-2025-22871 
