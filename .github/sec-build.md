@@ -16,10 +16,10 @@
 │                       │     ├ InstalledVersion: v1.24.1 
 │                       │     ├ FixedVersion    : 1.24.4 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:83705a9d53722be11e18e13f61cba87cd4740e0a24a31
-│                       │     │                  │         8edf58073386a5fd4bd 
-│                       │     │                  ╰ DiffID: sha256:9644d839314c94db86bf6925ea8e49a7f3a7c8a13cc42
-│                       │     │                            994d5d17ac6d907e8a0 
+│                       │     ├ Layer            ╭ Digest: sha256:3388cce45aa755487133fb9ae21a304a14ef741fcced9
+│                       │     │                  │         5da37f955c29e084fde 
+│                       │     │                  ╰ DiffID: sha256:bd8bcd16bdadda46a764c38687111259ab7b091d5f8e7
+│                       │     │                            d4e07f48c58eaca38c5 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22874 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -57,10 +57,10 @@
 │                       │     ├ InstalledVersion: v1.24.1 
 │                       │     ├ FixedVersion    : 1.23.10, 1.24.4 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:83705a9d53722be11e18e13f61cba87cd4740e0a24a31
-│                       │     │                  │         8edf58073386a5fd4bd 
-│                       │     │                  ╰ DiffID: sha256:9644d839314c94db86bf6925ea8e49a7f3a7c8a13cc42
-│                       │     │                            994d5d17ac6d907e8a0 
+│                       │     ├ Layer            ╭ Digest: sha256:3388cce45aa755487133fb9ae21a304a14ef741fcced9
+│                       │     │                  │         5da37f955c29e084fde 
+│                       │     │                  ╰ DiffID: sha256:bd8bcd16bdadda46a764c38687111259ab7b091d5f8e7
+│                       │     │                            d4e07f48c58eaca38c5 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-0913 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -95,10 +95,10 @@
 │                       │     ├ InstalledVersion: v1.24.1 
 │                       │     ├ FixedVersion    : 1.23.8, 1.24.2 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:83705a9d53722be11e18e13f61cba87cd4740e0a24a31
-│                       │     │                  │         8edf58073386a5fd4bd 
-│                       │     │                  ╰ DiffID: sha256:9644d839314c94db86bf6925ea8e49a7f3a7c8a13cc42
-│                       │     │                            994d5d17ac6d907e8a0 
+│                       │     ├ Layer            ╭ Digest: sha256:3388cce45aa755487133fb9ae21a304a14ef741fcced9
+│                       │     │                  │         5da37f955c29e084fde 
+│                       │     │                  ╰ DiffID: sha256:bd8bcd16bdadda46a764c38687111259ab7b091d5f8e7
+│                       │     │                            d4e07f48c58eaca38c5 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22871 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -147,10 +147,10 @@
 │                             ├ InstalledVersion: v1.24.1 
 │                             ├ FixedVersion    : 1.23.10, 1.24.4 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:83705a9d53722be11e18e13f61cba87cd4740e0a24a31
-│                             │                  │         8edf58073386a5fd4bd 
-│                             │                  ╰ DiffID: sha256:9644d839314c94db86bf6925ea8e49a7f3a7c8a13cc42
-│                             │                            994d5d17ac6d907e8a0 
+│                             ├ Layer            ╭ Digest: sha256:3388cce45aa755487133fb9ae21a304a14ef741fcced9
+│                             │                  │         5da37f955c29e084fde 
+│                             │                  ╰ DiffID: sha256:bd8bcd16bdadda46a764c38687111259ab7b091d5f8e7
+│                             │                            d4e07f48c58eaca38c5 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-4673 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
@@ -195,10 +195,10 @@
 │                       │     ├ InstalledVersion: v0.28.0 
 │                       │     ├ FixedVersion    : 0.36.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:83705a9d53722be11e18e13f61cba87cd4740e0a24a31
-│                       │     │                  │         8edf58073386a5fd4bd 
-│                       │     │                  ╰ DiffID: sha256:9644d839314c94db86bf6925ea8e49a7f3a7c8a13cc42
-│                       │     │                            994d5d17ac6d907e8a0 
+│                       │     ├ Layer            ╭ Digest: sha256:3388cce45aa755487133fb9ae21a304a14ef741fcced9
+│                       │     │                  │         5da37f955c29e084fde 
+│                       │     │                  ╰ DiffID: sha256:bd8bcd16bdadda46a764c38687111259ab7b091d5f8e7
+│                       │     │                            d4e07f48c58eaca38c5 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -250,10 +250,10 @@
 │                             ├ InstalledVersion: v0.28.0 
 │                             ├ FixedVersion    : 0.38.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:83705a9d53722be11e18e13f61cba87cd4740e0a24a31
-│                             │                  │         8edf58073386a5fd4bd 
-│                             │                  ╰ DiffID: sha256:9644d839314c94db86bf6925ea8e49a7f3a7c8a13cc42
-│                             │                            994d5d17ac6d907e8a0 
+│                             ├ Layer            ╭ Digest: sha256:3388cce45aa755487133fb9ae21a304a14ef741fcced9
+│                             │                  │         5da37f955c29e084fde 
+│                             │                  ╰ DiffID: sha256:bd8bcd16bdadda46a764c38687111259ab7b091d5f8e7
+│                             │                            d4e07f48c58eaca38c5 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22872 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -271,7 +271,7 @@
 │                             │                    DOM construction, but only when tags are in foreign content
 │                             │                   (e.g. <math>, <svg>, etc contexts). 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon     : 2 
+│                             ├ VendorSeverity   ╭ amazon     : 3 
 │                             │                  ├ azure      : 2 
 │                             │                  ├ cbl-mariner: 2 
 │                             │                  ├ ghsa       : 2 
@@ -297,228 +297,9 @@
 ├ [6] ╭ Target: usr/bin/helm 
 │     ├ Class : lang-pkgs 
 │     ╰ Type  : gobinary 
-├ [7] ╭ Target         : usr/bin/nerdctl 
-│     ├ Class          : lang-pkgs 
-│     ├ Type           : gobinary 
-│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : GHSA-fv92-fjc5-jj9h 
-│                       │     ├ PkgID           : github.com/go-viper/mapstructure/v2@v2.2.1 
-│                       │     ├ PkgName         : github.com/go-viper/mapstructure/v2 
-│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/go-viper/mapstructure/v2@v2.2.1 
-│                       │     │                  ╰ UID : 8748de58b5ca7285 
-│                       │     ├ InstalledVersion: v2.2.1 
-│                       │     ├ FixedVersion    : 2.3.0 
-│                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:83705a9d53722be11e18e13f61cba87cd4740e0a24a31
-│                       │     │                  │         8edf58073386a5fd4bd 
-│                       │     │                  ╰ DiffID: sha256:9644d839314c94db86bf6925ea8e49a7f3a7c8a13cc42
-│                       │     │                            994d5d17ac6d907e8a0 
-│                       │     ├ SeveritySource  : ghsa 
-│                       │     ├ PrimaryURL      : https://github.com/advisories/GHSA-fv92-fjc5-jj9h 
-│                       │     ├ DataSource       ╭ ID  : ghsa 
-│                       │     │                  ├ Name: GitHub Security Advisory Go 
-│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
-│                       │     │                          osystem%3Ago 
-│                       │     ├ Title           : mapstructure May Leak Sensitive Information in Logs When
-│                       │     │                   Processing Malformed Data 
-│                       │     ├ Description     : ### Summary
-│                       │     │                   
-│                       │     │                   Use of this library in a security-critical context may result
-│                       │     │                    in leaking sensitive information, if used to process
-│                       │     │                   sensitive fields.
-│                       │     │                   ### Details
-│                       │     │                   OpenBao (and presumably HashiCorp Vault) have surfaced error
-│                       │     │                   messages from `mapstructure` as follows:
-│                       │     │                   https://github.com/openbao/openbao/blob/98c3a59c040efca724353
-│                       │     │                   ca46ca79bd5cdbab920/sdk/framework/field_data.go#L43-L50
-│                       │     │                   ```go
-│                       │     │                   			_, _, err := d.getPrimitive(field, schema)
-│                       │     │                   			if err != nil {
-│                       │     │                   				return fmt.Errorf("error converting input for field %q:
-│                       │     │                   %w", field, err)
-│                       │     │                   			}
-│                       │     │                   ```
-│                       │     │                   where this calls `mapstructure.WeakDecode(...)`:
-│                       │     │                   ca46ca79bd5cdbab920/sdk/framework/field_data.go#L181-L193
-│                       │     │                   func (d *FieldData) getPrimitive(k string, schema
-│                       │     │                   *FieldSchema) (interface{}, bool, error) {
-│                       │     │                   	raw, ok := d.Raw[k]
-│                       │     │                   	if !ok {
-│                       │     │                   		return nil, false, nil
-│                       │     │                   	}
-│                       │     │                   	switch t := schema.Type; t {
-│                       │     │                   	case TypeBool:
-│                       │     │                   		var result bool
-│                       │     │                   		if err := mapstructure.WeakDecode(raw, &result); err != nil
-│                       │     │                    {
-│                       │     │                   			return nil, false, err
-│                       │     │                   		}
-│                       │     │                   		return result, true, nil
-│                       │     │                   Notably, `WeakDecode(...)` eventually calls one of the decode
-│                       │     │                    helpers, which surfaces the original value:
-│                       │     │                   https://github.com/go-viper/mapstructure/blob/1a66224d5e54d87
-│                       │     │                   57f63bd66339cf764c3292c21/mapstructure.go#L679-L686
-│                       │     │                   57f63bd66339cf764c3292c21/mapstructure.go#L726-L730
-│                       │     │                   57f63bd66339cf764c3292c21/mapstructure.go#L783-L787
-│                       │     │                   & more.
-│                       │     │                   ### PoC
-│                       │     │                   To reproduce with OpenBao:
-│                       │     │                   $ podman run -p 8300:8300 openbao/openbao:latest server -dev
-│                       │     │                   -dev-root-token-id=root -dev-listen-address=0.0.0.0:8300
-│                       │     │                   and in a new tab:
-│                       │     │                   $ BAO_TOKEN=root BAO_ADDR=http://localhost:8300 bao auth
-│                       │     │                   enable userpass
-│                       │     │                   Success! Enabled userpass auth method at: userpass/
-│                       │     │                   $ curl -X PUT -H "X-Vault-Request: true" -H "X-Vault-Token:
-│                       │     │                   root" -d '{"password":{"asdf":"my-sensitive-value"}}'
-│                       │     │                   "http://localhost:8300/v1/auth/userpass/users/adsf"
-│                       │     │                   {"errors":["error converting input for field \"password\": ''
-│                       │     │                    expected type 'string', got unconvertible type
-│                       │     │                   'map[string]interface {}', value:
-│                       │     │                   'map[asdf:my-sensitive-value]'"]}
-│                       │     │                   ### Impact
-│                       │     │                   This is an information disclosure bug with little mitigation.
-│                       │     │                    See
-│                       │     │                   https://discuss.hashicorp.com/t/hcsec-2025-09-vault-may-expos
-│                       │     │                   e-sensitive-information-in-error-logs-when-processing-malform
-│                       │     │                   ed-data-with-the-kv-v2-plugin/74717 for a previous version.
-│                       │     │                   That version was fixed, but this is in the second part of
-│                       │     │                   that error message (starting at `'' expected a map, got
-│                       │     │                   'string'` -- when the field type is `string` and a `map` is
-│                       │     │                   provided, we see the above information leak -- the previous
-│                       │     │                   example had a `map` type field with a `string` value
-│                       │     │                   provided).
-│                       │     │                   This was rated 4.5 Medium by HashiCorp in the past
-│                       │     │                   iteration. 
-│                       │     ├ Severity        : MEDIUM 
-│                       │     ├ VendorSeverity   ─ ghsa: 2 
-│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N 
-│                       │     │                         ╰ V3Score : 5.3 
-│                       │     ├ References       ╭ [0]: https://github.com/go-viper/mapstructure 
-│                       │     │                  ╰ [1]: https://github.com/go-viper/mapstructure/security/advis
-│                       │     │                         ories/GHSA-fv92-fjc5-jj9h 
-│                       │     ├ PublishedDate   : 2025-06-27T16:24:59Z 
-│                       │     ╰ LastModifiedDate: 2025-06-27T16:24:59Z 
-│                       ├ [1] ╭ VulnerabilityID : CVE-2025-22874 
-│                       │     ├ PkgID           : stdlib@v1.24.3 
-│                       │     ├ PkgName         : stdlib 
-│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.3 
-│                       │     │                  ╰ UID : cde1b1f572e2cbda 
-│                       │     ├ InstalledVersion: v1.24.3 
-│                       │     ├ FixedVersion    : 1.24.4 
-│                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:83705a9d53722be11e18e13f61cba87cd4740e0a24a31
-│                       │     │                  │         8edf58073386a5fd4bd 
-│                       │     │                  ╰ DiffID: sha256:9644d839314c94db86bf6925ea8e49a7f3a7c8a13cc42
-│                       │     │                            994d5d17ac6d907e8a0 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22874 
-│                       │     ├ DataSource       ╭ ID  : govulndb 
-│                       │     │                  ├ Name: The Go Vulnerability Database 
-│                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │     ├ Title           : crypto/x509: Usage of ExtKeyUsageAny disables policy
-│                       │     │                   validation in crypto/x509 
-│                       │     ├ Description     : Calling Verify with a VerifyOptions.KeyUsages that contains
-│                       │     │                   ExtKeyUsageAny unintentionally disabledpolicy validation.
-│                       │     │                   This only affected certificate chains which contain policy
-│                       │     │                   graphs, which are rather uncommon. 
-│                       │     ├ Severity        : HIGH 
-│                       │     ├ VendorSeverity   ╭ amazon : 2 
-│                       │     │                  ├ bitnami: 3 
-│                       │     │                  ╰ redhat : 3 
-│                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H
-│                       │     │                  │         │           /A:N 
-│                       │     │                  │         ╰ V3Score : 7.5 
-│                       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H
-│                       │     │                            │           /A:N 
-│                       │     │                            ╰ V3Score : 7.5 
-│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-22874 
-│                       │     │                  ├ [1]: https://go.dev/cl/670375 
-│                       │     │                  ├ [2]: https://go.dev/issue/73612 
-│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A 
-│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-22874 
-│                       │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3749 
-│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-22874 
-│                       │     ├ PublishedDate   : 2025-06-11T17:15:42.167Z 
-│                       │     ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
-│                       ├ [2] ╭ VulnerabilityID : CVE-2025-0913 
-│                       │     ├ PkgID           : stdlib@v1.24.3 
-│                       │     ├ PkgName         : stdlib 
-│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.3 
-│                       │     │                  ╰ UID : cde1b1f572e2cbda 
-│                       │     ├ InstalledVersion: v1.24.3 
-│                       │     ├ FixedVersion    : 1.23.10, 1.24.4 
-│                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:83705a9d53722be11e18e13f61cba87cd4740e0a24a31
-│                       │     │                  │         8edf58073386a5fd4bd 
-│                       │     │                  ╰ DiffID: sha256:9644d839314c94db86bf6925ea8e49a7f3a7c8a13cc42
-│                       │     │                            994d5d17ac6d907e8a0 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-0913 
-│                       │     ├ DataSource       ╭ ID  : govulndb 
-│                       │     │                  ├ Name: The Go Vulnerability Database 
-│                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │     ├ Title           : Inconsistent handling of O_CREATE|O_EXCL on Unix and Windows
-│                       │     │                   in os in syscall 
-│                       │     ├ Description     : os.OpenFile(path, os.O_CREATE|O_EXCL) behaved differently on
-│                       │     │                   Unix and Windows systems when the target path was a dangling
-│                       │     │                   symlink. On Unix systems, OpenFile with O_CREATE and O_EXCL
-│                       │     │                   flags never follows symlinks. On Windows, when the target
-│                       │     │                   path was a symlink to a nonexistent location, OpenFile would
-│                       │     │                   create a file in that location. OpenFile now always returns
-│                       │     │                   an error when the O_CREATE and O_EXCL flags are both set and
-│                       │     │                   the target path is a symlink. 
-│                       │     ├ Severity        : MEDIUM 
-│                       │     ├ VendorSeverity   ─ bitnami: 2 
-│                       │     ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H
-│                       │     │                            │           /A:N 
-│                       │     │                            ╰ V3Score : 5.5 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/672396 
-│                       │     │                  ├ [1]: https://go.dev/issue/73702 
-│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A 
-│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-0913 
-│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-3750 
-│                       │     ├ PublishedDate   : 2025-06-11T18:15:24.627Z 
-│                       │     ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
-│                       ╰ [3] ╭ VulnerabilityID : CVE-2025-4673 
-│                             ├ PkgID           : stdlib@v1.24.3 
-│                             ├ PkgName         : stdlib 
-│                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.3 
-│                             │                  ╰ UID : cde1b1f572e2cbda 
-│                             ├ InstalledVersion: v1.24.3 
-│                             ├ FixedVersion    : 1.23.10, 1.24.4 
-│                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:83705a9d53722be11e18e13f61cba87cd4740e0a24a31
-│                             │                  │         8edf58073386a5fd4bd 
-│                             │                  ╰ DiffID: sha256:9644d839314c94db86bf6925ea8e49a7f3a7c8a13cc42
-│                             │                            994d5d17ac6d907e8a0 
-│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-4673 
-│                             ├ DataSource       ╭ ID  : govulndb 
-│                             │                  ├ Name: The Go Vulnerability Database 
-│                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ├ Title           : net/http: Sensitive headers not cleared on cross-origin
-│                             │                   redirect in net/http 
-│                             ├ Description     : Proxy-Authorization and Proxy-Authenticate headers persisted
-│                             │                   on cross-origin redirects potentially leaking sensitive
-│                             │                   information. 
-│                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon : 2 
-│                             │                  ├ bitnami: 2 
-│                             │                  ├ redhat : 2 
-│                             │                  ╰ ubuntu : 2 
-│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N
-│                             │                  │         │           /A:N 
-│                             │                  │         ╰ V3Score : 6.8 
-│                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N
-│                             │                            │           /A:N 
-│                             │                            ╰ V3Score : 6.8 
-│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-4673 
-│                             │                  ├ [1]: https://go.dev/cl/679257 
-│                             │                  ├ [2]: https://go.dev/issue/73816 
-│                             │                  ├ [3]: https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A 
-│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-4673 
-│                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3751 
-│                             │                  ├ [6]: https://ubuntu.com/security/notices/USN-7574-1 
-│                             │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
-│                             ├ PublishedDate   : 2025-06-11T17:15:42.993Z 
-│                             ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
+├ [7] ╭ Target: usr/bin/nerdctl 
+│     ├ Class : lang-pkgs 
+│     ╰ Type  : gobinary 
 ├ [8] ╭ Target: usr/bin/skopeo 
 │     ├ Class : lang-pkgs 
 │     ╰ Type  : gobinary 
