@@ -161,10 +161,11 @@
 │                             │                   on cross-origin redirects potentially leaking sensitive
 │                             │                   information. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon : 2 
-│                             │                  ├ bitnami: 2 
-│                             │                  ├ redhat : 2 
-│                             │                  ╰ ubuntu : 2 
+│                             ├ VendorSeverity   ╭ amazon     : 2 
+│                             │                  ├ bitnami    : 2 
+│                             │                  ├ oracle-oval: 2 
+│                             │                  ├ redhat     : 2 
+│                             │                  ╰ ubuntu     : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N
 │                             │                  │         │           /A:N 
 │                             │                  │         ╰ V3Score : 6.8 
@@ -175,10 +176,12 @@
 │                             │                  ├ [1]: https://go.dev/cl/679257 
 │                             │                  ├ [2]: https://go.dev/issue/73816 
 │                             │                  ├ [3]: https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A 
-│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-4673 
-│                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3751 
-│                             │                  ├ [6]: https://ubuntu.com/security/notices/USN-7574-1 
-│                             │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
+│                             │                  ├ [4]: https://linux.oracle.com/cve/CVE-2025-4673.html 
+│                             │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2025-10676.html 
+│                             │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2025-4673 
+│                             │                  ├ [7]: https://pkg.go.dev/vuln/GO-2025-3751 
+│                             │                  ├ [8]: https://ubuntu.com/security/notices/USN-7574-1 
+│                             │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
 │                             ├ PublishedDate   : 2025-06-11T17:15:42.993Z 
 │                             ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
 ├ [3] ╭ Target: usr/bin/ctr 
@@ -395,10 +398,11 @@
 │                             │                   on cross-origin redirects potentially leaking sensitive
 │                             │                   information. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon : 2 
-│                             │                  ├ bitnami: 2 
-│                             │                  ├ redhat : 2 
-│                             │                  ╰ ubuntu : 2 
+│                             ├ VendorSeverity   ╭ amazon     : 2 
+│                             │                  ├ bitnami    : 2 
+│                             │                  ├ oracle-oval: 2 
+│                             │                  ├ redhat     : 2 
+│                             │                  ╰ ubuntu     : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N
 │                             │                  │         │           /A:N 
 │                             │                  │         ╰ V3Score : 6.8 
@@ -409,10 +413,12 @@
 │                             │                  ├ [1]: https://go.dev/cl/679257 
 │                             │                  ├ [2]: https://go.dev/issue/73816 
 │                             │                  ├ [3]: https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A 
-│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-4673 
-│                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3751 
-│                             │                  ├ [6]: https://ubuntu.com/security/notices/USN-7574-1 
-│                             │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
+│                             │                  ├ [4]: https://linux.oracle.com/cve/CVE-2025-4673.html 
+│                             │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2025-10676.html 
+│                             │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2025-4673 
+│                             │                  ├ [7]: https://pkg.go.dev/vuln/GO-2025-3751 
+│                             │                  ├ [8]: https://ubuntu.com/security/notices/USN-7574-1 
+│                             │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
 │                             ├ PublishedDate   : 2025-06-11T17:15:42.993Z 
 │                             ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
 ├ [6] ╭ Target         : usr/bin/helm 
@@ -519,10 +525,11 @@
 │                             │                   on cross-origin redirects potentially leaking sensitive
 │                             │                   information. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon : 2 
-│                             │                  ├ bitnami: 2 
-│                             │                  ├ redhat : 2 
-│                             │                  ╰ ubuntu : 2 
+│                             ├ VendorSeverity   ╭ amazon     : 2 
+│                             │                  ├ bitnami    : 2 
+│                             │                  ├ oracle-oval: 2 
+│                             │                  ├ redhat     : 2 
+│                             │                  ╰ ubuntu     : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N
 │                             │                  │         │           /A:N 
 │                             │                  │         ╰ V3Score : 6.8 
@@ -533,10 +540,12 @@
 │                             │                  ├ [1]: https://go.dev/cl/679257 
 │                             │                  ├ [2]: https://go.dev/issue/73816 
 │                             │                  ├ [3]: https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A 
-│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-4673 
-│                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3751 
-│                             │                  ├ [6]: https://ubuntu.com/security/notices/USN-7574-1 
-│                             │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
+│                             │                  ├ [4]: https://linux.oracle.com/cve/CVE-2025-4673.html 
+│                             │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2025-10676.html 
+│                             │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2025-4673 
+│                             │                  ├ [7]: https://pkg.go.dev/vuln/GO-2025-3751 
+│                             │                  ├ [8]: https://ubuntu.com/security/notices/USN-7574-1 
+│                             │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
 │                             ├ PublishedDate   : 2025-06-11T17:15:42.993Z 
 │                             ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
 ├ [7] ╭ Target         : usr/bin/nerdctl 
@@ -741,10 +750,11 @@
 │                             │                   on cross-origin redirects potentially leaking sensitive
 │                             │                   information. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon : 2 
-│                             │                  ├ bitnami: 2 
-│                             │                  ├ redhat : 2 
-│                             │                  ╰ ubuntu : 2 
+│                             ├ VendorSeverity   ╭ amazon     : 2 
+│                             │                  ├ bitnami    : 2 
+│                             │                  ├ oracle-oval: 2 
+│                             │                  ├ redhat     : 2 
+│                             │                  ╰ ubuntu     : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N
 │                             │                  │         │           /A:N 
 │                             │                  │         ╰ V3Score : 6.8 
@@ -755,10 +765,12 @@
 │                             │                  ├ [1]: https://go.dev/cl/679257 
 │                             │                  ├ [2]: https://go.dev/issue/73816 
 │                             │                  ├ [3]: https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A 
-│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-4673 
-│                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3751 
-│                             │                  ├ [6]: https://ubuntu.com/security/notices/USN-7574-1 
-│                             │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
+│                             │                  ├ [4]: https://linux.oracle.com/cve/CVE-2025-4673.html 
+│                             │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2025-10676.html 
+│                             │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2025-4673 
+│                             │                  ├ [7]: https://pkg.go.dev/vuln/GO-2025-3751 
+│                             │                  ├ [8]: https://ubuntu.com/security/notices/USN-7574-1 
+│                             │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
 │                             ├ PublishedDate   : 2025-06-11T17:15:42.993Z 
 │                             ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
 ├ [8] ╭ Target: usr/bin/skopeo 
