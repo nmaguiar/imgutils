@@ -28,9 +28,10 @@
                         │     │                   This only affected certificate chains which contain policy
                         │     │                   graphs, which are rather uncommon. 
                         │     ├ Severity        : HIGH 
-                        │     ├ VendorSeverity   ╭ amazon : 2 
-                        │     │                  ├ bitnami: 3 
-                        │     │                  ╰ redhat : 3 
+                        │     ├ VendorSeverity   ╭ amazon     : 2 
+                        │     │                  ├ bitnami    : 3 
+                        │     │                  ├ cbl-mariner: 3 
+                        │     │                  ╰ redhat     : 3 
                         │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H
                         │     │                  │         │           /A:N 
                         │     │                  │         ╰ V3Score : 7.5 
@@ -158,8 +159,10 @@
                               │                   on cross-origin redirects potentially leaking sensitive
                               │                   information. 
                               ├ Severity        : MEDIUM 
-                              ├ VendorSeverity   ╭ amazon     : 2 
+                              ├ VendorSeverity   ╭ alma       : 2 
+                              │                  ├ amazon     : 2 
                               │                  ├ bitnami    : 2 
+                              │                  ├ cbl-mariner: 2 
                               │                  ├ oracle-oval: 2 
                               │                  ├ redhat     : 2 
                               │                  ╰ ubuntu     : 2 
@@ -169,16 +172,20 @@
                               │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N
                               │                            │           /A:N 
                               │                            ╰ V3Score : 6.8 
-                              ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-4673 
-                              │                  ├ [1]: https://go.dev/cl/679257 
-                              │                  ├ [2]: https://go.dev/issue/73816 
-                              │                  ├ [3]: https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A 
-                              │                  ├ [4]: https://linux.oracle.com/cve/CVE-2025-4673.html 
-                              │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2025-10676.html 
-                              │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2025-4673 
-                              │                  ├ [7]: https://pkg.go.dev/vuln/GO-2025-3751 
-                              │                  ├ [8]: https://ubuntu.com/security/notices/USN-7574-1 
-                              │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
+                              ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:10676 
+                              │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2025-4673 
+                              │                  ├ [2] : https://bugzilla.redhat.com/2373305 
+                              │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2025-10676.html 
+                              │                  ├ [4] : https://go.dev/cl/679257 
+                              │                  ├ [5] : https://go.dev/issue/73816 
+                              │                  ├ [6] : https://groups.google.com/g/golang-announce/c/ufZ8WpEs
+                              │                  │       A3A 
+                              │                  ├ [7] : https://linux.oracle.com/cve/CVE-2025-4673.html 
+                              │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2025-10677.html 
+                              │                  ├ [9] : https://nvd.nist.gov/vuln/detail/CVE-2025-4673 
+                              │                  ├ [10]: https://pkg.go.dev/vuln/GO-2025-3751 
+                              │                  ├ [11]: https://ubuntu.com/security/notices/USN-7574-1 
+                              │                  ╰ [12]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
                               ├ PublishedDate   : 2025-06-11T17:15:42.993Z 
                               ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
 ````
