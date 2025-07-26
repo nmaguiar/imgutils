@@ -4,49 +4,6 @@
 - Target: Java
   Class: lang-pkgs
   Type: jar
-  Vulnerabilities:
-  - VulnerabilityID: CVE-2025-48924
-    PkgName: org.apache.commons:commons-lang3
-    PkgPath: openaf/openaf.jar
-    PkgIdentifier:
-      PURL: pkg:maven/org.apache.commons/commons-lang3@3.17.0
-      UID: 36abc6aa3ef9156f
-    InstalledVersion: 3.17.0
-    FixedVersion: 3.18.0
-    Status: fixed
-    Layer:
-      Digest: sha256:8eb1defbd4c1c70706510db1054080ae688d9509e89b9c45728f63d7e6d85126
-      DiffID: sha256:957b5e71940f5ee40a2762579217032ceee9352d7ca016423151f93f889e56c3
-    SeveritySource: ghsa
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-48924
-    DataSource:
-      ID: ghsa
-      Name: GitHub Security Advisory Maven
-      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven
-    Title: 'commons-lang/commons-lang: org.apache.commons/commons-lang3: Uncontrolled Recursion vulnerability in Apache Commons Lang'
-    Description: "Uncontrolled Recursion vulnerability in Apache Commons Lang.\n\nThis issue affects Apache Commons Lang: Starting with\_commons-lang:commons-lang\_2.0 to 2.6, and, from org.apache.commons:commons-lang3 3.0 before\_3.18.0.\n\nThe methods ClassUtils.getClass(...) can throw\_StackOverflowError on very long inputs. Because an Error is usually not handled by applications and libraries, a \nStackOverflowError could\_cause an application to stop.\n\nUsers are recommended to upgrade to version 3.18.0, which fixes the issue."
-    Severity: MEDIUM
-    CweIDs:
-    - CWE-674
-    VendorSeverity:
-      ghsa: 2
-      redhat: 1
-    CVSS:
-      ghsa:
-        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
-        V3Score: 6.5
-      redhat:
-        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L
-        V3Score: 3.7
-    References:
-    - https://access.redhat.com/security/cve/CVE-2025-48924
-    - https://github.com/apache/commons-lang
-    - https://github.com/apache/commons-lang/commit/b424803abdb2bec818e4fbcb251ce031c22aca53
-    - https://lists.apache.org/thread/bgv0lpswokgol11tloxnjfzdl7yrc1g1
-    - https://nvd.nist.gov/vuln/detail/CVE-2025-48924
-    - https://www.cve.org/CVERecord?id=CVE-2025-48924
-    PublishedDate: '2025-07-11T15:15:24.347Z'
-    LastModifiedDate: '2025-07-15T13:14:49.98Z'
 - Target: usr/bin/crictl
   Class: lang-pkgs
   Type: gobinary
@@ -61,8 +18,8 @@
     FixedVersion: 1.24.4
     Status: fixed
     Layer:
-      Digest: sha256:8eb1defbd4c1c70706510db1054080ae688d9509e89b9c45728f63d7e6d85126
-      DiffID: sha256:957b5e71940f5ee40a2762579217032ceee9352d7ca016423151f93f889e56c3
+      Digest: sha256:186b9da34dfa54b090f8c61028a06b0e61435900dac42ac97695a8ea7ace9879
+      DiffID: sha256:a91c0c8732207cdeb68a168c870bc9305b6c6c9745b2fb77572680b11cd3a855
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22874
     DataSource:
       ID: govulndb
@@ -103,8 +60,8 @@
     FixedVersion: 1.23.10, 1.24.4
     Status: fixed
     Layer:
-      Digest: sha256:8eb1defbd4c1c70706510db1054080ae688d9509e89b9c45728f63d7e6d85126
-      DiffID: sha256:957b5e71940f5ee40a2762579217032ceee9352d7ca016423151f93f889e56c3
+      Digest: sha256:186b9da34dfa54b090f8c61028a06b0e61435900dac42ac97695a8ea7ace9879
+      DiffID: sha256:a91c0c8732207cdeb68a168c870bc9305b6c6c9745b2fb77572680b11cd3a855
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-0913
     DataSource:
       ID: govulndb
@@ -137,8 +94,8 @@
     FixedVersion: 1.23.8, 1.24.2
     Status: fixed
     Layer:
-      Digest: sha256:8eb1defbd4c1c70706510db1054080ae688d9509e89b9c45728f63d7e6d85126
-      DiffID: sha256:957b5e71940f5ee40a2762579217032ceee9352d7ca016423151f93f889e56c3
+      Digest: sha256:186b9da34dfa54b090f8c61028a06b0e61435900dac42ac97695a8ea7ace9879
+      DiffID: sha256:a91c0c8732207cdeb68a168c870bc9305b6c6c9745b2fb77572680b11cd3a855
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22871
     DataSource:
       ID: govulndb
@@ -187,8 +144,8 @@
     FixedVersion: 1.23.10, 1.24.4
     Status: fixed
     Layer:
-      Digest: sha256:8eb1defbd4c1c70706510db1054080ae688d9509e89b9c45728f63d7e6d85126
-      DiffID: sha256:957b5e71940f5ee40a2762579217032ceee9352d7ca016423151f93f889e56c3
+      Digest: sha256:186b9da34dfa54b090f8c61028a06b0e61435900dac42ac97695a8ea7ace9879
+      DiffID: sha256:a91c0c8732207cdeb68a168c870bc9305b6c6c9745b2fb77572680b11cd3a855
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-4673
     DataSource:
       ID: govulndb
@@ -245,8 +202,8 @@
     FixedVersion: 0.36.0
     Status: fixed
     Layer:
-      Digest: sha256:8eb1defbd4c1c70706510db1054080ae688d9509e89b9c45728f63d7e6d85126
-      DiffID: sha256:957b5e71940f5ee40a2762579217032ceee9352d7ca016423151f93f889e56c3
+      Digest: sha256:186b9da34dfa54b090f8c61028a06b0e61435900dac42ac97695a8ea7ace9879
+      DiffID: sha256:a91c0c8732207cdeb68a168c870bc9305b6c6c9745b2fb77572680b11cd3a855
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22870
     DataSource:
@@ -298,8 +255,8 @@
     FixedVersion: 0.38.0
     Status: fixed
     Layer:
-      Digest: sha256:8eb1defbd4c1c70706510db1054080ae688d9509e89b9c45728f63d7e6d85126
-      DiffID: sha256:957b5e71940f5ee40a2762579217032ceee9352d7ca016423151f93f889e56c3
+      Digest: sha256:186b9da34dfa54b090f8c61028a06b0e61435900dac42ac97695a8ea7ace9879
+      DiffID: sha256:a91c0c8732207cdeb68a168c870bc9305b6c6c9745b2fb77572680b11cd3a855
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22872
     DataSource:
@@ -349,8 +306,8 @@
     FixedVersion: 1.7.27, 1.6.38
     Status: fixed
     Layer:
-      Digest: sha256:8eb1defbd4c1c70706510db1054080ae688d9509e89b9c45728f63d7e6d85126
-      DiffID: sha256:957b5e71940f5ee40a2762579217032ceee9352d7ca016423151f93f889e56c3
+      Digest: sha256:186b9da34dfa54b090f8c61028a06b0e61435900dac42ac97695a8ea7ace9879
+      DiffID: sha256:a91c0c8732207cdeb68a168c870bc9305b6c6c9745b2fb77572680b11cd3a855
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2024-40635
     DataSource:
@@ -401,8 +358,8 @@
     FixedVersion: 0.38.0
     Status: fixed
     Layer:
-      Digest: sha256:8eb1defbd4c1c70706510db1054080ae688d9509e89b9c45728f63d7e6d85126
-      DiffID: sha256:957b5e71940f5ee40a2762579217032ceee9352d7ca016423151f93f889e56c3
+      Digest: sha256:186b9da34dfa54b090f8c61028a06b0e61435900dac42ac97695a8ea7ace9879
+      DiffID: sha256:a91c0c8732207cdeb68a168c870bc9305b6c6c9745b2fb77572680b11cd3a855
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22872
     DataSource:
@@ -445,8 +402,8 @@
     FixedVersion: 0.27.0
     Status: fixed
     Layer:
-      Digest: sha256:8eb1defbd4c1c70706510db1054080ae688d9509e89b9c45728f63d7e6d85126
-      DiffID: sha256:957b5e71940f5ee40a2762579217032ceee9352d7ca016423151f93f889e56c3
+      Digest: sha256:186b9da34dfa54b090f8c61028a06b0e61435900dac42ac97695a8ea7ace9879
+      DiffID: sha256:a91c0c8732207cdeb68a168c870bc9305b6c6c9745b2fb77572680b11cd3a855
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22868
     DataSource:
