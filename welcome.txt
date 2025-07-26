@@ -2,7 +2,7 @@
  .,-.-.,---..   .|--- .|    ,---.
  || | ||   ||   ||    ||    `---.
  `` ' '`---|`---'`---'``---'`---'
-       `---'                       (v0.5.1)
+       `---'                       (v0.5.2)
   
  For image deploy usage type & execute [1m'usage-help'[m, for examples [1m'examples-help'[m
  See more in [2mhttps://github.com/nmaguiar/imgutils[m
