@@ -103,7 +103,7 @@ jobs:
   from :
   - (get): versions
   to   : 
-  - (template): " oaf: {{openaf}} | docker: {{docker}} | helm: {{helm}} | skopeo: {{skopeo}} | crictl: {{crictl}} | ctr: {{ctr}} | nerdctl: {{nerdctl}} | dive: {{dive}} | syft: {{syft}} "
+  - (template): " oaf: {{{openaf}}} | docker: {{{docker}}} | helm: {{{helm}}} | skopeo: {{{skopeo}}} | crictl: {{{crictl}}} | ctr: {{{ctr}}} | nerdctl: {{{nerdctl}}} | dive: {{{dive}}} | syft: {{{syft}}} "
     ((outPath): status
     ((key    ): args
     ((out    ): args
