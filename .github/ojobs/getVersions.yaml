@@ -28,7 +28,7 @@ jobs:
   check:
     in:
       tag: isString.default("latest")
-  exec : |
+  exec : | #js
     var data = {}
 
     var oafpath = getOpenAFPath()
@@ -45,17 +45,18 @@ jobs:
               .get()
 
     var _r = {
-      openaf : res[0].stdout.trim(),
-      docker : res[1].stdout.trim(),
-      helm   : res[2].stdout.trim(),
-      skopeo : res[3].stdout.trim(),
-      crictl : res[4].stdout.trim(),
-      ctr    : res[5].stdout.trim(),
-      nerdctl: res[6].stdout.trim(),
-      dive   : res[7].stdout.trim(),
-      mc     : res[8].stdout.trim(),
-      syft   : res[9].stdout.trim()
+      openaf : res[0].stdout.trim().replace(/\"/g, ''),
+      docker : res[1].stdout.trim().replace(/\"/g, ''),
+      helm   : res[2].stdout.trim().replace(/\"/g, ''),
+      skopeo : res[3].stdout.trim().replace(/\"/g, ''),
+      crictl : res[4].stdout.trim().replace(/\"/g, ''),
+      ctr    : res[5].stdout.trim().replace(/\"/g, ''),
+      nerdctl: res[6].stdout.trim().replace(/\"/g, ''),
+      dive   : res[7].stdout.trim().replace(/\"/g, ''),
+      mc     : res[8].stdout.trim().replace(/\"/g, ''),
+      syft   : res[9].stdout.trim().replace(/\"/g, '')
     }
+    cprint(_r)
 
     $set("versions", _r)
 
@@ -103,7 +104,7 @@ jobs:
   from :
   - (get): versions
   to   : 
-  - (template): " oaf: {{{openaf}}} | docker: {{{docker}}} | helm: {{{helm}}} | skopeo: {{{skopeo}}} | crictl: {{{crictl}}} | ctr: {{{ctr}}} | nerdctl: {{{nerdctl}}} | dive: {{{dive}}} | syft: {{{syft}}} "
+  - (template): " oaf: {{openaf}} | docker: {{docker}} | helm: {{helm}} | skopeo: {{skopeo}} | crictl: {{crictl}} | ctr: {{ctr}} | nerdctl: {{nerdctl}} | dive: {{dive}} | syft: {{syft}} "
     ((outPath): status
     ((key    ): args
     ((out    ): args
