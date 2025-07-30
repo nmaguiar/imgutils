@@ -298,9 +298,129 @@
 - Target: usr/bin/nerdctl
   Class: lang-pkgs
   Type: gobinary
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2025-54388
+    PkgID: github.com/docker/docker@v28.3.1+incompatible
+    PkgName: github.com/docker/docker
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/docker/docker@v28.3.1%2Bincompatible
+      UID: f87f4b258c265c38
+    InstalledVersion: v28.3.1+incompatible
+    FixedVersion: 28.3.3
+    Status: fixed
+    Layer:
+      Digest: sha256:df6dabf390df61d13d7b3b4f96acdb18a79787d48944f6beed7554946ecb12d7
+      DiffID: sha256:db7e365213fb83c99119c595fdef3da13ecedec067232531160c43ce688c7c8b
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-54388
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'Moby firewalld reload makes published container ports accessible from remote hosts '
+    Description: |-
+      Moby is an open source container framework developed by Docker Inc. that is distributed as Docker Engine, Mirantis Container Runtime, and various other downstream projects/products. The Moby daemon component (dockerd), which is developed as [moby/moby](https://github.com/moby/moby) is commonly referred to as Docker, or Docker Engine.
+
+      Firewalld is a daemon used by some Linux distributions to provide a dynamically managed firewall. When Firewalld is running, Docker uses its iptables backend to create rules, including rules to isolate containers in one bridge network from containers in other bridge networks.
+
+      ### Impact
+
+      The iptables rules created by Docker are removed when firewalld is reloaded using, for example "firewall-cmd --reload", "killall -HUP firewalld", or "systemctl reload firewalld".
+
+      When that happens, Docker must re-create the rules. However, in affected versions of Docker, the iptables rules that prevent packets arriving on a host interface from reaching container addresses are not re-created.
+
+      Once these rules have been removed, a remote host configured with a route to a Docker bridge network can access published ports, even when those ports were only published to a loopback address. Unpublished ports remain inaccessible.
+
+      For example, following a firewalld reload on a Docker host with address `192.168.0.10` and a bridge network with subnet `172.17.0.0/16`, running the following command on another host in the local network will give it access to published ports on container addresses in that network: `ip route add 172.17.0.0/16 via 192.168.0.10`.
+
+      Containers running in networks created with `--internal` or equivalent have no access to other networks. Containers that are only connected to these networks remain isolated after a firewalld reload.
+
+      Where Docker Engine is not running in the host's network namespace, it is unaffected. Including, for example, Rootless Mode, and Docker Desktop.
+
+      ### Patches
+
+      Moby releases older than 28.2.0 are not affected. A fix is available in moby release 28.3.3.
+
+      ### Workarounds
+      After reloading firewalld, either:
+      - Restart the docker daemon,
+      - Re-create bridge networks, or
+      - Use rootless mode.
+
+      ### References
+      https://firewalld.org/
+      https://firewalld.org/documentation/howto/reload-firewalld.html
+    Severity: MEDIUM
+    VendorSeverity:
+      ghsa: 2
+    References:
+    - https://github.com/moby/moby
+    - https://github.com/moby/moby/commit/bea959c7b793b32a893820b97c4eadc7c87fabb0
+    - https://github.com/moby/moby/pull/50506
+    - https://github.com/moby/moby/security/advisories/GHSA-x4rx-4gw3-53p4
 - Target: usr/bin/skopeo
   Class: lang-pkgs
   Type: gobinary
 - Target: usr/bin/syft
   Class: lang-pkgs
   Type: gobinary
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2025-54388
+    PkgID: github.com/docker/docker@v28.2.2+incompatible
+    PkgName: github.com/docker/docker
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/docker/docker@v28.2.2%2Bincompatible
+      UID: 3c7ce1b3f4e63f81
+    InstalledVersion: v28.2.2+incompatible
+    FixedVersion: 28.3.3
+    Status: fixed
+    Layer:
+      Digest: sha256:df6dabf390df61d13d7b3b4f96acdb18a79787d48944f6beed7554946ecb12d7
+      DiffID: sha256:db7e365213fb83c99119c595fdef3da13ecedec067232531160c43ce688c7c8b
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-54388
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'Moby firewalld reload makes published container ports accessible from remote hosts '
+    Description: |-
+      Moby is an open source container framework developed by Docker Inc. that is distributed as Docker Engine, Mirantis Container Runtime, and various other downstream projects/products. The Moby daemon component (dockerd), which is developed as [moby/moby](https://github.com/moby/moby) is commonly referred to as Docker, or Docker Engine.
+
+      Firewalld is a daemon used by some Linux distributions to provide a dynamically managed firewall. When Firewalld is running, Docker uses its iptables backend to create rules, including rules to isolate containers in one bridge network from containers in other bridge networks.
+
+      ### Impact
+
+      The iptables rules created by Docker are removed when firewalld is reloaded using, for example "firewall-cmd --reload", "killall -HUP firewalld", or "systemctl reload firewalld".
+
+      When that happens, Docker must re-create the rules. However, in affected versions of Docker, the iptables rules that prevent packets arriving on a host interface from reaching container addresses are not re-created.
+
+      Once these rules have been removed, a remote host configured with a route to a Docker bridge network can access published ports, even when those ports were only published to a loopback address. Unpublished ports remain inaccessible.
+
+      For example, following a firewalld reload on a Docker host with address `192.168.0.10` and a bridge network with subnet `172.17.0.0/16`, running the following command on another host in the local network will give it access to published ports on container addresses in that network: `ip route add 172.17.0.0/16 via 192.168.0.10`.
+
+      Containers running in networks created with `--internal` or equivalent have no access to other networks. Containers that are only connected to these networks remain isolated after a firewalld reload.
+
+      Where Docker Engine is not running in the host's network namespace, it is unaffected. Including, for example, Rootless Mode, and Docker Desktop.
+
+      ### Patches
+
+      Moby releases older than 28.2.0 are not affected. A fix is available in moby release 28.3.3.
+
+      ### Workarounds
+      After reloading firewalld, either:
+      - Restart the docker daemon,
+      - Re-create bridge networks, or
+      - Use rootless mode.
+
+      ### References
+      https://firewalld.org/
+      https://firewalld.org/documentation/howto/reload-firewalld.html
+    Severity: MEDIUM
+    VendorSeverity:
+      ghsa: 2
+    References:
+    - https://github.com/moby/moby
+    - https://github.com/moby/moby/commit/bea959c7b793b32a893820b97c4eadc7c87fabb0
+    - https://github.com/moby/moby/pull/50506
+    - https://github.com/moby/moby/security/advisories/GHSA-x4rx-4gw3-53p4
