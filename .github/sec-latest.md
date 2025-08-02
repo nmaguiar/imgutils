@@ -125,10 +125,10 @@
 │                       │     │                            │           /A:N 
 │                       │     │                            ╰ V3Score : 5.4 
 │                       │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2025/04/04/4 
-│                       │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:9845 
+│                       │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:9635 
 │                       │     │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-22871 
 │                       │     │                  ├ [3] : https://bugzilla.redhat.com/2358493 
-│                       │     │                  ├ [4] : https://errata.almalinux.org/8/ALSA-2025-9845.html 
+│                       │     │                  ├ [4] : https://errata.almalinux.org/9/ALSA-2025-9635.html 
 │                       │     │                  ├ [5] : https://go.dev/cl/652998 
 │                       │     │                  ├ [6] : https://go.dev/issue/71988 
 │                       │     │                  ├ [7] : https://groups.google.com/g/golang-announce/c/Y2uBTVKj
@@ -175,10 +175,10 @@
 │                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N
 │                             │                            │           /A:N 
 │                             │                            ╰ V3Score : 6.8 
-│                             ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:10672 
+│                             ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:10676 
 │                             │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2025-4673 
 │                             │                  ├ [2] : https://bugzilla.redhat.com/2373305 
-│                             │                  ├ [3] : https://errata.almalinux.org/8/ALSA-2025-10672.html 
+│                             │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2025-10676.html 
 │                             │                  ├ [4] : https://go.dev/cl/679257 
 │                             │                  ├ [5] : https://go.dev/issue/73816 
 │                             │                  ├ [6] : https://groups.google.com/g/golang-announce/c/ufZ8WpEs
@@ -364,7 +364,7 @@
 │                             │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-54388 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-54388 
 │                             ├ PublishedDate   : 2025-07-30T14:15:28.693Z 
-│                             ╰ LastModifiedDate: 2025-07-30T14:15:28.693Z 
+│                             ╰ LastModifiedDate: 2025-07-31T18:42:37.87Z 
 ├ [8] ╭ Target: usr/bin/skopeo 
 │     ├ Class : lang-pkgs 
 │     ╰ Type  : gobinary 
@@ -425,5 +425,5 @@
                               │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-54388 
                               │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-54388 
                               ├ PublishedDate   : 2025-07-30T14:15:28.693Z 
-                              ╰ LastModifiedDate: 2025-07-30T14:15:28.693Z 
+                              ╰ LastModifiedDate: 2025-07-31T18:42:37.87Z 
 ````
