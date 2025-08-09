@@ -77,6 +77,7 @@
 │                       │     │                   an error when the O_CREATE and O_EXCL flags are both set and
 │                       │     │                   the target path is a symlink. 
 │                       │     ├ Severity        : MEDIUM 
+│                       │     ├ CweIDs           ─ [0]: CWE-59 
 │                       │     ├ VendorSeverity   ─ bitnami: 2 
 │                       │     ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H
 │                       │     │                            │           /A:N 
@@ -87,7 +88,7 @@
 │                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-0913 
 │                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-3750 
 │                       │     ├ PublishedDate   : 2025-06-11T18:15:24.627Z 
-│                       │     ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
+│                       │     ╰ LastModifiedDate: 2025-08-08T14:53:03.55Z 
 │                       ├ [2] ╭ VulnerabilityID : CVE-2025-22871 
 │                       │     ├ PkgID           : stdlib@v1.24.1 
 │                       │     ├ PkgName         : stdlib 
@@ -227,7 +228,7 @@
 │                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
 │                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3849 
 │                             ├ PublishedDate   : 2025-08-07T16:15:30.357Z 
-│                             ╰ LastModifiedDate: 2025-08-07T16:15:30.357Z 
+│                             ╰ LastModifiedDate: 2025-08-07T21:26:37.453Z 
 ├ [3] ╭ Target         : usr/bin/ctr 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -262,7 +263,7 @@
 │                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
 │                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3849 
 │                             ├ PublishedDate   : 2025-08-07T16:15:30.357Z 
-│                             ╰ LastModifiedDate: 2025-08-07T16:15:30.357Z 
+│                             ╰ LastModifiedDate: 2025-08-07T21:26:37.453Z 
 ├ [4] ╭ Target         : usr/bin/dive 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -401,7 +402,7 @@
 │                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
 │                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3849 
 │                             ├ PublishedDate   : 2025-08-07T16:15:30.357Z 
-│                             ╰ LastModifiedDate: 2025-08-07T16:15:30.357Z 
+│                             ╰ LastModifiedDate: 2025-08-07T21:26:37.453Z 
 ├ [5] ╭ Target         : usr/bin/docker 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -436,7 +437,7 @@
 │                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
 │                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3849 
 │                             ├ PublishedDate   : 2025-08-07T16:15:30.357Z 
-│                             ╰ LastModifiedDate: 2025-08-07T16:15:30.357Z 
+│                             ╰ LastModifiedDate: 2025-08-07T21:26:37.453Z 
 ├ [6] ╭ Target         : usr/bin/helm 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -471,7 +472,7 @@
 │                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
 │                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3849 
 │                             ├ PublishedDate   : 2025-08-07T16:15:30.357Z 
-│                             ╰ LastModifiedDate: 2025-08-07T16:15:30.357Z 
+│                             ╰ LastModifiedDate: 2025-08-07T21:26:37.453Z 
 ├ [7] ╭ Target         : usr/bin/nerdctl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -561,7 +562,7 @@
 │                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
 │                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3849 
 │                             ├ PublishedDate   : 2025-08-07T16:15:30.357Z 
-│                             ╰ LastModifiedDate: 2025-08-07T16:15:30.357Z 
+│                             ╰ LastModifiedDate: 2025-08-07T21:26:37.453Z 
 ├ [8] ╭ Target         : usr/bin/skopeo 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -596,7 +597,7 @@
 │                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
 │                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3849 
 │                             ├ PublishedDate   : 2025-08-07T16:15:30.357Z 
-│                             ╰ LastModifiedDate: 2025-08-07T16:15:30.357Z 
+│                             ╰ LastModifiedDate: 2025-08-07T21:26:37.453Z 
 ╰ [9] ╭ Target         : usr/bin/syft 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
@@ -686,5 +687,5 @@
                               │                  ├ [2]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
                               │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3849 
                               ├ PublishedDate   : 2025-08-07T16:15:30.357Z 
-                              ╰ LastModifiedDate: 2025-08-07T16:15:30.357Z 
+                              ╰ LastModifiedDate: 2025-08-07T21:26:37.453Z 
 ````
