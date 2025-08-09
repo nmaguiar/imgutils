@@ -67,6 +67,8 @@
     Title: Inconsistent handling of O_CREATE|O_EXCL on Unix and Windows in os in syscall
     Description: os.OpenFile(path, os.O_CREATE|O_EXCL) behaved differently on Unix and Windows systems when the target path was a dangling symlink. On Unix systems, OpenFile with O_CREATE and O_EXCL flags never follows symlinks. On Windows, when the target path was a symlink to a nonexistent location, OpenFile would create a file in that location. OpenFile now always returns an error when the O_CREATE and O_EXCL flags are both set and the target path is a symlink.
     Severity: MEDIUM
+    CweIDs:
+    - CWE-59
     VendorSeverity:
       bitnami: 2
     CVSS:
@@ -80,7 +82,7 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2025-0913
     - https://pkg.go.dev/vuln/GO-2025-3750
     PublishedDate: '2025-06-11T18:15:24.627Z'
-    LastModifiedDate: '2025-06-12T16:06:20.18Z'
+    LastModifiedDate: '2025-08-08T14:53:03.55Z'
   - VulnerabilityID: CVE-2025-22871
     PkgID: stdlib@v1.24.1
     PkgName: stdlib
@@ -212,4 +214,4 @@
     - https://groups.google.com/g/golang-announce/c/x5MKroML2yM
     - https://pkg.go.dev/vuln/GO-2025-3849
     PublishedDate: '2025-08-07T16:15:30.357Z'
-    LastModifiedDate: '2025-08-07T16:15:30.357Z'
+    LastModifiedDate: '2025-08-07T21:26:37.453Z'
