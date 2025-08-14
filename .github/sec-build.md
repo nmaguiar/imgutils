@@ -2,9 +2,46 @@
 ╭ [0] ╭ Target: nmaguiar/imgutils:build (alpine 3.23.0_alpha20250612) 
 │     ├ Class : os-pkgs 
 │     ╰ Type  : alpine 
-├ [1] ╭ Target: Java 
-│     ├ Class : lang-pkgs 
-│     ╰ Type  : jar 
+├ [1] ╭ Target         : Java 
+│     ├ Class          : lang-pkgs 
+│     ├ Type           : jar 
+│     ╰ Vulnerabilities ─ [0] ╭ VulnerabilityID : CVE-2025-55163 
+│                             ├ PkgName         : io.netty:netty-codec-http2 
+│                             ├ PkgPath         : openaf/Kube/netty-codec-http2-4.1.118.Final.jar 
+│                             ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-codec-http2@4.1.118.Final 
+│                             │                  ╰ UID : 47f6f5e248c0b5e1 
+│                             ├ InstalledVersion: 4.1.118.Final 
+│                             ├ FixedVersion    : 4.2.4.Final, 4.1.124.Final 
+│                             ├ Status          : fixed 
+│                             ├ Layer            ╭ Digest: sha256:969945cbab8b68b9c5d94aee2dd6e8db52d6c50ecc41f
+│                             │                  │         798e1f45fe2bb2cea18 
+│                             │                  ╰ DiffID: sha256:72341d4ee2226ed736e6356a0a695957e73d8e5c77ef0
+│                             │                            d75c74263bb132ef408 
+│                             ├ SeveritySource  : ghsa 
+│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-55163 
+│                             ├ DataSource       ╭ ID  : ghsa 
+│                             │                  ├ Name: GitHub Security Advisory Maven 
+│                             │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                             │                          osystem%3Amaven 
+│                             ├ Title           : Netty is an asynchronous, event-driven network application
+│                             │                   framework.  ... 
+│                             ├ Description     : Netty is an asynchronous, event-driven network application
+│                             │                   framework. Prior to versions 4.1.124.Final and 4.2.4.Final,
+│                             │                   Netty is vulnerable to MadeYouReset DDoS. This is a logical
+│                             │                   vulnerability in the HTTP/2 protocol, that uses malformed
+│                             │                   HTTP/2 control frames in order to break the max concurrent
+│                             │                   streams limit - which results in resource exhaustion and
+│                             │                   distributed denial of service. This issue has been patched in
+│                             │                    versions 4.1.124.Final and 4.2.4.Final. 
+│                             ├ Severity        : HIGH 
+│                             ├ CweIDs           ─ [0]: CWE-770 
+│                             ├ VendorSeverity   ─ ghsa: 3 
+│                             ├ References       ╭ [0]: https://github.com/netty/netty 
+│                             │                  ├ [1]: https://github.com/netty/netty/security/advisories/GHSA
+│                             │                  │      -prj3-ccx8-p6x4 
+│                             │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2025-55163 
+│                             ├ PublishedDate   : 2025-08-13T15:15:39.39Z 
+│                             ╰ LastModifiedDate: 2025-08-13T17:33:46.673Z 
 ├ [2] ╭ Target         : usr/bin/crictl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -164,13 +201,13 @@
 │                       │     │                            │           /A:N 
 │                       │     │                            ╰ V3Score : 5.4 
 │                       │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2025/04/04/4 
-│                       │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:9635 
+│                       │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:9623 
 │                       │     │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-22871 
 │                       │     │                  ├ [3] : https://bugzilla.redhat.com/2358493 
 │                       │     │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2358493 
 │                       │     │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
 │                       │     │                  │       5-22871 
-│                       │     │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-9635.html 
+│                       │     │                  ├ [6] : https://errata.almalinux.org/10/ALSA-2025-9623.html 
 │                       │     │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:9845 
 │                       │     │                  ├ [8] : https://go.dev/cl/652998 
 │                       │     │                  ├ [9] : https://go.dev/issue/71988 
@@ -218,10 +255,10 @@
 │                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N
 │                             │                            │           /A:N 
 │                             │                            ╰ V3Score : 6.8 
-│                             ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:10676 
+│                             ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:10677 
 │                             │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2025-4673 
 │                             │                  ├ [2] : https://bugzilla.redhat.com/2373305 
-│                             │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2025-10676.html 
+│                             │                  ├ [3] : https://errata.almalinux.org/10/ALSA-2025-10677.html 
 │                             │                  ├ [4] : https://go.dev/cl/679257 
 │                             │                  ├ [5] : https://go.dev/issue/73816 
 │                             │                  ├ [6] : https://groups.google.com/g/golang-announce/c/ufZ8WpEs
@@ -324,7 +361,7 @@
 │                             │                    DOM construction, but only when tags are in foreign content
 │                             │                   (e.g. <math>, <svg>, etc contexts). 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon     : 3 
+│                             ├ VendorSeverity   ╭ amazon     : 2 
 │                             │                  ├ azure      : 2 
 │                             │                  ├ cbl-mariner: 2 
 │                             │                  ├ ghsa       : 2 
