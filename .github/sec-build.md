@@ -13,10 +13,10 @@
 │                             ├ InstalledVersion: 4.1.118.Final 
 │                             ├ FixedVersion    : 4.2.4.Final, 4.1.124.Final 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:969945cbab8b68b9c5d94aee2dd6e8db52d6c50ecc41f
-│                             │                  │         798e1f45fe2bb2cea18 
-│                             │                  ╰ DiffID: sha256:72341d4ee2226ed736e6356a0a695957e73d8e5c77ef0
-│                             │                            d75c74263bb132ef408 
+│                             ├ Layer            ╭ Digest: sha256:2cb2a7c65e7c02a93f1a097a645c0df89011d72c6621a
+│                             │                  │         7207ef6f5801f3fbb96 
+│                             │                  ╰ DiffID: sha256:f0bd61f435ebde9480ec412c99b1f5219365aa8b93858
+│                             │                            ed2553321b99abb6832 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-55163 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -53,10 +53,10 @@
 │                       │     ├ InstalledVersion: v1.24.1 
 │                       │     ├ FixedVersion    : 1.24.4 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:969945cbab8b68b9c5d94aee2dd6e8db52d6c50ecc41f
-│                       │     │                  │         798e1f45fe2bb2cea18 
-│                       │     │                  ╰ DiffID: sha256:72341d4ee2226ed736e6356a0a695957e73d8e5c77ef0
-│                       │     │                            d75c74263bb132ef408 
+│                       │     ├ Layer            ╭ Digest: sha256:2cb2a7c65e7c02a93f1a097a645c0df89011d72c6621a
+│                       │     │                  │         7207ef6f5801f3fbb96 
+│                       │     │                  ╰ DiffID: sha256:f0bd61f435ebde9480ec412c99b1f5219365aa8b93858
+│                       │     │                            ed2553321b99abb6832 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22874 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -95,16 +95,15 @@
 │                       │     ├ InstalledVersion: v1.24.1 
 │                       │     ├ FixedVersion    : 1.23.12, 1.24.6 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:969945cbab8b68b9c5d94aee2dd6e8db52d6c50ecc41f
-│                       │     │                  │         798e1f45fe2bb2cea18 
-│                       │     │                  ╰ DiffID: sha256:72341d4ee2226ed736e6356a0a695957e73d8e5c77ef0
-│                       │     │                            d75c74263bb132ef408 
+│                       │     ├ Layer            ╭ Digest: sha256:2cb2a7c65e7c02a93f1a097a645c0df89011d72c6621a
+│                       │     │                  │         7207ef6f5801f3fbb96 
+│                       │     │                  ╰ DiffID: sha256:f0bd61f435ebde9480ec412c99b1f5219365aa8b93858
+│                       │     │                            ed2553321b99abb6832 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-47907 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
 │                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │     ├ Title           : Cancelling a query (e.g. by cancelling the context passed to
-│                       │     │                   one of th ... 
+│                       │     ├ Title           : database/sql: Postgres Scan Race Condition 
 │                       │     ├ Description     : Cancelling a query (e.g. by cancelling the context passed to
 │                       │     │                   one of the query methods) during a call to the Scan method of
 │                       │     │                    the returned Rows can result in unexpected results if other
@@ -113,15 +112,21 @@
 │                       │     │                    of another query, causing the call to Scan to return either
 │                       │     │                   unexpected results from the other query or an error. 
 │                       │     ├ Severity        : HIGH 
-│                       │     ├ VendorSeverity   ─ bitnami: 3 
-│                       │     ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L
+│                       │     ├ VendorSeverity   ╭ bitnami: 3 
+│                       │     │                  ╰ redhat : 3 
+│                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L
+│                       │     │                  │         │           /A:L 
+│                       │     │                  │         ╰ V3Score : 7 
+│                       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L
 │                       │     │                            │           /A:L 
 │                       │     │                            ╰ V3Score : 7 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/693735 
-│                       │     │                  ├ [1]: https://go.dev/issue/74831 
-│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
-│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-47907 
-│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-3849 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-47907 
+│                       │     │                  ├ [1]: https://go.dev/cl/693735 
+│                       │     │                  ├ [2]: https://go.dev/issue/74831 
+│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47907 
+│                       │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3849 
+│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-47907 
 │                       │     ├ PublishedDate   : 2025-08-07T16:15:30.357Z 
 │                       │     ╰ LastModifiedDate: 2025-08-07T21:26:37.453Z 
 │                       ├ [2] ╭ VulnerabilityID : CVE-2025-0913 
@@ -132,10 +137,10 @@
 │                       │     ├ InstalledVersion: v1.24.1 
 │                       │     ├ FixedVersion    : 1.23.10, 1.24.4 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:969945cbab8b68b9c5d94aee2dd6e8db52d6c50ecc41f
-│                       │     │                  │         798e1f45fe2bb2cea18 
-│                       │     │                  ╰ DiffID: sha256:72341d4ee2226ed736e6356a0a695957e73d8e5c77ef0
-│                       │     │                            d75c74263bb132ef408 
+│                       │     ├ Layer            ╭ Digest: sha256:2cb2a7c65e7c02a93f1a097a645c0df89011d72c6621a
+│                       │     │                  │         7207ef6f5801f3fbb96 
+│                       │     │                  ╰ DiffID: sha256:f0bd61f435ebde9480ec412c99b1f5219365aa8b93858
+│                       │     │                            ed2553321b99abb6832 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-0913 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -171,10 +176,10 @@
 │                       │     ├ InstalledVersion: v1.24.1 
 │                       │     ├ FixedVersion    : 1.23.8, 1.24.2 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:969945cbab8b68b9c5d94aee2dd6e8db52d6c50ecc41f
-│                       │     │                  │         798e1f45fe2bb2cea18 
-│                       │     │                  ╰ DiffID: sha256:72341d4ee2226ed736e6356a0a695957e73d8e5c77ef0
-│                       │     │                            d75c74263bb132ef408 
+│                       │     ├ Layer            ╭ Digest: sha256:2cb2a7c65e7c02a93f1a097a645c0df89011d72c6621a
+│                       │     │                  │         7207ef6f5801f3fbb96 
+│                       │     │                  ╰ DiffID: sha256:f0bd61f435ebde9480ec412c99b1f5219365aa8b93858
+│                       │     │                            ed2553321b99abb6832 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22871 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -201,13 +206,13 @@
 │                       │     │                            │           /A:N 
 │                       │     │                            ╰ V3Score : 5.4 
 │                       │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2025/04/04/4 
-│                       │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:9623 
+│                       │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:9635 
 │                       │     │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-22871 
 │                       │     │                  ├ [3] : https://bugzilla.redhat.com/2358493 
 │                       │     │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2358493 
 │                       │     │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
 │                       │     │                  │       5-22871 
-│                       │     │                  ├ [6] : https://errata.almalinux.org/10/ALSA-2025-9623.html 
+│                       │     │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-9635.html 
 │                       │     │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:9845 
 │                       │     │                  ├ [8] : https://go.dev/cl/652998 
 │                       │     │                  ├ [9] : https://go.dev/issue/71988 
@@ -228,10 +233,10 @@
 │                             ├ InstalledVersion: v1.24.1 
 │                             ├ FixedVersion    : 1.23.10, 1.24.4 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:969945cbab8b68b9c5d94aee2dd6e8db52d6c50ecc41f
-│                             │                  │         798e1f45fe2bb2cea18 
-│                             │                  ╰ DiffID: sha256:72341d4ee2226ed736e6356a0a695957e73d8e5c77ef0
-│                             │                            d75c74263bb132ef408 
+│                             ├ Layer            ╭ Digest: sha256:2cb2a7c65e7c02a93f1a097a645c0df89011d72c6621a
+│                             │                  │         7207ef6f5801f3fbb96 
+│                             │                  ╰ DiffID: sha256:f0bd61f435ebde9480ec412c99b1f5219365aa8b93858
+│                             │                            ed2553321b99abb6832 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-4673 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
@@ -255,10 +260,10 @@
 │                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N
 │                             │                            │           /A:N 
 │                             │                            ╰ V3Score : 6.8 
-│                             ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:10677 
+│                             ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:10676 
 │                             │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2025-4673 
 │                             │                  ├ [2] : https://bugzilla.redhat.com/2373305 
-│                             │                  ├ [3] : https://errata.almalinux.org/10/ALSA-2025-10677.html 
+│                             │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2025-10676.html 
 │                             │                  ├ [4] : https://go.dev/cl/679257 
 │                             │                  ├ [5] : https://go.dev/issue/73816 
 │                             │                  ├ [6] : https://groups.google.com/g/golang-announce/c/ufZ8WpEs
@@ -277,7 +282,66 @@
 ├ [4] ╭ Target         : usr/bin/dive 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
-│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2025-22870 
+│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2025-54410 
+│                       │     ├ PkgID           : github.com/docker/docker@v27.1.2+incompatible 
+│                       │     ├ PkgName         : github.com/docker/docker 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v27.1.2%2Bincompat
+│                       │     │                  │       ible 
+│                       │     │                  ╰ UID : 92dfc7b3a5de6e88 
+│                       │     ├ InstalledVersion: v27.1.2+incompatible 
+│                       │     ├ FixedVersion    : 28.0.0 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:2cb2a7c65e7c02a93f1a097a645c0df89011d72c6621a
+│                       │     │                  │         7207ef6f5801f3fbb96 
+│                       │     │                  ╰ DiffID: sha256:f0bd61f435ebde9480ec412c99b1f5219365aa8b93858
+│                       │     │                            ed2553321b99abb6832 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-54410 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Go 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Ago 
+│                       │     ├ Title           : github.com/moby/moby: Moby's Firewalld reload removes bridge
+│                       │     │                   network isolation 
+│                       │     ├ Description     : Moby is an open source container framework developed by
+│                       │     │                   Docker Inc. that is distributed as Docker Engine, Mirantis
+│                       │     │                   Container Runtime, and various other downstream
+│                       │     │                   projects/products. A firewalld vulnerability affects Moby
+│                       │     │                   releases before 28.0.0. When firewalld reloads, Docker fails
+│                       │     │                   to re-create iptables rules that isolate bridge networks,
+│                       │     │                   allowing any container to access all ports on any other
+│                       │     │                   container across different bridge networks on the same host.
+│                       │     │                   This breaks network segmentation between containers that
+│                       │     │                   should be isolated, creating significant risk in multi-tenant
+│                       │     │                    environments. Only containers in --internal networks remain
+│                       │     │                   protected.
+│                       │     │                   Workarounds include reloading firewalld and either restarting
+│                       │     │                    the docker daemon, re-creating bridge networks, or using
+│                       │     │                   rootless mode. Maintainers anticipate a fix for this issue in
+│                       │     │                    version 25.0.13. 
+│                       │     ├ Severity        : LOW 
+│                       │     ├ CweIDs           ─ [0]: CWE-909 
+│                       │     ├ VendorSeverity   ╭ ghsa  : 1 
+│                       │     │                  ╰ redhat: 1 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:L/I:L/
+│                       │     │                  │        │           A:N 
+│                       │     │                  │        ╰ V3Score : 3.3 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:L/I:L/
+│                       │     │                           │           A:N 
+│                       │     │                           ╰ V3Score : 3.3 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-54410 
+│                       │     │                  ├ [1]: https://firewalld.org/documentation/howto/reload-firewa
+│                       │     │                  │      lld.html 
+│                       │     │                  ├ [2]: https://github.com/moby/moby 
+│                       │     │                  ├ [3]: https://github.com/moby/moby/pull/49443 
+│                       │     │                  ├ [4]: https://github.com/moby/moby/pull/49728 
+│                       │     │                  ├ [5]: https://github.com/moby/moby/security/advisories/GHSA-4
+│                       │     │                  │      vq8-7jfc-9cvp 
+│                       │     │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2025-54410 
+│                       │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-54410 
+│                       │     ├ PublishedDate   : 2025-07-30T14:15:28.9Z 
+│                       │     ╰ LastModifiedDate: 2025-07-31T18:42:37.87Z 
+│                       ├ [1] ╭ VulnerabilityID : CVE-2025-22870 
 │                       │     ├ PkgID           : golang.org/x/net@v0.28.0 
 │                       │     ├ PkgName         : golang.org/x/net 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.28.0 
@@ -285,10 +349,10 @@
 │                       │     ├ InstalledVersion: v0.28.0 
 │                       │     ├ FixedVersion    : 0.36.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:969945cbab8b68b9c5d94aee2dd6e8db52d6c50ecc41f
-│                       │     │                  │         798e1f45fe2bb2cea18 
-│                       │     │                  ╰ DiffID: sha256:72341d4ee2226ed736e6356a0a695957e73d8e5c77ef0
-│                       │     │                            d75c74263bb132ef408 
+│                       │     ├ Layer            ╭ Digest: sha256:2cb2a7c65e7c02a93f1a097a645c0df89011d72c6621a
+│                       │     │                  │         7207ef6f5801f3fbb96 
+│                       │     │                  ╰ DiffID: sha256:f0bd61f435ebde9480ec412c99b1f5219365aa8b93858
+│                       │     │                            ed2553321b99abb6832 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -332,7 +396,7 @@
 │                       │     │                  ╰ [12]: https://www.cve.org/CVERecord?id=CVE-2025-22870 
 │                       │     ├ PublishedDate   : 2025-03-12T19:15:38.31Z 
 │                       │     ╰ LastModifiedDate: 2025-05-09T20:15:38.727Z 
-│                       ╰ [1] ╭ VulnerabilityID : CVE-2025-22872 
+│                       ╰ [2] ╭ VulnerabilityID : CVE-2025-22872 
 │                             ├ PkgID           : golang.org/x/net@v0.28.0 
 │                             ├ PkgName         : golang.org/x/net 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.28.0 
@@ -340,10 +404,10 @@
 │                             ├ InstalledVersion: v0.28.0 
 │                             ├ FixedVersion    : 0.38.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:969945cbab8b68b9c5d94aee2dd6e8db52d6c50ecc41f
-│                             │                  │         798e1f45fe2bb2cea18 
-│                             │                  ╰ DiffID: sha256:72341d4ee2226ed736e6356a0a695957e73d8e5c77ef0
-│                             │                            d75c74263bb132ef408 
+│                             ├ Layer            ╭ Digest: sha256:2cb2a7c65e7c02a93f1a097a645c0df89011d72c6621a
+│                             │                  │         7207ef6f5801f3fbb96 
+│                             │                  ╰ DiffID: sha256:f0bd61f435ebde9480ec412c99b1f5219365aa8b93858
+│                             │                            ed2553321b99abb6832 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22872 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -361,7 +425,7 @@
 │                             │                    DOM construction, but only when tags are in foreign content
 │                             │                   (e.g. <math>, <svg>, etc contexts). 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon     : 2 
+│                             ├ VendorSeverity   ╭ amazon     : 3 
 │                             │                  ├ azure      : 2 
 │                             │                  ├ cbl-mariner: 2 
 │                             │                  ├ ghsa       : 2 
@@ -388,23 +452,22 @@
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
 │     ╰ Vulnerabilities ─ [0] ╭ VulnerabilityID : CVE-2025-47907 
-│                             ├ PkgID           : stdlib@v1.24.4 
+│                             ├ PkgID           : stdlib@v1.24.5 
 │                             ├ PkgName         : stdlib 
-│                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.4 
-│                             │                  ╰ UID : 14f0997fde0e2ebc 
-│                             ├ InstalledVersion: v1.24.4 
+│                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.5 
+│                             │                  ╰ UID : 286da69d5e45e5e8 
+│                             ├ InstalledVersion: v1.24.5 
 │                             ├ FixedVersion    : 1.23.12, 1.24.6 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:969945cbab8b68b9c5d94aee2dd6e8db52d6c50ecc41f
-│                             │                  │         798e1f45fe2bb2cea18 
-│                             │                  ╰ DiffID: sha256:72341d4ee2226ed736e6356a0a695957e73d8e5c77ef0
-│                             │                            d75c74263bb132ef408 
+│                             ├ Layer            ╭ Digest: sha256:2cb2a7c65e7c02a93f1a097a645c0df89011d72c6621a
+│                             │                  │         7207ef6f5801f3fbb96 
+│                             │                  ╰ DiffID: sha256:f0bd61f435ebde9480ec412c99b1f5219365aa8b93858
+│                             │                            ed2553321b99abb6832 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-47907 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ├ Title           : Cancelling a query (e.g. by cancelling the context passed to
-│                             │                   one of th ... 
+│                             ├ Title           : database/sql: Postgres Scan Race Condition 
 │                             ├ Description     : Cancelling a query (e.g. by cancelling the context passed to
 │                             │                   one of the query methods) during a call to the Scan method of
 │                             │                    the returned Rows can result in unexpected results if other
@@ -413,15 +476,21 @@
 │                             │                    of another query, causing the call to Scan to return either
 │                             │                   unexpected results from the other query or an error. 
 │                             ├ Severity        : HIGH 
-│                             ├ VendorSeverity   ─ bitnami: 3 
-│                             ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L
+│                             ├ VendorSeverity   ╭ bitnami: 3 
+│                             │                  ╰ redhat : 3 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L
+│                             │                  │         │           /A:L 
+│                             │                  │         ╰ V3Score : 7 
+│                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L
 │                             │                            │           /A:L 
 │                             │                            ╰ V3Score : 7 
-│                             ├ References       ╭ [0]: https://go.dev/cl/693735 
-│                             │                  ├ [1]: https://go.dev/issue/74831 
-│                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
-│                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-47907 
-│                             │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-3849 
+│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-47907 
+│                             │                  ├ [1]: https://go.dev/cl/693735 
+│                             │                  ├ [2]: https://go.dev/issue/74831 
+│                             │                  ├ [3]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
+│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47907 
+│                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3849 
+│                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-47907 
 │                             ├ PublishedDate   : 2025-08-07T16:15:30.357Z 
 │                             ╰ LastModifiedDate: 2025-08-07T21:26:37.453Z 
 ├ [7] ╭ Target         : usr/bin/nerdctl 
@@ -436,10 +505,10 @@
 │                       │     ├ InstalledVersion: v28.3.1+incompatible 
 │                       │     ├ FixedVersion    : 28.3.3 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:969945cbab8b68b9c5d94aee2dd6e8db52d6c50ecc41f
-│                       │     │                  │         798e1f45fe2bb2cea18 
-│                       │     │                  ╰ DiffID: sha256:72341d4ee2226ed736e6356a0a695957e73d8e5c77ef0
-│                       │     │                            d75c74263bb132ef408 
+│                       │     ├ Layer            ╭ Digest: sha256:2cb2a7c65e7c02a93f1a097a645c0df89011d72c6621a
+│                       │     │                  │         7207ef6f5801f3fbb96 
+│                       │     │                  ╰ DiffID: sha256:f0bd61f435ebde9480ec412c99b1f5219365aa8b93858
+│                       │     │                            ed2553321b99abb6832 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-54388 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -490,16 +559,15 @@
 │                             ├ InstalledVersion: v1.24.4 
 │                             ├ FixedVersion    : 1.23.12, 1.24.6 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:969945cbab8b68b9c5d94aee2dd6e8db52d6c50ecc41f
-│                             │                  │         798e1f45fe2bb2cea18 
-│                             │                  ╰ DiffID: sha256:72341d4ee2226ed736e6356a0a695957e73d8e5c77ef0
-│                             │                            d75c74263bb132ef408 
+│                             ├ Layer            ╭ Digest: sha256:2cb2a7c65e7c02a93f1a097a645c0df89011d72c6621a
+│                             │                  │         7207ef6f5801f3fbb96 
+│                             │                  ╰ DiffID: sha256:f0bd61f435ebde9480ec412c99b1f5219365aa8b93858
+│                             │                            ed2553321b99abb6832 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-47907 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ├ Title           : Cancelling a query (e.g. by cancelling the context passed to
-│                             │                   one of th ... 
+│                             ├ Title           : database/sql: Postgres Scan Race Condition 
 │                             ├ Description     : Cancelling a query (e.g. by cancelling the context passed to
 │                             │                   one of the query methods) during a call to the Scan method of
 │                             │                    the returned Rows can result in unexpected results if other
@@ -508,15 +576,21 @@
 │                             │                    of another query, causing the call to Scan to return either
 │                             │                   unexpected results from the other query or an error. 
 │                             ├ Severity        : HIGH 
-│                             ├ VendorSeverity   ─ bitnami: 3 
-│                             ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L
+│                             ├ VendorSeverity   ╭ bitnami: 3 
+│                             │                  ╰ redhat : 3 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L
+│                             │                  │         │           /A:L 
+│                             │                  │         ╰ V3Score : 7 
+│                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L
 │                             │                            │           /A:L 
 │                             │                            ╰ V3Score : 7 
-│                             ├ References       ╭ [0]: https://go.dev/cl/693735 
-│                             │                  ├ [1]: https://go.dev/issue/74831 
-│                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
-│                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-47907 
-│                             │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-3849 
+│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-47907 
+│                             │                  ├ [1]: https://go.dev/cl/693735 
+│                             │                  ├ [2]: https://go.dev/issue/74831 
+│                             │                  ├ [3]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
+│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47907 
+│                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3849 
+│                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-47907 
 │                             ├ PublishedDate   : 2025-08-07T16:15:30.357Z 
 │                             ╰ LastModifiedDate: 2025-08-07T21:26:37.453Z 
 ├ [8] ╭ Target: usr/bin/skopeo 
@@ -533,16 +607,15 @@
                               ├ InstalledVersion: v1.24.5 
                               ├ FixedVersion    : 1.23.12, 1.24.6 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:969945cbab8b68b9c5d94aee2dd6e8db52d6c50ecc41f
-                              │                  │         798e1f45fe2bb2cea18 
-                              │                  ╰ DiffID: sha256:72341d4ee2226ed736e6356a0a695957e73d8e5c77ef0
-                              │                            d75c74263bb132ef408 
+                              ├ Layer            ╭ Digest: sha256:2cb2a7c65e7c02a93f1a097a645c0df89011d72c6621a
+                              │                  │         7207ef6f5801f3fbb96 
+                              │                  ╰ DiffID: sha256:f0bd61f435ebde9480ec412c99b1f5219365aa8b93858
+                              │                            ed2553321b99abb6832 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-47907 
                               ├ DataSource       ╭ ID  : govulndb 
                               │                  ├ Name: The Go Vulnerability Database 
                               │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                              ├ Title           : Cancelling a query (e.g. by cancelling the context passed to
-                              │                   one of th ... 
+                              ├ Title           : database/sql: Postgres Scan Race Condition 
                               ├ Description     : Cancelling a query (e.g. by cancelling the context passed to
                               │                   one of the query methods) during a call to the Scan method of
                               │                    the returned Rows can result in unexpected results if other
@@ -551,15 +624,21 @@
                               │                    of another query, causing the call to Scan to return either
                               │                   unexpected results from the other query or an error. 
                               ├ Severity        : HIGH 
-                              ├ VendorSeverity   ─ bitnami: 3 
-                              ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L
+                              ├ VendorSeverity   ╭ bitnami: 3 
+                              │                  ╰ redhat : 3 
+                              ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L
+                              │                  │         │           /A:L 
+                              │                  │         ╰ V3Score : 7 
+                              │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L
                               │                            │           /A:L 
                               │                            ╰ V3Score : 7 
-                              ├ References       ╭ [0]: https://go.dev/cl/693735 
-                              │                  ├ [1]: https://go.dev/issue/74831 
-                              │                  ├ [2]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
-                              │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-47907 
-                              │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-3849 
+                              ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-47907 
+                              │                  ├ [1]: https://go.dev/cl/693735 
+                              │                  ├ [2]: https://go.dev/issue/74831 
+                              │                  ├ [3]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
+                              │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47907 
+                              │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3849 
+                              │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-47907 
                               ├ PublishedDate   : 2025-08-07T16:15:30.357Z 
                               ╰ LastModifiedDate: 2025-08-07T21:26:37.453Z 
 ````
