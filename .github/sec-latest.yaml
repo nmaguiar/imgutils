@@ -99,21 +99,27 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Title: Cancelling a query (e.g. by cancelling the context passed to one of th ...
+    Title: 'database/sql: Postgres Scan Race Condition'
     Description: Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel. This can result in a race condition that may overwrite the expected results with those of another query, causing the call to Scan to return either unexpected results from the other query or an error.
     Severity: HIGH
     VendorSeverity:
       bitnami: 3
+      redhat: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L
         V3Score: 7
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L
+        V3Score: 7
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-47907
     - https://go.dev/cl/693735
     - https://go.dev/issue/74831
     - https://groups.google.com/g/golang-announce/c/x5MKroML2yM
     - https://nvd.nist.gov/vuln/detail/CVE-2025-47907
     - https://pkg.go.dev/vuln/GO-2025-3849
+    - https://www.cve.org/CVERecord?id=CVE-2025-47907
     PublishedDate: '2025-08-07T16:15:30.357Z'
     LastModifiedDate: '2025-08-07T21:26:37.453Z'
   - VulnerabilityID: CVE-2025-0913
@@ -189,12 +195,12 @@
         V3Score: 5.4
     References:
     - http://www.openwall.com/lists/oss-security/2025/04/04/4
-    - https://access.redhat.com/errata/RHSA-2025:9623
+    - https://access.redhat.com/errata/RHSA-2025:9635
     - https://access.redhat.com/security/cve/CVE-2025-22871
     - https://bugzilla.redhat.com/2358493
     - https://bugzilla.redhat.com/show_bug.cgi?id=2358493
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-22871
-    - https://errata.almalinux.org/10/ALSA-2025-9623.html
+    - https://errata.almalinux.org/9/ALSA-2025-9635.html
     - https://errata.rockylinux.org/RLSA-2025:9845
     - https://go.dev/cl/652998
     - https://go.dev/issue/71988
@@ -242,10 +248,10 @@
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N
         V3Score: 6.8
     References:
-    - https://access.redhat.com/errata/RHSA-2025:10677
+    - https://access.redhat.com/errata/RHSA-2025:10676
     - https://access.redhat.com/security/cve/CVE-2025-4673
     - https://bugzilla.redhat.com/2373305
-    - https://errata.almalinux.org/10/ALSA-2025-10677.html
+    - https://errata.almalinux.org/9/ALSA-2025-10676.html
     - https://go.dev/cl/679257
     - https://go.dev/issue/73816
     - https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A
@@ -278,27 +284,79 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Title: Cancelling a query (e.g. by cancelling the context passed to one of th ...
+    Title: 'database/sql: Postgres Scan Race Condition'
     Description: Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel. This can result in a race condition that may overwrite the expected results with those of another query, causing the call to Scan to return either unexpected results from the other query or an error.
     Severity: HIGH
     VendorSeverity:
       bitnami: 3
+      redhat: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L
         V3Score: 7
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L
+        V3Score: 7
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-47907
     - https://go.dev/cl/693735
     - https://go.dev/issue/74831
     - https://groups.google.com/g/golang-announce/c/x5MKroML2yM
     - https://nvd.nist.gov/vuln/detail/CVE-2025-47907
     - https://pkg.go.dev/vuln/GO-2025-3849
+    - https://www.cve.org/CVERecord?id=CVE-2025-47907
     PublishedDate: '2025-08-07T16:15:30.357Z'
     LastModifiedDate: '2025-08-07T21:26:37.453Z'
 - Target: usr/bin/dive
   Class: lang-pkgs
   Type: gobinary
   Vulnerabilities:
+  - VulnerabilityID: CVE-2025-54410
+    PkgID: github.com/docker/docker@v27.1.2+incompatible
+    PkgName: github.com/docker/docker
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/docker/docker@v27.1.2%2Bincompatible
+      UID: 92dfc7b3a5de6e88
+    InstalledVersion: v27.1.2+incompatible
+    FixedVersion: 28.0.0
+    Status: fixed
+    Layer:
+      Digest: sha256:0b1b1577ab1d22a120df880196ae4449bfef72b3ffac863332577be1fd808057
+      DiffID: sha256:c850ea2961a3ee102dfde1d337cca274897ce9a3094ebb87f17daaed6d882c15
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-54410
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'github.com/moby/moby: Moby''s Firewalld reload removes bridge network isolation'
+    Description: |-
+      Moby is an open source container framework developed by Docker Inc. that is distributed as Docker Engine, Mirantis Container Runtime, and various other downstream projects/products. A firewalld vulnerability affects Moby releases before 28.0.0. When firewalld reloads, Docker fails to re-create iptables rules that isolate bridge networks, allowing any container to access all ports on any other container across different bridge networks on the same host. This breaks network segmentation between containers that should be isolated, creating significant risk in multi-tenant environments. Only containers in --internal networks remain protected.
+      Workarounds include reloading firewalld and either restarting the docker daemon, re-creating bridge networks, or using rootless mode. Maintainers anticipate a fix for this issue in version 25.0.13.
+    Severity: LOW
+    CweIDs:
+    - CWE-909
+    VendorSeverity:
+      ghsa: 1
+      redhat: 1
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:N
+        V3Score: 3.3
+      redhat:
+        V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:N
+        V3Score: 3.3
+    References:
+    - https://access.redhat.com/security/cve/CVE-2025-54410
+    - https://firewalld.org/documentation/howto/reload-firewalld.html
+    - https://github.com/moby/moby
+    - https://github.com/moby/moby/pull/49443
+    - https://github.com/moby/moby/pull/49728
+    - https://github.com/moby/moby/security/advisories/GHSA-4vq8-7jfc-9cvp
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-54410
+    - https://www.cve.org/CVERecord?id=CVE-2025-54410
+    PublishedDate: '2025-07-30T14:15:28.9Z'
+    LastModifiedDate: '2025-07-31T18:42:37.87Z'
   - VulnerabilityID: CVE-2025-22870
     PkgID: golang.org/x/net@v0.28.0
     PkgName: golang.org/x/net
@@ -374,7 +432,7 @@
     Description: The tokenizer incorrectly interprets tags with unquoted attribute values that end with a solidus character (/) as self-closing. When directly using Tokenizer, this can result in such tags incorrectly being marked as self-closing, and when using the Parse functions, this can result in content following such tags as being placed in the wrong scope during DOM construction, but only when tags are in foreign content (e.g. <math>, <svg>, etc contexts).
     Severity: MEDIUM
     VendorSeverity:
-      amazon: 2
+      amazon: 3
       azure: 2
       cbl-mariner: 2
       ghsa: 2
@@ -413,21 +471,27 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Title: Cancelling a query (e.g. by cancelling the context passed to one of th ...
+    Title: 'database/sql: Postgres Scan Race Condition'
     Description: Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel. This can result in a race condition that may overwrite the expected results with those of another query, causing the call to Scan to return either unexpected results from the other query or an error.
     Severity: HIGH
     VendorSeverity:
       bitnami: 3
+      redhat: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L
         V3Score: 7
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L
+        V3Score: 7
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-47907
     - https://go.dev/cl/693735
     - https://go.dev/issue/74831
     - https://groups.google.com/g/golang-announce/c/x5MKroML2yM
     - https://nvd.nist.gov/vuln/detail/CVE-2025-47907
     - https://pkg.go.dev/vuln/GO-2025-3849
+    - https://www.cve.org/CVERecord?id=CVE-2025-47907
     PublishedDate: '2025-08-07T16:15:30.357Z'
     LastModifiedDate: '2025-08-07T21:26:37.453Z'
 - Target: usr/bin/docker
@@ -451,21 +515,27 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Title: Cancelling a query (e.g. by cancelling the context passed to one of th ...
+    Title: 'database/sql: Postgres Scan Race Condition'
     Description: Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel. This can result in a race condition that may overwrite the expected results with those of another query, causing the call to Scan to return either unexpected results from the other query or an error.
     Severity: HIGH
     VendorSeverity:
       bitnami: 3
+      redhat: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L
         V3Score: 7
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L
+        V3Score: 7
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-47907
     - https://go.dev/cl/693735
     - https://go.dev/issue/74831
     - https://groups.google.com/g/golang-announce/c/x5MKroML2yM
     - https://nvd.nist.gov/vuln/detail/CVE-2025-47907
     - https://pkg.go.dev/vuln/GO-2025-3849
+    - https://www.cve.org/CVERecord?id=CVE-2025-47907
     PublishedDate: '2025-08-07T16:15:30.357Z'
     LastModifiedDate: '2025-08-07T21:26:37.453Z'
 - Target: usr/bin/helm
@@ -489,21 +559,27 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Title: Cancelling a query (e.g. by cancelling the context passed to one of th ...
+    Title: 'database/sql: Postgres Scan Race Condition'
     Description: Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel. This can result in a race condition that may overwrite the expected results with those of another query, causing the call to Scan to return either unexpected results from the other query or an error.
     Severity: HIGH
     VendorSeverity:
       bitnami: 3
+      redhat: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L
         V3Score: 7
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L
+        V3Score: 7
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-47907
     - https://go.dev/cl/693735
     - https://go.dev/issue/74831
     - https://groups.google.com/g/golang-announce/c/x5MKroML2yM
     - https://nvd.nist.gov/vuln/detail/CVE-2025-47907
     - https://pkg.go.dev/vuln/GO-2025-3849
+    - https://www.cve.org/CVERecord?id=CVE-2025-47907
     PublishedDate: '2025-08-07T16:15:30.357Z'
     LastModifiedDate: '2025-08-07T21:26:37.453Z'
 - Target: usr/bin/nerdctl
@@ -567,21 +643,27 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Title: Cancelling a query (e.g. by cancelling the context passed to one of th ...
+    Title: 'database/sql: Postgres Scan Race Condition'
     Description: Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel. This can result in a race condition that may overwrite the expected results with those of another query, causing the call to Scan to return either unexpected results from the other query or an error.
     Severity: HIGH
     VendorSeverity:
       bitnami: 3
+      redhat: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L
         V3Score: 7
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L
+        V3Score: 7
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-47907
     - https://go.dev/cl/693735
     - https://go.dev/issue/74831
     - https://groups.google.com/g/golang-announce/c/x5MKroML2yM
     - https://nvd.nist.gov/vuln/detail/CVE-2025-47907
     - https://pkg.go.dev/vuln/GO-2025-3849
+    - https://www.cve.org/CVERecord?id=CVE-2025-47907
     PublishedDate: '2025-08-07T16:15:30.357Z'
     LastModifiedDate: '2025-08-07T21:26:37.453Z'
 - Target: usr/bin/skopeo
@@ -605,21 +687,27 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Title: Cancelling a query (e.g. by cancelling the context passed to one of th ...
+    Title: 'database/sql: Postgres Scan Race Condition'
     Description: Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel. This can result in a race condition that may overwrite the expected results with those of another query, causing the call to Scan to return either unexpected results from the other query or an error.
     Severity: HIGH
     VendorSeverity:
       bitnami: 3
+      redhat: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L
         V3Score: 7
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L
+        V3Score: 7
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-47907
     - https://go.dev/cl/693735
     - https://go.dev/issue/74831
     - https://groups.google.com/g/golang-announce/c/x5MKroML2yM
     - https://nvd.nist.gov/vuln/detail/CVE-2025-47907
     - https://pkg.go.dev/vuln/GO-2025-3849
+    - https://www.cve.org/CVERecord?id=CVE-2025-47907
     PublishedDate: '2025-08-07T16:15:30.357Z'
     LastModifiedDate: '2025-08-07T21:26:37.453Z'
 - Target: usr/bin/syft
@@ -683,20 +771,26 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Title: Cancelling a query (e.g. by cancelling the context passed to one of th ...
+    Title: 'database/sql: Postgres Scan Race Condition'
     Description: Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel. This can result in a race condition that may overwrite the expected results with those of another query, causing the call to Scan to return either unexpected results from the other query or an error.
     Severity: HIGH
     VendorSeverity:
       bitnami: 3
+      redhat: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L
         V3Score: 7
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L
+        V3Score: 7
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-47907
     - https://go.dev/cl/693735
     - https://go.dev/issue/74831
     - https://groups.google.com/g/golang-announce/c/x5MKroML2yM
     - https://nvd.nist.gov/vuln/detail/CVE-2025-47907
     - https://pkg.go.dev/vuln/GO-2025-3849
+    - https://www.cve.org/CVERecord?id=CVE-2025-47907
     PublishedDate: '2025-08-07T16:15:30.357Z'
     LastModifiedDate: '2025-08-07T21:26:37.453Z'
