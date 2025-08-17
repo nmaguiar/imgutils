@@ -23,17 +23,25 @@
       ID: ghsa
       Name: GitHub Security Advisory Maven
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven
-    Title: Netty is an asynchronous, event-driven network application framework.  ...
+    Title: 'netty: netty-codec-http2: Netty MadeYouReset HTTP/2 DDoS Vulnerability'
     Description: Netty is an asynchronous, event-driven network application framework. Prior to versions 4.1.124.Final and 4.2.4.Final, Netty is vulnerable to MadeYouReset DDoS. This is a logical vulnerability in the HTTP/2 protocol, that uses malformed HTTP/2 control frames in order to break the max concurrent streams limit - which results in resource exhaustion and distributed denial of service. This issue has been patched in versions 4.1.124.Final and 4.2.4.Final.
     Severity: HIGH
     CweIDs:
     - CWE-770
     VendorSeverity:
       ghsa: 3
+      redhat: 3
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-55163
     - https://github.com/netty/netty
     - https://github.com/netty/netty/security/advisories/GHSA-prj3-ccx8-p6x4
+    - https://kb.cert.org/vuls/id/767506
     - https://nvd.nist.gov/vuln/detail/CVE-2025-55163
+    - https://www.cve.org/CVERecord?id=CVE-2025-55163
     PublishedDate: '2025-08-13T15:15:39.39Z'
     LastModifiedDate: '2025-08-13T17:33:46.673Z'
 - Target: usr/bin/crictl
@@ -391,7 +399,7 @@
     Description: The tokenizer incorrectly interprets tags with unquoted attribute values that end with a solidus character (/) as self-closing. When directly using Tokenizer, this can result in such tags incorrectly being marked as self-closing, and when using the Parse functions, this can result in content following such tags as being placed in the wrong scope during DOM construction, but only when tags are in foreign content (e.g. <math>, <svg>, etc contexts).
     Severity: MEDIUM
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       azure: 2
       cbl-mariner: 2
       ghsa: 2
