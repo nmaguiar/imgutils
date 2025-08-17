@@ -23,8 +23,8 @@
 │                             │                  ├ Name: GitHub Security Advisory Maven 
 │                             │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
 │                             │                          osystem%3Amaven 
-│                             ├ Title           : Netty is an asynchronous, event-driven network application
-│                             │                   framework.  ... 
+│                             ├ Title           : netty: netty-codec-http2: Netty MadeYouReset HTTP/2 DDoS
+│                             │                   Vulnerability 
 │                             ├ Description     : Netty is an asynchronous, event-driven network application
 │                             │                   framework. Prior to versions 4.1.124.Final and 4.2.4.Final,
 │                             │                   Netty is vulnerable to MadeYouReset DDoS. This is a logical
@@ -35,11 +35,18 @@
 │                             │                    versions 4.1.124.Final and 4.2.4.Final. 
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-770 
-│                             ├ VendorSeverity   ─ ghsa: 3 
-│                             ├ References       ╭ [0]: https://github.com/netty/netty 
-│                             │                  ├ [1]: https://github.com/netty/netty/security/advisories/GHSA
+│                             ├ VendorSeverity   ╭ ghsa  : 3 
+│                             │                  ╰ redhat: 3 
+│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                             │                           │           A:H 
+│                             │                           ╰ V3Score : 7.5 
+│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-55163 
+│                             │                  ├ [1]: https://github.com/netty/netty 
+│                             │                  ├ [2]: https://github.com/netty/netty/security/advisories/GHSA
 │                             │                  │      -prj3-ccx8-p6x4 
-│                             │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2025-55163 
+│                             │                  ├ [3]: https://kb.cert.org/vuls/id/767506 
+│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-55163 
+│                             │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2025-55163 
 │                             ├ PublishedDate   : 2025-08-13T15:15:39.39Z 
 │                             ╰ LastModifiedDate: 2025-08-13T17:33:46.673Z 
 ├ [2] ╭ Target         : usr/bin/crictl 
@@ -425,7 +432,7 @@
 │                             │                    DOM construction, but only when tags are in foreign content
 │                             │                   (e.g. <math>, <svg>, etc contexts). 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon     : 3 
+│                             ├ VendorSeverity   ╭ amazon     : 2 
 │                             │                  ├ azure      : 2 
 │                             │                  ├ cbl-mariner: 2 
 │                             │                  ├ ghsa       : 2 
