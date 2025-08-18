@@ -209,6 +209,7 @@
                               ├ Severity        : MEDIUM 
                               ├ VendorSeverity   ╭ alma       : 2 
                               │                  ├ amazon     : 2 
+                              │                  ├ azure      : 2 
                               │                  ├ bitnami    : 2 
                               │                  ├ cbl-mariner: 2 
                               │                  ├ oracle-oval: 2 
