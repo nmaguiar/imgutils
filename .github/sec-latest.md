@@ -256,6 +256,7 @@
 │                             ├ Severity        : MEDIUM 
 │                             ├ VendorSeverity   ╭ alma       : 2 
 │                             │                  ├ amazon     : 2 
+│                             │                  ├ azure      : 2 
 │                             │                  ├ bitnami    : 2 
 │                             │                  ├ cbl-mariner: 2 
 │                             │                  ├ oracle-oval: 2 
@@ -474,7 +475,7 @@
 │                       │     │                    DOM construction, but only when tags are in foreign content
 │                       │     │                   (e.g. <math>, <svg>, etc contexts). 
 │                       │     ├ Severity        : MEDIUM 
-│                       │     ├ VendorSeverity   ╭ amazon     : 2 
+│                       │     ├ VendorSeverity   ╭ amazon     : 3 
 │                       │     │                  ├ azure      : 2 
 │                       │     │                  ├ cbl-mariner: 2 
 │                       │     │                  ├ ghsa       : 2 
