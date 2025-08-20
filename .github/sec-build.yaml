@@ -560,6 +560,49 @@
   Class: lang-pkgs
   Type: gobinary
   Vulnerabilities:
+  - VulnerabilityID: CVE-2025-8959
+    PkgID: github.com/hashicorp/go-getter@v1.7.8
+    PkgName: github.com/hashicorp/go-getter
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/hashicorp/go-getter@v1.7.8
+      UID: 74eb5b07ca4d0ef6
+    InstalledVersion: v1.7.8
+    FixedVersion: 1.7.9
+    Status: fixed
+    Layer:
+      Digest: sha256:2cb2a7c65e7c02a93f1a097a645c0df89011d72c6621a7207ef6f5801f3fbb96
+      DiffID: sha256:f0bd61f435ebde9480ec412c99b1f5219365aa8b93858ed2553321b99abb6832
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-8959
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'github.com/hashicorp/go-getter: HashiCorp go-getter Arbitrary File Read'
+    Description: HashiCorp's go-getter library subdirectory download feature is vulnerable to symlink attacks leading to unauthorized read access beyond the designated directory boundaries. This vulnerability, identified as CVE-2025-8959, is fixed in go-getter 1.7.9.
+    Severity: HIGH
+    CweIDs:
+    - CWE-59
+    VendorSeverity:
+      ghsa: 3
+      redhat: 3
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+        V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+        V3Score: 7.5
+    References:
+    - https://access.redhat.com/security/cve/CVE-2025-8959
+    - https://discuss.hashicorp.com/t/hcsec-2025-23-hashicorp-go-getter-vulnerable-to-arbitrary-read-through-symlink-attack/76242
+    - https://github.com/hashicorp/go-getter
+    - https://github.com/hashicorp/go-getter/commit/87541b2501c00df5eaedea6acc61a2a4a4efa5b7
+    - https://github.com/hashicorp/go-getter/pull/540
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-8959
+    - https://www.cve.org/CVERecord?id=CVE-2025-8959
+    PublishedDate: '2025-08-15T21:15:37.347Z'
+    LastModifiedDate: '2025-08-18T20:16:28.75Z'
   - VulnerabilityID: CVE-2025-47907
     PkgID: stdlib@v1.24.5
     PkgName: stdlib
