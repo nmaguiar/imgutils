@@ -830,7 +830,54 @@
                         │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-54388 
                         │     ├ PublishedDate   : 2025-07-30T14:15:28.693Z 
                         │     ╰ LastModifiedDate: 2025-07-31T18:42:37.87Z 
-                        ╰ [1] ╭ VulnerabilityID : CVE-2025-47907 
+                        ├ [1] ╭ VulnerabilityID : CVE-2025-8959 
+                        │     ├ PkgID           : github.com/hashicorp/go-getter@v1.7.8 
+                        │     ├ PkgName         : github.com/hashicorp/go-getter 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/hashicorp/go-getter@v1.7.8 
+                        │     │                  ╰ UID : 74eb5b07ca4d0ef6 
+                        │     ├ InstalledVersion: v1.7.8 
+                        │     ├ FixedVersion    : 1.7.9 
+                        │     ├ Status          : fixed 
+                        │     ├ Layer            ╭ Digest: sha256:0b1b1577ab1d22a120df880196ae4449bfef72b3ffac8
+                        │     │                  │         63332577be1fd808057 
+                        │     │                  ╰ DiffID: sha256:c850ea2961a3ee102dfde1d337cca274897ce9a3094eb
+                        │     │                            b87f17daaed6d882c15 
+                        │     ├ SeveritySource  : ghsa 
+                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-8959 
+                        │     ├ DataSource       ╭ ID  : ghsa 
+                        │     │                  ├ Name: GitHub Security Advisory Go 
+                        │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+                        │     │                          osystem%3Ago 
+                        │     ├ Title           : github.com/hashicorp/go-getter: HashiCorp go-getter Arbitrary
+                        │     │                    File Read 
+                        │     ├ Description     : HashiCorp's go-getter library subdirectory download feature
+                        │     │                   is vulnerable to symlink attacks leading to unauthorized read
+                        │     │                    access beyond the designated directory boundaries. This
+                        │     │                   vulnerability, identified as CVE-2025-8959, is fixed in
+                        │     │                   go-getter 1.7.9. 
+                        │     ├ Severity        : HIGH 
+                        │     ├ CweIDs           ─ [0]: CWE-59 
+                        │     ├ VendorSeverity   ╭ ghsa  : 3 
+                        │     │                  ╰ redhat: 3 
+                        │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/
+                        │     │                  │        │           A:N 
+                        │     │                  │        ╰ V3Score : 7.5 
+                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/
+                        │     │                           │           A:N 
+                        │     │                           ╰ V3Score : 7.5 
+                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-8959 
+                        │     │                  ├ [1]: https://discuss.hashicorp.com/t/hcsec-2025-23-hashicorp
+                        │     │                  │      -go-getter-vulnerable-to-arbitrary-read-through-symlink
+                        │     │                  │      -attack/76242 
+                        │     │                  ├ [2]: https://github.com/hashicorp/go-getter 
+                        │     │                  ├ [3]: https://github.com/hashicorp/go-getter/commit/87541b250
+                        │     │                  │      1c00df5eaedea6acc61a2a4a4efa5b7 
+                        │     │                  ├ [4]: https://github.com/hashicorp/go-getter/pull/540 
+                        │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-8959 
+                        │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-8959 
+                        │     ├ PublishedDate   : 2025-08-15T21:15:37.347Z 
+                        │     ╰ LastModifiedDate: 2025-08-18T20:16:28.75Z 
+                        ╰ [2] ╭ VulnerabilityID : CVE-2025-47907 
                               ├ PkgID           : stdlib@v1.24.5 
                               ├ PkgName         : stdlib 
                               ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.5 
