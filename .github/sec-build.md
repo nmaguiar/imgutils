@@ -213,13 +213,13 @@
 │                       │     │                            │           /A:N 
 │                       │     │                            ╰ V3Score : 5.4 
 │                       │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2025/04/04/4 
-│                       │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:9623 
+│                       │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:9635 
 │                       │     │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-22871 
 │                       │     │                  ├ [3] : https://bugzilla.redhat.com/2358493 
 │                       │     │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2358493 
 │                       │     │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
 │                       │     │                  │       5-22871 
-│                       │     │                  ├ [6] : https://errata.almalinux.org/10/ALSA-2025-9623.html 
+│                       │     │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-9635.html 
 │                       │     │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:9845 
 │                       │     │                  ├ [8] : https://go.dev/cl/652998 
 │                       │     │                  ├ [9] : https://go.dev/issue/71988 
@@ -268,10 +268,10 @@
 │                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N
 │                             │                            │           /A:N 
 │                             │                            ╰ V3Score : 6.8 
-│                             ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:10677 
+│                             ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:10676 
 │                             │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2025-4673 
 │                             │                  ├ [2] : https://bugzilla.redhat.com/2373305 
-│                             │                  ├ [3] : https://errata.almalinux.org/10/ALSA-2025-10677.html 
+│                             │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2025-10676.html 
 │                             │                  ├ [4] : https://go.dev/cl/679257 
 │                             │                  ├ [5] : https://go.dev/issue/73816 
 │                             │                  ├ [6] : https://groups.google.com/g/golang-announce/c/ufZ8WpEs
@@ -437,7 +437,7 @@
 │                             │                    DOM construction, but only when tags are in foreign content
 │                             │                   (e.g. <math>, <svg>, etc contexts). 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon     : 2 
+│                             ├ VendorSeverity   ╭ amazon     : 3 
 │                             │                  ├ azure      : 2 
 │                             │                  ├ cbl-mariner: 2 
 │                             │                  ├ ghsa       : 2 
