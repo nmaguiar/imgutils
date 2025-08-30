@@ -438,7 +438,7 @@
 │                             │                    DOM construction, but only when tags are in foreign content
 │                             │                   (e.g. <math>, <svg>, etc contexts). 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon     : 2 
+│                             ├ VendorSeverity   ╭ amazon     : 3 
 │                             │                  ├ azure      : 2 
 │                             │                  ├ cbl-mariner: 2 
 │                             │                  ├ ghsa       : 2 
@@ -623,10 +623,11 @@
 │                       │     ├ References       ╭ [0]: https://github.com/go-viper/mapstructure 
 │                       │     │                  ├ [1]: https://github.com/go-viper/mapstructure/commit/742921c
 │                       │     │                  │      9ba2854d27baa64272487fc5075d2c39c 
-│                       │     │                  ╰ [2]: https://github.com/go-viper/mapstructure/security/advis
-│                       │     │                         ories/GHSA-2464-8j7c-4cjm 
+│                       │     │                  ├ [2]: https://github.com/go-viper/mapstructure/security/advis
+│                       │     │                  │      ories/GHSA-2464-8j7c-4cjm 
+│                       │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3900 
 │                       │     ├ PublishedDate   : 2025-08-21T14:37:19Z 
-│                       │     ╰ LastModifiedDate: 2025-08-21T14:37:19Z 
+│                       │     ╰ LastModifiedDate: 2025-08-29T20:44:25Z 
 │                       ╰ [2] ╭ VulnerabilityID : CVE-2025-47907 
 │                             ├ PkgID           : stdlib@v1.24.4 
 │                             ├ PkgName         : stdlib 
@@ -679,7 +680,7 @@
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/ulikunitz/xz@v0.5.12 
 │                             │                  ╰ UID : 9c51b87b941526f4 
 │                             ├ InstalledVersion: v0.5.12 
-│                             ├ FixedVersion    : 0.5.14 
+│                             ├ FixedVersion    : 0.5.15 
 │                             ├ Status          : fixed 
 │                             ├ Layer            ╭ Digest: sha256:7510ad29ffa7cc1a2114a402022514f3823883c02de2c
 │                             │                  │         7abcfb0d2e2ac745b1b 
@@ -691,96 +692,39 @@
 │                             │                  ├ Name: GitHub Security Advisory Go 
 │                             │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
 │                             │                          osystem%3Ago 
-│                             ├ Title           : github.com/ulikunitz/xz leaks memory when decoding a
-│                             │                   corrupted multiple LZMA archives 
-│                             ├ Description     : ### Summary
-│                             │                   
-│                             │                   It is possible to put data in front of an LZMA-encoded byte
-│                             │                   stream without detecting the situation while reading the
-│                             │                   header. This can lead to increased memory consumption because
-│                             │                    the current implementation allocates the full decoding
-│                             │                   buffer directly after reading the header. The LZMA header
-│                             │                   doesn't include a magic number or has  a checksum to detect
-│                             │                   such an issue according to the
-│                             │                   [specification](https://github.com/jljusten/LZMA-SDK/blob/mas
-│                             │                   ter/DOC/lzma-specification.txt).
-│                             │                   Note that the code recognizes the issue later while reading
-│                             │                   the stream, but at this time the memory allocation has
-│                             │                   already been done.
-│                             │                   ### Mitigations
-│                             │                   The release v0.5.14 includes following mitigations:
-│                             │                   - The ReaderConfig DictCap field is now interpreted as a
-│                             │                   limit for the dictionary size.
-│                             │                   - The default is 2 Gigabytes (2^31 bytes).
-│                             │                   - Users can check with the [Reader.Header] method what the
-│                             │                   actual values are in  their LZMA files and set a smaller
-│                             │                   limit using ReaderConfig.
-│                             │                   - The dictionary size will not exceed the larger of the file
-│                             │                   size and the minimum dictionary size. This is another measure
-│                             │                    to prevent huge memory allocations for the dictionary.
-│                             │                   - The code supports stream sizes only up to a pebibyte
-│                             │                   (1024^5).
-│                             │                   ### Methods affected
-│                             │                   Only software that uses
-│                             │                   [lzma.NewReader](https://pkg.go.dev/github.com/ulikunitz/xz/l
-│                             │                   zma#NewReader) or
-│                             │                   [lzma.ReaderConfig.NewReader](https://pkg.go.dev/github.com/u
-│                             │                   likunitz/xz/lzma#ReaderConfig.NewReader) is affected. There
-│                             │                   is no issue for software using the xz functionality.
-│                             │                   I thank  @GregoryBuligin for his report, which is provided
-│                             │                   below.
-│                             │                   When unpacking a large number of LZMA archives, even in a
-│                             │                   single goroutine, if the first byte of the archive file is 0
-│                             │                   (a zero byte added to the beginning), an error __writeMatch:
-│                             │                   distance out of range__ occurs. Memory consumption spikes
-│                             │                   sharply, and the GC clearly cannot handle this situation.
-│                             │                   ### Details
-│                             │                   Judging by the error  __writeMatch: distance out of range__,
-│                             │                   the problems occur in the code around this function.
-│                             │                   https://github.com/ulikunitz/xz/blob/c8314b8f21e9c5e25b52da07
-│                             │                   544cac14db277e89/lzma/decoderdict.go#L81
-│                             │                   ### PoC
-│                             │                   Run a function similar to this one in 1 or several goroutines
-│                             │                    on a multitude of LZMA archives that have a 0 (a zero byte)
-│                             │                   added to the beginning.
-│                             │                   ```
-│                             │                   const ProjectLocalPath = "some/path"
-│                             │                   const TmpDir = "tmp"
-│                             │                   func UnpackLZMA(lzmaFile string) error {
-│                             │                   	file, err := os.Open(lzmaFile)
-│                             │                   	if err != nil {
-│                             │                   		return err
-│                             │                   	}
-│                             │                   	defer file.Close()
-│                             │                   	reader, err := lzma.NewReader(bufio.NewReader(file))
-│                             │                   	tmpFile, err := os.CreateTemp(TmpDir, TmpLZMAPrefix)
-│                             │                   	defer func() {
-│                             │                   		tmpFile.Close()
-│                             │                   		_ = os.Remove(tmpFile.Name())
-│                             │                   	}()
-│                             │                   	sha256Hasher := sha256.New()
-│                             │                   	multiWriter := io.MultiWriter(tmpFile, sha256Hasher)
-│                             │                   	if _, err = io.Copy(multiWriter, reader); err != nil {
-│                             │                   	unpackHash := hex.EncodeToString(sha256Hasher.Sum(nil))
-│                             │                   	unpackDir := filepath.Join(
-│                             │                   		ProjectLocalPath, unpackHash[:2],
-│                             │                   	)
-│                             │                   	_ = os.MkdirAll(unpackDir, DirPerm)
-│                             │                   	unpackPath := filepath.Join(unpackDir, unpackHash)
-│                             │                   	return os.Rename(tmpFile.Name(), unpackPath)
-│                             │                   }
-│                             │                   ### Impact
-│                             │                   Servers with a small amount of RAM that download and unpack a
-│                             │                    large number of unverified LZMA archives 
+│                             ├ Title           : github.com/ulikunitz/xz: github.com/ulikunitz/xz leaks memory 
+│                             ├ Description     : xz is a pure golang package for reading and writing
+│                             │                   xz-compressed files. Prior to version 0.5.14, it is possible
+│                             │                   to put data in front of an LZMA-encoded byte stream without
+│                             │                   detecting the situation while reading the header. This can
+│                             │                   lead to increased memory consumption because the current
+│                             │                   implementation allocates the full decoding buffer directly
+│                             │                   after reading the header. The LZMA header doesn't include a
+│                             │                   magic number or has a checksum to detect such an issue
+│                             │                   according to the specification. Note that the code recognizes
+│                             │                    the issue later while reading the stream, but at this time
+│                             │                   the memory allocation has already been done. This issue has
+│                             │                   been patched in version 0.5.14. 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ─ ghsa: 2 
-│                             ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L 
-│                             │                         ╰ V3Score : 5.3 
-│                             ╰ References       ╭ [0]: https://github.com/ulikunitz/xz 
-│                                                ├ [1]: https://github.com/ulikunitz/xz/commit/88ddf1d0d98d688d
-│                                                │      b65de034f48960b2760d2ae2 
-│                                                ╰ [2]: https://github.com/ulikunitz/xz/security/advisories/GHS
-│                                                       A-jc7w-c686-c4v9 
+│                             ├ CweIDs           ─ [0]: CWE-770 
+│                             ├ VendorSeverity   ╭ ghsa  : 2 
+│                             │                  ╰ redhat: 2 
+│                             ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                             │                  │        │           A:L 
+│                             │                  │        ╰ V3Score : 5.3 
+│                             │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                             │                           │           A:L 
+│                             │                           ╰ V3Score : 5.3 
+│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-58058 
+│                             │                  ├ [1]: https://github.com/ulikunitz/xz 
+│                             │                  ├ [2]: https://github.com/ulikunitz/xz/commit/88ddf1d0d98d688d
+│                             │                  │      b65de034f48960b2760d2ae2 
+│                             │                  ├ [3]: https://github.com/ulikunitz/xz/security/advisories/GHS
+│                             │                  │      A-jc7w-c686-c4v9 
+│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-58058 
+│                             │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2025-58058 
+│                             ├ PublishedDate   : 2025-08-28T22:15:32.577Z 
+│                             ╰ LastModifiedDate: 2025-08-29T16:24:29.73Z 
 ╰ [9] ╭ Target         : usr/bin/syft 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
@@ -828,7 +772,8 @@
                         │     │                  │      1c00df5eaedea6acc61a2a4a4efa5b7 
                         │     │                  ├ [4]: https://github.com/hashicorp/go-getter/pull/540 
                         │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-8959 
-                        │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-8959 
+                        │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-3892 
+                        │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-8959 
                         │     ├ PublishedDate   : 2025-08-15T21:15:37.347Z 
                         │     ╰ LastModifiedDate: 2025-08-18T20:16:28.75Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2025-58058 
@@ -837,7 +782,7 @@
                         │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/ulikunitz/xz@v0.5.12 
                         │     │                  ╰ UID : dab39ef52e0395fd 
                         │     ├ InstalledVersion: v0.5.12 
-                        │     ├ FixedVersion    : 0.5.14 
+                        │     ├ FixedVersion    : 0.5.15 
                         │     ├ Status          : fixed 
                         │     ├ Layer            ╭ Digest: sha256:7510ad29ffa7cc1a2114a402022514f3823883c02de2c
                         │     │                  │         7abcfb0d2e2ac745b1b 
@@ -849,96 +794,39 @@
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
                         │     │                          osystem%3Ago 
-                        │     ├ Title           : github.com/ulikunitz/xz leaks memory when decoding a
-                        │     │                   corrupted multiple LZMA archives 
-                        │     ├ Description     : ### Summary
-                        │     │                   
-                        │     │                   It is possible to put data in front of an LZMA-encoded byte
-                        │     │                   stream without detecting the situation while reading the
-                        │     │                   header. This can lead to increased memory consumption because
-                        │     │                    the current implementation allocates the full decoding
-                        │     │                   buffer directly after reading the header. The LZMA header
-                        │     │                   doesn't include a magic number or has  a checksum to detect
-                        │     │                   such an issue according to the
-                        │     │                   [specification](https://github.com/jljusten/LZMA-SDK/blob/mas
-                        │     │                   ter/DOC/lzma-specification.txt).
-                        │     │                   Note that the code recognizes the issue later while reading
-                        │     │                   the stream, but at this time the memory allocation has
-                        │     │                   already been done.
-                        │     │                   ### Mitigations
-                        │     │                   The release v0.5.14 includes following mitigations:
-                        │     │                   - The ReaderConfig DictCap field is now interpreted as a
-                        │     │                   limit for the dictionary size.
-                        │     │                   - The default is 2 Gigabytes (2^31 bytes).
-                        │     │                   - Users can check with the [Reader.Header] method what the
-                        │     │                   actual values are in  their LZMA files and set a smaller
-                        │     │                   limit using ReaderConfig.
-                        │     │                   - The dictionary size will not exceed the larger of the file
-                        │     │                   size and the minimum dictionary size. This is another measure
-                        │     │                    to prevent huge memory allocations for the dictionary.
-                        │     │                   - The code supports stream sizes only up to a pebibyte
-                        │     │                   (1024^5).
-                        │     │                   ### Methods affected
-                        │     │                   Only software that uses
-                        │     │                   [lzma.NewReader](https://pkg.go.dev/github.com/ulikunitz/xz/l
-                        │     │                   zma#NewReader) or
-                        │     │                   [lzma.ReaderConfig.NewReader](https://pkg.go.dev/github.com/u
-                        │     │                   likunitz/xz/lzma#ReaderConfig.NewReader) is affected. There
-                        │     │                   is no issue for software using the xz functionality.
-                        │     │                   I thank  @GregoryBuligin for his report, which is provided
-                        │     │                   below.
-                        │     │                   When unpacking a large number of LZMA archives, even in a
-                        │     │                   single goroutine, if the first byte of the archive file is 0
-                        │     │                   (a zero byte added to the beginning), an error __writeMatch:
-                        │     │                   distance out of range__ occurs. Memory consumption spikes
-                        │     │                   sharply, and the GC clearly cannot handle this situation.
-                        │     │                   ### Details
-                        │     │                   Judging by the error  __writeMatch: distance out of range__,
-                        │     │                   the problems occur in the code around this function.
-                        │     │                   https://github.com/ulikunitz/xz/blob/c8314b8f21e9c5e25b52da07
-                        │     │                   544cac14db277e89/lzma/decoderdict.go#L81
-                        │     │                   ### PoC
-                        │     │                   Run a function similar to this one in 1 or several goroutines
-                        │     │                    on a multitude of LZMA archives that have a 0 (a zero byte)
-                        │     │                   added to the beginning.
-                        │     │                   ```
-                        │     │                   const ProjectLocalPath = "some/path"
-                        │     │                   const TmpDir = "tmp"
-                        │     │                   func UnpackLZMA(lzmaFile string) error {
-                        │     │                   	file, err := os.Open(lzmaFile)
-                        │     │                   	if err != nil {
-                        │     │                   		return err
-                        │     │                   	}
-                        │     │                   	defer file.Close()
-                        │     │                   	reader, err := lzma.NewReader(bufio.NewReader(file))
-                        │     │                   	tmpFile, err := os.CreateTemp(TmpDir, TmpLZMAPrefix)
-                        │     │                   	defer func() {
-                        │     │                   		tmpFile.Close()
-                        │     │                   		_ = os.Remove(tmpFile.Name())
-                        │     │                   	}()
-                        │     │                   	sha256Hasher := sha256.New()
-                        │     │                   	multiWriter := io.MultiWriter(tmpFile, sha256Hasher)
-                        │     │                   	if _, err = io.Copy(multiWriter, reader); err != nil {
-                        │     │                   	unpackHash := hex.EncodeToString(sha256Hasher.Sum(nil))
-                        │     │                   	unpackDir := filepath.Join(
-                        │     │                   		ProjectLocalPath, unpackHash[:2],
-                        │     │                   	)
-                        │     │                   	_ = os.MkdirAll(unpackDir, DirPerm)
-                        │     │                   	unpackPath := filepath.Join(unpackDir, unpackHash)
-                        │     │                   	return os.Rename(tmpFile.Name(), unpackPath)
-                        │     │                   }
-                        │     │                   ### Impact
-                        │     │                   Servers with a small amount of RAM that download and unpack a
-                        │     │                    large number of unverified LZMA archives 
+                        │     ├ Title           : github.com/ulikunitz/xz: github.com/ulikunitz/xz leaks memory 
+                        │     ├ Description     : xz is a pure golang package for reading and writing
+                        │     │                   xz-compressed files. Prior to version 0.5.14, it is possible
+                        │     │                   to put data in front of an LZMA-encoded byte stream without
+                        │     │                   detecting the situation while reading the header. This can
+                        │     │                   lead to increased memory consumption because the current
+                        │     │                   implementation allocates the full decoding buffer directly
+                        │     │                   after reading the header. The LZMA header doesn't include a
+                        │     │                   magic number or has a checksum to detect such an issue
+                        │     │                   according to the specification. Note that the code recognizes
+                        │     │                    the issue later while reading the stream, but at this time
+                        │     │                   the memory allocation has already been done. This issue has
+                        │     │                   been patched in version 0.5.14. 
                         │     ├ Severity        : MEDIUM 
-                        │     ├ VendorSeverity   ─ ghsa: 2 
-                        │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L 
-                        │     │                         ╰ V3Score : 5.3 
-                        │     ╰ References       ╭ [0]: https://github.com/ulikunitz/xz 
-                        │                        ├ [1]: https://github.com/ulikunitz/xz/commit/88ddf1d0d98d688d
-                        │                        │      b65de034f48960b2760d2ae2 
-                        │                        ╰ [2]: https://github.com/ulikunitz/xz/security/advisories/GHS
-                        │                               A-jc7w-c686-c4v9 
+                        │     ├ CweIDs           ─ [0]: CWE-770 
+                        │     ├ VendorSeverity   ╭ ghsa  : 2 
+                        │     │                  ╰ redhat: 2 
+                        │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+                        │     │                  │        │           A:L 
+                        │     │                  │        ╰ V3Score : 5.3 
+                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+                        │     │                           │           A:L 
+                        │     │                           ╰ V3Score : 5.3 
+                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-58058 
+                        │     │                  ├ [1]: https://github.com/ulikunitz/xz 
+                        │     │                  ├ [2]: https://github.com/ulikunitz/xz/commit/88ddf1d0d98d688d
+                        │     │                  │      b65de034f48960b2760d2ae2 
+                        │     │                  ├ [3]: https://github.com/ulikunitz/xz/security/advisories/GHS
+                        │     │                  │      A-jc7w-c686-c4v9 
+                        │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-58058 
+                        │     │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2025-58058 
+                        │     ├ PublishedDate   : 2025-08-28T22:15:32.577Z 
+                        │     ╰ LastModifiedDate: 2025-08-29T16:24:29.73Z 
                         ╰ [2] ╭ VulnerabilityID : CVE-2025-47907 
                               ├ PkgID           : stdlib@v1.24.5 
                               ├ PkgName         : stdlib 
