@@ -1,4 +1,606 @@
-stdout: {}
-stderr: "[vuln] Vulnerability scanning is enabled\n2025-08-30T07:07:53Z\tINFO\t[secret] Secret scanning is enabled\n2025-08-30T07:07:53Z\tINFO\t[secret] If your scanning is slow, please try '--scanners vuln' to disable secret scanning\n2025-08-30T07:07:53Z\tINFO\t[secret]"
-exitcode: 1
-cmd: docker run --pull always --rm -v trivy-db:/root/.cache/trivy aquasec/trivy -f json  image nmaguiar/imgutils:build
+- Target: nmaguiar/imgutils:build (alpine 3.23.0_alpha20250612)
+  Class: os-pkgs
+  Type: alpine
+- Target: Java
+  Class: lang-pkgs
+  Type: jar
+- Target: usr/bin/crictl
+  Class: lang-pkgs
+  Type: gobinary
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2025-22874
+    PkgID: stdlib@v1.24.1
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.24.1
+      UID: 969259d6a3318a6c
+    InstalledVersion: v1.24.1
+    FixedVersion: 1.24.4
+    Status: fixed
+    Layer:
+      Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a9a2e862e2b8cf782174
+      DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34b5167a289ac82c12925
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22874
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'crypto/x509: Usage of ExtKeyUsageAny disables policy validation in crypto/x509'
+    Description: Calling Verify with a VerifyOptions.KeyUsages that contains ExtKeyUsageAny unintentionally disabledpolicy validation. This only affected certificate chains which contain policy graphs, which are rather uncommon.
+    Severity: HIGH
+    VendorSeverity:
+      amazon: 2
+      bitnami: 3
+      cbl-mariner: 3
+      redhat: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
+        V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
+        V3Score: 7.5
+    References:
+    - https://access.redhat.com/security/cve/CVE-2025-22874
+    - https://go.dev/cl/670375
+    - https://go.dev/issue/73612
+    - https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-22874
+    - https://pkg.go.dev/vuln/GO-2025-3749
+    - https://www.cve.org/CVERecord?id=CVE-2025-22874
+    PublishedDate: '2025-06-11T17:15:42.167Z'
+    LastModifiedDate: '2025-06-12T16:06:20.18Z'
+  - VulnerabilityID: CVE-2025-47907
+    PkgID: stdlib@v1.24.1
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.24.1
+      UID: 969259d6a3318a6c
+    InstalledVersion: v1.24.1
+    FixedVersion: 1.23.12, 1.24.6
+    Status: fixed
+    Layer:
+      Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a9a2e862e2b8cf782174
+      DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34b5167a289ac82c12925
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-47907
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'database/sql: Postgres Scan Race Condition'
+    Description: Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel. This can result in a race condition that may overwrite the expected results with those of another query, causing the call to Scan to return either unexpected results from the other query or an error.
+    Severity: HIGH
+    VendorSeverity:
+      azure: 3
+      bitnami: 3
+      redhat: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L
+        V3Score: 7
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L
+        V3Score: 7
+    References:
+    - https://access.redhat.com/security/cve/CVE-2025-47907
+    - https://go.dev/cl/693735
+    - https://go.dev/issue/74831
+    - https://groups.google.com/g/golang-announce/c/x5MKroML2yM
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-47907
+    - https://pkg.go.dev/vuln/GO-2025-3849
+    - https://www.cve.org/CVERecord?id=CVE-2025-47907
+    PublishedDate: '2025-08-07T16:15:30.357Z'
+    LastModifiedDate: '2025-08-07T21:26:37.453Z'
+  - VulnerabilityID: CVE-2025-0913
+    PkgID: stdlib@v1.24.1
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.24.1
+      UID: 969259d6a3318a6c
+    InstalledVersion: v1.24.1
+    FixedVersion: 1.23.10, 1.24.4
+    Status: fixed
+    Layer:
+      Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a9a2e862e2b8cf782174
+      DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34b5167a289ac82c12925
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-0913
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: Inconsistent handling of O_CREATE|O_EXCL on Unix and Windows in os in syscall
+    Description: os.OpenFile(path, os.O_CREATE|O_EXCL) behaved differently on Unix and Windows systems when the target path was a dangling symlink. On Unix systems, OpenFile with O_CREATE and O_EXCL flags never follows symlinks. On Windows, when the target path was a symlink to a nonexistent location, OpenFile would create a file in that location. OpenFile now always returns an error when the O_CREATE and O_EXCL flags are both set and the target path is a symlink.
+    Severity: MEDIUM
+    CweIDs:
+    - CWE-59
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N
+        V3Score: 5.5
+    References:
+    - https://go.dev/cl/672396
+    - https://go.dev/issue/73702
+    - https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-0913
+    - https://pkg.go.dev/vuln/GO-2025-3750
+    PublishedDate: '2025-06-11T18:15:24.627Z'
+    LastModifiedDate: '2025-08-08T14:53:03.55Z'
+  - VulnerabilityID: CVE-2025-22871
+    PkgID: stdlib@v1.24.1
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.24.1
+      UID: 969259d6a3318a6c
+    InstalledVersion: v1.24.1
+    FixedVersion: 1.23.8, 1.24.2
+    Status: fixed
+    Layer:
+      Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a9a2e862e2b8cf782174
+      DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34b5167a289ac82c12925
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22871
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'net/http: Request smuggling due to acceptance of invalid chunked data in net/http'
+    Description: The net/http package improperly accepts a bare LF as a line terminator in chunked data chunk-size lines. This can permit request smuggling if a net/http server is used in conjunction with a server that incorrectly accepts a bare LF as part of a chunk-ext.
+    Severity: MEDIUM
+    VendorSeverity:
+      alma: 2
+      amazon: 3
+      bitnami: 4
+      cbl-mariner: 3
+      oracle-oval: 2
+      redhat: 2
+      rocky: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
+        V3Score: 9.1
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N
+        V3Score: 5.4
+    References:
+    - http://www.openwall.com/lists/oss-security/2025/04/04/4
+    - https://access.redhat.com/errata/RHSA-2025:9635
+    - https://access.redhat.com/security/cve/CVE-2025-22871
+    - https://bugzilla.redhat.com/2358493
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2358493
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-22871
+    - https://errata.almalinux.org/9/ALSA-2025-9635.html
+    - https://errata.rockylinux.org/RLSA-2025:9845
+    - https://go.dev/cl/652998
+    - https://go.dev/issue/71988
+    - https://groups.google.com/g/golang-announce/c/Y2uBTVKjBQk
+    - https://linux.oracle.com/cve/CVE-2025-22871.html
+    - https://linux.oracle.com/errata/ELSA-2025-9845.html
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-22871
+    - https://pkg.go.dev/vuln/GO-2025-3563
+    - https://www.cve.org/CVERecord?id=CVE-2025-22871
+    PublishedDate: '2025-04-08T20:15:20.183Z'
+    LastModifiedDate: '2025-04-18T15:15:57.923Z'
+  - VulnerabilityID: CVE-2025-4673
+    PkgID: stdlib@v1.24.1
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.24.1
+      UID: 969259d6a3318a6c
+    InstalledVersion: v1.24.1
+    FixedVersion: 1.23.10, 1.24.4
+    Status: fixed
+    Layer:
+      Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a9a2e862e2b8cf782174
+      DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34b5167a289ac82c12925
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-4673
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'net/http: Sensitive headers not cleared on cross-origin redirect in net/http'
+    Description: Proxy-Authorization and Proxy-Authenticate headers persisted on cross-origin redirects potentially leaking sensitive information.
+    Severity: MEDIUM
+    VendorSeverity:
+      alma: 2
+      amazon: 2
+      azure: 2
+      bitnami: 2
+      cbl-mariner: 2
+      oracle-oval: 2
+      redhat: 2
+      ubuntu: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N
+        V3Score: 6.8
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N
+        V3Score: 6.8
+    References:
+    - https://access.redhat.com/errata/RHSA-2025:10676
+    - https://access.redhat.com/security/cve/CVE-2025-4673
+    - https://bugzilla.redhat.com/2373305
+    - https://errata.almalinux.org/9/ALSA-2025-10676.html
+    - https://go.dev/cl/679257
+    - https://go.dev/issue/73816
+    - https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A
+    - https://linux.oracle.com/cve/CVE-2025-4673.html
+    - https://linux.oracle.com/errata/ELSA-2025-10677.html
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-4673
+    - https://pkg.go.dev/vuln/GO-2025-3751
+    - https://ubuntu.com/security/notices/USN-7574-1
+    - https://www.cve.org/CVERecord?id=CVE-2025-4673
+    PublishedDate: '2025-06-11T17:15:42.993Z'
+    LastModifiedDate: '2025-06-12T16:06:20.18Z'
+- Target: usr/bin/ctr
+  Class: lang-pkgs
+  Type: gobinary
+- Target: usr/bin/dive
+  Class: lang-pkgs
+  Type: gobinary
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2025-54410
+    PkgID: github.com/docker/docker@v27.1.2+incompatible
+    PkgName: github.com/docker/docker
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/docker/docker@v27.1.2%2Bincompatible
+      UID: 92dfc7b3a5de6e88
+    InstalledVersion: v27.1.2+incompatible
+    FixedVersion: 28.0.0
+    Status: fixed
+    Layer:
+      Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a9a2e862e2b8cf782174
+      DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34b5167a289ac82c12925
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-54410
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'github.com/moby/moby: Moby''s Firewalld reload removes bridge network isolation'
+    Description: |-
+      Moby is an open source container framework developed by Docker Inc. that is distributed as Docker Engine, Mirantis Container Runtime, and various other downstream projects/products. A firewalld vulnerability affects Moby releases before 28.0.0. When firewalld reloads, Docker fails to re-create iptables rules that isolate bridge networks, allowing any container to access all ports on any other container across different bridge networks on the same host. This breaks network segmentation between containers that should be isolated, creating significant risk in multi-tenant environments. Only containers in --internal networks remain protected.
+      Workarounds include reloading firewalld and either restarting the docker daemon, re-creating bridge networks, or using rootless mode. Maintainers anticipate a fix for this issue in version 25.0.13.
+    Severity: LOW
+    CweIDs:
+    - CWE-909
+    VendorSeverity:
+      ghsa: 1
+      nvd: 2
+      redhat: 1
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:N
+        V3Score: 3.3
+      nvd:
+        V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
+        V3Score: 5.2
+      redhat:
+        V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:N
+        V3Score: 3.3
+    References:
+    - https://access.redhat.com/security/cve/CVE-2025-54410
+    - https://firewalld.org/documentation/howto/reload-firewalld.html
+    - https://github.com/moby/moby
+    - https://github.com/moby/moby/pull/49443
+    - https://github.com/moby/moby/pull/49728
+    - https://github.com/moby/moby/security/advisories/GHSA-4vq8-7jfc-9cvp
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-54410
+    - https://www.cve.org/CVERecord?id=CVE-2025-54410
+    PublishedDate: '2025-07-30T14:15:28.9Z'
+    LastModifiedDate: '2025-08-22T17:27:29.677Z'
+  - VulnerabilityID: CVE-2025-22870
+    PkgID: golang.org/x/net@v0.28.0
+    PkgName: golang.org/x/net
+    PkgIdentifier:
+      PURL: pkg:golang/golang.org/x/net@v0.28.0
+      UID: 2fe24708cb92b4b0
+    InstalledVersion: v0.28.0
+    FixedVersion: 0.36.0
+    Status: fixed
+    Layer:
+      Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a9a2e862e2b8cf782174
+      DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34b5167a289ac82c12925
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22870
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'golang.org/x/net/proxy: golang.org/x/net/http/httpproxy: HTTP Proxy bypass using IPv6 Zone IDs in golang.org/x/net'
+    Description: Matching of hosts against proxy patterns can improperly treat an IPv6 zone ID as a hostname component. For example, when the NO_PROXY environment variable is set to "*.example.com", a request to "[::1%25.example.com]:80` will incorrectly match and not be proxied.
+    Severity: MEDIUM
+    CweIDs:
+    - CWE-115
+    VendorSeverity:
+      amazon: 2
+      azure: 2
+      cbl-mariner: 2
+      ghsa: 2
+      redhat: 2
+      ubuntu: 2
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:L
+        V3Score: 4.4
+      redhat:
+        V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:L
+        V3Score: 4.4
+    References:
+    - http://www.openwall.com/lists/oss-security/2025/03/07/2
+    - https://access.redhat.com/security/cve/CVE-2025-22870
+    - https://github.com/golang/go/issues/71984
+    - https://go-review.googlesource.com/q/project:net
+    - https://go.dev/cl/654697
+    - https://go.dev/issue/71984
+    - https://groups.google.com/g/golang-announce/c/4t3lzH3I0eI/m/b42ImqrBAQAJ
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-22870
+    - https://pkg.go.dev/vuln/GO-2025-3503
+    - https://security.netapp.com/advisory/ntap-20250509-0007
+    - https://security.netapp.com/advisory/ntap-20250509-0007/
+    - https://ubuntu.com/security/notices/USN-7574-1
+    - https://www.cve.org/CVERecord?id=CVE-2025-22870
+    PublishedDate: '2025-03-12T19:15:38.31Z'
+    LastModifiedDate: '2025-05-09T20:15:38.727Z'
+  - VulnerabilityID: CVE-2025-22872
+    PkgID: golang.org/x/net@v0.28.0
+    PkgName: golang.org/x/net
+    PkgIdentifier:
+      PURL: pkg:golang/golang.org/x/net@v0.28.0
+      UID: 2fe24708cb92b4b0
+    InstalledVersion: v0.28.0
+    FixedVersion: 0.38.0
+    Status: fixed
+    Layer:
+      Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a9a2e862e2b8cf782174
+      DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34b5167a289ac82c12925
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22872
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'golang.org/x/net/html: Incorrect Neutralization of Input During Web Page Generation in x/net in golang.org/x/net'
+    Description: The tokenizer incorrectly interprets tags with unquoted attribute values that end with a solidus character (/) as self-closing. When directly using Tokenizer, this can result in such tags incorrectly being marked as self-closing, and when using the Parse functions, this can result in content following such tags as being placed in the wrong scope during DOM construction, but only when tags are in foreign content (e.g. <math>, <svg>, etc contexts).
+    Severity: MEDIUM
+    VendorSeverity:
+      amazon: 3
+      azure: 2
+      cbl-mariner: 2
+      ghsa: 2
+      redhat: 2
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:L
+        V3Score: 6.5
+    References:
+    - https://access.redhat.com/security/cve/CVE-2025-22872
+    - https://github.com/advisories/GHSA-vvgc-356p-c3xw
+    - https://go.dev/cl/662715
+    - https://go.dev/issue/73070
+    - https://groups.google.com/g/golang-announce/c/ezSKR9vqbqA
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-22872
+    - https://pkg.go.dev/vuln/GO-2025-3595
+    - https://security.netapp.com/advisory/ntap-20250516-0007
+    - https://security.netapp.com/advisory/ntap-20250516-0007/
+    - https://www.cve.org/CVERecord?id=CVE-2025-22872
+    PublishedDate: '2025-04-16T18:16:04.183Z'
+    LastModifiedDate: '2025-05-16T23:15:19.707Z'
+- Target: usr/bin/docker
+  Class: lang-pkgs
+  Type: gobinary
+- Target: usr/bin/helm
+  Class: lang-pkgs
+  Type: gobinary
+- Target: usr/bin/nerdctl
+  Class: lang-pkgs
+  Type: gobinary
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2025-54388
+    PkgID: github.com/docker/docker@v28.3.1+incompatible
+    PkgName: github.com/docker/docker
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/docker/docker@v28.3.1%2Bincompatible
+      UID: f87f4b258c265c38
+    InstalledVersion: v28.3.1+incompatible
+    FixedVersion: 28.3.3
+    Status: fixed
+    Layer:
+      Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a9a2e862e2b8cf782174
+      DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34b5167a289ac82c12925
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-54388
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'github.com/moby/moby: Moby''s Firewalld reload makes container ports accessible'
+    Description: Moby is an open source container framework developed by Docker Inc. that is distributed as Docker Engine, Mirantis Container Runtime, and various other downstream projects/products. In versions 28.2.0 through 28.3.2, when the firewalld service is reloaded it removes all iptables rules including those created by Docker. While Docker should automatically recreate these rules, versions before 28.3.3 fail to recreate the specific rules that block external access to containers. This means that after a firewalld reload, containers with ports published to localhost (like 127.0.0.1:8080) become accessible from remote machines that have network routing to the Docker bridge, even though they should only be accessible from the host itself. The vulnerability only affects explicitly published ports - unpublished ports remain protected. This issue is fixed in version 28.3.3.
+    Severity: MEDIUM
+    CweIDs:
+    - CWE-909
+    VendorSeverity:
+      ghsa: 2
+      redhat: 2
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 5.2
+    References:
+    - https://access.redhat.com/security/cve/CVE-2025-54388
+    - https://github.com/moby/moby
+    - https://github.com/moby/moby/commit/bea959c7b793b32a893820b97c4eadc7c87fabb0
+    - https://github.com/moby/moby/pull/50506
+    - https://github.com/moby/moby/security/advisories/GHSA-x4rx-4gw3-53p4
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-54388
+    - https://www.cve.org/CVERecord?id=CVE-2025-54388
+    PublishedDate: '2025-07-30T14:15:28.693Z'
+    LastModifiedDate: '2025-07-31T18:42:37.87Z'
+  - VulnerabilityID: GHSA-2464-8j7c-4cjm
+    PkgID: github.com/go-viper/mapstructure/v2@v2.3.0
+    PkgName: github.com/go-viper/mapstructure/v2
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/go-viper/mapstructure/v2@v2.3.0
+      UID: 7c3062713bb034b5
+    InstalledVersion: v2.3.0
+    FixedVersion: 2.4.0
+    Status: fixed
+    Layer:
+      Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a9a2e862e2b8cf782174
+      DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34b5167a289ac82c12925
+    SeveritySource: ghsa
+    PrimaryURL: https://github.com/advisories/GHSA-2464-8j7c-4cjm
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: go-viper's mapstructure May Leak Sensitive Information in Logs When Processing Malformed Data
+    Description: "### Summary\n\nUse of this library in a security-critical context may result in leaking sensitive information, if used to process sensitive fields.\n\n### Details\n\nOpenBao (and presumably HashiCorp Vault) have surfaced error messages from `mapstructure` as follows:\n\nhttps://github.com/openbao/openbao/blob/98c3a59c040efca724353ca46ca79bd5cdbab920/sdk/framework/field_data.go#L43-L50\n\n```go\n\t\t\t_, _, err := d.getPrimitive(field, schema)\n\t\t\tif err != nil {\n\t\t\t\treturn fmt.Errorf(\"error converting input for field %q: %w\", field, err)\n\t\t\t}\n```\n\nwhere this calls `mapstructure.WeakDecode(...)`: https://github.com/openbao/openbao/blob/98c3a59c040efca724353ca46ca79bd5cdbab920/sdk/framework/field_data.go#L181-L193\n\n```go\n\nfunc (d *FieldData) getPrimitive(k string, schema *FieldSchema) (interface{}, bool, error) {\n\traw, ok := d.Raw[k]\n\tif !ok {\n\t\treturn nil, false, nil\n\t}\n\n\tswitch t := schema.Type; t {\n\tcase TypeBool:\n\t\tvar result bool\n\t\tif err := mapstructure.WeakDecode(raw, &result); err != nil {\n\t\t\treturn nil, false, err\n\t\t}\n\t\treturn result, true, nil\n```\n\nNotably, `WeakDecode(...)` eventually calls one of the decode helpers, which surfaces the original value via `strconv` helpers:\n\nhttps://github.com/go-viper/mapstructure/blob/8c61ec1924fcfa522f9fc6b4618c672db61d1a38/mapstructure.go#L720-L727\n\nhttps://github.com/go-viper/mapstructure/blob/8c61ec1924fcfa522f9fc6b4618c672db61d1a38/mapstructure.go#L791-L798\n\nhttps://github.com/go-viper/mapstructure/blob/8c61ec1924fcfa522f9fc6b4618c672db61d1a38/decode_hooks.go#L180\n\n& more. These are different code paths than are fixed in the previous iteration at https://github.com/go-viper/mapstructure/security/advisories/GHSA-fv92-fjc5-jj9h.\n\n### PoC\n\nTo reproduce with OpenBao:\n\n```\n$ podman run --pull=always -p 8300:8300 openbao/openbao:latest server -dev -dev-root-token-id=root -dev-listen-address=0.0.0.0:8300\n```\n\nand in a new tab:\n\n```\n$ BAO_TOKEN=root BAO_ADDR=http://localhost:8300 bao auth enable userpass\nSuccess! Enabled userpass auth method at: userpass/\n$ curl -X PUT -H \"X-Vault-Request: true\" -H \"X-Vault-Token: root\" -d '{\"ttl\":\"asdf\"}' \"http://localhost:8200/v1/auth/userpass/users/asdf\"\n\n--> server logs:\n\n2025-06-25T21:32:25.101-0500 [ERROR] core: failed to run existence check: error=\"error converting input for field \\\"ttl\\\": time: invalid duration \\\"asdf\\\"\"\n```\n\n### Impact\n\nThis is an information disclosure bug with little mitigation. See https://discuss.hashicorp.com/t/hcsec-2025-09-vault-may-expose-sensitive-information-in-error-logs-when-processing-malformed-data-with-the-kv-v2-plugin/74717 for a previous version. That version was fixed, but this is in the second part of that error message (starting at `'' expected a map, got 'string'` -- when the field type is `string` and a `map` is provided, we see the above information leak -- the previous example had a `map` type field with a `string` value provided).\n\nThis was rated 4.5 Medium by HashiCorp in the past iteration."
+    Severity: MEDIUM
+    VendorSeverity:
+      ghsa: 2
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N
+        V3Score: 5.3
+    References:
+    - https://github.com/go-viper/mapstructure
+    - https://github.com/go-viper/mapstructure/commit/742921c9ba2854d27baa64272487fc5075d2c39c
+    - https://github.com/go-viper/mapstructure/security/advisories/GHSA-2464-8j7c-4cjm
+    - https://pkg.go.dev/vuln/GO-2025-3900
+    PublishedDate: '2025-08-21T14:37:19Z'
+    LastModifiedDate: '2025-08-29T20:44:25Z'
+  - VulnerabilityID: CVE-2025-47907
+    PkgID: stdlib@v1.24.4
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.24.4
+      UID: e23adfee605e8287
+    InstalledVersion: v1.24.4
+    FixedVersion: 1.23.12, 1.24.6
+    Status: fixed
+    Layer:
+      Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a9a2e862e2b8cf782174
+      DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34b5167a289ac82c12925
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-47907
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Title: 'database/sql: Postgres Scan Race Condition'
+    Description: Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel. This can result in a race condition that may overwrite the expected results with those of another query, causing the call to Scan to return either unexpected results from the other query or an error.
+    Severity: HIGH
+    VendorSeverity:
+      azure: 3
+      bitnami: 3
+      redhat: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L
+        V3Score: 7
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L
+        V3Score: 7
+    References:
+    - https://access.redhat.com/security/cve/CVE-2025-47907
+    - https://go.dev/cl/693735
+    - https://go.dev/issue/74831
+    - https://groups.google.com/g/golang-announce/c/x5MKroML2yM
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-47907
+    - https://pkg.go.dev/vuln/GO-2025-3849
+    - https://www.cve.org/CVERecord?id=CVE-2025-47907
+    PublishedDate: '2025-08-07T16:15:30.357Z'
+    LastModifiedDate: '2025-08-07T21:26:37.453Z'
+- Target: usr/bin/skopeo
+  Class: lang-pkgs
+  Type: gobinary
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2025-58058
+    PkgID: github.com/ulikunitz/xz@v0.5.12
+    PkgName: github.com/ulikunitz/xz
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/ulikunitz/xz@v0.5.12
+      UID: 9c51b87b941526f4
+    InstalledVersion: v0.5.12
+    FixedVersion: 0.5.15
+    Status: fixed
+    Layer:
+      Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a9a2e862e2b8cf782174
+      DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34b5167a289ac82c12925
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-58058
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'github.com/ulikunitz/xz: github.com/ulikunitz/xz leaks memory'
+    Description: xz is a pure golang package for reading and writing xz-compressed files. Prior to version 0.5.14, it is possible to put data in front of an LZMA-encoded byte stream without detecting the situation while reading the header. This can lead to increased memory consumption because the current implementation allocates the full decoding buffer directly after reading the header. The LZMA header doesn't include a magic number or has a checksum to detect such an issue according to the specification. Note that the code recognizes the issue later while reading the stream, but at this time the memory allocation has already been done. This issue has been patched in version 0.5.14.
+    Severity: MEDIUM
+    CweIDs:
+    - CWE-770
+    VendorSeverity:
+      ghsa: 2
+      redhat: 2
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+        V3Score: 5.3
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+        V3Score: 5.3
+    References:
+    - https://access.redhat.com/security/cve/CVE-2025-58058
+    - https://github.com/ulikunitz/xz
+    - https://github.com/ulikunitz/xz/commit/88ddf1d0d98d688db65de034f48960b2760d2ae2
+    - https://github.com/ulikunitz/xz/security/advisories/GHSA-jc7w-c686-c4v9
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-58058
+    - https://www.cve.org/CVERecord?id=CVE-2025-58058
+    PublishedDate: '2025-08-28T22:15:32.577Z'
+    LastModifiedDate: '2025-08-29T16:24:29.73Z'
+- Target: usr/bin/syft
+  Class: lang-pkgs
+  Type: gobinary
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2025-58058
+    PkgID: github.com/ulikunitz/xz@v0.5.12
+    PkgName: github.com/ulikunitz/xz
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/ulikunitz/xz@v0.5.12
+      UID: dab39ef52e0395fd
+    InstalledVersion: v0.5.12
+    FixedVersion: 0.5.15
+    Status: fixed
+    Layer:
+      Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a9a2e862e2b8cf782174
+      DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34b5167a289ac82c12925
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-58058
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Title: 'github.com/ulikunitz/xz: github.com/ulikunitz/xz leaks memory'
+    Description: xz is a pure golang package for reading and writing xz-compressed files. Prior to version 0.5.14, it is possible to put data in front of an LZMA-encoded byte stream without detecting the situation while reading the header. This can lead to increased memory consumption because the current implementation allocates the full decoding buffer directly after reading the header. The LZMA header doesn't include a magic number or has a checksum to detect such an issue according to the specification. Note that the code recognizes the issue later while reading the stream, but at this time the memory allocation has already been done. This issue has been patched in version 0.5.14.
+    Severity: MEDIUM
+    CweIDs:
+    - CWE-770
+    VendorSeverity:
+      ghsa: 2
+      redhat: 2
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+        V3Score: 5.3
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+        V3Score: 5.3
+    References:
+    - https://access.redhat.com/security/cve/CVE-2025-58058
+    - https://github.com/ulikunitz/xz
+    - https://github.com/ulikunitz/xz/commit/88ddf1d0d98d688db65de034f48960b2760d2ae2
+    - https://github.com/ulikunitz/xz/security/advisories/GHSA-jc7w-c686-c4v9
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-58058
+    - https://www.cve.org/CVERecord?id=CVE-2025-58058
+    PublishedDate: '2025-08-28T22:15:32.577Z'
+    LastModifiedDate: '2025-08-29T16:24:29.73Z'
