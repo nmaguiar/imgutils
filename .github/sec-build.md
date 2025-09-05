@@ -5,146 +5,104 @@
 ├ [1] ╭ Target         : Java 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : jar 
-│     ╰ Vulnerabilities ─ [0] ╭ VulnerabilityID : CVE-2025-58057 
-│                             ├ PkgName         : io.netty:netty-codec 
-│                             ├ PkgPath         : openaf/Kube/netty-codec-4.1.124.Final.jar 
-│                             ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-codec@4.1.124.Final 
-│                             │                  ╰ UID : 49244db0421ffc41 
+│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2025-58057 
+│                       │     ├ PkgName         : io.netty:netty-codec 
+│                       │     ├ PkgPath         : openaf/Kube/netty-codec-4.1.124.Final.jar 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-codec@4.1.124.Final 
+│                       │     │                  ╰ UID : 49244db0421ffc41 
+│                       │     ├ InstalledVersion: 4.1.124.Final 
+│                       │     ├ FixedVersion    : 4.1.125.Final 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a
+│                       │     │                  │         9a2e862e2b8cf782174 
+│                       │     │                  ╰ DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34
+│                       │     │                            b5167a289ac82c12925 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-58057 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Maven 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Amaven 
+│                       │     ├ Title           : netty-codec: netty-codec-compression: Netty's BrotliDecoder
+│                       │     │                   is vulnerable to DoS via zip bomb style attack 
+│                       │     ├ Description     : Netty is an asynchronous event-driven network application
+│                       │     │                   framework for rapid development of maintainable high
+│                       │     │                   performance protocol servers & clients. In
+│                       │     │                   netty-codec-compression versions 4.1.124.Final and below, and
+│                       │     │                    netty-codec versions 4.2.4.Final and below, when supplied
+│                       │     │                   with specially crafted input, BrotliDecoder and certain other
+│                       │     │                    decompression decoders will allocate a large number of
+│                       │     │                   reachable byte buffers, which can lead to denial of service.
+│                       │     │                   BrotliDecoder.decompress has no limit in how often it calls
+│                       │     │                   pull, decompressing data 64K bytes at a time. The buffers are
+│                       │     │                    saved in the output list, and remain reachable until OOM is
+│                       │     │                   hit. This is fixed in versions 4.1.125.Final of netty-codec
+│                       │     │                   and 4.2.5.Final of netty-codec-compression. 
+│                       │     ├ Severity        : MEDIUM 
+│                       │     ├ CweIDs           ─ [0]: CWE-409 
+│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │     │                  ╰ redhat: 2 
+│                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/
+│                       │     │                           │           A:N 
+│                       │     │                           ╰ V3Score : 5.3 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-58057 
+│                       │     │                  ├ [1]: https://github.com/netty/netty 
+│                       │     │                  ├ [2]: https://github.com/netty/netty/commit/9d804c54ce962408a
+│                       │     │                  │      e6418255a83a13924f7145d 
+│                       │     │                  ├ [3]: https://github.com/netty/netty/security/advisories/GHSA
+│                       │     │                  │      -3p8m-j85q-pgmj 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-58057 
+│                       │     │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2025-58057 
+│                       │     ├ PublishedDate   : 2025-09-04T10:42:32.18Z 
+│                       │     ╰ LastModifiedDate: 2025-09-04T15:35:29.497Z 
+│                       ╰ [1] ╭ VulnerabilityID : CVE-2025-58056 
+│                             ├ PkgName         : io.netty:netty-codec-http 
+│                             ├ PkgPath         : openaf/Kube/netty-codec-http-4.1.124.Final.jar 
+│                             ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-codec-http@4.1.124.Final 
+│                             │                  ╰ UID : 4a859a3d9e253fb7 
 │                             ├ InstalledVersion: 4.1.124.Final 
-│                             ├ FixedVersion    : 4.1.125.Final 
+│                             ├ FixedVersion    : 4.1.125.Final, 4.2.5.Final 
 │                             ├ Status          : fixed 
 │                             ├ Layer            ╭ Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a
 │                             │                  │         9a2e862e2b8cf782174 
 │                             │                  ╰ DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34
 │                             │                            b5167a289ac82c12925 
 │                             ├ SeveritySource  : ghsa 
-│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-58057 
+│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-58056 
 │                             ├ DataSource       ╭ ID  : ghsa 
 │                             │                  ├ Name: GitHub Security Advisory Maven 
 │                             │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
 │                             │                          osystem%3Amaven 
-│                             ├ Title           : Netty's decoders vulnerable to DoS via zip bomb style attack 
-│                             ├ Description     : ### Summary
-│                             │                   
-│                             │                   With specially crafted input, `BrotliDecoder` and some other
-│                             │                   decompressing decoders will allocate a large number of
-│                             │                   reachable byte buffers, which can lead to denial of service.
-│                             │                   ### Details
-│                             │                   `BrotliDecoder.decompress` has no limit in how often it calls
-│                             │                    `pull`, decompressing data 64K bytes at a time. The buffers
-│                             │                   are saved in the output list, and remain reachable until OOM
-│                             │                   is hit. This is basically a zip bomb.
-│                             │                   Tested on 4.1.118, but there were no changes to the decoder
-│                             │                   since.
-│                             │                   ### PoC
-│                             │                   Run this test case with `-Xmx1G`:
-│                             │                   ```java
-│                             │                   import io.netty.buffer.Unpooled;
-│                             │                   import io.netty.channel.embedded.EmbeddedChannel;
-│                             │                   import java.util.Base64;
-│                             │                   public class T {
-│                             │                       public static void main(String[] args) {
-│                             │                           EmbeddedChannel channel = new EmbeddedChannel(new
-│                             │                   BrotliDecoder());
-│                             │                          
-│                             │                   channel.writeInbound(Unpooled.wrappedBuffer(Base64.getDecoder
-│                             │                   ().decode("aPpxD1tETigSAGj6cQ8vRE4oEgBo+nEPW0ROKBIAaPpxD1tETi
-│                             │                   gSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nE
-│                             │                   PW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigS
-│                             │                   AGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW
-│                             │                   0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAG
-│                             │                   j6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0R
-│                             │                   OKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6
-│                             │                   cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROK
-│                             │                   BIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ
-│                             │                   9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBI
-│                             │                   AaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9b
-│                             │                   RE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAa
-│                             │                   PpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE
-│                             │                   4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPp
-│                             │                   xD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4o
-│                             │                   EgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD
-│                             │                   1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEg
-│                             │                   Bo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1t
-│                             │                   ETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo
-│                             │                   +nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tET
-│                             │                   igSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+n
-│                             │                   EPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETig
-│                             │                   SAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEP
-│                             │                   W0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSA
-│                             │                   Gj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0
-│                             │                   ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj
-│                             │                   6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0RO
-│                             │                   KBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6c
-│                             │                   Q9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKB
-│                             │                   IAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9
-│                             │                   bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIA
-│                             │                   aPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bR
-│                             │                   E4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROMBIAEg
-│                             │                   IaHwBETlQQVFcXlgA=")));
-│                             │                       }
-│                             │                   }
-│                             │                   ```
-│                             │                   Error:
-│                             │                   Exception in thread "main" java.lang.OutOfMemoryError: Cannot
-│                             │                    reserve 4194304 bytes of direct buffer memory (allocated:
-│                             │                   1069580289, limit: 1073741824)
-│                             │                   	at java.base/java.nio.Bits.reserveMemory(Bits.java:178)
-│                             │                   	at
-│                             │                   java.base/java.nio.DirectByteBuffer.<init>(DirectByteBuffer.j
-│                             │                   ava:121)
-│                             │                   java.base/java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:
-│                             │                   332)
-│                             │                   io.netty.buffer.PoolArena$DirectArena.allocateDirect(PoolAren
-│                             │                   a.java:718)
-│                             │                   io.netty.buffer.PoolArena$DirectArena.newChunk(PoolArena.java
-│                             │                   :693)
-│                             │                   io.netty.buffer.PoolArena.allocateNormal(PoolArena.java:213)
-│                             │                   io.netty.buffer.PoolArena.tcacheAllocateNormal(PoolArena.java
-│                             │                   :195)
-│                             │                   	at io.netty.buffer.PoolArena.allocate(PoolArena.java:137)
-│                             │                   	at io.netty.buffer.PoolArena.allocate(PoolArena.java:127)
-│                             │                   io.netty.buffer.PooledByteBufAllocator.newDirectBuffer(Pooled
-│                             │                   ByteBufAllocator.java:403)
-│                             │                   io.netty.buffer.AbstractByteBufAllocator.directBuffer(Abstrac
-│                             │                   tByteBufAllocator.java:188)
-│                             │                   tByteBufAllocator.java:179)
-│                             │                   io.netty.buffer.AbstractByteBufAllocator.buffer(AbstractByteB
-│                             │                   ufAllocator.java:116)
-│                             │                   io.netty.handler.codec.compression.BrotliDecoder.pull(BrotliD
-│                             │                   ecoder.java:70)
-│                             │                   io.netty.handler.codec.compression.BrotliDecoder.decompress(B
-│                             │                   rotliDecoder.java:101)
-│                             │                   io.netty.handler.codec.compression.BrotliDecoder.decode(Brotl
-│                             │                   iDecoder.java:137)
-│                             │                   io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReen
-│                             │                   tryProtection(ByteToMessageDecoder.java:530)
-│                             │                   io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteTo
-│                             │                   MessageDecoder.java:469)
-│                             │                   io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteT
-│                             │                   oMessageDecoder.java:290)
-│                             │                   io.netty.channel.AbstractChannelHandlerContext.invokeChannelR
-│                             │                   ead(AbstractChannelHandlerContext.java:444)
-│                             │                   ead(AbstractChannelHandlerContext.java:420)
-│                             │                   io.netty.channel.AbstractChannelHandlerContext.fireChannelRea
-│                             │                   d(AbstractChannelHandlerContext.java:412)
-│                             │                   io.netty.channel.DefaultChannelPipeline$HeadContext.channelRe
-│                             │                   ad(DefaultChannelPipeline.java:1357)
-│                             │                   ead(AbstractChannelHandlerContext.java:440)
-│                             │                   io.netty.channel.DefaultChannelPipeline.fireChannelRead(Defau
-│                             │                   ltChannelPipeline.java:868)
-│                             │                   io.netty.channel.embedded.EmbeddedChannel.writeInbound(Embedd
-│                             │                   edChannel.java:348)
-│                             │                   	at io.netty.handler.codec.compression.T.main(T.java:11)
-│                             │                   ### Impact
-│                             │                   DoS for anyone using `BrotliDecoder` on untrusted input. 
-│                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ─ ghsa: 2 
-│                             ╰ References       ╭ [0]: https://github.com/netty/netty 
-│                                                ├ [1]: https://github.com/netty/netty/commit/9d804c54ce962408a
-│                                                │      e6418255a83a13924f7145d 
-│                                                ╰ [2]: https://github.com/netty/netty/security/advisories/GHSA
-│                                                       -3p8m-j85q-pgmj 
+│                             ├ Title           : Netty is an asynchronous event-driven network application
+│                             │                   framework fo ... 
+│                             ├ Description     : Netty is an asynchronous event-driven network application
+│                             │                   framework for development of maintainable high performance
+│                             │                   protocol servers and clients. In versions 4.1.124.Final, and
+│                             │                   4.2.0.Alpha3 through 4.2.4.Final, Netty incorrectly accepts
+│                             │                   standalone newline characters (LF) as a chunk-size line
+│                             │                   terminator, regardless of a preceding carriage return (CR),
+│                             │                   instead of requiring CRLF per HTTP/1.1 standards. When
+│                             │                   combined with reverse proxies that parse LF differently
+│                             │                   (treating it as part of the chunk extension), attackers can
+│                             │                   craft requests that the proxy sees as one request but Netty
+│                             │                   processes as two, enabling request smuggling attacks. This is
+│                             │                    fixed in versions 4.1.125.Final and 4.2.5.Final. 
+│                             ├ Severity        : HIGH 
+│                             ├ CweIDs           ─ [0]: CWE-444 
+│                             ├ VendorSeverity   ─ ghsa: 3 
+│                             ├ References       ╭ [0]: https://datatracker.ietf.org/doc/html/rfc9112#name-chun
+│                             │                  │      ked-transfer-coding 
+│                             │                  ├ [1]: https://github.com/JLLeitschuh/unCVEed/issues/1 
+│                             │                  ├ [2]: https://github.com/netty/netty 
+│                             │                  ├ [3]: https://github.com/netty/netty/commit/edb55fd8e0a3bcbd8
+│                             │                  │      5881e423464f585183d1284 
+│                             │                  ├ [4]: https://github.com/netty/netty/issues/15522 
+│                             │                  ├ [5]: https://github.com/netty/netty/pull/15611 
+│                             │                  ├ [6]: https://github.com/netty/netty/security/advisories/GHSA
+│                             │                  │      -fghv-69vj-qj49 
+│                             │                  ╰ [7]: https://w4ke.info/2025/06/18/funky-chunks.html 
+│                             ├ PublishedDate   : 2025-09-03T21:15:33.07Z 
+│                             ╰ LastModifiedDate: 2025-09-04T15:35:29.497Z 
 ├ [2] ╭ Target         : usr/bin/crictl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -215,7 +173,8 @@
 │                       │     │                    of another query, causing the call to Scan to return either
 │                       │     │                   unexpected results from the other query or an error. 
 │                       │     ├ Severity        : HIGH 
-│                       │     ├ VendorSeverity   ╭ azure  : 3 
+│                       │     ├ VendorSeverity   ╭ amazon : 3 
+│                       │     │                  ├ azure  : 3 
 │                       │     │                  ├ bitnami: 3 
 │                       │     │                  ╰ redhat : 3 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L
@@ -749,7 +708,8 @@
 │                             │                    of another query, causing the call to Scan to return either
 │                             │                   unexpected results from the other query or an error. 
 │                             ├ Severity        : HIGH 
-│                             ├ VendorSeverity   ╭ azure  : 3 
+│                             ├ VendorSeverity   ╭ amazon : 3 
+│                             │                  ├ azure  : 3 
 │                             │                  ├ bitnami: 3 
 │                             │                  ╰ redhat : 3 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L
