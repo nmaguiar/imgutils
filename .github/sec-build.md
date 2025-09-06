@@ -13,10 +13,10 @@
 │                       │     ├ InstalledVersion: 4.1.124.Final 
 │                       │     ├ FixedVersion    : 4.1.125.Final 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a
-│                       │     │                  │         9a2e862e2b8cf782174 
-│                       │     │                  ╰ DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34
-│                       │     │                            b5167a289ac82c12925 
+│                       │     ├ Layer            ╭ Digest: sha256:927bd6f3c81f43d988262ac9f0c89e5bfa49d986c46f2
+│                       │     │                  │         bff4cdb90453a1909db 
+│                       │     │                  ╰ DiffID: sha256:10509b2587a7f7167bc79e334d82294cd3df787119794
+│                       │     │                            6d3136e6a3667d6f38b 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-58057 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -63,10 +63,10 @@
 │                             ├ InstalledVersion: 4.1.124.Final 
 │                             ├ FixedVersion    : 4.1.125.Final, 4.2.5.Final 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a
-│                             │                  │         9a2e862e2b8cf782174 
-│                             │                  ╰ DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34
-│                             │                            b5167a289ac82c12925 
+│                             ├ Layer            ╭ Digest: sha256:927bd6f3c81f43d988262ac9f0c89e5bfa49d986c46f2
+│                             │                  │         bff4cdb90453a1909db 
+│                             │                  ╰ DiffID: sha256:10509b2587a7f7167bc79e334d82294cd3df787119794
+│                             │                            6d3136e6a3667d6f38b 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-58056 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -87,20 +87,21 @@
 │                             │                   craft requests that the proxy sees as one request but Netty
 │                             │                   processes as two, enabling request smuggling attacks. This is
 │                             │                    fixed in versions 4.1.125.Final and 4.2.5.Final. 
-│                             ├ Severity        : HIGH 
+│                             ├ Severity        : LOW 
 │                             ├ CweIDs           ─ [0]: CWE-444 
-│                             ├ VendorSeverity   ─ ghsa: 3 
+│                             ├ VendorSeverity   ─ ghsa: 1 
 │                             ├ References       ╭ [0]: https://datatracker.ietf.org/doc/html/rfc9112#name-chun
 │                             │                  │      ked-transfer-coding 
 │                             │                  ├ [1]: https://github.com/JLLeitschuh/unCVEed/issues/1 
-│                             │                  ├ [2]: https://github.com/netty/netty 
-│                             │                  ├ [3]: https://github.com/netty/netty/commit/edb55fd8e0a3bcbd8
+│                             │                  ├ [2]: https://github.com/github/advisory-database/pull/6092 
+│                             │                  ├ [3]: https://github.com/netty/netty 
+│                             │                  ├ [4]: https://github.com/netty/netty/commit/edb55fd8e0a3bcbd8
 │                             │                  │      5881e423464f585183d1284 
-│                             │                  ├ [4]: https://github.com/netty/netty/issues/15522 
-│                             │                  ├ [5]: https://github.com/netty/netty/pull/15611 
-│                             │                  ├ [6]: https://github.com/netty/netty/security/advisories/GHSA
+│                             │                  ├ [5]: https://github.com/netty/netty/issues/15522 
+│                             │                  ├ [6]: https://github.com/netty/netty/pull/15611 
+│                             │                  ├ [7]: https://github.com/netty/netty/security/advisories/GHSA
 │                             │                  │      -fghv-69vj-qj49 
-│                             │                  ╰ [7]: https://w4ke.info/2025/06/18/funky-chunks.html 
+│                             │                  ╰ [8]: https://w4ke.info/2025/06/18/funky-chunks.html 
 │                             ├ PublishedDate   : 2025-09-03T21:15:33.07Z 
 │                             ╰ LastModifiedDate: 2025-09-04T15:35:29.497Z 
 ├ [2] ╭ Target         : usr/bin/crictl 
@@ -114,10 +115,10 @@
 │                       │     ├ InstalledVersion: v1.24.1 
 │                       │     ├ FixedVersion    : 1.24.4 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a
-│                       │     │                  │         9a2e862e2b8cf782174 
-│                       │     │                  ╰ DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34
-│                       │     │                            b5167a289ac82c12925 
+│                       │     ├ Layer            ╭ Digest: sha256:927bd6f3c81f43d988262ac9f0c89e5bfa49d986c46f2
+│                       │     │                  │         bff4cdb90453a1909db 
+│                       │     │                  ╰ DiffID: sha256:10509b2587a7f7167bc79e334d82294cd3df787119794
+│                       │     │                            6d3136e6a3667d6f38b 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22874 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -156,10 +157,10 @@
 │                       │     ├ InstalledVersion: v1.24.1 
 │                       │     ├ FixedVersion    : 1.23.12, 1.24.6 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a
-│                       │     │                  │         9a2e862e2b8cf782174 
-│                       │     │                  ╰ DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34
-│                       │     │                            b5167a289ac82c12925 
+│                       │     ├ Layer            ╭ Digest: sha256:927bd6f3c81f43d988262ac9f0c89e5bfa49d986c46f2
+│                       │     │                  │         bff4cdb90453a1909db 
+│                       │     │                  ╰ DiffID: sha256:10509b2587a7f7167bc79e334d82294cd3df787119794
+│                       │     │                            6d3136e6a3667d6f38b 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-47907 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -200,10 +201,10 @@
 │                       │     ├ InstalledVersion: v1.24.1 
 │                       │     ├ FixedVersion    : 1.23.10, 1.24.4 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a
-│                       │     │                  │         9a2e862e2b8cf782174 
-│                       │     │                  ╰ DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34
-│                       │     │                            b5167a289ac82c12925 
+│                       │     ├ Layer            ╭ Digest: sha256:927bd6f3c81f43d988262ac9f0c89e5bfa49d986c46f2
+│                       │     │                  │         bff4cdb90453a1909db 
+│                       │     │                  ╰ DiffID: sha256:10509b2587a7f7167bc79e334d82294cd3df787119794
+│                       │     │                            6d3136e6a3667d6f38b 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-0913 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -239,10 +240,10 @@
 │                       │     ├ InstalledVersion: v1.24.1 
 │                       │     ├ FixedVersion    : 1.23.8, 1.24.2 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a
-│                       │     │                  │         9a2e862e2b8cf782174 
-│                       │     │                  ╰ DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34
-│                       │     │                            b5167a289ac82c12925 
+│                       │     ├ Layer            ╭ Digest: sha256:927bd6f3c81f43d988262ac9f0c89e5bfa49d986c46f2
+│                       │     │                  │         bff4cdb90453a1909db 
+│                       │     │                  ╰ DiffID: sha256:10509b2587a7f7167bc79e334d82294cd3df787119794
+│                       │     │                            6d3136e6a3667d6f38b 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22871 
 │                       │     ├ DataSource       ╭ ID  : govulndb 
 │                       │     │                  ├ Name: The Go Vulnerability Database 
@@ -296,10 +297,10 @@
 │                             ├ InstalledVersion: v1.24.1 
 │                             ├ FixedVersion    : 1.23.10, 1.24.4 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a
-│                             │                  │         9a2e862e2b8cf782174 
-│                             │                  ╰ DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34
-│                             │                            b5167a289ac82c12925 
+│                             ├ Layer            ╭ Digest: sha256:927bd6f3c81f43d988262ac9f0c89e5bfa49d986c46f2
+│                             │                  │         bff4cdb90453a1909db 
+│                             │                  ╰ DiffID: sha256:10509b2587a7f7167bc79e334d82294cd3df787119794
+│                             │                            6d3136e6a3667d6f38b 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-4673 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
@@ -355,10 +356,10 @@
 │                       │     ├ InstalledVersion: v27.1.2+incompatible 
 │                       │     ├ FixedVersion    : 28.0.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a
-│                       │     │                  │         9a2e862e2b8cf782174 
-│                       │     │                  ╰ DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34
-│                       │     │                            b5167a289ac82c12925 
+│                       │     ├ Layer            ╭ Digest: sha256:927bd6f3c81f43d988262ac9f0c89e5bfa49d986c46f2
+│                       │     │                  │         bff4cdb90453a1909db 
+│                       │     │                  ╰ DiffID: sha256:10509b2587a7f7167bc79e334d82294cd3df787119794
+│                       │     │                            6d3136e6a3667d6f38b 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-54410 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -417,10 +418,10 @@
 │                       │     ├ InstalledVersion: v0.28.0 
 │                       │     ├ FixedVersion    : 0.36.0 
 │                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a
-│                       │     │                  │         9a2e862e2b8cf782174 
-│                       │     │                  ╰ DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34
-│                       │     │                            b5167a289ac82c12925 
+│                       │     ├ Layer            ╭ Digest: sha256:927bd6f3c81f43d988262ac9f0c89e5bfa49d986c46f2
+│                       │     │                  │         bff4cdb90453a1909db 
+│                       │     │                  ╰ DiffID: sha256:10509b2587a7f7167bc79e334d82294cd3df787119794
+│                       │     │                            6d3136e6a3667d6f38b 
 │                       │     ├ SeveritySource  : ghsa 
 │                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22870 
 │                       │     ├ DataSource       ╭ ID  : ghsa 
@@ -472,10 +473,10 @@
 │                             ├ InstalledVersion: v0.28.0 
 │                             ├ FixedVersion    : 0.38.0 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a
-│                             │                  │         9a2e862e2b8cf782174 
-│                             │                  ╰ DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34
-│                             │                            b5167a289ac82c12925 
+│                             ├ Layer            ╭ Digest: sha256:927bd6f3c81f43d988262ac9f0c89e5bfa49d986c46f2
+│                             │                  │         bff4cdb90453a1909db 
+│                             │                  ╰ DiffID: sha256:10509b2587a7f7167bc79e334d82294cd3df787119794
+│                             │                            6d3136e6a3667d6f38b 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22872 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -493,7 +494,7 @@
 │                             │                    DOM construction, but only when tags are in foreign content
 │                             │                   (e.g. <math>, <svg>, etc contexts). 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon     : 3 
+│                             ├ VendorSeverity   ╭ amazon     : 2 
 │                             │                  ├ azure      : 2 
 │                             │                  ├ cbl-mariner: 2 
 │                             │                  ├ ghsa       : 2 
@@ -519,214 +520,9 @@
 ├ [6] ╭ Target: usr/bin/helm 
 │     ├ Class : lang-pkgs 
 │     ╰ Type  : gobinary 
-├ [7] ╭ Target         : usr/bin/nerdctl 
-│     ├ Class          : lang-pkgs 
-│     ├ Type           : gobinary 
-│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2025-54388 
-│                       │     ├ PkgID           : github.com/docker/docker@v28.3.1+incompatible 
-│                       │     ├ PkgName         : github.com/docker/docker 
-│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v28.3.1%2Bincompat
-│                       │     │                  │       ible 
-│                       │     │                  ╰ UID : f87f4b258c265c38 
-│                       │     ├ InstalledVersion: v28.3.1+incompatible 
-│                       │     ├ FixedVersion    : 28.3.3 
-│                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a
-│                       │     │                  │         9a2e862e2b8cf782174 
-│                       │     │                  ╰ DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34
-│                       │     │                            b5167a289ac82c12925 
-│                       │     ├ SeveritySource  : ghsa 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-54388 
-│                       │     ├ DataSource       ╭ ID  : ghsa 
-│                       │     │                  ├ Name: GitHub Security Advisory Go 
-│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
-│                       │     │                          osystem%3Ago 
-│                       │     ├ Title           : github.com/moby/moby: Moby's Firewalld reload makes container
-│                       │     │                    ports accessible 
-│                       │     ├ Description     : Moby is an open source container framework developed by
-│                       │     │                   Docker Inc. that is distributed as Docker Engine, Mirantis
-│                       │     │                   Container Runtime, and various other downstream
-│                       │     │                   projects/products. In versions 28.2.0 through 28.3.2, when
-│                       │     │                   the firewalld service is reloaded it removes all iptables
-│                       │     │                   rules including those created by Docker. While Docker should
-│                       │     │                   automatically recreate these rules, versions before 28.3.3
-│                       │     │                   fail to recreate the specific rules that block external
-│                       │     │                   access to containers. This means that after a firewalld
-│                       │     │                   reload, containers with ports published to localhost (like
-│                       │     │                   127.0.0.1:8080) become accessible from remote machines that
-│                       │     │                   have network routing to the Docker bridge, even though they
-│                       │     │                   should only be accessible from the host itself. The
-│                       │     │                   vulnerability only affects explicitly published ports -
-│                       │     │                   unpublished ports remain protected. This issue is fixed in
-│                       │     │                   version 28.3.3. 
-│                       │     ├ Severity        : MEDIUM 
-│                       │     ├ CweIDs           ─ [0]: CWE-909 
-│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
-│                       │     │                  ╰ redhat: 2 
-│                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:C/C:L/I:L/
-│                       │     │                           │           A:N 
-│                       │     │                           ╰ V3Score : 5.2 
-│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-54388 
-│                       │     │                  ├ [1]: https://github.com/moby/moby 
-│                       │     │                  ├ [2]: https://github.com/moby/moby/commit/bea959c7b793b32a893
-│                       │     │                  │      820b97c4eadc7c87fabb0 
-│                       │     │                  ├ [3]: https://github.com/moby/moby/pull/50506 
-│                       │     │                  ├ [4]: https://github.com/moby/moby/security/advisories/GHSA-x
-│                       │     │                  │      4rx-4gw3-53p4 
-│                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-54388 
-│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-54388 
-│                       │     ├ PublishedDate   : 2025-07-30T14:15:28.693Z 
-│                       │     ╰ LastModifiedDate: 2025-07-31T18:42:37.87Z 
-│                       ├ [1] ╭ VulnerabilityID : GHSA-2464-8j7c-4cjm 
-│                       │     ├ PkgID           : github.com/go-viper/mapstructure/v2@v2.3.0 
-│                       │     ├ PkgName         : github.com/go-viper/mapstructure/v2 
-│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/go-viper/mapstructure/v2@v2.3.0 
-│                       │     │                  ╰ UID : 7c3062713bb034b5 
-│                       │     ├ InstalledVersion: v2.3.0 
-│                       │     ├ FixedVersion    : 2.4.0 
-│                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a
-│                       │     │                  │         9a2e862e2b8cf782174 
-│                       │     │                  ╰ DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34
-│                       │     │                            b5167a289ac82c12925 
-│                       │     ├ SeveritySource  : ghsa 
-│                       │     ├ PrimaryURL      : https://github.com/advisories/GHSA-2464-8j7c-4cjm 
-│                       │     ├ DataSource       ╭ ID  : ghsa 
-│                       │     │                  ├ Name: GitHub Security Advisory Go 
-│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
-│                       │     │                          osystem%3Ago 
-│                       │     ├ Title           : go-viper's mapstructure May Leak Sensitive Information in
-│                       │     │                   Logs When Processing Malformed Data 
-│                       │     ├ Description     : ### Summary
-│                       │     │                   
-│                       │     │                   Use of this library in a security-critical context may result
-│                       │     │                    in leaking sensitive information, if used to process
-│                       │     │                   sensitive fields.
-│                       │     │                   ### Details
-│                       │     │                   OpenBao (and presumably HashiCorp Vault) have surfaced error
-│                       │     │                   messages from `mapstructure` as follows:
-│                       │     │                   https://github.com/openbao/openbao/blob/98c3a59c040efca724353
-│                       │     │                   ca46ca79bd5cdbab920/sdk/framework/field_data.go#L43-L50
-│                       │     │                   ```go
-│                       │     │                   			_, _, err := d.getPrimitive(field, schema)
-│                       │     │                   			if err != nil {
-│                       │     │                   				return fmt.Errorf("error converting input for field %q:
-│                       │     │                   %w", field, err)
-│                       │     │                   			}
-│                       │     │                   ```
-│                       │     │                   where this calls `mapstructure.WeakDecode(...)`:
-│                       │     │                   ca46ca79bd5cdbab920/sdk/framework/field_data.go#L181-L193
-│                       │     │                   func (d *FieldData) getPrimitive(k string, schema
-│                       │     │                   *FieldSchema) (interface{}, bool, error) {
-│                       │     │                   	raw, ok := d.Raw[k]
-│                       │     │                   	if !ok {
-│                       │     │                   		return nil, false, nil
-│                       │     │                   	}
-│                       │     │                   	switch t := schema.Type; t {
-│                       │     │                   	case TypeBool:
-│                       │     │                   		var result bool
-│                       │     │                   		if err := mapstructure.WeakDecode(raw, &result); err != nil
-│                       │     │                    {
-│                       │     │                   			return nil, false, err
-│                       │     │                   		}
-│                       │     │                   		return result, true, nil
-│                       │     │                   Notably, `WeakDecode(...)` eventually calls one of the decode
-│                       │     │                    helpers, which surfaces the original value via `strconv`
-│                       │     │                   helpers:
-│                       │     │                   https://github.com/go-viper/mapstructure/blob/8c61ec1924fcfa5
-│                       │     │                   22f9fc6b4618c672db61d1a38/mapstructure.go#L720-L727
-│                       │     │                   22f9fc6b4618c672db61d1a38/mapstructure.go#L791-L798
-│                       │     │                   22f9fc6b4618c672db61d1a38/decode_hooks.go#L180
-│                       │     │                   & more. These are different code paths than are fixed in the
-│                       │     │                   previous iteration at
-│                       │     │                   https://github.com/go-viper/mapstructure/security/advisories/
-│                       │     │                   GHSA-fv92-fjc5-jj9h.
-│                       │     │                   ### PoC
-│                       │     │                   To reproduce with OpenBao:
-│                       │     │                   $ podman run --pull=always -p 8300:8300
-│                       │     │                   openbao/openbao:latest server -dev -dev-root-token-id=root
-│                       │     │                   -dev-listen-address=0.0.0.0:8300
-│                       │     │                   and in a new tab:
-│                       │     │                   $ BAO_TOKEN=root BAO_ADDR=http://localhost:8300 bao auth
-│                       │     │                   enable userpass
-│                       │     │                   Success! Enabled userpass auth method at: userpass/
-│                       │     │                   $ curl -X PUT -H "X-Vault-Request: true" -H "X-Vault-Token:
-│                       │     │                   root" -d '{"ttl":"asdf"}'
-│                       │     │                   "http://localhost:8200/v1/auth/userpass/users/asdf"
-│                       │     │                   --> server logs:
-│                       │     │                   2025-06-25T21:32:25.101-0500 [ERROR] core: failed to run
-│                       │     │                   existence check: error="error converting input for field
-│                       │     │                   \"ttl\": time: invalid duration \"asdf\""
-│                       │     │                   ### Impact
-│                       │     │                   This is an information disclosure bug with little mitigation.
-│                       │     │                    See
-│                       │     │                   https://discuss.hashicorp.com/t/hcsec-2025-09-vault-may-expos
-│                       │     │                   e-sensitive-information-in-error-logs-when-processing-malform
-│                       │     │                   ed-data-with-the-kv-v2-plugin/74717 for a previous version.
-│                       │     │                   That version was fixed, but this is in the second part of
-│                       │     │                   that error message (starting at `'' expected a map, got
-│                       │     │                   'string'` -- when the field type is `string` and a `map` is
-│                       │     │                   provided, we see the above information leak -- the previous
-│                       │     │                   example had a `map` type field with a `string` value
-│                       │     │                   provided).
-│                       │     │                   This was rated 4.5 Medium by HashiCorp in the past
-│                       │     │                   iteration. 
-│                       │     ├ Severity        : MEDIUM 
-│                       │     ├ VendorSeverity   ─ ghsa: 2 
-│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N 
-│                       │     │                         ╰ V3Score : 5.3 
-│                       │     ├ References       ╭ [0]: https://github.com/go-viper/mapstructure 
-│                       │     │                  ├ [1]: https://github.com/go-viper/mapstructure/commit/742921c
-│                       │     │                  │      9ba2854d27baa64272487fc5075d2c39c 
-│                       │     │                  ├ [2]: https://github.com/go-viper/mapstructure/security/advis
-│                       │     │                  │      ories/GHSA-2464-8j7c-4cjm 
-│                       │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3900 
-│                       │     ├ PublishedDate   : 2025-08-21T14:37:19Z 
-│                       │     ╰ LastModifiedDate: 2025-08-29T20:44:25Z 
-│                       ╰ [2] ╭ VulnerabilityID : CVE-2025-47907 
-│                             ├ PkgID           : stdlib@v1.24.4 
-│                             ├ PkgName         : stdlib 
-│                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.4 
-│                             │                  ╰ UID : e23adfee605e8287 
-│                             ├ InstalledVersion: v1.24.4 
-│                             ├ FixedVersion    : 1.23.12, 1.24.6 
-│                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a
-│                             │                  │         9a2e862e2b8cf782174 
-│                             │                  ╰ DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34
-│                             │                            b5167a289ac82c12925 
-│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-47907 
-│                             ├ DataSource       ╭ ID  : govulndb 
-│                             │                  ├ Name: The Go Vulnerability Database 
-│                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ├ Title           : database/sql: Postgres Scan Race Condition 
-│                             ├ Description     : Cancelling a query (e.g. by cancelling the context passed to
-│                             │                   one of the query methods) during a call to the Scan method of
-│                             │                    the returned Rows can result in unexpected results if other
-│                             │                   queries are being made in parallel. This can result in a race
-│                             │                    condition that may overwrite the expected results with those
-│                             │                    of another query, causing the call to Scan to return either
-│                             │                   unexpected results from the other query or an error. 
-│                             ├ Severity        : HIGH 
-│                             ├ VendorSeverity   ╭ amazon : 3 
-│                             │                  ├ azure  : 3 
-│                             │                  ├ bitnami: 3 
-│                             │                  ╰ redhat : 3 
-│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L
-│                             │                  │         │           /A:L 
-│                             │                  │         ╰ V3Score : 7 
-│                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L
-│                             │                            │           /A:L 
-│                             │                            ╰ V3Score : 7 
-│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-47907 
-│                             │                  ├ [1]: https://go.dev/cl/693735 
-│                             │                  ├ [2]: https://go.dev/issue/74831 
-│                             │                  ├ [3]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
-│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47907 
-│                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-3849 
-│                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-47907 
-│                             ├ PublishedDate   : 2025-08-07T16:15:30.357Z 
-│                             ╰ LastModifiedDate: 2025-08-07T21:26:37.453Z 
+├ [7] ╭ Target: usr/bin/nerdctl 
+│     ├ Class : lang-pkgs 
+│     ╰ Type  : gobinary 
 ├ [8] ╭ Target         : usr/bin/skopeo 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -738,10 +534,10 @@
 │                             ├ InstalledVersion: v0.5.12 
 │                             ├ FixedVersion    : 0.5.15 
 │                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a
-│                             │                  │         9a2e862e2b8cf782174 
-│                             │                  ╰ DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34
-│                             │                            b5167a289ac82c12925 
+│                             ├ Layer            ╭ Digest: sha256:927bd6f3c81f43d988262ac9f0c89e5bfa49d986c46f2
+│                             │                  │         bff4cdb90453a1909db 
+│                             │                  ╰ DiffID: sha256:10509b2587a7f7167bc79e334d82294cd3df787119794
+│                             │                            6d3136e6a3667d6f38b 
 │                             ├ SeveritySource  : ghsa 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-58058 
 │                             ├ DataSource       ╭ ID  : ghsa 
@@ -792,10 +588,10 @@
                               ├ InstalledVersion: v0.5.12 
                               ├ FixedVersion    : 0.5.15 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:c0959bad9720892bf785e51d3e640bea317084dc7279a
-                              │                  │         9a2e862e2b8cf782174 
-                              │                  ╰ DiffID: sha256:013f8762bd2ffae4f3afb3877069fccdd92c14e304b34
-                              │                            b5167a289ac82c12925 
+                              ├ Layer            ╭ Digest: sha256:927bd6f3c81f43d988262ac9f0c89e5bfa49d986c46f2
+                              │                  │         bff4cdb90453a1909db 
+                              │                  ╰ DiffID: sha256:10509b2587a7f7167bc79e334d82294cd3df787119794
+                              │                            6d3136e6a3667d6f38b 
                               ├ SeveritySource  : ghsa 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-58058 
                               ├ DataSource       ╭ ID  : ghsa 
