@@ -87,20 +87,21 @@
 │                       │     │                   craft requests that the proxy sees as one request but Netty
 │                       │     │                   processes as two, enabling request smuggling attacks. This is
 │                       │     │                    fixed in versions 4.1.125.Final and 4.2.5.Final. 
-│                       │     ├ Severity        : HIGH 
+│                       │     ├ Severity        : LOW 
 │                       │     ├ CweIDs           ─ [0]: CWE-444 
-│                       │     ├ VendorSeverity   ─ ghsa: 3 
+│                       │     ├ VendorSeverity   ─ ghsa: 1 
 │                       │     ├ References       ╭ [0]: https://datatracker.ietf.org/doc/html/rfc9112#name-chun
 │                       │     │                  │      ked-transfer-coding 
 │                       │     │                  ├ [1]: https://github.com/JLLeitschuh/unCVEed/issues/1 
-│                       │     │                  ├ [2]: https://github.com/netty/netty 
-│                       │     │                  ├ [3]: https://github.com/netty/netty/commit/edb55fd8e0a3bcbd8
+│                       │     │                  ├ [2]: https://github.com/github/advisory-database/pull/6092 
+│                       │     │                  ├ [3]: https://github.com/netty/netty 
+│                       │     │                  ├ [4]: https://github.com/netty/netty/commit/edb55fd8e0a3bcbd8
 │                       │     │                  │      5881e423464f585183d1284 
-│                       │     │                  ├ [4]: https://github.com/netty/netty/issues/15522 
-│                       │     │                  ├ [5]: https://github.com/netty/netty/pull/15611 
-│                       │     │                  ├ [6]: https://github.com/netty/netty/security/advisories/GHSA
+│                       │     │                  ├ [5]: https://github.com/netty/netty/issues/15522 
+│                       │     │                  ├ [6]: https://github.com/netty/netty/pull/15611 
+│                       │     │                  ├ [7]: https://github.com/netty/netty/security/advisories/GHSA
 │                       │     │                  │      -fghv-69vj-qj49 
-│                       │     │                  ╰ [7]: https://w4ke.info/2025/06/18/funky-chunks.html 
+│                       │     │                  ╰ [8]: https://w4ke.info/2025/06/18/funky-chunks.html 
 │                       │     ├ PublishedDate   : 2025-09-03T21:15:33.07Z 
 │                       │     ╰ LastModifiedDate: 2025-09-04T15:35:29.497Z 
 │                       ╰ [2] ╭ VulnerabilityID : CVE-2025-55163 
@@ -537,7 +538,7 @@
 │                             │                    DOM construction, but only when tags are in foreign content
 │                             │                   (e.g. <math>, <svg>, etc contexts). 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon     : 3 
+│                             ├ VendorSeverity   ╭ amazon     : 2 
 │                             │                  ├ azure      : 2 
 │                             │                  ├ cbl-mariner: 2 
 │                             │                  ├ ghsa       : 2 
