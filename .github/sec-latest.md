@@ -103,7 +103,7 @@
 │                       │     │                  │      -fghv-69vj-qj49 
 │                       │     │                  ╰ [8]: https://w4ke.info/2025/06/18/funky-chunks.html 
 │                       │     ├ PublishedDate   : 2025-09-03T21:15:33.07Z 
-│                       │     ╰ LastModifiedDate: 2025-09-04T15:35:29.497Z 
+│                       │     ╰ LastModifiedDate: 2025-09-05T19:15:32.803Z 
 │                       ╰ [2] ╭ VulnerabilityID : CVE-2025-55163 
 │                             ├ PkgName         : io.netty:netty-codec-http2 
 │                             ├ PkgPath         : openaf/Kube/netty-codec-http2-4.1.118.Final.jar 
@@ -218,10 +218,11 @@
 │                       │     │                    of another query, causing the call to Scan to return either
 │                       │     │                   unexpected results from the other query or an error. 
 │                       │     ├ Severity        : HIGH 
-│                       │     ├ VendorSeverity   ╭ amazon : 3 
-│                       │     │                  ├ azure  : 3 
-│                       │     │                  ├ bitnami: 3 
-│                       │     │                  ╰ redhat : 3 
+│                       │     ├ VendorSeverity   ╭ amazon     : 3 
+│                       │     │                  ├ azure      : 3 
+│                       │     │                  ├ bitnami    : 3 
+│                       │     │                  ├ cbl-mariner: 3 
+│                       │     │                  ╰ redhat     : 3 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L
 │                       │     │                  │         │           /A:L 
 │                       │     │                  │         ╰ V3Score : 7 
@@ -753,10 +754,11 @@
 │                             │                    of another query, causing the call to Scan to return either
 │                             │                   unexpected results from the other query or an error. 
 │                             ├ Severity        : HIGH 
-│                             ├ VendorSeverity   ╭ amazon : 3 
-│                             │                  ├ azure  : 3 
-│                             │                  ├ bitnami: 3 
-│                             │                  ╰ redhat : 3 
+│                             ├ VendorSeverity   ╭ amazon     : 3 
+│                             │                  ├ azure      : 3 
+│                             │                  ├ bitnami    : 3 
+│                             │                  ├ cbl-mariner: 3 
+│                             │                  ╰ redhat     : 3 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L
 │                             │                  │         │           /A:L 
 │                             │                  │         ╰ V3Score : 7 
@@ -953,10 +955,11 @@
                               │                    of another query, causing the call to Scan to return either
                               │                   unexpected results from the other query or an error. 
                               ├ Severity        : HIGH 
-                              ├ VendorSeverity   ╭ amazon : 3 
-                              │                  ├ azure  : 3 
-                              │                  ├ bitnami: 3 
-                              │                  ╰ redhat : 3 
+                              ├ VendorSeverity   ╭ amazon     : 3 
+                              │                  ├ azure      : 3 
+                              │                  ├ bitnami    : 3 
+                              │                  ├ cbl-mariner: 3 
+                              │                  ╰ redhat     : 3 
                               ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L
                               │                  │         │           /A:L 
                               │                  │         ╰ V3Score : 7 
