@@ -80,7 +80,7 @@
     - https://github.com/netty/netty/security/advisories/GHSA-fghv-69vj-qj49
     - https://w4ke.info/2025/06/18/funky-chunks.html
     PublishedDate: '2025-09-03T21:15:33.07Z'
-    LastModifiedDate: '2025-09-04T15:35:29.497Z'
+    LastModifiedDate: '2025-09-05T19:15:32.803Z'
   - VulnerabilityID: CVE-2025-55163
     PkgName: io.netty:netty-codec-http2
     PkgPath: openaf/Kube/netty-codec-http2-4.1.118.Final.jar
@@ -190,6 +190,7 @@
       amazon: 3
       azure: 3
       bitnami: 3
+      cbl-mariner: 3
       redhat: 3
     CVSS:
       bitnami:
@@ -612,6 +613,7 @@
       amazon: 3
       azure: 3
       bitnami: 3
+      cbl-mariner: 3
       redhat: 3
     CVSS:
       bitnami:
@@ -790,6 +792,7 @@
       amazon: 3
       azure: 3
       bitnami: 3
+      cbl-mariner: 3
       redhat: 3
     CVSS:
       bitnami:
