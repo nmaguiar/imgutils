@@ -13,10 +13,10 @@
                         │     ├ InstalledVersion: v1.24.1 
                         │     ├ FixedVersion    : 1.24.4 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:ba57ec6a1b2542fabbcd6bfbacdf8928647c344551b8f
-                        │     │                  │         92c1735b76ec857d67c 
-                        │     │                  ╰ DiffID: sha256:9b76179ada47eeac65495e2120949d08fe574fe8d41a2
-                        │     │                            74a8f5f2b637895f644 
+                        │     ├ Layer            ╭ Digest: sha256:1e8e0fe9b1e14e118d21ee9d7f5e9dbb9d2a0726c438e
+                        │     │                  │         d4f7a3f17a756d03f35 
+                        │     │                  ╰ DiffID: sha256:ed89fea085b355cd778205a62771af4bb01c26b1e3697
+                        │     │                            759a7fb7967d402a66c 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22874 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
@@ -55,10 +55,10 @@
                         │     ├ InstalledVersion: v1.24.1 
                         │     ├ FixedVersion    : 1.23.12, 1.24.6 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:ba57ec6a1b2542fabbcd6bfbacdf8928647c344551b8f
-                        │     │                  │         92c1735b76ec857d67c 
-                        │     │                  ╰ DiffID: sha256:9b76179ada47eeac65495e2120949d08fe574fe8d41a2
-                        │     │                            74a8f5f2b637895f644 
+                        │     ├ Layer            ╭ Digest: sha256:1e8e0fe9b1e14e118d21ee9d7f5e9dbb9d2a0726c438e
+                        │     │                  │         d4f7a3f17a756d03f35 
+                        │     │                  ╰ DiffID: sha256:ed89fea085b355cd778205a62771af4bb01c26b1e3697
+                        │     │                            759a7fb7967d402a66c 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-47907 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
@@ -100,10 +100,10 @@
                         │     ├ InstalledVersion: v1.24.1 
                         │     ├ FixedVersion    : 1.23.10, 1.24.4 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:ba57ec6a1b2542fabbcd6bfbacdf8928647c344551b8f
-                        │     │                  │         92c1735b76ec857d67c 
-                        │     │                  ╰ DiffID: sha256:9b76179ada47eeac65495e2120949d08fe574fe8d41a2
-                        │     │                            74a8f5f2b637895f644 
+                        │     ├ Layer            ╭ Digest: sha256:1e8e0fe9b1e14e118d21ee9d7f5e9dbb9d2a0726c438e
+                        │     │                  │         d4f7a3f17a756d03f35 
+                        │     │                  ╰ DiffID: sha256:ed89fea085b355cd778205a62771af4bb01c26b1e3697
+                        │     │                            759a7fb7967d402a66c 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-0913 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
@@ -139,10 +139,10 @@
                         │     ├ InstalledVersion: v1.24.1 
                         │     ├ FixedVersion    : 1.23.8, 1.24.2 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:ba57ec6a1b2542fabbcd6bfbacdf8928647c344551b8f
-                        │     │                  │         92c1735b76ec857d67c 
-                        │     │                  ╰ DiffID: sha256:9b76179ada47eeac65495e2120949d08fe574fe8d41a2
-                        │     │                            74a8f5f2b637895f644 
+                        │     ├ Layer            ╭ Digest: sha256:1e8e0fe9b1e14e118d21ee9d7f5e9dbb9d2a0726c438e
+                        │     │                  │         d4f7a3f17a756d03f35 
+                        │     │                  ╰ DiffID: sha256:ed89fea085b355cd778205a62771af4bb01c26b1e3697
+                        │     │                            759a7fb7967d402a66c 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22871 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
@@ -196,10 +196,10 @@
                               ├ InstalledVersion: v1.24.1 
                               ├ FixedVersion    : 1.23.10, 1.24.4 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:ba57ec6a1b2542fabbcd6bfbacdf8928647c344551b8f
-                              │                  │         92c1735b76ec857d67c 
-                              │                  ╰ DiffID: sha256:9b76179ada47eeac65495e2120949d08fe574fe8d41a2
-                              │                            74a8f5f2b637895f644 
+                              ├ Layer            ╭ Digest: sha256:1e8e0fe9b1e14e118d21ee9d7f5e9dbb9d2a0726c438e
+                              │                  │         d4f7a3f17a756d03f35 
+                              │                  ╰ DiffID: sha256:ed89fea085b355cd778205a62771af4bb01c26b1e3697
+                              │                            759a7fb7967d402a66c 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-4673 
                               ├ DataSource       ╭ ID  : govulndb 
                               │                  ├ Name: The Go Vulnerability Database 
