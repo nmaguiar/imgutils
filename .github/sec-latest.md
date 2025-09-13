@@ -77,8 +77,8 @@
 │                       │     │                  ├ Name: GitHub Security Advisory Maven 
 │                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
 │                       │     │                          osystem%3Amaven 
-│                       │     ├ Title           : Netty is an asynchronous event-driven network application
-│                       │     │                   framework fo ... 
+│                       │     ├ Title           : netty-codec-http: Netty is vulnerable to request smuggling
+│                       │     │                   due to incorrect parsing of chunk extensions 
 │                       │     ├ Description     : Netty is an asynchronous event-driven network application
 │                       │     │                   framework for development of maintainable high performance
 │                       │     │                   protocol servers and clients. In versions 4.1.124.Final, and
@@ -93,22 +93,30 @@
 │                       │     │                    fixed in versions 4.1.125.Final and 4.2.5.Final. 
 │                       │     ├ Severity        : LOW 
 │                       │     ├ CweIDs           ─ [0]: CWE-444 
-│                       │     ├ VendorSeverity   ╭ ghsa: 1 
-│                       │     │                  ╰ nvd : 3 
-│                       │     ├ CVSS             ─ nvd ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N 
-│                       │     │                        ╰ V3Score : 7.5 
-│                       │     ├ References       ╭ [0]: https://datatracker.ietf.org/doc/html/rfc9112#name-chun
-│                       │     │                  │      ked-transfer-coding 
-│                       │     │                  ├ [1]: https://github.com/JLLeitschuh/unCVEed/issues/1 
-│                       │     │                  ├ [2]: https://github.com/github/advisory-database/pull/6092 
-│                       │     │                  ├ [3]: https://github.com/netty/netty 
-│                       │     │                  ├ [4]: https://github.com/netty/netty/commit/edb55fd8e0a3bcbd8
-│                       │     │                  │      5881e423464f585183d1284 
-│                       │     │                  ├ [5]: https://github.com/netty/netty/issues/15522 
-│                       │     │                  ├ [6]: https://github.com/netty/netty/pull/15611 
-│                       │     │                  ├ [7]: https://github.com/netty/netty/security/advisories/GHSA
-│                       │     │                  │      -fghv-69vj-qj49 
-│                       │     │                  ╰ [8]: https://w4ke.info/2025/06/18/funky-chunks.html 
+│                       │     ├ VendorSeverity   ╭ ghsa  : 1 
+│                       │     │                  ├ nvd   : 3 
+│                       │     │                  ╰ redhat: 2 
+│                       │     ├ CVSS             ╭ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/
+│                       │     │                  │        │           A:N 
+│                       │     │                  │        ╰ V3Score : 7.5 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/
+│                       │     │                           │           A:N 
+│                       │     │                           ╰ V3Score : 7.5 
+│                       │     ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2025-58056 
+│                       │     │                  ├ [1] : https://datatracker.ietf.org/doc/html/rfc9112#name-chu
+│                       │     │                  │       nked-transfer-coding 
+│                       │     │                  ├ [2] : https://github.com/JLLeitschuh/unCVEed/issues/1 
+│                       │     │                  ├ [3] : https://github.com/github/advisory-database/pull/6092 
+│                       │     │                  ├ [4] : https://github.com/netty/netty 
+│                       │     │                  ├ [5] : https://github.com/netty/netty/commit/edb55fd8e0a3bcbd
+│                       │     │                  │       85881e423464f585183d1284 
+│                       │     │                  ├ [6] : https://github.com/netty/netty/issues/15522 
+│                       │     │                  ├ [7] : https://github.com/netty/netty/pull/15611 
+│                       │     │                  ├ [8] : https://github.com/netty/netty/security/advisories/GHS
+│                       │     │                  │       A-fghv-69vj-qj49 
+│                       │     │                  ├ [9] : https://nvd.nist.gov/vuln/detail/CVE-2025-58056 
+│                       │     │                  ├ [10]: https://w4ke.info/2025/06/18/funky-chunks.html 
+│                       │     │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2025-58056 
 │                       │     ├ PublishedDate   : 2025-09-03T21:15:33.07Z 
 │                       │     ╰ LastModifiedDate: 2025-09-08T16:46:36.847Z 
 │                       ╰ [2] ╭ VulnerabilityID : CVE-2025-55163 
@@ -142,8 +150,15 @@
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-770 
 │                             ├ VendorSeverity   ╭ ghsa  : 3 
+│                             │                  ├ nvd   : 3 
 │                             │                  ╰ redhat: 3 
-│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                             ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                             │                  │        │           A:H 
+│                             │                  │        ╰ V3Score : 7.5 
+│                             │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                             │                  │        │           A:H 
+│                             │                  │        ╰ V3Score : 7.5 
+│                             │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
 │                             │                           │           A:H 
 │                             │                           ╰ V3Score : 7.5 
 │                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-55163 
@@ -154,7 +169,7 @@
 │                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-55163 
 │                             │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2025-55163 
 │                             ├ PublishedDate   : 2025-08-13T15:15:39.39Z 
-│                             ╰ LastModifiedDate: 2025-08-13T17:33:46.673Z 
+│                             ╰ LastModifiedDate: 2025-09-10T14:48:03.603Z 
 ├ [2] ╭ Target         : usr/bin/crictl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -182,6 +197,7 @@
 │                       │     │                   graphs, which are rather uncommon. 
 │                       │     ├ Severity        : HIGH 
 │                       │     ├ VendorSeverity   ╭ amazon     : 2 
+│                       │     │                  ├ azure      : 3 
 │                       │     │                  ├ bitnami    : 3 
 │                       │     │                  ├ cbl-mariner: 3 
 │                       │     │                  ╰ redhat     : 3 
@@ -229,7 +245,7 @@
 │                       │     │                  ├ azure      : 3 
 │                       │     │                  ├ bitnami    : 3 
 │                       │     │                  ├ cbl-mariner: 3 
-│                       │     │                  ╰ redhat     : 3 
+│                       │     │                  ╰ redhat     : 2 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L
 │                       │     │                  │         │           /A:L 
 │                       │     │                  │         ╰ V3Score : 7 
@@ -322,13 +338,13 @@
 │                       │     │                            │           /A:N 
 │                       │     │                            ╰ V3Score : 5.4 
 │                       │     ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2025/04/04/4 
-│                       │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:9623 
+│                       │     │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:9635 
 │                       │     │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-22871 
 │                       │     │                  ├ [3] : https://bugzilla.redhat.com/2358493 
 │                       │     │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2358493 
 │                       │     │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
 │                       │     │                  │       5-22871 
-│                       │     │                  ├ [6] : https://errata.almalinux.org/10/ALSA-2025-9623.html 
+│                       │     │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-9635.html 
 │                       │     │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:9845 
 │                       │     │                  ├ [8] : https://go.dev/cl/652998 
 │                       │     │                  ├ [9] : https://go.dev/issue/71988 
@@ -377,10 +393,10 @@
 │                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N
 │                             │                            │           /A:N 
 │                             │                            ╰ V3Score : 6.8 
-│                             ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:10677 
+│                             ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:10676 
 │                             │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2025-4673 
 │                             │                  ├ [2] : https://bugzilla.redhat.com/2373305 
-│                             │                  ├ [3] : https://errata.almalinux.org/10/ALSA-2025-10677.html 
+│                             │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2025-10676.html 
 │                             │                  ├ [4] : https://go.dev/cl/679257 
 │                             │                  ├ [5] : https://go.dev/issue/73816 
 │                             │                  ├ [6] : https://groups.google.com/g/golang-announce/c/ufZ8WpEs
@@ -617,7 +633,10 @@
 │                       │     ├ VendorSeverity   ╭ ghsa  : 2 
 │                       │     │                  ├ nvd   : 2 
 │                       │     │                  ╰ redhat: 2 
-│                       │     ├ CVSS             ╭ nvd    ╭ V3Vector: CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:U/C:L/I:L/
+│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:U/C:L/I:L/
+│                       │     │                  │        │           A:N 
+│                       │     │                  │        ╰ V3Score : 4.6 
+│                       │     │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:U/C:L/I:L/
 │                       │     │                  │        │           A:N 
 │                       │     │                  │        ╰ V3Score : 4.6 
 │                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:C/C:L/I:L/
@@ -769,7 +788,7 @@
 │                             │                  ├ azure      : 3 
 │                             │                  ├ bitnami    : 3 
 │                             │                  ├ cbl-mariner: 3 
-│                             │                  ╰ redhat     : 3 
+│                             │                  ╰ redhat     : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L
 │                             │                  │         │           /A:L 
 │                             │                  │         ╰ V3Score : 7 
@@ -970,7 +989,7 @@
                               │                  ├ azure      : 3 
                               │                  ├ bitnami    : 3 
                               │                  ├ cbl-mariner: 3 
-                              │                  ╰ redhat     : 3 
+                              │                  ╰ redhat     : 2 
                               ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L
                               │                  │         │           /A:L 
                               │                  │         ╰ V3Score : 7 
