@@ -15,8 +15,8 @@
     FixedVersion: 1.24.4
     Status: fixed
     Layer:
-      Digest: sha256:1e8e0fe9b1e14e118d21ee9d7f5e9dbb9d2a0726c438ed4f7a3f17a756d03f35
-      DiffID: sha256:ed89fea085b355cd778205a62771af4bb01c26b1e3697759a7fb7967d402a66c
+      Digest: sha256:3abe8bf0130d47bdf3dd6929079bb06ca0864c057c58953afad5126fba00849e
+      DiffID: sha256:0592193a2b351cd58bcfde24d5f0c5dc4c1e23b00179945fc9e2bf0e12973180
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22874
     DataSource:
       ID: govulndb
@@ -27,6 +27,7 @@
     Severity: HIGH
     VendorSeverity:
       amazon: 2
+      azure: 3
       bitnami: 3
       cbl-mariner: 3
       redhat: 3
@@ -57,8 +58,8 @@
     FixedVersion: 1.23.12, 1.24.6
     Status: fixed
     Layer:
-      Digest: sha256:1e8e0fe9b1e14e118d21ee9d7f5e9dbb9d2a0726c438ed4f7a3f17a756d03f35
-      DiffID: sha256:ed89fea085b355cd778205a62771af4bb01c26b1e3697759a7fb7967d402a66c
+      Digest: sha256:3abe8bf0130d47bdf3dd6929079bb06ca0864c057c58953afad5126fba00849e
+      DiffID: sha256:0592193a2b351cd58bcfde24d5f0c5dc4c1e23b00179945fc9e2bf0e12973180
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-47907
     DataSource:
       ID: govulndb
@@ -72,7 +73,7 @@
       azure: 3
       bitnami: 3
       cbl-mariner: 3
-      redhat: 3
+      redhat: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L
@@ -100,8 +101,8 @@
     FixedVersion: 1.23.10, 1.24.4
     Status: fixed
     Layer:
-      Digest: sha256:1e8e0fe9b1e14e118d21ee9d7f5e9dbb9d2a0726c438ed4f7a3f17a756d03f35
-      DiffID: sha256:ed89fea085b355cd778205a62771af4bb01c26b1e3697759a7fb7967d402a66c
+      Digest: sha256:3abe8bf0130d47bdf3dd6929079bb06ca0864c057c58953afad5126fba00849e
+      DiffID: sha256:0592193a2b351cd58bcfde24d5f0c5dc4c1e23b00179945fc9e2bf0e12973180
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-0913
     DataSource:
       ID: govulndb
@@ -136,8 +137,8 @@
     FixedVersion: 1.23.8, 1.24.2
     Status: fixed
     Layer:
-      Digest: sha256:1e8e0fe9b1e14e118d21ee9d7f5e9dbb9d2a0726c438ed4f7a3f17a756d03f35
-      DiffID: sha256:ed89fea085b355cd778205a62771af4bb01c26b1e3697759a7fb7967d402a66c
+      Digest: sha256:3abe8bf0130d47bdf3dd6929079bb06ca0864c057c58953afad5126fba00849e
+      DiffID: sha256:0592193a2b351cd58bcfde24d5f0c5dc4c1e23b00179945fc9e2bf0e12973180
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-22871
     DataSource:
       ID: govulndb
@@ -163,12 +164,12 @@
         V3Score: 5.4
     References:
     - http://www.openwall.com/lists/oss-security/2025/04/04/4
-    - https://access.redhat.com/errata/RHSA-2025:9623
+    - https://access.redhat.com/errata/RHSA-2025:9635
     - https://access.redhat.com/security/cve/CVE-2025-22871
     - https://bugzilla.redhat.com/2358493
     - https://bugzilla.redhat.com/show_bug.cgi?id=2358493
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-22871
-    - https://errata.almalinux.org/10/ALSA-2025-9623.html
+    - https://errata.almalinux.org/9/ALSA-2025-9635.html
     - https://errata.rockylinux.org/RLSA-2025:9845
     - https://go.dev/cl/652998
     - https://go.dev/issue/71988
@@ -190,8 +191,8 @@
     FixedVersion: 1.23.10, 1.24.4
     Status: fixed
     Layer:
-      Digest: sha256:1e8e0fe9b1e14e118d21ee9d7f5e9dbb9d2a0726c438ed4f7a3f17a756d03f35
-      DiffID: sha256:ed89fea085b355cd778205a62771af4bb01c26b1e3697759a7fb7967d402a66c
+      Digest: sha256:3abe8bf0130d47bdf3dd6929079bb06ca0864c057c58953afad5126fba00849e
+      DiffID: sha256:0592193a2b351cd58bcfde24d5f0c5dc4c1e23b00179945fc9e2bf0e12973180
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-4673
     DataSource:
       ID: govulndb
@@ -217,10 +218,10 @@
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N
         V3Score: 6.8
     References:
-    - https://access.redhat.com/errata/RHSA-2025:10677
+    - https://access.redhat.com/errata/RHSA-2025:10676
     - https://access.redhat.com/security/cve/CVE-2025-4673
     - https://bugzilla.redhat.com/2373305
-    - https://errata.almalinux.org/10/ALSA-2025-10677.html
+    - https://errata.almalinux.org/9/ALSA-2025-10676.html
     - https://go.dev/cl/679257
     - https://go.dev/issue/73816
     - https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A
