@@ -234,30 +234,18 @@
 │                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │                       │     ├ Title           : If the PATH environment variable contains paths which are
 │                       │     │                   executables  ... 
-│                       │     ├ Description     : Package updates are available for Amazon Linux 2023 that fix
-│                       │     │                   the following vulnerabilities:
-│                       │     │                   CVE-2025-47907:
-│                       │     │                   	Cancelling a query (e.g. by cancelling the context passed to
-│                       │     │                    one of the query methods) during a call to the Scan method
-│                       │     │                   of the returned Rows can result in unexpected results if
-│                       │     │                   other queries are being made in parallel. This can result in
-│                       │     │                   a race condition that may overwrite the expected results with
-│                       │     │                    those of another query, causing the call to Scan to return
-│                       │     │                   either unexpected results from the other query or an error.
-│                       │     │                   
-│                       │     │                   CVE-2025-47906:
-│                       │     │                   	os/exec: LookPath may return unexpected paths. If the PATH
-│                       │     │                   environment variable contains paths which are executables
-│                       │     │                   (rather than just directories), passing certain strings to
-│                       │     │                   LookPath ("", ".", and ".."), can result in the binaries
-│                       │     │                   listed in the PATH being unexpectedly returned.
-│                       │     │                    
+│                       │     ├ Description     : If the PATH environment variable contains paths which are
+│                       │     │                   executables (rather than just directories), passing certain
+│                       │     │                   strings to LookPath ("", ".", and ".."), can result in the
+│                       │     │                   binaries listed in the PATH being unexpectedly returned. 
 │                       │     ├ Severity        : HIGH 
 │                       │     ├ VendorSeverity   ─ amazon: 3 
-│                       │     ╰ References       ╭ [0]: https://go.dev/cl/691775 
-│                       │                        ├ [1]: https://go.dev/issue/74466 
-│                       │                        ├ [2]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
-│                       │                        ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3956 
+│                       │     ├ References       ╭ [0]: https://go.dev/cl/691775 
+│                       │     │                  ├ [1]: https://go.dev/issue/74466 
+│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
+│                       │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3956 
+│                       │     ├ PublishedDate   : 2025-09-18T19:15:37.66Z 
+│                       │     ╰ LastModifiedDate: 2025-09-19T16:00:27.847Z 
 │                       ├ [2] ╭ VulnerabilityID : CVE-2025-47907 
 │                       │     ├ PkgID           : stdlib@v1.24.1 
 │                       │     ├ PkgName         : stdlib 
@@ -604,7 +592,7 @@
 │                             │                    DOM construction, but only when tags are in foreign content
 │                             │                   (e.g. <math>, <svg>, etc contexts). 
 │                             ├ Severity        : MEDIUM 
-│                             ├ VendorSeverity   ╭ amazon     : 3 
+│                             ├ VendorSeverity   ╭ amazon     : 2 
 │                             │                  ├ azure      : 2 
 │                             │                  ├ cbl-mariner: 2 
 │                             │                  ├ ghsa       : 2 
@@ -819,30 +807,18 @@
 │                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │                       │     ├ Title           : If the PATH environment variable contains paths which are
 │                       │     │                   executables  ... 
-│                       │     ├ Description     : Package updates are available for Amazon Linux 2023 that fix
-│                       │     │                   the following vulnerabilities:
-│                       │     │                   CVE-2025-47907:
-│                       │     │                   	Cancelling a query (e.g. by cancelling the context passed to
-│                       │     │                    one of the query methods) during a call to the Scan method
-│                       │     │                   of the returned Rows can result in unexpected results if
-│                       │     │                   other queries are being made in parallel. This can result in
-│                       │     │                   a race condition that may overwrite the expected results with
-│                       │     │                    those of another query, causing the call to Scan to return
-│                       │     │                   either unexpected results from the other query or an error.
-│                       │     │                   
-│                       │     │                   CVE-2025-47906:
-│                       │     │                   	os/exec: LookPath may return unexpected paths. If the PATH
-│                       │     │                   environment variable contains paths which are executables
-│                       │     │                   (rather than just directories), passing certain strings to
-│                       │     │                   LookPath ("", ".", and ".."), can result in the binaries
-│                       │     │                   listed in the PATH being unexpectedly returned.
-│                       │     │                    
+│                       │     ├ Description     : If the PATH environment variable contains paths which are
+│                       │     │                   executables (rather than just directories), passing certain
+│                       │     │                   strings to LookPath ("", ".", and ".."), can result in the
+│                       │     │                   binaries listed in the PATH being unexpectedly returned. 
 │                       │     ├ Severity        : HIGH 
 │                       │     ├ VendorSeverity   ─ amazon: 3 
-│                       │     ╰ References       ╭ [0]: https://go.dev/cl/691775 
-│                       │                        ├ [1]: https://go.dev/issue/74466 
-│                       │                        ├ [2]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
-│                       │                        ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3956 
+│                       │     ├ References       ╭ [0]: https://go.dev/cl/691775 
+│                       │     │                  ├ [1]: https://go.dev/issue/74466 
+│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
+│                       │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3956 
+│                       │     ├ PublishedDate   : 2025-09-18T19:15:37.66Z 
+│                       │     ╰ LastModifiedDate: 2025-09-19T16:00:27.847Z 
 │                       ╰ [3] ╭ VulnerabilityID : CVE-2025-47907 
 │                             ├ PkgID           : stdlib@v1.24.4 
 │                             ├ PkgName         : stdlib 
@@ -1062,30 +1038,18 @@
                         │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
                         │     ├ Title           : If the PATH environment variable contains paths which are
                         │     │                   executables  ... 
-                        │     ├ Description     : Package updates are available for Amazon Linux 2023 that fix
-                        │     │                   the following vulnerabilities:
-                        │     │                   CVE-2025-47907:
-                        │     │                   	Cancelling a query (e.g. by cancelling the context passed to
-                        │     │                    one of the query methods) during a call to the Scan method
-                        │     │                   of the returned Rows can result in unexpected results if
-                        │     │                   other queries are being made in parallel. This can result in
-                        │     │                   a race condition that may overwrite the expected results with
-                        │     │                    those of another query, causing the call to Scan to return
-                        │     │                   either unexpected results from the other query or an error.
-                        │     │                   
-                        │     │                   CVE-2025-47906:
-                        │     │                   	os/exec: LookPath may return unexpected paths. If the PATH
-                        │     │                   environment variable contains paths which are executables
-                        │     │                   (rather than just directories), passing certain strings to
-                        │     │                   LookPath ("", ".", and ".."), can result in the binaries
-                        │     │                   listed in the PATH being unexpectedly returned.
-                        │     │                    
+                        │     ├ Description     : If the PATH environment variable contains paths which are
+                        │     │                   executables (rather than just directories), passing certain
+                        │     │                   strings to LookPath ("", ".", and ".."), can result in the
+                        │     │                   binaries listed in the PATH being unexpectedly returned. 
                         │     ├ Severity        : HIGH 
                         │     ├ VendorSeverity   ─ amazon: 3 
-                        │     ╰ References       ╭ [0]: https://go.dev/cl/691775 
-                        │                        ├ [1]: https://go.dev/issue/74466 
-                        │                        ├ [2]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
-                        │                        ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3956 
+                        │     ├ References       ╭ [0]: https://go.dev/cl/691775 
+                        │     │                  ├ [1]: https://go.dev/issue/74466 
+                        │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/x5MKroML2yM 
+                        │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-3956 
+                        │     ├ PublishedDate   : 2025-09-18T19:15:37.66Z 
+                        │     ╰ LastModifiedDate: 2025-09-19T16:00:27.847Z 
                         ╰ [3] ╭ VulnerabilityID : CVE-2025-47907 
                               ├ PkgID           : stdlib@v1.24.5 
                               ├ PkgName         : stdlib 
