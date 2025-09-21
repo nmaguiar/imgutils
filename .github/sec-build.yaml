@@ -166,10 +166,16 @@
     Severity: HIGH
     VendorSeverity:
       amazon: 3
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L
+        V3Score: 6.5
     References:
     - https://go.dev/cl/691775
     - https://go.dev/issue/74466
     - https://groups.google.com/g/golang-announce/c/x5MKroML2yM
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-47906
     - https://pkg.go.dev/vuln/GO-2025-3956
     PublishedDate: '2025-09-18T19:15:37.66Z'
     LastModifiedDate: '2025-09-19T16:00:27.847Z'
@@ -490,7 +496,7 @@
     Description: The tokenizer incorrectly interprets tags with unquoted attribute values that end with a solidus character (/) as self-closing. When directly using Tokenizer, this can result in such tags incorrectly being marked as self-closing, and when using the Parse functions, this can result in content following such tags as being placed in the wrong scope during DOM construction, but only when tags are in foreign content (e.g. <math>, <svg>, etc contexts).
     Severity: MEDIUM
     VendorSeverity:
-      amazon: 2
+      amazon: 3
       azure: 2
       cbl-mariner: 2
       ghsa: 2
