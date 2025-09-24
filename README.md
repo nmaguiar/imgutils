@@ -322,20 +322,29 @@ exit
 
 ### Checking images content
 
-To check images use the following commands within the imgutils/nmaguiar:
+
+To inspect image contents you can use dive or the included expansion scripts. The scripts accept a path to an image tar or a registry/docker-daemon reference (they will use skopeo to create a temporary archive when needed). Examples to run inside the imgutils container:
 
 ```bash
-$ dive docker.io/some/image:latest
-[...]
-$ docker image save some/image:latest > image.tar
-[...]
-$ ojob expand.yaml image=image.tar output=output json=image.json
-# Check the output for the entrypoint and other information about the image
-$ cd output
-$ mc
-# then use the midnight-commander UI to check the contents
-```
+# Interactive exploration
+dive docker.io/some/image:latest
 
+# Save image to a tar and expand layers to a directory
+docker image save some/image:latest > image.tar
+# Expand layers (preserves each layer under the output folder)
+expandLayersInImage.sh image.tar output_layers
+
+# Expand files (extracts files from the last layer where they are found)
+expandFilesInImage.sh image.tar output_files
+
+# You can also pass a registry reference directly (the script will use skopeo):
+expandLayersInImage.sh docker.io/some/image:latest output_layers
+expandFilesInImage.sh docker.io/some/image:latest output_files
+
+# Inspect the results
+ls -R output_files
+cd output_files && mc
+```
 ### Using the local docker authentication
 
 To start imgutils/nmaguiar with the local host docker authentication:
