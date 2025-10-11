@@ -2131,6 +2131,7 @@
       cbl-mariner: 2
       oracle-oval: 2
       redhat: 2
+      rocky: 2
       ubuntu: 2
     CVSS:
       bitnami:
@@ -2143,7 +2144,10 @@
     - https://access.redhat.com/errata/RHSA-2025:15887
     - https://access.redhat.com/security/cve/CVE-2025-4673
     - https://bugzilla.redhat.com/2373305
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2373305
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-4673
     - https://errata.almalinux.org/9/ALSA-2025-15887.html
+    - https://errata.rockylinux.org/RLSA-2025:16432
     - https://go.dev/cl/679257
     - https://go.dev/issue/73816
     - https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A
@@ -2178,7 +2182,7 @@
     VendorSeverity:
       amazon: 3
       bitnami: 2
-      cbl-mariner: 3
+      cbl-mariner: 2
       redhat: 2
     CVSS:
       bitnami:
