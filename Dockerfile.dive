@@ -2,7 +2,7 @@
 FROM golang:alpine as dive
 
 RUN apk update\
- && apk add git make bash ncurses curl\
+ && apk add git make bash ncurses curl python3\
  #&& cd /go/src\
  #&& git clone https://github.com/wagoodman/dive.git\
  && git clone https://github.com/wagoodman/dive.git\
@@ -10,14 +10,16 @@ RUN apk update\
  && git checkout v0.13.1\
  && make bootstrap\
  #&& mkdir .tmp\
- && go get golang.org/x/tools@latest\
- && go mod tidy\
+ #&& go get golang.org/x/tools@latest\
+ #&& go mod tidy\
  #&& go install github.com/goreleaser/goreleaser@latest\
  #&& ln -s /go/bin/goreleaser .tmp/goreleaser\
  && curl https://ojob.io/getStatic.sh | sh\
  && ./oaf -c "var o=io.readFileYAML('.goreleaser.yaml');delete o.dockers;o.builds[0].goos=['linux'];io.writeFileYAML('.goreleaser.yaml',o)"\
+ && make\
  && make build\
- && cp snapshot/dive_linux_arm64/dive /dive_linux_arm64\
+ && make snapshot\
+ && cp snapshot/dive_linux_arm64_v8.0/dive /dive_linux_arm64\
  && cp snapshot/dive_linux_amd64_v1/dive /dive_linux_amd64
 # && arch=$(uname -m) && if [ "$arch" == "aarch64" ]; then cp snapshot/dive_linux_arm64/dive /dive; elif [ "$arch" == "x86_64" ]; then cp snapshot/dive_linux_amd64_v1/dive /dive; fi
 
