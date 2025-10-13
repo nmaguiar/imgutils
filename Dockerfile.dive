@@ -5,7 +5,7 @@ RUN apk update\
  && apk add git make bash ncurses curl\
  #&& cd /go/src\
  #&& git clone https://github.com/wagoodman/dive.git\
- && git clone https://github.com/nmaguiar/dive.git\
+ && git clone https://github.com/wagoodman/dive.git\
  && cd dive\
  && git checkout v0.13.1\
  && make bootstrap\
