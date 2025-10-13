@@ -10,6 +10,8 @@ RUN apk update\
  && git checkout v0.12.0\
  && make bootstrap\
  #&& mkdir .tmp\
+ && go get golang.org/x/tools@latest\
+ && go mod tidy\
  #&& go install github.com/goreleaser/goreleaser@latest\
  #&& ln -s /go/bin/goreleaser .tmp/goreleaser\
  && curl https://ojob.io/getStatic.sh | sh\
