@@ -22,6 +22,14 @@ Welcome to the ImgUtils image. Check the deployment options available and the li
 
 If you need to login in AWS ECR and another registry at the same time (use ```"$'\n'"``` or ```|||``` to separate multiple registries logins)
 
+You can validate the same authentication string outside of the container using the helper script:
+
+```bash
+scripts/regAuthLogin.sh "my.registry.example.com,myuser,mypassword"
+```
+
+The script accepts the same syntax as `REGAUTH`, including multiple registries separated with new lines or `|||`.
+
 ### AWS CloudShell
 
 {{{$acolor 'FAINT,ITALIC' 'sudo docker run --rm -ti --pull always -v /var/run/docker.sock:/var/run/docker.sock -e REGAUTH="$(aws sts get-caller-identity --query Account --output text).dkr.ecr.$AWS_REGION.amazonaws.com,AWS,$(aws ecr get-login-password)" nmaguiar/imgutils:build /bin/bash'}}}
