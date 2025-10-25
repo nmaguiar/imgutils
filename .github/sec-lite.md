@@ -1092,7 +1092,7 @@
                         │     │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
                         │     │                  │       5-22871 
                         │     │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-9635.html 
-                        │     │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:9845 
+                        │     │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:9317 
                         │     │                  ├ [8] : https://go.dev/cl/652998 
                         │     │                  ├ [9] : https://go.dev/issue/71988 
                         │     │                  ├ [10]: https://groups.google.com/g/golang-announce/c/Y2uBTVKj
