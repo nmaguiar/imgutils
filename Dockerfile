@@ -38,12 +38,14 @@ RUN sed -i 's/v[0-9]*\.[0-9]*/edge/g' /etc/apk/repositories\
  && curl -s https://ojob.io/docker/listHubRepo.yaml > /openaf/ojobs/listHubRepo.yaml\
  && curl -s https://ojob.io/oaf/colorFormats.yaml > /openaf/ojobs/colorFormats.yaml\
  && curl -s https://ojob.io/sec/add2dtrack.yaml > /openaf/ojobs/add2dtrack.yaml\
+ && curl -s https://ojob.io/docker/mirrorImages.yaml > /openaf/ojobs/mirrorImages.yaml\
  && /openaf/oaf --sb /openaf/ojobs/imgExpand.yaml\
  && /openaf/oaf --sb /openaf/ojobs/imgCollapse.yaml\
  && /openaf/oaf --sb /openaf/ojobs/imgInfo.yaml\
  && /openaf/oaf --sb /openaf/ojobs/listHubRepo.yaml\
  && /openaf/oaf --sb /openaf/ojobs/colorFormats.yaml\
  && /openaf/oaf --sb /openaf/ojobs/add2dtrack.yaml\
+ && /openaf/oaf --sb /openaf/ojobs/mirrorImages.yaml\
  && chown -R openaf:0 /openaf\
  && chown openaf:0 /openaf/.opack.db\
  && chmod -R u+rwx,g+rwx,o+rx,o-w /openaf/*\
