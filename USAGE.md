@@ -22,9 +22,22 @@ Welcome to the ImgUtils image. Check the deployment options available and the li
 
 If you need to login in AWS ECR and another registry at the same time (use ```"$'\n'"``` or ```|||``` to separate multiple registries logins)
 
+You can validate the same authentication string outside of the container using the helper script:
+
+```bash
+scripts/regAuthLogin.sh "my.registry.example.com,myuser,mypassword"
+```
+
+The script accepts the same syntax as `REGAUTH`, including multiple registries separated with new lines or `|||`.
+
 ### AWS CloudShell
 
 {{{$acolor 'FAINT,ITALIC' 'sudo docker run --rm -ti --pull always -v /var/run/docker.sock:/var/run/docker.sock -e REGAUTH="$(aws sts get-caller-identity --query Account --output text).dkr.ecr.$AWS_REGION.amazonaws.com,AWS,$(aws ecr get-login-password)" nmaguiar/imgutils:build /bin/bash'}}}
+
+### Container in AWS
+
+{{{$acolor 'FAINT,ITALIC' 'docker run --rm -ti -v ~/.aws:/home/openaf/.aws --pull=always nmaguiar/imgutils /bin/bash -c "opack install AWS && regAuthLogin.sh \"123456789012.dkr.ecr.eu-west-1.amazonaws.com
+,$(ojob ojob.io/aws/getECRDockerToken region=eu-west-1)\" && ojob ojob-repo/some-other-job"'}}}
 
 ---
 
@@ -75,6 +88,7 @@ First check the nodes' names with 'kubectl get nodes'
 | imageArchiveType.sh | Given a container image tar file, determines if it's a docker or oci archive tar file |
 | convert2dockerarchive.sh | Given a container image tar file, converts it to a docker archive tar from an oci image tar file |
 | convert2ociarchive.sh | Given a container image tar file, converts it to an oci archive tar from a docker image tar file |
+| regAuthLogin.sh | Given a registry authentication string, performs the login to the specified registries |
 
 ---
 

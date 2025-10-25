@@ -62,11 +62,19 @@ docker run --rm -ti --pull always -v /var/run/docker.sock:/var/run/docker.sock -
 
 If you need to login in AWS ECR and another registry at the same time (use ```"$'\n'"``` or ```|||``` to separate multiple registries logins):
 
-AWS ECR + another registry example: 
+AWS ECR + another registry example:
 
 ```bash
 docker run --rm -ti --pull always -v /var/run/docker.sock:/var/run/docker.sock -e REGAUTH="$(aws sts get-caller-identity --query Account --output text).dkr.ecr.$(curl -s http://169.254.169.254/latest/meta-data/placement/region).amazonaws.com,AWS,$(aws ecr get-login-password)"$'\n'"my.other.registry,mylogin,mypass" nmaguiar/imgutils /bin/bash
 ```
+
+To test the same authentication string outside of the container, you can use the helper script:
+
+```bash
+scripts/regAuthLogin.sh "my.registry.example.com,myuser,mypassword"
+```
+
+The script accepts the same syntax as `REGAUTH`, including multiple registries separated with new lines or `|||`.
 
 Private registry based on host docker auth example:
 
