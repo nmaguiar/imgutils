@@ -34,6 +34,11 @@ The script accepts the same syntax as `REGAUTH`, including multiple registries s
 
 {{{$acolor 'FAINT,ITALIC' 'sudo docker run --rm -ti --pull always -v /var/run/docker.sock:/var/run/docker.sock -e REGAUTH="$(aws sts get-caller-identity --query Account --output text).dkr.ecr.$AWS_REGION.amazonaws.com,AWS,$(aws ecr get-login-password)" nmaguiar/imgutils:build /bin/bash'}}}
 
+### Container in AWS
+
+{{{$acolor 'FAINT,ITALIC' 'docker run --rm -ti -v ~/.aws:/home/openaf/.aws --pull=always nmaguiar/imgutils /bin/bash -c "opack install AWS && regAuthLogin.sh \"123456789012.dkr.ecr.eu-west-1.amazonaws.com
+,$(ojob ojob.io/aws/getECRDockerToken region=eu-west-1)\" && ojob ojob-repo/some-other-job"'}}}
+
 ---
 
 ## ⚙️  Deploy using kubectl 
