@@ -1035,11 +1035,15 @@
       amazon: 3
       bitnami: 4
       cbl-mariner: 3
+      ghsa: 4
       oracle-oval: 2
       redhat: 2
       rocky: 2
     CVSS:
       bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
+        V3Score: 9.1
+      ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
         V3Score: 9.1
       redhat:
@@ -1054,6 +1058,10 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-22871
     - https://errata.almalinux.org/9/ALSA-2025-9635.html
     - https://errata.rockylinux.org/RLSA-2025:9317
+    - https://github.com/roadrunner-server/roadrunner
+    - https://github.com/roadrunner-server/roadrunner/commit/f269279ee87d0b88127741cad1042389af7605fa
+    - https://github.com/roadrunner-server/roadrunner/issues/2166
+    - https://github.com/roadrunner-server/roadrunner/releases/tag/v2025.1.0
     - https://go.dev/cl/652998
     - https://go.dev/issue/71988
     - https://groups.google.com/g/golang-announce/c/Y2uBTVKjBQk
