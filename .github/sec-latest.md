@@ -2121,10 +2121,14 @@
 │                       │     │                  ├ amazon     : 3 
 │                       │     │                  ├ bitnami    : 4 
 │                       │     │                  ├ cbl-mariner: 3 
+│                       │     │                  ├ ghsa       : 4 
 │                       │     │                  ├ oracle-oval: 2 
 │                       │     │                  ├ redhat     : 2 
 │                       │     │                  ╰ rocky      : 2 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
+│                       │     │                  │         │           /A:N 
+│                       │     │                  │         ╰ V3Score : 9.1 
+│                       │     │                  ├ ghsa    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
 │                       │     │                  │         │           /A:N 
 │                       │     │                  │         ╰ V3Score : 9.1 
 │                       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L
@@ -2139,15 +2143,22 @@
 │                       │     │                  │       5-22871 
 │                       │     │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-9635.html 
 │                       │     │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:9317 
-│                       │     │                  ├ [8] : https://go.dev/cl/652998 
-│                       │     │                  ├ [9] : https://go.dev/issue/71988 
-│                       │     │                  ├ [10]: https://groups.google.com/g/golang-announce/c/Y2uBTVKj
+│                       │     │                  ├ [8] : https://github.com/roadrunner-server/roadrunner 
+│                       │     │                  ├ [9] : https://github.com/roadrunner-server/roadrunner/commit
+│                       │     │                  │       /f269279ee87d0b88127741cad1042389af7605fa 
+│                       │     │                  ├ [10]: https://github.com/roadrunner-server/roadrunner/issues
+│                       │     │                  │       /2166 
+│                       │     │                  ├ [11]: https://github.com/roadrunner-server/roadrunner/releas
+│                       │     │                  │       es/tag/v2025.1.0 
+│                       │     │                  ├ [12]: https://go.dev/cl/652998 
+│                       │     │                  ├ [13]: https://go.dev/issue/71988 
+│                       │     │                  ├ [14]: https://groups.google.com/g/golang-announce/c/Y2uBTVKj
 │                       │     │                  │       BQk 
-│                       │     │                  ├ [11]: https://linux.oracle.com/cve/CVE-2025-22871.html 
-│                       │     │                  ├ [12]: https://linux.oracle.com/errata/ELSA-2025-9845.html 
-│                       │     │                  ├ [13]: https://nvd.nist.gov/vuln/detail/CVE-2025-22871 
-│                       │     │                  ├ [14]: https://pkg.go.dev/vuln/GO-2025-3563 
-│                       │     │                  ╰ [15]: https://www.cve.org/CVERecord?id=CVE-2025-22871 
+│                       │     │                  ├ [15]: https://linux.oracle.com/cve/CVE-2025-22871.html 
+│                       │     │                  ├ [16]: https://linux.oracle.com/errata/ELSA-2025-9845.html 
+│                       │     │                  ├ [17]: https://nvd.nist.gov/vuln/detail/CVE-2025-22871 
+│                       │     │                  ├ [18]: https://pkg.go.dev/vuln/GO-2025-3563 
+│                       │     │                  ╰ [19]: https://www.cve.org/CVERecord?id=CVE-2025-22871 
 │                       │     ├ PublishedDate   : 2025-04-08T20:15:20.183Z 
 │                       │     ╰ LastModifiedDate: 2025-04-18T15:15:57.923Z 
 │                       ├ [4] ╭ VulnerabilityID : CVE-2025-4673 
@@ -7203,7 +7214,8 @@
 │                             │                   been patched in version 0.5.14. 
 │                             ├ Severity        : MEDIUM 
 │                             ├ CweIDs           ─ [0]: CWE-770 
-│                             ├ VendorSeverity   ╭ cbl-mariner: 2 
+│                             ├ VendorSeverity   ╭ azure      : 2 
+│                             │                  ├ cbl-mariner: 2 
 │                             │                  ├ ghsa       : 2 
 │                             │                  ╰ redhat     : 2 
 │                             ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
