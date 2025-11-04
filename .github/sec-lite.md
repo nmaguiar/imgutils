@@ -1524,7 +1524,7 @@
                         │      │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-4009 
                         │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-61723 
                         │      ├ PublishedDate   : 2025-10-29T23:16:19.927Z 
-                        │      ╰ LastModifiedDate: 2025-10-30T21:15:37.053Z 
+                        │      ╰ LastModifiedDate: 2025-11-03T15:15:36.157Z 
                         ╰ [15] ╭ VulnerabilityID : CVE-2025-61725 
                                ├ PkgID           : stdlib@v1.24.1 
                                ├ PkgName         : stdlib 
