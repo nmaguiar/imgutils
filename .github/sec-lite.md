@@ -1078,7 +1078,7 @@
                         │      │                  │      _bI 
                         │      │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-4014 
                         │      ├ PublishedDate   : 2025-10-29T23:16:19.357Z 
-                        │      ╰ LastModifiedDate: 2025-10-30T15:15:39.793Z 
+                        │      ╰ LastModifiedDate: 2025-11-03T20:19:15.39Z 
                         ├ [4]  ╭ VulnerabilityID : CVE-2025-58186 
                         │      ├ PkgID           : stdlib@v1.24.1 
                         │      ├ PkgName         : stdlib 
@@ -1141,7 +1141,7 @@
                         │      │                  │      _bI 
                         │      │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-4007 
                         │      ├ PublishedDate   : 2025-10-29T23:16:19.643Z 
-                        │      ╰ LastModifiedDate: 2025-10-30T21:15:33.983Z 
+                        │      ╰ LastModifiedDate: 2025-11-03T20:19:15.52Z 
                         ├ [6]  ╭ VulnerabilityID : CVE-2025-58188 
                         │      ├ PkgID           : stdlib@v1.24.1 
                         │      ├ PkgName         : stdlib 
@@ -1286,13 +1286,13 @@
                         │      │                            │           L/A:N 
                         │      │                            ╰ V3Score : 5.4 
                         │      ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2025/04/04/4 
-                        │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:9635 
+                        │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:9623 
                         │      │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-22871 
                         │      │                  ├ [3] : https://bugzilla.redhat.com/2358493 
                         │      │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2358493 
                         │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       25-22871 
-                        │      │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-9635.html 
+                        │      │                  ├ [6] : https://errata.almalinux.org/10/ALSA-2025-9623.html 
                         │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:9845 
                         │      │                  ├ [8] : https://github.com/roadrunner-server/roadrunner 
                         │      │                  ├ [9] : https://github.com/roadrunner-server/roadrunner/commi
@@ -1349,13 +1349,13 @@
                         │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:
                         │      │                            │           N/A:N 
                         │      │                            ╰ V3Score : 6.8 
-                        │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:15887 
+                        │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:16432 
                         │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2025-4673 
                         │      │                  ├ [2] : https://bugzilla.redhat.com/2373305 
                         │      │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2373305 
                         │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       25-4673 
-                        │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2025-15887.html 
+                        │      │                  ├ [5] : https://errata.almalinux.org/10/ALSA-2025-16432.html 
                         │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2025:16432 
                         │      │                  ├ [7] : https://go.dev/cl/679257 
                         │      │                  ├ [8] : https://go.dev/issue/73816 
@@ -1562,5 +1562,5 @@
                                │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4006 
                                │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61725 
                                ├ PublishedDate   : 2025-10-29T23:16:20.113Z 
-                               ╰ LastModifiedDate: 2025-10-30T21:15:37.19Z 
+                               ╰ LastModifiedDate: 2025-11-03T20:19:17.47Z 
 ````
