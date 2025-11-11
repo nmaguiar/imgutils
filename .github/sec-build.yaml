@@ -2319,7 +2319,7 @@
     - https://bugzilla.redhat.com/show_bug.cgi?id=2358493
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-22871
     - https://errata.almalinux.org/9/ALSA-2025-9635.html
-    - https://errata.rockylinux.org/RLSA-2025:9317
+    - https://errata.rockylinux.org/RLSA-2025:9845
     - https://github.com/roadrunner-server/roadrunner
     - https://github.com/roadrunner-server/roadrunner/commit/f269279ee87d0b88127741cad1042389af7605fa
     - https://github.com/roadrunner-server/roadrunner/issues/2166
@@ -3356,6 +3356,7 @@
     VendorSeverity:
       amazon: 3
       ghsa: 3
+      oracle-oval: 3
       redhat: 3
       ubuntu: 3
     CVSS:
@@ -3390,6 +3391,8 @@
     - https://github.com/opencontainers/runc/security/advisories/GHSA-qw9x-cqr3-wc7r
     - https://github.com/opencontainers/selinux/pull/237
     - https://github.com/opencontainers/selinux/releases/tag/v1.13.0
+    - https://linux.oracle.com/cve/CVE-2025-52881.html
+    - https://linux.oracle.com/errata/ELSA-2025-19927.html
     - https://nvd.nist.gov/vuln/detail/CVE-2025-52881
     - https://pkg.go.dev/github.com/cyphar/filepath-securejoin/pathrs-lite/procfs
     - https://ubuntu.com/security/notices/USN-7851-1
@@ -7004,6 +7007,7 @@
     VendorSeverity:
       amazon: 3
       ghsa: 3
+      oracle-oval: 3
       redhat: 3
       ubuntu: 3
     CVSS:
@@ -7038,6 +7042,8 @@
     - https://github.com/opencontainers/runc/security/advisories/GHSA-qw9x-cqr3-wc7r
     - https://github.com/opencontainers/selinux/pull/237
     - https://github.com/opencontainers/selinux/releases/tag/v1.13.0
+    - https://linux.oracle.com/cve/CVE-2025-52881.html
+    - https://linux.oracle.com/errata/ELSA-2025-19927.html
     - https://nvd.nist.gov/vuln/detail/CVE-2025-52881
     - https://pkg.go.dev/github.com/cyphar/filepath-securejoin/pathrs-lite/procfs
     - https://ubuntu.com/security/notices/USN-7851-1
@@ -8000,6 +8006,7 @@
     VendorSeverity:
       amazon: 3
       ghsa: 3
+      oracle-oval: 3
       redhat: 3
       ubuntu: 3
     CVSS:
@@ -8034,6 +8041,8 @@
     - https://github.com/opencontainers/runc/security/advisories/GHSA-qw9x-cqr3-wc7r
     - https://github.com/opencontainers/selinux/pull/237
     - https://github.com/opencontainers/selinux/releases/tag/v1.13.0
+    - https://linux.oracle.com/cve/CVE-2025-52881.html
+    - https://linux.oracle.com/errata/ELSA-2025-19927.html
     - https://nvd.nist.gov/vuln/detail/CVE-2025-52881
     - https://pkg.go.dev/github.com/cyphar/filepath-securejoin/pathrs-lite/procfs
     - https://ubuntu.com/security/notices/USN-7851-1
@@ -10765,6 +10774,7 @@
     VendorSeverity:
       amazon: 3
       ghsa: 3
+      oracle-oval: 3
       redhat: 3
       ubuntu: 3
     CVSS:
@@ -10799,6 +10809,8 @@
     - https://github.com/opencontainers/runc/security/advisories/GHSA-qw9x-cqr3-wc7r
     - https://github.com/opencontainers/selinux/pull/237
     - https://github.com/opencontainers/selinux/releases/tag/v1.13.0
+    - https://linux.oracle.com/cve/CVE-2025-52881.html
+    - https://linux.oracle.com/errata/ELSA-2025-19927.html
     - https://nvd.nist.gov/vuln/detail/CVE-2025-52881
     - https://pkg.go.dev/github.com/cyphar/filepath-securejoin/pathrs-lite/procfs
     - https://ubuntu.com/security/notices/USN-7851-1
