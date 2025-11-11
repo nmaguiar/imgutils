@@ -2382,7 +2382,7 @@
 │                       │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-22871 
 │                       │      │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-9635.html 
-│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:9317 
+│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:9845 
 │                       │      │                  ├ [8] : https://github.com/roadrunner-server/roadrunner 
 │                       │      │                  ├ [9] : https://github.com/roadrunner-server/roadrunner/commi
 │                       │      │                  │       t/f269279ee87d0b88127741cad1042389af7605fa 
@@ -3449,10 +3449,11 @@
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ╭ [0]: CWE-61 
 │                             │                  ╰ [1]: CWE-363 
-│                             ├ VendorSeverity   ╭ amazon: 3 
-│                             │                  ├ ghsa  : 3 
-│                             │                  ├ redhat: 3 
-│                             │                  ╰ ubuntu: 3 
+│                             ├ VendorSeverity   ╭ amazon     : 3 
+│                             │                  ├ ghsa       : 3 
+│                             │                  ├ oracle-oval: 3 
+│                             │                  ├ redhat     : 3 
+│                             │                  ╰ ubuntu     : 3 
 │                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/
 │                             │                           │           A:H 
 │                             │                           ╰ V3Score : 8.2 
@@ -3507,13 +3508,15 @@
 │                             │                  ├ [25]: https://github.com/opencontainers/selinux/pull/237 
 │                             │                  ├ [26]: https://github.com/opencontainers/selinux/releases/tag
 │                             │                  │       /v1.13.0 
-│                             │                  ├ [27]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
-│                             │                  ├ [28]: https://pkg.go.dev/github.com/cyphar/filepath-securejo
+│                             │                  ├ [27]: https://linux.oracle.com/cve/CVE-2025-52881.html 
+│                             │                  ├ [28]: https://linux.oracle.com/errata/ELSA-2025-19927.html 
+│                             │                  ├ [29]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
+│                             │                  ├ [30]: https://pkg.go.dev/github.com/cyphar/filepath-securejo
 │                             │                  │       in/pathrs-lite/procfs 
-│                             │                  ├ [29]: https://ubuntu.com/security/notices/USN-7851-1 
-│                             │                  ├ [30]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
-│                             │                  ├ [31]: https://youtu.be/tGseJW_uBB8 
-│                             │                  ╰ [32]: https://youtu.be/y1PaBzxwRWQ 
+│                             │                  ├ [31]: https://ubuntu.com/security/notices/USN-7851-1 
+│                             │                  ├ [32]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
+│                             │                  ├ [33]: https://youtu.be/tGseJW_uBB8 
+│                             │                  ╰ [34]: https://youtu.be/y1PaBzxwRWQ 
 │                             ├ PublishedDate   : 2025-11-06T21:15:42.817Z 
 │                             ╰ LastModifiedDate: 2025-11-06T21:15:42.817Z 
 ├ [4] ╭ Target         : usr/bin/dive 
@@ -7365,10 +7368,11 @@
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ╭ [0]: CWE-61 
 │                             │                  ╰ [1]: CWE-363 
-│                             ├ VendorSeverity   ╭ amazon: 3 
-│                             │                  ├ ghsa  : 3 
-│                             │                  ├ redhat: 3 
-│                             │                  ╰ ubuntu: 3 
+│                             ├ VendorSeverity   ╭ amazon     : 3 
+│                             │                  ├ ghsa       : 3 
+│                             │                  ├ oracle-oval: 3 
+│                             │                  ├ redhat     : 3 
+│                             │                  ╰ ubuntu     : 3 
 │                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/
 │                             │                           │           A:H 
 │                             │                           ╰ V3Score : 8.2 
@@ -7423,13 +7427,15 @@
 │                             │                  ├ [25]: https://github.com/opencontainers/selinux/pull/237 
 │                             │                  ├ [26]: https://github.com/opencontainers/selinux/releases/tag
 │                             │                  │       /v1.13.0 
-│                             │                  ├ [27]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
-│                             │                  ├ [28]: https://pkg.go.dev/github.com/cyphar/filepath-securejo
+│                             │                  ├ [27]: https://linux.oracle.com/cve/CVE-2025-52881.html 
+│                             │                  ├ [28]: https://linux.oracle.com/errata/ELSA-2025-19927.html 
+│                             │                  ├ [29]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
+│                             │                  ├ [30]: https://pkg.go.dev/github.com/cyphar/filepath-securejo
 │                             │                  │       in/pathrs-lite/procfs 
-│                             │                  ├ [29]: https://ubuntu.com/security/notices/USN-7851-1 
-│                             │                  ├ [30]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
-│                             │                  ├ [31]: https://youtu.be/tGseJW_uBB8 
-│                             │                  ╰ [32]: https://youtu.be/y1PaBzxwRWQ 
+│                             │                  ├ [31]: https://ubuntu.com/security/notices/USN-7851-1 
+│                             │                  ├ [32]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
+│                             │                  ├ [33]: https://youtu.be/tGseJW_uBB8 
+│                             │                  ╰ [34]: https://youtu.be/y1PaBzxwRWQ 
 │                             ├ PublishedDate   : 2025-11-06T21:15:42.817Z 
 │                             ╰ LastModifiedDate: 2025-11-06T21:15:42.817Z 
 ├ [8] ╭ Target         : usr/bin/skopeo 
@@ -8431,10 +8437,11 @@
 │                       │     ├ Severity        : HIGH 
 │                       │     ├ CweIDs           ╭ [0]: CWE-61 
 │                       │     │                  ╰ [1]: CWE-363 
-│                       │     ├ VendorSeverity   ╭ amazon: 3 
-│                       │     │                  ├ ghsa  : 3 
-│                       │     │                  ├ redhat: 3 
-│                       │     │                  ╰ ubuntu: 3 
+│                       │     ├ VendorSeverity   ╭ amazon     : 3 
+│                       │     │                  ├ ghsa       : 3 
+│                       │     │                  ├ oracle-oval: 3 
+│                       │     │                  ├ redhat     : 3 
+│                       │     │                  ╰ ubuntu     : 3 
 │                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/
 │                       │     │                           │           A:H 
 │                       │     │                           ╰ V3Score : 8.2 
@@ -8489,13 +8496,15 @@
 │                       │     │                  ├ [25]: https://github.com/opencontainers/selinux/pull/237 
 │                       │     │                  ├ [26]: https://github.com/opencontainers/selinux/releases/tag
 │                       │     │                  │       /v1.13.0 
-│                       │     │                  ├ [27]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
-│                       │     │                  ├ [28]: https://pkg.go.dev/github.com/cyphar/filepath-securejo
+│                       │     │                  ├ [27]: https://linux.oracle.com/cve/CVE-2025-52881.html 
+│                       │     │                  ├ [28]: https://linux.oracle.com/errata/ELSA-2025-19927.html 
+│                       │     │                  ├ [29]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
+│                       │     │                  ├ [30]: https://pkg.go.dev/github.com/cyphar/filepath-securejo
 │                       │     │                  │       in/pathrs-lite/procfs 
-│                       │     │                  ├ [29]: https://ubuntu.com/security/notices/USN-7851-1 
-│                       │     │                  ├ [30]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
-│                       │     │                  ├ [31]: https://youtu.be/tGseJW_uBB8 
-│                       │     │                  ╰ [32]: https://youtu.be/y1PaBzxwRWQ 
+│                       │     │                  ├ [31]: https://ubuntu.com/security/notices/USN-7851-1 
+│                       │     │                  ├ [32]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
+│                       │     │                  ├ [33]: https://youtu.be/tGseJW_uBB8 
+│                       │     │                  ╰ [34]: https://youtu.be/y1PaBzxwRWQ 
 │                       │     ├ PublishedDate   : 2025-11-06T21:15:42.817Z 
 │                       │     ╰ LastModifiedDate: 2025-11-06T21:15:42.817Z 
 │                       ├ [1] ╭ VulnerabilityID : CVE-2025-58058 
@@ -11380,10 +11389,11 @@
                               ├ Severity        : HIGH 
                               ├ CweIDs           ╭ [0]: CWE-61 
                               │                  ╰ [1]: CWE-363 
-                              ├ VendorSeverity   ╭ amazon: 3 
-                              │                  ├ ghsa  : 3 
-                              │                  ├ redhat: 3 
-                              │                  ╰ ubuntu: 3 
+                              ├ VendorSeverity   ╭ amazon     : 3 
+                              │                  ├ ghsa       : 3 
+                              │                  ├ oracle-oval: 3 
+                              │                  ├ redhat     : 3 
+                              │                  ╰ ubuntu     : 3 
                               ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/
                               │                           │           A:H 
                               │                           ╰ V3Score : 8.2 
@@ -11438,13 +11448,15 @@
                               │                  ├ [25]: https://github.com/opencontainers/selinux/pull/237 
                               │                  ├ [26]: https://github.com/opencontainers/selinux/releases/tag
                               │                  │       /v1.13.0 
-                              │                  ├ [27]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
-                              │                  ├ [28]: https://pkg.go.dev/github.com/cyphar/filepath-securejo
+                              │                  ├ [27]: https://linux.oracle.com/cve/CVE-2025-52881.html 
+                              │                  ├ [28]: https://linux.oracle.com/errata/ELSA-2025-19927.html 
+                              │                  ├ [29]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
+                              │                  ├ [30]: https://pkg.go.dev/github.com/cyphar/filepath-securejo
                               │                  │       in/pathrs-lite/procfs 
-                              │                  ├ [29]: https://ubuntu.com/security/notices/USN-7851-1 
-                              │                  ├ [30]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
-                              │                  ├ [31]: https://youtu.be/tGseJW_uBB8 
-                              │                  ╰ [32]: https://youtu.be/y1PaBzxwRWQ 
+                              │                  ├ [31]: https://ubuntu.com/security/notices/USN-7851-1 
+                              │                  ├ [32]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
+                              │                  ├ [33]: https://youtu.be/tGseJW_uBB8 
+                              │                  ╰ [34]: https://youtu.be/y1PaBzxwRWQ 
                               ├ PublishedDate   : 2025-11-06T21:15:42.817Z 
                               ╰ LastModifiedDate: 2025-11-06T21:15:42.817Z 
 ````
