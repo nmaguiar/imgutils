@@ -1012,47 +1012,7 @@
                         │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-47907 
                         │      ├ PublishedDate   : 2025-08-07T16:15:30.357Z 
                         │      ╰ LastModifiedDate: 2025-11-04T22:16:16.347Z 
-                        ├ [2]  ╭ VulnerabilityID : CVE-2025-47912 
-                        │      ├ PkgID           : stdlib@v1.24.1 
-                        │      ├ PkgName         : stdlib 
-                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
-                        │      │                  ╰ UID : 969259d6a3318a6c 
-                        │      ├ InstalledVersion: v1.24.1 
-                        │      ├ FixedVersion    : 1.24.8, 1.25.2 
-                        │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:3c9b1226bd5a1c7ac2fe73b1ccd6c408b0f91f3bc12d
-                        │      │                  │         b0b19c82087f794fdd81 
-                        │      │                  ╰ DiffID: sha256:7960f1c5276f4e2740e632a5244b4684abd95a25bbc7
-                        │      │                            e4dc8786fc4baf8be8be 
-                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-47912 
-                        │      ├ DataSource       ╭ ID  : govulndb 
-                        │      │                  ├ Name: The Go Vulnerability Database 
-                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │      ├ Title           : The Parse function permits values other than IPv6 addresses
-                        │      │                   to be incl ... 
-                        │      ├ Description     : The Parse function permits values other than IPv6 addresses
-                        │      │                   to be included in square brackets within the host component
-                        │      │                   of a URL. RFC 3986 permits IPv6 addresses to be included
-                        │      │                   within the host component, enclosed within square brackets.
-                        │      │                   For example: "http://[::1]/". IPv4 addresses and hostnames
-                        │      │                   must not appear within square brackets. Parse did not
-                        │      │                   enforce this requirement. 
-                        │      ├ Severity        : HIGH 
-                        │      ├ VendorSeverity   ╭ amazon : 3 
-                        │      │                  ╰ bitnami: 2 
-                        │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
-                        │      │                            │           N/A:N 
-                        │      │                            ╰ V3Score : 5.3 
-                        │      ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/10/08/1 
-                        │      │                  ├ [1]: https://go.dev/cl/709857 
-                        │      │                  ├ [2]: https://go.dev/issue/75678 
-                        │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/4Emdl2iQ
-                        │      │                  │      _bI 
-                        │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47912 
-                        │      │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4010 
-                        │      ├ PublishedDate   : 2025-10-29T23:16:18.187Z 
-                        │      ╰ LastModifiedDate: 2025-11-04T22:16:16.497Z 
-                        ├ [3]  ╭ VulnerabilityID : CVE-2025-58183 
+                        ├ [2]  ╭ VulnerabilityID : CVE-2025-58183 
                         │      ├ PkgID           : stdlib@v1.24.1 
                         │      ├ PkgName         : stdlib 
                         │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -1098,7 +1058,7 @@
                         │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-58183 
                         │      ├ PublishedDate   : 2025-10-29T23:16:19.357Z 
                         │      ╰ LastModifiedDate: 2025-11-04T22:16:33.2Z 
-                        ├ [4]  ╭ VulnerabilityID : CVE-2025-58186 
+                        ├ [3]  ╭ VulnerabilityID : CVE-2025-58186 
                         │      ├ PkgID           : stdlib@v1.24.1 
                         │      ├ PkgName         : stdlib 
                         │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -1136,7 +1096,7 @@
                         │      │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4012 
                         │      ├ PublishedDate   : 2025-10-29T23:16:19.547Z 
                         │      ╰ LastModifiedDate: 2025-11-04T22:16:33.45Z 
-                        ├ [5]  ╭ VulnerabilityID : CVE-2025-58187 
+                        ├ [4]  ╭ VulnerabilityID : CVE-2025-58187 
                         │      ├ PkgID           : stdlib@v1.24.1 
                         │      ├ PkgName         : stdlib 
                         │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -1173,7 +1133,7 @@
                         │      │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4007 
                         │      ├ PublishedDate   : 2025-10-29T23:16:19.643Z 
                         │      ╰ LastModifiedDate: 2025-11-04T22:16:33.593Z 
-                        ├ [6]  ╭ VulnerabilityID : CVE-2025-58188 
+                        ├ [5]  ╭ VulnerabilityID : CVE-2025-58188 
                         │      ├ PkgID           : stdlib@v1.24.1 
                         │      ├ PkgName         : stdlib 
                         │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -1210,44 +1170,7 @@
                         │      │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4013 
                         │      ├ PublishedDate   : 2025-10-29T23:16:19.74Z 
                         │      ╰ LastModifiedDate: 2025-11-04T22:16:33.74Z 
-                        ├ [7]  ╭ VulnerabilityID : CVE-2025-61724 
-                        │      ├ PkgID           : stdlib@v1.24.1 
-                        │      ├ PkgName         : stdlib 
-                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
-                        │      │                  ╰ UID : 969259d6a3318a6c 
-                        │      ├ InstalledVersion: v1.24.1 
-                        │      ├ FixedVersion    : 1.24.8, 1.25.2 
-                        │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:3c9b1226bd5a1c7ac2fe73b1ccd6c408b0f91f3bc12d
-                        │      │                  │         b0b19c82087f794fdd81 
-                        │      │                  ╰ DiffID: sha256:7960f1c5276f4e2740e632a5244b4684abd95a25bbc7
-                        │      │                            e4dc8786fc4baf8be8be 
-                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-61724 
-                        │      ├ DataSource       ╭ ID  : govulndb 
-                        │      │                  ├ Name: The Go Vulnerability Database 
-                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │      ├ Title           : The Reader.ReadResponse function constructs a response
-                        │      │                   string through  ... 
-                        │      ├ Description     : The Reader.ReadResponse function constructs a response
-                        │      │                   string through repeated string concatenation of lines. When
-                        │      │                   the number of lines in a response is large, this can cause
-                        │      │                   excessive CPU consumption. 
-                        │      ├ Severity        : HIGH 
-                        │      ├ VendorSeverity   ╭ amazon : 3 
-                        │      │                  ╰ bitnami: 2 
-                        │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
-                        │      │                            │           N/A:L 
-                        │      │                            ╰ V3Score : 5.3 
-                        │      ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/10/08/1 
-                        │      │                  ├ [1]: https://go.dev/cl/709859 
-                        │      │                  ├ [2]: https://go.dev/issue/75716 
-                        │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/4Emdl2iQ
-                        │      │                  │      _bI 
-                        │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-61724 
-                        │      │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4015 
-                        │      ├ PublishedDate   : 2025-10-29T23:16:20.02Z 
-                        │      ╰ LastModifiedDate: 2025-11-04T22:16:36.567Z 
-                        ├ [8]  ╭ VulnerabilityID : CVE-2025-0913 
+                        ├ [6]  ╭ VulnerabilityID : CVE-2025-0913 
                         │      ├ PkgID           : stdlib@v1.24.1 
                         │      ├ PkgName         : stdlib 
                         │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -1287,7 +1210,7 @@
                         │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-3750 
                         │      ├ PublishedDate   : 2025-06-11T18:15:24.627Z 
                         │      ╰ LastModifiedDate: 2025-08-08T14:53:03.55Z 
-                        ├ [9]  ╭ VulnerabilityID : CVE-2025-22871 
+                        ├ [7]  ╭ VulnerabilityID : CVE-2025-22871 
                         │      ├ PkgID           : stdlib@v1.24.1 
                         │      ├ PkgName         : stdlib 
                         │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -1355,7 +1278,7 @@
                         │      │                  ╰ [19]: https://www.cve.org/CVERecord?id=CVE-2025-22871 
                         │      ├ PublishedDate   : 2025-04-08T20:15:20.183Z 
                         │      ╰ LastModifiedDate: 2025-04-18T15:15:57.923Z 
-                        ├ [10] ╭ VulnerabilityID : CVE-2025-4673 
+                        ├ [8]  ╭ VulnerabilityID : CVE-2025-4673 
                         │      ├ PkgID           : stdlib@v1.24.1 
                         │      ├ PkgName         : stdlib 
                         │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -1412,7 +1335,7 @@
                         │      │                  ╰ [15]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
                         │      ├ PublishedDate   : 2025-06-11T17:15:42.993Z 
                         │      ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
-                        ├ [11] ╭ VulnerabilityID : CVE-2025-47906 
+                        ├ [9]  ╭ VulnerabilityID : CVE-2025-47906 
                         │      ├ PkgID           : stdlib@v1.24.1 
                         │      ├ PkgName         : stdlib 
                         │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -1455,7 +1378,53 @@
                         │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-47906 
                         │      ├ PublishedDate   : 2025-09-18T19:15:37.66Z 
                         │      ╰ LastModifiedDate: 2025-11-04T22:16:16.207Z 
-                        ├ [12] ╭ VulnerabilityID : CVE-2025-58185 
+                        ├ [10] ╭ VulnerabilityID : CVE-2025-47912 
+                        │      ├ PkgID           : stdlib@v1.24.1 
+                        │      ├ PkgName         : stdlib 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
+                        │      │                  ╰ UID : 969259d6a3318a6c 
+                        │      ├ InstalledVersion: v1.24.1 
+                        │      ├ FixedVersion    : 1.24.8, 1.25.2 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:3c9b1226bd5a1c7ac2fe73b1ccd6c408b0f91f3bc12d
+                        │      │                  │         b0b19c82087f794fdd81 
+                        │      │                  ╰ DiffID: sha256:7960f1c5276f4e2740e632a5244b4684abd95a25bbc7
+                        │      │                            e4dc8786fc4baf8be8be 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-47912 
+                        │      ├ DataSource       ╭ ID  : govulndb 
+                        │      │                  ├ Name: The Go Vulnerability Database 
+                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │      ├ Title           : net/url: Insufficient validation of bracketed IPv6 hostnames
+                        │      │                    in net/url 
+                        │      ├ Description     : The Parse function permits values other than IPv6 addresses
+                        │      │                   to be included in square brackets within the host component
+                        │      │                   of a URL. RFC 3986 permits IPv6 addresses to be included
+                        │      │                   within the host component, enclosed within square brackets.
+                        │      │                   For example: "http://[::1]/". IPv4 addresses and hostnames
+                        │      │                   must not appear within square brackets. Parse did not
+                        │      │                   enforce this requirement. 
+                        │      ├ Severity        : MEDIUM 
+                        │      ├ VendorSeverity   ╭ amazon : 3 
+                        │      │                  ├ bitnami: 2 
+                        │      │                  ╰ redhat : 2 
+                        │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
+                        │      │                  │         │           N/A:N 
+                        │      │                  │         ╰ V3Score : 5.3 
+                        │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
+                        │      │                            │           N/A:N 
+                        │      │                            ╰ V3Score : 5.3 
+                        │      ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/10/08/1 
+                        │      │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2025-47912 
+                        │      │                  ├ [2]: https://go.dev/cl/709857 
+                        │      │                  ├ [3]: https://go.dev/issue/75678 
+                        │      │                  ├ [4]: https://groups.google.com/g/golang-announce/c/4Emdl2iQ
+                        │      │                  │      _bI 
+                        │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-47912 
+                        │      │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-4010 
+                        │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-47912 
+                        │      ├ PublishedDate   : 2025-10-29T23:16:18.187Z 
+                        │      ╰ LastModifiedDate: 2025-11-04T22:16:16.497Z 
+                        ├ [11] ╭ VulnerabilityID : CVE-2025-58185 
                         │      ├ PkgID           : stdlib@v1.24.1 
                         │      ├ PkgName         : stdlib 
                         │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -1498,7 +1467,7 @@
                         │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-58185 
                         │      ├ PublishedDate   : 2025-10-29T23:16:19.45Z 
                         │      ╰ LastModifiedDate: 2025-11-04T22:16:33.327Z 
-                        ├ [13] ╭ VulnerabilityID : CVE-2025-58189 
+                        ├ [12] ╭ VulnerabilityID : CVE-2025-58189 
                         │      ├ PkgID           : stdlib@v1.24.1 
                         │      ├ PkgName         : stdlib 
                         │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -1540,7 +1509,7 @@
                         │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-58189 
                         │      ├ PublishedDate   : 2025-10-29T23:16:19.833Z 
                         │      ╰ LastModifiedDate: 2025-11-04T22:16:33.877Z 
-                        ├ [14] ╭ VulnerabilityID : CVE-2025-61723 
+                        ├ [13] ╭ VulnerabilityID : CVE-2025-61723 
                         │      ├ PkgID           : stdlib@v1.24.1 
                         │      ├ PkgName         : stdlib 
                         │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -1584,6 +1553,49 @@
                         │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-61723 
                         │      ├ PublishedDate   : 2025-10-29T23:16:19.927Z 
                         │      ╰ LastModifiedDate: 2025-11-04T22:16:36.42Z 
+                        ├ [14] ╭ VulnerabilityID : CVE-2025-61724 
+                        │      ├ PkgID           : stdlib@v1.24.1 
+                        │      ├ PkgName         : stdlib 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
+                        │      │                  ╰ UID : 969259d6a3318a6c 
+                        │      ├ InstalledVersion: v1.24.1 
+                        │      ├ FixedVersion    : 1.24.8, 1.25.2 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:3c9b1226bd5a1c7ac2fe73b1ccd6c408b0f91f3bc12d
+                        │      │                  │         b0b19c82087f794fdd81 
+                        │      │                  ╰ DiffID: sha256:7960f1c5276f4e2740e632a5244b4684abd95a25bbc7
+                        │      │                            e4dc8786fc4baf8be8be 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-61724 
+                        │      ├ DataSource       ╭ ID  : govulndb 
+                        │      │                  ├ Name: The Go Vulnerability Database 
+                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │      ├ Title           : net/textproto: Excessive CPU consumption in
+                        │      │                   Reader.ReadResponse in net/textproto 
+                        │      ├ Description     : The Reader.ReadResponse function constructs a response
+                        │      │                   string through repeated string concatenation of lines. When
+                        │      │                   the number of lines in a response is large, this can cause
+                        │      │                   excessive CPU consumption. 
+                        │      ├ Severity        : MEDIUM 
+                        │      ├ VendorSeverity   ╭ amazon : 3 
+                        │      │                  ├ bitnami: 2 
+                        │      │                  ╰ redhat : 2 
+                        │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+                        │      │                  │         │           N/A:L 
+                        │      │                  │         ╰ V3Score : 5.3 
+                        │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+                        │      │                            │           N/A:L 
+                        │      │                            ╰ V3Score : 5.3 
+                        │      ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/10/08/1 
+                        │      │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2025-61724 
+                        │      │                  ├ [2]: https://go.dev/cl/709859 
+                        │      │                  ├ [3]: https://go.dev/issue/75716 
+                        │      │                  ├ [4]: https://groups.google.com/g/golang-announce/c/4Emdl2iQ
+                        │      │                  │      _bI 
+                        │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-61724 
+                        │      │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-4015 
+                        │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-61724 
+                        │      ├ PublishedDate   : 2025-10-29T23:16:20.02Z 
+                        │      ╰ LastModifiedDate: 2025-11-04T22:16:36.567Z 
                         ╰ [15] ╭ VulnerabilityID : CVE-2025-61725 
                                ├ PkgID           : stdlib@v1.24.1 
                                ├ PkgName         : stdlib 
