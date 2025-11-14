@@ -2058,47 +2058,7 @@
 │                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-47907 
 │                       │      ├ PublishedDate   : 2025-08-07T16:15:30.357Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:16.347Z 
-│                       ├ [2]  ╭ VulnerabilityID : CVE-2025-47912 
-│                       │      ├ PkgID           : stdlib@v1.24.1 
-│                       │      ├ PkgName         : stdlib 
-│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
-│                       │      │                  ╰ UID : 969259d6a3318a6c 
-│                       │      ├ InstalledVersion: v1.24.1 
-│                       │      ├ FixedVersion    : 1.24.8, 1.25.2 
-│                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65e
-│                       │      │                  │         f96fa5ed92ae53b559a7 
-│                       │      │                  ╰ DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc0197
-│                       │      │                            4613d0880d65f9f80b20 
-│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-47912 
-│                       │      ├ DataSource       ╭ ID  : govulndb 
-│                       │      │                  ├ Name: The Go Vulnerability Database 
-│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │      ├ Title           : The Parse function permits values other than IPv6 addresses
-│                       │      │                   to be incl ... 
-│                       │      ├ Description     : The Parse function permits values other than IPv6 addresses
-│                       │      │                   to be included in square brackets within the host component
-│                       │      │                   of a URL. RFC 3986 permits IPv6 addresses to be included
-│                       │      │                   within the host component, enclosed within square brackets.
-│                       │      │                   For example: "http://[::1]/". IPv4 addresses and hostnames
-│                       │      │                   must not appear within square brackets. Parse did not
-│                       │      │                   enforce this requirement. 
-│                       │      ├ Severity        : HIGH 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
-│                       │      │                  ╰ bitnami: 2 
-│                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
-│                       │      │                            │           N/A:N 
-│                       │      │                            ╰ V3Score : 5.3 
-│                       │      ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/10/08/1 
-│                       │      │                  ├ [1]: https://go.dev/cl/709857 
-│                       │      │                  ├ [2]: https://go.dev/issue/75678 
-│                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/4Emdl2iQ
-│                       │      │                  │      _bI 
-│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47912 
-│                       │      │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4010 
-│                       │      ├ PublishedDate   : 2025-10-29T23:16:18.187Z 
-│                       │      ╰ LastModifiedDate: 2025-11-04T22:16:16.497Z 
-│                       ├ [3]  ╭ VulnerabilityID : CVE-2025-58183 
+│                       ├ [2]  ╭ VulnerabilityID : CVE-2025-58183 
 │                       │      ├ PkgID           : stdlib@v1.24.1 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -2144,7 +2104,7 @@
 │                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-58183 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.357Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.2Z 
-│                       ├ [4]  ╭ VulnerabilityID : CVE-2025-58186 
+│                       ├ [3]  ╭ VulnerabilityID : CVE-2025-58186 
 │                       │      ├ PkgID           : stdlib@v1.24.1 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -2182,7 +2142,7 @@
 │                       │      │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4012 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.547Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.45Z 
-│                       ├ [5]  ╭ VulnerabilityID : CVE-2025-58187 
+│                       ├ [4]  ╭ VulnerabilityID : CVE-2025-58187 
 │                       │      ├ PkgID           : stdlib@v1.24.1 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -2219,7 +2179,7 @@
 │                       │      │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4007 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.643Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.593Z 
-│                       ├ [6]  ╭ VulnerabilityID : CVE-2025-58188 
+│                       ├ [5]  ╭ VulnerabilityID : CVE-2025-58188 
 │                       │      ├ PkgID           : stdlib@v1.24.1 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -2256,44 +2216,7 @@
 │                       │      │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4013 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.74Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.74Z 
-│                       ├ [7]  ╭ VulnerabilityID : CVE-2025-61724 
-│                       │      ├ PkgID           : stdlib@v1.24.1 
-│                       │      ├ PkgName         : stdlib 
-│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
-│                       │      │                  ╰ UID : 969259d6a3318a6c 
-│                       │      ├ InstalledVersion: v1.24.1 
-│                       │      ├ FixedVersion    : 1.24.8, 1.25.2 
-│                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65e
-│                       │      │                  │         f96fa5ed92ae53b559a7 
-│                       │      │                  ╰ DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc0197
-│                       │      │                            4613d0880d65f9f80b20 
-│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-61724 
-│                       │      ├ DataSource       ╭ ID  : govulndb 
-│                       │      │                  ├ Name: The Go Vulnerability Database 
-│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │      ├ Title           : The Reader.ReadResponse function constructs a response
-│                       │      │                   string through  ... 
-│                       │      ├ Description     : The Reader.ReadResponse function constructs a response
-│                       │      │                   string through repeated string concatenation of lines. When
-│                       │      │                   the number of lines in a response is large, this can cause
-│                       │      │                   excessive CPU consumption. 
-│                       │      ├ Severity        : HIGH 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
-│                       │      │                  ╰ bitnami: 2 
-│                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
-│                       │      │                            │           N/A:L 
-│                       │      │                            ╰ V3Score : 5.3 
-│                       │      ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/10/08/1 
-│                       │      │                  ├ [1]: https://go.dev/cl/709859 
-│                       │      │                  ├ [2]: https://go.dev/issue/75716 
-│                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/4Emdl2iQ
-│                       │      │                  │      _bI 
-│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-61724 
-│                       │      │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4015 
-│                       │      ├ PublishedDate   : 2025-10-29T23:16:20.02Z 
-│                       │      ╰ LastModifiedDate: 2025-11-04T22:16:36.567Z 
-│                       ├ [8]  ╭ VulnerabilityID : CVE-2025-0913 
+│                       ├ [6]  ╭ VulnerabilityID : CVE-2025-0913 
 │                       │      ├ PkgID           : stdlib@v1.24.1 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -2333,7 +2256,7 @@
 │                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-3750 
 │                       │      ├ PublishedDate   : 2025-06-11T18:15:24.627Z 
 │                       │      ╰ LastModifiedDate: 2025-08-08T14:53:03.55Z 
-│                       ├ [9]  ╭ VulnerabilityID : CVE-2025-22871 
+│                       ├ [7]  ╭ VulnerabilityID : CVE-2025-22871 
 │                       │      ├ PkgID           : stdlib@v1.24.1 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -2401,7 +2324,7 @@
 │                       │      │                  ╰ [19]: https://www.cve.org/CVERecord?id=CVE-2025-22871 
 │                       │      ├ PublishedDate   : 2025-04-08T20:15:20.183Z 
 │                       │      ╰ LastModifiedDate: 2025-04-18T15:15:57.923Z 
-│                       ├ [10] ╭ VulnerabilityID : CVE-2025-4673 
+│                       ├ [8]  ╭ VulnerabilityID : CVE-2025-4673 
 │                       │      ├ PkgID           : stdlib@v1.24.1 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -2458,7 +2381,7 @@
 │                       │      │                  ╰ [15]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
 │                       │      ├ PublishedDate   : 2025-06-11T17:15:42.993Z 
 │                       │      ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
-│                       ├ [11] ╭ VulnerabilityID : CVE-2025-47906 
+│                       ├ [9]  ╭ VulnerabilityID : CVE-2025-47906 
 │                       │      ├ PkgID           : stdlib@v1.24.1 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -2501,7 +2424,53 @@
 │                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-47906 
 │                       │      ├ PublishedDate   : 2025-09-18T19:15:37.66Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:16.207Z 
-│                       ├ [12] ╭ VulnerabilityID : CVE-2025-58185 
+│                       ├ [10] ╭ VulnerabilityID : CVE-2025-47912 
+│                       │      ├ PkgID           : stdlib@v1.24.1 
+│                       │      ├ PkgName         : stdlib 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
+│                       │      │                  ╰ UID : 969259d6a3318a6c 
+│                       │      ├ InstalledVersion: v1.24.1 
+│                       │      ├ FixedVersion    : 1.24.8, 1.25.2 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65e
+│                       │      │                  │         f96fa5ed92ae53b559a7 
+│                       │      │                  ╰ DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc0197
+│                       │      │                            4613d0880d65f9f80b20 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-47912 
+│                       │      ├ DataSource       ╭ ID  : govulndb 
+│                       │      │                  ├ Name: The Go Vulnerability Database 
+│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │      ├ Title           : net/url: Insufficient validation of bracketed IPv6 hostnames
+│                       │      │                    in net/url 
+│                       │      ├ Description     : The Parse function permits values other than IPv6 addresses
+│                       │      │                   to be included in square brackets within the host component
+│                       │      │                   of a URL. RFC 3986 permits IPv6 addresses to be included
+│                       │      │                   within the host component, enclosed within square brackets.
+│                       │      │                   For example: "http://[::1]/". IPv4 addresses and hostnames
+│                       │      │                   must not appear within square brackets. Parse did not
+│                       │      │                   enforce this requirement. 
+│                       │      ├ Severity        : MEDIUM 
+│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      │                  ├ bitnami: 2 
+│                       │      │                  ╰ redhat : 2 
+│                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
+│                       │      │                  │         │           N/A:N 
+│                       │      │                  │         ╰ V3Score : 5.3 
+│                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
+│                       │      │                            │           N/A:N 
+│                       │      │                            ╰ V3Score : 5.3 
+│                       │      ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/10/08/1 
+│                       │      │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2025-47912 
+│                       │      │                  ├ [2]: https://go.dev/cl/709857 
+│                       │      │                  ├ [3]: https://go.dev/issue/75678 
+│                       │      │                  ├ [4]: https://groups.google.com/g/golang-announce/c/4Emdl2iQ
+│                       │      │                  │      _bI 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-47912 
+│                       │      │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-4010 
+│                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-47912 
+│                       │      ├ PublishedDate   : 2025-10-29T23:16:18.187Z 
+│                       │      ╰ LastModifiedDate: 2025-11-04T22:16:16.497Z 
+│                       ├ [11] ╭ VulnerabilityID : CVE-2025-58185 
 │                       │      ├ PkgID           : stdlib@v1.24.1 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -2544,7 +2513,7 @@
 │                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-58185 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.45Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.327Z 
-│                       ├ [13] ╭ VulnerabilityID : CVE-2025-58189 
+│                       ├ [12] ╭ VulnerabilityID : CVE-2025-58189 
 │                       │      ├ PkgID           : stdlib@v1.24.1 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -2586,7 +2555,7 @@
 │                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-58189 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.833Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.877Z 
-│                       ├ [14] ╭ VulnerabilityID : CVE-2025-61723 
+│                       ├ [13] ╭ VulnerabilityID : CVE-2025-61723 
 │                       │      ├ PkgID           : stdlib@v1.24.1 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -2630,6 +2599,49 @@
 │                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-61723 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.927Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:36.42Z 
+│                       ├ [14] ╭ VulnerabilityID : CVE-2025-61724 
+│                       │      ├ PkgID           : stdlib@v1.24.1 
+│                       │      ├ PkgName         : stdlib 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
+│                       │      │                  ╰ UID : 969259d6a3318a6c 
+│                       │      ├ InstalledVersion: v1.24.1 
+│                       │      ├ FixedVersion    : 1.24.8, 1.25.2 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65e
+│                       │      │                  │         f96fa5ed92ae53b559a7 
+│                       │      │                  ╰ DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc0197
+│                       │      │                            4613d0880d65f9f80b20 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-61724 
+│                       │      ├ DataSource       ╭ ID  : govulndb 
+│                       │      │                  ├ Name: The Go Vulnerability Database 
+│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │      ├ Title           : net/textproto: Excessive CPU consumption in
+│                       │      │                   Reader.ReadResponse in net/textproto 
+│                       │      ├ Description     : The Reader.ReadResponse function constructs a response
+│                       │      │                   string through repeated string concatenation of lines. When
+│                       │      │                   the number of lines in a response is large, this can cause
+│                       │      │                   excessive CPU consumption. 
+│                       │      ├ Severity        : MEDIUM 
+│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      │                  ├ bitnami: 2 
+│                       │      │                  ╰ redhat : 2 
+│                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+│                       │      │                  │         │           N/A:L 
+│                       │      │                  │         ╰ V3Score : 5.3 
+│                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+│                       │      │                            │           N/A:L 
+│                       │      │                            ╰ V3Score : 5.3 
+│                       │      ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/10/08/1 
+│                       │      │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2025-61724 
+│                       │      │                  ├ [2]: https://go.dev/cl/709859 
+│                       │      │                  ├ [3]: https://go.dev/issue/75716 
+│                       │      │                  ├ [4]: https://groups.google.com/g/golang-announce/c/4Emdl2iQ
+│                       │      │                  │      _bI 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-61724 
+│                       │      │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-4015 
+│                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-61724 
+│                       │      ├ PublishedDate   : 2025-10-29T23:16:20.02Z 
+│                       │      ╰ LastModifiedDate: 2025-11-04T22:16:36.567Z 
 │                       ╰ [15] ╭ VulnerabilityID : CVE-2025-61725 
 │                              ├ PkgID           : stdlib@v1.24.1 
 │                              ├ PkgName         : stdlib 
@@ -3449,9 +3461,13 @@
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ╭ [0]: CWE-61 
 │                             │                  ╰ [1]: CWE-363 
-│                             ├ VendorSeverity   ╭ amazon     : 3 
+│                             ├ VendorSeverity   ╭ alma       : 3 
+│                             │                  ├ amazon     : 3 
+│                             │                  ├ azure      : 3 
+│                             │                  ├ cbl-mariner: 3 
 │                             │                  ├ ghsa       : 3 
 │                             │                  ├ oracle-oval: 3 
+│                             │                  ├ photon     : 3 
 │                             │                  ├ redhat     : 3 
 │                             │                  ╰ ubuntu     : 3 
 │                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/
@@ -3461,64 +3477,69 @@
 │                             │                  │       080fa9f26a2cd3544e2801449697322 
 │                             │                  ├ [1] : http://github.com/opencontainers/runc/commit/fdcc9d3ca
 │                             │                  │       d2f85954a241ccb910a61aaa1ef47f3 
-│                             │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-52881 
-│                             │                  ├ [3] : https://github.com/opencontainers/runc 
-│                             │                  ├ [4] : https://github.com/opencontainers/runc/blob/v1.4.0-rc.
+│                             │                  ├ [2] : https://access.redhat.com/errata/RHSA-2025:19927 
+│                             │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2025-52881 
+│                             │                  ├ [4] : https://bugzilla.redhat.com/2404705 
+│                             │                  ├ [5] : https://bugzilla.redhat.com/2404708 
+│                             │                  ├ [6] : https://bugzilla.redhat.com/2404715 
+│                             │                  ├ [7] : https://errata.almalinux.org/9/ALSA-2025-19927.html 
+│                             │                  ├ [8] : https://github.com/opencontainers/runc 
+│                             │                  ├ [9] : https://github.com/opencontainers/runc/blob/v1.4.0-rc.
 │                             │                  │       2/RELEASES.md 
-│                             │                  ├ [5] : https://github.com/opencontainers/runc/commit/3f925525
+│                             │                  ├ [10]: https://github.com/opencontainers/runc/commit/3f925525
 │                             │                  │       b44d247e390e529e772a0dc0c0bc3557 
-│                             │                  ├ [6] : https://github.com/opencontainers/runc/commit/435cc81b
+│                             │                  ├ [11]: https://github.com/opencontainers/runc/commit/435cc81b
 │                             │                  │       e6b79cdec73b4002c0dae549b2f6ae6d 
-│                             │                  ├ [7] : https://github.com/opencontainers/runc/commit/44a0fcf6
+│                             │                  ├ [12]: https://github.com/opencontainers/runc/commit/44a0fcf6
 │                             │                  │       85db051c80b8c269812bb177f5802c58 
-│                             │                  ├ [8] : https://github.com/opencontainers/runc/commit/4b37cd93
+│                             │                  ├ [13]: https://github.com/opencontainers/runc/commit/4b37cd93
 │                             │                  │       f86e72feac866442988b549b5b7bf3e6 
-│                             │                  ├ [9] : https://github.com/opencontainers/runc/commit/6fc19144
+│                             │                  ├ [14]: https://github.com/opencontainers/runc/commit/6fc19144
 │                             │                  │       9109ea14bb7d61238f24a33fe08c651f 
-│                             │                  ├ [10]: https://github.com/opencontainers/runc/commit/77889b56
+│                             │                  ├ [15]: https://github.com/opencontainers/runc/commit/77889b56
 │                             │                  │       db939c323d29d1130f28f9aea2edb544 
-│                             │                  ├ [11]: https://github.com/opencontainers/runc/commit/77d217c7
+│                             │                  ├ [16]: https://github.com/opencontainers/runc/commit/77d217c7
 │                             │                  │       c3775d8ca5af89e477e81568ef4572db 
-│                             │                  ├ [12]: https://github.com/opencontainers/runc/commit/a41366e7
+│                             │                  ├ [17]: https://github.com/opencontainers/runc/commit/a41366e7
 │                             │                  │       4080fa9f26a2cd3544e2801449697322 
-│                             │                  ├ [13]: https://github.com/opencontainers/runc/commit/b3dd1bc5
+│                             │                  ├ [18]: https://github.com/opencontainers/runc/commit/b3dd1bc5
 │                             │                  │       62ed9996d1a0f249e056c16624046d28 
-│                             │                  ├ [14]: https://github.com/opencontainers/runc/commit/d40b3439
+│                             │                  ├ [19]: https://github.com/opencontainers/runc/commit/d40b3439
 │                             │                  │       a9614a86e87b81a94c6811ec6fa2d7d2 
-│                             │                  ├ [15]: https://github.com/opencontainers/runc/commit/d61fd29d
+│                             │                  ├ [20]: https://github.com/opencontainers/runc/commit/d61fd29d
 │                             │                  │       854b416feaaf128bf650325cd2182165 
-│                             │                  ├ [16]: https://github.com/opencontainers/runc/commit/db19bbed
+│                             │                  ├ [21]: https://github.com/opencontainers/runc/commit/db19bbed
 │                             │                  │       5348847da433faa9d69e9f90192bfa64 
-│                             │                  ├ [17]: https://github.com/opencontainers/runc/commit/ed6b1693
+│                             │                  ├ [22]: https://github.com/opencontainers/runc/commit/ed6b1693
 │                             │                  │       b8b3ae7eb0250a7e76fc888cdacf98c1 
-│                             │                  ├ [18]: https://github.com/opencontainers/runc/commit/fdcc9d3c
+│                             │                  ├ [23]: https://github.com/opencontainers/runc/commit/fdcc9d3c
 │                             │                  │       ad2f85954a241ccb910a61aaa1ef47f3 
-│                             │                  ├ [19]: https://github.com/opencontainers/runc/commit/ff6fe132
+│                             │                  ├ [24]: https://github.com/opencontainers/runc/commit/ff6fe132
 │                             │                  │       4663538167eca8b3d3eec61e1bd4fa51 
-│                             │                  ├ [20]: https://github.com/opencontainers/runc/commit/ff94f999
+│                             │                  ├ [25]: https://github.com/opencontainers/runc/commit/ff94f999
 │                             │                  │       1bd32076c871ef0ad8bc1b763458e480 
-│                             │                  ├ [21]: https://github.com/opencontainers/runc/security/adviso
+│                             │                  ├ [26]: https://github.com/opencontainers/runc/security/adviso
 │                             │                  │       ries/GHSA-9493-h29p-rfm2 
-│                             │                  ├ [22]: https://github.com/opencontainers/runc/security/adviso
+│                             │                  ├ [27]: https://github.com/opencontainers/runc/security/adviso
 │                             │                  │       ries/GHSA-cgrx-mc8f-2prm 
-│                             │                  ├ [23]: https://github.com/opencontainers/runc/security/adviso
+│                             │                  ├ [28]: https://github.com/opencontainers/runc/security/adviso
 │                             │                  │       ries/GHSA-fh74-hm69-rqjw 
-│                             │                  ├ [24]: https://github.com/opencontainers/runc/security/adviso
+│                             │                  ├ [29]: https://github.com/opencontainers/runc/security/adviso
 │                             │                  │       ries/GHSA-qw9x-cqr3-wc7r 
-│                             │                  ├ [25]: https://github.com/opencontainers/selinux/pull/237 
-│                             │                  ├ [26]: https://github.com/opencontainers/selinux/releases/tag
+│                             │                  ├ [30]: https://github.com/opencontainers/selinux/pull/237 
+│                             │                  ├ [31]: https://github.com/opencontainers/selinux/releases/tag
 │                             │                  │       /v1.13.0 
-│                             │                  ├ [27]: https://linux.oracle.com/cve/CVE-2025-52881.html 
-│                             │                  ├ [28]: https://linux.oracle.com/errata/ELSA-2025-19927.html 
-│                             │                  ├ [29]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
-│                             │                  ├ [30]: https://pkg.go.dev/github.com/cyphar/filepath-securejo
+│                             │                  ├ [32]: https://linux.oracle.com/cve/CVE-2025-52881.html 
+│                             │                  ├ [33]: https://linux.oracle.com/errata/ELSA-2025-19927.html 
+│                             │                  ├ [34]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
+│                             │                  ├ [35]: https://pkg.go.dev/github.com/cyphar/filepath-securejo
 │                             │                  │       in/pathrs-lite/procfs 
-│                             │                  ├ [31]: https://ubuntu.com/security/notices/USN-7851-1 
-│                             │                  ├ [32]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
-│                             │                  ├ [33]: https://youtu.be/tGseJW_uBB8 
-│                             │                  ╰ [34]: https://youtu.be/y1PaBzxwRWQ 
+│                             │                  ├ [36]: https://ubuntu.com/security/notices/USN-7851-1 
+│                             │                  ├ [37]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
+│                             │                  ├ [38]: https://youtu.be/tGseJW_uBB8 
+│                             │                  ╰ [39]: https://youtu.be/y1PaBzxwRWQ 
 │                             ├ PublishedDate   : 2025-11-06T21:15:42.817Z 
-│                             ╰ LastModifiedDate: 2025-11-06T21:15:42.817Z 
+│                             ╰ LastModifiedDate: 2025-11-12T16:20:22.257Z 
 ├ [4] ╭ Target         : usr/bin/dive 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -5659,48 +5680,8 @@
 │                       │      │                  │      sories/GHSA-m6hq-p25p-ffr2 
 │                       │      │                  ╰ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-64329 
 │                       │      ├ PublishedDate   : 2025-11-07T05:16:08.017Z 
-│                       │      ╰ LastModifiedDate: 2025-11-07T05:16:08.017Z 
-│                       ├ [2]  ╭ VulnerabilityID : CVE-2025-47912 
-│                       │      ├ PkgID           : stdlib@v1.24.7 
-│                       │      ├ PkgName         : stdlib 
-│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.7 
-│                       │      │                  ╰ UID : dab6465cb6be340c 
-│                       │      ├ InstalledVersion: v1.24.7 
-│                       │      ├ FixedVersion    : 1.24.8, 1.25.2 
-│                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65e
-│                       │      │                  │         f96fa5ed92ae53b559a7 
-│                       │      │                  ╰ DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc0197
-│                       │      │                            4613d0880d65f9f80b20 
-│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-47912 
-│                       │      ├ DataSource       ╭ ID  : govulndb 
-│                       │      │                  ├ Name: The Go Vulnerability Database 
-│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │      ├ Title           : The Parse function permits values other than IPv6 addresses
-│                       │      │                   to be incl ... 
-│                       │      ├ Description     : The Parse function permits values other than IPv6 addresses
-│                       │      │                   to be included in square brackets within the host component
-│                       │      │                   of a URL. RFC 3986 permits IPv6 addresses to be included
-│                       │      │                   within the host component, enclosed within square brackets.
-│                       │      │                   For example: "http://[::1]/". IPv4 addresses and hostnames
-│                       │      │                   must not appear within square brackets. Parse did not
-│                       │      │                   enforce this requirement. 
-│                       │      ├ Severity        : HIGH 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
-│                       │      │                  ╰ bitnami: 2 
-│                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
-│                       │      │                            │           N/A:N 
-│                       │      │                            ╰ V3Score : 5.3 
-│                       │      ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/10/08/1 
-│                       │      │                  ├ [1]: https://go.dev/cl/709857 
-│                       │      │                  ├ [2]: https://go.dev/issue/75678 
-│                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/4Emdl2iQ
-│                       │      │                  │      _bI 
-│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47912 
-│                       │      │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4010 
-│                       │      ├ PublishedDate   : 2025-10-29T23:16:18.187Z 
-│                       │      ╰ LastModifiedDate: 2025-11-04T22:16:16.497Z 
-│                       ├ [3]  ╭ VulnerabilityID : CVE-2025-58183 
+│                       │      ╰ LastModifiedDate: 2025-11-12T16:20:22.257Z 
+│                       ├ [2]  ╭ VulnerabilityID : CVE-2025-58183 
 │                       │      ├ PkgID           : stdlib@v1.24.7 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.7 
@@ -5746,7 +5727,7 @@
 │                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-58183 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.357Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.2Z 
-│                       ├ [4]  ╭ VulnerabilityID : CVE-2025-58186 
+│                       ├ [3]  ╭ VulnerabilityID : CVE-2025-58186 
 │                       │      ├ PkgID           : stdlib@v1.24.7 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.7 
@@ -5784,7 +5765,7 @@
 │                       │      │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4012 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.547Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.45Z 
-│                       ├ [5]  ╭ VulnerabilityID : CVE-2025-58187 
+│                       ├ [4]  ╭ VulnerabilityID : CVE-2025-58187 
 │                       │      ├ PkgID           : stdlib@v1.24.7 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.7 
@@ -5821,7 +5802,7 @@
 │                       │      │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4007 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.643Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.593Z 
-│                       ├ [6]  ╭ VulnerabilityID : CVE-2025-58188 
+│                       ├ [5]  ╭ VulnerabilityID : CVE-2025-58188 
 │                       │      ├ PkgID           : stdlib@v1.24.7 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.7 
@@ -5858,7 +5839,7 @@
 │                       │      │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4013 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.74Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.74Z 
-│                       ├ [7]  ╭ VulnerabilityID : CVE-2025-61724 
+│                       ├ [6]  ╭ VulnerabilityID : CVE-2025-47912 
 │                       │      ├ PkgID           : stdlib@v1.24.7 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.7 
@@ -5870,32 +5851,41 @@
 │                       │      │                  │         f96fa5ed92ae53b559a7 
 │                       │      │                  ╰ DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc0197
 │                       │      │                            4613d0880d65f9f80b20 
-│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-61724 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-47912 
 │                       │      ├ DataSource       ╭ ID  : govulndb 
 │                       │      │                  ├ Name: The Go Vulnerability Database 
 │                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │      ├ Title           : The Reader.ReadResponse function constructs a response
-│                       │      │                   string through  ... 
-│                       │      ├ Description     : The Reader.ReadResponse function constructs a response
-│                       │      │                   string through repeated string concatenation of lines. When
-│                       │      │                   the number of lines in a response is large, this can cause
-│                       │      │                   excessive CPU consumption. 
-│                       │      ├ Severity        : HIGH 
+│                       │      ├ Title           : net/url: Insufficient validation of bracketed IPv6 hostnames
+│                       │      │                    in net/url 
+│                       │      ├ Description     : The Parse function permits values other than IPv6 addresses
+│                       │      │                   to be included in square brackets within the host component
+│                       │      │                   of a URL. RFC 3986 permits IPv6 addresses to be included
+│                       │      │                   within the host component, enclosed within square brackets.
+│                       │      │                   For example: "http://[::1]/". IPv4 addresses and hostnames
+│                       │      │                   must not appear within square brackets. Parse did not
+│                       │      │                   enforce this requirement. 
+│                       │      ├ Severity        : MEDIUM 
 │                       │      ├ VendorSeverity   ╭ amazon : 3 
-│                       │      │                  ╰ bitnami: 2 
-│                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
-│                       │      │                            │           N/A:L 
+│                       │      │                  ├ bitnami: 2 
+│                       │      │                  ╰ redhat : 2 
+│                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
+│                       │      │                  │         │           N/A:N 
+│                       │      │                  │         ╰ V3Score : 5.3 
+│                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
+│                       │      │                            │           N/A:N 
 │                       │      │                            ╰ V3Score : 5.3 
 │                       │      ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/10/08/1 
-│                       │      │                  ├ [1]: https://go.dev/cl/709859 
-│                       │      │                  ├ [2]: https://go.dev/issue/75716 
-│                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/4Emdl2iQ
+│                       │      │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2025-47912 
+│                       │      │                  ├ [2]: https://go.dev/cl/709857 
+│                       │      │                  ├ [3]: https://go.dev/issue/75678 
+│                       │      │                  ├ [4]: https://groups.google.com/g/golang-announce/c/4Emdl2iQ
 │                       │      │                  │      _bI 
-│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-61724 
-│                       │      │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4015 
-│                       │      ├ PublishedDate   : 2025-10-29T23:16:20.02Z 
-│                       │      ╰ LastModifiedDate: 2025-11-04T22:16:36.567Z 
-│                       ├ [8]  ╭ VulnerabilityID : CVE-2025-58185 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-47912 
+│                       │      │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-4010 
+│                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-47912 
+│                       │      ├ PublishedDate   : 2025-10-29T23:16:18.187Z 
+│                       │      ╰ LastModifiedDate: 2025-11-04T22:16:16.497Z 
+│                       ├ [7]  ╭ VulnerabilityID : CVE-2025-58185 
 │                       │      ├ PkgID           : stdlib@v1.24.7 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.7 
@@ -5938,7 +5928,7 @@
 │                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-58185 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.45Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.327Z 
-│                       ├ [9]  ╭ VulnerabilityID : CVE-2025-58189 
+│                       ├ [8]  ╭ VulnerabilityID : CVE-2025-58189 
 │                       │      ├ PkgID           : stdlib@v1.24.7 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.7 
@@ -5980,7 +5970,7 @@
 │                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-58189 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.833Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.877Z 
-│                       ├ [10] ╭ VulnerabilityID : CVE-2025-61723 
+│                       ├ [9]  ╭ VulnerabilityID : CVE-2025-61723 
 │                       │      ├ PkgID           : stdlib@v1.24.7 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.7 
@@ -6024,6 +6014,49 @@
 │                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-61723 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.927Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:36.42Z 
+│                       ├ [10] ╭ VulnerabilityID : CVE-2025-61724 
+│                       │      ├ PkgID           : stdlib@v1.24.7 
+│                       │      ├ PkgName         : stdlib 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.7 
+│                       │      │                  ╰ UID : dab6465cb6be340c 
+│                       │      ├ InstalledVersion: v1.24.7 
+│                       │      ├ FixedVersion    : 1.24.8, 1.25.2 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65e
+│                       │      │                  │         f96fa5ed92ae53b559a7 
+│                       │      │                  ╰ DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc0197
+│                       │      │                            4613d0880d65f9f80b20 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-61724 
+│                       │      ├ DataSource       ╭ ID  : govulndb 
+│                       │      │                  ├ Name: The Go Vulnerability Database 
+│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │      ├ Title           : net/textproto: Excessive CPU consumption in
+│                       │      │                   Reader.ReadResponse in net/textproto 
+│                       │      ├ Description     : The Reader.ReadResponse function constructs a response
+│                       │      │                   string through repeated string concatenation of lines. When
+│                       │      │                   the number of lines in a response is large, this can cause
+│                       │      │                   excessive CPU consumption. 
+│                       │      ├ Severity        : MEDIUM 
+│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      │                  ├ bitnami: 2 
+│                       │      │                  ╰ redhat : 2 
+│                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+│                       │      │                  │         │           N/A:L 
+│                       │      │                  │         ╰ V3Score : 5.3 
+│                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+│                       │      │                            │           N/A:L 
+│                       │      │                            ╰ V3Score : 5.3 
+│                       │      ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/10/08/1 
+│                       │      │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2025-61724 
+│                       │      │                  ├ [2]: https://go.dev/cl/709859 
+│                       │      │                  ├ [3]: https://go.dev/issue/75716 
+│                       │      │                  ├ [4]: https://groups.google.com/g/golang-announce/c/4Emdl2iQ
+│                       │      │                  │      _bI 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-61724 
+│                       │      │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-4015 
+│                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-61724 
+│                       │      ├ PublishedDate   : 2025-10-29T23:16:20.02Z 
+│                       │      ╰ LastModifiedDate: 2025-11-04T22:16:36.567Z 
 │                       ╰ [11] ╭ VulnerabilityID : CVE-2025-61725 
 │                              ├ PkgID           : stdlib@v1.24.7 
 │                              ├ PkgName         : stdlib 
@@ -7368,9 +7401,13 @@
 │                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ╭ [0]: CWE-61 
 │                             │                  ╰ [1]: CWE-363 
-│                             ├ VendorSeverity   ╭ amazon     : 3 
+│                             ├ VendorSeverity   ╭ alma       : 3 
+│                             │                  ├ amazon     : 3 
+│                             │                  ├ azure      : 3 
+│                             │                  ├ cbl-mariner: 3 
 │                             │                  ├ ghsa       : 3 
 │                             │                  ├ oracle-oval: 3 
+│                             │                  ├ photon     : 3 
 │                             │                  ├ redhat     : 3 
 │                             │                  ╰ ubuntu     : 3 
 │                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/
@@ -7380,64 +7417,69 @@
 │                             │                  │       080fa9f26a2cd3544e2801449697322 
 │                             │                  ├ [1] : http://github.com/opencontainers/runc/commit/fdcc9d3ca
 │                             │                  │       d2f85954a241ccb910a61aaa1ef47f3 
-│                             │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-52881 
-│                             │                  ├ [3] : https://github.com/opencontainers/runc 
-│                             │                  ├ [4] : https://github.com/opencontainers/runc/blob/v1.4.0-rc.
+│                             │                  ├ [2] : https://access.redhat.com/errata/RHSA-2025:19927 
+│                             │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2025-52881 
+│                             │                  ├ [4] : https://bugzilla.redhat.com/2404705 
+│                             │                  ├ [5] : https://bugzilla.redhat.com/2404708 
+│                             │                  ├ [6] : https://bugzilla.redhat.com/2404715 
+│                             │                  ├ [7] : https://errata.almalinux.org/9/ALSA-2025-19927.html 
+│                             │                  ├ [8] : https://github.com/opencontainers/runc 
+│                             │                  ├ [9] : https://github.com/opencontainers/runc/blob/v1.4.0-rc.
 │                             │                  │       2/RELEASES.md 
-│                             │                  ├ [5] : https://github.com/opencontainers/runc/commit/3f925525
+│                             │                  ├ [10]: https://github.com/opencontainers/runc/commit/3f925525
 │                             │                  │       b44d247e390e529e772a0dc0c0bc3557 
-│                             │                  ├ [6] : https://github.com/opencontainers/runc/commit/435cc81b
+│                             │                  ├ [11]: https://github.com/opencontainers/runc/commit/435cc81b
 │                             │                  │       e6b79cdec73b4002c0dae549b2f6ae6d 
-│                             │                  ├ [7] : https://github.com/opencontainers/runc/commit/44a0fcf6
+│                             │                  ├ [12]: https://github.com/opencontainers/runc/commit/44a0fcf6
 │                             │                  │       85db051c80b8c269812bb177f5802c58 
-│                             │                  ├ [8] : https://github.com/opencontainers/runc/commit/4b37cd93
+│                             │                  ├ [13]: https://github.com/opencontainers/runc/commit/4b37cd93
 │                             │                  │       f86e72feac866442988b549b5b7bf3e6 
-│                             │                  ├ [9] : https://github.com/opencontainers/runc/commit/6fc19144
+│                             │                  ├ [14]: https://github.com/opencontainers/runc/commit/6fc19144
 │                             │                  │       9109ea14bb7d61238f24a33fe08c651f 
-│                             │                  ├ [10]: https://github.com/opencontainers/runc/commit/77889b56
+│                             │                  ├ [15]: https://github.com/opencontainers/runc/commit/77889b56
 │                             │                  │       db939c323d29d1130f28f9aea2edb544 
-│                             │                  ├ [11]: https://github.com/opencontainers/runc/commit/77d217c7
+│                             │                  ├ [16]: https://github.com/opencontainers/runc/commit/77d217c7
 │                             │                  │       c3775d8ca5af89e477e81568ef4572db 
-│                             │                  ├ [12]: https://github.com/opencontainers/runc/commit/a41366e7
+│                             │                  ├ [17]: https://github.com/opencontainers/runc/commit/a41366e7
 │                             │                  │       4080fa9f26a2cd3544e2801449697322 
-│                             │                  ├ [13]: https://github.com/opencontainers/runc/commit/b3dd1bc5
+│                             │                  ├ [18]: https://github.com/opencontainers/runc/commit/b3dd1bc5
 │                             │                  │       62ed9996d1a0f249e056c16624046d28 
-│                             │                  ├ [14]: https://github.com/opencontainers/runc/commit/d40b3439
+│                             │                  ├ [19]: https://github.com/opencontainers/runc/commit/d40b3439
 │                             │                  │       a9614a86e87b81a94c6811ec6fa2d7d2 
-│                             │                  ├ [15]: https://github.com/opencontainers/runc/commit/d61fd29d
+│                             │                  ├ [20]: https://github.com/opencontainers/runc/commit/d61fd29d
 │                             │                  │       854b416feaaf128bf650325cd2182165 
-│                             │                  ├ [16]: https://github.com/opencontainers/runc/commit/db19bbed
+│                             │                  ├ [21]: https://github.com/opencontainers/runc/commit/db19bbed
 │                             │                  │       5348847da433faa9d69e9f90192bfa64 
-│                             │                  ├ [17]: https://github.com/opencontainers/runc/commit/ed6b1693
+│                             │                  ├ [22]: https://github.com/opencontainers/runc/commit/ed6b1693
 │                             │                  │       b8b3ae7eb0250a7e76fc888cdacf98c1 
-│                             │                  ├ [18]: https://github.com/opencontainers/runc/commit/fdcc9d3c
+│                             │                  ├ [23]: https://github.com/opencontainers/runc/commit/fdcc9d3c
 │                             │                  │       ad2f85954a241ccb910a61aaa1ef47f3 
-│                             │                  ├ [19]: https://github.com/opencontainers/runc/commit/ff6fe132
+│                             │                  ├ [24]: https://github.com/opencontainers/runc/commit/ff6fe132
 │                             │                  │       4663538167eca8b3d3eec61e1bd4fa51 
-│                             │                  ├ [20]: https://github.com/opencontainers/runc/commit/ff94f999
+│                             │                  ├ [25]: https://github.com/opencontainers/runc/commit/ff94f999
 │                             │                  │       1bd32076c871ef0ad8bc1b763458e480 
-│                             │                  ├ [21]: https://github.com/opencontainers/runc/security/adviso
+│                             │                  ├ [26]: https://github.com/opencontainers/runc/security/adviso
 │                             │                  │       ries/GHSA-9493-h29p-rfm2 
-│                             │                  ├ [22]: https://github.com/opencontainers/runc/security/adviso
+│                             │                  ├ [27]: https://github.com/opencontainers/runc/security/adviso
 │                             │                  │       ries/GHSA-cgrx-mc8f-2prm 
-│                             │                  ├ [23]: https://github.com/opencontainers/runc/security/adviso
+│                             │                  ├ [28]: https://github.com/opencontainers/runc/security/adviso
 │                             │                  │       ries/GHSA-fh74-hm69-rqjw 
-│                             │                  ├ [24]: https://github.com/opencontainers/runc/security/adviso
+│                             │                  ├ [29]: https://github.com/opencontainers/runc/security/adviso
 │                             │                  │       ries/GHSA-qw9x-cqr3-wc7r 
-│                             │                  ├ [25]: https://github.com/opencontainers/selinux/pull/237 
-│                             │                  ├ [26]: https://github.com/opencontainers/selinux/releases/tag
+│                             │                  ├ [30]: https://github.com/opencontainers/selinux/pull/237 
+│                             │                  ├ [31]: https://github.com/opencontainers/selinux/releases/tag
 │                             │                  │       /v1.13.0 
-│                             │                  ├ [27]: https://linux.oracle.com/cve/CVE-2025-52881.html 
-│                             │                  ├ [28]: https://linux.oracle.com/errata/ELSA-2025-19927.html 
-│                             │                  ├ [29]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
-│                             │                  ├ [30]: https://pkg.go.dev/github.com/cyphar/filepath-securejo
+│                             │                  ├ [32]: https://linux.oracle.com/cve/CVE-2025-52881.html 
+│                             │                  ├ [33]: https://linux.oracle.com/errata/ELSA-2025-19927.html 
+│                             │                  ├ [34]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
+│                             │                  ├ [35]: https://pkg.go.dev/github.com/cyphar/filepath-securejo
 │                             │                  │       in/pathrs-lite/procfs 
-│                             │                  ├ [31]: https://ubuntu.com/security/notices/USN-7851-1 
-│                             │                  ├ [32]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
-│                             │                  ├ [33]: https://youtu.be/tGseJW_uBB8 
-│                             │                  ╰ [34]: https://youtu.be/y1PaBzxwRWQ 
+│                             │                  ├ [36]: https://ubuntu.com/security/notices/USN-7851-1 
+│                             │                  ├ [37]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
+│                             │                  ├ [38]: https://youtu.be/tGseJW_uBB8 
+│                             │                  ╰ [39]: https://youtu.be/y1PaBzxwRWQ 
 │                             ├ PublishedDate   : 2025-11-06T21:15:42.817Z 
-│                             ╰ LastModifiedDate: 2025-11-06T21:15:42.817Z 
+│                             ╰ LastModifiedDate: 2025-11-12T16:20:22.257Z 
 ├ [8] ╭ Target         : usr/bin/skopeo 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -8437,9 +8479,13 @@
 │                       │     ├ Severity        : HIGH 
 │                       │     ├ CweIDs           ╭ [0]: CWE-61 
 │                       │     │                  ╰ [1]: CWE-363 
-│                       │     ├ VendorSeverity   ╭ amazon     : 3 
+│                       │     ├ VendorSeverity   ╭ alma       : 3 
+│                       │     │                  ├ amazon     : 3 
+│                       │     │                  ├ azure      : 3 
+│                       │     │                  ├ cbl-mariner: 3 
 │                       │     │                  ├ ghsa       : 3 
 │                       │     │                  ├ oracle-oval: 3 
+│                       │     │                  ├ photon     : 3 
 │                       │     │                  ├ redhat     : 3 
 │                       │     │                  ╰ ubuntu     : 3 
 │                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/
@@ -8449,64 +8495,69 @@
 │                       │     │                  │       080fa9f26a2cd3544e2801449697322 
 │                       │     │                  ├ [1] : http://github.com/opencontainers/runc/commit/fdcc9d3ca
 │                       │     │                  │       d2f85954a241ccb910a61aaa1ef47f3 
-│                       │     │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-52881 
-│                       │     │                  ├ [3] : https://github.com/opencontainers/runc 
-│                       │     │                  ├ [4] : https://github.com/opencontainers/runc/blob/v1.4.0-rc.
+│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2025:19927 
+│                       │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2025-52881 
+│                       │     │                  ├ [4] : https://bugzilla.redhat.com/2404705 
+│                       │     │                  ├ [5] : https://bugzilla.redhat.com/2404708 
+│                       │     │                  ├ [6] : https://bugzilla.redhat.com/2404715 
+│                       │     │                  ├ [7] : https://errata.almalinux.org/9/ALSA-2025-19927.html 
+│                       │     │                  ├ [8] : https://github.com/opencontainers/runc 
+│                       │     │                  ├ [9] : https://github.com/opencontainers/runc/blob/v1.4.0-rc.
 │                       │     │                  │       2/RELEASES.md 
-│                       │     │                  ├ [5] : https://github.com/opencontainers/runc/commit/3f925525
+│                       │     │                  ├ [10]: https://github.com/opencontainers/runc/commit/3f925525
 │                       │     │                  │       b44d247e390e529e772a0dc0c0bc3557 
-│                       │     │                  ├ [6] : https://github.com/opencontainers/runc/commit/435cc81b
+│                       │     │                  ├ [11]: https://github.com/opencontainers/runc/commit/435cc81b
 │                       │     │                  │       e6b79cdec73b4002c0dae549b2f6ae6d 
-│                       │     │                  ├ [7] : https://github.com/opencontainers/runc/commit/44a0fcf6
+│                       │     │                  ├ [12]: https://github.com/opencontainers/runc/commit/44a0fcf6
 │                       │     │                  │       85db051c80b8c269812bb177f5802c58 
-│                       │     │                  ├ [8] : https://github.com/opencontainers/runc/commit/4b37cd93
+│                       │     │                  ├ [13]: https://github.com/opencontainers/runc/commit/4b37cd93
 │                       │     │                  │       f86e72feac866442988b549b5b7bf3e6 
-│                       │     │                  ├ [9] : https://github.com/opencontainers/runc/commit/6fc19144
+│                       │     │                  ├ [14]: https://github.com/opencontainers/runc/commit/6fc19144
 │                       │     │                  │       9109ea14bb7d61238f24a33fe08c651f 
-│                       │     │                  ├ [10]: https://github.com/opencontainers/runc/commit/77889b56
+│                       │     │                  ├ [15]: https://github.com/opencontainers/runc/commit/77889b56
 │                       │     │                  │       db939c323d29d1130f28f9aea2edb544 
-│                       │     │                  ├ [11]: https://github.com/opencontainers/runc/commit/77d217c7
+│                       │     │                  ├ [16]: https://github.com/opencontainers/runc/commit/77d217c7
 │                       │     │                  │       c3775d8ca5af89e477e81568ef4572db 
-│                       │     │                  ├ [12]: https://github.com/opencontainers/runc/commit/a41366e7
+│                       │     │                  ├ [17]: https://github.com/opencontainers/runc/commit/a41366e7
 │                       │     │                  │       4080fa9f26a2cd3544e2801449697322 
-│                       │     │                  ├ [13]: https://github.com/opencontainers/runc/commit/b3dd1bc5
+│                       │     │                  ├ [18]: https://github.com/opencontainers/runc/commit/b3dd1bc5
 │                       │     │                  │       62ed9996d1a0f249e056c16624046d28 
-│                       │     │                  ├ [14]: https://github.com/opencontainers/runc/commit/d40b3439
+│                       │     │                  ├ [19]: https://github.com/opencontainers/runc/commit/d40b3439
 │                       │     │                  │       a9614a86e87b81a94c6811ec6fa2d7d2 
-│                       │     │                  ├ [15]: https://github.com/opencontainers/runc/commit/d61fd29d
+│                       │     │                  ├ [20]: https://github.com/opencontainers/runc/commit/d61fd29d
 │                       │     │                  │       854b416feaaf128bf650325cd2182165 
-│                       │     │                  ├ [16]: https://github.com/opencontainers/runc/commit/db19bbed
+│                       │     │                  ├ [21]: https://github.com/opencontainers/runc/commit/db19bbed
 │                       │     │                  │       5348847da433faa9d69e9f90192bfa64 
-│                       │     │                  ├ [17]: https://github.com/opencontainers/runc/commit/ed6b1693
+│                       │     │                  ├ [22]: https://github.com/opencontainers/runc/commit/ed6b1693
 │                       │     │                  │       b8b3ae7eb0250a7e76fc888cdacf98c1 
-│                       │     │                  ├ [18]: https://github.com/opencontainers/runc/commit/fdcc9d3c
+│                       │     │                  ├ [23]: https://github.com/opencontainers/runc/commit/fdcc9d3c
 │                       │     │                  │       ad2f85954a241ccb910a61aaa1ef47f3 
-│                       │     │                  ├ [19]: https://github.com/opencontainers/runc/commit/ff6fe132
+│                       │     │                  ├ [24]: https://github.com/opencontainers/runc/commit/ff6fe132
 │                       │     │                  │       4663538167eca8b3d3eec61e1bd4fa51 
-│                       │     │                  ├ [20]: https://github.com/opencontainers/runc/commit/ff94f999
+│                       │     │                  ├ [25]: https://github.com/opencontainers/runc/commit/ff94f999
 │                       │     │                  │       1bd32076c871ef0ad8bc1b763458e480 
-│                       │     │                  ├ [21]: https://github.com/opencontainers/runc/security/adviso
+│                       │     │                  ├ [26]: https://github.com/opencontainers/runc/security/adviso
 │                       │     │                  │       ries/GHSA-9493-h29p-rfm2 
-│                       │     │                  ├ [22]: https://github.com/opencontainers/runc/security/adviso
+│                       │     │                  ├ [27]: https://github.com/opencontainers/runc/security/adviso
 │                       │     │                  │       ries/GHSA-cgrx-mc8f-2prm 
-│                       │     │                  ├ [23]: https://github.com/opencontainers/runc/security/adviso
+│                       │     │                  ├ [28]: https://github.com/opencontainers/runc/security/adviso
 │                       │     │                  │       ries/GHSA-fh74-hm69-rqjw 
-│                       │     │                  ├ [24]: https://github.com/opencontainers/runc/security/adviso
+│                       │     │                  ├ [29]: https://github.com/opencontainers/runc/security/adviso
 │                       │     │                  │       ries/GHSA-qw9x-cqr3-wc7r 
-│                       │     │                  ├ [25]: https://github.com/opencontainers/selinux/pull/237 
-│                       │     │                  ├ [26]: https://github.com/opencontainers/selinux/releases/tag
+│                       │     │                  ├ [30]: https://github.com/opencontainers/selinux/pull/237 
+│                       │     │                  ├ [31]: https://github.com/opencontainers/selinux/releases/tag
 │                       │     │                  │       /v1.13.0 
-│                       │     │                  ├ [27]: https://linux.oracle.com/cve/CVE-2025-52881.html 
-│                       │     │                  ├ [28]: https://linux.oracle.com/errata/ELSA-2025-19927.html 
-│                       │     │                  ├ [29]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
-│                       │     │                  ├ [30]: https://pkg.go.dev/github.com/cyphar/filepath-securejo
+│                       │     │                  ├ [32]: https://linux.oracle.com/cve/CVE-2025-52881.html 
+│                       │     │                  ├ [33]: https://linux.oracle.com/errata/ELSA-2025-19927.html 
+│                       │     │                  ├ [34]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
+│                       │     │                  ├ [35]: https://pkg.go.dev/github.com/cyphar/filepath-securejo
 │                       │     │                  │       in/pathrs-lite/procfs 
-│                       │     │                  ├ [31]: https://ubuntu.com/security/notices/USN-7851-1 
-│                       │     │                  ├ [32]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
-│                       │     │                  ├ [33]: https://youtu.be/tGseJW_uBB8 
-│                       │     │                  ╰ [34]: https://youtu.be/y1PaBzxwRWQ 
+│                       │     │                  ├ [36]: https://ubuntu.com/security/notices/USN-7851-1 
+│                       │     │                  ├ [37]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
+│                       │     │                  ├ [38]: https://youtu.be/tGseJW_uBB8 
+│                       │     │                  ╰ [39]: https://youtu.be/y1PaBzxwRWQ 
 │                       │     ├ PublishedDate   : 2025-11-06T21:15:42.817Z 
-│                       │     ╰ LastModifiedDate: 2025-11-06T21:15:42.817Z 
+│                       │     ╰ LastModifiedDate: 2025-11-12T16:20:22.257Z 
 │                       ├ [1] ╭ VulnerabilityID : CVE-2025-58058 
 │                       │     ├ PkgID           : github.com/ulikunitz/xz@v0.5.12 
 │                       │     ├ PkgName         : github.com/ulikunitz/xz 
@@ -11349,7 +11400,7 @@
                         │     │                  │      ories/GHSA-m6hq-p25p-ffr2 
                         │     │                  ╰ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-64329 
                         │     ├ PublishedDate   : 2025-11-07T05:16:08.017Z 
-                        │     ╰ LastModifiedDate: 2025-11-07T05:16:08.017Z 
+                        │     ╰ LastModifiedDate: 2025-11-12T16:20:22.257Z 
                         ╰ [2] ╭ VulnerabilityID : CVE-2025-52881 
                               ├ PkgID           : github.com/opencontainers/selinux@v1.11.0 
                               ├ PkgName         : github.com/opencontainers/selinux 
@@ -11389,9 +11440,13 @@
                               ├ Severity        : HIGH 
                               ├ CweIDs           ╭ [0]: CWE-61 
                               │                  ╰ [1]: CWE-363 
-                              ├ VendorSeverity   ╭ amazon     : 3 
+                              ├ VendorSeverity   ╭ alma       : 3 
+                              │                  ├ amazon     : 3 
+                              │                  ├ azure      : 3 
+                              │                  ├ cbl-mariner: 3 
                               │                  ├ ghsa       : 3 
                               │                  ├ oracle-oval: 3 
+                              │                  ├ photon     : 3 
                               │                  ├ redhat     : 3 
                               │                  ╰ ubuntu     : 3 
                               ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/
@@ -11401,62 +11456,67 @@
                               │                  │       080fa9f26a2cd3544e2801449697322 
                               │                  ├ [1] : http://github.com/opencontainers/runc/commit/fdcc9d3ca
                               │                  │       d2f85954a241ccb910a61aaa1ef47f3 
-                              │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-52881 
-                              │                  ├ [3] : https://github.com/opencontainers/runc 
-                              │                  ├ [4] : https://github.com/opencontainers/runc/blob/v1.4.0-rc.
+                              │                  ├ [2] : https://access.redhat.com/errata/RHSA-2025:19927 
+                              │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2025-52881 
+                              │                  ├ [4] : https://bugzilla.redhat.com/2404705 
+                              │                  ├ [5] : https://bugzilla.redhat.com/2404708 
+                              │                  ├ [6] : https://bugzilla.redhat.com/2404715 
+                              │                  ├ [7] : https://errata.almalinux.org/9/ALSA-2025-19927.html 
+                              │                  ├ [8] : https://github.com/opencontainers/runc 
+                              │                  ├ [9] : https://github.com/opencontainers/runc/blob/v1.4.0-rc.
                               │                  │       2/RELEASES.md 
-                              │                  ├ [5] : https://github.com/opencontainers/runc/commit/3f925525
+                              │                  ├ [10]: https://github.com/opencontainers/runc/commit/3f925525
                               │                  │       b44d247e390e529e772a0dc0c0bc3557 
-                              │                  ├ [6] : https://github.com/opencontainers/runc/commit/435cc81b
+                              │                  ├ [11]: https://github.com/opencontainers/runc/commit/435cc81b
                               │                  │       e6b79cdec73b4002c0dae549b2f6ae6d 
-                              │                  ├ [7] : https://github.com/opencontainers/runc/commit/44a0fcf6
+                              │                  ├ [12]: https://github.com/opencontainers/runc/commit/44a0fcf6
                               │                  │       85db051c80b8c269812bb177f5802c58 
-                              │                  ├ [8] : https://github.com/opencontainers/runc/commit/4b37cd93
+                              │                  ├ [13]: https://github.com/opencontainers/runc/commit/4b37cd93
                               │                  │       f86e72feac866442988b549b5b7bf3e6 
-                              │                  ├ [9] : https://github.com/opencontainers/runc/commit/6fc19144
+                              │                  ├ [14]: https://github.com/opencontainers/runc/commit/6fc19144
                               │                  │       9109ea14bb7d61238f24a33fe08c651f 
-                              │                  ├ [10]: https://github.com/opencontainers/runc/commit/77889b56
+                              │                  ├ [15]: https://github.com/opencontainers/runc/commit/77889b56
                               │                  │       db939c323d29d1130f28f9aea2edb544 
-                              │                  ├ [11]: https://github.com/opencontainers/runc/commit/77d217c7
+                              │                  ├ [16]: https://github.com/opencontainers/runc/commit/77d217c7
                               │                  │       c3775d8ca5af89e477e81568ef4572db 
-                              │                  ├ [12]: https://github.com/opencontainers/runc/commit/a41366e7
+                              │                  ├ [17]: https://github.com/opencontainers/runc/commit/a41366e7
                               │                  │       4080fa9f26a2cd3544e2801449697322 
-                              │                  ├ [13]: https://github.com/opencontainers/runc/commit/b3dd1bc5
+                              │                  ├ [18]: https://github.com/opencontainers/runc/commit/b3dd1bc5
                               │                  │       62ed9996d1a0f249e056c16624046d28 
-                              │                  ├ [14]: https://github.com/opencontainers/runc/commit/d40b3439
+                              │                  ├ [19]: https://github.com/opencontainers/runc/commit/d40b3439
                               │                  │       a9614a86e87b81a94c6811ec6fa2d7d2 
-                              │                  ├ [15]: https://github.com/opencontainers/runc/commit/d61fd29d
+                              │                  ├ [20]: https://github.com/opencontainers/runc/commit/d61fd29d
                               │                  │       854b416feaaf128bf650325cd2182165 
-                              │                  ├ [16]: https://github.com/opencontainers/runc/commit/db19bbed
+                              │                  ├ [21]: https://github.com/opencontainers/runc/commit/db19bbed
                               │                  │       5348847da433faa9d69e9f90192bfa64 
-                              │                  ├ [17]: https://github.com/opencontainers/runc/commit/ed6b1693
+                              │                  ├ [22]: https://github.com/opencontainers/runc/commit/ed6b1693
                               │                  │       b8b3ae7eb0250a7e76fc888cdacf98c1 
-                              │                  ├ [18]: https://github.com/opencontainers/runc/commit/fdcc9d3c
+                              │                  ├ [23]: https://github.com/opencontainers/runc/commit/fdcc9d3c
                               │                  │       ad2f85954a241ccb910a61aaa1ef47f3 
-                              │                  ├ [19]: https://github.com/opencontainers/runc/commit/ff6fe132
+                              │                  ├ [24]: https://github.com/opencontainers/runc/commit/ff6fe132
                               │                  │       4663538167eca8b3d3eec61e1bd4fa51 
-                              │                  ├ [20]: https://github.com/opencontainers/runc/commit/ff94f999
+                              │                  ├ [25]: https://github.com/opencontainers/runc/commit/ff94f999
                               │                  │       1bd32076c871ef0ad8bc1b763458e480 
-                              │                  ├ [21]: https://github.com/opencontainers/runc/security/adviso
+                              │                  ├ [26]: https://github.com/opencontainers/runc/security/adviso
                               │                  │       ries/GHSA-9493-h29p-rfm2 
-                              │                  ├ [22]: https://github.com/opencontainers/runc/security/adviso
+                              │                  ├ [27]: https://github.com/opencontainers/runc/security/adviso
                               │                  │       ries/GHSA-cgrx-mc8f-2prm 
-                              │                  ├ [23]: https://github.com/opencontainers/runc/security/adviso
+                              │                  ├ [28]: https://github.com/opencontainers/runc/security/adviso
                               │                  │       ries/GHSA-fh74-hm69-rqjw 
-                              │                  ├ [24]: https://github.com/opencontainers/runc/security/adviso
+                              │                  ├ [29]: https://github.com/opencontainers/runc/security/adviso
                               │                  │       ries/GHSA-qw9x-cqr3-wc7r 
-                              │                  ├ [25]: https://github.com/opencontainers/selinux/pull/237 
-                              │                  ├ [26]: https://github.com/opencontainers/selinux/releases/tag
+                              │                  ├ [30]: https://github.com/opencontainers/selinux/pull/237 
+                              │                  ├ [31]: https://github.com/opencontainers/selinux/releases/tag
                               │                  │       /v1.13.0 
-                              │                  ├ [27]: https://linux.oracle.com/cve/CVE-2025-52881.html 
-                              │                  ├ [28]: https://linux.oracle.com/errata/ELSA-2025-19927.html 
-                              │                  ├ [29]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
-                              │                  ├ [30]: https://pkg.go.dev/github.com/cyphar/filepath-securejo
+                              │                  ├ [32]: https://linux.oracle.com/cve/CVE-2025-52881.html 
+                              │                  ├ [33]: https://linux.oracle.com/errata/ELSA-2025-19927.html 
+                              │                  ├ [34]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
+                              │                  ├ [35]: https://pkg.go.dev/github.com/cyphar/filepath-securejo
                               │                  │       in/pathrs-lite/procfs 
-                              │                  ├ [31]: https://ubuntu.com/security/notices/USN-7851-1 
-                              │                  ├ [32]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
-                              │                  ├ [33]: https://youtu.be/tGseJW_uBB8 
-                              │                  ╰ [34]: https://youtu.be/y1PaBzxwRWQ 
+                              │                  ├ [36]: https://ubuntu.com/security/notices/USN-7851-1 
+                              │                  ├ [37]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
+                              │                  ├ [38]: https://youtu.be/tGseJW_uBB8 
+                              │                  ╰ [39]: https://youtu.be/y1PaBzxwRWQ 
                               ├ PublishedDate   : 2025-11-06T21:15:42.817Z 
-                              ╰ LastModifiedDate: 2025-11-06T21:15:42.817Z 
+                              ╰ LastModifiedDate: 2025-11-12T16:20:22.257Z 
 ````
