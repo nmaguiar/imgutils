@@ -1,5 +1,5 @@
 # ---------------------
-FROM openaf/oaf:nightly as main
+FROM openaf/oaf:edge as main
 
 USER root
 RUN apk update\
