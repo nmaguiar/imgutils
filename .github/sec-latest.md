@@ -2305,7 +2305,7 @@
 │                       │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-22871 
 │                       │      │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-9635.html 
-│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:9845 
+│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:9317 
 │                       │      │                  ├ [8] : https://github.com/roadrunner-server/roadrunner 
 │                       │      │                  ├ [9] : https://github.com/roadrunner-server/roadrunner/commi
 │                       │      │                  │       t/f269279ee87d0b88127741cad1042389af7605fa 
