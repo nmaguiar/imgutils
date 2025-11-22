@@ -2044,6 +2044,7 @@
     Description: tar.Reader does not set a maximum size on the number of sparse region data blocks in GNU tar pax 1.0 sparse files. A maliciously-crafted archive containing a large number of sparse regions can cause a Reader to read an unbounded amount of data from the archive into memory. When reading from a compressed source, a small compressed input can result in large allocations.
     Severity: HIGH
     VendorSeverity:
+      alma: 2
       amazon: 3
       bitnami: 2
       redhat: 2
@@ -2056,7 +2057,10 @@
         V3Score: 7.5
     References:
     - http://www.openwall.com/lists/oss-security/2025/10/08/1
+    - https://access.redhat.com/errata/RHSA-2025:21815
     - https://access.redhat.com/security/cve/CVE-2025-58183
+    - https://bugzilla.redhat.com/2407258
+    - https://errata.almalinux.org/9/ALSA-2025-21815.html
     - https://go.dev/cl/709861
     - https://go.dev/issue/75677
     - https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI
@@ -2119,7 +2123,7 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Title: Due to the design of the name constraint checking algorithm, the proce ...
-    Description: Due to the design of the name constraint checking algorithm, the processing time of some inputs scals non-linearly with respect to the size of the certificate. This affects programs which validate arbitrary certificate chains.
+    Description: Due to the design of the name constraint checking algorithm, the processing time of some inputs scale non-linearly with respect to the size of the certificate. This affects programs which validate arbitrary certificate chains.
     Severity: HIGH
     VendorSeverity:
       amazon: 3
@@ -2136,7 +2140,7 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2025-58187
     - https://pkg.go.dev/vuln/GO-2025-4007
     PublishedDate: '2025-10-29T23:16:19.643Z'
-    LastModifiedDate: '2025-11-04T22:16:33.593Z'
+    LastModifiedDate: '2025-11-20T23:15:52.007Z'
   - VulnerabilityID: CVE-2025-58188
     PkgID: stdlib@v1.24.1
     PkgName: stdlib
@@ -5300,6 +5304,7 @@
     References:
     - https://go.dev/cl/721960
     - https://go.dev/issue/76364
+    - https://go.googlesource.com/crypto
     - https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA
     - https://nvd.nist.gov/vuln/detail/CVE-2025-47914
     - https://pkg.go.dev/vuln/GO-2025-4135
@@ -6698,6 +6703,7 @@
     References:
     - https://go.dev/cl/721960
     - https://go.dev/issue/76364
+    - https://go.googlesource.com/crypto
     - https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA
     - https://nvd.nist.gov/vuln/detail/CVE-2025-47914
     - https://pkg.go.dev/vuln/GO-2025-4135
@@ -7822,6 +7828,7 @@
     References:
     - https://go.dev/cl/721960
     - https://go.dev/issue/76364
+    - https://go.googlesource.com/crypto
     - https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA
     - https://nvd.nist.gov/vuln/detail/CVE-2025-47914
     - https://pkg.go.dev/vuln/GO-2025-4135
@@ -10523,6 +10530,7 @@
     References:
     - https://go.dev/cl/721960
     - https://go.dev/issue/76364
+    - https://go.googlesource.com/crypto
     - https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA
     - https://nvd.nist.gov/vuln/detail/CVE-2025-47914
     - https://pkg.go.dev/vuln/GO-2025-4135
