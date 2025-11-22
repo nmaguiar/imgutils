@@ -2084,7 +2084,8 @@
 │                       │      │                   from a compressed source, a small compressed input can
 │                       │      │                   result in large allocations. 
 │                       │      ├ Severity        : HIGH 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ alma   : 2 
+│                       │      │                  ├ amazon : 3 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:
@@ -2093,15 +2094,18 @@
 │                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                            │           N/A:H 
 │                       │      │                            ╰ V3Score : 7.5 
-│                       │      ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/10/08/1 
-│                       │      │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2025-58183 
-│                       │      │                  ├ [2]: https://go.dev/cl/709861 
-│                       │      │                  ├ [3]: https://go.dev/issue/75677 
-│                       │      │                  ├ [4]: https://groups.google.com/g/golang-announce/c/4Emdl2iQ
-│                       │      │                  │      _bI 
-│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-58183 
-│                       │      │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-4014 
-│                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-58183 
+│                       │      ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2025/10/08/1 
+│                       │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:21815 
+│                       │      │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-58183 
+│                       │      │                  ├ [3] : https://bugzilla.redhat.com/2407258 
+│                       │      │                  ├ [4] : https://errata.almalinux.org/9/ALSA-2025-21815.html 
+│                       │      │                  ├ [5] : https://go.dev/cl/709861 
+│                       │      │                  ├ [6] : https://go.dev/issue/75677 
+│                       │      │                  ├ [7] : https://groups.google.com/g/golang-announce/c/4Emdl2i
+│                       │      │                  │       Q_bI 
+│                       │      │                  ├ [8] : https://nvd.nist.gov/vuln/detail/CVE-2025-58183 
+│                       │      │                  ├ [9] : https://pkg.go.dev/vuln/GO-2025-4014 
+│                       │      │                  ╰ [10]: https://www.cve.org/CVERecord?id=CVE-2025-58183 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.357Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.2Z 
 │                       ├ [3]  ╭ VulnerabilityID : CVE-2025-58186 
@@ -2161,7 +2165,7 @@
 │                       │      ├ Title           : Due to the design of the name constraint checking algorithm,
 │                       │      │                    the proce ... 
 │                       │      ├ Description     : Due to the design of the name constraint checking algorithm,
-│                       │      │                    the processing time of some inputs scals non-linearly with
+│                       │      │                    the processing time of some inputs scale non-linearly with
 │                       │      │                   respect to the size of the certificate. This affects
 │                       │      │                   programs which validate arbitrary certificate chains. 
 │                       │      ├ Severity        : HIGH 
@@ -2178,7 +2182,7 @@
 │                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-58187 
 │                       │      │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4007 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.643Z 
-│                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.593Z 
+│                       │      ╰ LastModifiedDate: 2025-11-20T23:15:52.007Z 
 │                       ├ [5]  ╭ VulnerabilityID : CVE-2025-58188 
 │                       │      ├ PkgID           : stdlib@v1.24.1 
 │                       │      ├ PkgName         : stdlib 
@@ -4383,7 +4387,7 @@
 │                             ├ Title           : Due to the design of the name constraint checking algorithm,
 │                             │                   the proce ... 
 │                             ├ Description     : Due to the design of the name constraint checking algorithm,
-│                             │                   the processing time of some inputs scals non-linearly with
+│                             │                   the processing time of some inputs scale non-linearly with
 │                             │                   respect to the size of the certificate. This affects programs
 │                             │                    which validate arbitrary certificate chains. 
 │                             ├ Severity        : HIGH 
@@ -4399,7 +4403,7 @@
 │                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-58187 
 │                             │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4007 
 │                             ├ PublishedDate   : 2025-10-29T23:16:19.643Z 
-│                             ╰ LastModifiedDate: 2025-11-04T22:16:33.593Z 
+│                             ╰ LastModifiedDate: 2025-11-20T23:15:52.007Z 
 ├ [5] ╭ Target  : usr/bin/docker 
 │     ├ Class   : lang-pkgs 
 │     ├ Type    : gobinary 
@@ -5713,10 +5717,11 @@
 │                       │      │                         ╰ V3Score : 5.3 
 │                       │      ├ References       ╭ [0]: https://go.dev/cl/721960 
 │                       │      │                  ├ [1]: https://go.dev/issue/76364 
-│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/w-oX3UxN
+│                       │      │                  ├ [2]: https://go.googlesource.com/crypto 
+│                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/w-oX3UxN
 │                       │      │                  │      cZA 
-│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
-│                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4135 
+│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
+│                       │      │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4135 
 │                       │      ├ PublishedDate   : 2025-11-19T21:15:50.517Z 
 │                       │      ╰ LastModifiedDate: 2025-11-19T21:15:50.517Z 
 │                       ├ [3]  ╭ VulnerabilityID : CVE-2025-58181 
@@ -5782,7 +5787,8 @@
 │                       │      │                   from a compressed source, a small compressed input can
 │                       │      │                   result in large allocations. 
 │                       │      ├ Severity        : HIGH 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ alma   : 2 
+│                       │      │                  ├ amazon : 3 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:
@@ -5791,15 +5797,18 @@
 │                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                            │           N/A:H 
 │                       │      │                            ╰ V3Score : 7.5 
-│                       │      ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/10/08/1 
-│                       │      │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2025-58183 
-│                       │      │                  ├ [2]: https://go.dev/cl/709861 
-│                       │      │                  ├ [3]: https://go.dev/issue/75677 
-│                       │      │                  ├ [4]: https://groups.google.com/g/golang-announce/c/4Emdl2iQ
-│                       │      │                  │      _bI 
-│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-58183 
-│                       │      │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-4014 
-│                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-58183 
+│                       │      ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2025/10/08/1 
+│                       │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:21815 
+│                       │      │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-58183 
+│                       │      │                  ├ [3] : https://bugzilla.redhat.com/2407258 
+│                       │      │                  ├ [4] : https://errata.almalinux.org/9/ALSA-2025-21815.html 
+│                       │      │                  ├ [5] : https://go.dev/cl/709861 
+│                       │      │                  ├ [6] : https://go.dev/issue/75677 
+│                       │      │                  ├ [7] : https://groups.google.com/g/golang-announce/c/4Emdl2i
+│                       │      │                  │       Q_bI 
+│                       │      │                  ├ [8] : https://nvd.nist.gov/vuln/detail/CVE-2025-58183 
+│                       │      │                  ├ [9] : https://pkg.go.dev/vuln/GO-2025-4014 
+│                       │      │                  ╰ [10]: https://www.cve.org/CVERecord?id=CVE-2025-58183 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.357Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.2Z 
 │                       ├ [5]  ╭ VulnerabilityID : CVE-2025-58186 
@@ -5859,7 +5868,7 @@
 │                       │      ├ Title           : Due to the design of the name constraint checking algorithm,
 │                       │      │                    the proce ... 
 │                       │      ├ Description     : Due to the design of the name constraint checking algorithm,
-│                       │      │                    the processing time of some inputs scals non-linearly with
+│                       │      │                    the processing time of some inputs scale non-linearly with
 │                       │      │                   respect to the size of the certificate. This affects
 │                       │      │                   programs which validate arbitrary certificate chains. 
 │                       │      ├ Severity        : HIGH 
@@ -5876,7 +5885,7 @@
 │                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-58187 
 │                       │      │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4007 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.643Z 
-│                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.593Z 
+│                       │      ╰ LastModifiedDate: 2025-11-20T23:15:52.007Z 
 │                       ├ [7]  ╭ VulnerabilityID : CVE-2025-58188 
 │                       │      ├ PkgID           : stdlib@v1.24.7 
 │                       │      ├ PkgName         : stdlib 
@@ -7584,9 +7593,10 @@
 │                       │     │                         ╰ V3Score : 5.3 
 │                       │     ├ References       ╭ [0]: https://go.dev/cl/721960 
 │                       │     │                  ├ [1]: https://go.dev/issue/76364 
-│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA 
-│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
-│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4135 
+│                       │     │                  ├ [2]: https://go.googlesource.com/crypto 
+│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
+│                       │     │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4135 
 │                       │     ├ PublishedDate   : 2025-11-19T21:15:50.517Z 
 │                       │     ╰ LastModifiedDate: 2025-11-19T21:15:50.517Z 
 │                       ╰ [2] ╭ VulnerabilityID : CVE-2025-58181 
@@ -8785,9 +8795,10 @@
 │                       │     │                         ╰ V3Score : 5.3 
 │                       │     ├ References       ╭ [0]: https://go.dev/cl/721960 
 │                       │     │                  ├ [1]: https://go.dev/issue/76364 
-│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA 
-│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
-│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4135 
+│                       │     │                  ├ [2]: https://go.googlesource.com/crypto 
+│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
+│                       │     │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4135 
 │                       │     ├ PublishedDate   : 2025-11-19T21:15:50.517Z 
 │                       │     ╰ LastModifiedDate: 2025-11-19T21:15:50.517Z 
 │                       ├ [3] ╭ VulnerabilityID : CVE-2025-58181 
@@ -8845,7 +8856,7 @@
 │                             ├ Title           : Due to the design of the name constraint checking algorithm,
 │                             │                   the proce ... 
 │                             ├ Description     : Due to the design of the name constraint checking algorithm,
-│                             │                   the processing time of some inputs scals non-linearly with
+│                             │                   the processing time of some inputs scale non-linearly with
 │                             │                   respect to the size of the certificate. This affects programs
 │                             │                    which validate arbitrary certificate chains. 
 │                             ├ Severity        : HIGH 
@@ -8861,7 +8872,7 @@
 │                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-58187 
 │                             │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4007 
 │                             ├ PublishedDate   : 2025-10-29T23:16:19.643Z 
-│                             ╰ LastModifiedDate: 2025-11-04T22:16:33.593Z 
+│                             ╰ LastModifiedDate: 2025-11-20T23:15:52.007Z 
 ╰ [9] ╭ Target         : usr/bin/syft 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
@@ -11765,9 +11776,10 @@
                         │     │                         ╰ V3Score : 5.3 
                         │     ├ References       ╭ [0]: https://go.dev/cl/721960 
                         │     │                  ├ [1]: https://go.dev/issue/76364 
-                        │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA 
-                        │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
-                        │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4135 
+                        │     │                  ├ [2]: https://go.googlesource.com/crypto 
+                        │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA 
+                        │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
+                        │     │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4135 
                         │     ├ PublishedDate   : 2025-11-19T21:15:50.517Z 
                         │     ╰ LastModifiedDate: 2025-11-19T21:15:50.517Z 
                         ╰ [4] ╭ VulnerabilityID : CVE-2025-58181 
