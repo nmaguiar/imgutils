@@ -2312,13 +2312,13 @@
 │                       │      │                            │           L/A:N 
 │                       │      │                            ╰ V3Score : 5.4 
 │                       │      ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2025/04/04/4 
-│                       │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:9623 
+│                       │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:9635 
 │                       │      │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-22871 
 │                       │      │                  ├ [3] : https://bugzilla.redhat.com/2358493 
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2358493 
 │                       │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-22871 
-│                       │      │                  ├ [6] : https://errata.almalinux.org/10/ALSA-2025-9623.html 
+│                       │      │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-9635.html 
 │                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:9845 
 │                       │      │                  ├ [8] : https://github.com/roadrunner-server/roadrunner 
 │                       │      │                  ├ [9] : https://github.com/roadrunner-server/roadrunner/commi
@@ -2375,13 +2375,13 @@
 │                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:
 │                       │      │                            │           N/A:N 
 │                       │      │                            ╰ V3Score : 6.8 
-│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:16432 
+│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:15887 
 │                       │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2025-4673 
 │                       │      │                  ├ [2] : https://bugzilla.redhat.com/2373305 
 │                       │      │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2373305 
 │                       │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-4673 
-│                       │      │                  ├ [5] : https://errata.almalinux.org/10/ALSA-2025-16432.html 
+│                       │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2025-15887.html 
 │                       │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2025:16432 
 │                       │      │                  ├ [7] : https://go.dev/cl/679257 
 │                       │      │                  ├ [8] : https://go.dev/issue/73816 
@@ -5611,7 +5611,7 @@
 │                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
 │                       │     │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4135 
 │                       │     ├ PublishedDate   : 2025-11-19T21:15:50.517Z 
-│                       │     ╰ LastModifiedDate: 2025-11-19T21:15:50.517Z 
+│                       │     ╰ LastModifiedDate: 2025-11-21T15:13:59.083Z 
 │                       ╰ [1] ╭ VulnerabilityID : CVE-2025-58181 
 │                             ├ PkgID           : golang.org/x/crypto@v0.43.0 
 │                             ├ PkgName         : golang.org/x/crypto 
@@ -5647,7 +5647,7 @@
 │                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-58181 
 │                             │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4134 
 │                             ├ PublishedDate   : 2025-11-19T21:15:50.85Z 
-│                             ╰ LastModifiedDate: 2025-11-19T21:15:50.85Z 
+│                             ╰ LastModifiedDate: 2025-11-21T15:13:59.083Z 
 ├ [7] ╭ Target         : usr/bin/nerdctl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -7062,7 +7062,7 @@
 │                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
 │                       │     │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4135 
 │                       │     ├ PublishedDate   : 2025-11-19T21:15:50.517Z 
-│                       │     ╰ LastModifiedDate: 2025-11-19T21:15:50.517Z 
+│                       │     ╰ LastModifiedDate: 2025-11-21T15:13:59.083Z 
 │                       ╰ [2] ╭ VulnerabilityID : CVE-2025-58181 
 │                             ├ PkgID           : golang.org/x/crypto@v0.43.0 
 │                             ├ PkgName         : golang.org/x/crypto 
@@ -7098,7 +7098,7 @@
 │                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-58181 
 │                             │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4134 
 │                             ├ PublishedDate   : 2025-11-19T21:15:50.85Z 
-│                             ╰ LastModifiedDate: 2025-11-19T21:15:50.85Z 
+│                             ╰ LastModifiedDate: 2025-11-21T15:13:59.083Z 
 ├ [8] ╭ Target         : usr/bin/skopeo 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -8264,7 +8264,7 @@
 │                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
 │                       │     │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4135 
 │                       │     ├ PublishedDate   : 2025-11-19T21:15:50.517Z 
-│                       │     ╰ LastModifiedDate: 2025-11-19T21:15:50.517Z 
+│                       │     ╰ LastModifiedDate: 2025-11-21T15:13:59.083Z 
 │                       ╰ [3] ╭ VulnerabilityID : CVE-2025-58181 
 │                             ├ PkgID           : golang.org/x/crypto@v0.40.0 
 │                             ├ PkgName         : golang.org/x/crypto 
@@ -8300,7 +8300,7 @@
 │                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-58181 
 │                             │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4134 
 │                             ├ PublishedDate   : 2025-11-19T21:15:50.85Z 
-│                             ╰ LastModifiedDate: 2025-11-19T21:15:50.85Z 
+│                             ╰ LastModifiedDate: 2025-11-21T15:13:59.083Z 
 ╰ [9] ╭ Target         : usr/bin/syft 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
@@ -11088,7 +11088,7 @@
                         │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
                         │     │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4135 
                         │     ├ PublishedDate   : 2025-11-19T21:15:50.517Z 
-                        │     ╰ LastModifiedDate: 2025-11-19T21:15:50.517Z 
+                        │     ╰ LastModifiedDate: 2025-11-21T15:13:59.083Z 
                         ╰ [1] ╭ VulnerabilityID : CVE-2025-58181 
                               ├ PkgID           : golang.org/x/crypto@v0.44.0 
                               ├ PkgName         : golang.org/x/crypto 
@@ -11124,5 +11124,5 @@
                               │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-58181 
                               │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4134 
                               ├ PublishedDate   : 2025-11-19T21:15:50.85Z 
-                              ╰ LastModifiedDate: 2025-11-19T21:15:50.85Z 
+                              ╰ LastModifiedDate: 2025-11-21T15:13:59.083Z 
 ````
