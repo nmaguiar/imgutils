@@ -32,7 +32,13 @@ The script accepts the same syntax as `REGAUTH`, including multiple registries s
 
 ### AWS CloudShell
 
+*Private ECR:*
+
 {{{$acolor 'FAINT,ITALIC' 'sudo docker run --rm -ti --pull always -v /var/run/docker.sock:/var/run/docker.sock -e REGAUTH="$(aws sts get-caller-identity --query Account --output text).dkr.ecr.$AWS_REGION.amazonaws.com,AWS,$(aws ecr get-login-password)" nmaguiar/imgutils /bin/bash'}}}
+
+*Public ECR:*
+
+{{{$acolor 'FAINT,ITALIC' 'sudo docker run --rm -ti --pull always -v /var/run/docker.sock:/var/run/docker.sock -e REGAUTH="public.ecr.aws,AWS,$(aws ecr-public get-login-password --region us-east-1)" nmaguiar/imgutils /bin/bash'}}}
 
 ### Container in AWS
 
