@@ -905,6 +905,7 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:c9a649511534530cd784c9ae4f2202aa93e39a1c7d931a27af57d4430289e943
     Title: 'crypto/x509: Usage of ExtKeyUsageAny disables policy validation in crypto/x509'
     Description: Calling Verify with a VerifyOptions.KeyUsages that contains ExtKeyUsageAny unintentionally disabledpolicy validation. This only affected certificate chains which contain policy graphs, which are rather uncommon.
     Severity: HIGH
@@ -948,6 +949,7 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:8103e7319ad03e3daad28620ccd583d13d89e1ea3d288f8232e0fb8f64000c0e
     Title: 'database/sql: Postgres Scan Race Condition'
     Description: Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel. This can result in a race condition that may overwrite the expected results with those of another query, causing the call to Scan to return either unexpected results from the other query or an error.
     Severity: HIGH
@@ -977,7 +979,7 @@
     - https://go.dev/issue/74831
     - https://groups.google.com/g/golang-announce/c/x5MKroML2yM
     - https://linux.oracle.com/cve/CVE-2025-47907.html
-    - https://linux.oracle.com/errata/ELSA-2025-20909.html
+    - https://linux.oracle.com/errata/ELSA-2025-20983.html
     - https://nvd.nist.gov/vuln/detail/CVE-2025-47907
     - https://pkg.go.dev/vuln/GO-2025-3849
     - https://www.cve.org/CVERecord?id=CVE-2025-47907
@@ -1000,6 +1002,7 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:a6ce09bdd042729ac6e2c1d59ed69eb926235f3fef8ec2824ab29d554c42c9ab
     Title: 'golang: archive/tar: Unbounded allocation when parsing GNU sparse map'
     Description: tar.Reader does not set a maximum size on the number of sparse region data blocks in GNU tar pax 1.0 sparse files. A maliciously-crafted archive containing a large number of sparse regions can cause a Reader to read an unbounded amount of data from the archive into memory. When reading from a compressed source, a small compressed input can result in large allocations.
     Severity: HIGH
@@ -1033,7 +1036,7 @@
     - https://go.dev/issue/75677
     - https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI
     - https://linux.oracle.com/cve/CVE-2025-58183.html
-    - https://linux.oracle.com/errata/ELSA-2025-22011.html
+    - https://linux.oracle.com/errata/ELSA-2025-22012.html
     - https://nvd.nist.gov/vuln/detail/CVE-2025-58183
     - https://pkg.go.dev/vuln/GO-2025-4014
     - https://www.cve.org/CVERecord?id=CVE-2025-58183
@@ -1056,6 +1059,7 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:53a428778273f0da376953d055fd2d6c9f2e8c475420b46857da8d3086a99f8d
     Title: Despite HTTP headers having a default limit of 1MB, the number of cook ...
     Description: Despite HTTP headers having a default limit of 1MB, the number of cookies that can be parsed does not have a limit. By sending a lot of very small cookies such as "a=;", an attacker can make an HTTP server allocate a large amount of structs, causing large memory consumption.
     Severity: HIGH
@@ -1092,6 +1096,7 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:55dc7cf1f19ac6517fd3e55b610f37451458749ab661913789dbfc38af18e79e
     Title: Due to the design of the name constraint checking algorithm, the proce ...
     Description: Due to the design of the name constraint checking algorithm, the processing time of some inputs scale non-linearly with respect to the size of the certificate. This affects programs which validate arbitrary certificate chains.
     Severity: HIGH
@@ -1128,6 +1133,7 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:b861f5365ba084d735b0bf9789f3919e32e9c62b79c4bd9d5e61cc04326d8eaf
     Title: Inconsistent handling of O_CREATE|O_EXCL on Unix and Windows in os in syscall
     Description: os.OpenFile(path, os.O_CREATE|O_EXCL) behaved differently on Unix and Windows systems when the target path was a dangling symlink. On Unix systems, OpenFile with O_CREATE and O_EXCL flags never follows symlinks. On Windows, when the target path was a symlink to a nonexistent location, OpenFile would create a file in that location. OpenFile now always returns an error when the O_CREATE and O_EXCL flags are both set and the target path is a symlink.
     Severity: MEDIUM
@@ -1164,6 +1170,7 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:c7356e3e7272664957cf0f012d9161a6f8a81bd08c68b8268d6b5734097b4f73
     Title: 'net/http: Request smuggling due to acceptance of invalid chunked data in net/http'
     Description: The net/http package improperly accepts a bare LF as a line terminator in chunked data chunk-size lines. This can permit request smuggling if a net/http server is used in conjunction with a server that incorrectly accepts a bare LF as part of a chunk-ext.
     Severity: MEDIUM
@@ -1226,6 +1233,7 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:d62642a036775d37b4ed61d21d331d7e2a592f5e3b1f0fcfccbaa34df5294f01
     Title: 'net/http: Sensitive headers not cleared on cross-origin redirect in net/http'
     Description: Proxy-Authorization and Proxy-Authenticate headers persisted on cross-origin redirects potentially leaking sensitive information.
     Severity: MEDIUM
@@ -1282,6 +1290,7 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:1ec1bd5624de9a53b41a5262b086392475356f9afd9f718ed44b9384a75b8b23
     Title: 'os/exec: Unexpected paths returned from LookPath in os/exec'
     Description: If the PATH environment variable contains paths which are executables (rather than just directories), passing certain strings to LookPath ("", ".", and ".."), can result in the binaries listed in the PATH being unexpectedly returned.
     Severity: MEDIUM
@@ -1337,6 +1346,7 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:48aeaa62988b9d8e268ee087ebfa5f56157a5cf6d602776f5a380cb0215a98c9
     Title: 'net/url: Insufficient validation of bracketed IPv6 hostnames in net/url'
     Description: 'The Parse function permits values other than IPv6 addresses to be included in square brackets within the host component of a URL. RFC 3986 permits IPv6 addresses to be included within the host component, enclosed within square brackets. For example: "http://[::1]/". IPv4 addresses and hostnames must not appear within square brackets. Parse did not enforce this requirement.'
     Severity: MEDIUM
@@ -1379,6 +1389,7 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:4da6900df8cc8e35c7fca8eaaf7b2162cd416576f9d53bdf7e461636166408b1
     Title: 'encoding/asn1: Parsing DER payload can cause memory exhaustion in encoding/asn1'
     Description: Parsing a maliciously crafted DER payload could allocate large amounts of memory, causing memory exhaustion.
     Severity: MEDIUM
@@ -1422,6 +1433,7 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:6cc17249cb42d2472d874351ea9f81dd5099eff7622909652c51720405843808
     Title: 'crypto/x509: golang: Panic when validating certificates with DSA public keys in crypto/x509'
     Description: Validating certificate chains which contain DSA public keys can cause programs to panic, due to a interface cast that assumes they implement the Equal method. This affects programs which validate arbitrary certificate chains.
     Severity: MEDIUM
@@ -1465,6 +1477,7 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:03ef6f1ddcbb4ce3e1760daeb38096ad4bf67da26c24e48ea5dead4d149a3a6a
     Title: 'crypto/tls: go crypto/tls ALPN negotiation error contains attacker controlled information'
     Description: When Conn.Handshake fails during ALPN negotiation the error contains attacker controlled information (the ALPN protocols sent by the client) which is not escaped.
     Severity: MEDIUM
@@ -1507,6 +1520,7 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:c3288688d0f86b1ab6b38d422f36cac9b6769ed961446a312afd2208c4aa6ece
     Title: 'encoding/pem: Quadratic complexity when parsing some invalid inputs in encoding/pem'
     Description: The processing time for parsing some invalid inputs scales non-linearly with respect to the size of the input. This affects programs which parse untrusted PEM inputs.
     Severity: MEDIUM
@@ -1550,6 +1564,7 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:60c4784d2d7d24ff5c9afd3e927e08b4e004d97d56a546637b314d6153550f94
     Title: 'net/textproto: Excessive CPU consumption in Reader.ReadResponse in net/textproto'
     Description: The Reader.ReadResponse function constructs a response string through repeated string concatenation of lines. When the number of lines in a response is large, this can cause excessive CPU consumption.
     Severity: MEDIUM
@@ -1592,6 +1607,7 @@
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:e17689d2d343d6287b61cb4418b6b0b8713222ad7a5dd3bdb5055814e5e8495c
     Title: 'net/mail: Excessive CPU consumption in ParseAddress in net/mail'
     Description: The ParseAddress function constructeds domain-literal address components through repeated string concatenation. When parsing large domain-literal components, this can cause excessive CPU consumption.
     Severity: MEDIUM
@@ -1617,3 +1633,59 @@
     - https://www.cve.org/CVERecord?id=CVE-2025-61725
     PublishedDate: '2025-10-29T23:16:20.113Z'
     LastModifiedDate: '2025-11-04T22:16:36.693Z'
+  - VulnerabilityID: CVE-2025-61727
+    PkgID: stdlib@v1.24.1
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.24.1
+      UID: 969259d6a3318a6c
+    InstalledVersion: v1.24.1
+    FixedVersion: 1.24.11, 1.25.5
+    Status: fixed
+    Layer:
+      Digest: sha256:3c9b1226bd5a1c7ac2fe73b1ccd6c408b0f91f3bc12db0b19c82087f794fdd81
+      DiffID: sha256:7960f1c5276f4e2740e632a5244b4684abd95a25bbc7e4dc8786fc4baf8be8be
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-61727
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:63f007e9df726c9d61c774ca50b263daa704c96b2fa5f9ac4b8f573984d46e49
+    Title: An excluded subdomain constraint in a certificate chain does not restr ...
+    Description: An excluded subdomain constraint in a certificate chain does not restrict the usage of wildcard SANs in the leaf certificate. For example a constraint that excludes the subdomain test.example.com does not prevent a leaf certificate from claiming the SAN *.example.com.
+    Severity: UNKNOWN
+    References:
+    - https://go.dev/cl/723900
+    - https://go.dev/issue/76442
+    - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
+    - https://pkg.go.dev/vuln/GO-2025-4175
+    PublishedDate: '2025-12-03T20:16:25.607Z'
+    LastModifiedDate: '2025-12-03T22:15:51.51Z'
+  - VulnerabilityID: CVE-2025-61729
+    PkgID: stdlib@v1.24.1
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.24.1
+      UID: 969259d6a3318a6c
+    InstalledVersion: v1.24.1
+    FixedVersion: 1.24.11, 1.25.5
+    Status: fixed
+    Layer:
+      Digest: sha256:3c9b1226bd5a1c7ac2fe73b1ccd6c408b0f91f3bc12db0b19c82087f794fdd81
+      DiffID: sha256:7960f1c5276f4e2740e632a5244b4684abd95a25bbc7e4dc8786fc4baf8be8be
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-61729
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:6ea01e26b4d1d4aae805931a0b0e5387eb5a801db4d7b006fed89100163f36b8
+    Title: Within HostnameError.Error(), when constructing an error string, there ...
+    Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
+    Severity: UNKNOWN
+    References:
+    - https://go.dev/cl/725920
+    - https://go.dev/issue/76445
+    - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
+    - https://pkg.go.dev/vuln/GO-2025-4155
+    PublishedDate: '2025-12-02T19:15:51.447Z'
+    LastModifiedDate: '2025-12-02T22:16:08.527Z'
