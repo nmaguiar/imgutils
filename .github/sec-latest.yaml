@@ -2155,6 +2155,41 @@
     - https://pkg.go.dev/vuln/GO-2025-4007
     PublishedDate: '2025-10-29T23:16:19.643Z'
     LastModifiedDate: '2025-11-20T23:15:52.007Z'
+  - VulnerabilityID: CVE-2025-61729
+    PkgID: stdlib@v1.24.1
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.24.1
+      UID: 969259d6a3318a6c
+    InstalledVersion: v1.24.1
+    FixedVersion: 1.24.11, 1.25.5
+    Status: fixed
+    Layer:
+      Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65ef96fa5ed92ae53b559a7
+      DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc01974613d0880d65f9f80b20
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-61729
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:e1cabe7325648960871a15948b5bb015dfa9f7c22a2f62ea2e0b2c231889e6fd
+    Title: Within HostnameError.Error(), when constructing an error string, there ...
+    Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/725920
+    - https://go.dev/issue/76445
+    - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-61729
+    - https://pkg.go.dev/vuln/GO-2025-4155
+    PublishedDate: '2025-12-02T19:15:51.447Z'
+    LastModifiedDate: '2025-12-04T17:15:25.86Z'
   - VulnerabilityID: CVE-2025-0913
     PkgID: stdlib@v1.24.1
     PkgName: stdlib
@@ -2699,35 +2734,7 @@
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
     - https://pkg.go.dev/vuln/GO-2025-4175
     PublishedDate: '2025-12-03T20:16:25.607Z'
-    LastModifiedDate: '2025-12-03T22:15:51.51Z'
-  - VulnerabilityID: CVE-2025-61729
-    PkgID: stdlib@v1.24.1
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.24.1
-      UID: 969259d6a3318a6c
-    InstalledVersion: v1.24.1
-    FixedVersion: 1.24.11, 1.25.5
-    Status: fixed
-    Layer:
-      Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65ef96fa5ed92ae53b559a7
-      DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc01974613d0880d65f9f80b20
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-61729
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:e1cabe7325648960871a15948b5bb015dfa9f7c22a2f62ea2e0b2c231889e6fd
-    Title: Within HostnameError.Error(), when constructing an error string, there ...
-    Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/725920
-    - https://go.dev/issue/76445
-    - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
-    - https://pkg.go.dev/vuln/GO-2025-4155
-    PublishedDate: '2025-12-02T19:15:51.447Z'
-    LastModifiedDate: '2025-12-02T22:16:08.527Z'
+    LastModifiedDate: '2025-12-04T17:15:08.283Z'
 - Target: usr/bin/ctr
   Class: lang-pkgs
   Type: gobinary
@@ -3545,6 +3552,41 @@
     - https://youtu.be/y1PaBzxwRWQ
     PublishedDate: '2025-11-06T21:15:42.817Z'
     LastModifiedDate: '2025-12-03T18:37:17.917Z'
+  - VulnerabilityID: CVE-2025-61729
+    PkgID: stdlib@v1.25.3
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.25.3
+      UID: d217d5eb9140fc3b
+    InstalledVersion: v1.25.3
+    FixedVersion: 1.24.11, 1.25.5
+    Status: fixed
+    Layer:
+      Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65ef96fa5ed92ae53b559a7
+      DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc01974613d0880d65f9f80b20
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-61729
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:0bbb88571d6be613517b139884f9f7dcbd6392d8f913e6577dcf7de1a0e67b0f
+    Title: Within HostnameError.Error(), when constructing an error string, there ...
+    Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/725920
+    - https://go.dev/issue/76445
+    - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-61729
+    - https://pkg.go.dev/vuln/GO-2025-4155
+    PublishedDate: '2025-12-02T19:15:51.447Z'
+    LastModifiedDate: '2025-12-04T17:15:25.86Z'
   - VulnerabilityID: CVE-2025-61727
     PkgID: stdlib@v1.25.3
     PkgName: stdlib
@@ -3572,35 +3614,7 @@
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
     - https://pkg.go.dev/vuln/GO-2025-4175
     PublishedDate: '2025-12-03T20:16:25.607Z'
-    LastModifiedDate: '2025-12-03T22:15:51.51Z'
-  - VulnerabilityID: CVE-2025-61729
-    PkgID: stdlib@v1.25.3
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.25.3
-      UID: d217d5eb9140fc3b
-    InstalledVersion: v1.25.3
-    FixedVersion: 1.24.11, 1.25.5
-    Status: fixed
-    Layer:
-      Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65ef96fa5ed92ae53b559a7
-      DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc01974613d0880d65f9f80b20
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-61729
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:0bbb88571d6be613517b139884f9f7dcbd6392d8f913e6577dcf7de1a0e67b0f
-    Title: Within HostnameError.Error(), when constructing an error string, there ...
-    Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/725920
-    - https://go.dev/issue/76445
-    - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
-    - https://pkg.go.dev/vuln/GO-2025-4155
-    PublishedDate: '2025-12-02T19:15:51.447Z'
-    LastModifiedDate: '2025-12-02T22:16:08.527Z'
+    LastModifiedDate: '2025-12-04T17:15:08.283Z'
 - Target: usr/bin/dive
   Class: lang-pkgs
   Type: gobinary
@@ -4318,6 +4332,41 @@
     - https://pkg.go.dev/vuln/GO-2025-4007
     PublishedDate: '2025-10-29T23:16:19.643Z'
     LastModifiedDate: '2025-11-20T23:15:52.007Z'
+  - VulnerabilityID: CVE-2025-61729
+    PkgID: stdlib@v1.25.2
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.25.2
+      UID: e7a588376b482579
+    InstalledVersion: v1.25.2
+    FixedVersion: 1.24.11, 1.25.5
+    Status: fixed
+    Layer:
+      Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65ef96fa5ed92ae53b559a7
+      DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc01974613d0880d65f9f80b20
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-61729
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:9116ef22e3ca751912f4e30e2c8ea8c2c252dfbf413ba2153a3b99a7cd081c07
+    Title: Within HostnameError.Error(), when constructing an error string, there ...
+    Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/725920
+    - https://go.dev/issue/76445
+    - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-61729
+    - https://pkg.go.dev/vuln/GO-2025-4155
+    PublishedDate: '2025-12-02T19:15:51.447Z'
+    LastModifiedDate: '2025-12-04T17:15:25.86Z'
   - VulnerabilityID: CVE-2025-61727
     PkgID: stdlib@v1.25.2
     PkgName: stdlib
@@ -4345,35 +4394,7 @@
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
     - https://pkg.go.dev/vuln/GO-2025-4175
     PublishedDate: '2025-12-03T20:16:25.607Z'
-    LastModifiedDate: '2025-12-03T22:15:51.51Z'
-  - VulnerabilityID: CVE-2025-61729
-    PkgID: stdlib@v1.25.2
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.25.2
-      UID: e7a588376b482579
-    InstalledVersion: v1.25.2
-    FixedVersion: 1.24.11, 1.25.5
-    Status: fixed
-    Layer:
-      Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65ef96fa5ed92ae53b559a7
-      DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc01974613d0880d65f9f80b20
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-61729
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:9116ef22e3ca751912f4e30e2c8ea8c2c252dfbf413ba2153a3b99a7cd081c07
-    Title: Within HostnameError.Error(), when constructing an error string, there ...
-    Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/725920
-    - https://go.dev/issue/76445
-    - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
-    - https://pkg.go.dev/vuln/GO-2025-4155
-    PublishedDate: '2025-12-02T19:15:51.447Z'
-    LastModifiedDate: '2025-12-02T22:16:08.527Z'
+    LastModifiedDate: '2025-12-04T17:15:08.283Z'
 - Target: usr/bin/docker
   Class: lang-pkgs
   Type: gobinary
@@ -4389,6 +4410,41 @@
       Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65ef96fa5ed92ae53b559a7
       DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc01974613d0880d65f9f80b20
   Vulnerabilities:
+  - VulnerabilityID: CVE-2025-61729
+    PkgID: stdlib@v1.25.3
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.25.3
+      UID: 81dc48ca4b736060
+    InstalledVersion: v1.25.3
+    FixedVersion: 1.24.11, 1.25.5
+    Status: fixed
+    Layer:
+      Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65ef96fa5ed92ae53b559a7
+      DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc01974613d0880d65f9f80b20
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-61729
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:9de4296a23d354c2b2d929c1ffbb236e60eb32d06beaf6db747a26fbfaf40b4a
+    Title: Within HostnameError.Error(), when constructing an error string, there ...
+    Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/725920
+    - https://go.dev/issue/76445
+    - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-61729
+    - https://pkg.go.dev/vuln/GO-2025-4155
+    PublishedDate: '2025-12-02T19:15:51.447Z'
+    LastModifiedDate: '2025-12-04T17:15:25.86Z'
   - VulnerabilityID: CVE-2025-61727
     PkgID: stdlib@v1.25.3
     PkgName: stdlib
@@ -4416,35 +4472,7 @@
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
     - https://pkg.go.dev/vuln/GO-2025-4175
     PublishedDate: '2025-12-03T20:16:25.607Z'
-    LastModifiedDate: '2025-12-03T22:15:51.51Z'
-  - VulnerabilityID: CVE-2025-61729
-    PkgID: stdlib@v1.25.3
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.25.3
-      UID: 81dc48ca4b736060
-    InstalledVersion: v1.25.3
-    FixedVersion: 1.24.11, 1.25.5
-    Status: fixed
-    Layer:
-      Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65ef96fa5ed92ae53b559a7
-      DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc01974613d0880d65f9f80b20
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-61729
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:9de4296a23d354c2b2d929c1ffbb236e60eb32d06beaf6db747a26fbfaf40b4a
-    Title: Within HostnameError.Error(), when constructing an error string, there ...
-    Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/725920
-    - https://go.dev/issue/76445
-    - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
-    - https://pkg.go.dev/vuln/GO-2025-4155
-    PublishedDate: '2025-12-02T19:15:51.447Z'
-    LastModifiedDate: '2025-12-02T22:16:08.527Z'
+    LastModifiedDate: '2025-12-04T17:15:08.283Z'
 - Target: usr/bin/helm
   Class: lang-pkgs
   Type: gobinary
@@ -5876,6 +5904,41 @@
     - https://pkg.go.dev/vuln/GO-2025-4007
     PublishedDate: '2025-10-29T23:16:19.643Z'
     LastModifiedDate: '2025-11-20T23:15:52.007Z'
+  - VulnerabilityID: CVE-2025-61729
+    PkgID: stdlib@v1.24.7
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.24.7
+      UID: dab6465cb6be340c
+    InstalledVersion: v1.24.7
+    FixedVersion: 1.24.11, 1.25.5
+    Status: fixed
+    Layer:
+      Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65ef96fa5ed92ae53b559a7
+      DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc01974613d0880d65f9f80b20
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-61729
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:5e1127debfb4d0f3bd2f530857885f5f25ab5b1176ee9237416741953a4a26b2
+    Title: Within HostnameError.Error(), when constructing an error string, there ...
+    Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/725920
+    - https://go.dev/issue/76445
+    - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-61729
+    - https://pkg.go.dev/vuln/GO-2025-4155
+    PublishedDate: '2025-12-02T19:15:51.447Z'
+    LastModifiedDate: '2025-12-04T17:15:25.86Z'
   - VulnerabilityID: CVE-2025-47912
     PkgID: stdlib@v1.24.7
     PkgName: stdlib
@@ -6207,35 +6270,7 @@
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
     - https://pkg.go.dev/vuln/GO-2025-4175
     PublishedDate: '2025-12-03T20:16:25.607Z'
-    LastModifiedDate: '2025-12-03T22:15:51.51Z'
-  - VulnerabilityID: CVE-2025-61729
-    PkgID: stdlib@v1.24.7
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.24.7
-      UID: dab6465cb6be340c
-    InstalledVersion: v1.24.7
-    FixedVersion: 1.24.11, 1.25.5
-    Status: fixed
-    Layer:
-      Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65ef96fa5ed92ae53b559a7
-      DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc01974613d0880d65f9f80b20
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-61729
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:5e1127debfb4d0f3bd2f530857885f5f25ab5b1176ee9237416741953a4a26b2
-    Title: Within HostnameError.Error(), when constructing an error string, there ...
-    Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/725920
-    - https://go.dev/issue/76445
-    - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
-    - https://pkg.go.dev/vuln/GO-2025-4155
-    PublishedDate: '2025-12-02T19:15:51.447Z'
-    LastModifiedDate: '2025-12-02T22:16:08.527Z'
+    LastModifiedDate: '2025-12-04T17:15:08.283Z'
 - Target: usr/bin/nerdctl
   Class: lang-pkgs
   Type: gobinary
@@ -7649,6 +7684,41 @@
     - https://pkg.go.dev/vuln/GO-2025-4134
     PublishedDate: '2025-11-19T21:15:50.85Z'
     LastModifiedDate: '2025-11-21T15:13:59.083Z'
+  - VulnerabilityID: CVE-2025-61729
+    PkgID: stdlib@v1.25.4
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.25.4
+      UID: 98c6f1cdbd682ea8
+    InstalledVersion: v1.25.4
+    FixedVersion: 1.24.11, 1.25.5
+    Status: fixed
+    Layer:
+      Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65ef96fa5ed92ae53b559a7
+      DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc01974613d0880d65f9f80b20
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-61729
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:2a30f1533d5db858d6a0568e0c6c167d44a5c8dfdae414f1948632ace0752bb3
+    Title: Within HostnameError.Error(), when constructing an error string, there ...
+    Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/725920
+    - https://go.dev/issue/76445
+    - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-61729
+    - https://pkg.go.dev/vuln/GO-2025-4155
+    PublishedDate: '2025-12-02T19:15:51.447Z'
+    LastModifiedDate: '2025-12-04T17:15:25.86Z'
   - VulnerabilityID: CVE-2025-61727
     PkgID: stdlib@v1.25.4
     PkgName: stdlib
@@ -7676,35 +7746,7 @@
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
     - https://pkg.go.dev/vuln/GO-2025-4175
     PublishedDate: '2025-12-03T20:16:25.607Z'
-    LastModifiedDate: '2025-12-03T22:15:51.51Z'
-  - VulnerabilityID: CVE-2025-61729
-    PkgID: stdlib@v1.25.4
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.25.4
-      UID: 98c6f1cdbd682ea8
-    InstalledVersion: v1.25.4
-    FixedVersion: 1.24.11, 1.25.5
-    Status: fixed
-    Layer:
-      Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65ef96fa5ed92ae53b559a7
-      DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc01974613d0880d65f9f80b20
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-61729
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:2a30f1533d5db858d6a0568e0c6c167d44a5c8dfdae414f1948632ace0752bb3
-    Title: Within HostnameError.Error(), when constructing an error string, there ...
-    Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/725920
-    - https://go.dev/issue/76445
-    - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
-    - https://pkg.go.dev/vuln/GO-2025-4155
-    PublishedDate: '2025-12-02T19:15:51.447Z'
-    LastModifiedDate: '2025-12-02T22:16:08.527Z'
+    LastModifiedDate: '2025-12-04T17:15:08.283Z'
 - Target: usr/bin/skopeo
   Class: lang-pkgs
   Type: gobinary
@@ -8882,6 +8924,41 @@
     - https://pkg.go.dev/vuln/GO-2025-4007
     PublishedDate: '2025-10-29T23:16:19.643Z'
     LastModifiedDate: '2025-11-20T23:15:52.007Z'
+  - VulnerabilityID: CVE-2025-61729
+    PkgID: stdlib@v1.25.2
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.25.2
+      UID: faf903ac16c9e848
+    InstalledVersion: v1.25.2
+    FixedVersion: 1.24.11, 1.25.5
+    Status: fixed
+    Layer:
+      Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65ef96fa5ed92ae53b559a7
+      DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc01974613d0880d65f9f80b20
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-61729
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:a4564c1d1ab9a9e6a80492ca42ff072d2826b90f113dcc54df49925b675fea50
+    Title: Within HostnameError.Error(), when constructing an error string, there ...
+    Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/725920
+    - https://go.dev/issue/76445
+    - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-61729
+    - https://pkg.go.dev/vuln/GO-2025-4155
+    PublishedDate: '2025-12-02T19:15:51.447Z'
+    LastModifiedDate: '2025-12-04T17:15:25.86Z'
   - VulnerabilityID: CVE-2025-61727
     PkgID: stdlib@v1.25.2
     PkgName: stdlib
@@ -8909,35 +8986,7 @@
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
     - https://pkg.go.dev/vuln/GO-2025-4175
     PublishedDate: '2025-12-03T20:16:25.607Z'
-    LastModifiedDate: '2025-12-03T22:15:51.51Z'
-  - VulnerabilityID: CVE-2025-61729
-    PkgID: stdlib@v1.25.2
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.25.2
-      UID: faf903ac16c9e848
-    InstalledVersion: v1.25.2
-    FixedVersion: 1.24.11, 1.25.5
-    Status: fixed
-    Layer:
-      Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65ef96fa5ed92ae53b559a7
-      DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc01974613d0880d65f9f80b20
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-61729
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:a4564c1d1ab9a9e6a80492ca42ff072d2826b90f113dcc54df49925b675fea50
-    Title: Within HostnameError.Error(), when constructing an error string, there ...
-    Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/725920
-    - https://go.dev/issue/76445
-    - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
-    - https://pkg.go.dev/vuln/GO-2025-4155
-    PublishedDate: '2025-12-02T19:15:51.447Z'
-    LastModifiedDate: '2025-12-02T22:16:08.527Z'
+    LastModifiedDate: '2025-12-04T17:15:08.283Z'
 - Target: usr/bin/syft
   Class: lang-pkgs
   Type: gobinary
@@ -11730,6 +11779,41 @@
     - https://pkg.go.dev/vuln/GO-2025-4134
     PublishedDate: '2025-11-19T21:15:50.85Z'
     LastModifiedDate: '2025-11-21T15:13:59.083Z'
+  - VulnerabilityID: CVE-2025-61729
+    PkgID: stdlib@v1.25.3
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.25.3
+      UID: d11e97e9b670d878
+    InstalledVersion: v1.25.3
+    FixedVersion: 1.24.11, 1.25.5
+    Status: fixed
+    Layer:
+      Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65ef96fa5ed92ae53b559a7
+      DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc01974613d0880d65f9f80b20
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-61729
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:acbd0d9d3c9c7938c0a0831efc56242b8935e755f3da9d7cf41f373d6f69b973
+    Title: Within HostnameError.Error(), when constructing an error string, there ...
+    Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/725920
+    - https://go.dev/issue/76445
+    - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-61729
+    - https://pkg.go.dev/vuln/GO-2025-4155
+    PublishedDate: '2025-12-02T19:15:51.447Z'
+    LastModifiedDate: '2025-12-04T17:15:25.86Z'
   - VulnerabilityID: CVE-2025-61727
     PkgID: stdlib@v1.25.3
     PkgName: stdlib
@@ -11757,32 +11841,4 @@
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
     - https://pkg.go.dev/vuln/GO-2025-4175
     PublishedDate: '2025-12-03T20:16:25.607Z'
-    LastModifiedDate: '2025-12-03T22:15:51.51Z'
-  - VulnerabilityID: CVE-2025-61729
-    PkgID: stdlib@v1.25.3
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.25.3
-      UID: d11e97e9b670d878
-    InstalledVersion: v1.25.3
-    FixedVersion: 1.24.11, 1.25.5
-    Status: fixed
-    Layer:
-      Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65ef96fa5ed92ae53b559a7
-      DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc01974613d0880d65f9f80b20
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-61729
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:acbd0d9d3c9c7938c0a0831efc56242b8935e755f3da9d7cf41f373d6f69b973
-    Title: Within HostnameError.Error(), when constructing an error string, there ...
-    Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/725920
-    - https://go.dev/issue/76445
-    - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
-    - https://pkg.go.dev/vuln/GO-2025-4155
-    PublishedDate: '2025-12-02T19:15:51.447Z'
-    LastModifiedDate: '2025-12-02T22:16:08.527Z'
+    LastModifiedDate: '2025-12-04T17:15:08.283Z'
