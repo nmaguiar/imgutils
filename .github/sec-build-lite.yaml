@@ -970,11 +970,11 @@
         V3Score: 7
     References:
     - http://www.openwall.com/lists/oss-security/2025/08/06/1
-    - https://access.redhat.com/errata/RHSA-2025:20983
+    - https://access.redhat.com/errata/RHSA-2025:20909
     - https://access.redhat.com/security/cve/CVE-2025-47907
     - https://bugzilla.redhat.com/2387083
     - https://bugzilla.redhat.com/2393152
-    - https://errata.almalinux.org/10/ALSA-2025-20983.html
+    - https://errata.almalinux.org/9/ALSA-2025-20909.html
     - https://go.dev/cl/693735
     - https://go.dev/issue/74831
     - https://groups.google.com/g/golang-announce/c/x5MKroML2yM
@@ -1022,7 +1022,7 @@
         V3Score: 7.5
     References:
     - http://www.openwall.com/lists/oss-security/2025/10/08/1
-    - https://access.redhat.com/errata/RHSA-2025:22012
+    - https://access.redhat.com/errata/RHSA-2025:22011
     - https://access.redhat.com/security/cve/CVE-2025-58183
     - https://bugzilla.redhat.com/2404715
     - https://bugzilla.redhat.com/2407258
@@ -1030,7 +1030,7 @@
     - https://bugzilla.redhat.com/show_bug.cgi?id=2407258
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-52881
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58183
-    - https://errata.almalinux.org/10/ALSA-2025-22012.html
+    - https://errata.almalinux.org/9/ALSA-2025-22011.html
     - https://errata.rockylinux.org/RLSA-2025:22011
     - https://go.dev/cl/709861
     - https://go.dev/issue/75677
@@ -1230,13 +1230,13 @@
         V3Score: 5.4
     References:
     - http://www.openwall.com/lists/oss-security/2025/04/04/4
-    - https://access.redhat.com/errata/RHSA-2025:9146
+    - https://access.redhat.com/errata/RHSA-2025:9635
     - https://access.redhat.com/security/cve/CVE-2025-22871
     - https://bugzilla.redhat.com/2358493
     - https://bugzilla.redhat.com/show_bug.cgi?id=2358493
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-22871
-    - https://errata.almalinux.org/10/ALSA-2025-9146.html
-    - https://errata.rockylinux.org/RLSA-2025:9845
+    - https://errata.almalinux.org/9/ALSA-2025-9635.html
+    - https://errata.rockylinux.org/RLSA-2025:9635
     - https://github.com/roadrunner-server/roadrunner
     - https://github.com/roadrunner-server/roadrunner/commit/f269279ee87d0b88127741cad1042389af7605fa
     - https://github.com/roadrunner-server/roadrunner/issues/2166
@@ -1290,13 +1290,13 @@
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N
         V3Score: 6.8
     References:
-    - https://access.redhat.com/errata/RHSA-2025:10677
+    - https://access.redhat.com/errata/RHSA-2025:15887
     - https://access.redhat.com/security/cve/CVE-2025-4673
     - https://bugzilla.redhat.com/2373305
     - https://bugzilla.redhat.com/show_bug.cgi?id=2373305
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-4673
-    - https://errata.almalinux.org/10/ALSA-2025-10677.html
-    - https://errata.rockylinux.org/RLSA-2025:16432
+    - https://errata.almalinux.org/9/ALSA-2025-15887.html
+    - https://errata.rockylinux.org/RLSA-2025:15887
     - https://go.dev/cl/679257
     - https://go.dev/issue/73816
     - https://groups.google.com/g/golang-announce/c/ufZ8WpEsA3A
@@ -1644,7 +1644,7 @@
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:dc14963699146e0fb98540cba3b1307ba0b4eb6e7a92ef524d42ce529b89b56b
     Title: 'net/mail: Excessive CPU consumption in ParseAddress in net/mail'
-    Description: The ParseAddress function constructeds domain-literal address components through repeated string concatenation. When parsing large domain-literal components, this can cause excessive CPU consumption.
+    Description: The ParseAddress function constructs domain-literal address components through repeated string concatenation. When parsing large domain-literal components, this can cause excessive CPU consumption.
     Severity: MEDIUM
     VendorSeverity:
       amazon: 3
@@ -1667,7 +1667,7 @@
     - https://pkg.go.dev/vuln/GO-2025-4006
     - https://www.cve.org/CVERecord?id=CVE-2025-61725
     PublishedDate: '2025-10-29T23:16:20.113Z'
-    LastModifiedDate: '2025-11-04T22:16:36.693Z'
+    LastModifiedDate: '2025-12-09T18:15:56.347Z'
   - VulnerabilityID: CVE-2025-61727
     PkgID: stdlib@v1.24.1
     PkgName: stdlib
@@ -1688,11 +1688,18 @@
     Fingerprint: sha256:d31f572d1cba15affe08148d0cd7cc46e776fb2c21811bae064195dc35c02db0
     Title: An excluded subdomain constraint in a certificate chain does not restr ...
     Description: An excluded subdomain constraint in a certificate chain does not restrict the usage of wildcard SANs in the leaf certificate. For example a constraint that excludes the subdomain test.example.com does not prevent a leaf certificate from claiming the SAN *.example.com.
-    Severity: UNKNOWN
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
+        V3Score: 6.5
     References:
     - https://go.dev/cl/723900
     - https://go.dev/issue/76442
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-61727
     - https://pkg.go.dev/vuln/GO-2025-4175
     PublishedDate: '2025-12-03T20:16:25.607Z'
     LastModifiedDate: '2025-12-04T17:15:08.283Z'
