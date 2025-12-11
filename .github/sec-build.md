@@ -2073,11 +2073,11 @@
 │                       │      │                            │           L/A:L 
 │                       │      │                            ╰ V3Score : 7 
 │                       │      ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2025/08/06/1 
-│                       │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:20983 
+│                       │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:20909 
 │                       │      │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-47907 
 │                       │      │                  ├ [3] : https://bugzilla.redhat.com/2387083 
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/2393152 
-│                       │      │                  ├ [5] : https://errata.almalinux.org/10/ALSA-2025-20983.html 
+│                       │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2025-20909.html 
 │                       │      │                  ├ [6] : https://go.dev/cl/693735 
 │                       │      │                  ├ [7] : https://go.dev/issue/74831 
 │                       │      │                  ├ [8] : https://groups.google.com/g/golang-announce/c/x5MKroM
@@ -2130,7 +2130,7 @@
 │                       │      │                            │           N/A:H 
 │                       │      │                            ╰ V3Score : 7.5 
 │                       │      ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2025/10/08/1 
-│                       │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:22012 
+│                       │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:22011 
 │                       │      │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-58183 
 │                       │      │                  ├ [3] : https://bugzilla.redhat.com/2404715 
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/2407258 
@@ -2140,7 +2140,7 @@
 │                       │      │                  │       25-52881 
 │                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-58183 
-│                       │      │                  ├ [9] : https://errata.almalinux.org/10/ALSA-2025-22012.html 
+│                       │      │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2025-22011.html 
 │                       │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2025:22011 
 │                       │      │                  ├ [11]: https://go.dev/cl/709861 
 │                       │      │                  ├ [12]: https://go.dev/issue/75677 
@@ -2357,14 +2357,14 @@
 │                       │      │                            │           L/A:N 
 │                       │      │                            ╰ V3Score : 5.4 
 │                       │      ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2025/04/04/4 
-│                       │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:9146 
+│                       │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:9635 
 │                       │      │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-22871 
 │                       │      │                  ├ [3] : https://bugzilla.redhat.com/2358493 
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2358493 
 │                       │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-22871 
-│                       │      │                  ├ [6] : https://errata.almalinux.org/10/ALSA-2025-9146.html 
-│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:9845 
+│                       │      │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-9635.html 
+│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:9635 
 │                       │      │                  ├ [8] : https://github.com/roadrunner-server/roadrunner 
 │                       │      │                  ├ [9] : https://github.com/roadrunner-server/roadrunner/commi
 │                       │      │                  │       t/f269279ee87d0b88127741cad1042389af7605fa 
@@ -2422,14 +2422,14 @@
 │                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:
 │                       │      │                            │           N/A:N 
 │                       │      │                            ╰ V3Score : 6.8 
-│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:10677 
+│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2025:15887 
 │                       │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2025-4673 
 │                       │      │                  ├ [2] : https://bugzilla.redhat.com/2373305 
 │                       │      │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2373305 
 │                       │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-4673 
-│                       │      │                  ├ [5] : https://errata.almalinux.org/10/ALSA-2025-10677.html 
-│                       │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2025:16432 
+│                       │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2025-15887.html 
+│                       │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2025:15887 
 │                       │      │                  ├ [7] : https://go.dev/cl/679257 
 │                       │      │                  ├ [8] : https://go.dev/issue/73816 
 │                       │      │                  ├ [9] : https://groups.google.com/g/golang-announce/c/ufZ8WpE
@@ -2795,10 +2795,10 @@
 │                       │      │                   748fbc9adc5 
 │                       │      ├ Title           : net/mail: Excessive CPU consumption in ParseAddress in
 │                       │      │                   net/mail 
-│                       │      ├ Description     : The ParseAddress function constructeds domain-literal
-│                       │      │                   address components through repeated string concatenation.
-│                       │      │                   When parsing large domain-literal components, this can cause
-│                       │      │                    excessive CPU consumption. 
+│                       │      ├ Description     : The ParseAddress function constructs domain-literal address
+│                       │      │                   components through repeated string concatenation. When
+│                       │      │                   parsing large domain-literal components, this can cause
+│                       │      │                   excessive CPU consumption. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ VendorSeverity   ╭ amazon : 3 
 │                       │      │                  ├ bitnami: 3 
@@ -2819,7 +2819,7 @@
 │                       │      │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-4006 
 │                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-61725 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:20.113Z 
-│                       │      ╰ LastModifiedDate: 2025-11-04T22:16:36.693Z 
+│                       │      ╰ LastModifiedDate: 2025-12-09T18:15:56.347Z 
 │                       ╰ [17] ╭ VulnerabilityID : CVE-2025-61727 
 │                              ├ PkgID           : stdlib@v1.24.1 
 │                              ├ PkgName         : stdlib 
@@ -2845,12 +2845,17 @@
 │                              │                   certificate. For example a constraint that excludes the
 │                              │                   subdomain test.example.com does not prevent a leaf
 │                              │                   certificate from claiming the SAN *.example.com. 
-│                              ├ Severity        : UNKNOWN 
+│                              ├ Severity        : MEDIUM 
+│                              ├ VendorSeverity   ─ bitnami: 2 
+│                              ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
+│                              │                            │           L/A:N 
+│                              │                            ╰ V3Score : 6.5 
 │                              ├ References       ╭ [0]: https://go.dev/cl/723900 
 │                              │                  ├ [1]: https://go.dev/issue/76442 
 │                              │                  ├ [2]: https://groups.google.com/g/golang-announce/c/8FJoBkPd
 │                              │                  │      dm4 
-│                              │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-4175 
+│                              │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-61727 
+│                              │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4175 
 │                              ├ PublishedDate   : 2025-12-03T20:16:25.607Z 
 │                              ╰ LastModifiedDate: 2025-12-04T17:15:08.283Z 
 ├ [3] ╭ Target         : usr/bin/ctr 
@@ -3652,7 +3657,7 @@
 │                             │                  │       080fa9f26a2cd3544e2801449697322 
 │                             │                  ├ [1] : http://github.com/opencontainers/runc/commit/fdcc9d3ca
 │                             │                  │       d2f85954a241ccb910a61aaa1ef47f3 
-│                             │                  ├ [2] : https://access.redhat.com/errata/RHSA-2025:22012 
+│                             │                  ├ [2] : https://access.redhat.com/errata/RHSA-2025:22011 
 │                             │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2025-52881 
 │                             │                  ├ [4] : https://bugzilla.redhat.com/2404715 
 │                             │                  ├ [5] : https://bugzilla.redhat.com/2407258 
@@ -3662,7 +3667,7 @@
 │                             │                  │       5-52881 
 │                             │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
 │                             │                  │       5-58183 
-│                             │                  ├ [10]: https://errata.almalinux.org/10/ALSA-2025-22012.html 
+│                             │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2025-22011.html 
 │                             │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22011 
 │                             │                  ├ [12]: https://github.com/opencontainers/runc 
 │                             │                  ├ [13]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.
@@ -4615,11 +4620,16 @@
 │                             │                   certificate. For example a constraint that excludes the
 │                             │                   subdomain test.example.com does not prevent a leaf
 │                             │                   certificate from claiming the SAN *.example.com. 
-│                             ├ Severity        : UNKNOWN 
+│                             ├ Severity        : MEDIUM 
+│                             ├ VendorSeverity   ─ bitnami: 2 
+│                             ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 6.5 
 │                             ├ References       ╭ [0]: https://go.dev/cl/723900 
 │                             │                  ├ [1]: https://go.dev/issue/76442 
 │                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/8FJoBkPddm4 
-│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-4175 
+│                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-61727 
+│                             │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4175 
 │                             ├ PublishedDate   : 2025-12-03T20:16:25.607Z 
 │                             ╰ LastModifiedDate: 2025-12-04T17:15:08.283Z 
 ├ [5] ╭ Target  : usr/bin/docker 
@@ -5959,11 +5969,16 @@
 │                             │                   certificate. For example a constraint that excludes the
 │                             │                   subdomain test.example.com does not prevent a leaf
 │                             │                   certificate from claiming the SAN *.example.com. 
-│                             ├ Severity        : UNKNOWN 
+│                             ├ Severity        : MEDIUM 
+│                             ├ VendorSeverity   ─ bitnami: 2 
+│                             ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 6.5 
 │                             ├ References       ╭ [0]: https://go.dev/cl/723900 
 │                             │                  ├ [1]: https://go.dev/issue/76442 
 │                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/8FJoBkPddm4 
-│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-4175 
+│                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-61727 
+│                             │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4175 
 │                             ├ PublishedDate   : 2025-12-03T20:16:25.607Z 
 │                             ╰ LastModifiedDate: 2025-12-04T17:15:08.283Z 
 ├ [7] ╭ Target         : usr/bin/nerdctl 
@@ -7228,7 +7243,58 @@
 │     │                                      │         f479eceadbeb13c 
 │     │                                      ╰ DiffID: sha256:3e1dc1c4bffabb4f87b0b42c6dae4a6ae0d5c08a2a38e9786
 │     │                                                fa334654717a59f 
-│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2025-52881 
+│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2025-67499 
+│                       │     ├ PkgID           : github.com/containernetworking/plugins@v1.8.0 
+│                       │     ├ PkgName         : github.com/containernetworking/plugins 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/containernetworking/plugins@v1.8.0 
+│                       │     │                  ╰ UID : 3c113ed6e14f9bc8 
+│                       │     ├ InstalledVersion: v1.8.0 
+│                       │     ├ FixedVersion    : 1.9.0 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:cfc3e8dd698c7d2a04ce147e21e353170ce559607971d
+│                       │     │                  │         c7d2f479eceadbeb13c 
+│                       │     │                  ╰ DiffID: sha256:3e1dc1c4bffabb4f87b0b42c6dae4a6ae0d5c08a2a38e
+│                       │     │                            9786fa334654717a59f 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-67499 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Go 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Ago 
+│                       │     ├ Fingerprint     : sha256:4f78b3b4815d65d8d6c1eae147cf4dc17cc4970ba8e6f8ed1097d2
+│                       │     │                   b05e73f034 
+│                       │     ├ Title           : CNA Plugins Portmap nftables backend can intercept non-local
+│                       │     │                   traffic 
+│                       │     ├ Description     : The CNI portmap plugin allows containers to emulate opening a
+│                       │     │                    host port, forwarding that traffic to the container.
+│                       │     │                   Versions 1.6.0 through 1.8.0  inadvertently forward all
+│                       │     │                   traffic with the same destination port as the host port when
+│                       │     │                   the portmap plugin is configured with the nftables backend,
+│                       │     │                   thus ignoring the destination IP. This includes traffic not
+│                       │     │                   intended for the node itself, i.e. traffic to containers
+│                       │     │                   hosted on the node. Containers that request HostPort
+│                       │     │                   forwarding can intercept all traffic destined for that port.
+│                       │     │                   This requires that the portmap plugin be explicitly
+│                       │     │                   configured to use the nftables backend. This issue is fixed
+│                       │     │                   in version 1.9.0. To workaround, configure the portmap plugin
+│                       │     │                    to use the iptables backend. It does not have this
+│                       │     │                   vulnerability. 
+│                       │     ├ Severity        : MEDIUM 
+│                       │     ├ CweIDs           ─ [0]: CWE-200 
+│                       │     ├ VendorSeverity   ─ ghsa: 2 
+│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H 
+│                       │     │                         ╰ V3Score : 6.6 
+│                       │     ├ References       ╭ [0]: https://github.com/containernetworking/plugins 
+│                       │     │                  ├ [1]: https://github.com/containernetworking/plugins/commit/9
+│                       │     │                  │      b3772e1a7abf93cbb7c6526a28bc0d27b830e02 
+│                       │     │                  ├ [2]: https://github.com/containernetworking/plugins/pull/1210 
+│                       │     │                  ├ [3]: https://github.com/containernetworking/plugins/releases
+│                       │     │                  │      /tag/v1.9.0 
+│                       │     │                  ╰ [4]: https://github.com/containernetworking/plugins/security
+│                       │     │                         /advisories/GHSA-jv3w-x3r3-g6rm 
+│                       │     ├ PublishedDate   : 2025-12-10T00:16:11.107Z 
+│                       │     ╰ LastModifiedDate: 2025-12-10T00:16:11.107Z 
+│                       ├ [1] ╭ VulnerabilityID : CVE-2025-52881 
 │                       │     ├ PkgID           : github.com/opencontainers/selinux@v1.12.0 
 │                       │     ├ PkgName         : github.com/opencontainers/selinux 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/opencontainers/selinux@v1.12.0 
@@ -7290,7 +7356,7 @@
 │                       │     │                  │       080fa9f26a2cd3544e2801449697322 
 │                       │     │                  ├ [1] : http://github.com/opencontainers/runc/commit/fdcc9d3ca
 │                       │     │                  │       d2f85954a241ccb910a61aaa1ef47f3 
-│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2025:22012 
+│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2025:22011 
 │                       │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2025-52881 
 │                       │     │                  ├ [4] : https://bugzilla.redhat.com/2404715 
 │                       │     │                  ├ [5] : https://bugzilla.redhat.com/2407258 
@@ -7300,7 +7366,7 @@
 │                       │     │                  │       5-52881 
 │                       │     │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
 │                       │     │                  │       5-58183 
-│                       │     │                  ├ [10]: https://errata.almalinux.org/10/ALSA-2025-22012.html 
+│                       │     │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2025-22011.html 
 │                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22011 
 │                       │     │                  ├ [12]: https://github.com/opencontainers/runc 
 │                       │     │                  ├ [13]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.
@@ -7359,7 +7425,7 @@
 │                       │     │                  ╰ [43]: https://youtu.be/y1PaBzxwRWQ 
 │                       │     ├ PublishedDate   : 2025-11-06T21:15:42.817Z 
 │                       │     ╰ LastModifiedDate: 2025-12-03T18:37:17.917Z 
-│                       ├ [1] ╭ VulnerabilityID : CVE-2025-47914 
+│                       ├ [2] ╭ VulnerabilityID : CVE-2025-47914 
 │                       │     ├ PkgID           : golang.org/x/crypto@v0.43.0 
 │                       │     ├ PkgName         : golang.org/x/crypto 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/crypto@v0.43.0 
@@ -7398,7 +7464,7 @@
 │                       │     │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4135 
 │                       │     ├ PublishedDate   : 2025-11-19T21:15:50.517Z 
 │                       │     ╰ LastModifiedDate: 2025-11-21T15:13:59.083Z 
-│                       ├ [2] ╭ VulnerabilityID : CVE-2025-58181 
+│                       ├ [3] ╭ VulnerabilityID : CVE-2025-58181 
 │                       │     ├ PkgID           : golang.org/x/crypto@v0.43.0 
 │                       │     ├ PkgName         : golang.org/x/crypto 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/crypto@v0.43.0 
@@ -7436,7 +7502,7 @@
 │                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4134 
 │                       │     ├ PublishedDate   : 2025-11-19T21:15:50.85Z 
 │                       │     ╰ LastModifiedDate: 2025-11-21T15:13:59.083Z 
-│                       ├ [3] ╭ VulnerabilityID : CVE-2025-61729 
+│                       ├ [4] ╭ VulnerabilityID : CVE-2025-61729 
 │                       │     ├ PkgID           : stdlib@v1.25.4 
 │                       │     ├ PkgName         : stdlib 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.4 
@@ -7474,7 +7540,7 @@
 │                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4155 
 │                       │     ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
 │                       │     ╰ LastModifiedDate: 2025-12-04T17:15:25.86Z 
-│                       ╰ [4] ╭ VulnerabilityID : CVE-2025-61727 
+│                       ╰ [5] ╭ VulnerabilityID : CVE-2025-61727 
 │                             ├ PkgID           : stdlib@v1.25.4 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.4 
@@ -7499,11 +7565,16 @@
 │                             │                   certificate. For example a constraint that excludes the
 │                             │                   subdomain test.example.com does not prevent a leaf
 │                             │                   certificate from claiming the SAN *.example.com. 
-│                             ├ Severity        : UNKNOWN 
+│                             ├ Severity        : MEDIUM 
+│                             ├ VendorSeverity   ─ bitnami: 2 
+│                             ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 6.5 
 │                             ├ References       ╭ [0]: https://go.dev/cl/723900 
 │                             │                  ├ [1]: https://go.dev/issue/76442 
 │                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/8FJoBkPddm4 
-│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-4175 
+│                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-61727 
+│                             │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4175 
 │                             ├ PublishedDate   : 2025-12-03T20:16:25.607Z 
 │                             ╰ LastModifiedDate: 2025-12-04T17:15:08.283Z 
 ├ [8] ╭ Target         : usr/bin/skopeo 
@@ -8528,7 +8599,7 @@
 │                       │     │                  │       080fa9f26a2cd3544e2801449697322 
 │                       │     │                  ├ [1] : http://github.com/opencontainers/runc/commit/fdcc9d3ca
 │                       │     │                  │       d2f85954a241ccb910a61aaa1ef47f3 
-│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2025:22012 
+│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2025:22011 
 │                       │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2025-52881 
 │                       │     │                  ├ [4] : https://bugzilla.redhat.com/2404715 
 │                       │     │                  ├ [5] : https://bugzilla.redhat.com/2407258 
@@ -8538,7 +8609,7 @@
 │                       │     │                  │       5-52881 
 │                       │     │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
 │                       │     │                  │       5-58183 
-│                       │     │                  ├ [10]: https://errata.almalinux.org/10/ALSA-2025-22012.html 
+│                       │     │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2025-22011.html 
 │                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22011 
 │                       │     │                  ├ [12]: https://github.com/opencontainers/runc 
 │                       │     │                  ├ [13]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.
@@ -8642,7 +8713,7 @@
 │                       │     │                  │      GHSA-f83f-xpx7-ffpw 
 │                       │     │                  ╰ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-66506 
 │                       │     ├ PublishedDate   : 2025-12-04T22:15:49.503Z 
-│                       │     ╰ LastModifiedDate: 2025-12-04T22:15:49.503Z 
+│                       │     ╰ LastModifiedDate: 2025-12-08T18:27:15.857Z 
 │                       ├ [2] ╭ VulnerabilityID : CVE-2025-58058 
 │                       │     ├ PkgID           : github.com/ulikunitz/xz@v0.5.12 
 │                       │     ├ PkgName         : github.com/ulikunitz/xz 
@@ -8838,11 +8909,16 @@
 │                             │                   certificate. For example a constraint that excludes the
 │                             │                   subdomain test.example.com does not prevent a leaf
 │                             │                   certificate from claiming the SAN *.example.com. 
-│                             ├ Severity        : UNKNOWN 
+│                             ├ Severity        : MEDIUM 
+│                             ├ VendorSeverity   ─ bitnami: 2 
+│                             ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 6.5 
 │                             ├ References       ╭ [0]: https://go.dev/cl/723900 
 │                             │                  ├ [1]: https://go.dev/issue/76442 
 │                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/8FJoBkPddm4 
-│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-4175 
+│                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-61727 
+│                             │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4175 
 │                             ├ PublishedDate   : 2025-12-03T20:16:25.607Z 
 │                             ╰ LastModifiedDate: 2025-12-04T17:15:08.283Z 
 ╰ [9] ╭ Target         : usr/bin/syft 
@@ -11736,11 +11812,16 @@
                               │                   certificate. For example a constraint that excludes the
                               │                   subdomain test.example.com does not prevent a leaf
                               │                   certificate from claiming the SAN *.example.com. 
-                              ├ Severity        : UNKNOWN 
+                              ├ Severity        : MEDIUM 
+                              ├ VendorSeverity   ─ bitnami: 2 
+                              ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L
+                              │                            │           /A:N 
+                              │                            ╰ V3Score : 6.5 
                               ├ References       ╭ [0]: https://go.dev/cl/723900 
                               │                  ├ [1]: https://go.dev/issue/76442 
                               │                  ├ [2]: https://groups.google.com/g/golang-announce/c/8FJoBkPddm4 
-                              │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2025-4175 
+                              │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-61727 
+                              │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4175 
                               ├ PublishedDate   : 2025-12-03T20:16:25.607Z 
                               ╰ LastModifiedDate: 2025-12-04T17:15:08.283Z 
 ````
