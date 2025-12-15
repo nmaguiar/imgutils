@@ -2122,7 +2122,7 @@
 │                       │      │                  ├ bitnami    : 2 
 │                       │      │                  ├ oracle-oval: 2 
 │                       │      │                  ├ redhat     : 2 
-│                       │      │                  ╰ rocky      : 3 
+│                       │      │                  ╰ rocky      : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:
 │                       │      │                  │         │           N/A:L 
 │                       │      │                  │         ╰ V3Score : 4.3 
@@ -2134,23 +2134,20 @@
 │                       │      │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-58183 
 │                       │      │                  ├ [3] : https://bugzilla.redhat.com/2404715 
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/2407258 
-│                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2404715 
-│                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2407258 
-│                       │      │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       25-52881 
-│                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2407258 
+│                       │      │                  ├ [6] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-58183 
-│                       │      │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2025-22011.html 
-│                       │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2025:22011 
-│                       │      │                  ├ [11]: https://go.dev/cl/709861 
-│                       │      │                  ├ [12]: https://go.dev/issue/75677 
-│                       │      │                  ├ [13]: https://groups.google.com/g/golang-announce/c/4Emdl2i
+│                       │      │                  ├ [7] : https://errata.almalinux.org/9/ALSA-2025-22011.html 
+│                       │      │                  ├ [8] : https://errata.rockylinux.org/RLSA-2025:23087 
+│                       │      │                  ├ [9] : https://go.dev/cl/709861 
+│                       │      │                  ├ [10]: https://go.dev/issue/75677 
+│                       │      │                  ├ [11]: https://groups.google.com/g/golang-announce/c/4Emdl2i
 │                       │      │                  │       Q_bI 
-│                       │      │                  ├ [14]: https://linux.oracle.com/cve/CVE-2025-58183.html 
-│                       │      │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2025-23088.html 
-│                       │      │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2025-58183 
-│                       │      │                  ├ [17]: https://pkg.go.dev/vuln/GO-2025-4014 
-│                       │      │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2025-58183 
+│                       │      │                  ├ [12]: https://linux.oracle.com/cve/CVE-2025-58183.html 
+│                       │      │                  ├ [13]: https://linux.oracle.com/errata/ELSA-2025-23088.html 
+│                       │      │                  ├ [14]: https://nvd.nist.gov/vuln/detail/CVE-2025-58183 
+│                       │      │                  ├ [15]: https://pkg.go.dev/vuln/GO-2025-4014 
+│                       │      │                  ╰ [16]: https://www.cve.org/CVERecord?id=CVE-2025-58183 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.357Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.2Z 
 │                       ├ [3]  ╭ VulnerabilityID : CVE-2025-58186 
@@ -2250,8 +2247,9 @@
 │                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │                       │      ├ Fingerprint     : sha256:998f7d1fd54c68caa50d9467f89dffd197b2c7957095066de4c13
 │                       │      │                   c1a6e940af8 
-│                       │      ├ Title           : Within HostnameError.Error(), when constructing an error
-│                       │      │                   string, there ... 
+│                       │      ├ Title           : crypto/x509: Excessive resource consumption when printing
+│                       │      │                   error string for host certificate validation in
+│                       │      │                   crypto/x509 
 │                       │      ├ Description     : Within HostnameError.Error(), when constructing an error
 │                       │      │                   string, there is no limit to the number of hosts that will
 │                       │      │                   be printed out. Furthermore, the error string is constructed
@@ -2259,16 +2257,22 @@
 │                       │      │                   runtime. Therefore, a certificate provided by a malicious
 │                       │      │                   actor can result in excessive resource consumption. 
 │                       │      ├ Severity        : HIGH 
-│                       │      ├ VendorSeverity   ─ bitnami: 3 
-│                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+│                       │      ├ VendorSeverity   ╭ bitnami: 3 
+│                       │      │                  ╰ redhat : 3 
+│                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+│                       │      │                  │         │           N/A:H 
+│                       │      │                  │         ╰ V3Score : 7.5 
+│                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                            │           N/A:H 
 │                       │      │                            ╰ V3Score : 7.5 
-│                       │      ├ References       ╭ [0]: https://go.dev/cl/725920 
-│                       │      │                  ├ [1]: https://go.dev/issue/76445 
-│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/8FJoBkPd
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-61729 
+│                       │      │                  ├ [1]: https://go.dev/cl/725920 
+│                       │      │                  ├ [2]: https://go.dev/issue/76445 
+│                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/8FJoBkPd
 │                       │      │                  │      dm4 
-│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-61729 
-│                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4155 
+│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-61729 
+│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4155 
+│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
 │                       │      ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
 │                       │      ╰ LastModifiedDate: 2025-12-04T17:15:25.86Z 
 │                       ├ [6]  ╭ VulnerabilityID : CVE-2025-0913 
@@ -4575,8 +4579,9 @@
 │                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │                       │     ├ Fingerprint     : sha256:dc7ae3c4fab1cbe00df6719461f92ed350ff241a25276cf28e1c3b
 │                       │     │                   6e1c887b2a 
-│                       │     ├ Title           : Within HostnameError.Error(), when constructing an error
-│                       │     │                   string, there ... 
+│                       │     ├ Title           : crypto/x509: Excessive resource consumption when printing
+│                       │     │                   error string for host certificate validation in crypto/x509[
+│                       │     │                   m 
 │                       │     ├ Description     : Within HostnameError.Error(), when constructing an error
 │                       │     │                   string, there is no limit to the number of hosts that will be
 │                       │     │                    printed out. Furthermore, the error string is constructed by
@@ -4584,15 +4589,21 @@
 │                       │     │                    Therefore, a certificate provided by a malicious actor can
 │                       │     │                   result in excessive resource consumption. 
 │                       │     ├ Severity        : HIGH 
-│                       │     ├ VendorSeverity   ─ bitnami: 3 
-│                       │     ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+│                       │     ├ VendorSeverity   ╭ bitnami: 3 
+│                       │     │                  ╰ redhat : 3 
+│                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+│                       │     │                  │         │           /A:H 
+│                       │     │                  │         ╰ V3Score : 7.5 
+│                       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │     │                            │           /A:H 
 │                       │     │                            ╰ V3Score : 7.5 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/725920 
-│                       │     │                  ├ [1]: https://go.dev/issue/76445 
-│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/8FJoBkPddm4 
-│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-61729 
-│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4155 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-61729 
+│                       │     │                  ├ [1]: https://go.dev/cl/725920 
+│                       │     │                  ├ [2]: https://go.dev/issue/76445 
+│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/8FJoBkPddm4 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-61729 
+│                       │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4155 
+│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
 │                       │     ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
 │                       │     ╰ LastModifiedDate: 2025-12-04T17:15:25.86Z 
 │                       ╰ [4] ╭ VulnerabilityID : CVE-2025-61727 
@@ -5867,7 +5878,7 @@
 │                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
 │                       │     │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4135 
 │                       │     ├ PublishedDate   : 2025-11-19T21:15:50.517Z 
-│                       │     ╰ LastModifiedDate: 2025-11-21T15:13:59.083Z 
+│                       │     ╰ LastModifiedDate: 2025-12-11T19:36:41.373Z 
 │                       ├ [1] ╭ VulnerabilityID : CVE-2025-58181 
 │                       │     ├ PkgID           : golang.org/x/crypto@v0.43.0 
 │                       │     ├ PkgName         : golang.org/x/crypto 
@@ -5905,7 +5916,7 @@
 │                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-58181 
 │                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4134 
 │                       │     ├ PublishedDate   : 2025-11-19T21:15:50.85Z 
-│                       │     ╰ LastModifiedDate: 2025-11-21T15:13:59.083Z 
+│                       │     ╰ LastModifiedDate: 2025-12-11T19:29:24.9Z 
 │                       ├ [2] ╭ VulnerabilityID : CVE-2025-61729 
 │                       │     ├ PkgID           : stdlib@v1.25.4 
 │                       │     ├ PkgName         : stdlib 
@@ -5924,8 +5935,9 @@
 │                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │                       │     ├ Fingerprint     : sha256:95693a32bebb09d169dadc8f2be7d42f92c00a674b1e4da2d3aa4f
 │                       │     │                   ade46bfe1b 
-│                       │     ├ Title           : Within HostnameError.Error(), when constructing an error
-│                       │     │                   string, there ... 
+│                       │     ├ Title           : crypto/x509: Excessive resource consumption when printing
+│                       │     │                   error string for host certificate validation in crypto/x509[
+│                       │     │                   m 
 │                       │     ├ Description     : Within HostnameError.Error(), when constructing an error
 │                       │     │                   string, there is no limit to the number of hosts that will be
 │                       │     │                    printed out. Furthermore, the error string is constructed by
@@ -5933,15 +5945,21 @@
 │                       │     │                    Therefore, a certificate provided by a malicious actor can
 │                       │     │                   result in excessive resource consumption. 
 │                       │     ├ Severity        : HIGH 
-│                       │     ├ VendorSeverity   ─ bitnami: 3 
-│                       │     ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+│                       │     ├ VendorSeverity   ╭ bitnami: 3 
+│                       │     │                  ╰ redhat : 3 
+│                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+│                       │     │                  │         │           /A:H 
+│                       │     │                  │         ╰ V3Score : 7.5 
+│                       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │     │                            │           /A:H 
 │                       │     │                            ╰ V3Score : 7.5 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/725920 
-│                       │     │                  ├ [1]: https://go.dev/issue/76445 
-│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/8FJoBkPddm4 
-│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-61729 
-│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4155 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-61729 
+│                       │     │                  ├ [1]: https://go.dev/cl/725920 
+│                       │     │                  ├ [2]: https://go.dev/issue/76445 
+│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/8FJoBkPddm4 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-61729 
+│                       │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4155 
+│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
 │                       │     ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
 │                       │     ╰ LastModifiedDate: 2025-12-04T17:15:25.86Z 
 │                       ╰ [3] ╭ VulnerabilityID : CVE-2025-61727 
@@ -7294,7 +7312,7 @@
 │                       │     │                  │      /advisories/GHSA-jv3w-x3r3-g6rm 
 │                       │     │                  ╰ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-67499 
 │                       │     ├ PublishedDate   : 2025-12-10T00:16:11.107Z 
-│                       │     ╰ LastModifiedDate: 2025-12-10T00:16:11.107Z 
+│                       │     ╰ LastModifiedDate: 2025-12-12T15:19:07.567Z 
 │                       ├ [1] ╭ VulnerabilityID : CVE-2025-52881 
 │                       │     ├ PkgID           : github.com/opencontainers/selinux@v1.12.0 
 │                       │     ├ PkgName         : github.com/opencontainers/selinux 
@@ -7464,7 +7482,7 @@
 │                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
 │                       │     │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4135 
 │                       │     ├ PublishedDate   : 2025-11-19T21:15:50.517Z 
-│                       │     ╰ LastModifiedDate: 2025-11-21T15:13:59.083Z 
+│                       │     ╰ LastModifiedDate: 2025-12-11T19:36:41.373Z 
 │                       ├ [3] ╭ VulnerabilityID : CVE-2025-58181 
 │                       │     ├ PkgID           : golang.org/x/crypto@v0.43.0 
 │                       │     ├ PkgName         : golang.org/x/crypto 
@@ -7502,7 +7520,7 @@
 │                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-58181 
 │                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4134 
 │                       │     ├ PublishedDate   : 2025-11-19T21:15:50.85Z 
-│                       │     ╰ LastModifiedDate: 2025-11-21T15:13:59.083Z 
+│                       │     ╰ LastModifiedDate: 2025-12-11T19:29:24.9Z 
 │                       ├ [4] ╭ VulnerabilityID : CVE-2025-61729 
 │                       │     ├ PkgID           : stdlib@v1.25.4 
 │                       │     ├ PkgName         : stdlib 
@@ -7521,8 +7539,9 @@
 │                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │                       │     ├ Fingerprint     : sha256:0c26916911d6c93552ff1c9b73901acc07ad7aeb06b2a84e335a19
 │                       │     │                   6875ce1ed3 
-│                       │     ├ Title           : Within HostnameError.Error(), when constructing an error
-│                       │     │                   string, there ... 
+│                       │     ├ Title           : crypto/x509: Excessive resource consumption when printing
+│                       │     │                   error string for host certificate validation in crypto/x509[
+│                       │     │                   m 
 │                       │     ├ Description     : Within HostnameError.Error(), when constructing an error
 │                       │     │                   string, there is no limit to the number of hosts that will be
 │                       │     │                    printed out. Furthermore, the error string is constructed by
@@ -7530,15 +7549,21 @@
 │                       │     │                    Therefore, a certificate provided by a malicious actor can
 │                       │     │                   result in excessive resource consumption. 
 │                       │     ├ Severity        : HIGH 
-│                       │     ├ VendorSeverity   ─ bitnami: 3 
-│                       │     ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+│                       │     ├ VendorSeverity   ╭ bitnami: 3 
+│                       │     │                  ╰ redhat : 3 
+│                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+│                       │     │                  │         │           /A:H 
+│                       │     │                  │         ╰ V3Score : 7.5 
+│                       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │     │                            │           /A:H 
 │                       │     │                            ╰ V3Score : 7.5 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/725920 
-│                       │     │                  ├ [1]: https://go.dev/issue/76445 
-│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/8FJoBkPddm4 
-│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-61729 
-│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4155 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-61729 
+│                       │     │                  ├ [1]: https://go.dev/cl/725920 
+│                       │     │                  ├ [2]: https://go.dev/issue/76445 
+│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/8FJoBkPddm4 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-61729 
+│                       │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4155 
+│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
 │                       │     ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
 │                       │     ╰ LastModifiedDate: 2025-12-04T17:15:25.86Z 
 │                       ╰ [5] ╭ VulnerabilityID : CVE-2025-61727 
@@ -8689,8 +8714,8 @@
 │                       │     │                          osystem%3Ago 
 │                       │     ├ Fingerprint     : sha256:2ef5016cb8291c58766e6dc112bf893bf9c4e0d58905f0c9598548
 │                       │     │                   03fd86dc0a 
-│                       │     ├ Title           : Fulcio is a free-to-use certificate authority for issuing
-│                       │     │                   code signing ... 
+│                       │     ├ Title           : github.com/sigstore/fulcio: Fulcio: Denial of Service via
+│                       │     │                   crafted OpenID Connect (OIDC) token 
 │                       │     ├ Description     : Fulcio is a free-to-use certificate authority for issuing
 │                       │     │                   code signing certificates for an OpenID Connect (OIDC)
 │                       │     │                   identity. Prior to 1.8.3, function identity.extractIssuerURL
@@ -8704,15 +8729,22 @@
 │                       │     │                   fixed in 1.8.3. 
 │                       │     ├ Severity        : HIGH 
 │                       │     ├ CweIDs           ─ [0]: CWE-405 
-│                       │     ├ VendorSeverity   ─ ghsa: 3 
-│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
-│                       │     │                         ╰ V3Score : 7.5 
-│                       │     ├ References       ╭ [0]: https://github.com/sigstore/fulcio 
-│                       │     │                  ├ [1]: https://github.com/sigstore/fulcio/commit/765a0e57608b9
+│                       │     ├ VendorSeverity   ╭ ghsa  : 3 
+│                       │     │                  ╰ redhat: 3 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                       │     │                  │        │           A:H 
+│                       │     │                  │        ╰ V3Score : 7.5 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                       │     │                           │           A:H 
+│                       │     │                           ╰ V3Score : 7.5 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-66506 
+│                       │     │                  ├ [1]: https://github.com/sigstore/fulcio 
+│                       │     │                  ├ [2]: https://github.com/sigstore/fulcio/commit/765a0e57608b9
 │                       │     │                  │      ef390e1eeeea8595b9054c63a5a 
-│                       │     │                  ├ [2]: https://github.com/sigstore/fulcio/security/advisories/
+│                       │     │                  ├ [3]: https://github.com/sigstore/fulcio/security/advisories/
 │                       │     │                  │      GHSA-f83f-xpx7-ffpw 
-│                       │     │                  ╰ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-66506 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-66506 
+│                       │     │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2025-66506 
 │                       │     ├ PublishedDate   : 2025-12-04T22:15:49.503Z 
 │                       │     ╰ LastModifiedDate: 2025-12-08T18:27:15.857Z 
 │                       ├ [2] ╭ VulnerabilityID : CVE-2025-58058 
@@ -8808,7 +8840,7 @@
 │                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
 │                       │     │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4135 
 │                       │     ├ PublishedDate   : 2025-11-19T21:15:50.517Z 
-│                       │     ╰ LastModifiedDate: 2025-11-21T15:13:59.083Z 
+│                       │     ╰ LastModifiedDate: 2025-12-11T19:36:41.373Z 
 │                       ├ [4] ╭ VulnerabilityID : CVE-2025-58181 
 │                       │     ├ PkgID           : golang.org/x/crypto@v0.40.0 
 │                       │     ├ PkgName         : golang.org/x/crypto 
@@ -8846,7 +8878,7 @@
 │                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-58181 
 │                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4134 
 │                       │     ├ PublishedDate   : 2025-11-19T21:15:50.85Z 
-│                       │     ╰ LastModifiedDate: 2025-11-21T15:13:59.083Z 
+│                       │     ╰ LastModifiedDate: 2025-12-11T19:29:24.9Z 
 │                       ├ [5] ╭ VulnerabilityID : CVE-2025-61729 
 │                       │     ├ PkgID           : stdlib@v1.25.3 
 │                       │     ├ PkgName         : stdlib 
@@ -8865,8 +8897,9 @@
 │                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │                       │     ├ Fingerprint     : sha256:068b792aa37dd6a37d40eb01fc5c44bf0d34684391117c7a586146
 │                       │     │                   d69eb12e0d 
-│                       │     ├ Title           : Within HostnameError.Error(), when constructing an error
-│                       │     │                   string, there ... 
+│                       │     ├ Title           : crypto/x509: Excessive resource consumption when printing
+│                       │     │                   error string for host certificate validation in crypto/x509[
+│                       │     │                   m 
 │                       │     ├ Description     : Within HostnameError.Error(), when constructing an error
 │                       │     │                   string, there is no limit to the number of hosts that will be
 │                       │     │                    printed out. Furthermore, the error string is constructed by
@@ -8874,15 +8907,21 @@
 │                       │     │                    Therefore, a certificate provided by a malicious actor can
 │                       │     │                   result in excessive resource consumption. 
 │                       │     ├ Severity        : HIGH 
-│                       │     ├ VendorSeverity   ─ bitnami: 3 
-│                       │     ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+│                       │     ├ VendorSeverity   ╭ bitnami: 3 
+│                       │     │                  ╰ redhat : 3 
+│                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+│                       │     │                  │         │           /A:H 
+│                       │     │                  │         ╰ V3Score : 7.5 
+│                       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │     │                            │           /A:H 
 │                       │     │                            ╰ V3Score : 7.5 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/725920 
-│                       │     │                  ├ [1]: https://go.dev/issue/76445 
-│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/8FJoBkPddm4 
-│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-61729 
-│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4155 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-61729 
+│                       │     │                  ├ [1]: https://go.dev/cl/725920 
+│                       │     │                  ├ [2]: https://go.dev/issue/76445 
+│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/8FJoBkPddm4 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-61729 
+│                       │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4155 
+│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
 │                       │     ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
 │                       │     ╰ LastModifiedDate: 2025-12-04T17:15:25.86Z 
 │                       ╰ [6] ╭ VulnerabilityID : CVE-2025-61727 
@@ -11711,7 +11750,7 @@
                         │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
                         │     │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4135 
                         │     ├ PublishedDate   : 2025-11-19T21:15:50.517Z 
-                        │     ╰ LastModifiedDate: 2025-11-21T15:13:59.083Z 
+                        │     ╰ LastModifiedDate: 2025-12-11T19:36:41.373Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2025-58181 
                         │     ├ PkgID           : golang.org/x/crypto@v0.44.0 
                         │     ├ PkgName         : golang.org/x/crypto 
@@ -11749,7 +11788,7 @@
                         │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-58181 
                         │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4134 
                         │     ├ PublishedDate   : 2025-11-19T21:15:50.85Z 
-                        │     ╰ LastModifiedDate: 2025-11-21T15:13:59.083Z 
+                        │     ╰ LastModifiedDate: 2025-12-11T19:29:24.9Z 
                         ├ [2] ╭ VulnerabilityID : CVE-2025-61729 
                         │     ├ PkgID           : stdlib@v1.25.4 
                         │     ├ PkgName         : stdlib 
@@ -11768,8 +11807,9 @@
                         │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
                         │     ├ Fingerprint     : sha256:59e07e1ed623ffc26ed8f0e5fd6cf9584df71f3ea68277d0639f62
                         │     │                   63fc7d97df 
-                        │     ├ Title           : Within HostnameError.Error(), when constructing an error
-                        │     │                   string, there ... 
+                        │     ├ Title           : crypto/x509: Excessive resource consumption when printing
+                        │     │                   error string for host certificate validation in crypto/x509[
+                        │     │                   m 
                         │     ├ Description     : Within HostnameError.Error(), when constructing an error
                         │     │                   string, there is no limit to the number of hosts that will be
                         │     │                    printed out. Furthermore, the error string is constructed by
@@ -11777,15 +11817,21 @@
                         │     │                    Therefore, a certificate provided by a malicious actor can
                         │     │                   result in excessive resource consumption. 
                         │     ├ Severity        : HIGH 
-                        │     ├ VendorSeverity   ─ bitnami: 3 
-                        │     ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+                        │     ├ VendorSeverity   ╭ bitnami: 3 
+                        │     │                  ╰ redhat : 3 
+                        │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+                        │     │                  │         │           /A:H 
+                        │     │                  │         ╰ V3Score : 7.5 
+                        │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
                         │     │                            │           /A:H 
                         │     │                            ╰ V3Score : 7.5 
-                        │     ├ References       ╭ [0]: https://go.dev/cl/725920 
-                        │     │                  ├ [1]: https://go.dev/issue/76445 
-                        │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/8FJoBkPddm4 
-                        │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-61729 
-                        │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4155 
+                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-61729 
+                        │     │                  ├ [1]: https://go.dev/cl/725920 
+                        │     │                  ├ [2]: https://go.dev/issue/76445 
+                        │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/8FJoBkPddm4 
+                        │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-61729 
+                        │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4155 
+                        │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
                         │     ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
                         │     ╰ LastModifiedDate: 2025-12-04T17:15:25.86Z 
                         ╰ [3] ╭ VulnerabilityID : CVE-2025-61727 
