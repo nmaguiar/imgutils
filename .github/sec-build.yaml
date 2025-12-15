@@ -2069,7 +2069,7 @@
       bitnami: 2
       oracle-oval: 2
       redhat: 2
-      rocky: 3
+      rocky: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L
@@ -2083,12 +2083,10 @@
     - https://access.redhat.com/security/cve/CVE-2025-58183
     - https://bugzilla.redhat.com/2404715
     - https://bugzilla.redhat.com/2407258
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2404715
     - https://bugzilla.redhat.com/show_bug.cgi?id=2407258
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-52881
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58183
     - https://errata.almalinux.org/9/ALSA-2025-22011.html
-    - https://errata.rockylinux.org/RLSA-2025:22011
+    - https://errata.rockylinux.org/RLSA-2025:23087
     - https://go.dev/cl/709861
     - https://go.dev/issue/75677
     - https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI
@@ -2191,21 +2189,27 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:998f7d1fd54c68caa50d9467f89dffd197b2c7957095066de4c13c1a6e940af8
-    Title: Within HostnameError.Error(), when constructing an error string, there ...
+    Title: 'crypto/x509: Excessive resource consumption when printing error string for host certificate validation in crypto/x509'
     Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
     Severity: HIGH
     VendorSeverity:
       bitnami: 3
+      redhat: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-61729
     - https://go.dev/cl/725920
     - https://go.dev/issue/76445
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
     - https://nvd.nist.gov/vuln/detail/CVE-2025-61729
     - https://pkg.go.dev/vuln/GO-2025-4155
+    - https://www.cve.org/CVERecord?id=CVE-2025-61729
     PublishedDate: '2025-12-02T19:15:51.447Z'
     LastModifiedDate: '2025-12-04T17:15:25.86Z'
   - VulnerabilityID: CVE-2025-0913
@@ -4275,21 +4279,27 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:dc7ae3c4fab1cbe00df6719461f92ed350ff241a25276cf28e1c3b6e1c887b2a
-    Title: Within HostnameError.Error(), when constructing an error string, there ...
+    Title: 'crypto/x509: Excessive resource consumption when printing error string for host certificate validation in crypto/x509'
     Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
     Severity: HIGH
     VendorSeverity:
       bitnami: 3
+      redhat: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-61729
     - https://go.dev/cl/725920
     - https://go.dev/issue/76445
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
     - https://nvd.nist.gov/vuln/detail/CVE-2025-61729
     - https://pkg.go.dev/vuln/GO-2025-4155
+    - https://www.cve.org/CVERecord?id=CVE-2025-61729
     PublishedDate: '2025-12-02T19:15:51.447Z'
     LastModifiedDate: '2025-12-04T17:15:25.86Z'
   - VulnerabilityID: CVE-2025-61727
@@ -5526,7 +5536,7 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2025-47914
     - https://pkg.go.dev/vuln/GO-2025-4135
     PublishedDate: '2025-11-19T21:15:50.517Z'
-    LastModifiedDate: '2025-11-21T15:13:59.083Z'
+    LastModifiedDate: '2025-12-11T19:36:41.373Z'
   - VulnerabilityID: CVE-2025-58181
     PkgID: golang.org/x/crypto@v0.43.0
     PkgName: golang.org/x/crypto
@@ -5564,7 +5574,7 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2025-58181
     - https://pkg.go.dev/vuln/GO-2025-4134
     PublishedDate: '2025-11-19T21:15:50.85Z'
-    LastModifiedDate: '2025-11-21T15:13:59.083Z'
+    LastModifiedDate: '2025-12-11T19:29:24.9Z'
   - VulnerabilityID: CVE-2025-61729
     PkgID: stdlib@v1.25.4
     PkgName: stdlib
@@ -5583,21 +5593,27 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:95693a32bebb09d169dadc8f2be7d42f92c00a674b1e4da2d3aa4fade46bfe1b
-    Title: Within HostnameError.Error(), when constructing an error string, there ...
+    Title: 'crypto/x509: Excessive resource consumption when printing error string for host certificate validation in crypto/x509'
     Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
     Severity: HIGH
     VendorSeverity:
       bitnami: 3
+      redhat: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-61729
     - https://go.dev/cl/725920
     - https://go.dev/issue/76445
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
     - https://nvd.nist.gov/vuln/detail/CVE-2025-61729
     - https://pkg.go.dev/vuln/GO-2025-4155
+    - https://www.cve.org/CVERecord?id=CVE-2025-61729
     PublishedDate: '2025-12-02T19:15:51.447Z'
     LastModifiedDate: '2025-12-04T17:15:25.86Z'
   - VulnerabilityID: CVE-2025-61727
@@ -6918,7 +6934,7 @@
     - https://github.com/containernetworking/plugins/security/advisories/GHSA-jv3w-x3r3-g6rm
     - https://nvd.nist.gov/vuln/detail/CVE-2025-67499
     PublishedDate: '2025-12-10T00:16:11.107Z'
-    LastModifiedDate: '2025-12-10T00:16:11.107Z'
+    LastModifiedDate: '2025-12-12T15:19:07.567Z'
   - VulnerabilityID: CVE-2025-52881
     PkgID: github.com/opencontainers/selinux@v1.12.0
     PkgName: github.com/opencontainers/selinux
@@ -7048,7 +7064,7 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2025-47914
     - https://pkg.go.dev/vuln/GO-2025-4135
     PublishedDate: '2025-11-19T21:15:50.517Z'
-    LastModifiedDate: '2025-11-21T15:13:59.083Z'
+    LastModifiedDate: '2025-12-11T19:36:41.373Z'
   - VulnerabilityID: CVE-2025-58181
     PkgID: golang.org/x/crypto@v0.43.0
     PkgName: golang.org/x/crypto
@@ -7086,7 +7102,7 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2025-58181
     - https://pkg.go.dev/vuln/GO-2025-4134
     PublishedDate: '2025-11-19T21:15:50.85Z'
-    LastModifiedDate: '2025-11-21T15:13:59.083Z'
+    LastModifiedDate: '2025-12-11T19:29:24.9Z'
   - VulnerabilityID: CVE-2025-61729
     PkgID: stdlib@v1.25.4
     PkgName: stdlib
@@ -7105,21 +7121,27 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:0c26916911d6c93552ff1c9b73901acc07ad7aeb06b2a84e335a196875ce1ed3
-    Title: Within HostnameError.Error(), when constructing an error string, there ...
+    Title: 'crypto/x509: Excessive resource consumption when printing error string for host certificate validation in crypto/x509'
     Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
     Severity: HIGH
     VendorSeverity:
       bitnami: 3
+      redhat: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-61729
     - https://go.dev/cl/725920
     - https://go.dev/issue/76445
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
     - https://nvd.nist.gov/vuln/detail/CVE-2025-61729
     - https://pkg.go.dev/vuln/GO-2025-4155
+    - https://www.cve.org/CVERecord?id=CVE-2025-61729
     PublishedDate: '2025-12-02T19:15:51.447Z'
     LastModifiedDate: '2025-12-04T17:15:25.86Z'
   - VulnerabilityID: CVE-2025-61727
@@ -8194,22 +8216,28 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:2ef5016cb8291c58766e6dc112bf893bf9c4e0d58905f0c959854803fd86dc0a
-    Title: Fulcio is a free-to-use certificate authority for issuing code signing ...
+    Title: 'github.com/sigstore/fulcio: Fulcio: Denial of Service via crafted OpenID Connect (OIDC) token'
     Description: Fulcio is a free-to-use certificate authority for issuing code signing certificates for an OpenID Connect (OIDC) identity. Prior to 1.8.3, function identity.extractIssuerURL splits (via a call to strings.Split) its argument (which is untrusted data) on periods. As a result, in the face of a malicious request with an (invalid) OIDC identity token in the payload containing many period characters, a call to extractIssuerURL incurs allocations to the tune of O(n) bytes (where n stands for the length of the function's argument), with a constant factor of about 16. This vulnerability is fixed in 1.8.3.
     Severity: HIGH
     CweIDs:
     - CWE-405
     VendorSeverity:
       ghsa: 3
+      redhat: 3
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-66506
     - https://github.com/sigstore/fulcio
     - https://github.com/sigstore/fulcio/commit/765a0e57608b9ef390e1eeeea8595b9054c63a5a
     - https://github.com/sigstore/fulcio/security/advisories/GHSA-f83f-xpx7-ffpw
     - https://nvd.nist.gov/vuln/detail/CVE-2025-66506
+    - https://www.cve.org/CVERecord?id=CVE-2025-66506
     PublishedDate: '2025-12-04T22:15:49.503Z'
     LastModifiedDate: '2025-12-08T18:27:15.857Z'
   - VulnerabilityID: CVE-2025-58058
@@ -8295,7 +8323,7 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2025-47914
     - https://pkg.go.dev/vuln/GO-2025-4135
     PublishedDate: '2025-11-19T21:15:50.517Z'
-    LastModifiedDate: '2025-11-21T15:13:59.083Z'
+    LastModifiedDate: '2025-12-11T19:36:41.373Z'
   - VulnerabilityID: CVE-2025-58181
     PkgID: golang.org/x/crypto@v0.40.0
     PkgName: golang.org/x/crypto
@@ -8333,7 +8361,7 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2025-58181
     - https://pkg.go.dev/vuln/GO-2025-4134
     PublishedDate: '2025-11-19T21:15:50.85Z'
-    LastModifiedDate: '2025-11-21T15:13:59.083Z'
+    LastModifiedDate: '2025-12-11T19:29:24.9Z'
   - VulnerabilityID: CVE-2025-61729
     PkgID: stdlib@v1.25.3
     PkgName: stdlib
@@ -8352,21 +8380,27 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:068b792aa37dd6a37d40eb01fc5c44bf0d34684391117c7a586146d69eb12e0d
-    Title: Within HostnameError.Error(), when constructing an error string, there ...
+    Title: 'crypto/x509: Excessive resource consumption when printing error string for host certificate validation in crypto/x509'
     Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
     Severity: HIGH
     VendorSeverity:
       bitnami: 3
+      redhat: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-61729
     - https://go.dev/cl/725920
     - https://go.dev/issue/76445
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
     - https://nvd.nist.gov/vuln/detail/CVE-2025-61729
     - https://pkg.go.dev/vuln/GO-2025-4155
+    - https://www.cve.org/CVERecord?id=CVE-2025-61729
     PublishedDate: '2025-12-02T19:15:51.447Z'
     LastModifiedDate: '2025-12-04T17:15:25.86Z'
   - VulnerabilityID: CVE-2025-61727
@@ -11069,7 +11103,7 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2025-47914
     - https://pkg.go.dev/vuln/GO-2025-4135
     PublishedDate: '2025-11-19T21:15:50.517Z'
-    LastModifiedDate: '2025-11-21T15:13:59.083Z'
+    LastModifiedDate: '2025-12-11T19:36:41.373Z'
   - VulnerabilityID: CVE-2025-58181
     PkgID: golang.org/x/crypto@v0.44.0
     PkgName: golang.org/x/crypto
@@ -11107,7 +11141,7 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2025-58181
     - https://pkg.go.dev/vuln/GO-2025-4134
     PublishedDate: '2025-11-19T21:15:50.85Z'
-    LastModifiedDate: '2025-11-21T15:13:59.083Z'
+    LastModifiedDate: '2025-12-11T19:29:24.9Z'
   - VulnerabilityID: CVE-2025-61729
     PkgID: stdlib@v1.25.4
     PkgName: stdlib
@@ -11126,21 +11160,27 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:59e07e1ed623ffc26ed8f0e5fd6cf9584df71f3ea68277d0639f6263fc7d97df
-    Title: Within HostnameError.Error(), when constructing an error string, there ...
+    Title: 'crypto/x509: Excessive resource consumption when printing error string for host certificate validation in crypto/x509'
     Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
     Severity: HIGH
     VendorSeverity:
       bitnami: 3
+      redhat: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-61729
     - https://go.dev/cl/725920
     - https://go.dev/issue/76445
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
     - https://nvd.nist.gov/vuln/detail/CVE-2025-61729
     - https://pkg.go.dev/vuln/GO-2025-4155
+    - https://www.cve.org/CVERecord?id=CVE-2025-61729
     PublishedDate: '2025-12-02T19:15:51.447Z'
     LastModifiedDate: '2025-12-04T17:15:25.86Z'
   - VulnerabilityID: CVE-2025-61727
