@@ -1057,7 +1057,7 @@
                         │      │                  ├ bitnami    : 2 
                         │      │                  ├ oracle-oval: 2 
                         │      │                  ├ redhat     : 2 
-                        │      │                  ╰ rocky      : 3 
+                        │      │                  ╰ rocky      : 2 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:
                         │      │                  │         │           N/A:L 
                         │      │                  │         ╰ V3Score : 4.3 
@@ -1069,23 +1069,20 @@
                         │      │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-58183 
                         │      │                  ├ [3] : https://bugzilla.redhat.com/2404715 
                         │      │                  ├ [4] : https://bugzilla.redhat.com/2407258 
-                        │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2404715 
-                        │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2407258 
-                        │      │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-                        │      │                  │       25-52881 
-                        │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+                        │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2407258 
+                        │      │                  ├ [6] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       25-58183 
-                        │      │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2025-22011.html 
-                        │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2025:22011 
-                        │      │                  ├ [11]: https://go.dev/cl/709861 
-                        │      │                  ├ [12]: https://go.dev/issue/75677 
-                        │      │                  ├ [13]: https://groups.google.com/g/golang-announce/c/4Emdl2i
+                        │      │                  ├ [7] : https://errata.almalinux.org/9/ALSA-2025-22011.html 
+                        │      │                  ├ [8] : https://errata.rockylinux.org/RLSA-2025:23087 
+                        │      │                  ├ [9] : https://go.dev/cl/709861 
+                        │      │                  ├ [10]: https://go.dev/issue/75677 
+                        │      │                  ├ [11]: https://groups.google.com/g/golang-announce/c/4Emdl2i
                         │      │                  │       Q_bI 
-                        │      │                  ├ [14]: https://linux.oracle.com/cve/CVE-2025-58183.html 
-                        │      │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2025-23088.html 
-                        │      │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2025-58183 
-                        │      │                  ├ [17]: https://pkg.go.dev/vuln/GO-2025-4014 
-                        │      │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2025-58183 
+                        │      │                  ├ [12]: https://linux.oracle.com/cve/CVE-2025-58183.html 
+                        │      │                  ├ [13]: https://linux.oracle.com/errata/ELSA-2025-23088.html 
+                        │      │                  ├ [14]: https://nvd.nist.gov/vuln/detail/CVE-2025-58183 
+                        │      │                  ├ [15]: https://pkg.go.dev/vuln/GO-2025-4014 
+                        │      │                  ╰ [16]: https://www.cve.org/CVERecord?id=CVE-2025-58183 
                         │      ├ PublishedDate   : 2025-10-29T23:16:19.357Z 
                         │      ╰ LastModifiedDate: 2025-11-04T22:16:33.2Z 
                         ├ [3]  ╭ VulnerabilityID : CVE-2025-58186 
@@ -1185,8 +1182,9 @@
                         │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
                         │      ├ Fingerprint     : sha256:6ea01e26b4d1d4aae805931a0b0e5387eb5a801db4d7b006fed89
                         │      │                   100163f36b8 
-                        │      ├ Title           : Within HostnameError.Error(), when constructing an error
-                        │      │                   string, there ... 
+                        │      ├ Title           : crypto/x509: Excessive resource consumption when printing
+                        │      │                   error string for host certificate validation in
+                        │      │                   crypto/x509 
                         │      ├ Description     : Within HostnameError.Error(), when constructing an error
                         │      │                   string, there is no limit to the number of hosts that will
                         │      │                   be printed out. Furthermore, the error string is constructed
@@ -1194,16 +1192,22 @@
                         │      │                   runtime. Therefore, a certificate provided by a malicious
                         │      │                   actor can result in excessive resource consumption. 
                         │      ├ Severity        : HIGH 
-                        │      ├ VendorSeverity   ─ bitnami: 3 
-                        │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+                        │      ├ VendorSeverity   ╭ bitnami: 3 
+                        │      │                  ╰ redhat : 3 
+                        │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+                        │      │                  │         │           N/A:H 
+                        │      │                  │         ╰ V3Score : 7.5 
+                        │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
                         │      │                            │           N/A:H 
                         │      │                            ╰ V3Score : 7.5 
-                        │      ├ References       ╭ [0]: https://go.dev/cl/725920 
-                        │      │                  ├ [1]: https://go.dev/issue/76445 
-                        │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/8FJoBkPd
+                        │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-61729 
+                        │      │                  ├ [1]: https://go.dev/cl/725920 
+                        │      │                  ├ [2]: https://go.dev/issue/76445 
+                        │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/8FJoBkPd
                         │      │                  │      dm4 
-                        │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-61729 
-                        │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4155 
+                        │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-61729 
+                        │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4155 
+                        │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
                         │      ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
                         │      ╰ LastModifiedDate: 2025-12-04T17:15:25.86Z 
                         ├ [6]  ╭ VulnerabilityID : CVE-2025-0913 
