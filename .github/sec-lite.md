@@ -1052,7 +1052,7 @@
                         │      │                   from a compressed source, a small compressed input can
                         │      │                   result in large allocations. 
                         │      ├ Severity        : HIGH 
-                        │      ├ VendorSeverity   ╭ alma       : 3 
+                        │      ├ VendorSeverity   ╭ alma       : 2 
                         │      │                  ├ amazon     : 3 
                         │      │                  ├ bitnami    : 2 
                         │      │                  ├ oracle-oval: 2 
@@ -1065,24 +1065,23 @@
                         │      │                            │           N/A:H 
                         │      │                            ╰ V3Score : 7.5 
                         │      ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2025/10/08/1 
-                        │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:22011 
+                        │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:23087 
                         │      │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-58183 
-                        │      │                  ├ [3] : https://bugzilla.redhat.com/2404715 
-                        │      │                  ├ [4] : https://bugzilla.redhat.com/2407258 
-                        │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2407258 
-                        │      │                  ├ [6] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+                        │      │                  ├ [3] : https://bugzilla.redhat.com/2407258 
+                        │      │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2407258 
+                        │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       25-58183 
-                        │      │                  ├ [7] : https://errata.almalinux.org/9/ALSA-2025-22011.html 
-                        │      │                  ├ [8] : https://errata.rockylinux.org/RLSA-2025:23087 
-                        │      │                  ├ [9] : https://go.dev/cl/709861 
-                        │      │                  ├ [10]: https://go.dev/issue/75677 
-                        │      │                  ├ [11]: https://groups.google.com/g/golang-announce/c/4Emdl2i
+                        │      │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-23087.html 
+                        │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23087 
+                        │      │                  ├ [8] : https://go.dev/cl/709861 
+                        │      │                  ├ [9] : https://go.dev/issue/75677 
+                        │      │                  ├ [10]: https://groups.google.com/g/golang-announce/c/4Emdl2i
                         │      │                  │       Q_bI 
-                        │      │                  ├ [12]: https://linux.oracle.com/cve/CVE-2025-58183.html 
-                        │      │                  ├ [13]: https://linux.oracle.com/errata/ELSA-2025-23088.html 
-                        │      │                  ├ [14]: https://nvd.nist.gov/vuln/detail/CVE-2025-58183 
-                        │      │                  ├ [15]: https://pkg.go.dev/vuln/GO-2025-4014 
-                        │      │                  ╰ [16]: https://www.cve.org/CVERecord?id=CVE-2025-58183 
+                        │      │                  ├ [11]: https://linux.oracle.com/cve/CVE-2025-58183.html 
+                        │      │                  ├ [12]: https://linux.oracle.com/errata/ELSA-2025-23088.html 
+                        │      │                  ├ [13]: https://nvd.nist.gov/vuln/detail/CVE-2025-58183 
+                        │      │                  ├ [14]: https://pkg.go.dev/vuln/GO-2025-4014 
+                        │      │                  ╰ [15]: https://www.cve.org/CVERecord?id=CVE-2025-58183 
                         │      ├ PublishedDate   : 2025-10-29T23:16:19.357Z 
                         │      ╰ LastModifiedDate: 2025-11-04T22:16:33.2Z 
                         ├ [3]  ╭ VulnerabilityID : CVE-2025-58186 
