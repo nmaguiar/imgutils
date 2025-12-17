@@ -1058,6 +1058,43 @@
       Digest: sha256:cfc3e8dd698c7d2a04ce147e21e353170ce559607971dc7d2f479eceadbeb13c
       DiffID: sha256:3e1dc1c4bffabb4f87b0b42c6dae4a6ae0d5c08a2a38e9786fa334654717a59f
     FilePath: openaf/Kube/snakeyaml-2.4.jar
+  Vulnerabilities:
+  - VulnerabilityID: CVE-2025-67735
+    PkgName: io.netty:netty-codec-http
+    PkgPath: openaf/Kube/netty-codec-http-4.2.7.Final.jar
+    PkgIdentifier:
+      PURL: pkg:maven/io.netty/netty-codec-http@4.2.7.Final
+      UID: d35d217fd14d658b
+    InstalledVersion: 4.2.7.Final
+    FixedVersion: 4.2.8.Final, 4.1.129.Final
+    Status: fixed
+    Layer:
+      Digest: sha256:cfc3e8dd698c7d2a04ce147e21e353170ce559607971dc7d2f479eceadbeb13c
+      DiffID: sha256:3e1dc1c4bffabb4f87b0b42c6dae4a6ae0d5c08a2a38e9786fa334654717a59f
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-67735
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Maven
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven
+    Fingerprint: sha256:2ecfbeaec2a55b97e570050fe9a4714eb77344cb6bd202833ee2988f1acacc0d
+    Title: Netty has a CRLF Injection vulnerability in io.netty.handler.codec.http.HttpRequestEncoder
+    Description: Netty is an asynchronous, event-driven network application framework. In versions prior to 4.1.129.Final and 4.2.8.Final, the `io.netty.handler.codec.http.HttpRequestEncoder` has a CRLF injection with the request URI when constructing a request. This leads to request smuggling when `HttpRequestEncoder` is used without proper sanitization of the URI. Any application / framework using `HttpRequestEncoder` can be subject to be abused to perform request smuggling using CRLF injection. Versions 4.1.129.Final and 4.2.8.Final fix the issue.
+    Severity: MEDIUM
+    CweIDs:
+    - CWE-93
+    VendorSeverity:
+      ghsa: 2
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
+        V3Score: 6.5
+    References:
+    - https://github.com/netty/netty
+    - https://github.com/netty/netty/commit/77e81f1e5944d98b3acf887d3aa443b252752e94
+    - https://github.com/netty/netty/security/advisories/GHSA-84h7-rjj3-6jx4
+    PublishedDate: '2025-12-16T01:15:52.367Z'
+    LastModifiedDate: '2025-12-16T01:15:52.367Z'
 - Target: usr/bin/crictl
   Class: lang-pkgs
   Type: gobinary
@@ -2064,7 +2101,7 @@
     Description: tar.Reader does not set a maximum size on the number of sparse region data blocks in GNU tar pax 1.0 sparse files. A maliciously-crafted archive containing a large number of sparse regions can cause a Reader to read an unbounded amount of data from the archive into memory. When reading from a compressed source, a small compressed input can result in large allocations.
     Severity: HIGH
     VendorSeverity:
-      alma: 3
+      alma: 2
       amazon: 3
       bitnami: 2
       oracle-oval: 2
@@ -2079,13 +2116,12 @@
         V3Score: 7.5
     References:
     - http://www.openwall.com/lists/oss-security/2025/10/08/1
-    - https://access.redhat.com/errata/RHSA-2025:22011
+    - https://access.redhat.com/errata/RHSA-2025:23087
     - https://access.redhat.com/security/cve/CVE-2025-58183
-    - https://bugzilla.redhat.com/2404715
     - https://bugzilla.redhat.com/2407258
     - https://bugzilla.redhat.com/show_bug.cgi?id=2407258
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58183
-    - https://errata.almalinux.org/9/ALSA-2025-22011.html
+    - https://errata.almalinux.org/9/ALSA-2025-23087.html
     - https://errata.rockylinux.org/RLSA-2025:23087
     - https://go.dev/cl/709861
     - https://go.dev/issue/75677
