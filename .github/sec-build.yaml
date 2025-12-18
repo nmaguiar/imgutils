@@ -1078,7 +1078,7 @@
       Name: GitHub Security Advisory Maven
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven
     Fingerprint: sha256:2ecfbeaec2a55b97e570050fe9a4714eb77344cb6bd202833ee2988f1acacc0d
-    Title: Netty has a CRLF Injection vulnerability in io.netty.handler.codec.http.HttpRequestEncoder
+    Title: Netty is an asynchronous, event-driven network application framework.  ...
     Description: Netty is an asynchronous, event-driven network application framework. In versions prior to 4.1.129.Final and 4.2.8.Final, the `io.netty.handler.codec.http.HttpRequestEncoder` has a CRLF injection with the request URI when constructing a request. This leads to request smuggling when `HttpRequestEncoder` is used without proper sanitization of the URI. Any application / framework using `HttpRequestEncoder` can be subject to be abused to perform request smuggling using CRLF injection. Versions 4.1.129.Final and 4.2.8.Final fix the issue.
     Severity: MEDIUM
     CweIDs:
@@ -1094,7 +1094,7 @@
     - https://github.com/netty/netty/commit/77e81f1e5944d98b3acf887d3aa443b252752e94
     - https://github.com/netty/netty/security/advisories/GHSA-84h7-rjj3-6jx4
     PublishedDate: '2025-12-16T01:15:52.367Z'
-    LastModifiedDate: '2025-12-16T01:15:52.367Z'
+    LastModifiedDate: '2025-12-16T14:10:11.3Z'
 - Target: usr/bin/crictl
   Class: lang-pkgs
   Type: gobinary
@@ -2103,6 +2103,7 @@
     VendorSeverity:
       alma: 2
       amazon: 3
+      azure: 2
       bitnami: 2
       oracle-oval: 2
       redhat: 2
@@ -2170,43 +2171,6 @@
     - https://pkg.go.dev/vuln/GO-2025-4012
     PublishedDate: '2025-10-29T23:16:19.547Z'
     LastModifiedDate: '2025-11-04T22:16:33.45Z'
-  - VulnerabilityID: CVE-2025-58187
-    PkgID: stdlib@v1.24.1
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.24.1
-      UID: 969259d6a3318a6c
-    InstalledVersion: v1.24.1
-    FixedVersion: 1.24.9, 1.25.3
-    Status: fixed
-    Layer:
-      Digest: sha256:cfc3e8dd698c7d2a04ce147e21e353170ce559607971dc7d2f479eceadbeb13c
-      DiffID: sha256:3e1dc1c4bffabb4f87b0b42c6dae4a6ae0d5c08a2a38e9786fa334654717a59f
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-58187
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:9712c6aba8dbbc0fa87a98876d00cc610c2e739306d257b556aea289d19d5349
-    Title: Due to the design of the name constraint checking algorithm, the proce ...
-    Description: Due to the design of the name constraint checking algorithm, the processing time of some inputs scale non-linearly with respect to the size of the certificate. This affects programs which validate arbitrary certificate chains.
-    Severity: HIGH
-    VendorSeverity:
-      amazon: 3
-      bitnami: 3
-    CVSS:
-      bitnami:
-        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-        V3Score: 7.5
-    References:
-    - http://www.openwall.com/lists/oss-security/2025/10/08/1
-    - https://go.dev/cl/709854
-    - https://go.dev/issue/75681
-    - https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI
-    - https://nvd.nist.gov/vuln/detail/CVE-2025-58187
-    - https://pkg.go.dev/vuln/GO-2025-4007
-    PublishedDate: '2025-10-29T23:16:19.643Z'
-    LastModifiedDate: '2025-11-20T23:15:52.007Z'
   - VulnerabilityID: CVE-2025-61729
     PkgID: stdlib@v1.24.1
     PkgName: stdlib
@@ -2548,6 +2512,50 @@
     - https://www.cve.org/CVERecord?id=CVE-2025-58185
     PublishedDate: '2025-10-29T23:16:19.45Z'
     LastModifiedDate: '2025-11-04T22:16:33.327Z'
+  - VulnerabilityID: CVE-2025-58187
+    PkgID: stdlib@v1.24.1
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.24.1
+      UID: 969259d6a3318a6c
+    InstalledVersion: v1.24.1
+    FixedVersion: 1.24.9, 1.25.3
+    Status: fixed
+    Layer:
+      Digest: sha256:cfc3e8dd698c7d2a04ce147e21e353170ce559607971dc7d2f479eceadbeb13c
+      DiffID: sha256:3e1dc1c4bffabb4f87b0b42c6dae4a6ae0d5c08a2a38e9786fa334654717a59f
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-58187
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:9712c6aba8dbbc0fa87a98876d00cc610c2e739306d257b556aea289d19d5349
+    Title: 'crypto/x509: Quadratic complexity when checking name constraints in crypto/x509'
+    Description: Due to the design of the name constraint checking algorithm, the processing time of some inputs scale non-linearly with respect to the size of the certificate. This affects programs which validate arbitrary certificate chains.
+    Severity: MEDIUM
+    VendorSeverity:
+      amazon: 3
+      bitnami: 3
+      redhat: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+        V3Score: 5.3
+    References:
+    - http://www.openwall.com/lists/oss-security/2025/10/08/1
+    - https://access.redhat.com/security/cve/CVE-2025-58187
+    - https://github.com/golang/go/commit/3fc4c79fdbb17b9b29ea9f8c29dd780df075d4c4
+    - https://go.dev/cl/709854
+    - https://go.dev/issue/75681
+    - https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-58187
+    - https://pkg.go.dev/vuln/GO-2025-4007
+    - https://www.cve.org/CVERecord?id=CVE-2025-58187
+    PublishedDate: '2025-10-29T23:16:19.643Z'
+    LastModifiedDate: '2025-11-20T23:15:52.007Z'
   - VulnerabilityID: CVE-2025-58188
     PkgID: stdlib@v1.24.1
     PkgName: stdlib
@@ -2783,21 +2791,27 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:3a6eadbfa89db9be6524784b0a07df0f3d6c00d05405d50b6465e307b53f4dba
-    Title: An excluded subdomain constraint in a certificate chain does not restr ...
+    Title: 'golang: crypto/x509: excluded subdomain constraint does not restrict wildcard SANs'
     Description: An excluded subdomain constraint in a certificate chain does not restrict the usage of wildcard SANs in the leaf certificate. For example a constraint that excludes the subdomain test.example.com does not prevent a leaf certificate from claiming the SAN *.example.com.
     Severity: MEDIUM
     VendorSeverity:
       bitnami: 2
+      redhat: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
         V3Score: 6.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
+        V3Score: 6.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-61727
     - https://go.dev/cl/723900
     - https://go.dev/issue/76442
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
     - https://nvd.nist.gov/vuln/detail/CVE-2025-61727
     - https://pkg.go.dev/vuln/GO-2025-4175
+    - https://www.cve.org/CVERecord?id=CVE-2025-61727
     PublishedDate: '2025-12-03T20:16:25.607Z'
     LastModifiedDate: '2025-12-04T17:15:08.283Z'
 - Target: usr/bin/ctr
@@ -4356,21 +4370,27 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:b180c0317e3322215732a82dd2d91ba05e8b426e722655b5486390441a9ac080
-    Title: An excluded subdomain constraint in a certificate chain does not restr ...
+    Title: 'golang: crypto/x509: excluded subdomain constraint does not restrict wildcard SANs'
     Description: An excluded subdomain constraint in a certificate chain does not restrict the usage of wildcard SANs in the leaf certificate. For example a constraint that excludes the subdomain test.example.com does not prevent a leaf certificate from claiming the SAN *.example.com.
     Severity: MEDIUM
     VendorSeverity:
       bitnami: 2
+      redhat: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
         V3Score: 6.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
+        V3Score: 6.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-61727
     - https://go.dev/cl/723900
     - https://go.dev/issue/76442
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
     - https://nvd.nist.gov/vuln/detail/CVE-2025-61727
     - https://pkg.go.dev/vuln/GO-2025-4175
+    - https://www.cve.org/CVERecord?id=CVE-2025-61727
     PublishedDate: '2025-12-03T20:16:25.607Z'
     LastModifiedDate: '2025-12-04T17:15:08.283Z'
 - Target: usr/bin/docker
@@ -5670,21 +5690,27 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:8508b7ae33e8b6bc419fef58653f1d7876e1bdf3559a597a316c8cadef493b51
-    Title: An excluded subdomain constraint in a certificate chain does not restr ...
+    Title: 'golang: crypto/x509: excluded subdomain constraint does not restrict wildcard SANs'
     Description: An excluded subdomain constraint in a certificate chain does not restrict the usage of wildcard SANs in the leaf certificate. For example a constraint that excludes the subdomain test.example.com does not prevent a leaf certificate from claiming the SAN *.example.com.
     Severity: MEDIUM
     VendorSeverity:
       bitnami: 2
+      redhat: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
         V3Score: 6.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
+        V3Score: 6.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-61727
     - https://go.dev/cl/723900
     - https://go.dev/issue/76442
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
     - https://nvd.nist.gov/vuln/detail/CVE-2025-61727
     - https://pkg.go.dev/vuln/GO-2025-4175
+    - https://www.cve.org/CVERecord?id=CVE-2025-61727
     PublishedDate: '2025-12-03T20:16:25.607Z'
     LastModifiedDate: '2025-12-04T17:15:08.283Z'
 - Target: usr/bin/nerdctl
@@ -7198,21 +7224,27 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:2828c5a2867b7a2adec6fa98ded0d973613d8ed25bc80b3829a7a7a2603d3014
-    Title: An excluded subdomain constraint in a certificate chain does not restr ...
+    Title: 'golang: crypto/x509: excluded subdomain constraint does not restrict wildcard SANs'
     Description: An excluded subdomain constraint in a certificate chain does not restrict the usage of wildcard SANs in the leaf certificate. For example a constraint that excludes the subdomain test.example.com does not prevent a leaf certificate from claiming the SAN *.example.com.
     Severity: MEDIUM
     VendorSeverity:
       bitnami: 2
+      redhat: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
         V3Score: 6.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
+        V3Score: 6.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-61727
     - https://go.dev/cl/723900
     - https://go.dev/issue/76442
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
     - https://nvd.nist.gov/vuln/detail/CVE-2025-61727
     - https://pkg.go.dev/vuln/GO-2025-4175
+    - https://www.cve.org/CVERecord?id=CVE-2025-61727
     PublishedDate: '2025-12-03T20:16:25.607Z'
     LastModifiedDate: '2025-12-04T17:15:08.283Z'
 - Target: usr/bin/skopeo
@@ -8457,21 +8489,27 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:d8bf1d88e2ea0adc9baa7cd9dab025d7927af6ad0784b3c5b7e4ebba06b3f921
-    Title: An excluded subdomain constraint in a certificate chain does not restr ...
+    Title: 'golang: crypto/x509: excluded subdomain constraint does not restrict wildcard SANs'
     Description: An excluded subdomain constraint in a certificate chain does not restrict the usage of wildcard SANs in the leaf certificate. For example a constraint that excludes the subdomain test.example.com does not prevent a leaf certificate from claiming the SAN *.example.com.
     Severity: MEDIUM
     VendorSeverity:
       bitnami: 2
+      redhat: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
         V3Score: 6.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
+        V3Score: 6.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-61727
     - https://go.dev/cl/723900
     - https://go.dev/issue/76442
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
     - https://nvd.nist.gov/vuln/detail/CVE-2025-61727
     - https://pkg.go.dev/vuln/GO-2025-4175
+    - https://www.cve.org/CVERecord?id=CVE-2025-61727
     PublishedDate: '2025-12-03T20:16:25.607Z'
     LastModifiedDate: '2025-12-04T17:15:08.283Z'
 - Target: usr/bin/syft
@@ -11237,20 +11275,26 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:9138e5d9a31318795878bd4f109f4dceda246af2dd0f0c0d9adc0a47d85d8890
-    Title: An excluded subdomain constraint in a certificate chain does not restr ...
+    Title: 'golang: crypto/x509: excluded subdomain constraint does not restrict wildcard SANs'
     Description: An excluded subdomain constraint in a certificate chain does not restrict the usage of wildcard SANs in the leaf certificate. For example a constraint that excludes the subdomain test.example.com does not prevent a leaf certificate from claiming the SAN *.example.com.
     Severity: MEDIUM
     VendorSeverity:
       bitnami: 2
+      redhat: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
         V3Score: 6.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
+        V3Score: 6.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-61727
     - https://go.dev/cl/723900
     - https://go.dev/issue/76442
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
     - https://nvd.nist.gov/vuln/detail/CVE-2025-61727
     - https://pkg.go.dev/vuln/GO-2025-4175
+    - https://www.cve.org/CVERecord?id=CVE-2025-61727
     PublishedDate: '2025-12-03T20:16:25.607Z'
     LastModifiedDate: '2025-12-04T17:15:08.283Z'
