@@ -1011,6 +1011,7 @@
       amazon: 3
       azure: 2
       bitnami: 2
+      cbl-mariner: 2
       oracle-oval: 2
       redhat: 2
       rocky: 2
@@ -1040,43 +1041,6 @@
     - https://www.cve.org/CVERecord?id=CVE-2025-58183
     PublishedDate: '2025-10-29T23:16:19.357Z'
     LastModifiedDate: '2025-11-04T22:16:33.2Z'
-  - VulnerabilityID: CVE-2025-58186
-    PkgID: stdlib@v1.24.1
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.24.1
-      UID: 969259d6a3318a6c
-    InstalledVersion: v1.24.1
-    FixedVersion: 1.24.8, 1.25.2
-    Status: fixed
-    Layer:
-      Digest: sha256:3c9b1226bd5a1c7ac2fe73b1ccd6c408b0f91f3bc12db0b19c82087f794fdd81
-      DiffID: sha256:7960f1c5276f4e2740e632a5244b4684abd95a25bbc7e4dc8786fc4baf8be8be
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-58186
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:53a428778273f0da376953d055fd2d6c9f2e8c475420b46857da8d3086a99f8d
-    Title: Despite HTTP headers having a default limit of 1MB, the number of cook ...
-    Description: Despite HTTP headers having a default limit of 1MB, the number of cookies that can be parsed does not have a limit. By sending a lot of very small cookies such as "a=;", an attacker can make an HTTP server allocate a large amount of structs, causing large memory consumption.
-    Severity: HIGH
-    VendorSeverity:
-      amazon: 3
-      bitnami: 2
-    CVSS:
-      bitnami:
-        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
-        V3Score: 5.3
-    References:
-    - http://www.openwall.com/lists/oss-security/2025/10/08/1
-    - https://go.dev/cl/709855
-    - https://go.dev/issue/75672
-    - https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI
-    - https://nvd.nist.gov/vuln/detail/CVE-2025-58186
-    - https://pkg.go.dev/vuln/GO-2025-4012
-    PublishedDate: '2025-10-29T23:16:19.547Z'
-    LastModifiedDate: '2025-11-04T22:16:33.45Z'
   - VulnerabilityID: CVE-2025-61729
     PkgID: stdlib@v1.24.1
     PkgName: stdlib
@@ -1418,6 +1382,49 @@
     - https://www.cve.org/CVERecord?id=CVE-2025-58185
     PublishedDate: '2025-10-29T23:16:19.45Z'
     LastModifiedDate: '2025-11-04T22:16:33.327Z'
+  - VulnerabilityID: CVE-2025-58186
+    PkgID: stdlib@v1.24.1
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.24.1
+      UID: 969259d6a3318a6c
+    InstalledVersion: v1.24.1
+    FixedVersion: 1.24.8, 1.25.2
+    Status: fixed
+    Layer:
+      Digest: sha256:3c9b1226bd5a1c7ac2fe73b1ccd6c408b0f91f3bc12db0b19c82087f794fdd81
+      DiffID: sha256:7960f1c5276f4e2740e632a5244b4684abd95a25bbc7e4dc8786fc4baf8be8be
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-58186
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:53a428778273f0da376953d055fd2d6c9f2e8c475420b46857da8d3086a99f8d
+    Title: 'golang.org/net/http: Lack of limit when parsing cookies can cause memory exhaustion in net/http'
+    Description: Despite HTTP headers having a default limit of 1MB, the number of cookies that can be parsed does not have a limit. By sending a lot of very small cookies such as "a=;", an attacker can make an HTTP server allocate a large amount of structs, causing large memory consumption.
+    Severity: MEDIUM
+    VendorSeverity:
+      amazon: 3
+      bitnami: 2
+      redhat: 1
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+        V3Score: 5.3
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+        V3Score: 5.3
+    References:
+    - http://www.openwall.com/lists/oss-security/2025/10/08/1
+    - https://access.redhat.com/security/cve/CVE-2025-58186
+    - https://go.dev/cl/709855
+    - https://go.dev/issue/75672
+    - https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-58186
+    - https://pkg.go.dev/vuln/GO-2025-4012
+    - https://www.cve.org/CVERecord?id=CVE-2025-58186
+    PublishedDate: '2025-10-29T23:16:19.547Z'
+    LastModifiedDate: '2025-11-04T22:16:33.45Z'
   - VulnerabilityID: CVE-2025-58187
     PkgID: stdlib@v1.24.1
     PkgName: stdlib
