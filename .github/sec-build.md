@@ -1092,8 +1092,8 @@
 │                             │                          osystem%3Amaven 
 │                             ├ Fingerprint     : sha256:2ecfbeaec2a55b97e570050fe9a4714eb77344cb6bd202833ee298
 │                             │                   8f1acacc0d 
-│                             ├ Title           : Netty is an asynchronous, event-driven network application
-│                             │                   framework.  ... 
+│                             ├ Title           : netty-codec-http: Netty (netty-codec-http): Request Smuggling
+│                             │                    via CRLF Injection 
 │                             ├ Description     : Netty is an asynchronous, event-driven network application
 │                             │                   framework. In versions prior to 4.1.129.Final and
 │                             │                   4.2.8.Final, the
@@ -1106,14 +1106,22 @@
 │                             │                   Versions 4.1.129.Final and 4.2.8.Final fix the issue. 
 │                             ├ Severity        : MEDIUM 
 │                             ├ CweIDs           ─ [0]: CWE-93 
-│                             ├ VendorSeverity   ─ ghsa: 2 
-│                             ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N 
-│                             │                         ╰ V3Score : 6.5 
-│                             ├ References       ╭ [0]: https://github.com/netty/netty 
-│                             │                  ├ [1]: https://github.com/netty/netty/commit/77e81f1e5944d98b3
+│                             ├ VendorSeverity   ╭ ghsa  : 2 
+│                             │                  ╰ redhat: 2 
+│                             ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/
+│                             │                  │        │           A:N 
+│                             │                  │        ╰ V3Score : 6.5 
+│                             │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/
+│                             │                           │           A:N 
+│                             │                           ╰ V3Score : 6.5 
+│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-67735 
+│                             │                  ├ [1]: https://github.com/netty/netty 
+│                             │                  ├ [2]: https://github.com/netty/netty/commit/77e81f1e5944d98b3
 │                             │                  │      acf887d3aa443b252752e94 
-│                             │                  ╰ [2]: https://github.com/netty/netty/security/advisories/GHSA
-│                             │                         -84h7-rjj3-6jx4 
+│                             │                  ├ [3]: https://github.com/netty/netty/security/advisories/GHSA
+│                             │                  │      -84h7-rjj3-6jx4 
+│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-67735 
+│                             │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2025-67735 
 │                             ├ PublishedDate   : 2025-12-16T01:15:52.367Z 
 │                             ╰ LastModifiedDate: 2025-12-16T14:10:11.3Z 
 ├ [2] ╭ Target         : usr/bin/crictl 
@@ -2170,6 +2178,7 @@
 │                       │      │                  ├ amazon     : 3 
 │                       │      │                  ├ azure      : 2 
 │                       │      │                  ├ bitnami    : 2 
+│                       │      │                  ├ cbl-mariner: 2 
 │                       │      │                  ├ oracle-oval: 2 
 │                       │      │                  ├ redhat     : 2 
 │                       │      │                  ╰ rocky      : 2 
@@ -2199,47 +2208,7 @@
 │                       │      │                  ╰ [15]: https://www.cve.org/CVERecord?id=CVE-2025-58183 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.357Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.2Z 
-│                       ├ [3]  ╭ VulnerabilityID : CVE-2025-58186 
-│                       │      ├ PkgID           : stdlib@v1.24.1 
-│                       │      ├ PkgName         : stdlib 
-│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
-│                       │      │                  ╰ UID : 969259d6a3318a6c 
-│                       │      ├ InstalledVersion: v1.24.1 
-│                       │      ├ FixedVersion    : 1.24.8, 1.25.2 
-│                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:cfc3e8dd698c7d2a04ce147e21e353170ce559607971
-│                       │      │                  │         dc7d2f479eceadbeb13c 
-│                       │      │                  ╰ DiffID: sha256:3e1dc1c4bffabb4f87b0b42c6dae4a6ae0d5c08a2a38
-│                       │      │                            e9786fa334654717a59f 
-│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-58186 
-│                       │      ├ DataSource       ╭ ID  : govulndb 
-│                       │      │                  ├ Name: The Go Vulnerability Database 
-│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │      ├ Fingerprint     : sha256:8b4c41fffb46e4ac0cc59daf2f2f1cd875b882b3efd31b33b40e0
-│                       │      │                   b84d3ed025e 
-│                       │      ├ Title           : Despite HTTP headers having a default limit of 1MB, the
-│                       │      │                   number of cook ... 
-│                       │      ├ Description     : Despite HTTP headers having a default limit of 1MB, the
-│                       │      │                   number of cookies that can be parsed does not have a limit.
-│                       │      │                   By sending a lot of very small cookies such as "a=;", an
-│                       │      │                   attacker can make an HTTP server allocate a large amount of
-│                       │      │                   structs, causing large memory consumption. 
-│                       │      ├ Severity        : HIGH 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
-│                       │      │                  ╰ bitnami: 2 
-│                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
-│                       │      │                            │           N/A:L 
-│                       │      │                            ╰ V3Score : 5.3 
-│                       │      ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/10/08/1 
-│                       │      │                  ├ [1]: https://go.dev/cl/709855 
-│                       │      │                  ├ [2]: https://go.dev/issue/75672 
-│                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/4Emdl2iQ
-│                       │      │                  │      _bI 
-│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-58186 
-│                       │      │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4012 
-│                       │      ├ PublishedDate   : 2025-10-29T23:16:19.547Z 
-│                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.45Z 
-│                       ├ [4]  ╭ VulnerabilityID : CVE-2025-61729 
+│                       ├ [3]  ╭ VulnerabilityID : CVE-2025-61729 
 │                       │      ├ PkgID           : stdlib@v1.24.1 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -2285,7 +2254,7 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
 │                       │      ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
 │                       │      ╰ LastModifiedDate: 2025-12-04T17:15:25.86Z 
-│                       ├ [5]  ╭ VulnerabilityID : CVE-2025-0913 
+│                       ├ [4]  ╭ VulnerabilityID : CVE-2025-0913 
 │                       │      ├ PkgID           : stdlib@v1.24.1 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -2327,7 +2296,7 @@
 │                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-3750 
 │                       │      ├ PublishedDate   : 2025-06-11T18:15:24.627Z 
 │                       │      ╰ LastModifiedDate: 2025-08-08T14:53:03.55Z 
-│                       ├ [6]  ╭ VulnerabilityID : CVE-2025-22871 
+│                       ├ [5]  ╭ VulnerabilityID : CVE-2025-22871 
 │                       │      ├ PkgID           : stdlib@v1.24.1 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -2397,7 +2366,7 @@
 │                       │      │                  ╰ [19]: https://www.cve.org/CVERecord?id=CVE-2025-22871 
 │                       │      ├ PublishedDate   : 2025-04-08T20:15:20.183Z 
 │                       │      ╰ LastModifiedDate: 2025-04-18T15:15:57.923Z 
-│                       ├ [7]  ╭ VulnerabilityID : CVE-2025-4673 
+│                       ├ [6]  ╭ VulnerabilityID : CVE-2025-4673 
 │                       │      ├ PkgID           : stdlib@v1.24.1 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -2456,7 +2425,7 @@
 │                       │      │                  ╰ [15]: https://www.cve.org/CVERecord?id=CVE-2025-4673 
 │                       │      ├ PublishedDate   : 2025-06-11T17:15:42.993Z 
 │                       │      ╰ LastModifiedDate: 2025-06-12T16:06:20.18Z 
-│                       ├ [8]  ╭ VulnerabilityID : CVE-2025-47906 
+│                       ├ [7]  ╭ VulnerabilityID : CVE-2025-47906 
 │                       │      ├ PkgID           : stdlib@v1.24.1 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -2514,7 +2483,7 @@
 │                       │      │                  ╰ [15]: https://www.cve.org/CVERecord?id=CVE-2025-47906 
 │                       │      ├ PublishedDate   : 2025-09-18T19:15:37.66Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:16.207Z 
-│                       ├ [9]  ╭ VulnerabilityID : CVE-2025-47912 
+│                       ├ [8]  ╭ VulnerabilityID : CVE-2025-47912 
 │                       │      ├ PkgID           : stdlib@v1.24.1 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -2562,7 +2531,7 @@
 │                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-47912 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:18.187Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:16.497Z 
-│                       ├ [10] ╭ VulnerabilityID : CVE-2025-58185 
+│                       ├ [9]  ╭ VulnerabilityID : CVE-2025-58185 
 │                       │      ├ PkgID           : stdlib@v1.24.1 
 │                       │      ├ PkgName         : stdlib 
 │                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
@@ -2607,6 +2576,52 @@
 │                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-58185 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.45Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.327Z 
+│                       ├ [10] ╭ VulnerabilityID : CVE-2025-58186 
+│                       │      ├ PkgID           : stdlib@v1.24.1 
+│                       │      ├ PkgName         : stdlib 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.1 
+│                       │      │                  ╰ UID : 969259d6a3318a6c 
+│                       │      ├ InstalledVersion: v1.24.1 
+│                       │      ├ FixedVersion    : 1.24.8, 1.25.2 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:cfc3e8dd698c7d2a04ce147e21e353170ce559607971
+│                       │      │                  │         dc7d2f479eceadbeb13c 
+│                       │      │                  ╰ DiffID: sha256:3e1dc1c4bffabb4f87b0b42c6dae4a6ae0d5c08a2a38
+│                       │      │                            e9786fa334654717a59f 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-58186 
+│                       │      ├ DataSource       ╭ ID  : govulndb 
+│                       │      │                  ├ Name: The Go Vulnerability Database 
+│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │      ├ Fingerprint     : sha256:8b4c41fffb46e4ac0cc59daf2f2f1cd875b882b3efd31b33b40e0
+│                       │      │                   b84d3ed025e 
+│                       │      ├ Title           : golang.org/net/http: Lack of limit when parsing cookies can
+│                       │      │                   cause memory exhaustion in net/http 
+│                       │      ├ Description     : Despite HTTP headers having a default limit of 1MB, the
+│                       │      │                   number of cookies that can be parsed does not have a limit.
+│                       │      │                   By sending a lot of very small cookies such as "a=;", an
+│                       │      │                   attacker can make an HTTP server allocate a large amount of
+│                       │      │                   structs, causing large memory consumption. 
+│                       │      ├ Severity        : MEDIUM 
+│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      │                  ├ bitnami: 2 
+│                       │      │                  ╰ redhat : 1 
+│                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+│                       │      │                  │         │           N/A:L 
+│                       │      │                  │         ╰ V3Score : 5.3 
+│                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+│                       │      │                            │           N/A:L 
+│                       │      │                            ╰ V3Score : 5.3 
+│                       │      ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/10/08/1 
+│                       │      │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2025-58186 
+│                       │      │                  ├ [2]: https://go.dev/cl/709855 
+│                       │      │                  ├ [3]: https://go.dev/issue/75672 
+│                       │      │                  ├ [4]: https://groups.google.com/g/golang-announce/c/4Emdl2iQ
+│                       │      │                  │      _bI 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-58186 
+│                       │      │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-4012 
+│                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-58186 
+│                       │      ├ PublishedDate   : 2025-10-29T23:16:19.547Z 
+│                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.45Z 
 │                       ├ [11] ╭ VulnerabilityID : CVE-2025-58187 
 │                       │      ├ PkgID           : stdlib@v1.24.1 
 │                       │      ├ PkgName         : stdlib 
@@ -5929,23 +5944,29 @@
 │                       │     │                          osystem%3Ago 
 │                       │     ├ Fingerprint     : sha256:f9797cefc6acbc9670551c7182f0f4e9af5ddf612f8f2ded28360e
 │                       │     │                   5fcaee0647 
-│                       │     ├ Title           : SSH Agent servers do not validate the size of messages when
-│                       │     │                   processing ... 
+│                       │     ├ Title           : golang.org/x/crypto/ssh/agent: in golang.org/x/crypto/ssh/agent 
 │                       │     ├ Description     : SSH Agent servers do not validate the size of messages when
 │                       │     │                   processing new identity requests, which may cause the program
 │                       │     │                    to panic if the message is malformed due to an out of bounds
 │                       │     │                    read. 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-125 
-│                       │     ├ VendorSeverity   ─ ghsa: 2 
-│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L 
-│                       │     │                         ╰ V3Score : 5.3 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/721960 
-│                       │     │                  ├ [1]: https://go.dev/issue/76364 
-│                       │     │                  ├ [2]: https://go.googlesource.com/crypto 
-│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA 
-│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
-│                       │     │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4135 
+│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │     │                  ╰ redhat: 2 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                       │     │                  │        │           A:L 
+│                       │     │                  │        ╰ V3Score : 5.3 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                       │     │                           │           A:L 
+│                       │     │                           ╰ V3Score : 5.3 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-47914 
+│                       │     │                  ├ [1]: https://go.dev/cl/721960 
+│                       │     │                  ├ [2]: https://go.dev/issue/76364 
+│                       │     │                  ├ [3]: https://go.googlesource.com/crypto 
+│                       │     │                  ├ [4]: https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA 
+│                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
+│                       │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-4135 
+│                       │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-47914 
 │                       │     ├ PublishedDate   : 2025-11-19T21:15:50.517Z 
 │                       │     ╰ LastModifiedDate: 2025-12-11T19:36:41.373Z 
 │                       ├ [1] ╭ VulnerabilityID : CVE-2025-58181 
@@ -7356,8 +7377,10 @@
 │                       │     │                          osystem%3Ago 
 │                       │     ├ Fingerprint     : sha256:4f78b3b4815d65d8d6c1eae147cf4dc17cc4970ba8e6f8ed1097d2
 │                       │     │                   b05e73f034 
-│                       │     ├ Title           : CNA Plugins Portmap nftables backend can intercept non-local
-│                       │     │                   traffic 
+│                       │     ├ Title           : CNI portmap plugin:
+│                       │     │                   github.com/containernetworking/plugins/plugins/meta/portmap:
+│                       │     │                   CNI portmap plugin: HostPort forwarding vulnerability allows
+│                       │     │                   traffic interception 
 │                       │     ├ Description     : The CNI portmap plugin allows containers to emulate opening a
 │                       │     │                    host port, forwarding that traffic to the container.
 │                       │     │                   Versions 1.6.0 through 1.8.0  inadvertently forward all
@@ -7374,18 +7397,25 @@
 │                       │     │                   vulnerability. 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-200 
-│                       │     ├ VendorSeverity   ─ ghsa: 2 
-│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H 
-│                       │     │                         ╰ V3Score : 6.6 
-│                       │     ├ References       ╭ [0]: https://github.com/containernetworking/plugins 
-│                       │     │                  ├ [1]: https://github.com/containernetworking/plugins/commit/9
+│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │     │                  ╰ redhat: 2 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/
+│                       │     │                  │        │           A:H 
+│                       │     │                  │        ╰ V3Score : 6.6 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/
+│                       │     │                           │           A:H 
+│                       │     │                           ╰ V3Score : 6.6 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-67499 
+│                       │     │                  ├ [1]: https://github.com/containernetworking/plugins 
+│                       │     │                  ├ [2]: https://github.com/containernetworking/plugins/commit/9
 │                       │     │                  │      b3772e1a7abf93cbb7c6526a28bc0d27b830e02 
-│                       │     │                  ├ [2]: https://github.com/containernetworking/plugins/pull/1210 
-│                       │     │                  ├ [3]: https://github.com/containernetworking/plugins/releases
+│                       │     │                  ├ [3]: https://github.com/containernetworking/plugins/pull/1210 
+│                       │     │                  ├ [4]: https://github.com/containernetworking/plugins/releases
 │                       │     │                  │      /tag/v1.9.0 
-│                       │     │                  ├ [4]: https://github.com/containernetworking/plugins/security
+│                       │     │                  ├ [5]: https://github.com/containernetworking/plugins/security
 │                       │     │                  │      /advisories/GHSA-jv3w-x3r3-g6rm 
-│                       │     │                  ╰ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-67499 
+│                       │     │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2025-67499 
+│                       │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-67499 
 │                       │     ├ PublishedDate   : 2025-12-10T00:16:11.107Z 
 │                       │     ╰ LastModifiedDate: 2025-12-12T15:19:07.567Z 
 │                       ├ [1] ╭ VulnerabilityID : CVE-2025-52881 
@@ -7539,23 +7569,29 @@
 │                       │     │                          osystem%3Ago 
 │                       │     ├ Fingerprint     : sha256:d7128a07bc32fac886990b92ba55980a961c3ad28359f5d5f9d872
 │                       │     │                   731cce0bde 
-│                       │     ├ Title           : SSH Agent servers do not validate the size of messages when
-│                       │     │                   processing ... 
+│                       │     ├ Title           : golang.org/x/crypto/ssh/agent: in golang.org/x/crypto/ssh/agent 
 │                       │     ├ Description     : SSH Agent servers do not validate the size of messages when
 │                       │     │                   processing new identity requests, which may cause the program
 │                       │     │                    to panic if the message is malformed due to an out of bounds
 │                       │     │                    read. 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-125 
-│                       │     ├ VendorSeverity   ─ ghsa: 2 
-│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L 
-│                       │     │                         ╰ V3Score : 5.3 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/721960 
-│                       │     │                  ├ [1]: https://go.dev/issue/76364 
-│                       │     │                  ├ [2]: https://go.googlesource.com/crypto 
-│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA 
-│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
-│                       │     │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4135 
+│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │     │                  ╰ redhat: 2 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                       │     │                  │        │           A:L 
+│                       │     │                  │        ╰ V3Score : 5.3 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                       │     │                           │           A:L 
+│                       │     │                           ╰ V3Score : 5.3 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-47914 
+│                       │     │                  ├ [1]: https://go.dev/cl/721960 
+│                       │     │                  ├ [2]: https://go.dev/issue/76364 
+│                       │     │                  ├ [3]: https://go.googlesource.com/crypto 
+│                       │     │                  ├ [4]: https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA 
+│                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
+│                       │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-4135 
+│                       │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-47914 
 │                       │     ├ PublishedDate   : 2025-11-19T21:15:50.517Z 
 │                       │     ╰ LastModifiedDate: 2025-12-11T19:36:41.373Z 
 │                       ├ [3] ╭ VulnerabilityID : CVE-2025-58181 
@@ -8903,23 +8939,29 @@
 │                       │     │                          osystem%3Ago 
 │                       │     ├ Fingerprint     : sha256:bf624f322c7a0d5421b9d500a434a8cd3b107f9557c7adb0b2fdbe
 │                       │     │                   8573e52e50 
-│                       │     ├ Title           : SSH Agent servers do not validate the size of messages when
-│                       │     │                   processing ... 
+│                       │     ├ Title           : golang.org/x/crypto/ssh/agent: in golang.org/x/crypto/ssh/agent 
 │                       │     ├ Description     : SSH Agent servers do not validate the size of messages when
 │                       │     │                   processing new identity requests, which may cause the program
 │                       │     │                    to panic if the message is malformed due to an out of bounds
 │                       │     │                    read. 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-125 
-│                       │     ├ VendorSeverity   ─ ghsa: 2 
-│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L 
-│                       │     │                         ╰ V3Score : 5.3 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/721960 
-│                       │     │                  ├ [1]: https://go.dev/issue/76364 
-│                       │     │                  ├ [2]: https://go.googlesource.com/crypto 
-│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA 
-│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
-│                       │     │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4135 
+│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │     │                  ╰ redhat: 2 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                       │     │                  │        │           A:L 
+│                       │     │                  │        ╰ V3Score : 5.3 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                       │     │                           │           A:L 
+│                       │     │                           ╰ V3Score : 5.3 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-47914 
+│                       │     │                  ├ [1]: https://go.dev/cl/721960 
+│                       │     │                  ├ [2]: https://go.dev/issue/76364 
+│                       │     │                  ├ [3]: https://go.googlesource.com/crypto 
+│                       │     │                  ├ [4]: https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA 
+│                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
+│                       │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-4135 
+│                       │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-47914 
 │                       │     ├ PublishedDate   : 2025-11-19T21:15:50.517Z 
 │                       │     ╰ LastModifiedDate: 2025-12-11T19:36:41.373Z 
 │                       ├ [4] ╭ VulnerabilityID : CVE-2025-58181 
@@ -11819,23 +11861,29 @@
                         │     │                          osystem%3Ago 
                         │     ├ Fingerprint     : sha256:96197f616da747f17e0b3f3c80f613587373e5175206bf19913306
                         │     │                   7221175fa4 
-                        │     ├ Title           : SSH Agent servers do not validate the size of messages when
-                        │     │                   processing ... 
+                        │     ├ Title           : golang.org/x/crypto/ssh/agent: in golang.org/x/crypto/ssh/agent 
                         │     ├ Description     : SSH Agent servers do not validate the size of messages when
                         │     │                   processing new identity requests, which may cause the program
                         │     │                    to panic if the message is malformed due to an out of bounds
                         │     │                    read. 
                         │     ├ Severity        : MEDIUM 
                         │     ├ CweIDs           ─ [0]: CWE-125 
-                        │     ├ VendorSeverity   ─ ghsa: 2 
-                        │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L 
-                        │     │                         ╰ V3Score : 5.3 
-                        │     ├ References       ╭ [0]: https://go.dev/cl/721960 
-                        │     │                  ├ [1]: https://go.dev/issue/76364 
-                        │     │                  ├ [2]: https://go.googlesource.com/crypto 
-                        │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA 
-                        │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
-                        │     │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2025-4135 
+                        │     ├ VendorSeverity   ╭ ghsa  : 2 
+                        │     │                  ╰ redhat: 2 
+                        │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+                        │     │                  │        │           A:L 
+                        │     │                  │        ╰ V3Score : 5.3 
+                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+                        │     │                           │           A:L 
+                        │     │                           ╰ V3Score : 5.3 
+                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-47914 
+                        │     │                  ├ [1]: https://go.dev/cl/721960 
+                        │     │                  ├ [2]: https://go.dev/issue/76364 
+                        │     │                  ├ [3]: https://go.googlesource.com/crypto 
+                        │     │                  ├ [4]: https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA 
+                        │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-47914 
+                        │     │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-4135 
+                        │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-47914 
                         │     ├ PublishedDate   : 2025-11-19T21:15:50.517Z 
                         │     ╰ LastModifiedDate: 2025-12-11T19:36:41.373Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2025-58181 
