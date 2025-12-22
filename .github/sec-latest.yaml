@@ -2118,7 +2118,7 @@
     - https://go.dev/issue/75677
     - https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI
     - https://linux.oracle.com/cve/CVE-2025-58183.html
-    - https://linux.oracle.com/errata/ELSA-2025-23088.html
+    - https://linux.oracle.com/errata/ELSA-2025-23326.html
     - https://nvd.nist.gov/vuln/detail/CVE-2025-58183
     - https://pkg.go.dev/vuln/GO-2025-4014
     - https://www.cve.org/CVERecord?id=CVE-2025-58183
@@ -2145,6 +2145,8 @@
     Title: 'crypto/x509: Excessive resource consumption when printing error string for host certificate validation in crypto/x509'
     Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
     Severity: HIGH
+    CweIDs:
+    - CWE-295
     VendorSeverity:
       bitnami: 3
       redhat: 3
@@ -2164,7 +2166,7 @@
     - https://pkg.go.dev/vuln/GO-2025-4155
     - https://www.cve.org/CVERecord?id=CVE-2025-61729
     PublishedDate: '2025-12-02T19:15:51.447Z'
-    LastModifiedDate: '2025-12-04T17:15:25.86Z'
+    LastModifiedDate: '2025-12-19T18:25:28.283Z'
   - VulnerabilityID: CVE-2025-0913
     PkgID: stdlib@v1.24.1
     PkgName: stdlib
@@ -2790,6 +2792,8 @@
     Title: 'golang: crypto/x509: excluded subdomain constraint does not restrict wildcard SANs'
     Description: An excluded subdomain constraint in a certificate chain does not restrict the usage of wildcard SANs in the leaf certificate. For example a constraint that excludes the subdomain test.example.com does not prevent a leaf certificate from claiming the SAN *.example.com.
     Severity: MEDIUM
+    CweIDs:
+    - CWE-295
     VendorSeverity:
       bitnami: 2
       redhat: 2
@@ -2809,7 +2813,7 @@
     - https://pkg.go.dev/vuln/GO-2025-4175
     - https://www.cve.org/CVERecord?id=CVE-2025-61727
     PublishedDate: '2025-12-03T20:16:25.607Z'
-    LastModifiedDate: '2025-12-04T17:15:08.283Z'
+    LastModifiedDate: '2025-12-18T20:15:10.957Z'
 - Target: usr/bin/ctr
   Class: lang-pkgs
   Type: gobinary
@@ -3648,6 +3652,8 @@
     Title: 'crypto/x509: Excessive resource consumption when printing error string for host certificate validation in crypto/x509'
     Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
     Severity: HIGH
+    CweIDs:
+    - CWE-295
     VendorSeverity:
       bitnami: 3
       redhat: 3
@@ -3667,7 +3673,7 @@
     - https://pkg.go.dev/vuln/GO-2025-4155
     - https://www.cve.org/CVERecord?id=CVE-2025-61729
     PublishedDate: '2025-12-02T19:15:51.447Z'
-    LastModifiedDate: '2025-12-04T17:15:25.86Z'
+    LastModifiedDate: '2025-12-19T18:25:28.283Z'
   - VulnerabilityID: CVE-2025-61727
     PkgID: stdlib@v1.25.3
     PkgName: stdlib
@@ -3689,6 +3695,8 @@
     Title: 'golang: crypto/x509: excluded subdomain constraint does not restrict wildcard SANs'
     Description: An excluded subdomain constraint in a certificate chain does not restrict the usage of wildcard SANs in the leaf certificate. For example a constraint that excludes the subdomain test.example.com does not prevent a leaf certificate from claiming the SAN *.example.com.
     Severity: MEDIUM
+    CweIDs:
+    - CWE-295
     VendorSeverity:
       bitnami: 2
       redhat: 2
@@ -3708,7 +3716,7 @@
     - https://pkg.go.dev/vuln/GO-2025-4175
     - https://www.cve.org/CVERecord?id=CVE-2025-61727
     PublishedDate: '2025-12-03T20:16:25.607Z'
-    LastModifiedDate: '2025-12-04T17:15:08.283Z'
+    LastModifiedDate: '2025-12-18T20:15:10.957Z'
 - Target: usr/bin/dive
   Class: lang-pkgs
   Type: gobinary
@@ -4410,6 +4418,8 @@
     Title: 'crypto/x509: Excessive resource consumption when printing error string for host certificate validation in crypto/x509'
     Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
     Severity: HIGH
+    CweIDs:
+    - CWE-295
     VendorSeverity:
       bitnami: 3
       redhat: 3
@@ -4429,7 +4439,7 @@
     - https://pkg.go.dev/vuln/GO-2025-4155
     - https://www.cve.org/CVERecord?id=CVE-2025-61729
     PublishedDate: '2025-12-02T19:15:51.447Z'
-    LastModifiedDate: '2025-12-04T17:15:25.86Z'
+    LastModifiedDate: '2025-12-19T18:25:28.283Z'
   - VulnerabilityID: CVE-2025-58187
     PkgID: stdlib@v1.25.2
     PkgName: stdlib
@@ -4495,6 +4505,8 @@
     Title: 'golang: crypto/x509: excluded subdomain constraint does not restrict wildcard SANs'
     Description: An excluded subdomain constraint in a certificate chain does not restrict the usage of wildcard SANs in the leaf certificate. For example a constraint that excludes the subdomain test.example.com does not prevent a leaf certificate from claiming the SAN *.example.com.
     Severity: MEDIUM
+    CweIDs:
+    - CWE-295
     VendorSeverity:
       bitnami: 2
       redhat: 2
@@ -4514,7 +4526,7 @@
     - https://pkg.go.dev/vuln/GO-2025-4175
     - https://www.cve.org/CVERecord?id=CVE-2025-61727
     PublishedDate: '2025-12-03T20:16:25.607Z'
-    LastModifiedDate: '2025-12-04T17:15:08.283Z'
+    LastModifiedDate: '2025-12-18T20:15:10.957Z'
 - Target: usr/bin/docker
   Class: lang-pkgs
   Type: gobinary
@@ -4551,6 +4563,8 @@
     Title: 'crypto/x509: Excessive resource consumption when printing error string for host certificate validation in crypto/x509'
     Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
     Severity: HIGH
+    CweIDs:
+    - CWE-295
     VendorSeverity:
       bitnami: 3
       redhat: 3
@@ -4570,7 +4584,7 @@
     - https://pkg.go.dev/vuln/GO-2025-4155
     - https://www.cve.org/CVERecord?id=CVE-2025-61729
     PublishedDate: '2025-12-02T19:15:51.447Z'
-    LastModifiedDate: '2025-12-04T17:15:25.86Z'
+    LastModifiedDate: '2025-12-19T18:25:28.283Z'
   - VulnerabilityID: CVE-2025-61727
     PkgID: stdlib@v1.25.3
     PkgName: stdlib
@@ -4592,6 +4606,8 @@
     Title: 'golang: crypto/x509: excluded subdomain constraint does not restrict wildcard SANs'
     Description: An excluded subdomain constraint in a certificate chain does not restrict the usage of wildcard SANs in the leaf certificate. For example a constraint that excludes the subdomain test.example.com does not prevent a leaf certificate from claiming the SAN *.example.com.
     Severity: MEDIUM
+    CweIDs:
+    - CWE-295
     VendorSeverity:
       bitnami: 2
       redhat: 2
@@ -4611,7 +4627,7 @@
     - https://pkg.go.dev/vuln/GO-2025-4175
     - https://www.cve.org/CVERecord?id=CVE-2025-61727
     PublishedDate: '2025-12-03T20:16:25.607Z'
-    LastModifiedDate: '2025-12-04T17:15:08.283Z'
+    LastModifiedDate: '2025-12-18T20:15:10.957Z'
 - Target: usr/bin/helm
   Class: lang-pkgs
   Type: gobinary
@@ -5914,23 +5930,29 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:36cf9e7b9bf34f4721e6218fe1eef5c66306bf51381219fad0dfd38d8b1c1c83
-    Title: SSH servers parsing GSSAPI authentication requests do not validate the ...
+    Title: 'golang.org/x/crypto/ssh: in golang.org/x/crypto/ssh'
     Description: SSH servers parsing GSSAPI authentication requests do not validate the number of mechanisms specified in the request, allowing an attacker to cause unbounded memory consumption.
     Severity: MEDIUM
     CweIDs:
     - CWE-770
     VendorSeverity:
       ghsa: 2
+      redhat: 2
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
         V3Score: 5.3
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+        V3Score: 5.3
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-58181
     - https://go.dev/cl/721961
     - https://go.dev/issue/76363
     - https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA
     - https://nvd.nist.gov/vuln/detail/CVE-2025-58181
     - https://pkg.go.dev/vuln/GO-2025-4134
+    - https://www.cve.org/CVERecord?id=CVE-2025-58181
     PublishedDate: '2025-11-19T21:15:50.85Z'
     LastModifiedDate: '2025-12-11T19:29:24.9Z'
   - VulnerabilityID: CVE-2025-58183
@@ -5983,7 +6005,7 @@
     - https://go.dev/issue/75677
     - https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI
     - https://linux.oracle.com/cve/CVE-2025-58183.html
-    - https://linux.oracle.com/errata/ELSA-2025-23088.html
+    - https://linux.oracle.com/errata/ELSA-2025-23326.html
     - https://nvd.nist.gov/vuln/detail/CVE-2025-58183
     - https://pkg.go.dev/vuln/GO-2025-4014
     - https://www.cve.org/CVERecord?id=CVE-2025-58183
@@ -6010,6 +6032,8 @@
     Title: 'crypto/x509: Excessive resource consumption when printing error string for host certificate validation in crypto/x509'
     Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
     Severity: HIGH
+    CweIDs:
+    - CWE-295
     VendorSeverity:
       bitnami: 3
       redhat: 3
@@ -6029,7 +6053,7 @@
     - https://pkg.go.dev/vuln/GO-2025-4155
     - https://www.cve.org/CVERecord?id=CVE-2025-61729
     PublishedDate: '2025-12-02T19:15:51.447Z'
-    LastModifiedDate: '2025-12-04T17:15:25.86Z'
+    LastModifiedDate: '2025-12-19T18:25:28.283Z'
   - VulnerabilityID: CVE-2025-47912
     PkgID: stdlib@v1.24.7
     PkgName: stdlib
@@ -6442,6 +6466,8 @@
     Title: 'golang: crypto/x509: excluded subdomain constraint does not restrict wildcard SANs'
     Description: An excluded subdomain constraint in a certificate chain does not restrict the usage of wildcard SANs in the leaf certificate. For example a constraint that excludes the subdomain test.example.com does not prevent a leaf certificate from claiming the SAN *.example.com.
     Severity: MEDIUM
+    CweIDs:
+    - CWE-295
     VendorSeverity:
       bitnami: 2
       redhat: 2
@@ -6461,7 +6487,7 @@
     - https://pkg.go.dev/vuln/GO-2025-4175
     - https://www.cve.org/CVERecord?id=CVE-2025-61727
     PublishedDate: '2025-12-03T20:16:25.607Z'
-    LastModifiedDate: '2025-12-04T17:15:08.283Z'
+    LastModifiedDate: '2025-12-18T20:15:10.957Z'
 - Target: usr/bin/nerdctl
   Class: lang-pkgs
   Type: gobinary
@@ -7907,23 +7933,29 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:47d0dae306ebd4227b0fa735b519b3ffe5689cdf000b60eb9209643af4e46b0f
-    Title: SSH servers parsing GSSAPI authentication requests do not validate the ...
+    Title: 'golang.org/x/crypto/ssh: in golang.org/x/crypto/ssh'
     Description: SSH servers parsing GSSAPI authentication requests do not validate the number of mechanisms specified in the request, allowing an attacker to cause unbounded memory consumption.
     Severity: MEDIUM
     CweIDs:
     - CWE-770
     VendorSeverity:
       ghsa: 2
+      redhat: 2
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
         V3Score: 5.3
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+        V3Score: 5.3
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-58181
     - https://go.dev/cl/721961
     - https://go.dev/issue/76363
     - https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA
     - https://nvd.nist.gov/vuln/detail/CVE-2025-58181
     - https://pkg.go.dev/vuln/GO-2025-4134
+    - https://www.cve.org/CVERecord?id=CVE-2025-58181
     PublishedDate: '2025-11-19T21:15:50.85Z'
     LastModifiedDate: '2025-12-11T19:29:24.9Z'
   - VulnerabilityID: CVE-2025-61729
@@ -7947,6 +7979,8 @@
     Title: 'crypto/x509: Excessive resource consumption when printing error string for host certificate validation in crypto/x509'
     Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
     Severity: HIGH
+    CweIDs:
+    - CWE-295
     VendorSeverity:
       bitnami: 3
       redhat: 3
@@ -7966,7 +8000,7 @@
     - https://pkg.go.dev/vuln/GO-2025-4155
     - https://www.cve.org/CVERecord?id=CVE-2025-61729
     PublishedDate: '2025-12-02T19:15:51.447Z'
-    LastModifiedDate: '2025-12-04T17:15:25.86Z'
+    LastModifiedDate: '2025-12-19T18:25:28.283Z'
   - VulnerabilityID: CVE-2025-61727
     PkgID: stdlib@v1.25.4
     PkgName: stdlib
@@ -7988,6 +8022,8 @@
     Title: 'golang: crypto/x509: excluded subdomain constraint does not restrict wildcard SANs'
     Description: An excluded subdomain constraint in a certificate chain does not restrict the usage of wildcard SANs in the leaf certificate. For example a constraint that excludes the subdomain test.example.com does not prevent a leaf certificate from claiming the SAN *.example.com.
     Severity: MEDIUM
+    CweIDs:
+    - CWE-295
     VendorSeverity:
       bitnami: 2
       redhat: 2
@@ -8007,7 +8043,7 @@
     - https://pkg.go.dev/vuln/GO-2025-4175
     - https://www.cve.org/CVERecord?id=CVE-2025-61727
     PublishedDate: '2025-12-03T20:16:25.607Z'
-    LastModifiedDate: '2025-12-04T17:15:08.283Z'
+    LastModifiedDate: '2025-12-18T20:15:10.957Z'
 - Target: usr/bin/skopeo
   Class: lang-pkgs
   Type: gobinary
@@ -9178,23 +9214,29 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:b918d9598594a3a52f610de86d4fa780b8aa70c9da561c9703a9221c981ffbe2
-    Title: SSH servers parsing GSSAPI authentication requests do not validate the ...
+    Title: 'golang.org/x/crypto/ssh: in golang.org/x/crypto/ssh'
     Description: SSH servers parsing GSSAPI authentication requests do not validate the number of mechanisms specified in the request, allowing an attacker to cause unbounded memory consumption.
     Severity: MEDIUM
     CweIDs:
     - CWE-770
     VendorSeverity:
       ghsa: 2
+      redhat: 2
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
         V3Score: 5.3
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+        V3Score: 5.3
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-58181
     - https://go.dev/cl/721961
     - https://go.dev/issue/76363
     - https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA
     - https://nvd.nist.gov/vuln/detail/CVE-2025-58181
     - https://pkg.go.dev/vuln/GO-2025-4134
+    - https://www.cve.org/CVERecord?id=CVE-2025-58181
     PublishedDate: '2025-11-19T21:15:50.85Z'
     LastModifiedDate: '2025-12-11T19:29:24.9Z'
   - VulnerabilityID: CVE-2025-61729
@@ -9218,6 +9260,8 @@
     Title: 'crypto/x509: Excessive resource consumption when printing error string for host certificate validation in crypto/x509'
     Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
     Severity: HIGH
+    CweIDs:
+    - CWE-295
     VendorSeverity:
       bitnami: 3
       redhat: 3
@@ -9237,7 +9281,7 @@
     - https://pkg.go.dev/vuln/GO-2025-4155
     - https://www.cve.org/CVERecord?id=CVE-2025-61729
     PublishedDate: '2025-12-02T19:15:51.447Z'
-    LastModifiedDate: '2025-12-04T17:15:25.86Z'
+    LastModifiedDate: '2025-12-19T18:25:28.283Z'
   - VulnerabilityID: CVE-2025-58187
     PkgID: stdlib@v1.25.2
     PkgName: stdlib
@@ -9303,6 +9347,8 @@
     Title: 'golang: crypto/x509: excluded subdomain constraint does not restrict wildcard SANs'
     Description: An excluded subdomain constraint in a certificate chain does not restrict the usage of wildcard SANs in the leaf certificate. For example a constraint that excludes the subdomain test.example.com does not prevent a leaf certificate from claiming the SAN *.example.com.
     Severity: MEDIUM
+    CweIDs:
+    - CWE-295
     VendorSeverity:
       bitnami: 2
       redhat: 2
@@ -9322,7 +9368,7 @@
     - https://pkg.go.dev/vuln/GO-2025-4175
     - https://www.cve.org/CVERecord?id=CVE-2025-61727
     PublishedDate: '2025-12-03T20:16:25.607Z'
-    LastModifiedDate: '2025-12-04T17:15:08.283Z'
+    LastModifiedDate: '2025-12-18T20:15:10.957Z'
 - Target: usr/bin/syft
   Class: lang-pkgs
   Type: gobinary
@@ -12159,23 +12205,29 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:c8250368c86cc803305a0b420795b82a775395a1af1ff33a7b98ac71286da35d
-    Title: SSH servers parsing GSSAPI authentication requests do not validate the ...
+    Title: 'golang.org/x/crypto/ssh: in golang.org/x/crypto/ssh'
     Description: SSH servers parsing GSSAPI authentication requests do not validate the number of mechanisms specified in the request, allowing an attacker to cause unbounded memory consumption.
     Severity: MEDIUM
     CweIDs:
     - CWE-770
     VendorSeverity:
       ghsa: 2
+      redhat: 2
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
         V3Score: 5.3
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+        V3Score: 5.3
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-58181
     - https://go.dev/cl/721961
     - https://go.dev/issue/76363
     - https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA
     - https://nvd.nist.gov/vuln/detail/CVE-2025-58181
     - https://pkg.go.dev/vuln/GO-2025-4134
+    - https://www.cve.org/CVERecord?id=CVE-2025-58181
     PublishedDate: '2025-11-19T21:15:50.85Z'
     LastModifiedDate: '2025-12-11T19:29:24.9Z'
   - VulnerabilityID: CVE-2025-61729
@@ -12199,6 +12251,8 @@
     Title: 'crypto/x509: Excessive resource consumption when printing error string for host certificate validation in crypto/x509'
     Description: Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.
     Severity: HIGH
+    CweIDs:
+    - CWE-295
     VendorSeverity:
       bitnami: 3
       redhat: 3
@@ -12218,7 +12272,7 @@
     - https://pkg.go.dev/vuln/GO-2025-4155
     - https://www.cve.org/CVERecord?id=CVE-2025-61729
     PublishedDate: '2025-12-02T19:15:51.447Z'
-    LastModifiedDate: '2025-12-04T17:15:25.86Z'
+    LastModifiedDate: '2025-12-19T18:25:28.283Z'
   - VulnerabilityID: CVE-2025-61727
     PkgID: stdlib@v1.25.3
     PkgName: stdlib
@@ -12240,6 +12294,8 @@
     Title: 'golang: crypto/x509: excluded subdomain constraint does not restrict wildcard SANs'
     Description: An excluded subdomain constraint in a certificate chain does not restrict the usage of wildcard SANs in the leaf certificate. For example a constraint that excludes the subdomain test.example.com does not prevent a leaf certificate from claiming the SAN *.example.com.
     Severity: MEDIUM
+    CweIDs:
+    - CWE-295
     VendorSeverity:
       bitnami: 2
       redhat: 2
@@ -12259,4 +12315,4 @@
     - https://pkg.go.dev/vuln/GO-2025-4175
     - https://www.cve.org/CVERecord?id=CVE-2025-61727
     PublishedDate: '2025-12-03T20:16:25.607Z'
-    LastModifiedDate: '2025-12-04T17:15:08.283Z'
+    LastModifiedDate: '2025-12-18T20:15:10.957Z'
