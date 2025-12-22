@@ -1080,7 +1080,7 @@
                         │      │                  ├ [10]: https://groups.google.com/g/golang-announce/c/4Emdl2i
                         │      │                  │       Q_bI 
                         │      │                  ├ [11]: https://linux.oracle.com/cve/CVE-2025-58183.html 
-                        │      │                  ├ [12]: https://linux.oracle.com/errata/ELSA-2025-23088.html 
+                        │      │                  ├ [12]: https://linux.oracle.com/errata/ELSA-2025-23326.html 
                         │      │                  ├ [13]: https://nvd.nist.gov/vuln/detail/CVE-2025-58183 
                         │      │                  ├ [14]: https://pkg.go.dev/vuln/GO-2025-4014 
                         │      │                  ╰ [15]: https://www.cve.org/CVERecord?id=CVE-2025-58183 
@@ -1114,6 +1114,7 @@
                         │      │                   runtime. Therefore, a certificate provided by a malicious
                         │      │                   actor can result in excessive resource consumption. 
                         │      ├ Severity        : HIGH 
+                        │      ├ CweIDs           ─ [0]: CWE-295 
                         │      ├ VendorSeverity   ╭ bitnami: 3 
                         │      │                  ╰ redhat : 3 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
@@ -1131,7 +1132,7 @@
                         │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4155 
                         │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
                         │      ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
-                        │      ╰ LastModifiedDate: 2025-12-04T17:15:25.86Z 
+                        │      ╰ LastModifiedDate: 2025-12-19T18:25:28.283Z 
                         ├ [4]  ╭ VulnerabilityID : CVE-2025-0913 
                         │      ├ PkgID           : stdlib@v1.24.1 
                         │      ├ PkgName         : stdlib 
@@ -1800,6 +1801,7 @@
                                │                   subdomain test.example.com does not prevent a leaf
                                │                   certificate from claiming the SAN *.example.com. 
                                ├ Severity        : MEDIUM 
+                               ├ CweIDs           ─ [0]: CWE-295 
                                ├ VendorSeverity   ╭ bitnami: 2 
                                │                  ╰ redhat : 2 
                                ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
@@ -1817,5 +1819,5 @@
                                │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4175 
                                │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61727 
                                ├ PublishedDate   : 2025-12-03T20:16:25.607Z 
-                               ╰ LastModifiedDate: 2025-12-04T17:15:08.283Z 
+                               ╰ LastModifiedDate: 2025-12-18T20:15:10.957Z 
 ````
