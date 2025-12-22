@@ -2183,7 +2183,7 @@
 │                       │      │                  ├ [10]: https://groups.google.com/g/golang-announce/c/4Emdl2i
 │                       │      │                  │       Q_bI 
 │                       │      │                  ├ [11]: https://linux.oracle.com/cve/CVE-2025-58183.html 
-│                       │      │                  ├ [12]: https://linux.oracle.com/errata/ELSA-2025-23088.html 
+│                       │      │                  ├ [12]: https://linux.oracle.com/errata/ELSA-2025-23326.html 
 │                       │      │                  ├ [13]: https://nvd.nist.gov/vuln/detail/CVE-2025-58183 
 │                       │      │                  ├ [14]: https://pkg.go.dev/vuln/GO-2025-4014 
 │                       │      │                  ╰ [15]: https://www.cve.org/CVERecord?id=CVE-2025-58183 
@@ -2217,6 +2217,7 @@
 │                       │      │                   runtime. Therefore, a certificate provided by a malicious
 │                       │      │                   actor can result in excessive resource consumption. 
 │                       │      ├ Severity        : HIGH 
+│                       │      ├ CweIDs           ─ [0]: CWE-295 
 │                       │      ├ VendorSeverity   ╭ bitnami: 3 
 │                       │      │                  ╰ redhat : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
@@ -2234,7 +2235,7 @@
 │                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4155 
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
 │                       │      ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
-│                       │      ╰ LastModifiedDate: 2025-12-04T17:15:25.86Z 
+│                       │      ╰ LastModifiedDate: 2025-12-19T18:25:28.283Z 
 │                       ├ [4]  ╭ VulnerabilityID : CVE-2025-0913 
 │                       │      ├ PkgID           : stdlib@v1.24.1 
 │                       │      ├ PkgName         : stdlib 
@@ -2903,6 +2904,7 @@
 │                              │                   subdomain test.example.com does not prevent a leaf
 │                              │                   certificate from claiming the SAN *.example.com. 
 │                              ├ Severity        : MEDIUM 
+│                              ├ CweIDs           ─ [0]: CWE-295 
 │                              ├ VendorSeverity   ╭ bitnami: 2 
 │                              │                  ╰ redhat : 2 
 │                              ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
@@ -2920,7 +2922,7 @@
 │                              │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4175 
 │                              │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61727 
 │                              ├ PublishedDate   : 2025-12-03T20:16:25.607Z 
-│                              ╰ LastModifiedDate: 2025-12-04T17:15:08.283Z 
+│                              ╰ LastModifiedDate: 2025-12-18T20:15:10.957Z 
 ├ [3] ╭ Target         : usr/bin/ctr 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -3817,6 +3819,7 @@
 │                       │     │                    Therefore, a certificate provided by a malicious actor can
 │                       │     │                   result in excessive resource consumption. 
 │                       │     ├ Severity        : HIGH 
+│                       │     ├ CweIDs           ─ [0]: CWE-295 
 │                       │     ├ VendorSeverity   ╭ bitnami: 3 
 │                       │     │                  ╰ redhat : 3 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
@@ -3833,7 +3836,7 @@
 │                       │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4155 
 │                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
 │                       │     ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
-│                       │     ╰ LastModifiedDate: 2025-12-04T17:15:25.86Z 
+│                       │     ╰ LastModifiedDate: 2025-12-19T18:25:28.283Z 
 │                       ╰ [2] ╭ VulnerabilityID : CVE-2025-61727 
 │                             ├ PkgID           : stdlib@v1.25.3 
 │                             ├ PkgName         : stdlib 
@@ -3860,6 +3863,7 @@
 │                             │                   subdomain test.example.com does not prevent a leaf
 │                             │                   certificate from claiming the SAN *.example.com. 
 │                             ├ Severity        : MEDIUM 
+│                             ├ CweIDs           ─ [0]: CWE-295 
 │                             ├ VendorSeverity   ╭ bitnami: 2 
 │                             │                  ╰ redhat : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L
@@ -3876,7 +3880,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4175 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61727 
 │                             ├ PublishedDate   : 2025-12-03T20:16:25.607Z 
-│                             ╰ LastModifiedDate: 2025-12-04T17:15:08.283Z 
+│                             ╰ LastModifiedDate: 2025-12-18T20:15:10.957Z 
 ├ [4] ╭ Target         : usr/bin/dive 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -4736,6 +4740,7 @@
 │                       │     │                    Therefore, a certificate provided by a malicious actor can
 │                       │     │                   result in excessive resource consumption. 
 │                       │     ├ Severity        : HIGH 
+│                       │     ├ CweIDs           ─ [0]: CWE-295 
 │                       │     ├ VendorSeverity   ╭ bitnami: 3 
 │                       │     │                  ╰ redhat : 3 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
@@ -4752,7 +4757,7 @@
 │                       │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4155 
 │                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
 │                       │     ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
-│                       │     ╰ LastModifiedDate: 2025-12-04T17:15:25.86Z 
+│                       │     ╰ LastModifiedDate: 2025-12-19T18:25:28.283Z 
 │                       ├ [4] ╭ VulnerabilityID : CVE-2025-58187 
 │                       │     ├ PkgID           : stdlib@v1.25.2 
 │                       │     ├ PkgName         : stdlib 
@@ -4825,6 +4830,7 @@
 │                             │                   subdomain test.example.com does not prevent a leaf
 │                             │                   certificate from claiming the SAN *.example.com. 
 │                             ├ Severity        : MEDIUM 
+│                             ├ CweIDs           ─ [0]: CWE-295 
 │                             ├ VendorSeverity   ╭ bitnami: 2 
 │                             │                  ╰ redhat : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L
@@ -4841,7 +4847,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4175 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61727 
 │                             ├ PublishedDate   : 2025-12-03T20:16:25.607Z 
-│                             ╰ LastModifiedDate: 2025-12-04T17:15:08.283Z 
+│                             ╰ LastModifiedDate: 2025-12-18T20:15:10.957Z 
 ├ [5] ╭ Target         : usr/bin/docker 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -4883,6 +4889,7 @@
 │                       │     │                    Therefore, a certificate provided by a malicious actor can
 │                       │     │                   result in excessive resource consumption. 
 │                       │     ├ Severity        : HIGH 
+│                       │     ├ CweIDs           ─ [0]: CWE-295 
 │                       │     ├ VendorSeverity   ╭ bitnami: 3 
 │                       │     │                  ╰ redhat : 3 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
@@ -4899,7 +4906,7 @@
 │                       │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4155 
 │                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
 │                       │     ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
-│                       │     ╰ LastModifiedDate: 2025-12-04T17:15:25.86Z 
+│                       │     ╰ LastModifiedDate: 2025-12-19T18:25:28.283Z 
 │                       ╰ [1] ╭ VulnerabilityID : CVE-2025-61727 
 │                             ├ PkgID           : stdlib@v1.25.3 
 │                             ├ PkgName         : stdlib 
@@ -4926,6 +4933,7 @@
 │                             │                   subdomain test.example.com does not prevent a leaf
 │                             │                   certificate from claiming the SAN *.example.com. 
 │                             ├ Severity        : MEDIUM 
+│                             ├ CweIDs           ─ [0]: CWE-295 
 │                             ├ VendorSeverity   ╭ bitnami: 2 
 │                             │                  ╰ redhat : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L
@@ -4942,7 +4950,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4175 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61727 
 │                             ├ PublishedDate   : 2025-12-03T20:16:25.607Z 
-│                             ╰ LastModifiedDate: 2025-12-04T17:15:08.283Z 
+│                             ╰ LastModifiedDate: 2025-12-18T20:15:10.957Z 
 ├ [6] ╭ Target         : usr/bin/helm 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -6302,23 +6310,29 @@
 │                       │      │                          cosystem%3Ago 
 │                       │      ├ Fingerprint     : sha256:36cf9e7b9bf34f4721e6218fe1eef5c66306bf51381219fad0dfd
 │                       │      │                   38d8b1c1c83 
-│                       │      ├ Title           : SSH servers parsing GSSAPI authentication requests do not
-│                       │      │                   validate the ... 
+│                       │      ├ Title           : golang.org/x/crypto/ssh: in golang.org/x/crypto/ssh 
 │                       │      ├ Description     : SSH servers parsing GSSAPI authentication requests do not
 │                       │      │                   validate the number of mechanisms specified in the request,
 │                       │      │                   allowing an attacker to cause unbounded memory
 │                       │      │                   consumption. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ VendorSeverity   ─ ghsa: 2 
-│                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L 
-│                       │      │                         ╰ V3Score : 5.3 
-│                       │      ├ References       ╭ [0]: https://go.dev/cl/721961 
-│                       │      │                  ├ [1]: https://go.dev/issue/76363 
-│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/w-oX3UxN
+│                       │      ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │      │                  ╰ redhat: 2 
+│                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+│                       │      │                  │        │           /A:L 
+│                       │      │                  │        ╰ V3Score : 5.3 
+│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+│                       │      │                           │           /A:L 
+│                       │      │                           ╰ V3Score : 5.3 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-58181 
+│                       │      │                  ├ [1]: https://go.dev/cl/721961 
+│                       │      │                  ├ [2]: https://go.dev/issue/76363 
+│                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/w-oX3UxN
 │                       │      │                  │      cZA 
-│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-58181 
-│                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4134 
+│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-58181 
+│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4134 
+│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-58181 
 │                       │      ├ PublishedDate   : 2025-11-19T21:15:50.85Z 
 │                       │      ╰ LastModifiedDate: 2025-12-11T19:29:24.9Z 
 │                       ├ [4]  ╭ VulnerabilityID : CVE-2025-58183 
@@ -6377,7 +6391,7 @@
 │                       │      │                  ├ [10]: https://groups.google.com/g/golang-announce/c/4Emdl2i
 │                       │      │                  │       Q_bI 
 │                       │      │                  ├ [11]: https://linux.oracle.com/cve/CVE-2025-58183.html 
-│                       │      │                  ├ [12]: https://linux.oracle.com/errata/ELSA-2025-23088.html 
+│                       │      │                  ├ [12]: https://linux.oracle.com/errata/ELSA-2025-23326.html 
 │                       │      │                  ├ [13]: https://nvd.nist.gov/vuln/detail/CVE-2025-58183 
 │                       │      │                  ├ [14]: https://pkg.go.dev/vuln/GO-2025-4014 
 │                       │      │                  ╰ [15]: https://www.cve.org/CVERecord?id=CVE-2025-58183 
@@ -6411,6 +6425,7 @@
 │                       │      │                   runtime. Therefore, a certificate provided by a malicious
 │                       │      │                   actor can result in excessive resource consumption. 
 │                       │      ├ Severity        : HIGH 
+│                       │      ├ CweIDs           ─ [0]: CWE-295 
 │                       │      ├ VendorSeverity   ╭ bitnami: 3 
 │                       │      │                  ╰ redhat : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
@@ -6428,7 +6443,7 @@
 │                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4155 
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
 │                       │      ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
-│                       │      ╰ LastModifiedDate: 2025-12-04T17:15:25.86Z 
+│                       │      ╰ LastModifiedDate: 2025-12-19T18:25:28.283Z 
 │                       ├ [6]  ╭ VulnerabilityID : CVE-2025-47912 
 │                       │      ├ PkgID           : stdlib@v1.24.7 
 │                       │      ├ PkgName         : stdlib 
@@ -6868,6 +6883,7 @@
 │                              │                   subdomain test.example.com does not prevent a leaf
 │                              │                   certificate from claiming the SAN *.example.com. 
 │                              ├ Severity        : MEDIUM 
+│                              ├ CweIDs           ─ [0]: CWE-295 
 │                              ├ VendorSeverity   ╭ bitnami: 2 
 │                              │                  ╰ redhat : 2 
 │                              ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
@@ -6885,7 +6901,7 @@
 │                              │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4175 
 │                              │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61727 
 │                              ├ PublishedDate   : 2025-12-03T20:16:25.607Z 
-│                              ╰ LastModifiedDate: 2025-12-04T17:15:08.283Z 
+│                              ╰ LastModifiedDate: 2025-12-18T20:15:10.957Z 
 ├ [7] ╭ Target         : usr/bin/nerdctl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -8405,22 +8421,28 @@
 │                       │     │                          osystem%3Ago 
 │                       │     ├ Fingerprint     : sha256:47d0dae306ebd4227b0fa735b519b3ffe5689cdf000b60eb920964
 │                       │     │                   3af4e46b0f 
-│                       │     ├ Title           : SSH servers parsing GSSAPI authentication requests do not
-│                       │     │                   validate the ... 
+│                       │     ├ Title           : golang.org/x/crypto/ssh: in golang.org/x/crypto/ssh 
 │                       │     ├ Description     : SSH servers parsing GSSAPI authentication requests do not
 │                       │     │                   validate the number of mechanisms specified in the request,
 │                       │     │                   allowing an attacker to cause unbounded memory consumption.[
 │                       │     │                   m 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-770 
-│                       │     ├ VendorSeverity   ─ ghsa: 2 
-│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L 
-│                       │     │                         ╰ V3Score : 5.3 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/721961 
-│                       │     │                  ├ [1]: https://go.dev/issue/76363 
-│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA 
-│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-58181 
-│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4134 
+│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │     │                  ╰ redhat: 2 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                       │     │                  │        │           A:L 
+│                       │     │                  │        ╰ V3Score : 5.3 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                       │     │                           │           A:L 
+│                       │     │                           ╰ V3Score : 5.3 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-58181 
+│                       │     │                  ├ [1]: https://go.dev/cl/721961 
+│                       │     │                  ├ [2]: https://go.dev/issue/76363 
+│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-58181 
+│                       │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4134 
+│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-58181 
 │                       │     ├ PublishedDate   : 2025-11-19T21:15:50.85Z 
 │                       │     ╰ LastModifiedDate: 2025-12-11T19:29:24.9Z 
 │                       ├ [4] ╭ VulnerabilityID : CVE-2025-61729 
@@ -8451,6 +8473,7 @@
 │                       │     │                    Therefore, a certificate provided by a malicious actor can
 │                       │     │                   result in excessive resource consumption. 
 │                       │     ├ Severity        : HIGH 
+│                       │     ├ CweIDs           ─ [0]: CWE-295 
 │                       │     ├ VendorSeverity   ╭ bitnami: 3 
 │                       │     │                  ╰ redhat : 3 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
@@ -8467,7 +8490,7 @@
 │                       │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4155 
 │                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
 │                       │     ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
-│                       │     ╰ LastModifiedDate: 2025-12-04T17:15:25.86Z 
+│                       │     ╰ LastModifiedDate: 2025-12-19T18:25:28.283Z 
 │                       ╰ [5] ╭ VulnerabilityID : CVE-2025-61727 
 │                             ├ PkgID           : stdlib@v1.25.4 
 │                             ├ PkgName         : stdlib 
@@ -8494,6 +8517,7 @@
 │                             │                   subdomain test.example.com does not prevent a leaf
 │                             │                   certificate from claiming the SAN *.example.com. 
 │                             ├ Severity        : MEDIUM 
+│                             ├ CweIDs           ─ [0]: CWE-295 
 │                             ├ VendorSeverity   ╭ bitnami: 2 
 │                             │                  ╰ redhat : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L
@@ -8510,7 +8534,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4175 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61727 
 │                             ├ PublishedDate   : 2025-12-03T20:16:25.607Z 
-│                             ╰ LastModifiedDate: 2025-12-04T17:15:08.283Z 
+│                             ╰ LastModifiedDate: 2025-12-18T20:15:10.957Z 
 ├ [8] ╭ Target         : usr/bin/skopeo 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -9775,22 +9799,28 @@
 │                       │     │                          osystem%3Ago 
 │                       │     ├ Fingerprint     : sha256:b918d9598594a3a52f610de86d4fa780b8aa70c9da561c9703a922
 │                       │     │                   1c981ffbe2 
-│                       │     ├ Title           : SSH servers parsing GSSAPI authentication requests do not
-│                       │     │                   validate the ... 
+│                       │     ├ Title           : golang.org/x/crypto/ssh: in golang.org/x/crypto/ssh 
 │                       │     ├ Description     : SSH servers parsing GSSAPI authentication requests do not
 │                       │     │                   validate the number of mechanisms specified in the request,
 │                       │     │                   allowing an attacker to cause unbounded memory consumption.[
 │                       │     │                   m 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-770 
-│                       │     ├ VendorSeverity   ─ ghsa: 2 
-│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L 
-│                       │     │                         ╰ V3Score : 5.3 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/721961 
-│                       │     │                  ├ [1]: https://go.dev/issue/76363 
-│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA 
-│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-58181 
-│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4134 
+│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │     │                  ╰ redhat: 2 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                       │     │                  │        │           A:L 
+│                       │     │                  │        ╰ V3Score : 5.3 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                       │     │                           │           A:L 
+│                       │     │                           ╰ V3Score : 5.3 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-58181 
+│                       │     │                  ├ [1]: https://go.dev/cl/721961 
+│                       │     │                  ├ [2]: https://go.dev/issue/76363 
+│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-58181 
+│                       │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4134 
+│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-58181 
 │                       │     ├ PublishedDate   : 2025-11-19T21:15:50.85Z 
 │                       │     ╰ LastModifiedDate: 2025-12-11T19:29:24.9Z 
 │                       ├ [5] ╭ VulnerabilityID : CVE-2025-61729 
@@ -9821,6 +9851,7 @@
 │                       │     │                    Therefore, a certificate provided by a malicious actor can
 │                       │     │                   result in excessive resource consumption. 
 │                       │     ├ Severity        : HIGH 
+│                       │     ├ CweIDs           ─ [0]: CWE-295 
 │                       │     ├ VendorSeverity   ╭ bitnami: 3 
 │                       │     │                  ╰ redhat : 3 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
@@ -9837,7 +9868,7 @@
 │                       │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4155 
 │                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
 │                       │     ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
-│                       │     ╰ LastModifiedDate: 2025-12-04T17:15:25.86Z 
+│                       │     ╰ LastModifiedDate: 2025-12-19T18:25:28.283Z 
 │                       ├ [6] ╭ VulnerabilityID : CVE-2025-58187 
 │                       │     ├ PkgID           : stdlib@v1.25.2 
 │                       │     ├ PkgName         : stdlib 
@@ -9910,6 +9941,7 @@
 │                             │                   subdomain test.example.com does not prevent a leaf
 │                             │                   certificate from claiming the SAN *.example.com. 
 │                             ├ Severity        : MEDIUM 
+│                             ├ CweIDs           ─ [0]: CWE-295 
 │                             ├ VendorSeverity   ╭ bitnami: 2 
 │                             │                  ╰ redhat : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L
@@ -9926,7 +9958,7 @@
 │                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4175 
 │                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61727 
 │                             ├ PublishedDate   : 2025-12-03T20:16:25.607Z 
-│                             ╰ LastModifiedDate: 2025-12-04T17:15:08.283Z 
+│                             ╰ LastModifiedDate: 2025-12-18T20:15:10.957Z 
 ╰ [9] ╭ Target         : usr/bin/syft 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
@@ -12946,22 +12978,28 @@
                         │     │                          osystem%3Ago 
                         │     ├ Fingerprint     : sha256:c8250368c86cc803305a0b420795b82a775395a1af1ff33a7b98ac
                         │     │                   71286da35d 
-                        │     ├ Title           : SSH servers parsing GSSAPI authentication requests do not
-                        │     │                   validate the ... 
+                        │     ├ Title           : golang.org/x/crypto/ssh: in golang.org/x/crypto/ssh 
                         │     ├ Description     : SSH servers parsing GSSAPI authentication requests do not
                         │     │                   validate the number of mechanisms specified in the request,
                         │     │                   allowing an attacker to cause unbounded memory consumption.[
                         │     │                   m 
                         │     ├ Severity        : MEDIUM 
                         │     ├ CweIDs           ─ [0]: CWE-770 
-                        │     ├ VendorSeverity   ─ ghsa: 2 
-                        │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L 
-                        │     │                         ╰ V3Score : 5.3 
-                        │     ├ References       ╭ [0]: https://go.dev/cl/721961 
-                        │     │                  ├ [1]: https://go.dev/issue/76363 
-                        │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA 
-                        │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-58181 
-                        │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2025-4134 
+                        │     ├ VendorSeverity   ╭ ghsa  : 2 
+                        │     │                  ╰ redhat: 2 
+                        │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+                        │     │                  │        │           A:L 
+                        │     │                  │        ╰ V3Score : 5.3 
+                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+                        │     │                           │           A:L 
+                        │     │                           ╰ V3Score : 5.3 
+                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-58181 
+                        │     │                  ├ [1]: https://go.dev/cl/721961 
+                        │     │                  ├ [2]: https://go.dev/issue/76363 
+                        │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA 
+                        │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-58181 
+                        │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4134 
+                        │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-58181 
                         │     ├ PublishedDate   : 2025-11-19T21:15:50.85Z 
                         │     ╰ LastModifiedDate: 2025-12-11T19:29:24.9Z 
                         ├ [6] ╭ VulnerabilityID : CVE-2025-61729 
@@ -12992,6 +13030,7 @@
                         │     │                    Therefore, a certificate provided by a malicious actor can
                         │     │                   result in excessive resource consumption. 
                         │     ├ Severity        : HIGH 
+                        │     ├ CweIDs           ─ [0]: CWE-295 
                         │     ├ VendorSeverity   ╭ bitnami: 3 
                         │     │                  ╰ redhat : 3 
                         │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
@@ -13008,7 +13047,7 @@
                         │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4155 
                         │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
                         │     ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
-                        │     ╰ LastModifiedDate: 2025-12-04T17:15:25.86Z 
+                        │     ╰ LastModifiedDate: 2025-12-19T18:25:28.283Z 
                         ╰ [7] ╭ VulnerabilityID : CVE-2025-61727 
                               ├ PkgID           : stdlib@v1.25.3 
                               ├ PkgName         : stdlib 
@@ -13035,6 +13074,7 @@
                               │                   subdomain test.example.com does not prevent a leaf
                               │                   certificate from claiming the SAN *.example.com. 
                               ├ Severity        : MEDIUM 
+                              ├ CweIDs           ─ [0]: CWE-295 
                               ├ VendorSeverity   ╭ bitnami: 2 
                               │                  ╰ redhat : 2 
                               ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L
@@ -13051,5 +13091,5 @@
                               │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4175 
                               │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61727 
                               ├ PublishedDate   : 2025-12-03T20:16:25.607Z 
-                              ╰ LastModifiedDate: 2025-12-04T17:15:08.283Z 
+                              ╰ LastModifiedDate: 2025-12-18T20:15:10.957Z 
 ````
