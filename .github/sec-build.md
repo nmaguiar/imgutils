@@ -2189,20 +2189,20 @@
 │                       │      │                            │           N/A:H 
 │                       │      │                            ╰ V3Score : 7.5 
 │                       │      ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2025/10/08/1 
-│                       │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:23087 
+│                       │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:23326 
 │                       │      │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-58183 
 │                       │      │                  ├ [3] : https://bugzilla.redhat.com/2407258 
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2407258 
 │                       │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-58183 
-│                       │      │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-23087.html 
-│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23087 
+│                       │      │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-23326.html 
+│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23295 
 │                       │      │                  ├ [8] : https://go.dev/cl/709861 
 │                       │      │                  ├ [9] : https://go.dev/issue/75677 
 │                       │      │                  ├ [10]: https://groups.google.com/g/golang-announce/c/4Emdl2i
 │                       │      │                  │       Q_bI 
 │                       │      │                  ├ [11]: https://linux.oracle.com/cve/CVE-2025-58183.html 
-│                       │      │                  ├ [12]: https://linux.oracle.com/errata/ELSA-2025-23326.html 
+│                       │      │                  ├ [12]: https://linux.oracle.com/errata/ELSA-2025-23948.html 
 │                       │      │                  ├ [13]: https://nvd.nist.gov/vuln/detail/CVE-2025-58183 
 │                       │      │                  ├ [14]: https://pkg.go.dev/vuln/GO-2025-4014 
 │                       │      │                  ╰ [15]: https://www.cve.org/CVERecord?id=CVE-2025-58183 
@@ -2348,7 +2348,7 @@
 │                       │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-22871 
 │                       │      │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-9635.html 
-│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:9635 
+│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:9317 
 │                       │      │                  ├ [8] : https://github.com/roadrunner-server/roadrunner 
 │                       │      │                  ├ [9] : https://github.com/roadrunner-server/roadrunner/commi
 │                       │      │                  │       t/f269279ee87d0b88127741cad1042389af7605fa 
@@ -2413,7 +2413,7 @@
 │                       │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-4673 
 │                       │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2025-15887.html 
-│                       │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2025:15887 
+│                       │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2025:16432 
 │                       │      │                  ├ [7] : https://go.dev/cl/679257 
 │                       │      │                  ├ [8] : https://go.dev/issue/73816 
 │                       │      │                  ├ [9] : https://groups.google.com/g/golang-announce/c/ufZ8WpE
@@ -3752,7 +3752,7 @@
 │                             │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
 │                             │                  │       5-58183 
 │                             │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2025-22011.html 
-│                             │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22011 
+│                             │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22012 
 │                             │                  ├ [12]: https://github.com/opencontainers/runc 
 │                             │                  ├ [13]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.
 │                             │                  │       2/RELEASES.md 
@@ -7503,7 +7503,7 @@
 │                       │     │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
 │                       │     │                  │       5-58183 
 │                       │     │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2025-22011.html 
-│                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22011 
+│                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22012 
 │                       │     │                  ├ [12]: https://github.com/opencontainers/runc 
 │                       │     │                  ├ [13]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.
 │                       │     │                  │       2/RELEASES.md 
@@ -8773,7 +8773,7 @@
 │                       │     │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
 │                       │     │                  │       5-58183 
 │                       │     │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2025-22011.html 
-│                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22011 
+│                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22012 
 │                       │     │                  ├ [12]: https://github.com/opencontainers/runc 
 │                       │     │                  ├ [13]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.
 │                       │     │                  │       2/RELEASES.md 
