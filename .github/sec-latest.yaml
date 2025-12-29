@@ -2053,11 +2053,11 @@
         V3Score: 7
     References:
     - http://www.openwall.com/lists/oss-security/2025/08/06/1
-    - https://access.redhat.com/errata/RHSA-2025:20909
+    - https://access.redhat.com/errata/RHSA-2025:20983
     - https://access.redhat.com/security/cve/CVE-2025-47907
     - https://bugzilla.redhat.com/2387083
     - https://bugzilla.redhat.com/2393152
-    - https://errata.almalinux.org/9/ALSA-2025-20909.html
+    - https://errata.almalinux.org/10/ALSA-2025-20983.html
     - https://go.dev/cl/693735
     - https://go.dev/issue/74831
     - https://groups.google.com/g/golang-announce/c/x5MKroML2yM
@@ -2107,12 +2107,12 @@
         V3Score: 7.5
     References:
     - http://www.openwall.com/lists/oss-security/2025/10/08/1
-    - https://access.redhat.com/errata/RHSA-2025:23326
+    - https://access.redhat.com/errata/RHSA-2025:23948
     - https://access.redhat.com/security/cve/CVE-2025-58183
     - https://bugzilla.redhat.com/2407258
     - https://bugzilla.redhat.com/show_bug.cgi?id=2407258
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58183
-    - https://errata.almalinux.org/9/ALSA-2025-23326.html
+    - https://errata.almalinux.org/8/ALSA-2025-23948.html
     - https://errata.rockylinux.org/RLSA-2025:23326
     - https://go.dev/cl/709861
     - https://go.dev/issue/75677
@@ -2246,12 +2246,12 @@
         V3Score: 5.4
     References:
     - http://www.openwall.com/lists/oss-security/2025/04/04/4
-    - https://access.redhat.com/errata/RHSA-2025:9635
+    - https://access.redhat.com/errata/RHSA-2025:9845
     - https://access.redhat.com/security/cve/CVE-2025-22871
     - https://bugzilla.redhat.com/2358493
     - https://bugzilla.redhat.com/show_bug.cgi?id=2358493
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-22871
-    - https://errata.almalinux.org/9/ALSA-2025-9635.html
+    - https://errata.almalinux.org/8/ALSA-2025-9845.html
     - https://errata.rockylinux.org/RLSA-2025:9635
     - https://github.com/roadrunner-server/roadrunner
     - https://github.com/roadrunner-server/roadrunner/commit/f269279ee87d0b88127741cad1042389af7605fa
@@ -2306,12 +2306,12 @@
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N
         V3Score: 6.8
     References:
-    - https://access.redhat.com/errata/RHSA-2025:15887
+    - https://access.redhat.com/errata/RHSA-2025:10672
     - https://access.redhat.com/security/cve/CVE-2025-4673
     - https://bugzilla.redhat.com/2373305
     - https://bugzilla.redhat.com/show_bug.cgi?id=2373305
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-4673
-    - https://errata.almalinux.org/9/ALSA-2025-15887.html
+    - https://errata.almalinux.org/8/ALSA-2025-10672.html
     - https://errata.rockylinux.org/RLSA-2025:15887
     - https://go.dev/cl/679257
     - https://go.dev/issue/73816
@@ -2363,12 +2363,13 @@
         V3Score: 6.5
     References:
     - http://www.openwall.com/lists/oss-security/2025/08/06/1
-    - https://access.redhat.com/errata/RHSA-2025:22005
+    - https://access.redhat.com/errata/RHSA-2025:22668
     - https://access.redhat.com/security/cve/CVE-2025-47906
     - https://bugzilla.redhat.com/2396546
+    - https://bugzilla.redhat.com/2407258
     - https://bugzilla.redhat.com/show_bug.cgi?id=2396546
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-47906
-    - https://errata.almalinux.org/9/ALSA-2025-22005.html
+    - https://errata.almalinux.org/8/ALSA-2025-22668.html
     - https://errata.rockylinux.org/RLSA-2025:22005
     - https://go.dev/cl/691775
     - https://go.dev/issue/74466
@@ -3587,15 +3588,14 @@
     References:
     - http://github.com/opencontainers/runc/commit/a41366e74080fa9f26a2cd3544e2801449697322
     - http://github.com/opencontainers/runc/commit/fdcc9d3cad2f85954a241ccb910a61aaa1ef47f3
-    - https://access.redhat.com/errata/RHSA-2025:22011
+    - https://access.redhat.com/errata/RHSA-2025:23543
     - https://access.redhat.com/security/cve/CVE-2025-52881
     - https://bugzilla.redhat.com/2404715
-    - https://bugzilla.redhat.com/2407258
     - https://bugzilla.redhat.com/show_bug.cgi?id=2404715
     - https://bugzilla.redhat.com/show_bug.cgi?id=2407258
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-52881
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58183
-    - https://errata.almalinux.org/9/ALSA-2025-22011.html
+    - https://errata.almalinux.org/8/ALSA-2025-23543.html
     - https://errata.rockylinux.org/RLSA-2025:22011
     - https://github.com/opencontainers/runc
     - https://github.com/opencontainers/runc/blob/v1.4.0-rc.2/RELEASES.md
@@ -5994,12 +5994,12 @@
         V3Score: 7.5
     References:
     - http://www.openwall.com/lists/oss-security/2025/10/08/1
-    - https://access.redhat.com/errata/RHSA-2025:23326
+    - https://access.redhat.com/errata/RHSA-2025:23948
     - https://access.redhat.com/security/cve/CVE-2025-58183
     - https://bugzilla.redhat.com/2407258
     - https://bugzilla.redhat.com/show_bug.cgi?id=2407258
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58183
-    - https://errata.almalinux.org/9/ALSA-2025-23326.html
+    - https://errata.almalinux.org/8/ALSA-2025-23948.html
     - https://errata.rockylinux.org/RLSA-2025:23326
     - https://go.dev/cl/709861
     - https://go.dev/issue/75677
@@ -7825,15 +7825,14 @@
     References:
     - http://github.com/opencontainers/runc/commit/a41366e74080fa9f26a2cd3544e2801449697322
     - http://github.com/opencontainers/runc/commit/fdcc9d3cad2f85954a241ccb910a61aaa1ef47f3
-    - https://access.redhat.com/errata/RHSA-2025:22011
+    - https://access.redhat.com/errata/RHSA-2025:23543
     - https://access.redhat.com/security/cve/CVE-2025-52881
     - https://bugzilla.redhat.com/2404715
-    - https://bugzilla.redhat.com/2407258
     - https://bugzilla.redhat.com/show_bug.cgi?id=2404715
     - https://bugzilla.redhat.com/show_bug.cgi?id=2407258
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-52881
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58183
-    - https://errata.almalinux.org/9/ALSA-2025-22011.html
+    - https://errata.almalinux.org/8/ALSA-2025-23543.html
     - https://errata.rockylinux.org/RLSA-2025:22011
     - https://github.com/opencontainers/runc
     - https://github.com/opencontainers/runc/blob/v1.4.0-rc.2/RELEASES.md
@@ -9018,15 +9017,14 @@
     References:
     - http://github.com/opencontainers/runc/commit/a41366e74080fa9f26a2cd3544e2801449697322
     - http://github.com/opencontainers/runc/commit/fdcc9d3cad2f85954a241ccb910a61aaa1ef47f3
-    - https://access.redhat.com/errata/RHSA-2025:22011
+    - https://access.redhat.com/errata/RHSA-2025:23543
     - https://access.redhat.com/security/cve/CVE-2025-52881
     - https://bugzilla.redhat.com/2404715
-    - https://bugzilla.redhat.com/2407258
     - https://bugzilla.redhat.com/show_bug.cgi?id=2404715
     - https://bugzilla.redhat.com/show_bug.cgi?id=2407258
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-52881
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58183
-    - https://errata.almalinux.org/9/ALSA-2025-22011.html
+    - https://errata.almalinux.org/8/ALSA-2025-23543.html
     - https://errata.rockylinux.org/RLSA-2025:22011
     - https://github.com/opencontainers/runc
     - https://github.com/opencontainers/runc/blob/v1.4.0-rc.2/RELEASES.md
@@ -12097,15 +12095,14 @@
     References:
     - http://github.com/opencontainers/runc/commit/a41366e74080fa9f26a2cd3544e2801449697322
     - http://github.com/opencontainers/runc/commit/fdcc9d3cad2f85954a241ccb910a61aaa1ef47f3
-    - https://access.redhat.com/errata/RHSA-2025:22011
+    - https://access.redhat.com/errata/RHSA-2025:23543
     - https://access.redhat.com/security/cve/CVE-2025-52881
     - https://bugzilla.redhat.com/2404715
-    - https://bugzilla.redhat.com/2407258
     - https://bugzilla.redhat.com/show_bug.cgi?id=2404715
     - https://bugzilla.redhat.com/show_bug.cgi?id=2407258
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-52881
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58183
-    - https://errata.almalinux.org/9/ALSA-2025-22011.html
+    - https://errata.almalinux.org/8/ALSA-2025-23543.html
     - https://errata.rockylinux.org/RLSA-2025:22011
     - https://github.com/opencontainers/runc
     - https://github.com/opencontainers/runc/blob/v1.4.0-rc.2/RELEASES.md
