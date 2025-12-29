@@ -994,13 +994,13 @@
                         │      │                            │           N/A:H 
                         │      │                            ╰ V3Score : 7.5 
                         │      ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2025/10/08/1 
-                        │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:23326 
+                        │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:23948 
                         │      │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-58183 
                         │      │                  ├ [3] : https://bugzilla.redhat.com/2407258 
                         │      │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2407258 
                         │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       25-58183 
-                        │      │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-23326.html 
+                        │      │                  ├ [6] : https://errata.almalinux.org/8/ALSA-2025-23948.html 
                         │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23326 
                         │      │                  ├ [8] : https://go.dev/cl/709861 
                         │      │                  ├ [9] : https://go.dev/issue/75677 
