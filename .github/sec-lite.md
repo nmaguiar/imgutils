@@ -1074,7 +1074,7 @@
                         │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       25-58183 
                         │      │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-23326.html 
-                        │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23295 
+                        │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23326 
                         │      │                  ├ [8] : https://go.dev/cl/709861 
                         │      │                  ├ [9] : https://go.dev/issue/75677 
                         │      │                  ├ [10]: https://groups.google.com/g/golang-announce/c/4Emdl2i
@@ -1226,7 +1226,7 @@
                         │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       25-22871 
                         │      │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-9635.html 
-                        │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:9317 
+                        │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:9635 
                         │      │                  ├ [8] : https://github.com/roadrunner-server/roadrunner 
                         │      │                  ├ [9] : https://github.com/roadrunner-server/roadrunner/commi
                         │      │                  │       t/f269279ee87d0b88127741cad1042389af7605fa 
@@ -1291,7 +1291,7 @@
                         │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       25-4673 
                         │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2025-15887.html 
-                        │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2025:16432 
+                        │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2025:15887 
                         │      │                  ├ [7] : https://go.dev/cl/679257 
                         │      │                  ├ [8] : https://go.dev/issue/73816 
                         │      │                  ├ [9] : https://groups.google.com/g/golang-announce/c/ufZ8WpE
