@@ -2177,7 +2177,7 @@
 │                       │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-58183 
 │                       │      │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-23326.html 
-│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23295 
+│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23326 
 │                       │      │                  ├ [8] : https://go.dev/cl/709861 
 │                       │      │                  ├ [9] : https://go.dev/issue/75677 
 │                       │      │                  ├ [10]: https://groups.google.com/g/golang-announce/c/4Emdl2i
@@ -2329,7 +2329,7 @@
 │                       │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-22871 
 │                       │      │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-9635.html 
-│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:9317 
+│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:9635 
 │                       │      │                  ├ [8] : https://github.com/roadrunner-server/roadrunner 
 │                       │      │                  ├ [9] : https://github.com/roadrunner-server/roadrunner/commi
 │                       │      │                  │       t/f269279ee87d0b88127741cad1042389af7605fa 
@@ -2394,7 +2394,7 @@
 │                       │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-4673 
 │                       │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2025-15887.html 
-│                       │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2025:16432 
+│                       │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2025:15887 
 │                       │      │                  ├ [7] : https://go.dev/cl/679257 
 │                       │      │                  ├ [8] : https://go.dev/issue/73816 
 │                       │      │                  ├ [9] : https://groups.google.com/g/golang-announce/c/ufZ8WpE
@@ -3733,7 +3733,7 @@
 │                       │     │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
 │                       │     │                  │       5-58183 
 │                       │     │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2025-22011.html 
-│                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22012 
+│                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22011 
 │                       │     │                  ├ [12]: https://github.com/opencontainers/runc 
 │                       │     │                  ├ [13]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.
 │                       │     │                  │       2/RELEASES.md 
@@ -6232,9 +6232,13 @@
 │                       │      │                  ├ azure      : 2 
 │                       │      │                  ├ cbl-mariner: 2 
 │                       │      │                  ├ ghsa       : 2 
+│                       │      │                  ├ nvd        : 2 
 │                       │      │                  ├ photon     : 2 
 │                       │      │                  ╰ redhat     : 2 
-│                       │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N
+│                       │      ├ CVSS             ╭ nvd    ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N
+│                       │      │                  │        │           /A:H 
+│                       │      │                  │        ╰ V3Score : 5.5 
+│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N
 │                       │      │                           │           /A:H 
 │                       │      │                           ╰ V3Score : 6.5 
 │                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-64329 
@@ -6246,7 +6250,7 @@
 │                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-64329 
 │                       │      │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2025-64329 
 │                       │      ├ PublishedDate   : 2025-11-07T05:16:08.017Z 
-│                       │      ╰ LastModifiedDate: 2025-11-12T16:20:22.257Z 
+│                       │      ╰ LastModifiedDate: 2025-12-31T18:34:48.06Z 
 │                       ├ [2]  ╭ VulnerabilityID : CVE-2025-47914 
 │                       │      ├ PkgID           : golang.org/x/crypto@v0.41.0 
 │                       │      ├ PkgName         : golang.org/x/crypto 
@@ -6389,7 +6393,7 @@
 │                       │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-58183 
 │                       │      │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-23326.html 
-│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23295 
+│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23326 
 │                       │      │                  ├ [8] : https://go.dev/cl/709861 
 │                       │      │                  ├ [9] : https://go.dev/issue/75677 
 │                       │      │                  ├ [10]: https://groups.google.com/g/golang-announce/c/4Emdl2i
@@ -8302,7 +8306,7 @@
 │                       │     │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
 │                       │     │                  │       5-58183 
 │                       │     │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2025-22011.html 
-│                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22012 
+│                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22011 
 │                       │     │                  ├ [12]: https://github.com/opencontainers/runc 
 │                       │     │                  ├ [13]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.
 │                       │     │                  │       2/RELEASES.md 
@@ -9572,7 +9576,7 @@
 │                       │     │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
 │                       │     │                  │       5-58183 
 │                       │     │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2025-22011.html 
-│                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22012 
+│                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22011 
 │                       │     │                  ├ [12]: https://github.com/opencontainers/runc 
 │                       │     │                  ├ [13]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.
 │                       │     │                  │       2/RELEASES.md 
@@ -12731,9 +12735,13 @@
                         │     │                  ├ azure      : 2 
                         │     │                  ├ cbl-mariner: 2 
                         │     │                  ├ ghsa       : 2 
+                        │     │                  ├ nvd        : 2 
                         │     │                  ├ photon     : 2 
                         │     │                  ╰ redhat     : 2 
-                        │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N/
+                        │     ├ CVSS             ╭ nvd    ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/
+                        │     │                  │        │           A:H 
+                        │     │                  │        ╰ V3Score : 5.5 
+                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N/
                         │     │                           │           A:H 
                         │     │                           ╰ V3Score : 6.5 
                         │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-64329 
@@ -12745,7 +12753,7 @@
                         │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-64329 
                         │     │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2025-64329 
                         │     ├ PublishedDate   : 2025-11-07T05:16:08.017Z 
-                        │     ╰ LastModifiedDate: 2025-11-12T16:20:22.257Z 
+                        │     ╰ LastModifiedDate: 2025-12-31T18:34:48.06Z 
                         ├ [2] ╭ VulnerabilityID : CVE-2025-11579 
                         │     ├ PkgID           : github.com/nwaples/rardecode@v1.1.3 
                         │     ├ PkgName         : github.com/nwaples/rardecode 
@@ -12863,7 +12871,7 @@
                         │     │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
                         │     │                  │       5-58183 
                         │     │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2025-22011.html 
-                        │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22012 
+                        │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22011 
                         │     │                  ├ [12]: https://github.com/opencontainers/runc 
                         │     │                  ├ [13]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.
                         │     │                  │       2/RELEASES.md 
