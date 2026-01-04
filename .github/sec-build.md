@@ -1123,7 +1123,7 @@
 │                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-67735 
 │                             │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2025-67735 
 │                             ├ PublishedDate   : 2025-12-16T01:15:52.367Z 
-│                             ╰ LastModifiedDate: 2025-12-16T14:10:11.3Z 
+│                             ╰ LastModifiedDate: 2026-01-02T18:50:23.313Z 
 ├ [2] ╭ Target         : usr/bin/crictl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
