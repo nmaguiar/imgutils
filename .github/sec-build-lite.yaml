@@ -998,6 +998,7 @@
     CweIDs:
     - CWE-295
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       redhat: 3
     CVSS:
@@ -1473,6 +1474,7 @@
     CweIDs:
     - CWE-295
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       redhat: 2
     CVSS:
