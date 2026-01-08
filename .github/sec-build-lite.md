@@ -1042,7 +1042,8 @@
                         │      │                   actor can result in excessive resource consumption. 
                         │      ├ Severity        : HIGH 
                         │      ├ CweIDs           ─ [0]: CWE-295 
-                        │      ├ VendorSeverity   ╭ bitnami: 3 
+                        │      ├ VendorSeverity   ╭ amazon : 3 
+                        │      │                  ├ bitnami: 3 
                         │      │                  ╰ redhat : 3 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
                         │      │                  │         │           N/A:H 
@@ -1544,7 +1545,8 @@
                                │                   certificate from claiming the SAN *.example.com. 
                                ├ Severity        : MEDIUM 
                                ├ CweIDs           ─ [0]: CWE-295 
-                               ├ VendorSeverity   ╭ bitnami: 2 
+                               ├ VendorSeverity   ╭ amazon : 3 
+                               │                  ├ bitnami: 2 
                                │                  ╰ redhat : 2 
                                ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
                                │                  │         │           L/A:N 
