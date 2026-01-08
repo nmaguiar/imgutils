@@ -2218,7 +2218,8 @@
 │                       │      │                   actor can result in excessive resource consumption. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-295 
-│                       │      ├ VendorSeverity   ╭ bitnami: 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      │                  ├ bitnami: 3 
 │                       │      │                  ╰ redhat : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
@@ -2905,7 +2906,8 @@
 │                              │                   certificate from claiming the SAN *.example.com. 
 │                              ├ Severity        : MEDIUM 
 │                              ├ CweIDs           ─ [0]: CWE-295 
-│                              ├ VendorSeverity   ╭ bitnami: 2 
+│                              ├ VendorSeverity   ╭ amazon : 3 
+│                              │                  ├ bitnami: 2 
 │                              │                  ╰ redhat : 2 
 │                              ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
 │                              │                  │         │           L/A:N 
@@ -3820,7 +3822,8 @@
 │                       │     │                   result in excessive resource consumption. 
 │                       │     ├ Severity        : HIGH 
 │                       │     ├ CweIDs           ─ [0]: CWE-295 
-│                       │     ├ VendorSeverity   ╭ bitnami: 3 
+│                       │     ├ VendorSeverity   ╭ amazon : 3 
+│                       │     │                  ├ bitnami: 3 
 │                       │     │                  ╰ redhat : 3 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │     │                  │         │           /A:H 
@@ -3864,7 +3867,8 @@
 │                             │                   certificate from claiming the SAN *.example.com. 
 │                             ├ Severity        : MEDIUM 
 │                             ├ CweIDs           ─ [0]: CWE-295 
-│                             ├ VendorSeverity   ╭ bitnami: 2 
+│                             ├ VendorSeverity   ╭ amazon : 3 
+│                             │                  ├ bitnami: 2 
 │                             │                  ╰ redhat : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L
 │                             │                  │         │           /A:N 
@@ -4741,7 +4745,8 @@
 │                       │     │                   result in excessive resource consumption. 
 │                       │     ├ Severity        : HIGH 
 │                       │     ├ CweIDs           ─ [0]: CWE-295 
-│                       │     ├ VendorSeverity   ╭ bitnami: 3 
+│                       │     ├ VendorSeverity   ╭ amazon : 3 
+│                       │     │                  ├ bitnami: 3 
 │                       │     │                  ╰ redhat : 3 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │     │                  │         │           /A:H 
@@ -4831,7 +4836,8 @@
 │                             │                   certificate from claiming the SAN *.example.com. 
 │                             ├ Severity        : MEDIUM 
 │                             ├ CweIDs           ─ [0]: CWE-295 
-│                             ├ VendorSeverity   ╭ bitnami: 2 
+│                             ├ VendorSeverity   ╭ amazon : 3 
+│                             │                  ├ bitnami: 2 
 │                             │                  ╰ redhat : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L
 │                             │                  │         │           /A:N 
@@ -4890,7 +4896,8 @@
 │                       │     │                   result in excessive resource consumption. 
 │                       │     ├ Severity        : HIGH 
 │                       │     ├ CweIDs           ─ [0]: CWE-295 
-│                       │     ├ VendorSeverity   ╭ bitnami: 3 
+│                       │     ├ VendorSeverity   ╭ amazon : 3 
+│                       │     │                  ├ bitnami: 3 
 │                       │     │                  ╰ redhat : 3 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │     │                  │         │           /A:H 
@@ -4934,7 +4941,8 @@
 │                             │                   certificate from claiming the SAN *.example.com. 
 │                             ├ Severity        : MEDIUM 
 │                             ├ CweIDs           ─ [0]: CWE-295 
-│                             ├ VendorSeverity   ╭ bitnami: 2 
+│                             ├ VendorSeverity   ╭ amazon : 3 
+│                             │                  ├ bitnami: 2 
 │                             │                  ╰ redhat : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L
 │                             │                  │         │           /A:N 
@@ -6279,7 +6287,8 @@
 │                       │      │                   of bounds read. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-125 
-│                       │      ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │      ├ VendorSeverity   ╭ amazon: 3 
+│                       │      │                  ├ ghsa  : 2 
 │                       │      │                  ╰ redhat: 2 
 │                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │      │                  │        │           /A:L 
@@ -6325,7 +6334,8 @@
 │                       │      │                   consumption. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │      ├ VendorSeverity   ╭ amazon: 3 
+│                       │      │                  ├ ghsa  : 2 
 │                       │      │                  ╰ redhat: 2 
 │                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │      │                  │        │           /A:L 
@@ -6434,7 +6444,8 @@
 │                       │      │                   actor can result in excessive resource consumption. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-295 
-│                       │      ├ VendorSeverity   ╭ bitnami: 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      │                  ├ bitnami: 3 
 │                       │      │                  ╰ redhat : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
@@ -6892,7 +6903,8 @@
 │                              │                   certificate from claiming the SAN *.example.com. 
 │                              ├ Severity        : MEDIUM 
 │                              ├ CweIDs           ─ [0]: CWE-295 
-│                              ├ VendorSeverity   ╭ bitnami: 2 
+│                              ├ VendorSeverity   ╭ amazon : 3 
+│                              │                  ├ bitnami: 2 
 │                              │                  ╰ redhat : 2 
 │                              ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
 │                              │                  │         │           L/A:N 
@@ -8391,7 +8403,8 @@
 │                       │     │                    read. 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-125 
-│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │     ├ VendorSeverity   ╭ amazon: 3 
+│                       │     │                  ├ ghsa  : 2 
 │                       │     │                  ╰ redhat: 2 
 │                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
 │                       │     │                  │        │           A:L 
@@ -8436,7 +8449,8 @@
 │                       │     │                   m 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-770 
-│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │     ├ VendorSeverity   ╭ amazon: 3 
+│                       │     │                  ├ ghsa  : 2 
 │                       │     │                  ╰ redhat: 2 
 │                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
 │                       │     │                  │        │           A:L 
@@ -8482,7 +8496,8 @@
 │                       │     │                   result in excessive resource consumption. 
 │                       │     ├ Severity        : HIGH 
 │                       │     ├ CweIDs           ─ [0]: CWE-295 
-│                       │     ├ VendorSeverity   ╭ bitnami: 3 
+│                       │     ├ VendorSeverity   ╭ amazon : 3 
+│                       │     │                  ├ bitnami: 3 
 │                       │     │                  ╰ redhat : 3 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │     │                  │         │           /A:H 
@@ -8526,7 +8541,8 @@
 │                             │                   certificate from claiming the SAN *.example.com. 
 │                             ├ Severity        : MEDIUM 
 │                             ├ CweIDs           ─ [0]: CWE-295 
-│                             ├ VendorSeverity   ╭ bitnami: 2 
+│                             ├ VendorSeverity   ╭ amazon : 3 
+│                             │                  ├ bitnami: 2 
 │                             │                  ╰ redhat : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L
 │                             │                  │         │           /A:N 
@@ -9769,7 +9785,8 @@
 │                       │     │                    read. 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-125 
-│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │     ├ VendorSeverity   ╭ amazon: 3 
+│                       │     │                  ├ ghsa  : 2 
 │                       │     │                  ╰ redhat: 2 
 │                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
 │                       │     │                  │        │           A:L 
@@ -9814,7 +9831,8 @@
 │                       │     │                   m 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-770 
-│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │     ├ VendorSeverity   ╭ amazon: 3 
+│                       │     │                  ├ ghsa  : 2 
 │                       │     │                  ╰ redhat: 2 
 │                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
 │                       │     │                  │        │           A:L 
@@ -9860,7 +9878,8 @@
 │                       │     │                   result in excessive resource consumption. 
 │                       │     ├ Severity        : HIGH 
 │                       │     ├ CweIDs           ─ [0]: CWE-295 
-│                       │     ├ VendorSeverity   ╭ bitnami: 3 
+│                       │     ├ VendorSeverity   ╭ amazon : 3 
+│                       │     │                  ├ bitnami: 3 
 │                       │     │                  ╰ redhat : 3 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │     │                  │         │           /A:H 
@@ -9950,7 +9969,8 @@
 │                             │                   certificate from claiming the SAN *.example.com. 
 │                             ├ Severity        : MEDIUM 
 │                             ├ CweIDs           ─ [0]: CWE-295 
-│                             ├ VendorSeverity   ╭ bitnami: 2 
+│                             ├ VendorSeverity   ╭ amazon : 3 
+│                             │                  ├ bitnami: 2 
 │                             │                  ╰ redhat : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L
 │                             │                  │         │           /A:N 
@@ -12956,7 +12976,8 @@
                         │     │                    read. 
                         │     ├ Severity        : MEDIUM 
                         │     ├ CweIDs           ─ [0]: CWE-125 
-                        │     ├ VendorSeverity   ╭ ghsa  : 2 
+                        │     ├ VendorSeverity   ╭ amazon: 3 
+                        │     │                  ├ ghsa  : 2 
                         │     │                  ╰ redhat: 2 
                         │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
                         │     │                  │        │           A:L 
@@ -13001,7 +13022,8 @@
                         │     │                   m 
                         │     ├ Severity        : MEDIUM 
                         │     ├ CweIDs           ─ [0]: CWE-770 
-                        │     ├ VendorSeverity   ╭ ghsa  : 2 
+                        │     ├ VendorSeverity   ╭ amazon: 3 
+                        │     │                  ├ ghsa  : 2 
                         │     │                  ╰ redhat: 2 
                         │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
                         │     │                  │        │           A:L 
@@ -13047,7 +13069,8 @@
                         │     │                   result in excessive resource consumption. 
                         │     ├ Severity        : HIGH 
                         │     ├ CweIDs           ─ [0]: CWE-295 
-                        │     ├ VendorSeverity   ╭ bitnami: 3 
+                        │     ├ VendorSeverity   ╭ amazon : 3 
+                        │     │                  ├ bitnami: 3 
                         │     │                  ╰ redhat : 3 
                         │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
                         │     │                  │         │           /A:H 
@@ -13091,7 +13114,8 @@
                               │                   certificate from claiming the SAN *.example.com. 
                               ├ Severity        : MEDIUM 
                               ├ CweIDs           ─ [0]: CWE-295 
-                              ├ VendorSeverity   ╭ bitnami: 2 
+                              ├ VendorSeverity   ╭ amazon : 3 
+                              │                  ├ bitnami: 2 
                               │                  ╰ redhat : 2 
                               ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L
                               │                  │         │           /A:N 
