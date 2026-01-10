@@ -945,7 +945,7 @@
                         │      │                   This only affected certificate chains which contain policy
                         │      │                   graphs, which are rather uncommon. 
                         │      ├ Severity        : HIGH 
-                        │      ├ VendorSeverity   ╭ amazon     : 2 
+                        │      ├ VendorSeverity   ╭ amazon     : 3 
                         │      │                  ├ azure      : 3 
                         │      │                  ├ bitnami    : 3 
                         │      │                  ├ cbl-mariner: 3 
@@ -1271,7 +1271,7 @@
                         │      │                   information. 
                         │      ├ Severity        : MEDIUM 
                         │      ├ VendorSeverity   ╭ alma       : 2 
-                        │      │                  ├ amazon     : 2 
+                        │      │                  ├ amazon     : 3 
                         │      │                  ├ azure      : 2 
                         │      │                  ├ bitnami    : 2 
                         │      │                  ├ cbl-mariner: 2 
