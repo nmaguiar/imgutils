@@ -8091,7 +8091,8 @@
 │                       │     ├ CweIDs           ─ [0]: CWE-770 
 │                       │     ├ VendorSeverity   ╭ amazon: 3 
 │                       │     │                  ├ ghsa  : 2 
-│                       │     │                  ╰ redhat: 2 
+│                       │     │                  ├ redhat: 2 
+│                       │     │                  ╰ ubuntu: 2 
 │                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
 │                       │     │                  │        │           A:L 
 │                       │     │                  │        ╰ V3Score : 5.3 
@@ -8099,12 +8100,17 @@
 │                       │     │                           │           A:L 
 │                       │     │                           ╰ V3Score : 5.3 
 │                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-58181 
-│                       │     │                  ├ [1]: https://go.dev/cl/721961 
-│                       │     │                  ├ [2]: https://go.dev/issue/76363 
-│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA 
-│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-58181 
-│                       │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4134 
-│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-58181 
+│                       │     │                  ├ [1]: https://github.com/golang/crypto/commit/e79546e28b85ea5
+│                       │     │                  │      3dd37afe1c4102746ef553b9c 
+│                       │     │                  ├ [2]: https://github.com/golang/go/issues/76363 
+│                       │     │                  ├ [3]: https://go.dev/cl/721961 
+│                       │     │                  ├ [4]: https://go.dev/issue/76363 
+│                       │     │                  ├ [5]: https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA 
+│                       │     │                  ├ [6]: https://groups.google.com/g/golang-announce/c/w-oX3UxNc
+│                       │     │                  │      ZA?pli=1 
+│                       │     │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2025-58181 
+│                       │     │                  ├ [8]: https://pkg.go.dev/vuln/GO-2025-4134 
+│                       │     │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2025-58181 
 │                       │     ├ PublishedDate   : 2025-11-19T21:15:50.85Z 
 │                       │     ╰ LastModifiedDate: 2025-12-11T19:29:24.9Z 
 │                       ├ [5] ╭ VulnerabilityID : CVE-2025-61729 
