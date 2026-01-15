@@ -1104,9 +1104,8 @@
                         │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
                         │      ├ Fingerprint     : sha256:6ea01e26b4d1d4aae805931a0b0e5387eb5a801db4d7b006fed89
                         │      │                   100163f36b8 
-                        │      ├ Title           : crypto/x509: Excessive resource consumption when printing
-                        │      │                   error string for host certificate validation in
-                        │      │                   crypto/x509 
+                        │      ├ Title           : crypto/x509: golang: Denial of Service due to excessive
+                        │      │                   resource consumption via crafted certificate 
                         │      ├ Description     : Within HostnameError.Error(), when constructing an error
                         │      │                   string, there is no limit to the number of hosts that will
                         │      │                   be printed out. Furthermore, the error string is constructed
