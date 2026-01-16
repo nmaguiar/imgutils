@@ -2116,13 +2116,13 @@
 │                       │      │                            │           N/A:H 
 │                       │      │                            ╰ V3Score : 7.5 
 │                       │      ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2025/10/08/1 
-│                       │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:23326 
+│                       │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:23295 
 │                       │      │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-58183 
 │                       │      │                  ├ [3] : https://bugzilla.redhat.com/2407258 
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2407258 
 │                       │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-58183 
-│                       │      │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-23326.html 
+│                       │      │                  ├ [6] : https://errata.almalinux.org/10/ALSA-2025-23295.html 
 │                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23326 
 │                       │      │                  ├ [8] : https://go.dev/cl/709861 
 │                       │      │                  ├ [9] : https://go.dev/issue/75677 
@@ -7836,7 +7836,7 @@
 │                       │     │                  │       080fa9f26a2cd3544e2801449697322 
 │                       │     │                  ├ [1] : http://github.com/opencontainers/runc/commit/fdcc9d3ca
 │                       │     │                  │       d2f85954a241ccb910a61aaa1ef47f3 
-│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2025:22011 
+│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2025:22012 
 │                       │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2025-52881 
 │                       │     │                  ├ [4] : https://bugzilla.redhat.com/2404715 
 │                       │     │                  ├ [5] : https://bugzilla.redhat.com/2407258 
@@ -7846,7 +7846,7 @@
 │                       │     │                  │       5-52881 
 │                       │     │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
 │                       │     │                  │       5-58183 
-│                       │     │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2025-22011.html 
+│                       │     │                  ├ [10]: https://errata.almalinux.org/10/ALSA-2025-22012.html 
 │                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22011 
 │                       │     │                  ├ [12]: https://github.com/opencontainers/runc 
 │                       │     │                  ├ [13]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.
