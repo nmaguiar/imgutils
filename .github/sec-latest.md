@@ -1053,58 +1053,118 @@
 │     │                         │            ╰ DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc01974613d
 │     │                         │                      0880d65f9f80b20 
 │     │                         ╰ FilePath  : openaf/Kube/snakeyaml-2.4.jar 
-│     ╰ Vulnerabilities ─ [0] ╭ VulnerabilityID : CVE-2025-67735 
-│                             ├ PkgName         : io.netty:netty-codec-http 
-│                             ├ PkgPath         : openaf/Kube/netty-codec-http-4.1.127.Final.jar 
-│                             ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-codec-http@4.1.127.Final 
-│                             │                  ╰ UID : 2b53ad0f7c29acdc 
-│                             ├ InstalledVersion: 4.1.127.Final 
-│                             ├ FixedVersion    : 4.2.8.Final, 4.1.129.Final 
+│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2025-67735 
+│                       │     ├ PkgName         : io.netty:netty-codec-http 
+│                       │     ├ PkgPath         : openaf/Kube/netty-codec-http-4.1.127.Final.jar 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-codec-http@4.1.127.Final 
+│                       │     │                  ╰ UID : 2b53ad0f7c29acdc 
+│                       │     ├ InstalledVersion: 4.1.127.Final 
+│                       │     ├ FixedVersion    : 4.2.8.Final, 4.1.129.Final 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65ef
+│                       │     │                  │         96fa5ed92ae53b559a7 
+│                       │     │                  ╰ DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc01974
+│                       │     │                            613d0880d65f9f80b20 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-67735 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Maven 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Amaven 
+│                       │     ├ Fingerprint     : sha256:97f1d2d4ba6074bf0481cd858ae24cc0635b27f4a13990cbe10b54
+│                       │     │                   e13553edcd 
+│                       │     ├ Title           : netty-codec-http: Netty (netty-codec-http): Request Smuggling
+│                       │     │                    via CRLF Injection 
+│                       │     ├ Description     : Netty is an asynchronous, event-driven network application
+│                       │     │                   framework. In versions prior to 4.1.129.Final and
+│                       │     │                   4.2.8.Final, the
+│                       │     │                   `io.netty.handler.codec.http.HttpRequestEncoder` has a CRLF
+│                       │     │                   injection with the request URI when constructing a request.
+│                       │     │                   This leads to request smuggling when `HttpRequestEncoder` is
+│                       │     │                   used without proper sanitization of the URI. Any application
+│                       │     │                   / framework using `HttpRequestEncoder` can be subject to be
+│                       │     │                   abused to perform request smuggling using CRLF injection.
+│                       │     │                   Versions 4.1.129.Final and 4.2.8.Final fix the issue. 
+│                       │     ├ Severity        : MEDIUM 
+│                       │     ├ CweIDs           ─ [0]: CWE-93 
+│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │     │                  ╰ redhat: 2 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/
+│                       │     │                  │        │           A:N 
+│                       │     │                  │        ╰ V3Score : 6.5 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/
+│                       │     │                           │           A:N 
+│                       │     │                           ╰ V3Score : 6.5 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-67735 
+│                       │     │                  ├ [1]: https://github.com/netty/netty 
+│                       │     │                  ├ [2]: https://github.com/netty/netty/commit/77e81f1e5944d98b3
+│                       │     │                  │      acf887d3aa443b252752e94 
+│                       │     │                  ├ [3]: https://github.com/netty/netty/security/advisories/GHSA
+│                       │     │                  │      -84h7-rjj3-6jx4 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-67735 
+│                       │     │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2025-67735 
+│                       │     ├ PublishedDate   : 2025-12-16T01:15:52.367Z 
+│                       │     ╰ LastModifiedDate: 2026-01-02T18:50:23.313Z 
+│                       ╰ [1] ╭ VulnerabilityID : CVE-2026-1002 
+│                             ├ PkgName         : io.vertx:vertx-core 
+│                             ├ PkgPath         : openaf/Kube/vertx-core-4.5.14.jar 
+│                             ├ PkgIdentifier    ╭ PURL: pkg:maven/io.vertx/vertx-core@4.5.14 
+│                             │                  ╰ UID : 43b6efb3a5bb2eb4 
+│                             ├ InstalledVersion: 4.5.14 
+│                             ├ FixedVersion    : 4.5.24, 5.0.7 
 │                             ├ Status          : fixed 
 │                             ├ Layer            ╭ Digest: sha256:e39c381397a4637e11bc5af23179b8de6a78cf4fe65ef
 │                             │                  │         96fa5ed92ae53b559a7 
 │                             │                  ╰ DiffID: sha256:ec54c7c92ba471731fd2a99f8dd9d51c8a06effc01974
 │                             │                            613d0880d65f9f80b20 
 │                             ├ SeveritySource  : ghsa 
-│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-67735 
+│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-1002 
 │                             ├ DataSource       ╭ ID  : ghsa 
 │                             │                  ├ Name: GitHub Security Advisory Maven 
 │                             │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
 │                             │                          osystem%3Amaven 
-│                             ├ Fingerprint     : sha256:97f1d2d4ba6074bf0481cd858ae24cc0635b27f4a13990cbe10b54
-│                             │                   e13553edcd 
-│                             ├ Title           : netty-codec-http: Netty (netty-codec-http): Request Smuggling
-│                             │                    via CRLF Injection 
-│                             ├ Description     : Netty is an asynchronous, event-driven network application
-│                             │                   framework. In versions prior to 4.1.129.Final and
-│                             │                   4.2.8.Final, the
-│                             │                   `io.netty.handler.codec.http.HttpRequestEncoder` has a CRLF
-│                             │                   injection with the request URI when constructing a request.
-│                             │                   This leads to request smuggling when `HttpRequestEncoder` is
-│                             │                   used without proper sanitization of the URI. Any application
-│                             │                   / framework using `HttpRequestEncoder` can be subject to be
-│                             │                   abused to perform request smuggling using CRLF injection.
-│                             │                   Versions 4.1.129.Final and 4.2.8.Final fix the issue. 
+│                             ├ Fingerprint     : sha256:bb2287cfe2cc85d24fab4e5f38736a19915166f06f13fe6dc68b3b
+│                             │                   84a760d505 
+│                             ├ Title           : io.vertx/vertx-core: static handler component cache can be
+│                             │                   manipulated to deny the access to static files 
+│                             ├ Description     : The Vert.x Web static handler component cache can be
+│                             │                   manipulated to deny the access to static files served by the
+│                             │                   handler using specifically crafted request URI.
+│                             │                   
+│                             │                   The issue comes from an improper implementation of the C.
+│                             │                   rule of section 5.2.4 of RFC3986 and is fixed in Vert.x Core
+│                             │                   component (used by Vert.x Web): 
+│                             │                   https://github.com/eclipse-vertx/vert.x/pull/5895 
+│                             │                   Steps to reproduce
+│                             │                   Given a file served by the static handler, craft an URI that
+│                             │                   introduces a string like bar%2F..%2F after the last / char to
+│                             │                    deny the access to the URI with an HTTP 404 response. For
+│                             │                   example https://example.com/foo/index.html can be denied with
+│                             │                    https://example.com/foo/bar%2F..%2Findex.html
+│                             │                   Mitgation
+│                             │                   Disabling Static Handler cache fixes the issue.
+│                             │                   StaticHandler staticHandler =
+│                             │                   StaticHandler.create().setCachingEnabled(false); 
 │                             ├ Severity        : MEDIUM 
-│                             ├ CweIDs           ─ [0]: CWE-93 
+│                             ├ CweIDs           ─ [0]: CWE-444 
 │                             ├ VendorSeverity   ╭ ghsa  : 2 
 │                             │                  ╰ redhat: 2 
-│                             ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/
-│                             │                  │        │           A:N 
-│                             │                  │        ╰ V3Score : 6.5 
-│                             │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/
-│                             │                           │           A:N 
-│                             │                           ╰ V3Score : 6.5 
-│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-67735 
-│                             │                  ├ [1]: https://github.com/netty/netty 
-│                             │                  ├ [2]: https://github.com/netty/netty/commit/77e81f1e5944d98b3
-│                             │                  │      acf887d3aa443b252752e94 
-│                             │                  ├ [3]: https://github.com/netty/netty/security/advisories/GHSA
-│                             │                  │      -84h7-rjj3-6jx4 
-│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-67735 
-│                             │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2025-67735 
-│                             ├ PublishedDate   : 2025-12-16T01:15:52.367Z 
-│                             ╰ LastModifiedDate: 2026-01-02T18:50:23.313Z 
+│                             ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                             │                           │           A:L 
+│                             │                           ╰ V3Score : 5.3 
+│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-1002 
+│                             │                  ├ [1]: https://github.com/eclipse-vertx/vert.x 
+│                             │                  ├ [2]: https://github.com/eclipse-vertx/vert.x/commit/5b67f5d1
+│                             │                  │      7788b2483d277c760f3f8154f9b2fed0 
+│                             │                  ├ [3]: https://github.com/eclipse-vertx/vert.x/commit/d007e7b4
+│                             │                  │      18543eb1567fe95cf20f5450a5c2d047 
+│                             │                  ├ [4]: https://github.com/eclipse-vertx/vert.x/pull/5894 
+│                             │                  ├ [5]: https://github.com/eclipse-vertx/vert.x/pull/5895 
+│                             │                  ├ [6]: https://github.com/vert-x3/vertx-web/issues/2836 
+│                             │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2026-1002 
+│                             │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-1002 
+│                             ├ PublishedDate   : 2026-01-15T21:16:05.64Z 
+│                             ╰ LastModifiedDate: 2026-01-16T15:55:12.257Z 
 ├ [2] ╭ Target         : usr/bin/crictl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -12864,10 +12924,14 @@
                         │     ├ Severity        : MEDIUM 
                         │     ├ CweIDs           ─ [0]: CWE-789 
                         │     ├ VendorSeverity   ╭ ghsa  : 2 
+                        │     │                  ├ nvd   : 2 
                         │     │                  ╰ redhat: 2 
                         │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
                         │     │                  │        │           A:L 
                         │     │                  │        ╰ V3Score : 5.3 
+                        │     │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/
+                        │     │                  │        │           A:H 
+                        │     │                  │        ╰ V3Score : 6.5 
                         │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
                         │     │                           │           A:L 
                         │     │                           ╰ V3Score : 5.3 
@@ -12879,7 +12943,7 @@
                         │     │                  ├ [4]: https://pkg.go.dev/vuln/GO-2025-4020 
                         │     │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2025-11579 
                         │     ├ PublishedDate   : 2025-10-10T12:15:37.743Z 
-                        │     ╰ LastModifiedDate: 2025-12-02T10:16:00.587Z 
+                        │     ╰ LastModifiedDate: 2026-01-16T20:56:26.367Z 
                         ├ [3] ╭ VulnerabilityID : CVE-2025-52881 
                         │     ├ PkgID           : github.com/opencontainers/selinux@v1.11.0 
                         │     ├ PkgName         : github.com/opencontainers/selinux 
