@@ -2168,7 +2168,7 @@
 │                       │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-58183 
 │                       │      │                  ├ [6] : https://errata.almalinux.org/10/ALSA-2025-23295.html 
-│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23326 
+│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23295 
 │                       │      │                  ├ [8] : https://go.dev/cl/709861 
 │                       │      │                  ├ [9] : https://go.dev/issue/75677 
 │                       │      │                  ├ [10]: https://groups.google.com/g/golang-announce/c/4Emdl2i
@@ -7791,7 +7791,7 @@
 │                       │     │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
 │                       │     │                  │       5-58183 
 │                       │     │                  ├ [10]: https://errata.almalinux.org/10/ALSA-2025-22012.html 
-│                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22011 
+│                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22012 
 │                       │     │                  ├ [12]: https://github.com/opencontainers/runc 
 │                       │     │                  ├ [13]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.
 │                       │     │                  │       2/RELEASES.md 
