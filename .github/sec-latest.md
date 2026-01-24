@@ -2161,14 +2161,14 @@
 │                       │      │                            │           N/A:H 
 │                       │      │                            ╰ V3Score : 7.5 
 │                       │      ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2025/10/08/1 
-│                       │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:23295 
+│                       │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:23326 
 │                       │      │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-58183 
 │                       │      │                  ├ [3] : https://bugzilla.redhat.com/2407258 
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2407258 
 │                       │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-58183 
-│                       │      │                  ├ [6] : https://errata.almalinux.org/10/ALSA-2025-23295.html 
-│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23295 
+│                       │      │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-23326.html 
+│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23326 
 │                       │      │                  ├ [8] : https://go.dev/cl/709861 
 │                       │      │                  ├ [9] : https://go.dev/issue/75677 
 │                       │      │                  ├ [10]: https://groups.google.com/g/golang-announce/c/4Emdl2i
@@ -2208,9 +2208,10 @@
 │                       │      │                   actor can result in excessive resource consumption. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-295 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
-│                       │      │                  ├ bitnami: 3 
-│                       │      │                  ╰ redhat : 3 
+│                       │      ├ VendorSeverity   ╭ amazon     : 3 
+│                       │      │                  ├ bitnami    : 3 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ redhat     : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
 │                       │      │                  │         ╰ V3Score : 7.5 
@@ -2222,9 +2223,11 @@
 │                       │      │                  ├ [2]: https://go.dev/issue/76445 
 │                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/8FJoBkPd
 │                       │      │                  │      dm4 
-│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-61729 
-│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4155 
-│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
+│                       │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2025-61729.html 
+│                       │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-0923.html 
+│                       │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2025-61729 
+│                       │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2025-4155 
+│                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
 │                       │      ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
 │                       │      ╰ LastModifiedDate: 2025-12-19T18:25:28.283Z 
 │                       ├ [2]  ╭ VulnerabilityID : CVE-2025-47910 
@@ -7780,7 +7783,7 @@
 │                       │     │                  │       080fa9f26a2cd3544e2801449697322 
 │                       │     │                  ├ [1] : http://github.com/opencontainers/runc/commit/fdcc9d3ca
 │                       │     │                  │       d2f85954a241ccb910a61aaa1ef47f3 
-│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2025:22012 
+│                       │     │                  ├ [2] : https://access.redhat.com/errata/RHSA-2025:22011 
 │                       │     │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2025-52881 
 │                       │     │                  ├ [4] : https://bugzilla.redhat.com/2404715 
 │                       │     │                  ├ [5] : https://bugzilla.redhat.com/2407258 
@@ -7790,8 +7793,8 @@
 │                       │     │                  │       5-52881 
 │                       │     │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
 │                       │     │                  │       5-58183 
-│                       │     │                  ├ [10]: https://errata.almalinux.org/10/ALSA-2025-22012.html 
-│                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22012 
+│                       │     │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2025-22011.html 
+│                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22011 
 │                       │     │                  ├ [12]: https://github.com/opencontainers/runc 
 │                       │     │                  ├ [13]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.
 │                       │     │                  │       2/RELEASES.md 
@@ -7923,8 +7926,8 @@
 │                       │     │                          osystem%3Ago 
 │                       │     ├ Fingerprint     : sha256:b21494a52873deea659d0638ba6f4ab906f23460fc1153fd88637d
 │                       │     │                   03ed94dcdc 
-│                       │     ├ Title           : Fulcio is a certificate authority for issuing code signing
-│                       │     │                   certificate ... 
+│                       │     ├ Title           : fulcio: Fulcio: Server-Side Request Forgery (SSRF) via
+│                       │     │                   unanchored regex in MetaIssuer URL validation 
 │                       │     ├ Description     : Fulcio is a certificate authority for issuing code signing
 │                       │     │                   certificates for an OpenID Connect (OIDC) identity. Prior to
 │                       │     │                   1.8.5, Fulcio's metaRegex() function uses unanchored regex,
@@ -7937,18 +7940,80 @@
 │                       │     │                   Blind SSRF. This vulnerability is fixed in 1.8.5. 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-918 
-│                       │     ├ VendorSeverity   ─ ghsa: 2 
-│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/A:N 
-│                       │     │                         ╰ V3Score : 5.8 
-│                       │     ├ References       ╭ [0]: https://github.com/sigstore/fulcio 
-│                       │     │                  ├ [1]: https://github.com/sigstore/fulcio/commit/eaae2f2be56df
+│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │     │                  ╰ redhat: 2 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/
+│                       │     │                  │        │           A:N 
+│                       │     │                  │        ╰ V3Score : 5.8 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/
+│                       │     │                           │           A:N 
+│                       │     │                           ╰ V3Score : 5.8 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-22772 
+│                       │     │                  ├ [1]: https://github.com/sigstore/fulcio 
+│                       │     │                  ├ [2]: https://github.com/sigstore/fulcio/commit/eaae2f2be56df
 │                       │     │                  │      9dea5f9b439ec81bedae4c0978d 
-│                       │     │                  ├ [2]: https://github.com/sigstore/fulcio/security/advisories/
+│                       │     │                  ├ [3]: https://github.com/sigstore/fulcio/security/advisories/
 │                       │     │                  │      GHSA-59jp-pj84-45mr 
-│                       │     │                  ╰ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-22772 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-22772 
+│                       │     │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2026-22772 
 │                       │     ├ PublishedDate   : 2026-01-12T21:15:59.457Z 
 │                       │     ╰ LastModifiedDate: 2026-01-13T14:03:18.99Z 
-│                       ├ [3] ╭ VulnerabilityID : CVE-2025-47914 
+│                       ├ [3] ╭ VulnerabilityID : CVE-2026-24137 
+│                       │     ├ PkgID           : github.com/sigstore/sigstore@v1.9.5 
+│                       │     ├ PkgName         : github.com/sigstore/sigstore 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/sigstore/sigstore@v1.9.5 
+│                       │     │                  ╰ UID : 85e16dac233061ec 
+│                       │     ├ InstalledVersion: v1.9.5 
+│                       │     ├ FixedVersion    : 1.10.4 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1b
+│                       │     │                  │         c64e086c1f91e77709f 
+│                       │     │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a44
+│                       │     │                            75e8bf0be8d84f76b5f 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-24137 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Go 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Ago 
+│                       │     ├ Fingerprint     : sha256:31ca4ce20142680fff08e1164c5956654672196cb932d491805de6
+│                       │     │                   0abd16f324 
+│                       │     ├ Title           : sigstore legacy TUF client allows for arbitrary file writes
+│                       │     │                   with target cache path traversal 
+│                       │     ├ Description     : sigstore framework is a common go library shared across
+│                       │     │                   sigstore services and clients. In versions 1.10.3 and below,
+│                       │     │                   the legacy TUF client (pkg/tuf/client.go) supports caching
+│                       │     │                   target files to disk. It constructs a filesystem path by
+│                       │     │                   joining a cache base directory with a target name sourced
+│                       │     │                   from signed target metadata; however, it does not validate
+│                       │     │                   that the resulting path stays within the cache base
+│                       │     │                   directory. A malicious TUF repository can trigger arbitrary
+│                       │     │                   file overwriting, limited to the permissions that the calling
+│                       │     │                    process has. Note that this should only affect clients that
+│                       │     │                   are directly using the TUF client in sigstore/sigstore or are
+│                       │     │                    using an older version of Cosign. Public Sigstore deployment
+│                       │     │                    users are unaffected, as TUF metadata is validated by a
+│                       │     │                   quorum of trusted collaborators. This issue has been fixed in
+│                       │     │                    version 1.10.4. As a workaround, users can disable disk
+│                       │     │                   caching for the legacy client by setting
+│                       │     │                   SIGSTORE_NO_CACHE=true in the environment, migrate to
+│                       │     │                   https://github.com/sigstore/sigstore-go/tree/main/pkg/tuf, or
+│                       │     │                    upgrade to the latest sigstore/sigstore release. 
+│                       │     ├ Severity        : MEDIUM 
+│                       │     ├ CweIDs           ─ [0]: CWE-22 
+│                       │     ├ VendorSeverity   ─ ghsa: 2 
+│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:N/I:H/A:N 
+│                       │     │                         ╰ V3Score : 5.8 
+│                       │     ├ References       ╭ [0]: https://github.com/sigstore/sigstore 
+│                       │     │                  ├ [1]: https://github.com/sigstore/sigstore/commit/8ec410a2993
+│                       │     │                  │      ea78083aecf0e473a85453039496e 
+│                       │     │                  ├ [2]: https://github.com/sigstore/sigstore/releases/tag/v1.10.4 
+│                       │     │                  ├ [3]: https://github.com/sigstore/sigstore/security/advisorie
+│                       │     │                  │      s/GHSA-fcv2-xgw5-pqxf 
+│                       │     │                  ╰ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-24137 
+│                       │     ├ PublishedDate   : 2026-01-23T00:15:52.553Z 
+│                       │     ╰ LastModifiedDate: 2026-01-23T00:15:52.553Z 
+│                       ├ [4] ╭ VulnerabilityID : CVE-2025-47914 
 │                       │     ├ PkgID           : golang.org/x/crypto@v0.43.0 
 │                       │     ├ PkgName         : golang.org/x/crypto 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/crypto@v0.43.0 
@@ -7968,7 +8033,8 @@
 │                       │     │                          osystem%3Ago 
 │                       │     ├ Fingerprint     : sha256:d771feba3af4593a2b82d84232051f27ab052daa57fc8b75d8721d
 │                       │     │                   3a617e22b1 
-│                       │     ├ Title           : golang.org/x/crypto/ssh/agent: in golang.org/x/crypto/ssh/agent 
+│                       │     ├ Title           : golang.org/x/crypto/ssh/agent: SSH Agent servers: Denial of
+│                       │     │                   Service due to malformed messages 
 │                       │     ├ Description     : SSH Agent servers do not validate the size of messages when
 │                       │     │                   processing new identity requests, which may cause the program
 │                       │     │                    to panic if the message is malformed due to an out of bounds
@@ -7994,7 +8060,7 @@
 │                       │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-47914 
 │                       │     ├ PublishedDate   : 2025-11-19T21:15:50.517Z 
 │                       │     ╰ LastModifiedDate: 2025-12-11T19:36:41.373Z 
-│                       ╰ [4] ╭ VulnerabilityID : CVE-2025-58181 
+│                       ╰ [5] ╭ VulnerabilityID : CVE-2025-58181 
 │                             ├ PkgID           : golang.org/x/crypto@v0.43.0 
 │                             ├ PkgName         : golang.org/x/crypto 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/crypto@v0.43.0 
@@ -8014,7 +8080,9 @@
 │                             │                          osystem%3Ago 
 │                             ├ Fingerprint     : sha256:af2fb62486f6739399c57afd7ddb5347424c9ade4a356c0bac502e
 │                             │                   beb2fa7fc1 
-│                             ├ Title           : golang.org/x/crypto/ssh: in golang.org/x/crypto/ssh 
+│                             ├ Title           : golang.org/x/crypto/ssh: golang.org/x/crypto/ssh: Denial of
+│                             │                   Service via unbounded memory consumption in GSSAPI
+│                             │                   authentication 
 │                             ├ Description     : SSH servers parsing GSSAPI authentication requests do not
 │                             │                   validate the number of mechanisms specified in the request,
 │                             │                   allowing an attacker to cause unbounded memory consumption.[
