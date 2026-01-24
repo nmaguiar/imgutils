@@ -994,14 +994,14 @@
                         │      │                            │           N/A:H 
                         │      │                            ╰ V3Score : 7.5 
                         │      ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2025/10/08/1 
-                        │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:23295 
+                        │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2025:23326 
                         │      │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-58183 
                         │      │                  ├ [3] : https://bugzilla.redhat.com/2407258 
                         │      │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2407258 
                         │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       25-58183 
-                        │      │                  ├ [6] : https://errata.almalinux.org/10/ALSA-2025-23295.html 
-                        │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23295 
+                        │      │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2025-23326.html 
+                        │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23326 
                         │      │                  ├ [8] : https://go.dev/cl/709861 
                         │      │                  ├ [9] : https://go.dev/issue/75677 
                         │      │                  ├ [10]: https://groups.google.com/g/golang-announce/c/4Emdl2i
@@ -1041,9 +1041,10 @@
                         │      │                   actor can result in excessive resource consumption. 
                         │      ├ Severity        : HIGH 
                         │      ├ CweIDs           ─ [0]: CWE-295 
-                        │      ├ VendorSeverity   ╭ amazon : 3 
-                        │      │                  ├ bitnami: 3 
-                        │      │                  ╰ redhat : 3 
+                        │      ├ VendorSeverity   ╭ amazon     : 3 
+                        │      │                  ├ bitnami    : 3 
+                        │      │                  ├ oracle-oval: 3 
+                        │      │                  ╰ redhat     : 3 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
                         │      │                  │         │           N/A:H 
                         │      │                  │         ╰ V3Score : 7.5 
@@ -1055,9 +1056,11 @@
                         │      │                  ├ [2]: https://go.dev/issue/76445 
                         │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/8FJoBkPd
                         │      │                  │      dm4 
-                        │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-61729 
-                        │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2025-4155 
-                        │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
+                        │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2025-61729.html 
+                        │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-0923.html 
+                        │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2025-61729 
+                        │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2025-4155 
+                        │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
                         │      ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
                         │      ╰ LastModifiedDate: 2025-12-19T18:25:28.283Z 
                         ├ [2]  ╭ VulnerabilityID : CVE-2025-47910 
