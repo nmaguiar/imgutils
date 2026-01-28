@@ -1041,26 +1041,35 @@
                         │      │                   actor can result in excessive resource consumption. 
                         │      ├ Severity        : HIGH 
                         │      ├ CweIDs           ─ [0]: CWE-295 
-                        │      ├ VendorSeverity   ╭ amazon     : 3 
+                        │      ├ VendorSeverity   ╭ alma       : 3 
+                        │      │                  ├ amazon     : 3 
                         │      │                  ├ bitnami    : 3 
                         │      │                  ├ oracle-oval: 3 
-                        │      │                  ╰ redhat     : 3 
+                        │      │                  ├ redhat     : 3 
+                        │      │                  ╰ rocky      : 3 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
                         │      │                  │         │           N/A:H 
                         │      │                  │         ╰ V3Score : 7.5 
                         │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
                         │      │                            │           N/A:H 
                         │      │                            ╰ V3Score : 7.5 
-                        │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-61729 
-                        │      │                  ├ [1]: https://go.dev/cl/725920 
-                        │      │                  ├ [2]: https://go.dev/issue/76445 
-                        │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/8FJoBkPd
-                        │      │                  │      dm4 
-                        │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2025-61729.html 
-                        │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-0923.html 
-                        │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2025-61729 
-                        │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2025-4155 
-                        │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
+                        │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:0923 
+                        │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2025-61729 
+                        │      │                  ├ [2] : https://bugzilla.redhat.com/2418462 
+                        │      │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2418462 
+                        │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+                        │      │                  │       25-61729 
+                        │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-0923.html 
+                        │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:0923 
+                        │      │                  ├ [7] : https://go.dev/cl/725920 
+                        │      │                  ├ [8] : https://go.dev/issue/76445 
+                        │      │                  ├ [9] : https://groups.google.com/g/golang-announce/c/8FJoBkP
+                        │      │                  │       ddm4 
+                        │      │                  ├ [10]: https://linux.oracle.com/cve/CVE-2025-61729.html 
+                        │      │                  ├ [11]: https://linux.oracle.com/errata/ELSA-2026-0923.html 
+                        │      │                  ├ [12]: https://nvd.nist.gov/vuln/detail/CVE-2025-61729 
+                        │      │                  ├ [13]: https://pkg.go.dev/vuln/GO-2025-4155 
+                        │      │                  ╰ [14]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
                         │      ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
                         │      ╰ LastModifiedDate: 2025-12-19T18:25:28.283Z 
                         ├ [2]  ╭ VulnerabilityID : CVE-2025-47910 
