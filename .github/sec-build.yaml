@@ -2151,10 +2151,12 @@
     CweIDs:
     - CWE-295
     VendorSeverity:
+      alma: 3
       amazon: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
+      rocky: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -2163,7 +2165,13 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
+    - https://access.redhat.com/errata/RHSA-2026:0923
     - https://access.redhat.com/security/cve/CVE-2025-61729
+    - https://bugzilla.redhat.com/2418462
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2418462
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-61729
+    - https://errata.almalinux.org/9/ALSA-2026-0923.html
+    - https://errata.rockylinux.org/RLSA-2026:0923
     - https://go.dev/cl/725920
     - https://go.dev/issue/76445
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
@@ -7581,7 +7589,7 @@
     - https://github.com/sigstore/sigstore/security/advisories/GHSA-fcv2-xgw5-pqxf
     - https://nvd.nist.gov/vuln/detail/CVE-2026-24137
     PublishedDate: '2026-01-23T00:15:52.553Z'
-    LastModifiedDate: '2026-01-23T00:15:52.553Z'
+    LastModifiedDate: '2026-01-26T15:04:14.85Z'
   - VulnerabilityID: CVE-2025-47914
     PkgID: golang.org/x/crypto@v0.43.0
     PkgName: golang.org/x/crypto
