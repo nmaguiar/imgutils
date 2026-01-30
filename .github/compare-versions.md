@@ -1,11 +1,3 @@
-| tool | latestOnline | buildVersion | latestversion |
-|------|--------------|--------------|---------------|
-| crictl | v1.35.0 | v1.35.0 | v1.35.0 |
-| ctr | containerd 2.2.1 | 2.2.1 | 2.2.1 |
-| docker | v29.2.0 | 29.1.5 | 29.1.5 |
-| helm | v4.1.0 | v4.1.0 | v4.0.5 |
-| nerdctl | v2.2.1 | 2.2.1 | 2.2.1 |
-| oaf | 20251115 | 20260123 | 20260117 |
-| skopeo | v1.21.0 | 1.21.0 | 1.21.0 |
-| syft | v1.41.0 | 1.40.1 | 1.40.1 |
-
+[0.003s][warning][cds] The shared archive file was created by a different version or build of HotSpot
+[0.003s][error  ][cds] An error has occurred while processing the shared archive file. Run with -Xlog:aot,cds for details.
+[0.003s][error  ][cds] Loading static archive failed.
