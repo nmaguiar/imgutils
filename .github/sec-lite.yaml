@@ -1090,9 +1090,13 @@
     Title: 'golang: net/url: Memory exhaustion in query parameter parsing in net/url'
     Description: The net/url package does not set a limit on the number of query parameters in a query. While the maximum size of query parameters in URLs is generally limited by the maximum request header size, the net/http.Request.ParseForm method can parse large URL-encoded forms. Parsing a large form containing many unique query parameters can cause excessive memory consumption.
     Severity: HIGH
+    CweIDs:
+    - CWE-770
     VendorSeverity:
+      amazon: 3
       azure: 2
       bitnami: 3
+      cbl-mariner: 2
       redhat: 3
     CVSS:
       bitnami:
@@ -1110,7 +1114,7 @@
     - https://pkg.go.dev/vuln/GO-2026-4341
     - https://www.cve.org/CVERecord?id=CVE-2025-61726
     PublishedDate: '2026-01-28T20:16:09.713Z'
-    LastModifiedDate: '2026-01-29T19:16:16.243Z'
+    LastModifiedDate: '2026-02-06T18:47:34.52Z'
   - VulnerabilityID: CVE-2025-61728
     VendorIDs:
     - GO-2026-4342
@@ -1134,7 +1138,10 @@
     Title: 'golang: archive/zip: Excessive CPU consumption when building archive index in archive/zip'
     Description: archive/zip uses a super-linear file name indexing algorithm that is invoked the first time a file in an archive is opened. This can lead to a denial of service when consuming a maliciously constructed ZIP archive.
     Severity: HIGH
+    CweIDs:
+    - CWE-770
     VendorSeverity:
+      amazon: 3
       azure: 2
       bitnami: 2
       redhat: 2
@@ -1155,7 +1162,7 @@
     - https://pkg.go.dev/vuln/GO-2026-4342
     - https://www.cve.org/CVERecord?id=CVE-2025-61728
     PublishedDate: '2026-01-28T20:16:09.83Z'
-    LastModifiedDate: '2026-01-29T19:16:16.39Z'
+    LastModifiedDate: '2026-02-06T18:45:10.42Z'
   - VulnerabilityID: CVE-2025-61729
     VendorIDs:
     - GO-2025-4155
@@ -1202,17 +1209,89 @@
     - https://bugzilla.redhat.com/show_bug.cgi?id=2418462
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-61729
     - https://errata.almalinux.org/9/ALSA-2026-0923.html
-    - https://errata.rockylinux.org/RLSA-2026:0923
+    - https://errata.rockylinux.org/RLSA-2026:1908
     - https://go.dev/cl/725920
     - https://go.dev/issue/76445
     - https://groups.google.com/g/golang-announce/c/8FJoBkPddm4
     - https://linux.oracle.com/cve/CVE-2025-61729.html
-    - https://linux.oracle.com/errata/ELSA-2026-1715.html
+    - https://linux.oracle.com/errata/ELSA-2026-2124.html
     - https://nvd.nist.gov/vuln/detail/CVE-2025-61729
     - https://pkg.go.dev/vuln/GO-2025-4155
     - https://www.cve.org/CVERecord?id=CVE-2025-61729
     PublishedDate: '2025-12-02T19:15:51.447Z'
     LastModifiedDate: '2025-12-19T18:25:28.283Z'
+  - VulnerabilityID: CVE-2025-61730
+    VendorIDs:
+    - GO-2026-4340
+    PkgID: stdlib@v1.25.0
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.25.0
+      UID: 7efd7a2bdb3f994b
+    InstalledVersion: v1.25.0
+    FixedVersion: 1.24.12, 1.25.6
+    Status: fixed
+    Layer:
+      Digest: sha256:1542387fd1443eae52c33431e5a596c30d80cb2a397c16947126129ff51eada6
+      DiffID: sha256:59f14d369c3dba385311a91b009ddb820081967a515e78516657e1ac00864f5e
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-61730
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:2f10b5f62b40d8e5a8a9edc0a6a5e0b319e2db285e2459764a046f2be7e5a7a6
+    Title: During the TLS 1.3 handshake if multiple messages are sent in records  ...
+    Description: During the TLS 1.3 handshake if multiple messages are sent in records that span encryption level boundaries (for instance the Client Hello and Encrypted Extensions messages), the subsequent messages may be processed before the encryption level changes. This can cause some minor information disclosure if a network-local attacker can inject messages during the handshake.
+    Severity: HIGH
+    VendorSeverity:
+      amazon: 3
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+        V3Score: 5.3
+    References:
+    - https://go.dev/cl/724120
+    - https://go.dev/issue/76443
+    - https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc
+    - https://nvd.nist.gov/vuln/detail/CVE-2025-61730
+    - https://pkg.go.dev/vuln/GO-2026-4340
+    PublishedDate: '2026-01-28T20:16:09.94Z'
+    LastModifiedDate: '2026-02-03T20:36:41.3Z'
+  - VulnerabilityID: CVE-2025-68121
+    VendorIDs:
+    - GO-2026-4337
+    PkgID: stdlib@v1.25.0
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.25.0
+      UID: 7efd7a2bdb3f994b
+    InstalledVersion: v1.25.0
+    FixedVersion: 1.24.13, 1.25.7, 1.26.0-rc.3
+    Status: fixed
+    Layer:
+      Digest: sha256:1542387fd1443eae52c33431e5a596c30d80cb2a397c16947126129ff51eada6
+      DiffID: sha256:59f14d369c3dba385311a91b009ddb820081967a515e78516657e1ac00864f5e
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-68121
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:ae4181ec6e626c778a13b228d706d383385aa22bb0c3533953913d62bb9bbf2f
+    Title: During session resumption in crypto/tls, if the underlying Config has  ...
+    Description: During session resumption in crypto/tls, if the underlying Config has its ClientCAs or RootCAs fields mutated between the initial handshake and the resumed handshake, the resumed handshake may succeed when it should have failed. This may happen when a user calls Config.Clone and mutates the returned Config, or uses Config.GetConfigForClient. This can cause a client to resume a session with a server that it would not have resumed with during the initial handshake, or cause a server to resume a session with a client that it would not have resumed with during the initial handshake.
+    Severity: HIGH
+    CweIDs:
+    - CWE-295
+    VendorSeverity:
+      amazon: 3
+    References:
+    - https://go.dev/cl/737700
+    - https://go.dev/issue/77217
+    - https://groups.google.com/g/golang-announce/c/K09ubi9FQFk
+    - https://pkg.go.dev/vuln/GO-2026-4337
+    PublishedDate: '2026-02-05T18:16:10.857Z'
+    LastModifiedDate: '2026-02-06T16:16:14.373Z'
   - VulnerabilityID: CVE-2025-47910
     VendorIDs:
     - GO-2025-3955
@@ -1348,7 +1427,7 @@
     - https://pkg.go.dev/vuln/GO-2025-4011
     - https://www.cve.org/CVERecord?id=CVE-2025-58185
     PublishedDate: '2025-10-29T23:16:19.45Z'
-    LastModifiedDate: '2026-01-29T13:26:08.45Z'
+    LastModifiedDate: '2026-02-06T20:26:41.997Z'
   - VulnerabilityID: CVE-2025-58186
     VendorIDs:
     - GO-2025-4012
@@ -1723,68 +1802,3 @@
     - https://www.cve.org/CVERecord?id=CVE-2025-61727
     PublishedDate: '2025-12-03T20:16:25.607Z'
     LastModifiedDate: '2025-12-18T20:15:10.957Z'
-  - VulnerabilityID: CVE-2025-61730
-    VendorIDs:
-    - GO-2026-4340
-    PkgID: stdlib@v1.25.0
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.25.0
-      UID: 7efd7a2bdb3f994b
-    InstalledVersion: v1.25.0
-    FixedVersion: 1.24.12, 1.25.6
-    Status: fixed
-    Layer:
-      Digest: sha256:1542387fd1443eae52c33431e5a596c30d80cb2a397c16947126129ff51eada6
-      DiffID: sha256:59f14d369c3dba385311a91b009ddb820081967a515e78516657e1ac00864f5e
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-61730
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:2f10b5f62b40d8e5a8a9edc0a6a5e0b319e2db285e2459764a046f2be7e5a7a6
-    Title: During the TLS 1.3 handshake if multiple messages are sent in records  ...
-    Description: During the TLS 1.3 handshake if multiple messages are sent in records that span encryption level boundaries (for instance the Client Hello and Encrypted Extensions messages), the subsequent messages may be processed before the encryption level changes. This can cause some minor information disclosure if a network-local attacker can inject messages during the handshake.
-    Severity: MEDIUM
-    VendorSeverity:
-      bitnami: 2
-    CVSS:
-      bitnami:
-        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-        V3Score: 5.3
-    References:
-    - https://go.dev/cl/724120
-    - https://go.dev/issue/76443
-    - https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc
-    - https://nvd.nist.gov/vuln/detail/CVE-2025-61730
-    - https://pkg.go.dev/vuln/GO-2026-4340
-    PublishedDate: '2026-01-28T20:16:09.94Z'
-    LastModifiedDate: '2026-02-03T20:36:41.3Z'
-  - VulnerabilityID: CVE-2025-68121
-    VendorIDs:
-    - GO-2026-4337
-    PkgID: stdlib@v1.25.0
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.25.0
-      UID: 7efd7a2bdb3f994b
-    InstalledVersion: v1.25.0
-    FixedVersion: 1.24.13, 1.25.7, 1.26.0-rc.3
-    Status: fixed
-    Layer:
-      Digest: sha256:1542387fd1443eae52c33431e5a596c30d80cb2a397c16947126129ff51eada6
-      DiffID: sha256:59f14d369c3dba385311a91b009ddb820081967a515e78516657e1ac00864f5e
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2025-68121
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:ae4181ec6e626c778a13b228d706d383385aa22bb0c3533953913d62bb9bbf2f
-    Title: '[crypto/tls: Config.Clone copies automatically generated session ticket keys, session resumption does not account for the expiration of full certificate chain]'
-    Description: During session resumption in crypto/tls, if the underlying Config has its ClientCAs or RootCAs fields mutated between the initial handshake and the resumed handshake, the resumed handshake may succeed when it should have failed. This may happen when a user calls Config.Clone and mutates the returned Config, or uses Config.GetConfigForClient. This can cause a client to resume a session with a server that it would not have resumed with during the initial handshake, or cause a server to resume a session with a client that it would not have resumed with during the initial handshake.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/737700
-    - https://go.dev/issue/77217
-    - https://groups.google.com/g/golang-announce/c/K09ubi9FQFk
-    - https://pkg.go.dev/vuln/GO-2026-4337
