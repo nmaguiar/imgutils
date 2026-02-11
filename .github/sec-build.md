@@ -2335,7 +2335,58 @@
 │     │                        │            ╰ DiffID: sha256:d274b0449155d15242e72d5d21129174899d7baa481eee830b
 │     │                        │                      b0614ec4b76dee 
 │     │                        ╰ AnalyzedBy: gobinary 
-│     ╰ Vulnerabilities ╭ [0]  ╭ VulnerabilityID : CVE-2025-58183 
+│     ╰ Vulnerabilities ╭ [0]  ╭ VulnerabilityID : CVE-2025-68121 
+│                       │      ├ VendorIDs        ─ [0]: GO-2026-4337 
+│                       │      ├ PkgID           : stdlib@v1.25.0 
+│                       │      ├ PkgName         : stdlib 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.0 
+│                       │      │                  ╰ UID : 7efd7a2bdb3f994b 
+│                       │      ├ InstalledVersion: v1.25.0 
+│                       │      ├ FixedVersion    : 1.24.13, 1.25.7, 1.26.0-rc.3 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:6c94f5df9d5a34b974a04ceb2c3406b7d9ba54216acc
+│                       │      │                  │         ad969825b9ac9287736c 
+│                       │      │                  ╰ DiffID: sha256:d274b0449155d15242e72d5d21129174899d7baa481e
+│                       │      │                            ee830bb0614ec4b76dee 
+│                       │      ├ SeveritySource  : nvd 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-68121 
+│                       │      ├ DataSource       ╭ ID  : govulndb 
+│                       │      │                  ├ Name: The Go Vulnerability Database 
+│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │      ├ Fingerprint     : sha256:79670cb8bd4081937dcc19f6486ed0059ad5b171ac538514796b8
+│                       │      │                   85bd95d3b42 
+│                       │      ├ Title           : During session resumption in crypto/tls, if the underlying
+│                       │      │                   Config has  ... 
+│                       │      ├ Description     : During session resumption in crypto/tls, if the underlying
+│                       │      │                   Config has its ClientCAs or RootCAs fields mutated between
+│                       │      │                   the initial handshake and the resumed handshake, the resumed
+│                       │      │                    handshake may succeed when it should have failed. This may
+│                       │      │                   happen when a user calls Config.Clone and mutates the
+│                       │      │                   returned Config, or uses Config.GetConfigForClient. This can
+│                       │      │                    cause a client to resume a session with a server that it
+│                       │      │                   would not have resumed with during the initial handshake, or
+│                       │      │                    cause a server to resume a session with a client that it
+│                       │      │                   would not have resumed with during the initial handshake. 
+│                       │      ├ Severity        : CRITICAL 
+│                       │      ├ CweIDs           ─ [0]: CWE-295 
+│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      │                  ├ bitnami: 2 
+│                       │      │                  ╰ nvd    : 4 
+│                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:
+│                       │      │                  │         │           L/A:N 
+│                       │      │                  │         ╰ V3Score : 4.8 
+│                       │      │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:
+│                       │      │                            │           H/A:H 
+│                       │      │                            ╰ V3Score : 10 
+│                       │      ├ References       ╭ [0]: https://go.dev/cl/737700 
+│                       │      │                  ├ [1]: https://go.dev/issue/77217 
+│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/K09ubi9F
+│                       │      │                  │      QFk 
+│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
+│                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4337 
+│                       │      ├ PublishedDate   : 2026-02-05T18:16:10.857Z 
+│                       │      ╰ LastModifiedDate: 2026-02-10T16:08:03.303Z 
+│                       ├ [1]  ╭ VulnerabilityID : CVE-2025-58183 
 │                       │      ├ VendorIDs        ─ [0]: GO-2025-4014 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
 │                       │      ├ PkgName         : stdlib 
@@ -2398,7 +2449,7 @@
 │                       │      │                  ╰ [15]: https://www.cve.org/CVERecord?id=CVE-2025-58183 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.357Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.2Z 
-│                       ├ [1]  ╭ VulnerabilityID : CVE-2025-61726 
+│                       ├ [2]  ╭ VulnerabilityID : CVE-2025-61726 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4341 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
 │                       │      ├ PkgName         : stdlib 
@@ -2449,7 +2500,7 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61726 
 │                       │      ├ PublishedDate   : 2026-01-28T20:16:09.713Z 
 │                       │      ╰ LastModifiedDate: 2026-02-06T18:47:34.52Z 
-│                       ├ [2]  ╭ VulnerabilityID : CVE-2025-61728 
+│                       ├ [3]  ╭ VulnerabilityID : CVE-2025-61728 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4342 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
 │                       │      ├ PkgName         : stdlib 
@@ -2497,7 +2548,7 @@
 │                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-61728 
 │                       │      ├ PublishedDate   : 2026-01-28T20:16:09.83Z 
 │                       │      ╰ LastModifiedDate: 2026-02-06T18:45:10.42Z 
-│                       ├ [3]  ╭ VulnerabilityID : CVE-2025-61729 
+│                       ├ [4]  ╭ VulnerabilityID : CVE-2025-61729 
 │                       │      ├ VendorIDs        ─ [0]: GO-2025-4155 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
 │                       │      ├ PkgName         : stdlib 
@@ -2538,26 +2589,26 @@
 │                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                            │           N/A:H 
 │                       │      │                            ╰ V3Score : 7.5 
-│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:0923 
+│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:1908 
 │                       │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2025-61729 
 │                       │      │                  ├ [2] : https://bugzilla.redhat.com/2418462 
 │                       │      │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2418462 
 │                       │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-61729 
-│                       │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-0923.html 
+│                       │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-1908.html 
 │                       │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:1908 
 │                       │      │                  ├ [7] : https://go.dev/cl/725920 
 │                       │      │                  ├ [8] : https://go.dev/issue/76445 
 │                       │      │                  ├ [9] : https://groups.google.com/g/golang-announce/c/8FJoBkP
 │                       │      │                  │       ddm4 
 │                       │      │                  ├ [10]: https://linux.oracle.com/cve/CVE-2025-61729.html 
-│                       │      │                  ├ [11]: https://linux.oracle.com/errata/ELSA-2026-2124.html 
+│                       │      │                  ├ [11]: https://linux.oracle.com/errata/ELSA-2026-2323.html 
 │                       │      │                  ├ [12]: https://nvd.nist.gov/vuln/detail/CVE-2025-61729 
 │                       │      │                  ├ [13]: https://pkg.go.dev/vuln/GO-2025-4155 
 │                       │      │                  ╰ [14]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
 │                       │      ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
 │                       │      ╰ LastModifiedDate: 2025-12-19T18:25:28.283Z 
-│                       ├ [4]  ╭ VulnerabilityID : CVE-2025-61730 
+│                       ├ [5]  ╭ VulnerabilityID : CVE-2025-61730 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4340 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
 │                       │      ├ PkgName         : stdlib 
@@ -2599,47 +2650,6 @@
 │                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4340 
 │                       │      ├ PublishedDate   : 2026-01-28T20:16:09.94Z 
 │                       │      ╰ LastModifiedDate: 2026-02-03T20:36:41.3Z 
-│                       ├ [5]  ╭ VulnerabilityID : CVE-2025-68121 
-│                       │      ├ VendorIDs        ─ [0]: GO-2026-4337 
-│                       │      ├ PkgID           : stdlib@v1.25.0 
-│                       │      ├ PkgName         : stdlib 
-│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.0 
-│                       │      │                  ╰ UID : 7efd7a2bdb3f994b 
-│                       │      ├ InstalledVersion: v1.25.0 
-│                       │      ├ FixedVersion    : 1.24.13, 1.25.7, 1.26.0-rc.3 
-│                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:6c94f5df9d5a34b974a04ceb2c3406b7d9ba54216acc
-│                       │      │                  │         ad969825b9ac9287736c 
-│                       │      │                  ╰ DiffID: sha256:d274b0449155d15242e72d5d21129174899d7baa481e
-│                       │      │                            ee830bb0614ec4b76dee 
-│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-68121 
-│                       │      ├ DataSource       ╭ ID  : govulndb 
-│                       │      │                  ├ Name: The Go Vulnerability Database 
-│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │      ├ Fingerprint     : sha256:79670cb8bd4081937dcc19f6486ed0059ad5b171ac538514796b8
-│                       │      │                   85bd95d3b42 
-│                       │      ├ Title           : During session resumption in crypto/tls, if the underlying
-│                       │      │                   Config has  ... 
-│                       │      ├ Description     : During session resumption in crypto/tls, if the underlying
-│                       │      │                   Config has its ClientCAs or RootCAs fields mutated between
-│                       │      │                   the initial handshake and the resumed handshake, the resumed
-│                       │      │                    handshake may succeed when it should have failed. This may
-│                       │      │                   happen when a user calls Config.Clone and mutates the
-│                       │      │                   returned Config, or uses Config.GetConfigForClient. This can
-│                       │      │                    cause a client to resume a session with a server that it
-│                       │      │                   would not have resumed with during the initial handshake, or
-│                       │      │                    cause a server to resume a session with a client that it
-│                       │      │                   would not have resumed with during the initial handshake. 
-│                       │      ├ Severity        : HIGH 
-│                       │      ├ CweIDs           ─ [0]: CWE-295 
-│                       │      ├ VendorSeverity   ─ amazon: 3 
-│                       │      ├ References       ╭ [0]: https://go.dev/cl/737700 
-│                       │      │                  ├ [1]: https://go.dev/issue/77217 
-│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/K09ubi9F
-│                       │      │                  │      QFk 
-│                       │      │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4337 
-│                       │      ├ PublishedDate   : 2026-02-05T18:16:10.857Z 
-│                       │      ╰ LastModifiedDate: 2026-02-06T16:16:14.373Z 
 │                       ├ [6]  ╭ VulnerabilityID : CVE-2025-47910 
 │                       │      ├ VendorIDs        ─ [0]: GO-2025-3955 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
@@ -4821,6 +4831,7 @@
 │                             │                  │         d969825b9ac9287736c 
 │                             │                  ╰ DiffID: sha256:d274b0449155d15242e72d5d21129174899d7baa481ee
 │                             │                            e830bb0614ec4b76dee 
+│                             ├ SeveritySource  : nvd 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-68121 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
@@ -4839,15 +4850,24 @@
 │                             │                   would not have resumed with during the initial handshake, or
 │                             │                   cause a server to resume a session with a client that it
 │                             │                   would not have resumed with during the initial handshake. 
-│                             ├ Severity        : HIGH 
+│                             ├ Severity        : CRITICAL 
 │                             ├ CweIDs           ─ [0]: CWE-295 
-│                             ├ VendorSeverity   ─ amazon: 3 
+│                             ├ VendorSeverity   ╭ amazon : 3 
+│                             │                  ├ bitnami: 2 
+│                             │                  ╰ nvd    : 4 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L
+│                             │                  │         │           /A:N 
+│                             │                  │         ╰ V3Score : 4.8 
+│                             │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
+│                             │                            │           /A:H 
+│                             │                            ╰ V3Score : 10 
 │                             ├ References       ╭ [0]: https://go.dev/cl/737700 
 │                             │                  ├ [1]: https://go.dev/issue/77217 
 │                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/K09ubi9FQFk 
-│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4337 
+│                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
+│                             │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4337 
 │                             ├ PublishedDate   : 2026-02-05T18:16:10.857Z 
-│                             ╰ LastModifiedDate: 2026-02-06T16:16:14.373Z 
+│                             ╰ LastModifiedDate: 2026-02-10T16:08:03.303Z 
 ├ [5] ╭ Target  : usr/bin/docker 
 │     ├ Class   : lang-pkgs 
 │     ├ Type    : gobinary 
@@ -6114,6 +6134,7 @@
 │                             │                  │         d969825b9ac9287736c 
 │                             │                  ╰ DiffID: sha256:d274b0449155d15242e72d5d21129174899d7baa481ee
 │                             │                            e830bb0614ec4b76dee 
+│                             ├ SeveritySource  : nvd 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-68121 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
@@ -6132,15 +6153,24 @@
 │                             │                   would not have resumed with during the initial handshake, or
 │                             │                   cause a server to resume a session with a client that it
 │                             │                   would not have resumed with during the initial handshake. 
-│                             ├ Severity        : HIGH 
+│                             ├ Severity        : CRITICAL 
 │                             ├ CweIDs           ─ [0]: CWE-295 
-│                             ├ VendorSeverity   ─ amazon: 3 
+│                             ├ VendorSeverity   ╭ amazon : 3 
+│                             │                  ├ bitnami: 2 
+│                             │                  ╰ nvd    : 4 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L
+│                             │                  │         │           /A:N 
+│                             │                  │         ╰ V3Score : 4.8 
+│                             │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
+│                             │                            │           /A:H 
+│                             │                            ╰ V3Score : 10 
 │                             ├ References       ╭ [0]: https://go.dev/cl/737700 
 │                             │                  ├ [1]: https://go.dev/issue/77217 
 │                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/K09ubi9FQFk 
-│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4337 
+│                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
+│                             │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4337 
 │                             ├ PublishedDate   : 2026-02-05T18:16:10.857Z 
-│                             ╰ LastModifiedDate: 2026-02-06T16:16:14.373Z 
+│                             ╰ LastModifiedDate: 2026-02-10T16:08:03.303Z 
 ├ [7] ╭ Target         : usr/bin/nerdctl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -7560,7 +7590,57 @@
 │     │                         │            ╰ DiffID: sha256:d274b0449155d15242e72d5d21129174899d7baa481eee830
 │     │                         │                      bb0614ec4b76dee 
 │     │                         ╰ AnalyzedBy: gobinary 
-│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2025-61726 
+│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2025-68121 
+│                       │     ├ VendorIDs        ─ [0]: GO-2026-4337 
+│                       │     ├ PkgID           : stdlib@v1.25.5 
+│                       │     ├ PkgName         : stdlib 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.5 
+│                       │     │                  ╰ UID : b69f79466ee2cf0 
+│                       │     ├ InstalledVersion: v1.25.5 
+│                       │     ├ FixedVersion    : 1.24.13, 1.25.7, 1.26.0-rc.3 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:6c94f5df9d5a34b974a04ceb2c3406b7d9ba54216acca
+│                       │     │                  │         d969825b9ac9287736c 
+│                       │     │                  ╰ DiffID: sha256:d274b0449155d15242e72d5d21129174899d7baa481ee
+│                       │     │                            e830bb0614ec4b76dee 
+│                       │     ├ SeveritySource  : nvd 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-68121 
+│                       │     ├ DataSource       ╭ ID  : govulndb 
+│                       │     │                  ├ Name: The Go Vulnerability Database 
+│                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │     ├ Fingerprint     : sha256:89b6353dc19dfb360097925ab7333ca45f16902d6df085751f757d
+│                       │     │                   cd796f1eb9 
+│                       │     ├ Title           : During session resumption in crypto/tls, if the underlying
+│                       │     │                   Config has  ... 
+│                       │     ├ Description     : During session resumption in crypto/tls, if the underlying
+│                       │     │                   Config has its ClientCAs or RootCAs fields mutated between
+│                       │     │                   the initial handshake and the resumed handshake, the resumed
+│                       │     │                   handshake may succeed when it should have failed. This may
+│                       │     │                   happen when a user calls Config.Clone and mutates the
+│                       │     │                   returned Config, or uses Config.GetConfigForClient. This can
+│                       │     │                   cause a client to resume a session with a server that it
+│                       │     │                   would not have resumed with during the initial handshake, or
+│                       │     │                   cause a server to resume a session with a client that it
+│                       │     │                   would not have resumed with during the initial handshake. 
+│                       │     ├ Severity        : CRITICAL 
+│                       │     ├ CweIDs           ─ [0]: CWE-295 
+│                       │     ├ VendorSeverity   ╭ amazon : 3 
+│                       │     │                  ├ bitnami: 2 
+│                       │     │                  ╰ nvd    : 4 
+│                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L
+│                       │     │                  │         │           /A:N 
+│                       │     │                  │         ╰ V3Score : 4.8 
+│                       │     │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
+│                       │     │                            │           /A:H 
+│                       │     │                            ╰ V3Score : 10 
+│                       │     ├ References       ╭ [0]: https://go.dev/cl/737700 
+│                       │     │                  ├ [1]: https://go.dev/issue/77217 
+│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/K09ubi9FQFk 
+│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
+│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4337 
+│                       │     ├ PublishedDate   : 2026-02-05T18:16:10.857Z 
+│                       │     ╰ LastModifiedDate: 2026-02-10T16:08:03.303Z 
+│                       ├ [1] ╭ VulnerabilityID : CVE-2025-61726 
 │                       │     ├ VendorIDs        ─ [0]: GO-2026-4341 
 │                       │     ├ PkgID           : stdlib@v1.25.5 
 │                       │     ├ PkgName         : stdlib 
@@ -7610,7 +7690,7 @@
 │                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61726 
 │                       │     ├ PublishedDate   : 2026-01-28T20:16:09.713Z 
 │                       │     ╰ LastModifiedDate: 2026-02-06T18:47:34.52Z 
-│                       ├ [1] ╭ VulnerabilityID : CVE-2025-61728 
+│                       ├ [2] ╭ VulnerabilityID : CVE-2025-61728 
 │                       │     ├ VendorIDs        ─ [0]: GO-2026-4342 
 │                       │     ├ PkgID           : stdlib@v1.25.5 
 │                       │     ├ PkgName         : stdlib 
@@ -7657,87 +7737,47 @@
 │                       │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-61728 
 │                       │     ├ PublishedDate   : 2026-01-28T20:16:09.83Z 
 │                       │     ╰ LastModifiedDate: 2026-02-06T18:45:10.42Z 
-│                       ├ [2] ╭ VulnerabilityID : CVE-2025-61730 
-│                       │     ├ VendorIDs        ─ [0]: GO-2026-4340 
-│                       │     ├ PkgID           : stdlib@v1.25.5 
-│                       │     ├ PkgName         : stdlib 
-│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.5 
-│                       │     │                  ╰ UID : b69f79466ee2cf0 
-│                       │     ├ InstalledVersion: v1.25.5 
-│                       │     ├ FixedVersion    : 1.24.12, 1.25.6 
-│                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:6c94f5df9d5a34b974a04ceb2c3406b7d9ba54216acca
-│                       │     │                  │         d969825b9ac9287736c 
-│                       │     │                  ╰ DiffID: sha256:d274b0449155d15242e72d5d21129174899d7baa481ee
-│                       │     │                            e830bb0614ec4b76dee 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-61730 
-│                       │     ├ DataSource       ╭ ID  : govulndb 
-│                       │     │                  ├ Name: The Go Vulnerability Database 
-│                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │     ├ Fingerprint     : sha256:d5df1780f5225341b6b5018e15a5c1fe424e3f31e1eaeedd79c124
-│                       │     │                   1b953752ba 
-│                       │     ├ Title           : During the TLS 1.3 handshake if multiple messages are sent in
-│                       │     │                    records  ... 
-│                       │     ├ Description     : During the TLS 1.3 handshake if multiple messages are sent in
-│                       │     │                    records that span encryption level boundaries (for instance
-│                       │     │                   the Client Hello and Encrypted Extensions messages), the
-│                       │     │                   subsequent messages may be processed before the encryption
-│                       │     │                   level changes. This can cause some minor information
-│                       │     │                   disclosure if a network-local attacker can inject messages
-│                       │     │                   during the handshake. 
-│                       │     ├ Severity        : HIGH 
-│                       │     ├ VendorSeverity   ╭ amazon : 3 
-│                       │     │                  ╰ bitnami: 2 
-│                       │     ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N
-│                       │     │                            │           /A:N 
-│                       │     │                            ╰ V3Score : 5.3 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/724120 
-│                       │     │                  ├ [1]: https://go.dev/issue/76443 
-│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc 
-│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-61730 
-│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4340 
-│                       │     ├ PublishedDate   : 2026-01-28T20:16:09.94Z 
-│                       │     ╰ LastModifiedDate: 2026-02-03T20:36:41.3Z 
-│                       ╰ [3] ╭ VulnerabilityID : CVE-2025-68121 
-│                             ├ VendorIDs        ─ [0]: GO-2026-4337 
+│                       ╰ [3] ╭ VulnerabilityID : CVE-2025-61730 
+│                             ├ VendorIDs        ─ [0]: GO-2026-4340 
 │                             ├ PkgID           : stdlib@v1.25.5 
 │                             ├ PkgName         : stdlib 
 │                             ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.5 
 │                             │                  ╰ UID : b69f79466ee2cf0 
 │                             ├ InstalledVersion: v1.25.5 
-│                             ├ FixedVersion    : 1.24.13, 1.25.7, 1.26.0-rc.3 
+│                             ├ FixedVersion    : 1.24.12, 1.25.6 
 │                             ├ Status          : fixed 
 │                             ├ Layer            ╭ Digest: sha256:6c94f5df9d5a34b974a04ceb2c3406b7d9ba54216acca
 │                             │                  │         d969825b9ac9287736c 
 │                             │                  ╰ DiffID: sha256:d274b0449155d15242e72d5d21129174899d7baa481ee
 │                             │                            e830bb0614ec4b76dee 
-│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-68121 
+│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-61730 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                             ├ Fingerprint     : sha256:89b6353dc19dfb360097925ab7333ca45f16902d6df085751f757d
-│                             │                   cd796f1eb9 
-│                             ├ Title           : During session resumption in crypto/tls, if the underlying
-│                             │                   Config has  ... 
-│                             ├ Description     : During session resumption in crypto/tls, if the underlying
-│                             │                   Config has its ClientCAs or RootCAs fields mutated between
-│                             │                   the initial handshake and the resumed handshake, the resumed
-│                             │                   handshake may succeed when it should have failed. This may
-│                             │                   happen when a user calls Config.Clone and mutates the
-│                             │                   returned Config, or uses Config.GetConfigForClient. This can
-│                             │                   cause a client to resume a session with a server that it
-│                             │                   would not have resumed with during the initial handshake, or
-│                             │                   cause a server to resume a session with a client that it
-│                             │                   would not have resumed with during the initial handshake. 
+│                             ├ Fingerprint     : sha256:d5df1780f5225341b6b5018e15a5c1fe424e3f31e1eaeedd79c124
+│                             │                   1b953752ba 
+│                             ├ Title           : During the TLS 1.3 handshake if multiple messages are sent in
+│                             │                    records  ... 
+│                             ├ Description     : During the TLS 1.3 handshake if multiple messages are sent in
+│                             │                    records that span encryption level boundaries (for instance
+│                             │                   the Client Hello and Encrypted Extensions messages), the
+│                             │                   subsequent messages may be processed before the encryption
+│                             │                   level changes. This can cause some minor information
+│                             │                   disclosure if a network-local attacker can inject messages
+│                             │                   during the handshake. 
 │                             ├ Severity        : HIGH 
-│                             ├ CweIDs           ─ [0]: CWE-295 
-│                             ├ VendorSeverity   ─ amazon: 3 
-│                             ├ References       ╭ [0]: https://go.dev/cl/737700 
-│                             │                  ├ [1]: https://go.dev/issue/77217 
-│                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/K09ubi9FQFk 
-│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4337 
-│                             ├ PublishedDate   : 2026-02-05T18:16:10.857Z 
-│                             ╰ LastModifiedDate: 2026-02-06T16:16:14.373Z 
+│                             ├ VendorSeverity   ╭ amazon : 3 
+│                             │                  ╰ bitnami: 2 
+│                             ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 5.3 
+│                             ├ References       ╭ [0]: https://go.dev/cl/724120 
+│                             │                  ├ [1]: https://go.dev/issue/76443 
+│                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc 
+│                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-61730 
+│                             │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4340 
+│                             ├ PublishedDate   : 2026-01-28T20:16:09.94Z 
+│                             ╰ LastModifiedDate: 2026-02-03T20:36:41.3Z 
 ├ [8] ╭ Target         : usr/bin/skopeo 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -9200,6 +9240,7 @@
 │                             │                  │         d969825b9ac9287736c 
 │                             │                  ╰ DiffID: sha256:d274b0449155d15242e72d5d21129174899d7baa481ee
 │                             │                            e830bb0614ec4b76dee 
+│                             ├ SeveritySource  : nvd 
 │                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-68121 
 │                             ├ DataSource       ╭ ID  : govulndb 
 │                             │                  ├ Name: The Go Vulnerability Database 
@@ -9218,15 +9259,24 @@
 │                             │                   would not have resumed with during the initial handshake, or
 │                             │                   cause a server to resume a session with a client that it
 │                             │                   would not have resumed with during the initial handshake. 
-│                             ├ Severity        : HIGH 
+│                             ├ Severity        : CRITICAL 
 │                             ├ CweIDs           ─ [0]: CWE-295 
-│                             ├ VendorSeverity   ─ amazon: 3 
+│                             ├ VendorSeverity   ╭ amazon : 3 
+│                             │                  ├ bitnami: 2 
+│                             │                  ╰ nvd    : 4 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L
+│                             │                  │         │           /A:N 
+│                             │                  │         ╰ V3Score : 4.8 
+│                             │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
+│                             │                            │           /A:H 
+│                             │                            ╰ V3Score : 10 
 │                             ├ References       ╭ [0]: https://go.dev/cl/737700 
 │                             │                  ├ [1]: https://go.dev/issue/77217 
 │                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/K09ubi9FQFk 
-│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4337 
+│                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
+│                             │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4337 
 │                             ├ PublishedDate   : 2026-02-05T18:16:10.857Z 
-│                             ╰ LastModifiedDate: 2026-02-06T16:16:14.373Z 
+│                             ╰ LastModifiedDate: 2026-02-10T16:08:03.303Z 
 ╰ [9] ╭ Target         : usr/bin/syft 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
@@ -12429,8 +12479,8 @@
                         │     │                          osystem%3Ago 
                         │     ├ Fingerprint     : sha256:987909af79892b9a1b31ede1a39d9867a5456483802a1b0f5568b6
                         │     │                   8e8c0666bb 
-                        │     ├ Title           : go-git improperly verifies data integrity values for .idx and
-                        │     │                    .pack files 
+                        │     ├ Title           : go-git is a highly extensible git implementation library
+                        │     │                   written in pu ... 
                         │     ├ Description     : go-git is a highly extensible git implementation library
                         │     │                   written in pure Go. Prior to 5.16.5, a vulnerability was
                         │     │                   discovered in go-git whereby data integrity values for .pack
@@ -12456,7 +12506,7 @@
                         │     │                  │      SA-37cx-329c-33x3 
                         │     │                  ╰ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-25934 
                         │     ├ PublishedDate   : 2026-02-09T23:16:05.937Z 
-                        │     ╰ LastModifiedDate: 2026-02-09T23:16:05.937Z 
+                        │     ╰ LastModifiedDate: 2026-02-10T15:22:54.74Z 
                         ╰ [1] ╭ VulnerabilityID : CVE-2025-68121 
                               ├ VendorIDs        ─ [0]: GO-2026-4337 
                               ├ PkgID           : stdlib@v1.25.6 
@@ -12470,6 +12520,7 @@
                               │                  │         d969825b9ac9287736c 
                               │                  ╰ DiffID: sha256:d274b0449155d15242e72d5d21129174899d7baa481ee
                               │                            e830bb0614ec4b76dee 
+                              ├ SeveritySource  : nvd 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-68121 
                               ├ DataSource       ╭ ID  : govulndb 
                               │                  ├ Name: The Go Vulnerability Database 
@@ -12488,13 +12539,22 @@
                               │                   would not have resumed with during the initial handshake, or
                               │                   cause a server to resume a session with a client that it
                               │                   would not have resumed with during the initial handshake. 
-                              ├ Severity        : HIGH 
+                              ├ Severity        : CRITICAL 
                               ├ CweIDs           ─ [0]: CWE-295 
-                              ├ VendorSeverity   ─ amazon: 3 
+                              ├ VendorSeverity   ╭ amazon : 3 
+                              │                  ├ bitnami: 2 
+                              │                  ╰ nvd    : 4 
+                              ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L
+                              │                  │         │           /A:N 
+                              │                  │         ╰ V3Score : 4.8 
+                              │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
+                              │                            │           /A:H 
+                              │                            ╰ V3Score : 10 
                               ├ References       ╭ [0]: https://go.dev/cl/737700 
                               │                  ├ [1]: https://go.dev/issue/77217 
                               │                  ├ [2]: https://groups.google.com/g/golang-announce/c/K09ubi9FQFk 
-                              │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4337 
+                              │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
+                              │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4337 
                               ├ PublishedDate   : 2026-02-05T18:16:10.857Z 
-                              ╰ LastModifiedDate: 2026-02-06T16:16:14.373Z 
+                              ╰ LastModifiedDate: 2026-02-10T16:08:03.303Z 
 ````
