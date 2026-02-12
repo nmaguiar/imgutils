@@ -1077,11 +1077,11 @@
                         │      ├ Severity        : CRITICAL 
                         │      ├ CweIDs           ─ [0]: CWE-295 
                         │      ├ VendorSeverity   ╭ amazon : 3 
-                        │      │                  ├ bitnami: 2 
+                        │      │                  ├ bitnami: 4 
                         │      │                  ╰ nvd    : 4 
-                        │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:
-                        │      │                  │         │           L/A:N 
-                        │      │                  │         ╰ V3Score : 4.8 
+                        │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:
+                        │      │                  │         │           H/A:H 
+                        │      │                  │         ╰ V3Score : 10 
                         │      │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:
                         │      │                            │           H/A:H 
                         │      │                            ╰ V3Score : 10 
@@ -1144,7 +1144,7 @@
                         │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       25-58183 
                         │      │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2026-1381.html 
-                        │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23326 
+                        │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23295 
                         │      │                  ├ [8] : https://go.dev/cl/709861 
                         │      │                  ├ [9] : https://go.dev/issue/75677 
                         │      │                  ├ [10]: https://groups.google.com/g/golang-announce/c/4Emdl2i
@@ -1303,7 +1303,7 @@
                         │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       25-61729 
                         │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-1908.html 
-                        │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:1908 
+                        │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:1715 
                         │      │                  ├ [7] : https://go.dev/cl/725920 
                         │      │                  ├ [8] : https://go.dev/issue/76445 
                         │      │                  ├ [9] : https://groups.google.com/g/golang-announce/c/8FJoBkP
