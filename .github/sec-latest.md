@@ -2370,11 +2370,11 @@
 │                       │      ├ Severity        : CRITICAL 
 │                       │      ├ CweIDs           ─ [0]: CWE-295 
 │                       │      ├ VendorSeverity   ╭ amazon : 3 
-│                       │      │                  ├ bitnami: 2 
+│                       │      │                  ├ bitnami: 4 
 │                       │      │                  ╰ nvd    : 4 
-│                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:
-│                       │      │                  │         │           L/A:N 
-│                       │      │                  │         ╰ V3Score : 4.8 
+│                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:
+│                       │      │                  │         │           H/A:H 
+│                       │      │                  │         ╰ V3Score : 10 
 │                       │      │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:
 │                       │      │                            │           H/A:H 
 │                       │      │                            ╰ V3Score : 10 
@@ -2437,7 +2437,7 @@
 │                       │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-58183 
 │                       │      │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2026-1381.html 
-│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23326 
+│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23295 
 │                       │      │                  ├ [8] : https://go.dev/cl/709861 
 │                       │      │                  ├ [9] : https://go.dev/issue/75677 
 │                       │      │                  ├ [10]: https://groups.google.com/g/golang-announce/c/4Emdl2i
@@ -2596,7 +2596,7 @@
 │                       │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-61729 
 │                       │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-1908.html 
-│                       │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:1908 
+│                       │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:1715 
 │                       │      │                  ├ [7] : https://go.dev/cl/725920 
 │                       │      │                  ├ [8] : https://go.dev/issue/76445 
 │                       │      │                  ├ [9] : https://groups.google.com/g/golang-announce/c/8FJoBkP
@@ -4025,11 +4025,11 @@
 │                             ├ Severity        : CRITICAL 
 │                             ├ CweIDs           ─ [0]: CWE-295 
 │                             ├ VendorSeverity   ╭ amazon : 3 
-│                             │                  ├ bitnami: 2 
+│                             │                  ├ bitnami: 4 
 │                             │                  ╰ nvd    : 4 
-│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L
-│                             │                  │         │           /A:N 
-│                             │                  │         ╰ V3Score : 4.8 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
+│                             │                  │         │           /A:H 
+│                             │                  │         ╰ V3Score : 10 
 │                             │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
 │                             │                            │           /A:H 
 │                             │                            ╰ V3Score : 10 
@@ -4908,11 +4908,11 @@
 │                             ├ Severity        : CRITICAL 
 │                             ├ CweIDs           ─ [0]: CWE-295 
 │                             ├ VendorSeverity   ╭ amazon : 3 
-│                             │                  ├ bitnami: 2 
+│                             │                  ├ bitnami: 4 
 │                             │                  ╰ nvd    : 4 
-│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L
-│                             │                  │         │           /A:N 
-│                             │                  │         ╰ V3Score : 4.8 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
+│                             │                  │         │           /A:H 
+│                             │                  │         ╰ V3Score : 10 
 │                             │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
 │                             │                            │           /A:H 
 │                             │                            ╰ V3Score : 10 
@@ -4972,11 +4972,11 @@
 │                             ├ Severity        : CRITICAL 
 │                             ├ CweIDs           ─ [0]: CWE-295 
 │                             ├ VendorSeverity   ╭ amazon : 3 
-│                             │                  ├ bitnami: 2 
+│                             │                  ├ bitnami: 4 
 │                             │                  ╰ nvd    : 4 
-│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L
-│                             │                  │         │           /A:N 
-│                             │                  │         ╰ V3Score : 4.8 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
+│                             │                  │         │           /A:H 
+│                             │                  │         ╰ V3Score : 10 
 │                             │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
 │                             │                            │           /A:H 
 │                             │                            ╰ V3Score : 10 
@@ -6320,11 +6320,11 @@
 │                       │     ├ Severity        : CRITICAL 
 │                       │     ├ CweIDs           ─ [0]: CWE-295 
 │                       │     ├ VendorSeverity   ╭ amazon : 3 
-│                       │     │                  ├ bitnami: 2 
+│                       │     │                  ├ bitnami: 4 
 │                       │     │                  ╰ nvd    : 4 
-│                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L
-│                       │     │                  │         │           /A:N 
-│                       │     │                  │         ╰ V3Score : 4.8 
+│                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
+│                       │     │                  │         │           /A:H 
+│                       │     │                  │         ╰ V3Score : 10 
 │                       │     │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
 │                       │     │                            │           /A:H 
 │                       │     │                            ╰ V3Score : 10 
@@ -7927,11 +7927,11 @@
 │                       │     ├ Severity        : CRITICAL 
 │                       │     ├ CweIDs           ─ [0]: CWE-295 
 │                       │     ├ VendorSeverity   ╭ amazon : 3 
-│                       │     │                  ├ bitnami: 2 
+│                       │     │                  ├ bitnami: 4 
 │                       │     │                  ╰ nvd    : 4 
-│                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L
-│                       │     │                  │         │           /A:N 
-│                       │     │                  │         ╰ V3Score : 4.8 
+│                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
+│                       │     │                  │         │           /A:H 
+│                       │     │                  │         ╰ V3Score : 10 
 │                       │     │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
 │                       │     │                            │           /A:H 
 │                       │     │                            ╰ V3Score : 10 
@@ -9195,7 +9195,7 @@
 │                       │     │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
 │                       │     │                  │       5-58183 
 │                       │     │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2025-22011.html 
-│                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22011 
+│                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22012 
 │                       │     │                  ├ [12]: https://github.com/opencontainers/runc 
 │                       │     │                  ├ [13]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.
 │                       │     │                  │       2/RELEASES.md 
@@ -9564,11 +9564,11 @@
 │                             ├ Severity        : CRITICAL 
 │                             ├ CweIDs           ─ [0]: CWE-295 
 │                             ├ VendorSeverity   ╭ amazon : 3 
-│                             │                  ├ bitnami: 2 
+│                             │                  ├ bitnami: 4 
 │                             │                  ╰ nvd    : 4 
-│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L
-│                             │                  │         │           /A:N 
-│                             │                  │         ╰ V3Score : 4.8 
+│                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
+│                             │                  │         │           /A:H 
+│                             │                  │         ╰ V3Score : 10 
 │                             │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
 │                             │                            │           /A:H 
 │                             │                            ╰ V3Score : 10 
@@ -12779,8 +12779,8 @@
                         │     │                          osystem%3Ago 
                         │     ├ Fingerprint     : sha256:f996e06a8d208a9fb1b7a0041c728dc16ca15d831c94b9c45a08a2
                         │     │                   a9d648f425 
-                        │     ├ Title           : go-git is a highly extensible git implementation library
-                        │     │                   written in pu ... 
+                        │     ├ Title           : go-git/go-git: go-git: Data integrity issue due to improper
+                        │     │                   verification of pack and index files 
                         │     ├ Description     : go-git is a highly extensible git implementation library
                         │     │                   written in pure Go. Prior to 5.16.5, a vulnerability was
                         │     │                   discovered in go-git whereby data integrity values for .pack
@@ -12797,14 +12797,21 @@
                         │     │                   m 
                         │     ├ Severity        : MEDIUM 
                         │     ├ CweIDs           ─ [0]: CWE-354 
-                        │     ├ VendorSeverity   ─ ghsa: 2 
-                        │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N 
-                        │     │                         ╰ V3Score : 4.3 
-                        │     ├ References       ╭ [0]: https://github.com/go-git/go-git 
-                        │     │                  ├ [1]: https://github.com/go-git/go-git/releases/tag/v5.16.5 
-                        │     │                  ├ [2]: https://github.com/go-git/go-git/security/advisories/GH
+                        │     ├ VendorSeverity   ╭ ghsa  : 2 
+                        │     │                  ╰ redhat: 2 
+                        │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/
+                        │     │                  │        │           A:N 
+                        │     │                  │        ╰ V3Score : 4.3 
+                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/
+                        │     │                           │           A:N 
+                        │     │                           ╰ V3Score : 4.3 
+                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-25934 
+                        │     │                  ├ [1]: https://github.com/go-git/go-git 
+                        │     │                  ├ [2]: https://github.com/go-git/go-git/releases/tag/v5.16.5 
+                        │     │                  ├ [3]: https://github.com/go-git/go-git/security/advisories/GH
                         │     │                  │      SA-37cx-329c-33x3 
-                        │     │                  ╰ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-25934 
+                        │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-25934 
+                        │     │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2026-25934 
                         │     ├ PublishedDate   : 2026-02-09T23:16:05.937Z 
                         │     ╰ LastModifiedDate: 2026-02-10T15:22:54.74Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2025-68121 
@@ -12842,11 +12849,11 @@
                         │     ├ Severity        : CRITICAL 
                         │     ├ CweIDs           ─ [0]: CWE-295 
                         │     ├ VendorSeverity   ╭ amazon : 3 
-                        │     │                  ├ bitnami: 2 
+                        │     │                  ├ bitnami: 4 
                         │     │                  ╰ nvd    : 4 
-                        │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L
-                        │     │                  │         │           /A:N 
-                        │     │                  │         ╰ V3Score : 4.8 
+                        │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
+                        │     │                  │         │           /A:H 
+                        │     │                  │         ╰ V3Score : 10 
                         │     │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
                         │     │                            │           /A:H 
                         │     │                            ╰ V3Score : 10 
