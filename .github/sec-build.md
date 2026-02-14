@@ -2355,8 +2355,7 @@
 │                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │                       │      ├ Fingerprint     : sha256:79670cb8bd4081937dcc19f6486ed0059ad5b171ac538514796b8
 │                       │      │                   85bd95d3b42 
-│                       │      ├ Title           : During session resumption in crypto/tls, if the underlying
-│                       │      │                   Config has  ... 
+│                       │      ├ Title           : crypto/tls: Unexpected session resumption in crypto/tls 
 │                       │      ├ Description     : During session resumption in crypto/tls, if the underlying
 │                       │      │                   Config has its ClientCAs or RootCAs fields mutated between
 │                       │      │                   the initial handshake and the resumed handshake, the resumed
@@ -2371,19 +2370,25 @@
 │                       │      ├ CweIDs           ─ [0]: CWE-295 
 │                       │      ├ VendorSeverity   ╭ amazon : 3 
 │                       │      │                  ├ bitnami: 4 
-│                       │      │                  ╰ nvd    : 4 
+│                       │      │                  ├ nvd    : 4 
+│                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:
 │                       │      │                  │         │           H/A:H 
 │                       │      │                  │         ╰ V3Score : 10 
-│                       │      │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:
-│                       │      │                            │           H/A:H 
-│                       │      │                            ╰ V3Score : 10 
-│                       │      ├ References       ╭ [0]: https://go.dev/cl/737700 
-│                       │      │                  ├ [1]: https://go.dev/issue/77217 
-│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/K09ubi9F
+│                       │      │                  ├ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:
+│                       │      │                  │         │           H/A:H 
+│                       │      │                  │         ╰ V3Score : 10 
+│                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:
+│                       │      │                            │           H/A:N 
+│                       │      │                            ╰ V3Score : 7.4 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-68121 
+│                       │      │                  ├ [1]: https://go.dev/cl/737700 
+│                       │      │                  ├ [2]: https://go.dev/issue/77217 
+│                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/K09ubi9F
 │                       │      │                  │      QFk 
-│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
-│                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4337 
+│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
+│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4337 
+│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-68121 
 │                       │      ├ PublishedDate   : 2026-02-05T18:16:10.857Z 
 │                       │      ╰ LastModifiedDate: 2026-02-10T16:08:03.303Z 
 │                       ├ [1]  ╭ VulnerabilityID : CVE-2025-58183 
@@ -2437,7 +2442,7 @@
 │                       │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-58183 
 │                       │      │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2026-1381.html 
-│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23295 
+│                       │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23326 
 │                       │      │                  ├ [8] : https://go.dev/cl/709861 
 │                       │      │                  ├ [9] : https://go.dev/issue/75677 
 │                       │      │                  ├ [10]: https://groups.google.com/g/golang-announce/c/4Emdl2i
@@ -2596,7 +2601,7 @@
 │                       │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-61729 
 │                       │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-1908.html 
-│                       │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:1715 
+│                       │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:1908 
 │                       │      │                  ├ [7] : https://go.dev/cl/725920 
 │                       │      │                  ├ [8] : https://go.dev/issue/76445 
 │                       │      │                  ├ [9] : https://groups.google.com/g/golang-announce/c/8FJoBkP
@@ -4838,8 +4843,7 @@
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │                             ├ Fingerprint     : sha256:d605953fac003a549325dff4c8884ef517992c6b751670c70922dc
 │                             │                   d4946e4fd8 
-│                             ├ Title           : During session resumption in crypto/tls, if the underlying
-│                             │                   Config has  ... 
+│                             ├ Title           : crypto/tls: Unexpected session resumption in crypto/tls 
 │                             ├ Description     : During session resumption in crypto/tls, if the underlying
 │                             │                   Config has its ClientCAs or RootCAs fields mutated between
 │                             │                   the initial handshake and the resumed handshake, the resumed
@@ -4854,18 +4858,24 @@
 │                             ├ CweIDs           ─ [0]: CWE-295 
 │                             ├ VendorSeverity   ╭ amazon : 3 
 │                             │                  ├ bitnami: 4 
-│                             │                  ╰ nvd    : 4 
+│                             │                  ├ nvd    : 4 
+│                             │                  ╰ redhat : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
 │                             │                  │         │           /A:H 
 │                             │                  │         ╰ V3Score : 10 
-│                             │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
-│                             │                            │           /A:H 
-│                             │                            ╰ V3Score : 10 
-│                             ├ References       ╭ [0]: https://go.dev/cl/737700 
-│                             │                  ├ [1]: https://go.dev/issue/77217 
-│                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/K09ubi9FQFk 
-│                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
-│                             │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4337 
+│                             │                  ├ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
+│                             │                  │         │           /A:H 
+│                             │                  │         ╰ V3Score : 10 
+│                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 7.4 
+│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-68121 
+│                             │                  ├ [1]: https://go.dev/cl/737700 
+│                             │                  ├ [2]: https://go.dev/issue/77217 
+│                             │                  ├ [3]: https://groups.google.com/g/golang-announce/c/K09ubi9FQFk 
+│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
+│                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4337 
+│                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-68121 
 │                             ├ PublishedDate   : 2026-02-05T18:16:10.857Z 
 │                             ╰ LastModifiedDate: 2026-02-10T16:08:03.303Z 
 ├ [5] ╭ Target  : usr/bin/docker 
@@ -6141,8 +6151,7 @@
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │                             ├ Fingerprint     : sha256:19759c89a82d2c1b50fd08b007d545326ce72f957a1ec0382244f8
 │                             │                   482f9092dc 
-│                             ├ Title           : During session resumption in crypto/tls, if the underlying
-│                             │                   Config has  ... 
+│                             ├ Title           : crypto/tls: Unexpected session resumption in crypto/tls 
 │                             ├ Description     : During session resumption in crypto/tls, if the underlying
 │                             │                   Config has its ClientCAs or RootCAs fields mutated between
 │                             │                   the initial handshake and the resumed handshake, the resumed
@@ -6157,18 +6166,24 @@
 │                             ├ CweIDs           ─ [0]: CWE-295 
 │                             ├ VendorSeverity   ╭ amazon : 3 
 │                             │                  ├ bitnami: 4 
-│                             │                  ╰ nvd    : 4 
+│                             │                  ├ nvd    : 4 
+│                             │                  ╰ redhat : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
 │                             │                  │         │           /A:H 
 │                             │                  │         ╰ V3Score : 10 
-│                             │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
-│                             │                            │           /A:H 
-│                             │                            ╰ V3Score : 10 
-│                             ├ References       ╭ [0]: https://go.dev/cl/737700 
-│                             │                  ├ [1]: https://go.dev/issue/77217 
-│                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/K09ubi9FQFk 
-│                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
-│                             │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4337 
+│                             │                  ├ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
+│                             │                  │         │           /A:H 
+│                             │                  │         ╰ V3Score : 10 
+│                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 7.4 
+│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-68121 
+│                             │                  ├ [1]: https://go.dev/cl/737700 
+│                             │                  ├ [2]: https://go.dev/issue/77217 
+│                             │                  ├ [3]: https://groups.google.com/g/golang-announce/c/K09ubi9FQFk 
+│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
+│                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4337 
+│                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-68121 
 │                             ├ PublishedDate   : 2026-02-05T18:16:10.857Z 
 │                             ╰ LastModifiedDate: 2026-02-10T16:08:03.303Z 
 ├ [7] ╭ Target         : usr/bin/nerdctl 
@@ -7610,8 +7625,7 @@
 │                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │                       │     ├ Fingerprint     : sha256:89b6353dc19dfb360097925ab7333ca45f16902d6df085751f757d
 │                       │     │                   cd796f1eb9 
-│                       │     ├ Title           : During session resumption in crypto/tls, if the underlying
-│                       │     │                   Config has  ... 
+│                       │     ├ Title           : crypto/tls: Unexpected session resumption in crypto/tls 
 │                       │     ├ Description     : During session resumption in crypto/tls, if the underlying
 │                       │     │                   Config has its ClientCAs or RootCAs fields mutated between
 │                       │     │                   the initial handshake and the resumed handshake, the resumed
@@ -7626,18 +7640,24 @@
 │                       │     ├ CweIDs           ─ [0]: CWE-295 
 │                       │     ├ VendorSeverity   ╭ amazon : 3 
 │                       │     │                  ├ bitnami: 4 
-│                       │     │                  ╰ nvd    : 4 
+│                       │     │                  ├ nvd    : 4 
+│                       │     │                  ╰ redhat : 2 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
 │                       │     │                  │         │           /A:H 
 │                       │     │                  │         ╰ V3Score : 10 
-│                       │     │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
-│                       │     │                            │           /A:H 
-│                       │     │                            ╰ V3Score : 10 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/737700 
-│                       │     │                  ├ [1]: https://go.dev/issue/77217 
-│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/K09ubi9FQFk 
-│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
-│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4337 
+│                       │     │                  ├ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
+│                       │     │                  │         │           /A:H 
+│                       │     │                  │         ╰ V3Score : 10 
+│                       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H
+│                       │     │                            │           /A:N 
+│                       │     │                            ╰ V3Score : 7.4 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-68121 
+│                       │     │                  ├ [1]: https://go.dev/cl/737700 
+│                       │     │                  ├ [2]: https://go.dev/issue/77217 
+│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/K09ubi9FQFk 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
+│                       │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4337 
+│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-68121 
 │                       │     ├ PublishedDate   : 2026-02-05T18:16:10.857Z 
 │                       │     ╰ LastModifiedDate: 2026-02-10T16:08:03.303Z 
 │                       ├ [1] ╭ VulnerabilityID : CVE-2025-61726 
@@ -8893,7 +8913,7 @@
 │                       │     │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-202
 │                       │     │                  │       5-58183 
 │                       │     │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2025-22011.html 
-│                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22012 
+│                       │     │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22011 
 │                       │     │                  ├ [12]: https://github.com/opencontainers/runc 
 │                       │     │                  ├ [13]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.
 │                       │     │                  │       2/RELEASES.md 
@@ -9247,8 +9267,7 @@
 │                             │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │                             ├ Fingerprint     : sha256:8d6b7c5b260c04d40b8980cf6e0907f6a9cfe7cdceed49e3ee4155
 │                             │                   7082cc8fa9 
-│                             ├ Title           : During session resumption in crypto/tls, if the underlying
-│                             │                   Config has  ... 
+│                             ├ Title           : crypto/tls: Unexpected session resumption in crypto/tls 
 │                             ├ Description     : During session resumption in crypto/tls, if the underlying
 │                             │                   Config has its ClientCAs or RootCAs fields mutated between
 │                             │                   the initial handshake and the resumed handshake, the resumed
@@ -9263,18 +9282,24 @@
 │                             ├ CweIDs           ─ [0]: CWE-295 
 │                             ├ VendorSeverity   ╭ amazon : 3 
 │                             │                  ├ bitnami: 4 
-│                             │                  ╰ nvd    : 4 
+│                             │                  ├ nvd    : 4 
+│                             │                  ╰ redhat : 2 
 │                             ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
 │                             │                  │         │           /A:H 
 │                             │                  │         ╰ V3Score : 10 
-│                             │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
-│                             │                            │           /A:H 
-│                             │                            ╰ V3Score : 10 
-│                             ├ References       ╭ [0]: https://go.dev/cl/737700 
-│                             │                  ├ [1]: https://go.dev/issue/77217 
-│                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/K09ubi9FQFk 
-│                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
-│                             │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4337 
+│                             │                  ├ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
+│                             │                  │         │           /A:H 
+│                             │                  │         ╰ V3Score : 10 
+│                             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H
+│                             │                            │           /A:N 
+│                             │                            ╰ V3Score : 7.4 
+│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-68121 
+│                             │                  ├ [1]: https://go.dev/cl/737700 
+│                             │                  ├ [2]: https://go.dev/issue/77217 
+│                             │                  ├ [3]: https://groups.google.com/g/golang-announce/c/K09ubi9FQFk 
+│                             │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
+│                             │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4337 
+│                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-68121 
 │                             ├ PublishedDate   : 2026-02-05T18:16:10.857Z 
 │                             ╰ LastModifiedDate: 2026-02-10T16:08:03.303Z 
 ╰ [9] ╭ Target         : usr/bin/syft 
@@ -12534,8 +12559,7 @@
                               │                  ╰ URL : https://pkg.go.dev/vuln/ 
                               ├ Fingerprint     : sha256:3c8b50c45ad770bc07028351659f983526ae54b18aa912d5ba6de0
                               │                   967e0428e3 
-                              ├ Title           : During session resumption in crypto/tls, if the underlying
-                              │                   Config has  ... 
+                              ├ Title           : crypto/tls: Unexpected session resumption in crypto/tls 
                               ├ Description     : During session resumption in crypto/tls, if the underlying
                               │                   Config has its ClientCAs or RootCAs fields mutated between
                               │                   the initial handshake and the resumed handshake, the resumed
@@ -12550,18 +12574,24 @@
                               ├ CweIDs           ─ [0]: CWE-295 
                               ├ VendorSeverity   ╭ amazon : 3 
                               │                  ├ bitnami: 4 
-                              │                  ╰ nvd    : 4 
+                              │                  ├ nvd    : 4 
+                              │                  ╰ redhat : 2 
                               ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
                               │                  │         │           /A:H 
                               │                  │         ╰ V3Score : 10 
-                              │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
-                              │                            │           /A:H 
-                              │                            ╰ V3Score : 10 
-                              ├ References       ╭ [0]: https://go.dev/cl/737700 
-                              │                  ├ [1]: https://go.dev/issue/77217 
-                              │                  ├ [2]: https://groups.google.com/g/golang-announce/c/K09ubi9FQFk 
-                              │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
-                              │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4337 
+                              │                  ├ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
+                              │                  │         │           /A:H 
+                              │                  │         ╰ V3Score : 10 
+                              │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H
+                              │                            │           /A:N 
+                              │                            ╰ V3Score : 7.4 
+                              ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-68121 
+                              │                  ├ [1]: https://go.dev/cl/737700 
+                              │                  ├ [2]: https://go.dev/issue/77217 
+                              │                  ├ [3]: https://groups.google.com/g/golang-announce/c/K09ubi9FQFk 
+                              │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
+                              │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4337 
+                              │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-68121 
                               ├ PublishedDate   : 2026-02-05T18:16:10.857Z 
                               ╰ LastModifiedDate: 2026-02-10T16:08:03.303Z 
 ````
