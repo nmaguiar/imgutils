@@ -135,7 +135,8 @@ echo -e "[1m📥 -- Loading image: $INPUT_IMAGE[m"
 
 # Copy image to temporary archive if needed
 if [ ! -f "$INPUT_IMAGE" ] && [[ "$INPUT_IMAGE" == *:* ]]; then
-    CLEANUP_IMAGE=$(mktemp "${TMP_DIR}/image-XXXXXX.tar")
+    CLEANUP_IMAGE=$(mktemp "${TMP_DIR}/image-XXXXXX")
+    CLEANUP_IMAGE="${CLEANUP_IMAGE}.tar"
     log "Copying image to temporary archive: $CLEANUP_IMAGE"
     if [[ "$INPUT_IMAGE" == docker-daemon:* ]]; then
         skopeo copy "$INPUT_IMAGE" "docker-archive:${CLEANUP_IMAGE}" 2>&1 | grep -v "Getting image source signatures"
@@ -164,8 +165,8 @@ else
 fi
 
 # Get image config and layers
-CONFIG_FILE=$(jq -r '.[0].Config' "$MANIFEST")
-LAYERS=($(jq -r '.[0].Layers[]' "$MANIFEST"))
+CONFIG_FILE=$(oafp path='[0].Config' "$MANIFEST")
+LAYERS=($(oafp path='[0].Layers[]' "$MANIFEST"))
 
 log "Found ${#LAYERS[@]} layers"
 log "Config file: $CONFIG_FILE"
@@ -250,20 +251,22 @@ log "New layer digest: $NEW_LAYER_DIGEST"
 # Update config file
 log "Updating image configuration..."
 NEW_CONFIG="config-new.json"
-jq --arg msg "$MESSAGE" --arg from_idx "$FROM_INDEX" '
-    .history = (
-        .history[:($from_idx | tonumber)] + 
-        [{
-            "created": (now | strftime("%Y-%m-%dT%H:%M:%S.%NZ")),
-            "created_by": "squash.sh",
-            "comment": $msg
-        }]
-    ) |
-    .rootfs.diff_ids = (
-        .rootfs.diff_ids[:($from_idx | tonumber)] + 
-        ["sha256:" + env.NEW_LAYER_DIGEST]
-    )
-' "$CONFIG_FILE" > "$NEW_CONFIG"
+# jq --arg msg "$MESSAGE" --arg from_idx "$FROM_INDEX" '
+#     .history = (
+#         .history[:($from_idx | tonumber)] + 
+#         [{
+#             "created": (now | strftime("%Y-%m-%dT%H:%M:%S.%NZ")),
+#             "created_by": "squash.sh",
+#             "comment": $msg
+#         }]
+#     ) |
+#     .rootfs.diff_ids = (
+#         .rootfs.diff_ids[:($from_idx | tonumber)] + 
+#         ["sha256:" + env.NEW_LAYER_DIGEST]
+#     )
+# ' "$CONFIG_FILE" > "$NEW_CONFIG"
+oafp "$CONFIG_FILE" path="set(@,'orig')|{history:get('orig').concat(history[$FROM_INDEX:],[{created:now(0),created_by:'squash.sh',comment: '$MESSAGE'}]),rootfs:{type:'layers',diff_ids:get('orig').rootfs.concat(diff_ids[$FROM_INDEX:],['sha256:$NEW_LAYER_DIGEST'])}}" out=json
+oafp "$CONFIG_FILE" path="set(@,'orig')|{history:get('orig').concat(history[$FROM_INDEX:],[{created:now(0),created_by:'squash.sh',comment: '$MESSAGE'}]),rootfs:{type:'layers',diff_ids:get('orig').rootfs.concat(diff_ids[$FROM_INDEX:],['sha256:$NEW_LAYER_DIGEST'])}}" out=json > "$NEW_CONFIG"
 
 # Calculate new config digest
 NEW_CONFIG_DIGEST=$(sha256sum "$NEW_CONFIG" | awk '{print $1}')
@@ -272,7 +275,7 @@ mv "$NEW_CONFIG" "$NEW_CONFIG_FILE"
 log "New config digest: $NEW_CONFIG_DIGEST"
 
 # Create new manifest
-NEW_MANIFEST="manifest.json"
+NEW_MANIFEST="$WORK_DIR/manifest.json"
 LAYER_PATH="$SQUASHED_LAYER"
 
 # Build new layers array
@@ -295,11 +298,14 @@ else
     REPO_TAGS="[]"
 fi
 
-echo "[{\"Config\":\"$NEW_CONFIG_FILE\",\"RepoTags\":$REPO_TAGS,\"Layers\":$NEW_LAYERS_JSON}]" | jq '.' > "$NEW_MANIFEST"
-
-# Clean up old files
+# Clean up old files first (before creating new manifest)
 log "Cleaning up old manifest and config..."
 rm -f "$MANIFEST" "$CONFIG_FILE"
+
+# Create new manifest using temp file to avoid permission issues
+NEW_MANIFEST_TMP="${NEW_MANIFEST}.tmp"
+oafp data="[{\"Config\":\"$NEW_CONFIG_FILE\",\"RepoTags\":$REPO_TAGS,\"Layers\":$NEW_LAYERS_JSON}]" out=json > "$NEW_MANIFEST_TMP"
+mv "$NEW_MANIFEST_TMP" "$NEW_MANIFEST"
 
 # Remove squashed layers from archive
 if [ "$FROM_INDEX" -lt "${#LAYERS[@]}" ]; then
@@ -313,7 +319,8 @@ if [ -n "$OUTPUT_IMAGE" ]; then
     OUTPUT_FILE="$OUTPUT_IMAGE"
     echo -e "[1m💾 -- Saving squashed image to: $OUTPUT_FILE[m"
 else
-    OUTPUT_FILE=$(mktemp "${TMP_DIR}/squashed-image-XXXXXX.tar")
+    OUTPUT_FILE=$(mktemp "${TMP_DIR}/squashed-image-XXXXXX")
+    OUTPUT_FILE="${OUTPUT_FILE}.tar"
     echo -e "[1m💾 -- Creating temporary squashed image: $OUTPUT_FILE[m"
 fi
 
@@ -323,7 +330,7 @@ tar -cf "$OUTPUT_FILE" -C "$WORK_DIR" .
 if [ -n "$TAG" ] && [ -z "$OUTPUT_IMAGE" ]; then
     echo -e "[1m🐳 -- Loading squashed image into docker with tag: $TAG[m"
     if command -v docker >/dev/null 2>&1; then
-        docker load -i "$OUTPUT_FILE"
+        skopeo copy docker-archive:"$OUTPUT_FILE" docker-daemon:"$TAG"
         echo -e "[32;1m✅ -- Successfully squashed image: $TAG[m"
     elif command -v nerdctl >/dev/null 2>&1; then
         nerdctl load -i "$OUTPUT_FILE"
