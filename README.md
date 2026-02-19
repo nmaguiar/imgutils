@@ -361,6 +361,24 @@ To start imgutils/nmaguiar with the local host docker authentication:
 docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock -v $HOME:/work nmaguiar/imgutils /bin/sh -c "mkdir /home/openaf/.docker && sudo cp /work/.docker/config.json /home/openaf/.docker/. && sudo chmod a+r /home/openaf/.docker/*&& /bin/bash"
 ```
 
+### Squashing image layers
+
+To reduce the number of layers in an image for better performance and smaller size:
+
+```bash
+# Inside the imgutils container, squash all layers
+squash.sh -t myimage:squashed docker-daemon:myimage:latest
+
+# Squash from layer 5 onwards
+squash.sh -f 5 -t myimage:squashed docker-daemon:myimage:latest
+
+# Squash and save to a file
+squash.sh -o /tmp/squashed.tar -t myimage:squashed myimage:latest
+
+# Squash from a specific layer ID with custom message
+squash.sh -f sha256:abc123... -m "Optimized layers" -t myimage:squashed myimage:latest
+```
+
 ---
 
 📚  See more documentation in https://github.com/nmaguiar/imgutils

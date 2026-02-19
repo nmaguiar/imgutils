@@ -18,6 +18,7 @@ List of examples:
 | Images   | Generate a BOM (Bill Of Materials) for a provided image |
 | Images   | Retrieve a specific file from an image |
 | Images   | Comparing file contents between two image tags |
+| Images   | Squashing image layers to reduce size and improve performance |
 | Images   | Add/Change files to specific layers on an image |
 
 > To search for a specific example type '/Checking images content<ENTER>' and use the arrow keys to navigate
@@ -528,5 +529,95 @@ docker run --rm -ti --pull always -v $(pwd):/input nmaguiar/imgutils /bin/sh -c 
 ```
 
 > The options and output files are equal to the 'From registry images'
+
+---
+
+## 🔨 Squashing image layers to reduce size and improve performance
+
+Squashing layers can reduce image size and improve performance by combining multiple layers into one. This is particularly useful after running multiple RUN commands during development.
+
+**From the Docker daemon**
+
+```bash
+# Start imgutils with docker socket access
+docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock nmaguiar/imgutils /bin/bash
+
+# Squash all layers of an image
+squash.sh -t myapp:squashed docker-daemon:myapp:latest
+
+# Verify the squashed image
+docker images myapp
+```
+
+**Squashing from a specific layer**
+
+```bash
+# Start imgutils
+docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock nmaguiar/imgutils /bin/bash
+
+# First, inspect the image to find layer information
+dive docker-daemon:myapp:latest
+# or use docker history
+docker history myapp:latest
+
+# Squash from layer 5 onwards (keeping first 5 layers separate)
+squash.sh -f 5 -t myapp:squashed docker-daemon:myapp:latest
+```
+
+**Squashing from a registry image**
+
+```bash
+# Start imgutils
+docker run --rm -ti nmaguiar/imgutils /bin/bash
+
+# Squash all layers from a registry image
+squash.sh -t myapp:squashed myapp:latest
+
+# The squashed image can be pushed back to the registry
+docker push myapp:squashed
+```
+
+**Squashing and saving to a file**
+
+```bash
+# Start imgutils with volume mount
+docker run --rm -ti -v $(pwd):/output -v /var/run/docker.sock:/var/run/docker.sock nmaguiar/imgutils /bin/bash
+
+# Squash and save to a tar file
+squash.sh -o /output/squashed.tar -t myapp:squashed docker-daemon:myapp:latest
+
+# Exit and load the squashed image on another system
+exit
+docker load -i squashed.tar
+```
+
+**Advanced options**
+
+```bash
+# Squash with custom commit message
+squash.sh -m "Optimized for production" -t myapp:prod docker-daemon:myapp:dev
+
+# Squash from a specific layer ID with verbose output
+squash.sh -f sha256:abc123def456... -v -t myapp:squashed docker-daemon:myapp:latest
+
+# Use custom temporary directory
+squash.sh --tmp-dir /mnt/fast-storage -t myapp:squashed docker-daemon:myapp:latest
+```
+
+**Comparing before and after**
+
+```bash
+# Check original image size and layers
+docker images myapp:latest
+docker history myapp:latest
+
+# Squash the image
+squash.sh -t myapp:squashed docker-daemon:myapp:latest
+
+# Compare sizes
+docker images | grep myapp
+# Compare layer count
+docker history myapp:squashed
+```
 
 ---

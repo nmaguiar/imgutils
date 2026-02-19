@@ -94,6 +94,7 @@ First check the nodes' names with 'kubectl get nodes'
 | imageArchiveType.sh | Given a container image tar file, determines if it's a docker or oci archive tar file |
 | convert2dockerarchive.sh | Given a container image tar file, converts it to a docker archive tar from an oci image tar file |
 | convert2ociarchive.sh | Given a container image tar file, converts it to an oci archive tar from a docker image tar file |
+| squash.sh | Squashes layers in a docker image, similar to the docker-squash Python package. Can squash all layers or from a specific layer onwards |
 | regAuthLogin.sh | Given a registry authentication string, performs the login to the specified registries |
 
 ---
