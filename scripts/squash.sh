@@ -257,20 +257,6 @@ log "New layer digest: $NEW_LAYER_DIGEST"
 # Update config file
 log "Updating image configuration..."
 NEW_CONFIG="config-new.json"
-# jq --arg msg "$MESSAGE" --arg from_idx "$FROM_INDEX" '
-#     .history = (
-#         .history[:($from_idx | tonumber)] + 
-#         [{
-#             "created": (now | strftime("%Y-%m-%dT%H:%M:%S.%NZ")),
-#             "created_by": "squash.sh",
-#             "comment": $msg
-#         }]
-#     ) |
-#     .rootfs.diff_ids = (
-#         .rootfs.diff_ids[:($from_idx | tonumber)] + 
-#         ["sha256:" + env.NEW_LAYER_DIGEST]
-#     )
-# ' "$CONFIG_FILE" > "$NEW_CONFIG"
 oafp "$CONFIG_FILE" path="set(@,'orig')|{history:get('orig').concat(history[:$FROM_INDEX],[{created:to_isoDate(now(\`0\`)),created_by:'squash.sh',comment: '$MESSAGE'}]),rootfs:{type:'layers',diff_ids:get('orig').rootfs.concat(diff_ids[:$FROM_INDEX],['sha256:$NEW_LAYER_DIGEST'])}}" out=json > "$NEW_CONFIG"
 
 # Calculate new config digest
