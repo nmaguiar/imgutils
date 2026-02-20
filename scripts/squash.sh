@@ -290,7 +290,12 @@ log "New layer digest: $NEW_LAYER_DIGEST"
 # Update config file
 log "Updating image configuration..."
 NEW_CONFIG="config-new.json"
-oafp "$CONFIG_FILE" path="set(@,'orig')|{history:get('orig').concat(history[:$FROM_INDEX],[{created:to_isoDate(now(\`0\`)),created_by:'squash.sh',comment: '$MESSAGE'}]),rootfs:{type:'layers',diff_ids:get('orig').rootfs.concat(diff_ids[:$FROM_INDEX],['sha256:$NEW_LAYER_DIGEST'])}}" out=json > "$NEW_CONFIG"
+if [ "$FROM_INDEX" -eq 0 ]; then
+    # Full squash: emit a single history entry and a single filesystem diff.
+    oafp "$CONFIG_FILE" path="set(@,'orig')|{history:[{created:to_isoDate(now(\`0\`)),created_by:'squash.sh',comment: '$MESSAGE'}],rootfs:{type:'layers',diff_ids:['sha256:$NEW_LAYER_DIGEST']}}" out=json > "$NEW_CONFIG"
+else
+    oafp "$CONFIG_FILE" path="set(@,'orig')|{history:get('orig').concat(history[:$FROM_INDEX],[{created:to_isoDate(now(\`0\`)),created_by:'squash.sh',comment: '$MESSAGE'}]),rootfs:{type:'layers',diff_ids:get('orig').rootfs.concat(diff_ids[:$FROM_INDEX],['sha256:$NEW_LAYER_DIGEST'])}}" out=json > "$NEW_CONFIG"
+fi
 
 # Calculate new config digest
 NEW_CONFIG_DIGEST=$(sha256sum "$NEW_CONFIG" | awk '{print $1}')
