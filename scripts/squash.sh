@@ -177,6 +177,10 @@ LAYERS=()
 while IFS= read -r layer; do
     [ -n "$layer" ] && LAYERS+=("$layer")
 done < <(oafp path='[0].Layers' out=lines "$MANIFEST")
+DIFF_IDS=()
+while IFS= read -r diff_id; do
+    [ -n "$diff_id" ] && DIFF_IDS+=("$diff_id")
+done < <(oafp path='rootfs.diff_ids' out=lines "$CONFIG_FILE" 2>/dev/null || true)
 
 log "Found ${#LAYERS[@]} layers"
 log "Config file: $CONFIG_FILE"
@@ -200,10 +204,30 @@ else
     else
         # Find the layer index by ID
         FROM_INDEX=-1
+        FROM_LAYER_NOPREFIX="${FROM_LAYER#sha256:}"
         for i in "${!LAYERS[@]}"; do
-            if [[ "${LAYERS[$i]}" == *"$FROM_LAYER"* ]]; then
+            layer_path="${LAYERS[$i]}"
+            layer_id=$(basename "${layer_path%/layer.tar}")
+
+            # Match either archive layer path/id or config diff_id, with/without sha256: prefix.
+            if [[ "$layer_path" == *"$FROM_LAYER"* ]] || \
+               [[ "$layer_path" == *"$FROM_LAYER_NOPREFIX"* ]] || \
+               [[ "$layer_id" == "$FROM_LAYER" ]] || \
+               [[ "$layer_id" == "$FROM_LAYER_NOPREFIX" ]]; then
                 FROM_INDEX=$i
                 break
+            fi
+
+            if [ "$i" -lt "${#DIFF_IDS[@]}" ]; then
+                diff_id="${DIFF_IDS[$i]}"
+                diff_id_noprefix="${diff_id#sha256:}"
+                if [[ "$diff_id" == "$FROM_LAYER" ]] || \
+                   [[ "$diff_id" == "$FROM_LAYER_NOPREFIX" ]] || \
+                   [[ "$diff_id_noprefix" == "$FROM_LAYER" ]] || \
+                   [[ "$diff_id_noprefix" == "$FROM_LAYER_NOPREFIX" ]]; then
+                    FROM_INDEX=$i
+                    break
+                fi
             fi
         done
         if [ "$FROM_INDEX" -eq -1 ]; then
