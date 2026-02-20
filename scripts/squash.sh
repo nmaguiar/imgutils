@@ -143,8 +143,7 @@ echo -e "[1m📥 -- Loading image: $INPUT_IMAGE[m"
 
 # Copy image to temporary archive if needed
 if [ ! -f "$INPUT_IMAGE" ] && [[ "$INPUT_IMAGE" == *:* ]]; then
-    CLEANUP_IMAGE=$(mktemp "${TMP_DIR}/image-XXXXXX")
-    CLEANUP_IMAGE="${CLEANUP_IMAGE}.tar"
+    CLEANUP_IMAGE=$(mktemp "${TMP_DIR}/image-XXXXXX.tar")
     log "Copying image to temporary archive: $CLEANUP_IMAGE"
     if [[ "$INPUT_IMAGE" == docker-daemon:* ]]; then
         skopeo copy "$INPUT_IMAGE" "docker-archive:${CLEANUP_IMAGE}" 2>&1 | grep -v "Getting image source signatures"
@@ -210,39 +209,37 @@ fi
 SQUASHED_DIR="$WORK_DIR/squashed"
 mkdir -p "$SQUASHED_DIR"
 
-# Extract and merge layers
+# Extract and merge layers, processing whiteouts per-layer
 echo -e "[1m📦 -- Merging layers...[m"
 for i in $(seq $FROM_INDEX $((${#LAYERS[@]} - 1))); do
     LAYER="${LAYERS[$i]}"
     log "Processing layer $((i + 1))/${#LAYERS[@]}: $LAYER"
-    
+
     # Extract layer tar to squashed directory
     tar -xf "$WORK_DIR/$LAYER" -C "$SQUASHED_DIR" 2>/dev/null || true
-done
 
-# Remove .wh. whiteout files (Docker whiteout mechanism)
-log "Processing whiteout files..."
-find "$SQUASHED_DIR" -name '.wh.*' | while read -r whiteout; do
-    # Get the file/directory that should be deleted
-    dir=$(dirname "$whiteout")
-    base=$(basename "$whiteout")
-    target="${base#.wh.}"
-    
-    if [ "$target" = ".wh..wh..opq" ]; then
-        # Opaque whiteout - remove all files in directory
-        log "Opaque whiteout in: $dir"
-        find "$dir" -mindepth 1 ! -name '.wh.*' -delete 2>/dev/null || true
-    else
-        # Regular whiteout - remove specific file/directory
-        target_path="$dir/$target"
-        if [ -e "$target_path" ]; then
-            log "Removing whiteout target: $target_path"
-            rm -rf "$target_path"
+    # Process whiteout files for this layer immediately (before next layer)
+    find "$SQUASHED_DIR" -name '.wh.*' 2>/dev/null | while read -r whiteout; do
+        dir=$(dirname "$whiteout")
+        base=$(basename "$whiteout")
+        target="${base#.wh.}"
+
+        if [ "$target" = ".wh..opq" ]; then
+            # Opaque whiteout - remove all prior content in directory
+            log "Opaque whiteout in: $dir"
+            find "$dir" -mindepth 1 ! -name '.wh.*' -delete 2>/dev/null || true
+        else
+            # Regular whiteout - remove specific file/directory
+            target_path="$dir/$target"
+            if [ -e "$target_path" ]; then
+                log "Removing whiteout target: $target_path"
+                rm -rf "$target_path"
+            fi
         fi
-    fi
-    
-    # Remove the whiteout marker itself
-    rm -f "$whiteout"
+
+        # Remove the whiteout marker itself
+        rm -f "$whiteout"
+    done
 done
 
 # Create new layer tar
@@ -251,6 +248,7 @@ log "Creating squashed layer tar..."
 cd "$SQUASHED_DIR"
 tar -cf "$WORK_DIR/$SQUASHED_LAYER" . 2>/dev/null
 cd "$WORK_DIR"
+rm -rf "$SQUASHED_DIR"
 
 # Calculate new layer diff ID
 NEW_LAYER_DIGEST=$(sha256sum "$SQUASHED_LAYER" | awk '{print $1}')
@@ -326,8 +324,7 @@ if [ -n "$OUTPUT_IMAGE" ]; then
     OUTPUT_FILE="$OUTPUT_IMAGE"
     echo -e "[1m💾 -- Saving squashed image to: $OUTPUT_FILE[m"
 else
-    OUTPUT_FILE=$(mktemp "${TMP_DIR}/squashed-image-XXXXXX")
-    OUTPUT_FILE="${OUTPUT_FILE}.tar"
+    OUTPUT_FILE=$(mktemp "${TMP_DIR}/squashed-image-XXXXXX.tar")
     echo -e "[1m💾 -- Creating temporary squashed image: $OUTPUT_FILE[m"
 fi
 
