@@ -301,11 +301,13 @@ log "New config digest: $NEW_CONFIG_DIGEST"
 # Create new manifest
 NEW_MANIFEST="$WORK_DIR/manifest.json"
 LAYER_PATH="$SQUASHED_LAYER"
+NEW_LAYERS=()
 
 # Build new layers array
 NEW_LAYERS_JSON="["
 if [ "$FROM_INDEX" -gt 0 ]; then
     for i in $(seq 0 $((FROM_INDEX - 1))); do
+        NEW_LAYERS+=("${LAYERS[$i]}")
         if [ $i -gt 0 ]; then
             NEW_LAYERS_JSON="$NEW_LAYERS_JSON,"
         fi
@@ -313,6 +315,7 @@ if [ "$FROM_INDEX" -gt 0 ]; then
     done
     NEW_LAYERS_JSON="$NEW_LAYERS_JSON,"
 fi
+NEW_LAYERS+=("$LAYER_PATH")
 NEW_LAYERS_JSON="$NEW_LAYERS_JSON\"$LAYER_PATH\"]"
 
 # Build RepoTags
@@ -347,7 +350,20 @@ else
     echo -e "[1m💾 -- Creating temporary squashed image: $OUTPUT_FILE[m"
 fi
 
-tar -cf "$OUTPUT_FILE" -C "$WORK_DIR" .
+# Package only files referenced by the new manifest.
+# Repacking the full extracted archive may retain stale layer metadata/tar files.
+PACK_DIR="$WORK_DIR/archive"
+rm -rf "$PACK_DIR"
+mkdir -p "$PACK_DIR"
+cp -f "$NEW_MANIFEST" "$PACK_DIR/manifest.json"
+cp -f "$WORK_DIR/$NEW_CONFIG_FILE" "$PACK_DIR/$NEW_CONFIG_FILE"
+for layer in "${NEW_LAYERS[@]}"; do
+    layer_dir=$(dirname "$layer")
+    [ "$layer_dir" != "." ] && mkdir -p "$PACK_DIR/$layer_dir"
+    cp -f "$WORK_DIR/$layer" "$PACK_DIR/$layer"
+done
+
+tar -cf "$OUTPUT_FILE" -C "$PACK_DIR" .
 
 # Load into docker daemon if tag is specified and no output path
 if [ -n "$TAG" ] && [ -z "$OUTPUT_IMAGE" ]; then
