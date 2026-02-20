@@ -119,6 +119,14 @@ if [ -z "$TAG" ] && [ -z "$OUTPUT_IMAGE" ]; then
     usage
 fi
 
+# Resolve output path to absolute before any cd operations (portable, no realpath -m needed)
+if [ -n "$OUTPUT_IMAGE" ]; then
+    case "$OUTPUT_IMAGE" in
+        /*) ;;  # already absolute
+        *)  OUTPUT_IMAGE="$PWD/$OUTPUT_IMAGE" ;;
+    esac
+fi
+
 # Create temporary working directory
 WORK_DIR=$(mktemp -d "${TMP_DIR}/squash.XXXXXX")
 log "Created temporary directory: $WORK_DIR"
@@ -166,7 +174,7 @@ fi
 
 # Get image config and layers
 CONFIG_FILE=$(oafp path='[0].Config' "$MANIFEST")
-LAYERS=($(oafp path='[0].Layers[]' "$MANIFEST"))
+LAYERS=($(oafp path="[0].join(\`\n\`,Layers)" "$MANIFEST"))
 
 log "Found ${#LAYERS[@]} layers"
 log "Config file: $CONFIG_FILE"
@@ -265,8 +273,7 @@ NEW_CONFIG="config-new.json"
 #         ["sha256:" + env.NEW_LAYER_DIGEST]
 #     )
 # ' "$CONFIG_FILE" > "$NEW_CONFIG"
-oafp "$CONFIG_FILE" path="set(@,'orig')|{history:get('orig').concat(history[$FROM_INDEX:],[{created:now(0),created_by:'squash.sh',comment: '$MESSAGE'}]),rootfs:{type:'layers',diff_ids:get('orig').rootfs.concat(diff_ids[$FROM_INDEX:],['sha256:$NEW_LAYER_DIGEST'])}}" out=json
-oafp "$CONFIG_FILE" path="set(@,'orig')|{history:get('orig').concat(history[$FROM_INDEX:],[{created:now(0),created_by:'squash.sh',comment: '$MESSAGE'}]),rootfs:{type:'layers',diff_ids:get('orig').rootfs.concat(diff_ids[$FROM_INDEX:],['sha256:$NEW_LAYER_DIGEST'])}}" out=json > "$NEW_CONFIG"
+oafp "$CONFIG_FILE" path="set(@,'orig')|{history:get('orig').concat(history[:$FROM_INDEX],[{created:to_isoDate(now(\`0\`)),created_by:'squash.sh',comment: '$MESSAGE'}]),rootfs:{type:'layers',diff_ids:get('orig').rootfs.concat(diff_ids[:$FROM_INDEX],['sha256:$NEW_LAYER_DIGEST'])}}" out=json > "$NEW_CONFIG"
 
 # Calculate new config digest
 NEW_CONFIG_DIGEST=$(sha256sum "$NEW_CONFIG" | awk '{print $1}')
