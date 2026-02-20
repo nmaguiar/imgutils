@@ -143,7 +143,7 @@ echo -e "[1m📥 -- Loading image: $INPUT_IMAGE[m"
 
 # Copy image to temporary archive if needed
 if [ ! -f "$INPUT_IMAGE" ] && [[ "$INPUT_IMAGE" == *:* ]]; then
-    CLEANUP_IMAGE=$(mktemp "${TMP_DIR}/image-XXXXXX.tar")
+    CLEANUP_IMAGE=$(mktemp "${TMP_DIR}/image-XXXXXX")
     log "Copying image to temporary archive: $CLEANUP_IMAGE"
     if [[ "$INPUT_IMAGE" == docker-daemon:* ]]; then
         skopeo copy "$INPUT_IMAGE" "docker-archive:${CLEANUP_IMAGE}" 2>&1 | grep -v "Getting image source signatures"
@@ -343,7 +343,7 @@ if [ -n "$OUTPUT_IMAGE" ]; then
     OUTPUT_FILE="$OUTPUT_IMAGE"
     echo -e "[1m💾 -- Saving squashed image to: $OUTPUT_FILE[m"
 else
-    OUTPUT_FILE=$(mktemp "${TMP_DIR}/squashed-image-XXXXXX.tar")
+    OUTPUT_FILE=$(mktemp "${TMP_DIR}/squashed-image-XXXXXX")
     echo -e "[1m💾 -- Creating temporary squashed image: $OUTPUT_FILE[m"
 fi
 
