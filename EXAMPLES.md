@@ -620,4 +620,28 @@ docker images | grep myapp
 docker history myapp:squashed
 ```
 
+**Single docker run command line**
+
+Run `squash.sh` directly without entering an interactive shell:
+
+```bash
+# Squash all layers of a local docker image (result loaded back into docker daemon)
+docker run --rm -v /var/run/docker.sock:/var/run/docker.sock nmaguiar/imgutils squash.sh -t myapp:squashed docker-daemon:myapp:latest
+
+# Squash a registry image and save the result to a local tar file
+docker run --rm -v $(pwd):/output nmaguiar/imgutils squash.sh -o /output/squashed.tar myapp:latest
+
+# Squash a local docker image and save the result to a local tar file
+docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd):/output nmaguiar/imgutils squash.sh -o /output/squashed.tar docker-daemon:myapp:latest
+
+# Squash from layer 3 onwards and load back into the docker daemon
+docker run --rm -v /var/run/docker.sock:/var/run/docker.sock nmaguiar/imgutils squash.sh -f 3 -t myapp:squashed docker-daemon:myapp:latest
+
+# Squash with verbose output
+docker run --rm -v /var/run/docker.sock:/var/run/docker.sock nmaguiar/imgutils squash.sh -v -t myapp:squashed docker-daemon:myapp:latest
+
+# Squash a registry image using a custom temporary directory
+docker run --rm -v $(pwd):/work nmaguiar/imgutils squash.sh --tmp-dir /work -o /work/squashed.tar myapp:latest
+```
+
 ---
