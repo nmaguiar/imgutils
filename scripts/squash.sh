@@ -173,10 +173,19 @@ fi
 
 # Get image config and layers
 CONFIG_FILE=$(oafp path='[0].Config' "$MANIFEST")
-LAYERS=($(oafp path="[0].join(\`\n\`,Layers)" "$MANIFEST"))
+LAYERS=()
+while IFS= read -r layer; do
+    [ -n "$layer" ] && LAYERS+=("$layer")
+done < <(oafp path='[0].Layers' out=lines "$MANIFEST")
 
 log "Found ${#LAYERS[@]} layers"
 log "Config file: $CONFIG_FILE"
+
+# Validate layers
+if [ "${#LAYERS[@]}" -eq 0 ]; then
+    echo -e "[31;1m⚠️  -- No layers found in manifest[m" >&2
+    exit 1
+fi
 
 # Determine which layers to squash
 if [ -z "$FROM_LAYER" ]; then
@@ -205,41 +214,65 @@ else
     fi
 fi
 
+if [ "$FROM_INDEX" -lt 0 ] || [ "$FROM_INDEX" -ge "${#LAYERS[@]}" ]; then
+    echo -e "[31;1m⚠️  -- Invalid from-layer index: $FROM_INDEX (image has ${#LAYERS[@]} layers)[m" >&2
+    exit 1
+fi
+
 # Create squashed layer directory
 SQUASHED_DIR="$WORK_DIR/squashed"
 mkdir -p "$SQUASHED_DIR"
 
 # Extract and merge layers, processing whiteouts per-layer
 echo -e "[1m📦 -- Merging layers...[m"
-for i in $(seq $FROM_INDEX $((${#LAYERS[@]} - 1))); do
+for ((i=FROM_INDEX; i<${#LAYERS[@]}; i++)); do
     LAYER="${LAYERS[$i]}"
     log "Processing layer $((i + 1))/${#LAYERS[@]}: $LAYER"
+    LAYER_DIR="$WORK_DIR/layer-$i"
+    mkdir -p "$LAYER_DIR"
 
-    # Extract layer tar to squashed directory
-    tar -xf "$WORK_DIR/$LAYER" -C "$SQUASHED_DIR" 2>/dev/null || true
+    # Extract current layer to an isolated directory so whiteouts only affect previous state.
+    if [ ! -f "$WORK_DIR/$LAYER" ]; then
+        echo -e "[31;1m⚠️  -- Layer not found in archive: $LAYER[m" >&2
+        exit 1
+    fi
+    if ! tar -xf "$WORK_DIR/$LAYER" -C "$LAYER_DIR" 2>/dev/null; then
+        echo -e "[31;1m⚠️  -- Failed to extract layer: $LAYER[m" >&2
+        exit 1
+    fi
 
-    # Process whiteout files for this layer immediately (before next layer)
-    find "$SQUASHED_DIR" -name '.wh.*' 2>/dev/null | while read -r whiteout; do
-        dir=$(dirname "$whiteout")
+    # Apply this layer whiteouts against the accumulated filesystem.
+    find "$LAYER_DIR" -name '.wh.*' 2>/dev/null | while read -r whiteout; do
+        rel="${whiteout#$LAYER_DIR/}"
+        dir_rel=$(dirname "$rel")
         base=$(basename "$whiteout")
-        target="${base#.wh.}"
 
-        if [ "$target" = ".wh..opq" ]; then
-            # Opaque whiteout - remove all prior content in directory
-            log "Opaque whiteout in: $dir"
-            find "$dir" -mindepth 1 ! -name '.wh.*' -delete 2>/dev/null || true
+        if [ "$base" = ".wh..wh..opq" ]; then
+            # Opaque whiteout removes all prior entries from the target dir.
+            target_dir="$SQUASHED_DIR"
+            [ "$dir_rel" != "." ] && target_dir="$SQUASHED_DIR/$dir_rel"
+            if [ -d "$target_dir" ]; then
+                log "Opaque whiteout in: $target_dir"
+                find "$target_dir" -mindepth 1 -maxdepth 1 -exec rm -rf {} + 2>/dev/null || true
+            fi
         else
-            # Regular whiteout - remove specific file/directory
-            target_path="$dir/$target"
+            # Regular whiteout removes one prior path.
+            target="${base#.wh.}"
+            target_path="$SQUASHED_DIR/$target"
+            [ "$dir_rel" != "." ] && target_path="$SQUASHED_DIR/$dir_rel/$target"
             if [ -e "$target_path" ]; then
                 log "Removing whiteout target: $target_path"
                 rm -rf "$target_path"
             fi
         fi
 
-        # Remove the whiteout marker itself
+        # Whiteouts are markers; they must not be present in final layer content.
         rm -f "$whiteout"
     done
+
+    # Merge this layer content (without whiteout markers) into squashed filesystem.
+    (cd "$LAYER_DIR" && tar -cf - .) | (cd "$SQUASHED_DIR" && tar -xf -)
+    rm -rf "$LAYER_DIR"
 done
 
 # Create new layer tar
@@ -300,7 +333,7 @@ mv "$NEW_MANIFEST_TMP" "$NEW_MANIFEST"
 
 # Remove squashed layers from archive
 if [ "$FROM_INDEX" -lt "${#LAYERS[@]}" ]; then
-    for i in $(seq $FROM_INDEX $((${#LAYERS[@]} - 1))); do
+    for ((i=FROM_INDEX; i<${#LAYERS[@]}; i++)); do
         rm -f "$WORK_DIR/${LAYERS[$i]}"
     done
 fi
