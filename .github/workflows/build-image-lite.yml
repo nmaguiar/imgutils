@@ -47,13 +47,14 @@ jobs:
       run : |
         find .
 
-    - uses: docker/build-push-action@v3
+    - uses: docker/build-push-action@v6
       name: Build and push
       with:
         platforms: linux/amd64,linux/arm64
         file     : Dockerfile.lite
         push     : true
         tags     : nmaguiar/imgutils:build-lite
+        context  : .
 
     # - uses: docker/build-push-action@v3
     #   name: Build and push ubi
