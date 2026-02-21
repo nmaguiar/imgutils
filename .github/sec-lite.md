@@ -1091,13 +1091,13 @@
                         │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:
                         │      │                            │           H/A:N 
                         │      │                            ╰ V3Score : 7.4 
-                        │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:2706 
+                        │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:2708 
                         │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2025-68121 
                         │      │                  ├ [2] : https://bugzilla.redhat.com/2434431 
                         │      │                  ├ [3] : https://bugzilla.redhat.com/2434432 
                         │      │                  ├ [4] : https://bugzilla.redhat.com/2437016 
                         │      │                  ├ [5] : https://bugzilla.redhat.com/2437111 
-                        │      │                  ├ [6] : https://errata.almalinux.org/10/ALSA-2026-2706.html 
+                        │      │                  ├ [6] : https://errata.almalinux.org/8/ALSA-2026-2708.html 
                         │      │                  ├ [7] : https://go.dev/cl/737700 
                         │      │                  ├ [8] : https://go.dev/issue/77217 
                         │      │                  ├ [9] : https://groups.google.com/g/golang-announce/c/K09ubi9
@@ -1108,7 +1108,7 @@
                         │      │                  ├ [13]: https://pkg.go.dev/vuln/GO-2026-4337 
                         │      │                  ╰ [14]: https://www.cve.org/CVERecord?id=CVE-2025-68121 
                         │      ├ PublishedDate   : 2026-02-05T18:16:10.857Z 
-                        │      ╰ LastModifiedDate: 2026-02-10T16:08:03.303Z 
+                        │      ╰ LastModifiedDate: 2026-02-20T17:25:50.303Z 
                         ├ [1]  ╭ VulnerabilityID : CVE-2025-58183 
                         │      ├ VendorIDs        ─ [0]: GO-2025-4014 
                         │      ├ PkgID           : stdlib@v1.25.0 
@@ -1154,13 +1154,13 @@
                         │      │                            │           N/A:H 
                         │      │                            ╰ V3Score : 7.5 
                         │      ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2025/10/08/1 
-                        │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2026:1837 
+                        │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2026:1380 
                         │      │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-58183 
                         │      │                  ├ [3] : https://bugzilla.redhat.com/2407258 
                         │      │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2407258 
                         │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       25-58183 
-                        │      │                  ├ [6] : https://errata.almalinux.org/10/ALSA-2026-1837.html 
+                        │      │                  ├ [6] : https://errata.almalinux.org/8/ALSA-2026-1380.html 
                         │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23326 
                         │      │                  ├ [8] : https://go.dev/cl/709861 
                         │      │                  ├ [9] : https://go.dev/issue/75677 
@@ -1217,13 +1217,13 @@
                         │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
                         │      │                            │           N/A:H 
                         │      │                            ╰ V3Score : 7.5 
-                        │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:2706 
+                        │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:2708 
                         │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2025-61726 
                         │      │                  ├ [2] : https://bugzilla.redhat.com/2434431 
                         │      │                  ├ [3] : https://bugzilla.redhat.com/2434432 
                         │      │                  ├ [4] : https://bugzilla.redhat.com/2437016 
                         │      │                  ├ [5] : https://bugzilla.redhat.com/2437111 
-                        │      │                  ├ [6] : https://errata.almalinux.org/10/ALSA-2026-2706.html 
+                        │      │                  ├ [6] : https://errata.almalinux.org/8/ALSA-2026-2708.html 
                         │      │                  ├ [7] : https://go.dev/cl/736712 
                         │      │                  ├ [8] : https://go.dev/issue/77101 
                         │      │                  ├ [9] : https://groups.google.com/g/golang-announce/c/Vd2tYVM
@@ -1276,13 +1276,13 @@
                         │      │                            │           N/A:H 
                         │      │                            ╰ V3Score : 7.5 
                         │      ├ References       ╭ [0] : http://www.openwall.com/lists/oss-security/2026/01/15/4 
-                        │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2026:2706 
+                        │      │                  ├ [1] : https://access.redhat.com/errata/RHSA-2026:2708 
                         │      │                  ├ [2] : https://access.redhat.com/security/cve/CVE-2025-61728 
                         │      │                  ├ [3] : https://bugzilla.redhat.com/2434431 
                         │      │                  ├ [4] : https://bugzilla.redhat.com/2434432 
                         │      │                  ├ [5] : https://bugzilla.redhat.com/2437016 
                         │      │                  ├ [6] : https://bugzilla.redhat.com/2437111 
-                        │      │                  ├ [7] : https://errata.almalinux.org/10/ALSA-2026-2706.html 
+                        │      │                  ├ [7] : https://errata.almalinux.org/8/ALSA-2026-2708.html 
                         │      │                  ├ [8] : https://go.dev/cl/736713 
                         │      │                  ├ [9] : https://go.dev/issue/77102 
                         │      │                  ├ [10]: https://groups.google.com/g/golang-announce/c/Vd2tYVM
@@ -1336,13 +1336,13 @@
                         │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
                         │      │                            │           N/A:H 
                         │      │                            ╰ V3Score : 7.5 
-                        │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:1907 
+                        │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:2323 
                         │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2025-61729 
                         │      │                  ├ [2] : https://bugzilla.redhat.com/2418462 
                         │      │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2418462 
                         │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       25-61729 
-                        │      │                  ├ [5] : https://errata.almalinux.org/10/ALSA-2026-1907.html 
+                        │      │                  ├ [5] : https://errata.almalinux.org/8/ALSA-2026-2323.html 
                         │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:1908 
                         │      │                  ├ [7] : https://go.dev/cl/725920 
                         │      │                  ├ [8] : https://go.dev/issue/76445 
