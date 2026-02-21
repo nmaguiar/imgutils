@@ -43,6 +43,10 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+    - name: Test
+      run : |
+        find .
+
     - uses: docker/build-push-action@v3
       name: Build and push
       with:
