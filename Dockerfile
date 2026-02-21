@@ -51,7 +51,6 @@ RUN sed -i 's/v[0-9]*\.[0-9]*/edge/g' /etc/apk/repositories\
  && chmod a+rwx /openaf\
  && chmod -R a+rx /openaf/.docker\
  && sudo chmod g+w /openaf/.opack.db\
- && chmod a+x /usr/bin/crictl\
  && chmod a+x /usr/bin/helm\
  && chmod a+x /usr/bin/nerdctl\
  && cp /usr/bin/ctr /tmp/ctr\
@@ -121,7 +120,8 @@ RUN if [ "`uname -m`" = "x86_64" ]; then \
     else \
       mv /usr/bin/crictl_arm64 /usr/bin/crictl; \
       rm /usr/bin/crictl_amd64; \
-    fi
+    fi\
+ && chmod a+x /usr/bin/crictl
 
 # Setup the lastest syft
 # -----------------------
