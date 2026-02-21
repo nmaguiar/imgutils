@@ -1,0 +1,31 @@
+name: Build crictl
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '11 0 * * 6'
+
+jobs:
+    build:
+
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+
+        - name: build
+          run : |
+            docker system prune -f
+            rm -rf crictl
+            docker build --no-cache -t dev -f Dockerfile.crictl .
+            docker create --name dev dev
+            docker cp dev:/crictl_arm64 crictl_arm64
+            docker cp dev:/crictl_amd64 crictl_amd64
+
+        - name: Cache crictl save
+          uses: actions/cache/save@v4
+          with:
+            key : crictl
+            path: |
+              crictl_*

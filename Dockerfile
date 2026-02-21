@@ -27,7 +27,6 @@ RUN sed -i 's/v[0-9]*\.[0-9]*/edge/g' /etc/apk/repositories\
  && apk update\
  && apk upgrade --available\
  && apk --no-cache add skopeo docker-cli curl tar bash gzip mc tmux containerd-ctr bash-completion\
- && /openaf/ojob ojob.io/kube/getCriCtl path=/usr/bin\
  && /openaf/ojob ojob.io/kube/getHelm path=/usr/bin\
  && /openaf/ojob ojob.io/kube/getNerdCtl path=/usr/bin\
  && /openaf/opack install DockerRegistry Kube BouncyCastle oafproc\
@@ -52,7 +51,6 @@ RUN sed -i 's/v[0-9]*\.[0-9]*/edge/g' /etc/apk/repositories\
  && chmod a+rwx /openaf\
  && chmod -R a+rx /openaf/.docker\
  && sudo chmod g+w /openaf/.opack.db\
- && chmod a+x /usr/bin/crictl\
  && chmod a+x /usr/bin/helm\
  && chmod a+x /usr/bin/nerdctl\
  && cp /usr/bin/ctr /tmp/ctr\
@@ -111,6 +109,19 @@ RUN if [ "`uname -m`" = "x86_64" ]; then \
       mv /usr/bin/skopeo_arm64 /usr/bin/skopeo; \
       rm /usr/bin/skopeo_amd64; \
     fi
+
+# Setup crictl
+# ------------
+
+COPY crictl_* /usr/bin
+RUN if [ "`uname -m`" = "x86_64" ]; then \
+      mv /usr/bin/crictl_amd64 /usr/bin/crictl; \
+      rm /usr/bin/crictl_arm64; \
+    else \
+      mv /usr/bin/crictl_arm64 /usr/bin/crictl; \
+      rm /usr/bin/crictl_amd64; \
+    fi\
+ && chmod a+x /usr/bin/crictl
 
 # Setup the lastest syft
 # -----------------------
