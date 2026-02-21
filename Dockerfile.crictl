@@ -11,7 +11,7 @@ RUN apk add --no-cache \
 WORKDIR /go/src/github.com/kubernetes-sigs/cri-tools
 
 RUN git clone https://github.com/kubernetes-sigs/cri-tools.git . \
- && CRICTL_VERSION=v$(curl -s https://api.github.com/repos/kubernetes-sigs/cri-tools/releases/latest | jq -r .tag_name) \
+ && CRICTL_VERSION=$(curl -s https://api.github.com/repos/kubernetes-sigs/cri-tools/releases/latest | jq -r .tag_name) \
  && git checkout tags/${CRICTL_VERSION} -b build-branch \
  && make \
  && cp build/bin/linux/amd64/crictl /crictl_amd64 \
