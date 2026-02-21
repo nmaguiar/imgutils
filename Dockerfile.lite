@@ -4,9 +4,17 @@ FROM openaf/oaf:edge as main
 USER root
 RUN apk update\
  && apk --no-cache add tar bash gzip\
- && /openaf/ojob ojob.io/kube/getCriCtl path=/usr/bin\
- && chmod a+x /usr/bin/crictl\
  && rm /lib/apk/db/*
+
+COPY crictl_* /usr/bin
+RUN if [ "`uname -m`" = "x86_64" ]; then \
+      mv /usr/bin/crictl_amd64 /usr/bin/crictl; \
+      rm /usr/bin/crictl_arm64; \
+    else \
+      mv /usr/bin/crictl_arm64 /usr/bin/crictl; \
+      rm /usr/bin/crictl_amd64; \
+    fi\
+ && chmod a+x /usr/bin/crictl
 
 # ------------------
 FROM alpine:edge as clean
