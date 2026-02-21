@@ -5,6 +5,7 @@ RUN apk add --no-cache \
     go \
     bash \
     curl \
+    make \
     jq
 
 WORKDIR /go/src/github.com/kubernetes-sigs/cri-tools
@@ -12,5 +13,7 @@ WORKDIR /go/src/github.com/kubernetes-sigs/cri-tools
 RUN git clone https://github.com/kubernetes-sigs/cri-tools.git . \
  && CRICTL_VERSION=$(curl -s https://api.github.com/repos/kubernetes-sigs/cri-tools/releases/latest | jq -r .tag_name) \
  && git checkout tags/${CRICTL_VERSION} -b build-branch \
- && CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -trimpath -ldflags="-s -w -X github.com/kubernetes-sigs/cri-tools/pkg/version.Version=${CRICTL_VERSION}" -o /crictl_amd64 ./cmd/crictl \
- && CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -trimpath -ldflags="-s -w -X github.com/kubernetes-sigs/cri-tools/pkg/version.Version=${CRICTL_VERSION}" -o /crictl_arm64 ./cmd/crictl
+ && make \
+ && cp build/bin/linux/amd64/crictl /crictl_amd64 \
+ && GOARCH=arm64 make \
+ && cp build/bin/linux/arm64/crictl /crictl_arm64
