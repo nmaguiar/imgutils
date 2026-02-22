@@ -81,7 +81,7 @@ jobs:
       name: Generate sec-build.md
       with:
         ojob: 'ojob.io/util/toMDTree'
-        args: 'inputFile=.github/sec-build.yaml file=.github/sec-build.md'
+        args: 'inputFile=.github/sec-build.yaml path="[].Vulnerabilities" file=.github/sec-build.md'
         dist: 'nightly'
 
     - uses: openaf/ojob-action@v7
