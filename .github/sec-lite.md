@@ -1112,7 +1112,7 @@
                         │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       25-68121 
                         │      │                  ├ [15]: https://errata.almalinux.org/9/ALSA-2026-2920.html 
-                        │      │                  ├ [16]: https://errata.rockylinux.org/RLSA-2026:2709 
+                        │      │                  ├ [16]: https://errata.rockylinux.org/RLSA-2026:2708 
                         │      │                  ├ [17]: https://go.dev/cl/737700 
                         │      │                  ├ [18]: https://go.dev/issue/77217 
                         │      │                  ├ [19]: https://groups.google.com/g/golang-announce/c/K09ubi9
@@ -1176,7 +1176,7 @@
                         │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       25-58183 
                         │      │                  ├ [6] : https://errata.almalinux.org/9/ALSA-2026-1381.html 
-                        │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23326 
+                        │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2025:23948 
                         │      │                  ├ [8] : https://go.dev/cl/709861 
                         │      │                  ├ [9] : https://go.dev/issue/75677 
                         │      │                  ├ [10]: https://groups.google.com/g/golang-announce/c/4Emdl2i
@@ -1253,7 +1253,7 @@
                         │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       25-68121 
                         │      │                  ├ [15]: https://errata.almalinux.org/9/ALSA-2026-2920.html 
-                        │      │                  ├ [16]: https://errata.rockylinux.org/RLSA-2026:2709 
+                        │      │                  ├ [16]: https://errata.rockylinux.org/RLSA-2026:2708 
                         │      │                  ├ [17]: https://go.dev/cl/736712 
                         │      │                  ├ [18]: https://go.dev/issue/77101 
                         │      │                  ├ [19]: https://groups.google.com/g/golang-announce/c/Vd2tYVM
@@ -1327,7 +1327,7 @@
                         │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       25-68121 
                         │      │                  ├ [16]: https://errata.almalinux.org/9/ALSA-2026-2920.html 
-                        │      │                  ├ [17]: https://errata.rockylinux.org/RLSA-2026:2709 
+                        │      │                  ├ [17]: https://errata.rockylinux.org/RLSA-2026:2708 
                         │      │                  ├ [18]: https://go.dev/cl/736713 
                         │      │                  ├ [19]: https://go.dev/issue/77102 
                         │      │                  ├ [20]: https://groups.google.com/g/golang-announce/c/Vd2tYVM
@@ -1392,7 +1392,7 @@
                         │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       25-61729 
                         │      │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2026-2920.html 
-                        │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2026:1908 
+                        │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2026:2323 
                         │      │                  ├ [11]: https://go.dev/cl/725920 
                         │      │                  ├ [12]: https://go.dev/issue/76445 
                         │      │                  ├ [13]: https://groups.google.com/g/golang-announce/c/8FJoBkP
