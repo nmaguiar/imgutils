@@ -2937,7 +2937,7 @@
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
 │                       │      │                  ├ amazon     : 3 
-│                       │      │                  ├ azure      : 2 
+│                       │      │                  ├ azure      : 3 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ cbl-mariner: 2 
 │                       │      │                  ├ oracle-oval: 3 
@@ -2969,7 +2969,7 @@
 │                       │      │                  ├ [13]: https://groups.google.com/g/golang-announce/c/Vd2tYVM
 │                       │      │                  │       8eUc 
 │                       │      │                  ├ [14]: https://linux.oracle.com/cve/CVE-2025-61726.html 
-│                       │      │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-3668.html 
+│                       │      │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-3669.html 
 │                       │      │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2025-61726 
 │                       │      │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4341 
 │                       │      │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2025-61726 
@@ -3079,6 +3079,7 @@
 │                       │      ├ CweIDs           ─ [0]: CWE-295 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
 │                       │      │                  ├ amazon     : 3 
+│                       │      │                  ├ azure      : 3 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ oracle-oval: 3 
 │                       │      │                  ├ photon     : 3 
@@ -3147,7 +3148,7 @@
 │                       │      │                   inject messages during the handshake. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ VendorSeverity   ╭ amazon     : 3 
-│                       │      │                  ├ azure      : 1 
+│                       │      │                  ├ azure      : 2 
 │                       │      │                  ├ bitnami    : 2 
 │                       │      │                  ├ cbl-mariner: 1 
 │                       │      │                  ╰ photon     : 2 
@@ -5219,7 +5220,74 @@
 │     │                        │            ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4475e8b
 │     │                        │                      f0be8d84f76b5f 
 │     │                        ╰ AnalyzedBy: gobinary 
-│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2025-11065 
+│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2025-15558 
+│                       │     ├ VendorIDs        ─ [0]: GHSA-p436-gjf2-799p 
+│                       │     ├ PkgID           : github.com/docker/cli@v28.0.2+incompatible 
+│                       │     ├ PkgName         : github.com/docker/cli 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/cli@v28.0.2%2Bincompatible 
+│                       │     │                  ╰ UID : 88851239871c0131 
+│                       │     ├ InstalledVersion: v28.0.2+incompatible 
+│                       │     ├ FixedVersion    : 29.2.0 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1b
+│                       │     │                  │         c64e086c1f91e77709f 
+│                       │     │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a44
+│                       │     │                            75e8bf0be8d84f76b5f 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-15558 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Go 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Ago 
+│                       │     ├ Fingerprint     : sha256:9d8613f68ecdb7a962190708e57e98b0743a737f951a0c4861394e
+│                       │     │                   8530d850d4 
+│                       │     ├ Title           : docker/cli: Docker CLI for Windows: Privilege escalation via
+│                       │     │                   malicious plugin binaries 
+│                       │     ├ Description     : Docker CLI for Windows searches for plugin binaries in
+│                       │     │                   C:\ProgramData\Docker\cli-plugins, a directory that does not
+│                       │     │                   exist by default. A low-privileged attacker can create this
+│                       │     │                   directory and place malicious CLI plugin binaries
+│                       │     │                   (docker-compose.exe, docker-buildx.exe, etc.) that are
+│                       │     │                   executed when a victim user opens Docker Desktop or invokes
+│                       │     │                   Docker CLI plugin features, and allow privilege-escalation if
+│                       │     │                    the docker CLI is executed as a privileged user.
+│                       │     │                   
+│                       │     │                   This issue affects Docker CLI: through 29.1.5 and Windows
+│                       │     │                   binaries acting as a CLI-plugin manager using the 
+│                       │     │                   github.com/docker/cli/cli-plugins/manager
+│                       │     │                   https://pkg.go.dev/github.com/docker/cli@v29.1.5+incompatible
+│                       │     │                   /cli-plugins/manager  package, such as Docker Compose.
+│                       │     │                   This issue does not impact non-Windows binaries, and projects
+│                       │     │                    not using the plugin-manager code. 
+│                       │     ├ Severity        : HIGH 
+│                       │     ├ CweIDs           ─ [0]: CWE-427 
+│                       │     ├ VendorSeverity   ╭ ghsa  : 3 
+│                       │     │                  ╰ redhat: 3 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:P/VC:H/V
+│                       │     │                  │        │            I:H/VA:H/SC:N/SI:N/SA:N 
+│                       │     │                  │        ╰ V40Score : 7 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/
+│                       │     │                           │           A:H 
+│                       │     │                           ╰ V3Score : 7.3 
+│                       │     ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2025-15558 
+│                       │     │                  ├ [1] : https://docs.docker.com/desktop/release-notes 
+│                       │     │                  ├ [2] : https://docs.docker.com/desktop/release-notes/ 
+│                       │     │                  ├ [3] : https://github.com/docker/cli 
+│                       │     │                  ├ [4] : https://github.com/docker/cli/commit/13759330b1f7e7cb0
+│                       │     │                  │       d67047ea42c5482548ba7fa 
+│                       │     │                  ├ [5] : https://github.com/docker/cli/pull/6713 
+│                       │     │                  ├ [6] : https://github.com/docker/cli/security/advisories/GHSA
+│                       │     │                  │       -p436-gjf2-799p 
+│                       │     │                  ├ [7] : https://github.com/docker/compose/pull/12300 
+│                       │     │                  ├ [8] : https://nvd.nist.gov/vuln/detail/CVE-2025-15558 
+│                       │     │                  ├ [9] : https://www.cve.org/CVERecord?id=CVE-2025-15558 
+│                       │     │                  ├ [10]: https://www.zerodayinitiative.com/advisories/ZDI-CAN-2
+│                       │     │                  │       8304 
+│                       │     │                  ╰ [11]: https://www.zerodayinitiative.com/advisories/ZDI-CAN-2
+│                       │     │                          8304/ 
+│                       │     ├ PublishedDate   : 2026-03-04T17:16:14.763Z 
+│                       │     ╰ LastModifiedDate: 2026-03-04T18:08:05.73Z 
+│                       ├ [1] ╭ VulnerabilityID : CVE-2025-11065 
 │                       │     ├ VendorIDs        ─ [0]: GHSA-2464-8j7c-4cjm 
 │                       │     ├ PkgID           : github.com/go-viper/mapstructure/v2@v2.2.1 
 │                       │     ├ PkgName         : github.com/go-viper/mapstructure/v2 
@@ -5274,7 +5342,7 @@
 │                       │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-11065 
 │                       │     ├ PublishedDate   : 2026-01-26T20:16:06.84Z 
 │                       │     ╰ LastModifiedDate: 2026-02-03T20:15:56.087Z 
-│                       ├ [1] ╭ VulnerabilityID : GHSA-fv92-fjc5-jj9h 
+│                       ├ [2] ╭ VulnerabilityID : GHSA-fv92-fjc5-jj9h 
 │                       │     ├ PkgID           : github.com/go-viper/mapstructure/v2@v2.2.1 
 │                       │     ├ PkgName         : github.com/go-viper/mapstructure/v2 
 │                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/go-viper/mapstructure/v2@v2.2.1 
@@ -5374,7 +5442,7 @@
 │                       │     │                         ories/GHSA-fv92-fjc5-jj9h 
 │                       │     ├ PublishedDate   : 2025-06-27T16:24:59Z 
 │                       │     ╰ LastModifiedDate: 2025-06-27T16:24:59Z 
-│                       ├ [2] ╭ VulnerabilityID : CVE-2025-22872 
+│                       ├ [3] ╭ VulnerabilityID : CVE-2025-22872 
 │                       │     ├ VendorIDs        ─ [0]: GHSA-vvgc-356p-c3xw 
 │                       │     ├ PkgID           : golang.org/x/net@v0.37.0 
 │                       │     ├ PkgName         : golang.org/x/net 
@@ -5429,7 +5497,7 @@
 │                       │     │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2025-22872 
 │                       │     ├ PublishedDate   : 2025-04-16T18:16:04.183Z 
 │                       │     ╰ LastModifiedDate: 2025-05-16T23:15:19.707Z 
-│                       ╰ [3] ╭ VulnerabilityID : CVE-2025-68121 
+│                       ╰ [4] ╭ VulnerabilityID : CVE-2025-68121 
 │                             ├ VendorIDs        ─ [0]: GO-2026-4337 
 │                             ├ PkgID           : stdlib@v1.25.6 
 │                             ├ PkgName         : stdlib 
@@ -7059,7 +7127,7 @@
 │                       │     ├ CweIDs           ─ [0]: CWE-770 
 │                       │     ├ VendorSeverity   ╭ alma       : 3 
 │                       │     │                  ├ amazon     : 3 
-│                       │     │                  ├ azure      : 2 
+│                       │     │                  ├ azure      : 3 
 │                       │     │                  ├ bitnami    : 3 
 │                       │     │                  ├ cbl-mariner: 2 
 │                       │     │                  ├ oracle-oval: 3 
@@ -7091,7 +7159,7 @@
 │                       │     │                  ├ [13]: https://groups.google.com/g/golang-announce/c/Vd2tYVM8
 │                       │     │                  │       eUc 
 │                       │     │                  ├ [14]: https://linux.oracle.com/cve/CVE-2025-61726.html 
-│                       │     │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-3668.html 
+│                       │     │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-3669.html 
 │                       │     │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2025-61726 
 │                       │     │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4341 
 │                       │     │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2025-61726 
@@ -7200,7 +7268,7 @@
 │                             │                   during the handshake. 
 │                             ├ Severity        : HIGH 
 │                             ├ VendorSeverity   ╭ amazon     : 3 
-│                             │                  ├ azure      : 1 
+│                             │                  ├ azure      : 2 
 │                             │                  ├ bitnami    : 2 
 │                             │                  ├ cbl-mariner: 1 
 │                             │                  ╰ photon     : 2 
@@ -8633,7 +8701,74 @@
 │     │                         │            ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4475e8
 │     │                         │                      bf0be8d84f76b5f 
 │     │                         ╰ AnalyzedBy: gobinary 
-│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2025-68121 
+│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2025-15558 
+│                       │     ├ VendorIDs        ─ [0]: GHSA-p436-gjf2-799p 
+│                       │     ├ PkgID           : github.com/docker/cli@v29.1.3+incompatible 
+│                       │     ├ PkgName         : github.com/docker/cli 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/cli@v29.1.3%2Bincompatible 
+│                       │     │                  ╰ UID : 7c51b9398c77238c 
+│                       │     ├ InstalledVersion: v29.1.3+incompatible 
+│                       │     ├ FixedVersion    : 29.2.0 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1b
+│                       │     │                  │         c64e086c1f91e77709f 
+│                       │     │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a44
+│                       │     │                            75e8bf0be8d84f76b5f 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-15558 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Go 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Ago 
+│                       │     ├ Fingerprint     : sha256:9fd90976d26721cadc925b7919eb9326669bd458cb989d1fdfdc4f
+│                       │     │                   0111f70f22 
+│                       │     ├ Title           : docker/cli: Docker CLI for Windows: Privilege escalation via
+│                       │     │                   malicious plugin binaries 
+│                       │     ├ Description     : Docker CLI for Windows searches for plugin binaries in
+│                       │     │                   C:\ProgramData\Docker\cli-plugins, a directory that does not
+│                       │     │                   exist by default. A low-privileged attacker can create this
+│                       │     │                   directory and place malicious CLI plugin binaries
+│                       │     │                   (docker-compose.exe, docker-buildx.exe, etc.) that are
+│                       │     │                   executed when a victim user opens Docker Desktop or invokes
+│                       │     │                   Docker CLI plugin features, and allow privilege-escalation if
+│                       │     │                    the docker CLI is executed as a privileged user.
+│                       │     │                   
+│                       │     │                   This issue affects Docker CLI: through 29.1.5 and Windows
+│                       │     │                   binaries acting as a CLI-plugin manager using the 
+│                       │     │                   github.com/docker/cli/cli-plugins/manager
+│                       │     │                   https://pkg.go.dev/github.com/docker/cli@v29.1.5+incompatible
+│                       │     │                   /cli-plugins/manager  package, such as Docker Compose.
+│                       │     │                   This issue does not impact non-Windows binaries, and projects
+│                       │     │                    not using the plugin-manager code. 
+│                       │     ├ Severity        : HIGH 
+│                       │     ├ CweIDs           ─ [0]: CWE-427 
+│                       │     ├ VendorSeverity   ╭ ghsa  : 3 
+│                       │     │                  ╰ redhat: 3 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:P/VC:H/V
+│                       │     │                  │        │            I:H/VA:H/SC:N/SI:N/SA:N 
+│                       │     │                  │        ╰ V40Score : 7 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/
+│                       │     │                           │           A:H 
+│                       │     │                           ╰ V3Score : 7.3 
+│                       │     ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2025-15558 
+│                       │     │                  ├ [1] : https://docs.docker.com/desktop/release-notes 
+│                       │     │                  ├ [2] : https://docs.docker.com/desktop/release-notes/ 
+│                       │     │                  ├ [3] : https://github.com/docker/cli 
+│                       │     │                  ├ [4] : https://github.com/docker/cli/commit/13759330b1f7e7cb0
+│                       │     │                  │       d67047ea42c5482548ba7fa 
+│                       │     │                  ├ [5] : https://github.com/docker/cli/pull/6713 
+│                       │     │                  ├ [6] : https://github.com/docker/cli/security/advisories/GHSA
+│                       │     │                  │       -p436-gjf2-799p 
+│                       │     │                  ├ [7] : https://github.com/docker/compose/pull/12300 
+│                       │     │                  ├ [8] : https://nvd.nist.gov/vuln/detail/CVE-2025-15558 
+│                       │     │                  ├ [9] : https://www.cve.org/CVERecord?id=CVE-2025-15558 
+│                       │     │                  ├ [10]: https://www.zerodayinitiative.com/advisories/ZDI-CAN-2
+│                       │     │                  │       8304 
+│                       │     │                  ╰ [11]: https://www.zerodayinitiative.com/advisories/ZDI-CAN-2
+│                       │     │                          8304/ 
+│                       │     ├ PublishedDate   : 2026-03-04T17:16:14.763Z 
+│                       │     ╰ LastModifiedDate: 2026-03-04T18:08:05.73Z 
+│                       ├ [1] ╭ VulnerabilityID : CVE-2025-68121 
 │                       │     ├ VendorIDs        ─ [0]: GO-2026-4337 
 │                       │     ├ PkgID           : stdlib@v1.25.5 
 │                       │     ├ PkgName         : stdlib 
@@ -8712,7 +8847,7 @@
 │                       │     │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2025-68121 
 │                       │     ├ PublishedDate   : 2026-02-05T18:16:10.857Z 
 │                       │     ╰ LastModifiedDate: 2026-02-20T17:25:50.303Z 
-│                       ├ [1] ╭ VulnerabilityID : CVE-2025-61726 
+│                       ├ [2] ╭ VulnerabilityID : CVE-2025-61726 
 │                       │     ├ VendorIDs        ─ [0]: GO-2026-4341 
 │                       │     ├ PkgID           : stdlib@v1.25.5 
 │                       │     ├ PkgName         : stdlib 
@@ -8744,7 +8879,7 @@
 │                       │     ├ CweIDs           ─ [0]: CWE-770 
 │                       │     ├ VendorSeverity   ╭ alma       : 3 
 │                       │     │                  ├ amazon     : 3 
-│                       │     │                  ├ azure      : 2 
+│                       │     │                  ├ azure      : 3 
 │                       │     │                  ├ bitnami    : 3 
 │                       │     │                  ├ cbl-mariner: 2 
 │                       │     │                  ├ oracle-oval: 3 
@@ -8776,13 +8911,13 @@
 │                       │     │                  ├ [13]: https://groups.google.com/g/golang-announce/c/Vd2tYVM8
 │                       │     │                  │       eUc 
 │                       │     │                  ├ [14]: https://linux.oracle.com/cve/CVE-2025-61726.html 
-│                       │     │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-3668.html 
+│                       │     │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-3669.html 
 │                       │     │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2025-61726 
 │                       │     │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4341 
 │                       │     │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2025-61726 
 │                       │     ├ PublishedDate   : 2026-01-28T20:16:09.713Z 
 │                       │     ╰ LastModifiedDate: 2026-02-06T18:47:34.52Z 
-│                       ├ [2] ╭ VulnerabilityID : CVE-2025-61728 
+│                       ├ [3] ╭ VulnerabilityID : CVE-2025-61728 
 │                       │     ├ VendorIDs        ─ [0]: GO-2026-4342 
 │                       │     ├ PkgID           : stdlib@v1.25.5 
 │                       │     ├ PkgName         : stdlib 
@@ -8855,7 +8990,7 @@
 │                       │     │                  ╰ [24]: https://www.cve.org/CVERecord?id=CVE-2025-61728 
 │                       │     ├ PublishedDate   : 2026-01-28T20:16:09.83Z 
 │                       │     ╰ LastModifiedDate: 2026-02-06T18:45:10.42Z 
-│                       ╰ [3] ╭ VulnerabilityID : CVE-2025-61730 
+│                       ╰ [4] ╭ VulnerabilityID : CVE-2025-61730 
 │                             ├ VendorIDs        ─ [0]: GO-2026-4340 
 │                             ├ PkgID           : stdlib@v1.25.5 
 │                             ├ PkgName         : stdlib 
@@ -8885,7 +9020,7 @@
 │                             │                   during the handshake. 
 │                             ├ Severity        : HIGH 
 │                             ├ VendorSeverity   ╭ amazon     : 3 
-│                             │                  ├ azure      : 1 
+│                             │                  ├ azure      : 2 
 │                             │                  ├ bitnami    : 2 
 │                             │                  ├ cbl-mariner: 1 
 │                             │                  ╰ photon     : 2 
@@ -10166,10 +10301,14 @@
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-918 
 │                       │     ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │     │                  ├ nvd   : 2 
 │                       │     │                  ╰ redhat: 2 
 │                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/
 │                       │     │                  │        │           A:N 
 │                       │     │                  │        ╰ V3Score : 5.8 
+│                       │     │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/
+│                       │     │                  │        │           A:N 
+│                       │     │                  │        ╰ V3Score : 5.3 
 │                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/
 │                       │     │                           │           A:N 
 │                       │     │                           ╰ V3Score : 5.8 
@@ -10182,7 +10321,7 @@
 │                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-22772 
 │                       │     │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2026-22772 
 │                       │     ├ PublishedDate   : 2026-01-12T21:15:59.457Z 
-│                       │     ╰ LastModifiedDate: 2026-01-13T14:03:18.99Z 
+│                       │     ╰ LastModifiedDate: 2026-03-05T13:48:17.443Z 
 │                       ├ [3] ╭ VulnerabilityID : CVE-2026-24137 
 │                       │     ├ VendorIDs        ─ [0]: GHSA-fcv2-xgw5-pqxf 
 │                       │     ├ PkgID           : github.com/sigstore/sigstore@v1.9.5 
@@ -13659,7 +13798,74 @@
                         │     │                  ╰ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-1229 
                         │     ├ PublishedDate   : 2026-02-24T08:16:28.407Z 
                         │     ╰ LastModifiedDate: 2026-03-03T00:29:54.16Z 
-                        ├ [1] ╭ VulnerabilityID : CVE-2026-25934 
+                        ├ [1] ╭ VulnerabilityID : CVE-2025-15558 
+                        │     ├ VendorIDs        ─ [0]: GHSA-p436-gjf2-799p 
+                        │     ├ PkgID           : github.com/docker/cli@v29.1.4+incompatible 
+                        │     ├ PkgName         : github.com/docker/cli 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/cli@v29.1.4%2Bincompatible 
+                        │     │                  ╰ UID : 40a7f12b2ca46d65 
+                        │     ├ InstalledVersion: v29.1.4+incompatible 
+                        │     ├ FixedVersion    : 29.2.0 
+                        │     ├ Status          : fixed 
+                        │     ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1b
+                        │     │                  │         c64e086c1f91e77709f 
+                        │     │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a44
+                        │     │                            75e8bf0be8d84f76b5f 
+                        │     ├ SeveritySource  : ghsa 
+                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-15558 
+                        │     ├ DataSource       ╭ ID  : ghsa 
+                        │     │                  ├ Name: GitHub Security Advisory Go 
+                        │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+                        │     │                          osystem%3Ago 
+                        │     ├ Fingerprint     : sha256:8fcd8d8b908fe9d8c4e96d172cfb9c2bcd4012d4b50e576058005c
+                        │     │                   3faeb5bf26 
+                        │     ├ Title           : docker/cli: Docker CLI for Windows: Privilege escalation via
+                        │     │                   malicious plugin binaries 
+                        │     ├ Description     : Docker CLI for Windows searches for plugin binaries in
+                        │     │                   C:\ProgramData\Docker\cli-plugins, a directory that does not
+                        │     │                   exist by default. A low-privileged attacker can create this
+                        │     │                   directory and place malicious CLI plugin binaries
+                        │     │                   (docker-compose.exe, docker-buildx.exe, etc.) that are
+                        │     │                   executed when a victim user opens Docker Desktop or invokes
+                        │     │                   Docker CLI plugin features, and allow privilege-escalation if
+                        │     │                    the docker CLI is executed as a privileged user.
+                        │     │                   
+                        │     │                   This issue affects Docker CLI: through 29.1.5 and Windows
+                        │     │                   binaries acting as a CLI-plugin manager using the 
+                        │     │                   github.com/docker/cli/cli-plugins/manager
+                        │     │                   https://pkg.go.dev/github.com/docker/cli@v29.1.5+incompatible
+                        │     │                   /cli-plugins/manager  package, such as Docker Compose.
+                        │     │                   This issue does not impact non-Windows binaries, and projects
+                        │     │                    not using the plugin-manager code. 
+                        │     ├ Severity        : HIGH 
+                        │     ├ CweIDs           ─ [0]: CWE-427 
+                        │     ├ VendorSeverity   ╭ ghsa  : 3 
+                        │     │                  ╰ redhat: 3 
+                        │     ├ CVSS             ╭ ghsa   ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:P/VC:H/V
+                        │     │                  │        │            I:H/VA:H/SC:N/SI:N/SA:N 
+                        │     │                  │        ╰ V40Score : 7 
+                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/
+                        │     │                           │           A:H 
+                        │     │                           ╰ V3Score : 7.3 
+                        │     ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2025-15558 
+                        │     │                  ├ [1] : https://docs.docker.com/desktop/release-notes 
+                        │     │                  ├ [2] : https://docs.docker.com/desktop/release-notes/ 
+                        │     │                  ├ [3] : https://github.com/docker/cli 
+                        │     │                  ├ [4] : https://github.com/docker/cli/commit/13759330b1f7e7cb0
+                        │     │                  │       d67047ea42c5482548ba7fa 
+                        │     │                  ├ [5] : https://github.com/docker/cli/pull/6713 
+                        │     │                  ├ [6] : https://github.com/docker/cli/security/advisories/GHSA
+                        │     │                  │       -p436-gjf2-799p 
+                        │     │                  ├ [7] : https://github.com/docker/compose/pull/12300 
+                        │     │                  ├ [8] : https://nvd.nist.gov/vuln/detail/CVE-2025-15558 
+                        │     │                  ├ [9] : https://www.cve.org/CVERecord?id=CVE-2025-15558 
+                        │     │                  ├ [10]: https://www.zerodayinitiative.com/advisories/ZDI-CAN-2
+                        │     │                  │       8304 
+                        │     │                  ╰ [11]: https://www.zerodayinitiative.com/advisories/ZDI-CAN-2
+                        │     │                          8304/ 
+                        │     ├ PublishedDate   : 2026-03-04T17:16:14.763Z 
+                        │     ╰ LastModifiedDate: 2026-03-04T18:08:05.73Z 
+                        ├ [2] ╭ VulnerabilityID : CVE-2026-25934 
                         │     ├ VendorIDs        ─ [0]: GHSA-37cx-329c-33x3 
                         │     ├ PkgID           : github.com/go-git/go-git/v5@v5.16.4 
                         │     ├ PkgName         : github.com/go-git/go-git/v5 
@@ -13719,7 +13925,7 @@
                         │     │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2026-25934 
                         │     ├ PublishedDate   : 2026-02-09T23:16:05.937Z 
                         │     ╰ LastModifiedDate: 2026-02-20T20:21:19.26Z 
-                        ├ [2] ╭ VulnerabilityID : CVE-2026-24051 
+                        ├ [3] ╭ VulnerabilityID : CVE-2026-24051 
                         │     ├ VendorIDs        ─ [0]: GHSA-9h8m-3fm2-qjrq 
                         │     ├ PkgID           : go.opentelemetry.io/otel/sdk@v1.39.0 
                         │     ├ PkgName         : go.opentelemetry.io/otel/sdk 
@@ -13765,7 +13971,7 @@
                         │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4394 
                         │     ├ PublishedDate   : 2026-02-02T23:16:07.963Z 
                         │     ╰ LastModifiedDate: 2026-02-27T20:32:10.693Z 
-                        ├ [3] ╭ VulnerabilityID : CVE-2025-68121 
+                        ├ [4] ╭ VulnerabilityID : CVE-2025-68121 
                         │     ├ VendorIDs        ─ [0]: GO-2026-4337 
                         │     ├ PkgID           : stdlib@v1.25.5 
                         │     ├ PkgName         : stdlib 
@@ -13844,7 +14050,7 @@
                         │     │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2025-68121 
                         │     ├ PublishedDate   : 2026-02-05T18:16:10.857Z 
                         │     ╰ LastModifiedDate: 2026-02-20T17:25:50.303Z 
-                        ├ [4] ╭ VulnerabilityID : CVE-2025-61726 
+                        ├ [5] ╭ VulnerabilityID : CVE-2025-61726 
                         │     ├ VendorIDs        ─ [0]: GO-2026-4341 
                         │     ├ PkgID           : stdlib@v1.25.5 
                         │     ├ PkgName         : stdlib 
@@ -13876,7 +14082,7 @@
                         │     ├ CweIDs           ─ [0]: CWE-770 
                         │     ├ VendorSeverity   ╭ alma       : 3 
                         │     │                  ├ amazon     : 3 
-                        │     │                  ├ azure      : 2 
+                        │     │                  ├ azure      : 3 
                         │     │                  ├ bitnami    : 3 
                         │     │                  ├ cbl-mariner: 2 
                         │     │                  ├ oracle-oval: 3 
@@ -13908,13 +14114,13 @@
                         │     │                  ├ [13]: https://groups.google.com/g/golang-announce/c/Vd2tYVM8
                         │     │                  │       eUc 
                         │     │                  ├ [14]: https://linux.oracle.com/cve/CVE-2025-61726.html 
-                        │     │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-3668.html 
+                        │     │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-3669.html 
                         │     │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2025-61726 
                         │     │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4341 
                         │     │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2025-61726 
                         │     ├ PublishedDate   : 2026-01-28T20:16:09.713Z 
                         │     ╰ LastModifiedDate: 2026-02-06T18:47:34.52Z 
-                        ├ [5] ╭ VulnerabilityID : CVE-2025-61728 
+                        ├ [6] ╭ VulnerabilityID : CVE-2025-61728 
                         │     ├ VendorIDs        ─ [0]: GO-2026-4342 
                         │     ├ PkgID           : stdlib@v1.25.5 
                         │     ├ PkgName         : stdlib 
@@ -13987,7 +14193,7 @@
                         │     │                  ╰ [24]: https://www.cve.org/CVERecord?id=CVE-2025-61728 
                         │     ├ PublishedDate   : 2026-01-28T20:16:09.83Z 
                         │     ╰ LastModifiedDate: 2026-02-06T18:45:10.42Z 
-                        ╰ [6] ╭ VulnerabilityID : CVE-2025-61730 
+                        ╰ [7] ╭ VulnerabilityID : CVE-2025-61730 
                               ├ VendorIDs        ─ [0]: GO-2026-4340 
                               ├ PkgID           : stdlib@v1.25.5 
                               ├ PkgName         : stdlib 
@@ -14017,7 +14223,7 @@
                               │                   during the handshake. 
                               ├ Severity        : HIGH 
                               ├ VendorSeverity   ╭ amazon     : 3 
-                              │                  ├ azure      : 1 
+                              │                  ├ azure      : 2 
                               │                  ├ bitnami    : 2 
                               │                  ├ cbl-mariner: 1 
                               │                  ╰ photon     : 2 
