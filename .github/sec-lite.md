@@ -1263,7 +1263,7 @@
                         │      ├ CweIDs           ─ [0]: CWE-770 
                         │      ├ VendorSeverity   ╭ alma       : 3 
                         │      │                  ├ amazon     : 3 
-                        │      │                  ├ azure      : 2 
+                        │      │                  ├ azure      : 3 
                         │      │                  ├ bitnami    : 3 
                         │      │                  ├ cbl-mariner: 2 
                         │      │                  ├ oracle-oval: 3 
@@ -1295,7 +1295,7 @@
                         │      │                  ├ [13]: https://groups.google.com/g/golang-announce/c/Vd2tYVM
                         │      │                  │       8eUc 
                         │      │                  ├ [14]: https://linux.oracle.com/cve/CVE-2025-61726.html 
-                        │      │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-3668.html 
+                        │      │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-3669.html 
                         │      │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2025-61726 
                         │      │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4341 
                         │      │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2025-61726 
@@ -1405,6 +1405,7 @@
                         │      ├ CweIDs           ─ [0]: CWE-295 
                         │      ├ VendorSeverity   ╭ alma       : 3 
                         │      │                  ├ amazon     : 3 
+                        │      │                  ├ azure      : 3 
                         │      │                  ├ bitnami    : 3 
                         │      │                  ├ oracle-oval: 3 
                         │      │                  ├ photon     : 3 
@@ -1473,7 +1474,7 @@
                         │      │                   inject messages during the handshake. 
                         │      ├ Severity        : HIGH 
                         │      ├ VendorSeverity   ╭ amazon     : 3 
-                        │      │                  ├ azure      : 1 
+                        │      │                  ├ azure      : 2 
                         │      │                  ├ bitnami    : 2 
                         │      │                  ├ cbl-mariner: 1 
                         │      │                  ╰ photon     : 2 
