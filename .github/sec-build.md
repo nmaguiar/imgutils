@@ -63,7 +63,7 @@
 │     │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
 │     │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4601 
 │     │     ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
-│     │     ╰ LastModifiedDate: 2026-03-06T22:16:00.72Z 
+│     │     ╰ LastModifiedDate: 2026-03-09T13:35:34.633Z 
 │     ├ [2] ╭ VulnerabilityID : CVE-2026-27139 
 │     │     ├ VendorIDs        ─ [0]: GO-2026-4602 
 │     │     ├ PkgID           : stdlib@v1.25.7 
@@ -92,7 +92,7 @@
 │     │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
 │     │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4602 
 │     │     ├ PublishedDate   : 2026-03-06T22:16:01.07Z 
-│     │     ╰ LastModifiedDate: 2026-03-06T22:16:01.07Z 
+│     │     ╰ LastModifiedDate: 2026-03-09T15:15:57.15Z 
 │     ╰ [3] ╭ VulnerabilityID : CVE-2026-27142 
 │           ├ VendorIDs        ─ [0]: GO-2026-4603 
 │           ├ PkgID           : stdlib@v1.25.7 
@@ -122,7 +122,7 @@
 │           │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
 │           │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4603 
 │           ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
-│           ╰ LastModifiedDate: 2026-03-06T22:16:01.177Z 
+│           ╰ LastModifiedDate: 2026-03-09T13:35:34.633Z 
 ├ [1] ╭ [0] ╭ VulnerabilityID : CVE-2026-25679 
 │     │     ├ VendorIDs        ─ [0]: GO-2026-4601 
 │     │     ├ PkgID           : stdlib@v1.25.7 
@@ -148,7 +148,7 @@
 │     │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
 │     │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4601 
 │     │     ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
-│     │     ╰ LastModifiedDate: 2026-03-06T22:16:00.72Z 
+│     │     ╰ LastModifiedDate: 2026-03-09T13:35:34.633Z 
 │     ├ [1] ╭ VulnerabilityID : CVE-2026-27139 
 │     │     ├ VendorIDs        ─ [0]: GO-2026-4602 
 │     │     ├ PkgID           : stdlib@v1.25.7 
@@ -177,7 +177,7 @@
 │     │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
 │     │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4602 
 │     │     ├ PublishedDate   : 2026-03-06T22:16:01.07Z 
-│     │     ╰ LastModifiedDate: 2026-03-06T22:16:01.07Z 
+│     │     ╰ LastModifiedDate: 2026-03-09T15:15:57.15Z 
 │     ╰ [2] ╭ VulnerabilityID : CVE-2026-27142 
 │           ├ VendorIDs        ─ [0]: GO-2026-4603 
 │           ├ PkgID           : stdlib@v1.25.7 
@@ -207,7 +207,7 @@
 │           │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
 │           │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4603 
 │           ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
-│           ╰ LastModifiedDate: 2026-03-06T22:16:01.177Z 
+│           ╰ LastModifiedDate: 2026-03-09T13:35:34.633Z 
 ├ [2] ╭ [0] ╭ VulnerabilityID : CVE-2025-15558 
 │     │     ├ VendorIDs        ─ [0]: GHSA-p436-gjf2-799p 
 │     │     ├ PkgID           : github.com/docker/cli@v28.0.2+incompatible 
@@ -244,10 +244,13 @@
 │     │     ├ Severity        : HIGH 
 │     │     ├ CweIDs           ─ [0]: CWE-427 
 │     │     ├ VendorSeverity   ╭ ghsa  : 3 
+│     │     │                  ├ nvd   : 3 
 │     │     │                  ╰ redhat: 3 
 │     │     ├ CVSS             ╭ ghsa   ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N
 │     │     │                  │        │            /SA:N 
 │     │     │                  │        ╰ V40Score : 7 
+│     │     │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H 
+│     │     │                  │        ╰ V3Score : 8 
 │     │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H 
 │     │     │                           ╰ V3Score : 7.3 
 │     │     ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2025-15558 
@@ -264,7 +267,7 @@
 │     │     │                  ├ [10]: https://www.zerodayinitiative.com/advisories/ZDI-CAN-28304 
 │     │     │                  ╰ [11]: https://www.zerodayinitiative.com/advisories/ZDI-CAN-28304/ 
 │     │     ├ PublishedDate   : 2026-03-04T17:16:14.763Z 
-│     │     ╰ LastModifiedDate: 2026-03-04T18:08:05.73Z 
+│     │     ╰ LastModifiedDate: 2026-03-09T17:38:15.95Z 
 │     ├ [1] ╭ VulnerabilityID : CVE-2025-11065 
 │     │     ├ VendorIDs        ─ [0]: GHSA-2464-8j7c-4cjm 
 │     │     ├ PkgID           : github.com/go-viper/mapstructure/v2@v2.2.1 
@@ -473,7 +476,7 @@
 │     │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
 │     │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4601 
 │     │     ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
-│     │     ╰ LastModifiedDate: 2026-03-06T22:16:00.72Z 
+│     │     ╰ LastModifiedDate: 2026-03-09T13:35:34.633Z 
 │     ├ [5] ╭ VulnerabilityID : CVE-2026-27139 
 │     │     ├ VendorIDs        ─ [0]: GO-2026-4602 
 │     │     ├ PkgID           : stdlib@v1.24.13 
@@ -502,7 +505,7 @@
 │     │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
 │     │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4602 
 │     │     ├ PublishedDate   : 2026-03-06T22:16:01.07Z 
-│     │     ╰ LastModifiedDate: 2026-03-06T22:16:01.07Z 
+│     │     ╰ LastModifiedDate: 2026-03-09T15:15:57.15Z 
 │     ╰ [6] ╭ VulnerabilityID : CVE-2026-27142 
 │           ├ VendorIDs        ─ [0]: GO-2026-4603 
 │           ├ PkgID           : stdlib@v1.24.13 
@@ -532,7 +535,7 @@
 │           │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
 │           │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4603 
 │           ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
-│           ╰ LastModifiedDate: 2026-03-06T22:16:01.177Z 
+│           ╰ LastModifiedDate: 2026-03-09T13:35:34.633Z 
 ├ [3] ╭ [0] ╭ VulnerabilityID : CVE-2026-25679 
 │     │     ├ VendorIDs        ─ [0]: GO-2026-4601 
 │     │     ├ PkgID           : stdlib@v1.25.7 
@@ -558,7 +561,7 @@
 │     │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
 │     │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4601 
 │     │     ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
-│     │     ╰ LastModifiedDate: 2026-03-06T22:16:00.72Z 
+│     │     ╰ LastModifiedDate: 2026-03-09T13:35:34.633Z 
 │     ├ [1] ╭ VulnerabilityID : CVE-2026-27139 
 │     │     ├ VendorIDs        ─ [0]: GO-2026-4602 
 │     │     ├ PkgID           : stdlib@v1.25.7 
@@ -587,7 +590,7 @@
 │     │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
 │     │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4602 
 │     │     ├ PublishedDate   : 2026-03-06T22:16:01.07Z 
-│     │     ╰ LastModifiedDate: 2026-03-06T22:16:01.07Z 
+│     │     ╰ LastModifiedDate: 2026-03-09T15:15:57.15Z 
 │     ╰ [2] ╭ VulnerabilityID : CVE-2026-27142 
 │           ├ VendorIDs        ─ [0]: GO-2026-4603 
 │           ├ PkgID           : stdlib@v1.25.7 
@@ -617,7 +620,7 @@
 │           │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
 │           │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4603 
 │           ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
-│           ╰ LastModifiedDate: 2026-03-06T22:16:01.177Z 
+│           ╰ LastModifiedDate: 2026-03-09T13:35:34.633Z 
 ├ [4] ╭ [0] ╭ VulnerabilityID : CVE-2026-1229 
 │     │     ├ VendorIDs        ─ [0]: GHSA-q9hv-hpm4-hj6x 
 │     │     ├ PkgID           : github.com/cloudflare/circl@v1.6.1 
@@ -684,7 +687,7 @@
 │     │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
 │     │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4601 
 │     │     ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
-│     │     ╰ LastModifiedDate: 2026-03-06T22:16:00.72Z 
+│     │     ╰ LastModifiedDate: 2026-03-09T13:35:34.633Z 
 │     ├ [2] ╭ VulnerabilityID : CVE-2026-27139 
 │     │     ├ VendorIDs        ─ [0]: GO-2026-4602 
 │     │     ├ PkgID           : stdlib@v1.25.7 
@@ -713,7 +716,7 @@
 │     │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
 │     │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4602 
 │     │     ├ PublishedDate   : 2026-03-06T22:16:01.07Z 
-│     │     ╰ LastModifiedDate: 2026-03-06T22:16:01.07Z 
+│     │     ╰ LastModifiedDate: 2026-03-09T15:15:57.15Z 
 │     ╰ [3] ╭ VulnerabilityID : CVE-2026-27142 
 │           ├ VendorIDs        ─ [0]: GO-2026-4603 
 │           ├ PkgID           : stdlib@v1.25.7 
@@ -743,7 +746,7 @@
 │           │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
 │           │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4603 
 │           ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
-│           ╰ LastModifiedDate: 2026-03-06T22:16:01.177Z 
+│           ╰ LastModifiedDate: 2026-03-09T13:35:34.633Z 
 ├ [5] ╭ [0] ╭ VulnerabilityID : CVE-2025-15558 
 │     │     ├ VendorIDs        ─ [0]: GHSA-p436-gjf2-799p 
 │     │     ├ PkgID           : github.com/docker/cli@v29.1.3+incompatible 
@@ -780,10 +783,13 @@
 │     │     ├ Severity        : HIGH 
 │     │     ├ CweIDs           ─ [0]: CWE-427 
 │     │     ├ VendorSeverity   ╭ ghsa  : 3 
+│     │     │                  ├ nvd   : 3 
 │     │     │                  ╰ redhat: 3 
 │     │     ├ CVSS             ╭ ghsa   ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N
 │     │     │                  │        │            /SA:N 
 │     │     │                  │        ╰ V40Score : 7 
+│     │     │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H 
+│     │     │                  │        ╰ V3Score : 8 
 │     │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H 
 │     │     │                           ╰ V3Score : 7.3 
 │     │     ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2025-15558 
@@ -800,7 +806,7 @@
 │     │     │                  ├ [10]: https://www.zerodayinitiative.com/advisories/ZDI-CAN-28304 
 │     │     │                  ╰ [11]: https://www.zerodayinitiative.com/advisories/ZDI-CAN-28304/ 
 │     │     ├ PublishedDate   : 2026-03-04T17:16:14.763Z 
-│     │     ╰ LastModifiedDate: 2026-03-04T18:08:05.73Z 
+│     │     ╰ LastModifiedDate: 2026-03-09T17:38:15.95Z 
 │     ├ [1] ╭ VulnerabilityID : CVE-2025-68121 
 │     │     ├ VendorIDs        ─ [0]: GO-2026-4337 
 │     │     ├ PkgID           : stdlib@v1.25.5 
@@ -1052,7 +1058,7 @@
 │     │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
 │     │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4601 
 │     │     ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
-│     │     ╰ LastModifiedDate: 2026-03-06T22:16:00.72Z 
+│     │     ╰ LastModifiedDate: 2026-03-09T13:35:34.633Z 
 │     ├ [6] ╭ VulnerabilityID : CVE-2026-27139 
 │     │     ├ VendorIDs        ─ [0]: GO-2026-4602 
 │     │     ├ PkgID           : stdlib@v1.25.5 
@@ -1081,7 +1087,7 @@
 │     │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
 │     │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4602 
 │     │     ├ PublishedDate   : 2026-03-06T22:16:01.07Z 
-│     │     ╰ LastModifiedDate: 2026-03-06T22:16:01.07Z 
+│     │     ╰ LastModifiedDate: 2026-03-09T15:15:57.15Z 
 │     ╰ [7] ╭ VulnerabilityID : CVE-2026-27142 
 │           ├ VendorIDs        ─ [0]: GO-2026-4603 
 │           ├ PkgID           : stdlib@v1.25.5 
@@ -1111,7 +1117,7 @@
 │           │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
 │           │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4603 
 │           ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
-│           ╰ LastModifiedDate: 2026-03-06T22:16:01.177Z 
+│           ╰ LastModifiedDate: 2026-03-09T13:35:34.633Z 
 ├ [6] ╭ [0] ╭ VulnerabilityID : CVE-2025-52881 
 │     │     ├ VendorIDs        ─ [0]: GHSA-cgrx-mc8f-2prm 
 │     │     ├ PkgID           : github.com/opencontainers/selinux@v1.12.0 
@@ -1491,7 +1497,7 @@
 │     │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
 │     │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4601 
 │     │     ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
-│     │     ╰ LastModifiedDate: 2026-03-06T22:16:00.72Z 
+│     │     ╰ LastModifiedDate: 2026-03-09T13:35:34.633Z 
 │     ├ [7] ╭ VulnerabilityID : CVE-2026-27139 
 │     │     ├ VendorIDs        ─ [0]: GO-2026-4602 
 │     │     ├ PkgID           : stdlib@v1.25.7 
@@ -1520,7 +1526,7 @@
 │     │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
 │     │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4602 
 │     │     ├ PublishedDate   : 2026-03-06T22:16:01.07Z 
-│     │     ╰ LastModifiedDate: 2026-03-06T22:16:01.07Z 
+│     │     ╰ LastModifiedDate: 2026-03-09T15:15:57.15Z 
 │     ╰ [8] ╭ VulnerabilityID : CVE-2026-27142 
 │           ├ VendorIDs        ─ [0]: GO-2026-4603 
 │           ├ PkgID           : stdlib@v1.25.7 
@@ -1550,7 +1556,7 @@
 │           │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
 │           │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4603 
 │           ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
-│           ╰ LastModifiedDate: 2026-03-06T22:16:01.177Z 
+│           ╰ LastModifiedDate: 2026-03-09T13:35:34.633Z 
 ╰ [7] ╭ [0] ╭ VulnerabilityID : CVE-2026-1229 
       │     ├ VendorIDs        ─ [0]: GHSA-q9hv-hpm4-hj6x 
       │     ├ PkgID           : github.com/cloudflare/circl@v1.6.1 
@@ -1656,7 +1662,7 @@
       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
       │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4601 
       │     ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
-      │     ╰ LastModifiedDate: 2026-03-06T22:16:00.72Z 
+      │     ╰ LastModifiedDate: 2026-03-09T13:35:34.633Z 
       ├ [3] ╭ VulnerabilityID : CVE-2026-27139 
       │     ├ VendorIDs        ─ [0]: GO-2026-4602 
       │     ├ PkgID           : stdlib@v1.25.7 
@@ -1685,7 +1691,7 @@
       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
       │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4602 
       │     ├ PublishedDate   : 2026-03-06T22:16:01.07Z 
-      │     ╰ LastModifiedDate: 2026-03-06T22:16:01.07Z 
+      │     ╰ LastModifiedDate: 2026-03-09T15:15:57.15Z 
       ╰ [4] ╭ VulnerabilityID : CVE-2026-27142 
             ├ VendorIDs        ─ [0]: GO-2026-4603 
             ├ PkgID           : stdlib@v1.25.7 
@@ -1715,5 +1721,5 @@
             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4603 
             ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
-            ╰ LastModifiedDate: 2026-03-06T22:16:01.177Z 
+            ╰ LastModifiedDate: 2026-03-09T13:35:34.633Z 
 ````
