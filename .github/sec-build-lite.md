@@ -1117,7 +1117,7 @@
                         │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
                         │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4601 
                         │     ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
-                        │     ╰ LastModifiedDate: 2026-03-06T22:16:00.72Z 
+                        │     ╰ LastModifiedDate: 2026-03-09T13:35:34.633Z 
                         ├ [2] ╭ VulnerabilityID : CVE-2026-27139 
                         │     ├ VendorIDs        ─ [0]: GO-2026-4602 
                         │     ├ PkgID           : stdlib@v1.25.7 
@@ -1152,7 +1152,7 @@
                         │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
                         │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4602 
                         │     ├ PublishedDate   : 2026-03-06T22:16:01.07Z 
-                        │     ╰ LastModifiedDate: 2026-03-06T22:16:01.07Z 
+                        │     ╰ LastModifiedDate: 2026-03-09T15:15:57.15Z 
                         ╰ [3] ╭ VulnerabilityID : CVE-2026-27142 
                               ├ VendorIDs        ─ [0]: GO-2026-4603 
                               ├ PkgID           : stdlib@v1.25.7 
@@ -1187,5 +1187,5 @@
                               │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
                               │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4603 
                               ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
-                              ╰ LastModifiedDate: 2026-03-06T22:16:01.177Z 
+                              ╰ LastModifiedDate: 2026-03-09T13:35:34.633Z 
 ````
