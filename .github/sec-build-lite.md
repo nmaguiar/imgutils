@@ -1088,37 +1088,7 @@
                         │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4394 
                         │     ├ PublishedDate   : 2026-02-02T23:16:07.963Z 
                         │     ╰ LastModifiedDate: 2026-02-27T20:32:10.693Z 
-                        ├ [1] ╭ VulnerabilityID : CVE-2026-25679 
-                        │     ├ VendorIDs        ─ [0]: GO-2026-4601 
-                        │     ├ PkgID           : stdlib@v1.25.7 
-                        │     ├ PkgName         : stdlib 
-                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.7 
-                        │     │                  ╰ UID : 32606f2acbd3d9ad 
-                        │     ├ InstalledVersion: v1.25.7 
-                        │     ├ FixedVersion    : 1.25.8, 1.26.1 
-                        │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:ef8e13d7f1e034cadfd54ae80e802a454a8277b828c26
-                        │     │                  │         bfba852b5d2a705a709 
-                        │     │                  ╰ DiffID: sha256:4ad0147544e7a4098a10248ecb74fd63b62d68f004db9
-                        │     │                            70caa622604c93f2e51 
-                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-25679 
-                        │     ├ DataSource       ╭ ID  : govulndb 
-                        │     │                  ├ Name: The Go Vulnerability Database 
-                        │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │     ├ Fingerprint     : sha256:6443538b3750a7f3ac835b4518c7aefbba35aeda098f25db1e94a8
-                        │     │                   e352de3262 
-                        │     ├ Title           : url.Parse insufficiently validated the host/authority
-                        │     │                   component and ac ... 
-                        │     ├ Description     : url.Parse insufficiently validated the host/authority
-                        │     │                   component and accepted some invalid URLs. 
-                        │     ├ Severity        : UNKNOWN 
-                        │     ├ References       ╭ [0]: https://go.dev/cl/752180 
-                        │     │                  ├ [1]: https://go.dev/issue/77578 
-                        │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
-                        │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4601 
-                        │     ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
-                        │     ╰ LastModifiedDate: 2026-03-09T13:35:34.633Z 
-                        ├ [2] ╭ VulnerabilityID : CVE-2026-27139 
+                        ├ [1] ╭ VulnerabilityID : CVE-2026-27139 
                         │     ├ VendorIDs        ─ [0]: GO-2026-4602 
                         │     ├ PkgID           : stdlib@v1.25.7 
                         │     ├ PkgName         : stdlib 
@@ -1146,13 +1116,49 @@
                         │     │                   metadata provided by lstat from arbitrary locations on the
                         │     │                   filesystem without permitting reading or writing files
                         │     │                   outside the root. 
-                        │     ├ Severity        : UNKNOWN 
+                        │     ├ Severity        : LOW 
+                        │     ├ VendorSeverity   ─ bitnami: 1 
+                        │     ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:N
+                        │     │                            │           /A:N 
+                        │     │                            ╰ V3Score : 2.5 
                         │     ├ References       ╭ [0]: https://go.dev/cl/749480 
                         │     │                  ├ [1]: https://go.dev/issue/77827 
                         │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
-                        │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4602 
+                        │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-27139 
+                        │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4602 
                         │     ├ PublishedDate   : 2026-03-06T22:16:01.07Z 
                         │     ╰ LastModifiedDate: 2026-03-09T15:15:57.15Z 
+                        ├ [2] ╭ VulnerabilityID : CVE-2026-25679 
+                        │     ├ VendorIDs        ─ [0]: GO-2026-4601 
+                        │     ├ PkgID           : stdlib@v1.25.7 
+                        │     ├ PkgName         : stdlib 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.7 
+                        │     │                  ╰ UID : 32606f2acbd3d9ad 
+                        │     ├ InstalledVersion: v1.25.7 
+                        │     ├ FixedVersion    : 1.25.8, 1.26.1 
+                        │     ├ Status          : fixed 
+                        │     ├ Layer            ╭ Digest: sha256:ef8e13d7f1e034cadfd54ae80e802a454a8277b828c26
+                        │     │                  │         bfba852b5d2a705a709 
+                        │     │                  ╰ DiffID: sha256:4ad0147544e7a4098a10248ecb74fd63b62d68f004db9
+                        │     │                            70caa622604c93f2e51 
+                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-25679 
+                        │     ├ DataSource       ╭ ID  : govulndb 
+                        │     │                  ├ Name: The Go Vulnerability Database 
+                        │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │     ├ Fingerprint     : sha256:6443538b3750a7f3ac835b4518c7aefbba35aeda098f25db1e94a8
+                        │     │                   e352de3262 
+                        │     ├ Title           : url.Parse insufficiently validated the host/authority
+                        │     │                   component and ac ... 
+                        │     ├ Description     : url.Parse insufficiently validated the host/authority
+                        │     │                   component and accepted some invalid URLs. 
+                        │     ├ Severity        : UNKNOWN 
+                        │     ├ References       ╭ [0]: https://go.dev/cl/752180 
+                        │     │                  ├ [1]: https://go.dev/issue/77578 
+                        │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
+                        │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-25679 
+                        │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4601 
+                        │     ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
+                        │     ╰ LastModifiedDate: 2026-03-10T18:18:37.74Z 
                         ╰ [3] ╭ VulnerabilityID : CVE-2026-27142 
                               ├ VendorIDs        ─ [0]: GO-2026-4603 
                               ├ PkgID           : stdlib@v1.25.7 
@@ -1185,7 +1191,8 @@
                               ├ References       ╭ [0]: https://go.dev/cl/752081 
                               │                  ├ [1]: https://go.dev/issue/77954 
                               │                  ├ [2]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
-                              │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4603 
+                              │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-27142 
+                              │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4603 
                               ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
-                              ╰ LastModifiedDate: 2026-03-09T13:35:34.633Z 
+                              ╰ LastModifiedDate: 2026-03-10T18:18:44.607Z 
 ````
