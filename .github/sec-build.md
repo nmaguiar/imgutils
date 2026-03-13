@@ -1007,22 +1007,20 @@
 │     │     │                  ├ [2] : https://bugzilla.redhat.com/2418462 
 │     │     │                  ├ [3] : https://bugzilla.redhat.com/2434432 
 │     │     │                  ├ [4] : https://bugzilla.redhat.com/2437111 
-│     │     │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2418462 
-│     │     │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2434432 
-│     │     │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2437111 
-│     │     │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-61726 
-│     │     │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-61729 
-│     │     │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121 
-│     │     │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-3928.html 
-│     │     │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:3341 
-│     │     │                  ├ [13]: https://go.dev/cl/737700 
-│     │     │                  ├ [14]: https://go.dev/issue/77217 
-│     │     │                  ├ [15]: https://groups.google.com/g/golang-announce/c/K09ubi9FQFk 
-│     │     │                  ├ [16]: https://linux.oracle.com/cve/CVE-2025-68121.html 
-│     │     │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-4164.html 
-│     │     │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
-│     │     │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4337 
-│     │     │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2025-68121 
+│     │     │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2434432 
+│     │     │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2437111 
+│     │     │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-61726 
+│     │     │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121 
+│     │     │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2026-3928.html 
+│     │     │                  ├ [10]: https://errata.rockylinux.org/RLSA-2026:4177 
+│     │     │                  ├ [11]: https://go.dev/cl/737700 
+│     │     │                  ├ [12]: https://go.dev/issue/77217 
+│     │     │                  ├ [13]: https://groups.google.com/g/golang-announce/c/K09ubi9FQFk 
+│     │     │                  ├ [14]: https://linux.oracle.com/cve/CVE-2025-68121.html 
+│     │     │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-4164.html 
+│     │     │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
+│     │     │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4337 
+│     │     │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2025-68121 
 │     │     ├ PublishedDate   : 2026-02-05T18:16:10.857Z 
 │     │     ╰ LastModifiedDate: 2026-02-20T17:25:50.303Z 
 │     ├ [2] ╭ VulnerabilityID : CVE-2025-61726 
@@ -1051,7 +1049,7 @@
 │     │     ├ CweIDs           ─ [0]: CWE-770 
 │     │     ├ VendorSeverity   ╭ alma       : 3 
 │     │     │                  ├ amazon     : 2 
-│     │     │                  ├ azure      : 3 
+│     │     │                  ├ azure      : 2 
 │     │     │                  ├ bitnami    : 3 
 │     │     │                  ├ cbl-mariner: 2 
 │     │     │                  ├ oracle-oval: 3 
@@ -1067,22 +1065,20 @@
 │     │     │                  ├ [2] : https://bugzilla.redhat.com/2418462 
 │     │     │                  ├ [3] : https://bugzilla.redhat.com/2434432 
 │     │     │                  ├ [4] : https://bugzilla.redhat.com/2437111 
-│     │     │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2418462 
-│     │     │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2434432 
-│     │     │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2437111 
-│     │     │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-61726 
-│     │     │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-61729 
-│     │     │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121 
-│     │     │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-3928.html 
-│     │     │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:3341 
-│     │     │                  ├ [13]: https://go.dev/cl/736712 
-│     │     │                  ├ [14]: https://go.dev/issue/77101 
-│     │     │                  ├ [15]: https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc 
-│     │     │                  ├ [16]: https://linux.oracle.com/cve/CVE-2025-61726.html 
-│     │     │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-4164.html 
-│     │     │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2025-61726 
-│     │     │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4341 
-│     │     │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2025-61726 
+│     │     │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2434432 
+│     │     │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2437111 
+│     │     │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-61726 
+│     │     │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121 
+│     │     │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2026-3928.html 
+│     │     │                  ├ [10]: https://errata.rockylinux.org/RLSA-2026:4177 
+│     │     │                  ├ [11]: https://go.dev/cl/736712 
+│     │     │                  ├ [12]: https://go.dev/issue/77101 
+│     │     │                  ├ [13]: https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc 
+│     │     │                  ├ [14]: https://linux.oracle.com/cve/CVE-2025-61726.html 
+│     │     │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-4164.html 
+│     │     │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2025-61726 
+│     │     │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4341 
+│     │     │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2025-61726 
 │     │     ├ PublishedDate   : 2026-01-28T20:16:09.713Z 
 │     │     ╰ LastModifiedDate: 2026-02-06T18:47:34.52Z 
 │     ├ [3] ╭ VulnerabilityID : CVE-2025-61728 
@@ -1171,7 +1167,7 @@
 │     │     │                    network-local attacker can inject messages during the handshake. 
 │     │     ├ Severity        : MEDIUM 
 │     │     ├ VendorSeverity   ╭ amazon     : 2 
-│     │     │                  ├ azure      : 2 
+│     │     │                  ├ azure      : 1 
 │     │     │                  ├ bitnami    : 2 
 │     │     │                  ├ cbl-mariner: 1 
 │     │     │                  ╰ photon     : 2 
