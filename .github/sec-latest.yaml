@@ -5239,6 +5239,7 @@
     - https://pkg.go.dev/vuln/GO-2025-3595
     - https://security.netapp.com/advisory/ntap-20250516-0007
     - https://security.netapp.com/advisory/ntap-20250516-0007/
+    - https://ubuntu.com/security/notices/USN-8089-1
     - https://www.cve.org/CVERecord?id=CVE-2025-22872
     PublishedDate: '2025-04-16T18:16:04.183Z'
     LastModifiedDate: '2025-05-16T23:15:19.707Z'
@@ -13892,6 +13893,7 @@
       ghsa: 2
       nvd: 2
       redhat: 2
+      ubuntu: 2
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
@@ -13908,6 +13910,7 @@
     - https://github.com/go-git/go-git/releases/tag/v5.16.5
     - https://github.com/go-git/go-git/security/advisories/GHSA-37cx-329c-33x3
     - https://nvd.nist.gov/vuln/detail/CVE-2026-25934
+    - https://ubuntu.com/security/notices/USN-8088-1
     - https://www.cve.org/CVERecord?id=CVE-2026-25934
     PublishedDate: '2026-02-09T23:16:05.937Z'
     LastModifiedDate: '2026-02-20T20:21:19.26Z'
