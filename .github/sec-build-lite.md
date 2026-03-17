@@ -1173,7 +1173,7 @@
                         │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4603 
                         │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27142 
                         │     ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
-                        │     ╰ LastModifiedDate: 2026-03-10T18:18:44.607Z 
+                        │     ╰ LastModifiedDate: 2026-03-16T16:16:13.77Z 
                         ╰ [3] ╭ VulnerabilityID : CVE-2026-27139 
                               ├ VendorIDs        ─ [0]: GO-2026-4602 
                               ├ PkgID           : stdlib@v1.25.7 
