@@ -805,8 +805,7 @@
 │     │                 │       ├ FilePath  : openaf/Kube/vertx-web-client-4.5.21.jar 
 │     │                 │       ╰ AnalyzedBy: jar 
 │     │                 ├ [79]  ╭ Name      : io.vertx:vertx-web-common 
-│     │                 │       ├ Identifier ╭ PURL: pkg:maven/io.vertx/vertx-web-common@4.5.21 
-│     │                 │       │            ╰ UID : ad409484118ffcf2 
+
 │     │                 │       ├ Version   : 4.5.21 
 │     │                 │       ├ Layer      ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1bc64e
 │     │                 │       │            │         086c1f91e77709f 
@@ -3478,15 +3477,7 @@
 │                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                            │           N/A:L 
 │                       │      │                            ╰ V3Score : 5.3 
-│                       │      ├ References       ╭ [0]: http://www.openwall.com/lists/oss-security/2025/10/08/1 
-│                       │      │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2025-58186 
-│                       │      │                  ├ [2]: https://go.dev/cl/709855 
-│                       │      │                  ├ [3]: https://go.dev/issue/75672 
-│                       │      │                  ├ [4]: https://groups.google.com/g/golang-announce/c/4Emdl2iQ
-│                       │      │                  │      _bI 
-│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2025-58186 
-│                       │      │                  ├ [6]: https://pkg.go.dev/vuln/GO-2025-4012 
-│                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-58186 
+
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.547Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.45Z 
 │                       ├ [13] ╭ VulnerabilityID : CVE-2025-58187 
