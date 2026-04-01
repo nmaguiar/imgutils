@@ -730,7 +730,8 @@
 │     │     ├ InstalledVersion: v29.1.3+incompatible 
 │     │     ├ FixedVersion    : 29.2.0 
 │     │     ├ Status          : fixed 
-
+│     │     ├ Layer            ╭ Digest: sha256:71246c9245dca34d4cabda065849873f2a0673c2c195d116754cc320f16df12a 
+│     │     │                  ╰ DiffID: sha256:f8ea014b0ff862ef2f5b03db90c0170fe96ee027722d68e0841ebd584ffbbff9 
 │     │     ├ SeveritySource  : ghsa 
 │     │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-15558 
 │     │     ├ DataSource       ╭ ID  : ghsa 
