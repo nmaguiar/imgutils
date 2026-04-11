@@ -1042,42 +1042,173 @@
       │                        │            ╰ DiffID: sha256:59f14d369c3dba385311a91b009ddb820081967a515e785166
       │                        │                      57e1ac00864f5e 
       │                        ╰ AnalyzedBy: gobinary 
-      ╰ Vulnerabilities ╭ [0]  ╭ VulnerabilityID : GHSA-6g7g-w4f8-9c9x 
+      ╰ Vulnerabilities ╭ [0]  ╭ VulnerabilityID : CVE-2026-32285 
+                        │      ├ VendorIDs        ─ [0]: GHSA-6g7g-w4f8-9c9x 
                         │      ├ PkgID           : github.com/buger/jsonparser@v1.1.1 
                         │      ├ PkgName         : github.com/buger/jsonparser 
                         │      ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/buger/jsonparser@v1.1.1 
                         │      │                  ╰ UID : ca4c6b1f9a21412b 
                         │      ├ InstalledVersion: v1.1.1 
-                        │      ├ Status          : affected 
+                        │      ├ FixedVersion    : 1.1.2 
+                        │      ├ Status          : fixed 
                         │      ├ Layer            ╭ Digest: sha256:1542387fd1443eae52c33431e5a596c30d80cb2a397c
                         │      │                  │         16947126129ff51eada6 
                         │      │                  ╰ DiffID: sha256:59f14d369c3dba385311a91b009ddb820081967a515e
                         │      │                            78516657e1ac00864f5e 
                         │      ├ SeveritySource  : ghsa 
-                        │      ├ PrimaryURL      : https://github.com/advisories/GHSA-6g7g-w4f8-9c9x 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32285 
                         │      ├ DataSource       ╭ ID  : ghsa 
                         │      │                  ├ Name: GitHub Security Advisory Go 
                         │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
                         │      │                          cosystem%3Ago 
-                        │      ├ Fingerprint     : sha256:be4a7ef7beabac4508e54c3420e2e2ea536c5355223c2a11b38d4
-                        │      │                   84d5ac43468 
-                        │      ├ Title           : Denial of service in github.com/buger/jsonparser 
+                        │      ├ Fingerprint     : sha256:1eb23c189f904b67f933fcfc5623791ff09b8ff6224c339d881f1
+                        │      │                   9b87eafd703 
+                        │      ├ Title           : github.com/buger/jsonparser: github.com/buger/jsonparser:
+                        │      │                   Denial of Service via malformed JSON input 
                         │      ├ Description     : The Delete function fails to properly validate offsets when
                         │      │                   processing malformed JSON input. This can lead to a negative
                         │      │                    slice index and a runtime panic, allowing a denial of
                         │      │                   service attack. 
                         │      ├ Severity        : HIGH 
-                        │      ├ VendorSeverity   ─ ghsa: 3 
-                        │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
-                        │      │                         ╰ V3Score : 7.5 
-                        │      ├ References       ╭ [0]: https://cyber.securityinfinity.com/buger-jsonparser-ne
-                        │      │                  │      gative-slice-panic-dos-2026 
-                        │      │                  ├ [1]: https://github.com/buger/jsonparser 
-                        │      │                  ├ [2]: https://github.com/buger/jsonparser/issues/275 
-                        │      │                  ╰ [3]: https://github.com/golang/vulndb/issues/4514 
-                        │      ├ PublishedDate   : 2026-03-18T13:00:19Z 
-                        │      ╰ LastModifiedDate: 2026-03-18T13:00:19Z 
-                        ├ [1]  ╭ VulnerabilityID : CVE-2026-24051 
+                        │      ├ VendorSeverity   ╭ ghsa  : 3 
+                        │      │                  ╰ redhat: 3 
+                        │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+                        │      │                  │        │           /A:H 
+                        │      │                  │        ╰ V3Score : 7.5 
+                        │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+                        │      │                           │           /A:H 
+                        │      │                           ╰ V3Score : 7.5 
+                        │      ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2026-32285 
+                        │      │                  ├ [1] : https://github.com/buger/jsonparser 
+                        │      │                  ├ [2] : https://github.com/buger/jsonparser/commit/a69e7e01cd
+                        │      │                  │       4ad67bdfd3ac2c080b9212af16f4b0 
+                        │      │                  ├ [3] : https://github.com/buger/jsonparser/issues/275 
+                        │      │                  ├ [4] : https://github.com/buger/jsonparser/pull/276 
+                        │      │                  ├ [5] : https://github.com/buger/jsonparser/releases/tag/v1.1.2 
+                        │      │                  ├ [6] : https://github.com/golang/vulndb/issues/4514 
+                        │      │                  ├ [7] : https://nvd.nist.gov/vuln/detail/CVE-2026-32285 
+                        │      │                  ├ [8] : https://pkg.go.dev/vuln/GO-2026-4514 
+                        │      │                  ├ [9] : https://securityinfinity.com/research/buger-jsonparse
+                        │      │                  │       r-negative-slice-panic-dos-2026 
+                        │      │                  ╰ [10]: https://www.cve.org/CVERecord?id=CVE-2026-32285 
+                        │      ├ PublishedDate   : 2026-03-26T20:16:12.197Z 
+                        │      ╰ LastModifiedDate: 2026-03-30T15:16:27.963Z 
+                        ├ [1]  ╭ VulnerabilityID : CVE-2026-34040 
+                        │      ├ VendorIDs        ─ [0]: GHSA-x744-4wpc-v9h2 
+                        │      ├ PkgID           : github.com/docker/docker@v28.3.3+incompatible 
+                        │      ├ PkgName         : github.com/docker/docker 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v28.3.3%2Bincompa
+                        │      │                  │       tible 
+                        │      │                  ╰ UID : a108c38e2d3411ae 
+                        │      ├ InstalledVersion: v28.3.3+incompatible 
+                        │      ├ FixedVersion    : 29.3.1 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:1542387fd1443eae52c33431e5a596c30d80cb2a397c
+                        │      │                  │         16947126129ff51eada6 
+                        │      │                  ╰ DiffID: sha256:59f14d369c3dba385311a91b009ddb820081967a515e
+                        │      │                            78516657e1ac00864f5e 
+                        │      ├ SeveritySource  : ghsa 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-34040 
+                        │      ├ DataSource       ╭ ID  : ghsa 
+                        │      │                  ├ Name: GitHub Security Advisory Go 
+                        │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+                        │      │                          cosystem%3Ago 
+                        │      ├ Fingerprint     : sha256:7ca561a44be28c76c075191d48f5f8b8180ff419225093d2027cb
+                        │      │                   91c04190cee 
+                        │      ├ Title           : Moby: Moby: Authorization bypass vulnerability 
+                        │      ├ Description     : Moby is an open source container framework. Prior to version
+                        │      │                    29.3.1, a security vulnerability has been detected that
+                        │      │                   allows attackers to bypass authorization plugins (AuthZ).
+                        │      │                   This issue has been patched in version 29.3.1. 
+                        │      ├ Severity        : HIGH 
+                        │      ├ CweIDs           ─ [0]: CWE-288 
+                        │      ├ VendorSeverity   ╭ ghsa  : 3 
+                        │      │                  ├ nvd   : 3 
+                        │      │                  ╰ redhat: 2 
+                        │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H
+                        │      │                  │        │           /A:H 
+                        │      │                  │        ╰ V3Score : 8.8 
+                        │      │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H
+                        │      │                  │        │           /A:H 
+                        │      │                  │        ╰ V3Score : 7.8 
+                        │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H
+                        │      │                           │           /A:N 
+                        │      │                           ╰ V3Score : 8.4 
+                        │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-34040 
+                        │      │                  ├ [1]: https://docs.docker.com/engine/extend/plugins_authoriz
+                        │      │                  │      ation 
+                        │      │                  ├ [2]: https://github.com/moby/moby 
+                        │      │                  ├ [3]: https://github.com/moby/moby/commit/e89edb19ad7de0407a
+                        │      │                  │      5d31e3111cb01aa10b5a38 
+                        │      │                  ├ [4]: https://github.com/moby/moby/releases/tag/docker-v29.3.1 
+                        │      │                  ├ [5]: https://github.com/moby/moby/security/advisories/GHSA-
+                        │      │                  │      v23v-6jw2-98fq 
+                        │      │                  ├ [6]: https://github.com/moby/moby/security/advisories/GHSA-
+                        │      │                  │      x744-4wpc-v9h2 
+                        │      │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2026-34040 
+                        │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-34040 
+                        │      ├ PublishedDate   : 2026-03-31T03:15:57.883Z 
+                        │      ╰ LastModifiedDate: 2026-04-03T16:51:28.67Z 
+                        ├ [2]  ╭ VulnerabilityID : CVE-2026-33997 
+                        │      ├ VendorIDs        ─ [0]: GHSA-pxq6-2prw-chj9 
+                        │      ├ PkgID           : github.com/docker/docker@v28.3.3+incompatible 
+                        │      ├ PkgName         : github.com/docker/docker 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v28.3.3%2Bincompa
+                        │      │                  │       tible 
+                        │      │                  ╰ UID : a108c38e2d3411ae 
+                        │      ├ InstalledVersion: v28.3.3+incompatible 
+                        │      ├ FixedVersion    : 29.3.1 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:1542387fd1443eae52c33431e5a596c30d80cb2a397c
+                        │      │                  │         16947126129ff51eada6 
+                        │      │                  ╰ DiffID: sha256:59f14d369c3dba385311a91b009ddb820081967a515e
+                        │      │                            78516657e1ac00864f5e 
+                        │      ├ SeveritySource  : ghsa 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-33997 
+                        │      ├ DataSource       ╭ ID  : ghsa 
+                        │      │                  ├ Name: GitHub Security Advisory Go 
+                        │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+                        │      │                          cosystem%3Ago 
+                        │      ├ Fingerprint     : sha256:5c82d0a8e3a46dc93b86f7c03e012d6bfa7e5d2453f505551a0fc
+                        │      │                   b42acda6176 
+                        │      ├ Title           : moby: docker: github.com/moby/moby: Moby: Privilege
+                        │      │                   validation bypass during plugin installation 
+                        │      ├ Description     : Moby is an open source container framework. Prior to version
+                        │      │                    29.3.1, a security vulnerability has been detected that
+                        │      │                   allows plugins privilege validation to be bypassed during
+                        │      │                   docker plugin install. Due to an error in the daemon's
+                        │      │                   privilege comparison logic, the daemon may incorrectly
+                        │      │                   accept a privilege set that differs from the one approved by
+                        │      │                    the user. Plugins that request exactly one privilege are
+                        │      │                   also affected, because no comparison is performed at all.
+                        │      │                   This issue has been patched in version 29.3.1. 
+                        │      ├ Severity        : MEDIUM 
+                        │      ├ CweIDs           ─ [0]: CWE-193 
+                        │      ├ VendorSeverity   ╭ ghsa  : 2 
+                        │      │                  ├ nvd   : 3 
+                        │      │                  ╰ redhat: 3 
+                        │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H
+                        │      │                  │        │           /A:N 
+                        │      │                  │        ╰ V3Score : 6.8 
+                        │      │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H
+                        │      │                  │        │           /A:N 
+                        │      │                  │        ╰ V3Score : 8.1 
+                        │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H
+                        │      │                           │           /A:H 
+                        │      │                           ╰ V3Score : 8.4 
+                        │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-33997 
+                        │      │                  ├ [1]: https://docs.docker.com/engine/extend/legacy_plugins 
+                        │      │                  ├ [2]: https://github.com/moby/moby 
+                        │      │                  ├ [3]: https://github.com/moby/moby/commit/f4d6f25bf0c3fa12d4
+                        │      │                  │      968320a45685947756a22a 
+                        │      │                  ├ [4]: https://github.com/moby/moby/releases/tag/docker-v29.3.1 
+                        │      │                  ├ [5]: https://github.com/moby/moby/security/advisories/GHSA-
+                        │      │                  │      pxq6-2prw-chj9 
+                        │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-33997 
+                        │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2026-33997 
+                        │      ├ PublishedDate   : 2026-03-31T03:15:57.523Z 
+                        │      ╰ LastModifiedDate: 2026-04-03T17:23:21.307Z 
+                        ├ [3]  ╭ VulnerabilityID : CVE-2026-24051 
                         │      ├ VendorIDs        ─ [0]: GHSA-9h8m-3fm2-qjrq 
                         │      ├ PkgID           : go.opentelemetry.io/otel/sdk@v1.37.0 
                         │      ├ PkgName         : go.opentelemetry.io/otel/sdk 
@@ -1123,7 +1254,53 @@
                         │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4394 
                         │      ├ PublishedDate   : 2026-02-02T23:16:07.963Z 
                         │      ╰ LastModifiedDate: 2026-02-27T20:32:10.693Z 
-                        ├ [2]  ╭ VulnerabilityID : CVE-2026-33186 
+                        ├ [4]  ╭ VulnerabilityID : CVE-2026-39883 
+                        │      ├ VendorIDs        ─ [0]: GHSA-hfvc-g4fc-pqhx 
+                        │      ├ PkgID           : go.opentelemetry.io/otel/sdk@v1.37.0 
+                        │      ├ PkgName         : go.opentelemetry.io/otel/sdk 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/go.opentelemetry.io/otel/sdk@v1.37.0 
+                        │      │                  ╰ UID : badfb66d9fa38d4c 
+                        │      ├ InstalledVersion: v1.37.0 
+                        │      ├ FixedVersion    : 1.43.0 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:1542387fd1443eae52c33431e5a596c30d80cb2a397c
+                        │      │                  │         16947126129ff51eada6 
+                        │      │                  ╰ DiffID: sha256:59f14d369c3dba385311a91b009ddb820081967a515e
+                        │      │                            78516657e1ac00864f5e 
+                        │      ├ SeveritySource  : ghsa 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39883 
+                        │      ├ DataSource       ╭ ID  : ghsa 
+                        │      │                  ├ Name: GitHub Security Advisory Go 
+                        │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+                        │      │                          cosystem%3Ago 
+                        │      ├ Fingerprint     : sha256:8c9d2270bafb0323488a51c8d281f3cd7f0ed3446386b45739f10
+                        │      │                   4e88a67a349 
+                        │      ├ Title           : opentelemetry-go: BSD kenv command not using absolute path
+                        │      │                   enables PATH hijacking 
+                        │      ├ Description     : OpenTelemetry-Go is the Go implementation of OpenTelemetry.
+                        │      │                   From 1.15.0 to 1.42.0, the fix for CVE-2026-24051 changed
+                        │      │                   the Darwin ioreg command to use an absolute path but left
+                        │      │                   the BSD kenv command using a bare name, allowing the same
+                        │      │                   PATH hijacking attack on BSD and Solaris platforms. This
+                        │      │                   vulnerability is fixed in 1.43.0. 
+                        │      ├ Severity        : HIGH 
+                        │      ├ CweIDs           ─ [0]: CWE-426 
+                        │      ├ VendorSeverity   ╭ ghsa: 3 
+                        │      │                  ╰ nvd : 3 
+                        │      ├ CVSS             ╭ ghsa ╭ V40Vector: CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:H/VI
+                        │      │                  │      │            :H/VA:H/SC:N/SI:N/SA:N 
+                        │      │                  │      ╰ V40Score : 7.3 
+                        │      │                  ╰ nvd  ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H 
+                        │      │                         ╰ V3Score : 7 
+                        │      ├ References       ╭ [0]: http://github.com/open-telemetry/opentelemetry-go/rele
+                        │      │                  │      ases/tag/v1.43.0 
+                        │      │                  ├ [1]: https://github.com/open-telemetry/opentelemetry-go 
+                        │      │                  ├ [2]: https://github.com/open-telemetry/opentelemetry-go/sec
+                        │      │                  │      urity/advisories/GHSA-hfvc-g4fc-pqhx 
+                        │      │                  ╰ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-39883 
+                        │      ├ PublishedDate   : 2026-04-08T21:17:00.697Z 
+                        │      ╰ LastModifiedDate: 2026-04-10T21:16:27.12Z 
+                        ├ [5]  ╭ VulnerabilityID : CVE-2026-33186 
                         │      ├ VendorIDs        ─ [0]: GHSA-p77j-4mvh-x3m3 
                         │      ├ PkgID           : google.golang.org/grpc@v1.75.0 
                         │      ├ PkgName         : google.golang.org/grpc 
@@ -1144,96 +1321,60 @@
                         │      │                          cosystem%3Ago 
                         │      ├ Fingerprint     : sha256:6fec4a9a09801646f4d38efcf762dbba85c27f96b57e4900bc324
                         │      │                   99c07ae05fd 
-                        │      ├ Title           : gRPC-Go has an authorization bypass via missing leading
-                        │      │                   slash in :path 
-                        │      ├ Description     : ### Impact
-                        │      │                   _What kind of vulnerability is it? Who is impacted?_
-                        │      │                   
-                        │      │                   It is an **Authorization Bypass** resulting from **Improper
-                        │      │                   Input Validation** of the HTTP/2 `:path` pseudo-header.
-                        │      │                   The gRPC-Go server was too lenient in its routing logic,
-                        │      │                   accepting requests where the `:path` omitted the mandatory
-                        │      │                   leading slash (e.g., `Service/Method` instead of
-                        │      │                   `/Service/Method`). While the server successfully routed
+                        │      ├ Title           : google.golang.org/grpc/grpc-go:
+                        │      │                   google.golang.org/grpc/authz: gRPC-Go: Authorization bypass
+                        │      │                   due to improper HTTP/2 path validation 
+                        │      ├ Description     : gRPC-Go is the Go language implementation of gRPC. Versions
+                        │      │                   prior to 1.79.3 have an authorization bypass resulting from
+                        │      │                   improper input validation of the HTTP/2 `:path`
+                        │      │                   pseudo-header. The gRPC-Go server was too lenient in its
+                        │      │                   routing logic, accepting requests where the `:path` omitted
+                        │      │                   the mandatory leading slash (e.g., `Service/Method` instead
+                        │      │                   of `/Service/Method`). While the server successfully routed
                         │      │                   these requests to the correct handler, authorization
                         │      │                   interceptors (including the official `grpc/authz` package)
                         │      │                   evaluated the raw, non-canonical path string. Consequently,
                         │      │                   "deny" rules defined using canonical paths (starting with
                         │      │                   `/`) failed to match the incoming request, allowing it to
                         │      │                   bypass the policy if a fallback "allow" rule was present.
-                        │      │                   **Who is impacted?**
-                        │      │                   This affects gRPC-Go servers that meet both of the following
-                        │      │                    criteria:
-                        │      │                   1. They use path-based authorization interceptors, such as
-                        │      │                   the official RBAC implementation in
-                        │      │                   `google.golang.org/grpc/authz` or custom interceptors
-                        │      │                   relying on `info.FullMethod` or `grpc.Method(ctx)`.
-                        │      │                   2. Their security policy contains specific "deny" rules for
-                        │      │                   canonical paths but allows other requests by default (a
-                        │      │                   fallback "allow" rule).
-                        │      │                   The vulnerability is exploitable by an attacker who can send
-                        │      │                    raw HTTP/2 frames with malformed `:path` headers directly
-                        │      │                   to the gRPC server.
-                        │      │                   ### Patches
-                        │      │                   _Has the problem been patched? What versions should users
-                        │      │                   upgrade to?_
-                        │      │                   Yes, the issue has been patched. The fix ensures that any
+                        │      │                   This affects gRPC-Go servers that use path-based
+                        │      │                   authorization interceptors, such as the official RBAC
+                        │      │                   implementation in `google.golang.org/grpc/authz` or custom
+                        │      │                   interceptors relying on `info.FullMethod` or
+                        │      │                   `grpc.Method(ctx)`; AND that have a security policy contains
+                        │      │                    specific "deny" rules for canonical paths but allows other
+                        │      │                   requests by default (a fallback "allow" rule). The
+                        │      │                   vulnerability is exploitable by an attacker who can send raw
+                        │      │                    HTTP/2 frames with malformed `:path` headers directly to
+                        │      │                   the gRPC server. The fix in version 1.79.3 ensures that any
                         │      │                   request with a `:path` that does not start with a leading
                         │      │                   slash is immediately rejected with a `codes.Unimplemented`
                         │      │                   error, preventing it from reaching authorization
                         │      │                   interceptors or handlers with a non-canonical path string.
-                        │      │                   Users should upgrade to the following versions (or newer):
-                        │      │                   * **v1.79.3**
-                        │      │                   * The latest **master** branch.
-                        │      │                   It is recommended that all users employing path-based
-                        │      │                   authorization (especially `grpc/authz`) upgrade as soon as
-                        │      │                   the patch is available in a tagged release.
-                        │      │                   ### Workarounds
-                        │      │                   _Is there a way for users to fix or remediate the
-                        │      │                   vulnerability without upgrading?_
                         │      │                   While upgrading is the most secure and recommended path,
                         │      │                   users can mitigate the vulnerability using one of the
-                        │      │                   following methods:
-                        │      │                   #### 1. Use a Validating Interceptor (Recommended
-                        │      │                   Mitigation)
-                        │      │                   Add an "outermost" interceptor to your server that validates
-                        │      │                    the path before any other authorization logic runs:
-                        │      │                   ```go
-                        │      │                   func pathValidationInterceptor(ctx context.Context, req any,
-                        │      │                    info *grpc.UnaryServerInfo, handler grpc.UnaryHandler)
-                        │      │                   (any, error) {
-                        │      │                       if info.FullMethod == "" || info.FullMethod[0] != '/' {
-                        │      │                           return nil, status.Errorf(codes.Unimplemented,
-                        │      │                   "malformed method name")
-                        │      │                       }   
-                        │      │                       return handler(ctx, req)
-                        │      │                   }
-                        │      │                   // Ensure this is the FIRST interceptor in your chain
-                        │      │                   s := grpc.NewServer(
-                        │      │                       grpc.ChainUnaryInterceptor(pathValidationInterceptor,
-                        │      │                   authzInterceptor),
-                        │      │                   )
-                        │      │                   ```
-                        │      │                   #### 2. Infrastructure-Level Normalization
-                        │      │                   If your gRPC server is behind a reverse proxy or load
-                        │      │                   balancer (such as Envoy, NGINX, or an L7 Cloud Load
-                        │      │                   Balancer), ensure it is configured to enforce strict HTTP/2
-                        │      │                   compliance for pseudo-headers and reject or normalize
-                        │      │                   requests where the `:path` header does not start with a
-                        │      │                   leading slash.
-                        │      │                   #### 3. Policy Hardening
-                        │      │                   Switch to a "default deny" posture in your authorization
-                        │      │                   policies (explicitly listing all allowed paths and denying
-                        │      │                   everything else) to reduce the risk of bypasses via
-                        │      │                   malformed inputs. 
+                        │      │                   following methods: Use a validating interceptor (recommended
+                        │      │                    mitigation); infrastructure-level normalization; and/or
+                        │      │                   policy hardening. 
                         │      ├ Severity        : CRITICAL 
-                        │      ├ VendorSeverity   ─ ghsa: 4 
-                        │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N 
-                        │      │                         ╰ V3Score : 9.1 
-                        │      ╰ References       ╭ [0]: https://github.com/grpc/grpc-go 
-                        │                         ╰ [1]: https://github.com/grpc/grpc-go/security/advisories/GH
-                        │                                SA-p77j-4mvh-x3m3 
-                        ├ [3]  ╭ VulnerabilityID : CVE-2025-68121 
+                        │      ├ CweIDs           ─ [0]: CWE-285 
+                        │      ├ VendorSeverity   ╭ ghsa  : 4 
+                        │      │                  ╰ redhat: 3 
+                        │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
+                        │      │                  │        │           /A:N 
+                        │      │                  │        ╰ V3Score : 9.1 
+                        │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H
+                        │      │                           │           /A:N 
+                        │      │                           ╰ V3Score : 8.1 
+                        │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-33186 
+                        │      │                  ├ [1]: https://github.com/grpc/grpc-go 
+                        │      │                  ├ [2]: https://github.com/grpc/grpc-go/security/advisories/GH
+                        │      │                  │      SA-p77j-4mvh-x3m3 
+                        │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-33186 
+                        │      │                  ╰ [4]: https://www.cve.org/CVERecord?id=CVE-2026-33186 
+                        │      ├ PublishedDate   : 2026-03-20T23:16:45.18Z 
+                        │      ╰ LastModifiedDate: 2026-04-10T20:49:17.737Z 
+                        ├ [6]  ╭ VulnerabilityID : CVE-2025-68121 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4337 
                         │      ├ PkgID           : stdlib@v1.25.0 
                         │      ├ PkgName         : stdlib 
@@ -1253,7 +1394,8 @@
                         │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
                         │      ├ Fingerprint     : sha256:ae4181ec6e626c778a13b228d706d383385aa22bb0c3533953913
                         │      │                   d62bb9bbf2f 
-                        │      ├ Title           : crypto/tls: Unexpected session resumption in crypto/tls 
+                        │      ├ Title           : crypto/tls: crypto/tls: Incorrect certificate validation
+                        │      │                   during TLS session resumption 
                         │      ├ Description     : During session resumption in crypto/tls, if the underlying
                         │      │                   Config has its ClientCAs or RootCAs fields mutated between
                         │      │                   the initial handshake and the resumed handshake, the resumed
@@ -1302,13 +1444,13 @@
                         │      │                  ├ [12]: https://groups.google.com/g/golang-announce/c/K09ubi9
                         │      │                  │       FQFk 
                         │      │                  ├ [13]: https://linux.oracle.com/cve/CVE-2025-68121.html 
-                        │      │                  ├ [14]: https://linux.oracle.com/errata/ELSA-2026-4672.html 
+                        │      │                  ├ [14]: https://linux.oracle.com/errata/ELSA-2026-5146.html 
                         │      │                  ├ [15]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
                         │      │                  ├ [16]: https://pkg.go.dev/vuln/GO-2026-4337 
                         │      │                  ╰ [17]: https://www.cve.org/CVERecord?id=CVE-2025-68121 
                         │      ├ PublishedDate   : 2026-02-05T18:16:10.857Z 
                         │      ╰ LastModifiedDate: 2026-02-20T17:25:50.303Z 
-                        ├ [4]  ╭ VulnerabilityID : CVE-2025-58183 
+                        ├ [7]  ╭ VulnerabilityID : CVE-2025-58183 
                         │      ├ VendorIDs        ─ [0]: GO-2025-4014 
                         │      ├ PkgID           : stdlib@v1.25.0 
                         │      ├ PkgName         : stdlib 
@@ -1372,7 +1514,7 @@
                         │      │                  ╰ [15]: https://www.cve.org/CVERecord?id=CVE-2025-58183 
                         │      ├ PublishedDate   : 2025-10-29T23:16:19.357Z 
                         │      ╰ LastModifiedDate: 2025-11-04T22:16:33.2Z 
-                        ├ [5]  ╭ VulnerabilityID : CVE-2025-61726 
+                        ├ [8]  ╭ VulnerabilityID : CVE-2025-61726 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4341 
                         │      ├ PkgID           : stdlib@v1.25.0 
                         │      ├ PkgName         : stdlib 
@@ -1434,13 +1576,13 @@
                         │      │                  ├ [12]: https://groups.google.com/g/golang-announce/c/Vd2tYVM
                         │      │                  │       8eUc 
                         │      │                  ├ [13]: https://linux.oracle.com/cve/CVE-2025-61726.html 
-                        │      │                  ├ [14]: https://linux.oracle.com/errata/ELSA-2026-4672.html 
+                        │      │                  ├ [14]: https://linux.oracle.com/errata/ELSA-2026-5146.html 
                         │      │                  ├ [15]: https://nvd.nist.gov/vuln/detail/CVE-2025-61726 
                         │      │                  ├ [16]: https://pkg.go.dev/vuln/GO-2026-4341 
                         │      │                  ╰ [17]: https://www.cve.org/CVERecord?id=CVE-2025-61726 
                         │      ├ PublishedDate   : 2026-01-28T20:16:09.713Z 
                         │      ╰ LastModifiedDate: 2026-02-06T18:47:34.52Z 
-                        ├ [6]  ╭ VulnerabilityID : CVE-2025-61728 
+                        ├ [9]  ╭ VulnerabilityID : CVE-2025-61728 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4342 
                         │      ├ PkgID           : stdlib@v1.25.0 
                         │      ├ PkgName         : stdlib 
@@ -1513,7 +1655,7 @@
                         │      │                  ╰ [24]: https://www.cve.org/CVERecord?id=CVE-2025-61728 
                         │      ├ PublishedDate   : 2026-01-28T20:16:09.83Z 
                         │      ╰ LastModifiedDate: 2026-02-06T18:45:10.42Z 
-                        ├ [7]  ╭ VulnerabilityID : CVE-2025-61729 
+                        ├ [10] ╭ VulnerabilityID : CVE-2025-61729 
                         │      ├ VendorIDs        ─ [0]: GO-2025-4155 
                         │      ├ PkgID           : stdlib@v1.25.0 
                         │      ├ PkgName         : stdlib 
@@ -1577,13 +1719,13 @@
                         │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/8FJoBkP
                         │      │                  │       ddm4 
                         │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2025-61729.html 
-                        │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-4164.html 
+                        │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-5146.html 
                         │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2025-61729 
                         │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2025-4155 
                         │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2025-61729 
                         │      ├ PublishedDate   : 2025-12-02T19:15:51.447Z 
                         │      ╰ LastModifiedDate: 2025-12-19T18:25:28.283Z 
-                        ├ [8]  ╭ VulnerabilityID : CVE-2026-25679 
+                        ├ [11] ╭ VulnerabilityID : CVE-2026-25679 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4601 
                         │      ├ PkgID           : stdlib@v1.25.0 
                         │      ├ PkgName         : stdlib 
@@ -1606,25 +1748,34 @@
                         │      ├ Description     : url.Parse insufficiently validated the host/authority
                         │      │                   component and accepted some invalid URLs. 
                         │      ├ Severity        : HIGH 
-                        │      ├ VendorSeverity   ╭ bitnami: 3 
-                        │      │                  ╰ redhat : 3 
+                        │      ├ VendorSeverity   ╭ alma       : 3 
+                        │      │                  ├ amazon     : 2 
+                        │      │                  ├ azure      : 3 
+                        │      │                  ├ bitnami    : 3 
+                        │      │                  ├ oracle-oval: 3 
+                        │      │                  ╰ redhat     : 3 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
                         │      │                  │         │           N/A:H 
                         │      │                  │         ╰ V3Score : 7.5 
                         │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
                         │      │                            │           N/A:H 
                         │      │                            ╰ V3Score : 7.5 
-                        │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-25679 
-                        │      │                  ├ [1]: https://go.dev/cl/752180 
-                        │      │                  ├ [2]: https://go.dev/issue/77578 
-                        │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/EdhZqrQ9
-                        │      │                  │      8hk 
-                        │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-25679 
-                        │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4601 
-                        │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
+                        │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:6383 
+                        │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-25679 
+                        │      │                  ├ [2] : https://bugzilla.redhat.com/2445356 
+                        │      │                  ├ [3] : https://errata.almalinux.org/9/ALSA-2026-6383.html 
+                        │      │                  ├ [4] : https://go.dev/cl/752180 
+                        │      │                  ├ [5] : https://go.dev/issue/77578 
+                        │      │                  ├ [6] : https://groups.google.com/g/golang-announce/c/EdhZqrQ
+                        │      │                  │       98hk 
+                        │      │                  ├ [7] : https://linux.oracle.com/cve/CVE-2026-25679.html 
+                        │      │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2026-7259.html 
+                        │      │                  ├ [9] : https://nvd.nist.gov/vuln/detail/CVE-2026-25679 
+                        │      │                  ├ [10]: https://pkg.go.dev/vuln/GO-2026-4601 
+                        │      │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
                         │      ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
                         │      ╰ LastModifiedDate: 2026-03-10T18:18:37.74Z 
-                        ├ [9]  ╭ VulnerabilityID : CVE-2025-47910 
+                        ├ [12] ╭ VulnerabilityID : CVE-2025-47910 
                         │      ├ VendorIDs        ─ [0]: GO-2025-3955 
                         │      ├ PkgID           : stdlib@v1.25.0 
                         │      ├ PkgName         : stdlib 
@@ -1669,7 +1820,7 @@
                         │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-47910 
                         │      ├ PublishedDate   : 2025-09-22T21:15:59.627Z 
                         │      ╰ LastModifiedDate: 2025-09-24T14:15:49.437Z 
-                        ├ [10] ╭ VulnerabilityID : CVE-2025-47912 
+                        ├ [13] ╭ VulnerabilityID : CVE-2025-47912 
                         │      ├ VendorIDs        ─ [0]: GO-2025-4010 
                         │      ├ PkgID           : stdlib@v1.25.0 
                         │      ├ PkgName         : stdlib 
@@ -1719,7 +1870,7 @@
                         │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-47912 
                         │      ├ PublishedDate   : 2025-10-29T23:16:18.187Z 
                         │      ╰ LastModifiedDate: 2026-01-29T13:57:18.69Z 
-                        ├ [11] ╭ VulnerabilityID : CVE-2025-58185 
+                        ├ [14] ╭ VulnerabilityID : CVE-2025-58185 
                         │      ├ VendorIDs        ─ [0]: GO-2025-4011 
                         │      ├ PkgID           : stdlib@v1.25.0 
                         │      ├ PkgName         : stdlib 
@@ -1767,7 +1918,7 @@
                         │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-58185 
                         │      ├ PublishedDate   : 2025-10-29T23:16:19.45Z 
                         │      ╰ LastModifiedDate: 2026-02-06T20:26:41.997Z 
-                        ├ [12] ╭ VulnerabilityID : CVE-2025-58186 
+                        ├ [15] ╭ VulnerabilityID : CVE-2025-58186 
                         │      ├ VendorIDs        ─ [0]: GO-2025-4012 
                         │      ├ PkgID           : stdlib@v1.25.0 
                         │      ├ PkgName         : stdlib 
@@ -1815,7 +1966,7 @@
                         │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-58186 
                         │      ├ PublishedDate   : 2025-10-29T23:16:19.547Z 
                         │      ╰ LastModifiedDate: 2025-11-04T22:16:33.45Z 
-                        ├ [13] ╭ VulnerabilityID : CVE-2025-58187 
+                        ├ [16] ╭ VulnerabilityID : CVE-2025-58187 
                         │      ├ VendorIDs        ─ [0]: GO-2025-4007 
                         │      ├ PkgID           : stdlib@v1.25.0 
                         │      ├ PkgName         : stdlib 
@@ -1865,7 +2016,7 @@
                         │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-58187 
                         │      ├ PublishedDate   : 2025-10-29T23:16:19.643Z 
                         │      ╰ LastModifiedDate: 2026-01-29T16:02:27.08Z 
-                        ├ [14] ╭ VulnerabilityID : CVE-2025-58188 
+                        ├ [17] ╭ VulnerabilityID : CVE-2025-58188 
                         │      ├ VendorIDs        ─ [0]: GO-2025-4013 
                         │      ├ PkgID           : stdlib@v1.25.0 
                         │      ├ PkgName         : stdlib 
@@ -1915,7 +2066,7 @@
                         │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-58188 
                         │      ├ PublishedDate   : 2025-10-29T23:16:19.74Z 
                         │      ╰ LastModifiedDate: 2026-01-29T15:55:11.97Z 
-                        ├ [15] ╭ VulnerabilityID : CVE-2025-58189 
+                        ├ [18] ╭ VulnerabilityID : CVE-2025-58189 
                         │      ├ VendorIDs        ─ [0]: GO-2025-4008 
                         │      ├ PkgID           : stdlib@v1.25.0 
                         │      ├ PkgName         : stdlib 
@@ -1962,7 +2113,7 @@
                         │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-58189 
                         │      ├ PublishedDate   : 2025-10-29T23:16:19.833Z 
                         │      ╰ LastModifiedDate: 2026-01-29T15:49:24.543Z 
-                        ├ [16] ╭ VulnerabilityID : CVE-2025-61723 
+                        ├ [19] ╭ VulnerabilityID : CVE-2025-61723 
                         │      ├ VendorIDs        ─ [0]: GO-2025-4009 
                         │      ├ PkgID           : stdlib@v1.25.0 
                         │      ├ PkgName         : stdlib 
@@ -2011,7 +2162,7 @@
                         │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-61723 
                         │      ├ PublishedDate   : 2025-10-29T23:16:19.927Z 
                         │      ╰ LastModifiedDate: 2026-01-29T15:49:05.343Z 
-                        ├ [17] ╭ VulnerabilityID : CVE-2025-61724 
+                        ├ [20] ╭ VulnerabilityID : CVE-2025-61724 
                         │      ├ VendorIDs        ─ [0]: GO-2025-4015 
                         │      ├ PkgID           : stdlib@v1.25.0 
                         │      ├ PkgName         : stdlib 
@@ -2059,7 +2210,7 @@
                         │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-61724 
                         │      ├ PublishedDate   : 2025-10-29T23:16:20.02Z 
                         │      ╰ LastModifiedDate: 2026-01-29T15:30:53.69Z 
-                        ├ [18] ╭ VulnerabilityID : CVE-2025-61725 
+                        ├ [21] ╭ VulnerabilityID : CVE-2025-61725 
                         │      ├ VendorIDs        ─ [0]: GO-2025-4006 
                         │      ├ PkgID           : stdlib@v1.25.0 
                         │      ├ PkgName         : stdlib 
@@ -2106,7 +2257,7 @@
                         │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-61725 
                         │      ├ PublishedDate   : 2025-10-29T23:16:20.113Z 
                         │      ╰ LastModifiedDate: 2025-12-09T18:15:56.347Z 
-                        ├ [19] ╭ VulnerabilityID : CVE-2025-61727 
+                        ├ [22] ╭ VulnerabilityID : CVE-2025-61727 
                         │      ├ VendorIDs        ─ [0]: GO-2025-4175 
                         │      ├ PkgID           : stdlib@v1.25.0 
                         │      ├ PkgName         : stdlib 
@@ -2154,7 +2305,7 @@
                         │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61727 
                         │      ├ PublishedDate   : 2025-12-03T20:16:25.607Z 
                         │      ╰ LastModifiedDate: 2025-12-18T20:15:10.957Z 
-                        ├ [20] ╭ VulnerabilityID : CVE-2025-61730 
+                        ├ [23] ╭ VulnerabilityID : CVE-2025-61730 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4340 
                         │      ├ PkgID           : stdlib@v1.25.0 
                         │      ├ PkgName         : stdlib 
@@ -2199,7 +2350,7 @@
                         │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4340 
                         │      ├ PublishedDate   : 2026-01-28T20:16:09.94Z 
                         │      ╰ LastModifiedDate: 2026-02-03T20:36:41.3Z 
-                        ├ [21] ╭ VulnerabilityID : CVE-2026-27142 
+                        ├ [24] ╭ VulnerabilityID : CVE-2026-27142 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4603 
                         │      ├ PkgID           : stdlib@v1.25.0 
                         │      ├ PkgName         : stdlib 
@@ -2228,7 +2379,8 @@
                         │      │                   escaping URLs in actions in the meta content attribute which
                         │      │                    follow "url=" by setting htmlmetacontenturlescape=0. 
                         │      ├ Severity        : MEDIUM 
-                        │      ├ VendorSeverity   ╭ bitnami: 2 
+                        │      ├ VendorSeverity   ╭ amazon : 2 
+                        │      │                  ├ bitnami: 2 
                         │      │                  ╰ redhat : 2 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
                         │      │                  │         │           L/A:N 
@@ -2246,50 +2398,287 @@
                         │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27142 
                         │      ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
                         │      ╰ LastModifiedDate: 2026-03-16T16:16:13.77Z 
-                        ╰ [22] ╭ VulnerabilityID : CVE-2026-27139 
-                               ├ VendorIDs        ─ [0]: GO-2026-4602 
+                        ├ [25] ╭ VulnerabilityID : CVE-2026-32281 
+                        │      ├ VendorIDs        ─ [0]: GO-2026-4946 
+                        │      ├ PkgID           : stdlib@v1.25.0 
+                        │      ├ PkgName         : stdlib 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.0 
+                        │      │                  ╰ UID : 7efd7a2bdb3f994b 
+                        │      ├ InstalledVersion: v1.25.0 
+                        │      ├ FixedVersion    : 1.25.9, 1.26.2 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:1542387fd1443eae52c33431e5a596c30d80cb2a397c
+                        │      │                  │         16947126129ff51eada6 
+                        │      │                  ╰ DiffID: sha256:59f14d369c3dba385311a91b009ddb820081967a515e
+                        │      │                            78516657e1ac00864f5e 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32281 
+                        │      ├ DataSource       ╭ ID  : govulndb 
+                        │      │                  ├ Name: The Go Vulnerability Database 
+                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │      ├ Fingerprint     : sha256:da37d3a7564a4cb5423f725e91e03fc1cfd856b25d32444015dd0
+                        │      │                   651ed24b68b 
+                        │      ├ Title           : crypto/x509: golang: Go crypto/x509: Denial of Service via
+                        │      │                   inefficient certificate chain validation 
+                        │      ├ Description     : Validating certificate chains which use policies is
+                        │      │                   unexpectedly inefficient when certificates in the chain
+                        │      │                   contain a very large number of policy mappings, possibly
+                        │      │                   causing denial of service. This only affects validation of
+                        │      │                   otherwise trusted certificate chains, issued by a root CA in
+                        │      │                    the VerifyOptions.Roots CertPool, or in the system
+                        │      │                   certificate pool. 
+                        │      ├ Severity        : MEDIUM 
+                        │      ├ VendorSeverity   ─ redhat: 2 
+                        │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N
+                        │      │                           │           /A:H 
+                        │      │                           ╰ V3Score : 5.9 
+                        │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-32281 
+                        │      │                  ├ [1]: https://go.dev/cl/758061 
+                        │      │                  ├ [2]: https://go.dev/issue/78281 
+                        │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
+                        │      │                  │      RWU 
+                        │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32281 
+                        │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4946 
+                        │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32281 
+                        │      ├ PublishedDate   : 2026-04-08T02:16:03.35Z 
+                        │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
+                        ├ [26] ╭ VulnerabilityID : CVE-2026-32288 
+                        │      ├ VendorIDs        ─ [0]: GO-2026-4869 
+                        │      ├ PkgID           : stdlib@v1.25.0 
+                        │      ├ PkgName         : stdlib 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.0 
+                        │      │                  ╰ UID : 7efd7a2bdb3f994b 
+                        │      ├ InstalledVersion: v1.25.0 
+                        │      ├ FixedVersion    : 1.25.9, 1.26.2 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:1542387fd1443eae52c33431e5a596c30d80cb2a397c
+                        │      │                  │         16947126129ff51eada6 
+                        │      │                  ╰ DiffID: sha256:59f14d369c3dba385311a91b009ddb820081967a515e
+                        │      │                            78516657e1ac00864f5e 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32288 
+                        │      ├ DataSource       ╭ ID  : govulndb 
+                        │      │                  ├ Name: The Go Vulnerability Database 
+                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │      ├ Fingerprint     : sha256:4d57187b0021fe422dab6429c398dabe78ad90033594fc2eb0f04
+                        │      │                   4508a8fe921 
+                        │      ├ Title           : archive/tar: golang: Go's archive/tar package: Denial of
+                        │      │                   Service via maliciously-crafted archive 
+                        │      ├ Description     : tar.Reader can allocate an unbounded amount of memory when
+                        │      │                   reading a maliciously-crafted archive containing a large
+                        │      │                   number of sparse regions encoded in the "old GNU sparse map"
+                        │      │                    format. 
+                        │      ├ Severity        : MEDIUM 
+                        │      ├ VendorSeverity   ─ redhat: 2 
+                        │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N
+                        │      │                           │           /A:L 
+                        │      │                           ╰ V3Score : 4.3 
+                        │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-32288 
+                        │      │                  ├ [1]: https://go.dev/cl/763766 
+                        │      │                  ├ [2]: https://go.dev/issue/78301 
+                        │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
+                        │      │                  │      RWU 
+                        │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32288 
+                        │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4869 
+                        │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32288 
+                        │      ├ PublishedDate   : 2026-04-08T02:16:03.707Z 
+                        │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
+                        ├ [27] ╭ VulnerabilityID : CVE-2026-32289 
+                        │      ├ VendorIDs        ─ [0]: GO-2026-4865 
+                        │      ├ PkgID           : stdlib@v1.25.0 
+                        │      ├ PkgName         : stdlib 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.0 
+                        │      │                  ╰ UID : 7efd7a2bdb3f994b 
+                        │      ├ InstalledVersion: v1.25.0 
+                        │      ├ FixedVersion    : 1.25.9, 1.26.2 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:1542387fd1443eae52c33431e5a596c30d80cb2a397c
+                        │      │                  │         16947126129ff51eada6 
+                        │      │                  ╰ DiffID: sha256:59f14d369c3dba385311a91b009ddb820081967a515e
+                        │      │                            78516657e1ac00864f5e 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32289 
+                        │      ├ DataSource       ╭ ID  : govulndb 
+                        │      │                  ├ Name: The Go Vulnerability Database 
+                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │      ├ Fingerprint     : sha256:f610d6190e3bac106483d6a97ccd8c1aac4a5c3c3b1af5e231fe4
+                        │      │                   94151f36c57 
+                        │      ├ Title           : html/template: golang: html/template: Cross-Site Scripting
+                        │      │                   (XSS) via improper context and brace depth tracking in JS
+                        │      │                   template literals 
+                        │      ├ Description     : Context was not properly tracked across template branches
+                        │      │                   for JS template literals, leading to possibly incorrect
+                        │      │                   escaping of content when branches were used. Additionally
+                        │      │                   template actions within JS template literals did not
+                        │      │                   properly track the brace depth, leading to incorrect
+                        │      │                   escaping being applied. These issues could cause actions
+                        │      │                   within JS template literals to be incorrectly or improperly
+                        │      │                   escaped, leading to XSS vulnerabilities. 
+                        │      ├ Severity        : MEDIUM 
+                        │      ├ VendorSeverity   ─ redhat: 2 
+                        │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L
+                        │      │                           │           /A:N 
+                        │      │                           ╰ V3Score : 5.4 
+                        │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-32289 
+                        │      │                  ├ [1]: https://go.dev/cl/763762 
+                        │      │                  ├ [2]: https://go.dev/issue/78331 
+                        │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
+                        │      │                  │      RWU 
+                        │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32289 
+                        │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4865 
+                        │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32289 
+                        │      ├ PublishedDate   : 2026-04-08T02:16:03.82Z 
+                        │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
+                        ├ [28] ╭ VulnerabilityID : CVE-2026-27139 
+                        │      ├ VendorIDs        ─ [0]: GO-2026-4602 
+                        │      ├ PkgID           : stdlib@v1.25.0 
+                        │      ├ PkgName         : stdlib 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.0 
+                        │      │                  ╰ UID : 7efd7a2bdb3f994b 
+                        │      ├ InstalledVersion: v1.25.0 
+                        │      ├ FixedVersion    : 1.25.8, 1.26.1 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:1542387fd1443eae52c33431e5a596c30d80cb2a397c
+                        │      │                  │         16947126129ff51eada6 
+                        │      │                  ╰ DiffID: sha256:59f14d369c3dba385311a91b009ddb820081967a515e
+                        │      │                            78516657e1ac00864f5e 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-27139 
+                        │      ├ DataSource       ╭ ID  : govulndb 
+                        │      │                  ├ Name: The Go Vulnerability Database 
+                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │      ├ Fingerprint     : sha256:8881d68a37633ba7b37f86568b9a9ddc64d4cf1eb3db31dda6488
+                        │      │                   1cacab1e5c7 
+                        │      ├ Title           : os: FileInfo can escape from a Root in golang os module 
+                        │      ├ Description     : On Unix platforms, when listing the contents of a directory
+                        │      │                   using File.ReadDir or File.Readdir the returned FileInfo
+                        │      │                   could reference a file outside of the Root in which the File
+                        │      │                    was opened. The impact of this escape is limited to reading
+                        │      │                    metadata provided by lstat from arbitrary locations on the
+                        │      │                   filesystem without permitting reading or writing files
+                        │      │                   outside the root. 
+                        │      ├ Severity        : LOW 
+                        │      ├ VendorSeverity   ╭ amazon : 2 
+                        │      │                  ├ bitnami: 1 
+                        │      │                  ╰ redhat : 1 
+                        │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:
+                        │      │                  │         │           N/A:N 
+                        │      │                  │         ╰ V3Score : 2.5 
+                        │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:
+                        │      │                            │           N/A:N 
+                        │      │                            ╰ V3Score : 2.5 
+                        │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-27139 
+                        │      │                  ├ [1]: https://go.dev/cl/749480 
+                        │      │                  ├ [2]: https://go.dev/issue/77827 
+                        │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/EdhZqrQ9
+                        │      │                  │      8hk 
+                        │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-27139 
+                        │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4602 
+                        │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27139 
+                        │      ├ PublishedDate   : 2026-03-06T22:16:01.07Z 
+                        │      ╰ LastModifiedDate: 2026-03-09T15:15:57.15Z 
+                        ├ [29] ╭ VulnerabilityID : CVE-2026-32280 
+                        │      ├ VendorIDs        ─ [0]: GO-2026-4947 
+                        │      ├ PkgID           : stdlib@v1.25.0 
+                        │      ├ PkgName         : stdlib 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.0 
+                        │      │                  ╰ UID : 7efd7a2bdb3f994b 
+                        │      ├ InstalledVersion: v1.25.0 
+                        │      ├ FixedVersion    : 1.25.9, 1.26.2 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:1542387fd1443eae52c33431e5a596c30d80cb2a397c
+                        │      │                  │         16947126129ff51eada6 
+                        │      │                  ╰ DiffID: sha256:59f14d369c3dba385311a91b009ddb820081967a515e
+                        │      │                            78516657e1ac00864f5e 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32280 
+                        │      ├ DataSource       ╭ ID  : govulndb 
+                        │      │                  ├ Name: The Go Vulnerability Database 
+                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │      ├ Fingerprint     : sha256:db245cf9d34a04dc1b839eda4b11576b7815c088704d27ccfb6da
+                        │      │                   5c9967f7d70 
+                        │      ├ Title           : During chain building, the amount of work that is done is
+                        │      │                   not correctl ... 
+                        │      ├ Description     : During chain building, the amount of work that is done is
+                        │      │                   not correctly limited when a large number of intermediate
+                        │      │                   certificates are passed in VerifyOptions.Intermediates,
+                        │      │                   which can lead to a denial of service. This affects both
+                        │      │                   direct users of crypto/x509 and users of crypto/tls. 
+                        │      ├ Severity        : UNKNOWN 
+                        │      ├ CweIDs           ─ [0]: CWE-770 
+                        │      ├ References       ╭ [0]: https://go.dev/cl/758320 
+                        │      │                  ├ [1]: https://go.dev/issue/78282 
+                        │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
+                        │      │                  │      RWU 
+                        │      │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4947 
+                        │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
+                        │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
+                        ├ [30] ╭ VulnerabilityID : CVE-2026-32282 
+                        │      ├ VendorIDs        ─ [0]: GO-2026-4864 
+                        │      ├ PkgID           : stdlib@v1.25.0 
+                        │      ├ PkgName         : stdlib 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.0 
+                        │      │                  ╰ UID : 7efd7a2bdb3f994b 
+                        │      ├ InstalledVersion: v1.25.0 
+                        │      ├ FixedVersion    : 1.25.9, 1.26.2 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:1542387fd1443eae52c33431e5a596c30d80cb2a397c
+                        │      │                  │         16947126129ff51eada6 
+                        │      │                  ╰ DiffID: sha256:59f14d369c3dba385311a91b009ddb820081967a515e
+                        │      │                            78516657e1ac00864f5e 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32282 
+                        │      ├ DataSource       ╭ ID  : govulndb 
+                        │      │                  ├ Name: The Go Vulnerability Database 
+                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │      ├ Fingerprint     : sha256:89a9070377f0e6bd078c4e135d6df4ddf1ac789fdd603728664de
+                        │      │                   610a1da12b6 
+                        │      ├ Title           : On Linux, if the target of Root.Chmod is replaced with a
+                        │      │                   symlink while ... 
+                        │      ├ Description     : On Linux, if the target of Root.Chmod is replaced with a
+                        │      │                   symlink while the chmod operation is in progress, Chmod can
+                        │      │                   operate on the target of the symlink, even when the target
+                        │      │                   lies outside the root. The Linux fchmodat syscall silently
+                        │      │                   ignores the AT_SYMLINK_NOFOLLOW flag, which Root.Chmod uses
+                        │      │                   to avoid symlink traversal. Root.Chmod checks its target
+                        │      │                   before acting and returns an error if the target is a
+                        │      │                   symlink lying outside the root, so the impact is limited to
+                        │      │                   cases where the target is replaced with a symlink between
+                        │      │                   the check and operation. 
+                        │      ├ Severity        : UNKNOWN 
+                        │      ├ References       ╭ [0]: https://go.dev/cl/763761 
+                        │      │                  ├ [1]: https://go.dev/issue/78293 
+                        │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
+                        │      │                  │      RWU 
+                        │      │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4864 
+                        │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
+                        │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
+                        ╰ [31] ╭ VulnerabilityID : CVE-2026-32283 
+                               ├ VendorIDs        ─ [0]: GO-2026-4870 
                                ├ PkgID           : stdlib@v1.25.0 
                                ├ PkgName         : stdlib 
                                ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.0 
                                │                  ╰ UID : 7efd7a2bdb3f994b 
                                ├ InstalledVersion: v1.25.0 
-                               ├ FixedVersion    : 1.25.8, 1.26.1 
+                               ├ FixedVersion    : 1.25.9, 1.26.2 
                                ├ Status          : fixed 
                                ├ Layer            ╭ Digest: sha256:1542387fd1443eae52c33431e5a596c30d80cb2a397c
                                │                  │         16947126129ff51eada6 
                                │                  ╰ DiffID: sha256:59f14d369c3dba385311a91b009ddb820081967a515e
                                │                            78516657e1ac00864f5e 
-                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-27139 
+                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32283 
                                ├ DataSource       ╭ ID  : govulndb 
                                │                  ├ Name: The Go Vulnerability Database 
                                │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                               ├ Fingerprint     : sha256:8881d68a37633ba7b37f86568b9a9ddc64d4cf1eb3db31dda6488
-                               │                   1cacab1e5c7 
-                               ├ Title           : os: FileInfo can escape from a Root in golang os module 
-                               ├ Description     : On Unix platforms, when listing the contents of a directory
-                               │                   using File.ReadDir or File.Readdir the returned FileInfo
-                               │                   could reference a file outside of the Root in which the File
-                               │                    was opened. The impact of this escape is limited to reading
-                               │                    metadata provided by lstat from arbitrary locations on the
-                               │                   filesystem without permitting reading or writing files
-                               │                   outside the root. 
-                               ├ Severity        : LOW 
-                               ├ VendorSeverity   ╭ bitnami: 1 
-                               │                  ╰ redhat : 1 
-                               ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:
-                               │                  │         │           N/A:N 
-                               │                  │         ╰ V3Score : 2.5 
-                               │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:
-                               │                            │           N/A:N 
-                               │                            ╰ V3Score : 2.5 
-                               ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-27139 
-                               │                  ├ [1]: https://go.dev/cl/749480 
-                               │                  ├ [2]: https://go.dev/issue/77827 
-                               │                  ├ [3]: https://groups.google.com/g/golang-announce/c/EdhZqrQ9
-                               │                  │      8hk 
-                               │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-27139 
-                               │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4602 
-                               │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27139 
-                               ├ PublishedDate   : 2026-03-06T22:16:01.07Z 
-                               ╰ LastModifiedDate: 2026-03-09T15:15:57.15Z 
+                               ├ Fingerprint     : sha256:50599c3673a8c26f67c2c5f58033676a4b694ce4b71d729e33a21
+                               │                   57ff7588f48 
+                               ├ Title           : If one side of the TLS connection sends multiple key update
+                               │                   messages p ... 
+                               ├ Description     : If one side of the TLS connection sends multiple key update
+                               │                   messages post-handshake in a single record, the connection
+                               │                   can deadlock, causing uncontrolled consumption of resources.
+                               │                    This can lead to a denial of service. This only affects TLS
+                               │                    1.3. 
+                               ├ Severity        : UNKNOWN 
+                               ├ References       ╭ [0]: https://go.dev/cl/763767 
+                               │                  ├ [1]: https://go.dev/issue/78334 
+                               │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
+                               │                  │      RWU 
+                               │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4870 
+                               ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
+                               ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
 ````
