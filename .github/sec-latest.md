@@ -8220,8 +8220,7 @@
 │     │                 │       ╰ AnalyzedBy: gobinary 
 │     │                 ├ [31]  ╭ ID        : github.com/go-openapi/swag@v0.23.1 
 │     │                 │       ├ Name      : github.com/go-openapi/swag 
-│     │                 │       ├ Identifier ╭ PURL: pkg:golang/github.com/go-openapi/swag@v0.23.1 
-│     │                 │       │            ╰ UID : deef7e736ce25096 
+
 │     │                 │       ├ Version   : v0.23.1 
 │     │                 │       ├ Layer      ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1bc64e
 │     │                 │       │            │         086c1f91e77709f 
@@ -8465,16 +8464,7 @@
 │     │                 │       │            ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4475e8
 │     │                 │       │                      bf0be8d84f76b5f 
 │     │                 │       ╰ AnalyzedBy: gobinary 
-│     │                 ├ [55]  ╭ ID        : github.com/mitchellh/go-wordwrap@v1.0.1 
-│     │                 │       ├ Name      : github.com/mitchellh/go-wordwrap 
-│     │                 │       ├ Identifier ╭ PURL: pkg:golang/github.com/mitchellh/go-wordwrap@v1.0.1 
-│     │                 │       │            ╰ UID : aad1ba1413cab7d2 
-│     │                 │       ├ Version   : v1.0.1 
-│     │                 │       ├ Layer      ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1bc64e
-│     │                 │       │            │         086c1f91e77709f 
-│     │                 │       │            ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4475e8
-│     │                 │       │                      bf0be8d84f76b5f 
-│     │                 │       ╰ AnalyzedBy: gobinary 
+
 │     │                 ├ [56]  ╭ ID        : github.com/mitchellh/reflectwalk@v1.0.2 
 │     │                 │       ├ Name      : github.com/mitchellh/reflectwalk 
 │     │                 │       ├ Identifier ╭ PURL: pkg:golang/github.com/mitchellh/reflectwalk@v1.0.2 
