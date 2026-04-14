@@ -3555,7 +3555,93 @@
 │                       │      │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
 │                       │      ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
 │                       │      ╰ LastModifiedDate: 2026-03-10T18:18:37.74Z 
-│                       ├ [12] ╭ VulnerabilityID : CVE-2025-47910 
+│                       ├ [12] ╭ VulnerabilityID : CVE-2026-32280 
+│                       │      ├ VendorIDs        ─ [0]: GO-2026-4947 
+│                       │      ├ PkgID           : stdlib@v1.25.0 
+│                       │      ├ PkgName         : stdlib 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.0 
+│                       │      │                  ╰ UID : 7efd7a2bdb3f994b 
+│                       │      ├ InstalledVersion: v1.25.0 
+│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
+│                       │      │                  │         bc64e086c1f91e77709f 
+│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
+│                       │      │                            475e8bf0be8d84f76b5f 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32280 
+│                       │      ├ DataSource       ╭ ID  : govulndb 
+│                       │      │                  ├ Name: The Go Vulnerability Database 
+│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │      ├ Fingerprint     : sha256:6186365025608b3653f33e45b16b5dbc32e9fffd71f8766fe7f1e
+│                       │      │                   a2346df7f19 
+│                       │      ├ Title           : During chain building, the amount of work that is done is
+│                       │      │                   not correctl ... 
+│                       │      ├ Description     : During chain building, the amount of work that is done is
+│                       │      │                   not correctly limited when a large number of intermediate
+│                       │      │                   certificates are passed in VerifyOptions.Intermediates,
+│                       │      │                   which can lead to a denial of service. This affects both
+│                       │      │                   direct users of crypto/x509 and users of crypto/tls. 
+│                       │      ├ Severity        : HIGH 
+│                       │      ├ CweIDs           ─ [0]: CWE-770 
+│                       │      ├ VendorSeverity   ─ bitnami: 3 
+│                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+│                       │      │                            │           N/A:H 
+│                       │      │                            ╰ V3Score : 7.5 
+│                       │      ├ References       ╭ [0]: https://go.dev/cl/758320 
+│                       │      │                  ├ [1]: https://go.dev/issue/78282 
+│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
+│                       │      │                  │      RWU 
+│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
+│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
+│                       ├ [13] ╭ VulnerabilityID : CVE-2026-32282 
+│                       │      ├ VendorIDs        ─ [0]: GO-2026-4864 
+│                       │      ├ PkgID           : stdlib@v1.25.0 
+│                       │      ├ PkgName         : stdlib 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.0 
+│                       │      │                  ╰ UID : 7efd7a2bdb3f994b 
+│                       │      ├ InstalledVersion: v1.25.0 
+│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
+│                       │      │                  │         bc64e086c1f91e77709f 
+│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
+│                       │      │                            475e8bf0be8d84f76b5f 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32282 
+│                       │      ├ DataSource       ╭ ID  : govulndb 
+│                       │      │                  ├ Name: The Go Vulnerability Database 
+│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │      ├ Fingerprint     : sha256:46b8c6adff520469093b0e622ee2fe7a3414ce22cef2e7c62c119
+│                       │      │                   40e0bd93fee 
+│                       │      ├ Title           : golang: internal/syscall/unix: Root.Chmod can follow
+│                       │      │                   symlinks out of the root 
+│                       │      ├ Description     : On Linux, if the target of Root.Chmod is replaced with a
+│                       │      │                   symlink while the chmod operation is in progress, Chmod can
+│                       │      │                   operate on the target of the symlink, even when the target
+│                       │      │                   lies outside the root. The Linux fchmodat syscall silently
+│                       │      │                   ignores the AT_SYMLINK_NOFOLLOW flag, which Root.Chmod uses
+│                       │      │                   to avoid symlink traversal. Root.Chmod checks its target
+│                       │      │                   before acting and returns an error if the target is a
+│                       │      │                   symlink lying outside the root, so the impact is limited to
+│                       │      │                   cases where the target is replaced with a symlink between
+│                       │      │                   the check and operation. 
+│                       │      ├ Severity        : HIGH 
+│                       │      ├ VendorSeverity   ─ redhat: 2 
+│                       │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H
+│                       │      │                           │           /A:H 
+│                       │      │                           ╰ V3Score : 7.8 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-32282 
+│                       │      │                  ├ [1]: https://go.dev/cl/763761 
+│                       │      │                  ├ [2]: https://go.dev/issue/78293 
+│                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
+│                       │      │                  │      RWU 
+│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:39.807Z 
+│                       ├ [14] ╭ VulnerabilityID : CVE-2025-47910 
 │                       │      ├ VendorIDs        ─ [0]: GO-2025-3955 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
 │                       │      ├ PkgName         : stdlib 
@@ -3600,7 +3686,7 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-47910 
 │                       │      ├ PublishedDate   : 2025-09-22T21:15:59.627Z 
 │                       │      ╰ LastModifiedDate: 2025-09-24T14:15:49.437Z 
-│                       ├ [13] ╭ VulnerabilityID : CVE-2025-47912 
+│                       ├ [15] ╭ VulnerabilityID : CVE-2025-47912 
 │                       │      ├ VendorIDs        ─ [0]: GO-2025-4010 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
 │                       │      ├ PkgName         : stdlib 
@@ -3650,7 +3736,7 @@
 │                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-47912 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:18.187Z 
 │                       │      ╰ LastModifiedDate: 2026-01-29T13:57:18.69Z 
-│                       ├ [14] ╭ VulnerabilityID : CVE-2025-58185 
+│                       ├ [16] ╭ VulnerabilityID : CVE-2025-58185 
 │                       │      ├ VendorIDs        ─ [0]: GO-2025-4011 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
 │                       │      ├ PkgName         : stdlib 
@@ -3698,7 +3784,7 @@
 │                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-58185 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.45Z 
 │                       │      ╰ LastModifiedDate: 2026-02-06T20:26:41.997Z 
-│                       ├ [15] ╭ VulnerabilityID : CVE-2025-58186 
+│                       ├ [17] ╭ VulnerabilityID : CVE-2025-58186 
 │                       │      ├ VendorIDs        ─ [0]: GO-2025-4012 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
 │                       │      ├ PkgName         : stdlib 
@@ -3746,7 +3832,7 @@
 │                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-58186 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.547Z 
 │                       │      ╰ LastModifiedDate: 2025-11-04T22:16:33.45Z 
-│                       ├ [16] ╭ VulnerabilityID : CVE-2025-58187 
+│                       ├ [18] ╭ VulnerabilityID : CVE-2025-58187 
 │                       │      ├ VendorIDs        ─ [0]: GO-2025-4007 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
 │                       │      ├ PkgName         : stdlib 
@@ -3796,7 +3882,7 @@
 │                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-58187 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.643Z 
 │                       │      ╰ LastModifiedDate: 2026-01-29T16:02:27.08Z 
-│                       ├ [17] ╭ VulnerabilityID : CVE-2025-58188 
+│                       ├ [19] ╭ VulnerabilityID : CVE-2025-58188 
 │                       │      ├ VendorIDs        ─ [0]: GO-2025-4013 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
 │                       │      ├ PkgName         : stdlib 
@@ -3846,7 +3932,7 @@
 │                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-58188 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.74Z 
 │                       │      ╰ LastModifiedDate: 2026-01-29T15:55:11.97Z 
-│                       ├ [18] ╭ VulnerabilityID : CVE-2025-58189 
+│                       ├ [20] ╭ VulnerabilityID : CVE-2025-58189 
 │                       │      ├ VendorIDs        ─ [0]: GO-2025-4008 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
 │                       │      ├ PkgName         : stdlib 
@@ -3893,7 +3979,7 @@
 │                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-58189 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.833Z 
 │                       │      ╰ LastModifiedDate: 2026-01-29T15:49:24.543Z 
-│                       ├ [19] ╭ VulnerabilityID : CVE-2025-61723 
+│                       ├ [21] ╭ VulnerabilityID : CVE-2025-61723 
 │                       │      ├ VendorIDs        ─ [0]: GO-2025-4009 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
 │                       │      ├ PkgName         : stdlib 
@@ -3942,7 +4028,7 @@
 │                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2025-61723 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:19.927Z 
 │                       │      ╰ LastModifiedDate: 2026-01-29T15:49:05.343Z 
-│                       ├ [20] ╭ VulnerabilityID : CVE-2025-61724 
+│                       ├ [22] ╭ VulnerabilityID : CVE-2025-61724 
 │                       │      ├ VendorIDs        ─ [0]: GO-2025-4015 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
 │                       │      ├ PkgName         : stdlib 
@@ -3990,7 +4076,7 @@
 │                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-61724 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:20.02Z 
 │                       │      ╰ LastModifiedDate: 2026-01-29T15:30:53.69Z 
-│                       ├ [21] ╭ VulnerabilityID : CVE-2025-61725 
+│                       ├ [23] ╭ VulnerabilityID : CVE-2025-61725 
 │                       │      ├ VendorIDs        ─ [0]: GO-2025-4006 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
 │                       │      ├ PkgName         : stdlib 
@@ -4037,7 +4123,7 @@
 │                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2025-61725 
 │                       │      ├ PublishedDate   : 2025-10-29T23:16:20.113Z 
 │                       │      ╰ LastModifiedDate: 2025-12-09T18:15:56.347Z 
-│                       ├ [22] ╭ VulnerabilityID : CVE-2025-61727 
+│                       ├ [24] ╭ VulnerabilityID : CVE-2025-61727 
 │                       │      ├ VendorIDs        ─ [0]: GO-2025-4175 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
 │                       │      ├ PkgName         : stdlib 
@@ -4085,7 +4171,7 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61727 
 │                       │      ├ PublishedDate   : 2025-12-03T20:16:25.607Z 
 │                       │      ╰ LastModifiedDate: 2025-12-18T20:15:10.957Z 
-│                       ├ [23] ╭ VulnerabilityID : CVE-2025-61730 
+│                       ├ [25] ╭ VulnerabilityID : CVE-2025-61730 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4340 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
 │                       │      ├ PkgName         : stdlib 
@@ -4130,7 +4216,7 @@
 │                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4340 
 │                       │      ├ PublishedDate   : 2026-01-28T20:16:09.94Z 
 │                       │      ╰ LastModifiedDate: 2026-02-03T20:36:41.3Z 
-│                       ├ [24] ╭ VulnerabilityID : CVE-2026-27142 
+│                       ├ [26] ╭ VulnerabilityID : CVE-2026-27142 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4603 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
 │                       │      ├ PkgName         : stdlib 
@@ -4178,7 +4264,7 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27142 
 │                       │      ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
 │                       │      ╰ LastModifiedDate: 2026-03-16T16:16:13.77Z 
-│                       ├ [25] ╭ VulnerabilityID : CVE-2026-32281 
+│                       ├ [27] ╭ VulnerabilityID : CVE-2026-32281 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4946 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
 │                       │      ├ PkgName         : stdlib 
@@ -4220,8 +4306,8 @@
 │                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4946 
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32281 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.35Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [26] ╭ VulnerabilityID : CVE-2026-32288 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:39.607Z 
+│                       ├ [28] ╭ VulnerabilityID : CVE-2026-32288 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4869 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
 │                       │      ├ PkgName         : stdlib 
@@ -4260,8 +4346,8 @@
 │                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4869 
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32288 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.707Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [27] ╭ VulnerabilityID : CVE-2026-32289 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:40.21Z 
+│                       ├ [29] ╭ VulnerabilityID : CVE-2026-32289 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4865 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
 │                       │      ├ PkgName         : stdlib 
@@ -4305,8 +4391,8 @@
 │                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4865 
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32289 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.82Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [28] ╭ VulnerabilityID : CVE-2026-27139 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:40.41Z 
+│                       ├ [30] ╭ VulnerabilityID : CVE-2026-27139 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4602 
 │                       │      ├ PkgID           : stdlib@v1.25.0 
 │                       │      ├ PkgName         : stdlib 
@@ -4353,80 +4439,6 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27139 
 │                       │      ├ PublishedDate   : 2026-03-06T22:16:01.07Z 
 │                       │      ╰ LastModifiedDate: 2026-03-09T15:15:57.15Z 
-│                       ├ [29] ╭ VulnerabilityID : CVE-2026-32280 
-│                       │      ├ VendorIDs        ─ [0]: GO-2026-4947 
-│                       │      ├ PkgID           : stdlib@v1.25.0 
-│                       │      ├ PkgName         : stdlib 
-│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.0 
-│                       │      │                  ╰ UID : 7efd7a2bdb3f994b 
-│                       │      ├ InstalledVersion: v1.25.0 
-│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
-│                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
-│                       │      │                  │         bc64e086c1f91e77709f 
-│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
-│                       │      │                            475e8bf0be8d84f76b5f 
-│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32280 
-│                       │      ├ DataSource       ╭ ID  : govulndb 
-│                       │      │                  ├ Name: The Go Vulnerability Database 
-│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │      ├ Fingerprint     : sha256:6186365025608b3653f33e45b16b5dbc32e9fffd71f8766fe7f1e
-│                       │      │                   a2346df7f19 
-│                       │      ├ Title           : During chain building, the amount of work that is done is
-│                       │      │                   not correctl ... 
-│                       │      ├ Description     : During chain building, the amount of work that is done is
-│                       │      │                   not correctly limited when a large number of intermediate
-│                       │      │                   certificates are passed in VerifyOptions.Intermediates,
-│                       │      │                   which can lead to a denial of service. This affects both
-│                       │      │                   direct users of crypto/x509 and users of crypto/tls. 
-│                       │      ├ Severity        : UNKNOWN 
-│                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ References       ╭ [0]: https://go.dev/cl/758320 
-│                       │      │                  ├ [1]: https://go.dev/issue/78282 
-│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
-│                       │      │                  │      RWU 
-│                       │      │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [30] ╭ VulnerabilityID : CVE-2026-32282 
-│                       │      ├ VendorIDs        ─ [0]: GO-2026-4864 
-│                       │      ├ PkgID           : stdlib@v1.25.0 
-│                       │      ├ PkgName         : stdlib 
-│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.0 
-│                       │      │                  ╰ UID : 7efd7a2bdb3f994b 
-│                       │      ├ InstalledVersion: v1.25.0 
-│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
-│                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
-│                       │      │                  │         bc64e086c1f91e77709f 
-│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
-│                       │      │                            475e8bf0be8d84f76b5f 
-│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32282 
-│                       │      ├ DataSource       ╭ ID  : govulndb 
-│                       │      │                  ├ Name: The Go Vulnerability Database 
-│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │      ├ Fingerprint     : sha256:46b8c6adff520469093b0e622ee2fe7a3414ce22cef2e7c62c119
-│                       │      │                   40e0bd93fee 
-│                       │      ├ Title           : On Linux, if the target of Root.Chmod is replaced with a
-│                       │      │                   symlink while ... 
-│                       │      ├ Description     : On Linux, if the target of Root.Chmod is replaced with a
-│                       │      │                   symlink while the chmod operation is in progress, Chmod can
-│                       │      │                   operate on the target of the symlink, even when the target
-│                       │      │                   lies outside the root. The Linux fchmodat syscall silently
-│                       │      │                   ignores the AT_SYMLINK_NOFOLLOW flag, which Root.Chmod uses
-│                       │      │                   to avoid symlink traversal. Root.Chmod checks its target
-│                       │      │                   before acting and returns an error if the target is a
-│                       │      │                   symlink lying outside the root, so the impact is limited to
-│                       │      │                   cases where the target is replaced with a symlink between
-│                       │      │                   the check and operation. 
-│                       │      ├ Severity        : UNKNOWN 
-│                       │      ├ References       ╭ [0]: https://go.dev/cl/763761 
-│                       │      │                  ├ [1]: https://go.dev/issue/78293 
-│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
-│                       │      │                  │      RWU 
-│                       │      │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
 │                       ╰ [31] ╭ VulnerabilityID : CVE-2026-32283 
 │                              ├ VendorIDs        ─ [0]: GO-2026-4870 
 │                              ├ PkgID           : stdlib@v1.25.0 
@@ -4458,9 +4470,10 @@
 │                              │                  ├ [1]: https://go.dev/issue/78334 
 │                              │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                              │                  │      RWU 
-│                              │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                              │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                              │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4870 
 │                              ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
-│                              ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
+│                              ╰ LastModifiedDate: 2026-04-13T19:16:40Z 
 ├ [3] ╭ Target         : usr/bin/ctr 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -5481,7 +5494,93 @@
 │                       │      │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
 │                       │      ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
 │                       │      ╰ LastModifiedDate: 2026-03-10T18:18:37.74Z 
-│                       ├ [3]  ╭ VulnerabilityID : CVE-2026-27142 
+│                       ├ [3]  ╭ VulnerabilityID : CVE-2026-32280 
+│                       │      ├ VendorIDs        ─ [0]: GO-2026-4947 
+│                       │      ├ PkgID           : stdlib@v1.25.6 
+│                       │      ├ PkgName         : stdlib 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.6 
+│                       │      │                  ╰ UID : 763e04f5995d9770 
+│                       │      ├ InstalledVersion: v1.25.6 
+│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
+│                       │      │                  │         bc64e086c1f91e77709f 
+│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
+│                       │      │                            475e8bf0be8d84f76b5f 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32280 
+│                       │      ├ DataSource       ╭ ID  : govulndb 
+│                       │      │                  ├ Name: The Go Vulnerability Database 
+│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │      ├ Fingerprint     : sha256:006d3158575a1b09f8d533c72836701590cdfe5a381dd3325e210
+│                       │      │                   d610eaaef47 
+│                       │      ├ Title           : During chain building, the amount of work that is done is
+│                       │      │                   not correctl ... 
+│                       │      ├ Description     : During chain building, the amount of work that is done is
+│                       │      │                   not correctly limited when a large number of intermediate
+│                       │      │                   certificates are passed in VerifyOptions.Intermediates,
+│                       │      │                   which can lead to a denial of service. This affects both
+│                       │      │                   direct users of crypto/x509 and users of crypto/tls. 
+│                       │      ├ Severity        : HIGH 
+│                       │      ├ CweIDs           ─ [0]: CWE-770 
+│                       │      ├ VendorSeverity   ─ bitnami: 3 
+│                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+│                       │      │                            │           N/A:H 
+│                       │      │                            ╰ V3Score : 7.5 
+│                       │      ├ References       ╭ [0]: https://go.dev/cl/758320 
+│                       │      │                  ├ [1]: https://go.dev/issue/78282 
+│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
+│                       │      │                  │      RWU 
+│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
+│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
+│                       ├ [4]  ╭ VulnerabilityID : CVE-2026-32282 
+│                       │      ├ VendorIDs        ─ [0]: GO-2026-4864 
+│                       │      ├ PkgID           : stdlib@v1.25.6 
+│                       │      ├ PkgName         : stdlib 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.6 
+│                       │      │                  ╰ UID : 763e04f5995d9770 
+│                       │      ├ InstalledVersion: v1.25.6 
+│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
+│                       │      │                  │         bc64e086c1f91e77709f 
+│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
+│                       │      │                            475e8bf0be8d84f76b5f 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32282 
+│                       │      ├ DataSource       ╭ ID  : govulndb 
+│                       │      │                  ├ Name: The Go Vulnerability Database 
+│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │      ├ Fingerprint     : sha256:9c1b3dde54ad6b0dae03376a1908523039eae0110c6c23f8a4dde
+│                       │      │                   8bc1e1794ee 
+│                       │      ├ Title           : golang: internal/syscall/unix: Root.Chmod can follow
+│                       │      │                   symlinks out of the root 
+│                       │      ├ Description     : On Linux, if the target of Root.Chmod is replaced with a
+│                       │      │                   symlink while the chmod operation is in progress, Chmod can
+│                       │      │                   operate on the target of the symlink, even when the target
+│                       │      │                   lies outside the root. The Linux fchmodat syscall silently
+│                       │      │                   ignores the AT_SYMLINK_NOFOLLOW flag, which Root.Chmod uses
+│                       │      │                   to avoid symlink traversal. Root.Chmod checks its target
+│                       │      │                   before acting and returns an error if the target is a
+│                       │      │                   symlink lying outside the root, so the impact is limited to
+│                       │      │                   cases where the target is replaced with a symlink between
+│                       │      │                   the check and operation. 
+│                       │      ├ Severity        : HIGH 
+│                       │      ├ VendorSeverity   ─ redhat: 2 
+│                       │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H
+│                       │      │                           │           /A:H 
+│                       │      │                           ╰ V3Score : 7.8 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-32282 
+│                       │      │                  ├ [1]: https://go.dev/cl/763761 
+│                       │      │                  ├ [2]: https://go.dev/issue/78293 
+│                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
+│                       │      │                  │      RWU 
+│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:39.807Z 
+│                       ├ [5]  ╭ VulnerabilityID : CVE-2026-27142 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4603 
 │                       │      ├ PkgID           : stdlib@v1.25.6 
 │                       │      ├ PkgName         : stdlib 
@@ -5529,7 +5628,7 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27142 
 │                       │      ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
 │                       │      ╰ LastModifiedDate: 2026-03-16T16:16:13.77Z 
-│                       ├ [4]  ╭ VulnerabilityID : CVE-2026-32281 
+│                       ├ [6]  ╭ VulnerabilityID : CVE-2026-32281 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4946 
 │                       │      ├ PkgID           : stdlib@v1.25.6 
 │                       │      ├ PkgName         : stdlib 
@@ -5571,8 +5670,8 @@
 │                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4946 
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32281 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.35Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [5]  ╭ VulnerabilityID : CVE-2026-32288 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:39.607Z 
+│                       ├ [7]  ╭ VulnerabilityID : CVE-2026-32288 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4869 
 │                       │      ├ PkgID           : stdlib@v1.25.6 
 │                       │      ├ PkgName         : stdlib 
@@ -5611,8 +5710,8 @@
 │                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4869 
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32288 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.707Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [6]  ╭ VulnerabilityID : CVE-2026-32289 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:40.21Z 
+│                       ├ [8]  ╭ VulnerabilityID : CVE-2026-32289 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4865 
 │                       │      ├ PkgID           : stdlib@v1.25.6 
 │                       │      ├ PkgName         : stdlib 
@@ -5656,8 +5755,8 @@
 │                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4865 
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32289 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.82Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [7]  ╭ VulnerabilityID : CVE-2026-27139 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:40.41Z 
+│                       ├ [9]  ╭ VulnerabilityID : CVE-2026-27139 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4602 
 │                       │      ├ PkgID           : stdlib@v1.25.6 
 │                       │      ├ PkgName         : stdlib 
@@ -5704,80 +5803,6 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27139 
 │                       │      ├ PublishedDate   : 2026-03-06T22:16:01.07Z 
 │                       │      ╰ LastModifiedDate: 2026-03-09T15:15:57.15Z 
-│                       ├ [8]  ╭ VulnerabilityID : CVE-2026-32280 
-│                       │      ├ VendorIDs        ─ [0]: GO-2026-4947 
-│                       │      ├ PkgID           : stdlib@v1.25.6 
-│                       │      ├ PkgName         : stdlib 
-│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.6 
-│                       │      │                  ╰ UID : 763e04f5995d9770 
-│                       │      ├ InstalledVersion: v1.25.6 
-│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
-│                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
-│                       │      │                  │         bc64e086c1f91e77709f 
-│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
-│                       │      │                            475e8bf0be8d84f76b5f 
-│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32280 
-│                       │      ├ DataSource       ╭ ID  : govulndb 
-│                       │      │                  ├ Name: The Go Vulnerability Database 
-│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │      ├ Fingerprint     : sha256:006d3158575a1b09f8d533c72836701590cdfe5a381dd3325e210
-│                       │      │                   d610eaaef47 
-│                       │      ├ Title           : During chain building, the amount of work that is done is
-│                       │      │                   not correctl ... 
-│                       │      ├ Description     : During chain building, the amount of work that is done is
-│                       │      │                   not correctly limited when a large number of intermediate
-│                       │      │                   certificates are passed in VerifyOptions.Intermediates,
-│                       │      │                   which can lead to a denial of service. This affects both
-│                       │      │                   direct users of crypto/x509 and users of crypto/tls. 
-│                       │      ├ Severity        : UNKNOWN 
-│                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ References       ╭ [0]: https://go.dev/cl/758320 
-│                       │      │                  ├ [1]: https://go.dev/issue/78282 
-│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
-│                       │      │                  │      RWU 
-│                       │      │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [9]  ╭ VulnerabilityID : CVE-2026-32282 
-│                       │      ├ VendorIDs        ─ [0]: GO-2026-4864 
-│                       │      ├ PkgID           : stdlib@v1.25.6 
-│                       │      ├ PkgName         : stdlib 
-│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.6 
-│                       │      │                  ╰ UID : 763e04f5995d9770 
-│                       │      ├ InstalledVersion: v1.25.6 
-│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
-│                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
-│                       │      │                  │         bc64e086c1f91e77709f 
-│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
-│                       │      │                            475e8bf0be8d84f76b5f 
-│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32282 
-│                       │      ├ DataSource       ╭ ID  : govulndb 
-│                       │      │                  ├ Name: The Go Vulnerability Database 
-│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │      ├ Fingerprint     : sha256:9c1b3dde54ad6b0dae03376a1908523039eae0110c6c23f8a4dde
-│                       │      │                   8bc1e1794ee 
-│                       │      ├ Title           : On Linux, if the target of Root.Chmod is replaced with a
-│                       │      │                   symlink while ... 
-│                       │      ├ Description     : On Linux, if the target of Root.Chmod is replaced with a
-│                       │      │                   symlink while the chmod operation is in progress, Chmod can
-│                       │      │                   operate on the target of the symlink, even when the target
-│                       │      │                   lies outside the root. The Linux fchmodat syscall silently
-│                       │      │                   ignores the AT_SYMLINK_NOFOLLOW flag, which Root.Chmod uses
-│                       │      │                   to avoid symlink traversal. Root.Chmod checks its target
-│                       │      │                   before acting and returns an error if the target is a
-│                       │      │                   symlink lying outside the root, so the impact is limited to
-│                       │      │                   cases where the target is replaced with a symlink between
-│                       │      │                   the check and operation. 
-│                       │      ├ Severity        : UNKNOWN 
-│                       │      ├ References       ╭ [0]: https://go.dev/cl/763761 
-│                       │      │                  ├ [1]: https://go.dev/issue/78293 
-│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
-│                       │      │                  │      RWU 
-│                       │      │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
 │                       ╰ [10] ╭ VulnerabilityID : CVE-2026-32283 
 │                              ├ VendorIDs        ─ [0]: GO-2026-4870 
 │                              ├ PkgID           : stdlib@v1.25.6 
@@ -5809,9 +5834,10 @@
 │                              │                  ├ [1]: https://go.dev/issue/78334 
 │                              │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                              │                  │      RWU 
-│                              │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                              │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                              │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4870 
 │                              ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
-│                              ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
+│                              ╰ LastModifiedDate: 2026-04-13T19:16:40Z 
 ├ [4] ╭ Target         : usr/bin/dive 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -6974,7 +7000,93 @@
 │                       │      │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
 │                       │      ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
 │                       │      ╰ LastModifiedDate: 2026-03-10T18:18:37.74Z 
-│                       ├ [8]  ╭ VulnerabilityID : CVE-2026-27142 
+│                       ├ [8]  ╭ VulnerabilityID : CVE-2026-32280 
+│                       │      ├ VendorIDs        ─ [0]: GO-2026-4947 
+│                       │      ├ PkgID           : stdlib@v1.25.6 
+│                       │      ├ PkgName         : stdlib 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.6 
+│                       │      │                  ╰ UID : ee631e7f6330f31f 
+│                       │      ├ InstalledVersion: v1.25.6 
+│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
+│                       │      │                  │         bc64e086c1f91e77709f 
+│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
+│                       │      │                            475e8bf0be8d84f76b5f 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32280 
+│                       │      ├ DataSource       ╭ ID  : govulndb 
+│                       │      │                  ├ Name: The Go Vulnerability Database 
+│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │      ├ Fingerprint     : sha256:10fd98435585832f3e02ae1d7385d6b151780ffde1941a7255672
+│                       │      │                   16ab6d47285 
+│                       │      ├ Title           : During chain building, the amount of work that is done is
+│                       │      │                   not correctl ... 
+│                       │      ├ Description     : During chain building, the amount of work that is done is
+│                       │      │                   not correctly limited when a large number of intermediate
+│                       │      │                   certificates are passed in VerifyOptions.Intermediates,
+│                       │      │                   which can lead to a denial of service. This affects both
+│                       │      │                   direct users of crypto/x509 and users of crypto/tls. 
+│                       │      ├ Severity        : HIGH 
+│                       │      ├ CweIDs           ─ [0]: CWE-770 
+│                       │      ├ VendorSeverity   ─ bitnami: 3 
+│                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+│                       │      │                            │           N/A:H 
+│                       │      │                            ╰ V3Score : 7.5 
+│                       │      ├ References       ╭ [0]: https://go.dev/cl/758320 
+│                       │      │                  ├ [1]: https://go.dev/issue/78282 
+│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
+│                       │      │                  │      RWU 
+│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
+│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
+│                       ├ [9]  ╭ VulnerabilityID : CVE-2026-32282 
+│                       │      ├ VendorIDs        ─ [0]: GO-2026-4864 
+│                       │      ├ PkgID           : stdlib@v1.25.6 
+│                       │      ├ PkgName         : stdlib 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.6 
+│                       │      │                  ╰ UID : ee631e7f6330f31f 
+│                       │      ├ InstalledVersion: v1.25.6 
+│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
+│                       │      │                  │         bc64e086c1f91e77709f 
+│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
+│                       │      │                            475e8bf0be8d84f76b5f 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32282 
+│                       │      ├ DataSource       ╭ ID  : govulndb 
+│                       │      │                  ├ Name: The Go Vulnerability Database 
+│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │      ├ Fingerprint     : sha256:4fa0f4656b9261ec19e6e61a2db0272356152dd73b8a168c5d073
+│                       │      │                   e989ebe2591 
+│                       │      ├ Title           : golang: internal/syscall/unix: Root.Chmod can follow
+│                       │      │                   symlinks out of the root 
+│                       │      ├ Description     : On Linux, if the target of Root.Chmod is replaced with a
+│                       │      │                   symlink while the chmod operation is in progress, Chmod can
+│                       │      │                   operate on the target of the symlink, even when the target
+│                       │      │                   lies outside the root. The Linux fchmodat syscall silently
+│                       │      │                   ignores the AT_SYMLINK_NOFOLLOW flag, which Root.Chmod uses
+│                       │      │                   to avoid symlink traversal. Root.Chmod checks its target
+│                       │      │                   before acting and returns an error if the target is a
+│                       │      │                   symlink lying outside the root, so the impact is limited to
+│                       │      │                   cases where the target is replaced with a symlink between
+│                       │      │                   the check and operation. 
+│                       │      ├ Severity        : HIGH 
+│                       │      ├ VendorSeverity   ─ redhat: 2 
+│                       │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H
+│                       │      │                           │           /A:H 
+│                       │      │                           ╰ V3Score : 7.8 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-32282 
+│                       │      │                  ├ [1]: https://go.dev/cl/763761 
+│                       │      │                  ├ [2]: https://go.dev/issue/78293 
+│                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
+│                       │      │                  │      RWU 
+│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:39.807Z 
+│                       ├ [10] ╭ VulnerabilityID : CVE-2026-27142 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4603 
 │                       │      ├ PkgID           : stdlib@v1.25.6 
 │                       │      ├ PkgName         : stdlib 
@@ -7022,7 +7134,7 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27142 
 │                       │      ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
 │                       │      ╰ LastModifiedDate: 2026-03-16T16:16:13.77Z 
-│                       ├ [9]  ╭ VulnerabilityID : CVE-2026-32281 
+│                       ├ [11] ╭ VulnerabilityID : CVE-2026-32281 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4946 
 │                       │      ├ PkgID           : stdlib@v1.25.6 
 │                       │      ├ PkgName         : stdlib 
@@ -7064,8 +7176,8 @@
 │                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4946 
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32281 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.35Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [10] ╭ VulnerabilityID : CVE-2026-32288 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:39.607Z 
+│                       ├ [12] ╭ VulnerabilityID : CVE-2026-32288 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4869 
 │                       │      ├ PkgID           : stdlib@v1.25.6 
 │                       │      ├ PkgName         : stdlib 
@@ -7104,8 +7216,8 @@
 │                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4869 
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32288 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.707Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [11] ╭ VulnerabilityID : CVE-2026-32289 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:40.21Z 
+│                       ├ [13] ╭ VulnerabilityID : CVE-2026-32289 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4865 
 │                       │      ├ PkgID           : stdlib@v1.25.6 
 │                       │      ├ PkgName         : stdlib 
@@ -7149,8 +7261,8 @@
 │                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4865 
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32289 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.82Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [12] ╭ VulnerabilityID : CVE-2026-27139 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:40.41Z 
+│                       ├ [14] ╭ VulnerabilityID : CVE-2026-27139 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4602 
 │                       │      ├ PkgID           : stdlib@v1.25.6 
 │                       │      ├ PkgName         : stdlib 
@@ -7197,80 +7309,6 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27139 
 │                       │      ├ PublishedDate   : 2026-03-06T22:16:01.07Z 
 │                       │      ╰ LastModifiedDate: 2026-03-09T15:15:57.15Z 
-│                       ├ [13] ╭ VulnerabilityID : CVE-2026-32280 
-│                       │      ├ VendorIDs        ─ [0]: GO-2026-4947 
-│                       │      ├ PkgID           : stdlib@v1.25.6 
-│                       │      ├ PkgName         : stdlib 
-│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.6 
-│                       │      │                  ╰ UID : ee631e7f6330f31f 
-│                       │      ├ InstalledVersion: v1.25.6 
-│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
-│                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
-│                       │      │                  │         bc64e086c1f91e77709f 
-│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
-│                       │      │                            475e8bf0be8d84f76b5f 
-│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32280 
-│                       │      ├ DataSource       ╭ ID  : govulndb 
-│                       │      │                  ├ Name: The Go Vulnerability Database 
-│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │      ├ Fingerprint     : sha256:10fd98435585832f3e02ae1d7385d6b151780ffde1941a7255672
-│                       │      │                   16ab6d47285 
-│                       │      ├ Title           : During chain building, the amount of work that is done is
-│                       │      │                   not correctl ... 
-│                       │      ├ Description     : During chain building, the amount of work that is done is
-│                       │      │                   not correctly limited when a large number of intermediate
-│                       │      │                   certificates are passed in VerifyOptions.Intermediates,
-│                       │      │                   which can lead to a denial of service. This affects both
-│                       │      │                   direct users of crypto/x509 and users of crypto/tls. 
-│                       │      ├ Severity        : UNKNOWN 
-│                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ References       ╭ [0]: https://go.dev/cl/758320 
-│                       │      │                  ├ [1]: https://go.dev/issue/78282 
-│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
-│                       │      │                  │      RWU 
-│                       │      │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [14] ╭ VulnerabilityID : CVE-2026-32282 
-│                       │      ├ VendorIDs        ─ [0]: GO-2026-4864 
-│                       │      ├ PkgID           : stdlib@v1.25.6 
-│                       │      ├ PkgName         : stdlib 
-│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.6 
-│                       │      │                  ╰ UID : ee631e7f6330f31f 
-│                       │      ├ InstalledVersion: v1.25.6 
-│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
-│                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
-│                       │      │                  │         bc64e086c1f91e77709f 
-│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
-│                       │      │                            475e8bf0be8d84f76b5f 
-│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32282 
-│                       │      ├ DataSource       ╭ ID  : govulndb 
-│                       │      │                  ├ Name: The Go Vulnerability Database 
-│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │      ├ Fingerprint     : sha256:4fa0f4656b9261ec19e6e61a2db0272356152dd73b8a168c5d073
-│                       │      │                   e989ebe2591 
-│                       │      ├ Title           : On Linux, if the target of Root.Chmod is replaced with a
-│                       │      │                   symlink while ... 
-│                       │      ├ Description     : On Linux, if the target of Root.Chmod is replaced with a
-│                       │      │                   symlink while the chmod operation is in progress, Chmod can
-│                       │      │                   operate on the target of the symlink, even when the target
-│                       │      │                   lies outside the root. The Linux fchmodat syscall silently
-│                       │      │                   ignores the AT_SYMLINK_NOFOLLOW flag, which Root.Chmod uses
-│                       │      │                   to avoid symlink traversal. Root.Chmod checks its target
-│                       │      │                   before acting and returns an error if the target is a
-│                       │      │                   symlink lying outside the root, so the impact is limited to
-│                       │      │                   cases where the target is replaced with a symlink between
-│                       │      │                   the check and operation. 
-│                       │      ├ Severity        : UNKNOWN 
-│                       │      ├ References       ╭ [0]: https://go.dev/cl/763761 
-│                       │      │                  ├ [1]: https://go.dev/issue/78293 
-│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
-│                       │      │                  │      RWU 
-│                       │      │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
 │                       ╰ [15] ╭ VulnerabilityID : CVE-2026-32283 
 │                              ├ VendorIDs        ─ [0]: GO-2026-4870 
 │                              ├ PkgID           : stdlib@v1.25.6 
@@ -7302,9 +7340,10 @@
 │                              │                  ├ [1]: https://go.dev/issue/78334 
 │                              │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                              │                  │      RWU 
-│                              │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                              │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                              │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4870 
 │                              ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
-│                              ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
+│                              ╰ LastModifiedDate: 2026-04-13T19:16:40Z 
 ├ [5] ╭ Target         : usr/bin/docker 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -7445,7 +7484,91 @@
 │                       │     │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
 │                       │     ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
 │                       │     ╰ LastModifiedDate: 2026-03-10T18:18:37.74Z 
-│                       ├ [2] ╭ VulnerabilityID : CVE-2026-27142 
+│                       ├ [2] ╭ VulnerabilityID : CVE-2026-32280 
+│                       │     ├ VendorIDs        ─ [0]: GO-2026-4947 
+│                       │     ├ PkgID           : stdlib@v1.25.6 
+│                       │     ├ PkgName         : stdlib 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.6 
+│                       │     │                  ╰ UID : 84f417d7cda3769f 
+│                       │     ├ InstalledVersion: v1.25.6 
+│                       │     ├ FixedVersion    : 1.25.9, 1.26.2 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1b
+│                       │     │                  │         c64e086c1f91e77709f 
+│                       │     │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a44
+│                       │     │                            75e8bf0be8d84f76b5f 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32280 
+│                       │     ├ DataSource       ╭ ID  : govulndb 
+│                       │     │                  ├ Name: The Go Vulnerability Database 
+│                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │     ├ Fingerprint     : sha256:e80f911e1102771a6cecc944f706b29d3e7256e76fa4c5b2e57a37
+│                       │     │                   a27ba6bc03 
+│                       │     ├ Title           : During chain building, the amount of work that is done is not
+│                       │     │                    correctl ... 
+│                       │     ├ Description     : During chain building, the amount of work that is done is not
+│                       │     │                    correctly limited when a large number of intermediate
+│                       │     │                   certificates are passed in VerifyOptions.Intermediates, which
+│                       │     │                    can lead to a denial of service. This affects both direct
+│                       │     │                   users of crypto/x509 and users of crypto/tls. 
+│                       │     ├ Severity        : HIGH 
+│                       │     ├ CweIDs           ─ [0]: CWE-770 
+│                       │     ├ VendorSeverity   ─ bitnami: 3 
+│                       │     ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+│                       │     │                            │           /A:H 
+│                       │     │                            ╰ V3Score : 7.5 
+│                       │     ├ References       ╭ [0]: https://go.dev/cl/758320 
+│                       │     │                  ├ [1]: https://go.dev/issue/78282 
+│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
+│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │     ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
+│                       │     ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
+│                       ├ [3] ╭ VulnerabilityID : CVE-2026-32282 
+│                       │     ├ VendorIDs        ─ [0]: GO-2026-4864 
+│                       │     ├ PkgID           : stdlib@v1.25.6 
+│                       │     ├ PkgName         : stdlib 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.6 
+│                       │     │                  ╰ UID : 84f417d7cda3769f 
+│                       │     ├ InstalledVersion: v1.25.6 
+│                       │     ├ FixedVersion    : 1.25.9, 1.26.2 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1b
+│                       │     │                  │         c64e086c1f91e77709f 
+│                       │     │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a44
+│                       │     │                            75e8bf0be8d84f76b5f 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32282 
+│                       │     ├ DataSource       ╭ ID  : govulndb 
+│                       │     │                  ├ Name: The Go Vulnerability Database 
+│                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │     ├ Fingerprint     : sha256:ecb1d70dd7b01e40c8601481610e421fb901e25d775d192c3f0ce6
+│                       │     │                   5ddc8dbdc3 
+│                       │     ├ Title           : golang: internal/syscall/unix: Root.Chmod can follow symlinks
+│                       │     │                    out of the root 
+│                       │     ├ Description     : On Linux, if the target of Root.Chmod is replaced with a
+│                       │     │                   symlink while the chmod operation is in progress, Chmod can
+│                       │     │                   operate on the target of the symlink, even when the target
+│                       │     │                   lies outside the root. The Linux fchmodat syscall silently
+│                       │     │                   ignores the AT_SYMLINK_NOFOLLOW flag, which Root.Chmod uses
+│                       │     │                   to avoid symlink traversal. Root.Chmod checks its target
+│                       │     │                   before acting and returns an error if the target is a symlink
+│                       │     │                    lying outside the root, so the impact is limited to cases
+│                       │     │                   where the target is replaced with a symlink between the check
+│                       │     │                    and operation. 
+│                       │     ├ Severity        : HIGH 
+│                       │     ├ VendorSeverity   ─ redhat: 2 
+│                       │     ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/
+│                       │     │                           │           A:H 
+│                       │     │                           ╰ V3Score : 7.8 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-32282 
+│                       │     │                  ├ [1]: https://go.dev/cl/763761 
+│                       │     │                  ├ [2]: https://go.dev/issue/78293 
+│                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │     ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
+│                       │     ╰ LastModifiedDate: 2026-04-13T19:16:39.807Z 
+│                       ├ [4] ╭ VulnerabilityID : CVE-2026-27142 
 │                       │     ├ VendorIDs        ─ [0]: GO-2026-4603 
 │                       │     ├ PkgID           : stdlib@v1.25.6 
 │                       │     ├ PkgName         : stdlib 
@@ -7492,7 +7615,7 @@
 │                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27142 
 │                       │     ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
 │                       │     ╰ LastModifiedDate: 2026-03-16T16:16:13.77Z 
-│                       ├ [3] ╭ VulnerabilityID : CVE-2026-32281 
+│                       ├ [5] ╭ VulnerabilityID : CVE-2026-32281 
 │                       │     ├ VendorIDs        ─ [0]: GO-2026-4946 
 │                       │     ├ PkgID           : stdlib@v1.25.6 
 │                       │     ├ PkgName         : stdlib 
@@ -7533,8 +7656,8 @@
 │                       │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4946 
 │                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32281 
 │                       │     ├ PublishedDate   : 2026-04-08T02:16:03.35Z 
-│                       │     ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [4] ╭ VulnerabilityID : CVE-2026-32288 
+│                       │     ╰ LastModifiedDate: 2026-04-13T19:16:39.607Z 
+│                       ├ [6] ╭ VulnerabilityID : CVE-2026-32288 
 │                       │     ├ VendorIDs        ─ [0]: GO-2026-4869 
 │                       │     ├ PkgID           : stdlib@v1.25.6 
 │                       │     ├ PkgName         : stdlib 
@@ -7572,8 +7695,8 @@
 │                       │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4869 
 │                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32288 
 │                       │     ├ PublishedDate   : 2026-04-08T02:16:03.707Z 
-│                       │     ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [5] ╭ VulnerabilityID : CVE-2026-32289 
+│                       │     ╰ LastModifiedDate: 2026-04-13T19:16:40.21Z 
+│                       ├ [7] ╭ VulnerabilityID : CVE-2026-32289 
 │                       │     ├ VendorIDs        ─ [0]: GO-2026-4865 
 │                       │     ├ PkgID           : stdlib@v1.25.6 
 │                       │     ├ PkgName         : stdlib 
@@ -7616,8 +7739,8 @@
 │                       │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4865 
 │                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32289 
 │                       │     ├ PublishedDate   : 2026-04-08T02:16:03.82Z 
-│                       │     ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [6] ╭ VulnerabilityID : CVE-2026-27139 
+│                       │     ╰ LastModifiedDate: 2026-04-13T19:16:40.41Z 
+│                       ├ [8] ╭ VulnerabilityID : CVE-2026-27139 
 │                       │     ├ VendorIDs        ─ [0]: GO-2026-4602 
 │                       │     ├ PkgID           : stdlib@v1.25.6 
 │                       │     ├ PkgName         : stdlib 
@@ -7663,78 +7786,6 @@
 │                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27139 
 │                       │     ├ PublishedDate   : 2026-03-06T22:16:01.07Z 
 │                       │     ╰ LastModifiedDate: 2026-03-09T15:15:57.15Z 
-│                       ├ [7] ╭ VulnerabilityID : CVE-2026-32280 
-│                       │     ├ VendorIDs        ─ [0]: GO-2026-4947 
-│                       │     ├ PkgID           : stdlib@v1.25.6 
-│                       │     ├ PkgName         : stdlib 
-│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.6 
-│                       │     │                  ╰ UID : 84f417d7cda3769f 
-│                       │     ├ InstalledVersion: v1.25.6 
-│                       │     ├ FixedVersion    : 1.25.9, 1.26.2 
-│                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1b
-│                       │     │                  │         c64e086c1f91e77709f 
-│                       │     │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a44
-│                       │     │                            75e8bf0be8d84f76b5f 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32280 
-│                       │     ├ DataSource       ╭ ID  : govulndb 
-│                       │     │                  ├ Name: The Go Vulnerability Database 
-│                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │     ├ Fingerprint     : sha256:e80f911e1102771a6cecc944f706b29d3e7256e76fa4c5b2e57a37
-│                       │     │                   a27ba6bc03 
-│                       │     ├ Title           : During chain building, the amount of work that is done is not
-│                       │     │                    correctl ... 
-│                       │     ├ Description     : During chain building, the amount of work that is done is not
-│                       │     │                    correctly limited when a large number of intermediate
-│                       │     │                   certificates are passed in VerifyOptions.Intermediates, which
-│                       │     │                    can lead to a denial of service. This affects both direct
-│                       │     │                   users of crypto/x509 and users of crypto/tls. 
-│                       │     ├ Severity        : UNKNOWN 
-│                       │     ├ CweIDs           ─ [0]: CWE-770 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/758320 
-│                       │     │                  ├ [1]: https://go.dev/issue/78282 
-│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
-│                       │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │     ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
-│                       │     ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [8] ╭ VulnerabilityID : CVE-2026-32282 
-│                       │     ├ VendorIDs        ─ [0]: GO-2026-4864 
-│                       │     ├ PkgID           : stdlib@v1.25.6 
-│                       │     ├ PkgName         : stdlib 
-│                       │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.6 
-│                       │     │                  ╰ UID : 84f417d7cda3769f 
-│                       │     ├ InstalledVersion: v1.25.6 
-│                       │     ├ FixedVersion    : 1.25.9, 1.26.2 
-│                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1b
-│                       │     │                  │         c64e086c1f91e77709f 
-│                       │     │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a44
-│                       │     │                            75e8bf0be8d84f76b5f 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32282 
-│                       │     ├ DataSource       ╭ ID  : govulndb 
-│                       │     │                  ├ Name: The Go Vulnerability Database 
-│                       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │     ├ Fingerprint     : sha256:ecb1d70dd7b01e40c8601481610e421fb901e25d775d192c3f0ce6
-│                       │     │                   5ddc8dbdc3 
-│                       │     ├ Title           : On Linux, if the target of Root.Chmod is replaced with a
-│                       │     │                   symlink while ... 
-│                       │     ├ Description     : On Linux, if the target of Root.Chmod is replaced with a
-│                       │     │                   symlink while the chmod operation is in progress, Chmod can
-│                       │     │                   operate on the target of the symlink, even when the target
-│                       │     │                   lies outside the root. The Linux fchmodat syscall silently
-│                       │     │                   ignores the AT_SYMLINK_NOFOLLOW flag, which Root.Chmod uses
-│                       │     │                   to avoid symlink traversal. Root.Chmod checks its target
-│                       │     │                   before acting and returns an error if the target is a symlink
-│                       │     │                    lying outside the root, so the impact is limited to cases
-│                       │     │                   where the target is replaced with a symlink between the check
-│                       │     │                    and operation. 
-│                       │     ├ Severity        : UNKNOWN 
-│                       │     ├ References       ╭ [0]: https://go.dev/cl/763761 
-│                       │     │                  ├ [1]: https://go.dev/issue/78293 
-│                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
-│                       │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │     ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
-│                       │     ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
 │                       ╰ [9] ╭ VulnerabilityID : CVE-2026-32283 
 │                             ├ VendorIDs        ─ [0]: GO-2026-4870 
 │                             ├ PkgID           : stdlib@v1.25.6 
@@ -7765,9 +7816,10 @@
 │                             ├ References       ╭ [0]: https://go.dev/cl/763767 
 │                             │                  ├ [1]: https://go.dev/issue/78334 
 │                             │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
-│                             │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                             │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4870 
 │                             ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
-│                             ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
+│                             ╰ LastModifiedDate: 2026-04-13T19:16:40Z 
 ├ [6] ╭ Target         : usr/bin/helm 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -8220,7 +8272,8 @@
 │     │                 │       ╰ AnalyzedBy: gobinary 
 │     │                 ├ [31]  ╭ ID        : github.com/go-openapi/swag@v0.23.1 
 │     │                 │       ├ Name      : github.com/go-openapi/swag 
-
+│     │                 │       ├ Identifier ╭ PURL: pkg:golang/github.com/go-openapi/swag@v0.23.1 
+│     │                 │       │            ╰ UID : deef7e736ce25096 
 │     │                 │       ├ Version   : v0.23.1 
 │     │                 │       ├ Layer      ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1bc64e
 │     │                 │       │            │         086c1f91e77709f 
@@ -8464,7 +8517,16 @@
 │     │                 │       │            ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4475e8
 │     │                 │       │                      bf0be8d84f76b5f 
 │     │                 │       ╰ AnalyzedBy: gobinary 
-
+│     │                 ├ [55]  ╭ ID        : github.com/mitchellh/go-wordwrap@v1.0.1 
+│     │                 │       ├ Name      : github.com/mitchellh/go-wordwrap 
+│     │                 │       ├ Identifier ╭ PURL: pkg:golang/github.com/mitchellh/go-wordwrap@v1.0.1 
+│     │                 │       │            ╰ UID : aad1ba1413cab7d2 
+│     │                 │       ├ Version   : v1.0.1 
+│     │                 │       ├ Layer      ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1bc64e
+│     │                 │       │            │         086c1f91e77709f 
+│     │                 │       │            ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4475e8
+│     │                 │       │                      bf0be8d84f76b5f 
+│     │                 │       ╰ AnalyzedBy: gobinary 
 │     │                 ├ [56]  ╭ ID        : github.com/mitchellh/reflectwalk@v1.0.2 
 │     │                 │       ├ Name      : github.com/mitchellh/reflectwalk 
 │     │                 │       ├ Identifier ╭ PURL: pkg:golang/github.com/mitchellh/reflectwalk@v1.0.2 
@@ -9138,10 +9200,14 @@
 │                       │      │                   fixed in 4.1.4. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-22 
-│                       │      ├ VendorSeverity   ─ ghsa: 3 
-│                       │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI
-│                       │      │                         │            :H/VA:L/SC:H/SI:H/SA:H 
-│                       │      │                         ╰ V40Score : 8.4 
+│                       │      ├ VendorSeverity   ╭ bitnami: 3 
+│                       │      │                  ╰ ghsa   : 3 
+│                       │      ├ CVSS             ╭ bitnami ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N
+│                       │      │                  │         │            /VI:H/VA:L/SC:H/SI:H/SA:H 
+│                       │      │                  │         ╰ V40Score : 8.4 
+│                       │      │                  ╰ ghsa    ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N
+│                       │      │                            │            /VI:H/VA:L/SC:H/SI:H/SA:H 
+│                       │      │                            ╰ V40Score : 8.4 
 │                       │      ├ References       ╭ [0]: https://github.com/helm/helm 
 │                       │      │                  ├ [1]: https://github.com/helm/helm/commit/36c8539e99bc42d7ae
 │                       │      │                  │      f9b87d136254662d04f027 
@@ -9150,7 +9216,7 @@
 │                       │      │                  │      vmx8-mqv2-9gmg 
 │                       │      │                  ╰ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-35204 
 │                       │      ├ PublishedDate   : 2026-04-09T16:16:27.55Z 
-│                       │      ╰ LastModifiedDate: 2026-04-09T16:16:27.55Z 
+│                       │      ╰ LastModifiedDate: 2026-04-13T15:02:47.353Z 
 │                       ├ [2]  ╭ VulnerabilityID : CVE-2026-35205 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-q5jf-9vfq-h4h7 
 │                       │      ├ PkgID           : helm.sh/helm/v4@v4.0.5 
@@ -9180,10 +9246,14 @@
 │                       │      │                   vulnerability is fixed in 4.1.4. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-636 
-│                       │      ├ VendorSeverity   ─ ghsa: 3 
-│                       │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI
-│                       │      │                         │            :H/VA:H/SC:N/SI:N/SA:N 
-│                       │      │                         ╰ V40Score : 8.4 
+│                       │      ├ VendorSeverity   ╭ bitnami: 3 
+│                       │      │                  ╰ ghsa   : 3 
+│                       │      ├ CVSS             ╭ bitnami ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H
+│                       │      │                  │         │            /VI:H/VA:H/SC:N/SI:N/SA:N 
+│                       │      │                  │         ╰ V40Score : 8.4 
+│                       │      │                  ╰ ghsa    ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H
+│                       │      │                            │            /VI:H/VA:H/SC:N/SI:N/SA:N 
+│                       │      │                            ╰ V40Score : 8.4 
 │                       │      ├ References       ╭ [0]: https://github.com/helm/helm 
 │                       │      │                  ├ [1]: https://github.com/helm/helm/commit/05fa37973dc9e42b76
 │                       │      │                  │      e1d2883494c87174b6074f 
@@ -9194,7 +9264,7 @@
 │                       │      │                  │      -file 
 │                       │      │                  ╰ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-35205 
 │                       │      ├ PublishedDate   : 2026-04-09T16:16:27.72Z 
-│                       │      ╰ LastModifiedDate: 2026-04-09T16:16:27.72Z 
+│                       │      ╰ LastModifiedDate: 2026-04-13T15:02:47.353Z 
 │                       ├ [3]  ╭ VulnerabilityID : CVE-2026-35206 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-hr2v-4r36-88hr 
 │                       │      ├ PkgID           : helm.sh/helm/v4@v4.0.5 
@@ -9216,8 +9286,8 @@
 │                       │      │                          cosystem%3Ago 
 │                       │      ├ Fingerprint     : sha256:f3f2a54f2e29a6b99b930e7cc99a0eb55c3c7f36abfdd4a0feffe
 │                       │      │                   e2abe7fa2f1 
-│                       │      ├ Title           : Helm Chart extraction output directory collapse via
-│                       │      │                   `Chart.yaml` name dot-segment 
+│                       │      ├ Title           : github.com/helm/helm: Helm: Files written to unexpected
+│                       │      │                   directory via specially crafted Chart 
 │                       │      ├ Description     : Helm is a package manager for Charts for Kubernetes. In Helm
 │                       │      │                    versions <=3.20.1 and <=4.1.3, a specially crafted Chart
 │                       │      │                   will cause helm pull --untar  [chart URL | repo/chartname]
@@ -9228,19 +9298,29 @@
 │                       │      │                   name. This vulnerability is fixed in 3.20.2 and 4.1.4. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-22 
-│                       │      ├ VendorSeverity   ─ ghsa: 2 
-│                       │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI
-│                       │      │                         │            :L/VA:L/SC:N/SI:N/SA:N 
-│                       │      │                         ╰ V40Score : 4.8 
-│                       │      ├ References       ╭ [0]: https://github.com/helm/helm 
-│                       │      │                  ├ [1]: https://github.com/helm/helm/commit/4e7994d4467182f535
+│                       │      ├ VendorSeverity   ╭ bitnami: 2 
+│                       │      │                  ├ ghsa   : 2 
+│                       │      │                  ╰ redhat : 2 
+│                       │      ├ CVSS             ╭ bitnami ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N
+│                       │      │                  │         │            /VI:L/VA:L/SC:N/SI:N/SA:N 
+│                       │      │                  │         ╰ V40Score : 4.8 
+│                       │      │                  ├ ghsa    ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N
+│                       │      │                  │         │            /VI:L/VA:L/SC:N/SI:N/SA:N 
+│                       │      │                  │         ╰ V40Score : 4.8 
+│                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:
+│                       │      │                            │           L/A:L 
+│                       │      │                            ╰ V3Score : 4.4 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-35206 
+│                       │      │                  ├ [1]: https://github.com/helm/helm 
+│                       │      │                  ├ [2]: https://github.com/helm/helm/commit/4e7994d4467182f535
 │                       │      │                  │      b6797c94b5b0e994a91436 
-│                       │      │                  ├ [2]: https://github.com/helm/helm/releases/tag/v4.1.4 
-│                       │      │                  ├ [3]: https://github.com/helm/helm/security/advisories/GHSA-
+│                       │      │                  ├ [3]: https://github.com/helm/helm/releases/tag/v4.1.4 
+│                       │      │                  ├ [4]: https://github.com/helm/helm/security/advisories/GHSA-
 │                       │      │                  │      hr2v-4r36-88hr 
-│                       │      │                  ╰ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-35206 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-35206 
+│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-35206 
 │                       │      ├ PublishedDate   : 2026-04-09T21:16:09.993Z 
-│                       │      ╰ LastModifiedDate: 2026-04-09T21:16:09.993Z 
+│                       │      ╰ LastModifiedDate: 2026-04-13T15:02:27.76Z 
 │                       ├ [4]  ╭ VulnerabilityID : CVE-2025-68121 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4337 
 │                       │      ├ PkgID           : stdlib@v1.25.5 
@@ -9508,7 +9588,93 @@
 │                       │      │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
 │                       │      ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
 │                       │      ╰ LastModifiedDate: 2026-03-10T18:18:37.74Z 
-│                       ├ [8]  ╭ VulnerabilityID : CVE-2025-61730 
+│                       ├ [8]  ╭ VulnerabilityID : CVE-2026-32280 
+│                       │      ├ VendorIDs        ─ [0]: GO-2026-4947 
+│                       │      ├ PkgID           : stdlib@v1.25.5 
+│                       │      ├ PkgName         : stdlib 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.5 
+│                       │      │                  ╰ UID : dd9399a1cfc3023 
+│                       │      ├ InstalledVersion: v1.25.5 
+│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
+│                       │      │                  │         bc64e086c1f91e77709f 
+│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
+│                       │      │                            475e8bf0be8d84f76b5f 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32280 
+│                       │      ├ DataSource       ╭ ID  : govulndb 
+│                       │      │                  ├ Name: The Go Vulnerability Database 
+│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │      ├ Fingerprint     : sha256:d580a2e418ded3846c5ecaeeb192c597e60086d8b5617cacf1f99
+│                       │      │                   ed2ec194351 
+│                       │      ├ Title           : During chain building, the amount of work that is done is
+│                       │      │                   not correctl ... 
+│                       │      ├ Description     : During chain building, the amount of work that is done is
+│                       │      │                   not correctly limited when a large number of intermediate
+│                       │      │                   certificates are passed in VerifyOptions.Intermediates,
+│                       │      │                   which can lead to a denial of service. This affects both
+│                       │      │                   direct users of crypto/x509 and users of crypto/tls. 
+│                       │      ├ Severity        : HIGH 
+│                       │      ├ CweIDs           ─ [0]: CWE-770 
+│                       │      ├ VendorSeverity   ─ bitnami: 3 
+│                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+│                       │      │                            │           N/A:H 
+│                       │      │                            ╰ V3Score : 7.5 
+│                       │      ├ References       ╭ [0]: https://go.dev/cl/758320 
+│                       │      │                  ├ [1]: https://go.dev/issue/78282 
+│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
+│                       │      │                  │      RWU 
+│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
+│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
+│                       ├ [9]  ╭ VulnerabilityID : CVE-2026-32282 
+│                       │      ├ VendorIDs        ─ [0]: GO-2026-4864 
+│                       │      ├ PkgID           : stdlib@v1.25.5 
+│                       │      ├ PkgName         : stdlib 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.5 
+│                       │      │                  ╰ UID : dd9399a1cfc3023 
+│                       │      ├ InstalledVersion: v1.25.5 
+│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
+│                       │      │                  │         bc64e086c1f91e77709f 
+│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
+│                       │      │                            475e8bf0be8d84f76b5f 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32282 
+│                       │      ├ DataSource       ╭ ID  : govulndb 
+│                       │      │                  ├ Name: The Go Vulnerability Database 
+│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │      ├ Fingerprint     : sha256:442136102ae9308650081db1eeda2aae71d7d33a97041bed5e331
+│                       │      │                   38a86a83b65 
+│                       │      ├ Title           : golang: internal/syscall/unix: Root.Chmod can follow
+│                       │      │                   symlinks out of the root 
+│                       │      ├ Description     : On Linux, if the target of Root.Chmod is replaced with a
+│                       │      │                   symlink while the chmod operation is in progress, Chmod can
+│                       │      │                   operate on the target of the symlink, even when the target
+│                       │      │                   lies outside the root. The Linux fchmodat syscall silently
+│                       │      │                   ignores the AT_SYMLINK_NOFOLLOW flag, which Root.Chmod uses
+│                       │      │                   to avoid symlink traversal. Root.Chmod checks its target
+│                       │      │                   before acting and returns an error if the target is a
+│                       │      │                   symlink lying outside the root, so the impact is limited to
+│                       │      │                   cases where the target is replaced with a symlink between
+│                       │      │                   the check and operation. 
+│                       │      ├ Severity        : HIGH 
+│                       │      ├ VendorSeverity   ─ redhat: 2 
+│                       │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H
+│                       │      │                           │           /A:H 
+│                       │      │                           ╰ V3Score : 7.8 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-32282 
+│                       │      │                  ├ [1]: https://go.dev/cl/763761 
+│                       │      │                  ├ [2]: https://go.dev/issue/78293 
+│                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
+│                       │      │                  │      RWU 
+│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:39.807Z 
+│                       ├ [10] ╭ VulnerabilityID : CVE-2025-61730 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4340 
 │                       │      ├ PkgID           : stdlib@v1.25.5 
 │                       │      ├ PkgName         : stdlib 
@@ -9553,7 +9719,7 @@
 │                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4340 
 │                       │      ├ PublishedDate   : 2026-01-28T20:16:09.94Z 
 │                       │      ╰ LastModifiedDate: 2026-02-03T20:36:41.3Z 
-│                       ├ [9]  ╭ VulnerabilityID : CVE-2026-27142 
+│                       ├ [11] ╭ VulnerabilityID : CVE-2026-27142 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4603 
 │                       │      ├ PkgID           : stdlib@v1.25.5 
 │                       │      ├ PkgName         : stdlib 
@@ -9601,7 +9767,7 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27142 
 │                       │      ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
 │                       │      ╰ LastModifiedDate: 2026-03-16T16:16:13.77Z 
-│                       ├ [10] ╭ VulnerabilityID : CVE-2026-32281 
+│                       ├ [12] ╭ VulnerabilityID : CVE-2026-32281 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4946 
 │                       │      ├ PkgID           : stdlib@v1.25.5 
 │                       │      ├ PkgName         : stdlib 
@@ -9643,8 +9809,8 @@
 │                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4946 
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32281 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.35Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [11] ╭ VulnerabilityID : CVE-2026-32288 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:39.607Z 
+│                       ├ [13] ╭ VulnerabilityID : CVE-2026-32288 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4869 
 │                       │      ├ PkgID           : stdlib@v1.25.5 
 │                       │      ├ PkgName         : stdlib 
@@ -9683,8 +9849,8 @@
 │                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4869 
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32288 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.707Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [12] ╭ VulnerabilityID : CVE-2026-32289 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:40.21Z 
+│                       ├ [14] ╭ VulnerabilityID : CVE-2026-32289 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4865 
 │                       │      ├ PkgID           : stdlib@v1.25.5 
 │                       │      ├ PkgName         : stdlib 
@@ -9728,8 +9894,8 @@
 │                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4865 
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32289 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.82Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [13] ╭ VulnerabilityID : CVE-2026-27139 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:40.41Z 
+│                       ├ [15] ╭ VulnerabilityID : CVE-2026-27139 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4602 
 │                       │      ├ PkgID           : stdlib@v1.25.5 
 │                       │      ├ PkgName         : stdlib 
@@ -9776,80 +9942,6 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27139 
 │                       │      ├ PublishedDate   : 2026-03-06T22:16:01.07Z 
 │                       │      ╰ LastModifiedDate: 2026-03-09T15:15:57.15Z 
-│                       ├ [14] ╭ VulnerabilityID : CVE-2026-32280 
-│                       │      ├ VendorIDs        ─ [0]: GO-2026-4947 
-│                       │      ├ PkgID           : stdlib@v1.25.5 
-│                       │      ├ PkgName         : stdlib 
-│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.5 
-│                       │      │                  ╰ UID : dd9399a1cfc3023 
-│                       │      ├ InstalledVersion: v1.25.5 
-│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
-│                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
-│                       │      │                  │         bc64e086c1f91e77709f 
-│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
-│                       │      │                            475e8bf0be8d84f76b5f 
-│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32280 
-│                       │      ├ DataSource       ╭ ID  : govulndb 
-│                       │      │                  ├ Name: The Go Vulnerability Database 
-│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │      ├ Fingerprint     : sha256:d580a2e418ded3846c5ecaeeb192c597e60086d8b5617cacf1f99
-│                       │      │                   ed2ec194351 
-│                       │      ├ Title           : During chain building, the amount of work that is done is
-│                       │      │                   not correctl ... 
-│                       │      ├ Description     : During chain building, the amount of work that is done is
-│                       │      │                   not correctly limited when a large number of intermediate
-│                       │      │                   certificates are passed in VerifyOptions.Intermediates,
-│                       │      │                   which can lead to a denial of service. This affects both
-│                       │      │                   direct users of crypto/x509 and users of crypto/tls. 
-│                       │      ├ Severity        : UNKNOWN 
-│                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ References       ╭ [0]: https://go.dev/cl/758320 
-│                       │      │                  ├ [1]: https://go.dev/issue/78282 
-│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
-│                       │      │                  │      RWU 
-│                       │      │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [15] ╭ VulnerabilityID : CVE-2026-32282 
-│                       │      ├ VendorIDs        ─ [0]: GO-2026-4864 
-│                       │      ├ PkgID           : stdlib@v1.25.5 
-│                       │      ├ PkgName         : stdlib 
-│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.5 
-│                       │      │                  ╰ UID : dd9399a1cfc3023 
-│                       │      ├ InstalledVersion: v1.25.5 
-│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
-│                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
-│                       │      │                  │         bc64e086c1f91e77709f 
-│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
-│                       │      │                            475e8bf0be8d84f76b5f 
-│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32282 
-│                       │      ├ DataSource       ╭ ID  : govulndb 
-│                       │      │                  ├ Name: The Go Vulnerability Database 
-│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │      ├ Fingerprint     : sha256:442136102ae9308650081db1eeda2aae71d7d33a97041bed5e331
-│                       │      │                   38a86a83b65 
-│                       │      ├ Title           : On Linux, if the target of Root.Chmod is replaced with a
-│                       │      │                   symlink while ... 
-│                       │      ├ Description     : On Linux, if the target of Root.Chmod is replaced with a
-│                       │      │                   symlink while the chmod operation is in progress, Chmod can
-│                       │      │                   operate on the target of the symlink, even when the target
-│                       │      │                   lies outside the root. The Linux fchmodat syscall silently
-│                       │      │                   ignores the AT_SYMLINK_NOFOLLOW flag, which Root.Chmod uses
-│                       │      │                   to avoid symlink traversal. Root.Chmod checks its target
-│                       │      │                   before acting and returns an error if the target is a
-│                       │      │                   symlink lying outside the root, so the impact is limited to
-│                       │      │                   cases where the target is replaced with a symlink between
-│                       │      │                   the check and operation. 
-│                       │      ├ Severity        : UNKNOWN 
-│                       │      ├ References       ╭ [0]: https://go.dev/cl/763761 
-│                       │      │                  ├ [1]: https://go.dev/issue/78293 
-│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
-│                       │      │                  │      RWU 
-│                       │      │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
 │                       ╰ [16] ╭ VulnerabilityID : CVE-2026-32283 
 │                              ├ VendorIDs        ─ [0]: GO-2026-4870 
 │                              ├ PkgID           : stdlib@v1.25.5 
@@ -9881,9 +9973,10 @@
 │                              │                  ├ [1]: https://go.dev/issue/78334 
 │                              │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                              │                  │      RWU 
-│                              │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                              │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                              │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4870 
 │                              ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
-│                              ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
+│                              ╰ LastModifiedDate: 2026-04-13T19:16:40Z 
 ├ [7] ╭ Target         : usr/bin/nerdctl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -11900,7 +11993,93 @@
 │                       │      │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
 │                       │      ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
 │                       │      ╰ LastModifiedDate: 2026-03-10T18:18:37.74Z 
-│                       ├ [9]  ╭ VulnerabilityID : CVE-2025-61730 
+│                       ├ [9]  ╭ VulnerabilityID : CVE-2026-32280 
+│                       │      ├ VendorIDs        ─ [0]: GO-2026-4947 
+│                       │      ├ PkgID           : stdlib@v1.25.5 
+│                       │      ├ PkgName         : stdlib 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.5 
+│                       │      │                  ╰ UID : b69f79466ee2cf0 
+│                       │      ├ InstalledVersion: v1.25.5 
+│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
+│                       │      │                  │         bc64e086c1f91e77709f 
+│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
+│                       │      │                            475e8bf0be8d84f76b5f 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32280 
+│                       │      ├ DataSource       ╭ ID  : govulndb 
+│                       │      │                  ├ Name: The Go Vulnerability Database 
+│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │      ├ Fingerprint     : sha256:78a0210f5297a764457f13155562f4353c3cb2d48394f12986a98
+│                       │      │                   71c9b163614 
+│                       │      ├ Title           : During chain building, the amount of work that is done is
+│                       │      │                   not correctl ... 
+│                       │      ├ Description     : During chain building, the amount of work that is done is
+│                       │      │                   not correctly limited when a large number of intermediate
+│                       │      │                   certificates are passed in VerifyOptions.Intermediates,
+│                       │      │                   which can lead to a denial of service. This affects both
+│                       │      │                   direct users of crypto/x509 and users of crypto/tls. 
+│                       │      ├ Severity        : HIGH 
+│                       │      ├ CweIDs           ─ [0]: CWE-770 
+│                       │      ├ VendorSeverity   ─ bitnami: 3 
+│                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+│                       │      │                            │           N/A:H 
+│                       │      │                            ╰ V3Score : 7.5 
+│                       │      ├ References       ╭ [0]: https://go.dev/cl/758320 
+│                       │      │                  ├ [1]: https://go.dev/issue/78282 
+│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
+│                       │      │                  │      RWU 
+│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
+│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
+│                       ├ [10] ╭ VulnerabilityID : CVE-2026-32282 
+│                       │      ├ VendorIDs        ─ [0]: GO-2026-4864 
+│                       │      ├ PkgID           : stdlib@v1.25.5 
+│                       │      ├ PkgName         : stdlib 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.5 
+│                       │      │                  ╰ UID : b69f79466ee2cf0 
+│                       │      ├ InstalledVersion: v1.25.5 
+│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
+│                       │      │                  │         bc64e086c1f91e77709f 
+│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
+│                       │      │                            475e8bf0be8d84f76b5f 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32282 
+│                       │      ├ DataSource       ╭ ID  : govulndb 
+│                       │      │                  ├ Name: The Go Vulnerability Database 
+│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │      ├ Fingerprint     : sha256:6e5915f3328dc91afff23f6e12ced64d7d48fcd8c984792c99c3e
+│                       │      │                   e830dcff348 
+│                       │      ├ Title           : golang: internal/syscall/unix: Root.Chmod can follow
+│                       │      │                   symlinks out of the root 
+│                       │      ├ Description     : On Linux, if the target of Root.Chmod is replaced with a
+│                       │      │                   symlink while the chmod operation is in progress, Chmod can
+│                       │      │                   operate on the target of the symlink, even when the target
+│                       │      │                   lies outside the root. The Linux fchmodat syscall silently
+│                       │      │                   ignores the AT_SYMLINK_NOFOLLOW flag, which Root.Chmod uses
+│                       │      │                   to avoid symlink traversal. Root.Chmod checks its target
+│                       │      │                   before acting and returns an error if the target is a
+│                       │      │                   symlink lying outside the root, so the impact is limited to
+│                       │      │                   cases where the target is replaced with a symlink between
+│                       │      │                   the check and operation. 
+│                       │      ├ Severity        : HIGH 
+│                       │      ├ VendorSeverity   ─ redhat: 2 
+│                       │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H
+│                       │      │                           │           /A:H 
+│                       │      │                           ╰ V3Score : 7.8 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-32282 
+│                       │      │                  ├ [1]: https://go.dev/cl/763761 
+│                       │      │                  ├ [2]: https://go.dev/issue/78293 
+│                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
+│                       │      │                  │      RWU 
+│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:39.807Z 
+│                       ├ [11] ╭ VulnerabilityID : CVE-2025-61730 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4340 
 │                       │      ├ PkgID           : stdlib@v1.25.5 
 │                       │      ├ PkgName         : stdlib 
@@ -11945,7 +12124,7 @@
 │                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4340 
 │                       │      ├ PublishedDate   : 2026-01-28T20:16:09.94Z 
 │                       │      ╰ LastModifiedDate: 2026-02-03T20:36:41.3Z 
-│                       ├ [10] ╭ VulnerabilityID : CVE-2026-27142 
+│                       ├ [12] ╭ VulnerabilityID : CVE-2026-27142 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4603 
 │                       │      ├ PkgID           : stdlib@v1.25.5 
 │                       │      ├ PkgName         : stdlib 
@@ -11993,7 +12172,7 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27142 
 │                       │      ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
 │                       │      ╰ LastModifiedDate: 2026-03-16T16:16:13.77Z 
-│                       ├ [11] ╭ VulnerabilityID : CVE-2026-32281 
+│                       ├ [13] ╭ VulnerabilityID : CVE-2026-32281 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4946 
 │                       │      ├ PkgID           : stdlib@v1.25.5 
 │                       │      ├ PkgName         : stdlib 
@@ -12035,8 +12214,8 @@
 │                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4946 
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32281 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.35Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [12] ╭ VulnerabilityID : CVE-2026-32288 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:39.607Z 
+│                       ├ [14] ╭ VulnerabilityID : CVE-2026-32288 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4869 
 │                       │      ├ PkgID           : stdlib@v1.25.5 
 │                       │      ├ PkgName         : stdlib 
@@ -12075,8 +12254,8 @@
 │                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4869 
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32288 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.707Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [13] ╭ VulnerabilityID : CVE-2026-32289 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:40.21Z 
+│                       ├ [15] ╭ VulnerabilityID : CVE-2026-32289 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4865 
 │                       │      ├ PkgID           : stdlib@v1.25.5 
 │                       │      ├ PkgName         : stdlib 
@@ -12120,8 +12299,8 @@
 │                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4865 
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32289 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.82Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [14] ╭ VulnerabilityID : CVE-2026-27139 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:40.41Z 
+│                       ├ [16] ╭ VulnerabilityID : CVE-2026-27139 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4602 
 │                       │      ├ PkgID           : stdlib@v1.25.5 
 │                       │      ├ PkgName         : stdlib 
@@ -12168,80 +12347,6 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27139 
 │                       │      ├ PublishedDate   : 2026-03-06T22:16:01.07Z 
 │                       │      ╰ LastModifiedDate: 2026-03-09T15:15:57.15Z 
-│                       ├ [15] ╭ VulnerabilityID : CVE-2026-32280 
-│                       │      ├ VendorIDs        ─ [0]: GO-2026-4947 
-│                       │      ├ PkgID           : stdlib@v1.25.5 
-│                       │      ├ PkgName         : stdlib 
-│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.5 
-│                       │      │                  ╰ UID : b69f79466ee2cf0 
-│                       │      ├ InstalledVersion: v1.25.5 
-│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
-│                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
-│                       │      │                  │         bc64e086c1f91e77709f 
-│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
-│                       │      │                            475e8bf0be8d84f76b5f 
-│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32280 
-│                       │      ├ DataSource       ╭ ID  : govulndb 
-│                       │      │                  ├ Name: The Go Vulnerability Database 
-│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │      ├ Fingerprint     : sha256:78a0210f5297a764457f13155562f4353c3cb2d48394f12986a98
-│                       │      │                   71c9b163614 
-│                       │      ├ Title           : During chain building, the amount of work that is done is
-│                       │      │                   not correctl ... 
-│                       │      ├ Description     : During chain building, the amount of work that is done is
-│                       │      │                   not correctly limited when a large number of intermediate
-│                       │      │                   certificates are passed in VerifyOptions.Intermediates,
-│                       │      │                   which can lead to a denial of service. This affects both
-│                       │      │                   direct users of crypto/x509 and users of crypto/tls. 
-│                       │      ├ Severity        : UNKNOWN 
-│                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ References       ╭ [0]: https://go.dev/cl/758320 
-│                       │      │                  ├ [1]: https://go.dev/issue/78282 
-│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
-│                       │      │                  │      RWU 
-│                       │      │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [16] ╭ VulnerabilityID : CVE-2026-32282 
-│                       │      ├ VendorIDs        ─ [0]: GO-2026-4864 
-│                       │      ├ PkgID           : stdlib@v1.25.5 
-│                       │      ├ PkgName         : stdlib 
-│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.5 
-│                       │      │                  ╰ UID : b69f79466ee2cf0 
-│                       │      ├ InstalledVersion: v1.25.5 
-│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
-│                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
-│                       │      │                  │         bc64e086c1f91e77709f 
-│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
-│                       │      │                            475e8bf0be8d84f76b5f 
-│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32282 
-│                       │      ├ DataSource       ╭ ID  : govulndb 
-│                       │      │                  ├ Name: The Go Vulnerability Database 
-│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │      ├ Fingerprint     : sha256:6e5915f3328dc91afff23f6e12ced64d7d48fcd8c984792c99c3e
-│                       │      │                   e830dcff348 
-│                       │      ├ Title           : On Linux, if the target of Root.Chmod is replaced with a
-│                       │      │                   symlink while ... 
-│                       │      ├ Description     : On Linux, if the target of Root.Chmod is replaced with a
-│                       │      │                   symlink while the chmod operation is in progress, Chmod can
-│                       │      │                   operate on the target of the symlink, even when the target
-│                       │      │                   lies outside the root. The Linux fchmodat syscall silently
-│                       │      │                   ignores the AT_SYMLINK_NOFOLLOW flag, which Root.Chmod uses
-│                       │      │                   to avoid symlink traversal. Root.Chmod checks its target
-│                       │      │                   before acting and returns an error if the target is a
-│                       │      │                   symlink lying outside the root, so the impact is limited to
-│                       │      │                   cases where the target is replaced with a symlink between
-│                       │      │                   the check and operation. 
-│                       │      ├ Severity        : UNKNOWN 
-│                       │      ├ References       ╭ [0]: https://go.dev/cl/763761 
-│                       │      │                  ├ [1]: https://go.dev/issue/78293 
-│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
-│                       │      │                  │      RWU 
-│                       │      │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
 │                       ╰ [17] ╭ VulnerabilityID : CVE-2026-32283 
 │                              ├ VendorIDs        ─ [0]: GO-2026-4870 
 │                              ├ PkgID           : stdlib@v1.25.5 
@@ -12273,9 +12378,10 @@
 │                              │                  ├ [1]: https://go.dev/issue/78334 
 │                              │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                              │                  │      RWU 
-│                              │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                              │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                              │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4870 
 │                              ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
-│                              ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
+│                              ╰ LastModifiedDate: 2026-04-13T19:16:40Z 
 ├ [8] ╭ Target         : usr/bin/skopeo 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -14120,7 +14226,93 @@
 │                       │      │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
 │                       │      ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
 │                       │      ╰ LastModifiedDate: 2026-03-10T18:18:37.74Z 
-│                       ├ [12] ╭ VulnerabilityID : CVE-2026-27142 
+│                       ├ [12] ╭ VulnerabilityID : CVE-2026-32280 
+│                       │      ├ VendorIDs        ─ [0]: GO-2026-4947 
+│                       │      ├ PkgID           : stdlib@v1.25.6 
+│                       │      ├ PkgName         : stdlib 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.6 
+│                       │      │                  ╰ UID : 31a334de3521db4e 
+│                       │      ├ InstalledVersion: v1.25.6 
+│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
+│                       │      │                  │         bc64e086c1f91e77709f 
+│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
+│                       │      │                            475e8bf0be8d84f76b5f 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32280 
+│                       │      ├ DataSource       ╭ ID  : govulndb 
+│                       │      │                  ├ Name: The Go Vulnerability Database 
+│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │      ├ Fingerprint     : sha256:b627aeba865cb8c2ed336cc8b6d6a3eb2078095d37edd1ff8506a
+│                       │      │                   d6fd0a721a3 
+│                       │      ├ Title           : During chain building, the amount of work that is done is
+│                       │      │                   not correctl ... 
+│                       │      ├ Description     : During chain building, the amount of work that is done is
+│                       │      │                   not correctly limited when a large number of intermediate
+│                       │      │                   certificates are passed in VerifyOptions.Intermediates,
+│                       │      │                   which can lead to a denial of service. This affects both
+│                       │      │                   direct users of crypto/x509 and users of crypto/tls. 
+│                       │      ├ Severity        : HIGH 
+│                       │      ├ CweIDs           ─ [0]: CWE-770 
+│                       │      ├ VendorSeverity   ─ bitnami: 3 
+│                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+│                       │      │                            │           N/A:H 
+│                       │      │                            ╰ V3Score : 7.5 
+│                       │      ├ References       ╭ [0]: https://go.dev/cl/758320 
+│                       │      │                  ├ [1]: https://go.dev/issue/78282 
+│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
+│                       │      │                  │      RWU 
+│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
+│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
+│                       ├ [13] ╭ VulnerabilityID : CVE-2026-32282 
+│                       │      ├ VendorIDs        ─ [0]: GO-2026-4864 
+│                       │      ├ PkgID           : stdlib@v1.25.6 
+│                       │      ├ PkgName         : stdlib 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.6 
+│                       │      │                  ╰ UID : 31a334de3521db4e 
+│                       │      ├ InstalledVersion: v1.25.6 
+│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
+│                       │      │                  │         bc64e086c1f91e77709f 
+│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
+│                       │      │                            475e8bf0be8d84f76b5f 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32282 
+│                       │      ├ DataSource       ╭ ID  : govulndb 
+│                       │      │                  ├ Name: The Go Vulnerability Database 
+│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │      ├ Fingerprint     : sha256:b6d4992f5685623a376404d1bd9fb597a92dfb883c2da14efdcf6
+│                       │      │                   ec64c611c11 
+│                       │      ├ Title           : golang: internal/syscall/unix: Root.Chmod can follow
+│                       │      │                   symlinks out of the root 
+│                       │      ├ Description     : On Linux, if the target of Root.Chmod is replaced with a
+│                       │      │                   symlink while the chmod operation is in progress, Chmod can
+│                       │      │                   operate on the target of the symlink, even when the target
+│                       │      │                   lies outside the root. The Linux fchmodat syscall silently
+│                       │      │                   ignores the AT_SYMLINK_NOFOLLOW flag, which Root.Chmod uses
+│                       │      │                   to avoid symlink traversal. Root.Chmod checks its target
+│                       │      │                   before acting and returns an error if the target is a
+│                       │      │                   symlink lying outside the root, so the impact is limited to
+│                       │      │                   cases where the target is replaced with a symlink between
+│                       │      │                   the check and operation. 
+│                       │      ├ Severity        : HIGH 
+│                       │      ├ VendorSeverity   ─ redhat: 2 
+│                       │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H
+│                       │      │                           │           /A:H 
+│                       │      │                           ╰ V3Score : 7.8 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-32282 
+│                       │      │                  ├ [1]: https://go.dev/cl/763761 
+│                       │      │                  ├ [2]: https://go.dev/issue/78293 
+│                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
+│                       │      │                  │      RWU 
+│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:39.807Z 
+│                       ├ [14] ╭ VulnerabilityID : CVE-2026-27142 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4603 
 │                       │      ├ PkgID           : stdlib@v1.25.6 
 │                       │      ├ PkgName         : stdlib 
@@ -14168,7 +14360,7 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27142 
 │                       │      ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
 │                       │      ╰ LastModifiedDate: 2026-03-16T16:16:13.77Z 
-│                       ├ [13] ╭ VulnerabilityID : CVE-2026-32281 
+│                       ├ [15] ╭ VulnerabilityID : CVE-2026-32281 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4946 
 │                       │      ├ PkgID           : stdlib@v1.25.6 
 │                       │      ├ PkgName         : stdlib 
@@ -14210,8 +14402,8 @@
 │                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4946 
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32281 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.35Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [14] ╭ VulnerabilityID : CVE-2026-32288 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:39.607Z 
+│                       ├ [16] ╭ VulnerabilityID : CVE-2026-32288 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4869 
 │                       │      ├ PkgID           : stdlib@v1.25.6 
 │                       │      ├ PkgName         : stdlib 
@@ -14250,8 +14442,8 @@
 │                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4869 
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32288 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.707Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [15] ╭ VulnerabilityID : CVE-2026-32289 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:40.21Z 
+│                       ├ [17] ╭ VulnerabilityID : CVE-2026-32289 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4865 
 │                       │      ├ PkgID           : stdlib@v1.25.6 
 │                       │      ├ PkgName         : stdlib 
@@ -14295,8 +14487,8 @@
 │                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4865 
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32289 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.82Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [16] ╭ VulnerabilityID : CVE-2026-27139 
+│                       │      ╰ LastModifiedDate: 2026-04-13T19:16:40.41Z 
+│                       ├ [18] ╭ VulnerabilityID : CVE-2026-27139 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4602 
 │                       │      ├ PkgID           : stdlib@v1.25.6 
 │                       │      ├ PkgName         : stdlib 
@@ -14343,80 +14535,6 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27139 
 │                       │      ├ PublishedDate   : 2026-03-06T22:16:01.07Z 
 │                       │      ╰ LastModifiedDate: 2026-03-09T15:15:57.15Z 
-│                       ├ [17] ╭ VulnerabilityID : CVE-2026-32280 
-│                       │      ├ VendorIDs        ─ [0]: GO-2026-4947 
-│                       │      ├ PkgID           : stdlib@v1.25.6 
-│                       │      ├ PkgName         : stdlib 
-│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.6 
-│                       │      │                  ╰ UID : 31a334de3521db4e 
-│                       │      ├ InstalledVersion: v1.25.6 
-│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
-│                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
-│                       │      │                  │         bc64e086c1f91e77709f 
-│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
-│                       │      │                            475e8bf0be8d84f76b5f 
-│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32280 
-│                       │      ├ DataSource       ╭ ID  : govulndb 
-│                       │      │                  ├ Name: The Go Vulnerability Database 
-│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │      ├ Fingerprint     : sha256:b627aeba865cb8c2ed336cc8b6d6a3eb2078095d37edd1ff8506a
-│                       │      │                   d6fd0a721a3 
-│                       │      ├ Title           : During chain building, the amount of work that is done is
-│                       │      │                   not correctl ... 
-│                       │      ├ Description     : During chain building, the amount of work that is done is
-│                       │      │                   not correctly limited when a large number of intermediate
-│                       │      │                   certificates are passed in VerifyOptions.Intermediates,
-│                       │      │                   which can lead to a denial of service. This affects both
-│                       │      │                   direct users of crypto/x509 and users of crypto/tls. 
-│                       │      ├ Severity        : UNKNOWN 
-│                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ References       ╭ [0]: https://go.dev/cl/758320 
-│                       │      │                  ├ [1]: https://go.dev/issue/78282 
-│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
-│                       │      │                  │      RWU 
-│                       │      │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-│                       ├ [18] ╭ VulnerabilityID : CVE-2026-32282 
-│                       │      ├ VendorIDs        ─ [0]: GO-2026-4864 
-│                       │      ├ PkgID           : stdlib@v1.25.6 
-│                       │      ├ PkgName         : stdlib 
-│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.6 
-│                       │      │                  ╰ UID : 31a334de3521db4e 
-│                       │      ├ InstalledVersion: v1.25.6 
-│                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
-│                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
-│                       │      │                  │         bc64e086c1f91e77709f 
-│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
-│                       │      │                            475e8bf0be8d84f76b5f 
-│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32282 
-│                       │      ├ DataSource       ╭ ID  : govulndb 
-│                       │      │                  ├ Name: The Go Vulnerability Database 
-│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │      ├ Fingerprint     : sha256:b6d4992f5685623a376404d1bd9fb597a92dfb883c2da14efdcf6
-│                       │      │                   ec64c611c11 
-│                       │      ├ Title           : On Linux, if the target of Root.Chmod is replaced with a
-│                       │      │                   symlink while ... 
-│                       │      ├ Description     : On Linux, if the target of Root.Chmod is replaced with a
-│                       │      │                   symlink while the chmod operation is in progress, Chmod can
-│                       │      │                   operate on the target of the symlink, even when the target
-│                       │      │                   lies outside the root. The Linux fchmodat syscall silently
-│                       │      │                   ignores the AT_SYMLINK_NOFOLLOW flag, which Root.Chmod uses
-│                       │      │                   to avoid symlink traversal. Root.Chmod checks its target
-│                       │      │                   before acting and returns an error if the target is a
-│                       │      │                   symlink lying outside the root, so the impact is limited to
-│                       │      │                   cases where the target is replaced with a symlink between
-│                       │      │                   the check and operation. 
-│                       │      ├ Severity        : UNKNOWN 
-│                       │      ├ References       ╭ [0]: https://go.dev/cl/763761 
-│                       │      │                  ├ [1]: https://go.dev/issue/78293 
-│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
-│                       │      │                  │      RWU 
-│                       │      │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
-│                       │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
 │                       ╰ [19] ╭ VulnerabilityID : CVE-2026-32283 
 │                              ├ VendorIDs        ─ [0]: GO-2026-4870 
 │                              ├ PkgID           : stdlib@v1.25.6 
@@ -14448,9 +14566,10 @@
 │                              │                  ├ [1]: https://go.dev/issue/78334 
 │                              │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                              │                  │      RWU 
-│                              │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                              │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                              │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4870 
 │                              ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
-│                              ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
+│                              ╰ LastModifiedDate: 2026-04-13T19:16:40Z 
 ╰ [9] ╭ Target         : usr/bin/syft 
       ├ Class          : lang-pkgs 
       ├ Type           : gobinary 
@@ -18310,8 +18429,8 @@
                         │      │                          cosystem%3Ago 
                         │      ├ Fingerprint     : sha256:fd9c0256e6da282b05cc315ff27ab407a4d6d0e61690a803c49a8
                         │      │                   5890b3f8880 
-                        │      ├ Title           : HashiCorp\u2019s go-getter library up to v1.8.5 may allow
-                        │      │                   arbitrary fi ... 
+                        │      ├ Title           : go-getter: go-getter: Arbitrary file reads via maliciously
+                        │      │                   crafted URL 
                         │      ├ Description     : HashiCorp’s go-getter library up to v1.8.5 may allow
                         │      │                   arbitrary file reads on the file system during certain git
                         │      │                   operations through a maliciously crafted URL. This
@@ -18320,16 +18439,23 @@
                         │      │                   and package. 
                         │      ├ Severity        : HIGH 
                         │      ├ CweIDs           ─ [0]: CWE-200 
-                        │      ├ VendorSeverity   ─ ghsa: 3 
-                        │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N 
-                        │      │                         ╰ V3Score : 7.5 
-                        │      ├ References       ╭ [0]: https://discuss.hashicorp.com/t/hcsec-2026-04-go-gette
+                        │      ├ VendorSeverity   ╭ ghsa  : 3 
+                        │      │                  ╰ redhat: 3 
+                        │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N
+                        │      │                  │        │           /A:N 
+                        │      │                  │        ╰ V3Score : 7.5 
+                        │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N
+                        │      │                           │           /A:N 
+                        │      │                           ╰ V3Score : 7.5 
+                        │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-4660 
+                        │      │                  ├ [1]: https://discuss.hashicorp.com/t/hcsec-2026-04-go-gette
                         │      │                  │      r-may-allow-to-arbitrary-filesystem-reads-through-git-
                         │      │                  │      operations/77311 
-                        │      │                  ├ [1]: https://github.com/hashicorp/go-getter 
-                        │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-4660 
+                        │      │                  ├ [2]: https://github.com/hashicorp/go-getter 
+                        │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-4660 
+                        │      │                  ╰ [4]: https://www.cve.org/CVERecord?id=CVE-2026-4660 
                         │      ├ PublishedDate   : 2026-04-09T14:16:32.993Z 
-                        │      ╰ LastModifiedDate: 2026-04-09T14:16:32.993Z 
+                        │      ╰ LastModifiedDate: 2026-04-13T15:02:47.353Z 
                         ├ [12] ╭ VulnerabilityID : CVE-2026-24051 
                         │      ├ VendorIDs        ─ [0]: GHSA-9h8m-3fm2-qjrq 
                         │      ├ PkgID           : go.opentelemetry.io/otel/sdk@v1.39.0 
@@ -18763,7 +18889,93 @@
                         │      │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
                         │      ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
                         │      ╰ LastModifiedDate: 2026-03-10T18:18:37.74Z 
-                        ├ [19] ╭ VulnerabilityID : CVE-2025-61730 
+                        ├ [19] ╭ VulnerabilityID : CVE-2026-32280 
+                        │      ├ VendorIDs        ─ [0]: GO-2026-4947 
+                        │      ├ PkgID           : stdlib@v1.25.5 
+                        │      ├ PkgName         : stdlib 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.5 
+                        │      │                  ╰ UID : 3a3fb3a2726e7728 
+                        │      ├ InstalledVersion: v1.25.5 
+                        │      ├ FixedVersion    : 1.25.9, 1.26.2 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
+                        │      │                  │         bc64e086c1f91e77709f 
+                        │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
+                        │      │                            475e8bf0be8d84f76b5f 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32280 
+                        │      ├ DataSource       ╭ ID  : govulndb 
+                        │      │                  ├ Name: The Go Vulnerability Database 
+                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │      ├ Fingerprint     : sha256:ebb90dc12374287146823d425eb9f4cb1a5d1cc4ac64676360269
+                        │      │                   501af642b72 
+                        │      ├ Title           : During chain building, the amount of work that is done is
+                        │      │                   not correctl ... 
+                        │      ├ Description     : During chain building, the amount of work that is done is
+                        │      │                   not correctly limited when a large number of intermediate
+                        │      │                   certificates are passed in VerifyOptions.Intermediates,
+                        │      │                   which can lead to a denial of service. This affects both
+                        │      │                   direct users of crypto/x509 and users of crypto/tls. 
+                        │      ├ Severity        : HIGH 
+                        │      ├ CweIDs           ─ [0]: CWE-770 
+                        │      ├ VendorSeverity   ─ bitnami: 3 
+                        │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+                        │      │                            │           N/A:H 
+                        │      │                            ╰ V3Score : 7.5 
+                        │      ├ References       ╭ [0]: https://go.dev/cl/758320 
+                        │      │                  ├ [1]: https://go.dev/issue/78282 
+                        │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
+                        │      │                  │      RWU 
+                        │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+                        │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4947 
+                        │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
+                        │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
+                        ├ [20] ╭ VulnerabilityID : CVE-2026-32282 
+                        │      ├ VendorIDs        ─ [0]: GO-2026-4864 
+                        │      ├ PkgID           : stdlib@v1.25.5 
+                        │      ├ PkgName         : stdlib 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.5 
+                        │      │                  ╰ UID : 3a3fb3a2726e7728 
+                        │      ├ InstalledVersion: v1.25.5 
+                        │      ├ FixedVersion    : 1.25.9, 1.26.2 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
+                        │      │                  │         bc64e086c1f91e77709f 
+                        │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
+                        │      │                            475e8bf0be8d84f76b5f 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32282 
+                        │      ├ DataSource       ╭ ID  : govulndb 
+                        │      │                  ├ Name: The Go Vulnerability Database 
+                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │      ├ Fingerprint     : sha256:81dd2cb619bda851a638c557264dc7ea7371aae7efb203566c9d7
+                        │      │                   1b4d393b1d5 
+                        │      ├ Title           : golang: internal/syscall/unix: Root.Chmod can follow
+                        │      │                   symlinks out of the root 
+                        │      ├ Description     : On Linux, if the target of Root.Chmod is replaced with a
+                        │      │                   symlink while the chmod operation is in progress, Chmod can
+                        │      │                   operate on the target of the symlink, even when the target
+                        │      │                   lies outside the root. The Linux fchmodat syscall silently
+                        │      │                   ignores the AT_SYMLINK_NOFOLLOW flag, which Root.Chmod uses
+                        │      │                   to avoid symlink traversal. Root.Chmod checks its target
+                        │      │                   before acting and returns an error if the target is a
+                        │      │                   symlink lying outside the root, so the impact is limited to
+                        │      │                   cases where the target is replaced with a symlink between
+                        │      │                   the check and operation. 
+                        │      ├ Severity        : HIGH 
+                        │      ├ VendorSeverity   ─ redhat: 2 
+                        │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H
+                        │      │                           │           /A:H 
+                        │      │                           ╰ V3Score : 7.8 
+                        │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-32282 
+                        │      │                  ├ [1]: https://go.dev/cl/763761 
+                        │      │                  ├ [2]: https://go.dev/issue/78293 
+                        │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
+                        │      │                  │      RWU 
+                        │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+                        │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4864 
+                        │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+                        │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
+                        │      ╰ LastModifiedDate: 2026-04-13T19:16:39.807Z 
+                        ├ [21] ╭ VulnerabilityID : CVE-2025-61730 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4340 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -18808,7 +19020,7 @@
                         │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4340 
                         │      ├ PublishedDate   : 2026-01-28T20:16:09.94Z 
                         │      ╰ LastModifiedDate: 2026-02-03T20:36:41.3Z 
-                        ├ [20] ╭ VulnerabilityID : CVE-2026-27142 
+                        ├ [22] ╭ VulnerabilityID : CVE-2026-27142 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4603 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -18856,7 +19068,7 @@
                         │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27142 
                         │      ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
                         │      ╰ LastModifiedDate: 2026-03-16T16:16:13.77Z 
-                        ├ [21] ╭ VulnerabilityID : CVE-2026-32281 
+                        ├ [23] ╭ VulnerabilityID : CVE-2026-32281 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4946 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -18898,8 +19110,8 @@
                         │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4946 
                         │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32281 
                         │      ├ PublishedDate   : 2026-04-08T02:16:03.35Z 
-                        │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-                        ├ [22] ╭ VulnerabilityID : CVE-2026-32288 
+                        │      ╰ LastModifiedDate: 2026-04-13T19:16:39.607Z 
+                        ├ [24] ╭ VulnerabilityID : CVE-2026-32288 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4869 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -18938,8 +19150,8 @@
                         │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4869 
                         │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32288 
                         │      ├ PublishedDate   : 2026-04-08T02:16:03.707Z 
-                        │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-                        ├ [23] ╭ VulnerabilityID : CVE-2026-32289 
+                        │      ╰ LastModifiedDate: 2026-04-13T19:16:40.21Z 
+                        ├ [25] ╭ VulnerabilityID : CVE-2026-32289 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4865 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -18983,8 +19195,8 @@
                         │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4865 
                         │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32289 
                         │      ├ PublishedDate   : 2026-04-08T02:16:03.82Z 
-                        │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-                        ├ [24] ╭ VulnerabilityID : CVE-2026-27139 
+                        │      ╰ LastModifiedDate: 2026-04-13T19:16:40.41Z 
+                        ├ [26] ╭ VulnerabilityID : CVE-2026-27139 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4602 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -19031,80 +19243,6 @@
                         │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27139 
                         │      ├ PublishedDate   : 2026-03-06T22:16:01.07Z 
                         │      ╰ LastModifiedDate: 2026-03-09T15:15:57.15Z 
-                        ├ [25] ╭ VulnerabilityID : CVE-2026-32280 
-                        │      ├ VendorIDs        ─ [0]: GO-2026-4947 
-                        │      ├ PkgID           : stdlib@v1.25.5 
-                        │      ├ PkgName         : stdlib 
-                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.5 
-                        │      │                  ╰ UID : 3a3fb3a2726e7728 
-                        │      ├ InstalledVersion: v1.25.5 
-                        │      ├ FixedVersion    : 1.25.9, 1.26.2 
-                        │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
-                        │      │                  │         bc64e086c1f91e77709f 
-                        │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
-                        │      │                            475e8bf0be8d84f76b5f 
-                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32280 
-                        │      ├ DataSource       ╭ ID  : govulndb 
-                        │      │                  ├ Name: The Go Vulnerability Database 
-                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │      ├ Fingerprint     : sha256:ebb90dc12374287146823d425eb9f4cb1a5d1cc4ac64676360269
-                        │      │                   501af642b72 
-                        │      ├ Title           : During chain building, the amount of work that is done is
-                        │      │                   not correctl ... 
-                        │      ├ Description     : During chain building, the amount of work that is done is
-                        │      │                   not correctly limited when a large number of intermediate
-                        │      │                   certificates are passed in VerifyOptions.Intermediates,
-                        │      │                   which can lead to a denial of service. This affects both
-                        │      │                   direct users of crypto/x509 and users of crypto/tls. 
-                        │      ├ Severity        : UNKNOWN 
-                        │      ├ CweIDs           ─ [0]: CWE-770 
-                        │      ├ References       ╭ [0]: https://go.dev/cl/758320 
-                        │      │                  ├ [1]: https://go.dev/issue/78282 
-                        │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
-                        │      │                  │      RWU 
-                        │      │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4947 
-                        │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
-                        │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
-                        ├ [26] ╭ VulnerabilityID : CVE-2026-32282 
-                        │      ├ VendorIDs        ─ [0]: GO-2026-4864 
-                        │      ├ PkgID           : stdlib@v1.25.5 
-                        │      ├ PkgName         : stdlib 
-                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.5 
-                        │      │                  ╰ UID : 3a3fb3a2726e7728 
-                        │      ├ InstalledVersion: v1.25.5 
-                        │      ├ FixedVersion    : 1.25.9, 1.26.2 
-                        │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
-                        │      │                  │         bc64e086c1f91e77709f 
-                        │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
-                        │      │                            475e8bf0be8d84f76b5f 
-                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32282 
-                        │      ├ DataSource       ╭ ID  : govulndb 
-                        │      │                  ├ Name: The Go Vulnerability Database 
-                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │      ├ Fingerprint     : sha256:81dd2cb619bda851a638c557264dc7ea7371aae7efb203566c9d7
-                        │      │                   1b4d393b1d5 
-                        │      ├ Title           : On Linux, if the target of Root.Chmod is replaced with a
-                        │      │                   symlink while ... 
-                        │      ├ Description     : On Linux, if the target of Root.Chmod is replaced with a
-                        │      │                   symlink while the chmod operation is in progress, Chmod can
-                        │      │                   operate on the target of the symlink, even when the target
-                        │      │                   lies outside the root. The Linux fchmodat syscall silently
-                        │      │                   ignores the AT_SYMLINK_NOFOLLOW flag, which Root.Chmod uses
-                        │      │                   to avoid symlink traversal. Root.Chmod checks its target
-                        │      │                   before acting and returns an error if the target is a
-                        │      │                   symlink lying outside the root, so the impact is limited to
-                        │      │                   cases where the target is replaced with a symlink between
-                        │      │                   the check and operation. 
-                        │      ├ Severity        : UNKNOWN 
-                        │      ├ References       ╭ [0]: https://go.dev/cl/763761 
-                        │      │                  ├ [1]: https://go.dev/issue/78293 
-                        │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
-                        │      │                  │      RWU 
-                        │      │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4864 
-                        │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
-                        │      ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
                         ╰ [27] ╭ VulnerabilityID : CVE-2026-32283 
                                ├ VendorIDs        ─ [0]: GO-2026-4870 
                                ├ PkgID           : stdlib@v1.25.5 
@@ -19136,7 +19274,8 @@
                                │                  ├ [1]: https://go.dev/issue/78334 
                                │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
                                │                  │      RWU 
-                               │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-4870 
+                               │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+                               │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4870 
                                ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
-                               ╰ LastModifiedDate: 2026-04-08T21:26:35.91Z 
+                               ╰ LastModifiedDate: 2026-04-13T19:16:40Z 
 ````
