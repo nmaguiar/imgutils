@@ -1714,74 +1714,129 @@
 │                       │     │                  ╰ [4]: https://www.cve.org/CVERecord?id=CVE-2026-33871 
 │                       │     ├ PublishedDate   : 2026-03-27T20:16:34.833Z 
 │                       │     ╰ LastModifiedDate: 2026-03-30T20:10:17.62Z 
-│                       ╰ [4] ╭ VulnerabilityID : CVE-2026-1002 
-│                             ├ VendorIDs        ─ [0]: GHSA-cphf-4846-3xx9 
-│                             ├ PkgName         : io.vertx:vertx-core 
-│                             ├ PkgPath         : openaf/Kube/vertx-core-4.5.21.jar 
-│                             ├ PkgIdentifier    ╭ PURL: pkg:maven/io.vertx/vertx-core@4.5.21 
-│                             │                  ╰ UID : 3803bdb2fc068a1b 
-│                             ├ InstalledVersion: 4.5.21 
-│                             ├ FixedVersion    : 4.5.24, 5.0.7 
+│                       ├ [4] ╭ VulnerabilityID : CVE-2026-1002 
+│                       │     ├ VendorIDs        ─ [0]: GHSA-cphf-4846-3xx9 
+│                       │     ├ PkgName         : io.vertx:vertx-core 
+│                       │     ├ PkgPath         : openaf/Kube/vertx-core-4.5.21.jar 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/io.vertx/vertx-core@4.5.21 
+│                       │     │                  ╰ UID : 3803bdb2fc068a1b 
+│                       │     ├ InstalledVersion: 4.5.21 
+│                       │     ├ FixedVersion    : 4.5.24, 5.0.7 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1b
+│                       │     │                  │         c64e086c1f91e77709f 
+│                       │     │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a44
+│                       │     │                            75e8bf0be8d84f76b5f 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-1002 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Maven 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Amaven 
+│                       │     ├ Fingerprint     : sha256:6682e350e40d9471cda10511c2c4cfbe5206fb15b987baf7f61f6f
+│                       │     │                   5aa0cae02b 
+│                       │     ├ Title           : io.vertx/vertx-core: static handler component cache can be
+│                       │     │                   manipulated to deny the access to static files 
+│                       │     ├ Description     : The Vert.x Web static handler component cache can be
+│                       │     │                   manipulated to deny the access to static files served by the
+│                       │     │                   handler using specifically crafted request URI.
+│                       │     │                   
+│                       │     │                   The issue comes from an improper implementation of the C.
+│                       │     │                   rule of section 5.2.4 of RFC3986 and is fixed in Vert.x Core
+│                       │     │                   component (used by Vert.x Web): 
+│                       │     │                   https://github.com/eclipse-vertx/vert.x/pull/5895 
+│                       │     │                   Steps to reproduce
+│                       │     │                   Given a file served by the static handler, craft an URI that
+│                       │     │                   introduces a string like bar%2F..%2F after the last / char to
+│                       │     │                    deny the access to the URI with an HTTP 404 response. For
+│                       │     │                   example https://example.com/foo/index.html can be denied with
+│                       │     │                    https://example.com/foo/bar%2F..%2Findex.html
+│                       │     │                   Mitgation
+│                       │     │                   Disabling Static Handler cache fixes the issue.
+│                       │     │                   StaticHandler staticHandler =
+│                       │     │                   StaticHandler.create().setCachingEnabled(false); 
+│                       │     ├ Severity        : MEDIUM 
+│                       │     ├ CweIDs           ─ [0]: CWE-444 
+│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │     │                  ├ nvd   : 2 
+│                       │     │                  ╰ redhat: 2 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/V
+│                       │     │                  │        │            I:N/VA:L/SC:N/SI:N/SA:L 
+│                       │     │                  │        ╰ V40Score : 6.9 
+│                       │     │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                       │     │                  │        │           A:L 
+│                       │     │                  │        ╰ V3Score : 5.3 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
+│                       │     │                           │           A:L 
+│                       │     │                           ╰ V3Score : 5.3 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-1002 
+│                       │     │                  ├ [1]: https://github.com/eclipse-vertx/vert.x 
+│                       │     │                  ├ [2]: https://github.com/eclipse-vertx/vert.x/commit/5b67f5d1
+│                       │     │                  │      7788b2483d277c760f3f8154f9b2fed0 
+│                       │     │                  ├ [3]: https://github.com/eclipse-vertx/vert.x/commit/d007e7b4
+│                       │     │                  │      18543eb1567fe95cf20f5450a5c2d047 
+│                       │     │                  ├ [4]: https://github.com/eclipse-vertx/vert.x/pull/5894 
+│                       │     │                  ├ [5]: https://github.com/eclipse-vertx/vert.x/pull/5895 
+│                       │     │                  ├ [6]: https://github.com/vert-x3/vertx-web/issues/2836 
+│                       │     │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2026-1002 
+│                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-1002 
+│                       │     ├ PublishedDate   : 2026-01-15T21:16:05.64Z 
+│                       │     ╰ LastModifiedDate: 2026-02-05T16:50:31.073Z 
+│                       ╰ [5] ╭ VulnerabilityID : CVE-2026-2332 
+│                             ├ VendorIDs        ─ [0]: GHSA-355h-qmc2-wpwf 
+│                             ├ PkgName         : org.eclipse.jetty:jetty-http 
+│                             ├ PkgPath         : openaf/openaf.jar 
+│                             ├ PkgIdentifier    ╭ PURL: pkg:maven/org.eclipse.jetty/jetty-http@12.1.5 
+│                             │                  ╰ UID : 77423079db8cc6a2 
+│                             ├ InstalledVersion: 12.1.5 
+│                             ├ FixedVersion    : 12.1.7, 12.0.33, 11.0.28, 10.0.28, 9.4.60 
 │                             ├ Status          : fixed 
 │                             ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1b
 │                             │                  │         c64e086c1f91e77709f 
 │                             │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a44
 │                             │                            75e8bf0be8d84f76b5f 
 │                             ├ SeveritySource  : ghsa 
-│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-1002 
+│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-2332 
 │                             ├ DataSource       ╭ ID  : ghsa 
 │                             │                  ├ Name: GitHub Security Advisory Maven 
 │                             │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
 │                             │                          osystem%3Amaven 
-│                             ├ Fingerprint     : sha256:6682e350e40d9471cda10511c2c4cfbe5206fb15b987baf7f61f6f
-│                             │                   5aa0cae02b 
-│                             ├ Title           : io.vertx/vertx-core: static handler component cache can be
-│                             │                   manipulated to deny the access to static files 
-│                             ├ Description     : The Vert.x Web static handler component cache can be
-│                             │                   manipulated to deny the access to static files served by the
-│                             │                   handler using specifically crafted request URI.
+│                             ├ Fingerprint     : sha256:a2d1116fe2cae3731400e92715b5a65ca6a91d3c03dcdea8bc839e
+│                             │                   bcbfaf5b77 
+│                             ├ Title           : In Eclipse Jetty, the HTTP/1.1 parser is vulnerable to
+│                             │                   request smuggli ... 
+│                             ├ Description     : In Eclipse Jetty, the HTTP/1.1 parser is vulnerable to
+│                             │                   request smuggling when chunk extensions are used, similar to
+│                             │                   the "funky chunks" techniques outlined here:
+│                             │                     *  https://w4ke.info/2025/06/18/funky-chunks.html
 │                             │                   
-│                             │                   The issue comes from an improper implementation of the C.
-│                             │                   rule of section 5.2.4 of RFC3986 and is fixed in Vert.x Core
-│                             │                   component (used by Vert.x Web): 
-│                             │                   https://github.com/eclipse-vertx/vert.x/pull/5895 
-│                             │                   Steps to reproduce
-│                             │                   Given a file served by the static handler, craft an URI that
-│                             │                   introduces a string like bar%2F..%2F after the last / char to
-│                             │                    deny the access to the URI with an HTTP 404 response. For
-│                             │                   example https://example.com/foo/index.html can be denied with
-│                             │                    https://example.com/foo/bar%2F..%2Findex.html
-│                             │                   Mitgation
-│                             │                   Disabling Static Handler cache fixes the issue.
-│                             │                   StaticHandler staticHandler =
-│                             │                   StaticHandler.create().setCachingEnabled(false); 
-│                             ├ Severity        : MEDIUM 
+│                             │                     *  https://w4ke.info/2025/10/29/funky-chunks-2.html
+│                             │                   Jetty terminates chunk extension parsing at \r\n inside
+│                             │                   quoted strings instead of treating this as an error.
+│                             │                   POST / HTTP/1.1
+│                             │                   Host: localhost
+│                             │                   Transfer-Encoding: chunked
+│                             │                   1;ext="val
+│                             │                   X
+│                             │                   0
+│                             │                   GET /smuggled HTTP/1.1
+│                             │                   ...
+│                             │                   Note how the chunk extension does not close the double
+│                             │                   quotes, and it is able to inject a smuggled request. 
+│                             ├ Severity        : HIGH 
 │                             ├ CweIDs           ─ [0]: CWE-444 
-│                             ├ VendorSeverity   ╭ ghsa  : 2 
-│                             │                  ├ nvd   : 2 
-│                             │                  ╰ redhat: 2 
-│                             ├ CVSS             ╭ ghsa   ╭ V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/V
-│                             │                  │        │            I:N/VA:L/SC:N/SI:N/SA:L 
-│                             │                  │        ╰ V40Score : 6.9 
-│                             │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
-│                             │                  │        │           A:L 
-│                             │                  │        ╰ V3Score : 5.3 
-│                             │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
-│                             │                           │           A:L 
-│                             │                           ╰ V3Score : 5.3 
-│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-1002 
-│                             │                  ├ [1]: https://github.com/eclipse-vertx/vert.x 
-│                             │                  ├ [2]: https://github.com/eclipse-vertx/vert.x/commit/5b67f5d1
-│                             │                  │      7788b2483d277c760f3f8154f9b2fed0 
-│                             │                  ├ [3]: https://github.com/eclipse-vertx/vert.x/commit/d007e7b4
-│                             │                  │      18543eb1567fe95cf20f5450a5c2d047 
-│                             │                  ├ [4]: https://github.com/eclipse-vertx/vert.x/pull/5894 
-│                             │                  ├ [5]: https://github.com/eclipse-vertx/vert.x/pull/5895 
-│                             │                  ├ [6]: https://github.com/vert-x3/vertx-web/issues/2836 
-│                             │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2026-1002 
-│                             │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-1002 
-│                             ├ PublishedDate   : 2026-01-15T21:16:05.64Z 
-│                             ╰ LastModifiedDate: 2026-02-05T16:50:31.073Z 
+│                             ├ VendorSeverity   ─ ghsa: 3 
+│                             ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N 
+│                             │                         ╰ V3Score : 7.4 
+│                             ├ References       ╭ [0]: https://github.com/jetty/jetty.project 
+│                             │                  ├ [1]: https://github.com/jetty/jetty.project/security/advisor
+│                             │                  │      ies/GHSA-355h-qmc2-wpwf 
+│                             │                  ├ [2]: https://gitlab.eclipse.org/security/cve-assignment/-/is
+│                             │                  │      sues/89 
+│                             │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-2332 
+│                             │                  ╰ [4]: https://w4ke.info/2025/06/18/funky-chunks.html 
+│                             ├ PublishedDate   : 2026-04-14T12:16:21.333Z 
+│                             ╰ LastModifiedDate: 2026-04-14T12:16:21.333Z 
 ├ [2] ╭ Target         : usr/bin/crictl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -2850,7 +2905,8 @@
 │                       │      │                    slice index and a runtime panic, allowing a denial of
 │                       │      │                   service attack. 
 │                       │      ├ Severity        : HIGH 
-│                       │      ├ VendorSeverity   ╭ ghsa  : 3 
+│                       │      ├ VendorSeverity   ╭ amazon: 3 
+│                       │      │                  ├ ghsa  : 3 
 │                       │      │                  ╰ redhat: 3 
 │                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │      │                  │        │           /A:H 
@@ -2904,6 +2960,7 @@
 │                       │      ├ CweIDs           ─ [0]: CWE-288 
 │                       │      ├ VendorSeverity   ╭ ghsa  : 3 
 │                       │      │                  ├ nvd   : 3 
+│                       │      │                  ├ photon: 3 
 │                       │      │                  ╰ redhat: 2 
 │                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H
 │                       │      │                  │        │           /A:H 
@@ -2964,8 +3021,10 @@
 │                       │      │                   This issue has been patched in version 29.3.1. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-193 
-│                       │      ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │      ├ VendorSeverity   ╭ amazon: 2 
+│                       │      │                  ├ ghsa  : 2 
 │                       │      │                  ├ nvd   : 3 
+│                       │      │                  ├ photon: 3 
 │                       │      │                  ╰ redhat: 3 
 │                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H
 │                       │      │                  │        │           /A:N 
@@ -3138,7 +3197,8 @@
 │                       │      │                   policy hardening. 
 │                       │      ├ Severity        : CRITICAL 
 │                       │      ├ CweIDs           ─ [0]: CWE-285 
-│                       │      ├ VendorSeverity   ╭ ghsa  : 4 
+│                       │      ├ VendorSeverity   ╭ amazon: 3 
+│                       │      │                  ├ ghsa  : 4 
 │                       │      │                  ╰ redhat: 3 
 │                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
 │                       │      │                  │        │           /A:N 
@@ -3549,7 +3609,7 @@
 │                       │      │                  ├ [6] : https://groups.google.com/g/golang-announce/c/EdhZqrQ
 │                       │      │                  │       98hk 
 │                       │      │                  ├ [7] : https://linux.oracle.com/cve/CVE-2026-25679.html 
-│                       │      │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2026-7259.html 
+│                       │      │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2026-7992.html 
 │                       │      │                  ├ [9] : https://nvd.nist.gov/vuln/detail/CVE-2026-25679 
 │                       │      │                  ├ [10]: https://pkg.go.dev/vuln/GO-2026-4601 
 │                       │      │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
@@ -5352,7 +5412,8 @@
 │                       │      │                   policy hardening. 
 │                       │      ├ Severity        : CRITICAL 
 │                       │      ├ CweIDs           ─ [0]: CWE-285 
-│                       │      ├ VendorSeverity   ╭ ghsa  : 4 
+│                       │      ├ VendorSeverity   ╭ amazon: 3 
+│                       │      │                  ├ ghsa  : 4 
 │                       │      │                  ╰ redhat: 3 
 │                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
 │                       │      │                  │        │           /A:N 
@@ -5488,7 +5549,7 @@
 │                       │      │                  ├ [6] : https://groups.google.com/g/golang-announce/c/EdhZqrQ
 │                       │      │                  │       98hk 
 │                       │      │                  ├ [7] : https://linux.oracle.com/cve/CVE-2026-25679.html 
-│                       │      │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2026-7259.html 
+│                       │      │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2026-7992.html 
 │                       │      │                  ├ [9] : https://nvd.nist.gov/vuln/detail/CVE-2026-25679 
 │                       │      │                  ├ [10]: https://pkg.go.dev/vuln/GO-2026-4601 
 │                       │      │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
@@ -6572,6 +6633,7 @@
 │                       │      ├ CweIDs           ─ [0]: CWE-288 
 │                       │      ├ VendorSeverity   ╭ ghsa  : 3 
 │                       │      │                  ├ nvd   : 3 
+│                       │      │                  ├ photon: 3 
 │                       │      │                  ╰ redhat: 2 
 │                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H
 │                       │      │                  │        │           /A:H 
@@ -6632,8 +6694,10 @@
 │                       │      │                   This issue has been patched in version 29.3.1. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-193 
-│                       │      ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │      ├ VendorSeverity   ╭ amazon: 2 
+│                       │      │                  ├ ghsa  : 2 
 │                       │      │                  ├ nvd   : 3 
+│                       │      │                  ├ photon: 3 
 │                       │      │                  ╰ redhat: 3 
 │                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H
 │                       │      │                  │        │           /A:N 
@@ -6994,7 +7058,7 @@
 │                       │      │                  ├ [6] : https://groups.google.com/g/golang-announce/c/EdhZqrQ
 │                       │      │                  │       98hk 
 │                       │      │                  ├ [7] : https://linux.oracle.com/cve/CVE-2026-25679.html 
-│                       │      │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2026-7259.html 
+│                       │      │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2026-7992.html 
 │                       │      │                  ├ [9] : https://nvd.nist.gov/vuln/detail/CVE-2026-25679 
 │                       │      │                  ├ [10]: https://pkg.go.dev/vuln/GO-2026-4601 
 │                       │      │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
@@ -7478,7 +7542,7 @@
 │                       │     │                  ├ [6] : https://groups.google.com/g/golang-announce/c/EdhZqrQ9
 │                       │     │                  │       8hk 
 │                       │     │                  ├ [7] : https://linux.oracle.com/cve/CVE-2026-25679.html 
-│                       │     │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2026-7259.html 
+│                       │     │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2026-7992.html 
 │                       │     │                  ├ [9] : https://nvd.nist.gov/vuln/detail/CVE-2026-25679 
 │                       │     │                  ├ [10]: https://pkg.go.dev/vuln/GO-2026-4601 
 │                       │     │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
@@ -9582,7 +9646,7 @@
 │                       │      │                  ├ [6] : https://groups.google.com/g/golang-announce/c/EdhZqrQ
 │                       │      │                  │       98hk 
 │                       │      │                  ├ [7] : https://linux.oracle.com/cve/CVE-2026-25679.html 
-│                       │      │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2026-7259.html 
+│                       │      │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2026-7992.html 
 │                       │      │                  ├ [9] : https://nvd.nist.gov/vuln/detail/CVE-2026-25679 
 │                       │      │                  ├ [10]: https://pkg.go.dev/vuln/GO-2026-4601 
 │                       │      │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
@@ -11502,6 +11566,7 @@
 │                       │      ├ CweIDs           ─ [0]: CWE-288 
 │                       │      ├ VendorSeverity   ╭ ghsa  : 3 
 │                       │      │                  ├ nvd   : 3 
+│                       │      │                  ├ photon: 3 
 │                       │      │                  ╰ redhat: 2 
 │                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H
 │                       │      │                  │        │           /A:H 
@@ -11562,8 +11627,10 @@
 │                       │      │                   This issue has been patched in version 29.3.1. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-193 
-│                       │      ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │      ├ VendorSeverity   ╭ amazon: 2 
+│                       │      │                  ├ ghsa  : 2 
 │                       │      │                  ├ nvd   : 3 
+│                       │      │                  ├ photon: 3 
 │                       │      │                  ╰ redhat: 3 
 │                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H
 │                       │      │                  │        │           /A:N 
@@ -11710,7 +11777,8 @@
 │                       │      │                   policy hardening. 
 │                       │      ├ Severity        : CRITICAL 
 │                       │      ├ CweIDs           ─ [0]: CWE-285 
-│                       │      ├ VendorSeverity   ╭ ghsa  : 4 
+│                       │      ├ VendorSeverity   ╭ amazon: 3 
+│                       │      │                  ├ ghsa  : 4 
 │                       │      │                  ╰ redhat: 3 
 │                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
 │                       │      │                  │        │           /A:N 
@@ -11987,7 +12055,7 @@
 │                       │      │                  ├ [6] : https://groups.google.com/g/golang-announce/c/EdhZqrQ
 │                       │      │                  │       98hk 
 │                       │      │                  ├ [7] : https://linux.oracle.com/cve/CVE-2026-25679.html 
-│                       │      │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2026-7259.html 
+│                       │      │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2026-7992.html 
 │                       │      │                  ├ [9] : https://nvd.nist.gov/vuln/detail/CVE-2026-25679 
 │                       │      │                  ├ [10]: https://pkg.go.dev/vuln/GO-2026-4601 
 │                       │      │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
@@ -13454,6 +13522,7 @@
 │                       │      ├ CweIDs           ─ [0]: CWE-288 
 │                       │      ├ VendorSeverity   ╭ ghsa  : 3 
 │                       │      │                  ├ nvd   : 3 
+│                       │      │                  ├ photon: 3 
 │                       │      │                  ╰ redhat: 2 
 │                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H
 │                       │      │                  │        │           /A:H 
@@ -13514,8 +13583,10 @@
 │                       │      │                   This issue has been patched in version 29.3.1. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-193 
-│                       │      ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │      ├ VendorSeverity   ╭ amazon: 2 
+│                       │      │                  ├ ghsa  : 2 
 │                       │      │                  ├ nvd   : 3 
+│                       │      │                  ├ photon: 3 
 │                       │      │                  ╰ redhat: 3 
 │                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H
 │                       │      │                  │        │           /A:N 
@@ -14084,7 +14155,8 @@
 │                       │      │                   policy hardening. 
 │                       │      ├ Severity        : CRITICAL 
 │                       │      ├ CweIDs           ─ [0]: CWE-285 
-│                       │      ├ VendorSeverity   ╭ ghsa  : 4 
+│                       │      ├ VendorSeverity   ╭ amazon: 3 
+│                       │      │                  ├ ghsa  : 4 
 │                       │      │                  ╰ redhat: 3 
 │                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
 │                       │      │                  │        │           /A:N 
@@ -14220,7 +14292,7 @@
 │                       │      │                  ├ [6] : https://groups.google.com/g/golang-announce/c/EdhZqrQ
 │                       │      │                  │       98hk 
 │                       │      │                  ├ [7] : https://linux.oracle.com/cve/CVE-2026-25679.html 
-│                       │      │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2026-7259.html 
+│                       │      │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2026-7992.html 
 │                       │      │                  ├ [9] : https://nvd.nist.gov/vuln/detail/CVE-2026-25679 
 │                       │      │                  ├ [10]: https://pkg.go.dev/vuln/GO-2026-4601 
 │                       │      │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
@@ -18092,6 +18164,7 @@
                         │      ├ CweIDs           ─ [0]: CWE-288 
                         │      ├ VendorSeverity   ╭ ghsa  : 3 
                         │      │                  ├ nvd   : 3 
+                        │      │                  ├ photon: 3 
                         │      │                  ╰ redhat: 2 
                         │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H
                         │      │                  │        │           /A:H 
@@ -18152,8 +18225,10 @@
                         │      │                   This issue has been patched in version 29.3.1. 
                         │      ├ Severity        : MEDIUM 
                         │      ├ CweIDs           ─ [0]: CWE-193 
-                        │      ├ VendorSeverity   ╭ ghsa  : 2 
+                        │      ├ VendorSeverity   ╭ amazon: 2 
+                        │      │                  ├ ghsa  : 2 
                         │      │                  ├ nvd   : 3 
+                        │      │                  ├ photon: 3 
                         │      │                  ╰ redhat: 3 
                         │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H
                         │      │                  │        │           /A:N 
@@ -18606,7 +18681,8 @@
                         │      │                   policy hardening. 
                         │      ├ Severity        : CRITICAL 
                         │      ├ CweIDs           ─ [0]: CWE-285 
-                        │      ├ VendorSeverity   ╭ ghsa  : 4 
+                        │      ├ VendorSeverity   ╭ amazon: 3 
+                        │      │                  ├ ghsa  : 4 
                         │      │                  ╰ redhat: 3 
                         │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
                         │      │                  │        │           /A:N 
@@ -18883,7 +18959,7 @@
                         │      │                  ├ [6] : https://groups.google.com/g/golang-announce/c/EdhZqrQ
                         │      │                  │       98hk 
                         │      │                  ├ [7] : https://linux.oracle.com/cve/CVE-2026-25679.html 
-                        │      │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2026-7259.html 
+                        │      │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2026-7992.html 
                         │      │                  ├ [9] : https://nvd.nist.gov/vuln/detail/CVE-2026-25679 
                         │      │                  ├ [10]: https://pkg.go.dev/vuln/GO-2026-4601 
                         │      │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
