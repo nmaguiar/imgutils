@@ -1449,6 +1449,46 @@
     - https://www.cve.org/CVERecord?id=CVE-2026-1002
     PublishedDate: '2026-01-15T21:16:05.64Z'
     LastModifiedDate: '2026-02-05T16:50:31.073Z'
+  - VulnerabilityID: CVE-2026-2332
+    VendorIDs:
+    - GHSA-355h-qmc2-wpwf
+    PkgName: org.eclipse.jetty:jetty-http
+    PkgPath: openaf/openaf.jar
+    PkgIdentifier:
+      PURL: pkg:maven/org.eclipse.jetty/jetty-http@12.1.5
+      UID: 77423079db8cc6a2
+    InstalledVersion: 12.1.5
+    FixedVersion: 12.1.7, 12.0.33, 11.0.28, 10.0.28, 9.4.60
+    Status: fixed
+    Layer:
+      Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1bc64e086c1f91e77709f
+      DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4475e8bf0be8d84f76b5f
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-2332
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Maven
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven
+    Fingerprint: sha256:a2d1116fe2cae3731400e92715b5a65ca6a91d3c03dcdea8bc839ebcbfaf5b77
+    Title: In Eclipse Jetty, the HTTP/1.1 parser is vulnerable to request smuggli ...
+    Description: "In Eclipse Jetty, the HTTP/1.1 parser is vulnerable to request smuggling when chunk extensions are used, similar to the \"funky chunks\" techniques outlined here:\n  *  https://w4ke.info/2025/06/18/funky-chunks.html\n\n  *  https://w4ke.info/2025/10/29/funky-chunks-2.html\n\n\nJetty terminates chunk extension parsing at\_\\r\\n\_inside quoted strings instead of treating this as an error.\n\n\nPOST / HTTP/1.1\nHost: localhost\nTransfer-Encoding: chunked\n\n1;ext=\"val\nX\n0\n\nGET /smuggled HTTP/1.1\n...\n\n\n\n\n\nNote how the chunk extension does not close the double quotes, and it is able to inject a smuggled request."
+    Severity: HIGH
+    CweIDs:
+    - CWE-444
+    VendorSeverity:
+      ghsa: 3
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N
+        V3Score: 7.4
+    References:
+    - https://github.com/jetty/jetty.project
+    - https://github.com/jetty/jetty.project/security/advisories/GHSA-355h-qmc2-wpwf
+    - https://gitlab.eclipse.org/security/cve-assignment/-/issues/89
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-2332
+    - https://w4ke.info/2025/06/18/funky-chunks.html
+    PublishedDate: '2026-04-14T12:16:21.333Z'
+    LastModifiedDate: '2026-04-14T12:16:21.333Z'
 - Target: usr/bin/crictl
   Class: lang-pkgs
   Type: gobinary
@@ -2482,6 +2522,7 @@
     Description: The Delete function fails to properly validate offsets when processing malformed JSON input. This can lead to a negative slice index and a runtime panic, allowing a denial of service attack.
     Severity: HIGH
     VendorSeverity:
+      amazon: 3
       ghsa: 3
       redhat: 3
     CVSS:
@@ -2534,6 +2575,7 @@
     VendorSeverity:
       ghsa: 3
       nvd: 3
+      photon: 3
       redhat: 2
     CVSS:
       ghsa:
@@ -2584,8 +2626,10 @@
     CweIDs:
     - CWE-193
     VendorSeverity:
+      amazon: 2
       ghsa: 2
       nvd: 3
+      photon: 3
       redhat: 3
     CVSS:
       ghsa:
@@ -2718,6 +2762,7 @@
     CweIDs:
     - CWE-285
     VendorSeverity:
+      amazon: 3
       ghsa: 4
       redhat: 3
     CVSS:
@@ -3105,7 +3150,7 @@
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
     - https://linux.oracle.com/cve/CVE-2026-25679.html
-    - https://linux.oracle.com/errata/ELSA-2026-7259.html
+    - https://linux.oracle.com/errata/ELSA-2026-7992.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-25679
     - https://pkg.go.dev/vuln/GO-2026-4601
     - https://www.cve.org/CVERecord?id=CVE-2026-25679
@@ -4822,6 +4867,7 @@
     CweIDs:
     - CWE-285
     VendorSeverity:
+      amazon: 3
       ghsa: 4
       redhat: 3
     CVSS:
@@ -4953,7 +4999,7 @@
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
     - https://linux.oracle.com/cve/CVE-2026-25679.html
-    - https://linux.oracle.com/errata/ELSA-2026-7259.html
+    - https://linux.oracle.com/errata/ELSA-2026-7992.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-25679
     - https://pkg.go.dev/vuln/GO-2026-4601
     - https://www.cve.org/CVERecord?id=CVE-2026-25679
@@ -5984,6 +6030,7 @@
     VendorSeverity:
       ghsa: 3
       nvd: 3
+      photon: 3
       redhat: 2
     CVSS:
       ghsa:
@@ -6034,8 +6081,10 @@
     CweIDs:
     - CWE-193
     VendorSeverity:
+      amazon: 2
       ghsa: 2
       nvd: 3
+      photon: 3
       redhat: 3
     CVSS:
       ghsa:
@@ -6310,7 +6359,7 @@
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
     - https://linux.oracle.com/cve/CVE-2026-25679.html
-    - https://linux.oracle.com/errata/ELSA-2026-7259.html
+    - https://linux.oracle.com/errata/ELSA-2026-7992.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-25679
     - https://pkg.go.dev/vuln/GO-2026-4601
     - https://www.cve.org/CVERecord?id=CVE-2026-25679
@@ -6760,7 +6809,7 @@
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
     - https://linux.oracle.com/cve/CVE-2026-25679.html
-    - https://linux.oracle.com/errata/ELSA-2026-7259.html
+    - https://linux.oracle.com/errata/ELSA-2026-7992.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-25679
     - https://pkg.go.dev/vuln/GO-2026-4601
     - https://www.cve.org/CVERecord?id=CVE-2026-25679
@@ -8774,7 +8823,7 @@
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
     - https://linux.oracle.com/cve/CVE-2026-25679.html
-    - https://linux.oracle.com/errata/ELSA-2026-7259.html
+    - https://linux.oracle.com/errata/ELSA-2026-7992.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-25679
     - https://pkg.go.dev/vuln/GO-2026-4601
     - https://www.cve.org/CVERecord?id=CVE-2026-25679
@@ -10625,6 +10674,7 @@
     VendorSeverity:
       ghsa: 3
       nvd: 3
+      photon: 3
       redhat: 2
     CVSS:
       ghsa:
@@ -10675,8 +10725,10 @@
     CweIDs:
     - CWE-193
     VendorSeverity:
+      amazon: 2
       ghsa: 2
       nvd: 3
+      photon: 3
       redhat: 3
     CVSS:
       ghsa:
@@ -10771,6 +10823,7 @@
     CweIDs:
     - CWE-285
     VendorSeverity:
+      amazon: 3
       ghsa: 4
       redhat: 3
     CVSS:
@@ -11034,7 +11087,7 @@
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
     - https://linux.oracle.com/cve/CVE-2026-25679.html
-    - https://linux.oracle.com/errata/ELSA-2026-7259.html
+    - https://linux.oracle.com/errata/ELSA-2026-7992.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-25679
     - https://pkg.go.dev/vuln/GO-2026-4601
     - https://www.cve.org/CVERecord?id=CVE-2026-25679
@@ -12432,6 +12485,7 @@
     VendorSeverity:
       ghsa: 3
       nvd: 3
+      photon: 3
       redhat: 2
     CVSS:
       ghsa:
@@ -12482,8 +12536,10 @@
     CweIDs:
     - CWE-193
     VendorSeverity:
+      amazon: 2
       ghsa: 2
       nvd: 3
+      photon: 3
       redhat: 3
     CVSS:
       ghsa:
@@ -12918,6 +12974,7 @@
     CweIDs:
     - CWE-285
     VendorSeverity:
+      amazon: 3
       ghsa: 4
       redhat: 3
     CVSS:
@@ -13049,7 +13106,7 @@
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
     - https://linux.oracle.com/cve/CVE-2026-25679.html
-    - https://linux.oracle.com/errata/ELSA-2026-7259.html
+    - https://linux.oracle.com/errata/ELSA-2026-7992.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-25679
     - https://pkg.go.dev/vuln/GO-2026-4601
     - https://www.cve.org/CVERecord?id=CVE-2026-25679
@@ -16691,6 +16748,7 @@
     VendorSeverity:
       ghsa: 3
       nvd: 3
+      photon: 3
       redhat: 2
     CVSS:
       ghsa:
@@ -16741,8 +16799,10 @@
     CweIDs:
     - CWE-193
     VendorSeverity:
+      amazon: 2
       ghsa: 2
       nvd: 3
+      photon: 3
       redhat: 3
     CVSS:
       ghsa:
@@ -17106,6 +17166,7 @@
     CweIDs:
     - CWE-285
     VendorSeverity:
+      amazon: 3
       ghsa: 4
       redhat: 3
     CVSS:
@@ -17369,7 +17430,7 @@
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
     - https://linux.oracle.com/cve/CVE-2026-25679.html
-    - https://linux.oracle.com/errata/ELSA-2026-7259.html
+    - https://linux.oracle.com/errata/ELSA-2026-7992.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-25679
     - https://pkg.go.dev/vuln/GO-2026-4601
     - https://www.cve.org/CVERecord?id=CVE-2026-25679
