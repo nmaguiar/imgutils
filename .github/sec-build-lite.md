@@ -1070,7 +1070,8 @@
                         │      │                    slice index and a runtime panic, allowing a denial of
                         │      │                   service attack. 
                         │      ├ Severity        : HIGH 
-                        │      ├ VendorSeverity   ╭ ghsa  : 3 
+                        │      ├ VendorSeverity   ╭ amazon: 3 
+                        │      │                  ├ ghsa  : 3 
                         │      │                  ╰ redhat: 3 
                         │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
                         │      │                  │        │           /A:H 
@@ -1124,6 +1125,7 @@
                         │      ├ CweIDs           ─ [0]: CWE-288 
                         │      ├ VendorSeverity   ╭ ghsa  : 3 
                         │      │                  ├ nvd   : 3 
+                        │      │                  ├ photon: 3 
                         │      │                  ╰ redhat: 2 
                         │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H
                         │      │                  │        │           /A:H 
@@ -1184,8 +1186,10 @@
                         │      │                   This issue has been patched in version 29.3.1. 
                         │      ├ Severity        : MEDIUM 
                         │      ├ CweIDs           ─ [0]: CWE-193 
-                        │      ├ VendorSeverity   ╭ ghsa  : 2 
+                        │      ├ VendorSeverity   ╭ amazon: 2 
+                        │      │                  ├ ghsa  : 2 
                         │      │                  ├ nvd   : 3 
+                        │      │                  ├ photon: 3 
                         │      │                  ╰ redhat: 3 
                         │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H
                         │      │                  │        │           /A:N 
@@ -1358,7 +1362,8 @@
                         │      │                   policy hardening. 
                         │      ├ Severity        : CRITICAL 
                         │      ├ CweIDs           ─ [0]: CWE-285 
-                        │      ├ VendorSeverity   ╭ ghsa  : 4 
+                        │      ├ VendorSeverity   ╭ amazon: 3 
+                        │      │                  ├ ghsa  : 4 
                         │      │                  ╰ redhat: 3 
                         │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
                         │      │                  │        │           /A:N 
@@ -1460,7 +1465,50 @@
                         │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
                         │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
                         │      ╰ LastModifiedDate: 2026-04-13T19:16:39.807Z 
-                        ├ [8]  ╭ VulnerabilityID : CVE-2026-32281 
+                        ├ [8]  ╭ VulnerabilityID : CVE-2026-33810 
+                        │      ├ VendorIDs        ─ [0]: GO-2026-4866 
+                        │      ├ PkgID           : stdlib@v1.26.1 
+                        │      ├ PkgName         : stdlib 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.26.1 
+                        │      │                  ╰ UID : fd1b63a55787cf45 
+                        │      ├ InstalledVersion: v1.26.1 
+                        │      ├ FixedVersion    : 1.26.2 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:47877b0a31aa04fad689dbcbdc90994e047ed9e603c4
+                        │      │                  │         c23d1b386452e8ef7bf3 
+                        │      │                  ╰ DiffID: sha256:a5d45d5ddeba36fffbf1b3d253c37b5755d608eec8c8
+                        │      │                            97136ce1a50eb79bb62c 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-33810 
+                        │      ├ DataSource       ╭ ID  : govulndb 
+                        │      │                  ├ Name: The Go Vulnerability Database 
+                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │      ├ Fingerprint     : sha256:b72a831ec11282cdb458379113a7398d3dbb527c920895927c0c9
+                        │      │                   3c33b119206 
+                        │      ├ Title           : crypto/x509: golang: Go crypto/x509: Certificate validation
+                        │      │                   bypass due to incorrect DNS constraint application 
+                        │      ├ Description     : When verifying a certificate chain containing excluded DNS
+                        │      │                   constraints, these constraints are not correctly applied to
+                        │      │                   wildcard DNS SANs which use a different case than the
+                        │      │                   constraint. This only affects validation of otherwise
+                        │      │                   trusted certificate chains, issued by a root CA in the
+                        │      │                   VerifyOptions.Roots CertPool, or in the system certificate
+                        │      │                   pool. 
+                        │      ├ Severity        : HIGH 
+                        │      ├ VendorSeverity   ─ redhat: 3 
+                        │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L
+                        │      │                           │           /A:L 
+                        │      │                           ╰ V3Score : 8.8 
+                        │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-33810 
+                        │      │                  ├ [1]: https://go.dev/cl/763763 
+                        │      │                  ├ [2]: https://go.dev/issue/78332 
+                        │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
+                        │      │                  │      RWU 
+                        │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-33810 
+                        │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4866 
+                        │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-33810 
+                        │      ├ PublishedDate   : 2026-04-08T02:16:03.95Z 
+                        │      ╰ LastModifiedDate: 2026-04-13T19:16:42.317Z 
+                        ├ [9]  ╭ VulnerabilityID : CVE-2026-32281 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4946 
                         │      ├ PkgID           : stdlib@v1.26.1 
                         │      ├ PkgName         : stdlib 
@@ -1503,7 +1551,7 @@
                         │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32281 
                         │      ├ PublishedDate   : 2026-04-08T02:16:03.35Z 
                         │      ╰ LastModifiedDate: 2026-04-13T19:16:39.607Z 
-                        ├ [9]  ╭ VulnerabilityID : CVE-2026-32288 
+                        ├ [10] ╭ VulnerabilityID : CVE-2026-32288 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4869 
                         │      ├ PkgID           : stdlib@v1.26.1 
                         │      ├ PkgName         : stdlib 
@@ -1543,7 +1591,7 @@
                         │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32288 
                         │      ├ PublishedDate   : 2026-04-08T02:16:03.707Z 
                         │      ╰ LastModifiedDate: 2026-04-13T19:16:40.21Z 
-                        ├ [10] ╭ VulnerabilityID : CVE-2026-32289 
+                        ├ [11] ╭ VulnerabilityID : CVE-2026-32289 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4865 
                         │      ├ PkgID           : stdlib@v1.26.1 
                         │      ├ PkgName         : stdlib 
@@ -1588,76 +1636,39 @@
                         │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32289 
                         │      ├ PublishedDate   : 2026-04-08T02:16:03.82Z 
                         │      ╰ LastModifiedDate: 2026-04-13T19:16:40.41Z 
-                        ├ [11] ╭ VulnerabilityID : CVE-2026-32283 
-                        │      ├ VendorIDs        ─ [0]: GO-2026-4870 
-                        │      ├ PkgID           : stdlib@v1.26.1 
-                        │      ├ PkgName         : stdlib 
-                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.26.1 
-                        │      │                  ╰ UID : fd1b63a55787cf45 
-                        │      ├ InstalledVersion: v1.26.1 
-                        │      ├ FixedVersion    : 1.25.9, 1.26.2 
-                        │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:47877b0a31aa04fad689dbcbdc90994e047ed9e603c4
-                        │      │                  │         c23d1b386452e8ef7bf3 
-                        │      │                  ╰ DiffID: sha256:a5d45d5ddeba36fffbf1b3d253c37b5755d608eec8c8
-                        │      │                            97136ce1a50eb79bb62c 
-                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32283 
-                        │      ├ DataSource       ╭ ID  : govulndb 
-                        │      │                  ├ Name: The Go Vulnerability Database 
-                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │      ├ Fingerprint     : sha256:85e4eebf6bcaf59fd2c1cfda611bd8b68ae84ff070240e4404666
-                        │      │                   7aa26545f16 
-                        │      ├ Title           : If one side of the TLS connection sends multiple key update
-                        │      │                   messages p ... 
-                        │      ├ Description     : If one side of the TLS connection sends multiple key update
-                        │      │                   messages post-handshake in a single record, the connection
-                        │      │                   can deadlock, causing uncontrolled consumption of resources.
-                        │      │                    This can lead to a denial of service. This only affects TLS
-                        │      │                    1.3. 
-                        │      ├ Severity        : UNKNOWN 
-                        │      ├ References       ╭ [0]: https://go.dev/cl/763767 
-                        │      │                  ├ [1]: https://go.dev/issue/78334 
-                        │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
-                        │      │                  │      RWU 
-                        │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-                        │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4870 
-                        │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
-                        │      ╰ LastModifiedDate: 2026-04-13T19:16:40Z 
-                        ╰ [12] ╭ VulnerabilityID : CVE-2026-33810 
-                               ├ VendorIDs        ─ [0]: GO-2026-4866 
+                        ╰ [12] ╭ VulnerabilityID : CVE-2026-32283 
+                               ├ VendorIDs        ─ [0]: GO-2026-4870 
                                ├ PkgID           : stdlib@v1.26.1 
                                ├ PkgName         : stdlib 
                                ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.26.1 
                                │                  ╰ UID : fd1b63a55787cf45 
                                ├ InstalledVersion: v1.26.1 
-                               ├ FixedVersion    : 1.26.2 
+                               ├ FixedVersion    : 1.25.9, 1.26.2 
                                ├ Status          : fixed 
                                ├ Layer            ╭ Digest: sha256:47877b0a31aa04fad689dbcbdc90994e047ed9e603c4
                                │                  │         c23d1b386452e8ef7bf3 
                                │                  ╰ DiffID: sha256:a5d45d5ddeba36fffbf1b3d253c37b5755d608eec8c8
                                │                            97136ce1a50eb79bb62c 
-                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-33810 
+                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32283 
                                ├ DataSource       ╭ ID  : govulndb 
                                │                  ├ Name: The Go Vulnerability Database 
                                │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                               ├ Fingerprint     : sha256:b72a831ec11282cdb458379113a7398d3dbb527c920895927c0c9
-                               │                   3c33b119206 
-                               ├ Title           : When verifying a certificate chain containing excluded DNS
-                               │                   constraints ... 
-                               ├ Description     : When verifying a certificate chain containing excluded DNS
-                               │                   constraints, these constraints are not correctly applied to
-                               │                   wildcard DNS SANs which use a different case than the
-                               │                   constraint. This only affects validation of otherwise
-                               │                   trusted certificate chains, issued by a root CA in the
-                               │                   VerifyOptions.Roots CertPool, or in the system certificate
-                               │                   pool. 
+                               ├ Fingerprint     : sha256:85e4eebf6bcaf59fd2c1cfda611bd8b68ae84ff070240e4404666
+                               │                   7aa26545f16 
+                               ├ Title           : If one side of the TLS connection sends multiple key update
+                               │                   messages p ... 
+                               ├ Description     : If one side of the TLS connection sends multiple key update
+                               │                   messages post-handshake in a single record, the connection
+                               │                   can deadlock, causing uncontrolled consumption of resources.
+                               │                    This can lead to a denial of service. This only affects TLS
+                               │                    1.3. 
                                ├ Severity        : UNKNOWN 
-                               ├ References       ╭ [0]: https://go.dev/cl/763763 
-                               │                  ├ [1]: https://go.dev/issue/78332 
+                               ├ References       ╭ [0]: https://go.dev/cl/763767 
+                               │                  ├ [1]: https://go.dev/issue/78334 
                                │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
                                │                  │      RWU 
-                               │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-33810 
-                               │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4866 
-                               ├ PublishedDate   : 2026-04-08T02:16:03.95Z 
-                               ╰ LastModifiedDate: 2026-04-13T19:16:42.317Z 
+                               │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+                               │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4870 
+                               ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
+                               ╰ LastModifiedDate: 2026-04-13T19:16:40Z 
 ````
