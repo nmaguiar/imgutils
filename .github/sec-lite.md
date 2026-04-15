@@ -1070,7 +1070,8 @@
                         │      │                    slice index and a runtime panic, allowing a denial of
                         │      │                   service attack. 
                         │      ├ Severity        : HIGH 
-                        │      ├ VendorSeverity   ╭ ghsa  : 3 
+                        │      ├ VendorSeverity   ╭ amazon: 3 
+                        │      │                  ├ ghsa  : 3 
                         │      │                  ╰ redhat: 3 
                         │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
                         │      │                  │        │           /A:H 
@@ -1124,6 +1125,7 @@
                         │      ├ CweIDs           ─ [0]: CWE-288 
                         │      ├ VendorSeverity   ╭ ghsa  : 3 
                         │      │                  ├ nvd   : 3 
+                        │      │                  ├ photon: 3 
                         │      │                  ╰ redhat: 2 
                         │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H
                         │      │                  │        │           /A:H 
@@ -1184,8 +1186,10 @@
                         │      │                   This issue has been patched in version 29.3.1. 
                         │      ├ Severity        : MEDIUM 
                         │      ├ CweIDs           ─ [0]: CWE-193 
-                        │      ├ VendorSeverity   ╭ ghsa  : 2 
+                        │      ├ VendorSeverity   ╭ amazon: 2 
+                        │      │                  ├ ghsa  : 2 
                         │      │                  ├ nvd   : 3 
+                        │      │                  ├ photon: 3 
                         │      │                  ╰ redhat: 3 
                         │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H
                         │      │                  │        │           /A:N 
@@ -1358,7 +1362,8 @@
                         │      │                   policy hardening. 
                         │      ├ Severity        : CRITICAL 
                         │      ├ CweIDs           ─ [0]: CWE-285 
-                        │      ├ VendorSeverity   ╭ ghsa  : 4 
+                        │      ├ VendorSeverity   ╭ amazon: 3 
+                        │      │                  ├ ghsa  : 4 
                         │      │                  ╰ redhat: 3 
                         │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
                         │      │                  │        │           /A:N 
@@ -1769,7 +1774,7 @@
                         │      │                  ├ [6] : https://groups.google.com/g/golang-announce/c/EdhZqrQ
                         │      │                  │       98hk 
                         │      │                  ├ [7] : https://linux.oracle.com/cve/CVE-2026-25679.html 
-                        │      │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2026-7259.html 
+                        │      │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2026-7992.html 
                         │      │                  ├ [9] : https://nvd.nist.gov/vuln/detail/CVE-2026-25679 
                         │      │                  ├ [10]: https://pkg.go.dev/vuln/GO-2026-4601 
                         │      │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
