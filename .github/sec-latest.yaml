@@ -2906,7 +2906,7 @@
     - https://pkg.go.dev/vuln/GO-2025-4014
     - https://www.cve.org/CVERecord?id=CVE-2025-58183
     PublishedDate: '2025-10-29T23:16:19.357Z'
-    LastModifiedDate: '2025-11-04T22:16:33.2Z'
+    LastModifiedDate: '2026-04-15T00:35:42.02Z'
   - VulnerabilityID: CVE-2025-61726
     VendorIDs:
     - GO-2026-4341
@@ -3134,6 +3134,7 @@
       bitnami: 3
       oracle-oval: 3
       redhat: 3
+      rocky: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -3145,7 +3146,10 @@
     - https://access.redhat.com/errata/RHSA-2026:6383
     - https://access.redhat.com/security/cve/CVE-2026-25679
     - https://bugzilla.redhat.com/2445356
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://errata.almalinux.org/9/ALSA-2026-6383.html
+    - https://errata.rockylinux.org/RLSA-2026:7259
     - https://go.dev/cl/752180
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
@@ -3276,7 +3280,7 @@
     - https://pkg.go.dev/vuln/GO-2025-3955
     - https://www.cve.org/CVERecord?id=CVE-2025-47910
     PublishedDate: '2025-09-22T21:15:59.627Z'
-    LastModifiedDate: '2025-09-24T14:15:49.437Z'
+    LastModifiedDate: '2026-04-15T00:35:42.02Z'
   - VulnerabilityID: CVE-2025-47912
     VendorIDs:
     - GO-2025-4010
@@ -3417,7 +3421,7 @@
     - https://pkg.go.dev/vuln/GO-2025-4012
     - https://www.cve.org/CVERecord?id=CVE-2025-58186
     PublishedDate: '2025-10-29T23:16:19.547Z'
-    LastModifiedDate: '2025-11-04T22:16:33.45Z'
+    LastModifiedDate: '2026-04-15T00:35:42.02Z'
   - VulnerabilityID: CVE-2025-58187
     VendorIDs:
     - GO-2025-4007
@@ -3706,7 +3710,7 @@
     - https://pkg.go.dev/vuln/GO-2025-4006
     - https://www.cve.org/CVERecord?id=CVE-2025-61725
     PublishedDate: '2025-10-29T23:16:20.113Z'
-    LastModifiedDate: '2025-12-09T18:15:56.347Z'
+    LastModifiedDate: '2026-04-15T00:35:42.02Z'
   - VulnerabilityID: CVE-2025-61727
     VendorIDs:
     - GO-2025-4175
@@ -4983,6 +4987,7 @@
       bitnami: 3
       oracle-oval: 3
       redhat: 3
+      rocky: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -4994,7 +4999,10 @@
     - https://access.redhat.com/errata/RHSA-2026:6383
     - https://access.redhat.com/security/cve/CVE-2026-25679
     - https://bugzilla.redhat.com/2445356
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://errata.almalinux.org/9/ALSA-2026-6383.html
+    - https://errata.rockylinux.org/RLSA-2026:7259
     - https://go.dev/cl/752180
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
@@ -6156,7 +6164,7 @@
     - https://pkg.go.dev/vuln/GO-2025-3900
     - https://www.cve.org/CVERecord?id=CVE-2025-11065
     PublishedDate: '2026-01-26T20:16:06.84Z'
-    LastModifiedDate: '2026-02-03T20:15:56.087Z'
+    LastModifiedDate: '2026-04-15T00:35:42.02Z'
   - VulnerabilityID: GHSA-fv92-fjc5-jj9h
     PkgID: github.com/go-viper/mapstructure/v2@v2.2.1
     PkgName: github.com/go-viper/mapstructure/v2
@@ -6244,7 +6252,7 @@
     - https://ubuntu.com/security/notices/USN-8089-3
     - https://www.cve.org/CVERecord?id=CVE-2025-22872
     PublishedDate: '2025-04-16T18:16:04.183Z'
-    LastModifiedDate: '2025-05-16T23:15:19.707Z'
+    LastModifiedDate: '2026-04-15T00:35:42.02Z'
   - VulnerabilityID: CVE-2025-68121
     VendorIDs:
     - GO-2026-4337
@@ -6343,6 +6351,7 @@
       bitnami: 3
       oracle-oval: 3
       redhat: 3
+      rocky: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -6354,7 +6363,10 @@
     - https://access.redhat.com/errata/RHSA-2026:6383
     - https://access.redhat.com/security/cve/CVE-2026-25679
     - https://bugzilla.redhat.com/2445356
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://errata.almalinux.org/9/ALSA-2026-6383.html
+    - https://errata.rockylinux.org/RLSA-2026:7259
     - https://go.dev/cl/752180
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
@@ -6793,6 +6805,7 @@
       bitnami: 3
       oracle-oval: 3
       redhat: 3
+      rocky: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -6804,7 +6817,10 @@
     - https://access.redhat.com/errata/RHSA-2026:6383
     - https://access.redhat.com/security/cve/CVE-2026-25679
     - https://bugzilla.redhat.com/2445356
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://errata.almalinux.org/9/ALSA-2026-6383.html
+    - https://errata.rockylinux.org/RLSA-2026:7259
     - https://go.dev/cl/752180
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
@@ -8807,6 +8823,7 @@
       bitnami: 3
       oracle-oval: 3
       redhat: 3
+      rocky: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -8818,7 +8835,10 @@
     - https://access.redhat.com/errata/RHSA-2026:6383
     - https://access.redhat.com/security/cve/CVE-2026-25679
     - https://bugzilla.redhat.com/2445356
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://errata.almalinux.org/9/ALSA-2026-6383.html
+    - https://errata.rockylinux.org/RLSA-2026:7259
     - https://go.dev/cl/752180
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
@@ -11071,6 +11091,7 @@
       bitnami: 3
       oracle-oval: 3
       redhat: 3
+      rocky: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -11082,7 +11103,10 @@
     - https://access.redhat.com/errata/RHSA-2026:6383
     - https://access.redhat.com/security/cve/CVE-2026-25679
     - https://bugzilla.redhat.com/2445356
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://errata.almalinux.org/9/ALSA-2026-6383.html
+    - https://errata.rockylinux.org/RLSA-2026:7259
     - https://go.dev/cl/752180
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
@@ -12846,7 +12870,7 @@
     - https://pkg.go.dev/vuln/GO-2026-4358
     - https://www.cve.org/CVERecord?id=CVE-2026-24137
     PublishedDate: '2026-01-23T00:15:52.553Z'
-    LastModifiedDate: '2026-01-26T15:04:14.85Z'
+    LastModifiedDate: '2026-04-15T00:35:42.02Z'
   - VulnerabilityID: CVE-2025-47914
     VendorIDs:
     - GHSA-f6x5-jh6r-wrfv
@@ -13090,6 +13114,7 @@
       bitnami: 3
       oracle-oval: 3
       redhat: 3
+      rocky: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -13101,7 +13126,10 @@
     - https://access.redhat.com/errata/RHSA-2026:6383
     - https://access.redhat.com/security/cve/CVE-2026-25679
     - https://bugzilla.redhat.com/2445356
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://errata.almalinux.org/9/ALSA-2026-6383.html
+    - https://errata.rockylinux.org/RLSA-2026:7259
     - https://go.dev/cl/752180
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
@@ -17414,6 +17442,7 @@
       bitnami: 3
       oracle-oval: 3
       redhat: 3
+      rocky: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -17425,7 +17454,10 @@
     - https://access.redhat.com/errata/RHSA-2026:6383
     - https://access.redhat.com/security/cve/CVE-2026-25679
     - https://bugzilla.redhat.com/2445356
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://errata.almalinux.org/9/ALSA-2026-6383.html
+    - https://errata.rockylinux.org/RLSA-2026:7259
     - https://go.dev/cl/752180
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
