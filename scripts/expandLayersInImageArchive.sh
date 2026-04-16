@@ -39,6 +39,15 @@ else
   mkdir -p $2
 fi
 
+# Run archive extraction through sudo so image-owned files and metadata do not fail on extract.
+extract_layer_to_dir() {
+  local archive_file="$1"
+  local archive_entry="$2"
+  local output_dir="$3"
+
+  sudo tar -xOf "$archive_file" "$archive_entry" | sudo tar -xf - -C "$output_dir" 2>/dev/null
+}
+
 # Check if it's a docker archive or an OCI archive and converting to docker archive
 convert2dockerarchive.sh $1
 
@@ -50,7 +59,7 @@ for tarFile in $(tar -tf $1 | grep '\.tar$'); do
     # Create the layer directory in the output directory
     mkdir -p $2/$(basename $tarFile .tar)
     # Extract the tar file to the layer directory
-    tar -xOf $1 $tarFile | tar -xf - -C $2/$(basename $tarFile .tar) 2>/dev/null
+    extract_layer_to_dir "$1" "$tarFile" "$2/$(basename "$tarFile" .tar)"
 done
 
 # Extract the image json (excluding the manifest) to an output file
@@ -59,5 +68,5 @@ for tarFile in $(tar -tf $1 | grep '\.json$'); do
         continue
     fi
     # Extract the tar file to the output directory name as a json file
-    tar -xOf $1 $tarFile > $2.json
+    sudo tar -xOf "$1" "$tarFile" > "$2.json"
 done
