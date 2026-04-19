@@ -1,4 +1,4 @@
-````yaml
+```yaml
 ╭ [0] ╭ Target: nmaguiar/imgutils:latest (alpine 3.24.0_alpha20251224) 
 │     ├ Class : os-pkgs 
 │     ╰ Type  : alpine 
@@ -19437,4 +19437,4 @@
                                │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4870 
                                ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
                                ╰ LastModifiedDate: 2026-04-13T19:16:40Z 
-````
+```
