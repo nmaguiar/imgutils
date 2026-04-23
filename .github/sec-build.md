@@ -22,6 +22,7 @@
 │     │      │                   malformed JSON input. This can lead to a negative slice index and a runtime
 │     │      │                   panic, allowing a denial of service attack. 
 │     │      ├ Severity        : HIGH 
+│     │      ├ CweIDs           ─ [0]: CWE-129 
 │     │      ├ VendorSeverity   ╭ amazon: 3 
 │     │      │                  ├ ghsa  : 3 
 │     │      │                  ╰ redhat: 3 
@@ -43,7 +44,7 @@
 │     │      │                  │       anic-dos-2026 
 │     │      │                  ╰ [10]: https://www.cve.org/CVERecord?id=CVE-2026-32285 
 │     │      ├ PublishedDate   : 2026-03-26T20:16:12.197Z 
-│     │      ╰ LastModifiedDate: 2026-03-30T15:16:27.963Z 
+│     │      ╰ LastModifiedDate: 2026-04-21T15:42:07.52Z 
 │     ├ [1]  ╭ VulnerabilityID : CVE-2026-34040 
 │     │      ├ VendorIDs        ─ [0]: GHSA-x744-4wpc-v9h2 
 │     │      ├ PkgID           : github.com/docker/docker@v28.3.3+incompatible 
@@ -1055,8 +1056,9 @@
 │     │      ├ Description     : url.Parse insufficiently validated the host/authority component and accepted
 │     │      │                   some invalid URLs. 
 │     │      ├ Severity        : HIGH 
+│     │      ├ CweIDs           ─ [0]: CWE-425 
 │     │      ├ VendorSeverity   ╭ alma       : 3 
-│     │      │                  ├ amazon     : 3 
+│     │      │                  ├ amazon     : 2 
 │     │      │                  ├ azure      : 3 
 │     │      │                  ├ bitnami    : 3 
 │     │      │                  ├ oracle-oval: 3 
@@ -1066,23 +1068,23 @@
 │     │      │                  │         ╰ V3Score : 7.5 
 │     │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
 │     │      │                            ╰ V3Score : 7.5 
-│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:8841 
+│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:9044 
 │     │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-25679 
 │     │      │                  ├ [2] : https://bugzilla.redhat.com/2445356 
 │     │      │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
 │     │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679 
-│     │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-8841.html 
+│     │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-9044.html 
 │     │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:7259 
 │     │      │                  ├ [7] : https://go.dev/cl/752180 
 │     │      │                  ├ [8] : https://go.dev/issue/77578 
 │     │      │                  ├ [9] : https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
 │     │      │                  ├ [10]: https://linux.oracle.com/cve/CVE-2026-25679.html 
-│     │      │                  ├ [11]: https://linux.oracle.com/errata/ELSA-2026-8842.html 
+│     │      │                  ├ [11]: https://linux.oracle.com/errata/ELSA-2026-9044.html 
 │     │      │                  ├ [12]: https://nvd.nist.gov/vuln/detail/CVE-2026-25679 
 │     │      │                  ├ [13]: https://pkg.go.dev/vuln/GO-2026-4601 
 │     │      │                  ╰ [14]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
 │     │      ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
-│     │      ╰ LastModifiedDate: 2026-03-10T18:18:37.74Z 
+│     │      ╰ LastModifiedDate: 2026-04-21T14:43:03.8Z 
 │     ├ [7]  ╭ VulnerabilityID : CVE-2026-32280 
 │     │      ├ VendorIDs        ─ [0]: GO-2026-4947 
 │     │      ├ PkgID           : stdlib@v1.24.13 
@@ -1228,7 +1230,8 @@
 │     │      │                   actions in the meta content attribute which follow "url=" by setting
 │     │      │                   htmlmetacontenturlescape=0. 
 │     │      ├ Severity        : MEDIUM 
-│     │      ├ VendorSeverity   ╭ amazon : 3 
+│     │      ├ CweIDs           ─ [0]: CWE-79 
+│     │      ├ VendorSeverity   ╭ amazon : 2 
 │     │      │                  ├ bitnami: 2 
 │     │      │                  ╰ redhat : 2 
 │     │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N 
@@ -1243,7 +1246,7 @@
 │     │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4603 
 │     │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27142 
 │     │      ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
-│     │      ╰ LastModifiedDate: 2026-03-16T16:16:13.77Z 
+│     │      ╰ LastModifiedDate: 2026-04-21T14:30:01.38Z 
 │     ├ [11] ╭ VulnerabilityID : CVE-2026-32282 
 │     │      ├ VendorIDs        ─ [0]: GO-2026-4864 
 │     │      ├ PkgID           : stdlib@v1.24.13 
@@ -1400,7 +1403,8 @@
 │            │                   reading metadata provided by lstat from arbitrary locations on the filesystem
 │            │                   without permitting reading or writing files outside the root. 
 │            ├ Severity        : LOW 
-│            ├ VendorSeverity   ╭ amazon : 3 
+│            ├ CweIDs           ─ [0]: CWE-22 
+│            ├ VendorSeverity   ╭ amazon : 2 
 │            │                  ├ azure  : 1 
 │            │                  ├ bitnami: 1 
 │            │                  ╰ redhat : 1 
@@ -1416,7 +1420,7 @@
 │            │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4602 
 │            │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27139 
 │            ├ PublishedDate   : 2026-03-06T22:16:01.07Z 
-│            ╰ LastModifiedDate: 2026-03-09T15:15:57.15Z 
+│            ╰ LastModifiedDate: 2026-04-21T14:32:36.317Z 
 ├ [3] ╭ [0] ╭ VulnerabilityID : CVE-2026-34040 
 │     │     ├ VendorIDs        ─ [0]: GHSA-x744-4wpc-v9h2 
 │     │     ├ PkgID           : github.com/docker/docker@v28.5.2+incompatible 
