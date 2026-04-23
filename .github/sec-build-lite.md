@@ -1070,6 +1070,7 @@
                         │      │                    slice index and a runtime panic, allowing a denial of
                         │      │                   service attack. 
                         │      ├ Severity        : HIGH 
+                        │      ├ CweIDs           ─ [0]: CWE-129 
                         │      ├ VendorSeverity   ╭ amazon: 3 
                         │      │                  ├ ghsa  : 3 
                         │      │                  ╰ redhat: 3 
@@ -1093,7 +1094,7 @@
                         │      │                  │       r-negative-slice-panic-dos-2026 
                         │      │                  ╰ [10]: https://www.cve.org/CVERecord?id=CVE-2026-32285 
                         │      ├ PublishedDate   : 2026-03-26T20:16:12.197Z 
-                        │      ╰ LastModifiedDate: 2026-03-30T15:16:27.963Z 
+                        │      ╰ LastModifiedDate: 2026-04-21T15:42:07.52Z 
                         ├ [1]  ╭ VulnerabilityID : CVE-2026-34040 
                         │      ├ VendorIDs        ─ [0]: GHSA-x744-4wpc-v9h2 
                         │      ├ PkgID           : github.com/docker/docker@v28.3.3+incompatible 
