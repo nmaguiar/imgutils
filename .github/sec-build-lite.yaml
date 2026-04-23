@@ -1033,6 +1033,8 @@
     Title: 'github.com/buger/jsonparser: github.com/buger/jsonparser: Denial of Service via malformed JSON input'
     Description: The Delete function fails to properly validate offsets when processing malformed JSON input. This can lead to a negative slice index and a runtime panic, allowing a denial of service attack.
     Severity: HIGH
+    CweIDs:
+    - CWE-129
     VendorSeverity:
       amazon: 3
       ghsa: 3
@@ -1057,7 +1059,7 @@
     - https://securityinfinity.com/research/buger-jsonparser-negative-slice-panic-dos-2026
     - https://www.cve.org/CVERecord?id=CVE-2026-32285
     PublishedDate: '2026-03-26T20:16:12.197Z'
-    LastModifiedDate: '2026-03-30T15:16:27.963Z'
+    LastModifiedDate: '2026-04-21T15:42:07.52Z'
   - VulnerabilityID: CVE-2026-34040
     VendorIDs:
     - GHSA-x744-4wpc-v9h2
