@@ -114,10 +114,10 @@
       │                 │      │              ├ [87]: sigs.k8s.io/structured-merge-diff/v6@v6.3.0 
       │                 │      │              ├ [88]: sigs.k8s.io/yaml@v1.6.0 
       │                 │      │              ╰ [89]: stdlib@v1.26.1 
-      │                 │      ├ Layer        ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c
-      │                 │      │              │         24b41bbf4210d205 
-      │                 │      │              ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b569
-      │                 │      │                        647423d6cecab91f 
+      │                 │      ├ Layer        ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac78
+      │                 │      │              │         0b49477eb96cce99 
+      │                 │      │              ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aa
+      │                 │      │                        dbaa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy  : gobinary 
       │                 ├ [1]  ╭ ID          : stdlib@v1.26.1 
       │                 │      ├ Name        : stdlib 
@@ -125,90 +125,90 @@
       │                 │      │              ╰ UID : fd1b63a55787cf45 
       │                 │      ├ Version     : v1.26.1 
       │                 │      ├ Relationship: direct 
-      │                 │      ├ Layer        ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c
-      │                 │      │              │         24b41bbf4210d205 
-      │                 │      │              ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b569
-      │                 │      │                        647423d6cecab91f 
+      │                 │      ├ Layer        ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac78
+      │                 │      │              │         0b49477eb96cce99 
+      │                 │      │              ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aa
+      │                 │      │                        dbaa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy  : gobinary 
       │                 ├ [2]  ╭ ID        : github.com/Masterminds/semver/v3@v3.4.0 
       │                 │      ├ Name      : github.com/Masterminds/semver/v3 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/masterminds/semver/v3@v3.4.0 
       │                 │      │            ╰ UID : 61979fc8ec4a16d1 
       │                 │      ├ Version   : v3.4.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [3]  ╭ ID        : github.com/bahlo/generic-list-go@v0.2.0 
       │                 │      ├ Name      : github.com/bahlo/generic-list-go 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/bahlo/generic-list-go@v0.2.0 
       │                 │      │            ╰ UID : cc1b9b6d9db37f11 
       │                 │      ├ Version   : v0.2.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [4]  ╭ ID        : github.com/beorn7/perks@v1.0.1 
       │                 │      ├ Name      : github.com/beorn7/perks 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/beorn7/perks@v1.0.1 
       │                 │      │            ╰ UID : a600fae07525a979 
       │                 │      ├ Version   : v1.0.1 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [5]  ╭ ID        : github.com/blang/semver/v4@v4.0.0 
       │                 │      ├ Name      : github.com/blang/semver/v4 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/blang/semver/v4@v4.0.0 
       │                 │      │            ╰ UID : 3c4c58067a3fb5f4 
       │                 │      ├ Version   : v4.0.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [6]  ╭ ID        : github.com/buger/jsonparser@v1.1.1 
       │                 │      ├ Name      : github.com/buger/jsonparser 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/buger/jsonparser@v1.1.1 
       │                 │      │            ╰ UID : ca4c6b1f9a21412b 
       │                 │      ├ Version   : v1.1.1 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [7]  ╭ ID        : github.com/cenkalti/backoff/v5@v5.0.2 
       │                 │      ├ Name      : github.com/cenkalti/backoff/v5 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/cenkalti/backoff/v5@v5.0.2 
       │                 │      │            ╰ UID : 17da9672588a8cd7 
       │                 │      ├ Version   : v5.0.2 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [8]  ╭ ID        : github.com/cespare/xxhash/v2@v2.3.0 
       │                 │      ├ Name      : github.com/cespare/xxhash/v2 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/cespare/xxhash/v2@v2.3.0 
       │                 │      │            ╰ UID : ae14b47911e674c0 
       │                 │      ├ Version   : v2.3.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [9]  ╭ ID        : github.com/cpuguy83/go-md2man/v2@v2.0.7 
       │                 │      ├ Name      : github.com/cpuguy83/go-md2man/v2 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/cpuguy83/go-md2man/v2@v2.0.7 
       │                 │      │            ╰ UID : 53631060e8952d0 
       │                 │      ├ Version   : v2.0.7 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [10] ╭ ID        : github.com/davecgh/go-spew@v1.1.2-0.20180830191138-d8f796af33cc 
       │                 │      ├ Name      : github.com/davecgh/go-spew 
@@ -216,110 +216,110 @@
       │                 │      │            │       38-d8f796af33cc 
       │                 │      │            ╰ UID : 168e0b1cd8db2fed 
       │                 │      ├ Version   : v1.1.2-0.20180830191138-d8f796af33cc 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [11] ╭ ID        : github.com/distribution/reference@v0.6.0 
       │                 │      ├ Name      : github.com/distribution/reference 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/distribution/reference@v0.6.0 
       │                 │      │            ╰ UID : de61d6c0a0a57b33 
       │                 │      ├ Version   : v0.6.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [12] ╭ ID        : github.com/docker/docker@v28.3.3+incompatible 
       │                 │      ├ Name      : github.com/docker/docker 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/docker/docker@v28.3.3%2Bincompatible 
       │                 │      │            ╰ UID : a108c38e2d3411ae 
       │                 │      ├ Version   : v28.3.3+incompatible 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [13] ╭ ID        : github.com/docker/go-units@v0.5.0 
       │                 │      ├ Name      : github.com/docker/go-units 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/docker/go-units@v0.5.0 
       │                 │      │            ╰ UID : 8a035529378502ea 
       │                 │      ├ Version   : v0.5.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [14] ╭ ID        : github.com/felixge/httpsnoop@v1.0.4 
       │                 │      ├ Name      : github.com/felixge/httpsnoop 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/felixge/httpsnoop@v1.0.4 
       │                 │      │            ╰ UID : 416ab57515c73dc2 
       │                 │      ├ Version   : v1.0.4 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [15] ╭ ID        : github.com/fsnotify/fsnotify@v1.9.0 
       │                 │      ├ Name      : github.com/fsnotify/fsnotify 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/fsnotify/fsnotify@v1.9.0 
       │                 │      │            ╰ UID : 4e3a94a1b8cfcc63 
       │                 │      ├ Version   : v1.9.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [16] ╭ ID        : github.com/fxamacker/cbor/v2@v2.9.0 
       │                 │      ├ Name      : github.com/fxamacker/cbor/v2 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/fxamacker/cbor/v2@v2.9.0 
       │                 │      │            ╰ UID : bfa2bf70a280b22b 
       │                 │      ├ Version   : v2.9.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [17] ╭ ID        : github.com/go-logr/logr@v1.4.3 
       │                 │      ├ Name      : github.com/go-logr/logr 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/go-logr/logr@v1.4.3 
       │                 │      │            ╰ UID : 3e9387ec5e0495ae 
       │                 │      ├ Version   : v1.4.3 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [18] ╭ ID        : github.com/go-logr/stdr@v1.2.2 
       │                 │      ├ Name      : github.com/go-logr/stdr 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/go-logr/stdr@v1.2.2 
       │                 │      │            ╰ UID : c75c5a2e1b160a5d 
       │                 │      ├ Version   : v1.2.2 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [19] ╭ ID        : github.com/google/go-cmp@v0.7.0 
       │                 │      ├ Name      : github.com/google/go-cmp 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/google/go-cmp@v0.7.0 
       │                 │      │            ╰ UID : 3c19127019e40e93 
       │                 │      ├ Version   : v0.7.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [20] ╭ ID        : github.com/google/uuid@v1.6.0 
       │                 │      ├ Name      : github.com/google/uuid 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/google/uuid@v1.6.0 
       │                 │      │            ╰ UID : 3290f48c8d5533ff 
       │                 │      ├ Version   : v1.6.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [21] ╭ ID        : github.com/gorilla/websocket@v1.5.4-0.20250319132907-e064f32e3674 
       │                 │      ├ Name      : github.com/gorilla/websocket 
@@ -327,40 +327,40 @@
       │                 │      │            │       2907-e064f32e3674 
       │                 │      │            ╰ UID : 1d5a2f6d05a6ee57 
       │                 │      ├ Version   : v1.5.4-0.20250319132907-e064f32e3674 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [22] ╭ ID        : github.com/grpc-ecosystem/grpc-gateway/v2@v2.27.1 
       │                 │      ├ Name      : github.com/grpc-ecosystem/grpc-gateway/v2 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/grpc-ecosystem/grpc-gateway/v2@v2.27.1 
       │                 │      │            ╰ UID : 381e0fc6fff88a2c 
       │                 │      ├ Version   : v2.27.1 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [23] ╭ ID        : github.com/invopop/jsonschema@v0.13.0 
       │                 │      ├ Name      : github.com/invopop/jsonschema 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/invopop/jsonschema@v0.13.0 
       │                 │      │            ╰ UID : 346245bdd925cb0e 
       │                 │      ├ Version   : v0.13.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [24] ╭ ID        : github.com/json-iterator/go@v1.1.12 
       │                 │      ├ Name      : github.com/json-iterator/go 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/json-iterator/go@v1.1.12 
       │                 │      │            ╰ UID : 77804eec1fc4967d 
       │                 │      ├ Version   : v1.1.12 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [25] ╭ ID        : github.com/liggitt/tabwriter@v0.0.0-20181228230101-89fcab3d43de 
       │                 │      ├ Name      : github.com/liggitt/tabwriter 
@@ -368,50 +368,50 @@
       │                 │      │            │       01-89fcab3d43de 
       │                 │      │            ╰ UID : c7923f6efc458305 
       │                 │      ├ Version   : v0.0.0-20181228230101-89fcab3d43de 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [26] ╭ ID        : github.com/mailru/easyjson@v0.7.7 
       │                 │      ├ Name      : github.com/mailru/easyjson 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/mailru/easyjson@v0.7.7 
       │                 │      │            ╰ UID : cb1165ed9ed49e75 
       │                 │      ├ Version   : v0.7.7 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [27] ╭ ID        : github.com/mitchellh/go-wordwrap@v1.0.1 
       │                 │      ├ Name      : github.com/mitchellh/go-wordwrap 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/mitchellh/go-wordwrap@v1.0.1 
       │                 │      │            ╰ UID : 8e93ccdafc17a7d4 
       │                 │      ├ Version   : v1.0.1 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [28] ╭ ID        : github.com/moby/spdystream@v0.5.0 
       │                 │      ├ Name      : github.com/moby/spdystream 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/moby/spdystream@v0.5.0 
       │                 │      │            ╰ UID : 2ebdf32ca1a4f777 
       │                 │      ├ Version   : v0.5.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [29] ╭ ID        : github.com/moby/term@v0.5.2 
       │                 │      ├ Name      : github.com/moby/term 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/moby/term@v0.5.2 
       │                 │      │            ╰ UID : 37049f197bfbec80 
       │                 │      ├ Version   : v0.5.2 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [30] ╭ ID        : github.com/modern-go/concurrent@v0.0.0-20180306012644-bacd9c7ef1dd 
       │                 │      ├ Name      : github.com/modern-go/concurrent 
@@ -419,10 +419,10 @@
       │                 │      │            │       12644-bacd9c7ef1dd 
       │                 │      │            ╰ UID : 9cf390cf1781d6e3 
       │                 │      ├ Version   : v0.0.0-20180306012644-bacd9c7ef1dd 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [31] ╭ ID        : github.com/modern-go/reflect2@v1.0.3-0.20250322232337-35a7c28c31ee 
       │                 │      ├ Name      : github.com/modern-go/reflect2 
@@ -430,10 +430,10 @@
       │                 │      │            │       32337-35a7c28c31ee 
       │                 │      │            ╰ UID : 698f2c299844d62f 
       │                 │      ├ Version   : v1.0.3-0.20250322232337-35a7c28c31ee 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [32] ╭ ID        : github.com/munnerz/goautoneg@v0.0.0-20191010083416-a7dc8b61c822 
       │                 │      ├ Name      : github.com/munnerz/goautoneg 
@@ -441,10 +441,10 @@
       │                 │      │            │       16-a7dc8b61c822 
       │                 │      │            ╰ UID : a384b2e132544011 
       │                 │      ├ Version   : v0.0.0-20191010083416-a7dc8b61c822 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [33] ╭ ID        : github.com/mxk/go-flowrate@v0.0.0-20140419014527-cca7078d478f 
       │                 │      ├ Name      : github.com/mxk/go-flowrate 
@@ -452,140 +452,140 @@
       │                 │      │            │       -cca7078d478f 
       │                 │      │            ╰ UID : 44ae3a481333854f 
       │                 │      ├ Version   : v0.0.0-20140419014527-cca7078d478f 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [34] ╭ ID        : github.com/onsi/ginkgo/v2@v2.27.2 
       │                 │      ├ Name      : github.com/onsi/ginkgo/v2 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/onsi/ginkgo/v2@v2.27.2 
       │                 │      │            ╰ UID : f607f62db9227e1e 
       │                 │      ├ Version   : v2.27.2 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [35] ╭ ID        : github.com/onsi/gomega@v1.38.2 
       │                 │      ├ Name      : github.com/onsi/gomega 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/onsi/gomega@v1.38.2 
       │                 │      │            ╰ UID : 59432a6edec3acf9 
       │                 │      ├ Version   : v1.38.2 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [36] ╭ ID        : github.com/opencontainers/go-digest@v1.0.0 
       │                 │      ├ Name      : github.com/opencontainers/go-digest 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/opencontainers/go-digest@v1.0.0 
       │                 │      │            ╰ UID : c2f429f266feed25 
       │                 │      ├ Version   : v1.0.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [37] ╭ ID        : github.com/prometheus/client_golang@v1.23.2 
       │                 │      ├ Name      : github.com/prometheus/client_golang 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/prometheus/client_golang@v1.23.2 
       │                 │      │            ╰ UID : 1296fa7c1600be60 
       │                 │      ├ Version   : v1.23.2 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [38] ╭ ID        : github.com/prometheus/client_model@v0.6.2 
       │                 │      ├ Name      : github.com/prometheus/client_model 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/prometheus/client_model@v0.6.2 
       │                 │      │            ╰ UID : 367b97fec4d40939 
       │                 │      ├ Version   : v0.6.2 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [39] ╭ ID        : github.com/prometheus/common@v0.66.1 
       │                 │      ├ Name      : github.com/prometheus/common 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/prometheus/common@v0.66.1 
       │                 │      │            ╰ UID : f5763bd4efaf8b86 
       │                 │      ├ Version   : v0.66.1 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [40] ╭ ID        : github.com/prometheus/procfs@v0.16.1 
       │                 │      ├ Name      : github.com/prometheus/procfs 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/prometheus/procfs@v0.16.1 
       │                 │      │            ╰ UID : fab8672fabe0e226 
       │                 │      ├ Version   : v0.16.1 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [41] ╭ ID        : github.com/russross/blackfriday/v2@v2.1.0 
       │                 │      ├ Name      : github.com/russross/blackfriday/v2 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/russross/blackfriday/v2@v2.1.0 
       │                 │      │            ╰ UID : 761d5729d0c46ad9 
       │                 │      ├ Version   : v2.1.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [42] ╭ ID        : github.com/sirupsen/logrus@v1.9.3 
       │                 │      ├ Name      : github.com/sirupsen/logrus 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/sirupsen/logrus@v1.9.3 
       │                 │      │            ╰ UID : bcb0226bd1fa8b41 
       │                 │      ├ Version   : v1.9.3 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [43] ╭ ID        : github.com/spf13/pflag@v1.0.9 
       │                 │      ├ Name      : github.com/spf13/pflag 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/spf13/pflag@v1.0.9 
       │                 │      │            ╰ UID : a53accbfd46f7978 
       │                 │      ├ Version   : v1.0.9 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [44] ╭ ID        : github.com/urfave/cli/v2@v2.27.7 
       │                 │      ├ Name      : github.com/urfave/cli/v2 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/urfave/cli/v2@v2.27.7 
       │                 │      │            ╰ UID : 85129e2d21a968af 
       │                 │      ├ Version   : v2.27.7 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [45] ╭ ID        : github.com/wk8/go-ordered-map/v2@v2.1.8 
       │                 │      ├ Name      : github.com/wk8/go-ordered-map/v2 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/wk8/go-ordered-map/v2@v2.1.8 
       │                 │      │            ╰ UID : 45a8eacafcbe81df 
       │                 │      ├ Version   : v2.1.8 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [46] ╭ ID        : github.com/x448/float16@v0.8.4 
       │                 │      ├ Name      : github.com/x448/float16 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/x448/float16@v0.8.4 
       │                 │      │            ╰ UID : ac5447e20076e8df 
       │                 │      ├ Version   : v0.8.4 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [47] ╭ ID        : github.com/xrash/smetrics@v0.0.0-20240521201337-686a1a2994c1 
       │                 │      ├ Name      : github.com/xrash/smetrics 
@@ -593,20 +593,20 @@
       │                 │      │            │       686a1a2994c1 
       │                 │      │            ╰ UID : c1853d36683b5a8a 
       │                 │      ├ Version   : v0.0.0-20240521201337-686a1a2994c1 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [48] ╭ ID        : go.opentelemetry.io/auto/sdk@v1.1.0 
       │                 │      ├ Name      : go.opentelemetry.io/auto/sdk 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/go.opentelemetry.io/auto/sdk@v1.1.0 
       │                 │      │            ╰ UID : 3975c84ff401eef6 
       │                 │      ├ Version   : v1.1.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [49] ╭ ID        : go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc
       │                 │      │             /otelgrpc@v0.60.0 
@@ -616,10 +616,10 @@
       │                 │      │            │       le.golang.org/grpc/otelgrpc@v0.60.0 
       │                 │      │            ╰ UID : d01467d19a0d5e4e 
       │                 │      ├ Version   : v0.60.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [50] ╭ ID        : go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp@v0.6
       │                 │      │             1.0 
@@ -628,20 +628,20 @@
       │                 │      │            │       http/otelhttp@v0.61.0 
       │                 │      │            ╰ UID : 62aace81e21fd210 
       │                 │      ├ Version   : v0.61.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [51] ╭ ID        : go.opentelemetry.io/otel@v1.37.0 
       │                 │      ├ Name      : go.opentelemetry.io/otel 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/go.opentelemetry.io/otel@v1.37.0 
       │                 │      │            ╰ UID : 4e08428689a0c42e 
       │                 │      ├ Version   : v1.37.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [52] ╭ ID        : go.opentelemetry.io/otel/exporters/otlp/otlptrace@v1.37.0 
       │                 │      ├ Name      : go.opentelemetry.io/otel/exporters/otlp/otlptrace 
@@ -649,10 +649,10 @@
       │                 │      │            │       e@v1.37.0 
       │                 │      │            ╰ UID : 3fdad2e2e100e4f9 
       │                 │      ├ Version   : v1.37.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [53] ╭ ID        : go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc@v1
       │                 │      │             .37.0 
@@ -661,160 +661,160 @@
       │                 │      │            │       e/otlptracegrpc@v1.37.0 
       │                 │      │            ╰ UID : efcf09017fe778cb 
       │                 │      ├ Version   : v1.37.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [54] ╭ ID        : go.opentelemetry.io/otel/metric@v1.37.0 
       │                 │      ├ Name      : go.opentelemetry.io/otel/metric 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/go.opentelemetry.io/otel/metric@v1.37.0 
       │                 │      │            ╰ UID : 8aec881805755c6a 
       │                 │      ├ Version   : v1.37.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [55] ╭ ID        : go.opentelemetry.io/otel/sdk@v1.37.0 
       │                 │      ├ Name      : go.opentelemetry.io/otel/sdk 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/go.opentelemetry.io/otel/sdk@v1.37.0 
       │                 │      │            ╰ UID : badfb66d9fa38d4c 
       │                 │      ├ Version   : v1.37.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [56] ╭ ID        : go.opentelemetry.io/otel/trace@v1.37.0 
       │                 │      ├ Name      : go.opentelemetry.io/otel/trace 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/go.opentelemetry.io/otel/trace@v1.37.0 
       │                 │      │            ╰ UID : 54bb41ef5c5dea0a 
       │                 │      ├ Version   : v1.37.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [57] ╭ ID        : go.opentelemetry.io/proto/otlp@v1.7.0 
       │                 │      ├ Name      : go.opentelemetry.io/proto/otlp 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/go.opentelemetry.io/proto/otlp@v1.7.0 
       │                 │      │            ╰ UID : 4d170e89d2a95465 
       │                 │      ├ Version   : v1.7.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [58] ╭ ID        : go.yaml.in/yaml/v2@v2.4.3 
       │                 │      ├ Name      : go.yaml.in/yaml/v2 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/go.yaml.in/yaml/v2@v2.4.3 
       │                 │      │            ╰ UID : c6df5a28cf374077 
       │                 │      ├ Version   : v2.4.3 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [59] ╭ ID        : go.yaml.in/yaml/v3@v3.0.4 
       │                 │      ├ Name      : go.yaml.in/yaml/v3 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/go.yaml.in/yaml/v3@v3.0.4 
       │                 │      │            ╰ UID : 79e367f10d642c78 
       │                 │      ├ Version   : v3.0.4 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [60] ╭ ID        : golang.org/x/mod@v0.29.0 
       │                 │      ├ Name      : golang.org/x/mod 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/golang.org/x/mod@v0.29.0 
       │                 │      │            ╰ UID : 91b0c1b20cffa4b9 
       │                 │      ├ Version   : v0.29.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [61] ╭ ID        : golang.org/x/net@v0.47.0 
       │                 │      ├ Name      : golang.org/x/net 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/golang.org/x/net@v0.47.0 
       │                 │      │            ╰ UID : 5594252c20b6331 
       │                 │      ├ Version   : v0.47.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [62] ╭ ID        : golang.org/x/oauth2@v0.30.0 
       │                 │      ├ Name      : golang.org/x/oauth2 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/golang.org/x/oauth2@v0.30.0 
       │                 │      │            ╰ UID : 83d39ce75f4e4650 
       │                 │      ├ Version   : v0.30.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [63] ╭ ID        : golang.org/x/sync@v0.18.0 
       │                 │      ├ Name      : golang.org/x/sync 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/golang.org/x/sync@v0.18.0 
       │                 │      │            ╰ UID : 1bfd5ccebef5de06 
       │                 │      ├ Version   : v0.18.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [64] ╭ ID        : golang.org/x/sys@v0.38.0 
       │                 │      ├ Name      : golang.org/x/sys 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/golang.org/x/sys@v0.38.0 
       │                 │      │            ╰ UID : 9aa434950a57a85e 
       │                 │      ├ Version   : v0.38.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [65] ╭ ID        : golang.org/x/term@v0.37.0 
       │                 │      ├ Name      : golang.org/x/term 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/golang.org/x/term@v0.37.0 
       │                 │      │            ╰ UID : 16825d21e72cf15b 
       │                 │      ├ Version   : v0.37.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [66] ╭ ID        : golang.org/x/text@v0.31.0 
       │                 │      ├ Name      : golang.org/x/text 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/golang.org/x/text@v0.31.0 
       │                 │      │            ╰ UID : af1b94c742843c56 
       │                 │      ├ Version   : v0.31.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [67] ╭ ID        : golang.org/x/time@v0.9.0 
       │                 │      ├ Name      : golang.org/x/time 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/golang.org/x/time@v0.9.0 
       │                 │      │            ╰ UID : 9b2171fbfc6a6db3 
       │                 │      ├ Version   : v0.9.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [68] ╭ ID        : golang.org/x/tools@v0.38.0 
       │                 │      ├ Name      : golang.org/x/tools 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/golang.org/x/tools@v0.38.0 
       │                 │      │            ╰ UID : 9b1f9285f498c11e 
       │                 │      ├ Version   : v0.38.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [69] ╭ ID        : google.golang.org/genproto/googleapis/api@v0.0.0-20250707201910-8d
       │                 │      │             1bb00bc6a7 
@@ -823,10 +823,10 @@
       │                 │      │            │       -20250707201910-8d1bb00bc6a7 
       │                 │      │            ╰ UID : 2a6740c97fcde2eb 
       │                 │      ├ Version   : v0.0.0-20250707201910-8d1bb00bc6a7 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [70] ╭ ID        : google.golang.org/genproto/googleapis/rpc@v0.0.0-20250707201910-8d
       │                 │      │             1bb00bc6a7 
@@ -835,130 +835,130 @@
       │                 │      │            │       -20250707201910-8d1bb00bc6a7 
       │                 │      │            ╰ UID : 2362217f783656dd 
       │                 │      ├ Version   : v0.0.0-20250707201910-8d1bb00bc6a7 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [71] ╭ ID        : google.golang.org/grpc@v1.75.0 
       │                 │      ├ Name      : google.golang.org/grpc 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/google.golang.org/grpc@v1.75.0 
       │                 │      │            ╰ UID : dc760fcc5f8111f9 
       │                 │      ├ Version   : v1.75.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [72] ╭ ID        : google.golang.org/protobuf@v1.36.8 
       │                 │      ├ Name      : google.golang.org/protobuf 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/google.golang.org/protobuf@v1.36.8 
       │                 │      │            ╰ UID : 5be951b1048bc3a8 
       │                 │      ├ Version   : v1.36.8 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [73] ╭ ID        : gopkg.in/inf.v0@v0.9.1 
       │                 │      ├ Name      : gopkg.in/inf.v0 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/gopkg.in/inf.v0@v0.9.1 
       │                 │      │            ╰ UID : cc9ad2e2566a6b03 
       │                 │      ├ Version   : v0.9.1 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [74] ╭ ID        : gopkg.in/yaml.v3@v3.0.1 
       │                 │      ├ Name      : gopkg.in/yaml.v3 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/gopkg.in/yaml.v3@v3.0.1 
       │                 │      │            ╰ UID : 4add0fad6833945 
       │                 │      ├ Version   : v3.0.1 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [75] ╭ ID        : k8s.io/api@v0.35.0-rc.1 
       │                 │      ├ Name      : k8s.io/api 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/k8s.io/api@v0.35.0-rc.1 
       │                 │      │            ╰ UID : 9cb3c27b98ec05dd 
       │                 │      ├ Version   : v0.35.0-rc.1 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [76] ╭ ID        : k8s.io/apimachinery@v0.35.0-rc.1 
       │                 │      ├ Name      : k8s.io/apimachinery 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/k8s.io/apimachinery@v0.35.0-rc.1 
       │                 │      │            ╰ UID : f523aff66d12c9e7 
       │                 │      ├ Version   : v0.35.0-rc.1 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [77] ╭ ID        : k8s.io/cli-runtime@v0.35.0-rc.1 
       │                 │      ├ Name      : k8s.io/cli-runtime 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/k8s.io/cli-runtime@v0.35.0-rc.1 
       │                 │      │            ╰ UID : c8de41a13ca9174a 
       │                 │      ├ Version   : v0.35.0-rc.1 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [78] ╭ ID        : k8s.io/client-go@v0.35.0-rc.1 
       │                 │      ├ Name      : k8s.io/client-go 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/k8s.io/client-go@v0.35.0-rc.1 
       │                 │      │            ╰ UID : 64c0564101280fb6 
       │                 │      ├ Version   : v0.35.0-rc.1 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [79] ╭ ID        : k8s.io/component-base@v0.35.0-rc.1 
       │                 │      ├ Name      : k8s.io/component-base 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/k8s.io/component-base@v0.35.0-rc.1 
       │                 │      │            ╰ UID : 83ae1719f9b55204 
       │                 │      ├ Version   : v0.35.0-rc.1 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [80] ╭ ID        : k8s.io/cri-api@v0.35.0-rc.1 
       │                 │      ├ Name      : k8s.io/cri-api 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/k8s.io/cri-api@v0.35.0-rc.1 
       │                 │      │            ╰ UID : 34d9e99e243527a 
       │                 │      ├ Version   : v0.35.0-rc.1 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [81] ╭ ID        : k8s.io/cri-client@v0.35.0-rc.1 
       │                 │      ├ Name      : k8s.io/cri-client 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/k8s.io/cri-client@v0.35.0-rc.1 
       │                 │      │            ╰ UID : 2a522efdc500df3c 
       │                 │      ├ Version   : v0.35.0-rc.1 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [82] ╭ ID        : k8s.io/klog/v2@v2.130.1 
       │                 │      ├ Name      : k8s.io/klog/v2 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/k8s.io/klog/v2@v2.130.1 
       │                 │      │            ╰ UID : ee6e2153ab63167d 
       │                 │      ├ Version   : v2.130.1 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [83] ╭ ID        : k8s.io/kube-openapi@v0.0.0-20250910181357-589584f1c912 
       │                 │      ├ Name      : k8s.io/kube-openapi 
@@ -966,40 +966,40 @@
       │                 │      │            │       f1c912 
       │                 │      │            ╰ UID : 21d3f77e6c05ff01 
       │                 │      ├ Version   : v0.0.0-20250910181357-589584f1c912 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [84] ╭ ID        : k8s.io/kubectl@v0.35.0-rc.1 
       │                 │      ├ Name      : k8s.io/kubectl 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/k8s.io/kubectl@v0.35.0-rc.1 
       │                 │      │            ╰ UID : 4e880628d64b8040 
       │                 │      ├ Version   : v0.35.0-rc.1 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [85] ╭ ID        : k8s.io/kubelet@v0.35.0-rc.1 
       │                 │      ├ Name      : k8s.io/kubelet 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/k8s.io/kubelet@v0.35.0-rc.1 
       │                 │      │            ╰ UID : 8a1975a862833fd 
       │                 │      ├ Version   : v0.35.0-rc.1 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [86] ╭ ID        : k8s.io/utils@v0.0.0-20251002143259-bc988d571ff4 
       │                 │      ├ Name      : k8s.io/utils 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/k8s.io/utils@v0.0.0-20251002143259-bc988d571ff4 
       │                 │      │            ╰ UID : 4c3632aadc3e2d71 
       │                 │      ├ Version   : v0.0.0-20251002143259-bc988d571ff4 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [87] ╭ ID        : sigs.k8s.io/json@v0.0.0-20250730193827-2d320260d730 
       │                 │      ├ Name      : sigs.k8s.io/json 
@@ -1007,40 +1007,40 @@
       │                 │      │            │       730 
       │                 │      │            ╰ UID : e7fc47e37916501f 
       │                 │      ├ Version   : v0.0.0-20250730193827-2d320260d730 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [88] ╭ ID        : sigs.k8s.io/randfill@v1.0.0 
       │                 │      ├ Name      : sigs.k8s.io/randfill 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/sigs.k8s.io/randfill@v1.0.0 
       │                 │      │            ╰ UID : 3854cab13adf03f0 
       │                 │      ├ Version   : v1.0.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ├ [89] ╭ ID        : sigs.k8s.io/structured-merge-diff/v6@v6.3.0 
       │                 │      ├ Name      : sigs.k8s.io/structured-merge-diff/v6 
       │                 │      ├ Identifier ╭ PURL: pkg:golang/sigs.k8s.io/structured-merge-diff/v6@v6.3.0 
       │                 │      │            ╰ UID : ae969a91cd3ce93b 
       │                 │      ├ Version   : v6.3.0 
-      │                 │      ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                 │      │            │         b41bbf4210d205 
-      │                 │      │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                 │      │                      7423d6cecab91f 
+      │                 │      ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                 │      │            │         49477eb96cce99 
+      │                 │      │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                 │      │                      aa4ab59ec2e5a3 
       │                 │      ╰ AnalyzedBy: gobinary 
       │                 ╰ [90] ╭ ID        : sigs.k8s.io/yaml@v1.6.0 
       │                        ├ Name      : sigs.k8s.io/yaml 
       │                        ├ Identifier ╭ PURL: pkg:golang/sigs.k8s.io/yaml@v1.6.0 
       │                        │            ╰ UID : 4b3e50227fc8eb87 
       │                        ├ Version   : v1.6.0 
-      │                        ├ Layer      ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7512c24
-      │                        │            │         b41bbf4210d205 
-      │                        │            ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0b56964
-      │                        │                      7423d6cecab91f 
+      │                        ├ Layer      ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6ac780b
+      │                        │            │         49477eb96cce99 
+      │                        │            ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa9585aadb
+      │                        │                      aa4ab59ec2e5a3 
       │                        ╰ AnalyzedBy: gobinary 
       ╰ Vulnerabilities ╭ [0]  ╭ VulnerabilityID : CVE-2026-32285 
                         │      ├ VendorIDs        ─ [0]: GHSA-6g7g-w4f8-9c9x 
@@ -1051,18 +1051,18 @@
                         │      ├ InstalledVersion: v1.1.1 
                         │      ├ FixedVersion    : 1.1.2 
                         │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7
-                        │      │                  │         512c24b41bbf4210d205 
-                        │      │                  ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0
-                        │      │                            b569647423d6cecab91f 
+                        │      ├ Layer            ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6
+                        │      │                  │         ac780b49477eb96cce99 
+                        │      │                  ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa95
+                        │      │                            85aadbaa4ab59ec2e5a3 
                         │      ├ SeveritySource  : ghsa 
                         │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32285 
                         │      ├ DataSource       ╭ ID  : ghsa 
                         │      │                  ├ Name: GitHub Security Advisory Go 
                         │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
                         │      │                          cosystem%3Ago 
-                        │      ├ Fingerprint     : sha256:137ef81907bcce86bcfb5814aff48f6b7b8e91cd2d70820229be3
-                        │      │                   0deb51dd13e 
+                        │      ├ Fingerprint     : sha256:fbde8db68b84dd11828ad756b20e43feda897bf20298c5efe5429
+                        │      │                   06efe982f73 
                         │      ├ Title           : github.com/buger/jsonparser: github.com/buger/jsonparser:
                         │      │                   Denial of Service via malformed JSON input 
                         │      ├ Description     : The Delete function fails to properly validate offsets when
@@ -1105,18 +1105,18 @@
                         │      ├ InstalledVersion: v28.3.3+incompatible 
                         │      ├ FixedVersion    : 29.3.1 
                         │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7
-                        │      │                  │         512c24b41bbf4210d205 
-                        │      │                  ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0
-                        │      │                            b569647423d6cecab91f 
+                        │      ├ Layer            ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6
+                        │      │                  │         ac780b49477eb96cce99 
+                        │      │                  ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa95
+                        │      │                            85aadbaa4ab59ec2e5a3 
                         │      ├ SeveritySource  : ghsa 
                         │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-34040 
                         │      ├ DataSource       ╭ ID  : ghsa 
                         │      │                  ├ Name: GitHub Security Advisory Go 
                         │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
                         │      │                          cosystem%3Ago 
-                        │      ├ Fingerprint     : sha256:91bf6aec1101cc20a21a55494ce56b67110022bd7be85f579fa3e
-                        │      │                   b2c1ad85bbb 
+                        │      ├ Fingerprint     : sha256:b65de8a0a760bd60d52e870c8c38b744a0ae84f0494e85ff1b1e0
+                        │      │                   4b5ef13fd65 
                         │      ├ Title           : Moby: Moby: Authorization bypass vulnerability 
                         │      ├ Description     : Moby is an open source container framework. Prior to version
                         │      │                    29.3.1, a security vulnerability has been detected that
@@ -1162,18 +1162,18 @@
                         │      ├ InstalledVersion: v28.3.3+incompatible 
                         │      ├ FixedVersion    : 29.3.1 
                         │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7
-                        │      │                  │         512c24b41bbf4210d205 
-                        │      │                  ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0
-                        │      │                            b569647423d6cecab91f 
+                        │      ├ Layer            ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6
+                        │      │                  │         ac780b49477eb96cce99 
+                        │      │                  ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa95
+                        │      │                            85aadbaa4ab59ec2e5a3 
                         │      ├ SeveritySource  : ghsa 
                         │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-33997 
                         │      ├ DataSource       ╭ ID  : ghsa 
                         │      │                  ├ Name: GitHub Security Advisory Go 
                         │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
                         │      │                          cosystem%3Ago 
-                        │      ├ Fingerprint     : sha256:992dc84f0d63016df5abf9985a8de6112cb6a672ab7958e7fdc96
-                        │      │                   34915945935 
+                        │      ├ Fingerprint     : sha256:740e2dd847fb18a5c4c8b2f6ea6c464f4b1cbb624b70596a672de
+                        │      │                   58db575bd30 
                         │      ├ Title           : moby: docker: github.com/moby/moby: Moby: Privilege
                         │      │                   validation bypass during plugin installation 
                         │      ├ Description     : Moby is an open source container framework. Prior to version
@@ -1222,18 +1222,18 @@
                         │      ├ InstalledVersion: v0.5.0 
                         │      ├ FixedVersion    : 0.5.1 
                         │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7
-                        │      │                  │         512c24b41bbf4210d205 
-                        │      │                  ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0
-                        │      │                            b569647423d6cecab91f 
+                        │      ├ Layer            ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6
+                        │      │                  │         ac780b49477eb96cce99 
+                        │      │                  ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa95
+                        │      │                            85aadbaa4ab59ec2e5a3 
                         │      ├ SeveritySource  : ghsa 
                         │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-35469 
                         │      ├ DataSource       ╭ ID  : ghsa 
                         │      │                  ├ Name: GitHub Security Advisory Go 
                         │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
                         │      │                          cosystem%3Ago 
-                        │      ├ Fingerprint     : sha256:fa49e156350b3d2930d0e852ad3936cca44dbccd9de91ce67e50a
-                        │      │                   43e64821861 
+                        │      ├ Fingerprint     : sha256:94c4360a2aa9d7386f80a6c6a94732424cb9fa1860d7264939748
+                        │      │                   5d7b3790ae6 
                         │      ├ Title           : Kubelet: CRI-O: kube-apiserver: Kubelet, CRI-O,
                         │      │                   kube-apiserver: Denial of Service via SPDY streaming code 
                         │      ├ Description     : spdystream is a Go library for multiplexing streams over
@@ -1279,18 +1279,18 @@
                         │      ├ InstalledVersion: v1.37.0 
                         │      ├ FixedVersion    : 1.40.0 
                         │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7
-                        │      │                  │         512c24b41bbf4210d205 
-                        │      │                  ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0
-                        │      │                            b569647423d6cecab91f 
+                        │      ├ Layer            ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6
+                        │      │                  │         ac780b49477eb96cce99 
+                        │      │                  ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa95
+                        │      │                            85aadbaa4ab59ec2e5a3 
                         │      ├ SeveritySource  : ghsa 
                         │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-24051 
                         │      ├ DataSource       ╭ ID  : ghsa 
                         │      │                  ├ Name: GitHub Security Advisory Go 
                         │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
                         │      │                          cosystem%3Ago 
-                        │      ├ Fingerprint     : sha256:072dae3ad345aaebdda41a9d3e4f452c8bdc24c8b6fe6e991ff49
-                        │      │                   045b349fce1 
+                        │      ├ Fingerprint     : sha256:64e2fa13aca7bc65452edde8ad4b9e3af8fa548aea5f5d9d62d2d
+                        │      │                   cc8e2c490d8 
                         │      ├ Title           : OpenTelemetry Go SDK Vulnerable to Arbitrary Code Execution
                         │      │                   via PATH Hijacking 
                         │      ├ Description     : OpenTelemetry-Go is the Go implementation of OpenTelemetry.
@@ -1325,18 +1325,18 @@
                         │      ├ InstalledVersion: v1.37.0 
                         │      ├ FixedVersion    : 1.43.0 
                         │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7
-                        │      │                  │         512c24b41bbf4210d205 
-                        │      │                  ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0
-                        │      │                            b569647423d6cecab91f 
+                        │      ├ Layer            ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6
+                        │      │                  │         ac780b49477eb96cce99 
+                        │      │                  ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa95
+                        │      │                            85aadbaa4ab59ec2e5a3 
                         │      ├ SeveritySource  : ghsa 
                         │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39883 
                         │      ├ DataSource       ╭ ID  : ghsa 
                         │      │                  ├ Name: GitHub Security Advisory Go 
                         │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
                         │      │                          cosystem%3Ago 
-                        │      ├ Fingerprint     : sha256:2e4e499865e04104785d03257ebbbcfd1de1698208ec4eb36234b
-                        │      │                   a3b5cb9b006 
+                        │      ├ Fingerprint     : sha256:d85de124ac93f980b8ad21bcd632c3de2e00a2fc885d24f11dee3
+                        │      │                   7faf8e8e154 
                         │      ├ Title           : opentelemetry-go: BSD kenv command not using absolute path
                         │      │                   enables PATH hijacking 
                         │      ├ Description     : OpenTelemetry-Go is the Go implementation of OpenTelemetry.
@@ -1371,18 +1371,18 @@
                         │      ├ InstalledVersion: v1.75.0 
                         │      ├ FixedVersion    : 1.79.3 
                         │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7
-                        │      │                  │         512c24b41bbf4210d205 
-                        │      │                  ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0
-                        │      │                            b569647423d6cecab91f 
+                        │      ├ Layer            ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6
+                        │      │                  │         ac780b49477eb96cce99 
+                        │      │                  ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa95
+                        │      │                            85aadbaa4ab59ec2e5a3 
                         │      ├ SeveritySource  : ghsa 
                         │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-33186 
                         │      ├ DataSource       ╭ ID  : ghsa 
                         │      │                  ├ Name: GitHub Security Advisory Go 
                         │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
                         │      │                          cosystem%3Ago 
-                        │      ├ Fingerprint     : sha256:1e8dfbe1519ce62ef125c8b12d076dede809e65505a02e3a509ef
-                        │      │                   c7e4e281e1b 
+                        │      ├ Fingerprint     : sha256:200ee67c0a9646b6e2c953a61722a8e3ebee15ec7ab7688c1bcd4
+                        │      │                   06557454cb2 
                         │      ├ Title           : google.golang.org/grpc/grpc-go:
                         │      │                   google.golang.org/grpc/authz: gRPC-Go: Authorization bypass
                         │      │                   due to improper HTTP/2 path validation 
@@ -1426,9 +1426,9 @@
                         │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
                         │      │                  │        │           /A:N 
                         │      │                  │        ╰ V3Score : 9.1 
-                        │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H
+                        │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
                         │      │                           │           /A:N 
-                        │      │                           ╰ V3Score : 8.1 
+                        │      │                           ╰ V3Score : 9.1 
                         │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-33186 
                         │      │                  ├ [1]: https://github.com/grpc/grpc-go 
                         │      │                  ├ [2]: https://github.com/grpc/grpc-go/security/advisories/GH
@@ -1446,16 +1446,16 @@
                         │      ├ InstalledVersion: v1.26.1 
                         │      ├ FixedVersion    : 1.25.9, 1.26.2 
                         │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7
-                        │      │                  │         512c24b41bbf4210d205 
-                        │      │                  ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0
-                        │      │                            b569647423d6cecab91f 
+                        │      ├ Layer            ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6
+                        │      │                  │         ac780b49477eb96cce99 
+                        │      │                  ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa95
+                        │      │                            85aadbaa4ab59ec2e5a3 
                         │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32280 
                         │      ├ DataSource       ╭ ID  : govulndb 
                         │      │                  ├ Name: The Go Vulnerability Database 
                         │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │      ├ Fingerprint     : sha256:bda488aac3235ec533775f3011f495184773deb64be3d61c77fe7
-                        │      │                   fc4a906ec6f 
+                        │      ├ Fingerprint     : sha256:908ace6b99dfdc2afe7efbeb162cc908198537ec6783c97dff48a
+                        │      │                   dd68ff79dd3 
                         │      ├ Title           : crypto/x509: crypto/tls: golang: Go: Denial of Service
                         │      │                   vulnerability in certificate chain building 
                         │      ├ Description     : During chain building, the amount of work that is done is
@@ -1492,17 +1492,17 @@
                         │      ├ InstalledVersion: v1.26.1 
                         │      ├ FixedVersion    : 1.25.9, 1.26.2 
                         │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7
-                        │      │                  │         512c24b41bbf4210d205 
-                        │      │                  ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0
-                        │      │                            b569647423d6cecab91f 
+                        │      ├ Layer            ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6
+                        │      │                  │         ac780b49477eb96cce99 
+                        │      │                  ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa95
+                        │      │                            85aadbaa4ab59ec2e5a3 
                         │      ├ SeveritySource  : nvd 
                         │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32281 
                         │      ├ DataSource       ╭ ID  : govulndb 
                         │      │                  ├ Name: The Go Vulnerability Database 
                         │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │      ├ Fingerprint     : sha256:f3f7672a97aaba4954b9b3eb43d5c9bccf442f87649811566a0eb
-                        │      │                   c590c607099 
+                        │      ├ Fingerprint     : sha256:2d6d38f127775138037d9cffbfe6120e21fd7f06265e384d66c35
+                        │      │                   d316aefa325 
                         │      ├ Title           : crypto/x509: golang: Go crypto/x509: Denial of Service via
                         │      │                   inefficient certificate chain validation 
                         │      ├ Description     : Validating certificate chains which use policies is
@@ -1545,17 +1545,17 @@
                         │      ├ InstalledVersion: v1.26.1 
                         │      ├ FixedVersion    : 1.25.9, 1.26.2 
                         │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7
-                        │      │                  │         512c24b41bbf4210d205 
-                        │      │                  ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0
-                        │      │                            b569647423d6cecab91f 
+                        │      ├ Layer            ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6
+                        │      │                  │         ac780b49477eb96cce99 
+                        │      │                  ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa95
+                        │      │                            85aadbaa4ab59ec2e5a3 
                         │      ├ SeveritySource  : nvd 
                         │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32283 
                         │      ├ DataSource       ╭ ID  : govulndb 
                         │      │                  ├ Name: The Go Vulnerability Database 
                         │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │      ├ Fingerprint     : sha256:0f9c7ae469c005948b2c7a5cc98bf61990e82dbe51f816b601ae5
-                        │      │                   c2489a850ee 
+                        │      ├ Fingerprint     : sha256:46f4f3abb9e20a46fc36e0c041194996111901ab2e0a8c4db0b0d
+                        │      │                   a5fab96814d 
                         │      ├ Title           : If one side of the TLS connection sends multiple key update
                         │      │                   messages p ... 
                         │      ├ Description     : If one side of the TLS connection sends multiple key update
@@ -1590,17 +1590,17 @@
                         │      ├ InstalledVersion: v1.26.1 
                         │      ├ FixedVersion    : 1.26.2 
                         │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7
-                        │      │                  │         512c24b41bbf4210d205 
-                        │      │                  ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0
-                        │      │                            b569647423d6cecab91f 
+                        │      ├ Layer            ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6
+                        │      │                  │         ac780b49477eb96cce99 
+                        │      │                  ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa95
+                        │      │                            85aadbaa4ab59ec2e5a3 
                         │      ├ SeveritySource  : nvd 
                         │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-33810 
                         │      ├ DataSource       ╭ ID  : govulndb 
                         │      │                  ├ Name: The Go Vulnerability Database 
                         │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │      ├ Fingerprint     : sha256:72e44159ee335c63dd97fff2dda0fcee014777d08092e3899de36
-                        │      │                   ad4d608e10c 
+                        │      ├ Fingerprint     : sha256:f11ef9e9ae2506330b633dd6d1ec2d7f2a41f5d89e9c6ea14bae3
+                        │      │                   31daad55650 
                         │      ├ Title           : crypto/x509: golang: Go crypto/x509: Certificate validation
                         │      │                   bypass due to incorrect DNS constraint application 
                         │      ├ Description     : When verifying a certificate chain containing excluded DNS
@@ -1646,17 +1646,17 @@
                         │      ├ InstalledVersion: v1.26.1 
                         │      ├ FixedVersion    : 1.25.9, 1.26.2 
                         │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7
-                        │      │                  │         512c24b41bbf4210d205 
-                        │      │                  ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0
-                        │      │                            b569647423d6cecab91f 
+                        │      ├ Layer            ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6
+                        │      │                  │         ac780b49477eb96cce99 
+                        │      │                  ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa95
+                        │      │                            85aadbaa4ab59ec2e5a3 
                         │      ├ SeveritySource  : nvd 
                         │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32282 
                         │      ├ DataSource       ╭ ID  : govulndb 
                         │      │                  ├ Name: The Go Vulnerability Database 
                         │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │      ├ Fingerprint     : sha256:44f1fa076eafc48b01ec71e8a687a794076c17fa4e4728441f426
-                        │      │                   857fac1685f 
+                        │      ├ Fingerprint     : sha256:ff0956a68acba4f18c79f31b7641d7f557b9829d430c6e04bbcb7
+                        │      │                   72e40a9b658 
                         │      ├ Title           : golang: internal/syscall/unix: Root.Chmod can follow
                         │      │                   symlinks out of the root 
                         │      ├ Description     : On Linux, if the target of Root.Chmod is replaced with a
@@ -1702,17 +1702,17 @@
                         │      ├ InstalledVersion: v1.26.1 
                         │      ├ FixedVersion    : 1.25.9, 1.26.2 
                         │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7
-                        │      │                  │         512c24b41bbf4210d205 
-                        │      │                  ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0
-                        │      │                            b569647423d6cecab91f 
+                        │      ├ Layer            ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6
+                        │      │                  │         ac780b49477eb96cce99 
+                        │      │                  ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa95
+                        │      │                            85aadbaa4ab59ec2e5a3 
                         │      ├ SeveritySource  : nvd 
                         │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32288 
                         │      ├ DataSource       ╭ ID  : govulndb 
                         │      │                  ├ Name: The Go Vulnerability Database 
                         │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │      ├ Fingerprint     : sha256:09716556d07afdcd764a8606b532dd1ec15e59a04d99c7a2e79b1
-                        │      │                   2fab15067a6 
+                        │      ├ Fingerprint     : sha256:dd39bf6c261b134f576bd629b99d0550850f7667d347eb07bfd62
+                        │      │                   55848799b19 
                         │      ├ Title           : archive/tar: golang: Go's archive/tar package: Denial of
                         │      │                   Service via maliciously-crafted archive 
                         │      ├ Description     : tar.Reader can allocate an unbounded amount of memory when
@@ -1752,17 +1752,17 @@
                                ├ InstalledVersion: v1.26.1 
                                ├ FixedVersion    : 1.25.9, 1.26.2 
                                ├ Status          : fixed 
-                               ├ Layer            ╭ Digest: sha256:9ebd078ec487e2c02833da0074da4b4b13f88e679fa7
-                               │                  │         512c24b41bbf4210d205 
-                               │                  ╰ DiffID: sha256:2752e8c67f53ba524bc9f44d558cb5453c3ea49403d0
-                               │                            b569647423d6cecab91f 
+                               ├ Layer            ╭ Digest: sha256:3ff7167dd998e8f33a16cb9bbe1923fabd5e696850b6
+                               │                  │         ac780b49477eb96cce99 
+                               │                  ╰ DiffID: sha256:f8314430a54eb25c7b3d2668c733f6d079dfecfefa95
+                               │                            85aadbaa4ab59ec2e5a3 
                                ├ SeveritySource  : nvd 
                                ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32289 
                                ├ DataSource       ╭ ID  : govulndb 
                                │                  ├ Name: The Go Vulnerability Database 
                                │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                               ├ Fingerprint     : sha256:762996f766814eb48c500991f92f17327c43a9416c452ddf23d46
-                               │                   da987a2d200 
+                               ├ Fingerprint     : sha256:0535902bc3cd6e1953850332966bdcdf536818e5c6fad5c46f53a
+                               │                   c7bfc428503 
                                ├ Title           : html/template: golang: html/template: Cross-Site Scripting
                                │                   (XSS) via improper context and brace depth tracking in JS
                                │                   template literals 
