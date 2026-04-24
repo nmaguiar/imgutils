@@ -1426,9 +1426,9 @@
                         │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
                         │      │                  │        │           /A:N 
                         │      │                  │        ╰ V3Score : 9.1 
-                        │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H
+                        │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
                         │      │                           │           /A:N 
-                        │      │                           ╰ V3Score : 8.1 
+                        │      │                           ╰ V3Score : 9.1 
                         │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-33186 
                         │      │                  ├ [1]: https://github.com/grpc/grpc-go 
                         │      │                  ├ [2]: https://github.com/grpc/grpc-go/security/advisories/GH
