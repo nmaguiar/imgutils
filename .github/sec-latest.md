@@ -3359,9 +3359,9 @@
 │                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
 │                       │      │                  │        │           /A:N 
 │                       │      │                  │        ╰ V3Score : 9.1 
-│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H
+│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
 │                       │      │                           │           /A:N 
-│                       │      │                           ╰ V3Score : 8.1 
+│                       │      │                           ╰ V3Score : 9.1 
 │                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-33186 
 │                       │      │                  ├ [1]: https://github.com/grpc/grpc-go 
 │                       │      │                  ├ [2]: https://github.com/grpc/grpc-go/security/advisories/GH
@@ -5640,9 +5640,9 @@
 │                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
 │                       │      │                  │        │           /A:N 
 │                       │      │                  │        ╰ V3Score : 9.1 
-│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H
+│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
 │                       │      │                           │           /A:N 
-│                       │      │                           ╰ V3Score : 8.1 
+│                       │      │                           ╰ V3Score : 9.1 
 │                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-33186 
 │                       │      │                  ├ [1]: https://github.com/grpc/grpc-go 
 │                       │      │                  ├ [2]: https://github.com/grpc/grpc-go/security/advisories/GH
@@ -7665,10 +7665,7 @@
 │                       │      ├ InstalledVersion: v1.25.6 
 │                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
 │                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
-│                       │      │                  │         bc64e086c1f91e77709f 
-│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
-│                       │      │                            475e8bf0be8d84f76b5f 
+
 │                       │      ├ SeveritySource  : nvd 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32289 
 │                       │      ├ DataSource       ╭ ID  : govulndb 
@@ -12334,9 +12331,9 @@
 │                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
 │                       │      │                  │        │           /A:N 
 │                       │      │                  │        ╰ V3Score : 9.1 
-│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H
+│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
 │                       │      │                           │           /A:N 
-│                       │      │                           ╰ V3Score : 8.1 
+│                       │      │                           ╰ V3Score : 9.1 
 │                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-33186 
 │                       │      │                  ├ [1]: https://github.com/grpc/grpc-go 
 │                       │      │                  ├ [2]: https://github.com/grpc/grpc-go/security/advisories/GH
@@ -14777,9 +14774,9 @@
 │                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
 │                       │      │                  │        │           /A:N 
 │                       │      │                  │        ╰ V3Score : 9.1 
-│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H
+│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
 │                       │      │                           │           /A:N 
-│                       │      │                           ╰ V3Score : 8.1 
+│                       │      │                           ╰ V3Score : 9.1 
 │                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-33186 
 │                       │      │                  ├ [1]: https://github.com/grpc/grpc-go 
 │                       │      │                  ├ [2]: https://github.com/grpc/grpc-go/security/advisories/GH
@@ -19438,9 +19435,9 @@
                         │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
                         │      │                  │        │           /A:N 
                         │      │                  │        ╰ V3Score : 9.1 
-                        │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H
+                        │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H
                         │      │                           │           /A:N 
-                        │      │                           ╰ V3Score : 8.1 
+                        │      │                           ╰ V3Score : 9.1 
                         │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-33186 
                         │      │                  ├ [1]: https://github.com/grpc/grpc-go 
                         │      │                  ├ [2]: https://github.com/grpc/grpc-go/security/advisories/GH
