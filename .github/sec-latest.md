@@ -597,10 +597,7 @@
 │     │                 │       ├ Identifier ╭ PURL: pkg:maven/io.jsonwebtoken/jjwt-api@0.13.0 
 │     │                 │       │            ╰ UID : fe506a80a2899a4a 
 │     │                 │       ├ Version   : 0.13.0 
-│     │                 │       ├ Layer      ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1bc64e
-│     │                 │       │            │         086c1f91e77709f 
-│     │                 │       │            ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4475e8
-│     │                 │       │                      bf0be8d84f76b5f 
+
 │     │                 │       ├ FilePath  : openaf/openaf.jar 
 │     │                 │       ╰ AnalyzedBy: jar 
 │     │                 ├ [59]  ╭ Name      : io.jsonwebtoken:jjwt-gson 
@@ -3806,8 +3803,9 @@
 │                       │      │                   direct users of crypto/x509 and users of crypto/tls. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ VendorSeverity   ╭ bitnami: 3 
-│                       │      │                  ╰ redhat : 3 
+│                       │      ├ VendorSeverity   ╭ bitnami    : 3 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ redhat     : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
 │                       │      │                  │         ╰ V3Score : 7.5 
@@ -3819,9 +3817,11 @@
 │                       │      │                  ├ [2]: https://go.dev/issue/78282 
 │                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                       │      │                  │      RWU 
-│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
-│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
+│                       │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2026-32280.html 
+│                       │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+│                       │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:16:42.18Z 
 │                       ├ [14] ╭ VulnerabilityID : CVE-2026-32281 
@@ -3906,8 +3906,9 @@
 │                       │      │                    1.3. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ VendorSeverity   ╭ bitnami: 3 
-│                       │      │                  ╰ nvd    : 3 
+│                       │      ├ VendorSeverity   ╭ bitnami    : 3 
+│                       │      │                  ├ nvd        : 3 
+│                       │      │                  ╰ oracle-oval: 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
 │                       │      │                  │         ╰ V3Score : 7.5 
@@ -3918,8 +3919,10 @@
 │                       │      │                  ├ [1]: https://go.dev/issue/78334 
 │                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                       │      │                  │      RWU 
-│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-│                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                       │      │                  ├ [3]: https://linux.oracle.com/cve/CVE-2026-32283.html 
+│                       │      │                  ├ [4]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                       │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4870 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:12:10.54Z 
 │                       ├ [16] ╭ VulnerabilityID : CVE-2025-47910 
@@ -4580,9 +4583,10 @@
 │                       │      │                   the check and operation. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-59 
-│                       │      ├ VendorSeverity   ╭ bitnami: 2 
-│                       │      │                  ├ nvd    : 2 
-│                       │      │                  ╰ redhat : 2 
+│                       │      ├ VendorSeverity   ╭ bitnami    : 2 
+│                       │      │                  ├ nvd        : 2 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ redhat     : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:
 │                       │      │                  │         │           H/A:H 
 │                       │      │                  │         ╰ V3Score : 6.4 
@@ -4597,9 +4601,11 @@
 │                       │      │                  ├ [2]: https://go.dev/issue/78293 
 │                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                       │      │                  │      RWU 
-│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+│                       │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+│                       │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:15:39.4Z 
 │                       ├ [30] ╭ VulnerabilityID : CVE-2026-32288 
@@ -5811,8 +5817,9 @@
 │                       │      │                   direct users of crypto/x509 and users of crypto/tls. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ VendorSeverity   ╭ bitnami: 3 
-│                       │      │                  ╰ redhat : 3 
+│                       │      ├ VendorSeverity   ╭ bitnami    : 3 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ redhat     : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
 │                       │      │                  │         ╰ V3Score : 7.5 
@@ -5824,9 +5831,11 @@
 │                       │      │                  ├ [2]: https://go.dev/issue/78282 
 │                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                       │      │                  │      RWU 
-│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
-│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
+│                       │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2026-32280.html 
+│                       │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+│                       │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:16:42.18Z 
 │                       ├ [4]  ╭ VulnerabilityID : CVE-2026-32281 
@@ -5911,8 +5920,9 @@
 │                       │      │                    1.3. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ VendorSeverity   ╭ bitnami: 3 
-│                       │      │                  ╰ nvd    : 3 
+│                       │      ├ VendorSeverity   ╭ bitnami    : 3 
+│                       │      │                  ├ nvd        : 3 
+│                       │      │                  ╰ oracle-oval: 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
 │                       │      │                  │         ╰ V3Score : 7.5 
@@ -5923,8 +5933,10 @@
 │                       │      │                  ├ [1]: https://go.dev/issue/78334 
 │                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                       │      │                  │      RWU 
-│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-│                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                       │      │                  ├ [3]: https://linux.oracle.com/cve/CVE-2026-32283.html 
+│                       │      │                  ├ [4]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                       │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4870 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:12:10.54Z 
 │                       ├ [6]  ╭ VulnerabilityID : CVE-2026-27142 
@@ -6010,9 +6022,10 @@
 │                       │      │                   the check and operation. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-59 
-│                       │      ├ VendorSeverity   ╭ bitnami: 2 
-│                       │      │                  ├ nvd    : 2 
-│                       │      │                  ╰ redhat : 2 
+│                       │      ├ VendorSeverity   ╭ bitnami    : 2 
+│                       │      │                  ├ nvd        : 2 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ redhat     : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:
 │                       │      │                  │         │           H/A:H 
 │                       │      │                  │         ╰ V3Score : 6.4 
@@ -6027,9 +6040,11 @@
 │                       │      │                  ├ [2]: https://go.dev/issue/78293 
 │                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                       │      │                  │      RWU 
-│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+│                       │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+│                       │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:15:39.4Z 
 │                       ├ [8]  ╭ VulnerabilityID : CVE-2026-32288 
@@ -7385,8 +7400,9 @@
 │                       │      │                   direct users of crypto/x509 and users of crypto/tls. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ VendorSeverity   ╭ bitnami: 3 
-│                       │      │                  ╰ redhat : 3 
+│                       │      ├ VendorSeverity   ╭ bitnami    : 3 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ redhat     : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
 │                       │      │                  │         ╰ V3Score : 7.5 
@@ -7398,9 +7414,11 @@
 │                       │      │                  ├ [2]: https://go.dev/issue/78282 
 │                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                       │      │                  │      RWU 
-│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
-│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
+│                       │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2026-32280.html 
+│                       │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+│                       │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:16:42.18Z 
 │                       ├ [9]  ╭ VulnerabilityID : CVE-2026-32281 
@@ -7485,8 +7503,9 @@
 │                       │      │                    1.3. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ VendorSeverity   ╭ bitnami: 3 
-│                       │      │                  ╰ nvd    : 3 
+│                       │      ├ VendorSeverity   ╭ bitnami    : 3 
+│                       │      │                  ├ nvd        : 3 
+│                       │      │                  ╰ oracle-oval: 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
 │                       │      │                  │         ╰ V3Score : 7.5 
@@ -7497,8 +7516,10 @@
 │                       │      │                  ├ [1]: https://go.dev/issue/78334 
 │                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                       │      │                  │      RWU 
-│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-│                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                       │      │                  ├ [3]: https://linux.oracle.com/cve/CVE-2026-32283.html 
+│                       │      │                  ├ [4]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                       │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4870 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:12:10.54Z 
 │                       ├ [11] ╭ VulnerabilityID : CVE-2026-27142 
@@ -7584,9 +7605,10 @@
 │                       │      │                   the check and operation. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-59 
-│                       │      ├ VendorSeverity   ╭ bitnami: 2 
-│                       │      │                  ├ nvd    : 2 
-│                       │      │                  ╰ redhat : 2 
+│                       │      ├ VendorSeverity   ╭ bitnami    : 2 
+│                       │      │                  ├ nvd        : 2 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ redhat     : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:
 │                       │      │                  │         │           H/A:H 
 │                       │      │                  │         ╰ V3Score : 6.4 
@@ -7601,9 +7623,11 @@
 │                       │      │                  ├ [2]: https://go.dev/issue/78293 
 │                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                       │      │                  │      RWU 
-│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+│                       │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+│                       │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:15:39.4Z 
 │                       ├ [13] ╭ VulnerabilityID : CVE-2026-32288 
@@ -7665,7 +7689,10 @@
 │                       │      ├ InstalledVersion: v1.25.6 
 │                       │      ├ FixedVersion    : 1.25.9, 1.26.2 
 │                       │      ├ Status          : fixed 
-
+│                       │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
+│                       │      │                  │         bc64e086c1f91e77709f 
+│                       │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
+│                       │      │                            475e8bf0be8d84f76b5f 
 │                       │      ├ SeveritySource  : nvd 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32289 
 │                       │      ├ DataSource       ╭ ID  : govulndb 
@@ -7931,8 +7958,9 @@
 │                       │     │                   users of crypto/x509 and users of crypto/tls. 
 │                       │     ├ Severity        : HIGH 
 │                       │     ├ CweIDs           ─ [0]: CWE-770 
-│                       │     ├ VendorSeverity   ╭ bitnami: 3 
-│                       │     │                  ╰ redhat : 3 
+│                       │     ├ VendorSeverity   ╭ bitnami    : 3 
+│                       │     │                  ├ oracle-oval: 3 
+│                       │     │                  ╰ redhat     : 3 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │     │                  │         │           /A:H 
 │                       │     │                  │         ╰ V3Score : 7.5 
@@ -7943,9 +7971,11 @@
 │                       │     │                  ├ [1]: https://go.dev/cl/758320 
 │                       │     │                  ├ [2]: https://go.dev/issue/78282 
 │                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
-│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
-│                       │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
+│                       │     │                  ├ [4]: https://linux.oracle.com/cve/CVE-2026-32280.html 
+│                       │     │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+│                       │     │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │     │                  ├ [7]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
 │                       │     ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
 │                       │     ╰ LastModifiedDate: 2026-04-16T19:16:42.18Z 
 │                       ├ [3] ╭ VulnerabilityID : CVE-2026-32281 
@@ -8029,8 +8059,9 @@
 │                       │     │                   1.3. 
 │                       │     ├ Severity        : HIGH 
 │                       │     ├ CweIDs           ─ [0]: CWE-770 
-│                       │     ├ VendorSeverity   ╭ bitnami: 3 
-│                       │     │                  ╰ nvd    : 3 
+│                       │     ├ VendorSeverity   ╭ bitnami    : 3 
+│                       │     │                  ├ nvd        : 3 
+│                       │     │                  ╰ oracle-oval: 3 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │     │                  │         │           /A:H 
 │                       │     │                  │         ╰ V3Score : 7.5 
@@ -8040,8 +8071,10 @@
 │                       │     ├ References       ╭ [0]: https://go.dev/cl/763767 
 │                       │     │                  ├ [1]: https://go.dev/issue/78334 
 │                       │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
-│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-│                       │     │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                       │     │                  ├ [3]: https://linux.oracle.com/cve/CVE-2026-32283.html 
+│                       │     │                  ├ [4]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+│                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                       │     │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4870 
 │                       │     ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
 │                       │     ╰ LastModifiedDate: 2026-04-16T19:12:10.54Z 
 │                       ├ [5] ╭ VulnerabilityID : CVE-2026-27142 
@@ -8126,9 +8159,10 @@
 │                       │     │                    and operation. 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-59 
-│                       │     ├ VendorSeverity   ╭ bitnami: 2 
-│                       │     │                  ├ nvd    : 2 
-│                       │     │                  ╰ redhat : 2 
+│                       │     ├ VendorSeverity   ╭ bitnami    : 2 
+│                       │     │                  ├ nvd        : 2 
+│                       │     │                  ├ oracle-oval: 3 
+│                       │     │                  ╰ redhat     : 2 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H
 │                       │     │                  │         │           /A:H 
 │                       │     │                  │         ╰ V3Score : 6.4 
@@ -8142,9 +8176,11 @@
 │                       │     │                  ├ [1]: https://go.dev/cl/763761 
 │                       │     │                  ├ [2]: https://go.dev/issue/78293 
 │                       │     │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
-│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-│                       │     │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │     │                  ├ [4]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+│                       │     │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+│                       │     │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │     │                  ├ [7]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │                       │     ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │                       │     ╰ LastModifiedDate: 2026-04-16T19:15:39.4Z 
 │                       ├ [7] ╭ VulnerabilityID : CVE-2026-32288 
@@ -10169,8 +10205,9 @@
 │                       │      │                   direct users of crypto/x509 and users of crypto/tls. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ VendorSeverity   ╭ bitnami: 3 
-│                       │      │                  ╰ redhat : 3 
+│                       │      ├ VendorSeverity   ╭ bitnami    : 3 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ redhat     : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
 │                       │      │                  │         ╰ V3Score : 7.5 
@@ -10182,9 +10219,11 @@
 │                       │      │                  ├ [2]: https://go.dev/issue/78282 
 │                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                       │      │                  │      RWU 
-│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
-│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
+│                       │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2026-32280.html 
+│                       │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+│                       │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:16:42.18Z 
 │                       ├ [10] ╭ VulnerabilityID : CVE-2026-32281 
@@ -10269,8 +10308,9 @@
 │                       │      │                    1.3. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ VendorSeverity   ╭ bitnami: 3 
-│                       │      │                  ╰ nvd    : 3 
+│                       │      ├ VendorSeverity   ╭ bitnami    : 3 
+│                       │      │                  ├ nvd        : 3 
+│                       │      │                  ╰ oracle-oval: 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
 │                       │      │                  │         ╰ V3Score : 7.5 
@@ -10281,8 +10321,10 @@
 │                       │      │                  ├ [1]: https://go.dev/issue/78334 
 │                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                       │      │                  │      RWU 
-│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-│                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                       │      │                  ├ [3]: https://linux.oracle.com/cve/CVE-2026-32283.html 
+│                       │      │                  ├ [4]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                       │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4870 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:12:10.54Z 
 │                       ├ [12] ╭ VulnerabilityID : CVE-2025-61730 
@@ -10413,9 +10455,10 @@
 │                       │      │                   the check and operation. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-59 
-│                       │      ├ VendorSeverity   ╭ bitnami: 2 
-│                       │      │                  ├ nvd    : 2 
-│                       │      │                  ╰ redhat : 2 
+│                       │      ├ VendorSeverity   ╭ bitnami    : 2 
+│                       │      │                  ├ nvd        : 2 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ redhat     : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:
 │                       │      │                  │         │           H/A:H 
 │                       │      │                  │         ╰ V3Score : 6.4 
@@ -10430,9 +10473,11 @@
 │                       │      │                  ├ [2]: https://go.dev/issue/78293 
 │                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                       │      │                  │      RWU 
-│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+│                       │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+│                       │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:15:39.4Z 
 │                       ├ [15] ╭ VulnerabilityID : CVE-2026-32288 
@@ -12249,8 +12294,9 @@
 │                       │      │                   vulnerability is fixed in 4.1.4 and 3.0.5. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-248 
-│                       │      ├ VendorSeverity   ╭ ghsa  : 3 
-│                       │      │                  ╰ redhat: 3 
+│                       │      ├ VendorSeverity   ╭ ghsa       : 3 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ redhat     : 3 
 │                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │      │                  │        │           /A:H 
 │                       │      │                  │        ╰ V3Score : 7.5 
@@ -12261,10 +12307,12 @@
 │                       │      │                  ├ [1]: https://github.com/go-jose/go-jose 
 │                       │      │                  ├ [2]: https://github.com/go-jose/go-jose/security/advisories
 │                       │      │                  │      /GHSA-78h2-9frx-2jm8 
-│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-34986 
-│                       │      │                  ├ [4]: https://pkg.go.dev/github.com/go-jose/go-jose/v4#pkg-c
+│                       │      │                  ├ [3]: https://linux.oracle.com/cve/CVE-2026-34986.html 
+│                       │      │                  ├ [4]: https://linux.oracle.com/errata/ELSA-2026-10135.html 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-34986 
+│                       │      │                  ├ [6]: https://pkg.go.dev/github.com/go-jose/go-jose/v4#pkg-c
 │                       │      │                  │      onstants 
-│                       │      │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2026-34986 
+│                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2026-34986 
 │                       │      ├ PublishedDate   : 2026-04-06T17:17:11.87Z 
 │                       │      ╰ LastModifiedDate: 2026-04-07T13:20:11.643Z 
 │                       ├ [4]  ╭ VulnerabilityID : CVE-2026-33186 
@@ -12643,8 +12691,9 @@
 │                       │      │                   direct users of crypto/x509 and users of crypto/tls. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ VendorSeverity   ╭ bitnami: 3 
-│                       │      │                  ╰ redhat : 3 
+│                       │      ├ VendorSeverity   ╭ bitnami    : 3 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ redhat     : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
 │                       │      │                  │         ╰ V3Score : 7.5 
@@ -12656,9 +12705,11 @@
 │                       │      │                  ├ [2]: https://go.dev/issue/78282 
 │                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                       │      │                  │      RWU 
-│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
-│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
+│                       │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2026-32280.html 
+│                       │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+│                       │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:16:42.18Z 
 │                       ├ [10] ╭ VulnerabilityID : CVE-2026-32281 
@@ -12743,8 +12794,9 @@
 │                       │      │                    1.3. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ VendorSeverity   ╭ bitnami: 3 
-│                       │      │                  ╰ nvd    : 3 
+│                       │      ├ VendorSeverity   ╭ bitnami    : 3 
+│                       │      │                  ├ nvd        : 3 
+│                       │      │                  ╰ oracle-oval: 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
 │                       │      │                  │         ╰ V3Score : 7.5 
@@ -12755,8 +12807,10 @@
 │                       │      │                  ├ [1]: https://go.dev/issue/78334 
 │                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                       │      │                  │      RWU 
-│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-│                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                       │      │                  ├ [3]: https://linux.oracle.com/cve/CVE-2026-32283.html 
+│                       │      │                  ├ [4]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                       │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4870 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:12:10.54Z 
 │                       ├ [12] ╭ VulnerabilityID : CVE-2025-61730 
@@ -12887,9 +12941,10 @@
 │                       │      │                   the check and operation. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-59 
-│                       │      ├ VendorSeverity   ╭ bitnami: 2 
-│                       │      │                  ├ nvd    : 2 
-│                       │      │                  ╰ redhat : 2 
+│                       │      ├ VendorSeverity   ╭ bitnami    : 2 
+│                       │      │                  ├ nvd        : 2 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ redhat     : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:
 │                       │      │                  │         │           H/A:H 
 │                       │      │                  │         ╰ V3Score : 6.4 
@@ -12904,9 +12959,11 @@
 │                       │      │                  ├ [2]: https://go.dev/issue/78293 
 │                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                       │      │                  │      RWU 
-│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+│                       │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+│                       │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:15:39.4Z 
 │                       ├ [15] ╭ VulnerabilityID : CVE-2026-32288 
@@ -14270,8 +14327,9 @@
 │                       │      │                   vulnerability is fixed in 4.1.4 and 3.0.5. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-248 
-│                       │      ├ VendorSeverity   ╭ ghsa  : 3 
-│                       │      │                  ╰ redhat: 3 
+│                       │      ├ VendorSeverity   ╭ ghsa       : 3 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ redhat     : 3 
 │                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │      │                  │        │           /A:H 
 │                       │      │                  │        ╰ V3Score : 7.5 
@@ -14282,10 +14340,12 @@
 │                       │      │                  ├ [1]: https://github.com/go-jose/go-jose 
 │                       │      │                  ├ [2]: https://github.com/go-jose/go-jose/security/advisories
 │                       │      │                  │      /GHSA-78h2-9frx-2jm8 
-│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-34986 
-│                       │      │                  ├ [4]: https://pkg.go.dev/github.com/go-jose/go-jose/v4#pkg-c
+│                       │      │                  ├ [3]: https://linux.oracle.com/cve/CVE-2026-34986.html 
+│                       │      │                  ├ [4]: https://linux.oracle.com/errata/ELSA-2026-10135.html 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-34986 
+│                       │      │                  ├ [6]: https://pkg.go.dev/github.com/go-jose/go-jose/v4#pkg-c
 │                       │      │                  │      onstants 
-│                       │      │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2026-34986 
+│                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2026-34986 
 │                       │      ├ PublishedDate   : 2026-04-06T17:17:11.87Z 
 │                       │      ╰ LastModifiedDate: 2026-04-07T13:20:11.643Z 
 │                       ├ [3]  ╭ VulnerabilityID : CVE-2025-52881 
@@ -14945,8 +15005,9 @@
 │                       │      │                   direct users of crypto/x509 and users of crypto/tls. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ VendorSeverity   ╭ bitnami: 3 
-│                       │      │                  ╰ redhat : 3 
+│                       │      ├ VendorSeverity   ╭ bitnami    : 3 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ redhat     : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
 │                       │      │                  │         ╰ V3Score : 7.5 
@@ -14958,9 +15019,11 @@
 │                       │      │                  ├ [2]: https://go.dev/issue/78282 
 │                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                       │      │                  │      RWU 
-│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
-│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
+│                       │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2026-32280.html 
+│                       │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+│                       │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:16:42.18Z 
 │                       ├ [13] ╭ VulnerabilityID : CVE-2026-32281 
@@ -15045,8 +15108,9 @@
 │                       │      │                    1.3. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ VendorSeverity   ╭ bitnami: 3 
-│                       │      │                  ╰ nvd    : 3 
+│                       │      ├ VendorSeverity   ╭ bitnami    : 3 
+│                       │      │                  ├ nvd        : 3 
+│                       │      │                  ╰ oracle-oval: 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
 │                       │      │                  │         ╰ V3Score : 7.5 
@@ -15057,8 +15121,10 @@
 │                       │      │                  ├ [1]: https://go.dev/issue/78334 
 │                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                       │      │                  │      RWU 
-│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-│                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                       │      │                  ├ [3]: https://linux.oracle.com/cve/CVE-2026-32283.html 
+│                       │      │                  ├ [4]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                       │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4870 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:12:10.54Z 
 │                       ├ [15] ╭ VulnerabilityID : CVE-2026-27142 
@@ -15144,9 +15210,10 @@
 │                       │      │                   the check and operation. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-59 
-│                       │      ├ VendorSeverity   ╭ bitnami: 2 
-│                       │      │                  ├ nvd    : 2 
-│                       │      │                  ╰ redhat : 2 
+│                       │      ├ VendorSeverity   ╭ bitnami    : 2 
+│                       │      │                  ├ nvd        : 2 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ redhat     : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:
 │                       │      │                  │         │           H/A:H 
 │                       │      │                  │         ╰ V3Score : 6.4 
@@ -15161,9 +15228,11 @@
 │                       │      │                  ├ [2]: https://go.dev/issue/78293 
 │                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
 │                       │      │                  │      RWU 
-│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+│                       │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+│                       │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:15:39.4Z 
 │                       ├ [17] ╭ VulnerabilityID : CVE-2026-32288 
@@ -19213,8 +19282,9 @@
                         │      │                   vulnerability is fixed in 4.1.4 and 3.0.5. 
                         │      ├ Severity        : HIGH 
                         │      ├ CweIDs           ─ [0]: CWE-248 
-                        │      ├ VendorSeverity   ╭ ghsa  : 3 
-                        │      │                  ╰ redhat: 3 
+                        │      ├ VendorSeverity   ╭ ghsa       : 3 
+                        │      │                  ├ oracle-oval: 3 
+                        │      │                  ╰ redhat     : 3 
                         │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
                         │      │                  │        │           /A:H 
                         │      │                  │        ╰ V3Score : 7.5 
@@ -19225,10 +19295,12 @@
                         │      │                  ├ [1]: https://github.com/go-jose/go-jose 
                         │      │                  ├ [2]: https://github.com/go-jose/go-jose/security/advisories
                         │      │                  │      /GHSA-78h2-9frx-2jm8 
-                        │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-34986 
-                        │      │                  ├ [4]: https://pkg.go.dev/github.com/go-jose/go-jose/v4#pkg-c
+                        │      │                  ├ [3]: https://linux.oracle.com/cve/CVE-2026-34986.html 
+                        │      │                  ├ [4]: https://linux.oracle.com/errata/ELSA-2026-10135.html 
+                        │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-34986 
+                        │      │                  ├ [6]: https://pkg.go.dev/github.com/go-jose/go-jose/v4#pkg-c
                         │      │                  │      onstants 
-                        │      │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2026-34986 
+                        │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2026-34986 
                         │      ├ PublishedDate   : 2026-04-06T17:17:11.87Z 
                         │      ╰ LastModifiedDate: 2026-04-07T13:20:11.643Z 
                         ├ [12] ╭ VulnerabilityID : CVE-2026-4660 
@@ -19747,8 +19819,9 @@
                         │      │                   direct users of crypto/x509 and users of crypto/tls. 
                         │      ├ Severity        : HIGH 
                         │      ├ CweIDs           ─ [0]: CWE-770 
-                        │      ├ VendorSeverity   ╭ bitnami: 3 
-                        │      │                  ╰ redhat : 3 
+                        │      ├ VendorSeverity   ╭ bitnami    : 3 
+                        │      │                  ├ oracle-oval: 3 
+                        │      │                  ╰ redhat     : 3 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
                         │      │                  │         │           N/A:H 
                         │      │                  │         ╰ V3Score : 7.5 
@@ -19760,9 +19833,11 @@
                         │      │                  ├ [2]: https://go.dev/issue/78282 
                         │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
                         │      │                  │      RWU 
-                        │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
-                        │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4947 
-                        │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
+                        │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2026-32280.html 
+                        │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+                        │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+                        │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2026-4947 
+                        │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
                         │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
                         │      ╰ LastModifiedDate: 2026-04-16T19:16:42.18Z 
                         ├ [21] ╭ VulnerabilityID : CVE-2026-32281 
@@ -19847,8 +19922,9 @@
                         │      │                    1.3. 
                         │      ├ Severity        : HIGH 
                         │      ├ CweIDs           ─ [0]: CWE-770 
-                        │      ├ VendorSeverity   ╭ bitnami: 3 
-                        │      │                  ╰ nvd    : 3 
+                        │      ├ VendorSeverity   ╭ bitnami    : 3 
+                        │      │                  ├ nvd        : 3 
+                        │      │                  ╰ oracle-oval: 3 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
                         │      │                  │         │           N/A:H 
                         │      │                  │         ╰ V3Score : 7.5 
@@ -19859,8 +19935,10 @@
                         │      │                  ├ [1]: https://go.dev/issue/78334 
                         │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
                         │      │                  │      RWU 
-                        │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-                        │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4870 
+                        │      │                  ├ [3]: https://linux.oracle.com/cve/CVE-2026-32283.html 
+                        │      │                  ├ [4]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+                        │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+                        │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4870 
                         │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
                         │      ╰ LastModifiedDate: 2026-04-16T19:12:10.54Z 
                         ├ [23] ╭ VulnerabilityID : CVE-2025-61730 
@@ -19991,9 +20069,10 @@
                         │      │                   the check and operation. 
                         │      ├ Severity        : MEDIUM 
                         │      ├ CweIDs           ─ [0]: CWE-59 
-                        │      ├ VendorSeverity   ╭ bitnami: 2 
-                        │      │                  ├ nvd    : 2 
-                        │      │                  ╰ redhat : 2 
+                        │      ├ VendorSeverity   ╭ bitnami    : 2 
+                        │      │                  ├ nvd        : 2 
+                        │      │                  ├ oracle-oval: 3 
+                        │      │                  ╰ redhat     : 2 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:
                         │      │                  │         │           H/A:H 
                         │      │                  │         ╰ V3Score : 6.4 
@@ -20008,9 +20087,11 @@
                         │      │                  ├ [2]: https://go.dev/issue/78293 
                         │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
                         │      │                  │      RWU 
-                        │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-                        │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4864 
-                        │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+                        │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+                        │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+                        │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+                        │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2026-4864 
+                        │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
                         │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
                         │      ╰ LastModifiedDate: 2026-04-16T19:15:39.4Z 
                         ├ [26] ╭ VulnerabilityID : CVE-2026-32288 
