@@ -1732,6 +1732,7 @@
                         │      ├ CweIDs           ─ [0]: CWE-770 
                         │      ├ VendorSeverity   ╭ bitnami: 2 
                         │      │                  ├ nvd    : 2 
+                        │      │                  ├ photon : 3 
                         │      │                  ╰ redhat : 2 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:
                         │      │                  │         │           N/A:H 
@@ -1787,6 +1788,7 @@
                                ├ CweIDs           ─ [0]: CWE-79 
                                ├ VendorSeverity   ╭ bitnami: 2 
                                │                  ├ nvd    : 2 
+                               │                  ├ photon : 4 
                                │                  ╰ redhat : 2 
                                ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
                                │                  │         │           L/A:N 
