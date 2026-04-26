@@ -2794,6 +2794,7 @@
     VendorSeverity:
       bitnami: 2
       nvd: 2
+      photon: 3
       redhat: 2
     CVSS:
       bitnami:
@@ -2844,6 +2845,7 @@
     VendorSeverity:
       bitnami: 2
       nvd: 2
+      photon: 4
       redhat: 2
     CVSS:
       bitnami:
@@ -4692,7 +4694,7 @@
     - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://errata.almalinux.org/9/ALSA-2026-9044.html
-    - https://errata.rockylinux.org/RLSA-2026:7259
+    - https://errata.rockylinux.org/RLSA-2026:7011
     - https://go.dev/cl/752180
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
@@ -4976,6 +4978,7 @@
     VendorSeverity:
       bitnami: 2
       nvd: 2
+      photon: 3
       redhat: 2
     CVSS:
       bitnami:
@@ -5026,6 +5029,7 @@
     VendorSeverity:
       bitnami: 2
       nvd: 2
+      photon: 4
       redhat: 2
     CVSS:
       bitnami:
@@ -8108,6 +8112,7 @@
     VendorSeverity:
       bitnami: 2
       nvd: 2
+      photon: 3
       redhat: 2
     CVSS:
       bitnami:
@@ -8158,6 +8163,7 @@
     VendorSeverity:
       bitnami: 2
       nvd: 2
+      photon: 4
       redhat: 2
     CVSS:
       bitnami:
@@ -9398,11 +9404,9 @@
     - https://bugzilla.redhat.com/2404715
     - https://bugzilla.redhat.com/2407258
     - https://bugzilla.redhat.com/show_bug.cgi?id=2404715
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2407258
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-52881
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58183
     - https://errata.almalinux.org/9/ALSA-2025-22011.html
-    - https://errata.rockylinux.org/RLSA-2025:22011
+    - https://errata.rockylinux.org/RLSA-2025:23543
     - https://github.com/opencontainers/runc
     - https://github.com/opencontainers/runc/blob/v1.4.0-rc.2/RELEASES.md
     - https://github.com/opencontainers/runc/commit/3f925525b44d247e390e529e772a0dc0c0bc3557
@@ -10006,6 +10010,7 @@
     VendorSeverity:
       bitnami: 2
       nvd: 2
+      photon: 3
       redhat: 2
     CVSS:
       bitnami:
@@ -10056,6 +10061,7 @@
     VendorSeverity:
       bitnami: 2
       nvd: 2
+      photon: 4
       redhat: 2
     CVSS:
       bitnami:
