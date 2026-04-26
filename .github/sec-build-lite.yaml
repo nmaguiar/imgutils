@@ -1620,6 +1620,7 @@
     VendorSeverity:
       bitnami: 2
       nvd: 2
+      photon: 3
       redhat: 2
     CVSS:
       bitnami:
@@ -1670,6 +1671,7 @@
     VendorSeverity:
       bitnami: 2
       nvd: 2
+      photon: 4
       redhat: 2
     CVSS:
       bitnami:
