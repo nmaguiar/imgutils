@@ -3747,7 +3747,7 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-425 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 2 
+│                       │      │                  ├ amazon     : 3 
 │                       │      │                  ├ azure      : 3 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ oracle-oval: 3 
@@ -4533,7 +4533,7 @@
 │                       │      │                    follow "url=" by setting htmlmetacontenturlescape=0. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
-│                       │      ├ VendorSeverity   ╭ amazon : 2 
+│                       │      ├ VendorSeverity   ╭ amazon : 3 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
@@ -4747,7 +4747,7 @@
 │                              │                   outside the root. 
 │                              ├ Severity        : LOW 
 │                              ├ CweIDs           ─ [0]: CWE-22 
-│                              ├ VendorSeverity   ╭ amazon : 2 
+│                              ├ VendorSeverity   ╭ amazon : 3 
 │                              │                  ├ azure  : 1 
 │                              │                  ├ bitnami: 1 
 │                              │                  ╰ redhat : 1 
@@ -4872,10 +4872,7 @@
 │     │                 │      ├ Identifier ╭ PURL: pkg:golang/github.com/microsoft/hcsshim@v0.14.0-rc.1 
 │     │                 │      │            ╰ UID : ba09268543a5d016 
 │     │                 │      ├ Version   : v0.14.0-rc.1 
-│     │                 │      ├ Layer      ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1bc64e0
-│     │                 │      │            │         86c1f91e77709f 
-│     │                 │      │            ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4475e8b
-│     │                 │      │                      f0be8d84f76b5f 
+
 │     │                 │      ╰ AnalyzedBy: gobinary 
 │     │                 ├ [3]  ╭ ID        : github.com/cilium/ebpf@v0.16.0 
 │     │                 │      ├ Name      : github.com/cilium/ebpf 
@@ -5763,7 +5760,7 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-425 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 2 
+│                       │      │                  ├ amazon     : 3 
 │                       │      │                  ├ azure      : 3 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ oracle-oval: 3 
@@ -5974,7 +5971,7 @@
 │                       │      │                    follow "url=" by setting htmlmetacontenturlescape=0. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
-│                       │      ├ VendorSeverity   ╭ amazon : 2 
+│                       │      ├ VendorSeverity   ╭ amazon : 3 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
@@ -6188,7 +6185,7 @@
 │                              │                   outside the root. 
 │                              ├ Severity        : LOW 
 │                              ├ CweIDs           ─ [0]: CWE-22 
-│                              ├ VendorSeverity   ╭ amazon : 2 
+│                              ├ VendorSeverity   ╭ amazon : 3 
 │                              │                  ├ azure  : 1 
 │                              │                  ├ bitnami: 1 
 │                              │                  ╰ redhat : 1 
@@ -7348,7 +7345,7 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-425 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 2 
+│                       │      │                  ├ amazon     : 3 
 │                       │      │                  ├ azure      : 3 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ oracle-oval: 3 
@@ -7559,7 +7556,7 @@
 │                       │      │                    follow "url=" by setting htmlmetacontenturlescape=0. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
-│                       │      ├ VendorSeverity   ╭ amazon : 2 
+│                       │      ├ VendorSeverity   ╭ amazon : 3 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
@@ -7773,7 +7770,7 @@
 │                              │                   outside the root. 
 │                              ├ Severity        : LOW 
 │                              ├ CweIDs           ─ [0]: CWE-22 
-│                              ├ VendorSeverity   ╭ amazon : 2 
+│                              ├ VendorSeverity   ╭ amazon : 3 
 │                              │                  ├ azure  : 1 
 │                              │                  ├ bitnami: 1 
 │                              │                  ╰ redhat : 1 
@@ -7908,7 +7905,7 @@
 │                       │     ├ Severity        : HIGH 
 │                       │     ├ CweIDs           ─ [0]: CWE-425 
 │                       │     ├ VendorSeverity   ╭ alma       : 3 
-│                       │     │                  ├ amazon     : 2 
+│                       │     │                  ├ amazon     : 3 
 │                       │     │                  ├ azure      : 3 
 │                       │     │                  ├ bitnami    : 3 
 │                       │     │                  ├ oracle-oval: 3 
@@ -8116,7 +8113,7 @@
 │                       │     │                   follow "url=" by setting htmlmetacontenturlescape=0. 
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ─ [0]: CWE-79 
-│                       │     ├ VendorSeverity   ╭ amazon : 2 
+│                       │     ├ VendorSeverity   ╭ amazon : 3 
 │                       │     │                  ├ bitnami: 2 
 │                       │     │                  ╰ redhat : 2 
 │                       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
@@ -8326,7 +8323,7 @@
 │                             │                   outside the root. 
 │                             ├ Severity        : LOW 
 │                             ├ CweIDs           ─ [0]: CWE-22 
-│                             ├ VendorSeverity   ╭ amazon : 2 
+│                             ├ VendorSeverity   ╭ amazon : 3 
 │                             │                  ├ azure  : 1 
 │                             │                  ├ bitnami: 1 
 │                             │                  ╰ redhat : 1 
@@ -10157,7 +10154,7 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-425 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 2 
+│                       │      │                  ├ amazon     : 3 
 │                       │      │                  ├ azure      : 3 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ oracle-oval: 3 
@@ -10413,7 +10410,7 @@
 │                       │      │                    follow "url=" by setting htmlmetacontenturlescape=0. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
-│                       │      ├ VendorSeverity   ╭ amazon : 2 
+│                       │      ├ VendorSeverity   ╭ amazon : 3 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
@@ -10627,7 +10624,7 @@
 │                              │                   outside the root. 
 │                              ├ Severity        : LOW 
 │                              ├ CweIDs           ─ [0]: CWE-22 
-│                              ├ VendorSeverity   ╭ amazon : 2 
+│                              ├ VendorSeverity   ╭ amazon : 3 
 │                              │                  ├ azure  : 1 
 │                              │                  ├ bitnami: 1 
 │                              │                  ╰ redhat : 1 
@@ -12645,7 +12642,7 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-425 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 2 
+│                       │      │                  ├ amazon     : 3 
 │                       │      │                  ├ azure      : 3 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ oracle-oval: 3 
@@ -12901,7 +12898,7 @@
 │                       │      │                    follow "url=" by setting htmlmetacontenturlescape=0. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
-│                       │      ├ VendorSeverity   ╭ amazon : 2 
+│                       │      ├ VendorSeverity   ╭ amazon : 3 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
@@ -13115,7 +13112,7 @@
 │                              │                   outside the root. 
 │                              ├ Severity        : LOW 
 │                              ├ CweIDs           ─ [0]: CWE-22 
-│                              ├ VendorSeverity   ╭ amazon : 2 
+│                              ├ VendorSeverity   ╭ amazon : 3 
 │                              │                  ├ azure  : 1 
 │                              │                  ├ bitnami: 1 
 │                              │                  ╰ redhat : 1 
@@ -14961,7 +14958,7 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-425 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 2 
+│                       │      │                  ├ amazon     : 3 
 │                       │      │                  ├ azure      : 3 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ oracle-oval: 3 
@@ -15172,7 +15169,7 @@
 │                       │      │                    follow "url=" by setting htmlmetacontenturlescape=0. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
-│                       │      ├ VendorSeverity   ╭ amazon : 2 
+│                       │      ├ VendorSeverity   ╭ amazon : 3 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
@@ -15386,7 +15383,7 @@
 │                              │                   outside the root. 
 │                              ├ Severity        : LOW 
 │                              ├ CweIDs           ─ [0]: CWE-22 
-│                              ├ VendorSeverity   ╭ amazon : 2 
+│                              ├ VendorSeverity   ╭ amazon : 3 
 │                              │                  ├ azure  : 1 
 │                              │                  ├ bitnami: 1 
 │                              │                  ╰ redhat : 1 
@@ -19777,7 +19774,7 @@
                         │      ├ Severity        : HIGH 
                         │      ├ CweIDs           ─ [0]: CWE-425 
                         │      ├ VendorSeverity   ╭ alma       : 3 
-                        │      │                  ├ amazon     : 2 
+                        │      │                  ├ amazon     : 3 
                         │      │                  ├ azure      : 3 
                         │      │                  ├ bitnami    : 3 
                         │      │                  ├ oracle-oval: 3 
@@ -20033,7 +20030,7 @@
                         │      │                    follow "url=" by setting htmlmetacontenturlescape=0. 
                         │      ├ Severity        : MEDIUM 
                         │      ├ CweIDs           ─ [0]: CWE-79 
-                        │      ├ VendorSeverity   ╭ amazon : 2 
+                        │      ├ VendorSeverity   ╭ amazon : 3 
                         │      │                  ├ bitnami: 2 
                         │      │                  ╰ redhat : 2 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
@@ -20247,7 +20244,7 @@
                                │                   outside the root. 
                                ├ Severity        : LOW 
                                ├ CweIDs           ─ [0]: CWE-22 
-                               ├ VendorSeverity   ╭ amazon : 2 
+                               ├ VendorSeverity   ╭ amazon : 3 
                                │                  ├ azure  : 1 
                                │                  ├ bitnami: 1 
                                │                  ╰ redhat : 1 
