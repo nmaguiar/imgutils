@@ -1069,7 +1069,7 @@
 │     │      ├ Severity        : HIGH 
 │     │      ├ CweIDs           ─ [0]: CWE-425 
 │     │      ├ VendorSeverity   ╭ alma       : 3 
-│     │      │                  ├ amazon     : 2 
+│     │      │                  ├ amazon     : 3 
 │     │      │                  ├ azure      : 3 
 │     │      │                  ├ bitnami    : 3 
 │     │      │                  ├ oracle-oval: 3 
@@ -1248,7 +1248,7 @@
 │     │      │                   htmlmetacontenturlescape=0. 
 │     │      ├ Severity        : MEDIUM 
 │     │      ├ CweIDs           ─ [0]: CWE-79 
-│     │      ├ VendorSeverity   ╭ amazon : 2 
+│     │      ├ VendorSeverity   ╭ amazon : 3 
 │     │      │                  ├ bitnami: 2 
 │     │      │                  ╰ redhat : 2 
 │     │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N 
@@ -1426,7 +1426,7 @@
 │            │                   without permitting reading or writing files outside the root. 
 │            ├ Severity        : LOW 
 │            ├ CweIDs           ─ [0]: CWE-22 
-│            ├ VendorSeverity   ╭ amazon : 2 
+│            ├ VendorSeverity   ╭ amazon : 3 
 │            │                  ├ azure  : 1 
 │            │                  ├ bitnami: 1 
 │            │                  ╰ redhat : 1 
