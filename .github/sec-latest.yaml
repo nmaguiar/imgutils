@@ -1470,7 +1470,7 @@
       Name: GitHub Security Advisory Maven
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven
     Fingerprint: sha256:02a7c875671a0428647bf1b83db39e5186ac65b1544e796cf8df0cc57fb5a5ea
-    Title: Use of a Broken or Risky Cryptographic Algorithm vulnerability in Legi ...
+    Title: 'bouncycastle: BC-JAVA: PKIX draft CompositeVerifier accepts empty signature sequence as valid'
     Description: |-
       Use of a Broken or Risky Cryptographic Algorithm vulnerability in Legion of the Bouncy Castle Inc. BC-JAVA bcpkix on all (pkix modules), Legion of the Bouncy Castle Inc. BCPKIX-FIPS bcpkix on All (pkix modules). This vulnerability is associated with program files JcaContentVerifierProviderBuilder.Java.
 
@@ -1480,15 +1480,21 @@
     - CWE-327
     VendorSeverity:
       ghsa: 2
+      redhat: 3
     CVSS:
       ghsa:
         V40Vector: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/U:Green
         V40Score: 6.3
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
+        V3Score: 7.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-5588
     - https://github.com/bcgit/bc-java
     - https://github.com/bcgit/bc-java/commit/656bae0dbd9b1521f840521ff786e78749fe3057
     - https://github.com/bcgit/bc-java/wiki/CVE%E2%80%902026%E2%80%905588
     - https://nvd.nist.gov/vuln/detail/CVE-2026-5588
+    - https://www.cve.org/CVERecord?id=CVE-2026-5588
     PublishedDate: '2026-04-15T10:16:49.597Z'
     LastModifiedDate: '2026-04-21T16:16:20.54Z'
   - VulnerabilityID: CVE-2026-0636
@@ -1512,7 +1518,7 @@
       Name: GitHub Security Advisory Maven
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven
     Fingerprint: sha256:e788de66a0febbfa10aa238e9c5f53212b19c9f31722bb7f6f3864d6c7c4b6a3
-    Title: Improper neutralization of special elements used in an LDAP query ('LD ...
+    Title: 'bouncycastle: BC-JAVA: LDAP injection vulnerability in LDAPStoreHelper.java'
     Description: |-
       Improper neutralization of special elements used in an LDAP query ('LDAP injection') vulnerability in Legion of the Bouncy Castle Inc. BC-JAVA bcprov on all (prov modules). This vulnerability is associated with program files LDAPStoreHelper.
 
@@ -1522,15 +1528,21 @@
     - CWE-90
     VendorSeverity:
       ghsa: 2
+      redhat: 3
     CVSS:
       ghsa:
         V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/RE:M/U:Amber
         V40Score: 5.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
+        V3Score: 6.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-0636
     - https://github.com/bcgit/bc-java
     - https://github.com/bcgit/bc-java/commit/d20cdb8430e09224114fec0179a71859929fcbde
     - https://github.com/bcgit/bc-java/wiki/CVE%E2%80%902026%E2%80%900636
     - https://nvd.nist.gov/vuln/detail/CVE-2026-0636
+    - https://www.cve.org/CVERecord?id=CVE-2026-0636
     PublishedDate: '2026-04-15T10:16:38.413Z'
     LastModifiedDate: '2026-04-17T15:38:09.243Z'
   - VulnerabilityID: CVE-2026-2332
@@ -1561,11 +1573,15 @@
     - CWE-444
     VendorSeverity:
       ghsa: 3
+      nvd: 4
       redhat: 3
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N
         V3Score: 7.4
+      nvd:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
+        V3Score: 9.1
       redhat:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N
         V3Score: 7.4
@@ -1578,7 +1594,7 @@
     - https://w4ke.info/2025/06/18/funky-chunks.html
     - https://www.cve.org/CVERecord?id=CVE-2026-2332
     PublishedDate: '2026-04-14T12:16:21.333Z'
-    LastModifiedDate: '2026-04-17T15:24:57.753Z'
+    LastModifiedDate: '2026-05-01T13:31:00.31Z'
 - Target: usr/bin/crictl
   Class: lang-pkgs
   Type: gobinary
@@ -2665,6 +2681,7 @@
     CweIDs:
     - CWE-288
     VendorSeverity:
+      amazon: 3
       ghsa: 3
       nvd: 3
       photon: 3
@@ -2789,7 +2806,7 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2026-35469
     - https://www.cve.org/CVERecord?id=CVE-2026-35469
     PublishedDate: '2026-04-16T22:16:37.92Z'
-    LastModifiedDate: '2026-04-17T15:38:09.243Z'
+    LastModifiedDate: '2026-04-29T21:04:10.06Z'
   - VulnerabilityID: CVE-2026-24051
     VendorIDs:
     - GHSA-9h8m-3fm2-qjrq
@@ -2955,6 +2972,7 @@
       photon: 4
       redhat: 2
       rocky: 3
+      ubuntu: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
@@ -2976,16 +2994,18 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121
     - https://errata.almalinux.org/9/ALSA-2026-4177.html
     - https://errata.rockylinux.org/RLSA-2026:4177
+    - https://github.com/golang/go/issues/77113
     - https://go.dev/cl/737700
     - https://go.dev/issue/77217
     - https://groups.google.com/g/golang-announce/c/K09ubi9FQFk
+    - https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc
     - https://linux.oracle.com/cve/CVE-2025-68121.html
     - https://linux.oracle.com/errata/ELSA-2026-5146.html
     - https://nvd.nist.gov/vuln/detail/CVE-2025-68121
     - https://pkg.go.dev/vuln/GO-2026-4337
     - https://www.cve.org/CVERecord?id=CVE-2025-68121
     PublishedDate: '2026-02-05T18:16:10.857Z'
-    LastModifiedDate: '2026-02-20T17:25:50.303Z'
+    LastModifiedDate: '2026-04-29T14:16:16.17Z'
   - VulnerabilityID: CVE-2025-58183
     VendorIDs:
     - GO-2025-4014
@@ -3270,7 +3290,7 @@
     - CWE-425
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 3
       bitnami: 3
       oracle-oval: 3
@@ -3290,7 +3310,7 @@
     - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://errata.almalinux.org/9/ALSA-2026-9044.html
-    - https://errata.rockylinux.org/RLSA-2026:7259
+    - https://errata.rockylinux.org/RLSA-2026:8841
     - https://go.dev/cl/752180
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
@@ -3327,6 +3347,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
@@ -3343,7 +3364,7 @@
     - https://go.dev/issue/78282
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32280.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11514.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32280
     - https://pkg.go.dev/vuln/GO-2026-4947
     - https://www.cve.org/CVERecord?id=CVE-2026-32280
@@ -3376,6 +3397,7 @@
     CweIDs:
     - CWE-295
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       nvd: 3
       redhat: 2
@@ -3426,6 +3448,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       nvd: 3
       oracle-oval: 3
@@ -3441,7 +3464,7 @@
     - https://go.dev/issue/78334
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32283.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11881.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32283
     - https://pkg.go.dev/vuln/GO-2026-4870
     PublishedDate: '2026-04-08T02:16:03.58Z'
@@ -4033,7 +4056,7 @@
     CweIDs:
     - CWE-79
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       bitnami: 2
       redhat: 2
     CVSS:
@@ -4080,6 +4103,7 @@
     CweIDs:
     - CWE-59
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       oracle-oval: 3
@@ -4100,7 +4124,7 @@
     - https://go.dev/issue/78293
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32282.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11712.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32282
     - https://pkg.go.dev/vuln/GO-2026-4864
     - https://www.cve.org/CVERecord?id=CVE-2026-32282
@@ -4133,6 +4157,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       photon: 3
@@ -4184,6 +4209,7 @@
     CweIDs:
     - CWE-79
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       photon: 4
@@ -4234,7 +4260,7 @@
     CweIDs:
     - CWE-22
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       azure: 1
       bitnami: 1
       redhat: 1
@@ -5146,6 +5172,7 @@
       photon: 4
       redhat: 2
       rocky: 3
+      ubuntu: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
@@ -5167,16 +5194,18 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121
     - https://errata.almalinux.org/9/ALSA-2026-4177.html
     - https://errata.rockylinux.org/RLSA-2026:4177
+    - https://github.com/golang/go/issues/77113
     - https://go.dev/cl/737700
     - https://go.dev/issue/77217
     - https://groups.google.com/g/golang-announce/c/K09ubi9FQFk
+    - https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc
     - https://linux.oracle.com/cve/CVE-2025-68121.html
     - https://linux.oracle.com/errata/ELSA-2026-5146.html
     - https://nvd.nist.gov/vuln/detail/CVE-2025-68121
     - https://pkg.go.dev/vuln/GO-2026-4337
     - https://www.cve.org/CVERecord?id=CVE-2025-68121
     PublishedDate: '2026-02-05T18:16:10.857Z'
-    LastModifiedDate: '2026-02-20T17:25:50.303Z'
+    LastModifiedDate: '2026-04-29T14:16:16.17Z'
   - VulnerabilityID: CVE-2026-25679
     VendorIDs:
     - GO-2026-4601
@@ -5204,7 +5233,7 @@
     - CWE-425
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 3
       bitnami: 3
       oracle-oval: 3
@@ -5224,7 +5253,7 @@
     - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://errata.almalinux.org/9/ALSA-2026-9044.html
-    - https://errata.rockylinux.org/RLSA-2026:7259
+    - https://errata.rockylinux.org/RLSA-2026:8841
     - https://go.dev/cl/752180
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
@@ -5261,6 +5290,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
@@ -5277,7 +5307,7 @@
     - https://go.dev/issue/78282
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32280.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11514.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32280
     - https://pkg.go.dev/vuln/GO-2026-4947
     - https://www.cve.org/CVERecord?id=CVE-2026-32280
@@ -5310,6 +5340,7 @@
     CweIDs:
     - CWE-295
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       nvd: 3
       redhat: 2
@@ -5360,6 +5391,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       nvd: 3
       oracle-oval: 3
@@ -5375,7 +5407,7 @@
     - https://go.dev/issue/78334
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32283.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11881.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32283
     - https://pkg.go.dev/vuln/GO-2026-4870
     PublishedDate: '2026-04-08T02:16:03.58Z'
@@ -5406,7 +5438,7 @@
     CweIDs:
     - CWE-79
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       bitnami: 2
       redhat: 2
     CVSS:
@@ -5453,6 +5485,7 @@
     CweIDs:
     - CWE-59
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       oracle-oval: 3
@@ -5473,7 +5506,7 @@
     - https://go.dev/issue/78293
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32282.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11712.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32282
     - https://pkg.go.dev/vuln/GO-2026-4864
     - https://www.cve.org/CVERecord?id=CVE-2026-32282
@@ -5506,6 +5539,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       photon: 3
@@ -5557,6 +5591,7 @@
     CweIDs:
     - CWE-79
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       photon: 4
@@ -5607,7 +5642,7 @@
     CweIDs:
     - CWE-22
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       azure: 1
       bitnami: 1
       redhat: 1
@@ -6337,6 +6372,7 @@
     CweIDs:
     - CWE-288
     VendorSeverity:
+      amazon: 3
       ghsa: 3
       nvd: 3
       photon: 3
@@ -6591,6 +6627,7 @@
       photon: 4
       redhat: 2
       rocky: 3
+      ubuntu: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
@@ -6612,16 +6649,18 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121
     - https://errata.almalinux.org/9/ALSA-2026-4177.html
     - https://errata.rockylinux.org/RLSA-2026:4177
+    - https://github.com/golang/go/issues/77113
     - https://go.dev/cl/737700
     - https://go.dev/issue/77217
     - https://groups.google.com/g/golang-announce/c/K09ubi9FQFk
+    - https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc
     - https://linux.oracle.com/cve/CVE-2025-68121.html
     - https://linux.oracle.com/errata/ELSA-2026-5146.html
     - https://nvd.nist.gov/vuln/detail/CVE-2025-68121
     - https://pkg.go.dev/vuln/GO-2026-4337
     - https://www.cve.org/CVERecord?id=CVE-2025-68121
     PublishedDate: '2026-02-05T18:16:10.857Z'
-    LastModifiedDate: '2026-02-20T17:25:50.303Z'
+    LastModifiedDate: '2026-04-29T14:16:16.17Z'
   - VulnerabilityID: CVE-2026-25679
     VendorIDs:
     - GO-2026-4601
@@ -6649,7 +6688,7 @@
     - CWE-425
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 3
       bitnami: 3
       oracle-oval: 3
@@ -6669,7 +6708,7 @@
     - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://errata.almalinux.org/9/ALSA-2026-9044.html
-    - https://errata.rockylinux.org/RLSA-2026:7259
+    - https://errata.rockylinux.org/RLSA-2026:8841
     - https://go.dev/cl/752180
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
@@ -6706,6 +6745,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
@@ -6722,7 +6762,7 @@
     - https://go.dev/issue/78282
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32280.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11514.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32280
     - https://pkg.go.dev/vuln/GO-2026-4947
     - https://www.cve.org/CVERecord?id=CVE-2026-32280
@@ -6755,6 +6795,7 @@
     CweIDs:
     - CWE-295
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       nvd: 3
       redhat: 2
@@ -6805,6 +6846,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       nvd: 3
       oracle-oval: 3
@@ -6820,7 +6862,7 @@
     - https://go.dev/issue/78334
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32283.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11881.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32283
     - https://pkg.go.dev/vuln/GO-2026-4870
     PublishedDate: '2026-04-08T02:16:03.58Z'
@@ -6851,7 +6893,7 @@
     CweIDs:
     - CWE-79
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       bitnami: 2
       redhat: 2
     CVSS:
@@ -6898,6 +6940,7 @@
     CweIDs:
     - CWE-59
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       oracle-oval: 3
@@ -6918,7 +6961,7 @@
     - https://go.dev/issue/78293
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32282.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11712.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32282
     - https://pkg.go.dev/vuln/GO-2026-4864
     - https://www.cve.org/CVERecord?id=CVE-2026-32282
@@ -6951,6 +6994,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       photon: 3
@@ -7002,6 +7046,7 @@
     CweIDs:
     - CWE-79
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       photon: 4
@@ -7052,7 +7097,7 @@
     CweIDs:
     - CWE-22
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       azure: 1
       bitnami: 1
       redhat: 1
@@ -7126,6 +7171,7 @@
       photon: 4
       redhat: 2
       rocky: 3
+      ubuntu: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
@@ -7147,16 +7193,18 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121
     - https://errata.almalinux.org/9/ALSA-2026-4177.html
     - https://errata.rockylinux.org/RLSA-2026:4177
+    - https://github.com/golang/go/issues/77113
     - https://go.dev/cl/737700
     - https://go.dev/issue/77217
     - https://groups.google.com/g/golang-announce/c/K09ubi9FQFk
+    - https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc
     - https://linux.oracle.com/cve/CVE-2025-68121.html
     - https://linux.oracle.com/errata/ELSA-2026-5146.html
     - https://nvd.nist.gov/vuln/detail/CVE-2025-68121
     - https://pkg.go.dev/vuln/GO-2026-4337
     - https://www.cve.org/CVERecord?id=CVE-2025-68121
     PublishedDate: '2026-02-05T18:16:10.857Z'
-    LastModifiedDate: '2026-02-20T17:25:50.303Z'
+    LastModifiedDate: '2026-04-29T14:16:16.17Z'
   - VulnerabilityID: CVE-2026-25679
     VendorIDs:
     - GO-2026-4601
@@ -7184,7 +7232,7 @@
     - CWE-425
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 3
       bitnami: 3
       oracle-oval: 3
@@ -7204,7 +7252,7 @@
     - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://errata.almalinux.org/9/ALSA-2026-9044.html
-    - https://errata.rockylinux.org/RLSA-2026:7259
+    - https://errata.rockylinux.org/RLSA-2026:8841
     - https://go.dev/cl/752180
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
@@ -7241,6 +7289,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
@@ -7257,7 +7306,7 @@
     - https://go.dev/issue/78282
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32280.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11514.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32280
     - https://pkg.go.dev/vuln/GO-2026-4947
     - https://www.cve.org/CVERecord?id=CVE-2026-32280
@@ -7290,6 +7339,7 @@
     CweIDs:
     - CWE-295
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       nvd: 3
       redhat: 2
@@ -7340,6 +7390,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       nvd: 3
       oracle-oval: 3
@@ -7355,7 +7406,7 @@
     - https://go.dev/issue/78334
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32283.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11881.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32283
     - https://pkg.go.dev/vuln/GO-2026-4870
     PublishedDate: '2026-04-08T02:16:03.58Z'
@@ -7386,7 +7437,7 @@
     CweIDs:
     - CWE-79
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       bitnami: 2
       redhat: 2
     CVSS:
@@ -7433,6 +7484,7 @@
     CweIDs:
     - CWE-59
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       oracle-oval: 3
@@ -7453,7 +7505,7 @@
     - https://go.dev/issue/78293
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32282.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11712.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32282
     - https://pkg.go.dev/vuln/GO-2026-4864
     - https://www.cve.org/CVERecord?id=CVE-2026-32282
@@ -7486,6 +7538,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       photon: 3
@@ -7537,6 +7590,7 @@
     CweIDs:
     - CWE-79
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       photon: 4
@@ -7587,7 +7641,7 @@
     CweIDs:
     - CWE-22
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       azure: 1
       bitnami: 1
       redhat: 1
@@ -8962,7 +9016,7 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2026-35469
     - https://www.cve.org/CVERecord?id=CVE-2026-35469
     PublishedDate: '2026-04-16T22:16:37.92Z'
-    LastModifiedDate: '2026-04-17T15:38:09.243Z'
+    LastModifiedDate: '2026-04-29T21:04:10.06Z'
   - VulnerabilityID: CVE-2026-35204
     VendorIDs:
     - GHSA-vmx8-mqv2-9gmg
@@ -9151,6 +9205,7 @@
       photon: 4
       redhat: 2
       rocky: 3
+      ubuntu: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
@@ -9172,16 +9227,18 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121
     - https://errata.almalinux.org/9/ALSA-2026-4177.html
     - https://errata.rockylinux.org/RLSA-2026:4177
+    - https://github.com/golang/go/issues/77113
     - https://go.dev/cl/737700
     - https://go.dev/issue/77217
     - https://groups.google.com/g/golang-announce/c/K09ubi9FQFk
+    - https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc
     - https://linux.oracle.com/cve/CVE-2025-68121.html
     - https://linux.oracle.com/errata/ELSA-2026-5146.html
     - https://nvd.nist.gov/vuln/detail/CVE-2025-68121
     - https://pkg.go.dev/vuln/GO-2026-4337
     - https://www.cve.org/CVERecord?id=CVE-2025-68121
     PublishedDate: '2026-02-05T18:16:10.857Z'
-    LastModifiedDate: '2026-02-20T17:25:50.303Z'
+    LastModifiedDate: '2026-04-29T14:16:16.17Z'
   - VulnerabilityID: CVE-2025-61726
     VendorIDs:
     - GO-2026-4341
@@ -9341,7 +9398,7 @@
     - CWE-425
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 3
       bitnami: 3
       oracle-oval: 3
@@ -9361,7 +9418,7 @@
     - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://errata.almalinux.org/9/ALSA-2026-9044.html
-    - https://errata.rockylinux.org/RLSA-2026:7259
+    - https://errata.rockylinux.org/RLSA-2026:8841
     - https://go.dev/cl/752180
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
@@ -9398,6 +9455,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
@@ -9414,7 +9472,7 @@
     - https://go.dev/issue/78282
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32280.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11514.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32280
     - https://pkg.go.dev/vuln/GO-2026-4947
     - https://www.cve.org/CVERecord?id=CVE-2026-32280
@@ -9447,6 +9505,7 @@
     CweIDs:
     - CWE-295
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       nvd: 3
       redhat: 2
@@ -9497,6 +9556,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       nvd: 3
       oracle-oval: 3
@@ -9512,7 +9572,7 @@
     - https://go.dev/issue/78334
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32283.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11881.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32283
     - https://pkg.go.dev/vuln/GO-2026-4870
     PublishedDate: '2026-04-08T02:16:03.58Z'
@@ -9584,7 +9644,7 @@
     CweIDs:
     - CWE-79
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       bitnami: 2
       redhat: 2
     CVSS:
@@ -9631,6 +9691,7 @@
     CweIDs:
     - CWE-59
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       oracle-oval: 3
@@ -9651,7 +9712,7 @@
     - https://go.dev/issue/78293
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32282.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11712.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32282
     - https://pkg.go.dev/vuln/GO-2026-4864
     - https://www.cve.org/CVERecord?id=CVE-2026-32282
@@ -9684,6 +9745,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       photon: 3
@@ -9735,6 +9797,7 @@
     CweIDs:
     - CWE-79
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       photon: 4
@@ -9785,7 +9848,7 @@
     CweIDs:
     - CWE-22
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       azure: 1
       bitnami: 1
       redhat: 1
@@ -11294,6 +11357,7 @@
     CweIDs:
     - CWE-288
     VendorSeverity:
+      amazon: 3
       ghsa: 3
       nvd: 3
       photon: 3
@@ -11400,9 +11464,12 @@
     CweIDs:
     - CWE-248
     VendorSeverity:
+      alma: 3
+      amazon: 3
       ghsa: 3
       oracle-oval: 3
       redhat: 3
+      rocky: 3
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -11411,7 +11478,13 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
+    - https://access.redhat.com/errata/RHSA-2026:10135
     - https://access.redhat.com/security/cve/CVE-2026-34986
+    - https://bugzilla.redhat.com/2455470
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2455470
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986
+    - https://errata.almalinux.org/9/ALSA-2026-10135.html
+    - https://errata.rockylinux.org/RLSA-2026:10135
     - https://github.com/go-jose/go-jose
     - https://github.com/go-jose/go-jose/security/advisories/GHSA-78h2-9frx-2jm8
     - https://linux.oracle.com/cve/CVE-2026-34986.html
@@ -11503,6 +11576,7 @@
       photon: 4
       redhat: 2
       rocky: 3
+      ubuntu: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
@@ -11524,16 +11598,18 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121
     - https://errata.almalinux.org/9/ALSA-2026-4177.html
     - https://errata.rockylinux.org/RLSA-2026:4177
+    - https://github.com/golang/go/issues/77113
     - https://go.dev/cl/737700
     - https://go.dev/issue/77217
     - https://groups.google.com/g/golang-announce/c/K09ubi9FQFk
+    - https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc
     - https://linux.oracle.com/cve/CVE-2025-68121.html
     - https://linux.oracle.com/errata/ELSA-2026-5146.html
     - https://nvd.nist.gov/vuln/detail/CVE-2025-68121
     - https://pkg.go.dev/vuln/GO-2026-4337
     - https://www.cve.org/CVERecord?id=CVE-2025-68121
     PublishedDate: '2026-02-05T18:16:10.857Z'
-    LastModifiedDate: '2026-02-20T17:25:50.303Z'
+    LastModifiedDate: '2026-04-29T14:16:16.17Z'
   - VulnerabilityID: CVE-2025-61726
     VendorIDs:
     - GO-2026-4341
@@ -11693,7 +11769,7 @@
     - CWE-425
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 3
       bitnami: 3
       oracle-oval: 3
@@ -11713,7 +11789,7 @@
     - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://errata.almalinux.org/9/ALSA-2026-9044.html
-    - https://errata.rockylinux.org/RLSA-2026:7259
+    - https://errata.rockylinux.org/RLSA-2026:8841
     - https://go.dev/cl/752180
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
@@ -11750,6 +11826,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
@@ -11766,7 +11843,7 @@
     - https://go.dev/issue/78282
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32280.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11514.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32280
     - https://pkg.go.dev/vuln/GO-2026-4947
     - https://www.cve.org/CVERecord?id=CVE-2026-32280
@@ -11799,6 +11876,7 @@
     CweIDs:
     - CWE-295
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       nvd: 3
       redhat: 2
@@ -11849,6 +11927,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       nvd: 3
       oracle-oval: 3
@@ -11864,7 +11943,7 @@
     - https://go.dev/issue/78334
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32283.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11881.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32283
     - https://pkg.go.dev/vuln/GO-2026-4870
     PublishedDate: '2026-04-08T02:16:03.58Z'
@@ -11936,7 +12015,7 @@
     CweIDs:
     - CWE-79
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       bitnami: 2
       redhat: 2
     CVSS:
@@ -11983,6 +12062,7 @@
     CweIDs:
     - CWE-59
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       oracle-oval: 3
@@ -12003,7 +12083,7 @@
     - https://go.dev/issue/78293
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32282.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11712.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32282
     - https://pkg.go.dev/vuln/GO-2026-4864
     - https://www.cve.org/CVERecord?id=CVE-2026-32282
@@ -12036,6 +12116,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       photon: 3
@@ -12087,6 +12168,7 @@
     CweIDs:
     - CWE-79
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       photon: 4
@@ -12137,7 +12219,7 @@
     CweIDs:
     - CWE-22
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       azure: 1
       bitnami: 1
       redhat: 1
@@ -13193,6 +13275,7 @@
     CweIDs:
     - CWE-288
     VendorSeverity:
+      amazon: 3
       ghsa: 3
       nvd: 3
       photon: 3
@@ -13299,9 +13382,12 @@
     CweIDs:
     - CWE-248
     VendorSeverity:
+      alma: 3
+      amazon: 3
       ghsa: 3
       oracle-oval: 3
       redhat: 3
+      rocky: 3
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -13310,7 +13396,13 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
+    - https://access.redhat.com/errata/RHSA-2026:10135
     - https://access.redhat.com/security/cve/CVE-2026-34986
+    - https://bugzilla.redhat.com/2455470
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2455470
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986
+    - https://errata.almalinux.org/9/ALSA-2026-10135.html
+    - https://errata.rockylinux.org/RLSA-2026:10135
     - https://github.com/go-jose/go-jose
     - https://github.com/go-jose/go-jose/security/advisories/GHSA-78h2-9frx-2jm8
     - https://linux.oracle.com/cve/CVE-2026-34986.html
@@ -13742,6 +13834,7 @@
       photon: 4
       redhat: 2
       rocky: 3
+      ubuntu: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
@@ -13763,16 +13856,18 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121
     - https://errata.almalinux.org/9/ALSA-2026-4177.html
     - https://errata.rockylinux.org/RLSA-2026:4177
+    - https://github.com/golang/go/issues/77113
     - https://go.dev/cl/737700
     - https://go.dev/issue/77217
     - https://groups.google.com/g/golang-announce/c/K09ubi9FQFk
+    - https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc
     - https://linux.oracle.com/cve/CVE-2025-68121.html
     - https://linux.oracle.com/errata/ELSA-2026-5146.html
     - https://nvd.nist.gov/vuln/detail/CVE-2025-68121
     - https://pkg.go.dev/vuln/GO-2026-4337
     - https://www.cve.org/CVERecord?id=CVE-2025-68121
     PublishedDate: '2026-02-05T18:16:10.857Z'
-    LastModifiedDate: '2026-02-20T17:25:50.303Z'
+    LastModifiedDate: '2026-04-29T14:16:16.17Z'
   - VulnerabilityID: CVE-2026-25679
     VendorIDs:
     - GO-2026-4601
@@ -13800,7 +13895,7 @@
     - CWE-425
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 3
       bitnami: 3
       oracle-oval: 3
@@ -13820,7 +13915,7 @@
     - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://errata.almalinux.org/9/ALSA-2026-9044.html
-    - https://errata.rockylinux.org/RLSA-2026:7259
+    - https://errata.rockylinux.org/RLSA-2026:8841
     - https://go.dev/cl/752180
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
@@ -13857,6 +13952,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
@@ -13873,7 +13969,7 @@
     - https://go.dev/issue/78282
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32280.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11514.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32280
     - https://pkg.go.dev/vuln/GO-2026-4947
     - https://www.cve.org/CVERecord?id=CVE-2026-32280
@@ -13906,6 +14002,7 @@
     CweIDs:
     - CWE-295
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       nvd: 3
       redhat: 2
@@ -13956,6 +14053,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       nvd: 3
       oracle-oval: 3
@@ -13971,7 +14069,7 @@
     - https://go.dev/issue/78334
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32283.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11881.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32283
     - https://pkg.go.dev/vuln/GO-2026-4870
     PublishedDate: '2026-04-08T02:16:03.58Z'
@@ -14002,7 +14100,7 @@
     CweIDs:
     - CWE-79
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       bitnami: 2
       redhat: 2
     CVSS:
@@ -14049,6 +14147,7 @@
     CweIDs:
     - CWE-59
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       oracle-oval: 3
@@ -14069,7 +14168,7 @@
     - https://go.dev/issue/78293
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32282.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11712.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32282
     - https://pkg.go.dev/vuln/GO-2026-4864
     - https://www.cve.org/CVERecord?id=CVE-2026-32282
@@ -14102,6 +14201,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       photon: 3
@@ -14153,6 +14253,7 @@
     CweIDs:
     - CWE-79
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       photon: 4
@@ -14203,7 +14304,7 @@
     CweIDs:
     - CWE-22
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       azure: 1
       bitnami: 1
       redhat: 1
@@ -17544,6 +17645,7 @@
     CweIDs:
     - CWE-288
     VendorSeverity:
+      amazon: 3
       ghsa: 3
       nvd: 3
       photon: 3
@@ -17841,9 +17943,12 @@
     CweIDs:
     - CWE-248
     VendorSeverity:
+      alma: 3
+      amazon: 3
       ghsa: 3
       oracle-oval: 3
       redhat: 3
+      rocky: 3
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -17852,7 +17957,13 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
+    - https://access.redhat.com/errata/RHSA-2026:10135
     - https://access.redhat.com/security/cve/CVE-2026-34986
+    - https://bugzilla.redhat.com/2455470
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2455470
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986
+    - https://errata.almalinux.org/9/ALSA-2026-10135.html
+    - https://errata.rockylinux.org/RLSA-2026:10135
     - https://github.com/go-jose/go-jose
     - https://github.com/go-jose/go-jose/security/advisories/GHSA-78h2-9frx-2jm8
     - https://linux.oracle.com/cve/CVE-2026-34986.html
@@ -18071,6 +18182,7 @@
       photon: 4
       redhat: 2
       rocky: 3
+      ubuntu: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
@@ -18092,16 +18204,18 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121
     - https://errata.almalinux.org/9/ALSA-2026-4177.html
     - https://errata.rockylinux.org/RLSA-2026:4177
+    - https://github.com/golang/go/issues/77113
     - https://go.dev/cl/737700
     - https://go.dev/issue/77217
     - https://groups.google.com/g/golang-announce/c/K09ubi9FQFk
+    - https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc
     - https://linux.oracle.com/cve/CVE-2025-68121.html
     - https://linux.oracle.com/errata/ELSA-2026-5146.html
     - https://nvd.nist.gov/vuln/detail/CVE-2025-68121
     - https://pkg.go.dev/vuln/GO-2026-4337
     - https://www.cve.org/CVERecord?id=CVE-2025-68121
     PublishedDate: '2026-02-05T18:16:10.857Z'
-    LastModifiedDate: '2026-02-20T17:25:50.303Z'
+    LastModifiedDate: '2026-04-29T14:16:16.17Z'
   - VulnerabilityID: CVE-2025-61726
     VendorIDs:
     - GO-2026-4341
@@ -18261,7 +18375,7 @@
     - CWE-425
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 3
       bitnami: 3
       oracle-oval: 3
@@ -18281,7 +18395,7 @@
     - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://errata.almalinux.org/9/ALSA-2026-9044.html
-    - https://errata.rockylinux.org/RLSA-2026:7259
+    - https://errata.rockylinux.org/RLSA-2026:8841
     - https://go.dev/cl/752180
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
@@ -18318,6 +18432,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
@@ -18334,7 +18449,7 @@
     - https://go.dev/issue/78282
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32280.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11514.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32280
     - https://pkg.go.dev/vuln/GO-2026-4947
     - https://www.cve.org/CVERecord?id=CVE-2026-32280
@@ -18367,6 +18482,7 @@
     CweIDs:
     - CWE-295
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       nvd: 3
       redhat: 2
@@ -18417,6 +18533,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 3
       nvd: 3
       oracle-oval: 3
@@ -18432,7 +18549,7 @@
     - https://go.dev/issue/78334
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32283.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11881.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32283
     - https://pkg.go.dev/vuln/GO-2026-4870
     PublishedDate: '2026-04-08T02:16:03.58Z'
@@ -18504,7 +18621,7 @@
     CweIDs:
     - CWE-79
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       bitnami: 2
       redhat: 2
     CVSS:
@@ -18551,6 +18668,7 @@
     CweIDs:
     - CWE-59
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       oracle-oval: 3
@@ -18571,7 +18689,7 @@
     - https://go.dev/issue/78293
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32282.html
-    - https://linux.oracle.com/errata/ELSA-2026-10219.html
+    - https://linux.oracle.com/errata/ELSA-2026-11712.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32282
     - https://pkg.go.dev/vuln/GO-2026-4864
     - https://www.cve.org/CVERecord?id=CVE-2026-32282
@@ -18604,6 +18722,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       photon: 3
@@ -18655,6 +18774,7 @@
     CweIDs:
     - CWE-79
     VendorSeverity:
+      amazon: 3
       bitnami: 2
       nvd: 2
       photon: 4
@@ -18705,7 +18825,7 @@
     CweIDs:
     - CWE-22
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       azure: 1
       bitnami: 1
       redhat: 1
