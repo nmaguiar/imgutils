@@ -1124,7 +1124,8 @@
                         │      │                   This issue has been patched in version 29.3.1. 
                         │      ├ Severity        : HIGH 
                         │      ├ CweIDs           ─ [0]: CWE-288 
-                        │      ├ VendorSeverity   ╭ ghsa  : 3 
+                        │      ├ VendorSeverity   ╭ amazon: 3 
+                        │      │                  ├ ghsa  : 3 
                         │      │                  ├ nvd   : 3 
                         │      │                  ├ photon: 3 
                         │      │                  ╰ redhat: 2 
@@ -1269,7 +1270,7 @@
                         │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-35469 
                         │      │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2026-35469 
                         │      ├ PublishedDate   : 2026-04-16T22:16:37.92Z 
-                        │      ╰ LastModifiedDate: 2026-04-17T15:38:09.243Z 
+                        │      ╰ LastModifiedDate: 2026-04-29T21:04:10.06Z 
                         ├ [4]  ╭ VulnerabilityID : CVE-2026-24051 
                         │      ├ VendorIDs        ─ [0]: GHSA-9h8m-3fm2-qjrq 
                         │      ├ PkgID           : go.opentelemetry.io/otel/sdk@v1.37.0 
@@ -1480,7 +1481,8 @@
                         │      │                  ├ oracle-oval: 3 
                         │      │                  ├ photon     : 4 
                         │      │                  ├ redhat     : 2 
-                        │      │                  ╰ rocky      : 3 
+                        │      │                  ├ rocky      : 3 
+                        │      │                  ╰ ubuntu     : 2 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:
                         │      │                  │         │           H/A:H 
                         │      │                  │         ╰ V3Score : 10 
@@ -1502,17 +1504,20 @@
                         │      │                  │       25-68121 
                         │      │                  ├ [8] : https://errata.almalinux.org/9/ALSA-2026-4177.html 
                         │      │                  ├ [9] : https://errata.rockylinux.org/RLSA-2026:4177 
-                        │      │                  ├ [10]: https://go.dev/cl/737700 
-                        │      │                  ├ [11]: https://go.dev/issue/77217 
-                        │      │                  ├ [12]: https://groups.google.com/g/golang-announce/c/K09ubi9
+                        │      │                  ├ [10]: https://github.com/golang/go/issues/77113 
+                        │      │                  ├ [11]: https://go.dev/cl/737700 
+                        │      │                  ├ [12]: https://go.dev/issue/77217 
+                        │      │                  ├ [13]: https://groups.google.com/g/golang-announce/c/K09ubi9
                         │      │                  │       FQFk 
-                        │      │                  ├ [13]: https://linux.oracle.com/cve/CVE-2025-68121.html 
-                        │      │                  ├ [14]: https://linux.oracle.com/errata/ELSA-2026-5146.html 
-                        │      │                  ├ [15]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
-                        │      │                  ├ [16]: https://pkg.go.dev/vuln/GO-2026-4337 
-                        │      │                  ╰ [17]: https://www.cve.org/CVERecord?id=CVE-2025-68121 
+                        │      │                  ├ [14]: https://groups.google.com/g/golang-announce/c/Vd2tYVM
+                        │      │                  │       8eUc 
+                        │      │                  ├ [15]: https://linux.oracle.com/cve/CVE-2025-68121.html 
+                        │      │                  ├ [16]: https://linux.oracle.com/errata/ELSA-2026-5146.html 
+                        │      │                  ├ [17]: https://nvd.nist.gov/vuln/detail/CVE-2025-68121 
+                        │      │                  ├ [18]: https://pkg.go.dev/vuln/GO-2026-4337 
+                        │      │                  ╰ [19]: https://www.cve.org/CVERecord?id=CVE-2025-68121 
                         │      ├ PublishedDate   : 2026-02-05T18:16:10.857Z 
-                        │      ╰ LastModifiedDate: 2026-02-20T17:25:50.303Z 
+                        │      ╰ LastModifiedDate: 2026-04-29T14:16:16.17Z 
                         ├ [8]  ╭ VulnerabilityID : CVE-2025-58183 
                         │      ├ VendorIDs        ─ [0]: GO-2025-4014 
                         │      ├ PkgID           : stdlib@v1.25.0 
@@ -1814,7 +1819,7 @@
                         │      ├ Severity        : HIGH 
                         │      ├ CweIDs           ─ [0]: CWE-425 
                         │      ├ VendorSeverity   ╭ alma       : 3 
-                        │      │                  ├ amazon     : 3 
+                        │      │                  ├ amazon     : 2 
                         │      │                  ├ azure      : 3 
                         │      │                  ├ bitnami    : 3 
                         │      │                  ├ oracle-oval: 3 
@@ -1833,7 +1838,7 @@
                         │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       26-25679 
                         │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-9044.html 
-                        │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:7259 
+                        │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:8841 
                         │      │                  ├ [7] : https://go.dev/cl/752180 
                         │      │                  ├ [8] : https://go.dev/issue/77578 
                         │      │                  ├ [9] : https://groups.google.com/g/golang-announce/c/EdhZqrQ
@@ -1873,7 +1878,8 @@
                         │      │                   direct users of crypto/x509 and users of crypto/tls. 
                         │      ├ Severity        : HIGH 
                         │      ├ CweIDs           ─ [0]: CWE-770 
-                        │      ├ VendorSeverity   ╭ bitnami    : 3 
+                        │      ├ VendorSeverity   ╭ amazon     : 3 
+                        │      │                  ├ bitnami    : 3 
                         │      │                  ├ oracle-oval: 3 
                         │      │                  ╰ redhat     : 3 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
@@ -1888,7 +1894,7 @@
                         │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
                         │      │                  │      RWU 
                         │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2026-32280.html 
-                        │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+                        │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-11514.html 
                         │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
                         │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2026-4947 
                         │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
@@ -1925,7 +1931,8 @@
                         │      │                   certificate pool. 
                         │      ├ Severity        : HIGH 
                         │      ├ CweIDs           ─ [0]: CWE-295 
-                        │      ├ VendorSeverity   ╭ bitnami: 3 
+                        │      ├ VendorSeverity   ╭ amazon : 3 
+                        │      │                  ├ bitnami: 3 
                         │      │                  ├ nvd    : 3 
                         │      │                  ╰ redhat : 2 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
@@ -1976,7 +1983,8 @@
                         │      │                    1.3. 
                         │      ├ Severity        : HIGH 
                         │      ├ CweIDs           ─ [0]: CWE-770 
-                        │      ├ VendorSeverity   ╭ bitnami    : 3 
+                        │      ├ VendorSeverity   ╭ amazon     : 3 
+                        │      │                  ├ bitnami    : 3 
                         │      │                  ├ nvd        : 3 
                         │      │                  ╰ oracle-oval: 3 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
@@ -1990,7 +1998,7 @@
                         │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
                         │      │                  │      RWU 
                         │      │                  ├ [3]: https://linux.oracle.com/cve/CVE-2026-32283.html 
-                        │      │                  ├ [4]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+                        │      │                  ├ [4]: https://linux.oracle.com/errata/ELSA-2026-11881.html 
                         │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
                         │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4870 
                         │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
@@ -2600,7 +2608,7 @@
                         │      │                    follow "url=" by setting htmlmetacontenturlescape=0. 
                         │      ├ Severity        : MEDIUM 
                         │      ├ CweIDs           ─ [0]: CWE-79 
-                        │      ├ VendorSeverity   ╭ amazon : 3 
+                        │      ├ VendorSeverity   ╭ amazon : 2 
                         │      │                  ├ bitnami: 2 
                         │      │                  ╰ redhat : 2 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
@@ -2653,7 +2661,8 @@
                         │      │                   the check and operation. 
                         │      ├ Severity        : MEDIUM 
                         │      ├ CweIDs           ─ [0]: CWE-59 
-                        │      ├ VendorSeverity   ╭ bitnami    : 2 
+                        │      ├ VendorSeverity   ╭ amazon     : 3 
+                        │      │                  ├ bitnami    : 2 
                         │      │                  ├ nvd        : 2 
                         │      │                  ├ oracle-oval: 3 
                         │      │                  ╰ redhat     : 2 
@@ -2672,7 +2681,7 @@
                         │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/0uYbvbPZ
                         │      │                  │      RWU 
                         │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2026-32282.html 
-                        │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-10219.html 
+                        │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-11712.html 
                         │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
                         │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2026-4864 
                         │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
@@ -2706,7 +2715,8 @@
                         │      │                    format. 
                         │      ├ Severity        : MEDIUM 
                         │      ├ CweIDs           ─ [0]: CWE-770 
-                        │      ├ VendorSeverity   ╭ bitnami: 2 
+                        │      ├ VendorSeverity   ╭ amazon : 3 
+                        │      │                  ├ bitnami: 2 
                         │      │                  ├ nvd    : 2 
                         │      │                  ├ photon : 3 
                         │      │                  ╰ redhat : 2 
@@ -2762,7 +2772,8 @@
                         │      │                   escaped, leading to XSS vulnerabilities. 
                         │      ├ Severity        : MEDIUM 
                         │      ├ CweIDs           ─ [0]: CWE-79 
-                        │      ├ VendorSeverity   ╭ bitnami: 2 
+                        │      ├ VendorSeverity   ╭ amazon : 3 
+                        │      │                  ├ bitnami: 2 
                         │      │                  ├ nvd    : 2 
                         │      │                  ├ photon : 4 
                         │      │                  ╰ redhat : 2 
@@ -2814,7 +2825,7 @@
                                │                   outside the root. 
                                ├ Severity        : LOW 
                                ├ CweIDs           ─ [0]: CWE-22 
-                               ├ VendorSeverity   ╭ amazon : 3 
+                               ├ VendorSeverity   ╭ amazon : 2 
                                │                  ├ azure  : 1 
                                │                  ├ bitnami: 1 
                                │                  ╰ redhat : 1 
