@@ -1077,7 +1077,7 @@
 │     │      ├ Severity        : HIGH 
 │     │      ├ CweIDs           ─ [0]: CWE-425 
 │     │      ├ VendorSeverity   ╭ alma       : 3 
-│     │      │                  ├ amazon     : 2 
+│     │      │                  ├ amazon     : 3 
 │     │      │                  ├ azure      : 3 
 │     │      │                  ├ bitnami    : 3 
 │     │      │                  ├ oracle-oval: 3 
@@ -1087,21 +1087,22 @@
 │     │      │                  │         ╰ V3Score : 7.5 
 │     │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
 │     │      │                            ╰ V3Score : 7.5 
-│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:9044 
+│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:8842 
 │     │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-25679 
-│     │      │                  ├ [2] : https://bugzilla.redhat.com/2445356 
-│     │      │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
-│     │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679 
-│     │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-9044.html 
-│     │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:8841 
-│     │      │                  ├ [7] : https://go.dev/cl/752180 
-│     │      │                  ├ [8] : https://go.dev/issue/77578 
-│     │      │                  ├ [9] : https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
-│     │      │                  ├ [10]: https://linux.oracle.com/cve/CVE-2026-25679.html 
-│     │      │                  ├ [11]: https://linux.oracle.com/errata/ELSA-2026-9044.html 
-│     │      │                  ├ [12]: https://nvd.nist.gov/vuln/detail/CVE-2026-25679 
-│     │      │                  ├ [13]: https://pkg.go.dev/vuln/GO-2026-4601 
-│     │      │                  ╰ [14]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
+│     │      │                  ├ [2] : https://bugzilla.redhat.com/2445345 
+│     │      │                  ├ [3] : https://bugzilla.redhat.com/2445356 
+│     │      │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
+│     │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679 
+│     │      │                  ├ [6] : https://errata.almalinux.org/10/ALSA-2026-8842.html 
+│     │      │                  ├ [7] : https://errata.rockylinux.org/RLSA-2026:8841 
+│     │      │                  ├ [8] : https://go.dev/cl/752180 
+│     │      │                  ├ [9] : https://go.dev/issue/77578 
+│     │      │                  ├ [10]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
+│     │      │                  ├ [11]: https://linux.oracle.com/cve/CVE-2026-25679.html 
+│     │      │                  ├ [12]: https://linux.oracle.com/errata/ELSA-2026-9044.html 
+│     │      │                  ├ [13]: https://nvd.nist.gov/vuln/detail/CVE-2026-25679 
+│     │      │                  ├ [14]: https://pkg.go.dev/vuln/GO-2026-4601 
+│     │      │                  ╰ [15]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
 │     │      ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
 │     │      ╰ LastModifiedDate: 2026-04-21T14:43:03.8Z 
 │     ├ [7]  ╭ VulnerabilityID : CVE-2026-32280 
@@ -1259,7 +1260,7 @@
 │     │      │                   htmlmetacontenturlescape=0. 
 │     │      ├ Severity        : MEDIUM 
 │     │      ├ CweIDs           ─ [0]: CWE-79 
-│     │      ├ VendorSeverity   ╭ amazon : 2 
+│     │      ├ VendorSeverity   ╭ amazon : 3 
 │     │      │                  ├ bitnami: 2 
 │     │      │                  ╰ redhat : 2 
 │     │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N 
@@ -1440,7 +1441,7 @@
 │            │                   without permitting reading or writing files outside the root. 
 │            ├ Severity        : LOW 
 │            ├ CweIDs           ─ [0]: CWE-22 
-│            ├ VendorSeverity   ╭ amazon : 2 
+│            ├ VendorSeverity   ╭ amazon : 3 
 │            │                  ├ azure  : 1 
 │            │                  ├ bitnami: 1 
 │            │                  ╰ redhat : 1 
@@ -2105,7 +2106,7 @@
       │      │                  │       e2801449697322 
       │      │                  ├ [1] : http://github.com/opencontainers/runc/commit/fdcc9d3cad2f85954a241ccb91
       │      │                  │       0a61aaa1ef47f3 
-      │      │                  ├ [2] : https://access.redhat.com/errata/RHSA-2025:22011 
+      │      │                  ├ [2] : https://access.redhat.com/errata/RHSA-2025:22012 
       │      │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2025-52881 
       │      │                  ├ [4] : https://bugzilla.redhat.com/2404715 
       │      │                  ├ [5] : https://bugzilla.redhat.com/2407258 
@@ -2113,7 +2114,7 @@
       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2407258 
       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-52881 
       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58183 
-      │      │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2025-22011.html 
+      │      │                  ├ [10]: https://errata.almalinux.org/10/ALSA-2025-22012.html 
       │      │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22011 
       │      │                  ├ [12]: https://github.com/opencontainers/runc 
       │      │                  ├ [13]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.2/RELEASES.md 
