@@ -809,7 +809,7 @@
     - https://github.com/netty/netty/security/advisories/GHSA-v8h7-rr48-vmmv
     - https://nvd.nist.gov/vuln/detail/CVE-2026-41417
     PublishedDate: '2026-05-06T22:16:25.78Z'
-    LastModifiedDate: '2026-05-07T15:16:06.703Z'
+    LastModifiedDate: '2026-05-11T14:29:48.36Z'
   - VulnerabilityID: CVE-2026-42580
     VendorIDs:
     - GHSA-m4cv-j2px-7723
@@ -1561,14 +1561,21 @@
     Title: Vert.x has a DoS via unbounded server-side SNI SslContext cache growth
     Description: A TCP client can perform a TLS handshake and present the server name extension with a server name that is accepted by a server wildcard name, e.g. if the server is configured with a certificate accepting *.example.com, any XYZ.example.com where xyz is a valid name can be used.
     Severity: MEDIUM
+    CweIDs:
+    - CWE-770
+    - CWE-295
     VendorSeverity:
       ghsa: 2
+      nvd: 2
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
         V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:L
         V3Score: 5.3
         V40Score: 6.9
+      nvd:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+        V3Score: 5.3
     References:
     - https://github.com/eclipse-vertx/vert.x
     - https://github.com/eclipse-vertx/vert.x/pull/6102
@@ -1576,7 +1583,7 @@
     - https://gitlab.eclipse.org/security/vulnerability-reports/-/issues/381
     - https://nvd.nist.gov/vuln/detail/CVE-2026-6860
     PublishedDate: '2026-05-06T10:16:26.293Z'
-    LastModifiedDate: '2026-05-07T14:52:27.38Z'
+    LastModifiedDate: '2026-05-12T13:42:01.617Z'
 - Target: usr/bin/crictl
   Class: lang-pkgs
   Type: gobinary
@@ -2004,11 +2011,17 @@
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456340
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456341
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456342
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27140
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27143
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27144
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
     - https://errata.almalinux.org/9/ALSA-2026-14200.html
-    - https://errata.rockylinux.org/RLSA-2026:11514
+    - https://errata.rockylinux.org/RLSA-2026:10219
     - https://go.dev/cl/758320
     - https://go.dev/issue/78282
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -2122,12 +2135,10 @@
     - https://bugzilla.redhat.com/2456339
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
     - https://errata.almalinux.org/9/ALSA-2026-14200.html
-    - https://errata.rockylinux.org/RLSA-2026:11514
+    - https://errata.rockylinux.org/RLSA-2026:11711
     - https://go.dev/cl/763767
     - https://go.dev/issue/78334
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -2191,6 +2202,199 @@
     - https://www.cve.org/CVERecord?id=CVE-2026-33810
     PublishedDate: '2026-04-08T02:16:03.95Z'
     LastModifiedDate: '2026-04-20T18:16:26.813Z'
+  - VulnerabilityID: CVE-2026-33811
+    VendorIDs:
+    - GO-2026-4981
+    PkgID: stdlib@v1.26.1
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.1
+      UID: fd1b63a55787cf45
+    InstalledVersion: v1.26.1
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    SeveritySource: nvd
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33811
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:6b9c35366a5bf50c6fe78dc9d332f4a200c6bd6128524ddf92e5039d82180e14
+    Title: When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ...
+    Description: When using LookupCNAME with the cgo DNS resolver, a very long CNAME response can trigger a double-free of C memory and a crash.
+    Severity: HIGH
+    CweIDs:
+    - CWE-415
+    VendorSeverity:
+      bitnami: 3
+      nvd: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+      nvd:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/767860
+    - https://go.dev/issue/78803
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-33811
+    - https://pkg.go.dev/vuln/GO-2026-4981
+    PublishedDate: '2026-05-07T20:16:42.77Z'
+    LastModifiedDate: '2026-05-12T20:23:02.333Z'
+  - VulnerabilityID: CVE-2026-33814
+    VendorIDs:
+    - GO-2026-4918
+    PkgID: stdlib@v1.26.1
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.1
+      UID: fd1b63a55787cf45
+    InstalledVersion: v1.26.1
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33814
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:27cfcb79b2219732344a2b768e56a4e4b4143abbad6ff6e04b36bc5d4278809c
+    Title: When processing HTTP/2 SETTINGS frames, transport will enter an infini ...
+    Description: When processing HTTP/2 SETTINGS frames, transport will enter an infinite loop of writing CONTINUATION frames if it receives a SETTINGS_MAX_FRAME_SIZE with a value of 0.
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/761581
+    - https://go.dev/cl/761640
+    - https://go.dev/issue/78476
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-33814
+    - https://pkg.go.dev/vuln/GO-2026-4918
+    PublishedDate: '2026-05-07T20:16:42.88Z'
+    LastModifiedDate: '2026-05-08T19:16:30.567Z'
+  - VulnerabilityID: CVE-2026-39820
+    VendorIDs:
+    - GO-2026-4986
+    PkgID: stdlib@v1.26.1
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.1
+      UID: fd1b63a55787cf45
+    InstalledVersion: v1.26.1
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39820
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:d44593ca556d44b70b3089d1e15f40a41c5c4ff1494d531c27b6c0bf98154ad0
+    Title: Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ...
+    Description: Well-crafted inputs reaching ParseAddress, ParseAddressList, and ParseDate were able to trigger excessive CPU exhaustion and memory allocations.
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/759940
+    - https://go.dev/issue/78566
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39820
+    - https://pkg.go.dev/vuln/GO-2026-4986
+    PublishedDate: '2026-05-07T20:16:43.187Z'
+    LastModifiedDate: '2026-05-08T15:16:37.323Z'
+  - VulnerabilityID: CVE-2026-39836
+    VendorIDs:
+    - GO-2026-4971
+    PkgID: stdlib@v1.26.1
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.1
+      UID: fd1b63a55787cf45
+    InstalledVersion: v1.26.1
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39836
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:b2f18874fc475e70372b93b91b80baf916cf2998da880d733e112b59c22f43a1
+    Title: Panic in Dial and LookupPort when handling NUL byte on Windows in net
+    Description: The Dial and LookupPort functions panic on Windows when provided with an input containing a NUL (0).
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/775320
+    - https://go.dev/issue/79006
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39836
+    - https://pkg.go.dev/vuln/GO-2026-4971
+    PublishedDate: '2026-05-07T20:16:43.593Z'
+    LastModifiedDate: '2026-05-08T22:16:29.723Z'
+  - VulnerabilityID: CVE-2026-42499
+    VendorIDs:
+    - GO-2026-4977
+    PkgID: stdlib@v1.26.1
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.1
+      UID: fd1b63a55787cf45
+    InstalledVersion: v1.26.1
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-42499
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:ab42b6fb18a6c97e665be9de73240336be5e7a153a2ffb4cecacb5e513649816
+    Title: Pathological inputs could cause DoS through consumePhrase when parsing ...
+    Description: Pathological inputs could cause DoS through consumePhrase when parsing an email address according to RFC 5322.
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/771520
+    - https://go.dev/issue/78987
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-42499
+    - https://pkg.go.dev/vuln/GO-2026-4977
+    PublishedDate: '2026-05-07T20:16:44.54Z'
+    LastModifiedDate: '2026-05-08T22:16:33.183Z'
   - VulnerabilityID: CVE-2026-32282
     VendorIDs:
     - GO-2026-4864
@@ -2243,12 +2447,10 @@
     - https://bugzilla.redhat.com/2456339
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
     - https://errata.almalinux.org/9/ALSA-2026-14200.html
-    - https://errata.rockylinux.org/RLSA-2026:11514
+    - https://errata.rockylinux.org/RLSA-2026:11711
     - https://go.dev/cl/763761
     - https://go.dev/issue/78293
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -2364,97 +2566,6 @@
     - https://www.cve.org/CVERecord?id=CVE-2026-32289
     PublishedDate: '2026-04-08T02:16:03.82Z'
     LastModifiedDate: '2026-04-16T19:06:57.367Z'
-  - VulnerabilityID: CVE-2026-33811
-    VendorIDs:
-    - GO-2026-4981
-    PkgID: stdlib@v1.26.1
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.1
-      UID: fd1b63a55787cf45
-    InstalledVersion: v1.26.1
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33811
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:6b9c35366a5bf50c6fe78dc9d332f4a200c6bd6128524ddf92e5039d82180e14
-    Title: When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ...
-    Description: When using LookupCNAME with the cgo DNS resolver, a very long CNAME response can trigger a double-free of C memory and a crash.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/767860
-    - https://go.dev/issue/78803
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4981
-    PublishedDate: '2026-05-07T20:16:42.77Z'
-    LastModifiedDate: '2026-05-08T15:16:36.64Z'
-  - VulnerabilityID: CVE-2026-33814
-    VendorIDs:
-    - GO-2026-4918
-    PkgID: stdlib@v1.26.1
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.1
-      UID: fd1b63a55787cf45
-    InstalledVersion: v1.26.1
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33814
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:27cfcb79b2219732344a2b768e56a4e4b4143abbad6ff6e04b36bc5d4278809c
-    Title: When processing HTTP/2 SETTINGS frames, transport will enter an infini ...
-    Description: When processing HTTP/2 SETTINGS frames, transport will enter an infinite loop of writing CONTINUATION frames if it receives a SETTINGS_MAX_FRAME_SIZE with a value of 0.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/761581
-    - https://go.dev/cl/761640
-    - https://go.dev/issue/78476
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4918
-    PublishedDate: '2026-05-07T20:16:42.88Z'
-    LastModifiedDate: '2026-05-08T19:16:30.567Z'
-  - VulnerabilityID: CVE-2026-39820
-    VendorIDs:
-    - GO-2026-4986
-    PkgID: stdlib@v1.26.1
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.1
-      UID: fd1b63a55787cf45
-    InstalledVersion: v1.26.1
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39820
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:d44593ca556d44b70b3089d1e15f40a41c5c4ff1494d531c27b6c0bf98154ad0
-    Title: Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ...
-    Description: Well-crafted inputs reaching ParseAddress, ParseAddressList, and ParseDate were able to trigger excessive CPU exhaustion and memory allocations.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/759940
-    - https://go.dev/issue/78566
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4986
-    PublishedDate: '2026-05-07T20:16:43.187Z'
-    LastModifiedDate: '2026-05-08T15:16:37.323Z'
   - VulnerabilityID: CVE-2026-39823
     VendorIDs:
     - GO-2026-4982
@@ -2477,11 +2588,18 @@
     Fingerprint: sha256:37de0a44509df5873b2d1bd52fc123295fa5ae2eeb05133e0641c316e8c012fb
     Title: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly  ...
     Description: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly escaped inside of a <meta> tag's <content> attribute. If the URL content were to insert ASCII whitespaces around the '=' rune inside of the <content> attribute, the escaper would fail to similarly escape it, leading to XSS.
-    Severity: UNKNOWN
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
     References:
     - https://go.dev/cl/769920
     - https://go.dev/issue/78913
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39823
     - https://pkg.go.dev/vuln/GO-2026-4982
     PublishedDate: '2026-05-07T20:16:43.29Z'
     LastModifiedDate: '2026-05-08T15:16:37.5Z'
@@ -2507,11 +2625,18 @@
     Fingerprint: sha256:c2e1d402d028041d5274bad5a963ab5b850dca3410efdb5b3fcc833d31722dfb
     Title: ReverseProxy can forward queries containing parameters not visible to  ...
     Description: ReverseProxy can forward queries containing parameters not visible to Rewrite functions. When used with a Rewrite function, or a Director function which parses query parameters, ReverseProxy sanitizes the forwarded request to remove query parameters which are not parsed by url.ParseQuery. ReverseProxy does not take ParseQuery's limit on the total number of query parameters (controlled by GODEBUG=urlmaxqueryparams=N) into account. This can permit ReverseProxy to forward a request containing a query parameter that is not visible to the Rewrite function. For example, the query "a1=x&a2=x&...&a10000=x&hidden=y" can forward the parameter "hidden=y" while hiding it from the proxy's Rewrite function.
-    Severity: UNKNOWN
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+        V3Score: 5.3
     References:
     - https://go.dev/cl/770541
     - https://go.dev/issue/78948
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39825
     - https://pkg.go.dev/vuln/GO-2026-4976
     PublishedDate: '2026-05-07T20:16:43.39Z'
     LastModifiedDate: '2026-05-08T22:16:29.547Z'
@@ -2537,74 +2662,21 @@
     Fingerprint: sha256:5c63ff81384a08d7d7bad7f6456d46876f28c133f53178b4fefe341235fbdd8b
     Title: If a trusted template author were to write a <script> tag containing a ...
     Description: If a trusted template author were to write a <script> tag containing an empty 'type' attribute or a 'type' attribute with an ASCII whitespace, the execution of the template would incorrectly escape any data passed into the <script> block.
-    Severity: UNKNOWN
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
     References:
     - https://go.dev/cl/771180
     - https://go.dev/issue/78981
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39826
     - https://pkg.go.dev/vuln/GO-2026-4980
     PublishedDate: '2026-05-07T20:16:43.49Z'
     LastModifiedDate: '2026-05-08T15:16:37.68Z'
-  - VulnerabilityID: CVE-2026-39836
-    VendorIDs:
-    - GO-2026-4971
-    PkgID: stdlib@v1.26.1
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.1
-      UID: fd1b63a55787cf45
-    InstalledVersion: v1.26.1
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39836
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:b2f18874fc475e70372b93b91b80baf916cf2998da880d733e112b59c22f43a1
-    Title: Panic in Dial and LookupPort when handling NUL byte on Windows in net
-    Description: The Dial and LookupPort functions panic on Windows when provided with an input containing a NUL (0).
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/775320
-    - https://go.dev/issue/79006
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4971
-    PublishedDate: '2026-05-07T20:16:43.593Z'
-    LastModifiedDate: '2026-05-08T22:16:29.723Z'
-  - VulnerabilityID: CVE-2026-42499
-    VendorIDs:
-    - GO-2026-4977
-    PkgID: stdlib@v1.26.1
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.1
-      UID: fd1b63a55787cf45
-    InstalledVersion: v1.26.1
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-42499
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:ab42b6fb18a6c97e665be9de73240336be5e7a153a2ffb4cecacb5e513649816
-    Title: Pathological inputs could cause DoS through consumePhrase when parsing ...
-    Description: Pathological inputs could cause DoS through consumePhrase when parsing an email address according to RFC 5322.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/771520
-    - https://go.dev/issue/78987
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4977
-    PublishedDate: '2026-05-07T20:16:44.54Z'
-    LastModifiedDate: '2026-05-08T22:16:33.183Z'
 - Target: usr/bin/ctr
   Class: lang-pkgs
   Type: gobinary
@@ -2624,6 +2696,7 @@
     Layer:
       Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
       DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    SeveritySource: nvd
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33811
     DataSource:
       ID: govulndb
@@ -2632,14 +2705,27 @@
     Fingerprint: sha256:c98462b919be62647f7bfbea9ebdd7902c2a9c9c14cbbb26741409ae1791ee31
     Title: When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ...
     Description: When using LookupCNAME with the cgo DNS resolver, a very long CNAME response can trigger a double-free of C memory and a crash.
-    Severity: UNKNOWN
+    Severity: HIGH
+    CweIDs:
+    - CWE-415
+    VendorSeverity:
+      bitnami: 3
+      nvd: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+      nvd:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
     - https://go.dev/cl/767860
     - https://go.dev/issue/78803
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-33811
     - https://pkg.go.dev/vuln/GO-2026-4981
     PublishedDate: '2026-05-07T20:16:42.77Z'
-    LastModifiedDate: '2026-05-08T15:16:36.64Z'
+    LastModifiedDate: '2026-05-12T20:23:02.333Z'
   - VulnerabilityID: CVE-2026-33814
     VendorIDs:
     - GO-2026-4918
@@ -2662,12 +2748,19 @@
     Fingerprint: sha256:94e9d542bc0f837f92b1503a3f4636ab55481c2e17bd066a92f032c37aa059e6
     Title: When processing HTTP/2 SETTINGS frames, transport will enter an infini ...
     Description: When processing HTTP/2 SETTINGS frames, transport will enter an infinite loop of writing CONTINUATION frames if it receives a SETTINGS_MAX_FRAME_SIZE with a value of 0.
-    Severity: UNKNOWN
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
     - https://go.dev/cl/761581
     - https://go.dev/cl/761640
     - https://go.dev/issue/78476
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-33814
     - https://pkg.go.dev/vuln/GO-2026-4918
     PublishedDate: '2026-05-07T20:16:42.88Z'
     LastModifiedDate: '2026-05-08T19:16:30.567Z'
@@ -2693,104 +2786,21 @@
     Fingerprint: sha256:b3fa6e658bdbc31a4b9592eecc08055168b4655bfdecf9729b6d3274a24f8da9
     Title: Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ...
     Description: Well-crafted inputs reaching ParseAddress, ParseAddressList, and ParseDate were able to trigger excessive CPU exhaustion and memory allocations.
-    Severity: UNKNOWN
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
     - https://go.dev/cl/759940
     - https://go.dev/issue/78566
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39820
     - https://pkg.go.dev/vuln/GO-2026-4986
     PublishedDate: '2026-05-07T20:16:43.187Z'
     LastModifiedDate: '2026-05-08T15:16:37.323Z'
-  - VulnerabilityID: CVE-2026-39823
-    VendorIDs:
-    - GO-2026-4982
-    PkgID: stdlib@v1.26.2
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.2
-      UID: 2cce5456b87d81aa
-    InstalledVersion: v1.26.2
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39823
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:d18cea2ac78d8707cadd3f32f037bef9fb8f8a6669664d7ed4f9571241d5d5d6
-    Title: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly  ...
-    Description: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly escaped inside of a <meta> tag's <content> attribute. If the URL content were to insert ASCII whitespaces around the '=' rune inside of the <content> attribute, the escaper would fail to similarly escape it, leading to XSS.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/769920
-    - https://go.dev/issue/78913
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4982
-    PublishedDate: '2026-05-07T20:16:43.29Z'
-    LastModifiedDate: '2026-05-08T15:16:37.5Z'
-  - VulnerabilityID: CVE-2026-39825
-    VendorIDs:
-    - GO-2026-4976
-    PkgID: stdlib@v1.26.2
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.2
-      UID: 2cce5456b87d81aa
-    InstalledVersion: v1.26.2
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39825
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:fd3f2514d4cf28d93b24b4b9e56d1a0aa01a08e0cada24cb1e333c0fbaf9fc1e
-    Title: ReverseProxy can forward queries containing parameters not visible to  ...
-    Description: ReverseProxy can forward queries containing parameters not visible to Rewrite functions. When used with a Rewrite function, or a Director function which parses query parameters, ReverseProxy sanitizes the forwarded request to remove query parameters which are not parsed by url.ParseQuery. ReverseProxy does not take ParseQuery's limit on the total number of query parameters (controlled by GODEBUG=urlmaxqueryparams=N) into account. This can permit ReverseProxy to forward a request containing a query parameter that is not visible to the Rewrite function. For example, the query "a1=x&a2=x&...&a10000=x&hidden=y" can forward the parameter "hidden=y" while hiding it from the proxy's Rewrite function.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/770541
-    - https://go.dev/issue/78948
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4976
-    PublishedDate: '2026-05-07T20:16:43.39Z'
-    LastModifiedDate: '2026-05-08T22:16:29.547Z'
-  - VulnerabilityID: CVE-2026-39826
-    VendorIDs:
-    - GO-2026-4980
-    PkgID: stdlib@v1.26.2
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.2
-      UID: 2cce5456b87d81aa
-    InstalledVersion: v1.26.2
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39826
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:0ed5ad4cd76c70cd6789d8b2c71b0b37a3e4ff7ed1e18605960fa2b8a841166d
-    Title: If a trusted template author were to write a <script> tag containing a ...
-    Description: If a trusted template author were to write a <script> tag containing an empty 'type' attribute or a 'type' attribute with an ASCII whitespace, the execution of the template would incorrectly escape any data passed into the <script> block.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/771180
-    - https://go.dev/issue/78981
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4980
-    PublishedDate: '2026-05-07T20:16:43.49Z'
-    LastModifiedDate: '2026-05-08T15:16:37.68Z'
   - VulnerabilityID: CVE-2026-39836
     VendorIDs:
     - GO-2026-4971
@@ -2813,11 +2823,18 @@
     Fingerprint: sha256:770b2b8f73d56eb09b30b6c5a8183bc6a20d28af6875ca687d72a7135e9b0976
     Title: Panic in Dial and LookupPort when handling NUL byte on Windows in net
     Description: The Dial and LookupPort functions panic on Windows when provided with an input containing a NUL (0).
-    Severity: UNKNOWN
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
     - https://go.dev/cl/775320
     - https://go.dev/issue/79006
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39836
     - https://pkg.go.dev/vuln/GO-2026-4971
     PublishedDate: '2026-05-07T20:16:43.593Z'
     LastModifiedDate: '2026-05-08T22:16:29.723Z'
@@ -2843,14 +2860,132 @@
     Fingerprint: sha256:ad37abd826327ad9f5107f2f0ba6c036b1c3644a487d4c8d0549ebfedeac409c
     Title: Pathological inputs could cause DoS through consumePhrase when parsing ...
     Description: Pathological inputs could cause DoS through consumePhrase when parsing an email address according to RFC 5322.
-    Severity: UNKNOWN
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
     - https://go.dev/cl/771520
     - https://go.dev/issue/78987
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-42499
     - https://pkg.go.dev/vuln/GO-2026-4977
     PublishedDate: '2026-05-07T20:16:44.54Z'
     LastModifiedDate: '2026-05-08T22:16:33.183Z'
+  - VulnerabilityID: CVE-2026-39823
+    VendorIDs:
+    - GO-2026-4982
+    PkgID: stdlib@v1.26.2
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.2
+      UID: 2cce5456b87d81aa
+    InstalledVersion: v1.26.2
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39823
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:d18cea2ac78d8707cadd3f32f037bef9fb8f8a6669664d7ed4f9571241d5d5d6
+    Title: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly  ...
+    Description: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly escaped inside of a <meta> tag's <content> attribute. If the URL content were to insert ASCII whitespaces around the '=' rune inside of the <content> attribute, the escaper would fail to similarly escape it, leading to XSS.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
+    References:
+    - https://go.dev/cl/769920
+    - https://go.dev/issue/78913
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39823
+    - https://pkg.go.dev/vuln/GO-2026-4982
+    PublishedDate: '2026-05-07T20:16:43.29Z'
+    LastModifiedDate: '2026-05-08T15:16:37.5Z'
+  - VulnerabilityID: CVE-2026-39825
+    VendorIDs:
+    - GO-2026-4976
+    PkgID: stdlib@v1.26.2
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.2
+      UID: 2cce5456b87d81aa
+    InstalledVersion: v1.26.2
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39825
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:fd3f2514d4cf28d93b24b4b9e56d1a0aa01a08e0cada24cb1e333c0fbaf9fc1e
+    Title: ReverseProxy can forward queries containing parameters not visible to  ...
+    Description: ReverseProxy can forward queries containing parameters not visible to Rewrite functions. When used with a Rewrite function, or a Director function which parses query parameters, ReverseProxy sanitizes the forwarded request to remove query parameters which are not parsed by url.ParseQuery. ReverseProxy does not take ParseQuery's limit on the total number of query parameters (controlled by GODEBUG=urlmaxqueryparams=N) into account. This can permit ReverseProxy to forward a request containing a query parameter that is not visible to the Rewrite function. For example, the query "a1=x&a2=x&...&a10000=x&hidden=y" can forward the parameter "hidden=y" while hiding it from the proxy's Rewrite function.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+        V3Score: 5.3
+    References:
+    - https://go.dev/cl/770541
+    - https://go.dev/issue/78948
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39825
+    - https://pkg.go.dev/vuln/GO-2026-4976
+    PublishedDate: '2026-05-07T20:16:43.39Z'
+    LastModifiedDate: '2026-05-08T22:16:29.547Z'
+  - VulnerabilityID: CVE-2026-39826
+    VendorIDs:
+    - GO-2026-4980
+    PkgID: stdlib@v1.26.2
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.2
+      UID: 2cce5456b87d81aa
+    InstalledVersion: v1.26.2
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39826
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:0ed5ad4cd76c70cd6789d8b2c71b0b37a3e4ff7ed1e18605960fa2b8a841166d
+    Title: If a trusted template author were to write a <script> tag containing a ...
+    Description: If a trusted template author were to write a <script> tag containing an empty 'type' attribute or a 'type' attribute with an ASCII whitespace, the execution of the template would incorrectly escape any data passed into the <script> block.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
+    References:
+    - https://go.dev/cl/771180
+    - https://go.dev/issue/78981
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39826
+    - https://pkg.go.dev/vuln/GO-2026-4980
+    PublishedDate: '2026-05-07T20:16:43.49Z'
+    LastModifiedDate: '2026-05-08T15:16:37.68Z'
 - Target: usr/bin/dive
   Class: lang-pkgs
   Type: gobinary
@@ -3207,7 +3342,7 @@
     - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://errata.almalinux.org/9/ALSA-2026-9044.html
-    - https://errata.rockylinux.org/RLSA-2026:7011
+    - https://errata.rockylinux.org/RLSA-2026:8841
     - https://go.dev/cl/752180
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
@@ -3266,11 +3401,17 @@
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456340
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456341
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456342
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27140
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27143
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27144
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
     - https://errata.almalinux.org/9/ALSA-2026-14200.html
-    - https://errata.rockylinux.org/RLSA-2026:11514
+    - https://errata.rockylinux.org/RLSA-2026:10219
     - https://go.dev/cl/758320
     - https://go.dev/issue/78282
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -3384,12 +3525,10 @@
     - https://bugzilla.redhat.com/2456339
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
     - https://errata.almalinux.org/9/ALSA-2026-14200.html
-    - https://errata.rockylinux.org/RLSA-2026:11514
+    - https://errata.rockylinux.org/RLSA-2026:11711
     - https://go.dev/cl/763767
     - https://go.dev/issue/78334
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -3400,6 +3539,199 @@
     - https://www.cve.org/CVERecord?id=CVE-2026-32283
     PublishedDate: '2026-04-08T02:16:03.58Z'
     LastModifiedDate: '2026-04-16T19:12:10.54Z'
+  - VulnerabilityID: CVE-2026-33811
+    VendorIDs:
+    - GO-2026-4981
+    PkgID: stdlib@v1.24.13
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.24.13
+      UID: ae746daa41f315ef
+    InstalledVersion: v1.24.13
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    SeveritySource: nvd
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33811
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:87190fe0000fdf832d0a2e896798d479db5691a932d62a108439b9d6dac7de02
+    Title: When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ...
+    Description: When using LookupCNAME with the cgo DNS resolver, a very long CNAME response can trigger a double-free of C memory and a crash.
+    Severity: HIGH
+    CweIDs:
+    - CWE-415
+    VendorSeverity:
+      bitnami: 3
+      nvd: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+      nvd:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/767860
+    - https://go.dev/issue/78803
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-33811
+    - https://pkg.go.dev/vuln/GO-2026-4981
+    PublishedDate: '2026-05-07T20:16:42.77Z'
+    LastModifiedDate: '2026-05-12T20:23:02.333Z'
+  - VulnerabilityID: CVE-2026-33814
+    VendorIDs:
+    - GO-2026-4918
+    PkgID: stdlib@v1.24.13
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.24.13
+      UID: ae746daa41f315ef
+    InstalledVersion: v1.24.13
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33814
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:7fe3b522d05cea7cb9eb4309686c8766c66c13e89e04039a9739820c211ee9f6
+    Title: When processing HTTP/2 SETTINGS frames, transport will enter an infini ...
+    Description: When processing HTTP/2 SETTINGS frames, transport will enter an infinite loop of writing CONTINUATION frames if it receives a SETTINGS_MAX_FRAME_SIZE with a value of 0.
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/761581
+    - https://go.dev/cl/761640
+    - https://go.dev/issue/78476
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-33814
+    - https://pkg.go.dev/vuln/GO-2026-4918
+    PublishedDate: '2026-05-07T20:16:42.88Z'
+    LastModifiedDate: '2026-05-08T19:16:30.567Z'
+  - VulnerabilityID: CVE-2026-39820
+    VendorIDs:
+    - GO-2026-4986
+    PkgID: stdlib@v1.24.13
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.24.13
+      UID: ae746daa41f315ef
+    InstalledVersion: v1.24.13
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39820
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:9f6718c73eb058f7659ae71cbd4e61f535f2bea38efd207047c34d367a0bb78d
+    Title: Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ...
+    Description: Well-crafted inputs reaching ParseAddress, ParseAddressList, and ParseDate were able to trigger excessive CPU exhaustion and memory allocations.
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/759940
+    - https://go.dev/issue/78566
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39820
+    - https://pkg.go.dev/vuln/GO-2026-4986
+    PublishedDate: '2026-05-07T20:16:43.187Z'
+    LastModifiedDate: '2026-05-08T15:16:37.323Z'
+  - VulnerabilityID: CVE-2026-39836
+    VendorIDs:
+    - GO-2026-4971
+    PkgID: stdlib@v1.24.13
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.24.13
+      UID: ae746daa41f315ef
+    InstalledVersion: v1.24.13
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39836
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:f5df5a74b16848657fb5eed991e90f0dde9ec3d5510a2834e3f92f899ecdaaad
+    Title: Panic in Dial and LookupPort when handling NUL byte on Windows in net
+    Description: The Dial and LookupPort functions panic on Windows when provided with an input containing a NUL (0).
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/775320
+    - https://go.dev/issue/79006
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39836
+    - https://pkg.go.dev/vuln/GO-2026-4971
+    PublishedDate: '2026-05-07T20:16:43.593Z'
+    LastModifiedDate: '2026-05-08T22:16:29.723Z'
+  - VulnerabilityID: CVE-2026-42499
+    VendorIDs:
+    - GO-2026-4977
+    PkgID: stdlib@v1.24.13
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.24.13
+      UID: ae746daa41f315ef
+    InstalledVersion: v1.24.13
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-42499
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:7660c95fe9754dfbf348ac72d1ce7858305ed147994f2103241e69399d133acf
+    Title: Pathological inputs could cause DoS through consumePhrase when parsing ...
+    Description: Pathological inputs could cause DoS through consumePhrase when parsing an email address according to RFC 5322.
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/771520
+    - https://go.dev/issue/78987
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-42499
+    - https://pkg.go.dev/vuln/GO-2026-4977
+    PublishedDate: '2026-05-07T20:16:44.54Z'
+    LastModifiedDate: '2026-05-08T22:16:33.183Z'
   - VulnerabilityID: CVE-2026-27142
     VendorIDs:
     - GO-2026-4603
@@ -3498,12 +3830,10 @@
     - https://bugzilla.redhat.com/2456339
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
     - https://errata.almalinux.org/9/ALSA-2026-14200.html
-    - https://errata.rockylinux.org/RLSA-2026:11514
+    - https://errata.rockylinux.org/RLSA-2026:11711
     - https://go.dev/cl/763761
     - https://go.dev/issue/78293
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -3619,6 +3949,117 @@
     - https://www.cve.org/CVERecord?id=CVE-2026-32289
     PublishedDate: '2026-04-08T02:16:03.82Z'
     LastModifiedDate: '2026-04-16T19:06:57.367Z'
+  - VulnerabilityID: CVE-2026-39823
+    VendorIDs:
+    - GO-2026-4982
+    PkgID: stdlib@v1.24.13
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.24.13
+      UID: ae746daa41f315ef
+    InstalledVersion: v1.24.13
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39823
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:4b1836b7d3ba73b305a28cdd1d7a060246e75c9ccbc6497d25d30a051162684a
+    Title: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly  ...
+    Description: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly escaped inside of a <meta> tag's <content> attribute. If the URL content were to insert ASCII whitespaces around the '=' rune inside of the <content> attribute, the escaper would fail to similarly escape it, leading to XSS.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
+    References:
+    - https://go.dev/cl/769920
+    - https://go.dev/issue/78913
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39823
+    - https://pkg.go.dev/vuln/GO-2026-4982
+    PublishedDate: '2026-05-07T20:16:43.29Z'
+    LastModifiedDate: '2026-05-08T15:16:37.5Z'
+  - VulnerabilityID: CVE-2026-39825
+    VendorIDs:
+    - GO-2026-4976
+    PkgID: stdlib@v1.24.13
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.24.13
+      UID: ae746daa41f315ef
+    InstalledVersion: v1.24.13
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39825
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:9f099e466153f8efa076ec70797afcfb648f096a0deb9a34111d65fb4a49ddb2
+    Title: ReverseProxy can forward queries containing parameters not visible to  ...
+    Description: ReverseProxy can forward queries containing parameters not visible to Rewrite functions. When used with a Rewrite function, or a Director function which parses query parameters, ReverseProxy sanitizes the forwarded request to remove query parameters which are not parsed by url.ParseQuery. ReverseProxy does not take ParseQuery's limit on the total number of query parameters (controlled by GODEBUG=urlmaxqueryparams=N) into account. This can permit ReverseProxy to forward a request containing a query parameter that is not visible to the Rewrite function. For example, the query "a1=x&a2=x&...&a10000=x&hidden=y" can forward the parameter "hidden=y" while hiding it from the proxy's Rewrite function.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+        V3Score: 5.3
+    References:
+    - https://go.dev/cl/770541
+    - https://go.dev/issue/78948
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39825
+    - https://pkg.go.dev/vuln/GO-2026-4976
+    PublishedDate: '2026-05-07T20:16:43.39Z'
+    LastModifiedDate: '2026-05-08T22:16:29.547Z'
+  - VulnerabilityID: CVE-2026-39826
+    VendorIDs:
+    - GO-2026-4980
+    PkgID: stdlib@v1.24.13
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.24.13
+      UID: ae746daa41f315ef
+    InstalledVersion: v1.24.13
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39826
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:b8614a0c676b3b7d265e9a28a72e8c4292d6b8ca79df770d4564653768db564b
+    Title: If a trusted template author were to write a <script> tag containing a ...
+    Description: If a trusted template author were to write a <script> tag containing an empty 'type' attribute or a 'type' attribute with an ASCII whitespace, the execution of the template would incorrectly escape any data passed into the <script> block.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
+    References:
+    - https://go.dev/cl/771180
+    - https://go.dev/issue/78981
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39826
+    - https://pkg.go.dev/vuln/GO-2026-4980
+    PublishedDate: '2026-05-07T20:16:43.49Z'
+    LastModifiedDate: '2026-05-08T15:16:37.68Z'
   - VulnerabilityID: CVE-2026-27139
     VendorIDs:
     - GO-2026-4602
@@ -3666,247 +4107,6 @@
     - https://www.cve.org/CVERecord?id=CVE-2026-27139
     PublishedDate: '2026-03-06T22:16:01.07Z'
     LastModifiedDate: '2026-04-21T14:32:36.317Z'
-  - VulnerabilityID: CVE-2026-33811
-    VendorIDs:
-    - GO-2026-4981
-    PkgID: stdlib@v1.24.13
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.24.13
-      UID: ae746daa41f315ef
-    InstalledVersion: v1.24.13
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33811
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:87190fe0000fdf832d0a2e896798d479db5691a932d62a108439b9d6dac7de02
-    Title: When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ...
-    Description: When using LookupCNAME with the cgo DNS resolver, a very long CNAME response can trigger a double-free of C memory and a crash.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/767860
-    - https://go.dev/issue/78803
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4981
-    PublishedDate: '2026-05-07T20:16:42.77Z'
-    LastModifiedDate: '2026-05-08T15:16:36.64Z'
-  - VulnerabilityID: CVE-2026-33814
-    VendorIDs:
-    - GO-2026-4918
-    PkgID: stdlib@v1.24.13
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.24.13
-      UID: ae746daa41f315ef
-    InstalledVersion: v1.24.13
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33814
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:7fe3b522d05cea7cb9eb4309686c8766c66c13e89e04039a9739820c211ee9f6
-    Title: When processing HTTP/2 SETTINGS frames, transport will enter an infini ...
-    Description: When processing HTTP/2 SETTINGS frames, transport will enter an infinite loop of writing CONTINUATION frames if it receives a SETTINGS_MAX_FRAME_SIZE with a value of 0.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/761581
-    - https://go.dev/cl/761640
-    - https://go.dev/issue/78476
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4918
-    PublishedDate: '2026-05-07T20:16:42.88Z'
-    LastModifiedDate: '2026-05-08T19:16:30.567Z'
-  - VulnerabilityID: CVE-2026-39820
-    VendorIDs:
-    - GO-2026-4986
-    PkgID: stdlib@v1.24.13
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.24.13
-      UID: ae746daa41f315ef
-    InstalledVersion: v1.24.13
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39820
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:9f6718c73eb058f7659ae71cbd4e61f535f2bea38efd207047c34d367a0bb78d
-    Title: Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ...
-    Description: Well-crafted inputs reaching ParseAddress, ParseAddressList, and ParseDate were able to trigger excessive CPU exhaustion and memory allocations.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/759940
-    - https://go.dev/issue/78566
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4986
-    PublishedDate: '2026-05-07T20:16:43.187Z'
-    LastModifiedDate: '2026-05-08T15:16:37.323Z'
-  - VulnerabilityID: CVE-2026-39823
-    VendorIDs:
-    - GO-2026-4982
-    PkgID: stdlib@v1.24.13
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.24.13
-      UID: ae746daa41f315ef
-    InstalledVersion: v1.24.13
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39823
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:4b1836b7d3ba73b305a28cdd1d7a060246e75c9ccbc6497d25d30a051162684a
-    Title: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly  ...
-    Description: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly escaped inside of a <meta> tag's <content> attribute. If the URL content were to insert ASCII whitespaces around the '=' rune inside of the <content> attribute, the escaper would fail to similarly escape it, leading to XSS.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/769920
-    - https://go.dev/issue/78913
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4982
-    PublishedDate: '2026-05-07T20:16:43.29Z'
-    LastModifiedDate: '2026-05-08T15:16:37.5Z'
-  - VulnerabilityID: CVE-2026-39825
-    VendorIDs:
-    - GO-2026-4976
-    PkgID: stdlib@v1.24.13
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.24.13
-      UID: ae746daa41f315ef
-    InstalledVersion: v1.24.13
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39825
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:9f099e466153f8efa076ec70797afcfb648f096a0deb9a34111d65fb4a49ddb2
-    Title: ReverseProxy can forward queries containing parameters not visible to  ...
-    Description: ReverseProxy can forward queries containing parameters not visible to Rewrite functions. When used with a Rewrite function, or a Director function which parses query parameters, ReverseProxy sanitizes the forwarded request to remove query parameters which are not parsed by url.ParseQuery. ReverseProxy does not take ParseQuery's limit on the total number of query parameters (controlled by GODEBUG=urlmaxqueryparams=N) into account. This can permit ReverseProxy to forward a request containing a query parameter that is not visible to the Rewrite function. For example, the query "a1=x&a2=x&...&a10000=x&hidden=y" can forward the parameter "hidden=y" while hiding it from the proxy's Rewrite function.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/770541
-    - https://go.dev/issue/78948
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4976
-    PublishedDate: '2026-05-07T20:16:43.39Z'
-    LastModifiedDate: '2026-05-08T22:16:29.547Z'
-  - VulnerabilityID: CVE-2026-39826
-    VendorIDs:
-    - GO-2026-4980
-    PkgID: stdlib@v1.24.13
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.24.13
-      UID: ae746daa41f315ef
-    InstalledVersion: v1.24.13
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39826
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:b8614a0c676b3b7d265e9a28a72e8c4292d6b8ca79df770d4564653768db564b
-    Title: If a trusted template author were to write a <script> tag containing a ...
-    Description: If a trusted template author were to write a <script> tag containing an empty 'type' attribute or a 'type' attribute with an ASCII whitespace, the execution of the template would incorrectly escape any data passed into the <script> block.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/771180
-    - https://go.dev/issue/78981
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4980
-    PublishedDate: '2026-05-07T20:16:43.49Z'
-    LastModifiedDate: '2026-05-08T15:16:37.68Z'
-  - VulnerabilityID: CVE-2026-39836
-    VendorIDs:
-    - GO-2026-4971
-    PkgID: stdlib@v1.24.13
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.24.13
-      UID: ae746daa41f315ef
-    InstalledVersion: v1.24.13
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39836
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:f5df5a74b16848657fb5eed991e90f0dde9ec3d5510a2834e3f92f899ecdaaad
-    Title: Panic in Dial and LookupPort when handling NUL byte on Windows in net
-    Description: The Dial and LookupPort functions panic on Windows when provided with an input containing a NUL (0).
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/775320
-    - https://go.dev/issue/79006
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4971
-    PublishedDate: '2026-05-07T20:16:43.593Z'
-    LastModifiedDate: '2026-05-08T22:16:29.723Z'
-  - VulnerabilityID: CVE-2026-42499
-    VendorIDs:
-    - GO-2026-4977
-    PkgID: stdlib@v1.24.13
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.24.13
-      UID: ae746daa41f315ef
-    InstalledVersion: v1.24.13
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-42499
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:7660c95fe9754dfbf348ac72d1ce7858305ed147994f2103241e69399d133acf
-    Title: Pathological inputs could cause DoS through consumePhrase when parsing ...
-    Description: Pathological inputs could cause DoS through consumePhrase when parsing an email address according to RFC 5322.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/771520
-    - https://go.dev/issue/78987
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4977
-    PublishedDate: '2026-05-07T20:16:44.54Z'
-    LastModifiedDate: '2026-05-08T22:16:33.183Z'
 - Target: usr/bin/docker
   Class: lang-pkgs
   Type: gobinary
@@ -3926,6 +4126,7 @@
     Layer:
       Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
       DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    SeveritySource: nvd
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33811
     DataSource:
       ID: govulndb
@@ -3934,14 +4135,27 @@
     Fingerprint: sha256:3132d566f01d79436ae7cf6d9109845968a7c44111f912328b6b738eaa25c95f
     Title: When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ...
     Description: When using LookupCNAME with the cgo DNS resolver, a very long CNAME response can trigger a double-free of C memory and a crash.
-    Severity: UNKNOWN
+    Severity: HIGH
+    CweIDs:
+    - CWE-415
+    VendorSeverity:
+      bitnami: 3
+      nvd: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+      nvd:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
     - https://go.dev/cl/767860
     - https://go.dev/issue/78803
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-33811
     - https://pkg.go.dev/vuln/GO-2026-4981
     PublishedDate: '2026-05-07T20:16:42.77Z'
-    LastModifiedDate: '2026-05-08T15:16:36.64Z'
+    LastModifiedDate: '2026-05-12T20:23:02.333Z'
   - VulnerabilityID: CVE-2026-33814
     VendorIDs:
     - GO-2026-4918
@@ -3964,12 +4178,19 @@
     Fingerprint: sha256:5e66aa227acf3193077894cd741d29b268061bac219ae65cff5f3439e301a3dd
     Title: When processing HTTP/2 SETTINGS frames, transport will enter an infini ...
     Description: When processing HTTP/2 SETTINGS frames, transport will enter an infinite loop of writing CONTINUATION frames if it receives a SETTINGS_MAX_FRAME_SIZE with a value of 0.
-    Severity: UNKNOWN
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
     - https://go.dev/cl/761581
     - https://go.dev/cl/761640
     - https://go.dev/issue/78476
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-33814
     - https://pkg.go.dev/vuln/GO-2026-4918
     PublishedDate: '2026-05-07T20:16:42.88Z'
     LastModifiedDate: '2026-05-08T19:16:30.567Z'
@@ -3995,104 +4216,21 @@
     Fingerprint: sha256:b03123aeca2715936315f2039fc5b3c6d4f96643bdf7841c5ad5f41ca1ef58bd
     Title: Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ...
     Description: Well-crafted inputs reaching ParseAddress, ParseAddressList, and ParseDate were able to trigger excessive CPU exhaustion and memory allocations.
-    Severity: UNKNOWN
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
     - https://go.dev/cl/759940
     - https://go.dev/issue/78566
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39820
     - https://pkg.go.dev/vuln/GO-2026-4986
     PublishedDate: '2026-05-07T20:16:43.187Z'
     LastModifiedDate: '2026-05-08T15:16:37.323Z'
-  - VulnerabilityID: CVE-2026-39823
-    VendorIDs:
-    - GO-2026-4982
-    PkgID: stdlib@v1.26.2
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.2
-      UID: bf537c19fc386d01
-    InstalledVersion: v1.26.2
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39823
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:c5a69552162407a644ea3c83ed9b66fe4bff70e9e2b76df9068c129a01e5238c
-    Title: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly  ...
-    Description: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly escaped inside of a <meta> tag's <content> attribute. If the URL content were to insert ASCII whitespaces around the '=' rune inside of the <content> attribute, the escaper would fail to similarly escape it, leading to XSS.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/769920
-    - https://go.dev/issue/78913
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4982
-    PublishedDate: '2026-05-07T20:16:43.29Z'
-    LastModifiedDate: '2026-05-08T15:16:37.5Z'
-  - VulnerabilityID: CVE-2026-39825
-    VendorIDs:
-    - GO-2026-4976
-    PkgID: stdlib@v1.26.2
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.2
-      UID: bf537c19fc386d01
-    InstalledVersion: v1.26.2
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39825
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:8e695931dfff71867fb547b2aa61380b136c527fc098111697113f3aa529f900
-    Title: ReverseProxy can forward queries containing parameters not visible to  ...
-    Description: ReverseProxy can forward queries containing parameters not visible to Rewrite functions. When used with a Rewrite function, or a Director function which parses query parameters, ReverseProxy sanitizes the forwarded request to remove query parameters which are not parsed by url.ParseQuery. ReverseProxy does not take ParseQuery's limit on the total number of query parameters (controlled by GODEBUG=urlmaxqueryparams=N) into account. This can permit ReverseProxy to forward a request containing a query parameter that is not visible to the Rewrite function. For example, the query "a1=x&a2=x&...&a10000=x&hidden=y" can forward the parameter "hidden=y" while hiding it from the proxy's Rewrite function.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/770541
-    - https://go.dev/issue/78948
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4976
-    PublishedDate: '2026-05-07T20:16:43.39Z'
-    LastModifiedDate: '2026-05-08T22:16:29.547Z'
-  - VulnerabilityID: CVE-2026-39826
-    VendorIDs:
-    - GO-2026-4980
-    PkgID: stdlib@v1.26.2
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.2
-      UID: bf537c19fc386d01
-    InstalledVersion: v1.26.2
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39826
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:d561ca3a59ffba54dc7979bfb00f7bec5749f7b03602dc5310b869333991a53b
-    Title: If a trusted template author were to write a <script> tag containing a ...
-    Description: If a trusted template author were to write a <script> tag containing an empty 'type' attribute or a 'type' attribute with an ASCII whitespace, the execution of the template would incorrectly escape any data passed into the <script> block.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/771180
-    - https://go.dev/issue/78981
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4980
-    PublishedDate: '2026-05-07T20:16:43.49Z'
-    LastModifiedDate: '2026-05-08T15:16:37.68Z'
   - VulnerabilityID: CVE-2026-39836
     VendorIDs:
     - GO-2026-4971
@@ -4115,11 +4253,18 @@
     Fingerprint: sha256:11cad8ced102444a781e437f15d9bb58fb3b2629b4e6bd0a81fa7a441cc18de2
     Title: Panic in Dial and LookupPort when handling NUL byte on Windows in net
     Description: The Dial and LookupPort functions panic on Windows when provided with an input containing a NUL (0).
-    Severity: UNKNOWN
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
     - https://go.dev/cl/775320
     - https://go.dev/issue/79006
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39836
     - https://pkg.go.dev/vuln/GO-2026-4971
     PublishedDate: '2026-05-07T20:16:43.593Z'
     LastModifiedDate: '2026-05-08T22:16:29.723Z'
@@ -4145,14 +4290,132 @@
     Fingerprint: sha256:5d7bbd78b472209494a79667621887f17087ddbb477de2cfef01afe686c655ff
     Title: Pathological inputs could cause DoS through consumePhrase when parsing ...
     Description: Pathological inputs could cause DoS through consumePhrase when parsing an email address according to RFC 5322.
-    Severity: UNKNOWN
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
     - https://go.dev/cl/771520
     - https://go.dev/issue/78987
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-42499
     - https://pkg.go.dev/vuln/GO-2026-4977
     PublishedDate: '2026-05-07T20:16:44.54Z'
     LastModifiedDate: '2026-05-08T22:16:33.183Z'
+  - VulnerabilityID: CVE-2026-39823
+    VendorIDs:
+    - GO-2026-4982
+    PkgID: stdlib@v1.26.2
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.2
+      UID: bf537c19fc386d01
+    InstalledVersion: v1.26.2
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39823
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:c5a69552162407a644ea3c83ed9b66fe4bff70e9e2b76df9068c129a01e5238c
+    Title: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly  ...
+    Description: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly escaped inside of a <meta> tag's <content> attribute. If the URL content were to insert ASCII whitespaces around the '=' rune inside of the <content> attribute, the escaper would fail to similarly escape it, leading to XSS.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
+    References:
+    - https://go.dev/cl/769920
+    - https://go.dev/issue/78913
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39823
+    - https://pkg.go.dev/vuln/GO-2026-4982
+    PublishedDate: '2026-05-07T20:16:43.29Z'
+    LastModifiedDate: '2026-05-08T15:16:37.5Z'
+  - VulnerabilityID: CVE-2026-39825
+    VendorIDs:
+    - GO-2026-4976
+    PkgID: stdlib@v1.26.2
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.2
+      UID: bf537c19fc386d01
+    InstalledVersion: v1.26.2
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39825
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:8e695931dfff71867fb547b2aa61380b136c527fc098111697113f3aa529f900
+    Title: ReverseProxy can forward queries containing parameters not visible to  ...
+    Description: ReverseProxy can forward queries containing parameters not visible to Rewrite functions. When used with a Rewrite function, or a Director function which parses query parameters, ReverseProxy sanitizes the forwarded request to remove query parameters which are not parsed by url.ParseQuery. ReverseProxy does not take ParseQuery's limit on the total number of query parameters (controlled by GODEBUG=urlmaxqueryparams=N) into account. This can permit ReverseProxy to forward a request containing a query parameter that is not visible to the Rewrite function. For example, the query "a1=x&a2=x&...&a10000=x&hidden=y" can forward the parameter "hidden=y" while hiding it from the proxy's Rewrite function.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+        V3Score: 5.3
+    References:
+    - https://go.dev/cl/770541
+    - https://go.dev/issue/78948
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39825
+    - https://pkg.go.dev/vuln/GO-2026-4976
+    PublishedDate: '2026-05-07T20:16:43.39Z'
+    LastModifiedDate: '2026-05-08T22:16:29.547Z'
+  - VulnerabilityID: CVE-2026-39826
+    VendorIDs:
+    - GO-2026-4980
+    PkgID: stdlib@v1.26.2
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.2
+      UID: bf537c19fc386d01
+    InstalledVersion: v1.26.2
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39826
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:d561ca3a59ffba54dc7979bfb00f7bec5749f7b03602dc5310b869333991a53b
+    Title: If a trusted template author were to write a <script> tag containing a ...
+    Description: If a trusted template author were to write a <script> tag containing an empty 'type' attribute or a 'type' attribute with an ASCII whitespace, the execution of the template would incorrectly escape any data passed into the <script> block.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
+    References:
+    - https://go.dev/cl/771180
+    - https://go.dev/issue/78981
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39826
+    - https://pkg.go.dev/vuln/GO-2026-4980
+    PublishedDate: '2026-05-07T20:16:43.49Z'
+    LastModifiedDate: '2026-05-08T15:16:37.68Z'
 - Target: usr/bin/helm
   Class: lang-pkgs
   Type: gobinary
@@ -4172,6 +4435,7 @@
     Layer:
       Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
       DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    SeveritySource: nvd
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33811
     DataSource:
       ID: govulndb
@@ -4180,14 +4444,27 @@
     Fingerprint: sha256:06d1fdb04aaec2963e10df8217f809fd7aa9d46be72daadacef058afe6e26c49
     Title: When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ...
     Description: When using LookupCNAME with the cgo DNS resolver, a very long CNAME response can trigger a double-free of C memory and a crash.
-    Severity: UNKNOWN
+    Severity: HIGH
+    CweIDs:
+    - CWE-415
+    VendorSeverity:
+      bitnami: 3
+      nvd: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+      nvd:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
     - https://go.dev/cl/767860
     - https://go.dev/issue/78803
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-33811
     - https://pkg.go.dev/vuln/GO-2026-4981
     PublishedDate: '2026-05-07T20:16:42.77Z'
-    LastModifiedDate: '2026-05-08T15:16:36.64Z'
+    LastModifiedDate: '2026-05-12T20:23:02.333Z'
   - VulnerabilityID: CVE-2026-33814
     VendorIDs:
     - GO-2026-4918
@@ -4210,12 +4487,19 @@
     Fingerprint: sha256:58adc59c8ee613530903b3bea91bce7ca12bb39a2b0f4a623699ad9edb6b876a
     Title: When processing HTTP/2 SETTINGS frames, transport will enter an infini ...
     Description: When processing HTTP/2 SETTINGS frames, transport will enter an infinite loop of writing CONTINUATION frames if it receives a SETTINGS_MAX_FRAME_SIZE with a value of 0.
-    Severity: UNKNOWN
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
     - https://go.dev/cl/761581
     - https://go.dev/cl/761640
     - https://go.dev/issue/78476
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-33814
     - https://pkg.go.dev/vuln/GO-2026-4918
     PublishedDate: '2026-05-07T20:16:42.88Z'
     LastModifiedDate: '2026-05-08T19:16:30.567Z'
@@ -4241,104 +4525,21 @@
     Fingerprint: sha256:262660a3c2edf0d7ca84ae905eb2e3279061f9f4f02a4d1396ea72d74d12feb9
     Title: Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ...
     Description: Well-crafted inputs reaching ParseAddress, ParseAddressList, and ParseDate were able to trigger excessive CPU exhaustion and memory allocations.
-    Severity: UNKNOWN
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
     - https://go.dev/cl/759940
     - https://go.dev/issue/78566
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39820
     - https://pkg.go.dev/vuln/GO-2026-4986
     PublishedDate: '2026-05-07T20:16:43.187Z'
     LastModifiedDate: '2026-05-08T15:16:37.323Z'
-  - VulnerabilityID: CVE-2026-39823
-    VendorIDs:
-    - GO-2026-4982
-    PkgID: stdlib@v1.25.9
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.25.9
-      UID: 24a9c780aa9b26bf
-    InstalledVersion: v1.25.9
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39823
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:0db7aead9aca72af15aef3f8cc95fad9c6fea0f013ed2abfa851713459649891
-    Title: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly  ...
-    Description: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly escaped inside of a <meta> tag's <content> attribute. If the URL content were to insert ASCII whitespaces around the '=' rune inside of the <content> attribute, the escaper would fail to similarly escape it, leading to XSS.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/769920
-    - https://go.dev/issue/78913
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4982
-    PublishedDate: '2026-05-07T20:16:43.29Z'
-    LastModifiedDate: '2026-05-08T15:16:37.5Z'
-  - VulnerabilityID: CVE-2026-39825
-    VendorIDs:
-    - GO-2026-4976
-    PkgID: stdlib@v1.25.9
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.25.9
-      UID: 24a9c780aa9b26bf
-    InstalledVersion: v1.25.9
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39825
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:72ccf3fd40d9b97d4d167e792e872e0654df02491dd9dc446e35f0163a167d1a
-    Title: ReverseProxy can forward queries containing parameters not visible to  ...
-    Description: ReverseProxy can forward queries containing parameters not visible to Rewrite functions. When used with a Rewrite function, or a Director function which parses query parameters, ReverseProxy sanitizes the forwarded request to remove query parameters which are not parsed by url.ParseQuery. ReverseProxy does not take ParseQuery's limit on the total number of query parameters (controlled by GODEBUG=urlmaxqueryparams=N) into account. This can permit ReverseProxy to forward a request containing a query parameter that is not visible to the Rewrite function. For example, the query "a1=x&a2=x&...&a10000=x&hidden=y" can forward the parameter "hidden=y" while hiding it from the proxy's Rewrite function.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/770541
-    - https://go.dev/issue/78948
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4976
-    PublishedDate: '2026-05-07T20:16:43.39Z'
-    LastModifiedDate: '2026-05-08T22:16:29.547Z'
-  - VulnerabilityID: CVE-2026-39826
-    VendorIDs:
-    - GO-2026-4980
-    PkgID: stdlib@v1.25.9
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.25.9
-      UID: 24a9c780aa9b26bf
-    InstalledVersion: v1.25.9
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39826
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:a0e78dbb528a0c9c8f5217235a7ebba009ff7811cf3665c0f33027df15b44837
-    Title: If a trusted template author were to write a <script> tag containing a ...
-    Description: If a trusted template author were to write a <script> tag containing an empty 'type' attribute or a 'type' attribute with an ASCII whitespace, the execution of the template would incorrectly escape any data passed into the <script> block.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/771180
-    - https://go.dev/issue/78981
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4980
-    PublishedDate: '2026-05-07T20:16:43.49Z'
-    LastModifiedDate: '2026-05-08T15:16:37.68Z'
   - VulnerabilityID: CVE-2026-39836
     VendorIDs:
     - GO-2026-4971
@@ -4361,11 +4562,18 @@
     Fingerprint: sha256:c019f407217bf91e1a3b924dd905fb978e9feb318e4ee457ccb0a59c5d1c907d
     Title: Panic in Dial and LookupPort when handling NUL byte on Windows in net
     Description: The Dial and LookupPort functions panic on Windows when provided with an input containing a NUL (0).
-    Severity: UNKNOWN
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
     - https://go.dev/cl/775320
     - https://go.dev/issue/79006
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39836
     - https://pkg.go.dev/vuln/GO-2026-4971
     PublishedDate: '2026-05-07T20:16:43.593Z'
     LastModifiedDate: '2026-05-08T22:16:29.723Z'
@@ -4391,14 +4599,132 @@
     Fingerprint: sha256:79175cc0b8eab4f47f2459394b4a2ba65a77948c5835d51f3881053620a867f2
     Title: Pathological inputs could cause DoS through consumePhrase when parsing ...
     Description: Pathological inputs could cause DoS through consumePhrase when parsing an email address according to RFC 5322.
-    Severity: UNKNOWN
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
     - https://go.dev/cl/771520
     - https://go.dev/issue/78987
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-42499
     - https://pkg.go.dev/vuln/GO-2026-4977
     PublishedDate: '2026-05-07T20:16:44.54Z'
     LastModifiedDate: '2026-05-08T22:16:33.183Z'
+  - VulnerabilityID: CVE-2026-39823
+    VendorIDs:
+    - GO-2026-4982
+    PkgID: stdlib@v1.25.9
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.25.9
+      UID: 24a9c780aa9b26bf
+    InstalledVersion: v1.25.9
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39823
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:0db7aead9aca72af15aef3f8cc95fad9c6fea0f013ed2abfa851713459649891
+    Title: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly  ...
+    Description: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly escaped inside of a <meta> tag's <content> attribute. If the URL content were to insert ASCII whitespaces around the '=' rune inside of the <content> attribute, the escaper would fail to similarly escape it, leading to XSS.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
+    References:
+    - https://go.dev/cl/769920
+    - https://go.dev/issue/78913
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39823
+    - https://pkg.go.dev/vuln/GO-2026-4982
+    PublishedDate: '2026-05-07T20:16:43.29Z'
+    LastModifiedDate: '2026-05-08T15:16:37.5Z'
+  - VulnerabilityID: CVE-2026-39825
+    VendorIDs:
+    - GO-2026-4976
+    PkgID: stdlib@v1.25.9
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.25.9
+      UID: 24a9c780aa9b26bf
+    InstalledVersion: v1.25.9
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39825
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:72ccf3fd40d9b97d4d167e792e872e0654df02491dd9dc446e35f0163a167d1a
+    Title: ReverseProxy can forward queries containing parameters not visible to  ...
+    Description: ReverseProxy can forward queries containing parameters not visible to Rewrite functions. When used with a Rewrite function, or a Director function which parses query parameters, ReverseProxy sanitizes the forwarded request to remove query parameters which are not parsed by url.ParseQuery. ReverseProxy does not take ParseQuery's limit on the total number of query parameters (controlled by GODEBUG=urlmaxqueryparams=N) into account. This can permit ReverseProxy to forward a request containing a query parameter that is not visible to the Rewrite function. For example, the query "a1=x&a2=x&...&a10000=x&hidden=y" can forward the parameter "hidden=y" while hiding it from the proxy's Rewrite function.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+        V3Score: 5.3
+    References:
+    - https://go.dev/cl/770541
+    - https://go.dev/issue/78948
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39825
+    - https://pkg.go.dev/vuln/GO-2026-4976
+    PublishedDate: '2026-05-07T20:16:43.39Z'
+    LastModifiedDate: '2026-05-08T22:16:29.547Z'
+  - VulnerabilityID: CVE-2026-39826
+    VendorIDs:
+    - GO-2026-4980
+    PkgID: stdlib@v1.25.9
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.25.9
+      UID: 24a9c780aa9b26bf
+    InstalledVersion: v1.25.9
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39826
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:a0e78dbb528a0c9c8f5217235a7ebba009ff7811cf3665c0f33027df15b44837
+    Title: If a trusted template author were to write a <script> tag containing a ...
+    Description: If a trusted template author were to write a <script> tag containing an empty 'type' attribute or a 'type' attribute with an ASCII whitespace, the execution of the template would incorrectly escape any data passed into the <script> block.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
+    References:
+    - https://go.dev/cl/771180
+    - https://go.dev/issue/78981
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39826
+    - https://pkg.go.dev/vuln/GO-2026-4980
+    PublishedDate: '2026-05-07T20:16:43.49Z'
+    LastModifiedDate: '2026-05-08T15:16:37.68Z'
 - Target: usr/bin/nerdctl
   Class: lang-pkgs
   Type: gobinary
@@ -4657,11 +4983,17 @@
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456340
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456341
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456342
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27140
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27143
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27144
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
     - https://errata.almalinux.org/9/ALSA-2026-14200.html
-    - https://errata.rockylinux.org/RLSA-2026:11514
+    - https://errata.rockylinux.org/RLSA-2026:10219
     - https://go.dev/cl/758320
     - https://go.dev/issue/78282
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -4775,12 +5107,10 @@
     - https://bugzilla.redhat.com/2456339
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
     - https://errata.almalinux.org/9/ALSA-2026-14200.html
-    - https://errata.rockylinux.org/RLSA-2026:11514
+    - https://errata.rockylinux.org/RLSA-2026:11711
     - https://go.dev/cl/763767
     - https://go.dev/issue/78334
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -4791,6 +5121,199 @@
     - https://www.cve.org/CVERecord?id=CVE-2026-32283
     PublishedDate: '2026-04-08T02:16:03.58Z'
     LastModifiedDate: '2026-04-16T19:12:10.54Z'
+  - VulnerabilityID: CVE-2026-33811
+    VendorIDs:
+    - GO-2026-4981
+    PkgID: stdlib@v1.25.8
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.25.8
+      UID: d7d9624bed3e4b65
+    InstalledVersion: v1.25.8
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    SeveritySource: nvd
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33811
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:519bce6793360dc9f3974aeb9da33e0db208395c4355d646c35f396774352a31
+    Title: When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ...
+    Description: When using LookupCNAME with the cgo DNS resolver, a very long CNAME response can trigger a double-free of C memory and a crash.
+    Severity: HIGH
+    CweIDs:
+    - CWE-415
+    VendorSeverity:
+      bitnami: 3
+      nvd: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+      nvd:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/767860
+    - https://go.dev/issue/78803
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-33811
+    - https://pkg.go.dev/vuln/GO-2026-4981
+    PublishedDate: '2026-05-07T20:16:42.77Z'
+    LastModifiedDate: '2026-05-12T20:23:02.333Z'
+  - VulnerabilityID: CVE-2026-33814
+    VendorIDs:
+    - GO-2026-4918
+    PkgID: stdlib@v1.25.8
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.25.8
+      UID: d7d9624bed3e4b65
+    InstalledVersion: v1.25.8
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33814
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:8e2e486f8c5dd08ede32d471e20cf1c8d88168c68d93eae151e75e4b85eed8a3
+    Title: When processing HTTP/2 SETTINGS frames, transport will enter an infini ...
+    Description: When processing HTTP/2 SETTINGS frames, transport will enter an infinite loop of writing CONTINUATION frames if it receives a SETTINGS_MAX_FRAME_SIZE with a value of 0.
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/761581
+    - https://go.dev/cl/761640
+    - https://go.dev/issue/78476
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-33814
+    - https://pkg.go.dev/vuln/GO-2026-4918
+    PublishedDate: '2026-05-07T20:16:42.88Z'
+    LastModifiedDate: '2026-05-08T19:16:30.567Z'
+  - VulnerabilityID: CVE-2026-39820
+    VendorIDs:
+    - GO-2026-4986
+    PkgID: stdlib@v1.25.8
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.25.8
+      UID: d7d9624bed3e4b65
+    InstalledVersion: v1.25.8
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39820
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:7375f1fb29b535ed868b868b6d2e03ebc14a8f5d9d22fa9a9af281ab07b96920
+    Title: Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ...
+    Description: Well-crafted inputs reaching ParseAddress, ParseAddressList, and ParseDate were able to trigger excessive CPU exhaustion and memory allocations.
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/759940
+    - https://go.dev/issue/78566
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39820
+    - https://pkg.go.dev/vuln/GO-2026-4986
+    PublishedDate: '2026-05-07T20:16:43.187Z'
+    LastModifiedDate: '2026-05-08T15:16:37.323Z'
+  - VulnerabilityID: CVE-2026-39836
+    VendorIDs:
+    - GO-2026-4971
+    PkgID: stdlib@v1.25.8
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.25.8
+      UID: d7d9624bed3e4b65
+    InstalledVersion: v1.25.8
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39836
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:4d4eb45b4df24647a8bfd436099dbf00e9f6015378eeacd2ba0bbcdedb11a573
+    Title: Panic in Dial and LookupPort when handling NUL byte on Windows in net
+    Description: The Dial and LookupPort functions panic on Windows when provided with an input containing a NUL (0).
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/775320
+    - https://go.dev/issue/79006
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39836
+    - https://pkg.go.dev/vuln/GO-2026-4971
+    PublishedDate: '2026-05-07T20:16:43.593Z'
+    LastModifiedDate: '2026-05-08T22:16:29.723Z'
+  - VulnerabilityID: CVE-2026-42499
+    VendorIDs:
+    - GO-2026-4977
+    PkgID: stdlib@v1.25.8
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.25.8
+      UID: d7d9624bed3e4b65
+    InstalledVersion: v1.25.8
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-42499
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:25f1da0394299b489328bdb044fc32006d6c8ac25d0b36bfa22585729f8dc8de
+    Title: Pathological inputs could cause DoS through consumePhrase when parsing ...
+    Description: Pathological inputs could cause DoS through consumePhrase when parsing an email address according to RFC 5322.
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/771520
+    - https://go.dev/issue/78987
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-42499
+    - https://pkg.go.dev/vuln/GO-2026-4977
+    PublishedDate: '2026-05-07T20:16:44.54Z'
+    LastModifiedDate: '2026-05-08T22:16:33.183Z'
   - VulnerabilityID: CVE-2026-32282
     VendorIDs:
     - GO-2026-4864
@@ -4843,12 +5366,10 @@
     - https://bugzilla.redhat.com/2456339
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
     - https://errata.almalinux.org/9/ALSA-2026-14200.html
-    - https://errata.rockylinux.org/RLSA-2026:11514
+    - https://errata.rockylinux.org/RLSA-2026:11711
     - https://go.dev/cl/763761
     - https://go.dev/issue/78293
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -4964,97 +5485,6 @@
     - https://www.cve.org/CVERecord?id=CVE-2026-32289
     PublishedDate: '2026-04-08T02:16:03.82Z'
     LastModifiedDate: '2026-04-16T19:06:57.367Z'
-  - VulnerabilityID: CVE-2026-33811
-    VendorIDs:
-    - GO-2026-4981
-    PkgID: stdlib@v1.25.8
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.25.8
-      UID: d7d9624bed3e4b65
-    InstalledVersion: v1.25.8
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33811
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:519bce6793360dc9f3974aeb9da33e0db208395c4355d646c35f396774352a31
-    Title: When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ...
-    Description: When using LookupCNAME with the cgo DNS resolver, a very long CNAME response can trigger a double-free of C memory and a crash.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/767860
-    - https://go.dev/issue/78803
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4981
-    PublishedDate: '2026-05-07T20:16:42.77Z'
-    LastModifiedDate: '2026-05-08T15:16:36.64Z'
-  - VulnerabilityID: CVE-2026-33814
-    VendorIDs:
-    - GO-2026-4918
-    PkgID: stdlib@v1.25.8
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.25.8
-      UID: d7d9624bed3e4b65
-    InstalledVersion: v1.25.8
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33814
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:8e2e486f8c5dd08ede32d471e20cf1c8d88168c68d93eae151e75e4b85eed8a3
-    Title: When processing HTTP/2 SETTINGS frames, transport will enter an infini ...
-    Description: When processing HTTP/2 SETTINGS frames, transport will enter an infinite loop of writing CONTINUATION frames if it receives a SETTINGS_MAX_FRAME_SIZE with a value of 0.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/761581
-    - https://go.dev/cl/761640
-    - https://go.dev/issue/78476
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4918
-    PublishedDate: '2026-05-07T20:16:42.88Z'
-    LastModifiedDate: '2026-05-08T19:16:30.567Z'
-  - VulnerabilityID: CVE-2026-39820
-    VendorIDs:
-    - GO-2026-4986
-    PkgID: stdlib@v1.25.8
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.25.8
-      UID: d7d9624bed3e4b65
-    InstalledVersion: v1.25.8
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39820
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:7375f1fb29b535ed868b868b6d2e03ebc14a8f5d9d22fa9a9af281ab07b96920
-    Title: Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ...
-    Description: Well-crafted inputs reaching ParseAddress, ParseAddressList, and ParseDate were able to trigger excessive CPU exhaustion and memory allocations.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/759940
-    - https://go.dev/issue/78566
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4986
-    PublishedDate: '2026-05-07T20:16:43.187Z'
-    LastModifiedDate: '2026-05-08T15:16:37.323Z'
   - VulnerabilityID: CVE-2026-39823
     VendorIDs:
     - GO-2026-4982
@@ -5077,11 +5507,18 @@
     Fingerprint: sha256:0d19d955515f8210f689fb8c631e26eb95ddbb2cfdca1fb5b579f826c380e5dd
     Title: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly  ...
     Description: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly escaped inside of a <meta> tag's <content> attribute. If the URL content were to insert ASCII whitespaces around the '=' rune inside of the <content> attribute, the escaper would fail to similarly escape it, leading to XSS.
-    Severity: UNKNOWN
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
     References:
     - https://go.dev/cl/769920
     - https://go.dev/issue/78913
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39823
     - https://pkg.go.dev/vuln/GO-2026-4982
     PublishedDate: '2026-05-07T20:16:43.29Z'
     LastModifiedDate: '2026-05-08T15:16:37.5Z'
@@ -5107,11 +5544,18 @@
     Fingerprint: sha256:44c111a297f3d1e60be0b0a10d19ac9dabace5ac61f5b2183165d08162e9b458
     Title: ReverseProxy can forward queries containing parameters not visible to  ...
     Description: ReverseProxy can forward queries containing parameters not visible to Rewrite functions. When used with a Rewrite function, or a Director function which parses query parameters, ReverseProxy sanitizes the forwarded request to remove query parameters which are not parsed by url.ParseQuery. ReverseProxy does not take ParseQuery's limit on the total number of query parameters (controlled by GODEBUG=urlmaxqueryparams=N) into account. This can permit ReverseProxy to forward a request containing a query parameter that is not visible to the Rewrite function. For example, the query "a1=x&a2=x&...&a10000=x&hidden=y" can forward the parameter "hidden=y" while hiding it from the proxy's Rewrite function.
-    Severity: UNKNOWN
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+        V3Score: 5.3
     References:
     - https://go.dev/cl/770541
     - https://go.dev/issue/78948
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39825
     - https://pkg.go.dev/vuln/GO-2026-4976
     PublishedDate: '2026-05-07T20:16:43.39Z'
     LastModifiedDate: '2026-05-08T22:16:29.547Z'
@@ -5137,74 +5581,21 @@
     Fingerprint: sha256:6e7d79593845508c28a2ed0bc956eec93cbc0e64a7fb2b19177a876b84fa4e0c
     Title: If a trusted template author were to write a <script> tag containing a ...
     Description: If a trusted template author were to write a <script> tag containing an empty 'type' attribute or a 'type' attribute with an ASCII whitespace, the execution of the template would incorrectly escape any data passed into the <script> block.
-    Severity: UNKNOWN
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
     References:
     - https://go.dev/cl/771180
     - https://go.dev/issue/78981
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39826
     - https://pkg.go.dev/vuln/GO-2026-4980
     PublishedDate: '2026-05-07T20:16:43.49Z'
     LastModifiedDate: '2026-05-08T15:16:37.68Z'
-  - VulnerabilityID: CVE-2026-39836
-    VendorIDs:
-    - GO-2026-4971
-    PkgID: stdlib@v1.25.8
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.25.8
-      UID: d7d9624bed3e4b65
-    InstalledVersion: v1.25.8
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39836
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:4d4eb45b4df24647a8bfd436099dbf00e9f6015378eeacd2ba0bbcdedb11a573
-    Title: Panic in Dial and LookupPort when handling NUL byte on Windows in net
-    Description: The Dial and LookupPort functions panic on Windows when provided with an input containing a NUL (0).
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/775320
-    - https://go.dev/issue/79006
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4971
-    PublishedDate: '2026-05-07T20:16:43.593Z'
-    LastModifiedDate: '2026-05-08T22:16:29.723Z'
-  - VulnerabilityID: CVE-2026-42499
-    VendorIDs:
-    - GO-2026-4977
-    PkgID: stdlib@v1.25.8
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.25.8
-      UID: d7d9624bed3e4b65
-    InstalledVersion: v1.25.8
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-42499
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:25f1da0394299b489328bdb044fc32006d6c8ac25d0b36bfa22585729f8dc8de
-    Title: Pathological inputs could cause DoS through consumePhrase when parsing ...
-    Description: Pathological inputs could cause DoS through consumePhrase when parsing an email address according to RFC 5322.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/771520
-    - https://go.dev/issue/78987
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4977
-    PublishedDate: '2026-05-07T20:16:44.54Z'
-    LastModifiedDate: '2026-05-08T22:16:33.183Z'
 - Target: usr/bin/skopeo
   Class: lang-pkgs
   Type: gobinary
@@ -5431,9 +5822,11 @@
     - https://bugzilla.redhat.com/2404715
     - https://bugzilla.redhat.com/2407258
     - https://bugzilla.redhat.com/show_bug.cgi?id=2404715
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2407258
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-52881
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58183
     - https://errata.almalinux.org/9/ALSA-2025-22011.html
-    - https://errata.rockylinux.org/RLSA-2025:23543
+    - https://errata.rockylinux.org/RLSA-2025:22011
     - https://github.com/opencontainers/runc
     - https://github.com/opencontainers/runc/blob/v1.4.0-rc.2/RELEASES.md
     - https://github.com/opencontainers/runc/commit/3f925525b44d247e390e529e772a0dc0c0bc3557
@@ -5847,11 +6240,17 @@
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456340
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456341
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456342
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27140
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27143
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27144
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
     - https://errata.almalinux.org/9/ALSA-2026-14200.html
-    - https://errata.rockylinux.org/RLSA-2026:11514
+    - https://errata.rockylinux.org/RLSA-2026:10219
     - https://go.dev/cl/758320
     - https://go.dev/issue/78282
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -5965,12 +6364,10 @@
     - https://bugzilla.redhat.com/2456339
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
     - https://errata.almalinux.org/9/ALSA-2026-14200.html
-    - https://errata.rockylinux.org/RLSA-2026:11514
+    - https://errata.rockylinux.org/RLSA-2026:11711
     - https://go.dev/cl/763767
     - https://go.dev/issue/78334
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -6034,6 +6431,199 @@
     - https://www.cve.org/CVERecord?id=CVE-2026-33810
     PublishedDate: '2026-04-08T02:16:03.95Z'
     LastModifiedDate: '2026-04-20T18:16:26.813Z'
+  - VulnerabilityID: CVE-2026-33811
+    VendorIDs:
+    - GO-2026-4981
+    PkgID: stdlib@v1.26.1
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.1
+      UID: ffd28a2ad639e9f9
+    InstalledVersion: v1.26.1
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    SeveritySource: nvd
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33811
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:be065754dd5d378b1d4b074eba815eb11796ddbe9a790594886c948864babf47
+    Title: When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ...
+    Description: When using LookupCNAME with the cgo DNS resolver, a very long CNAME response can trigger a double-free of C memory and a crash.
+    Severity: HIGH
+    CweIDs:
+    - CWE-415
+    VendorSeverity:
+      bitnami: 3
+      nvd: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+      nvd:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/767860
+    - https://go.dev/issue/78803
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-33811
+    - https://pkg.go.dev/vuln/GO-2026-4981
+    PublishedDate: '2026-05-07T20:16:42.77Z'
+    LastModifiedDate: '2026-05-12T20:23:02.333Z'
+  - VulnerabilityID: CVE-2026-33814
+    VendorIDs:
+    - GO-2026-4918
+    PkgID: stdlib@v1.26.1
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.1
+      UID: ffd28a2ad639e9f9
+    InstalledVersion: v1.26.1
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33814
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:88120a3592a0a3b048e4c457818596ab3a82e44cb6fe00efcd0b91e4a98a382b
+    Title: When processing HTTP/2 SETTINGS frames, transport will enter an infini ...
+    Description: When processing HTTP/2 SETTINGS frames, transport will enter an infinite loop of writing CONTINUATION frames if it receives a SETTINGS_MAX_FRAME_SIZE with a value of 0.
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/761581
+    - https://go.dev/cl/761640
+    - https://go.dev/issue/78476
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-33814
+    - https://pkg.go.dev/vuln/GO-2026-4918
+    PublishedDate: '2026-05-07T20:16:42.88Z'
+    LastModifiedDate: '2026-05-08T19:16:30.567Z'
+  - VulnerabilityID: CVE-2026-39820
+    VendorIDs:
+    - GO-2026-4986
+    PkgID: stdlib@v1.26.1
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.1
+      UID: ffd28a2ad639e9f9
+    InstalledVersion: v1.26.1
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39820
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:617334dd8c4dcdb2561ac43ff1a9fd055dd44912140e54ecb3104e94a26a2b5a
+    Title: Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ...
+    Description: Well-crafted inputs reaching ParseAddress, ParseAddressList, and ParseDate were able to trigger excessive CPU exhaustion and memory allocations.
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/759940
+    - https://go.dev/issue/78566
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39820
+    - https://pkg.go.dev/vuln/GO-2026-4986
+    PublishedDate: '2026-05-07T20:16:43.187Z'
+    LastModifiedDate: '2026-05-08T15:16:37.323Z'
+  - VulnerabilityID: CVE-2026-39836
+    VendorIDs:
+    - GO-2026-4971
+    PkgID: stdlib@v1.26.1
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.1
+      UID: ffd28a2ad639e9f9
+    InstalledVersion: v1.26.1
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39836
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:d70a3b41c7e92bbd0ccc52c30fc39dc151b5dcf0c32b685b2c8d98a3c0ea675d
+    Title: Panic in Dial and LookupPort when handling NUL byte on Windows in net
+    Description: The Dial and LookupPort functions panic on Windows when provided with an input containing a NUL (0).
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/775320
+    - https://go.dev/issue/79006
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39836
+    - https://pkg.go.dev/vuln/GO-2026-4971
+    PublishedDate: '2026-05-07T20:16:43.593Z'
+    LastModifiedDate: '2026-05-08T22:16:29.723Z'
+  - VulnerabilityID: CVE-2026-42499
+    VendorIDs:
+    - GO-2026-4977
+    PkgID: stdlib@v1.26.1
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.1
+      UID: ffd28a2ad639e9f9
+    InstalledVersion: v1.26.1
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-42499
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:15e9ea0eb0fce2894040efce94a42560d4b725db4102919c34ddfe599265e6be
+    Title: Pathological inputs could cause DoS through consumePhrase when parsing ...
+    Description: Pathological inputs could cause DoS through consumePhrase when parsing an email address according to RFC 5322.
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/771520
+    - https://go.dev/issue/78987
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-42499
+    - https://pkg.go.dev/vuln/GO-2026-4977
+    PublishedDate: '2026-05-07T20:16:44.54Z'
+    LastModifiedDate: '2026-05-08T22:16:33.183Z'
   - VulnerabilityID: CVE-2026-32282
     VendorIDs:
     - GO-2026-4864
@@ -6086,12 +6676,10 @@
     - https://bugzilla.redhat.com/2456339
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
     - https://errata.almalinux.org/9/ALSA-2026-14200.html
-    - https://errata.rockylinux.org/RLSA-2026:11514
+    - https://errata.rockylinux.org/RLSA-2026:11711
     - https://go.dev/cl/763761
     - https://go.dev/issue/78293
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -6207,97 +6795,6 @@
     - https://www.cve.org/CVERecord?id=CVE-2026-32289
     PublishedDate: '2026-04-08T02:16:03.82Z'
     LastModifiedDate: '2026-04-16T19:06:57.367Z'
-  - VulnerabilityID: CVE-2026-33811
-    VendorIDs:
-    - GO-2026-4981
-    PkgID: stdlib@v1.26.1
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.1
-      UID: ffd28a2ad639e9f9
-    InstalledVersion: v1.26.1
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33811
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:be065754dd5d378b1d4b074eba815eb11796ddbe9a790594886c948864babf47
-    Title: When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ...
-    Description: When using LookupCNAME with the cgo DNS resolver, a very long CNAME response can trigger a double-free of C memory and a crash.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/767860
-    - https://go.dev/issue/78803
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4981
-    PublishedDate: '2026-05-07T20:16:42.77Z'
-    LastModifiedDate: '2026-05-08T15:16:36.64Z'
-  - VulnerabilityID: CVE-2026-33814
-    VendorIDs:
-    - GO-2026-4918
-    PkgID: stdlib@v1.26.1
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.1
-      UID: ffd28a2ad639e9f9
-    InstalledVersion: v1.26.1
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33814
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:88120a3592a0a3b048e4c457818596ab3a82e44cb6fe00efcd0b91e4a98a382b
-    Title: When processing HTTP/2 SETTINGS frames, transport will enter an infini ...
-    Description: When processing HTTP/2 SETTINGS frames, transport will enter an infinite loop of writing CONTINUATION frames if it receives a SETTINGS_MAX_FRAME_SIZE with a value of 0.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/761581
-    - https://go.dev/cl/761640
-    - https://go.dev/issue/78476
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4918
-    PublishedDate: '2026-05-07T20:16:42.88Z'
-    LastModifiedDate: '2026-05-08T19:16:30.567Z'
-  - VulnerabilityID: CVE-2026-39820
-    VendorIDs:
-    - GO-2026-4986
-    PkgID: stdlib@v1.26.1
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.1
-      UID: ffd28a2ad639e9f9
-    InstalledVersion: v1.26.1
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39820
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:617334dd8c4dcdb2561ac43ff1a9fd055dd44912140e54ecb3104e94a26a2b5a
-    Title: Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ...
-    Description: Well-crafted inputs reaching ParseAddress, ParseAddressList, and ParseDate were able to trigger excessive CPU exhaustion and memory allocations.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/759940
-    - https://go.dev/issue/78566
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4986
-    PublishedDate: '2026-05-07T20:16:43.187Z'
-    LastModifiedDate: '2026-05-08T15:16:37.323Z'
   - VulnerabilityID: CVE-2026-39823
     VendorIDs:
     - GO-2026-4982
@@ -6320,11 +6817,18 @@
     Fingerprint: sha256:5689aee4f053205578881b015f4ac10d258379cabc55862117aa79c1850f809b
     Title: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly  ...
     Description: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly escaped inside of a <meta> tag's <content> attribute. If the URL content were to insert ASCII whitespaces around the '=' rune inside of the <content> attribute, the escaper would fail to similarly escape it, leading to XSS.
-    Severity: UNKNOWN
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
     References:
     - https://go.dev/cl/769920
     - https://go.dev/issue/78913
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39823
     - https://pkg.go.dev/vuln/GO-2026-4982
     PublishedDate: '2026-05-07T20:16:43.29Z'
     LastModifiedDate: '2026-05-08T15:16:37.5Z'
@@ -6350,11 +6854,18 @@
     Fingerprint: sha256:84d136dc6d23b80f485abdf9fa842df1107bcec1f7cf1ab582872898f56ed9c0
     Title: ReverseProxy can forward queries containing parameters not visible to  ...
     Description: ReverseProxy can forward queries containing parameters not visible to Rewrite functions. When used with a Rewrite function, or a Director function which parses query parameters, ReverseProxy sanitizes the forwarded request to remove query parameters which are not parsed by url.ParseQuery. ReverseProxy does not take ParseQuery's limit on the total number of query parameters (controlled by GODEBUG=urlmaxqueryparams=N) into account. This can permit ReverseProxy to forward a request containing a query parameter that is not visible to the Rewrite function. For example, the query "a1=x&a2=x&...&a10000=x&hidden=y" can forward the parameter "hidden=y" while hiding it from the proxy's Rewrite function.
-    Severity: UNKNOWN
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+        V3Score: 5.3
     References:
     - https://go.dev/cl/770541
     - https://go.dev/issue/78948
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39825
     - https://pkg.go.dev/vuln/GO-2026-4976
     PublishedDate: '2026-05-07T20:16:43.39Z'
     LastModifiedDate: '2026-05-08T22:16:29.547Z'
@@ -6380,79 +6891,74 @@
     Fingerprint: sha256:dd9a2341ac1615d3d2e94ff62a816685233c0317ed2bf30033e729804f5ec4b9
     Title: If a trusted template author were to write a <script> tag containing a ...
     Description: If a trusted template author were to write a <script> tag containing an empty 'type' attribute or a 'type' attribute with an ASCII whitespace, the execution of the template would incorrectly escape any data passed into the <script> block.
-    Severity: UNKNOWN
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
     References:
     - https://go.dev/cl/771180
     - https://go.dev/issue/78981
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39826
     - https://pkg.go.dev/vuln/GO-2026-4980
     PublishedDate: '2026-05-07T20:16:43.49Z'
     LastModifiedDate: '2026-05-08T15:16:37.68Z'
-  - VulnerabilityID: CVE-2026-39836
-    VendorIDs:
-    - GO-2026-4971
-    PkgID: stdlib@v1.26.1
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.1
-      UID: ffd28a2ad639e9f9
-    InstalledVersion: v1.26.1
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39836
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:d70a3b41c7e92bbd0ccc52c30fc39dc151b5dcf0c32b685b2c8d98a3c0ea675d
-    Title: Panic in Dial and LookupPort when handling NUL byte on Windows in net
-    Description: The Dial and LookupPort functions panic on Windows when provided with an input containing a NUL (0).
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/775320
-    - https://go.dev/issue/79006
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4971
-    PublishedDate: '2026-05-07T20:16:43.593Z'
-    LastModifiedDate: '2026-05-08T22:16:29.723Z'
-  - VulnerabilityID: CVE-2026-42499
-    VendorIDs:
-    - GO-2026-4977
-    PkgID: stdlib@v1.26.1
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.1
-      UID: ffd28a2ad639e9f9
-    InstalledVersion: v1.26.1
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-42499
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:15e9ea0eb0fce2894040efce94a42560d4b725db4102919c34ddfe599265e6be
-    Title: Pathological inputs could cause DoS through consumePhrase when parsing ...
-    Description: Pathological inputs could cause DoS through consumePhrase when parsing an email address according to RFC 5322.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/771520
-    - https://go.dev/issue/78987
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4977
-    PublishedDate: '2026-05-07T20:16:44.54Z'
-    LastModifiedDate: '2026-05-08T22:16:33.183Z'
 - Target: usr/bin/syft
   Class: lang-pkgs
   Type: gobinary
   Packages: []
   Vulnerabilities:
+  - VulnerabilityID: CVE-2026-45022
+    VendorIDs:
+    - GHSA-389r-gv7p-r3rp
+    PkgID: github.com/go-git/go-git/v5@v5.18.0
+    PkgName: github.com/go-git/go-git/v5
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/go-git/go-git/v5@v5.18.0
+      UID: b52c0a8533699950
+    InstalledVersion: v5.18.0
+    FixedVersion: 5.19.0
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    SeveritySource: ghsa
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-45022
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Fingerprint: sha256:92ffa4b2df5b9f658b84aa1f0e66f3dcf0271a0aea1d56ab420f0abbf90230c1
+    Title: go-git's improper parsing of specially crafted objects may lead to inconsistent interpretation compared to upstream Git
+    Description: |-
+      ### Impact
+      `go-git` may parse malformed Git objects in a way that differs from upstream Git. When `commit` or `tag` objects contain ambiguous or malformed headers, `go-git`’s decoded representation may expose values differently from how Git itself would interpret or reject the same object.
+
+      Additionally, `go-git`’s commit signing and verification logic operates over commit data reconstructed from `go-git`’s parsed representation rather than the original raw object bytes. As a result, `go-git` may sign or verify a commit payload that is not byte-for-byte equivalent to the object stored in the repository.
+
+      This can cause a signature to appear valid for a commit whose displayed or effective metadata differs from the object that was intended to be signed.
+
+      ### Patches
+      Users should upgrade to a patched version in order to mitigate this vulnerability. Versions prior to v5 are likely to be affected, users are recommended to upgrade to a supported `go-git` version.
+
+      ### Credit
+
+      Thanks to @bugbunny-research (https://bugbunny.ai/) for reporting this to `sigstore/gitsign`, and to @wlynch, @patzielinski and @adityasaky for coordinating the disclosure with the `go-git` project. :bow: :1st_place_medal: 
+
+      Thanks to @wayphinder for reporting this to the `go-git` project. :bow:
+    Severity: HIGH
+    VendorSeverity:
+      ghsa: 3
+    CVSS:
+      ghsa:
+        V40Vector: CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:H/SA:N
+        V40Score: 7
+    References:
+    - https://github.com/go-git/go-git
+    - https://github.com/go-git/go-git/security/advisories/GHSA-389r-gv7p-r3rp
   - VulnerabilityID: CVE-2026-33811
     VendorIDs:
     - GO-2026-4981
@@ -6467,6 +6973,7 @@
     Layer:
       Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
       DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    SeveritySource: nvd
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33811
     DataSource:
       ID: govulndb
@@ -6475,14 +6982,27 @@
     Fingerprint: sha256:4fd61036b4075c3488fab7f6340c11256264951bacc72f555a0703a6f2f93d0e
     Title: When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ...
     Description: When using LookupCNAME with the cgo DNS resolver, a very long CNAME response can trigger a double-free of C memory and a crash.
-    Severity: UNKNOWN
+    Severity: HIGH
+    CweIDs:
+    - CWE-415
+    VendorSeverity:
+      bitnami: 3
+      nvd: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+      nvd:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
     - https://go.dev/cl/767860
     - https://go.dev/issue/78803
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-33811
     - https://pkg.go.dev/vuln/GO-2026-4981
     PublishedDate: '2026-05-07T20:16:42.77Z'
-    LastModifiedDate: '2026-05-08T15:16:36.64Z'
+    LastModifiedDate: '2026-05-12T20:23:02.333Z'
   - VulnerabilityID: CVE-2026-33814
     VendorIDs:
     - GO-2026-4918
@@ -6505,12 +7025,19 @@
     Fingerprint: sha256:45052f3d43759279f497292574b5f22cc523ccf2f9b91318be0f9c9d8a4526f6
     Title: When processing HTTP/2 SETTINGS frames, transport will enter an infini ...
     Description: When processing HTTP/2 SETTINGS frames, transport will enter an infinite loop of writing CONTINUATION frames if it receives a SETTINGS_MAX_FRAME_SIZE with a value of 0.
-    Severity: UNKNOWN
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
     - https://go.dev/cl/761581
     - https://go.dev/cl/761640
     - https://go.dev/issue/78476
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-33814
     - https://pkg.go.dev/vuln/GO-2026-4918
     PublishedDate: '2026-05-07T20:16:42.88Z'
     LastModifiedDate: '2026-05-08T19:16:30.567Z'
@@ -6536,104 +7063,21 @@
     Fingerprint: sha256:dcb99222f7749e4473758c5b34088a8dca11e28ef5fc2cbcec819d5d554ea165
     Title: Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ...
     Description: Well-crafted inputs reaching ParseAddress, ParseAddressList, and ParseDate were able to trigger excessive CPU exhaustion and memory allocations.
-    Severity: UNKNOWN
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
     - https://go.dev/cl/759940
     - https://go.dev/issue/78566
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39820
     - https://pkg.go.dev/vuln/GO-2026-4986
     PublishedDate: '2026-05-07T20:16:43.187Z'
     LastModifiedDate: '2026-05-08T15:16:37.323Z'
-  - VulnerabilityID: CVE-2026-39823
-    VendorIDs:
-    - GO-2026-4982
-    PkgID: stdlib@v1.26.2
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.2
-      UID: d1d69e031af00a85
-    InstalledVersion: v1.26.2
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39823
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:7c644eb679fc936e5e85d04764e1035b30e5b8cf55a7dbe2bf7d51e1caf28ddd
-    Title: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly  ...
-    Description: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly escaped inside of a <meta> tag's <content> attribute. If the URL content were to insert ASCII whitespaces around the '=' rune inside of the <content> attribute, the escaper would fail to similarly escape it, leading to XSS.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/769920
-    - https://go.dev/issue/78913
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4982
-    PublishedDate: '2026-05-07T20:16:43.29Z'
-    LastModifiedDate: '2026-05-08T15:16:37.5Z'
-  - VulnerabilityID: CVE-2026-39825
-    VendorIDs:
-    - GO-2026-4976
-    PkgID: stdlib@v1.26.2
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.2
-      UID: d1d69e031af00a85
-    InstalledVersion: v1.26.2
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39825
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:afc540c78c6e13ef28f8171a57ddd461072224072ed5164cd089fcb91ada6c48
-    Title: ReverseProxy can forward queries containing parameters not visible to  ...
-    Description: ReverseProxy can forward queries containing parameters not visible to Rewrite functions. When used with a Rewrite function, or a Director function which parses query parameters, ReverseProxy sanitizes the forwarded request to remove query parameters which are not parsed by url.ParseQuery. ReverseProxy does not take ParseQuery's limit on the total number of query parameters (controlled by GODEBUG=urlmaxqueryparams=N) into account. This can permit ReverseProxy to forward a request containing a query parameter that is not visible to the Rewrite function. For example, the query "a1=x&a2=x&...&a10000=x&hidden=y" can forward the parameter "hidden=y" while hiding it from the proxy's Rewrite function.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/770541
-    - https://go.dev/issue/78948
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4976
-    PublishedDate: '2026-05-07T20:16:43.39Z'
-    LastModifiedDate: '2026-05-08T22:16:29.547Z'
-  - VulnerabilityID: CVE-2026-39826
-    VendorIDs:
-    - GO-2026-4980
-    PkgID: stdlib@v1.26.2
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.2
-      UID: d1d69e031af00a85
-    InstalledVersion: v1.26.2
-    FixedVersion: 1.25.10, 1.26.3
-    Status: fixed
-    Layer:
-      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
-      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39826
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:a7984d87c221dbe4631c0b5fba83a95fb209c371e93087ded0b6117a8292ecc5
-    Title: If a trusted template author were to write a <script> tag containing a ...
-    Description: If a trusted template author were to write a <script> tag containing an empty 'type' attribute or a 'type' attribute with an ASCII whitespace, the execution of the template would incorrectly escape any data passed into the <script> block.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/771180
-    - https://go.dev/issue/78981
-    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
-    - https://pkg.go.dev/vuln/GO-2026-4980
-    PublishedDate: '2026-05-07T20:16:43.49Z'
-    LastModifiedDate: '2026-05-08T15:16:37.68Z'
   - VulnerabilityID: CVE-2026-39836
     VendorIDs:
     - GO-2026-4971
@@ -6656,11 +7100,18 @@
     Fingerprint: sha256:e08c7915da53ee7113234755024594e9e8c6ac1e26d560c4bd37c74d2bd025c5
     Title: Panic in Dial and LookupPort when handling NUL byte on Windows in net
     Description: The Dial and LookupPort functions panic on Windows when provided with an input containing a NUL (0).
-    Severity: UNKNOWN
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
     - https://go.dev/cl/775320
     - https://go.dev/issue/79006
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39836
     - https://pkg.go.dev/vuln/GO-2026-4971
     PublishedDate: '2026-05-07T20:16:43.593Z'
     LastModifiedDate: '2026-05-08T22:16:29.723Z'
@@ -6686,11 +7137,129 @@
     Fingerprint: sha256:e27fb205c404ae0efaff3ded93e53496ab9ee44221ec42eaace5cdb8cc2aa7f7
     Title: Pathological inputs could cause DoS through consumePhrase when parsing ...
     Description: Pathological inputs could cause DoS through consumePhrase when parsing an email address according to RFC 5322.
-    Severity: UNKNOWN
+    Severity: HIGH
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
     - https://go.dev/cl/771520
     - https://go.dev/issue/78987
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-42499
     - https://pkg.go.dev/vuln/GO-2026-4977
     PublishedDate: '2026-05-07T20:16:44.54Z'
     LastModifiedDate: '2026-05-08T22:16:33.183Z'
+  - VulnerabilityID: CVE-2026-39823
+    VendorIDs:
+    - GO-2026-4982
+    PkgID: stdlib@v1.26.2
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.2
+      UID: d1d69e031af00a85
+    InstalledVersion: v1.26.2
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39823
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:7c644eb679fc936e5e85d04764e1035b30e5b8cf55a7dbe2bf7d51e1caf28ddd
+    Title: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly  ...
+    Description: CVE-2026-27142 fixed a vulnerability in which URLs were not correctly escaped inside of a <meta> tag's <content> attribute. If the URL content were to insert ASCII whitespaces around the '=' rune inside of the <content> attribute, the escaper would fail to similarly escape it, leading to XSS.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
+    References:
+    - https://go.dev/cl/769920
+    - https://go.dev/issue/78913
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39823
+    - https://pkg.go.dev/vuln/GO-2026-4982
+    PublishedDate: '2026-05-07T20:16:43.29Z'
+    LastModifiedDate: '2026-05-08T15:16:37.5Z'
+  - VulnerabilityID: CVE-2026-39825
+    VendorIDs:
+    - GO-2026-4976
+    PkgID: stdlib@v1.26.2
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.2
+      UID: d1d69e031af00a85
+    InstalledVersion: v1.26.2
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39825
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:afc540c78c6e13ef28f8171a57ddd461072224072ed5164cd089fcb91ada6c48
+    Title: ReverseProxy can forward queries containing parameters not visible to  ...
+    Description: ReverseProxy can forward queries containing parameters not visible to Rewrite functions. When used with a Rewrite function, or a Director function which parses query parameters, ReverseProxy sanitizes the forwarded request to remove query parameters which are not parsed by url.ParseQuery. ReverseProxy does not take ParseQuery's limit on the total number of query parameters (controlled by GODEBUG=urlmaxqueryparams=N) into account. This can permit ReverseProxy to forward a request containing a query parameter that is not visible to the Rewrite function. For example, the query "a1=x&a2=x&...&a10000=x&hidden=y" can forward the parameter "hidden=y" while hiding it from the proxy's Rewrite function.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+        V3Score: 5.3
+    References:
+    - https://go.dev/cl/770541
+    - https://go.dev/issue/78948
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39825
+    - https://pkg.go.dev/vuln/GO-2026-4976
+    PublishedDate: '2026-05-07T20:16:43.39Z'
+    LastModifiedDate: '2026-05-08T22:16:29.547Z'
+  - VulnerabilityID: CVE-2026-39826
+    VendorIDs:
+    - GO-2026-4980
+    PkgID: stdlib@v1.26.2
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.2
+      UID: d1d69e031af00a85
+    InstalledVersion: v1.26.2
+    FixedVersion: 1.25.10, 1.26.3
+    Status: fixed
+    Layer:
+      Digest: sha256:b2da923976b152f173c894eb48f363a3a90df419be5d71630b29e4dd4bf2b510
+      DiffID: sha256:08617ac9c48742b6401ecfa4a85132b9eaa4f561b5cd03b8d6e998f2527dbde6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39826
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:a7984d87c221dbe4631c0b5fba83a95fb209c371e93087ded0b6117a8292ecc5
+    Title: If a trusted template author were to write a <script> tag containing a ...
+    Description: If a trusted template author were to write a <script> tag containing an empty 'type' attribute or a 'type' attribute with an ASCII whitespace, the execution of the template would incorrectly escape any data passed into the <script> block.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
+    References:
+    - https://go.dev/cl/771180
+    - https://go.dev/issue/78981
+    - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-39826
+    - https://pkg.go.dev/vuln/GO-2026-4980
+    PublishedDate: '2026-05-07T20:16:43.49Z'
+    LastModifiedDate: '2026-05-08T15:16:37.68Z'
