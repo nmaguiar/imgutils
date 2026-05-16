@@ -16,18 +16,18 @@
                         │     ├ InstalledVersion: v28.5.2+incompatible 
                         │     ├ FixedVersion    : 29.3.1 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:5963d33d4606a0301197d12b6e270dc3c4244721bf21c
-                        │     │                  │         438b29e2a1ec2367a7b 
-                        │     │                  ╰ DiffID: sha256:a58a573a8a586930e8a63c499289465d09ed4d1c37df5
-                        │     │                            e7235933bb4ba0071d7 
+                        │     ├ Layer            ╭ Digest: sha256:76fce8a8dbabc302b2cbf909201ee33e4af22b837fc85
+                        │     │                  │         71ceb5e2f54758e3530 
+                        │     │                  ╰ DiffID: sha256:a7aa0717c316a211cd5ac7d0377c59921e7f266feae2c
+                        │     │                            3d488ee915c7f2519bd 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-34040 
                         │     ├ DataSource       ╭ ID  : ghsa 
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
                         │     │                          osystem%3Ago 
-                        │     ├ Fingerprint     : sha256:5f9f5824f5b15f9d6433afad4d7184cb52d257b6aaede1137b715e
-                        │     │                   99001bc240 
+                        │     ├ Fingerprint     : sha256:4b115afd4f68415dc4ce7d58f6ff417750673998be6dfc0b115806
+                        │     │                   bdccc0819c 
                         │     ├ Title           : Moby: Moby: Authorization bypass vulnerability 
                         │     ├ Description     : Moby is an open source container framework. Prior to version
                         │     │                   29.3.1, a security vulnerability has been detected that
@@ -74,18 +74,18 @@
                         │     ├ InstalledVersion: v28.5.2+incompatible 
                         │     ├ FixedVersion    : 29.3.1 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:5963d33d4606a0301197d12b6e270dc3c4244721bf21c
-                        │     │                  │         438b29e2a1ec2367a7b 
-                        │     │                  ╰ DiffID: sha256:a58a573a8a586930e8a63c499289465d09ed4d1c37df5
-                        │     │                            e7235933bb4ba0071d7 
+                        │     ├ Layer            ╭ Digest: sha256:76fce8a8dbabc302b2cbf909201ee33e4af22b837fc85
+                        │     │                  │         71ceb5e2f54758e3530 
+                        │     │                  ╰ DiffID: sha256:a7aa0717c316a211cd5ac7d0377c59921e7f266feae2c
+                        │     │                            3d488ee915c7f2519bd 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-33997 
                         │     ├ DataSource       ╭ ID  : ghsa 
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
                         │     │                          osystem%3Ago 
-                        │     ├ Fingerprint     : sha256:2d30c96f1de0c829316a6ab764b8faee38b88afd22b89efca15090
-                        │     │                   c6819e0e06 
+                        │     ├ Fingerprint     : sha256:979a323a6b56a5ef8c359f0f703a8309fd0211f2c073b97bc0ff99
+                        │     │                   b404538a05 
                         │     ├ Title           : moby: docker: github.com/moby/moby: Moby: Privilege
                         │     │                   validation bypass during plugin installation 
                         │     ├ Description     : Moby is an open source container framework. Prior to version
@@ -134,18 +134,18 @@
                               ├ InstalledVersion: v1.42.0 
                               ├ FixedVersion    : 1.43.0 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:5963d33d4606a0301197d12b6e270dc3c4244721bf21c
-                              │                  │         438b29e2a1ec2367a7b 
-                              │                  ╰ DiffID: sha256:a58a573a8a586930e8a63c499289465d09ed4d1c37df5
-                              │                            e7235933bb4ba0071d7 
+                              ├ Layer            ╭ Digest: sha256:76fce8a8dbabc302b2cbf909201ee33e4af22b837fc85
+                              │                  │         71ceb5e2f54758e3530 
+                              │                  ╰ DiffID: sha256:a7aa0717c316a211cd5ac7d0377c59921e7f266feae2c
+                              │                            3d488ee915c7f2519bd 
                               ├ SeveritySource  : ghsa 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39883 
                               ├ DataSource       ╭ ID  : ghsa 
                               │                  ├ Name: GitHub Security Advisory Go 
                               │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
                               │                          osystem%3Ago 
-                              ├ Fingerprint     : sha256:beb8b75b00c1f1d40602a77879aaca7a4fd54afa53b9f0b2fe7c4b
-                              │                   95166de42a 
+                              ├ Fingerprint     : sha256:590db54ca5eb1d03237bb51d1ab975a5f8810e7c8d4bdb628b73ea
+                              │                   9e13dbb71e 
                               ├ Title           : opentelemetry-go: BSD kenv command not using absolute path
                               │                   enables PATH hijacking 
                               ├ Description     : OpenTelemetry-Go is the Go implementation of OpenTelemetry.
