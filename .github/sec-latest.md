@@ -409,7 +409,8 @@
 │                       │      │                          cosystem%3Amaven 
 │                       │      ├ Fingerprint     : sha256:520a297cd7efd838ed0cf0e56d9be0d216c8d58ddca89f42ee735
 │                       │      │                   56de00fcc60 
-│                       │      ├ Title           : Netty Lz4FrameDecoder is vulnerable to resource exhaustion  
+│                       │      ├ Title           : Netty is an asynchronous, event-driven network application
+│                       │      │                   framework.  ... 
 │                       │      ├ Description     : Netty is an asynchronous, event-driven network application
 │                       │      │                   framework. Prior to 4.2.13.Final and 4.1.133.Final,
 │                       │      │                   Lz4FrameDecoder allocates a ByteBuf of size
@@ -425,10 +426,11 @@
 │                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
 │                       │      │                         ╰ V3Score : 7.5 
 │                       │      ├ References       ╭ [0]: https://github.com/netty/netty 
-│                       │      │                  ╰ [1]: https://github.com/netty/netty/security/advisories/GHS
-│                       │      │                         A-mj4r-2hfc-f8p6 
+│                       │      │                  ├ [1]: https://github.com/netty/netty/security/advisories/GHS
+│                       │      │                  │      A-mj4r-2hfc-f8p6 
+│                       │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-42583 
 │                       │      ├ PublishedDate   : 2026-05-13T19:17:23.903Z 
-│                       │      ╰ LastModifiedDate: 2026-05-13T19:17:23.903Z 
+│                       │      ╰ LastModifiedDate: 2026-05-14T16:26:50.047Z 
 │                       ├ [3]  ╭ VulnerabilityID : CVE-2026-42579 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-cm33-6792-r9fm 
 │                       │      ├ PkgName         : io.netty:netty-codec-dns 
@@ -450,8 +452,8 @@
 │                       │      │                          cosystem%3Amaven 
 │                       │      ├ Fingerprint     : sha256:098d7447bab9daed544721c3e69061e3b5649de923e5546425646
 │                       │      │                   0669c7183ff 
-│                       │      ├ Title           : Netty has a DNS Codec Input Validation Bypass (Encoder +
-│                       │      │                   Decoder) 
+│                       │      ├ Title           : Netty is an asynchronous, event-driven network application
+│                       │      │                   framework.  ... 
 │                       │      ├ Description     : Netty is an asynchronous, event-driven network application
 │                       │      │                   framework. Prior to 4.2.13.Final and 4.1.133.Final, Netty's
 │                       │      │                   DNS codec does not enforce RFC 1035 domain name constraints
@@ -470,10 +472,11 @@
 │                       │      ├ References       ╭ [0]: https://github.com/netty/netty 
 │                       │      │                  ├ [1]: https://github.com/netty/netty/security/advisories/GHS
 │                       │      │                  │      A-cm33-6792-r9fm 
-│                       │      │                  ├ [2]: https://tools.ietf.org/html/rfc1035#section-2.3.4 
-│                       │      │                  ╰ [3]: https://tools.ietf.org/html/rfc1035#section-4.1.4 
+│                       │      │                  ├ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-42579 
+│                       │      │                  ├ [3]: https://tools.ietf.org/html/rfc1035#section-2.3.4 
+│                       │      │                  ╰ [4]: https://tools.ietf.org/html/rfc1035#section-4.1.4 
 │                       │      ├ PublishedDate   : 2026-05-13T19:17:23.353Z 
-│                       │      ╰ LastModifiedDate: 2026-05-13T19:17:23.353Z 
+│                       │      ╰ LastModifiedDate: 2026-05-14T16:26:50.047Z 
 │                       ├ [4]  ╭ VulnerabilityID : CVE-2026-33870 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-pwqr-wmgm-9rr8 
 │                       │      ├ PkgName         : io.netty:netty-codec-http 
@@ -546,7 +549,8 @@
 │                       │      │                          cosystem%3Amaven 
 │                       │      ├ Fingerprint     : sha256:72cf7b94526be720502658bc396f9f2c889ec16bff3735307e7fa
 │                       │      │                   b027d4a1895 
-│                       │      ├ Title           : Netty has HttpClientCodec response desynchronization 
+│                       │      ├ Title           : Netty is an asynchronous, event-driven network application
+│                       │      │                   framework.  ... 
 │                       │      ├ Description     : Netty is an asynchronous, event-driven network application
 │                       │      │                   framework. Prior to 4.2.13.Final and 4.1.133.Final,
 │                       │      │                   HttpClientCodec pairs each inbound response with an outbound
@@ -564,10 +568,11 @@
 │                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L 
 │                       │      │                         ╰ V3Score : 7.3 
 │                       │      ├ References       ╭ [0]: https://github.com/netty/netty 
-│                       │      │                  ╰ [1]: https://github.com/netty/netty/security/advisories/GHS
-│                       │      │                         A-57rv-r2g8-2cj3 
+│                       │      │                  ├ [1]: https://github.com/netty/netty/security/advisories/GHS
+│                       │      │                  │      A-57rv-r2g8-2cj3 
+│                       │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-42584 
 │                       │      ├ PublishedDate   : 2026-05-13T19:17:24.043Z 
-│                       │      ╰ LastModifiedDate: 2026-05-13T19:17:24.043Z 
+│                       │      ╰ LastModifiedDate: 2026-05-14T16:26:50.047Z 
 │                       ├ [6]  ╭ VulnerabilityID : CVE-2026-42587 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-f6hv-jmp6-3vwv 
 │                       │      ├ PkgName         : io.netty:netty-codec-http 
@@ -589,9 +594,8 @@
 │                       │      │                          cosystem%3Amaven 
 │                       │      ├ Fingerprint     : sha256:9b0812d1a7304182def8ab491ed3bfdf737a67bff313f24504089
 │                       │      │                   8292205cde7 
-│                       │      ├ Title           : Netty: HttpContentDecompressor maxAllocation bypass when
-│                       │      │                   Content-Encoding set to br/zstd/snappy leads to
-│                       │      │                   decompression bomb DoS 
+│                       │      ├ Title           : Netty is an asynchronous, event-driven network application
+│                       │      │                   framework.  ... 
 │                       │      ├ Description     : Netty is an asynchronous, event-driven network application
 │                       │      │                   framework. Prior to 4.2.13.Final and 4.1.133.Final,
 │                       │      │                   HttpContentDecompressor accepts a maxAllocation parameter to
@@ -612,10 +616,11 @@
 │                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
 │                       │      │                         ╰ V3Score : 7.5 
 │                       │      ├ References       ╭ [0]: https://github.com/netty/netty 
-│                       │      │                  ╰ [1]: https://github.com/netty/netty/security/advisories/GHS
-│                       │      │                         A-f6hv-jmp6-3vwv 
+│                       │      │                  ├ [1]: https://github.com/netty/netty/security/advisories/GHS
+│                       │      │                  │      A-f6hv-jmp6-3vwv 
+│                       │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-42587 
 │                       │      ├ PublishedDate   : 2026-05-13T19:17:24.46Z 
-│                       │      ╰ LastModifiedDate: 2026-05-13T19:17:24.46Z 
+│                       │      ╰ LastModifiedDate: 2026-05-14T16:21:02.93Z 
 │                       ├ [7]  ╭ VulnerabilityID : CVE-2026-41417 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-v8h7-rr48-vmmv 
 │                       │      ├ PkgName         : io.netty:netty-codec-http 
@@ -685,8 +690,8 @@
 │                       │      │                          cosystem%3Amaven 
 │                       │      ├ Fingerprint     : sha256:9ac66afd682cbbaaf84133f6aa99efec6598dbd0e5d917bd1ed09
 │                       │      │                   c31b8ba4b23 
-│                       │      ├ Title           : Netty vulnerable to HTTP Request Smuggling due to incorrect
-│                       │      │                   chunk size parsing 
+│                       │      ├ Title           : Netty is an asynchronous, event-driven network application
+│                       │      │                   framework.  ... 
 │                       │      ├ Description     : Netty is an asynchronous, event-driven network application
 │                       │      │                   framework. Prior to 4.2.13.Final and 4.1.133.Final, Netty's
 │                       │      │                   chunk size parser silently overflows int, enabling request
@@ -699,10 +704,11 @@
 │                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L 
 │                       │      │                         ╰ V3Score : 6.5 
 │                       │      ├ References       ╭ [0]: https://github.com/netty/netty 
-│                       │      │                  ╰ [1]: https://github.com/netty/netty/security/advisories/GHS
-│                       │      │                         A-m4cv-j2px-7723 
+│                       │      │                  ├ [1]: https://github.com/netty/netty/security/advisories/GHS
+│                       │      │                  │      A-m4cv-j2px-7723 
+│                       │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-42580 
 │                       │      ├ PublishedDate   : 2026-05-13T19:17:23.49Z 
-│                       │      ╰ LastModifiedDate: 2026-05-13T19:17:23.49Z 
+│                       │      ╰ LastModifiedDate: 2026-05-14T19:16:35.967Z 
 │                       ├ [9]  ╭ VulnerabilityID : CVE-2026-42581 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-xxqh-mfjm-7mv9 
 │                       │      ├ PkgName         : io.netty:netty-codec-http 
@@ -724,8 +730,8 @@
 │                       │      │                          cosystem%3Amaven 
 │                       │      ├ Fingerprint     : sha256:3a7b7fa29748f0ae77613ea9b15833c316c3fbfec883dcf24ba11
 │                       │      │                   318e1407710 
-│                       │      ├ Title           : Netty HTTP/1.0 TE+CL Coexistence Bypasses Smuggling
-│                       │      │                   Sanitization 
+│                       │      ├ Title           : Netty is an asynchronous, event-driven network application
+│                       │      │                   framework.  ... 
 │                       │      ├ Description     : Netty is an asynchronous, event-driven network application
 │                       │      │                   framework. Prior to 4.2.13.Final and 4.1.133.Final,
 │                       │      │                   HttpObjectDecoder strips a conflicting Content-Length header
@@ -744,10 +750,11 @@
 │                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:N 
 │                       │      │                         ╰ V3Score : 5.8 
 │                       │      ├ References       ╭ [0]: https://github.com/netty/netty 
-│                       │      │                  ╰ [1]: https://github.com/netty/netty/security/advisories/GHS
-│                       │      │                         A-xxqh-mfjm-7mv9 
+│                       │      │                  ├ [1]: https://github.com/netty/netty/security/advisories/GHS
+│                       │      │                  │      A-xxqh-mfjm-7mv9 
+│                       │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-42581 
 │                       │      ├ PublishedDate   : 2026-05-13T19:17:23.627Z 
-│                       │      ╰ LastModifiedDate: 2026-05-13T19:17:23.627Z 
+│                       │      ╰ LastModifiedDate: 2026-05-14T16:26:50.047Z 
 │                       ├ [10] ╭ VulnerabilityID : CVE-2026-42585 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-38f8-5428-x5cv 
 │                       │      ├ PkgName         : io.netty:netty-codec-http 
@@ -769,8 +776,8 @@
 │                       │      │                          cosystem%3Amaven 
 │                       │      ├ Fingerprint     : sha256:ca7cc34b56319c9dedaa0a9e9e6fa1159a9d0fd8693975e5cb3df
 │                       │      │                   a5c3fc62fa5 
-│                       │      ├ Title           : Netty vulnerable to HTTP Request Smuggling due to malformed
-│                       │      │                   Transfer-Encoding 
+│                       │      ├ Title           : Netty is an asynchronous, event-driven network application
+│                       │      │                   framework.  ... 
 │                       │      ├ Description     : Netty is an asynchronous, event-driven network application
 │                       │      │                   framework. Prior to 4.2.13.Final and 4.1.133.Final, Netty
 │                       │      │                   incorrectly parses malformed Transfer-Encoding, enabling
@@ -784,10 +791,11 @@
 │                       │      ├ References       ╭ [0]: https://datatracker.ietf.org/doc/html/rfc9112#name-mes
 │                       │      │                  │      sage-body-length 
 │                       │      │                  ├ [1]: https://github.com/netty/netty 
-│                       │      │                  ╰ [2]: https://github.com/netty/netty/security/advisories/GHS
-│                       │      │                         A-38f8-5428-x5cv 
+│                       │      │                  ├ [2]: https://github.com/netty/netty/security/advisories/GHS
+│                       │      │                  │      A-38f8-5428-x5cv 
+│                       │      │                  ╰ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-42585 
 │                       │      ├ PublishedDate   : 2026-05-13T19:17:24.187Z 
-│                       │      ╰ LastModifiedDate: 2026-05-13T19:17:24.187Z 
+│                       │      ╰ LastModifiedDate: 2026-05-15T21:16:35.667Z 
 │                       ├ [11] ╭ VulnerabilityID : CVE-2026-33871 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-w9fj-cfpg-grvv 
 │                       │      ├ PkgName         : io.netty:netty-codec-http2 
@@ -864,9 +872,8 @@
 │                       │      │                          cosystem%3Amaven 
 │                       │      ├ Fingerprint     : sha256:9b0812d1a7304182def8ab491ed3bfdf737a67bff313f24504089
 │                       │      │                   8292205cde7 
-│                       │      ├ Title           : Netty: HttpContentDecompressor maxAllocation bypass when
-│                       │      │                   Content-Encoding set to br/zstd/snappy leads to
-│                       │      │                   decompression bomb DoS 
+│                       │      ├ Title           : Netty is an asynchronous, event-driven network application
+│                       │      │                   framework.  ... 
 │                       │      ├ Description     : Netty is an asynchronous, event-driven network application
 │                       │      │                   framework. Prior to 4.2.13.Final and 4.1.133.Final,
 │                       │      │                   HttpContentDecompressor accepts a maxAllocation parameter to
@@ -887,10 +894,11 @@
 │                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
 │                       │      │                         ╰ V3Score : 7.5 
 │                       │      ├ References       ╭ [0]: https://github.com/netty/netty 
-│                       │      │                  ╰ [1]: https://github.com/netty/netty/security/advisories/GHS
-│                       │      │                         A-f6hv-jmp6-3vwv 
+│                       │      │                  ├ [1]: https://github.com/netty/netty/security/advisories/GHS
+│                       │      │                  │      A-f6hv-jmp6-3vwv 
+│                       │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-42587 
 │                       │      ├ PublishedDate   : 2026-05-13T19:17:24.46Z 
-│                       │      ╰ LastModifiedDate: 2026-05-13T19:17:24.46Z 
+│                       │      ╰ LastModifiedDate: 2026-05-14T16:21:02.93Z 
 │                       ├ [13] ╭ VulnerabilityID : CVE-2026-42578 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-45q3-82m4-75jr 
 │                       │      ├ PkgName         : io.netty:netty-handler-proxy 
@@ -912,8 +920,8 @@
 │                       │      │                          cosystem%3Amaven 
 │                       │      ├ Fingerprint     : sha256:5a06c7dc02228f3b50ba9e7d150627d57a1e4cf22d70592cab108
 │                       │      │                   79d9fd4b8db 
-│                       │      ├ Title           : Netty has HTTP Header Injection via HttpProxyHandler
-│                       │      │                   Disabled Validation (Incomplete Fix CVE-2025-67735) 
+│                       │      ├ Title           : Netty is an asynchronous, event-driven network application
+│                       │      │                   framework.  ... 
 │                       │      ├ Description     : Netty is an asynchronous, event-driven network application
 │                       │      │                   framework. Prior to 4.2.13.Final and 4.1.133.Final, Netty's
 │                       │      │                   HttpProxyHandler constructs HTTP CONNECT requests with
@@ -928,12 +936,16 @@
 │                       │      ├ Severity        : LOW 
 │                       │      ├ CweIDs           ─ [0]: CWE-113 
 │                       │      ├ VendorSeverity   ─ ghsa: 1 
+│                       │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI
+│                       │      │                         │            :L/VA:N/SC:N/SI:N/SA:N/E:P 
+│                       │      │                         ╰ V40Score : 2.9 
 │                       │      ├ References       ╭ [0]: https://github.com/advisories/GHSA-84h7-rjj3-6jx4 
 │                       │      │                  ├ [1]: https://github.com/netty/netty 
-│                       │      │                  ╰ [2]: https://github.com/netty/netty/security/advisories/GHS
-│                       │      │                         A-45q3-82m4-75jr 
+│                       │      │                  ├ [2]: https://github.com/netty/netty/security/advisories/GHS
+│                       │      │                  │      A-45q3-82m4-75jr 
+│                       │      │                  ╰ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-42578 
 │                       │      ├ PublishedDate   : 2026-05-13T19:17:23.21Z 
-│                       │      ╰ LastModifiedDate: 2026-05-13T19:17:23.21Z 
+│                       │      ╰ LastModifiedDate: 2026-05-14T16:26:50.047Z 
 │                       ├ [14] ╭ VulnerabilityID : CVE-2026-1002 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-cphf-4846-3xx9 
 │                       │      ├ PkgName         : io.vertx:vertx-core 
@@ -2168,7 +2180,7 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 3 
+│                       │      │                  ├ amazon     : 2 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ oracle-oval: 3 
 │                       │      │                  ├ redhat     : 3 
@@ -2187,32 +2199,23 @@
 │                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
 │                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│                       │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2456340 
-│                       │      │                  ├ [9] : https://bugzilla.redhat.com/show_bug.cgi?id=2456341 
-│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2456342 
-│                       │      │                  ├ [11]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27140 
-│                       │      │                  ├ [12]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27143 
-│                       │      │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27144 
-│                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32280 
-│                       │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32282 
-│                       │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [17]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
-│                       │      │                  ├ [18]: https://errata.rockylinux.org/RLSA-2026:10219 
-│                       │      │                  ├ [19]: https://go.dev/cl/758320 
-│                       │      │                  ├ [20]: https://go.dev/issue/78282 
-│                       │      │                  ├ [21]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+│                       │      │                  ├ [13]: https://go.dev/cl/758320 
+│                       │      │                  ├ [14]: https://go.dev/issue/78282 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [22]: https://linux.oracle.com/cve/CVE-2026-32280.html 
-│                       │      │                  ├ [23]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
-│                       │      │                  ├ [24]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
-│                       │      │                  ├ [25]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      │                  ╰ [26]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32280.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:16:42.18Z 
 │                       ├ [15] ╭ VulnerabilityID : CVE-2026-32281 
@@ -2246,7 +2249,7 @@
 │                       │      │                   certificate pool. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-295 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 2 
 │                       │      │                  ├ bitnami: 3 
 │                       │      │                  ├ nvd    : 3 
 │                       │      │                  ╰ redhat : 2 
@@ -2299,7 +2302,7 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 3 
+│                       │      │                  ├ amazon     : 2 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ nvd        : 3 
 │                       │      │                  ├ oracle-oval: 3 
@@ -2321,21 +2324,24 @@
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456339 
 │                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-32282 
+│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
 │                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32280 
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32282 
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2026-14200.html 
-│                       │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2026:11711 
-│                       │      │                  ├ [11]: https://go.dev/cl/763767 
-│                       │      │                  ├ [12]: https://go.dev/issue/78334 
-│                       │      │                  ├ [13]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+│                       │      │                  ├ [13]: https://go.dev/cl/763767 
+│                       │      │                  ├ [14]: https://go.dev/issue/78334 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [14]: https://linux.oracle.com/cve/CVE-2026-32283.html 
-│                       │      │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│                       │      │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-│                       │      │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4870 
-│                       │      │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32283.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:12:10.54Z 
 │                       ├ [17] ╭ VulnerabilityID : CVE-2026-33811 
@@ -3095,8 +3101,8 @@
 │                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │                       │      ├ Fingerprint     : sha256:547b9bf6636a469e4093ad86d949599da0671903cb7248ebff1c1
 │                       │      │                   8f12d015d1f 
-│                       │      ├ Title           : During the TLS 1.3 handshake if multiple messages are sent
-│                       │      │                   in records  ... 
+│                       │      ├ Title           : crypto/tls: Handshake messages may be processed at the
+│                       │      │                   incorrect encryption level in crypto/tls 
 │                       │      ├ Description     : During the TLS 1.3 handshake if multiple messages are sent
 │                       │      │                   in records that span encryption level boundaries (for
 │                       │      │                   instance the Client Hello and Encrypted Extensions
@@ -3105,20 +3111,26 @@
 │                       │      │                   information disclosure if a network-local attacker can
 │                       │      │                   inject messages during the handshake. 
 │                       │      ├ Severity        : MEDIUM 
-│                       │      ├ VendorSeverity   ╭ amazon     : 2 
+│                       │      ├ VendorSeverity   ╭ amazon     : 3 
 │                       │      │                  ├ azure      : 1 
 │                       │      │                  ├ bitnami    : 2 
 │                       │      │                  ├ cbl-mariner: 1 
-│                       │      │                  ╰ photon     : 2 
-│                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
+│                       │      │                  ├ photon     : 2 
+│                       │      │                  ╰ redhat     : 2 
+│                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
+│                       │      │                  │         │           N/A:N 
+│                       │      │                  │         ╰ V3Score : 5.3 
+│                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
 │                       │      │                            │           N/A:N 
 │                       │      │                            ╰ V3Score : 5.3 
-│                       │      ├ References       ╭ [0]: https://go.dev/cl/724120 
-│                       │      │                  ├ [1]: https://go.dev/issue/76443 
-│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/Vd2tYVM8
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-61730 
+│                       │      │                  ├ [1]: https://go.dev/cl/724120 
+│                       │      │                  ├ [2]: https://go.dev/issue/76443 
+│                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/Vd2tYVM8
 │                       │      │                  │      eUc 
-│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-61730 
-│                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4340 
+│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-61730 
+│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4340 
+│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61730 
 │                       │      ├ PublishedDate   : 2026-01-28T20:16:09.94Z 
 │                       │      ╰ LastModifiedDate: 2026-02-03T20:36:41.3Z 
 │                       ├ [34] ╭ VulnerabilityID : CVE-2026-27142 
@@ -3151,7 +3163,7 @@
 │                       │      │                    follow "url=" by setting htmlmetacontenturlescape=0. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
-│                       │      ├ VendorSeverity   ╭ amazon : 2 
+│                       │      ├ VendorSeverity   ╭ amazon : 3 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
@@ -3205,7 +3217,7 @@
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-59 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 3 
+│                       │      │                  ├ amazon     : 2 
 │                       │      │                  ├ bitnami    : 2 
 │                       │      │                  ├ nvd        : 2 
 │                       │      │                  ├ oracle-oval: 3 
@@ -3227,21 +3239,24 @@
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456339 
 │                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-32282 
+│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
 │                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32280 
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32282 
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2026-14200.html 
-│                       │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2026:11711 
-│                       │      │                  ├ [11]: https://go.dev/cl/763761 
-│                       │      │                  ├ [12]: https://go.dev/issue/78293 
-│                       │      │                  ├ [13]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+│                       │      │                  ├ [13]: https://go.dev/cl/763761 
+│                       │      │                  ├ [14]: https://go.dev/issue/78293 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [14]: https://linux.oracle.com/cve/CVE-2026-32282.html 
-│                       │      │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│                       │      │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-│                       │      │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:15:39.4Z 
 │                       ├ [36] ╭ VulnerabilityID : CVE-2026-32288 
@@ -3272,11 +3287,11 @@
 │                       │      │                    format. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 2 
 │                       │      │                  ├ azure  : 2 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ├ nvd    : 2 
-│                       │      │                  ├ photon : 3 
+│                       │      │                  ├ photon : 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
@@ -3330,10 +3345,10 @@
 │                       │      │                   escaped, leading to XSS vulnerabilities. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 2 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ├ nvd    : 2 
-│                       │      │                  ├ photon : 4 
+│                       │      │                  ├ photon : 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
 │                       │      │                  │         │           L/A:N 
@@ -3511,7 +3526,7 @@
 │                              │                   outside the root. 
 │                              ├ Severity        : LOW 
 │                              ├ CweIDs           ─ [0]: CWE-22 
-│                              ├ VendorSeverity   ╭ amazon : 2 
+│                              ├ VendorSeverity   ╭ amazon : 3 
 │                              │                  ├ azure  : 1 
 │                              │                  ├ bitnami: 1 
 │                              │                  ╰ redhat : 1 
@@ -3824,7 +3839,7 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 3 
+│                       │      │                  ├ amazon     : 2 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ oracle-oval: 3 
 │                       │      │                  ├ redhat     : 3 
@@ -3843,32 +3858,23 @@
 │                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
 │                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│                       │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2456340 
-│                       │      │                  ├ [9] : https://bugzilla.redhat.com/show_bug.cgi?id=2456341 
-│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2456342 
-│                       │      │                  ├ [11]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27140 
-│                       │      │                  ├ [12]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27143 
-│                       │      │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27144 
-│                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32280 
-│                       │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32282 
-│                       │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [17]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
-│                       │      │                  ├ [18]: https://errata.rockylinux.org/RLSA-2026:10219 
-│                       │      │                  ├ [19]: https://go.dev/cl/758320 
-│                       │      │                  ├ [20]: https://go.dev/issue/78282 
-│                       │      │                  ├ [21]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+│                       │      │                  ├ [13]: https://go.dev/cl/758320 
+│                       │      │                  ├ [14]: https://go.dev/issue/78282 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [22]: https://linux.oracle.com/cve/CVE-2026-32280.html 
-│                       │      │                  ├ [23]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
-│                       │      │                  ├ [24]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
-│                       │      │                  ├ [25]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      │                  ╰ [26]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32280.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:16:42.18Z 
 │                       ├ [5]  ╭ VulnerabilityID : CVE-2026-32281 
@@ -3902,7 +3908,7 @@
 │                       │      │                   certificate pool. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-295 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 2 
 │                       │      │                  ├ bitnami: 3 
 │                       │      │                  ├ nvd    : 3 
 │                       │      │                  ╰ redhat : 2 
@@ -3955,7 +3961,7 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 3 
+│                       │      │                  ├ amazon     : 2 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ nvd        : 3 
 │                       │      │                  ├ oracle-oval: 3 
@@ -3977,21 +3983,24 @@
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456339 
 │                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-32282 
+│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
 │                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32280 
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32282 
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2026-14200.html 
-│                       │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2026:11711 
-│                       │      │                  ├ [11]: https://go.dev/cl/763767 
-│                       │      │                  ├ [12]: https://go.dev/issue/78334 
-│                       │      │                  ├ [13]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+│                       │      │                  ├ [13]: https://go.dev/cl/763767 
+│                       │      │                  ├ [14]: https://go.dev/issue/78334 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [14]: https://linux.oracle.com/cve/CVE-2026-32283.html 
-│                       │      │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│                       │      │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-│                       │      │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4870 
-│                       │      │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32283.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:12:10.54Z 
 │                       ├ [7]  ╭ VulnerabilityID : CVE-2026-33811 
@@ -4232,7 +4241,7 @@
 │                       │      │                    follow "url=" by setting htmlmetacontenturlescape=0. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
-│                       │      ├ VendorSeverity   ╭ amazon : 2 
+│                       │      ├ VendorSeverity   ╭ amazon : 3 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
@@ -4286,7 +4295,7 @@
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-59 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 3 
+│                       │      │                  ├ amazon     : 2 
 │                       │      │                  ├ bitnami    : 2 
 │                       │      │                  ├ nvd        : 2 
 │                       │      │                  ├ oracle-oval: 3 
@@ -4308,21 +4317,24 @@
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456339 
 │                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-32282 
+│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
 │                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32280 
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32282 
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2026-14200.html 
-│                       │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2026:11711 
-│                       │      │                  ├ [11]: https://go.dev/cl/763761 
-│                       │      │                  ├ [12]: https://go.dev/issue/78293 
-│                       │      │                  ├ [13]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+│                       │      │                  ├ [13]: https://go.dev/cl/763761 
+│                       │      │                  ├ [14]: https://go.dev/issue/78293 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [14]: https://linux.oracle.com/cve/CVE-2026-32282.html 
-│                       │      │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│                       │      │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-│                       │      │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:15:39.4Z 
 │                       ├ [14] ╭ VulnerabilityID : CVE-2026-32288 
@@ -4353,11 +4365,11 @@
 │                       │      │                    format. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 2 
 │                       │      │                  ├ azure  : 2 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ├ nvd    : 2 
-│                       │      │                  ├ photon : 3 
+│                       │      │                  ├ photon : 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
@@ -4411,10 +4423,10 @@
 │                       │      │                   escaped, leading to XSS vulnerabilities. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 2 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ├ nvd    : 2 
-│                       │      │                  ├ photon : 4 
+│                       │      │                  ├ photon : 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
 │                       │      │                  │         │           L/A:N 
@@ -4592,7 +4604,7 @@
 │                              │                   outside the root. 
 │                              ├ Severity        : LOW 
 │                              ├ CweIDs           ─ [0]: CWE-22 
-│                              ├ VendorSeverity   ╭ amazon : 2 
+│                              ├ VendorSeverity   ╭ amazon : 3 
 │                              │                  ├ azure  : 1 
 │                              │                  ├ bitnami: 1 
 │                              │                  ╰ redhat : 1 
@@ -5193,7 +5205,7 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 3 
+│                       │      │                  ├ amazon     : 2 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ oracle-oval: 3 
 │                       │      │                  ├ redhat     : 3 
@@ -5212,32 +5224,23 @@
 │                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
 │                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│                       │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2456340 
-│                       │      │                  ├ [9] : https://bugzilla.redhat.com/show_bug.cgi?id=2456341 
-│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2456342 
-│                       │      │                  ├ [11]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27140 
-│                       │      │                  ├ [12]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27143 
-│                       │      │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27144 
-│                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32280 
-│                       │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32282 
-│                       │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [17]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
-│                       │      │                  ├ [18]: https://errata.rockylinux.org/RLSA-2026:10219 
-│                       │      │                  ├ [19]: https://go.dev/cl/758320 
-│                       │      │                  ├ [20]: https://go.dev/issue/78282 
-│                       │      │                  ├ [21]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+│                       │      │                  ├ [13]: https://go.dev/cl/758320 
+│                       │      │                  ├ [14]: https://go.dev/issue/78282 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [22]: https://linux.oracle.com/cve/CVE-2026-32280.html 
-│                       │      │                  ├ [23]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
-│                       │      │                  ├ [24]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
-│                       │      │                  ├ [25]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      │                  ╰ [26]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32280.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:16:42.18Z 
 │                       ├ [9]  ╭ VulnerabilityID : CVE-2026-32281 
@@ -5271,7 +5274,7 @@
 │                       │      │                   certificate pool. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-295 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 2 
 │                       │      │                  ├ bitnami: 3 
 │                       │      │                  ├ nvd    : 3 
 │                       │      │                  ╰ redhat : 2 
@@ -5324,7 +5327,7 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 3 
+│                       │      │                  ├ amazon     : 2 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ nvd        : 3 
 │                       │      │                  ├ oracle-oval: 3 
@@ -5346,21 +5349,24 @@
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456339 
 │                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-32282 
+│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
 │                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32280 
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32282 
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2026-14200.html 
-│                       │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2026:11711 
-│                       │      │                  ├ [11]: https://go.dev/cl/763767 
-│                       │      │                  ├ [12]: https://go.dev/issue/78334 
-│                       │      │                  ├ [13]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+│                       │      │                  ├ [13]: https://go.dev/cl/763767 
+│                       │      │                  ├ [14]: https://go.dev/issue/78334 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [14]: https://linux.oracle.com/cve/CVE-2026-32283.html 
-│                       │      │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│                       │      │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-│                       │      │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4870 
-│                       │      │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32283.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:12:10.54Z 
 │                       ├ [11] ╭ VulnerabilityID : CVE-2026-33811 
@@ -5601,7 +5607,7 @@
 │                       │      │                    follow "url=" by setting htmlmetacontenturlescape=0. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
-│                       │      ├ VendorSeverity   ╭ amazon : 2 
+│                       │      ├ VendorSeverity   ╭ amazon : 3 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
@@ -5655,7 +5661,7 @@
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-59 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 3 
+│                       │      │                  ├ amazon     : 2 
 │                       │      │                  ├ bitnami    : 2 
 │                       │      │                  ├ nvd        : 2 
 │                       │      │                  ├ oracle-oval: 3 
@@ -5677,21 +5683,24 @@
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456339 
 │                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-32282 
+│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
 │                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32280 
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32282 
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2026-14200.html 
-│                       │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2026:11711 
-│                       │      │                  ├ [11]: https://go.dev/cl/763761 
-│                       │      │                  ├ [12]: https://go.dev/issue/78293 
-│                       │      │                  ├ [13]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+│                       │      │                  ├ [13]: https://go.dev/cl/763761 
+│                       │      │                  ├ [14]: https://go.dev/issue/78293 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [14]: https://linux.oracle.com/cve/CVE-2026-32282.html 
-│                       │      │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│                       │      │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-│                       │      │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:15:39.4Z 
 │                       ├ [18] ╭ VulnerabilityID : CVE-2026-32288 
@@ -5722,11 +5731,11 @@
 │                       │      │                    format. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 2 
 │                       │      │                  ├ azure  : 2 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ├ nvd    : 2 
-│                       │      │                  ├ photon : 3 
+│                       │      │                  ├ photon : 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
@@ -5780,10 +5789,10 @@
 │                       │      │                   escaped, leading to XSS vulnerabilities. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 2 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ├ nvd    : 2 
-│                       │      │                  ├ photon : 4 
+│                       │      │                  ├ photon : 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
 │                       │      │                  │         │           L/A:N 
@@ -5961,7 +5970,7 @@
 │                              │                   outside the root. 
 │                              ├ Severity        : LOW 
 │                              ├ CweIDs           ─ [0]: CWE-22 
-│                              ├ VendorSeverity   ╭ amazon : 2 
+│                              ├ VendorSeverity   ╭ amazon : 3 
 │                              │                  ├ azure  : 1 
 │                              │                  ├ bitnami: 1 
 │                              │                  ╰ redhat : 1 
@@ -6150,7 +6159,7 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 3 
+│                       │      │                  ├ amazon     : 2 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ oracle-oval: 3 
 │                       │      │                  ├ redhat     : 3 
@@ -6169,32 +6178,23 @@
 │                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
 │                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│                       │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2456340 
-│                       │      │                  ├ [9] : https://bugzilla.redhat.com/show_bug.cgi?id=2456341 
-│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2456342 
-│                       │      │                  ├ [11]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27140 
-│                       │      │                  ├ [12]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27143 
-│                       │      │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27144 
-│                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32280 
-│                       │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32282 
-│                       │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [17]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
-│                       │      │                  ├ [18]: https://errata.rockylinux.org/RLSA-2026:10219 
-│                       │      │                  ├ [19]: https://go.dev/cl/758320 
-│                       │      │                  ├ [20]: https://go.dev/issue/78282 
-│                       │      │                  ├ [21]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+│                       │      │                  ├ [13]: https://go.dev/cl/758320 
+│                       │      │                  ├ [14]: https://go.dev/issue/78282 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [22]: https://linux.oracle.com/cve/CVE-2026-32280.html 
-│                       │      │                  ├ [23]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
-│                       │      │                  ├ [24]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
-│                       │      │                  ├ [25]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      │                  ╰ [26]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32280.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:16:42.18Z 
 │                       ├ [3]  ╭ VulnerabilityID : CVE-2026-32281 
@@ -6228,7 +6228,7 @@
 │                       │      │                   certificate pool. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-295 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 2 
 │                       │      │                  ├ bitnami: 3 
 │                       │      │                  ├ nvd    : 3 
 │                       │      │                  ╰ redhat : 2 
@@ -6281,7 +6281,7 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 3 
+│                       │      │                  ├ amazon     : 2 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ nvd        : 3 
 │                       │      │                  ├ oracle-oval: 3 
@@ -6303,21 +6303,24 @@
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456339 
 │                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-32282 
+│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
 │                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32280 
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32282 
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2026-14200.html 
-│                       │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2026:11711 
-│                       │      │                  ├ [11]: https://go.dev/cl/763767 
-│                       │      │                  ├ [12]: https://go.dev/issue/78334 
-│                       │      │                  ├ [13]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+│                       │      │                  ├ [13]: https://go.dev/cl/763767 
+│                       │      │                  ├ [14]: https://go.dev/issue/78334 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [14]: https://linux.oracle.com/cve/CVE-2026-32283.html 
-│                       │      │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│                       │      │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-│                       │      │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4870 
-│                       │      │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32283.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:12:10.54Z 
 │                       ├ [5]  ╭ VulnerabilityID : CVE-2026-33811 
@@ -6558,7 +6561,7 @@
 │                       │      │                    follow "url=" by setting htmlmetacontenturlescape=0. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
-│                       │      ├ VendorSeverity   ╭ amazon : 2 
+│                       │      ├ VendorSeverity   ╭ amazon : 3 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
@@ -6612,7 +6615,7 @@
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-59 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 3 
+│                       │      │                  ├ amazon     : 2 
 │                       │      │                  ├ bitnami    : 2 
 │                       │      │                  ├ nvd        : 2 
 │                       │      │                  ├ oracle-oval: 3 
@@ -6634,21 +6637,24 @@
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456339 
 │                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-32282 
+│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
 │                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32280 
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32282 
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2026-14200.html 
-│                       │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2026:11711 
-│                       │      │                  ├ [11]: https://go.dev/cl/763761 
-│                       │      │                  ├ [12]: https://go.dev/issue/78293 
-│                       │      │                  ├ [13]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+│                       │      │                  ├ [13]: https://go.dev/cl/763761 
+│                       │      │                  ├ [14]: https://go.dev/issue/78293 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [14]: https://linux.oracle.com/cve/CVE-2026-32282.html 
-│                       │      │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│                       │      │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-│                       │      │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:15:39.4Z 
 │                       ├ [12] ╭ VulnerabilityID : CVE-2026-32288 
@@ -6679,11 +6685,11 @@
 │                       │      │                    format. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 2 
 │                       │      │                  ├ azure  : 2 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ├ nvd    : 2 
-│                       │      │                  ├ photon : 3 
+│                       │      │                  ├ photon : 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
@@ -6737,10 +6743,10 @@
 │                       │      │                   escaped, leading to XSS vulnerabilities. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 2 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ├ nvd    : 2 
-│                       │      │                  ├ photon : 4 
+│                       │      │                  ├ photon : 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
 │                       │      │                  │         │           L/A:N 
@@ -6918,7 +6924,7 @@
 │                              │                   outside the root. 
 │                              ├ Severity        : LOW 
 │                              ├ CweIDs           ─ [0]: CWE-22 
-│                              ├ VendorSeverity   ╭ amazon : 2 
+│                              ├ VendorSeverity   ╭ amazon : 3 
 │                              │                  ├ azure  : 1 
 │                              │                  ├ bitnami: 1 
 │                              │                  ╰ redhat : 1 
@@ -7526,7 +7532,7 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 3 
+│                       │      │                  ├ amazon     : 2 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ oracle-oval: 3 
 │                       │      │                  ├ redhat     : 3 
@@ -7545,32 +7551,23 @@
 │                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
 │                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│                       │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2456340 
-│                       │      │                  ├ [9] : https://bugzilla.redhat.com/show_bug.cgi?id=2456341 
-│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2456342 
-│                       │      │                  ├ [11]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27140 
-│                       │      │                  ├ [12]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27143 
-│                       │      │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27144 
-│                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32280 
-│                       │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32282 
-│                       │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [17]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
-│                       │      │                  ├ [18]: https://errata.rockylinux.org/RLSA-2026:10219 
-│                       │      │                  ├ [19]: https://go.dev/cl/758320 
-│                       │      │                  ├ [20]: https://go.dev/issue/78282 
-│                       │      │                  ├ [21]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+│                       │      │                  ├ [13]: https://go.dev/cl/758320 
+│                       │      │                  ├ [14]: https://go.dev/issue/78282 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [22]: https://linux.oracle.com/cve/CVE-2026-32280.html 
-│                       │      │                  ├ [23]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
-│                       │      │                  ├ [24]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
-│                       │      │                  ├ [25]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      │                  ╰ [26]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32280.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:16:42.18Z 
 │                       ├ [10] ╭ VulnerabilityID : CVE-2026-32281 
@@ -7604,7 +7601,7 @@
 │                       │      │                   certificate pool. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-295 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 2 
 │                       │      │                  ├ bitnami: 3 
 │                       │      │                  ├ nvd    : 3 
 │                       │      │                  ╰ redhat : 2 
@@ -7657,7 +7654,7 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 3 
+│                       │      │                  ├ amazon     : 2 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ nvd        : 3 
 │                       │      │                  ├ oracle-oval: 3 
@@ -7679,21 +7676,24 @@
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456339 
 │                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-32282 
+│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
 │                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32280 
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32282 
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2026-14200.html 
-│                       │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2026:11711 
-│                       │      │                  ├ [11]: https://go.dev/cl/763767 
-│                       │      │                  ├ [12]: https://go.dev/issue/78334 
-│                       │      │                  ├ [13]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+│                       │      │                  ├ [13]: https://go.dev/cl/763767 
+│                       │      │                  ├ [14]: https://go.dev/issue/78334 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [14]: https://linux.oracle.com/cve/CVE-2026-32283.html 
-│                       │      │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│                       │      │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-│                       │      │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4870 
-│                       │      │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32283.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:12:10.54Z 
 │                       ├ [12] ╭ VulnerabilityID : CVE-2026-33811 
@@ -7923,8 +7923,8 @@
 │                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │                       │      ├ Fingerprint     : sha256:79993134ff72b9e21ca512dcba5c5576a76066ba8c5aead3ee8c6
 │                       │      │                   e83658f3caf 
-│                       │      ├ Title           : During the TLS 1.3 handshake if multiple messages are sent
-│                       │      │                   in records  ... 
+│                       │      ├ Title           : crypto/tls: Handshake messages may be processed at the
+│                       │      │                   incorrect encryption level in crypto/tls 
 │                       │      ├ Description     : During the TLS 1.3 handshake if multiple messages are sent
 │                       │      │                   in records that span encryption level boundaries (for
 │                       │      │                   instance the Client Hello and Encrypted Extensions
@@ -7933,20 +7933,26 @@
 │                       │      │                   information disclosure if a network-local attacker can
 │                       │      │                   inject messages during the handshake. 
 │                       │      ├ Severity        : MEDIUM 
-│                       │      ├ VendorSeverity   ╭ amazon     : 2 
+│                       │      ├ VendorSeverity   ╭ amazon     : 3 
 │                       │      │                  ├ azure      : 1 
 │                       │      │                  ├ bitnami    : 2 
 │                       │      │                  ├ cbl-mariner: 1 
-│                       │      │                  ╰ photon     : 2 
-│                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
+│                       │      │                  ├ photon     : 2 
+│                       │      │                  ╰ redhat     : 2 
+│                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
+│                       │      │                  │         │           N/A:N 
+│                       │      │                  │         ╰ V3Score : 5.3 
+│                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
 │                       │      │                            │           N/A:N 
 │                       │      │                            ╰ V3Score : 5.3 
-│                       │      ├ References       ╭ [0]: https://go.dev/cl/724120 
-│                       │      │                  ├ [1]: https://go.dev/issue/76443 
-│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/Vd2tYVM8
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-61730 
+│                       │      │                  ├ [1]: https://go.dev/cl/724120 
+│                       │      │                  ├ [2]: https://go.dev/issue/76443 
+│                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/Vd2tYVM8
 │                       │      │                  │      eUc 
-│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-61730 
-│                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4340 
+│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-61730 
+│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4340 
+│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61730 
 │                       │      ├ PublishedDate   : 2026-01-28T20:16:09.94Z 
 │                       │      ╰ LastModifiedDate: 2026-02-03T20:36:41.3Z 
 │                       ├ [18] ╭ VulnerabilityID : CVE-2026-27142 
@@ -7979,7 +7985,7 @@
 │                       │      │                    follow "url=" by setting htmlmetacontenturlescape=0. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
-│                       │      ├ VendorSeverity   ╭ amazon : 2 
+│                       │      ├ VendorSeverity   ╭ amazon : 3 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
@@ -8033,7 +8039,7 @@
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-59 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 3 
+│                       │      │                  ├ amazon     : 2 
 │                       │      │                  ├ bitnami    : 2 
 │                       │      │                  ├ nvd        : 2 
 │                       │      │                  ├ oracle-oval: 3 
@@ -8055,21 +8061,24 @@
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456339 
 │                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-32282 
+│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
 │                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32280 
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32282 
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2026-14200.html 
-│                       │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2026:11711 
-│                       │      │                  ├ [11]: https://go.dev/cl/763761 
-│                       │      │                  ├ [12]: https://go.dev/issue/78293 
-│                       │      │                  ├ [13]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+│                       │      │                  ├ [13]: https://go.dev/cl/763761 
+│                       │      │                  ├ [14]: https://go.dev/issue/78293 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [14]: https://linux.oracle.com/cve/CVE-2026-32282.html 
-│                       │      │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│                       │      │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-│                       │      │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:15:39.4Z 
 │                       ├ [20] ╭ VulnerabilityID : CVE-2026-32288 
@@ -8100,11 +8109,11 @@
 │                       │      │                    format. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 2 
 │                       │      │                  ├ azure  : 2 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ├ nvd    : 2 
-│                       │      │                  ├ photon : 3 
+│                       │      │                  ├ photon : 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
@@ -8158,10 +8167,10 @@
 │                       │      │                   escaped, leading to XSS vulnerabilities. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 2 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ├ nvd    : 2 
-│                       │      │                  ├ photon : 4 
+│                       │      │                  ├ photon : 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
 │                       │      │                  │         │           L/A:N 
@@ -8339,7 +8348,7 @@
 │                              │                   outside the root. 
 │                              ├ Severity        : LOW 
 │                              ├ CweIDs           ─ [0]: CWE-22 
-│                              ├ VendorSeverity   ╭ amazon : 2 
+│                              ├ VendorSeverity   ╭ amazon : 3 
 │                              │                  ├ azure  : 1 
 │                              │                  ├ bitnami: 1 
 │                              │                  ╰ redhat : 1 
@@ -9066,7 +9075,7 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 3 
+│                       │      │                  ├ amazon     : 2 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ oracle-oval: 3 
 │                       │      │                  ├ redhat     : 3 
@@ -9085,32 +9094,23 @@
 │                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
 │                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│                       │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2456340 
-│                       │      │                  ├ [9] : https://bugzilla.redhat.com/show_bug.cgi?id=2456341 
-│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2456342 
-│                       │      │                  ├ [11]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27140 
-│                       │      │                  ├ [12]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27143 
-│                       │      │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27144 
-│                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32280 
-│                       │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32282 
-│                       │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [17]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
-│                       │      │                  ├ [18]: https://errata.rockylinux.org/RLSA-2026:10219 
-│                       │      │                  ├ [19]: https://go.dev/cl/758320 
-│                       │      │                  ├ [20]: https://go.dev/issue/78282 
-│                       │      │                  ├ [21]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+│                       │      │                  ├ [13]: https://go.dev/cl/758320 
+│                       │      │                  ├ [14]: https://go.dev/issue/78282 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [22]: https://linux.oracle.com/cve/CVE-2026-32280.html 
-│                       │      │                  ├ [23]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
-│                       │      │                  ├ [24]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
-│                       │      │                  ├ [25]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      │                  ╰ [26]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32280.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:16:42.18Z 
 │                       ├ [11] ╭ VulnerabilityID : CVE-2026-32281 
@@ -9144,7 +9144,7 @@
 │                       │      │                   certificate pool. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-295 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 2 
 │                       │      │                  ├ bitnami: 3 
 │                       │      │                  ├ nvd    : 3 
 │                       │      │                  ╰ redhat : 2 
@@ -9197,7 +9197,7 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 3 
+│                       │      │                  ├ amazon     : 2 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ nvd        : 3 
 │                       │      │                  ├ oracle-oval: 3 
@@ -9219,21 +9219,24 @@
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456339 
 │                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-32282 
+│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
 │                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32280 
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32282 
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2026-14200.html 
-│                       │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2026:11711 
-│                       │      │                  ├ [11]: https://go.dev/cl/763767 
-│                       │      │                  ├ [12]: https://go.dev/issue/78334 
-│                       │      │                  ├ [13]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+│                       │      │                  ├ [13]: https://go.dev/cl/763767 
+│                       │      │                  ├ [14]: https://go.dev/issue/78334 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [14]: https://linux.oracle.com/cve/CVE-2026-32283.html 
-│                       │      │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│                       │      │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-│                       │      │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4870 
-│                       │      │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32283.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:12:10.54Z 
 │                       ├ [13] ╭ VulnerabilityID : CVE-2026-33811 
@@ -9463,8 +9466,8 @@
 │                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │                       │      ├ Fingerprint     : sha256:f6370cda590dc1385a408d3948222bf7193ff39ea83920d4b9514
 │                       │      │                   94bc37b1872 
-│                       │      ├ Title           : During the TLS 1.3 handshake if multiple messages are sent
-│                       │      │                   in records  ... 
+│                       │      ├ Title           : crypto/tls: Handshake messages may be processed at the
+│                       │      │                   incorrect encryption level in crypto/tls 
 │                       │      ├ Description     : During the TLS 1.3 handshake if multiple messages are sent
 │                       │      │                   in records that span encryption level boundaries (for
 │                       │      │                   instance the Client Hello and Encrypted Extensions
@@ -9473,20 +9476,26 @@
 │                       │      │                   information disclosure if a network-local attacker can
 │                       │      │                   inject messages during the handshake. 
 │                       │      ├ Severity        : MEDIUM 
-│                       │      ├ VendorSeverity   ╭ amazon     : 2 
+│                       │      ├ VendorSeverity   ╭ amazon     : 3 
 │                       │      │                  ├ azure      : 1 
 │                       │      │                  ├ bitnami    : 2 
 │                       │      │                  ├ cbl-mariner: 1 
-│                       │      │                  ╰ photon     : 2 
-│                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
+│                       │      │                  ├ photon     : 2 
+│                       │      │                  ╰ redhat     : 2 
+│                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
+│                       │      │                  │         │           N/A:N 
+│                       │      │                  │         ╰ V3Score : 5.3 
+│                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
 │                       │      │                            │           N/A:N 
 │                       │      │                            ╰ V3Score : 5.3 
-│                       │      ├ References       ╭ [0]: https://go.dev/cl/724120 
-│                       │      │                  ├ [1]: https://go.dev/issue/76443 
-│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/Vd2tYVM8
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-61730 
+│                       │      │                  ├ [1]: https://go.dev/cl/724120 
+│                       │      │                  ├ [2]: https://go.dev/issue/76443 
+│                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/Vd2tYVM8
 │                       │      │                  │      eUc 
-│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-61730 
-│                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4340 
+│                       │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-61730 
+│                       │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4340 
+│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61730 
 │                       │      ├ PublishedDate   : 2026-01-28T20:16:09.94Z 
 │                       │      ╰ LastModifiedDate: 2026-02-03T20:36:41.3Z 
 │                       ├ [19] ╭ VulnerabilityID : CVE-2026-27142 
@@ -9519,7 +9528,7 @@
 │                       │      │                    follow "url=" by setting htmlmetacontenturlescape=0. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
-│                       │      ├ VendorSeverity   ╭ amazon : 2 
+│                       │      ├ VendorSeverity   ╭ amazon : 3 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
@@ -9573,7 +9582,7 @@
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-59 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 3 
+│                       │      │                  ├ amazon     : 2 
 │                       │      │                  ├ bitnami    : 2 
 │                       │      │                  ├ nvd        : 2 
 │                       │      │                  ├ oracle-oval: 3 
@@ -9595,21 +9604,24 @@
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456339 
 │                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-32282 
+│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
 │                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32280 
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32282 
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2026-14200.html 
-│                       │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2026:11711 
-│                       │      │                  ├ [11]: https://go.dev/cl/763761 
-│                       │      │                  ├ [12]: https://go.dev/issue/78293 
-│                       │      │                  ├ [13]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+│                       │      │                  ├ [13]: https://go.dev/cl/763761 
+│                       │      │                  ├ [14]: https://go.dev/issue/78293 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [14]: https://linux.oracle.com/cve/CVE-2026-32282.html 
-│                       │      │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│                       │      │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-│                       │      │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:15:39.4Z 
 │                       ├ [21] ╭ VulnerabilityID : CVE-2026-32288 
@@ -9640,11 +9652,11 @@
 │                       │      │                    format. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 2 
 │                       │      │                  ├ azure  : 2 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ├ nvd    : 2 
-│                       │      │                  ├ photon : 3 
+│                       │      │                  ├ photon : 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
@@ -9698,10 +9710,10 @@
 │                       │      │                   escaped, leading to XSS vulnerabilities. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 2 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ├ nvd    : 2 
-│                       │      │                  ├ photon : 4 
+│                       │      │                  ├ photon : 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
 │                       │      │                  │         │           L/A:N 
@@ -9879,7 +9891,7 @@
 │                              │                   outside the root. 
 │                              ├ Severity        : LOW 
 │                              ├ CweIDs           ─ [0]: CWE-22 
-│                              ├ VendorSeverity   ╭ amazon : 2 
+│                              ├ VendorSeverity   ╭ amazon : 3 
 │                              │                  ├ azure  : 1 
 │                              │                  ├ bitnami: 1 
 │                              │                  ╰ redhat : 1 
@@ -10812,7 +10824,7 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 3 
+│                       │      │                  ├ amazon     : 2 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ oracle-oval: 3 
 │                       │      │                  ├ redhat     : 3 
@@ -10831,32 +10843,23 @@
 │                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
 │                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│                       │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2456340 
-│                       │      │                  ├ [9] : https://bugzilla.redhat.com/show_bug.cgi?id=2456341 
-│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2456342 
-│                       │      │                  ├ [11]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27140 
-│                       │      │                  ├ [12]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27143 
-│                       │      │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27144 
-│                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32280 
-│                       │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32282 
-│                       │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [17]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
-│                       │      │                  ├ [18]: https://errata.rockylinux.org/RLSA-2026:10219 
-│                       │      │                  ├ [19]: https://go.dev/cl/758320 
-│                       │      │                  ├ [20]: https://go.dev/issue/78282 
-│                       │      │                  ├ [21]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+│                       │      │                  ├ [13]: https://go.dev/cl/758320 
+│                       │      │                  ├ [14]: https://go.dev/issue/78282 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [22]: https://linux.oracle.com/cve/CVE-2026-32280.html 
-│                       │      │                  ├ [23]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
-│                       │      │                  ├ [24]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
-│                       │      │                  ├ [25]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      │                  ╰ [26]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32280.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:16:42.18Z 
 │                       ├ [14] ╭ VulnerabilityID : CVE-2026-32281 
@@ -10890,7 +10893,7 @@
 │                       │      │                   certificate pool. 
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-295 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 2 
 │                       │      │                  ├ bitnami: 3 
 │                       │      │                  ├ nvd    : 3 
 │                       │      │                  ╰ redhat : 2 
@@ -10943,7 +10946,7 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 3 
+│                       │      │                  ├ amazon     : 2 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ nvd        : 3 
 │                       │      │                  ├ oracle-oval: 3 
@@ -10965,21 +10968,24 @@
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456339 
 │                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-32282 
+│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
 │                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32280 
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32282 
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2026-14200.html 
-│                       │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2026:11711 
-│                       │      │                  ├ [11]: https://go.dev/cl/763767 
-│                       │      │                  ├ [12]: https://go.dev/issue/78334 
-│                       │      │                  ├ [13]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+│                       │      │                  ├ [13]: https://go.dev/cl/763767 
+│                       │      │                  ├ [14]: https://go.dev/issue/78334 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [14]: https://linux.oracle.com/cve/CVE-2026-32283.html 
-│                       │      │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│                       │      │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-│                       │      │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4870 
-│                       │      │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32283.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:12:10.54Z 
 │                       ├ [16] ╭ VulnerabilityID : CVE-2026-33811 
@@ -11220,7 +11226,7 @@
 │                       │      │                    follow "url=" by setting htmlmetacontenturlescape=0. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
-│                       │      ├ VendorSeverity   ╭ amazon : 2 
+│                       │      ├ VendorSeverity   ╭ amazon : 3 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
@@ -11274,7 +11280,7 @@
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-59 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 3 
+│                       │      │                  ├ amazon     : 2 
 │                       │      │                  ├ bitnami    : 2 
 │                       │      │                  ├ nvd        : 2 
 │                       │      │                  ├ oracle-oval: 3 
@@ -11296,21 +11302,24 @@
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456339 
 │                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-32282 
+│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
 │                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32280 
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32282 
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2026-14200.html 
-│                       │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2026:11711 
-│                       │      │                  ├ [11]: https://go.dev/cl/763761 
-│                       │      │                  ├ [12]: https://go.dev/issue/78293 
-│                       │      │                  ├ [13]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+│                       │      │                  ├ [13]: https://go.dev/cl/763761 
+│                       │      │                  ├ [14]: https://go.dev/issue/78293 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [14]: https://linux.oracle.com/cve/CVE-2026-32282.html 
-│                       │      │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│                       │      │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-│                       │      │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:15:39.4Z 
 │                       ├ [23] ╭ VulnerabilityID : CVE-2026-32288 
@@ -11341,11 +11350,11 @@
 │                       │      │                    format. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-770 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 2 
 │                       │      │                  ├ azure  : 2 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ├ nvd    : 2 
-│                       │      │                  ├ photon : 3 
+│                       │      │                  ├ photon : 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
@@ -11399,10 +11408,10 @@
 │                       │      │                   escaped, leading to XSS vulnerabilities. 
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
-│                       │      ├ VendorSeverity   ╭ amazon : 3 
+│                       │      ├ VendorSeverity   ╭ amazon : 2 
 │                       │      │                  ├ bitnami: 2 
 │                       │      │                  ├ nvd    : 2 
-│                       │      │                  ├ photon : 4 
+│                       │      │                  ├ photon : 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
 │                       │      │                  │         │           L/A:N 
@@ -11580,7 +11589,7 @@
 │                              │                   outside the root. 
 │                              ├ Severity        : LOW 
 │                              ├ CweIDs           ─ [0]: CWE-22 
-│                              ├ VendorSeverity   ╭ amazon : 2 
+│                              ├ VendorSeverity   ╭ amazon : 3 
 │                              │                  ├ azure  : 1 
 │                              │                  ├ bitnami: 1 
 │                              │                  ╰ redhat : 1 
@@ -12035,7 +12044,68 @@
                         │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2026-33997 
                         │      ├ PublishedDate   : 2026-03-31T03:15:57.523Z 
                         │      ╰ LastModifiedDate: 2026-04-03T17:23:21.307Z 
-                        ├ [7]  ╭ VulnerabilityID : CVE-2026-44740 
+                        ├ [7]  ╭ VulnerabilityID : CVE-2026-44973 
+                        │      ├ VendorIDs        ─ [0]: GHSA-qw64-3x98-g7q2 
+                        │      ├ PkgID           : github.com/go-git/go-billy/v5@v5.7.0 
+                        │      ├ PkgName         : github.com/go-git/go-billy/v5 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/go-git/go-billy/v5@v5.7.0 
+                        │      │                  ╰ UID : d33992a11c8638df 
+                        │      ├ InstalledVersion: v5.7.0 
+                        │      ├ FixedVersion    : 5.9.0 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:3165b9799d773c6282c12356b547095fbd961b29b6c1
+                        │      │                  │         bc64e086c1f91e77709f 
+                        │      │                  ╰ DiffID: sha256:002e886d77cdf71609d280dd290c5a256b353221c4a4
+                        │      │                            475e8bf0be8d84f76b5f 
+                        │      ├ SeveritySource  : ghsa 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-44973 
+                        │      ├ DataSource       ╭ ID  : ghsa 
+                        │      │                  ├ Name: GitHub Security Advisory Go 
+                        │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+                        │      │                          cosystem%3Ago 
+                        │      ├ Fingerprint     : sha256:64b14e803758c81c0948d0444343679515163ccc995f8d8c19332
+                        │      │                   327d04e80fb 
+                        │      ├ Title           : go-billy has path traversal vulnerabilities 
+                        │      ├ Description     : ### Impact
+                        │      │                   Multiple path traversal issues exist across different
+                        │      │                   components of `go-billy`. Insufficient path sanitization and
+                        │      │                    boundary enforcement may allow crafted paths (e.g., using
+                        │      │                   `..`) to escape intended base directories.
+                        │      │                   
+                        │      │                   While go-billy was not originally designed to provide a
+                        │      │                   strong security boundary, some of these issues were
+                        │      │                   inconsistent across some of the built-in implementations.
+                        │      │                   This results in scenarios where applications relying on
+                        │      │                   `go-billy` for some level of isolation may inadvertently
+                        │      │                   expose access to unintended filesystem locations.
+                        │      │                   The `osfs.ChrootOS` implementation is notably affected by
+                        │      │                   this vulnerability and is now deprecated in `v5`, removed at
+                        │      │                    `v6`. Users are recommended to move on to `osfs.BoundOS`
+                        │      │                   instead: `osfs.New(path, WithBoundOS())`.
+                        │      │                   Users requiring stronger security boundary enforcement are
+                        │      │                   recommended to upgrade to `v6`, where the `osfs`
+                        │      │                   implementation are backed by the
+                        │      │                   [traversal-resistant](https://go.dev/blog/osroot) primitive
+                        │      │                   [os.Root](https://pkg.go.dev/os#Root).
+                        │      │                   ### Patches
+                        │      │                   Users should upgrade to a patched version in order to
+                        │      │                   mitigate this vulnerability. Versions prior to `v5` are
+                        │      │                   likely to be affected, users are recommended to upgrade to a
+                        │      │                    supported `go-billy` version.
+                        │      │                   ### Credits
+                        │      │                   Thanks to @faran66 and @vnykmshr for finding and separately
+                        │      │                   reporting this issue privately to the go-git project. 🙇 
+                        │      ├ Severity        : HIGH 
+                        │      ├ VendorSeverity   ─ ghsa: 3 
+                        │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N 
+                        │      │                         ╰ V3Score : 8.1 
+                        │      ╰ References       ╭ [0]: https://github.com/go-git/go-billy 
+                        │                         ├ [1]: https://github.com/go-git/go-billy/releases/tag/v5.9.0 
+                        │                         ├ [2]: https://github.com/go-git/go-billy/releases/tag/v6.0.0
+                        │                         │      -alpha.1 
+                        │                         ╰ [3]: https://github.com/go-git/go-billy/security/advisories
+                        │                                /GHSA-qw64-3x98-g7q2 
+                        ├ [8]  ╭ VulnerabilityID : CVE-2026-44740 
                         │      ├ VendorIDs        ─ [0]: GHSA-m3xc-h892-ggx6 
                         │      ├ PkgID           : github.com/go-git/go-billy/v5@v5.7.0 
                         │      ├ PkgName         : github.com/go-git/go-billy/v5 
@@ -12086,7 +12156,7 @@
                         │                         │      -alpha.1 
                         │                         ╰ [3]: https://github.com/go-git/go-billy/security/advisories
                         │                                /GHSA-m3xc-h892-ggx6 
-                        ├ [8]  ╭ VulnerabilityID : CVE-2026-45022 
+                        ├ [9]  ╭ VulnerabilityID : CVE-2026-45022 
                         │      ├ VendorIDs        ─ [0]: GHSA-389r-gv7p-r3rp 
                         │      ├ PkgID           : github.com/go-git/go-git/v5@v5.16.4 
                         │      ├ PkgName         : github.com/go-git/go-git/v5 
@@ -12147,7 +12217,7 @@
                         │      ╰ References       ╭ [0]: https://github.com/go-git/go-git 
                         │                         ╰ [1]: https://github.com/go-git/go-git/security/advisories/G
                         │                                HSA-389r-gv7p-r3rp 
-                        ├ [9]  ╭ VulnerabilityID : CVE-2026-25934 
+                        ├ [10] ╭ VulnerabilityID : CVE-2026-25934 
                         │      ├ VendorIDs        ─ [0]: GHSA-37cx-329c-33x3 
                         │      ├ PkgID           : github.com/go-git/go-git/v5@v5.16.4 
                         │      ├ PkgName         : github.com/go-git/go-git/v5 
@@ -12209,7 +12279,7 @@
                         │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-25934 
                         │      ├ PublishedDate   : 2026-02-09T23:16:05.937Z 
                         │      ╰ LastModifiedDate: 2026-02-20T20:21:19.26Z 
-                        ├ [10] ╭ VulnerabilityID : CVE-2026-34165 
+                        ├ [11] ╭ VulnerabilityID : CVE-2026-34165 
                         │      ├ VendorIDs        ─ [0]: GHSA-jhf3-xxhw-2wpp 
                         │      ├ PkgID           : github.com/go-git/go-git/v5@v5.16.4 
                         │      ├ PkgName         : github.com/go-git/go-git/v5 
@@ -12261,7 +12331,7 @@
                         │      │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2026-34165 
                         │      ├ PublishedDate   : 2026-03-31T15:16:17.343Z 
                         │      ╰ LastModifiedDate: 2026-04-02T16:49:16.047Z 
-                        ├ [11] ╭ VulnerabilityID : CVE-2026-41506 
+                        ├ [12] ╭ VulnerabilityID : CVE-2026-41506 
                         │      ├ VendorIDs        ─ [0]: GHSA-3xc5-wrhm-f963 
                         │      ├ PkgID           : github.com/go-git/go-git/v5@v5.16.4 
                         │      ├ PkgName         : github.com/go-git/go-git/v5 
@@ -12307,7 +12377,7 @@
                         │      │                  ╰ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-41506 
                         │      ├ PublishedDate   : 2026-05-08T14:16:33.983Z 
                         │      ╰ LastModifiedDate: 2026-05-12T14:33:02.04Z 
-                        ├ [12] ╭ VulnerabilityID : CVE-2026-33762 
+                        ├ [13] ╭ VulnerabilityID : CVE-2026-33762 
                         │      ├ VendorIDs        ─ [0]: GHSA-gm2x-2g9h-ccm8 
                         │      ├ PkgID           : github.com/go-git/go-git/v5@v5.16.4 
                         │      ├ PkgName         : github.com/go-git/go-git/v5 
@@ -12359,7 +12429,7 @@
                         │      │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2026-33762 
                         │      ├ PublishedDate   : 2026-03-31T15:16:15.597Z 
                         │      ╰ LastModifiedDate: 2026-04-02T16:49:29.7Z 
-                        ├ [13] ╭ VulnerabilityID : CVE-2026-34986 
+                        ├ [14] ╭ VulnerabilityID : CVE-2026-34986 
                         │      ├ VendorIDs        ─ [0]: GHSA-78h2-9frx-2jm8 
                         │      ├ PkgID           : github.com/go-jose/go-jose/v4@v4.1.2 
                         │      ├ PkgName         : github.com/go-jose/go-jose/v4 
@@ -12438,7 +12508,7 @@
                         │      │                  ╰ [13]: https://www.cve.org/CVERecord?id=CVE-2026-34986 
                         │      ├ PublishedDate   : 2026-04-06T17:17:11.87Z 
                         │      ╰ LastModifiedDate: 2026-05-04T15:20:44.337Z 
-                        ├ [14] ╭ VulnerabilityID : CVE-2026-4660 
+                        ├ [15] ╭ VulnerabilityID : CVE-2026-4660 
                         │      ├ VendorIDs        ─ [0]: GHSA-92mm-2pjq-r785 
                         │      ├ PkgID           : github.com/hashicorp/go-getter@v1.8.4 
                         │      ├ PkgName         : github.com/hashicorp/go-getter 
@@ -12486,7 +12556,7 @@
                         │      │                  ╰ [4]: https://www.cve.org/CVERecord?id=CVE-2026-4660 
                         │      ├ PublishedDate   : 2026-04-09T14:16:32.993Z 
                         │      ╰ LastModifiedDate: 2026-04-13T15:02:47.353Z 
-                        ├ [15] ╭ VulnerabilityID : CVE-2026-29181 
+                        ├ [16] ╭ VulnerabilityID : CVE-2026-29181 
                         │      ├ VendorIDs        ─ [0]: GHSA-mh2q-q3fh-2475 
                         │      ├ PkgID           : go.opentelemetry.io/otel@v1.39.0 
                         │      ├ PkgName         : go.opentelemetry.io/otel 
@@ -12534,7 +12604,7 @@
                         │      │                  ╰ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-29181 
                         │      ├ PublishedDate   : 2026-04-07T21:17:16.003Z 
                         │      ╰ LastModifiedDate: 2026-04-14T18:45:01.363Z 
-                        ├ [16] ╭ VulnerabilityID : CVE-2026-24051 
+                        ├ [17] ╭ VulnerabilityID : CVE-2026-24051 
                         │      ├ VendorIDs        ─ [0]: GHSA-9h8m-3fm2-qjrq 
                         │      ├ PkgID           : go.opentelemetry.io/otel/sdk@v1.39.0 
                         │      ├ PkgName         : go.opentelemetry.io/otel/sdk 
@@ -12580,7 +12650,7 @@
                         │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4394 
                         │      ├ PublishedDate   : 2026-02-02T23:16:07.963Z 
                         │      ╰ LastModifiedDate: 2026-02-27T20:32:10.693Z 
-                        ├ [17] ╭ VulnerabilityID : CVE-2026-39883 
+                        ├ [18] ╭ VulnerabilityID : CVE-2026-39883 
                         │      ├ VendorIDs        ─ [0]: GHSA-hfvc-g4fc-pqhx 
                         │      ├ PkgID           : go.opentelemetry.io/otel/sdk@v1.39.0 
                         │      ├ PkgName         : go.opentelemetry.io/otel/sdk 
@@ -12626,7 +12696,7 @@
                         │      │                  ╰ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-39883 
                         │      ├ PublishedDate   : 2026-04-08T21:17:00.697Z 
                         │      ╰ LastModifiedDate: 2026-04-10T21:16:27.12Z 
-                        ├ [18] ╭ VulnerabilityID : CVE-2026-33186 
+                        ├ [19] ╭ VulnerabilityID : CVE-2026-33186 
                         │      ├ VendorIDs        ─ [0]: GHSA-p77j-4mvh-x3m3 
                         │      ├ PkgID           : google.golang.org/grpc@v1.76.0 
                         │      ├ PkgName         : google.golang.org/grpc 
@@ -12702,7 +12772,7 @@
                         │      │                  ╰ [4]: https://www.cve.org/CVERecord?id=CVE-2026-33186 
                         │      ├ PublishedDate   : 2026-03-20T23:16:45.18Z 
                         │      ╰ LastModifiedDate: 2026-04-10T20:49:17.737Z 
-                        ├ [19] ╭ VulnerabilityID : CVE-2025-68121 
+                        ├ [20] ╭ VulnerabilityID : CVE-2025-68121 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4337 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -12782,7 +12852,7 @@
                         │      │                  ╰ [19]: https://www.cve.org/CVERecord?id=CVE-2025-68121 
                         │      ├ PublishedDate   : 2026-02-05T18:16:10.857Z 
                         │      ╰ LastModifiedDate: 2026-04-29T14:16:16.17Z 
-                        ├ [20] ╭ VulnerabilityID : CVE-2025-61726 
+                        ├ [21] ╭ VulnerabilityID : CVE-2025-61726 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4341 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -12850,7 +12920,7 @@
                         │      │                  ╰ [17]: https://www.cve.org/CVERecord?id=CVE-2025-61726 
                         │      ├ PublishedDate   : 2026-01-28T20:16:09.713Z 
                         │      ╰ LastModifiedDate: 2026-02-06T18:47:34.52Z 
-                        ├ [21] ╭ VulnerabilityID : CVE-2025-61728 
+                        ├ [22] ╭ VulnerabilityID : CVE-2025-61728 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4342 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -12923,7 +12993,7 @@
                         │      │                  ╰ [24]: https://www.cve.org/CVERecord?id=CVE-2025-61728 
                         │      ├ PublishedDate   : 2026-01-28T20:16:09.83Z 
                         │      ╰ LastModifiedDate: 2026-02-06T18:45:10.42Z 
-                        ├ [22] ╭ VulnerabilityID : CVE-2026-25679 
+                        ├ [23] ╭ VulnerabilityID : CVE-2026-25679 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4601 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -12979,7 +13049,7 @@
                         │      │                  ╰ [14]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
                         │      ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
                         │      ╰ LastModifiedDate: 2026-04-21T14:43:03.8Z 
-                        ├ [23] ╭ VulnerabilityID : CVE-2026-32280 
+                        ├ [24] ╭ VulnerabilityID : CVE-2026-32280 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4947 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -13008,7 +13078,7 @@
                         │      ├ Severity        : HIGH 
                         │      ├ CweIDs           ─ [0]: CWE-770 
                         │      ├ VendorSeverity   ╭ alma       : 3 
-                        │      │                  ├ amazon     : 3 
+                        │      │                  ├ amazon     : 2 
                         │      │                  ├ bitnami    : 3 
                         │      │                  ├ oracle-oval: 3 
                         │      │                  ├ redhat     : 3 
@@ -13027,35 +13097,26 @@
                         │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
                         │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
                         │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-                        │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2456340 
-                        │      │                  ├ [9] : https://bugzilla.redhat.com/show_bug.cgi?id=2456341 
-                        │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2456342 
-                        │      │                  ├ [11]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-                        │      │                  │       26-27140 
-                        │      │                  ├ [12]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-                        │      │                  │       26-27143 
-                        │      │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-                        │      │                  │       26-27144 
-                        │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+                        │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       26-32280 
-                        │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+                        │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       26-32282 
-                        │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+                        │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       26-32283 
-                        │      │                  ├ [17]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
-                        │      │                  ├ [18]: https://errata.rockylinux.org/RLSA-2026:10219 
-                        │      │                  ├ [19]: https://go.dev/cl/758320 
-                        │      │                  ├ [20]: https://go.dev/issue/78282 
-                        │      │                  ├ [21]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+                        │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+                        │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+                        │      │                  ├ [13]: https://go.dev/cl/758320 
+                        │      │                  ├ [14]: https://go.dev/issue/78282 
+                        │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
                         │      │                  │       ZRWU 
-                        │      │                  ├ [22]: https://linux.oracle.com/cve/CVE-2026-32280.html 
-                        │      │                  ├ [23]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
-                        │      │                  ├ [24]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
-                        │      │                  ├ [25]: https://pkg.go.dev/vuln/GO-2026-4947 
-                        │      │                  ╰ [26]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
+                        │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32280.html 
+                        │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
+                        │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+                        │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4947 
+                        │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
                         │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
                         │      ╰ LastModifiedDate: 2026-04-16T19:16:42.18Z 
-                        ├ [24] ╭ VulnerabilityID : CVE-2026-32281 
+                        ├ [25] ╭ VulnerabilityID : CVE-2026-32281 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4946 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -13086,7 +13147,7 @@
                         │      │                   certificate pool. 
                         │      ├ Severity        : HIGH 
                         │      ├ CweIDs           ─ [0]: CWE-295 
-                        │      ├ VendorSeverity   ╭ amazon : 3 
+                        │      ├ VendorSeverity   ╭ amazon : 2 
                         │      │                  ├ bitnami: 3 
                         │      │                  ├ nvd    : 3 
                         │      │                  ╰ redhat : 2 
@@ -13109,7 +13170,7 @@
                         │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32281 
                         │      ├ PublishedDate   : 2026-04-08T02:16:03.35Z 
                         │      ╰ LastModifiedDate: 2026-04-16T19:15:57.75Z 
-                        ├ [25] ╭ VulnerabilityID : CVE-2026-32283 
+                        ├ [26] ╭ VulnerabilityID : CVE-2026-32283 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4870 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -13139,7 +13200,7 @@
                         │      ├ Severity        : HIGH 
                         │      ├ CweIDs           ─ [0]: CWE-770 
                         │      ├ VendorSeverity   ╭ alma       : 3 
-                        │      │                  ├ amazon     : 3 
+                        │      │                  ├ amazon     : 2 
                         │      │                  ├ bitnami    : 3 
                         │      │                  ├ nvd        : 3 
                         │      │                  ├ oracle-oval: 3 
@@ -13161,24 +13222,27 @@
                         │      │                  ├ [4] : https://bugzilla.redhat.com/2456339 
                         │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
                         │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-                        │      │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-                        │      │                  │       26-32282 
+                        │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
                         │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+                        │      │                  │       26-32280 
+                        │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+                        │      │                  │       26-32282 
+                        │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       26-32283 
-                        │      │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2026-14200.html 
-                        │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2026:11711 
-                        │      │                  ├ [11]: https://go.dev/cl/763767 
-                        │      │                  ├ [12]: https://go.dev/issue/78334 
-                        │      │                  ├ [13]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+                        │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+                        │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+                        │      │                  ├ [13]: https://go.dev/cl/763767 
+                        │      │                  ├ [14]: https://go.dev/issue/78334 
+                        │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
                         │      │                  │       ZRWU 
-                        │      │                  ├ [14]: https://linux.oracle.com/cve/CVE-2026-32283.html 
-                        │      │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-                        │      │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-                        │      │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4870 
-                        │      │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
+                        │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32283.html 
+                        │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+                        │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+                        │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4870 
+                        │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
                         │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
                         │      ╰ LastModifiedDate: 2026-04-16T19:12:10.54Z 
-                        ├ [26] ╭ VulnerabilityID : CVE-2026-33811 
+                        ├ [27] ╭ VulnerabilityID : CVE-2026-33811 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4981 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -13221,7 +13285,7 @@
                         │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4981 
                         │      ├ PublishedDate   : 2026-05-07T20:16:42.77Z 
                         │      ╰ LastModifiedDate: 2026-05-12T20:23:02.333Z 
-                        ├ [27] ╭ VulnerabilityID : CVE-2026-33814 
+                        ├ [28] ╭ VulnerabilityID : CVE-2026-33814 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4918 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -13265,7 +13329,7 @@
                         │      │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2026-4918 
                         │      ├ PublishedDate   : 2026-05-07T20:16:42.88Z 
                         │      ╰ LastModifiedDate: 2026-05-13T14:41:59.52Z 
-                        ├ [28] ╭ VulnerabilityID : CVE-2026-39820 
+                        ├ [29] ╭ VulnerabilityID : CVE-2026-39820 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4986 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -13308,7 +13372,7 @@
                         │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4986 
                         │      ├ PublishedDate   : 2026-05-07T20:16:43.187Z 
                         │      ╰ LastModifiedDate: 2026-05-13T15:10:58.65Z 
-                        ├ [29] ╭ VulnerabilityID : CVE-2026-39836 
+                        ├ [30] ╭ VulnerabilityID : CVE-2026-39836 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4971 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -13350,7 +13414,7 @@
                         │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4971 
                         │      ├ PublishedDate   : 2026-05-07T20:16:43.593Z 
                         │      ╰ LastModifiedDate: 2026-05-13T15:11:10.31Z 
-                        ├ [30] ╭ VulnerabilityID : CVE-2026-42499 
+                        ├ [31] ╭ VulnerabilityID : CVE-2026-42499 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4977 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -13386,7 +13450,7 @@
                         │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4977 
                         │      ├ PublishedDate   : 2026-05-07T20:16:44.54Z 
                         │      ╰ LastModifiedDate: 2026-05-13T16:59:17.563Z 
-                        ├ [31] ╭ VulnerabilityID : CVE-2025-61730 
+                        ├ [32] ╭ VulnerabilityID : CVE-2025-61730 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4340 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -13405,8 +13469,8 @@
                         │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
                         │      ├ Fingerprint     : sha256:582a4cfe7599fd5d5393a4483731a51f535de23d6e07a0deb9839
                         │      │                   4e2c17360c7 
-                        │      ├ Title           : During the TLS 1.3 handshake if multiple messages are sent
-                        │      │                   in records  ... 
+                        │      ├ Title           : crypto/tls: Handshake messages may be processed at the
+                        │      │                   incorrect encryption level in crypto/tls 
                         │      ├ Description     : During the TLS 1.3 handshake if multiple messages are sent
                         │      │                   in records that span encryption level boundaries (for
                         │      │                   instance the Client Hello and Encrypted Extensions
@@ -13415,23 +13479,29 @@
                         │      │                   information disclosure if a network-local attacker can
                         │      │                   inject messages during the handshake. 
                         │      ├ Severity        : MEDIUM 
-                        │      ├ VendorSeverity   ╭ amazon     : 2 
+                        │      ├ VendorSeverity   ╭ amazon     : 3 
                         │      │                  ├ azure      : 1 
                         │      │                  ├ bitnami    : 2 
                         │      │                  ├ cbl-mariner: 1 
-                        │      │                  ╰ photon     : 2 
-                        │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
+                        │      │                  ├ photon     : 2 
+                        │      │                  ╰ redhat     : 2 
+                        │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
+                        │      │                  │         │           N/A:N 
+                        │      │                  │         ╰ V3Score : 5.3 
+                        │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
                         │      │                            │           N/A:N 
                         │      │                            ╰ V3Score : 5.3 
-                        │      ├ References       ╭ [0]: https://go.dev/cl/724120 
-                        │      │                  ├ [1]: https://go.dev/issue/76443 
-                        │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/Vd2tYVM8
+                        │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2025-61730 
+                        │      │                  ├ [1]: https://go.dev/cl/724120 
+                        │      │                  ├ [2]: https://go.dev/issue/76443 
+                        │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/Vd2tYVM8
                         │      │                  │      eUc 
-                        │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2025-61730 
-                        │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4340 
+                        │      │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2025-61730 
+                        │      │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-4340 
+                        │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2025-61730 
                         │      ├ PublishedDate   : 2026-01-28T20:16:09.94Z 
                         │      ╰ LastModifiedDate: 2026-02-03T20:36:41.3Z 
-                        ├ [32] ╭ VulnerabilityID : CVE-2026-27142 
+                        ├ [33] ╭ VulnerabilityID : CVE-2026-27142 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4603 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -13461,7 +13531,7 @@
                         │      │                    follow "url=" by setting htmlmetacontenturlescape=0. 
                         │      ├ Severity        : MEDIUM 
                         │      ├ CweIDs           ─ [0]: CWE-79 
-                        │      ├ VendorSeverity   ╭ amazon : 2 
+                        │      ├ VendorSeverity   ╭ amazon : 3 
                         │      │                  ├ bitnami: 2 
                         │      │                  ╰ redhat : 2 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
@@ -13480,7 +13550,7 @@
                         │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27142 
                         │      ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
                         │      ╰ LastModifiedDate: 2026-04-21T14:30:01.38Z 
-                        ├ [33] ╭ VulnerabilityID : CVE-2026-32282 
+                        ├ [34] ╭ VulnerabilityID : CVE-2026-32282 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4864 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -13515,7 +13585,7 @@
                         │      ├ Severity        : MEDIUM 
                         │      ├ CweIDs           ─ [0]: CWE-59 
                         │      ├ VendorSeverity   ╭ alma       : 3 
-                        │      │                  ├ amazon     : 3 
+                        │      │                  ├ amazon     : 2 
                         │      │                  ├ bitnami    : 2 
                         │      │                  ├ nvd        : 2 
                         │      │                  ├ oracle-oval: 3 
@@ -13537,24 +13607,27 @@
                         │      │                  ├ [4] : https://bugzilla.redhat.com/2456339 
                         │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
                         │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-                        │      │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-                        │      │                  │       26-32282 
+                        │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
                         │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+                        │      │                  │       26-32280 
+                        │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+                        │      │                  │       26-32282 
+                        │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
                         │      │                  │       26-32283 
-                        │      │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2026-14200.html 
-                        │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2026:11711 
-                        │      │                  ├ [11]: https://go.dev/cl/763761 
-                        │      │                  ├ [12]: https://go.dev/issue/78293 
-                        │      │                  ├ [13]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+                        │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-14200.html 
+                        │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:14200 
+                        │      │                  ├ [13]: https://go.dev/cl/763761 
+                        │      │                  ├ [14]: https://go.dev/issue/78293 
+                        │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
                         │      │                  │       ZRWU 
-                        │      │                  ├ [14]: https://linux.oracle.com/cve/CVE-2026-32282.html 
-                        │      │                  ├ [15]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-                        │      │                  ├ [16]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-                        │      │                  ├ [17]: https://pkg.go.dev/vuln/GO-2026-4864 
-                        │      │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+                        │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+                        │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+                        │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+                        │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4864 
+                        │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
                         │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
                         │      ╰ LastModifiedDate: 2026-04-16T19:15:39.4Z 
-                        ├ [34] ╭ VulnerabilityID : CVE-2026-32288 
+                        ├ [35] ╭ VulnerabilityID : CVE-2026-32288 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4869 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -13582,11 +13655,11 @@
                         │      │                    format. 
                         │      ├ Severity        : MEDIUM 
                         │      ├ CweIDs           ─ [0]: CWE-770 
-                        │      ├ VendorSeverity   ╭ amazon : 3 
+                        │      ├ VendorSeverity   ╭ amazon : 2 
                         │      │                  ├ azure  : 2 
                         │      │                  ├ bitnami: 2 
                         │      │                  ├ nvd    : 2 
-                        │      │                  ├ photon : 3 
+                        │      │                  ├ photon : 2 
                         │      │                  ╰ redhat : 2 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:
                         │      │                  │         │           N/A:H 
@@ -13607,7 +13680,7 @@
                         │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32288 
                         │      ├ PublishedDate   : 2026-04-08T02:16:03.707Z 
                         │      ╰ LastModifiedDate: 2026-04-16T19:08:52.24Z 
-                        ├ [35] ╭ VulnerabilityID : CVE-2026-32289 
+                        ├ [36] ╭ VulnerabilityID : CVE-2026-32289 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4865 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -13640,10 +13713,10 @@
                         │      │                   escaped, leading to XSS vulnerabilities. 
                         │      ├ Severity        : MEDIUM 
                         │      ├ CweIDs           ─ [0]: CWE-79 
-                        │      ├ VendorSeverity   ╭ amazon : 3 
+                        │      ├ VendorSeverity   ╭ amazon : 2 
                         │      │                  ├ bitnami: 2 
                         │      │                  ├ nvd    : 2 
-                        │      │                  ├ photon : 4 
+                        │      │                  ├ photon : 2 
                         │      │                  ╰ redhat : 2 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
                         │      │                  │         │           L/A:N 
@@ -13664,7 +13737,7 @@
                         │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32289 
                         │      ├ PublishedDate   : 2026-04-08T02:16:03.82Z 
                         │      ╰ LastModifiedDate: 2026-04-16T19:06:57.367Z 
-                        ├ [36] ╭ VulnerabilityID : CVE-2026-39823 
+                        ├ [37] ╭ VulnerabilityID : CVE-2026-39823 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4982 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -13705,7 +13778,7 @@
                         │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4982 
                         │      ├ PublishedDate   : 2026-05-07T20:16:43.29Z 
                         │      ╰ LastModifiedDate: 2026-05-13T16:58:45.697Z 
-                        ├ [37] ╭ VulnerabilityID : CVE-2026-39825 
+                        ├ [38] ╭ VulnerabilityID : CVE-2026-39825 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4976 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -13752,7 +13825,7 @@
                         │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4976 
                         │      ├ PublishedDate   : 2026-05-07T20:16:43.39Z 
                         │      ╰ LastModifiedDate: 2026-05-13T16:58:56.39Z 
-                        ├ [38] ╭ VulnerabilityID : CVE-2026-39826 
+                        ├ [39] ╭ VulnerabilityID : CVE-2026-39826 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4980 
                         │      ├ PkgID           : stdlib@v1.25.5 
                         │      ├ PkgName         : stdlib 
@@ -13792,7 +13865,7 @@
                         │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4980 
                         │      ├ PublishedDate   : 2026-05-07T20:16:43.49Z 
                         │      ╰ LastModifiedDate: 2026-05-13T16:59:07.48Z 
-                        ╰ [39] ╭ VulnerabilityID : CVE-2026-27139 
+                        ╰ [40] ╭ VulnerabilityID : CVE-2026-27139 
                                ├ VendorIDs        ─ [0]: GO-2026-4602 
                                ├ PkgID           : stdlib@v1.25.5 
                                ├ PkgName         : stdlib 
@@ -13821,7 +13894,7 @@
                                │                   outside the root. 
                                ├ Severity        : LOW 
                                ├ CweIDs           ─ [0]: CWE-22 
-                               ├ VendorSeverity   ╭ amazon : 2 
+                               ├ VendorSeverity   ╭ amazon : 3 
                                │                  ├ azure  : 1 
                                │                  ├ bitnami: 1 
                                │                  ╰ redhat : 1 
