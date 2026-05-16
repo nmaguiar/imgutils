@@ -1,0 +1,537 @@
+name: Pre-Release
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+  attestations: write
+
+jobs:
+
+  delete-caches:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Delete crictl cache
+      continue-on-error: true
+      run: gh api repos/${{ github.repository }}/actions/caches?key=crictl -X DELETE
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Delete skopeo cache
+      continue-on-error: true
+      run: gh api repos/${{ github.repository }}/actions/caches?key=skopeo -X DELETE
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Delete dive cache
+      continue-on-error: true
+      run: gh api repos/${{ github.repository }}/actions/caches?key=dive -X DELETE
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  build-crictl:
+    needs: delete-caches
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: build
+      run: |
+        docker system prune -f
+        rm -rf crictl
+        docker build --no-cache -t dev -f Dockerfile.crictl .
+        docker create --name dev dev
+        docker cp dev:/crictl_arm64 crictl_arm64
+        docker cp dev:/crictl_amd64 crictl_amd64
+    - name: Cache crictl save
+      uses: actions/cache/save@v4
+      with:
+        key: crictl
+        path: |
+          crictl_*
+
+  build-dive:
+    needs: delete-caches
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: build
+      run: |
+        docker system prune -f
+        rm -rf dive
+        docker build --no-cache -t dev -f Dockerfile.dive .
+        docker create --name dev dev
+        docker cp dev:/dive_linux_arm64 dive_linux_arm64
+        docker cp dev:/dive_linux_amd64 dive_linux_amd64
+    - name: Cache dive save
+      uses: actions/cache/save@v4
+      with:
+        key: dive
+        path: |
+          dive_linux_*
+
+  build-skopeo:
+    needs: delete-caches
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: build
+      run: |
+        docker system prune -f
+        rm -rf skopeo
+        docker build --no-cache -t dev -f Dockerfile.skopeo .
+        docker create --name dev dev
+        docker cp dev:/skopeo_arm64 skopeo_arm64
+        docker cp dev:/skopeo_amd64 skopeo_amd64
+    - name: Cache skopeo save
+      uses: actions/cache/save@v4
+      with:
+        key: skopeo
+        path: |
+          skopeo_*
+
+  build-image-lite:
+    needs: build-crictl
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      attestations: write
+      contents: read
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v3
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+    - name: Cache crictl
+      uses: actions/cache@v5
+      with:
+        key: crictl
+        path: |
+          crictl_*
+    - name: Login to DockerHub
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+    - uses: docker/build-push-action@v6
+      name: Build and push
+      with:
+        platforms: linux/amd64,linux/arm64
+        file: Dockerfile.lite
+        push: true
+        tags: nmaguiar/imgutils:build-lite
+        context: .
+
+  build-x64:
+    name: Build x64
+    needs: [build-crictl, build-dive, build-skopeo]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v3
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+    - name: Cache dive
+      uses: actions/cache@v5
+      with:
+        key: dive
+        path: |
+          dive_linux_*
+    - name: Cache skopeo
+      uses: actions/cache@v5
+      with:
+        key: skopeo
+        path: |
+          skopeo_*
+    - name: Cache crictl
+      uses: actions/cache@v5
+      with:
+        key: crictl
+        path: |
+          crictl_*
+    - name: list dive
+      run: |
+        arch=$(uname -m) && if [ "$arch" == "aarch64" ]; then cp dive_linux_arm64 dive; elif [ "$arch" == "x86_64" ]; then cp dive_linux_amd64 dive; fi
+    - name: list skopeo
+      run: |
+        arch=$(uname -m) && if [ "$arch" == "aarch64" ]; then cp skopeo_arm64 skopeo; elif [ "$arch" == "x86_64" ]; then cp skopeo_amd64 skopeo; fi
+    - name: list crictl
+      run: |
+        arch=$(uname -m) && if [ "$arch" == "aarch64" ]; then cp crictl_arm64 crictl; elif [ "$arch" == "x86_64" ]; then cp crictl_amd64 crictl; fi
+    - name: Login to DockerHub
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+    - uses: docker/build-push-action@v6
+      name: Build and push
+      with:
+        context: .
+        file: ./Dockerfile
+        platforms: linux/amd64
+        push: true
+        tags: nmaguiar/imgutils:build-x64
+
+  build-arm:
+    name: Build arm64
+    needs: [build-crictl, build-dive, build-skopeo]
+    runs-on: ubuntu-24.04-arm
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v3
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+    - name: Cache dive
+      uses: actions/cache@v5
+      with:
+        key: dive
+        path: |
+          dive_linux_*
+    - name: Cache skopeo
+      uses: actions/cache@v5
+      with:
+        key: skopeo
+        path: |
+          skopeo_*
+    - name: Cache crictl
+      uses: actions/cache@v5
+      with:
+        key: crictl
+        path: |
+          crictl_*
+    - name: list dive
+      run: |
+        arch=$(uname -m) && if [ "$arch" == "aarch64" ]; then cp dive_linux_arm64 dive; elif [ "$arch" == "x86_64" ]; then cp dive_linux_amd64 dive; fi
+    - name: list skopeo
+      run: |
+        arch=$(uname -m) && if [ "$arch" == "aarch64" ]; then cp skopeo_arm64 skopeo; elif [ "$arch" == "x86_64" ]; then cp skopeo_amd64 skopeo; fi
+    - name: list crictl
+      run: |
+        arch=$(uname -m) && if [ "$arch" == "aarch64" ]; then cp crictl_arm64 crictl; elif [ "$arch" == "x86_64" ]; then cp crictl_amd64 crictl; fi
+    - name: Login to DockerHub
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+    - uses: docker/build-push-action@v6
+      name: Build and push
+      with:
+        context: .
+        file: ./Dockerfile
+        platforms: linux/arm64
+        push: true
+        tags: nmaguiar/imgutils:build-arm
+
+  build:
+    needs: [build-arm, build-x64]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+    - name: Login to DockerHub
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+    - name: Create and push multi-arch manifest
+      run: |
+        docker buildx imagetools create --tag nmaguiar/imgutils:build nmaguiar/imgutils:build-x64 nmaguiar/imgutils:build-arm
+
+  test-skopeo:
+    name: test skopeo
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - uses: actions/checkout@v4
+    - name: Test skopeo inspect
+      uses: ./
+      with:
+        cmd: sudo skopeo inspect docker://nmaguiar/imgutils:build > /dev/null
+
+  test-helm:
+    name: test helm
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - uses: actions/checkout@v4
+    - name: Test helm
+      uses: ./
+      with:
+        cmd: sudo helm repo add bitnami https://charts.bitnami.com/bitnami && sudo helm pull bitnami/nginx
+
+  test-docker:
+    name: test docker
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - uses: actions/checkout@v4
+    - name: Test docker
+      uses: ./
+      with:
+        cmd: docker run --rm nmaguiar/imgutils:build id
+
+  test-crictl:
+    name: test crictl
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - uses: actions/checkout@v4
+    - name: Test crictl
+      uses: ./
+      with:
+        cmd: crictl -v
+
+  test-ctr:
+    name: test ctr
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - uses: actions/checkout@v4
+    - name: Test ctr
+      uses: ./
+      with:
+        cmd: ctr -v
+
+  test-nerdctl:
+    name: test nerdctl
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - uses: actions/checkout@v4
+    - name: Test nerdctl
+      uses: ./
+      with:
+        cmd: nerdctl -v
+
+  test-openaf:
+    name: test openaf
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - uses: actions/checkout@v4
+    - name: Test openaf
+      uses: ./
+      with:
+        cmd: oaf -v
+
+  test-syft:
+    name: test syft
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - uses: actions/checkout@v4
+    - name: Test syft
+      uses: ./
+      with:
+        cmd: sudo syft scan nmaguiar/imgutils -o syft-table > /dev/null
+
+  version-images:
+    runs-on: ubuntu-latest
+    needs: [build-image-lite, test-skopeo, test-helm, test-docker, test-crictl, test-ctr, test-nerdctl, test-openaf, test-syft]
+    permissions:
+      contents: write
+      pull-requests: write
+    name: Version images
+    steps:
+    - uses: actions/checkout@v4
+      name: Checkout
+    - name: Cache OpenAF runtime
+      uses: actions/cache@v5
+      with:
+        key: oaf-nightly
+        path: /tmp/oaf
+    - name: Generate build versions badge
+      uses: openaf/ojob-action@v7
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        ojob: '.github/ojobs/getVersions.yaml'
+        args: 'tag=build file=.github/build-versions.svg jsonfile=.github/build-versions.json'
+        dist: 'nightly'
+    - name: Generate latest versions badge
+      uses: openaf/ojob-action@v7
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        ojob: '.github/ojobs/getVersions.yaml'
+        args: 'tag=latest file=.github/latest-versions.svg jsonfile=.github/latest-versions.json'
+        dist: 'nightly'
+    - uses: openaf/ojob-action@v7
+      name: Update badges
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        ojob: 'ojob.io/git/hub/contentIn'
+        args: 'message="update\ badge\ {{date}}/{{time}}" title="Update\ badge" paths=.github/'
+        dist: 'nightly'
+
+  compare-versions:
+    runs-on: ubuntu-latest
+    needs: version-images
+    permissions:
+      contents: write
+      pull-requests: write
+    name: Compare Versions
+    steps:
+    - uses: actions/checkout@v4
+      name: Checkout
+      with:
+        ref: main
+    - name: Cache OpenAF runtime
+      uses: actions/cache@v5
+      with:
+        key: oaf-t8
+        path: /tmp/oaf
+    - name: Setup OpenAF
+      uses: openaf/action-setup@v2
+      with:
+        dist: t8
+    - name: Retrieving the latest version of the used tools to /tmp/_tmpMain.json
+      run: |
+        cat <<_EOF_ | oafp in=yaml out=json | oafp in=oafp out=json > /tmp/_tmpMain.json
+        # Skopeo
+        - url : https://api.github.com/repos/containers/skopeo/releases/latest
+          path: "{tool:'skopeo',lastVer:tag_name}"
+
+        # OpenAF
+        - url : https://openaf.io/release
+          in  : raw
+          path: "{tool:'oaf',lastVer:@}"
+
+        # Helm
+        - url : https://api.github.com/repos/helm/helm/releases/latest
+          path: "{tool:'helm',lastVer:tag_name}"
+
+        # Docker
+        - url : https://api.github.com/repos/docker/cli/tags
+          path: "[0].{tool:'docker',lastVer:name}"
+
+        # CriCtl
+        - url : https://api.github.com/repos/kubernetes-sigs/cri-tools/releases/latest
+          path: "{tool:'crictl',lastVer:name}"
+
+        # Ctr
+        - url : https://api.github.com/repos/containerd/containerd/releases/latest
+          path: "{tool:'ctr',lastVer:name}"
+
+        # NerdCtl
+        - url : https://api.github.com/repos/containerd/nerdctl/releases/latest
+          path: "{tool:'nerdctl',lastVer:name}"
+
+        # Midnight Commander
+        - url : https://api.github.com/repos/MidnightCommander/mc/tags
+          path: "[0].{tool:'mc',lastVer:name}"
+
+        # Syft
+        - url : https://api.github.com/repos/anchore/syft/releases/latest
+          path: "{tool:'syft',lastVer:name}"
+        _EOF_
+        oafp /tmp/_tmpMain.json out=ctable
+    - name: Preparing a lookup table for the build versions of the tools
+      run: |
+        oafp .github/build-versions.json out=ch ch="(type: file, options: (file: /tmp/_tmp.json))" chkey="tool" path=versions
+        oafp /tmp/_tmp.json
+    - name: Preparing a lookup table for the latest versions of the tools
+      run: |
+        oafp .github/latest-versions.json out=ch ch="(type: file, options: (file: /tmp/_tmpl.json))" chkey="tool" path=versions
+        oafp /tmp/_tmpl.json
+    - name: Joining the versions retrieved to produce a markdown table
+      run: |
+        ls -lad /tmp/*.json
+        oafp chs="[(name: v, type: file, options: (file: /tmp/_tmp.json))|(name: l, type: file, options: (file: /tmp/_tmpl.json))]" /tmp/_tmpMain.json path="[].{tool:tool,latestOnline:lastVer,buildVersion:ch('v','get',{tool:tool},__).version,latestversion:ch('l','get',{tool:tool},__).version}" out=mdtable sql="select * where tool <> 'mc' order by tool" > .github/compare-versions.md
+        oafp .github/compare-versions.md
+    - uses: openaf/ojob-action@v7
+      name: Update table
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        ojob: 'ojob.io/git/hub/contentIn'
+        args: 'message="update\ versions\ table\ {{date}}/{{time}}" title="Update\ table" paths=.github/'
+        dist: t8
+
+  prepare-release:
+    runs-on: ubuntu-latest
+    needs: compare-versions
+    permissions:
+      contents: write
+    steps:
+    - name: Checkout main
+      uses: actions/checkout@v4
+      with:
+        ref: main
+        fetch-depth: 0
+
+    - name: Get new version
+      run: |
+        VERSION=$(grep -oP '\(v[^\)]+\)' welcome.txt | tr -d '()')
+        echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+    - name: Get last release info
+      run: |
+        LAST_TAG=$(gh release list --limit 1 --json tagName --jq '.[0].tagName')
+        LAST_DATE=$(gh release view "$LAST_TAG" --json createdAt --jq .createdAt)
+        echo "LAST_TAG=$LAST_TAG" >> $GITHUB_ENV
+        echo "LAST_DATE=$LAST_DATE" >> $GITHUB_ENV
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Collect merged PRs since last release
+      run: |
+        gh pr list --state merged \
+          --json number,title,url,mergedAt,author \
+          --jq "[.[] | select(.mergedAt > \"$LAST_DATE\") | \"* \" + .title + \" by @\" + .author.login + \" in \" + .url] | .[]" \
+          > /tmp/prs.txt
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Parse version bumps from compare-versions.md
+      run: |
+        python3 << 'PYEOF'
+        with open('.github/compare-versions.md') as f:
+            lines = [l.strip() for l in f if l.strip().startswith('|')]
+        bumps = []
+        for line in lines[2:]:
+            cols = [c.strip() for c in line.split('|')[1:-1]]
+            if len(cols) < 4:
+                continue
+            tool, _, build_ver, latest_ver = cols
+            if build_ver.lstrip('v') != latest_ver.lstrip('v'):
+                bumps.append(f'- {tool}: {latest_ver} → {build_ver}')
+        with open('/tmp/bumps.txt', 'w') as f:
+            f.write('\n'.join(bumps))
+        PYEOF
+
+    - name: Compose release body
+      run: |
+        {
+          if [ -s /tmp/prs.txt ]; then
+            echo "## What's Changed"
+            cat /tmp/prs.txt
+            echo ""
+          fi
+          echo "## 🔁 Bumps"
+          echo ""
+          cat /tmp/bumps.txt
+          echo ""
+          echo "**Full Changelog**: https://github.com/${{ github.repository }}/compare/$LAST_TAG...$VERSION"
+        } > /tmp/release_body.md
+        cat /tmp/release_body.md
+
+    - name: Create draft pre-release
+      run: |
+        gh release create "$VERSION" \
+          --draft \
+          --prerelease \
+          --title "$VERSION" \
+          --notes-file /tmp/release_body.md
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
