@@ -64,7 +64,162 @@
                         │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-34040 
                         │     ├ PublishedDate   : 2026-03-31T03:15:57.883Z 
                         │     ╰ LastModifiedDate: 2026-04-03T16:51:28.67Z 
-                        ├ [1] ╭ VulnerabilityID : CVE-2026-33997 
+                        ├ [1] ╭ VulnerabilityID : CVE-2026-41567 
+                        │     ├ VendorIDs        ─ [0]: GHSA-x86f-5xw2-fm2r 
+                        │     ├ PkgID           : github.com/docker/docker@v28.5.2+incompatible 
+                        │     ├ PkgName         : github.com/docker/docker 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v28.5.2%2Bincompat
+                        │     │                  │       ible 
+                        │     │                  ╰ UID : 574b64b426d7eeee 
+                        │     ├ InstalledVersion: v28.5.2+incompatible 
+                        │     ├ Status          : affected 
+                        │     ├ Layer            ╭ Digest: sha256:dacc8fbc217bf572b50fdbe0cb0393959d318c935ff38
+                        │     │                  │         1e7479b33773ed03271 
+                        │     │                  ╰ DiffID: sha256:f5818a2ef8955e255dc0cbd98454306b3fe72eaaa7737
+                        │     │                            e0b4ae1ea70b8da3926 
+                        │     ├ SeveritySource  : ghsa 
+                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-41567 
+                        │     ├ DataSource       ╭ ID  : ghsa 
+                        │     │                  ├ Name: GitHub Security Advisory Go 
+                        │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+                        │     │                          osystem%3Ago 
+                        │     ├ Fingerprint     : sha256:511568f15773302b2170e8eb0aa1428e82a657e9faf74d3d1c144b
+                        │     │                   5c2820f9e1 
+                        │     ├ Title           : Docker: `PUT /containers/{id}/archive` executes container
+                        │     │                   binary on the host 
+                        │     ├ Description     : ## Summary
+                        │     │                   
+                        │     │                   When a user uploads a compressed archive into a container, a
+                        │     │                   malicious image can execute arbitrary code with daemon (host
+                        │     │                   root) privileges.
+                        │     │                   ## Details
+                        │     │                   When handling `PUT /containers/{id}/archive` requests with
+                        │     │                   compressed archives, the daemon decompresses them using
+                        │     │                   external system binaries. Due to incorrect ordering of
+                        │     │                   operations, these binaries are resolved from the container's
+                        │     │                   filesystem rather than the host's. A container image that
+                        │     │                   includes a trojanized decompression binary can achieve code
+                        │     │                   execution as the daemon process whenever a compressed archive
+                        │     │                    is uploaded to that container.
+                        │     │                   The executed binary runs with the daemon's full privileges,
+                        │     │                   including host root UID and unrestricted capabilities.
+                        │     │                   ## Impact
+                        │     │                   Arbitrary code execution as host root, crossing the
+                        │     │                   container-to-host trust boundary.
+                        │     │                   ### Conditions for exploitation
+                        │     │                   - A user must run a container from a malicious image that
+                        │     │                   contains a trojanized decompression binary.
+                        │     │                   - The user must then upload a compressed archive (xz or gzip)
+                        │     │                    into that container, either by piping a compressed archive
+                        │     │                   via `docker cp -` or by calling the `PUT
+                        │     │                   /containers/{id}/archive` API directly with compressed
+                        │     │                   content.
+                        │     │                   ### Not affected
+                        │     │                   Standard `docker cp` usage is **not** affected, because the
+                        │     │                   CLI sends uncompressed tar by default:
+                        │     │                   ```
+                        │     │                   docker cp ./file.txt mycontainer:/file.txt
+                        │     │                   This can only be exploited when explicitly passing a xz or
+                        │     │                   gzip-compressed archive to `docker cp` or the `PUT
+                        │     │                   /containers/{id}/archive` API, for example:
+                        │     │                   cat archive.tar.xz | docker cp - mycontainer:/dir
+                        │     │                   Decompression formats using pure Go implementations (bzip2,
+                        │     │                   zstd, and gzip when the container image does not contain an
+                        │     │                   `unpigz` binary) are also not affected.
+                        │     │                   ## Workarounds
+                        │     │                   - Only run containers from trusted images.
+                        │     │                   - Use authorization plugins to limit access to the `PUT
+                        │     │                   /containers/{id}/archive` endpoint.
+                        │     │                   - Avoid piping compressed archives into containers created
+                        │     │                   from untrusted images. 
+                        │     ├ Severity        : HIGH 
+                        │     ├ VendorSeverity   ─ ghsa: 3 
+                        │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:N 
+                        │     │                         ╰ V3Score : 7.2 
+                        │     ╰ References       ╭ [0]: https://github.com/moby/moby 
+                        │                        ╰ [1]: https://github.com/moby/moby/security/advisories/GHSA-x
+                        │                               86f-5xw2-fm2r 
+                        ├ [2] ╭ VulnerabilityID : CVE-2026-42306 
+                        │     ├ VendorIDs        ─ [0]: GHSA-rg2x-37c3-w2rh 
+                        │     ├ PkgID           : github.com/docker/docker@v28.5.2+incompatible 
+                        │     ├ PkgName         : github.com/docker/docker 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v28.5.2%2Bincompat
+                        │     │                  │       ible 
+                        │     │                  ╰ UID : 574b64b426d7eeee 
+                        │     ├ InstalledVersion: v28.5.2+incompatible 
+                        │     ├ Status          : affected 
+                        │     ├ Layer            ╭ Digest: sha256:dacc8fbc217bf572b50fdbe0cb0393959d318c935ff38
+                        │     │                  │         1e7479b33773ed03271 
+                        │     │                  ╰ DiffID: sha256:f5818a2ef8955e255dc0cbd98454306b3fe72eaaa7737
+                        │     │                            e0b4ae1ea70b8da3926 
+                        │     ├ SeveritySource  : ghsa 
+                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42306 
+                        │     ├ DataSource       ╭ ID  : ghsa 
+                        │     │                  ├ Name: GitHub Security Advisory Go 
+                        │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+                        │     │                          osystem%3Ago 
+                        │     ├ Fingerprint     : sha256:26bac92685c4930956c939fa642a35f85d84261db50ee38cc2c075
+                        │     │                   c467b51abe 
+                        │     ├ Title           : Docker: Race condition in docker cp allows bind mount
+                        │     │                   redirection to host path 
+                        │     ├ Description     : ## Summary
+                        │     │                   
+                        │     │                   A race condition during `docker cp` mount setup allows a
+                        │     │                   malicious container to redirect a bind mount target to an
+                        │     │                   arbitrary host path, potentially overwriting host files or
+                        │     │                   causing denial of service.
+                        │     │                   ## Details
+                        │     │                   When copying files into a container, the daemon sets up a
+                        │     │                   temporary filesystem view by bind-mounting volumes into a
+                        │     │                   private mount namespace. During this setup, the mount
+                        │     │                   destination is created inside the container root and then a
+                        │     │                   bind mount is attached using the container-relative path
+                        │     │                   resolved to an absolute host path.
+                        │     │                   Between mountpoint creation and the `mount()` syscall, a
+                        │     │                   process running inside the container can replace the
+                        │     │                   destination (or a parent path component) with a symlink
+                        │     │                   pointing to an arbitrary location on the host. The `mount()`
+                        │     │                   syscall follows the symlink, causing the volume to be
+                        │     │                   bind-mounted onto an arbitrary host path instead of the
+                        │     │                   intended container path.
+                        │     │                   ## Impact
+                        │     │                   A malicious container can redirect a volume bind mount to an
+                        │     │                   arbitrary host path. The impact depends on the volume content
+                        │     │                    and mount options:
+                        │     │                   - If the volume is writable, arbitrary host files at the
+                        │     │                   redirected path could be overwritten with the volume's
+                        │     │                   contents.
+                        │     │                   - If the volume is read-only, the host path is masked by the
+                        │     │                   mount for the duration of the operation, causing denial of
+                        │     │                   service.
+                        │     │                   - In all cases the mount is temporary (torn down after the
+                        │     │                   `docker cp` completes), but the effects of any writes
+                        │     │                   persist.
+                        │     │                   ### Conditions for exploitation
+                        │     │                   - A container must have at least one volume mount.
+                        │     │                   - A process inside the container must be able to rapidly
+                        │     │                   create and swap symlinks at the volume mount destination
+                        │     │                   path.
+                        │     │                   - An operator must initiate a `docker cp` into that
+                        │     │                   container, or call the `PUT /containers/{id}/archive` or
+                        │     │                   `HEAD /containers/{id}/archive` API endpoints.
+                        │     │                   ### Not affected
+                        │     │                   - Containers that do not have volume mounts are not affected,
+                        │     │                    as the race occurs during volume bind-mount setup.
+                        │     │                   ## Workarounds
+                        │     │                   - Only run containers from trusted images.
+                        │     │                   - Avoid using `docker cp` with untrusted running containers.
+                        │     │                   - Use authorization plugins to restrict access to the archive
+                        │     │                    API endpoints (`PUT /containers/{id}/archive`, `HEAD
+                        │     │                   /containers/{id}/archive`). 
+                        │     ├ Severity        : HIGH 
+                        │     ├ VendorSeverity   ─ ghsa: 3 
+                        │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:H/A:H 
+                        │     │                         ╰ V3Score : 7.2 
+                        │     ╰ References       ╭ [0]: https://github.com/moby/moby 
+                        │                        ╰ [1]: https://github.com/moby/moby/security/advisories/GHSA-r
+                        │                               g2x-37c3-w2rh 
+                        ├ [3] ╭ VulnerabilityID : CVE-2026-33997 
                         │     ├ VendorIDs        ─ [0]: GHSA-pxq6-2prw-chj9 
                         │     ├ PkgID           : github.com/docker/docker@v28.5.2+incompatible 
                         │     ├ PkgName         : github.com/docker/docker 
@@ -125,7 +280,98 @@
                         │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2026-33997 
                         │     ├ PublishedDate   : 2026-03-31T03:15:57.523Z 
                         │     ╰ LastModifiedDate: 2026-04-03T17:23:21.307Z 
-                        ╰ [2] ╭ VulnerabilityID : CVE-2026-39883 
+                        ├ [4] ╭ VulnerabilityID : CVE-2026-41568 
+                        │     ├ VendorIDs        ─ [0]: GHSA-vp62-88p7-qqf5 
+                        │     ├ PkgID           : github.com/docker/docker@v28.5.2+incompatible 
+                        │     ├ PkgName         : github.com/docker/docker 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v28.5.2%2Bincompat
+                        │     │                  │       ible 
+                        │     │                  ╰ UID : 574b64b426d7eeee 
+                        │     ├ InstalledVersion: v28.5.2+incompatible 
+                        │     ├ Status          : affected 
+                        │     ├ Layer            ╭ Digest: sha256:dacc8fbc217bf572b50fdbe0cb0393959d318c935ff38
+                        │     │                  │         1e7479b33773ed03271 
+                        │     │                  ╰ DiffID: sha256:f5818a2ef8955e255dc0cbd98454306b3fe72eaaa7737
+                        │     │                            e0b4ae1ea70b8da3926 
+                        │     ├ SeveritySource  : ghsa 
+                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-41568 
+                        │     ├ DataSource       ╭ ID  : ghsa 
+                        │     │                  ├ Name: GitHub Security Advisory Go 
+                        │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+                        │     │                          osystem%3Ago 
+                        │     ├ Fingerprint     : sha256:ab88afbb288780b056ac37aeb0f751160a89ddc502b04b61913c18
+                        │     │                   7bed726793 
+                        │     ├ Title           : Docker: Race condition in docker cp allows creation of
+                        │     │                   arbitrary empty files on the host via symlink swap 
+                        │     ├ Description     : ## Summary
+                        │     │                   
+                        │     │                   A race condition during `docker cp` mount setup allows a
+                        │     │                   malicious container to create empty files or directories at
+                        │     │                   arbitrary absolute paths on the host filesystem.
+                        │     │                   This advisory covers the race during mountpoint creation. The
+                        │     │                    related race during the subsequent mount syscall is tracked
+                        │     │                   in GHSA-rg2x-37c3-w2rh
+                        │     │                   ## Details
+                        │     │                   When copying files into a container, the daemon sets up a
+                        │     │                   temporary filesystem view by bind-mounting volumes into a
+                        │     │                   private mount namespace. During this setup, the mount
+                        │     │                   destination path is first resolved within the container's
+                        │     │                   root filesystem using `GetResourcePath`, and then used to
+                        │     │                   create the mountpoint (file or directory) if it does not
+                        │     │                   already exist via `createIfNotExists`.
+                        │     │                   Between path resolution and mountpoint creation, a process
+                        │     │                   running inside the container can swap a path component for a
+                        │     │                   symlink pointing to an arbitrary location on the host.
+                        │     │                   Because `createIfNotExists` operates on the already-resolved
+                        │     │                   absolute path using standard `os.MkdirAll` and `os.OpenFile`
+                        │     │                   — which follow symlinks in intermediate path components — the
+                        │     │                    symlink is followed and the file or directory is created
+                        │     │                   outside the container root filesystem, as root.
+                        │     │                   ## Impact
+                        │     │                   A malicious container can create empty files or directories
+                        │     │                   at arbitrary absolute paths on the host filesystem, running
+                        │     │                   as root. This enables persistent denial of service — for
+                        │     │                   example:
+                        │     │                   - Converting `/etc/docker/daemon.json` into a directory
+                        │     │                   prevents the daemon from restarting
+                        │     │                   - Creating `/etc/nologin` prevents user logins
+                        │     │                   - Overwriting critical system paths with empty files can
+                        │     │                   break host services
+                        │     │                   The container does not gain read or write access to existing
+                        │     │                   host files — only the ability to create new empty files or
+                        │     │                   directories at chosen paths.
+                        │     │                   ### Conditions for exploitation
+                        │     │                   - A container must be running with a process that can rapidly
+                        │     │                    create and swap symlinks at a volume mount destination
+                        │     │                   path.
+                        │     │                   - An operator must initiate a `docker cp` into that
+                        │     │                   container, or call the `PUT /containers/{id}/archive` or
+                        │     │                   `HEAD /containers/{id}/archive` API endpoints.
+                        │     │                   ### Not affected
+                        │     │                   - Containers that do not have volume mounts are not affected,
+                        │     │                    as the race occurs during volume bind-mount setup.
+                        │     │                   ## Patches
+                        │     │                   Mountpoint creation is now scoped to the container root using
+                        │     │                    `os.Root` (Go 1.24+), which refuses to follow symlinks that
+                        │     │                   escape the opened root directory. All filesystem operations
+                        │     │                   in `createIfNotExists` (`MkdirAll`, `OpenFile`) are performed
+                        │     │                    through the `os.Root` handle, so even if a symlink swap
+                        │     │                   occurs after path resolution, the creation stays confined to
+                        │     │                   the container root.
+                        │     │                   ## Workarounds
+                        │     │                   - Only run containers from trusted images.
+                        │     │                   - Avoid using `docker cp` with untrusted running containers.
+                        │     │                   - Use authorization plugins to restrict access to the archive
+                        │     │                    API endpoints (`PUT /containers/{id}/archive`, `HEAD
+                        │     │                   /containers/{id}/archive`). 
+                        │     ├ Severity        : MEDIUM 
+                        │     ├ VendorSeverity   ─ ghsa: 2 
+                        │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:L/A:H 
+                        │     │                         ╰ V3Score : 6 
+                        │     ╰ References       ╭ [0]: https://github.com/moby/moby 
+                        │                        ╰ [1]: https://github.com/moby/moby/security/advisories/GHSA-v
+                        │                               p62-88p7-qqf5 
+                        ╰ [5] ╭ VulnerabilityID : CVE-2026-39883 
                               ├ VendorIDs        ─ [0]: GHSA-hfvc-g4fc-pqhx 
                               ├ PkgID           : go.opentelemetry.io/otel/sdk@v1.42.0 
                               ├ PkgName         : go.opentelemetry.io/otel/sdk 
