@@ -4094,7 +4094,141 @@
                         │      ╰ References       ╭ [0]: https://github.com/go-git/go-git 
                         │                         ╰ [1]: https://github.com/go-git/go-git/security/advisories/G
                         │                                HSA-389r-gv7p-r3rp 
-                        ├ [3]  ╭ VulnerabilityID : CVE-2026-33811 
+                        ├ [3]  ╭ VulnerabilityID : CVE-2026-45571 
+                        │      ├ VendorIDs        ─ [0]: GHSA-crhj-59gh-8x96 
+                        │      ├ PkgID           : github.com/go-git/go-git/v5@v5.18.0 
+                        │      ├ PkgName         : github.com/go-git/go-git/v5 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/go-git/go-git/v5@v5.18.0 
+                        │      │                  ╰ UID : b52c0a8533699950 
+                        │      ├ InstalledVersion: v5.18.0 
+                        │      ├ FixedVersion    : 5.19.1 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+                        │      │                  │         681983635a9c1ff722b4 
+                        │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+                        │      │                            25428cc374c8321dfc38 
+                        │      ├ SeveritySource  : ghsa 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-45571 
+                        │      ├ DataSource       ╭ ID  : ghsa 
+                        │      │                  ├ Name: GitHub Security Advisory Go 
+                        │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+                        │      │                          cosystem%3Ago 
+                        │      ├ Fingerprint     : sha256:7648fc65506e72eae6efa1a432a83b691d2c25673a9f972d6930f
+                        │      │                   36330aedb0b 
+                        │      ├ Title           : go-git: Crafted repositories may modify main and submodule
+                        │      │                   .git directories 
+                        │      ├ Description     : ### Impact
+                        │      │                   A path validation issue in `go-git` could allow crafted
+                        │      │                   repository data to affect files outside the intended
+                        │      │                   checkout target, including the repository's `.git`
+                        │      │                   directory.
+                        │      │                   
+                        │      │                   These validations were introduced in upstream Git years ago,
+                        │      │                    so the vulnerability arose from go-git drifting from those
+                        │      │                   checks. Some attack vectors were platform-specific: certain
+                        │      │                   payloads affected only Windows users, others affected only
+                        │      │                   macOS users, and some applied across all supported
+                        │      │                   platforms.
+                        │      │                   Using non-descendant `go-billy` filesystem instances, or
+                        │      │                   different filesystem types, for the `Storer` and `Worktree`
+                        │      │                   may provide some isolation against `.git` directory
+                        │      │                   manipulation. For example, users that store the `.git`
+                        │      │                   directory through `memfs` while using `osfs` for the
+                        │      │                   worktree are not affected by this vulnerability in the main
+                        │      │                   repository, because repository metadata is not materialized
+                        │      │                   inside the worktree filesystem.
+                        │      │                   However, this isolation does not necessarily apply when the
+                        │      │                   repository contains submodules, since submodule dotgit
+                        │      │                   directories may still be represented or materialized within
+                        │      │                   the worktree context.
+                        │      │                   It is important to note that exploitation requires a
+                        │      │                   maliciously crafted repository payload. Users should always
+                        │      │                   exercise caution when interacting with repositories or Git
+                        │      │                   servers they do not trust.
+                        │      │                   ### Patches
+                        │      │                   Users should upgrade to a patched version in order to
+                        │      │                   mitigate this vulnerability. Versions prior to `v5` are
+                        │      │                   likely to be affected, users are recommended to upgrade to a
+                        │      │                    supported go-git version.
+                        │      │                   ### Credits
+                        │      │                   Thanks to @kodareef5, @AyushParkara and @N0zoM1z0 for
+                        │      │                   reporting this to the go-git project in three separate
+                        │      │                   reports. 🙇 
+                        │      ├ Severity        : MEDIUM 
+                        │      ├ VendorSeverity   ─ ghsa: 2 
+                        │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:L 
+                        │      │                         ╰ V3Score : 5.4 
+                        │      ╰ References       ╭ [0]: https://github.com/go-git/go-git 
+                        │                         ╰ [1]: https://github.com/go-git/go-git/security/advisories/G
+                        │                                HSA-crhj-59gh-8x96 
+                        ├ [4]  ╭ VulnerabilityID : CVE-2026-45570 
+                        │      ├ VendorIDs        ─ [0]: GHSA-m7cr-m3pv-hgrp 
+                        │      ├ PkgID           : github.com/go-git/go-git/v5@v5.18.0 
+                        │      ├ PkgName         : github.com/go-git/go-git/v5 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/go-git/go-git/v5@v5.18.0 
+                        │      │                  ╰ UID : b52c0a8533699950 
+                        │      ├ InstalledVersion: v5.18.0 
+                        │      ├ FixedVersion    : 5.19.1 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+                        │      │                  │         681983635a9c1ff722b4 
+                        │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+                        │      │                            25428cc374c8321dfc38 
+                        │      ├ SeveritySource  : ghsa 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-45570 
+                        │      ├ DataSource       ╭ ID  : ghsa 
+                        │      │                  ├ Name: GitHub Security Advisory Go 
+                        │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+                        │      │                          cosystem%3Ago 
+                        │      ├ Fingerprint     : sha256:9b55612d33a7072da730e272b21941712e9a9851224c6c3231c79
+                        │      │                   cf5538d37d5 
+                        │      ├ Title           : go-git: Improper single-quote escaping in go-git SSH transport 
+                        │      ├ Description     : ### Impact
+                        │      │                   
+                        │      │                   `go-git`'s SSH transport constructs the remote exec command
+                        │      │                   by wrapping the repository path in single quotes without
+                        │      │                   escaping single quotes embedded inside the path. This
+                        │      │                   diverges from canonical Git, which shell-quotes the path
+                        │      │                   through `sq_quote_buf` so that an embedded `'` becomes the
+                        │      │                   `'\''` close-escape-reopen sequence and the whole path
+                        │      │                   round-trips as a single quoted argument.
+                        │      │                   A repository path containing a single quote can therefore
+                        │      │                   break out of the quoted region in the exec command and be
+                        │      │                   appended as additional shell tokens. On SSH servers that
+                        │      │                   evaluate the exec command through a shell (for example a
+                        │      │                   user account whose login shell is `/bin/sh` or `/bin/bash`,
+                        │      │                   or a `ForceCommand` wrapper that re-evaluates
+                        │      │                   `$SSH_ORIGINAL_COMMAND`), those additional tokens execute in
+                        │      │                    that account's command-execution context. SSH servers that
+                        │      │                   tokenize the exec command without shell evaluation,
+                        │      │                   including the canonical `git-shell` setup, are not
+                        │      │                   affected.
+                        │      │                   The vulnerable behaviour is on the SSH server side, not in
+                        │      │                   `go-git`: the same bytes can be produced by any SSH client.
+                        │      │                   The change in `go-git` is defense-in-depth that restores
+                        │      │                   parity with canonical Git's wire format and prevents
+                        │      │                   `go-git` from being a vehicle for reaching shell-evaluating
+                        │      │                   servers through attacker-influenced repository paths.
+                        │      │                   ### Patches
+                        │      │                   Users should upgrade to a patched version in order to
+                        │      │                   mitigate this issue. The fix ports `sq_quote_buf` from
+                        │      │                   canonical Git into `go-git`'s SSH transport so that the wire
+                        │      │                    output is byte-identical to what `git` itself would send
+                        │      │                   for the same input.
+                        │      │                   Versions prior to `v5` are likely to be affected, users are
+                        │      │                   recommended to upgrade to a supported go-git version.
+                        │      │                   ### Credit
+                        │      │                   Thanks to @N0zoM1z0 for reporting this to the `go-git`
+                        │      │                   project. :bow: 
+                        │      ├ Severity        : LOW 
+                        │      ├ VendorSeverity   ─ ghsa: 1 
+                        │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI
+                        │      │                         │            :N/VA:N/SC:L/SI:L/SA:L 
+                        │      │                         ╰ V40Score : 2.3 
+                        │      ╰ References       ╭ [0]: https://github.com/go-git/go-git 
+                        │                         ╰ [1]: https://github.com/go-git/go-git/security/advisories/G
+                        │                                HSA-m7cr-m3pv-hgrp 
+                        ├ [5]  ╭ VulnerabilityID : CVE-2026-33811 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4981 
                         │      ├ PkgID           : stdlib@v1.26.2 
                         │      ├ PkgName         : stdlib 
@@ -4137,7 +4271,7 @@
                         │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4981 
                         │      ├ PublishedDate   : 2026-05-07T20:16:42.77Z 
                         │      ╰ LastModifiedDate: 2026-05-12T20:23:02.333Z 
-                        ├ [4]  ╭ VulnerabilityID : CVE-2026-33814 
+                        ├ [6]  ╭ VulnerabilityID : CVE-2026-33814 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4918 
                         │      ├ PkgID           : stdlib@v1.26.2 
                         │      ├ PkgName         : stdlib 
@@ -4181,7 +4315,7 @@
                         │      │                  ╰ [5]: https://pkg.go.dev/vuln/GO-2026-4918 
                         │      ├ PublishedDate   : 2026-05-07T20:16:42.88Z 
                         │      ╰ LastModifiedDate: 2026-05-13T14:41:59.52Z 
-                        ├ [5]  ╭ VulnerabilityID : CVE-2026-39820 
+                        ├ [7]  ╭ VulnerabilityID : CVE-2026-39820 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4986 
                         │      ├ PkgID           : stdlib@v1.26.2 
                         │      ├ PkgName         : stdlib 
@@ -4224,7 +4358,7 @@
                         │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4986 
                         │      ├ PublishedDate   : 2026-05-07T20:16:43.187Z 
                         │      ╰ LastModifiedDate: 2026-05-13T15:10:58.65Z 
-                        ├ [6]  ╭ VulnerabilityID : CVE-2026-39836 
+                        ├ [8]  ╭ VulnerabilityID : CVE-2026-39836 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4971 
                         │      ├ PkgID           : stdlib@v1.26.2 
                         │      ├ PkgName         : stdlib 
@@ -4266,7 +4400,7 @@
                         │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4971 
                         │      ├ PublishedDate   : 2026-05-07T20:16:43.593Z 
                         │      ╰ LastModifiedDate: 2026-05-13T15:11:10.31Z 
-                        ├ [7]  ╭ VulnerabilityID : CVE-2026-42499 
+                        ├ [9]  ╭ VulnerabilityID : CVE-2026-42499 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4977 
                         │      ├ PkgID           : stdlib@v1.26.2 
                         │      ├ PkgName         : stdlib 
@@ -4302,7 +4436,7 @@
                         │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4977 
                         │      ├ PublishedDate   : 2026-05-07T20:16:44.54Z 
                         │      ╰ LastModifiedDate: 2026-05-13T16:59:17.563Z 
-                        ├ [8]  ╭ VulnerabilityID : CVE-2026-39823 
+                        ├ [10] ╭ VulnerabilityID : CVE-2026-39823 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4982 
                         │      ├ PkgID           : stdlib@v1.26.2 
                         │      ├ PkgName         : stdlib 
@@ -4343,7 +4477,7 @@
                         │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4982 
                         │      ├ PublishedDate   : 2026-05-07T20:16:43.29Z 
                         │      ╰ LastModifiedDate: 2026-05-13T16:58:45.697Z 
-                        ├ [9]  ╭ VulnerabilityID : CVE-2026-39825 
+                        ├ [11] ╭ VulnerabilityID : CVE-2026-39825 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4976 
                         │      ├ PkgID           : stdlib@v1.26.2 
                         │      ├ PkgName         : stdlib 
@@ -4390,7 +4524,7 @@
                         │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-4976 
                         │      ├ PublishedDate   : 2026-05-07T20:16:43.39Z 
                         │      ╰ LastModifiedDate: 2026-05-13T16:58:56.39Z 
-                        ╰ [10] ╭ VulnerabilityID : CVE-2026-39826 
+                        ╰ [12] ╭ VulnerabilityID : CVE-2026-39826 
                                ├ VendorIDs        ─ [0]: GO-2026-4980 
                                ├ PkgID           : stdlib@v1.26.2 
                                ├ PkgName         : stdlib 
