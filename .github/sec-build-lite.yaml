@@ -18,15 +18,15 @@
     FixedVersion: 29.3.1
     Status: fixed
     Layer:
-      Digest: sha256:76fce8a8dbabc302b2cbf909201ee33e4af22b837fc8571ceb5e2f54758e3530
-      DiffID: sha256:a7aa0717c316a211cd5ac7d0377c59921e7f266feae2c3d488ee915c7f2519bd
+      Digest: sha256:8612006a3adaea7acd4ed19f9a8fa22d6b65624c28b2caed88430b9b98d97d0f
+      DiffID: sha256:929ba4237eac991ba05aad752b61b5bae93121a28fa50b69efe4ce44493acbcf
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-34040
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Fingerprint: sha256:4b115afd4f68415dc4ce7d58f6ff417750673998be6dfc0b115806bdccc0819c
+    Fingerprint: sha256:ad3dd90698b5ca7e09523d107a07a7cbec642284fc151beb70497222bd9a2ef2
     Title: 'Moby: Moby: Authorization bypass vulnerability'
     Description: Moby is an open source container framework. Prior to version 29.3.1, a security vulnerability has been detected that allows attackers to bypass authorization plugins (AuthZ). This issue has been patched in version 29.3.1.
     Severity: HIGH
@@ -71,15 +71,15 @@
     InstalledVersion: v28.5.2+incompatible
     Status: affected
     Layer:
-      Digest: sha256:76fce8a8dbabc302b2cbf909201ee33e4af22b837fc8571ceb5e2f54758e3530
-      DiffID: sha256:a7aa0717c316a211cd5ac7d0377c59921e7f266feae2c3d488ee915c7f2519bd
+      Digest: sha256:8612006a3adaea7acd4ed19f9a8fa22d6b65624c28b2caed88430b9b98d97d0f
+      DiffID: sha256:929ba4237eac991ba05aad752b61b5bae93121a28fa50b69efe4ce44493acbcf
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-41567
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Fingerprint: sha256:b692ff7f67d2fb32e1977259d8fab5683eb21fd6f54d8e19a085d046cf048a15
+    Fingerprint: sha256:ac9d1482d67d2a2aa0da8e2284ca747df22692a4c652be199c9b27b63d944fd2
     Title: 'Docker: `PUT /containers/{id}/archive` executes container binary on the host'
     Description: |-
       ## Summary
@@ -143,15 +143,15 @@
     InstalledVersion: v28.5.2+incompatible
     Status: affected
     Layer:
-      Digest: sha256:76fce8a8dbabc302b2cbf909201ee33e4af22b837fc8571ceb5e2f54758e3530
-      DiffID: sha256:a7aa0717c316a211cd5ac7d0377c59921e7f266feae2c3d488ee915c7f2519bd
+      Digest: sha256:8612006a3adaea7acd4ed19f9a8fa22d6b65624c28b2caed88430b9b98d97d0f
+      DiffID: sha256:929ba4237eac991ba05aad752b61b5bae93121a28fa50b69efe4ce44493acbcf
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-42306
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Fingerprint: sha256:3366e27a2651f5bf1e8a385a3c0337e7f6d3d9f78f10bc85d549dcd06698a239
+    Fingerprint: sha256:75f144bf2b6bb1bb1740c3a5348c32fce27f7603933a254dfce9b7c127790617
     Title: 'Docker: Race condition in docker cp allows bind mount redirection to host path'
     Description: |-
       ## Summary
@@ -209,15 +209,15 @@
     FixedVersion: 29.3.1
     Status: fixed
     Layer:
-      Digest: sha256:76fce8a8dbabc302b2cbf909201ee33e4af22b837fc8571ceb5e2f54758e3530
-      DiffID: sha256:a7aa0717c316a211cd5ac7d0377c59921e7f266feae2c3d488ee915c7f2519bd
+      Digest: sha256:8612006a3adaea7acd4ed19f9a8fa22d6b65624c28b2caed88430b9b98d97d0f
+      DiffID: sha256:929ba4237eac991ba05aad752b61b5bae93121a28fa50b69efe4ce44493acbcf
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33997
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Fingerprint: sha256:979a323a6b56a5ef8c359f0f703a8309fd0211f2c073b97bc0ff99b404538a05
+    Fingerprint: sha256:2c44f7bfc8bd31414e374857be159dd797cd2abe8fee113ba9bc6e42dc68d123
     Title: 'moby: docker: github.com/moby/moby: Moby: Privilege validation bypass during plugin installation'
     Description: Moby is an open source container framework. Prior to version 29.3.1, a security vulnerability has been detected that allows plugins privilege validation to be bypassed during docker plugin install. Due to an error in the daemon's privilege comparison logic, the daemon may incorrectly accept a privilege set that differs from the one approved by the user. Plugins that request exactly one privilege are also affected, because no comparison is performed at all. This issue has been patched in version 29.3.1.
     Severity: MEDIUM
@@ -261,15 +261,15 @@
     InstalledVersion: v28.5.2+incompatible
     Status: affected
     Layer:
-      Digest: sha256:76fce8a8dbabc302b2cbf909201ee33e4af22b837fc8571ceb5e2f54758e3530
-      DiffID: sha256:a7aa0717c316a211cd5ac7d0377c59921e7f266feae2c3d488ee915c7f2519bd
+      Digest: sha256:8612006a3adaea7acd4ed19f9a8fa22d6b65624c28b2caed88430b9b98d97d0f
+      DiffID: sha256:929ba4237eac991ba05aad752b61b5bae93121a28fa50b69efe4ce44493acbcf
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-41568
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Fingerprint: sha256:45a1fdd7b63f58cd8905ba3a4d5e57e64967d699fc8b354af4003f188db6bf39
+    Fingerprint: sha256:b1dc2991a0f3b25dec611689bae05e6e87a97db0a947de6d0d068536db39e58e
     Title: 'Docker: Race condition in docker cp allows creation of arbitrary empty files on the host via symlink swap'
     Description: |-
       ## Summary
@@ -334,15 +334,15 @@
     FixedVersion: 1.43.0
     Status: fixed
     Layer:
-      Digest: sha256:76fce8a8dbabc302b2cbf909201ee33e4af22b837fc8571ceb5e2f54758e3530
-      DiffID: sha256:a7aa0717c316a211cd5ac7d0377c59921e7f266feae2c3d488ee915c7f2519bd
+      Digest: sha256:8612006a3adaea7acd4ed19f9a8fa22d6b65624c28b2caed88430b9b98d97d0f
+      DiffID: sha256:929ba4237eac991ba05aad752b61b5bae93121a28fa50b69efe4ce44493acbcf
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39883
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Fingerprint: sha256:590db54ca5eb1d03237bb51d1ab975a5f8810e7c8d4bdb628b73ea9e13dbb71e
+    Fingerprint: sha256:29542223de934d47d25212ea1793ee5ccb0f252f77581e95200a87ea3fdb8713
     Title: 'opentelemetry-go: BSD kenv command not using absolute path enables PATH hijacking'
     Description: OpenTelemetry-Go is the Go implementation of OpenTelemetry. From 1.15.0 to 1.42.0, the fix for CVE-2026-24051 changed the Darwin ioreg command to use an absolute path but left the BSD kenv command using a bare name, allowing the same PATH hijacking attack on BSD and Solaris platforms. This vulnerability is fixed in 1.43.0.
     Severity: HIGH
