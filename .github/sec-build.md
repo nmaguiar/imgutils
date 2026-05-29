@@ -909,18 +909,20 @@
 │     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:9044 
 │     │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-25679 
 │     │      │                  ├ [2] : https://bugzilla.redhat.com/2445356 
-│     │      │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
-│     │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679 
-│     │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-9044.html 
-│     │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:9044 
-│     │      │                  ├ [7] : https://go.dev/cl/752180 
-│     │      │                  ├ [8] : https://go.dev/issue/77578 
-│     │      │                  ├ [9] : https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
-│     │      │                  ├ [10]: https://linux.oracle.com/cve/CVE-2026-25679.html 
-│     │      │                  ├ [11]: https://linux.oracle.com/errata/ELSA-2026-9044.html 
-│     │      │                  ├ [12]: https://nvd.nist.gov/vuln/detail/CVE-2026-25679 
-│     │      │                  ├ [13]: https://pkg.go.dev/vuln/GO-2026-4601 
-│     │      │                  ╰ [14]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
+│     │      │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2445345 
+│     │      │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
+│     │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679 
+│     │      │                  ├ [6] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27137 
+│     │      │                  ├ [7] : https://errata.almalinux.org/9/ALSA-2026-9044.html 
+│     │      │                  ├ [8] : https://errata.rockylinux.org/RLSA-2026:8842 
+│     │      │                  ├ [9] : https://go.dev/cl/752180 
+│     │      │                  ├ [10]: https://go.dev/issue/77578 
+│     │      │                  ├ [11]: https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk 
+│     │      │                  ├ [12]: https://linux.oracle.com/cve/CVE-2026-25679.html 
+│     │      │                  ├ [13]: https://linux.oracle.com/errata/ELSA-2026-9044.html 
+│     │      │                  ├ [14]: https://nvd.nist.gov/vuln/detail/CVE-2026-25679 
+│     │      │                  ├ [15]: https://pkg.go.dev/vuln/GO-2026-4601 
+│     │      │                  ╰ [16]: https://www.cve.org/CVERecord?id=CVE-2026-25679 
 │     │      ├ PublishedDate   : 2026-03-06T22:16:00.72Z 
 │     │      ╰ LastModifiedDate: 2026-04-21T14:43:03.8Z 
 │     ├ [10] ╭ VulnerabilityID : CVE-2026-32280 
@@ -970,19 +972,25 @@
 │     │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │     │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
 │     │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│     │      │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280 
-│     │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282 
-│     │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
-│     │      │                  ├ [16]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
-│     │      │                  ├ [17]: https://errata.rockylinux.org/RLSA-2026:14200 
-│     │      │                  ├ [18]: https://go.dev/cl/758320 
-│     │      │                  ├ [19]: https://go.dev/issue/78282 
-│     │      │                  ├ [20]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
-│     │      │                  ├ [21]: https://linux.oracle.com/cve/CVE-2026-32280.html 
-│     │      │                  ├ [22]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
-│     │      │                  ├ [23]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
-│     │      │                  ├ [24]: https://pkg.go.dev/vuln/GO-2026-4947 
-│     │      │                  ╰ [25]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
+│     │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2456340 
+│     │      │                  ├ [14]: https://bugzilla.redhat.com/show_bug.cgi?id=2456341 
+│     │      │                  ├ [15]: https://bugzilla.redhat.com/show_bug.cgi?id=2456342 
+│     │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27140 
+│     │      │                  ├ [17]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27143 
+│     │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27144 
+│     │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280 
+│     │      │                  ├ [20]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282 
+│     │      │                  ├ [21]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
+│     │      │                  ├ [22]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
+│     │      │                  ├ [23]: https://errata.rockylinux.org/RLSA-2026:10217 
+│     │      │                  ├ [24]: https://go.dev/cl/758320 
+│     │      │                  ├ [25]: https://go.dev/issue/78282 
+│     │      │                  ├ [26]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
+│     │      │                  ├ [27]: https://linux.oracle.com/cve/CVE-2026-32280.html 
+│     │      │                  ├ [28]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
+│     │      │                  ├ [29]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│     │      │                  ├ [30]: https://pkg.go.dev/vuln/GO-2026-4947 
+│     │      │                  ╰ [31]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
 │     │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
 │     │      ╰ LastModifiedDate: 2026-04-16T19:16:42.18Z 
 │     ├ [11] ╭ VulnerabilityID : CVE-2026-32281 
@@ -1091,20 +1099,18 @@
 │     │      │                  ├ [9] : https://bugzilla.redhat.com/2456339 
 │     │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │     │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│     │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│     │      │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280 
-│     │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282 
-│     │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
-│     │      │                  ├ [16]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
-│     │      │                  ├ [17]: https://errata.rockylinux.org/RLSA-2026:14200 
-│     │      │                  ├ [18]: https://go.dev/cl/763767 
-│     │      │                  ├ [19]: https://go.dev/issue/78334 
-│     │      │                  ├ [20]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
-│     │      │                  ├ [21]: https://linux.oracle.com/cve/CVE-2026-32283.html 
-│     │      │                  ├ [22]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│     │      │                  ├ [23]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-│     │      │                  ├ [24]: https://pkg.go.dev/vuln/GO-2026-4870 
-│     │      │                  ╰ [25]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
+│     │      │                  ├ [12]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282 
+│     │      │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
+│     │      │                  ├ [14]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
+│     │      │                  ├ [15]: https://errata.rockylinux.org/RLSA-2026:17075 
+│     │      │                  ├ [16]: https://go.dev/cl/763767 
+│     │      │                  ├ [17]: https://go.dev/issue/78334 
+│     │      │                  ├ [18]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
+│     │      │                  ├ [19]: https://linux.oracle.com/cve/CVE-2026-32283.html 
+│     │      │                  ├ [20]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│     │      │                  ├ [21]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│     │      │                  ├ [22]: https://pkg.go.dev/vuln/GO-2026-4870 
+│     │      │                  ╰ [23]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
 │     │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
 │     │      ╰ LastModifiedDate: 2026-04-16T19:12:10.54Z 
 │     ├ [13] ╭ VulnerabilityID : CVE-2026-33811 
@@ -1486,20 +1492,18 @@
 │     │      │                  ├ [9] : https://bugzilla.redhat.com/2456339 
 │     │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
 │     │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│     │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│     │      │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280 
-│     │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282 
-│     │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
-│     │      │                  ├ [16]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
-│     │      │                  ├ [17]: https://errata.rockylinux.org/RLSA-2026:14200 
-│     │      │                  ├ [18]: https://go.dev/cl/763761 
-│     │      │                  ├ [19]: https://go.dev/issue/78293 
-│     │      │                  ├ [20]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
-│     │      │                  ├ [21]: https://linux.oracle.com/cve/CVE-2026-32282.html 
-│     │      │                  ├ [22]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│     │      │                  ├ [23]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-│     │      │                  ├ [24]: https://pkg.go.dev/vuln/GO-2026-4864 
-│     │      │                  ╰ [25]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│     │      │                  ├ [12]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282 
+│     │      │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
+│     │      │                  ├ [14]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
+│     │      │                  ├ [15]: https://errata.rockylinux.org/RLSA-2026:17075 
+│     │      │                  ├ [16]: https://go.dev/cl/763761 
+│     │      │                  ├ [17]: https://go.dev/issue/78293 
+│     │      │                  ├ [18]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
+│     │      │                  ├ [19]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+│     │      │                  ├ [20]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│     │      │                  ├ [21]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│     │      │                  ├ [22]: https://pkg.go.dev/vuln/GO-2026-4864 
+│     │      │                  ╰ [23]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │     │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │     │      ╰ LastModifiedDate: 2026-04-16T19:15:39.4Z 
 │     ├ [23] ╭ VulnerabilityID : CVE-2026-32288 
@@ -1989,7 +1993,7 @@
 │     │     │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-52881 
 │     │     │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58183 
 │     │     │                  ├ [9] : https://errata.almalinux.org/9/ALSA-2025-22011.html 
-│     │     │                  ├ [10]: https://errata.rockylinux.org/RLSA-2025:22011 
+│     │     │                  ├ [10]: https://errata.rockylinux.org/RLSA-2025:22012 
 │     │     │                  ├ [11]: https://github.com/opencontainers/runc 
 │     │     │                  ├ [12]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.2/RELEASES.md 
 │     │     │                  ├ [13]: https://github.com/opencontainers/runc/commit/3f925525b44d247e390e529e77
@@ -2204,8 +2208,8 @@
 │           │                  ├ Name: GitHub Security Advisory Go 
 │           │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
 │           ├ Fingerprint     : sha256:0d71b6214e6a906e985ea139b29f48cf071bc16fc981cd7816dc0e12f946337a 
-│           ├ Title           : CVE-2026-29181 affecting package azurelinux-image-tools for versions less than
-│           │                   1.3.0-1 
+│           ├ Title           : github.com/open-telemetry/opentelemetry-go: OpenTelemetry-Go: Denial of Service
+│           │                    via crafted multi-value baggage headers 
 │           ├ Description     : OpenTelemetry-Go is the Go implementation of OpenTelemetry. From 1.36.0 to
 │           │                   1.40.0, multi-value baggage: header extraction parses each header field-value
 │           │                   independently and aggregates members across values. This allows an attacker to
@@ -2214,18 +2218,23 @@
 │           │                   vulnerability is fixed in 1.41.0. 
 │           ├ Severity        : HIGH 
 │           ├ CweIDs           ─ [0]: CWE-770 
-│           ├ VendorSeverity   ╭ azure: 2 
-│           │                  ╰ ghsa : 3 
-│           ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
-│           │                         ╰ V3Score : 7.5 
-│           ├ References       ╭ [0]: https://github.com/open-telemetry/opentelemetry-go 
-│           │                  ├ [1]: https://github.com/open-telemetry/opentelemetry-go/commit/aa1894e09e3fe66
+│           ├ VendorSeverity   ╭ azure : 2 
+│           │                  ├ ghsa  : 3 
+│           │                  ╰ redhat: 3 
+│           ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
+│           │                  │        ╰ V3Score : 7.5 
+│           │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
+│           │                           ╰ V3Score : 7.5 
+│           ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-29181 
+│           │                  ├ [1]: https://github.com/open-telemetry/opentelemetry-go 
+│           │                  ├ [2]: https://github.com/open-telemetry/opentelemetry-go/commit/aa1894e09e3fe66
 │           │                  │      860c7885cb40f98901b35277f 
-│           │                  ├ [2]: https://github.com/open-telemetry/opentelemetry-go/pull/7880 
-│           │                  ├ [3]: https://github.com/open-telemetry/opentelemetry-go/releases/tag/v1.41.0 
-│           │                  ├ [4]: https://github.com/open-telemetry/opentelemetry-go/security/advisories/GH
+│           │                  ├ [3]: https://github.com/open-telemetry/opentelemetry-go/pull/7880 
+│           │                  ├ [4]: https://github.com/open-telemetry/opentelemetry-go/releases/tag/v1.41.0 
+│           │                  ├ [5]: https://github.com/open-telemetry/opentelemetry-go/security/advisories/GH
 │           │                  │      SA-mh2q-q3fh-2475 
-│           │                  ╰ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-29181 
+│           │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-29181 
+│           │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2026-29181 
 │           ├ PublishedDate   : 2026-04-07T21:17:16.003Z 
 │           ╰ LastModifiedDate: 2026-04-14T18:45:01.363Z 
 ╰ [3] ╭ [0]  ╭ VulnerabilityID : CVE-2026-46680 
@@ -2314,38 +2323,26 @@
       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
       │      ├ Fingerprint     : sha256:244659151e24cc853dca81fe701c55a363fc0028ef87fae2401a21671eacdf76 
       │      ├ Title           : go-billy has path traversal vulnerabilities 
-      │      ├ Description     : ### Impact
-      │      │                   Multiple path traversal issues exist across different components of
-      │      │                   `go-billy`. Insufficient path sanitization and boundary enforcement may allow
-      │      │                   crafted paths (e.g., using `..`) to escape intended base directories.
-      │      │                   
-      │      │                   While go-billy was not originally designed to provide a strong security
-      │      │                   boundary, some of these issues were inconsistent across some of the built-in
-      │      │                   implementations. This results in scenarios where applications relying on
-      │      │                   `go-billy` for some level of isolation may inadvertently expose access to
-      │      │                   unintended filesystem locations.
-      │      │                   The `osfs.ChrootOS` implementation is notably affected by this vulnerability
-      │      │                   and is now deprecated in `v5`, removed at `v6`. Users are recommended to move
-      │      │                   on to `osfs.BoundOS` instead: `osfs.New(path, WithBoundOS())`.
-      │      │                   Users requiring stronger security boundary enforcement are recommended to
-      │      │                   upgrade to `v6`, where the `osfs` implementation are backed by the
-      │      │                   [traversal-resistant](https://go.dev/blog/osroot) primitive
-      │      │                   [os.Root](https://pkg.go.dev/os#Root).
-      │      │                   ### Patches
-      │      │                   Users should upgrade to a patched version in order to mitigate this
-      │      │                   vulnerability. Versions prior to `v5` are likely to be affected, users are
-      │      │                   recommended to upgrade to a supported `go-billy` version.
-      │      │                   ### Credits
-      │      │                   Thanks to @faran66 and @vnykmshr for finding and separately reporting this
-      │      │                   issue privately to the go-git project. 🙇 
+      │      ├ Description     : Billy is an interface filesystem abstraction for Go. Prior to 5.9.0, multiple
+      │      │                   path traversal issues exist across different components of go-billy.
+      │      │                   Insufficient path sanitization and boundary enforcement may allow crafted
+      │      │                   paths (e.g., using ..) to escape intended base directories. While go-billy was
+      │      │                    not originally designed to provide a strong security boundary, some of these
+      │      │                   issues were inconsistent across some of the built-in implementations. This
+      │      │                   results in scenarios where applications relying on go-billy for some level of
+      │      │                   isolation may inadvertently expose access to unintended filesystem locations.
+      │      │                   This vulnerability is fixed in 5.9.0. 
       │      ├ Severity        : HIGH 
+      │      ├ CweIDs           ─ [0]: CWE-22 
       │      ├ VendorSeverity   ─ ghsa: 3 
       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N 
       │      │                         ╰ V3Score : 8.1 
-      │      ╰ References       ╭ [0]: https://github.com/go-git/go-billy 
-      │                         ├ [1]: https://github.com/go-git/go-billy/releases/tag/v5.9.0 
-      │                         ├ [2]: https://github.com/go-git/go-billy/releases/tag/v6.0.0-alpha.1 
-      │                         ╰ [3]: https://github.com/go-git/go-billy/security/advisories/GHSA-qw64-3x98-g7q2 
+      │      ├ References       ╭ [0]: https://github.com/go-git/go-billy 
+      │      │                  ├ [1]: https://github.com/go-git/go-billy/releases/tag/v5.9.0 
+      │      │                  ├ [2]: https://github.com/go-git/go-billy/releases/tag/v6.0.0-alpha.1 
+      │      │                  ╰ [3]: https://github.com/go-git/go-billy/security/advisories/GHSA-qw64-3x98-g7q2 
+      │      ├ PublishedDate   : 2026-05-28T22:16:59.937Z 
+      │      ╰ LastModifiedDate: 2026-05-28T22:16:59.937Z 
       ├ [2]  ╭ VulnerabilityID : CVE-2026-44740 
       │      ├ VendorIDs        ─ [0]: GHSA-m3xc-h892-ggx6 
       │      ├ PkgID           : github.com/go-git/go-billy/v5@v5.8.0 
