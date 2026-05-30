@@ -16,18 +16,18 @@
                         │     ├ InstalledVersion: v28.5.2+incompatible 
                         │     ├ FixedVersion    : 29.3.1 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:8612006a3adaea7acd4ed19f9a8fa22d6b65624c28b2c
-                        │     │                  │         aed88430b9b98d97d0f 
-                        │     │                  ╰ DiffID: sha256:929ba4237eac991ba05aad752b61b5bae93121a28fa50
-                        │     │                            b69efe4ce44493acbcf 
+                        │     ├ Layer            ╭ Digest: sha256:c1fb1b0ff94c59b804de06a78bfd7ed76e0e92f8e2bad
+                        │     │                  │         ee48737fa1e6c61f91a 
+                        │     │                  ╰ DiffID: sha256:3a888aeec8d1b050141d462b5bb3ebad9a58c85fd316a
+                        │     │                            07f5afb38a096828ddc 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-34040 
                         │     ├ DataSource       ╭ ID  : ghsa 
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
                         │     │                          osystem%3Ago 
-                        │     ├ Fingerprint     : sha256:ad3dd90698b5ca7e09523d107a07a7cbec642284fc151beb704972
-                        │     │                   22bd9a2ef2 
+                        │     ├ Fingerprint     : sha256:cfb0c3e35a6e8db76c486829aa30f03289e4452f689394b22d3b16
+                        │     │                   ed2cda233f 
                         │     ├ Title           : Moby: Moby: Authorization bypass vulnerability 
                         │     ├ Description     : Moby is an open source container framework. Prior to version
                         │     │                   29.3.1, a security vulnerability has been detected that
@@ -73,18 +73,18 @@
                         │     │                  ╰ UID : 574b64b426d7eeee 
                         │     ├ InstalledVersion: v28.5.2+incompatible 
                         │     ├ Status          : affected 
-                        │     ├ Layer            ╭ Digest: sha256:8612006a3adaea7acd4ed19f9a8fa22d6b65624c28b2c
-                        │     │                  │         aed88430b9b98d97d0f 
-                        │     │                  ╰ DiffID: sha256:929ba4237eac991ba05aad752b61b5bae93121a28fa50
-                        │     │                            b69efe4ce44493acbcf 
+                        │     ├ Layer            ╭ Digest: sha256:c1fb1b0ff94c59b804de06a78bfd7ed76e0e92f8e2bad
+                        │     │                  │         ee48737fa1e6c61f91a 
+                        │     │                  ╰ DiffID: sha256:3a888aeec8d1b050141d462b5bb3ebad9a58c85fd316a
+                        │     │                            07f5afb38a096828ddc 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-41567 
                         │     ├ DataSource       ╭ ID  : ghsa 
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
                         │     │                          osystem%3Ago 
-                        │     ├ Fingerprint     : sha256:ac9d1482d67d2a2aa0da8e2284ca747df22692a4c652be199c9b27
-                        │     │                   b63d944fd2 
+                        │     ├ Fingerprint     : sha256:88a009633cda670a56da63a39923d4ed4b4ec9098e66618e7226ef
+                        │     │                   3fb604b88d 
                         │     ├ Title           : Docker: `PUT /containers/{id}/archive` executes container
                         │     │                   binary on the host 
                         │     ├ Description     : ## Summary
@@ -148,18 +148,18 @@
                         │     │                  ╰ UID : 574b64b426d7eeee 
                         │     ├ InstalledVersion: v28.5.2+incompatible 
                         │     ├ Status          : affected 
-                        │     ├ Layer            ╭ Digest: sha256:8612006a3adaea7acd4ed19f9a8fa22d6b65624c28b2c
-                        │     │                  │         aed88430b9b98d97d0f 
-                        │     │                  ╰ DiffID: sha256:929ba4237eac991ba05aad752b61b5bae93121a28fa50
-                        │     │                            b69efe4ce44493acbcf 
+                        │     ├ Layer            ╭ Digest: sha256:c1fb1b0ff94c59b804de06a78bfd7ed76e0e92f8e2bad
+                        │     │                  │         ee48737fa1e6c61f91a 
+                        │     │                  ╰ DiffID: sha256:3a888aeec8d1b050141d462b5bb3ebad9a58c85fd316a
+                        │     │                            07f5afb38a096828ddc 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42306 
                         │     ├ DataSource       ╭ ID  : ghsa 
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
                         │     │                          osystem%3Ago 
-                        │     ├ Fingerprint     : sha256:75f144bf2b6bb1bb1740c3a5348c32fce27f7603933a254dfce9b7
-                        │     │                   c127790617 
+                        │     ├ Fingerprint     : sha256:a5b61d27dd9f39e7354034e14bfe7802913b5b572ccb8ba11b5fc0
+                        │     │                   cec1098298 
                         │     ├ Title           : Docker: Race condition in docker cp allows bind mount
                         │     │                   redirection to host path 
                         │     ├ Description     : ## Summary
@@ -229,18 +229,18 @@
                         │     ├ InstalledVersion: v28.5.2+incompatible 
                         │     ├ FixedVersion    : 29.3.1 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:8612006a3adaea7acd4ed19f9a8fa22d6b65624c28b2c
-                        │     │                  │         aed88430b9b98d97d0f 
-                        │     │                  ╰ DiffID: sha256:929ba4237eac991ba05aad752b61b5bae93121a28fa50
-                        │     │                            b69efe4ce44493acbcf 
+                        │     ├ Layer            ╭ Digest: sha256:c1fb1b0ff94c59b804de06a78bfd7ed76e0e92f8e2bad
+                        │     │                  │         ee48737fa1e6c61f91a 
+                        │     │                  ╰ DiffID: sha256:3a888aeec8d1b050141d462b5bb3ebad9a58c85fd316a
+                        │     │                            07f5afb38a096828ddc 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-33997 
                         │     ├ DataSource       ╭ ID  : ghsa 
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
                         │     │                          osystem%3Ago 
-                        │     ├ Fingerprint     : sha256:2c44f7bfc8bd31414e374857be159dd797cd2abe8fee113ba9bc6e
-                        │     │                   42dc68d123 
+                        │     ├ Fingerprint     : sha256:3d27d60a1fc32887048fb035550f7da38c86164f6a5e8af06ff6bc
+                        │     │                   73592edf5b 
                         │     ├ Title           : moby: docker: github.com/moby/moby: Moby: Privilege
                         │     │                   validation bypass during plugin installation 
                         │     ├ Description     : Moby is an open source container framework. Prior to version
@@ -289,18 +289,18 @@
                         │     │                  ╰ UID : 574b64b426d7eeee 
                         │     ├ InstalledVersion: v28.5.2+incompatible 
                         │     ├ Status          : affected 
-                        │     ├ Layer            ╭ Digest: sha256:8612006a3adaea7acd4ed19f9a8fa22d6b65624c28b2c
-                        │     │                  │         aed88430b9b98d97d0f 
-                        │     │                  ╰ DiffID: sha256:929ba4237eac991ba05aad752b61b5bae93121a28fa50
-                        │     │                            b69efe4ce44493acbcf 
+                        │     ├ Layer            ╭ Digest: sha256:c1fb1b0ff94c59b804de06a78bfd7ed76e0e92f8e2bad
+                        │     │                  │         ee48737fa1e6c61f91a 
+                        │     │                  ╰ DiffID: sha256:3a888aeec8d1b050141d462b5bb3ebad9a58c85fd316a
+                        │     │                            07f5afb38a096828ddc 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-41568 
                         │     ├ DataSource       ╭ ID  : ghsa 
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
                         │     │                          osystem%3Ago 
-                        │     ├ Fingerprint     : sha256:b1dc2991a0f3b25dec611689bae05e6e87a97db0a947de6d0d0685
-                        │     │                   36db39e58e 
+                        │     ├ Fingerprint     : sha256:7630632abb20b37feab6a16b096521e3ab8aa5c9ab8e19ae4feb91
+                        │     │                   77f66d2f9b 
                         │     ├ Title           : Docker: Race condition in docker cp allows creation of
                         │     │                   arbitrary empty files on the host via symlink swap 
                         │     ├ Description     : ## Summary
@@ -380,18 +380,18 @@
                               ├ InstalledVersion: v1.42.0 
                               ├ FixedVersion    : 1.43.0 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:8612006a3adaea7acd4ed19f9a8fa22d6b65624c28b2c
-                              │                  │         aed88430b9b98d97d0f 
-                              │                  ╰ DiffID: sha256:929ba4237eac991ba05aad752b61b5bae93121a28fa50
-                              │                            b69efe4ce44493acbcf 
+                              ├ Layer            ╭ Digest: sha256:c1fb1b0ff94c59b804de06a78bfd7ed76e0e92f8e2bad
+                              │                  │         ee48737fa1e6c61f91a 
+                              │                  ╰ DiffID: sha256:3a888aeec8d1b050141d462b5bb3ebad9a58c85fd316a
+                              │                            07f5afb38a096828ddc 
                               ├ SeveritySource  : ghsa 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39883 
                               ├ DataSource       ╭ ID  : ghsa 
                               │                  ├ Name: GitHub Security Advisory Go 
                               │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
                               │                          osystem%3Ago 
-                              ├ Fingerprint     : sha256:29542223de934d47d25212ea1793ee5ccb0f252f77581e95200a87
-                              │                   ea3fdb8713 
+                              ├ Fingerprint     : sha256:02db3a3f720693e9b313f5f7a42f87902b8514533e4e14feffeeb9
+                              │                   1e93280cae 
                               ├ Title           : opentelemetry-go: BSD kenv command not using absolute path
                               │                   enables PATH hijacking 
                               ├ Description     : OpenTelemetry-Go is the Go implementation of OpenTelemetry.
