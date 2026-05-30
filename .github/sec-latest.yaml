@@ -774,7 +774,7 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:0528977b0da35f02535c3bd7d313649e59b3e382fce62386cee2ede21bb8232c
-    Title: A flaw was found in github.com/go-viper/mapstructure/v2, in the field  ...
+    Title: 'github.com/go-viper/mapstructure/v2: Go-viper''s mapstructure May Leak Sensitive Information in Logs in github.com/go-viper/mapstructure'
     Description: A flaw was found in github.com/go-viper/mapstructure/v2, in the field processing component using mapstructure.WeakDecode. This vulnerability allows information disclosure through detailed error messages that may leak sensitive input values via malformed user-supplied data processed in security-critical contexts.
     Severity: MEDIUM
     CweIDs:
@@ -784,8 +784,12 @@
       azure: 2
       cbl-mariner: 2
       ghsa: 2
+      redhat: 2
     CVSS:
       ghsa:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N
+        V3Score: 5.3
+      redhat:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N
         V3Score: 5.3
     References:
@@ -796,6 +800,7 @@
     - https://github.com/go-viper/mapstructure/security/advisories/GHSA-2464-8j7c-4cjm
     - https://nvd.nist.gov/vuln/detail/CVE-2025-11065
     - https://pkg.go.dev/vuln/GO-2025-3900
+    - https://www.cve.org/CVERecord?id=CVE-2025-11065
     PublishedDate: '2026-01-26T20:16:06.84Z'
     LastModifiedDate: '2026-04-15T00:35:42.02Z'
   - VulnerabilityID: GHSA-fv92-fjc5-jj9h
@@ -852,7 +857,7 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:cc48b21856d8730d6ae2b862a8b95cfdc455f56f985fa709183e0717462845b9
-    Title: The tokenizer incorrectly interprets tags with unquoted attribute valu ...
+    Title: 'golang.org/x/net/html: Incorrect Neutralization of Input During Web Page Generation in x/net in golang.org/x/net'
     Description: The tokenizer incorrectly interprets tags with unquoted attribute values that end with a solidus character (/) as self-closing. When directly using Tokenizer, this can result in such tags incorrectly being marked as self-closing, and when using the Parse functions, this can result in content following such tags as being placed in the wrong scope during DOM construction, but only when tags are in foreign content (e.g. <math>, <svg>, etc contexts).
     Severity: MEDIUM
     VendorSeverity:
@@ -860,13 +865,19 @@
       azure: 2
       cbl-mariner: 2
       ghsa: 2
+      redhat: 2
       ubuntu: 2
     CVSS:
       ghsa:
         V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N
         V40Score: 5.3
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:L
+        V3Score: 6.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-22872
     - https://github.com/TheDegenerateDev5150/net/commit/e1fcd82abba34df74614020343be8eb1fe85f0d9
+    - https://github.com/advisories/GHSA-vvgc-356p-c3xw
     - https://go.dev/cl/662715
     - https://go.dev/issue/73070
     - https://groups.google.com/g/golang-announce/c/ezSKR9vqbqA
@@ -1168,7 +1179,7 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:f1b14a73db1770e375948e5c146635441b56467f80a71912845d39e48219d0b2
-    Title: When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ...
+    Title: 'net: golang: Go net package: Denial of Service via long CNAME response in LookupCNAME'
     Description: When using LookupCNAME with the cgo DNS resolver, a very long CNAME response can trigger a double-free of C memory and a crash.
     Severity: HIGH
     CweIDs:
@@ -1177,6 +1188,7 @@
       amazon: 3
       bitnami: 3
       nvd: 3
+      redhat: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -1184,12 +1196,17 @@
       nvd:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-33811
     - https://go.dev/cl/767860
     - https://go.dev/issue/78803
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
     - https://nvd.nist.gov/vuln/detail/CVE-2026-33811
     - https://pkg.go.dev/vuln/GO-2026-4981
+    - https://www.cve.org/CVERecord?id=CVE-2026-33811
     PublishedDate: '2026-05-07T20:16:42.77Z'
     LastModifiedDate: '2026-05-12T20:23:02.333Z'
   - VulnerabilityID: CVE-2026-33814
@@ -1223,6 +1240,7 @@
       azure: 3
       bitnami: 3
       nvd: 3
+      ubuntu: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -1231,12 +1249,16 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
+    - https://github.com/golang/go/issues/78476
+    - https://go-review.googlesource.com/c/go/+/761581
+    - https://go-review.googlesource.com/c/net/+/761640
     - https://go.dev/cl/761581
     - https://go.dev/cl/761640
     - https://go.dev/issue/78476
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
     - https://nvd.nist.gov/vuln/detail/CVE-2026-33814
     - https://pkg.go.dev/vuln/GO-2026-4918
+    - https://www.cve.org/CVERecord?id=CVE-2026-33814
     PublishedDate: '2026-05-07T20:16:42.88Z'
     LastModifiedDate: '2026-05-13T14:41:59.52Z'
   - VulnerabilityID: CVE-2026-39820
@@ -2489,7 +2511,7 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:da1b04a181d028bb2abc4e28359547568c02e0c12711c087256fbe08a2214e8c
-    Title: When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ...
+    Title: 'net: golang: Go net package: Denial of Service via long CNAME response in LookupCNAME'
     Description: When using LookupCNAME with the cgo DNS resolver, a very long CNAME response can trigger a double-free of C memory and a crash.
     Severity: HIGH
     CweIDs:
@@ -2498,6 +2520,7 @@
       amazon: 3
       bitnami: 3
       nvd: 3
+      redhat: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -2505,12 +2528,17 @@
       nvd:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-33811
     - https://go.dev/cl/767860
     - https://go.dev/issue/78803
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
     - https://nvd.nist.gov/vuln/detail/CVE-2026-33811
     - https://pkg.go.dev/vuln/GO-2026-4981
+    - https://www.cve.org/CVERecord?id=CVE-2026-33811
     PublishedDate: '2026-05-07T20:16:42.77Z'
     LastModifiedDate: '2026-05-12T20:23:02.333Z'
   - VulnerabilityID: CVE-2026-33814
@@ -2544,6 +2572,7 @@
       azure: 3
       bitnami: 3
       nvd: 3
+      ubuntu: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -2552,12 +2581,16 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
+    - https://github.com/golang/go/issues/78476
+    - https://go-review.googlesource.com/c/go/+/761581
+    - https://go-review.googlesource.com/c/net/+/761640
     - https://go.dev/cl/761581
     - https://go.dev/cl/761640
     - https://go.dev/issue/78476
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
     - https://nvd.nist.gov/vuln/detail/CVE-2026-33814
     - https://pkg.go.dev/vuln/GO-2026-4918
+    - https://www.cve.org/CVERecord?id=CVE-2026-33814
     PublishedDate: '2026-05-07T20:16:42.88Z'
     LastModifiedDate: '2026-05-13T14:41:59.52Z'
   - VulnerabilityID: CVE-2026-39820
@@ -3323,7 +3356,7 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:b71190c63f6e2764978c3aa48d192af526445b1f694f60da67ee3c2528b73a67
-    Title: runc is a CLI tool for spawning and running containers according to th ...
+    Title: 'runc: opencontainers/selinux: container escape and denial of service due to arbitrary write gadgets and procfs write redirects'
     Description: runc is a CLI tool for spawning and running containers according to the OCI specification. In versions 1.2.7, 1.3.2 and 1.4.0-rc.2, an attacker can trick runc into misdirecting writes to /proc to other procfs files through the use of a racing container with shared mounts (we have also verified this attack is possible to exploit using a standard Dockerfile with docker buildx build as that also permits triggering parallel execution of containers with custom shared mounts configured). This redirect could be through symbolic links in a tmpfs or theoretically other methods such as regular bind-mounts. While similar, the mitigation applied for the related CVE, CVE-2019-19921, was fairly limited and effectively only caused runc to verify that when LSM labels are written they are actually procfs files. This issue is fixed in versions 1.2.8, 1.3.3, and 1.4.0-rc.3.
     Severity: HIGH
     CweIDs:
@@ -3338,6 +3371,7 @@
       nvd: 3
       oracle-oval: 3
       photon: 3
+      redhat: 3
       rocky: 3
       ubuntu: 3
     CVSS:
@@ -3347,10 +3381,14 @@
       nvd:
         V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H
         V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H
+        V3Score: 8.2
     References:
     - http://github.com/opencontainers/runc/commit/a41366e74080fa9f26a2cd3544e2801449697322
     - http://github.com/opencontainers/runc/commit/fdcc9d3cad2f85954a241ccb910a61aaa1ef47f3
     - https://access.redhat.com/errata/RHSA-2025:22011
+    - https://access.redhat.com/security/cve/CVE-2025-52881
     - https://bugzilla.redhat.com/2404715
     - https://bugzilla.redhat.com/2407258
     - https://bugzilla.redhat.com/show_bug.cgi?id=2404715
@@ -3414,7 +3452,7 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:6039a26fb0982dc8ef2c965214c2ca599f7406ddb1f098cd6c181ba40225b1b3
-    Title: Fulcio is a free-to-use certificate authority for issuing code signing ...
+    Title: 'github.com/sigstore/fulcio: Fulcio: Denial of Service via crafted OpenID Connect (OIDC) token'
     Description: Fulcio is a free-to-use certificate authority for issuing code signing certificates for an OpenID Connect (OIDC) identity. Prior to 1.8.3, function identity.extractIssuerURL splits (via a call to strings.Split) its argument (which is untrusted data) on periods. As a result, in the face of a malicious request with an (invalid) OIDC identity token in the payload containing many period characters, a call to extractIssuerURL incurs allocations to the tune of O(n) bytes (where n stands for the length of the function's argument), with a constant factor of about 16. This vulnerability is fixed in 1.8.3.
     Severity: HIGH
     CweIDs:
@@ -3422,15 +3460,21 @@
     VendorSeverity:
       amazon: 2
       ghsa: 3
+      redhat: 3
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2025-66506
     - https://github.com/sigstore/fulcio
     - https://github.com/sigstore/fulcio/commit/765a0e57608b9ef390e1eeeea8595b9054c63a5a
     - https://github.com/sigstore/fulcio/security/advisories/GHSA-f83f-xpx7-ffpw
     - https://nvd.nist.gov/vuln/detail/CVE-2025-66506
+    - https://www.cve.org/CVERecord?id=CVE-2025-66506
     PublishedDate: '2025-12-04T22:15:49.503Z'
     LastModifiedDate: '2026-03-10T19:30:53.47Z'
   - VulnerabilityID: CVE-2026-22772
@@ -3672,7 +3716,7 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:7713aba8b441d5640190c3741ff7f0034b0a85e80cd4883271ddb3c206ef8fec
-    Title: go-billy has path traversal vulnerabilities
+    Title: Billy is an interface filesystem abstraction for Go. Prior to 5.9.0, m ...
     Description: Billy is an interface filesystem abstraction for Go. Prior to 5.9.0, multiple path traversal issues exist across different components of go-billy. Insufficient path sanitization and boundary enforcement may allow crafted paths (e.g., using ..) to escape intended base directories. While go-billy was not originally designed to provide a strong security boundary, some of these issues were inconsistent across some of the built-in implementations. This results in scenarios where applications relying on go-billy for some level of isolation may inadvertently expose access to unintended filesystem locations. This vulnerability is fixed in 5.9.0.
     Severity: HIGH
     CweIDs:
@@ -3689,7 +3733,7 @@
     - https://github.com/go-git/go-billy/releases/tag/v6.0.0-alpha.1
     - https://github.com/go-git/go-billy/security/advisories/GHSA-qw64-3x98-g7q2
     PublishedDate: '2026-05-28T22:16:59.937Z'
-    LastModifiedDate: '2026-05-28T22:16:59.937Z'
+    LastModifiedDate: '2026-05-29T16:32:14.4Z'
   - VulnerabilityID: CVE-2026-44740
     VendorIDs:
     - GHSA-m3xc-h892-ggx6
@@ -3772,7 +3816,7 @@
     - https://github.com/go-git/go-git
     - https://github.com/go-git/go-git/security/advisories/GHSA-389r-gv7p-r3rp
     PublishedDate: '2026-05-27T15:16:29.98Z'
-    LastModifiedDate: '2026-05-27T15:16:29.98Z'
+    LastModifiedDate: '2026-05-29T15:42:56.873Z'
   - VulnerabilityID: CVE-2026-45571
     VendorIDs:
     - GHSA-crhj-59gh-8x96
@@ -3809,7 +3853,54 @@
     - https://github.com/go-git/go-git
     - https://github.com/go-git/go-git/security/advisories/GHSA-crhj-59gh-8x96
     PublishedDate: '2026-05-27T15:16:30.387Z'
-    LastModifiedDate: '2026-05-27T15:16:30.387Z'
+    LastModifiedDate: '2026-05-29T15:42:56.873Z'
+  - VulnerabilityID: GHSA-w5pp-99ch-qj29
+    PkgID: github.com/go-git/go-git/v5@v5.18.0
+    PkgName: github.com/go-git/go-git/v5
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/go-git/go-git/v5@v5.18.0
+      UID: b52c0a8533699950
+    InstalledVersion: v5.18.0
+    FixedVersion: 5.19.1
+    Status: fixed
+    Layer:
+      Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2681983635a9c1ff722b4
+      DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f79125428cc374c8321dfc38
+    SeveritySource: ghsa
+    PrimaryURL: https://github.com/advisories/GHSA-w5pp-99ch-qj29
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Fingerprint: sha256:653e472535c71f5d14f3f97196455ff45aa3dccbcd96c809d6c91e5094957027
+    Title: 'go-git: Malformed Git object data may cause panics or resource exhaustion'
+    Description: |-
+      ### Impact
+      Several denial-of-service issues were identified in `go-git` when parsing maliciously crafted Git repository data.
+
+      An attacker may craft a malicious `.pack`, `.idx` or loose objects that causes an application using an affected version of `go-git` to panic or consume excessive resources.
+
+      This can lead to denial of service in applications that use `go-git` to clone, fetch, open, or otherwise process untrusted repositories or Git object data.
+
+      Exploitation requires the ability to alter read-only files such as `.pack` or `.idx` from the local repository's `.git/objects/pack/` directory. Alternatively, the user would need to be interacting with a malicious remote server, which is not recommended and exposes users to a broader class of security risks beyond this issue.
+
+      ### Patches
+      Users should upgrade to a patched version in order to mitigate this vulnerability. Versions prior to `v5` are likely to be affected, users are recommended to upgrade to a supported `go-git` version.
+
+      ### Credits
+      go-git thanks @kodareef5, @AyushParkara and @N0zoM1z0 for reporting this in four separate reports. 🙇
+    Severity: MEDIUM
+    VendorSeverity:
+      ghsa: 2
+    CVSS:
+      ghsa:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+        V3Score: 6.5
+    References:
+    - https://github.com/go-git/go-git
+    - https://github.com/go-git/go-git/security/advisories/GHSA-w5pp-99ch-qj29
+    PublishedDate: '2026-05-29T19:43:27Z'
+    LastModifiedDate: '2026-05-29T19:43:27Z'
   - VulnerabilityID: CVE-2026-45570
     VendorIDs:
     - GHSA-m7cr-m3pv-hgrp
@@ -3846,7 +3937,7 @@
     - https://github.com/go-git/go-git
     - https://github.com/go-git/go-git/security/advisories/GHSA-m7cr-m3pv-hgrp
     PublishedDate: '2026-05-27T15:16:30.24Z'
-    LastModifiedDate: '2026-05-27T15:16:30.24Z'
+    LastModifiedDate: '2026-05-29T15:42:56.873Z'
   - VulnerabilityID: CVE-2026-33811
     VendorIDs:
     - GO-2026-4981
@@ -3868,7 +3959,7 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:37acf8d70229e3a9694c36f8a14b5f30400d3fb494e4e37d0f9141a7df82c6db
-    Title: When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ...
+    Title: 'net: golang: Go net package: Denial of Service via long CNAME response in LookupCNAME'
     Description: When using LookupCNAME with the cgo DNS resolver, a very long CNAME response can trigger a double-free of C memory and a crash.
     Severity: HIGH
     CweIDs:
@@ -3877,6 +3968,7 @@
       amazon: 3
       bitnami: 3
       nvd: 3
+      redhat: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -3884,12 +3976,17 @@
       nvd:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-33811
     - https://go.dev/cl/767860
     - https://go.dev/issue/78803
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
     - https://nvd.nist.gov/vuln/detail/CVE-2026-33811
     - https://pkg.go.dev/vuln/GO-2026-4981
+    - https://www.cve.org/CVERecord?id=CVE-2026-33811
     PublishedDate: '2026-05-07T20:16:42.77Z'
     LastModifiedDate: '2026-05-12T20:23:02.333Z'
   - VulnerabilityID: CVE-2026-33814
@@ -3923,6 +4020,7 @@
       azure: 3
       bitnami: 3
       nvd: 3
+      ubuntu: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -3931,12 +4029,16 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
+    - https://github.com/golang/go/issues/78476
+    - https://go-review.googlesource.com/c/go/+/761581
+    - https://go-review.googlesource.com/c/net/+/761640
     - https://go.dev/cl/761581
     - https://go.dev/cl/761640
     - https://go.dev/issue/78476
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
     - https://nvd.nist.gov/vuln/detail/CVE-2026-33814
     - https://pkg.go.dev/vuln/GO-2026-4918
+    - https://www.cve.org/CVERecord?id=CVE-2026-33814
     PublishedDate: '2026-05-07T20:16:42.88Z'
     LastModifiedDate: '2026-05-13T14:41:59.52Z'
   - VulnerabilityID: CVE-2026-39820
