@@ -371,50 +371,147 @@
                         │     ╰ References       ╭ [0]: https://github.com/moby/moby 
                         │                        ╰ [1]: https://github.com/moby/moby/security/advisories/GHSA-v
                         │                               p62-88p7-qqf5 
-                        ╰ [5] ╭ VulnerabilityID : CVE-2026-39883 
-                              ├ VendorIDs        ─ [0]: GHSA-hfvc-g4fc-pqhx 
-                              ├ PkgID           : go.opentelemetry.io/otel/sdk@v1.42.0 
-                              ├ PkgName         : go.opentelemetry.io/otel/sdk 
-                              ├ PkgIdentifier    ╭ PURL: pkg:golang/go.opentelemetry.io/otel/sdk@v1.42.0 
-                              │                  ╰ UID : 77f73fc145fb5169 
-                              ├ InstalledVersion: v1.42.0 
-                              ├ FixedVersion    : 1.43.0 
+                        ├ [5] ╭ VulnerabilityID : CVE-2026-39883 
+                        │     ├ VendorIDs        ─ [0]: GHSA-hfvc-g4fc-pqhx 
+                        │     ├ PkgID           : go.opentelemetry.io/otel/sdk@v1.42.0 
+                        │     ├ PkgName         : go.opentelemetry.io/otel/sdk 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/go.opentelemetry.io/otel/sdk@v1.42.0 
+                        │     │                  ╰ UID : 77f73fc145fb5169 
+                        │     ├ InstalledVersion: v1.42.0 
+                        │     ├ FixedVersion    : 1.43.0 
+                        │     ├ Status          : fixed 
+                        │     ├ Layer            ╭ Digest: sha256:dacc8fbc217bf572b50fdbe0cb0393959d318c935ff38
+                        │     │                  │         1e7479b33773ed03271 
+                        │     │                  ╰ DiffID: sha256:f5818a2ef8955e255dc0cbd98454306b3fe72eaaa7737
+                        │     │                            e0b4ae1ea70b8da3926 
+                        │     ├ SeveritySource  : ghsa 
+                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39883 
+                        │     ├ DataSource       ╭ ID  : ghsa 
+                        │     │                  ├ Name: GitHub Security Advisory Go 
+                        │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+                        │     │                          osystem%3Ago 
+                        │     ├ Fingerprint     : sha256:801aed090f82867dda83a2f01e361e13657fc36aa5dbadb4782820
+                        │     │                   76586d14ad 
+                        │     ├ Title           : opentelemetry-go: BSD kenv command not using absolute path
+                        │     │                   enables PATH hijacking 
+                        │     ├ Description     : OpenTelemetry-Go is the Go implementation of OpenTelemetry.
+                        │     │                   From 1.15.0 to 1.42.0, the fix for CVE-2026-24051 changed the
+                        │     │                    Darwin ioreg command to use an absolute path but left the
+                        │     │                   BSD kenv command using a bare name, allowing the same PATH
+                        │     │                   hijacking attack on BSD and Solaris platforms. This
+                        │     │                   vulnerability is fixed in 1.43.0. 
+                        │     ├ Severity        : HIGH 
+                        │     ├ CweIDs           ─ [0]: CWE-426 
+                        │     ├ VendorSeverity   ╭ ghsa: 3 
+                        │     │                  ╰ nvd : 3 
+                        │     ├ CVSS             ╭ ghsa ╭ V40Vector: CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:H/VI:
+                        │     │                  │      │            H/VA:H/SC:N/SI:N/SA:N 
+                        │     │                  │      ╰ V40Score : 7.3 
+                        │     │                  ╰ nvd  ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H 
+                        │     │                         ╰ V3Score : 7 
+                        │     ├ References       ╭ [0]: http://github.com/open-telemetry/opentelemetry-go/relea
+                        │     │                  │      ses/tag/v1.43.0 
+                        │     │                  ├ [1]: https://github.com/open-telemetry/opentelemetry-go 
+                        │     │                  ├ [2]: https://github.com/open-telemetry/opentelemetry-go/secu
+                        │     │                  │      rity/advisories/GHSA-hfvc-g4fc-pqhx 
+                        │     │                  ╰ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-39883 
+                        │     ├ PublishedDate   : 2026-04-08T21:17:00.697Z 
+                        │     ╰ LastModifiedDate: 2026-04-10T21:16:27.12Z 
+                        ├ [6] ╭ VulnerabilityID : CVE-2026-27145 
+                        │     ├ VendorIDs        ─ [0]: GO-2026-5037 
+                        │     ├ PkgID           : stdlib@v1.26.3 
+                        │     ├ PkgName         : stdlib 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.26.3 
+                        │     │                  ╰ UID : d70a4c65b1ff5c43 
+                        │     ├ InstalledVersion: v1.26.3 
+                        │     ├ FixedVersion    : 1.25.11, 1.26.4 
+                        │     ├ Status          : fixed 
+                        │     ├ Layer            ╭ Digest: sha256:dacc8fbc217bf572b50fdbe0cb0393959d318c935ff38
+                        │     │                  │         1e7479b33773ed03271 
+                        │     │                  ╰ DiffID: sha256:f5818a2ef8955e255dc0cbd98454306b3fe72eaaa7737
+                        │     │                            e0b4ae1ea70b8da3926 
+                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-27145 
+                        │     ├ DataSource       ╭ ID  : govulndb 
+                        │     │                  ├ Name: The Go Vulnerability Database 
+                        │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │     ├ Fingerprint     : sha256:e94b07403b2b69c2980720acadf5a2d21c699015498d9d670c7256
+                        │     │                   43715d1797 
+                        │     ├ Title           : Inefficient candidate hostname parsing in crypto/x509 
+                        │     ├ Description     : (*x509.Certificate).VerifyHostname previously called
+                        │     │                   matchHostnames in a loop over all DNS Subject Alternative
+                        │     │                   Name (SAN) entries. This caused strings.Split(host, ".") to
+                        │     │                   execute repeatedly on the same input hostname. With a large
+                        │     │                   DNS SAN list, verification costs scaled quadratically based
+                        │     │                   on the number of SAN entries multiplied by the hostname's
+                        │     │                   label count. Because x509.Verify validates hostnames before
+                        │     │                   building the certificate chain, this overhead occurred even
+                        │     │                   for untrusted certificates. 
+                        │     ├ Severity        : UNKNOWN 
+                        │     ├ References       ╭ [0]: https://go.dev/cl/783621 
+                        │     │                  ├ [1]: https://go.dev/issue/79694 
+                        │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw 
+                        │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-5037 
+                        │     ├ PublishedDate   : 2026-06-02T23:16:35.57Z 
+                        │     ╰ LastModifiedDate: 2026-06-02T23:16:35.57Z 
+                        ├ [7] ╭ VulnerabilityID : CVE-2026-42504 
+                        │     ├ VendorIDs        ─ [0]: GO-2026-5038 
+                        │     ├ PkgID           : stdlib@v1.26.3 
+                        │     ├ PkgName         : stdlib 
+                        │     ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.26.3 
+                        │     │                  ╰ UID : d70a4c65b1ff5c43 
+                        │     ├ InstalledVersion: v1.26.3 
+                        │     ├ FixedVersion    : 1.25.11, 1.26.4 
+                        │     ├ Status          : fixed 
+                        │     ├ Layer            ╭ Digest: sha256:dacc8fbc217bf572b50fdbe0cb0393959d318c935ff38
+                        │     │                  │         1e7479b33773ed03271 
+                        │     │                  ╰ DiffID: sha256:f5818a2ef8955e255dc0cbd98454306b3fe72eaaa7737
+                        │     │                            e0b4ae1ea70b8da3926 
+                        │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42504 
+                        │     ├ DataSource       ╭ ID  : govulndb 
+                        │     │                  ├ Name: The Go Vulnerability Database 
+                        │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │     ├ Fingerprint     : sha256:fccdf513dce7fd86c2e82409984c14b62e4bfcd1092a25b399881b
+                        │     │                   29456df2ca 
+                        │     ├ Title           : Quadratic complexity in WordDecoder.DecodeHeader in mime 
+                        │     ├ Description     : Decoding a maliciously-crafted MIME header containing many
+                        │     │                   invalid encoded-words can consume excessive CPU. 
+                        │     ├ Severity        : UNKNOWN 
+                        │     ├ References       ╭ [0]: https://go.dev/cl/774481 
+                        │     │                  ├ [1]: https://go.dev/issue/79217 
+                        │     │                  ├ [2]: https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw 
+                        │     │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-5038 
+                        │     ├ PublishedDate   : 2026-06-02T23:16:37.927Z 
+                        │     ╰ LastModifiedDate: 2026-06-02T23:16:37.927Z 
+                        ╰ [8] ╭ VulnerabilityID : CVE-2026-42507 
+                              ├ VendorIDs        ─ [0]: GO-2026-5039 
+                              ├ PkgID           : stdlib@v1.26.3 
+                              ├ PkgName         : stdlib 
+                              ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.26.3 
+                              │                  ╰ UID : d70a4c65b1ff5c43 
+                              ├ InstalledVersion: v1.26.3 
+                              ├ FixedVersion    : 1.25.11, 1.26.4 
                               ├ Status          : fixed 
                               ├ Layer            ╭ Digest: sha256:dacc8fbc217bf572b50fdbe0cb0393959d318c935ff38
                               │                  │         1e7479b33773ed03271 
                               │                  ╰ DiffID: sha256:f5818a2ef8955e255dc0cbd98454306b3fe72eaaa7737
                               │                            e0b4ae1ea70b8da3926 
-                              ├ SeveritySource  : ghsa 
-                              ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39883 
-                              ├ DataSource       ╭ ID  : ghsa 
-                              │                  ├ Name: GitHub Security Advisory Go 
-                              │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
-                              │                          osystem%3Ago 
-                              ├ Fingerprint     : sha256:801aed090f82867dda83a2f01e361e13657fc36aa5dbadb4782820
-                              │                   76586d14ad 
-                              ├ Title           : opentelemetry-go: BSD kenv command not using absolute path
-                              │                   enables PATH hijacking 
-                              ├ Description     : OpenTelemetry-Go is the Go implementation of OpenTelemetry.
-                              │                   From 1.15.0 to 1.42.0, the fix for CVE-2026-24051 changed the
-                              │                    Darwin ioreg command to use an absolute path but left the
-                              │                   BSD kenv command using a bare name, allowing the same PATH
-                              │                   hijacking attack on BSD and Solaris platforms. This
-                              │                   vulnerability is fixed in 1.43.0. 
-                              ├ Severity        : HIGH 
-                              ├ CweIDs           ─ [0]: CWE-426 
-                              ├ VendorSeverity   ╭ ghsa: 3 
-                              │                  ╰ nvd : 3 
-                              ├ CVSS             ╭ ghsa ╭ V40Vector: CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:H/VI:
-                              │                  │      │            H/VA:H/SC:N/SI:N/SA:N 
-                              │                  │      ╰ V40Score : 7.3 
-                              │                  ╰ nvd  ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H 
-                              │                         ╰ V3Score : 7 
-                              ├ References       ╭ [0]: http://github.com/open-telemetry/opentelemetry-go/relea
-                              │                  │      ses/tag/v1.43.0 
-                              │                  ├ [1]: https://github.com/open-telemetry/opentelemetry-go 
-                              │                  ├ [2]: https://github.com/open-telemetry/opentelemetry-go/secu
-                              │                  │      rity/advisories/GHSA-hfvc-g4fc-pqhx 
-                              │                  ╰ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-39883 
-                              ├ PublishedDate   : 2026-04-08T21:17:00.697Z 
-                              ╰ LastModifiedDate: 2026-04-10T21:16:27.12Z 
+                              ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42507 
+                              ├ DataSource       ╭ ID  : govulndb 
+                              │                  ├ Name: The Go Vulnerability Database 
+                              │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                              ├ Fingerprint     : sha256:4b6bbaadebfc13aa5fe0a9a110a5f943b0ccefee9550abf310bf80
+                              │                   2c978aaaa5 
+                              ├ Title           : Arbitrary inputs are included in errors without any escaping
+                              │                   in net/textproto 
+                              ├ Description     : When returning errors, functions in the net/textproto package
+                              │                    would include its input as part of the error. This might
+                              │                   allow an attacker to inject misleading content to errors that
+                              │                    are printed or logged. 
+                              ├ Severity        : UNKNOWN 
+                              ├ References       ╭ [0]: https://go.dev/cl/777060 
+                              │                  ├ [1]: https://go.dev/issue/79346 
+                              │                  ├ [2]: https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw 
+                              │                  ╰ [3]: https://pkg.go.dev/vuln/GO-2026-5039 
+                              ├ PublishedDate   : 2026-06-02T23:16:38.027Z 
+                              ╰ LastModifiedDate: 2026-06-02T23:16:38.027Z 
 ```
