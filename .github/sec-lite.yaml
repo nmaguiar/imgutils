@@ -365,3 +365,93 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2026-39883
     PublishedDate: '2026-04-08T21:17:00.697Z'
     LastModifiedDate: '2026-04-10T21:16:27.12Z'
+  - VulnerabilityID: CVE-2026-27145
+    VendorIDs:
+    - GO-2026-5037
+    PkgID: stdlib@v1.26.3
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.3
+      UID: d70a4c65b1ff5c43
+    InstalledVersion: v1.26.3
+    FixedVersion: 1.25.11, 1.26.4
+    Status: fixed
+    Layer:
+      Digest: sha256:dacc8fbc217bf572b50fdbe0cb0393959d318c935ff381e7479b33773ed03271
+      DiffID: sha256:f5818a2ef8955e255dc0cbd98454306b3fe72eaaa7737e0b4ae1ea70b8da3926
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-27145
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:e94b07403b2b69c2980720acadf5a2d21c699015498d9d670c725643715d1797
+    Title: Inefficient candidate hostname parsing in crypto/x509
+    Description: (*x509.Certificate).VerifyHostname previously called matchHostnames in a loop over all DNS Subject Alternative Name (SAN) entries. This caused strings.Split(host, ".") to execute repeatedly on the same input hostname. With a large DNS SAN list, verification costs scaled quadratically based on the number of SAN entries multiplied by the hostname's label count. Because x509.Verify validates hostnames before building the certificate chain, this overhead occurred even for untrusted certificates.
+    Severity: UNKNOWN
+    References:
+    - https://go.dev/cl/783621
+    - https://go.dev/issue/79694
+    - https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw
+    - https://pkg.go.dev/vuln/GO-2026-5037
+    PublishedDate: '2026-06-02T23:16:35.57Z'
+    LastModifiedDate: '2026-06-02T23:16:35.57Z'
+  - VulnerabilityID: CVE-2026-42504
+    VendorIDs:
+    - GO-2026-5038
+    PkgID: stdlib@v1.26.3
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.3
+      UID: d70a4c65b1ff5c43
+    InstalledVersion: v1.26.3
+    FixedVersion: 1.25.11, 1.26.4
+    Status: fixed
+    Layer:
+      Digest: sha256:dacc8fbc217bf572b50fdbe0cb0393959d318c935ff381e7479b33773ed03271
+      DiffID: sha256:f5818a2ef8955e255dc0cbd98454306b3fe72eaaa7737e0b4ae1ea70b8da3926
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-42504
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:fccdf513dce7fd86c2e82409984c14b62e4bfcd1092a25b399881b29456df2ca
+    Title: Quadratic complexity in WordDecoder.DecodeHeader in mime
+    Description: Decoding a maliciously-crafted MIME header containing many invalid encoded-words can consume excessive CPU.
+    Severity: UNKNOWN
+    References:
+    - https://go.dev/cl/774481
+    - https://go.dev/issue/79217
+    - https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw
+    - https://pkg.go.dev/vuln/GO-2026-5038
+    PublishedDate: '2026-06-02T23:16:37.927Z'
+    LastModifiedDate: '2026-06-02T23:16:37.927Z'
+  - VulnerabilityID: CVE-2026-42507
+    VendorIDs:
+    - GO-2026-5039
+    PkgID: stdlib@v1.26.3
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.3
+      UID: d70a4c65b1ff5c43
+    InstalledVersion: v1.26.3
+    FixedVersion: 1.25.11, 1.26.4
+    Status: fixed
+    Layer:
+      Digest: sha256:dacc8fbc217bf572b50fdbe0cb0393959d318c935ff381e7479b33773ed03271
+      DiffID: sha256:f5818a2ef8955e255dc0cbd98454306b3fe72eaaa7737e0b4ae1ea70b8da3926
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-42507
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:4b6bbaadebfc13aa5fe0a9a110a5f943b0ccefee9550abf310bf802c978aaaa5
+    Title: Arbitrary inputs are included in errors without any escaping in net/textproto
+    Description: When returning errors, functions in the net/textproto package would include its input as part of the error. This might allow an attacker to inject misleading content to errors that are printed or logged.
+    Severity: UNKNOWN
+    References:
+    - https://go.dev/cl/777060
+    - https://go.dev/issue/79346
+    - https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw
+    - https://pkg.go.dev/vuln/GO-2026-5039
+    PublishedDate: '2026-06-02T23:16:38.027Z'
+    LastModifiedDate: '2026-06-02T23:16:38.027Z'
