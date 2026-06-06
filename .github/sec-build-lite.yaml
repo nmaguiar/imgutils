@@ -18,15 +18,15 @@
     FixedVersion: 29.3.1
     Status: fixed
     Layer:
-      Digest: sha256:c1fb1b0ff94c59b804de06a78bfd7ed76e0e92f8e2badee48737fa1e6c61f91a
-      DiffID: sha256:3a888aeec8d1b050141d462b5bb3ebad9a58c85fd316a07f5afb38a096828ddc
+      Digest: sha256:e9a556d85b6330b002a6282840b2938cde5b22e340b697575d7a5b365dcd6010
+      DiffID: sha256:32cc1c216d1df9bf1e0ec94afec624a438e1bf81be4167ce34e724af626b52ce
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-34040
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Fingerprint: sha256:cfb0c3e35a6e8db76c486829aa30f03289e4452f689394b22d3b16ed2cda233f
+    Fingerprint: sha256:80f07269e9019aac67f77de469186c153efebfcfedf221ea127608cf92277d1c
     Title: 'Moby: Moby: Authorization bypass vulnerability'
     Description: Moby is an open source container framework. Prior to version 29.3.1, a security vulnerability has been detected that allows attackers to bypass authorization plugins (AuthZ). This issue has been patched in version 29.3.1.
     Severity: HIGH
@@ -71,58 +71,20 @@
     InstalledVersion: v28.5.2+incompatible
     Status: affected
     Layer:
-      Digest: sha256:c1fb1b0ff94c59b804de06a78bfd7ed76e0e92f8e2badee48737fa1e6c61f91a
-      DiffID: sha256:3a888aeec8d1b050141d462b5bb3ebad9a58c85fd316a07f5afb38a096828ddc
+      Digest: sha256:e9a556d85b6330b002a6282840b2938cde5b22e340b697575d7a5b365dcd6010
+      DiffID: sha256:32cc1c216d1df9bf1e0ec94afec624a438e1bf81be4167ce34e724af626b52ce
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-41567
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Fingerprint: sha256:88a009633cda670a56da63a39923d4ed4b4ec9098e66618e7226ef3fb604b88d
+    Fingerprint: sha256:4974136562fe9530230a8436711a684d9f1cb8fc6e561e11f5ab5ff97dd4682d
     Title: 'Docker: `PUT /containers/{id}/archive` executes container binary on the host'
-    Description: |-
-      ## Summary
-
-      When a user uploads a compressed archive into a container, a malicious image can execute arbitrary code with daemon (host root) privileges.
-
-      ## Details
-
-      When handling `PUT /containers/{id}/archive` requests with compressed archives, the daemon decompresses them using external system binaries. Due to incorrect ordering of operations, these binaries are resolved from the container's filesystem rather than the host's. A container image that includes a trojanized decompression binary can achieve code execution as the daemon process whenever a compressed archive is uploaded to that container.
-
-      The executed binary runs with the daemon's full privileges, including host root UID and unrestricted capabilities.
-
-      ## Impact
-
-      Arbitrary code execution as host root, crossing the container-to-host trust boundary.
-
-      ### Conditions for exploitation
-
-      - A user must run a container from a malicious image that contains a trojanized decompression binary.
-      - The user must then upload a compressed archive (xz or gzip) into that container, either by piping a compressed archive via `docker cp -` or by calling the `PUT /containers/{id}/archive` API directly with compressed content.
-
-      ### Not affected
-
-      Standard `docker cp` usage is **not** affected, because the CLI sends uncompressed tar by default:
-
-      ```
-      docker cp ./file.txt mycontainer:/file.txt
-      ```
-
-      This can only be exploited when explicitly passing a xz or gzip-compressed archive to `docker cp` or the `PUT /containers/{id}/archive` API, for example:
-
-      ```
-      cat archive.tar.xz | docker cp - mycontainer:/dir
-      ```
-
-      Decompression formats using pure Go implementations (bzip2, zstd, and gzip when the container image does not contain an `unpigz` binary) are also not affected.
-
-      ## Workarounds
-
-      - Only run containers from trusted images.
-      - Use authorization plugins to limit access to the `PUT /containers/{id}/archive` endpoint.
-      - Avoid piping compressed archives into containers created from untrusted images.
+    Description: Moby is an open source container framework. In versions prior to 29.5.1 and in moby/moby v2 prior to v2.0.0-beta.14, when a compressed archive is uploaded to a container via `PUT /containers/{id}/archive` or piped through `docker cp -`, the daemon resolves decompression binaries (such as `xz` or `unpigz`) from the container's filesystem rather than the host's due to incorrect ordering of operations. A malicious container image containing a trojanized decompression binary can achieve arbitrary code execution with full daemon privileges, including host root UID and unrestricted capabilities, when a user uploads a compressed (xz or gzip) archive into that container. This issue is fixed in Docker Engine 29.5.1 and moby/moby v2.0.0-beta.14. Workarounds include only running containers from trusted images, using authorization plugins to restrict access to the `PUT /containers/{id}/archive` endpoint, and avoiding piping compressed archives into containers created from untrusted images
     Severity: HIGH
+    CweIDs:
+    - CWE-427
     VendorSeverity:
       ghsa: 3
     CVSS:
@@ -132,6 +94,8 @@
     References:
     - https://github.com/moby/moby
     - https://github.com/moby/moby/security/advisories/GHSA-x86f-5xw2-fm2r
+    PublishedDate: '2026-06-05T02:17:13.817Z'
+    LastModifiedDate: '2026-06-05T16:01:30.983Z'
   - VulnerabilityID: CVE-2026-42306
     VendorIDs:
     - GHSA-rg2x-37c3-w2rh
@@ -143,15 +107,15 @@
     InstalledVersion: v28.5.2+incompatible
     Status: affected
     Layer:
-      Digest: sha256:c1fb1b0ff94c59b804de06a78bfd7ed76e0e92f8e2badee48737fa1e6c61f91a
-      DiffID: sha256:3a888aeec8d1b050141d462b5bb3ebad9a58c85fd316a07f5afb38a096828ddc
+      Digest: sha256:e9a556d85b6330b002a6282840b2938cde5b22e340b697575d7a5b365dcd6010
+      DiffID: sha256:32cc1c216d1df9bf1e0ec94afec624a438e1bf81be4167ce34e724af626b52ce
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-42306
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Fingerprint: sha256:a5b61d27dd9f39e7354034e14bfe7802913b5b572ccb8ba11b5fc0cec1098298
+    Fingerprint: sha256:31a52aac965bba0131e70d770ae6cd83071aa967e830fd6ed915e59c2cd85003
     Title: 'Docker: Race condition in docker cp allows bind mount redirection to host path'
     Description: |-
       ## Summary
@@ -209,15 +173,15 @@
     FixedVersion: 29.3.1
     Status: fixed
     Layer:
-      Digest: sha256:c1fb1b0ff94c59b804de06a78bfd7ed76e0e92f8e2badee48737fa1e6c61f91a
-      DiffID: sha256:3a888aeec8d1b050141d462b5bb3ebad9a58c85fd316a07f5afb38a096828ddc
+      Digest: sha256:e9a556d85b6330b002a6282840b2938cde5b22e340b697575d7a5b365dcd6010
+      DiffID: sha256:32cc1c216d1df9bf1e0ec94afec624a438e1bf81be4167ce34e724af626b52ce
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33997
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Fingerprint: sha256:3d27d60a1fc32887048fb035550f7da38c86164f6a5e8af06ff6bc73592edf5b
+    Fingerprint: sha256:c6a09d97dff334f868552b9510f33cfe9958df99961041ab722ba9c7db1e1388
     Title: 'moby: docker: github.com/moby/moby: Moby: Privilege validation bypass during plugin installation'
     Description: Moby is an open source container framework. Prior to version 29.3.1, a security vulnerability has been detected that allows plugins privilege validation to be bypassed during docker plugin install. Due to an error in the daemon's privilege comparison logic, the daemon may incorrectly accept a privilege set that differs from the one approved by the user. Plugins that request exactly one privilege are also affected, because no comparison is performed at all. This issue has been patched in version 29.3.1.
     Severity: MEDIUM
@@ -261,15 +225,15 @@
     InstalledVersion: v28.5.2+incompatible
     Status: affected
     Layer:
-      Digest: sha256:c1fb1b0ff94c59b804de06a78bfd7ed76e0e92f8e2badee48737fa1e6c61f91a
-      DiffID: sha256:3a888aeec8d1b050141d462b5bb3ebad9a58c85fd316a07f5afb38a096828ddc
+      Digest: sha256:e9a556d85b6330b002a6282840b2938cde5b22e340b697575d7a5b365dcd6010
+      DiffID: sha256:32cc1c216d1df9bf1e0ec94afec624a438e1bf81be4167ce34e724af626b52ce
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-41568
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Fingerprint: sha256:7630632abb20b37feab6a16b096521e3ab8aa5c9ab8e19ae4feb9177f66d2f9b
+    Fingerprint: sha256:6206992f9c0f5de41d05935a3bedacab211bb5282b996092fa6ddb4ec25a7594
     Title: 'Docker: Race condition in docker cp allows creation of arbitrary empty files on the host via symlink swap'
     Description: |-
       ## Summary
@@ -334,15 +298,15 @@
     FixedVersion: 1.43.0
     Status: fixed
     Layer:
-      Digest: sha256:c1fb1b0ff94c59b804de06a78bfd7ed76e0e92f8e2badee48737fa1e6c61f91a
-      DiffID: sha256:3a888aeec8d1b050141d462b5bb3ebad9a58c85fd316a07f5afb38a096828ddc
+      Digest: sha256:e9a556d85b6330b002a6282840b2938cde5b22e340b697575d7a5b365dcd6010
+      DiffID: sha256:32cc1c216d1df9bf1e0ec94afec624a438e1bf81be4167ce34e724af626b52ce
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39883
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Fingerprint: sha256:02db3a3f720693e9b313f5f7a42f87902b8514533e4e14feffeeb91e93280cae
+    Fingerprint: sha256:494ba0e84e80712672ab8cc9fdee61e61054805d2ddc319e15d1a5f69143ae1d
     Title: 'opentelemetry-go: BSD kenv command not using absolute path enables PATH hijacking'
     Description: OpenTelemetry-Go is the Go implementation of OpenTelemetry. From 1.15.0 to 1.42.0, the fix for CVE-2026-24051 changed the Darwin ioreg command to use an absolute path but left the BSD kenv command using a bare name, allowing the same PATH hijacking attack on BSD and Solaris platforms. This vulnerability is fixed in 1.43.0.
     Severity: HIGH
@@ -365,36 +329,6 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2026-39883
     PublishedDate: '2026-04-08T21:17:00.697Z'
     LastModifiedDate: '2026-04-10T21:16:27.12Z'
-  - VulnerabilityID: CVE-2026-27145
-    VendorIDs:
-    - GO-2026-5037
-    PkgID: stdlib@v1.26.3
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.3
-      UID: d70a4c65b1ff5c43
-    InstalledVersion: v1.26.3
-    FixedVersion: 1.25.11, 1.26.4
-    Status: fixed
-    Layer:
-      Digest: sha256:c1fb1b0ff94c59b804de06a78bfd7ed76e0e92f8e2badee48737fa1e6c61f91a
-      DiffID: sha256:3a888aeec8d1b050141d462b5bb3ebad9a58c85fd316a07f5afb38a096828ddc
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-27145
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:22fa6a87f1fc1c3c9f2c939a1722dc7bf5a29614efac8ed170275254bb554158
-    Title: Inefficient candidate hostname parsing in crypto/x509
-    Description: (*x509.Certificate).VerifyHostname previously called matchHostnames in a loop over all DNS Subject Alternative Name (SAN) entries. This caused strings.Split(host, ".") to execute repeatedly on the same input hostname. With a large DNS SAN list, verification costs scaled quadratically based on the number of SAN entries multiplied by the hostname's label count. Because x509.Verify validates hostnames before building the certificate chain, this overhead occurred even for untrusted certificates.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/783621
-    - https://go.dev/issue/79694
-    - https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw
-    - https://pkg.go.dev/vuln/GO-2026-5037
-    PublishedDate: '2026-06-02T23:16:35.57Z'
-    LastModifiedDate: '2026-06-02T23:16:35.57Z'
   - VulnerabilityID: CVE-2026-42504
     VendorIDs:
     - GO-2026-5038
@@ -407,24 +341,70 @@
     FixedVersion: 1.25.11, 1.26.4
     Status: fixed
     Layer:
-      Digest: sha256:c1fb1b0ff94c59b804de06a78bfd7ed76e0e92f8e2badee48737fa1e6c61f91a
-      DiffID: sha256:3a888aeec8d1b050141d462b5bb3ebad9a58c85fd316a07f5afb38a096828ddc
+      Digest: sha256:e9a556d85b6330b002a6282840b2938cde5b22e340b697575d7a5b365dcd6010
+      DiffID: sha256:32cc1c216d1df9bf1e0ec94afec624a438e1bf81be4167ce34e724af626b52ce
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-42504
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:171f9032df7985bac453b0518034e2334395be07045a2370c35fb7bc6c346e3c
-    Title: Quadratic complexity in WordDecoder.DecodeHeader in mime
+    Fingerprint: sha256:fc6cd2cf50d89b3c374b3646804501425a8037474e4073b2ae6317deafee8cfc
+    Title: Decoding a maliciously-crafted MIME header containing many invalid enc ...
     Description: Decoding a maliciously-crafted MIME header containing many invalid encoded-words can consume excessive CPU.
-    Severity: UNKNOWN
+    Severity: HIGH
+    CweIDs:
+    - CWE-407
+    VendorSeverity:
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
     - https://go.dev/cl/774481
     - https://go.dev/issue/79217
     - https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-42504
     - https://pkg.go.dev/vuln/GO-2026-5038
     PublishedDate: '2026-06-02T23:16:37.927Z'
-    LastModifiedDate: '2026-06-02T23:16:37.927Z'
+    LastModifiedDate: '2026-06-04T16:15:50.143Z'
+  - VulnerabilityID: CVE-2026-27145
+    VendorIDs:
+    - GO-2026-5037
+    PkgID: stdlib@v1.26.3
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.3
+      UID: d70a4c65b1ff5c43
+    InstalledVersion: v1.26.3
+    FixedVersion: 1.25.11, 1.26.4
+    Status: fixed
+    Layer:
+      Digest: sha256:e9a556d85b6330b002a6282840b2938cde5b22e340b697575d7a5b365dcd6010
+      DiffID: sha256:32cc1c216d1df9bf1e0ec94afec624a438e1bf81be4167ce34e724af626b52ce
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-27145
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:de637fa45e406b9bb86532ac8d05d6bb5e3145886f1104b5e1a06791ab2535e1
+    Title: '*x509.Certificate).VerifyHostname previously called matchHostnames in ...'
+    Description: (*x509.Certificate).VerifyHostname previously called matchHostnames in a loop over all DNS Subject Alternative Name (SAN) entries. This caused strings.Split(host, ".") to execute repeatedly on the same input hostname. With a large DNS SAN list, verification costs scaled quadratically based on the number of SAN entries multiplied by the hostname's label count. Because x509.Verify validates hostnames before building the certificate chain, this overhead occurred even for untrusted certificates.
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:H
+        V3Score: 6.5
+    References:
+    - https://go.dev/cl/783621
+    - https://go.dev/issue/79694
+    - https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-27145
+    - https://pkg.go.dev/vuln/GO-2026-5037
+    PublishedDate: '2026-06-02T23:16:35.57Z'
+    LastModifiedDate: '2026-06-04T16:15:50.143Z'
   - VulnerabilityID: CVE-2026-42507
     VendorIDs:
     - GO-2026-5039
@@ -437,21 +417,28 @@
     FixedVersion: 1.25.11, 1.26.4
     Status: fixed
     Layer:
-      Digest: sha256:c1fb1b0ff94c59b804de06a78bfd7ed76e0e92f8e2badee48737fa1e6c61f91a
-      DiffID: sha256:3a888aeec8d1b050141d462b5bb3ebad9a58c85fd316a07f5afb38a096828ddc
+      Digest: sha256:e9a556d85b6330b002a6282840b2938cde5b22e340b697575d7a5b365dcd6010
+      DiffID: sha256:32cc1c216d1df9bf1e0ec94afec624a438e1bf81be4167ce34e724af626b52ce
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-42507
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:555cd6c19b475c2e008cf094701c556910c66cf151d7479c02696e636e1950de
-    Title: Arbitrary inputs are included in errors without any escaping in net/textproto
+    Fingerprint: sha256:f44cfc212a4ca6a7c89dd69d761827c3d9895982817d5abfd47dceec1641b674
+    Title: When returning errors, functions in the net/textproto package would in ...
     Description: When returning errors, functions in the net/textproto package would include its input as part of the error. This might allow an attacker to inject misleading content to errors that are printed or logged.
-    Severity: UNKNOWN
+    Severity: MEDIUM
+    VendorSeverity:
+      bitnami: 2
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
+        V3Score: 5.3
     References:
     - https://go.dev/cl/777060
     - https://go.dev/issue/79346
     - https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-42507
     - https://pkg.go.dev/vuln/GO-2026-5039
     PublishedDate: '2026-06-02T23:16:38.027Z'
-    LastModifiedDate: '2026-06-02T23:16:38.027Z'
+    LastModifiedDate: '2026-06-04T16:15:50.143Z'
