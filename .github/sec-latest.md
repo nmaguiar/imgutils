@@ -2,10 +2,341 @@
 ╭ [0] ╭ Target: nmaguiar/imgutils:latest (alpine 3.24.0_alpha20260127) 
 │     ├ Class : os-pkgs 
 │     ╰ Type  : alpine 
-├ [1] ╭ Target  : Java 
-│     ├ Class   : lang-pkgs 
-│     ├ Type    : jar 
-│     ╰ Packages 
+├ [1] ╭ Target         : Java 
+│     ├ Class          : lang-pkgs 
+│     ├ Type           : jar 
+│     ├ Packages        
+│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2026-47244 
+│                       │     ├ VendorIDs        ─ [0]: GHSA-5x3r-wrvg-rp6q 
+│                       │     ├ PkgName         : io.netty:netty-codec-http2 
+│                       │     ├ PkgPath         : openaf/Kube/netty-codec-http2-4.2.13.Final.jar 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-codec-http2@4.2.13.Final 
+│                       │     │                  ╰ UID : 9a8774d6243b7ed4 
+│                       │     ├ InstalledVersion: 4.2.13.Final 
+│                       │     ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae26
+│                       │     │                  │         81983635a9c1ff722b4 
+│                       │     │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f7912
+│                       │     │                            5428cc374c8321dfc38 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-47244 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Maven 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Amaven 
+│                       │     ├ Fingerprint     : sha256:58b7896124c068e91597290b1693ae867b53c618dfc2d751db285a
+│                       │     │                   596f8f9b2f 
+│                       │     ├ Title           : Netty HTTP/2: Advertised MAX_CONCURRENT_STREAMS are not
+│                       │     │                   enforced 
+│                       │     ├ Description     : ### Impact
+│                       │     │                   DefaultHttp2Connection.DefaultEndpoint initialises
+│                       │     │                   maxActiveStreams/maxStreams to Integer.MAX_VALUE, and
+│                       │     │                   Http2Settings never inserts SETTINGS_MAX_CONCURRENT_STREAMS
+│                       │     │                   by default (Http2Settings.java:305-307 only clamps a
+│                       │     │                   user-supplied value). Unless the application explicitly calls
+│                       │     │                    initialSettings().maxConcurrentStreams(n), a Netty HTTP/2
+│                       │     │                   server advertises no limit and enforces none locally. Each
+│                       │     │                   open stream allocates a DefaultStream object, PropertyMap
+│                       │     │                   slots, flow-controller state and IntObjectHashMap entry; with
+│                       │     │                    ~2^30 permissible odd stream IDs a single TCP connection can
+│                       │     │                    create hundreds of thousands of long-lived stream objects.
+│                       │     │                   This is also the precondition for CVE-2023-44487-style
+│                       │     │                   Rapid-Reset amplification, where the absence of a low
+│                       │     │                   concurrent cap multiplies backend work.
+│                       │     │                   
+│                       │     │                   ### Resources
+│                       │     │                   https://www.rfc-editor.org/rfc/rfc7540.html#section-6.5.2 
+│                       │     ├ Severity        : MEDIUM 
+│                       │     ├ VendorSeverity   ─ ghsa: 2 
+│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L 
+│                       │     │                         ╰ V3Score : 5.3 
+│                       │     ╰ References       ╭ [0]: https://github.com/netty/netty 
+│                       │                        ├ [1]: https://github.com/netty/netty/releases/tag/netty-4.1.1
+│                       │                        │      35.Final 
+│                       │                        ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.2.1
+│                       │                        │      5.Final 
+│                       │                        ╰ [3]: https://github.com/netty/netty/security/advisories/GHSA
+│                       │                               -5x3r-wrvg-rp6q 
+│                       ├ [1] ╭ VulnerabilityID : CVE-2026-44249 
+│                       │     ├ VendorIDs        ─ [0]: GHSA-3qp7-7mw8-wx86 
+│                       │     ├ PkgName         : io.netty:netty-handler 
+│                       │     ├ PkgPath         : openaf/Kube/netty-handler-4.2.13.Final.jar 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-handler@4.2.13.Final 
+│                       │     │                  ╰ UID : 4752ddcaf5c03525 
+│                       │     ├ InstalledVersion: 4.2.13.Final 
+│                       │     ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae26
+│                       │     │                  │         81983635a9c1ff722b4 
+│                       │     │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f7912
+│                       │     │                            5428cc374c8321dfc38 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-44249 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Maven 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Amaven 
+│                       │     ├ Fingerprint     : sha256:1fef38b5486639c0918ecc92d4b0c7852bf77106f79155f9253eb6
+│                       │     │                   33b6cf4f20 
+│                       │     ├ Title           : Netty has an IPv6 Subnet Filter Bypass via Incorrect
+│                       │     │                   Comparator Masking 
+│                       │     ├ Description     : ### Summary
+│                       │     │                   An attacker can bypass IPv6 subnet rules due to an incorrect
+│                       │     │                   masking operation in IpSubnetFilterRule.compareTo(). Valid
+│                       │     │                   public IP addresses can bypass the restrictions.
+│                       │     │                   
+│                       │     │                   ### Details
+│                       │     │                   `io.netty.handler.ipfilter.IpSubnetFilterRule#compareTo(java.
+│                       │     │                   net.InetSocketAddress)` method performs a bitwise AND between
+│                       │     │                    the incoming IP address and the configured networkAddress,
+│                       │     │                   instead of the subnetMask.
+│                       │     │                   ### Impact
+│                       │     │                   Access Control Bypass. Attacker can bypass IpSubnetFilter
+│                       │     │                   IPv6 access controls. 
+│                       │     ├ Severity        : HIGH 
+│                       │     ├ VendorSeverity   ─ ghsa: 3 
+│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H 
+│                       │     │                         ╰ V3Score : 8.1 
+│                       │     ╰ References       ╭ [0]: https://github.com/netty/netty 
+│                       │                        ├ [1]: https://github.com/netty/netty/releases/tag/netty-4.1.1
+│                       │                        │      35.Final 
+│                       │                        ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.2.1
+│                       │                        │      5.Final 
+│                       │                        ╰ [3]: https://github.com/netty/netty/security/advisories/GHSA
+│                       │                               -3qp7-7mw8-wx86 
+│                       ├ [2] ╭ VulnerabilityID : CVE-2026-45416 
+│                       │     ├ VendorIDs        ─ [0]: GHSA-x4gw-5cx5-pgmh 
+│                       │     ├ PkgName         : io.netty:netty-handler 
+│                       │     ├ PkgPath         : openaf/Kube/netty-handler-4.2.13.Final.jar 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-handler@4.2.13.Final 
+│                       │     │                  ╰ UID : 4752ddcaf5c03525 
+│                       │     ├ InstalledVersion: 4.2.13.Final 
+│                       │     ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae26
+│                       │     │                  │         81983635a9c1ff722b4 
+│                       │     │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f7912
+│                       │     │                            5428cc374c8321dfc38 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-45416 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Maven 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Amaven 
+│                       │     ├ Fingerprint     : sha256:2bd58bfe9df4b58a570cb55966566b34b719dedad85b3ce3d0b1a6
+│                       │     │                   7af02a91d3 
+│                       │     ├ Title           : Netty: SNI handler pre-allocates up to 16 MiB from nine
+│                       │     │                   attacker bytes 
+│                       │     ├ Description     : SslClientHelloHandler.decode() reads the 24-bit TLS handshake
+│                       │     │                    length and, when the ClientHello does not fit in the first
+│                       │     │                   record, eagerly allocates
+│                       │     │                   `ctx.alloc().buffer(handshakeLength)` (line 161). The guard
+│                       │     │                   at line 140 is `handshakeLength > maxClientHelloLength &&
+│                       │     │                   maxClientHelloLength != 0`, and the commonly-used
+│                       │     │                   SniHandler/AbstractSniHandler constructors
+│                       │     │                   (SniHandler(Mapping), SniHandler(AsyncMapping),
+│                       │     │                   AbstractSniHandler()) pass maxClientHelloLength=0 and
+│                       │     │                   handshakeTimeoutMillis=0, so the length guard is disabled and
+│                       │     │                    no timeout is scheduled. A 16 MiB request exceeds the
+│                       │     │                   default pooled chunk size and becomes a huge/unpooled
+│                       │     │                   allocation performed immediately. The buffer is retained in
+│                       │     │                   the handler until the channel closes. 
+│                       │     ├ Severity        : HIGH 
+│                       │     ├ VendorSeverity   ─ ghsa: 3 
+│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
+│                       │     │                         ╰ V3Score : 7.5 
+│                       │     ╰ References       ╭ [0]: https://github.com/netty/netty 
+│                       │                        ├ [1]: https://github.com/netty/netty/releases/tag/netty-4.1.1
+│                       │                        │      35.Final 
+│                       │                        ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.2.1
+│                       │                        │      5.Final 
+│                       │                        ╰ [3]: https://github.com/netty/netty/security/advisories/GHSA
+│                       │                               -x4gw-5cx5-pgmh 
+│                       ├ [3] ╭ VulnerabilityID : CVE-2026-45674 
+│                       │     ├ VendorIDs        ─ [0]: GHSA-676x-f7gg-47vc 
+│                       │     ├ PkgName         : io.netty:netty-resolver-dns 
+│                       │     ├ PkgPath         : openaf/Kube/netty-resolver-dns-4.2.13.Final.jar 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-resolver-dns@4.2.13.Final 
+│                       │     │                  ╰ UID : 59e00c5d340ee81 
+│                       │     ├ InstalledVersion: 4.2.13.Final 
+│                       │     ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae26
+│                       │     │                  │         81983635a9c1ff722b4 
+│                       │     │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f7912
+│                       │     │                            5428cc374c8321dfc38 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-45674 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Maven 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Amaven 
+│                       │     ├ Fingerprint     : sha256:3d1c0d337b6a9eefb073cab10cad7770123569003b2171223cadef
+│                       │     │                   9fa22f0081 
+│                       │     ├ Title           : Netty Vulnerable to DNS Cache Poisoning via Missing Bailiwick
+│                       │     │                    Checks in CNAME Records 
+│                       │     ├ Description     : ### Summary
+│                       │     │                   Netty's DnsResolveContext fails to validate the origin
+│                       │     │                   (bailiwick) of CNAME records in DNS responses.
+│                       │     │                   
+│                       │     │                   ### Details
+│                       │     │                   In `io.netty.resolver.dns.DnsResolveContext#buildAliasMap`,
+│                       │     │                   the resolver processes the ANSWER section of a DNS response
+│                       │     │                   and blindly caches all CNAME records it finds.
+│                       │     │                   According to
+│                       │     │                   https://datatracker.ietf.org/doc/html/rfc5452#section-6 
+│                       │     │                   ```
+│                       │     │                   Care must be taken to only accept
+│                       │     │                      data if it is known that the originator is authoritative
+│                       │     │                   for the
+│                       │     │                      QNAME or a parent of the QNAME.
+│                       │     │                      One very simple way to achieve this is to only accept data
+│                       │     │                    if it is
+│                       │     │                      part of the domain for which the query was intended.
+│                       │     │                   ### Impact
+│                       │     │                   DNS Cache Poisoning (Bailiwick Bypass). Any application using
+│                       │     │                    Netty's DNS resolver is impacted. 
+│                       │     ├ Severity        : HIGH 
+│                       │     ├ VendorSeverity   ─ ghsa: 3 
+│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N 
+│                       │     │                         ╰ V3Score : 8.7 
+│                       │     ╰ References       ╭ [0]: https://github.com/netty/netty 
+│                       │                        ├ [1]: https://github.com/netty/netty/releases/tag/netty-4.1.1
+│                       │                        │      35.Final 
+│                       │                        ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.2.1
+│                       │                        │      5.Final 
+│                       │                        ╰ [3]: https://github.com/netty/netty/security/advisories/GHSA
+│                       │                               -676x-f7gg-47vc 
+│                       ├ [4] ╭ VulnerabilityID : CVE-2026-47691 
+│                       │     ├ VendorIDs        ─ [0]: GHSA-5pvg-856g-cp85 
+│                       │     ├ PkgName         : io.netty:netty-resolver-dns 
+│                       │     ├ PkgPath         : openaf/Kube/netty-resolver-dns-4.2.13.Final.jar 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-resolver-dns@4.2.13.Final 
+│                       │     │                  ╰ UID : 59e00c5d340ee81 
+│                       │     ├ InstalledVersion: 4.2.13.Final 
+│                       │     ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae26
+│                       │     │                  │         81983635a9c1ff722b4 
+│                       │     │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f7912
+│                       │     │                            5428cc374c8321dfc38 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-47691 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Maven 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Amaven 
+│                       │     ├ Fingerprint     : sha256:25578dedb4f89efa194e203788b839fe53db5f7ed780739d9322e3
+│                       │     │                   f2dfc01e64 
+│                       │     ├ Title           : Netty has Insufficient Bailiwick Validation for NS Records 
+│                       │     ├ Description     : ### Summary
+│                       │     │                   Netty's `DnsResolveContext` insufficiently validates the
+│                       │     │                   bailiwick of NS records, enabling DNS Cache Poisoning. An
+│                       │     │                   attacker controlling an authoritative name server for a
+│                       │     │                   subdomain can poison the cache for parent domains (like
+│                       │     │                   `.co.uk`).
+│                       │     │                   
+│                       │     │                   ### Details
+│                       │     │                   In
+│                       │     │                   `io.netty.resolver.dns.DnsResolveContext.AuthoritativeNameSer
+│                       │     │                   verList#add` method accepts any NS record from the AUTHORITY
+│                       │     │                   section as long as the record's name is a suffix of the
+│                       │     │                   questionName.
+│                       │     │                   This means if the resolver queries evil.co.uk., it will
+│                       │     │                   accept an NS record claiming authority over co.uk..
+│                       │     │                   Subsequently, the `handleWithAdditional` method caches the
+│                       │     │                   associated A records from the ADDITIONAL section directly
+│                       │     │                   into the `authoritativeDnsServerCache` under the parent
+│                       │     │                   domain's key (co.uk.). This bypasses standard bailiwick
+│                       │     │                   rules, where a server authoritative for a subdomain should
+│                       │     │                   not be trusted to provide authoritative records for its
+│                       │     │                   parent. The poisoned cache is then used for all future
+│                       │     │                   resolutions under co.uk..
+│                       │     │                   The
+│                       │     │                   verList#cache` method only prevents caching if the record is
+│                       │     │                   for the root zone (dots == 1).
+│                       │     │                   ### Impact
+│                       │     │                   DNS Cache Poisoning. Any application using Netty's DNS
+│                       │     │                   resolver is impacted. 
+│                       │     ├ Severity        : HIGH 
+│                       │     ├ VendorSeverity   ─ ghsa: 3 
+│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N 
+│                       │     │                         ╰ V3Score : 8.7 
+│                       │     ╰ References       ╭ [0]: https://github.com/netty/netty 
+│                       │                        ├ [1]: https://github.com/netty/netty/releases/tag/netty-4.1.1
+│                       │                        │      35.Final 
+│                       │                        ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.2.1
+│                       │                        │      5.Final 
+│                       │                        ╰ [3]: https://github.com/netty/netty/security/advisories/GHSA
+│                       │                               -5pvg-856g-cp85 
+│                       ╰ [5] ╭ VulnerabilityID : CVE-2026-45673 
+│                             ├ VendorIDs        ─ [0]: GHSA-xmv7-r254-6q78 
+│                             ├ PkgName         : io.netty:netty-resolver-dns 
+│                             ├ PkgPath         : openaf/Kube/netty-resolver-dns-4.2.13.Final.jar 
+│                             ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-resolver-dns@4.2.13.Final 
+│                             │                  ╰ UID : 59e00c5d340ee81 
+│                             ├ InstalledVersion: 4.2.13.Final 
+│                             ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
+│                             ├ Status          : fixed 
+│                             ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae26
+│                             │                  │         81983635a9c1ff722b4 
+│                             │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f7912
+│                             │                            5428cc374c8321dfc38 
+│                             ├ SeveritySource  : ghsa 
+│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-45673 
+│                             ├ DataSource       ╭ ID  : ghsa 
+│                             │                  ├ Name: GitHub Security Advisory Maven 
+│                             │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                             │                          osystem%3Amaven 
+│                             ├ Fingerprint     : sha256:b8fcc300a2b587caf00daa2cc2a55d0cf99c416edc82e5b1cbbc37
+│                             │                   fc74feeee4 
+│                             ├ Title           : Netty: DNS Cache Poisoning due to Predictable PRNG and
+│                             │                   Default Static Source Port 
+│                             ├ Description     : ### Summary
+│                             │                   Netty's DNS resolver uses a predictable PRNG for generating
+│                             │                   DNS transaction IDs and defaults to a static UDP source port.
+│                             │                    This combination reduces the entropy of DNS queries,
+│                             │                   enabling DNS Cache Poisoning (Kaminsky attack).
+│                             │                   
+│                             │                   ### Details
+│                             │                   Two factors contribute to this vulnerability in
+│                             │                   io.netty.resolver.dns:
+│                             │                   - Predictable Query IDs: `DnsQueryIdSpace` manages 16-bit
+│                             │                   transaction IDs in buckets of 16,384 IDs. It initializes only
+│                             │                    the first bucket. When an ID is returned, it is pushed back
+│                             │                   into the bucket at a random index generated by
+│                             │                   java.util.concurrent.ThreadLocalRandom:
+│                             │                   ```java
+│                             │                   Random random = ThreadLocalRandom.current();
+│                             │                   int insertionPosition = random.nextInt(count + 1);
+│                             │                   ```
+│                             │                   Because ThreadLocalRandom is a predictable LCG and the
+│                             │                   resolver operates within a single bucket, the sequence of IDs
+│                             │                    is predictable once the PRNG state is mathematically
+│                             │                   recovered.
+│                             │                   - Default Static Source Port: `DnsNameResolverBuilder`
+│                             │                   defaults to a `channelStrategy` of `ChannelPerResolver`. This
+│                             │                    binds the DatagramChannel once, resulting in a static source
+│                             │                    port for all subsequent queries.
+│                             │                   Combined, a static source port and predictable transaction
+│                             │                   IDs reduces the entropy required to secure DNS resolution
+│                             │                   against spoofing.
+│                             │                   ### Impact
+│                             │                   DNS Cache Poisoning. Downstream applications using the
+│                             │                   default Netty DNS resolver may connect to malicious IPs,
+│                             │                   leading to traffic interception or MitM attacks. 
+│                             ├ Severity        : MEDIUM 
+│                             ├ VendorSeverity   ─ ghsa: 2 
+│                             ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:H/A:N 
+│                             │                         ╰ V3Score : 6.8 
+│                             ╰ References       ╭ [0]: https://github.com/netty/netty 
+│                                                ├ [1]: https://github.com/netty/netty/releases/tag/netty-4.1.1
+│                                                │      35.Final 
+│                                                ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.2.1
+│                                                │      5.Final 
+│                                                ╰ [3]: https://github.com/netty/netty/security/advisories/GHSA
+│                                                       -xmv7-r254-6q78 
 ├ [2] ╭ Target         : usr/bin/crictl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -142,58 +473,56 @@
 │                       │     │                   5858c6069f 
 │                       │     ├ Title           : Docker: Race condition in docker cp allows bind mount
 │                       │     │                   redirection to host path 
-│                       │     ├ Description     : ## Summary
+│                       │     ├ Description     : Package updates are available for Amazon Linux 2023 that fix
+│                       │     │                   the following vulnerabilities:
+│                       │     │                   CVE-2026-46595:
+│                       │     │                   	Previously, CVE-2024-45337 fixed an authorization bypass for
+│                       │     │                    misused ssh server configurations; if any other type of
+│                       │     │                   callback is passed other than public key, then the
+│                       │     │                   source-address validation would be skipped.
 │                       │     │                   
-│                       │     │                   A race condition during `docker cp` mount setup allows a
-│                       │     │                   malicious container to redirect a bind mount target to an
-│                       │     │                   arbitrary host path, potentially overwriting host files or
-│                       │     │                   causing denial of service.
-│                       │     │                   ## Details
-│                       │     │                   When copying files into a container, the daemon sets up a
-│                       │     │                   temporary filesystem view by bind-mounting volumes into a
-│                       │     │                   private mount namespace. During this setup, the mount
-│                       │     │                   destination is created inside the container root and then a
-│                       │     │                   bind mount is attached using the container-relative path
-│                       │     │                   resolved to an absolute host path.
-│                       │     │                   Between mountpoint creation and the `mount()` syscall, a
-│                       │     │                   process running inside the container can replace the
-│                       │     │                   destination (or a parent path component) with a symlink
-│                       │     │                   pointing to an arbitrary location on the host. The `mount()`
-│                       │     │                   syscall follows the symlink, causing the volume to be
-│                       │     │                   bind-mounted onto an arbitrary host path instead of the
-│                       │     │                   intended container path.
-│                       │     │                   ## Impact
-│                       │     │                   A malicious container can redirect a volume bind mount to an
-│                       │     │                   arbitrary host path. The impact depends on the volume content
-│                       │     │                    and mount options:
-│                       │     │                   - If the volume is writable, arbitrary host files at the
-│                       │     │                   redirected path could be overwritten with the volume's
-│                       │     │                   contents.
-│                       │     │                   - If the volume is read-only, the host path is masked by the
-│                       │     │                   mount for the duration of the operation, causing denial of
-│                       │     │                   service.
-│                       │     │                   - In all cases the mount is temporary (torn down after the
-│                       │     │                   `docker cp` completes), but the effects of any writes
-│                       │     │                   persist.
-│                       │     │                   ### Conditions for exploitation
-│                       │     │                   - A container must have at least one volume mount.
-│                       │     │                   - A process inside the container must be able to rapidly
-│                       │     │                   create and swap symlinks at the volume mount destination
-│                       │     │                   path.
-│                       │     │                   - An operator must initiate a `docker cp` into that
-│                       │     │                   container, or call the `PUT /containers/{id}/archive` or
-│                       │     │                   `HEAD /containers/{id}/archive` API endpoints.
-│                       │     │                   ### Not affected
-│                       │     │                   - Containers that do not have volume mounts are not affected,
-│                       │     │                    as the race occurs during volume bind-mount setup.
-│                       │     │                   ## Workarounds
-│                       │     │                   - Only run containers from trusted images.
-│                       │     │                   - Avoid using `docker cp` with untrusted running containers.
-│                       │     │                   - Use authorization plugins to restrict access to the archive
-│                       │     │                    API endpoints (`PUT /containers/{id}/archive`, `HEAD
-│                       │     │                   /containers/{id}/archive`). 
+│                       │     │                   CVE-2026-42508:
+│                       │     │                   	Previously, a revoked 'SignatureKey' belonging to a CA was
+│                       │     │                   not correctly checked for revocation. Now, both the 'key' and
+│                       │     │                    'key.SignatureKey' are checked for @revoked.
+│                       │     │                   CVE-2026-42306:
+│                       │     │                   	Docker: Race condition in docker cp allows bind mount
+│                       │     │                   redirection to host path
+│                       │     │                   CVE-2026-39833:
+│                       │     │                   	The in-memory keyring returned by NewKeyring() silently
+│                       │     │                   accepted keys with the ConfirmBeforeUse constraint but never
+│                       │     │                   enforced it. The key would sign without any confirmation
+│                       │     │                   prompt, with no indication to the caller that the constraint
+│                       │     │                   was not in effect. NewKeyring() now returns an error when
+│                       │     │                   unsupported constraints are requested.
+│                       │     │                   CVE-2026-39831:
+│                       │     │                   	The Verify() method for FIDO/U2F security key types
+│                       │     │                   (sk-ecdsa-sha2-nistp256@openssh.com,
+│                       │     │                   sk-ssh-ed25519@openssh.com) did not check the User Presence
+│                       │     │                   flag. Signatures generated without physical touch were
+│                       │     │                   accepted, allowing unattended use of a hardware security key.
+│                       │     │                    To restore the previous behavior, return a
+│                       │     │                   "no-touch-required" extension in Permissions.Extensions from
+│                       │     │                   PublicKeyCallback.
+│                       │     │                   CVE-2026-39830:
+│                       │     │                   	A malicious SSH peer could send unsolicited global request
+│                       │     │                   responses to fill an internal buffer, blocking the
+│                       │     │                   connection's read loop. The blocked goroutine could not be
+│                       │     │                   released by calling Close(), resulting in a resource leak per
+│                       │     │                    connection. Unsolicited global responses are now discarded.
+│                       │     │                   CVE-2026-39829:
+│                       │     │                   	The RSA and DSA public key parsers did not enforce size
+│                       │     │                   limits on key parameters. A crafted public key with an
+│                       │     │                   excessively large modulus or DSA parameter could cause
+│                       │     │                   several minutes of CPU consumption during signature
+│                       │     │                   verification. This could be triggered by unauthenticated
+│                       │     │                   clients during public key authentication. RSA moduli are now
+│                       │     │                   limited to 8192 bits, and DSA parameters are validated per
+│                       │     │                   FIPS 186-2.
+│                       │     │                    
 │                       │     ├ Severity        : HIGH 
-│                       │     ├ VendorSeverity   ─ ghsa: 3 
+│                       │     ├ VendorSeverity   ╭ amazon: 3 
+│                       │     │                  ╰ ghsa  : 3 
 │                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:H/A:H 
 │                       │     │                         ╰ V3Score : 7.2 
 │                       │     ╰ References       ╭ [0]: https://github.com/moby/moby 
@@ -842,60 +1171,57 @@
 │                       │      │                   0557c18b400 
 │                       │      ├ Title           : Docker: Race condition in docker cp allows bind mount
 │                       │      │                   redirection to host path 
-│                       │      ├ Description     : ## Summary
+│                       │      ├ Description     : Package updates are available for Amazon Linux 2023 that fix
+│                       │      │                    the following vulnerabilities:
+│                       │      │                   CVE-2026-46595:
+│                       │      │                   	Previously, CVE-2024-45337 fixed an authorization bypass
+│                       │      │                   for misused ssh server configurations; if any other type of
+│                       │      │                   callback is passed other than public key, then the
+│                       │      │                   source-address validation would be skipped.
 │                       │      │                   
-│                       │      │                   A race condition during `docker cp` mount setup allows a
-│                       │      │                   malicious container to redirect a bind mount target to an
-│                       │      │                   arbitrary host path, potentially overwriting host files or
-│                       │      │                   causing denial of service.
-│                       │      │                   ## Details
-│                       │      │                   When copying files into a container, the daemon sets up a
-│                       │      │                   temporary filesystem view by bind-mounting volumes into a
-│                       │      │                   private mount namespace. During this setup, the mount
-│                       │      │                   destination is created inside the container root and then a
-│                       │      │                   bind mount is attached using the container-relative path
-│                       │      │                   resolved to an absolute host path.
-│                       │      │                   Between mountpoint creation and the `mount()` syscall, a
-│                       │      │                   process running inside the container can replace the
-│                       │      │                   destination (or a parent path component) with a symlink
-│                       │      │                   pointing to an arbitrary location on the host. The `mount()`
-│                       │      │                    syscall follows the symlink, causing the volume to be
-│                       │      │                   bind-mounted onto an arbitrary host path instead of the
-│                       │      │                   intended container path.
-│                       │      │                   ## Impact
-│                       │      │                   A malicious container can redirect a volume bind mount to an
-│                       │      │                    arbitrary host path. The impact depends on the volume
-│                       │      │                   content and mount options:
-│                       │      │                   - If the volume is writable, arbitrary host files at the
-│                       │      │                   redirected path could be overwritten with the volume's
-│                       │      │                   contents.
-│                       │      │                   - If the volume is read-only, the host path is masked by the
-│                       │      │                    mount for the duration of the operation, causing denial of
-│                       │      │                   service.
-│                       │      │                   - In all cases the mount is temporary (torn down after the
-│                       │      │                   `docker cp` completes), but the effects of any writes
-│                       │      │                   persist.
-│                       │      │                   ### Conditions for exploitation
-│                       │      │                   - A container must have at least one volume mount.
-│                       │      │                   - A process inside the container must be able to rapidly
-│                       │      │                   create and swap symlinks at the volume mount destination
-│                       │      │                   path.
-│                       │      │                   - An operator must initiate a `docker cp` into that
-│                       │      │                   container, or call the `PUT /containers/{id}/archive` or
-│                       │      │                   `HEAD /containers/{id}/archive` API endpoints.
-│                       │      │                   ### Not affected
-│                       │      │                   - Containers that do not have volume mounts are not
-│                       │      │                   affected, as the race occurs during volume bind-mount
-│                       │      │                   setup.
-│                       │      │                   ## Workarounds
-│                       │      │                   - Only run containers from trusted images.
-│                       │      │                   - Avoid using `docker cp` with untrusted running
-│                       │      │                   containers.
-│                       │      │                   - Use authorization plugins to restrict access to the
-│                       │      │                   archive API endpoints (`PUT /containers/{id}/archive`, `HEAD
-│                       │      │                    /containers/{id}/archive`). 
+│                       │      │                   CVE-2026-42508:
+│                       │      │                   	Previously, a revoked 'SignatureKey' belonging to a CA was
+│                       │      │                   not correctly checked for revocation. Now, both the 'key'
+│                       │      │                   and 'key.SignatureKey' are checked for @revoked.
+│                       │      │                   CVE-2026-42306:
+│                       │      │                   	Docker: Race condition in docker cp allows bind mount
+│                       │      │                   redirection to host path
+│                       │      │                   CVE-2026-39833:
+│                       │      │                   	The in-memory keyring returned by NewKeyring() silently
+│                       │      │                   accepted keys with the ConfirmBeforeUse constraint but never
+│                       │      │                    enforced it. The key would sign without any confirmation
+│                       │      │                   prompt, with no indication to the caller that the constraint
+│                       │      │                    was not in effect. NewKeyring() now returns an error when
+│                       │      │                   unsupported constraints are requested.
+│                       │      │                   CVE-2026-39831:
+│                       │      │                   	The Verify() method for FIDO/U2F security key types
+│                       │      │                   (sk-ecdsa-sha2-nistp256@openssh.com,
+│                       │      │                   sk-ssh-ed25519@openssh.com) did not check the User Presence
+│                       │      │                   flag. Signatures generated without physical touch were
+│                       │      │                   accepted, allowing unattended use of a hardware security
+│                       │      │                   key. To restore the previous behavior, return a
+│                       │      │                   "no-touch-required" extension in Permissions.Extensions from
+│                       │      │                    PublicKeyCallback.
+│                       │      │                   CVE-2026-39830:
+│                       │      │                   	A malicious SSH peer could send unsolicited global request
+│                       │      │                   responses to fill an internal buffer, blocking the
+│                       │      │                   connection's read loop. The blocked goroutine could not be
+│                       │      │                   released by calling Close(), resulting in a resource leak
+│                       │      │                   per connection. Unsolicited global responses are now
+│                       │      │                   discarded.
+│                       │      │                   CVE-2026-39829:
+│                       │      │                   	The RSA and DSA public key parsers did not enforce size
+│                       │      │                   limits on key parameters. A crafted public key with an
+│                       │      │                   excessively large modulus or DSA parameter could cause
+│                       │      │                   several minutes of CPU consumption during signature
+│                       │      │                   verification. This could be triggered by unauthenticated
+│                       │      │                   clients during public key authentication. RSA moduli are now
+│                       │      │                    limited to 8192 bits, and DSA parameters are validated per
+│                       │      │                   FIPS 186-2.
+│                       │      │                    
 │                       │      ├ Severity        : HIGH 
-│                       │      ├ VendorSeverity   ─ ghsa: 3 
+│                       │      ├ VendorSeverity   ╭ amazon: 3 
+│                       │      │                  ╰ ghsa  : 3 
 │                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:H/A:H 
 │                       │      │                         ╰ V3Score : 7.2 
 │                       │      ╰ References       ╭ [0]: https://github.com/moby/moby 
@@ -1851,51 +2177,7 @@
 │                       │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4976 
 │                       │      ├ PublishedDate   : 2026-05-07T20:16:43.39Z 
 │                       │      ╰ LastModifiedDate: 2026-05-13T16:58:56.39Z 
-│                       ├ [18] ╭ VulnerabilityID : CVE-2026-39826 
-│                       │      ├ VendorIDs        ─ [0]: GO-2026-4980 
-│                       │      ├ PkgID           : stdlib@v1.24.13 
-│                       │      ├ PkgName         : stdlib 
-│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.13 
-│                       │      │                  ╰ UID : ae746daa41f315ef 
-│                       │      ├ InstalledVersion: v1.24.13 
-│                       │      ├ FixedVersion    : 1.25.10, 1.26.3 
-│                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
-│                       │      │                  │         681983635a9c1ff722b4 
-│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
-│                       │      │                            25428cc374c8321dfc38 
-│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39826 
-│                       │      ├ DataSource       ╭ ID  : govulndb 
-│                       │      │                  ├ Name: The Go Vulnerability Database 
-│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │      ├ Fingerprint     : sha256:99c56d9c371d6c60fa91ae78a8d15a4d7334ea29388358fb94085
-│                       │      │                   97a23c88c54 
-│                       │      ├ Title           : If a trusted template author were to write a <script> tag
-│                       │      │                   containing a ... 
-│                       │      ├ Description     : If a trusted template author were to write a <script> tag
-│                       │      │                   containing an empty 'type' attribute or a 'type' attribute
-│                       │      │                   with an ASCII whitespace, the execution of the template
-│                       │      │                   would incorrectly escape any data passed into the <script>
-│                       │      │                   block. 
-│                       │      ├ Severity        : HIGH 
-│                       │      ├ CweIDs           ─ [0]: CWE-116 
-│                       │      ├ VendorSeverity   ╭ amazon     : 3 
-│                       │      │                  ├ bitnami    : 2 
-│                       │      │                  ╰ oracle-oval: 3 
-│                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
-│                       │      │                            │           L/A:N 
-│                       │      │                            ╰ V3Score : 6.1 
-│                       │      ├ References       ╭ [0]: https://go.dev/cl/771180 
-│                       │      │                  ├ [1]: https://go.dev/issue/78981 
-│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/qcCIEXso
-│                       │      │                  │      47M 
-│                       │      │                  ├ [3]: https://linux.oracle.com/cve/CVE-2026-39826.html 
-│                       │      │                  ├ [4]: https://linux.oracle.com/errata/ELSA-2026-22112.html 
-│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-39826 
-│                       │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4980 
-│                       │      ├ PublishedDate   : 2026-05-07T20:16:43.49Z 
-│                       │      ╰ LastModifiedDate: 2026-05-13T16:59:07.48Z 
-│                       ├ [19] ╭ VulnerabilityID : CVE-2026-39836 
+│                       ├ [18] ╭ VulnerabilityID : CVE-2026-39836 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4971 
 │                       │      ├ PkgID           : stdlib@v1.24.13 
 │                       │      ├ PkgName         : stdlib 
@@ -1939,7 +2221,7 @@
 │                       │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4971 
 │                       │      ├ PublishedDate   : 2026-05-07T20:16:43.593Z 
 │                       │      ╰ LastModifiedDate: 2026-05-13T15:11:10.31Z 
-│                       ├ [20] ╭ VulnerabilityID : CVE-2026-42499 
+│                       ├ [19] ╭ VulnerabilityID : CVE-2026-42499 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4977 
 │                       │      ├ PkgID           : stdlib@v1.24.13 
 │                       │      ├ PkgName         : stdlib 
@@ -1979,7 +2261,7 @@
 │                       │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4977 
 │                       │      ├ PublishedDate   : 2026-05-07T20:16:44.54Z 
 │                       │      ╰ LastModifiedDate: 2026-05-13T16:59:17.563Z 
-│                       ├ [21] ╭ VulnerabilityID : CVE-2026-42504 
+│                       ├ [20] ╭ VulnerabilityID : CVE-2026-42504 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-5038 
 │                       │      ├ PkgID           : stdlib@v1.24.13 
 │                       │      ├ PkgName         : stdlib 
@@ -2016,7 +2298,7 @@
 │                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-5038 
 │                       │      ├ PublishedDate   : 2026-06-02T23:16:37.927Z 
 │                       │      ╰ LastModifiedDate: 2026-06-04T16:15:50.143Z 
-│                       ├ [22] ╭ VulnerabilityID : CVE-2026-27142 
+│                       ├ [21] ╭ VulnerabilityID : CVE-2026-27142 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4603 
 │                       │      ├ PkgID           : stdlib@v1.24.13 
 │                       │      ├ PkgName         : stdlib 
@@ -2065,7 +2347,7 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27142 
 │                       │      ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
 │                       │      ╰ LastModifiedDate: 2026-04-21T14:30:01.38Z 
-│                       ├ [23] ╭ VulnerabilityID : CVE-2026-27145 
+│                       ├ [22] ╭ VulnerabilityID : CVE-2026-27145 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-5037 
 │                       │      ├ PkgID           : stdlib@v1.24.13 
 │                       │      ├ PkgName         : stdlib 
@@ -2108,7 +2390,7 @@
 │                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-5037 
 │                       │      ├ PublishedDate   : 2026-06-02T23:16:35.57Z 
 │                       │      ╰ LastModifiedDate: 2026-06-04T16:15:50.143Z 
-│                       ├ [24] ╭ VulnerabilityID : CVE-2026-32282 
+│                       ├ [23] ╭ VulnerabilityID : CVE-2026-32282 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4864 
 │                       │      ├ PkgID           : stdlib@v1.24.13 
 │                       │      ├ PkgName         : stdlib 
@@ -2205,7 +2487,7 @@
 │                       │      │                  ╰ [35]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:15:39.4Z 
-│                       ├ [25] ╭ VulnerabilityID : CVE-2026-32288 
+│                       ├ [24] ╭ VulnerabilityID : CVE-2026-32288 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4869 
 │                       │      ├ PkgID           : stdlib@v1.24.13 
 │                       │      ├ PkgName         : stdlib 
@@ -2259,7 +2541,7 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32288 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.707Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:08:52.24Z 
-│                       ├ [26] ╭ VulnerabilityID : CVE-2026-32289 
+│                       ├ [25] ╭ VulnerabilityID : CVE-2026-32289 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4865 
 │                       │      ├ PkgID           : stdlib@v1.24.13 
 │                       │      ├ PkgName         : stdlib 
@@ -2316,6 +2598,56 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32289 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.82Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:06:57.367Z 
+│                       ├ [26] ╭ VulnerabilityID : CVE-2026-39826 
+│                       │      ├ VendorIDs        ─ [0]: GO-2026-4980 
+│                       │      ├ PkgID           : stdlib@v1.24.13 
+│                       │      ├ PkgName         : stdlib 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.13 
+│                       │      │                  ╰ UID : ae746daa41f315ef 
+│                       │      ├ InstalledVersion: v1.24.13 
+│                       │      ├ FixedVersion    : 1.25.10, 1.26.3 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39826 
+│                       │      ├ DataSource       ╭ ID  : govulndb 
+│                       │      │                  ├ Name: The Go Vulnerability Database 
+│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │      ├ Fingerprint     : sha256:99c56d9c371d6c60fa91ae78a8d15a4d7334ea29388358fb94085
+│                       │      │                   97a23c88c54 
+│                       │      ├ Title           : html/template: golang: html/template: Cross-site scripting
+│                       │      │                   due to incorrect script tag escaping 
+│                       │      ├ Description     : If a trusted template author were to write a <script> tag
+│                       │      │                   containing an empty 'type' attribute or a 'type' attribute
+│                       │      │                   with an ASCII whitespace, the execution of the template
+│                       │      │                   would incorrectly escape any data passed into the <script>
+│                       │      │                   block. 
+│                       │      ├ Severity        : MEDIUM 
+│                       │      ├ CweIDs           ─ [0]: CWE-116 
+│                       │      ├ VendorSeverity   ╭ amazon     : 3 
+│                       │      │                  ├ bitnami    : 2 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ redhat     : 2 
+│                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
+│                       │      │                  │         │           L/A:N 
+│                       │      │                  │         ╰ V3Score : 6.1 
+│                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:
+│                       │      │                            │           L/A:N 
+│                       │      │                            ╰ V3Score : 5.4 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-39826 
+│                       │      │                  ├ [1]: https://go.dev/cl/771180 
+│                       │      │                  ├ [2]: https://go.dev/issue/78981 
+│                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/qcCIEXso
+│                       │      │                  │      47M 
+│                       │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2026-39826.html 
+│                       │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-22112.html 
+│                       │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-39826 
+│                       │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2026-4980 
+│                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-39826 
+│                       │      ├ PublishedDate   : 2026-05-07T20:16:43.49Z 
+│                       │      ╰ LastModifiedDate: 2026-05-13T16:59:07.48Z 
 │                       ├ [27] ╭ VulnerabilityID : CVE-2026-42507 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-5039 
 │                       │      ├ PkgID           : stdlib@v1.24.13 
@@ -2858,60 +3190,57 @@
 │                       │      │                   9eee228cb3e 
 │                       │      ├ Title           : Docker: Race condition in docker cp allows bind mount
 │                       │      │                   redirection to host path 
-│                       │      ├ Description     : ## Summary
+│                       │      ├ Description     : Package updates are available for Amazon Linux 2023 that fix
+│                       │      │                    the following vulnerabilities:
+│                       │      │                   CVE-2026-46595:
+│                       │      │                   	Previously, CVE-2024-45337 fixed an authorization bypass
+│                       │      │                   for misused ssh server configurations; if any other type of
+│                       │      │                   callback is passed other than public key, then the
+│                       │      │                   source-address validation would be skipped.
 │                       │      │                   
-│                       │      │                   A race condition during `docker cp` mount setup allows a
-│                       │      │                   malicious container to redirect a bind mount target to an
-│                       │      │                   arbitrary host path, potentially overwriting host files or
-│                       │      │                   causing denial of service.
-│                       │      │                   ## Details
-│                       │      │                   When copying files into a container, the daemon sets up a
-│                       │      │                   temporary filesystem view by bind-mounting volumes into a
-│                       │      │                   private mount namespace. During this setup, the mount
-│                       │      │                   destination is created inside the container root and then a
-│                       │      │                   bind mount is attached using the container-relative path
-│                       │      │                   resolved to an absolute host path.
-│                       │      │                   Between mountpoint creation and the `mount()` syscall, a
-│                       │      │                   process running inside the container can replace the
-│                       │      │                   destination (or a parent path component) with a symlink
-│                       │      │                   pointing to an arbitrary location on the host. The `mount()`
-│                       │      │                    syscall follows the symlink, causing the volume to be
-│                       │      │                   bind-mounted onto an arbitrary host path instead of the
-│                       │      │                   intended container path.
-│                       │      │                   ## Impact
-│                       │      │                   A malicious container can redirect a volume bind mount to an
-│                       │      │                    arbitrary host path. The impact depends on the volume
-│                       │      │                   content and mount options:
-│                       │      │                   - If the volume is writable, arbitrary host files at the
-│                       │      │                   redirected path could be overwritten with the volume's
-│                       │      │                   contents.
-│                       │      │                   - If the volume is read-only, the host path is masked by the
-│                       │      │                    mount for the duration of the operation, causing denial of
-│                       │      │                   service.
-│                       │      │                   - In all cases the mount is temporary (torn down after the
-│                       │      │                   `docker cp` completes), but the effects of any writes
-│                       │      │                   persist.
-│                       │      │                   ### Conditions for exploitation
-│                       │      │                   - A container must have at least one volume mount.
-│                       │      │                   - A process inside the container must be able to rapidly
-│                       │      │                   create and swap symlinks at the volume mount destination
-│                       │      │                   path.
-│                       │      │                   - An operator must initiate a `docker cp` into that
-│                       │      │                   container, or call the `PUT /containers/{id}/archive` or
-│                       │      │                   `HEAD /containers/{id}/archive` API endpoints.
-│                       │      │                   ### Not affected
-│                       │      │                   - Containers that do not have volume mounts are not
-│                       │      │                   affected, as the race occurs during volume bind-mount
-│                       │      │                   setup.
-│                       │      │                   ## Workarounds
-│                       │      │                   - Only run containers from trusted images.
-│                       │      │                   - Avoid using `docker cp` with untrusted running
-│                       │      │                   containers.
-│                       │      │                   - Use authorization plugins to restrict access to the
-│                       │      │                   archive API endpoints (`PUT /containers/{id}/archive`, `HEAD
-│                       │      │                    /containers/{id}/archive`). 
+│                       │      │                   CVE-2026-42508:
+│                       │      │                   	Previously, a revoked 'SignatureKey' belonging to a CA was
+│                       │      │                   not correctly checked for revocation. Now, both the 'key'
+│                       │      │                   and 'key.SignatureKey' are checked for @revoked.
+│                       │      │                   CVE-2026-42306:
+│                       │      │                   	Docker: Race condition in docker cp allows bind mount
+│                       │      │                   redirection to host path
+│                       │      │                   CVE-2026-39833:
+│                       │      │                   	The in-memory keyring returned by NewKeyring() silently
+│                       │      │                   accepted keys with the ConfirmBeforeUse constraint but never
+│                       │      │                    enforced it. The key would sign without any confirmation
+│                       │      │                   prompt, with no indication to the caller that the constraint
+│                       │      │                    was not in effect. NewKeyring() now returns an error when
+│                       │      │                   unsupported constraints are requested.
+│                       │      │                   CVE-2026-39831:
+│                       │      │                   	The Verify() method for FIDO/U2F security key types
+│                       │      │                   (sk-ecdsa-sha2-nistp256@openssh.com,
+│                       │      │                   sk-ssh-ed25519@openssh.com) did not check the User Presence
+│                       │      │                   flag. Signatures generated without physical touch were
+│                       │      │                   accepted, allowing unattended use of a hardware security
+│                       │      │                   key. To restore the previous behavior, return a
+│                       │      │                   "no-touch-required" extension in Permissions.Extensions from
+│                       │      │                    PublicKeyCallback.
+│                       │      │                   CVE-2026-39830:
+│                       │      │                   	A malicious SSH peer could send unsolicited global request
+│                       │      │                   responses to fill an internal buffer, blocking the
+│                       │      │                   connection's read loop. The blocked goroutine could not be
+│                       │      │                   released by calling Close(), resulting in a resource leak
+│                       │      │                   per connection. Unsolicited global responses are now
+│                       │      │                   discarded.
+│                       │      │                   CVE-2026-39829:
+│                       │      │                   	The RSA and DSA public key parsers did not enforce size
+│                       │      │                   limits on key parameters. A crafted public key with an
+│                       │      │                   excessively large modulus or DSA parameter could cause
+│                       │      │                   several minutes of CPU consumption during signature
+│                       │      │                   verification. This could be triggered by unauthenticated
+│                       │      │                   clients during public key authentication. RSA moduli are now
+│                       │      │                    limited to 8192 bits, and DSA parameters are validated per
+│                       │      │                   FIPS 186-2.
+│                       │      │                    
 │                       │      ├ Severity        : HIGH 
-│                       │      ├ VendorSeverity   ─ ghsa: 3 
+│                       │      ├ VendorSeverity   ╭ amazon: 3 
+│                       │      │                  ╰ ghsa  : 3 
 │                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:H/A:H 
 │                       │      │                         ╰ V3Score : 7.2 
 │                       │      ╰ References       ╭ [0]: https://github.com/moby/moby 
@@ -3757,51 +4086,7 @@
 │                       │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4976 
 │                       │      ├ PublishedDate   : 2026-05-07T20:16:43.39Z 
 │                       │      ╰ LastModifiedDate: 2026-05-13T16:58:56.39Z 
-│                       ├ [16] ╭ VulnerabilityID : CVE-2026-39826 
-│                       │      ├ VendorIDs        ─ [0]: GO-2026-4980 
-│                       │      ├ PkgID           : stdlib@v1.25.8 
-│                       │      ├ PkgName         : stdlib 
-│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.8 
-│                       │      │                  ╰ UID : d7d9624bed3e4b65 
-│                       │      ├ InstalledVersion: v1.25.8 
-│                       │      ├ FixedVersion    : 1.25.10, 1.26.3 
-│                       │      ├ Status          : fixed 
-│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
-│                       │      │                  │         681983635a9c1ff722b4 
-│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
-│                       │      │                            25428cc374c8321dfc38 
-│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39826 
-│                       │      ├ DataSource       ╭ ID  : govulndb 
-│                       │      │                  ├ Name: The Go Vulnerability Database 
-│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│                       │      ├ Fingerprint     : sha256:f4c4d30660b266a0fb8a3adac154f85b12e0ee1b53c75b2b4311f
-│                       │      │                   fef9898447a 
-│                       │      ├ Title           : If a trusted template author were to write a <script> tag
-│                       │      │                   containing a ... 
-│                       │      ├ Description     : If a trusted template author were to write a <script> tag
-│                       │      │                   containing an empty 'type' attribute or a 'type' attribute
-│                       │      │                   with an ASCII whitespace, the execution of the template
-│                       │      │                   would incorrectly escape any data passed into the <script>
-│                       │      │                   block. 
-│                       │      ├ Severity        : HIGH 
-│                       │      ├ CweIDs           ─ [0]: CWE-116 
-│                       │      ├ VendorSeverity   ╭ amazon     : 3 
-│                       │      │                  ├ bitnami    : 2 
-│                       │      │                  ╰ oracle-oval: 3 
-│                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
-│                       │      │                            │           L/A:N 
-│                       │      │                            ╰ V3Score : 6.1 
-│                       │      ├ References       ╭ [0]: https://go.dev/cl/771180 
-│                       │      │                  ├ [1]: https://go.dev/issue/78981 
-│                       │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/qcCIEXso
-│                       │      │                  │      47M 
-│                       │      │                  ├ [3]: https://linux.oracle.com/cve/CVE-2026-39826.html 
-│                       │      │                  ├ [4]: https://linux.oracle.com/errata/ELSA-2026-22112.html 
-│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-39826 
-│                       │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4980 
-│                       │      ├ PublishedDate   : 2026-05-07T20:16:43.49Z 
-│                       │      ╰ LastModifiedDate: 2026-05-13T16:59:07.48Z 
-│                       ├ [17] ╭ VulnerabilityID : CVE-2026-39836 
+│                       ├ [16] ╭ VulnerabilityID : CVE-2026-39836 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4971 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -3845,7 +4130,7 @@
 │                       │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4971 
 │                       │      ├ PublishedDate   : 2026-05-07T20:16:43.593Z 
 │                       │      ╰ LastModifiedDate: 2026-05-13T15:11:10.31Z 
-│                       ├ [18] ╭ VulnerabilityID : CVE-2026-42499 
+│                       ├ [17] ╭ VulnerabilityID : CVE-2026-42499 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4977 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -3885,7 +4170,7 @@
 │                       │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4977 
 │                       │      ├ PublishedDate   : 2026-05-07T20:16:44.54Z 
 │                       │      ╰ LastModifiedDate: 2026-05-13T16:59:17.563Z 
-│                       ├ [19] ╭ VulnerabilityID : CVE-2026-42504 
+│                       ├ [18] ╭ VulnerabilityID : CVE-2026-42504 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-5038 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -3922,7 +4207,7 @@
 │                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-5038 
 │                       │      ├ PublishedDate   : 2026-06-02T23:16:37.927Z 
 │                       │      ╰ LastModifiedDate: 2026-06-04T16:15:50.143Z 
-│                       ├ [20] ╭ VulnerabilityID : CVE-2026-27145 
+│                       ├ [19] ╭ VulnerabilityID : CVE-2026-27145 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-5037 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -3965,7 +4250,7 @@
 │                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-5037 
 │                       │      ├ PublishedDate   : 2026-06-02T23:16:35.57Z 
 │                       │      ╰ LastModifiedDate: 2026-06-04T16:15:50.143Z 
-│                       ├ [21] ╭ VulnerabilityID : CVE-2026-32282 
+│                       ├ [20] ╭ VulnerabilityID : CVE-2026-32282 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4864 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -4062,7 +4347,7 @@
 │                       │      │                  ╰ [35]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:15:39.4Z 
-│                       ├ [22] ╭ VulnerabilityID : CVE-2026-32288 
+│                       ├ [21] ╭ VulnerabilityID : CVE-2026-32288 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4869 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -4116,7 +4401,7 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32288 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.707Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:08:52.24Z 
-│                       ├ [23] ╭ VulnerabilityID : CVE-2026-32289 
+│                       ├ [22] ╭ VulnerabilityID : CVE-2026-32289 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4865 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -4173,6 +4458,56 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32289 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.82Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:06:57.367Z 
+│                       ├ [23] ╭ VulnerabilityID : CVE-2026-39826 
+│                       │      ├ VendorIDs        ─ [0]: GO-2026-4980 
+│                       │      ├ PkgID           : stdlib@v1.25.8 
+│                       │      ├ PkgName         : stdlib 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.25.8 
+│                       │      │                  ╰ UID : d7d9624bed3e4b65 
+│                       │      ├ InstalledVersion: v1.25.8 
+│                       │      ├ FixedVersion    : 1.25.10, 1.26.3 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39826 
+│                       │      ├ DataSource       ╭ ID  : govulndb 
+│                       │      │                  ├ Name: The Go Vulnerability Database 
+│                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│                       │      ├ Fingerprint     : sha256:f4c4d30660b266a0fb8a3adac154f85b12e0ee1b53c75b2b4311f
+│                       │      │                   fef9898447a 
+│                       │      ├ Title           : html/template: golang: html/template: Cross-site scripting
+│                       │      │                   due to incorrect script tag escaping 
+│                       │      ├ Description     : If a trusted template author were to write a <script> tag
+│                       │      │                   containing an empty 'type' attribute or a 'type' attribute
+│                       │      │                   with an ASCII whitespace, the execution of the template
+│                       │      │                   would incorrectly escape any data passed into the <script>
+│                       │      │                   block. 
+│                       │      ├ Severity        : MEDIUM 
+│                       │      ├ CweIDs           ─ [0]: CWE-116 
+│                       │      ├ VendorSeverity   ╭ amazon     : 3 
+│                       │      │                  ├ bitnami    : 2 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ redhat     : 2 
+│                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
+│                       │      │                  │         │           L/A:N 
+│                       │      │                  │         ╰ V3Score : 6.1 
+│                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:
+│                       │      │                            │           L/A:N 
+│                       │      │                            ╰ V3Score : 5.4 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-39826 
+│                       │      │                  ├ [1]: https://go.dev/cl/771180 
+│                       │      │                  ├ [2]: https://go.dev/issue/78981 
+│                       │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/qcCIEXso
+│                       │      │                  │      47M 
+│                       │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2026-39826.html 
+│                       │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-22112.html 
+│                       │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-39826 
+│                       │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2026-4980 
+│                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-39826 
+│                       │      ├ PublishedDate   : 2026-05-07T20:16:43.49Z 
+│                       │      ╰ LastModifiedDate: 2026-05-13T16:59:07.48Z 
 │                       ╰ [24] ╭ VulnerabilityID : CVE-2026-42507 
 │                              ├ VendorIDs        ─ [0]: GO-2026-5039 
 │                              ├ PkgID           : stdlib@v1.25.8 
@@ -4347,60 +4682,57 @@
 │                       │      │                   3cdc0e33faa 
 │                       │      ├ Title           : Docker: Race condition in docker cp allows bind mount
 │                       │      │                   redirection to host path 
-│                       │      ├ Description     : ## Summary
+│                       │      ├ Description     : Package updates are available for Amazon Linux 2023 that fix
+│                       │      │                    the following vulnerabilities:
+│                       │      │                   CVE-2026-46595:
+│                       │      │                   	Previously, CVE-2024-45337 fixed an authorization bypass
+│                       │      │                   for misused ssh server configurations; if any other type of
+│                       │      │                   callback is passed other than public key, then the
+│                       │      │                   source-address validation would be skipped.
 │                       │      │                   
-│                       │      │                   A race condition during `docker cp` mount setup allows a
-│                       │      │                   malicious container to redirect a bind mount target to an
-│                       │      │                   arbitrary host path, potentially overwriting host files or
-│                       │      │                   causing denial of service.
-│                       │      │                   ## Details
-│                       │      │                   When copying files into a container, the daemon sets up a
-│                       │      │                   temporary filesystem view by bind-mounting volumes into a
-│                       │      │                   private mount namespace. During this setup, the mount
-│                       │      │                   destination is created inside the container root and then a
-│                       │      │                   bind mount is attached using the container-relative path
-│                       │      │                   resolved to an absolute host path.
-│                       │      │                   Between mountpoint creation and the `mount()` syscall, a
-│                       │      │                   process running inside the container can replace the
-│                       │      │                   destination (or a parent path component) with a symlink
-│                       │      │                   pointing to an arbitrary location on the host. The `mount()`
-│                       │      │                    syscall follows the symlink, causing the volume to be
-│                       │      │                   bind-mounted onto an arbitrary host path instead of the
-│                       │      │                   intended container path.
-│                       │      │                   ## Impact
-│                       │      │                   A malicious container can redirect a volume bind mount to an
-│                       │      │                    arbitrary host path. The impact depends on the volume
-│                       │      │                   content and mount options:
-│                       │      │                   - If the volume is writable, arbitrary host files at the
-│                       │      │                   redirected path could be overwritten with the volume's
-│                       │      │                   contents.
-│                       │      │                   - If the volume is read-only, the host path is masked by the
-│                       │      │                    mount for the duration of the operation, causing denial of
-│                       │      │                   service.
-│                       │      │                   - In all cases the mount is temporary (torn down after the
-│                       │      │                   `docker cp` completes), but the effects of any writes
-│                       │      │                   persist.
-│                       │      │                   ### Conditions for exploitation
-│                       │      │                   - A container must have at least one volume mount.
-│                       │      │                   - A process inside the container must be able to rapidly
-│                       │      │                   create and swap symlinks at the volume mount destination
-│                       │      │                   path.
-│                       │      │                   - An operator must initiate a `docker cp` into that
-│                       │      │                   container, or call the `PUT /containers/{id}/archive` or
-│                       │      │                   `HEAD /containers/{id}/archive` API endpoints.
-│                       │      │                   ### Not affected
-│                       │      │                   - Containers that do not have volume mounts are not
-│                       │      │                   affected, as the race occurs during volume bind-mount
-│                       │      │                   setup.
-│                       │      │                   ## Workarounds
-│                       │      │                   - Only run containers from trusted images.
-│                       │      │                   - Avoid using `docker cp` with untrusted running
-│                       │      │                   containers.
-│                       │      │                   - Use authorization plugins to restrict access to the
-│                       │      │                   archive API endpoints (`PUT /containers/{id}/archive`, `HEAD
-│                       │      │                    /containers/{id}/archive`). 
+│                       │      │                   CVE-2026-42508:
+│                       │      │                   	Previously, a revoked 'SignatureKey' belonging to a CA was
+│                       │      │                   not correctly checked for revocation. Now, both the 'key'
+│                       │      │                   and 'key.SignatureKey' are checked for @revoked.
+│                       │      │                   CVE-2026-42306:
+│                       │      │                   	Docker: Race condition in docker cp allows bind mount
+│                       │      │                   redirection to host path
+│                       │      │                   CVE-2026-39833:
+│                       │      │                   	The in-memory keyring returned by NewKeyring() silently
+│                       │      │                   accepted keys with the ConfirmBeforeUse constraint but never
+│                       │      │                    enforced it. The key would sign without any confirmation
+│                       │      │                   prompt, with no indication to the caller that the constraint
+│                       │      │                    was not in effect. NewKeyring() now returns an error when
+│                       │      │                   unsupported constraints are requested.
+│                       │      │                   CVE-2026-39831:
+│                       │      │                   	The Verify() method for FIDO/U2F security key types
+│                       │      │                   (sk-ecdsa-sha2-nistp256@openssh.com,
+│                       │      │                   sk-ssh-ed25519@openssh.com) did not check the User Presence
+│                       │      │                   flag. Signatures generated without physical touch were
+│                       │      │                   accepted, allowing unattended use of a hardware security
+│                       │      │                   key. To restore the previous behavior, return a
+│                       │      │                   "no-touch-required" extension in Permissions.Extensions from
+│                       │      │                    PublicKeyCallback.
+│                       │      │                   CVE-2026-39830:
+│                       │      │                   	A malicious SSH peer could send unsolicited global request
+│                       │      │                   responses to fill an internal buffer, blocking the
+│                       │      │                   connection's read loop. The blocked goroutine could not be
+│                       │      │                   released by calling Close(), resulting in a resource leak
+│                       │      │                   per connection. Unsolicited global responses are now
+│                       │      │                   discarded.
+│                       │      │                   CVE-2026-39829:
+│                       │      │                   	The RSA and DSA public key parsers did not enforce size
+│                       │      │                   limits on key parameters. A crafted public key with an
+│                       │      │                   excessively large modulus or DSA parameter could cause
+│                       │      │                   several minutes of CPU consumption during signature
+│                       │      │                   verification. This could be triggered by unauthenticated
+│                       │      │                   clients during public key authentication. RSA moduli are now
+│                       │      │                    limited to 8192 bits, and DSA parameters are validated per
+│                       │      │                   FIPS 186-2.
+│                       │      │                    
 │                       │      ├ Severity        : HIGH 
-│                       │      ├ VendorSeverity   ─ ghsa: 3 
+│                       │      ├ VendorSeverity   ╭ amazon: 3 
+│                       │      │                  ╰ ghsa  : 3 
 │                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:H/A:H 
 │                       │      │                         ╰ V3Score : 7.2 
 │                       │      ╰ References       ╭ [0]: https://github.com/moby/moby 
@@ -5283,8 +5615,9 @@
                         │      │                  ╰ nvd  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N 
                         │      │                         ╰ V3Score : 7.5 
                         │      ├ References       ╭ [0]: https://github.com/go-git/go-git 
-                        │      │                  ╰ [1]: https://github.com/go-git/go-git/security/advisories/G
-                        │      │                         HSA-389r-gv7p-r3rp 
+                        │      │                  ├ [1]: https://github.com/go-git/go-git/security/advisories/G
+                        │      │                  │      HSA-389r-gv7p-r3rp 
+                        │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-45022 
                         │      ├ PublishedDate   : 2026-05-27T15:16:29.98Z 
                         │      ╰ LastModifiedDate: 2026-06-04T17:57:46.58Z 
                         ├ [4]  ╭ VulnerabilityID : CVE-2026-45571 
@@ -5324,8 +5657,9 @@
                         │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:L 
                         │      │                         ╰ V3Score : 5.4 
                         │      ├ References       ╭ [0]: https://github.com/go-git/go-git 
-                        │      │                  ╰ [1]: https://github.com/go-git/go-git/security/advisories/G
-                        │      │                         HSA-crhj-59gh-8x96 
+                        │      │                  ├ [1]: https://github.com/go-git/go-git/security/advisories/G
+                        │      │                  │      HSA-crhj-59gh-8x96 
+                        │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-45571 
                         │      ├ PublishedDate   : 2026-05-27T15:16:30.387Z 
                         │      ╰ LastModifiedDate: 2026-06-04T18:01:41.563Z 
                         ├ [5]  ╭ VulnerabilityID : GHSA-w5pp-99ch-qj29 
@@ -5425,8 +5759,9 @@
                         │      │                  ╰ nvd  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H 
                         │      │                         ╰ V3Score : 9.6 
                         │      ├ References       ╭ [0]: https://github.com/go-git/go-git 
-                        │      │                  ╰ [1]: https://github.com/go-git/go-git/security/advisories/G
-                        │      │                         HSA-m7cr-m3pv-hgrp 
+                        │      │                  ├ [1]: https://github.com/go-git/go-git/security/advisories/G
+                        │      │                  │      HSA-m7cr-m3pv-hgrp 
+                        │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-45570 
                         │      ├ PublishedDate   : 2026-05-27T15:16:30.24Z 
                         │      ╰ LastModifiedDate: 2026-06-04T18:00:39.48Z 
                         ├ [7]  ╭ VulnerabilityID : CVE-2026-33811 
@@ -5679,51 +6014,7 @@
                         │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4976 
                         │      ├ PublishedDate   : 2026-05-07T20:16:43.39Z 
                         │      ╰ LastModifiedDate: 2026-05-13T16:58:56.39Z 
-                        ├ [12] ╭ VulnerabilityID : CVE-2026-39826 
-                        │      ├ VendorIDs        ─ [0]: GO-2026-4980 
-                        │      ├ PkgID           : stdlib@v1.26.2 
-                        │      ├ PkgName         : stdlib 
-                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.26.2 
-                        │      │                  ╰ UID : d1d69e031af00a85 
-                        │      ├ InstalledVersion: v1.26.2 
-                        │      ├ FixedVersion    : 1.25.10, 1.26.3 
-                        │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
-                        │      │                  │         681983635a9c1ff722b4 
-                        │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
-                        │      │                            25428cc374c8321dfc38 
-                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39826 
-                        │      ├ DataSource       ╭ ID  : govulndb 
-                        │      │                  ├ Name: The Go Vulnerability Database 
-                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │      ├ Fingerprint     : sha256:87e97f86a97af81d57bf64e1a29c6e0dac7c9f0e8ed9bbf4efc0e
-                        │      │                   baca9eb6d1a 
-                        │      ├ Title           : If a trusted template author were to write a <script> tag
-                        │      │                   containing a ... 
-                        │      ├ Description     : If a trusted template author were to write a <script> tag
-                        │      │                   containing an empty 'type' attribute or a 'type' attribute
-                        │      │                   with an ASCII whitespace, the execution of the template
-                        │      │                   would incorrectly escape any data passed into the <script>
-                        │      │                   block. 
-                        │      ├ Severity        : HIGH 
-                        │      ├ CweIDs           ─ [0]: CWE-116 
-                        │      ├ VendorSeverity   ╭ amazon     : 3 
-                        │      │                  ├ bitnami    : 2 
-                        │      │                  ╰ oracle-oval: 3 
-                        │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
-                        │      │                            │           L/A:N 
-                        │      │                            ╰ V3Score : 6.1 
-                        │      ├ References       ╭ [0]: https://go.dev/cl/771180 
-                        │      │                  ├ [1]: https://go.dev/issue/78981 
-                        │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/qcCIEXso
-                        │      │                  │      47M 
-                        │      │                  ├ [3]: https://linux.oracle.com/cve/CVE-2026-39826.html 
-                        │      │                  ├ [4]: https://linux.oracle.com/errata/ELSA-2026-22112.html 
-                        │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-39826 
-                        │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4980 
-                        │      ├ PublishedDate   : 2026-05-07T20:16:43.49Z 
-                        │      ╰ LastModifiedDate: 2026-05-13T16:59:07.48Z 
-                        ├ [13] ╭ VulnerabilityID : CVE-2026-39836 
+                        ├ [12] ╭ VulnerabilityID : CVE-2026-39836 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4971 
                         │      ├ PkgID           : stdlib@v1.26.2 
                         │      ├ PkgName         : stdlib 
@@ -5767,7 +6058,7 @@
                         │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4971 
                         │      ├ PublishedDate   : 2026-05-07T20:16:43.593Z 
                         │      ╰ LastModifiedDate: 2026-05-13T15:11:10.31Z 
-                        ├ [14] ╭ VulnerabilityID : CVE-2026-42499 
+                        ├ [13] ╭ VulnerabilityID : CVE-2026-42499 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4977 
                         │      ├ PkgID           : stdlib@v1.26.2 
                         │      ├ PkgName         : stdlib 
@@ -5807,7 +6098,7 @@
                         │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4977 
                         │      ├ PublishedDate   : 2026-05-07T20:16:44.54Z 
                         │      ╰ LastModifiedDate: 2026-05-13T16:59:17.563Z 
-                        ├ [15] ╭ VulnerabilityID : CVE-2026-42504 
+                        ├ [14] ╭ VulnerabilityID : CVE-2026-42504 
                         │      ├ VendorIDs        ─ [0]: GO-2026-5038 
                         │      ├ PkgID           : stdlib@v1.26.2 
                         │      ├ PkgName         : stdlib 
@@ -5844,7 +6135,7 @@
                         │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-5038 
                         │      ├ PublishedDate   : 2026-06-02T23:16:37.927Z 
                         │      ╰ LastModifiedDate: 2026-06-04T16:15:50.143Z 
-                        ├ [16] ╭ VulnerabilityID : CVE-2026-27145 
+                        ├ [15] ╭ VulnerabilityID : CVE-2026-27145 
                         │      ├ VendorIDs        ─ [0]: GO-2026-5037 
                         │      ├ PkgID           : stdlib@v1.26.2 
                         │      ├ PkgName         : stdlib 
@@ -5887,6 +6178,56 @@
                         │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-5037 
                         │      ├ PublishedDate   : 2026-06-02T23:16:35.57Z 
                         │      ╰ LastModifiedDate: 2026-06-04T16:15:50.143Z 
+                        ├ [16] ╭ VulnerabilityID : CVE-2026-39826 
+                        │      ├ VendorIDs        ─ [0]: GO-2026-4980 
+                        │      ├ PkgID           : stdlib@v1.26.2 
+                        │      ├ PkgName         : stdlib 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.26.2 
+                        │      │                  ╰ UID : d1d69e031af00a85 
+                        │      ├ InstalledVersion: v1.26.2 
+                        │      ├ FixedVersion    : 1.25.10, 1.26.3 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+                        │      │                  │         681983635a9c1ff722b4 
+                        │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+                        │      │                            25428cc374c8321dfc38 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39826 
+                        │      ├ DataSource       ╭ ID  : govulndb 
+                        │      │                  ├ Name: The Go Vulnerability Database 
+                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │      ├ Fingerprint     : sha256:87e97f86a97af81d57bf64e1a29c6e0dac7c9f0e8ed9bbf4efc0e
+                        │      │                   baca9eb6d1a 
+                        │      ├ Title           : html/template: golang: html/template: Cross-site scripting
+                        │      │                   due to incorrect script tag escaping 
+                        │      ├ Description     : If a trusted template author were to write a <script> tag
+                        │      │                   containing an empty 'type' attribute or a 'type' attribute
+                        │      │                   with an ASCII whitespace, the execution of the template
+                        │      │                   would incorrectly escape any data passed into the <script>
+                        │      │                   block. 
+                        │      ├ Severity        : MEDIUM 
+                        │      ├ CweIDs           ─ [0]: CWE-116 
+                        │      ├ VendorSeverity   ╭ amazon     : 3 
+                        │      │                  ├ bitnami    : 2 
+                        │      │                  ├ oracle-oval: 3 
+                        │      │                  ╰ redhat     : 2 
+                        │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
+                        │      │                  │         │           L/A:N 
+                        │      │                  │         ╰ V3Score : 6.1 
+                        │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:
+                        │      │                            │           L/A:N 
+                        │      │                            ╰ V3Score : 5.4 
+                        │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-39826 
+                        │      │                  ├ [1]: https://go.dev/cl/771180 
+                        │      │                  ├ [2]: https://go.dev/issue/78981 
+                        │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/qcCIEXso
+                        │      │                  │      47M 
+                        │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2026-39826.html 
+                        │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-22112.html 
+                        │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-39826 
+                        │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2026-4980 
+                        │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-39826 
+                        │      ├ PublishedDate   : 2026-05-07T20:16:43.49Z 
+                        │      ╰ LastModifiedDate: 2026-05-13T16:59:07.48Z 
                         ╰ [17] ╭ VulnerabilityID : CVE-2026-42507 
                                ├ VendorIDs        ─ [0]: GO-2026-5039 
                                ├ PkgID           : stdlib@v1.26.2 
