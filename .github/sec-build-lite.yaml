@@ -94,6 +94,7 @@
     References:
     - https://github.com/moby/moby
     - https://github.com/moby/moby/security/advisories/GHSA-x86f-5xw2-fm2r
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-41567
     PublishedDate: '2026-06-05T02:17:13.817Z'
     LastModifiedDate: '2026-06-05T16:01:30.983Z'
   - VulnerabilityID: CVE-2026-42306
