@@ -111,8 +111,9 @@
                         │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:N 
                         │     │                         ╰ V3Score : 7.2 
                         │     ├ References       ╭ [0]: https://github.com/moby/moby 
-                        │     │                  ╰ [1]: https://github.com/moby/moby/security/advisories/GHSA-x
-                        │     │                         86f-5xw2-fm2r 
+                        │     │                  ├ [1]: https://github.com/moby/moby/security/advisories/GHSA-x
+                        │     │                  │      86f-5xw2-fm2r 
+                        │     │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-41567 
                         │     ├ PublishedDate   : 2026-06-05T02:17:13.817Z 
                         │     ╰ LastModifiedDate: 2026-06-05T16:01:30.983Z 
                         ├ [2] ╭ VulnerabilityID : CVE-2026-42306 
