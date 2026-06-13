@@ -139,61 +139,28 @@
                         │     │                   c467b51abe 
                         │     ├ Title           : Docker: Race condition in docker cp allows bind mount
                         │     │                   redirection to host path 
-                        │     ├ Description     : Package updates are available for Amazon Linux 2023 that fix
-                        │     │                   the following vulnerabilities:
-                        │     │                   CVE-2026-46595:
-                        │     │                   	Previously, CVE-2024-45337 fixed an authorization bypass for
-                        │     │                    misused ssh server configurations; if any other type of
-                        │     │                   callback is passed other than public key, then the
-                        │     │                   source-address validation would be skipped.
-                        │     │                   
-                        │     │                   CVE-2026-42508:
-                        │     │                   	Previously, a revoked 'SignatureKey' belonging to a CA was
-                        │     │                   not correctly checked for revocation. Now, both the 'key' and
-                        │     │                    'key.SignatureKey' are checked for @revoked.
-                        │     │                   CVE-2026-42306:
-                        │     │                   	Docker: Race condition in docker cp allows bind mount
-                        │     │                   redirection to host path
-                        │     │                   CVE-2026-39833:
-                        │     │                   	The in-memory keyring returned by NewKeyring() silently
-                        │     │                   accepted keys with the ConfirmBeforeUse constraint but never
-                        │     │                   enforced it. The key would sign without any confirmation
-                        │     │                   prompt, with no indication to the caller that the constraint
-                        │     │                   was not in effect. NewKeyring() now returns an error when
-                        │     │                   unsupported constraints are requested.
-                        │     │                   CVE-2026-39831:
-                        │     │                   	The Verify() method for FIDO/U2F security key types
-                        │     │                   (sk-ecdsa-sha2-nistp256@openssh.com,
-                        │     │                   sk-ssh-ed25519@openssh.com) did not check the User Presence
-                        │     │                   flag. Signatures generated without physical touch were
-                        │     │                   accepted, allowing unattended use of a hardware security key.
-                        │     │                    To restore the previous behavior, return a
-                        │     │                   "no-touch-required" extension in Permissions.Extensions from
-                        │     │                   PublicKeyCallback.
-                        │     │                   CVE-2026-39830:
-                        │     │                   	A malicious SSH peer could send unsolicited global request
-                        │     │                   responses to fill an internal buffer, blocking the
-                        │     │                   connection's read loop. The blocked goroutine could not be
-                        │     │                   released by calling Close(), resulting in a resource leak per
-                        │     │                    connection. Unsolicited global responses are now discarded.
-                        │     │                   CVE-2026-39829:
-                        │     │                   	The RSA and DSA public key parsers did not enforce size
-                        │     │                   limits on key parameters. A crafted public key with an
-                        │     │                   excessively large modulus or DSA parameter could cause
-                        │     │                   several minutes of CPU consumption during signature
-                        │     │                   verification. This could be triggered by unauthenticated
-                        │     │                   clients during public key authentication. RSA moduli are now
-                        │     │                   limited to 8192 bits, and DSA parameters are validated per
-                        │     │                   FIPS 186-2.
-                        │     │                    
+                        │     ├ Description     : Moby is an open source container framework. In Docker Engine
+                        │     │                   prior to version 29.5.1, Docker Daemon versions 28.5.2 and
+                        │     │                   prior, and Moby Daemon prior to version 2.0.0-beta.14, a race
+                        │     │                    condition during docker cp mount setup allows a malicious
+                        │     │                   container to redirect a bind mount target to an arbitrary
+                        │     │                   host path, potentially overwriting host files or causing
+                        │     │                   denial of service. This issue has been patched in Docker
+                        │     │                   Engine version 29.5.1 and Moby Daemon version
+                        │     │                   2.0.0-beta.14. 
                         │     ├ Severity        : HIGH 
+                        │     ├ CweIDs           ╭ [0]: CWE-61 
+                        │     │                  ╰ [1]: CWE-367 
                         │     ├ VendorSeverity   ╭ amazon: 3 
                         │     │                  ╰ ghsa  : 3 
                         │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:H/A:H 
                         │     │                         ╰ V3Score : 7.2 
-                        │     ╰ References       ╭ [0]: https://github.com/moby/moby 
-                        │                        ╰ [1]: https://github.com/moby/moby/security/advisories/GHSA-r
-                        │                               g2x-37c3-w2rh 
+                        │     ├ References       ╭ [0]: https://github.com/moby/moby 
+                        │     │                  ├ [1]: https://github.com/moby/moby/security/advisories/GHSA-r
+                        │     │                  │      g2x-37c3-w2rh 
+                        │     │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-42306 
+                        │     ├ PublishedDate   : 2026-06-12T19:16:27.49Z 
+                        │     ╰ LastModifiedDate: 2026-06-12T19:16:27.49Z 
                         ├ [3] ╭ VulnerabilityID : CVE-2026-33997 
                         │     ├ VendorIDs        ─ [0]: GHSA-pxq6-2prw-chj9 
                         │     ├ PkgID           : github.com/docker/docker@v28.5.2+incompatible 
@@ -278,74 +245,26 @@
                         │     │                   7bed726793 
                         │     ├ Title           : Docker: Race condition in docker cp allows creation of
                         │     │                   arbitrary empty files on the host via symlink swap 
-                        │     ├ Description     : ## Summary
-                        │     │                   
-                        │     │                   A race condition during `docker cp` mount setup allows a
-                        │     │                   malicious container to create empty files or directories at
-                        │     │                   arbitrary absolute paths on the host filesystem.
-                        │     │                   This advisory covers the race during mountpoint creation. The
-                        │     │                    related race during the subsequent mount syscall is tracked
-                        │     │                   in GHSA-rg2x-37c3-w2rh
-                        │     │                   ## Details
-                        │     │                   When copying files into a container, the daemon sets up a
-                        │     │                   temporary filesystem view by bind-mounting volumes into a
-                        │     │                   private mount namespace. During this setup, the mount
-                        │     │                   destination path is first resolved within the container's
-                        │     │                   root filesystem using `GetResourcePath`, and then used to
-                        │     │                   create the mountpoint (file or directory) if it does not
-                        │     │                   already exist via `createIfNotExists`.
-                        │     │                   Between path resolution and mountpoint creation, a process
-                        │     │                   running inside the container can swap a path component for a
-                        │     │                   symlink pointing to an arbitrary location on the host.
-                        │     │                   Because `createIfNotExists` operates on the already-resolved
-                        │     │                   absolute path using standard `os.MkdirAll` and `os.OpenFile`
-                        │     │                   — which follow symlinks in intermediate path components — the
-                        │     │                    symlink is followed and the file or directory is created
-                        │     │                   outside the container root filesystem, as root.
-                        │     │                   ## Impact
-                        │     │                   A malicious container can create empty files or directories
-                        │     │                   at arbitrary absolute paths on the host filesystem, running
-                        │     │                   as root. This enables persistent denial of service — for
-                        │     │                   example:
-                        │     │                   - Converting `/etc/docker/daemon.json` into a directory
-                        │     │                   prevents the daemon from restarting
-                        │     │                   - Creating `/etc/nologin` prevents user logins
-                        │     │                   - Overwriting critical system paths with empty files can
-                        │     │                   break host services
-                        │     │                   The container does not gain read or write access to existing
-                        │     │                   host files — only the ability to create new empty files or
-                        │     │                   directories at chosen paths.
-                        │     │                   ### Conditions for exploitation
-                        │     │                   - A container must be running with a process that can rapidly
-                        │     │                    create and swap symlinks at a volume mount destination
-                        │     │                   path.
-                        │     │                   - An operator must initiate a `docker cp` into that
-                        │     │                   container, or call the `PUT /containers/{id}/archive` or
-                        │     │                   `HEAD /containers/{id}/archive` API endpoints.
-                        │     │                   ### Not affected
-                        │     │                   - Containers that do not have volume mounts are not affected,
-                        │     │                    as the race occurs during volume bind-mount setup.
-                        │     │                   ## Patches
-                        │     │                   Mountpoint creation is now scoped to the container root using
-                        │     │                    `os.Root` (Go 1.24+), which refuses to follow symlinks that
-                        │     │                   escape the opened root directory. All filesystem operations
-                        │     │                   in `createIfNotExists` (`MkdirAll`, `OpenFile`) are performed
-                        │     │                    through the `os.Root` handle, so even if a symlink swap
-                        │     │                   occurs after path resolution, the creation stays confined to
-                        │     │                   the container root.
-                        │     │                   ## Workarounds
-                        │     │                   - Only run containers from trusted images.
-                        │     │                   - Avoid using `docker cp` with untrusted running containers.
-                        │     │                   - Use authorization plugins to restrict access to the archive
-                        │     │                    API endpoints (`PUT /containers/{id}/archive`, `HEAD
-                        │     │                   /containers/{id}/archive`). 
+                        │     ├ Description     : Moby is an open source container framework. In Docker Engine
+                        │     │                   prior to version 29.5.1, Docker Daemon versions 28.5.2 and
+                        │     │                   prior, and Moby Daemon prior to version 2.0.0-beta.14, a race
+                        │     │                    condition during docker cp mount setup allows a malicious
+                        │     │                   container to create empty files or directories at arbitrary
+                        │     │                   absolute paths on the host filesystem. This issue has been
+                        │     │                   patched in Docker Engine version 29.5.1 and Moby Daemon
+                        │     │                   version 2.0.0-beta.14. 
                         │     ├ Severity        : MEDIUM 
+                        │     ├ CweIDs           ╭ [0]: CWE-81 
+                        │     │                  ╰ [1]: CWE-367 
                         │     ├ VendorSeverity   ─ ghsa: 2 
                         │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:L/A:H 
                         │     │                         ╰ V3Score : 6 
-                        │     ╰ References       ╭ [0]: https://github.com/moby/moby 
-                        │                        ╰ [1]: https://github.com/moby/moby/security/advisories/GHSA-v
-                        │                               p62-88p7-qqf5 
+                        │     ├ References       ╭ [0]: https://github.com/moby/moby 
+                        │     │                  ├ [1]: https://github.com/moby/moby/security/advisories/GHSA-v
+                        │     │                  │      p62-88p7-qqf5 
+                        │     │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-41568 
+                        │     ├ PublishedDate   : 2026-06-12T19:16:26.907Z 
+                        │     ╰ LastModifiedDate: 2026-06-12T19:16:26.907Z 
                         ├ [5] ╭ VulnerabilityID : CVE-2026-39883 
                         │     ├ VendorIDs        ─ [0]: GHSA-hfvc-g4fc-pqhx 
                         │     ├ PkgID           : go.opentelemetry.io/otel/sdk@v1.42.0 
@@ -367,8 +286,9 @@
                         │     │                          osystem%3Ago 
                         │     ├ Fingerprint     : sha256:801aed090f82867dda83a2f01e361e13657fc36aa5dbadb4782820
                         │     │                   76586d14ad 
-                        │     ├ Title           : opentelemetry-go: BSD kenv command not using absolute path
-                        │     │                   enables PATH hijacking 
+                        │     ├ Title           : github.com/open-telemetry/opentelemetry-go: OpenTelemetry-Go:
+                        │     │                    Arbitrary code execution via PATH hijacking on BSD/Solaris[
+                        │     │                   m 
                         │     ├ Description     : OpenTelemetry-Go is the Go implementation of OpenTelemetry.
                         │     │                   From 1.15.0 to 1.42.0, the fix for CVE-2026-24051 changed the
                         │     │                    Darwin ioreg command to use an absolute path but left the
@@ -377,19 +297,26 @@
                         │     │                   vulnerability is fixed in 1.43.0. 
                         │     ├ Severity        : HIGH 
                         │     ├ CweIDs           ─ [0]: CWE-426 
-                        │     ├ VendorSeverity   ╭ ghsa: 3 
-                        │     │                  ╰ nvd : 3 
-                        │     ├ CVSS             ╭ ghsa ╭ V40Vector: CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:H/VI:
-                        │     │                  │      │            H/VA:H/SC:N/SI:N/SA:N 
-                        │     │                  │      ╰ V40Score : 7.3 
-                        │     │                  ╰ nvd  ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H 
-                        │     │                         ╰ V3Score : 7 
+                        │     ├ VendorSeverity   ╭ ghsa  : 3 
+                        │     │                  ├ nvd   : 3 
+                        │     │                  ╰ redhat: 3 
+                        │     ├ CVSS             ╭ ghsa   ╭ V40Vector: CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:H/V
+                        │     │                  │        │            I:H/VA:H/SC:N/SI:N/SA:N 
+                        │     │                  │        ╰ V40Score : 7.3 
+                        │     │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/
+                        │     │                  │        │           A:H 
+                        │     │                  │        ╰ V3Score : 7 
+                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/
+                        │     │                           │           A:H 
+                        │     │                           ╰ V3Score : 8.8 
                         │     ├ References       ╭ [0]: http://github.com/open-telemetry/opentelemetry-go/relea
                         │     │                  │      ses/tag/v1.43.0 
-                        │     │                  ├ [1]: https://github.com/open-telemetry/opentelemetry-go 
-                        │     │                  ├ [2]: https://github.com/open-telemetry/opentelemetry-go/secu
+                        │     │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2026-39883 
+                        │     │                  ├ [2]: https://github.com/open-telemetry/opentelemetry-go 
+                        │     │                  ├ [3]: https://github.com/open-telemetry/opentelemetry-go/secu
                         │     │                  │      rity/advisories/GHSA-hfvc-g4fc-pqhx 
-                        │     │                  ╰ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-39883 
+                        │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-39883 
+                        │     │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2026-39883 
                         │     ├ PublishedDate   : 2026-04-08T21:17:00.697Z 
                         │     ╰ LastModifiedDate: 2026-04-10T21:16:27.12Z 
                         ├ [6] ╭ VulnerabilityID : CVE-2026-42504 
