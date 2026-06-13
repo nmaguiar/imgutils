@@ -27,15 +27,17 @@
 │                       │     │                          osystem%3Amaven 
 │                       │     ├ Fingerprint     : sha256:58b7896124c068e91597290b1693ae867b53c618dfc2d751db285a
 │                       │     │                   596f8f9b2f 
-│                       │     ├ Title           : Netty HTTP/2: Advertised MAX_CONCURRENT_STREAMS are not
-│                       │     │                   enforced 
-│                       │     ├ Description     : ### Impact
-│                       │     │                   DefaultHttp2Connection.DefaultEndpoint initialises
-│                       │     │                   maxActiveStreams/maxStreams to Integer.MAX_VALUE, and
-│                       │     │                   Http2Settings never inserts SETTINGS_MAX_CONCURRENT_STREAMS
-│                       │     │                   by default (Http2Settings.java:305-307 only clamps a
-│                       │     │                   user-supplied value). Unless the application explicitly calls
-│                       │     │                    initialSettings().maxConcurrentStreams(n), a Netty HTTP/2
+│                       │     ├ Title           : Netty is a network application framework for development of
+│                       │     │                   protocol s ... 
+│                       │     ├ Description     : Netty is a network application framework for development of
+│                       │     │                   protocol servers and clients. Prior to versions 4.1.135.Final
+│                       │     │                    and 4.2.15.Final, DefaultHttp2Connection.DefaultEndpoint
+│                       │     │                   initialises maxActiveStreams/maxStreams to Integer.MAX_VALUE,
+│                       │     │                    and Http2Settings never inserts
+│                       │     │                   SETTINGS_MAX_CONCURRENT_STREAMS by default
+│                       │     │                   (Http2Settings.java:305-307 only clamps a user-supplied
+│                       │     │                   value). Unless the application explicitly calls
+│                       │     │                   initialSettings().maxConcurrentStreams(n), a Netty HTTP/2
 │                       │     │                   server advertises no limit and enforces none locally. Each
 │                       │     │                   open stream allocates a DefaultStream object, PropertyMap
 │                       │     │                   slots, flow-controller state and IntObjectHashMap entry; with
@@ -43,22 +45,78 @@
 │                       │     │                    create hundreds of thousands of long-lived stream objects.
 │                       │     │                   This is also the precondition for CVE-2023-44487-style
 │                       │     │                   Rapid-Reset amplification, where the absence of a low
-│                       │     │                   concurrent cap multiplies backend work.
-│                       │     │                   
-│                       │     │                   ### Resources
-│                       │     │                   https://www.rfc-editor.org/rfc/rfc7540.html#section-6.5.2 
+│                       │     │                   concurrent cap multiplies backend work. Versions
+│                       │     │                   4.1.135.Final and 4.2.15.Final patch the issue. 
 │                       │     ├ Severity        : MEDIUM 
+│                       │     ├ CweIDs           ─ [0]: CWE-400 
 │                       │     ├ VendorSeverity   ─ ghsa: 2 
 │                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L 
 │                       │     │                         ╰ V3Score : 5.3 
-│                       │     ╰ References       ╭ [0]: https://github.com/netty/netty 
-│                       │                        ├ [1]: https://github.com/netty/netty/releases/tag/netty-4.1.1
-│                       │                        │      35.Final 
-│                       │                        ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.2.1
-│                       │                        │      5.Final 
-│                       │                        ╰ [3]: https://github.com/netty/netty/security/advisories/GHSA
-│                       │                               -5x3r-wrvg-rp6q 
-│                       ├ [1] ╭ VulnerabilityID : CVE-2026-44249 
+│                       │     ├ References       ╭ [0]: https://github.com/netty/netty 
+│                       │     │                  ├ [1]: https://github.com/netty/netty/releases/tag/netty-4.1.1
+│                       │     │                  │      35.Final 
+│                       │     │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.2.1
+│                       │     │                  │      5.Final 
+│                       │     │                  ├ [3]: https://github.com/netty/netty/security/advisories/GHSA
+│                       │     │                  │      -5x3r-wrvg-rp6q 
+│                       │     │                  ╰ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-47244 
+│                       │     ├ PublishedDate   : 2026-06-12T15:16:29.217Z 
+│                       │     ╰ LastModifiedDate: 2026-06-12T15:55:06.377Z 
+│                       ├ [1] ╭ VulnerabilityID : CVE-2026-48043 
+│                       │     ├ VendorIDs        ─ [0]: GHSA-c2gf-v879-257j 
+│                       │     ├ PkgName         : io.netty:netty-codec-http2 
+│                       │     ├ PkgPath         : openaf/Kube/netty-codec-http2-4.2.13.Final.jar 
+│                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-codec-http2@4.2.13.Final 
+│                       │     │                  ╰ UID : 9a8774d6243b7ed4 
+│                       │     ├ InstalledVersion: 4.2.13.Final 
+│                       │     ├ FixedVersion    : 4.1.135.Final, 4.2.15.Final 
+│                       │     ├ Status          : fixed 
+│                       │     ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae26
+│                       │     │                  │         81983635a9c1ff722b4 
+│                       │     │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f7912
+│                       │     │                            5428cc374c8321dfc38 
+│                       │     ├ SeveritySource  : ghsa 
+│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-48043 
+│                       │     ├ DataSource       ╭ ID  : ghsa 
+│                       │     │                  ├ Name: GitHub Security Advisory Maven 
+│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
+│                       │     │                          osystem%3Amaven 
+│                       │     ├ Fingerprint     : sha256:5d3edd502709d920d8e6f67f99cfb1d0d6c5a52080aae7e5d31982
+│                       │     │                   23b08aecc4 
+│                       │     ├ Title           : Netty is a network application framework for development of
+│                       │     │                   protocol s ... 
+│                       │     ├ Description     : Netty is a network application framework for development of
+│                       │     │                   protocol servers and clients. In netty-codec-http2 prior to
+│                       │     │                   versions 4.1.135.Final and 4.2.15.Final, the
+│                       │     │                   `DelegatingDecompressorFrameListener` class orchestrates
+│                       │     │                   HTTP/2 decompression by embedding a per-stream
+│                       │     │                   `EmbeddedChannel` that runs the appropriate decompression
+│                       │     │                   codec (gzip, deflate, zstd) and forwards decompressed chunks
+│                       │     │                   to a wrapped listener. Each decompressed chunk is a pooled
+│                       │     │                   `ByteBuf` handed to an anonymous
+│                       │     │                   `ChannelInboundHandlerAdapter` tail handler, which becomes
+│                       │     │                   the sole owner responsible for releasing it. A remote peer
+│                       │     │                   could send frames that would result in the flow-controller
+│                       │     │                   throwing and so trigger a resource leak which at the end
+│                       │     │                   might take down the whole JVM due OOME. Versions
+│                       │     │                   4.1.135.Final and 4.2.15.Final patch the issue. 
+│                       │     ├ Severity        : MEDIUM 
+│                       │     ├ CweIDs           ╭ [0]: CWE-400 
+│                       │     │                  ╰ [1]: CWE-401 
+│                       │     ├ VendorSeverity   ─ ghsa: 2 
+│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L 
+│                       │     │                         ╰ V3Score : 5.3 
+│                       │     ├ References       ╭ [0]: https://github.com/netty/netty 
+│                       │     │                  ├ [1]: https://github.com/netty/netty/releases/tag/netty-4.1.1
+│                       │     │                  │      35.Final 
+│                       │     │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.2.1
+│                       │     │                  │      5.Final 
+│                       │     │                  ├ [3]: https://github.com/netty/netty/security/advisories/GHSA
+│                       │     │                  │      -c2gf-v879-257j 
+│                       │     │                  ╰ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-48043 
+│                       │     ├ PublishedDate   : 2026-06-12T16:16:30.587Z 
+│                       │     ╰ LastModifiedDate: 2026-06-12T16:18:27.287Z 
+│                       ├ [2] ╭ VulnerabilityID : CVE-2026-44249 
 │                       │     ├ VendorIDs        ─ [0]: GHSA-3qp7-7mw8-wx86 
 │                       │     ├ PkgName         : io.netty:netty-handler 
 │                       │     ├ PkgPath         : openaf/Kube/netty-handler-4.2.13.Final.jar 
@@ -79,33 +137,32 @@
 │                       │     │                          osystem%3Amaven 
 │                       │     ├ Fingerprint     : sha256:1fef38b5486639c0918ecc92d4b0c7852bf77106f79155f9253eb6
 │                       │     │                   33b6cf4f20 
-│                       │     ├ Title           : Netty has an IPv6 Subnet Filter Bypass via Incorrect
-│                       │     │                   Comparator Masking 
-│                       │     ├ Description     : ### Summary
-│                       │     │                   An attacker can bypass IPv6 subnet rules due to an incorrect
-│                       │     │                   masking operation in IpSubnetFilterRule.compareTo(). Valid
-│                       │     │                   public IP addresses can bypass the restrictions.
-│                       │     │                   
-│                       │     │                   ### Details
-│                       │     │                   `io.netty.handler.ipfilter.IpSubnetFilterRule#compareTo(java.
-│                       │     │                   net.InetSocketAddress)` method performs a bitwise AND between
-│                       │     │                    the incoming IP address and the configured networkAddress,
-│                       │     │                   instead of the subnetMask.
-│                       │     │                   ### Impact
-│                       │     │                   Access Control Bypass. Attacker can bypass IpSubnetFilter
-│                       │     │                   IPv6 access controls. 
+│                       │     ├ Title           : Netty is a network application framework for development of
+│                       │     │                   protocol s ... 
+│                       │     ├ Description     : Netty is a network application framework for development of
+│                       │     │                   protocol servers and clients. In netty-handler prior to
+│                       │     │                   versions 4.1.135.Final and 4.2.15.Final, an attacker can
+│                       │     │                   bypass IPv6 subnet rules due to an incorrect masking
+│                       │     │                   operation in IpSubnetFilterRule.compareTo(). Valid public IP
+│                       │     │                   addresses can bypass the restrictions. Versions 4.1.135.Final
+│                       │     │                    and 4.2.15.Final patch the issue. 
 │                       │     ├ Severity        : HIGH 
+│                       │     ├ CweIDs           ╭ [0]: CWE-284 
+│                       │     │                  ╰ [1]: CWE-697 
 │                       │     ├ VendorSeverity   ─ ghsa: 3 
 │                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H 
 │                       │     │                         ╰ V3Score : 8.1 
-│                       │     ╰ References       ╭ [0]: https://github.com/netty/netty 
-│                       │                        ├ [1]: https://github.com/netty/netty/releases/tag/netty-4.1.1
-│                       │                        │      35.Final 
-│                       │                        ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.2.1
-│                       │                        │      5.Final 
-│                       │                        ╰ [3]: https://github.com/netty/netty/security/advisories/GHSA
-│                       │                               -3qp7-7mw8-wx86 
-│                       ├ [2] ╭ VulnerabilityID : CVE-2026-45416 
+│                       │     ├ References       ╭ [0]: https://github.com/netty/netty 
+│                       │     │                  ├ [1]: https://github.com/netty/netty/releases/tag/netty-4.1.1
+│                       │     │                  │      35.Final 
+│                       │     │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.2.1
+│                       │     │                  │      5.Final 
+│                       │     │                  ├ [3]: https://github.com/netty/netty/security/advisories/GHSA
+│                       │     │                  │      -3qp7-7mw8-wx86 
+│                       │     │                  ╰ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-44249 
+│                       │     ├ PublishedDate   : 2026-06-11T22:16:56.707Z 
+│                       │     ╰ LastModifiedDate: 2026-06-12T15:55:06.377Z 
+│                       ├ [3] ╭ VulnerabilityID : CVE-2026-45416 
 │                       │     ├ VendorIDs        ─ [0]: GHSA-x4gw-5cx5-pgmh 
 │                       │     ├ PkgName         : io.netty:netty-handler 
 │                       │     ├ PkgPath         : openaf/Kube/netty-handler-4.2.13.Final.jar 
@@ -126,11 +183,13 @@
 │                       │     │                          osystem%3Amaven 
 │                       │     ├ Fingerprint     : sha256:2bd58bfe9df4b58a570cb55966566b34b719dedad85b3ce3d0b1a6
 │                       │     │                   7af02a91d3 
-│                       │     ├ Title           : Netty: SNI handler pre-allocates up to 16 MiB from nine
-│                       │     │                   attacker bytes 
-│                       │     ├ Description     : SslClientHelloHandler.decode() reads the 24-bit TLS handshake
-│                       │     │                    length and, when the ClientHello does not fit in the first
-│                       │     │                   record, eagerly allocates
+│                       │     ├ Title           : Netty is a network application framework for development of
+│                       │     │                   protocol s ... 
+│                       │     ├ Description     : Netty is a network application framework for development of
+│                       │     │                   protocol servers and clients. Prior to versions 4.1.135.Final
+│                       │     │                    and 4.2.15.Final, SslClientHelloHandler.decode() reads the
+│                       │     │                   24-bit TLS handshake length and, when the ClientHello does
+│                       │     │                   not fit in the first record, eagerly allocates
 │                       │     │                   `ctx.alloc().buffer(handshakeLength)` (line 161). The guard
 │                       │     │                   at line 140 is `handshakeLength > maxClientHelloLength &&
 │                       │     │                   maxClientHelloLength != 0`, and the commonly-used
@@ -141,19 +200,24 @@
 │                       │     │                    no timeout is scheduled. A 16 MiB request exceeds the
 │                       │     │                   default pooled chunk size and becomes a huge/unpooled
 │                       │     │                   allocation performed immediately. The buffer is retained in
-│                       │     │                   the handler until the channel closes. 
+│                       │     │                   the handler until the channel closes. Versions 4.1.135.Final
+│                       │     │                   and 4.2.15.Final patch the issue. 
 │                       │     ├ Severity        : HIGH 
+│                       │     ├ CweIDs           ─ [0]: CWE-770 
 │                       │     ├ VendorSeverity   ─ ghsa: 3 
 │                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
 │                       │     │                         ╰ V3Score : 7.5 
-│                       │     ╰ References       ╭ [0]: https://github.com/netty/netty 
-│                       │                        ├ [1]: https://github.com/netty/netty/releases/tag/netty-4.1.1
-│                       │                        │      35.Final 
-│                       │                        ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.2.1
-│                       │                        │      5.Final 
-│                       │                        ╰ [3]: https://github.com/netty/netty/security/advisories/GHSA
-│                       │                               -x4gw-5cx5-pgmh 
-│                       ├ [3] ╭ VulnerabilityID : CVE-2026-45674 
+│                       │     ├ References       ╭ [0]: https://github.com/netty/netty 
+│                       │     │                  ├ [1]: https://github.com/netty/netty/releases/tag/netty-4.1.1
+│                       │     │                  │      35.Final 
+│                       │     │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.2.1
+│                       │     │                  │      5.Final 
+│                       │     │                  ├ [3]: https://github.com/netty/netty/security/advisories/GHSA
+│                       │     │                  │      -x4gw-5cx5-pgmh 
+│                       │     │                  ╰ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-45416 
+│                       │     ├ PublishedDate   : 2026-06-12T15:16:26.94Z 
+│                       │     ╰ LastModifiedDate: 2026-06-12T15:55:06.377Z 
+│                       ├ [4] ╭ VulnerabilityID : CVE-2026-45674 
 │                       │     ├ VendorIDs        ─ [0]: GHSA-676x-f7gg-47vc 
 │                       │     ├ PkgName         : io.netty:netty-resolver-dns 
 │                       │     ├ PkgPath         : openaf/Kube/netty-resolver-dns-4.2.13.Final.jar 
@@ -174,41 +238,30 @@
 │                       │     │                          osystem%3Amaven 
 │                       │     ├ Fingerprint     : sha256:3d1c0d337b6a9eefb073cab10cad7770123569003b2171223cadef
 │                       │     │                   9fa22f0081 
-│                       │     ├ Title           : Netty Vulnerable to DNS Cache Poisoning via Missing Bailiwick
-│                       │     │                    Checks in CNAME Records 
-│                       │     ├ Description     : ### Summary
-│                       │     │                   Netty's DnsResolveContext fails to validate the origin
-│                       │     │                   (bailiwick) of CNAME records in DNS responses.
-│                       │     │                   
-│                       │     │                   ### Details
-│                       │     │                   In `io.netty.resolver.dns.DnsResolveContext#buildAliasMap`,
-│                       │     │                   the resolver processes the ANSWER section of a DNS response
-│                       │     │                   and blindly caches all CNAME records it finds.
-│                       │     │                   According to
-│                       │     │                   https://datatracker.ietf.org/doc/html/rfc5452#section-6 
-│                       │     │                   ```
-│                       │     │                   Care must be taken to only accept
-│                       │     │                      data if it is known that the originator is authoritative
-│                       │     │                   for the
-│                       │     │                      QNAME or a parent of the QNAME.
-│                       │     │                      One very simple way to achieve this is to only accept data
-│                       │     │                    if it is
-│                       │     │                      part of the domain for which the query was intended.
-│                       │     │                   ### Impact
-│                       │     │                   DNS Cache Poisoning (Bailiwick Bypass). Any application using
-│                       │     │                    Netty's DNS resolver is impacted. 
+│                       │     ├ Title           : Netty is a network application framework for development of
+│                       │     │                   protocol s ... 
+│                       │     ├ Description     : Netty is a network application framework for development of
+│                       │     │                   protocol servers and clients. Prior to versions 4.1.135.Final
+│                       │     │                    and 4.2.15.Final, Netty's DnsResolveContext fails to
+│                       │     │                   validate the origin (bailiwick) of CNAME records in DNS
+│                       │     │                   responses. Versions 4.1.135.Final and 4.2.15.Final patch the
+│                       │     │                   issue. 
 │                       │     ├ Severity        : HIGH 
+│                       │     ├ CweIDs           ─ [0]: CWE-345 
 │                       │     ├ VendorSeverity   ─ ghsa: 3 
 │                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N 
 │                       │     │                         ╰ V3Score : 8.7 
-│                       │     ╰ References       ╭ [0]: https://github.com/netty/netty 
-│                       │                        ├ [1]: https://github.com/netty/netty/releases/tag/netty-4.1.1
-│                       │                        │      35.Final 
-│                       │                        ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.2.1
-│                       │                        │      5.Final 
-│                       │                        ╰ [3]: https://github.com/netty/netty/security/advisories/GHSA
-│                       │                               -676x-f7gg-47vc 
-│                       ├ [4] ╭ VulnerabilityID : CVE-2026-47691 
+│                       │     ├ References       ╭ [0]: https://github.com/netty/netty 
+│                       │     │                  ├ [1]: https://github.com/netty/netty/releases/tag/netty-4.1.1
+│                       │     │                  │      35.Final 
+│                       │     │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.2.1
+│                       │     │                  │      5.Final 
+│                       │     │                  ├ [3]: https://github.com/netty/netty/security/advisories/GHSA
+│                       │     │                  │      -676x-f7gg-47vc 
+│                       │     │                  ╰ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-45674 
+│                       │     ├ PublishedDate   : 2026-06-12T15:16:27.55Z 
+│                       │     ╰ LastModifiedDate: 2026-06-12T15:55:06.377Z 
+│                       ├ [5] ╭ VulnerabilityID : CVE-2026-47691 
 │                       │     ├ VendorIDs        ─ [0]: GHSA-5pvg-856g-cp85 
 │                       │     ├ PkgName         : io.netty:netty-resolver-dns 
 │                       │     ├ PkgPath         : openaf/Kube/netty-resolver-dns-4.2.13.Final.jar 
@@ -229,48 +282,43 @@
 │                       │     │                          osystem%3Amaven 
 │                       │     ├ Fingerprint     : sha256:25578dedb4f89efa194e203788b839fe53db5f7ed780739d9322e3
 │                       │     │                   f2dfc01e64 
-│                       │     ├ Title           : Netty has Insufficient Bailiwick Validation for NS Records 
-│                       │     ├ Description     : ### Summary
-│                       │     │                   Netty's `DnsResolveContext` insufficiently validates the
-│                       │     │                   bailiwick of NS records, enabling DNS Cache Poisoning. An
-│                       │     │                   attacker controlling an authoritative name server for a
-│                       │     │                   subdomain can poison the cache for parent domains (like
-│                       │     │                   `.co.uk`).
-│                       │     │                   
-│                       │     │                   ### Details
-│                       │     │                   In
+│                       │     ├ Title           : Netty is a network application framework for development of
+│                       │     │                   protocol s ... 
+│                       │     ├ Description     : Netty is a network application framework for development of
+│                       │     │                   protocol servers and clients. Prior to versions 4.1.135.Final
+│                       │     │                    and 4.2.15.Final, Netty's `DnsResolveContext` insufficiently
+│                       │     │                    validates the bailiwick of NS records, enabling DNS Cache
+│                       │     │                   Poisoning. An attacker controlling an authoritative name
+│                       │     │                   server for a subdomain can poison the cache for parent
+│                       │     │                   domains (like `.co.uk`). In
 │                       │     │                   `io.netty.resolver.dns.DnsResolveContext.AuthoritativeNameSer
 │                       │     │                   verList#add` method accepts any NS record from the AUTHORITY
 │                       │     │                   section as long as the record's name is a suffix of the
-│                       │     │                   questionName.
-│                       │     │                   This means if the resolver queries evil.co.uk., it will
-│                       │     │                   accept an NS record claiming authority over co.uk..
-│                       │     │                   Subsequently, the `handleWithAdditional` method caches the
-│                       │     │                   associated A records from the ADDITIONAL section directly
-│                       │     │                   into the `authoritativeDnsServerCache` under the parent
-│                       │     │                   domain's key (co.uk.). This bypasses standard bailiwick
-│                       │     │                   rules, where a server authoritative for a subdomain should
-│                       │     │                   not be trusted to provide authoritative records for its
-│                       │     │                   parent. The poisoned cache is then used for all future
-│                       │     │                   resolutions under co.uk..
-│                       │     │                   The
-│                       │     │                   verList#cache` method only prevents caching if the record is
-│                       │     │                   for the root zone (dots == 1).
-│                       │     │                   ### Impact
-│                       │     │                   DNS Cache Poisoning. Any application using Netty's DNS
-│                       │     │                   resolver is impacted. 
+│                       │     │                   questionName. Subsequently, the `handleWithAdditional` method
+│                       │     │                    caches the associated A records from the ADDITIONAL section
+│                       │     │                   directly into the `authoritativeDnsServerCache` under the
+│                       │     │                   parent domain's key. This bypasses standard bailiwick rules,
+│                       │     │                   where a server authoritative for a subdomain should not be
+│                       │     │                   trusted to provide authoritative records for its parent. The
+│                       │     │                   poisoned cache is then used for all future resolutions under
+│                       │     │                   the parent domain's key. Versions 4.1.135.Final and
+│                       │     │                   4.2.15.Final patch the issue. 
 │                       │     ├ Severity        : HIGH 
+│                       │     ├ CweIDs           ─ [0]: CWE-345 
 │                       │     ├ VendorSeverity   ─ ghsa: 3 
 │                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N 
 │                       │     │                         ╰ V3Score : 8.7 
-│                       │     ╰ References       ╭ [0]: https://github.com/netty/netty 
-│                       │                        ├ [1]: https://github.com/netty/netty/releases/tag/netty-4.1.1
-│                       │                        │      35.Final 
-│                       │                        ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.2.1
-│                       │                        │      5.Final 
-│                       │                        ╰ [3]: https://github.com/netty/netty/security/advisories/GHSA
-│                       │                               -5pvg-856g-cp85 
-│                       ╰ [5] ╭ VulnerabilityID : CVE-2026-45673 
+│                       │     ├ References       ╭ [0]: https://github.com/netty/netty 
+│                       │     │                  ├ [1]: https://github.com/netty/netty/releases/tag/netty-4.1.1
+│                       │     │                  │      35.Final 
+│                       │     │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.2.1
+│                       │     │                  │      5.Final 
+│                       │     │                  ├ [3]: https://github.com/netty/netty/security/advisories/GHSA
+│                       │     │                  │      -5pvg-856g-cp85 
+│                       │     │                  ╰ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-47691 
+│                       │     ├ PublishedDate   : 2026-06-12T16:16:30.31Z 
+│                       │     ╰ LastModifiedDate: 2026-06-12T16:18:27.287Z 
+│                       ╰ [6] ╭ VulnerabilityID : CVE-2026-45673 
 │                             ├ VendorIDs        ─ [0]: GHSA-xmv7-r254-6q78 
 │                             ├ PkgName         : io.netty:netty-resolver-dns 
 │                             ├ PkgPath         : openaf/Kube/netty-resolver-dns-4.2.13.Final.jar 
@@ -291,52 +339,32 @@
 │                             │                          osystem%3Amaven 
 │                             ├ Fingerprint     : sha256:b8fcc300a2b587caf00daa2cc2a55d0cf99c416edc82e5b1cbbc37
 │                             │                   fc74feeee4 
-│                             ├ Title           : Netty: DNS Cache Poisoning due to Predictable PRNG and
-│                             │                   Default Static Source Port 
-│                             ├ Description     : ### Summary
-│                             │                   Netty's DNS resolver uses a predictable PRNG for generating
-│                             │                   DNS transaction IDs and defaults to a static UDP source port.
-│                             │                    This combination reduces the entropy of DNS queries,
-│                             │                   enabling DNS Cache Poisoning (Kaminsky attack).
-│                             │                   
-│                             │                   ### Details
-│                             │                   Two factors contribute to this vulnerability in
-│                             │                   io.netty.resolver.dns:
-│                             │                   - Predictable Query IDs: `DnsQueryIdSpace` manages 16-bit
-│                             │                   transaction IDs in buckets of 16,384 IDs. It initializes only
-│                             │                    the first bucket. When an ID is returned, it is pushed back
-│                             │                   into the bucket at a random index generated by
-│                             │                   java.util.concurrent.ThreadLocalRandom:
-│                             │                   ```java
-│                             │                   Random random = ThreadLocalRandom.current();
-│                             │                   int insertionPosition = random.nextInt(count + 1);
-│                             │                   ```
-│                             │                   Because ThreadLocalRandom is a predictable LCG and the
-│                             │                   resolver operates within a single bucket, the sequence of IDs
-│                             │                    is predictable once the PRNG state is mathematically
-│                             │                   recovered.
-│                             │                   - Default Static Source Port: `DnsNameResolverBuilder`
-│                             │                   defaults to a `channelStrategy` of `ChannelPerResolver`. This
-│                             │                    binds the DatagramChannel once, resulting in a static source
-│                             │                    port for all subsequent queries.
-│                             │                   Combined, a static source port and predictable transaction
-│                             │                   IDs reduces the entropy required to secure DNS resolution
-│                             │                   against spoofing.
-│                             │                   ### Impact
-│                             │                   DNS Cache Poisoning. Downstream applications using the
-│                             │                   default Netty DNS resolver may connect to malicious IPs,
-│                             │                   leading to traffic interception or MitM attacks. 
+│                             ├ Title           : Netty is a network application framework for development of
+│                             │                   protocol s ... 
+│                             ├ Description     : Netty is a network application framework for development of
+│                             │                   protocol servers and clients. Prior to versions 4.1.135.Final
+│                             │                    and 4.2.15.Final, Netty's DNS resolver uses a predictable
+│                             │                   PRNG for generating DNS transaction IDs and defaults to a
+│                             │                   static UDP source port. This combination reduces the entropy
+│                             │                   of DNS queries, enabling DNS Cache Poisoning (Kaminsky
+│                             │                   attack). Versions 4.1.135.Final and 4.2.15.Final patch the
+│                             │                   issue. 
 │                             ├ Severity        : MEDIUM 
+│                             ├ CweIDs           ╭ [0]: CWE-330 
+│                             │                  ╰ [1]: CWE-340 
 │                             ├ VendorSeverity   ─ ghsa: 2 
 │                             ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:H/A:N 
 │                             │                         ╰ V3Score : 6.8 
-│                             ╰ References       ╭ [0]: https://github.com/netty/netty 
-│                                                ├ [1]: https://github.com/netty/netty/releases/tag/netty-4.1.1
-│                                                │      35.Final 
-│                                                ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.2.1
-│                                                │      5.Final 
-│                                                ╰ [3]: https://github.com/netty/netty/security/advisories/GHSA
-│                                                       -xmv7-r254-6q78 
+│                             ├ References       ╭ [0]: https://github.com/netty/netty 
+│                             │                  ├ [1]: https://github.com/netty/netty/releases/tag/netty-4.1.1
+│                             │                  │      35.Final 
+│                             │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.2.1
+│                             │                  │      5.Final 
+│                             │                  ├ [3]: https://github.com/netty/netty/security/advisories/GHSA
+│                             │                  │      -xmv7-r254-6q78 
+│                             │                  ╰ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-45673 
+│                             ├ PublishedDate   : 2026-06-12T15:16:27.417Z 
+│                             ╰ LastModifiedDate: 2026-06-12T15:55:06.377Z 
 ├ [2] ╭ Target         : usr/bin/crictl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -474,61 +502,28 @@
 │                       │     │                   5858c6069f 
 │                       │     ├ Title           : Docker: Race condition in docker cp allows bind mount
 │                       │     │                   redirection to host path 
-│                       │     ├ Description     : Package updates are available for Amazon Linux 2023 that fix
-│                       │     │                   the following vulnerabilities:
-│                       │     │                   CVE-2026-46595:
-│                       │     │                   	Previously, CVE-2024-45337 fixed an authorization bypass for
-│                       │     │                    misused ssh server configurations; if any other type of
-│                       │     │                   callback is passed other than public key, then the
-│                       │     │                   source-address validation would be skipped.
-│                       │     │                   
-│                       │     │                   CVE-2026-42508:
-│                       │     │                   	Previously, a revoked 'SignatureKey' belonging to a CA was
-│                       │     │                   not correctly checked for revocation. Now, both the 'key' and
-│                       │     │                    'key.SignatureKey' are checked for @revoked.
-│                       │     │                   CVE-2026-42306:
-│                       │     │                   	Docker: Race condition in docker cp allows bind mount
-│                       │     │                   redirection to host path
-│                       │     │                   CVE-2026-39833:
-│                       │     │                   	The in-memory keyring returned by NewKeyring() silently
-│                       │     │                   accepted keys with the ConfirmBeforeUse constraint but never
-│                       │     │                   enforced it. The key would sign without any confirmation
-│                       │     │                   prompt, with no indication to the caller that the constraint
-│                       │     │                   was not in effect. NewKeyring() now returns an error when
-│                       │     │                   unsupported constraints are requested.
-│                       │     │                   CVE-2026-39831:
-│                       │     │                   	The Verify() method for FIDO/U2F security key types
-│                       │     │                   (sk-ecdsa-sha2-nistp256@openssh.com,
-│                       │     │                   sk-ssh-ed25519@openssh.com) did not check the User Presence
-│                       │     │                   flag. Signatures generated without physical touch were
-│                       │     │                   accepted, allowing unattended use of a hardware security key.
-│                       │     │                    To restore the previous behavior, return a
-│                       │     │                   "no-touch-required" extension in Permissions.Extensions from
-│                       │     │                   PublicKeyCallback.
-│                       │     │                   CVE-2026-39830:
-│                       │     │                   	A malicious SSH peer could send unsolicited global request
-│                       │     │                   responses to fill an internal buffer, blocking the
-│                       │     │                   connection's read loop. The blocked goroutine could not be
-│                       │     │                   released by calling Close(), resulting in a resource leak per
-│                       │     │                    connection. Unsolicited global responses are now discarded.
-│                       │     │                   CVE-2026-39829:
-│                       │     │                   	The RSA and DSA public key parsers did not enforce size
-│                       │     │                   limits on key parameters. A crafted public key with an
-│                       │     │                   excessively large modulus or DSA parameter could cause
-│                       │     │                   several minutes of CPU consumption during signature
-│                       │     │                   verification. This could be triggered by unauthenticated
-│                       │     │                   clients during public key authentication. RSA moduli are now
-│                       │     │                   limited to 8192 bits, and DSA parameters are validated per
-│                       │     │                   FIPS 186-2.
-│                       │     │                    
+│                       │     ├ Description     : Moby is an open source container framework. In Docker Engine
+│                       │     │                   prior to version 29.5.1, Docker Daemon versions 28.5.2 and
+│                       │     │                   prior, and Moby Daemon prior to version 2.0.0-beta.14, a race
+│                       │     │                    condition during docker cp mount setup allows a malicious
+│                       │     │                   container to redirect a bind mount target to an arbitrary
+│                       │     │                   host path, potentially overwriting host files or causing
+│                       │     │                   denial of service. This issue has been patched in Docker
+│                       │     │                   Engine version 29.5.1 and Moby Daemon version
+│                       │     │                   2.0.0-beta.14. 
 │                       │     ├ Severity        : HIGH 
+│                       │     ├ CweIDs           ╭ [0]: CWE-61 
+│                       │     │                  ╰ [1]: CWE-367 
 │                       │     ├ VendorSeverity   ╭ amazon: 3 
 │                       │     │                  ╰ ghsa  : 3 
 │                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:H/A:H 
 │                       │     │                         ╰ V3Score : 7.2 
-│                       │     ╰ References       ╭ [0]: https://github.com/moby/moby 
-│                       │                        ╰ [1]: https://github.com/moby/moby/security/advisories/GHSA-r
-│                       │                               g2x-37c3-w2rh 
+│                       │     ├ References       ╭ [0]: https://github.com/moby/moby 
+│                       │     │                  ├ [1]: https://github.com/moby/moby/security/advisories/GHSA-r
+│                       │     │                  │      g2x-37c3-w2rh 
+│                       │     │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-42306 
+│                       │     ├ PublishedDate   : 2026-06-12T19:16:27.49Z 
+│                       │     ╰ LastModifiedDate: 2026-06-12T19:16:27.49Z 
 │                       ├ [3] ╭ VulnerabilityID : CVE-2026-33997 
 │                       │     ├ VendorIDs        ─ [0]: GHSA-pxq6-2prw-chj9 
 │                       │     ├ PkgID           : github.com/docker/docker@v28.5.2+incompatible 
@@ -613,74 +608,26 @@
 │                       │     │                   0053c2005f 
 │                       │     ├ Title           : Docker: Race condition in docker cp allows creation of
 │                       │     │                   arbitrary empty files on the host via symlink swap 
-│                       │     ├ Description     : ## Summary
-│                       │     │                   
-│                       │     │                   A race condition during `docker cp` mount setup allows a
-│                       │     │                   malicious container to create empty files or directories at
-│                       │     │                   arbitrary absolute paths on the host filesystem.
-│                       │     │                   This advisory covers the race during mountpoint creation. The
-│                       │     │                    related race during the subsequent mount syscall is tracked
-│                       │     │                   in GHSA-rg2x-37c3-w2rh
-│                       │     │                   ## Details
-│                       │     │                   When copying files into a container, the daemon sets up a
-│                       │     │                   temporary filesystem view by bind-mounting volumes into a
-│                       │     │                   private mount namespace. During this setup, the mount
-│                       │     │                   destination path is first resolved within the container's
-│                       │     │                   root filesystem using `GetResourcePath`, and then used to
-│                       │     │                   create the mountpoint (file or directory) if it does not
-│                       │     │                   already exist via `createIfNotExists`.
-│                       │     │                   Between path resolution and mountpoint creation, a process
-│                       │     │                   running inside the container can swap a path component for a
-│                       │     │                   symlink pointing to an arbitrary location on the host.
-│                       │     │                   Because `createIfNotExists` operates on the already-resolved
-│                       │     │                   absolute path using standard `os.MkdirAll` and `os.OpenFile`
-│                       │     │                   — which follow symlinks in intermediate path components — the
-│                       │     │                    symlink is followed and the file or directory is created
-│                       │     │                   outside the container root filesystem, as root.
-│                       │     │                   ## Impact
-│                       │     │                   A malicious container can create empty files or directories
-│                       │     │                   at arbitrary absolute paths on the host filesystem, running
-│                       │     │                   as root. This enables persistent denial of service — for
-│                       │     │                   example:
-│                       │     │                   - Converting `/etc/docker/daemon.json` into a directory
-│                       │     │                   prevents the daemon from restarting
-│                       │     │                   - Creating `/etc/nologin` prevents user logins
-│                       │     │                   - Overwriting critical system paths with empty files can
-│                       │     │                   break host services
-│                       │     │                   The container does not gain read or write access to existing
-│                       │     │                   host files — only the ability to create new empty files or
-│                       │     │                   directories at chosen paths.
-│                       │     │                   ### Conditions for exploitation
-│                       │     │                   - A container must be running with a process that can rapidly
-│                       │     │                    create and swap symlinks at a volume mount destination
-│                       │     │                   path.
-│                       │     │                   - An operator must initiate a `docker cp` into that
-│                       │     │                   container, or call the `PUT /containers/{id}/archive` or
-│                       │     │                   `HEAD /containers/{id}/archive` API endpoints.
-│                       │     │                   ### Not affected
-│                       │     │                   - Containers that do not have volume mounts are not affected,
-│                       │     │                    as the race occurs during volume bind-mount setup.
-│                       │     │                   ## Patches
-│                       │     │                   Mountpoint creation is now scoped to the container root using
-│                       │     │                    `os.Root` (Go 1.24+), which refuses to follow symlinks that
-│                       │     │                   escape the opened root directory. All filesystem operations
-│                       │     │                   in `createIfNotExists` (`MkdirAll`, `OpenFile`) are performed
-│                       │     │                    through the `os.Root` handle, so even if a symlink swap
-│                       │     │                   occurs after path resolution, the creation stays confined to
-│                       │     │                   the container root.
-│                       │     │                   ## Workarounds
-│                       │     │                   - Only run containers from trusted images.
-│                       │     │                   - Avoid using `docker cp` with untrusted running containers.
-│                       │     │                   - Use authorization plugins to restrict access to the archive
-│                       │     │                    API endpoints (`PUT /containers/{id}/archive`, `HEAD
-│                       │     │                   /containers/{id}/archive`). 
+│                       │     ├ Description     : Moby is an open source container framework. In Docker Engine
+│                       │     │                   prior to version 29.5.1, Docker Daemon versions 28.5.2 and
+│                       │     │                   prior, and Moby Daemon prior to version 2.0.0-beta.14, a race
+│                       │     │                    condition during docker cp mount setup allows a malicious
+│                       │     │                   container to create empty files or directories at arbitrary
+│                       │     │                   absolute paths on the host filesystem. This issue has been
+│                       │     │                   patched in Docker Engine version 29.5.1 and Moby Daemon
+│                       │     │                   version 2.0.0-beta.14. 
 │                       │     ├ Severity        : MEDIUM 
+│                       │     ├ CweIDs           ╭ [0]: CWE-81 
+│                       │     │                  ╰ [1]: CWE-367 
 │                       │     ├ VendorSeverity   ─ ghsa: 2 
 │                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:L/A:H 
 │                       │     │                         ╰ V3Score : 6 
-│                       │     ╰ References       ╭ [0]: https://github.com/moby/moby 
-│                       │                        ╰ [1]: https://github.com/moby/moby/security/advisories/GHSA-v
-│                       │                               p62-88p7-qqf5 
+│                       │     ├ References       ╭ [0]: https://github.com/moby/moby 
+│                       │     │                  ├ [1]: https://github.com/moby/moby/security/advisories/GHSA-v
+│                       │     │                  │      p62-88p7-qqf5 
+│                       │     │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-41568 
+│                       │     ├ PublishedDate   : 2026-06-12T19:16:26.907Z 
+│                       │     ╰ LastModifiedDate: 2026-06-12T19:16:26.907Z 
 │                       ├ [5] ╭ VulnerabilityID : CVE-2026-39883 
 │                       │     ├ VendorIDs        ─ [0]: GHSA-hfvc-g4fc-pqhx 
 │                       │     ├ PkgID           : go.opentelemetry.io/otel/sdk@v1.42.0 
@@ -702,8 +649,9 @@
 │                       │     │                          osystem%3Ago 
 │                       │     ├ Fingerprint     : sha256:f6b8f0fe12e3ee96fc967a00dc9f69d80fd36a1dcfe438a234570a
 │                       │     │                   81ef378c24 
-│                       │     ├ Title           : opentelemetry-go: BSD kenv command not using absolute path
-│                       │     │                   enables PATH hijacking 
+│                       │     ├ Title           : github.com/open-telemetry/opentelemetry-go: OpenTelemetry-Go:
+│                       │     │                    Arbitrary code execution via PATH hijacking on BSD/Solaris[
+│                       │     │                   m 
 │                       │     ├ Description     : OpenTelemetry-Go is the Go implementation of OpenTelemetry.
 │                       │     │                   From 1.15.0 to 1.42.0, the fix for CVE-2026-24051 changed the
 │                       │     │                    Darwin ioreg command to use an absolute path but left the
@@ -712,19 +660,26 @@
 │                       │     │                   vulnerability is fixed in 1.43.0. 
 │                       │     ├ Severity        : HIGH 
 │                       │     ├ CweIDs           ─ [0]: CWE-426 
-│                       │     ├ VendorSeverity   ╭ ghsa: 3 
-│                       │     │                  ╰ nvd : 3 
-│                       │     ├ CVSS             ╭ ghsa ╭ V40Vector: CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:H/VI:
-│                       │     │                  │      │            H/VA:H/SC:N/SI:N/SA:N 
-│                       │     │                  │      ╰ V40Score : 7.3 
-│                       │     │                  ╰ nvd  ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H 
-│                       │     │                         ╰ V3Score : 7 
+│                       │     ├ VendorSeverity   ╭ ghsa  : 3 
+│                       │     │                  ├ nvd   : 3 
+│                       │     │                  ╰ redhat: 3 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V40Vector: CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:H/V
+│                       │     │                  │        │            I:H/VA:H/SC:N/SI:N/SA:N 
+│                       │     │                  │        ╰ V40Score : 7.3 
+│                       │     │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/
+│                       │     │                  │        │           A:H 
+│                       │     │                  │        ╰ V3Score : 7 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/
+│                       │     │                           │           A:H 
+│                       │     │                           ╰ V3Score : 8.8 
 │                       │     ├ References       ╭ [0]: http://github.com/open-telemetry/opentelemetry-go/relea
 │                       │     │                  │      ses/tag/v1.43.0 
-│                       │     │                  ├ [1]: https://github.com/open-telemetry/opentelemetry-go 
-│                       │     │                  ├ [2]: https://github.com/open-telemetry/opentelemetry-go/secu
+│                       │     │                  ├ [1]: https://access.redhat.com/security/cve/CVE-2026-39883 
+│                       │     │                  ├ [2]: https://github.com/open-telemetry/opentelemetry-go 
+│                       │     │                  ├ [3]: https://github.com/open-telemetry/opentelemetry-go/secu
 │                       │     │                  │      rity/advisories/GHSA-hfvc-g4fc-pqhx 
-│                       │     │                  ╰ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-39883 
+│                       │     │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-39883 
+│                       │     │                  ╰ [5]: https://www.cve.org/CVERecord?id=CVE-2026-39883 
 │                       │     ├ PublishedDate   : 2026-04-08T21:17:00.697Z 
 │                       │     ╰ LastModifiedDate: 2026-04-10T21:16:27.12Z 
 │                       ├ [6] ╭ VulnerabilityID : CVE-2026-42504 
@@ -1173,62 +1128,28 @@
 │                       │      │                   0557c18b400 
 │                       │      ├ Title           : Docker: Race condition in docker cp allows bind mount
 │                       │      │                   redirection to host path 
-│                       │      ├ Description     : Package updates are available for Amazon Linux 2023 that fix
-│                       │      │                    the following vulnerabilities:
-│                       │      │                   CVE-2026-46595:
-│                       │      │                   	Previously, CVE-2024-45337 fixed an authorization bypass
-│                       │      │                   for misused ssh server configurations; if any other type of
-│                       │      │                   callback is passed other than public key, then the
-│                       │      │                   source-address validation would be skipped.
-│                       │      │                   
-│                       │      │                   CVE-2026-42508:
-│                       │      │                   	Previously, a revoked 'SignatureKey' belonging to a CA was
-│                       │      │                   not correctly checked for revocation. Now, both the 'key'
-│                       │      │                   and 'key.SignatureKey' are checked for @revoked.
-│                       │      │                   CVE-2026-42306:
-│                       │      │                   	Docker: Race condition in docker cp allows bind mount
-│                       │      │                   redirection to host path
-│                       │      │                   CVE-2026-39833:
-│                       │      │                   	The in-memory keyring returned by NewKeyring() silently
-│                       │      │                   accepted keys with the ConfirmBeforeUse constraint but never
-│                       │      │                    enforced it. The key would sign without any confirmation
-│                       │      │                   prompt, with no indication to the caller that the constraint
-│                       │      │                    was not in effect. NewKeyring() now returns an error when
-│                       │      │                   unsupported constraints are requested.
-│                       │      │                   CVE-2026-39831:
-│                       │      │                   	The Verify() method for FIDO/U2F security key types
-│                       │      │                   (sk-ecdsa-sha2-nistp256@openssh.com,
-│                       │      │                   sk-ssh-ed25519@openssh.com) did not check the User Presence
-│                       │      │                   flag. Signatures generated without physical touch were
-│                       │      │                   accepted, allowing unattended use of a hardware security
-│                       │      │                   key. To restore the previous behavior, return a
-│                       │      │                   "no-touch-required" extension in Permissions.Extensions from
-│                       │      │                    PublicKeyCallback.
-│                       │      │                   CVE-2026-39830:
-│                       │      │                   	A malicious SSH peer could send unsolicited global request
-│                       │      │                   responses to fill an internal buffer, blocking the
-│                       │      │                   connection's read loop. The blocked goroutine could not be
-│                       │      │                   released by calling Close(), resulting in a resource leak
-│                       │      │                   per connection. Unsolicited global responses are now
-│                       │      │                   discarded.
-│                       │      │                   CVE-2026-39829:
-│                       │      │                   	The RSA and DSA public key parsers did not enforce size
-│                       │      │                   limits on key parameters. A crafted public key with an
-│                       │      │                   excessively large modulus or DSA parameter could cause
-│                       │      │                   several minutes of CPU consumption during signature
-│                       │      │                   verification. This could be triggered by unauthenticated
-│                       │      │                   clients during public key authentication. RSA moduli are now
-│                       │      │                    limited to 8192 bits, and DSA parameters are validated per
-│                       │      │                   FIPS 186-2.
-│                       │      │                    
+│                       │      ├ Description     : Moby is an open source container framework. In Docker Engine
+│                       │      │                    prior to version 29.5.1, Docker Daemon versions 28.5.2 and
+│                       │      │                   prior, and Moby Daemon prior to version 2.0.0-beta.14, a
+│                       │      │                   race condition during docker cp mount setup allows a
+│                       │      │                   malicious container to redirect a bind mount target to an
+│                       │      │                   arbitrary host path, potentially overwriting host files or
+│                       │      │                   causing denial of service. This issue has been patched in
+│                       │      │                   Docker Engine version 29.5.1 and Moby Daemon version
+│                       │      │                   2.0.0-beta.14. 
 │                       │      ├ Severity        : HIGH 
+│                       │      ├ CweIDs           ╭ [0]: CWE-61 
+│                       │      │                  ╰ [1]: CWE-367 
 │                       │      ├ VendorSeverity   ╭ amazon: 3 
 │                       │      │                  ╰ ghsa  : 3 
 │                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:H/A:H 
 │                       │      │                         ╰ V3Score : 7.2 
-│                       │      ╰ References       ╭ [0]: https://github.com/moby/moby 
-│                       │                         ╰ [1]: https://github.com/moby/moby/security/advisories/GHSA-
-│                       │                                rg2x-37c3-w2rh 
+│                       │      ├ References       ╭ [0]: https://github.com/moby/moby 
+│                       │      │                  ├ [1]: https://github.com/moby/moby/security/advisories/GHSA-
+│                       │      │                  │      rg2x-37c3-w2rh 
+│                       │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-42306 
+│                       │      ├ PublishedDate   : 2026-06-12T19:16:27.49Z 
+│                       │      ╰ LastModifiedDate: 2026-06-12T19:16:27.49Z 
 │                       ├ [4]  ╭ VulnerabilityID : CVE-2026-33997 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-pxq6-2prw-chj9 
 │                       │      ├ PkgID           : github.com/docker/docker@v28.0.4+incompatible 
@@ -1313,77 +1234,26 @@
 │                       │      │                   4dc729d092f 
 │                       │      ├ Title           : Docker: Race condition in docker cp allows creation of
 │                       │      │                   arbitrary empty files on the host via symlink swap 
-│                       │      ├ Description     : ## Summary
-│                       │      │                   
-│                       │      │                   A race condition during `docker cp` mount setup allows a
+│                       │      ├ Description     : Moby is an open source container framework. In Docker Engine
+│                       │      │                    prior to version 29.5.1, Docker Daemon versions 28.5.2 and
+│                       │      │                   prior, and Moby Daemon prior to version 2.0.0-beta.14, a
+│                       │      │                   race condition during docker cp mount setup allows a
 │                       │      │                   malicious container to create empty files or directories at
-│                       │      │                   arbitrary absolute paths on the host filesystem.
-│                       │      │                   This advisory covers the race during mountpoint creation.
-│                       │      │                   The related race during the subsequent mount syscall is
-│                       │      │                   tracked in GHSA-rg2x-37c3-w2rh
-│                       │      │                   ## Details
-│                       │      │                   When copying files into a container, the daemon sets up a
-│                       │      │                   temporary filesystem view by bind-mounting volumes into a
-│                       │      │                   private mount namespace. During this setup, the mount
-│                       │      │                   destination path is first resolved within the container's
-│                       │      │                   root filesystem using `GetResourcePath`, and then used to
-│                       │      │                   create the mountpoint (file or directory) if it does not
-│                       │      │                   already exist via `createIfNotExists`.
-│                       │      │                   Between path resolution and mountpoint creation, a process
-│                       │      │                   running inside the container can swap a path component for a
-│                       │      │                    symlink pointing to an arbitrary location on the host.
-│                       │      │                   Because `createIfNotExists` operates on the already-resolved
-│                       │      │                    absolute path using standard `os.MkdirAll` and
-│                       │      │                   `os.OpenFile` — which follow symlinks in intermediate path
-│                       │      │                   components — the symlink is followed and the file or
-│                       │      │                   directory is created outside the container root filesystem,
-│                       │      │                   as root.
-│                       │      │                   ## Impact
-│                       │      │                   A malicious container can create empty files or directories
-│                       │      │                   at arbitrary absolute paths on the host filesystem, running
-│                       │      │                   as root. This enables persistent denial of service — for
-│                       │      │                   example:
-│                       │      │                   - Converting `/etc/docker/daemon.json` into a directory
-│                       │      │                   prevents the daemon from restarting
-│                       │      │                   - Creating `/etc/nologin` prevents user logins
-│                       │      │                   - Overwriting critical system paths with empty files can
-│                       │      │                   break host services
-│                       │      │                   The container does not gain read or write access to existing
-│                       │      │                    host files — only the ability to create new empty files or
-│                       │      │                   directories at chosen paths.
-│                       │      │                   ### Conditions for exploitation
-│                       │      │                   - A container must be running with a process that can
-│                       │      │                   rapidly create and swap symlinks at a volume mount
-│                       │      │                   destination path.
-│                       │      │                   - An operator must initiate a `docker cp` into that
-│                       │      │                   container, or call the `PUT /containers/{id}/archive` or
-│                       │      │                   `HEAD /containers/{id}/archive` API endpoints.
-│                       │      │                   ### Not affected
-│                       │      │                   - Containers that do not have volume mounts are not
-│                       │      │                   affected, as the race occurs during volume bind-mount
-│                       │      │                   setup.
-│                       │      │                   ## Patches
-│                       │      │                   Mountpoint creation is now scoped to the container root
-│                       │      │                   using `os.Root` (Go 1.24+), which refuses to follow symlinks
-│                       │      │                    that escape the opened root directory. All filesystem
-│                       │      │                   operations in `createIfNotExists` (`MkdirAll`, `OpenFile`)
-│                       │      │                   are performed through the `os.Root` handle, so even if a
-│                       │      │                   symlink swap occurs after path resolution, the creation
-│                       │      │                   stays confined to the container root.
-│                       │      │                   ## Workarounds
-│                       │      │                   - Only run containers from trusted images.
-│                       │      │                   - Avoid using `docker cp` with untrusted running
-│                       │      │                   containers.
-│                       │      │                   - Use authorization plugins to restrict access to the
-│                       │      │                   archive API endpoints (`PUT /containers/{id}/archive`, `HEAD
-│                       │      │                    /containers/{id}/archive`). 
+│                       │      │                   arbitrary absolute paths on the host filesystem. This issue
+│                       │      │                   has been patched in Docker Engine version 29.5.1 and Moby
+│                       │      │                   Daemon version 2.0.0-beta.14. 
 │                       │      ├ Severity        : MEDIUM 
+│                       │      ├ CweIDs           ╭ [0]: CWE-81 
+│                       │      │                  ╰ [1]: CWE-367 
 │                       │      ├ VendorSeverity   ─ ghsa: 2 
 │                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:L/A:H 
 │                       │      │                         ╰ V3Score : 6 
-│                       │      ╰ References       ╭ [0]: https://github.com/moby/moby 
-│                       │                         ╰ [1]: https://github.com/moby/moby/security/advisories/GHSA-
-│                       │                                vp62-88p7-qqf5 
+│                       │      ├ References       ╭ [0]: https://github.com/moby/moby 
+│                       │      │                  ├ [1]: https://github.com/moby/moby/security/advisories/GHSA-
+│                       │      │                  │      vp62-88p7-qqf5 
+│                       │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-41568 
+│                       │      ├ PublishedDate   : 2026-06-12T19:16:26.907Z 
+│                       │      ╰ LastModifiedDate: 2026-06-12T19:16:26.907Z 
 │                       ├ [6]  ╭ VulnerabilityID : CVE-2025-11065 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-2464-8j7c-4cjm 
 │                       │      ├ PkgID           : github.com/go-viper/mapstructure/v2@v2.2.1 
@@ -1631,6 +1501,7 @@
 │                       │      │                  ├ azure      : 3 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ├ photon     : 3 
 │                       │      │                  ├ redhat     : 3 
 │                       │      │                  ╰ rocky      : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
@@ -1646,7 +1517,7 @@
 │                       │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-25679 
 │                       │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-9044.html 
-│                       │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:8456 
+│                       │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:9044 
 │                       │      │                  ├ [7] : https://go.dev/cl/752180 
 │                       │      │                  ├ [8] : https://go.dev/issue/77578 
 │                       │      │                  ├ [9] : https://groups.google.com/g/golang-announce/c/EdhZqrQ
@@ -1690,6 +1561,7 @@
 │                       │      │                  ├ amazon     : 3 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ├ photon     : 3 
 │                       │      │                  ├ redhat     : 3 
 │                       │      │                  ├ rocky      : 3 
 │                       │      │                  ╰ ubuntu     : 2 
@@ -1710,28 +1582,40 @@
 │                       │      │                  ├ [8] : https://bugzilla.redhat.com/2456338 
 │                       │      │                  ├ [9] : https://bugzilla.redhat.com/2456339 
 │                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
-│                       │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
-│                       │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2449833 
+│                       │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2455470 
+│                       │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2456333 
+│                       │      │                  ├ [14]: https://bugzilla.redhat.com/show_bug.cgi?id=2456335 
+│                       │      │                  ├ [15]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
+│                       │      │                  ├ [16]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
+│                       │      │                  ├ [17]: https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
+│                       │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-25679 
-│                       │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32280 
-│                       │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [20]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32281 
+│                       │      │                  ├ [21]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32282 
-│                       │      │                  ├ [17]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [22]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [18]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
-│                       │      │                  ├ [19]: https://errata.rockylinux.org/RLSA-2026:16875 
-│                       │      │                  ├ [20]: https://go.dev/cl/758320 
-│                       │      │                  ├ [21]: https://go.dev/issue/78282 
-│                       │      │                  ├ [22]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [23]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-33186 
+│                       │      │                  ├ [24]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-33810 
+│                       │      │                  ├ [25]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-34986 
+│                       │      │                  ├ [26]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
+│                       │      │                  ├ [27]: https://errata.rockylinux.org/RLSA-2026:19353 
+│                       │      │                  ├ [28]: https://go.dev/cl/758320 
+│                       │      │                  ├ [29]: https://go.dev/issue/78282 
+│                       │      │                  ├ [30]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [23]: https://linux.oracle.com/cve/CVE-2026-32280.html 
-│                       │      │                  ├ [24]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
-│                       │      │                  ├ [25]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
-│                       │      │                  ├ [26]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      │                  ╰ [27]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
+│                       │      │                  ├ [31]: https://linux.oracle.com/cve/CVE-2026-32280.html 
+│                       │      │                  ├ [32]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
+│                       │      │                  ├ [33]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ├ [34]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      │                  ╰ [35]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:16:42.18Z 
 │                       ├ [11] ╭ VulnerabilityID : CVE-2026-32281 
@@ -1769,6 +1653,7 @@
 │                       │      │                  ├ amazon : 3 
 │                       │      │                  ├ bitnami: 3 
 │                       │      │                  ├ nvd    : 3 
+│                       │      │                  ├ photon : 3 
 │                       │      │                  ├ redhat : 2 
 │                       │      │                  ╰ rocky  : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
@@ -1790,24 +1675,39 @@
 │                       │      │                  ├ [7] : https://bugzilla.redhat.com/2456336 
 │                       │      │                  ├ [8] : https://bugzilla.redhat.com/2456338 
 │                       │      │                  ├ [9] : https://bugzilla.redhat.com/2456339 
-│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2456333 
-│                       │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│                       │      │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
+│                       │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2449833 
+│                       │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2455470 
+│                       │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2456333 
+│                       │      │                  ├ [14]: https://bugzilla.redhat.com/show_bug.cgi?id=2456335 
+│                       │      │                  ├ [15]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
+│                       │      │                  ├ [16]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
+│                       │      │                  ├ [17]: https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
+│                       │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-25679 
+│                       │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32280 
-│                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [20]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32281 
-│                       │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [21]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32282 
+│                       │      │                  ├ [22]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [16]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
-│                       │      │                  ├ [17]: https://errata.rockylinux.org/RLSA-2026:23102 
-│                       │      │                  ├ [18]: https://go.dev/cl/758061 
-│                       │      │                  ├ [19]: https://go.dev/issue/78281 
-│                       │      │                  ├ [20]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [23]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-33186 
+│                       │      │                  ├ [24]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-33810 
+│                       │      │                  ├ [25]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-34986 
+│                       │      │                  ├ [26]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
+│                       │      │                  ├ [27]: https://errata.rockylinux.org/RLSA-2026:19353 
+│                       │      │                  ├ [28]: https://go.dev/cl/758061 
+│                       │      │                  ├ [29]: https://go.dev/issue/78281 
+│                       │      │                  ├ [30]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [21]: https://nvd.nist.gov/vuln/detail/CVE-2026-32281 
-│                       │      │                  ├ [22]: https://pkg.go.dev/vuln/GO-2026-4946 
-│                       │      │                  ╰ [23]: https://www.cve.org/CVERecord?id=CVE-2026-32281 
+│                       │      │                  ├ [31]: https://nvd.nist.gov/vuln/detail/CVE-2026-32281 
+│                       │      │                  ├ [32]: https://pkg.go.dev/vuln/GO-2026-4946 
+│                       │      │                  ╰ [33]: https://www.cve.org/CVERecord?id=CVE-2026-32281 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.35Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:15:57.75Z 
 │                       ├ [12] ╭ VulnerabilityID : CVE-2026-32283 
@@ -1844,6 +1744,7 @@
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ nvd        : 3 
 │                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ├ photon     : 3 
 │                       │      │                  ├ redhat     : 3 
 │                       │      │                  ╰ rocky      : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
@@ -1865,29 +1766,41 @@
 │                       │      │                  ├ [7] : https://bugzilla.redhat.com/2456336 
 │                       │      │                  ├ [8] : https://bugzilla.redhat.com/2456338 
 │                       │      │                  ├ [9] : https://bugzilla.redhat.com/2456339 
-│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
-│                       │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
-│                       │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2434432 
+│                       │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2437111 
+│                       │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2445345 
+│                       │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
+│                       │      │                  ├ [14]: https://bugzilla.redhat.com/show_bug.cgi?id=2449833 
+│                       │      │                  ├ [15]: https://bugzilla.redhat.com/show_bug.cgi?id=2455470 
+│                       │      │                  ├ [16]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
+│                       │      │                  ├ [17]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
+│                       │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       25-61726 
+│                       │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       25-68121 
+│                       │      │                  ├ [20]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-25679 
-│                       │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-32280 
-│                       │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [21]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-27137 
+│                       │      │                  ├ [22]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32282 
-│                       │      │                  ├ [17]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [23]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [18]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
-│                       │      │                  ├ [19]: https://errata.rockylinux.org/RLSA-2026:16875 
-│                       │      │                  ├ [20]: https://go.dev/cl/763767 
-│                       │      │                  ├ [21]: https://go.dev/issue/78334 
-│                       │      │                  ├ [22]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [24]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-33186 
+│                       │      │                  ├ [25]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-34986 
+│                       │      │                  ├ [26]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
+│                       │      │                  ├ [27]: https://errata.rockylinux.org/RLSA-2026:23228 
+│                       │      │                  ├ [28]: https://go.dev/cl/763767 
+│                       │      │                  ├ [29]: https://go.dev/issue/78334 
+│                       │      │                  ├ [30]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [23]: https://linux.oracle.com/cve/CVE-2026-32283.html 
-│                       │      │                  ├ [24]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│                       │      │                  ├ [25]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-│                       │      │                  ├ [26]: https://pkg.go.dev/vuln/GO-2026-4870 
-│                       │      │                  ╰ [27]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
+│                       │      │                  ├ [31]: https://linux.oracle.com/cve/CVE-2026-32283.html 
+│                       │      │                  ├ [32]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│                       │      │                  ├ [33]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                       │      │                  ├ [34]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                       │      │                  ╰ [35]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:12:10.54Z 
 │                       ├ [13] ╭ VulnerabilityID : CVE-2026-33811 
@@ -1921,6 +1834,7 @@
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ nvd        : 3 
 │                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ├ photon     : 3 
 │                       │      │                  ╰ redhat     : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
@@ -1975,6 +1889,7 @@
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ nvd        : 3 
 │                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ├ photon     : 3 
 │                       │      │                  ╰ ubuntu     : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
@@ -2027,7 +1942,8 @@
 │                       │      ├ VendorSeverity   ╭ amazon     : 3 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ nvd        : 3 
-│                       │      │                  ╰ oracle-oval: 3 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ photon     : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
 │                       │      │                  │         ╰ V3Score : 7.5 
@@ -2075,7 +1991,8 @@
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
 │                       │      ├ VendorSeverity   ╭ amazon     : 3 
 │                       │      │                  ├ bitnami    : 2 
-│                       │      │                  ╰ oracle-oval: 3 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ photon     : 2 
 │                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
 │                       │      │                            │           L/A:N 
 │                       │      │                            ╰ V3Score : 6.1 
@@ -2126,7 +2043,8 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ VendorSeverity   ╭ amazon     : 3 
 │                       │      │                  ├ bitnami    : 2 
-│                       │      │                  ╰ oracle-oval: 3 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ photon     : 2 
 │                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
 │                       │      │                            │           N/A:N 
 │                       │      │                            ╰ V3Score : 5.3 
@@ -2167,7 +2085,8 @@
 │                       │      ├ CweIDs           ─ [0]: CWE-476 
 │                       │      ├ VendorSeverity   ╭ bitnami    : 3 
 │                       │      │                  ├ nvd        : 3 
-│                       │      │                  ╰ oracle-oval: 3 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ photon     : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
 │                       │      │                  │         ╰ V3Score : 7.5 
@@ -2210,7 +2129,8 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ VendorSeverity   ╭ amazon     : 3 
 │                       │      │                  ├ bitnami    : 3 
-│                       │      │                  ╰ oracle-oval: 3 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ photon     : 3 
 │                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                            │           N/A:H 
 │                       │      │                            ╰ V3Score : 7.5 
@@ -2293,6 +2213,7 @@
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
 │                       │      ├ VendorSeverity   ╭ amazon : 3 
 │                       │      │                  ├ bitnami: 2 
+│                       │      │                  ├ photon : 2 
 │                       │      │                  ╰ redhat : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
 │                       │      │                  │         │           L/A:N 
@@ -2392,6 +2313,7 @@
 │                       │      │                  ├ bitnami    : 2 
 │                       │      │                  ├ nvd        : 2 
 │                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ├ photon     : 2 
 │                       │      │                  ├ redhat     : 2 
 │                       │      │                  ╰ rocky      : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:
@@ -2413,29 +2335,41 @@
 │                       │      │                  ├ [7] : https://bugzilla.redhat.com/2456336 
 │                       │      │                  ├ [8] : https://bugzilla.redhat.com/2456338 
 │                       │      │                  ├ [9] : https://bugzilla.redhat.com/2456339 
-│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
-│                       │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
-│                       │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2434432 
+│                       │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2437111 
+│                       │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2445345 
+│                       │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
+│                       │      │                  ├ [14]: https://bugzilla.redhat.com/show_bug.cgi?id=2449833 
+│                       │      │                  ├ [15]: https://bugzilla.redhat.com/show_bug.cgi?id=2455470 
+│                       │      │                  ├ [16]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
+│                       │      │                  ├ [17]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
+│                       │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       25-61726 
+│                       │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       25-68121 
+│                       │      │                  ├ [20]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-25679 
-│                       │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-32280 
-│                       │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [21]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-27137 
+│                       │      │                  ├ [22]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32282 
-│                       │      │                  ├ [17]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [23]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [18]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
-│                       │      │                  ├ [19]: https://errata.rockylinux.org/RLSA-2026:16875 
-│                       │      │                  ├ [20]: https://go.dev/cl/763761 
-│                       │      │                  ├ [21]: https://go.dev/issue/78293 
-│                       │      │                  ├ [22]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [24]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-33186 
+│                       │      │                  ├ [25]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-34986 
+│                       │      │                  ├ [26]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
+│                       │      │                  ├ [27]: https://errata.rockylinux.org/RLSA-2026:23228 
+│                       │      │                  ├ [28]: https://go.dev/cl/763761 
+│                       │      │                  ├ [29]: https://go.dev/issue/78293 
+│                       │      │                  ├ [30]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [23]: https://linux.oracle.com/cve/CVE-2026-32282.html 
-│                       │      │                  ├ [24]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│                       │      │                  ├ [25]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-│                       │      │                  ├ [26]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      │                  ╰ [27]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      │                  ├ [31]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+│                       │      │                  ├ [32]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│                       │      │                  ├ [33]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [34]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [35]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:15:39.4Z 
 │                       ├ [24] ╭ VulnerabilityID : CVE-2026-32288 
@@ -2580,6 +2514,7 @@
 │                       │      ├ VendorSeverity   ╭ amazon     : 3 
 │                       │      │                  ├ bitnami    : 2 
 │                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ├ photon     : 2 
 │                       │      │                  ╰ redhat     : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
 │                       │      │                  │         │           L/A:N 
@@ -2669,6 +2604,7 @@
 │                              ├ VendorSeverity   ╭ amazon : 3 
 │                              │                  ├ azure  : 1 
 │                              │                  ├ bitnami: 1 
+│                              │                  ├ photon : 1 
 │                              │                  ╰ redhat : 1 
 │                              ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:
 │                              │                  │         │           N/A:N 
@@ -3142,62 +3078,28 @@
 │                       │      │                   9eee228cb3e 
 │                       │      ├ Title           : Docker: Race condition in docker cp allows bind mount
 │                       │      │                   redirection to host path 
-│                       │      ├ Description     : Package updates are available for Amazon Linux 2023 that fix
-│                       │      │                    the following vulnerabilities:
-│                       │      │                   CVE-2026-46595:
-│                       │      │                   	Previously, CVE-2024-45337 fixed an authorization bypass
-│                       │      │                   for misused ssh server configurations; if any other type of
-│                       │      │                   callback is passed other than public key, then the
-│                       │      │                   source-address validation would be skipped.
-│                       │      │                   
-│                       │      │                   CVE-2026-42508:
-│                       │      │                   	Previously, a revoked 'SignatureKey' belonging to a CA was
-│                       │      │                   not correctly checked for revocation. Now, both the 'key'
-│                       │      │                   and 'key.SignatureKey' are checked for @revoked.
-│                       │      │                   CVE-2026-42306:
-│                       │      │                   	Docker: Race condition in docker cp allows bind mount
-│                       │      │                   redirection to host path
-│                       │      │                   CVE-2026-39833:
-│                       │      │                   	The in-memory keyring returned by NewKeyring() silently
-│                       │      │                   accepted keys with the ConfirmBeforeUse constraint but never
-│                       │      │                    enforced it. The key would sign without any confirmation
-│                       │      │                   prompt, with no indication to the caller that the constraint
-│                       │      │                    was not in effect. NewKeyring() now returns an error when
-│                       │      │                   unsupported constraints are requested.
-│                       │      │                   CVE-2026-39831:
-│                       │      │                   	The Verify() method for FIDO/U2F security key types
-│                       │      │                   (sk-ecdsa-sha2-nistp256@openssh.com,
-│                       │      │                   sk-ssh-ed25519@openssh.com) did not check the User Presence
-│                       │      │                   flag. Signatures generated without physical touch were
-│                       │      │                   accepted, allowing unattended use of a hardware security
-│                       │      │                   key. To restore the previous behavior, return a
-│                       │      │                   "no-touch-required" extension in Permissions.Extensions from
-│                       │      │                    PublicKeyCallback.
-│                       │      │                   CVE-2026-39830:
-│                       │      │                   	A malicious SSH peer could send unsolicited global request
-│                       │      │                   responses to fill an internal buffer, blocking the
-│                       │      │                   connection's read loop. The blocked goroutine could not be
-│                       │      │                   released by calling Close(), resulting in a resource leak
-│                       │      │                   per connection. Unsolicited global responses are now
-│                       │      │                   discarded.
-│                       │      │                   CVE-2026-39829:
-│                       │      │                   	The RSA and DSA public key parsers did not enforce size
-│                       │      │                   limits on key parameters. A crafted public key with an
-│                       │      │                   excessively large modulus or DSA parameter could cause
-│                       │      │                   several minutes of CPU consumption during signature
-│                       │      │                   verification. This could be triggered by unauthenticated
-│                       │      │                   clients during public key authentication. RSA moduli are now
-│                       │      │                    limited to 8192 bits, and DSA parameters are validated per
-│                       │      │                   FIPS 186-2.
-│                       │      │                    
+│                       │      ├ Description     : Moby is an open source container framework. In Docker Engine
+│                       │      │                    prior to version 29.5.1, Docker Daemon versions 28.5.2 and
+│                       │      │                   prior, and Moby Daemon prior to version 2.0.0-beta.14, a
+│                       │      │                   race condition during docker cp mount setup allows a
+│                       │      │                   malicious container to redirect a bind mount target to an
+│                       │      │                   arbitrary host path, potentially overwriting host files or
+│                       │      │                   causing denial of service. This issue has been patched in
+│                       │      │                   Docker Engine version 29.5.1 and Moby Daemon version
+│                       │      │                   2.0.0-beta.14. 
 │                       │      ├ Severity        : HIGH 
+│                       │      ├ CweIDs           ╭ [0]: CWE-61 
+│                       │      │                  ╰ [1]: CWE-367 
 │                       │      ├ VendorSeverity   ╭ amazon: 3 
 │                       │      │                  ╰ ghsa  : 3 
 │                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:H/A:H 
 │                       │      │                         ╰ V3Score : 7.2 
-│                       │      ╰ References       ╭ [0]: https://github.com/moby/moby 
-│                       │                         ╰ [1]: https://github.com/moby/moby/security/advisories/GHSA-
-│                       │                                rg2x-37c3-w2rh 
+│                       │      ├ References       ╭ [0]: https://github.com/moby/moby 
+│                       │      │                  ├ [1]: https://github.com/moby/moby/security/advisories/GHSA-
+│                       │      │                  │      rg2x-37c3-w2rh 
+│                       │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-42306 
+│                       │      ├ PublishedDate   : 2026-06-12T19:16:27.49Z 
+│                       │      ╰ LastModifiedDate: 2026-06-12T19:16:27.49Z 
 │                       ├ [4]  ╭ VulnerabilityID : CVE-2026-33997 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-pxq6-2prw-chj9 
 │                       │      ├ PkgID           : github.com/docker/docker@v28.5.2+incompatible 
@@ -3282,77 +3184,26 @@
 │                       │      │                   17fedecfcdf 
 │                       │      ├ Title           : Docker: Race condition in docker cp allows creation of
 │                       │      │                   arbitrary empty files on the host via symlink swap 
-│                       │      ├ Description     : ## Summary
-│                       │      │                   
-│                       │      │                   A race condition during `docker cp` mount setup allows a
+│                       │      ├ Description     : Moby is an open source container framework. In Docker Engine
+│                       │      │                    prior to version 29.5.1, Docker Daemon versions 28.5.2 and
+│                       │      │                   prior, and Moby Daemon prior to version 2.0.0-beta.14, a
+│                       │      │                   race condition during docker cp mount setup allows a
 │                       │      │                   malicious container to create empty files or directories at
-│                       │      │                   arbitrary absolute paths on the host filesystem.
-│                       │      │                   This advisory covers the race during mountpoint creation.
-│                       │      │                   The related race during the subsequent mount syscall is
-│                       │      │                   tracked in GHSA-rg2x-37c3-w2rh
-│                       │      │                   ## Details
-│                       │      │                   When copying files into a container, the daemon sets up a
-│                       │      │                   temporary filesystem view by bind-mounting volumes into a
-│                       │      │                   private mount namespace. During this setup, the mount
-│                       │      │                   destination path is first resolved within the container's
-│                       │      │                   root filesystem using `GetResourcePath`, and then used to
-│                       │      │                   create the mountpoint (file or directory) if it does not
-│                       │      │                   already exist via `createIfNotExists`.
-│                       │      │                   Between path resolution and mountpoint creation, a process
-│                       │      │                   running inside the container can swap a path component for a
-│                       │      │                    symlink pointing to an arbitrary location on the host.
-│                       │      │                   Because `createIfNotExists` operates on the already-resolved
-│                       │      │                    absolute path using standard `os.MkdirAll` and
-│                       │      │                   `os.OpenFile` — which follow symlinks in intermediate path
-│                       │      │                   components — the symlink is followed and the file or
-│                       │      │                   directory is created outside the container root filesystem,
-│                       │      │                   as root.
-│                       │      │                   ## Impact
-│                       │      │                   A malicious container can create empty files or directories
-│                       │      │                   at arbitrary absolute paths on the host filesystem, running
-│                       │      │                   as root. This enables persistent denial of service — for
-│                       │      │                   example:
-│                       │      │                   - Converting `/etc/docker/daemon.json` into a directory
-│                       │      │                   prevents the daemon from restarting
-│                       │      │                   - Creating `/etc/nologin` prevents user logins
-│                       │      │                   - Overwriting critical system paths with empty files can
-│                       │      │                   break host services
-│                       │      │                   The container does not gain read or write access to existing
-│                       │      │                    host files — only the ability to create new empty files or
-│                       │      │                   directories at chosen paths.
-│                       │      │                   ### Conditions for exploitation
-│                       │      │                   - A container must be running with a process that can
-│                       │      │                   rapidly create and swap symlinks at a volume mount
-│                       │      │                   destination path.
-│                       │      │                   - An operator must initiate a `docker cp` into that
-│                       │      │                   container, or call the `PUT /containers/{id}/archive` or
-│                       │      │                   `HEAD /containers/{id}/archive` API endpoints.
-│                       │      │                   ### Not affected
-│                       │      │                   - Containers that do not have volume mounts are not
-│                       │      │                   affected, as the race occurs during volume bind-mount
-│                       │      │                   setup.
-│                       │      │                   ## Patches
-│                       │      │                   Mountpoint creation is now scoped to the container root
-│                       │      │                   using `os.Root` (Go 1.24+), which refuses to follow symlinks
-│                       │      │                    that escape the opened root directory. All filesystem
-│                       │      │                   operations in `createIfNotExists` (`MkdirAll`, `OpenFile`)
-│                       │      │                   are performed through the `os.Root` handle, so even if a
-│                       │      │                   symlink swap occurs after path resolution, the creation
-│                       │      │                   stays confined to the container root.
-│                       │      │                   ## Workarounds
-│                       │      │                   - Only run containers from trusted images.
-│                       │      │                   - Avoid using `docker cp` with untrusted running
-│                       │      │                   containers.
-│                       │      │                   - Use authorization plugins to restrict access to the
-│                       │      │                   archive API endpoints (`PUT /containers/{id}/archive`, `HEAD
-│                       │      │                    /containers/{id}/archive`). 
+│                       │      │                   arbitrary absolute paths on the host filesystem. This issue
+│                       │      │                   has been patched in Docker Engine version 29.5.1 and Moby
+│                       │      │                   Daemon version 2.0.0-beta.14. 
 │                       │      ├ Severity        : MEDIUM 
+│                       │      ├ CweIDs           ╭ [0]: CWE-81 
+│                       │      │                  ╰ [1]: CWE-367 
 │                       │      ├ VendorSeverity   ─ ghsa: 2 
 │                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:L/A:H 
 │                       │      │                         ╰ V3Score : 6 
-│                       │      ╰ References       ╭ [0]: https://github.com/moby/moby 
-│                       │                         ╰ [1]: https://github.com/moby/moby/security/advisories/GHSA-
-│                       │                                vp62-88p7-qqf5 
+│                       │      ├ References       ╭ [0]: https://github.com/moby/moby 
+│                       │      │                  ├ [1]: https://github.com/moby/moby/security/advisories/GHSA-
+│                       │      │                  │      vp62-88p7-qqf5 
+│                       │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-41568 
+│                       │      ├ PublishedDate   : 2026-06-12T19:16:26.907Z 
+│                       │      ╰ LastModifiedDate: 2026-06-12T19:16:26.907Z 
 │                       ├ [6]  ╭ VulnerabilityID : CVE-2026-34986 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-78h2-9frx-2jm8 
 │                       │      ├ PkgID           : github.com/go-jose/go-jose/v4@v4.1.3 
@@ -3448,7 +3299,7 @@
 │                       │      │                  ├ [25]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-34986 
 │                       │      │                  ├ [26]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
-│                       │      │                  ├ [27]: https://errata.rockylinux.org/RLSA-2026:22937 
+│                       │      │                  ├ [27]: https://errata.rockylinux.org/RLSA-2026:23228 
 │                       │      │                  ├ [28]: https://github.com/go-jose/go-jose 
 │                       │      │                  ├ [29]: https://github.com/go-jose/go-jose/security/advisorie
 │                       │      │                  │       s/GHSA-78h2-9frx-2jm8 
@@ -3549,6 +3400,7 @@
 │                       │      │                  ├ amazon     : 3 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ├ photon     : 3 
 │                       │      │                  ├ redhat     : 3 
 │                       │      │                  ├ rocky      : 3 
 │                       │      │                  ╰ ubuntu     : 2 
@@ -3569,28 +3421,40 @@
 │                       │      │                  ├ [8] : https://bugzilla.redhat.com/2456338 
 │                       │      │                  ├ [9] : https://bugzilla.redhat.com/2456339 
 │                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
-│                       │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
-│                       │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2449833 
+│                       │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2455470 
+│                       │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2456333 
+│                       │      │                  ├ [14]: https://bugzilla.redhat.com/show_bug.cgi?id=2456335 
+│                       │      │                  ├ [15]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
+│                       │      │                  ├ [16]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
+│                       │      │                  ├ [17]: https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
+│                       │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-25679 
-│                       │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32280 
-│                       │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [20]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32281 
+│                       │      │                  ├ [21]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32282 
-│                       │      │                  ├ [17]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [22]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [18]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
-│                       │      │                  ├ [19]: https://errata.rockylinux.org/RLSA-2026:16875 
-│                       │      │                  ├ [20]: https://go.dev/cl/758320 
-│                       │      │                  ├ [21]: https://go.dev/issue/78282 
-│                       │      │                  ├ [22]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [23]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-33186 
+│                       │      │                  ├ [24]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-33810 
+│                       │      │                  ├ [25]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-34986 
+│                       │      │                  ├ [26]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
+│                       │      │                  ├ [27]: https://errata.rockylinux.org/RLSA-2026:19353 
+│                       │      │                  ├ [28]: https://go.dev/cl/758320 
+│                       │      │                  ├ [29]: https://go.dev/issue/78282 
+│                       │      │                  ├ [30]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [23]: https://linux.oracle.com/cve/CVE-2026-32280.html 
-│                       │      │                  ├ [24]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
-│                       │      │                  ├ [25]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
-│                       │      │                  ├ [26]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      │                  ╰ [27]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
+│                       │      │                  ├ [31]: https://linux.oracle.com/cve/CVE-2026-32280.html 
+│                       │      │                  ├ [32]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
+│                       │      │                  ├ [33]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ├ [34]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      │                  ╰ [35]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:16:42.18Z 
 │                       ├ [9]  ╭ VulnerabilityID : CVE-2026-32281 
@@ -3628,6 +3492,7 @@
 │                       │      │                  ├ amazon : 3 
 │                       │      │                  ├ bitnami: 3 
 │                       │      │                  ├ nvd    : 3 
+│                       │      │                  ├ photon : 3 
 │                       │      │                  ├ redhat : 2 
 │                       │      │                  ╰ rocky  : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
@@ -3649,24 +3514,39 @@
 │                       │      │                  ├ [7] : https://bugzilla.redhat.com/2456336 
 │                       │      │                  ├ [8] : https://bugzilla.redhat.com/2456338 
 │                       │      │                  ├ [9] : https://bugzilla.redhat.com/2456339 
-│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2456333 
-│                       │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│                       │      │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
+│                       │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2449833 
+│                       │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2455470 
+│                       │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2456333 
+│                       │      │                  ├ [14]: https://bugzilla.redhat.com/show_bug.cgi?id=2456335 
+│                       │      │                  ├ [15]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
+│                       │      │                  ├ [16]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
+│                       │      │                  ├ [17]: https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
+│                       │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-25679 
+│                       │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32280 
-│                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [20]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32281 
-│                       │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [21]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32282 
+│                       │      │                  ├ [22]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [16]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
-│                       │      │                  ├ [17]: https://errata.rockylinux.org/RLSA-2026:23102 
-│                       │      │                  ├ [18]: https://go.dev/cl/758061 
-│                       │      │                  ├ [19]: https://go.dev/issue/78281 
-│                       │      │                  ├ [20]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [23]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-33186 
+│                       │      │                  ├ [24]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-33810 
+│                       │      │                  ├ [25]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-34986 
+│                       │      │                  ├ [26]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
+│                       │      │                  ├ [27]: https://errata.rockylinux.org/RLSA-2026:19353 
+│                       │      │                  ├ [28]: https://go.dev/cl/758061 
+│                       │      │                  ├ [29]: https://go.dev/issue/78281 
+│                       │      │                  ├ [30]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [21]: https://nvd.nist.gov/vuln/detail/CVE-2026-32281 
-│                       │      │                  ├ [22]: https://pkg.go.dev/vuln/GO-2026-4946 
-│                       │      │                  ╰ [23]: https://www.cve.org/CVERecord?id=CVE-2026-32281 
+│                       │      │                  ├ [31]: https://nvd.nist.gov/vuln/detail/CVE-2026-32281 
+│                       │      │                  ├ [32]: https://pkg.go.dev/vuln/GO-2026-4946 
+│                       │      │                  ╰ [33]: https://www.cve.org/CVERecord?id=CVE-2026-32281 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.35Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:15:57.75Z 
 │                       ├ [10] ╭ VulnerabilityID : CVE-2026-32283 
@@ -3703,6 +3583,7 @@
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ nvd        : 3 
 │                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ├ photon     : 3 
 │                       │      │                  ├ redhat     : 3 
 │                       │      │                  ╰ rocky      : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
@@ -3724,29 +3605,41 @@
 │                       │      │                  ├ [7] : https://bugzilla.redhat.com/2456336 
 │                       │      │                  ├ [8] : https://bugzilla.redhat.com/2456338 
 │                       │      │                  ├ [9] : https://bugzilla.redhat.com/2456339 
-│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
-│                       │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
-│                       │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2434432 
+│                       │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2437111 
+│                       │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2445345 
+│                       │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
+│                       │      │                  ├ [14]: https://bugzilla.redhat.com/show_bug.cgi?id=2449833 
+│                       │      │                  ├ [15]: https://bugzilla.redhat.com/show_bug.cgi?id=2455470 
+│                       │      │                  ├ [16]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
+│                       │      │                  ├ [17]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
+│                       │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       25-61726 
+│                       │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       25-68121 
+│                       │      │                  ├ [20]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-25679 
-│                       │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-32280 
-│                       │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [21]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-27137 
+│                       │      │                  ├ [22]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32282 
-│                       │      │                  ├ [17]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [23]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [18]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
-│                       │      │                  ├ [19]: https://errata.rockylinux.org/RLSA-2026:16875 
-│                       │      │                  ├ [20]: https://go.dev/cl/763767 
-│                       │      │                  ├ [21]: https://go.dev/issue/78334 
-│                       │      │                  ├ [22]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [24]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-33186 
+│                       │      │                  ├ [25]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-34986 
+│                       │      │                  ├ [26]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
+│                       │      │                  ├ [27]: https://errata.rockylinux.org/RLSA-2026:23228 
+│                       │      │                  ├ [28]: https://go.dev/cl/763767 
+│                       │      │                  ├ [29]: https://go.dev/issue/78334 
+│                       │      │                  ├ [30]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [23]: https://linux.oracle.com/cve/CVE-2026-32283.html 
-│                       │      │                  ├ [24]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│                       │      │                  ├ [25]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-│                       │      │                  ├ [26]: https://pkg.go.dev/vuln/GO-2026-4870 
-│                       │      │                  ╰ [27]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
+│                       │      │                  ├ [31]: https://linux.oracle.com/cve/CVE-2026-32283.html 
+│                       │      │                  ├ [32]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│                       │      │                  ├ [33]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                       │      │                  ├ [34]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                       │      │                  ╰ [35]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:12:10.54Z 
 │                       ├ [11] ╭ VulnerabilityID : CVE-2026-33811 
@@ -3780,6 +3673,7 @@
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ nvd        : 3 
 │                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ├ photon     : 3 
 │                       │      │                  ╰ redhat     : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
@@ -3834,6 +3728,7 @@
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ nvd        : 3 
 │                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ├ photon     : 3 
 │                       │      │                  ╰ ubuntu     : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
@@ -3886,7 +3781,8 @@
 │                       │      ├ VendorSeverity   ╭ amazon     : 3 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ nvd        : 3 
-│                       │      │                  ╰ oracle-oval: 3 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ photon     : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
 │                       │      │                  │         ╰ V3Score : 7.5 
@@ -3934,7 +3830,8 @@
 │                       │      ├ CweIDs           ─ [0]: CWE-79 
 │                       │      ├ VendorSeverity   ╭ amazon     : 3 
 │                       │      │                  ├ bitnami    : 2 
-│                       │      │                  ╰ oracle-oval: 3 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ photon     : 2 
 │                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
 │                       │      │                            │           L/A:N 
 │                       │      │                            ╰ V3Score : 6.1 
@@ -3985,7 +3882,8 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ VendorSeverity   ╭ amazon     : 3 
 │                       │      │                  ├ bitnami    : 2 
-│                       │      │                  ╰ oracle-oval: 3 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ photon     : 2 
 │                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
 │                       │      │                            │           N/A:N 
 │                       │      │                            ╰ V3Score : 5.3 
@@ -4026,7 +3924,8 @@
 │                       │      ├ CweIDs           ─ [0]: CWE-476 
 │                       │      ├ VendorSeverity   ╭ bitnami    : 3 
 │                       │      │                  ├ nvd        : 3 
-│                       │      │                  ╰ oracle-oval: 3 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ photon     : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                  │         │           N/A:H 
 │                       │      │                  │         ╰ V3Score : 7.5 
@@ -4069,7 +3968,8 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ VendorSeverity   ╭ amazon     : 3 
 │                       │      │                  ├ bitnami    : 3 
-│                       │      │                  ╰ oracle-oval: 3 
+│                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ╰ photon     : 3 
 │                       │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                            │           N/A:H 
 │                       │      │                            ╰ V3Score : 7.5 
@@ -4202,6 +4102,7 @@
 │                       │      │                  ├ bitnami    : 2 
 │                       │      │                  ├ nvd        : 2 
 │                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ├ photon     : 2 
 │                       │      │                  ├ redhat     : 2 
 │                       │      │                  ╰ rocky      : 3 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:
@@ -4223,29 +4124,41 @@
 │                       │      │                  ├ [7] : https://bugzilla.redhat.com/2456336 
 │                       │      │                  ├ [8] : https://bugzilla.redhat.com/2456338 
 │                       │      │                  ├ [9] : https://bugzilla.redhat.com/2456339 
-│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
-│                       │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
-│                       │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2434432 
+│                       │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2437111 
+│                       │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2445345 
+│                       │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
+│                       │      │                  ├ [14]: https://bugzilla.redhat.com/show_bug.cgi?id=2449833 
+│                       │      │                  ├ [15]: https://bugzilla.redhat.com/show_bug.cgi?id=2455470 
+│                       │      │                  ├ [16]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
+│                       │      │                  ├ [17]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
+│                       │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       25-61726 
+│                       │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       25-68121 
+│                       │      │                  ├ [20]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-25679 
-│                       │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-32280 
-│                       │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [21]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-27137 
+│                       │      │                  ├ [22]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32282 
-│                       │      │                  ├ [17]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [23]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [18]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
-│                       │      │                  ├ [19]: https://errata.rockylinux.org/RLSA-2026:16875 
-│                       │      │                  ├ [20]: https://go.dev/cl/763761 
-│                       │      │                  ├ [21]: https://go.dev/issue/78293 
-│                       │      │                  ├ [22]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [24]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-33186 
+│                       │      │                  ├ [25]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-34986 
+│                       │      │                  ├ [26]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
+│                       │      │                  ├ [27]: https://errata.rockylinux.org/RLSA-2026:23228 
+│                       │      │                  ├ [28]: https://go.dev/cl/763761 
+│                       │      │                  ├ [29]: https://go.dev/issue/78293 
+│                       │      │                  ├ [30]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [23]: https://linux.oracle.com/cve/CVE-2026-32282.html 
-│                       │      │                  ├ [24]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│                       │      │                  ├ [25]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-│                       │      │                  ├ [26]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      │                  ╰ [27]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      │                  ├ [31]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+│                       │      │                  ├ [32]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│                       │      │                  ├ [33]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [34]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [35]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:15:39.4Z 
 │                       ├ [21] ╭ VulnerabilityID : CVE-2026-32288 
@@ -4390,6 +4303,7 @@
 │                       │      ├ VendorSeverity   ╭ amazon     : 3 
 │                       │      │                  ├ bitnami    : 2 
 │                       │      │                  ├ oracle-oval: 3 
+│                       │      │                  ├ photon     : 2 
 │                       │      │                  ╰ redhat     : 2 
 │                       │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
 │                       │      │                  │         │           L/A:N 
@@ -4584,62 +4498,28 @@
 │                       │      │                   3cdc0e33faa 
 │                       │      ├ Title           : Docker: Race condition in docker cp allows bind mount
 │                       │      │                   redirection to host path 
-│                       │      ├ Description     : Package updates are available for Amazon Linux 2023 that fix
-│                       │      │                    the following vulnerabilities:
-│                       │      │                   CVE-2026-46595:
-│                       │      │                   	Previously, CVE-2024-45337 fixed an authorization bypass
-│                       │      │                   for misused ssh server configurations; if any other type of
-│                       │      │                   callback is passed other than public key, then the
-│                       │      │                   source-address validation would be skipped.
-│                       │      │                   
-│                       │      │                   CVE-2026-42508:
-│                       │      │                   	Previously, a revoked 'SignatureKey' belonging to a CA was
-│                       │      │                   not correctly checked for revocation. Now, both the 'key'
-│                       │      │                   and 'key.SignatureKey' are checked for @revoked.
-│                       │      │                   CVE-2026-42306:
-│                       │      │                   	Docker: Race condition in docker cp allows bind mount
-│                       │      │                   redirection to host path
-│                       │      │                   CVE-2026-39833:
-│                       │      │                   	The in-memory keyring returned by NewKeyring() silently
-│                       │      │                   accepted keys with the ConfirmBeforeUse constraint but never
-│                       │      │                    enforced it. The key would sign without any confirmation
-│                       │      │                   prompt, with no indication to the caller that the constraint
-│                       │      │                    was not in effect. NewKeyring() now returns an error when
-│                       │      │                   unsupported constraints are requested.
-│                       │      │                   CVE-2026-39831:
-│                       │      │                   	The Verify() method for FIDO/U2F security key types
-│                       │      │                   (sk-ecdsa-sha2-nistp256@openssh.com,
-│                       │      │                   sk-ssh-ed25519@openssh.com) did not check the User Presence
-│                       │      │                   flag. Signatures generated without physical touch were
-│                       │      │                   accepted, allowing unattended use of a hardware security
-│                       │      │                   key. To restore the previous behavior, return a
-│                       │      │                   "no-touch-required" extension in Permissions.Extensions from
-│                       │      │                    PublicKeyCallback.
-│                       │      │                   CVE-2026-39830:
-│                       │      │                   	A malicious SSH peer could send unsolicited global request
-│                       │      │                   responses to fill an internal buffer, blocking the
-│                       │      │                   connection's read loop. The blocked goroutine could not be
-│                       │      │                   released by calling Close(), resulting in a resource leak
-│                       │      │                   per connection. Unsolicited global responses are now
-│                       │      │                   discarded.
-│                       │      │                   CVE-2026-39829:
-│                       │      │                   	The RSA and DSA public key parsers did not enforce size
-│                       │      │                   limits on key parameters. A crafted public key with an
-│                       │      │                   excessively large modulus or DSA parameter could cause
-│                       │      │                   several minutes of CPU consumption during signature
-│                       │      │                   verification. This could be triggered by unauthenticated
-│                       │      │                   clients during public key authentication. RSA moduli are now
-│                       │      │                    limited to 8192 bits, and DSA parameters are validated per
-│                       │      │                   FIPS 186-2.
-│                       │      │                    
+│                       │      ├ Description     : Moby is an open source container framework. In Docker Engine
+│                       │      │                    prior to version 29.5.1, Docker Daemon versions 28.5.2 and
+│                       │      │                   prior, and Moby Daemon prior to version 2.0.0-beta.14, a
+│                       │      │                   race condition during docker cp mount setup allows a
+│                       │      │                   malicious container to redirect a bind mount target to an
+│                       │      │                   arbitrary host path, potentially overwriting host files or
+│                       │      │                   causing denial of service. This issue has been patched in
+│                       │      │                   Docker Engine version 29.5.1 and Moby Daemon version
+│                       │      │                   2.0.0-beta.14. 
 │                       │      ├ Severity        : HIGH 
+│                       │      ├ CweIDs           ╭ [0]: CWE-61 
+│                       │      │                  ╰ [1]: CWE-367 
 │                       │      ├ VendorSeverity   ╭ amazon: 3 
 │                       │      │                  ╰ ghsa  : 3 
 │                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:H/A:H 
 │                       │      │                         ╰ V3Score : 7.2 
-│                       │      ╰ References       ╭ [0]: https://github.com/moby/moby 
-│                       │                         ╰ [1]: https://github.com/moby/moby/security/advisories/GHSA-
-│                       │                                rg2x-37c3-w2rh 
+│                       │      ├ References       ╭ [0]: https://github.com/moby/moby 
+│                       │      │                  ├ [1]: https://github.com/moby/moby/security/advisories/GHSA-
+│                       │      │                  │      rg2x-37c3-w2rh 
+│                       │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-42306 
+│                       │      ├ PublishedDate   : 2026-06-12T19:16:27.49Z 
+│                       │      ╰ LastModifiedDate: 2026-06-12T19:16:27.49Z 
 │                       ├ [3]  ╭ VulnerabilityID : CVE-2026-33997 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-pxq6-2prw-chj9 
 │                       │      ├ PkgID           : github.com/docker/docker@v28.5.1+incompatible 
@@ -4724,77 +4604,26 @@
 │                       │      │                   3e305d3100d 
 │                       │      ├ Title           : Docker: Race condition in docker cp allows creation of
 │                       │      │                   arbitrary empty files on the host via symlink swap 
-│                       │      ├ Description     : ## Summary
-│                       │      │                   
-│                       │      │                   A race condition during `docker cp` mount setup allows a
+│                       │      ├ Description     : Moby is an open source container framework. In Docker Engine
+│                       │      │                    prior to version 29.5.1, Docker Daemon versions 28.5.2 and
+│                       │      │                   prior, and Moby Daemon prior to version 2.0.0-beta.14, a
+│                       │      │                   race condition during docker cp mount setup allows a
 │                       │      │                   malicious container to create empty files or directories at
-│                       │      │                   arbitrary absolute paths on the host filesystem.
-│                       │      │                   This advisory covers the race during mountpoint creation.
-│                       │      │                   The related race during the subsequent mount syscall is
-│                       │      │                   tracked in GHSA-rg2x-37c3-w2rh
-│                       │      │                   ## Details
-│                       │      │                   When copying files into a container, the daemon sets up a
-│                       │      │                   temporary filesystem view by bind-mounting volumes into a
-│                       │      │                   private mount namespace. During this setup, the mount
-│                       │      │                   destination path is first resolved within the container's
-│                       │      │                   root filesystem using `GetResourcePath`, and then used to
-│                       │      │                   create the mountpoint (file or directory) if it does not
-│                       │      │                   already exist via `createIfNotExists`.
-│                       │      │                   Between path resolution and mountpoint creation, a process
-│                       │      │                   running inside the container can swap a path component for a
-│                       │      │                    symlink pointing to an arbitrary location on the host.
-│                       │      │                   Because `createIfNotExists` operates on the already-resolved
-│                       │      │                    absolute path using standard `os.MkdirAll` and
-│                       │      │                   `os.OpenFile` — which follow symlinks in intermediate path
-│                       │      │                   components — the symlink is followed and the file or
-│                       │      │                   directory is created outside the container root filesystem,
-│                       │      │                   as root.
-│                       │      │                   ## Impact
-│                       │      │                   A malicious container can create empty files or directories
-│                       │      │                   at arbitrary absolute paths on the host filesystem, running
-│                       │      │                   as root. This enables persistent denial of service — for
-│                       │      │                   example:
-│                       │      │                   - Converting `/etc/docker/daemon.json` into a directory
-│                       │      │                   prevents the daemon from restarting
-│                       │      │                   - Creating `/etc/nologin` prevents user logins
-│                       │      │                   - Overwriting critical system paths with empty files can
-│                       │      │                   break host services
-│                       │      │                   The container does not gain read or write access to existing
-│                       │      │                    host files — only the ability to create new empty files or
-│                       │      │                   directories at chosen paths.
-│                       │      │                   ### Conditions for exploitation
-│                       │      │                   - A container must be running with a process that can
-│                       │      │                   rapidly create and swap symlinks at a volume mount
-│                       │      │                   destination path.
-│                       │      │                   - An operator must initiate a `docker cp` into that
-│                       │      │                   container, or call the `PUT /containers/{id}/archive` or
-│                       │      │                   `HEAD /containers/{id}/archive` API endpoints.
-│                       │      │                   ### Not affected
-│                       │      │                   - Containers that do not have volume mounts are not
-│                       │      │                   affected, as the race occurs during volume bind-mount
-│                       │      │                   setup.
-│                       │      │                   ## Patches
-│                       │      │                   Mountpoint creation is now scoped to the container root
-│                       │      │                   using `os.Root` (Go 1.24+), which refuses to follow symlinks
-│                       │      │                    that escape the opened root directory. All filesystem
-│                       │      │                   operations in `createIfNotExists` (`MkdirAll`, `OpenFile`)
-│                       │      │                   are performed through the `os.Root` handle, so even if a
-│                       │      │                   symlink swap occurs after path resolution, the creation
-│                       │      │                   stays confined to the container root.
-│                       │      │                   ## Workarounds
-│                       │      │                   - Only run containers from trusted images.
-│                       │      │                   - Avoid using `docker cp` with untrusted running
-│                       │      │                   containers.
-│                       │      │                   - Use authorization plugins to restrict access to the
-│                       │      │                   archive API endpoints (`PUT /containers/{id}/archive`, `HEAD
-│                       │      │                    /containers/{id}/archive`). 
+│                       │      │                   arbitrary absolute paths on the host filesystem. This issue
+│                       │      │                   has been patched in Docker Engine version 29.5.1 and Moby
+│                       │      │                   Daemon version 2.0.0-beta.14. 
 │                       │      ├ Severity        : MEDIUM 
+│                       │      ├ CweIDs           ╭ [0]: CWE-81 
+│                       │      │                  ╰ [1]: CWE-367 
 │                       │      ├ VendorSeverity   ─ ghsa: 2 
 │                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:L/A:H 
 │                       │      │                         ╰ V3Score : 6 
-│                       │      ╰ References       ╭ [0]: https://github.com/moby/moby 
-│                       │                         ╰ [1]: https://github.com/moby/moby/security/advisories/GHSA-
-│                       │                                vp62-88p7-qqf5 
+│                       │      ├ References       ╭ [0]: https://github.com/moby/moby 
+│                       │      │                  ├ [1]: https://github.com/moby/moby/security/advisories/GHSA-
+│                       │      │                  │      vp62-88p7-qqf5 
+│                       │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-41568 
+│                       │      ├ PublishedDate   : 2026-06-12T19:16:26.907Z 
+│                       │      ╰ LastModifiedDate: 2026-06-12T19:16:26.907Z 
 │                       ├ [5]  ╭ VulnerabilityID : CVE-2025-52881 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-cgrx-mc8f-2prm 
 │                       │      ├ PkgID           : github.com/opencontainers/selinux@v1.12.0 
@@ -4867,65 +4696,68 @@
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/2404715 
 │                       │      │                  ├ [5] : https://bugzilla.redhat.com/2407258 
 │                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2404715 
-│                       │      │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2407258 
+│                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-52881 
-│                       │      │                  ├ [8] : https://errata.almalinux.org/9/ALSA-2025-22011.html 
-│                       │      │                  ├ [9] : https://errata.rockylinux.org/RLSA-2025:23543 
-│                       │      │                  ├ [10]: https://github.com/opencontainers/runc 
-│                       │      │                  ├ [11]: https://github.com/opencontainers/runc/blob/v1.4.0-rc
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       25-58183 
+│                       │      │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2025-22011.html 
+│                       │      │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22011 
+│                       │      │                  ├ [12]: https://github.com/opencontainers/runc 
+│                       │      │                  ├ [13]: https://github.com/opencontainers/runc/blob/v1.4.0-rc
 │                       │      │                  │       .2/RELEASES.md 
-│                       │      │                  ├ [12]: https://github.com/opencontainers/runc/commit/3f92552
+│                       │      │                  ├ [14]: https://github.com/opencontainers/runc/commit/3f92552
 │                       │      │                  │       5b44d247e390e529e772a0dc0c0bc3557 
-│                       │      │                  ├ [13]: https://github.com/opencontainers/runc/commit/435cc81
+│                       │      │                  ├ [15]: https://github.com/opencontainers/runc/commit/435cc81
 │                       │      │                  │       be6b79cdec73b4002c0dae549b2f6ae6d 
-│                       │      │                  ├ [14]: https://github.com/opencontainers/runc/commit/44a0fcf
+│                       │      │                  ├ [16]: https://github.com/opencontainers/runc/commit/44a0fcf
 │                       │      │                  │       685db051c80b8c269812bb177f5802c58 
-│                       │      │                  ├ [15]: https://github.com/opencontainers/runc/commit/4b37cd9
+│                       │      │                  ├ [17]: https://github.com/opencontainers/runc/commit/4b37cd9
 │                       │      │                  │       3f86e72feac866442988b549b5b7bf3e6 
-│                       │      │                  ├ [16]: https://github.com/opencontainers/runc/commit/6fc1914
+│                       │      │                  ├ [18]: https://github.com/opencontainers/runc/commit/6fc1914
 │                       │      │                  │       49109ea14bb7d61238f24a33fe08c651f 
-│                       │      │                  ├ [17]: https://github.com/opencontainers/runc/commit/77889b5
+│                       │      │                  ├ [19]: https://github.com/opencontainers/runc/commit/77889b5
 │                       │      │                  │       6db939c323d29d1130f28f9aea2edb544 
-│                       │      │                  ├ [18]: https://github.com/opencontainers/runc/commit/77d217c
+│                       │      │                  ├ [20]: https://github.com/opencontainers/runc/commit/77d217c
 │                       │      │                  │       7c3775d8ca5af89e477e81568ef4572db 
-│                       │      │                  ├ [19]: https://github.com/opencontainers/runc/commit/a41366e
+│                       │      │                  ├ [21]: https://github.com/opencontainers/runc/commit/a41366e
 │                       │      │                  │       74080fa9f26a2cd3544e2801449697322 
-│                       │      │                  ├ [20]: https://github.com/opencontainers/runc/commit/b3dd1bc
+│                       │      │                  ├ [22]: https://github.com/opencontainers/runc/commit/b3dd1bc
 │                       │      │                  │       562ed9996d1a0f249e056c16624046d28 
-│                       │      │                  ├ [21]: https://github.com/opencontainers/runc/commit/d40b343
+│                       │      │                  ├ [23]: https://github.com/opencontainers/runc/commit/d40b343
 │                       │      │                  │       9a9614a86e87b81a94c6811ec6fa2d7d2 
-│                       │      │                  ├ [22]: https://github.com/opencontainers/runc/commit/d61fd29
+│                       │      │                  ├ [24]: https://github.com/opencontainers/runc/commit/d61fd29
 │                       │      │                  │       d854b416feaaf128bf650325cd2182165 
-│                       │      │                  ├ [23]: https://github.com/opencontainers/runc/commit/db19bbe
+│                       │      │                  ├ [25]: https://github.com/opencontainers/runc/commit/db19bbe
 │                       │      │                  │       d5348847da433faa9d69e9f90192bfa64 
-│                       │      │                  ├ [24]: https://github.com/opencontainers/runc/commit/ed6b169
+│                       │      │                  ├ [26]: https://github.com/opencontainers/runc/commit/ed6b169
 │                       │      │                  │       3b8b3ae7eb0250a7e76fc888cdacf98c1 
-│                       │      │                  ├ [25]: https://github.com/opencontainers/runc/commit/fdcc9d3
+│                       │      │                  ├ [27]: https://github.com/opencontainers/runc/commit/fdcc9d3
 │                       │      │                  │       cad2f85954a241ccb910a61aaa1ef47f3 
-│                       │      │                  ├ [26]: https://github.com/opencontainers/runc/commit/ff6fe13
+│                       │      │                  ├ [28]: https://github.com/opencontainers/runc/commit/ff6fe13
 │                       │      │                  │       24663538167eca8b3d3eec61e1bd4fa51 
-│                       │      │                  ├ [27]: https://github.com/opencontainers/runc/commit/ff94f99
+│                       │      │                  ├ [29]: https://github.com/opencontainers/runc/commit/ff94f99
 │                       │      │                  │       91bd32076c871ef0ad8bc1b763458e480 
-│                       │      │                  ├ [28]: https://github.com/opencontainers/runc/security/advis
-│                       │      │                  │       ories/GHSA-9493-h29p-rfm2 
-│                       │      │                  ├ [29]: https://github.com/opencontainers/runc/security/advis
-│                       │      │                  │       ories/GHSA-cgrx-mc8f-2prm 
 │                       │      │                  ├ [30]: https://github.com/opencontainers/runc/security/advis
-│                       │      │                  │       ories/GHSA-fh74-hm69-rqjw 
+│                       │      │                  │       ories/GHSA-9493-h29p-rfm2 
 │                       │      │                  ├ [31]: https://github.com/opencontainers/runc/security/advis
+│                       │      │                  │       ories/GHSA-cgrx-mc8f-2prm 
+│                       │      │                  ├ [32]: https://github.com/opencontainers/runc/security/advis
+│                       │      │                  │       ories/GHSA-fh74-hm69-rqjw 
+│                       │      │                  ├ [33]: https://github.com/opencontainers/runc/security/advis
 │                       │      │                  │       ories/GHSA-qw9x-cqr3-wc7r 
-│                       │      │                  ├ [32]: https://github.com/opencontainers/selinux/pull/237 
-│                       │      │                  ├ [33]: https://github.com/opencontainers/selinux/releases/ta
+│                       │      │                  ├ [34]: https://github.com/opencontainers/selinux/pull/237 
+│                       │      │                  ├ [35]: https://github.com/opencontainers/selinux/releases/ta
 │                       │      │                  │       g/v1.13.0 
-│                       │      │                  ├ [34]: https://linux.oracle.com/cve/CVE-2025-52881.html 
-│                       │      │                  ├ [35]: https://linux.oracle.com/errata/ELSA-2025-23543.html 
-│                       │      │                  ├ [36]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
-│                       │      │                  ├ [37]: https://pkg.go.dev/github.com/cyphar/filepath-securej
+│                       │      │                  ├ [36]: https://linux.oracle.com/cve/CVE-2025-52881.html 
+│                       │      │                  ├ [37]: https://linux.oracle.com/errata/ELSA-2025-23543.html 
+│                       │      │                  ├ [38]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
+│                       │      │                  ├ [39]: https://pkg.go.dev/github.com/cyphar/filepath-securej
 │                       │      │                  │       oin/pathrs-lite/procfs 
-│                       │      │                  ├ [38]: https://ubuntu.com/security/notices/USN-7851-1 
-│                       │      │                  ├ [39]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
-│                       │      │                  ├ [40]: https://youtu.be/tGseJW_uBB8 
-│                       │      │                  ╰ [41]: https://youtu.be/y1PaBzxwRWQ 
+│                       │      │                  ├ [40]: https://ubuntu.com/security/notices/USN-7851-1 
+│                       │      │                  ├ [41]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
+│                       │      │                  ├ [42]: https://youtu.be/tGseJW_uBB8 
+│                       │      │                  ╰ [43]: https://youtu.be/y1PaBzxwRWQ 
 │                       │      ├ PublishedDate   : 2025-11-06T21:15:42.817Z 
 │                       │      ╰ LastModifiedDate: 2025-12-03T18:37:17.917Z 
 │                       ├ [6]  ╭ VulnerabilityID : CVE-2025-66506 
@@ -5696,6 +5528,7 @@
                         │      │                  ├ bitnami    : 3 
                         │      │                  ├ nvd        : 3 
                         │      │                  ├ oracle-oval: 3 
+                        │      │                  ├ photon     : 3 
                         │      │                  ╰ redhat     : 3 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
                         │      │                  │         │           N/A:H 
@@ -5750,6 +5583,7 @@
                         │      │                  ├ bitnami    : 3 
                         │      │                  ├ nvd        : 3 
                         │      │                  ├ oracle-oval: 3 
+                        │      │                  ├ photon     : 3 
                         │      │                  ╰ ubuntu     : 2 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
                         │      │                  │         │           N/A:H 
@@ -5802,7 +5636,8 @@
                         │      ├ VendorSeverity   ╭ amazon     : 3 
                         │      │                  ├ bitnami    : 3 
                         │      │                  ├ nvd        : 3 
-                        │      │                  ╰ oracle-oval: 3 
+                        │      │                  ├ oracle-oval: 3 
+                        │      │                  ╰ photon     : 3 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
                         │      │                  │         │           N/A:H 
                         │      │                  │         ╰ V3Score : 7.5 
@@ -5850,7 +5685,8 @@
                         │      ├ CweIDs           ─ [0]: CWE-79 
                         │      ├ VendorSeverity   ╭ amazon     : 3 
                         │      │                  ├ bitnami    : 2 
-                        │      │                  ╰ oracle-oval: 3 
+                        │      │                  ├ oracle-oval: 3 
+                        │      │                  ╰ photon     : 2 
                         │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
                         │      │                            │           L/A:N 
                         │      │                            ╰ V3Score : 6.1 
@@ -5901,7 +5737,8 @@
                         │      ├ Severity        : HIGH 
                         │      ├ VendorSeverity   ╭ amazon     : 3 
                         │      │                  ├ bitnami    : 2 
-                        │      │                  ╰ oracle-oval: 3 
+                        │      │                  ├ oracle-oval: 3 
+                        │      │                  ╰ photon     : 2 
                         │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:
                         │      │                            │           N/A:N 
                         │      │                            ╰ V3Score : 5.3 
@@ -5942,7 +5779,8 @@
                         │      ├ CweIDs           ─ [0]: CWE-476 
                         │      ├ VendorSeverity   ╭ bitnami    : 3 
                         │      │                  ├ nvd        : 3 
-                        │      │                  ╰ oracle-oval: 3 
+                        │      │                  ├ oracle-oval: 3 
+                        │      │                  ╰ photon     : 3 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
                         │      │                  │         │           N/A:H 
                         │      │                  │         ╰ V3Score : 7.5 
@@ -5985,7 +5823,8 @@
                         │      ├ Severity        : HIGH 
                         │      ├ VendorSeverity   ╭ amazon     : 3 
                         │      │                  ├ bitnami    : 3 
-                        │      │                  ╰ oracle-oval: 3 
+                        │      │                  ├ oracle-oval: 3 
+                        │      │                  ╰ photon     : 3 
                         │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
                         │      │                            │           N/A:H 
                         │      │                            ╰ V3Score : 7.5 
@@ -6110,6 +5949,7 @@
                         │      ├ VendorSeverity   ╭ amazon     : 3 
                         │      │                  ├ bitnami    : 2 
                         │      │                  ├ oracle-oval: 3 
+                        │      │                  ├ photon     : 2 
                         │      │                  ╰ redhat     : 2 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:
                         │      │                  │         │           L/A:N 
