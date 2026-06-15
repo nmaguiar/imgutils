@@ -67,7 +67,7 @@
       Name: GitHub Security Advisory Maven
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven
     Fingerprint: sha256:5d3edd502709d920d8e6f67f99cfb1d0d6c5a52080aae7e5d3198223b08aecc4
-    Title: Netty is a network application framework for development of protocol s ...
+    Title: 'netty-codec-http2: netty-codec-http2: Denial of Service due to resource leak'
     Description: Netty is a network application framework for development of protocol servers and clients. In netty-codec-http2 prior to versions 4.1.135.Final and 4.2.15.Final, the `DelegatingDecompressorFrameListener` class orchestrates HTTP/2 decompression by embedding a per-stream `EmbeddedChannel` that runs the appropriate decompression codec (gzip, deflate, zstd) and forwards decompressed chunks to a wrapped listener. Each decompressed chunk is a pooled `ByteBuf` handed to an anonymous `ChannelInboundHandlerAdapter` tail handler, which becomes the sole owner responsible for releasing it. A remote peer could send frames that would result in the flow-controller throwing and so trigger a resource leak which at the end might take down the whole JVM due OOME. Versions 4.1.135.Final and 4.2.15.Final patch the issue.
     Severity: MEDIUM
     CweIDs:
@@ -75,16 +75,22 @@
     - CWE-401
     VendorSeverity:
       ghsa: 2
+      redhat: 3
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
         V3Score: 5.3
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-48043
     - https://github.com/netty/netty
     - https://github.com/netty/netty/releases/tag/netty-4.1.135.Final
     - https://github.com/netty/netty/releases/tag/netty-4.2.15.Final
     - https://github.com/netty/netty/security/advisories/GHSA-c2gf-v879-257j
     - https://nvd.nist.gov/vuln/detail/CVE-2026-48043
+    - https://www.cve.org/CVERecord?id=CVE-2026-48043
     PublishedDate: '2026-06-12T16:16:30.587Z'
     LastModifiedDate: '2026-06-12T16:18:27.287Z'
   - VulnerabilityID: CVE-2026-44249
@@ -108,7 +114,7 @@
       Name: GitHub Security Advisory Maven
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven
     Fingerprint: sha256:1fef38b5486639c0918ecc92d4b0c7852bf77106f79155f9253eb633b6cf4f20
-    Title: Netty is a network application framework for development of protocol s ...
+    Title: 'netty-handler: netty-handler: IPv6 subnet rule bypass due to incorrect masking operation'
     Description: Netty is a network application framework for development of protocol servers and clients. In netty-handler prior to versions 4.1.135.Final and 4.2.15.Final, an attacker can bypass IPv6 subnet rules due to an incorrect masking operation in IpSubnetFilterRule.compareTo(). Valid public IP addresses can bypass the restrictions. Versions 4.1.135.Final and 4.2.15.Final patch the issue.
     Severity: HIGH
     CweIDs:
@@ -116,16 +122,22 @@
     - CWE-697
     VendorSeverity:
       ghsa: 3
+      redhat: 3
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
         V3Score: 8.1
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
+        V3Score: 8.1
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-44249
     - https://github.com/netty/netty
     - https://github.com/netty/netty/releases/tag/netty-4.1.135.Final
     - https://github.com/netty/netty/releases/tag/netty-4.2.15.Final
     - https://github.com/netty/netty/security/advisories/GHSA-3qp7-7mw8-wx86
     - https://nvd.nist.gov/vuln/detail/CVE-2026-44249
+    - https://www.cve.org/CVERecord?id=CVE-2026-44249
     PublishedDate: '2026-06-11T22:16:56.707Z'
     LastModifiedDate: '2026-06-12T15:55:06.377Z'
   - VulnerabilityID: CVE-2026-45416
@@ -269,7 +281,7 @@
       Name: GitHub Security Advisory Maven
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven
     Fingerprint: sha256:b8fcc300a2b587caf00daa2cc2a55d0cf99c416edc82e5b1cbbc37fc74feeee4
-    Title: Netty is a network application framework for development of protocol s ...
+    Title: 'netty-resolver-dns: Netty DNS resolver: DNS Cache Poisoning via predictable transaction IDs'
     Description: Netty is a network application framework for development of protocol servers and clients. Prior to versions 4.1.135.Final and 4.2.15.Final, Netty's DNS resolver uses a predictable PRNG for generating DNS transaction IDs and defaults to a static UDP source port. This combination reduces the entropy of DNS queries, enabling DNS Cache Poisoning (Kaminsky attack). Versions 4.1.135.Final and 4.2.15.Final patch the issue.
     Severity: MEDIUM
     CweIDs:
@@ -277,16 +289,22 @@
     - CWE-340
     VendorSeverity:
       ghsa: 2
+      redhat: 2
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:H/A:N
         V3Score: 6.8
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:H/A:N
+        V3Score: 6.8
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-45673
     - https://github.com/netty/netty
     - https://github.com/netty/netty/releases/tag/netty-4.1.135.Final
     - https://github.com/netty/netty/releases/tag/netty-4.2.15.Final
     - https://github.com/netty/netty/security/advisories/GHSA-xmv7-r254-6q78
     - https://nvd.nist.gov/vuln/detail/CVE-2026-45673
+    - https://www.cve.org/CVERecord?id=CVE-2026-45673
     PublishedDate: '2026-06-12T15:16:27.417Z'
     LastModifiedDate: '2026-06-12T15:55:06.377Z'
 - Target: usr/bin/crictl
@@ -368,7 +386,7 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:592460a99fb81963e749779523614bc60d42b145ac76310b9161761e4d04ebdd
-    Title: 'Docker: `PUT /containers/{id}/archive` executes container binary on the host'
+    Title: Moby is an open source container framework. In versions prior to 29.5. ...
     Description: Moby is an open source container framework. In versions prior to 29.5.1 and in moby/moby v2 prior to v2.0.0-beta.14, when a compressed archive is uploaded to a container via `PUT /containers/{id}/archive` or piped through `docker cp -`, the daemon resolves decompression binaries (such as `xz` or `unpigz`) from the container's filesystem rather than the host's due to incorrect ordering of operations. A malicious container image containing a trojanized decompression binary can achieve arbitrary code execution with full daemon privileges, including host root UID and unrestricted capabilities, when a user uploads a compressed (xz or gzip) archive into that container. This issue is fixed in Docker Engine 29.5.1 and moby/moby v2.0.0-beta.14. Workarounds include only running containers from trusted images, using authorization plugins to restrict access to the `PUT /containers/{id}/archive` endpoint, and avoiding piping compressed archives into containers created from untrusted images
     Severity: HIGH
     CweIDs:
@@ -405,7 +423,7 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:f2d7db0721bbe652569d7b4ca335003cb58587d3fb48c4b10d470b5858c6069f
-    Title: 'Docker: Race condition in docker cp allows bind mount redirection to host path'
+    Title: Moby is an open source container framework. In Docker Engine prior to  ...
     Description: Moby is an open source container framework. In Docker Engine prior to version 29.5.1, Docker Daemon versions 28.5.2 and prior, and Moby Daemon prior to version 2.0.0-beta.14, a race condition during docker cp mount setup allows a malicious container to redirect a bind mount target to an arbitrary host path, potentially overwriting host files or causing denial of service. This issue has been patched in Docker Engine version 29.5.1 and Moby Daemon version 2.0.0-beta.14.
     Severity: HIGH
     CweIDs:
@@ -497,7 +515,7 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:556923cfb15f84f3f52a10d164a082d0baa35a045d231e829d8c960053c2005f
-    Title: 'Docker: Race condition in docker cp allows creation of arbitrary empty files on the host via symlink swap'
+    Title: Moby is an open source container framework. In Docker Engine prior to  ...
     Description: Moby is an open source container framework. In Docker Engine prior to version 29.5.1, Docker Daemon versions 28.5.2 and prior, and Moby Daemon prior to version 2.0.0-beta.14, a race condition during docker cp mount setup allows a malicious container to create empty files or directories at arbitrary absolute paths on the host filesystem. This issue has been patched in Docker Engine version 29.5.1 and Moby Daemon version 2.0.0-beta.14.
     Severity: MEDIUM
     CweIDs:
@@ -933,7 +951,7 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:776fb0bc4ba1a38fd2b2c1ca64777c41683ef6edf35d556e06a24cb6a68dac5d
-    Title: 'Docker: `PUT /containers/{id}/archive` executes container binary on the host'
+    Title: Moby is an open source container framework. In versions prior to 29.5. ...
     Description: Moby is an open source container framework. In versions prior to 29.5.1 and in moby/moby v2 prior to v2.0.0-beta.14, when a compressed archive is uploaded to a container via `PUT /containers/{id}/archive` or piped through `docker cp -`, the daemon resolves decompression binaries (such as `xz` or `unpigz`) from the container's filesystem rather than the host's due to incorrect ordering of operations. A malicious container image containing a trojanized decompression binary can achieve arbitrary code execution with full daemon privileges, including host root UID and unrestricted capabilities, when a user uploads a compressed (xz or gzip) archive into that container. This issue is fixed in Docker Engine 29.5.1 and moby/moby v2.0.0-beta.14. Workarounds include only running containers from trusted images, using authorization plugins to restrict access to the `PUT /containers/{id}/archive` endpoint, and avoiding piping compressed archives into containers created from untrusted images
     Severity: HIGH
     CweIDs:
@@ -970,7 +988,7 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:bf85e928ef499deec030fff6a878c1aea36c04373620f78271f9e0557c18b400
-    Title: 'Docker: Race condition in docker cp allows bind mount redirection to host path'
+    Title: Moby is an open source container framework. In Docker Engine prior to  ...
     Description: Moby is an open source container framework. In Docker Engine prior to version 29.5.1, Docker Daemon versions 28.5.2 and prior, and Moby Daemon prior to version 2.0.0-beta.14, a race condition during docker cp mount setup allows a malicious container to redirect a bind mount target to an arbitrary host path, potentially overwriting host files or causing denial of service. This issue has been patched in Docker Engine version 29.5.1 and Moby Daemon version 2.0.0-beta.14.
     Severity: HIGH
     CweIDs:
@@ -1062,7 +1080,7 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:3412cb6dcb3b464a751eccb150fc039d0221baf71d2d0e322275f4dc729d092f
-    Title: 'Docker: Race condition in docker cp allows creation of arbitrary empty files on the host via symlink swap'
+    Title: Moby is an open source container framework. In Docker Engine prior to  ...
     Description: Moby is an open source container framework. In Docker Engine prior to version 29.5.1, Docker Daemon versions 28.5.2 and prior, and Moby Daemon prior to version 2.0.0-beta.14, a race condition during docker cp mount setup allows a malicious container to create empty files or directories at arbitrary absolute paths on the host filesystem. This issue has been patched in Docker Engine version 29.5.1 and Moby Daemon version 2.0.0-beta.14.
     Severity: MEDIUM
     CweIDs:
@@ -1266,7 +1284,7 @@
     - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://errata.almalinux.org/9/ALSA-2026-9044.html
-    - https://errata.rockylinux.org/RLSA-2026:9044
+    - https://errata.rockylinux.org/RLSA-2026:8456
     - https://go.dev/cl/752180
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
@@ -1330,23 +1348,15 @@
     - https://bugzilla.redhat.com/2456338
     - https://bugzilla.redhat.com/2456339
     - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2449833
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2455470
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456333
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456335
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33186
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33810
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986
     - https://errata.almalinux.org/9/ALSA-2026-19353.html
-    - https://errata.rockylinux.org/RLSA-2026:19353
+    - https://errata.rockylinux.org/RLSA-2026:16875
     - https://go.dev/cl/758320
     - https://go.dev/issue/78282
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -1412,24 +1422,14 @@
     - https://bugzilla.redhat.com/2456336
     - https://bugzilla.redhat.com/2456338
     - https://bugzilla.redhat.com/2456339
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2449833
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2455470
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456333
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456335
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33186
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33810
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986
     - https://errata.almalinux.org/9/ALSA-2026-19353.html
-    - https://errata.rockylinux.org/RLSA-2026:19353
+    - https://errata.rockylinux.org/RLSA-2026:24716
     - https://go.dev/cl/758061
     - https://go.dev/issue/78281
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -1494,24 +1494,16 @@
     - https://bugzilla.redhat.com/2456336
     - https://bugzilla.redhat.com/2456338
     - https://bugzilla.redhat.com/2456339
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2434432
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2437111
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2445345
     - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2449833
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2455470
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-61726
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27137
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33186
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986
     - https://errata.almalinux.org/9/ALSA-2026-19353.html
-    - https://errata.rockylinux.org/RLSA-2026:23228
+    - https://errata.rockylinux.org/RLSA-2026:16875
     - https://go.dev/cl/763767
     - https://go.dev/issue/78334
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -2037,24 +2029,16 @@
     - https://bugzilla.redhat.com/2456336
     - https://bugzilla.redhat.com/2456338
     - https://bugzilla.redhat.com/2456339
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2434432
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2437111
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2445345
     - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2449833
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2455470
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-61726
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27137
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33186
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986
     - https://errata.almalinux.org/9/ALSA-2026-19353.html
-    - https://errata.rockylinux.org/RLSA-2026:23228
+    - https://errata.rockylinux.org/RLSA-2026:16875
     - https://go.dev/cl/763761
     - https://go.dev/issue/78293
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -2688,7 +2672,7 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:e35c2778e737f21e6f4185626b6cb44c93e4d8ef14b69e564f8cbb3cd6999ff7
-    Title: 'Docker: `PUT /containers/{id}/archive` executes container binary on the host'
+    Title: Moby is an open source container framework. In versions prior to 29.5. ...
     Description: Moby is an open source container framework. In versions prior to 29.5.1 and in moby/moby v2 prior to v2.0.0-beta.14, when a compressed archive is uploaded to a container via `PUT /containers/{id}/archive` or piped through `docker cp -`, the daemon resolves decompression binaries (such as `xz` or `unpigz`) from the container's filesystem rather than the host's due to incorrect ordering of operations. A malicious container image containing a trojanized decompression binary can achieve arbitrary code execution with full daemon privileges, including host root UID and unrestricted capabilities, when a user uploads a compressed (xz or gzip) archive into that container. This issue is fixed in Docker Engine 29.5.1 and moby/moby v2.0.0-beta.14. Workarounds include only running containers from trusted images, using authorization plugins to restrict access to the `PUT /containers/{id}/archive` endpoint, and avoiding piping compressed archives into containers created from untrusted images
     Severity: HIGH
     CweIDs:
@@ -2725,7 +2709,7 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:15d83b2678a2bdfda5d3d94d6900877ef7eadd18ef643333784db9eee228cb3e
-    Title: 'Docker: Race condition in docker cp allows bind mount redirection to host path'
+    Title: Moby is an open source container framework. In Docker Engine prior to  ...
     Description: Moby is an open source container framework. In Docker Engine prior to version 29.5.1, Docker Daemon versions 28.5.2 and prior, and Moby Daemon prior to version 2.0.0-beta.14, a race condition during docker cp mount setup allows a malicious container to redirect a bind mount target to an arbitrary host path, potentially overwriting host files or causing denial of service. This issue has been patched in Docker Engine version 29.5.1 and Moby Daemon version 2.0.0-beta.14.
     Severity: HIGH
     CweIDs:
@@ -2817,7 +2801,7 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:bf475f5dbd1cff8b3d3e7079e8f43ddfc4f82404c55c742bff71917fedecfcdf
-    Title: 'Docker: Race condition in docker cp allows creation of arbitrary empty files on the host via symlink swap'
+    Title: Moby is an open source container framework. In Docker Engine prior to  ...
     Description: Moby is an open source container framework. In Docker Engine prior to version 29.5.1, Docker Daemon versions 28.5.2 and prior, and Moby Daemon prior to version 2.0.0-beta.14, a race condition during docker cp mount setup allows a malicious container to create empty files or directories at arbitrary absolute paths on the host filesystem. This issue has been patched in Docker Engine version 29.5.1 and Moby Daemon version 2.0.0-beta.14.
     Severity: MEDIUM
     CweIDs:
@@ -2903,7 +2887,7 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33186
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986
     - https://errata.almalinux.org/9/ALSA-2026-19353.html
-    - https://errata.rockylinux.org/RLSA-2026:23228
+    - https://errata.rockylinux.org/RLSA-2026:22937
     - https://github.com/go-jose/go-jose
     - https://github.com/go-jose/go-jose/security/advisories/GHSA-78h2-9frx-2jm8
     - https://linux.oracle.com/cve/CVE-2026-34986.html
@@ -3014,23 +2998,15 @@
     - https://bugzilla.redhat.com/2456338
     - https://bugzilla.redhat.com/2456339
     - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2449833
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2455470
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456333
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456335
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33186
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33810
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986
     - https://errata.almalinux.org/9/ALSA-2026-19353.html
-    - https://errata.rockylinux.org/RLSA-2026:19353
+    - https://errata.rockylinux.org/RLSA-2026:16875
     - https://go.dev/cl/758320
     - https://go.dev/issue/78282
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -3096,24 +3072,14 @@
     - https://bugzilla.redhat.com/2456336
     - https://bugzilla.redhat.com/2456338
     - https://bugzilla.redhat.com/2456339
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2449833
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2455470
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456333
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456335
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33186
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33810
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986
     - https://errata.almalinux.org/9/ALSA-2026-19353.html
-    - https://errata.rockylinux.org/RLSA-2026:19353
+    - https://errata.rockylinux.org/RLSA-2026:24716
     - https://go.dev/cl/758061
     - https://go.dev/issue/78281
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -3178,24 +3144,16 @@
     - https://bugzilla.redhat.com/2456336
     - https://bugzilla.redhat.com/2456338
     - https://bugzilla.redhat.com/2456339
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2434432
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2437111
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2445345
     - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2449833
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2455470
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-61726
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27137
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33186
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986
     - https://errata.almalinux.org/9/ALSA-2026-19353.html
-    - https://errata.rockylinux.org/RLSA-2026:23228
+    - https://errata.rockylinux.org/RLSA-2026:16875
     - https://go.dev/cl/763767
     - https://go.dev/issue/78334
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -3674,24 +3632,16 @@
     - https://bugzilla.redhat.com/2456336
     - https://bugzilla.redhat.com/2456338
     - https://bugzilla.redhat.com/2456339
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2434432
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2437111
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2445345
     - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2449833
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2455470
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-61726
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27137
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33186
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986
     - https://errata.almalinux.org/9/ALSA-2026-19353.html
-    - https://errata.rockylinux.org/RLSA-2026:23228
+    - https://errata.rockylinux.org/RLSA-2026:16875
     - https://go.dev/cl/763761
     - https://go.dev/issue/78293
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -3974,7 +3924,7 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:ee3774c85dede6daf5fe724e05f5b9815364f0a442397410169e03f9271dd480
-    Title: 'Docker: `PUT /containers/{id}/archive` executes container binary on the host'
+    Title: Moby is an open source container framework. In versions prior to 29.5. ...
     Description: Moby is an open source container framework. In versions prior to 29.5.1 and in moby/moby v2 prior to v2.0.0-beta.14, when a compressed archive is uploaded to a container via `PUT /containers/{id}/archive` or piped through `docker cp -`, the daemon resolves decompression binaries (such as `xz` or `unpigz`) from the container's filesystem rather than the host's due to incorrect ordering of operations. A malicious container image containing a trojanized decompression binary can achieve arbitrary code execution with full daemon privileges, including host root UID and unrestricted capabilities, when a user uploads a compressed (xz or gzip) archive into that container. This issue is fixed in Docker Engine 29.5.1 and moby/moby v2.0.0-beta.14. Workarounds include only running containers from trusted images, using authorization plugins to restrict access to the `PUT /containers/{id}/archive` endpoint, and avoiding piping compressed archives into containers created from untrusted images
     Severity: HIGH
     CweIDs:
@@ -4011,7 +3961,7 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:c2d01a51a63658b49480fb3d375f2bb997c6d8803b322325a733b3cdc0e33faa
-    Title: 'Docker: Race condition in docker cp allows bind mount redirection to host path'
+    Title: Moby is an open source container framework. In Docker Engine prior to  ...
     Description: Moby is an open source container framework. In Docker Engine prior to version 29.5.1, Docker Daemon versions 28.5.2 and prior, and Moby Daemon prior to version 2.0.0-beta.14, a race condition during docker cp mount setup allows a malicious container to redirect a bind mount target to an arbitrary host path, potentially overwriting host files or causing denial of service. This issue has been patched in Docker Engine version 29.5.1 and Moby Daemon version 2.0.0-beta.14.
     Severity: HIGH
     CweIDs:
@@ -4103,7 +4053,7 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:9c647b85247bef02926142b50f6c41b97b680cb4e334817a0410f3e305d3100d
-    Title: 'Docker: Race condition in docker cp allows creation of arbitrary empty files on the host via symlink swap'
+    Title: Moby is an open source container framework. In Docker Engine prior to  ...
     Description: Moby is an open source container framework. In Docker Engine prior to version 29.5.1, Docker Daemon versions 28.5.2 and prior, and Moby Daemon prior to version 2.0.0-beta.14, a race condition during docker cp mount setup allows a malicious container to create empty files or directories at arbitrary absolute paths on the host filesystem. This issue has been patched in Docker Engine version 29.5.1 and Moby Daemon version 2.0.0-beta.14.
     Severity: MEDIUM
     CweIDs:
@@ -4178,11 +4128,9 @@
     - https://bugzilla.redhat.com/2404715
     - https://bugzilla.redhat.com/2407258
     - https://bugzilla.redhat.com/show_bug.cgi?id=2404715
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2407258
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-52881
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58183
     - https://errata.almalinux.org/9/ALSA-2025-22011.html
-    - https://errata.rockylinux.org/RLSA-2025:22011
+    - https://errata.rockylinux.org/RLSA-2025:23543
     - https://github.com/opencontainers/runc
     - https://github.com/opencontainers/runc/blob/v1.4.0-rc.2/RELEASES.md
     - https://github.com/opencontainers/runc/commit/3f925525b44d247e390e529e772a0dc0c0bc3557
