@@ -85,8 +85,8 @@
                         │     │                          osystem%3Ago 
                         │     ├ Fingerprint     : sha256:b27818381dbcee1dd310f68a7f3a8dba375b3b6a428f7ffb42b394
                         │     │                   c225cd23dc 
-                        │     ├ Title           : Docker: `PUT /containers/{id}/archive` executes container
-                        │     │                   binary on the host 
+                        │     ├ Title           : Moby is an open source container framework. In versions prior
+                        │     │                    to 29.5. ... 
                         │     ├ Description     : Moby is an open source container framework. In versions prior
                         │     │                    to 29.5.1 and in moby/moby v2 prior to v2.0.0-beta.14, when
                         │     │                   a compressed archive is uploaded to a container via `PUT
@@ -137,8 +137,8 @@
                         │     │                          osystem%3Ago 
                         │     ├ Fingerprint     : sha256:5ea6b0e7e89a3f8f9e46efa745bdc4469f5024cb9da9944f9af030
                         │     │                   8b0d2ea5b2 
-                        │     ├ Title           : Docker: Race condition in docker cp allows bind mount
-                        │     │                   redirection to host path 
+                        │     ├ Title           : Moby is an open source container framework. In Docker Engine
+                        │     │                   prior to  ... 
                         │     ├ Description     : Moby is an open source container framework. In Docker Engine
                         │     │                   prior to version 29.5.1, Docker Daemon versions 28.5.2 and
                         │     │                   prior, and Moby Daemon prior to version 2.0.0-beta.14, a race
@@ -243,8 +243,8 @@
                         │     │                          osystem%3Ago 
                         │     ├ Fingerprint     : sha256:bb74b93cc8ef7c9f68d8dbebe1c6b772a6f2038e5fbbee9b43e91b
                         │     │                   a451fa6946 
-                        │     ├ Title           : Docker: Race condition in docker cp allows creation of
-                        │     │                   arbitrary empty files on the host via symlink swap 
+                        │     ├ Title           : Moby is an open source container framework. In Docker Engine
+                        │     │                   prior to  ... 
                         │     ├ Description     : Moby is an open source container framework. In Docker Engine
                         │     │                   prior to version 29.5.1, Docker Daemon versions 28.5.2 and
                         │     │                   prior, and Moby Daemon prior to version 2.0.0-beta.14, a race
