@@ -160,7 +160,7 @@
                         │     │                  │      g2x-37c3-w2rh 
                         │     │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-42306 
                         │     ├ PublishedDate   : 2026-06-12T19:16:27.49Z 
-                        │     ╰ LastModifiedDate: 2026-06-12T19:16:27.49Z 
+                        │     ╰ LastModifiedDate: 2026-06-15T21:01:58.873Z 
                         ├ [3] ╭ VulnerabilityID : CVE-2026-33997 
                         │     ├ VendorIDs        ─ [0]: GHSA-pxq6-2prw-chj9 
                         │     ├ PkgID           : github.com/docker/docker@v28.5.2+incompatible 
@@ -264,7 +264,7 @@
                         │     │                  │      p62-88p7-qqf5 
                         │     │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-41568 
                         │     ├ PublishedDate   : 2026-06-12T19:16:26.907Z 
-                        │     ╰ LastModifiedDate: 2026-06-12T19:16:26.907Z 
+                        │     ╰ LastModifiedDate: 2026-06-15T21:01:58.873Z 
                         ├ [5] ╭ VulnerabilityID : CVE-2026-39883 
                         │     ├ VendorIDs        ─ [0]: GHSA-hfvc-g4fc-pqhx 
                         │     ├ PkgID           : go.opentelemetry.io/otel/sdk@v1.42.0 
