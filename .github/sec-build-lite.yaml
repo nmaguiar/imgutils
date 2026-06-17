@@ -59,7 +59,7 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2026-34040
     - https://www.cve.org/CVERecord?id=CVE-2026-34040
     PublishedDate: '2026-03-31T03:15:57.883Z'
-    LastModifiedDate: '2026-04-03T16:51:28.67Z'
+    LastModifiedDate: '2026-06-16T14:47:49.937Z'
   - VulnerabilityID: CVE-2026-41567
     VendorIDs:
     - GHSA-x86f-5xw2-fm2r
@@ -126,8 +126,12 @@
     VendorSeverity:
       amazon: 3
       ghsa: 3
+      nvd: 3
     CVSS:
       ghsa:
+        V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:H/A:H
+        V3Score: 7.2
+      nvd:
         V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:H/A:H
         V3Score: 7.2
     References:
@@ -135,7 +139,7 @@
     - https://github.com/moby/moby/security/advisories/GHSA-rg2x-37c3-w2rh
     - https://nvd.nist.gov/vuln/detail/CVE-2026-42306
     PublishedDate: '2026-06-12T19:16:27.49Z'
-    LastModifiedDate: '2026-06-15T21:01:58.873Z'
+    LastModifiedDate: '2026-06-16T18:31:31.12Z'
   - VulnerabilityID: CVE-2026-33997
     VendorIDs:
     - GHSA-pxq6-2prw-chj9
@@ -188,7 +192,7 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2026-33997
     - https://www.cve.org/CVERecord?id=CVE-2026-33997
     PublishedDate: '2026-03-31T03:15:57.523Z'
-    LastModifiedDate: '2026-04-03T17:23:21.307Z'
+    LastModifiedDate: '2026-06-16T14:47:38.807Z'
   - VulnerabilityID: CVE-2026-41568
     VendorIDs:
     - GHSA-vp62-88p7-qqf5
@@ -226,7 +230,7 @@
     - https://github.com/moby/moby/security/advisories/GHSA-vp62-88p7-qqf5
     - https://nvd.nist.gov/vuln/detail/CVE-2026-41568
     PublishedDate: '2026-06-12T19:16:26.907Z'
-    LastModifiedDate: '2026-06-15T21:01:58.873Z'
+    LastModifiedDate: '2026-06-16T18:31:54.957Z'
   - VulnerabilityID: CVE-2026-39883
     VendorIDs:
     - GHSA-hfvc-g4fc-pqhx
