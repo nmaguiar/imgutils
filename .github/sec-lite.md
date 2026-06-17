@@ -63,7 +63,7 @@
                         │     │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2026-34040 
                         │     │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-34040 
                         │     ├ PublishedDate   : 2026-03-31T03:15:57.883Z 
-                        │     ╰ LastModifiedDate: 2026-04-03T16:51:28.67Z 
+                        │     ╰ LastModifiedDate: 2026-06-16T14:47:49.937Z 
                         ├ [1] ╭ VulnerabilityID : CVE-2026-41567 
                         │     ├ VendorIDs        ─ [0]: GHSA-x86f-5xw2-fm2r 
                         │     ├ PkgID           : github.com/docker/docker@v28.5.2+incompatible 
@@ -152,15 +152,18 @@
                         │     ├ CweIDs           ╭ [0]: CWE-61 
                         │     │                  ╰ [1]: CWE-367 
                         │     ├ VendorSeverity   ╭ amazon: 3 
-                        │     │                  ╰ ghsa  : 3 
-                        │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:H/A:H 
+                        │     │                  ├ ghsa  : 3 
+                        │     │                  ╰ nvd   : 3 
+                        │     ├ CVSS             ╭ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:H/A:H 
+                        │     │                  │      ╰ V3Score : 7.2 
+                        │     │                  ╰ nvd  ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:H/A:H 
                         │     │                         ╰ V3Score : 7.2 
                         │     ├ References       ╭ [0]: https://github.com/moby/moby 
                         │     │                  ├ [1]: https://github.com/moby/moby/security/advisories/GHSA-r
                         │     │                  │      g2x-37c3-w2rh 
                         │     │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-42306 
                         │     ├ PublishedDate   : 2026-06-12T19:16:27.49Z 
-                        │     ╰ LastModifiedDate: 2026-06-15T21:01:58.873Z 
+                        │     ╰ LastModifiedDate: 2026-06-16T18:31:31.12Z 
                         ├ [3] ╭ VulnerabilityID : CVE-2026-33997 
                         │     ├ VendorIDs        ─ [0]: GHSA-pxq6-2prw-chj9 
                         │     ├ PkgID           : github.com/docker/docker@v28.5.2+incompatible 
@@ -221,7 +224,7 @@
                         │     │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-33997 
                         │     │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2026-33997 
                         │     ├ PublishedDate   : 2026-03-31T03:15:57.523Z 
-                        │     ╰ LastModifiedDate: 2026-04-03T17:23:21.307Z 
+                        │     ╰ LastModifiedDate: 2026-06-16T14:47:38.807Z 
                         ├ [4] ╭ VulnerabilityID : CVE-2026-41568 
                         │     ├ VendorIDs        ─ [0]: GHSA-vp62-88p7-qqf5 
                         │     ├ PkgID           : github.com/docker/docker@v28.5.2+incompatible 
@@ -264,7 +267,7 @@
                         │     │                  │      p62-88p7-qqf5 
                         │     │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-41568 
                         │     ├ PublishedDate   : 2026-06-12T19:16:26.907Z 
-                        │     ╰ LastModifiedDate: 2026-06-15T21:01:58.873Z 
+                        │     ╰ LastModifiedDate: 2026-06-16T18:31:54.957Z 
                         ├ [5] ╭ VulnerabilityID : CVE-2026-39883 
                         │     ├ VendorIDs        ─ [0]: GHSA-hfvc-g4fc-pqhx 
                         │     ├ PkgID           : go.opentelemetry.io/otel/sdk@v1.42.0 
