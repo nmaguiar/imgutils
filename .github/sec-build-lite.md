@@ -419,22 +419,28 @@
                               │                  ╰ URL : https://pkg.go.dev/vuln/ 
                               ├ Fingerprint     : sha256:b023fb3f7f1c50a2df6158c529a9b28ebb31a13ebd367a0c4792d3
                               │                   4616623cb9 
-                              ├ Title           : When returning errors, functions in the net/textproto package
-                              │                    would in ... 
+                              ├ Title           : net/textproto: golang: Golang net/textproto: Misleading error
+                              │                    messages via input injection 
                               ├ Description     : When returning errors, functions in the net/textproto package
                               │                    would include its input as part of the error. This might
                               │                   allow an attacker to inject misleading content to errors that
                               │                    are printed or logged. 
                               ├ Severity        : MEDIUM 
-                              ├ VendorSeverity   ─ bitnami: 2 
-                              ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L
+                              ├ VendorSeverity   ╭ bitnami: 2 
+                              │                  ╰ redhat : 2 
+                              ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L
+                              │                  │         │           /A:N 
+                              │                  │         ╰ V3Score : 5.3 
+                              │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L
                               │                            │           /A:N 
                               │                            ╰ V3Score : 5.3 
-                              ├ References       ╭ [0]: https://go.dev/cl/777060 
-                              │                  ├ [1]: https://go.dev/issue/79346 
-                              │                  ├ [2]: https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw 
-                              │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-42507 
-                              │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-5039 
+                              ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-42507 
+                              │                  ├ [1]: https://go.dev/cl/777060 
+                              │                  ├ [2]: https://go.dev/issue/79346 
+                              │                  ├ [3]: https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw 
+                              │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-42507 
+                              │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-5039 
+                              │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-42507 
                               ├ PublishedDate   : 2026-06-02T23:16:38.027Z 
                               ╰ LastModifiedDate: 2026-06-04T16:15:50.143Z 
 ```
