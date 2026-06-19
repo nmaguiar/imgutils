@@ -380,21 +380,27 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:5926035ead9a2259de5a275c95236543c73ce6debbf31ca91d0b939212a8ad36
-    Title: When returning errors, functions in the net/textproto package would in ...
+    Title: 'net/textproto: golang: Golang net/textproto: Misleading error messages via input injection'
     Description: When returning errors, functions in the net/textproto package would include its input as part of the error. This might allow an attacker to inject misleading content to errors that are printed or logged.
     Severity: MEDIUM
     VendorSeverity:
       bitnami: 2
+      redhat: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
         V3Score: 5.3
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
+        V3Score: 5.3
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-42507
     - https://go.dev/cl/777060
     - https://go.dev/issue/79346
     - https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw
     - https://nvd.nist.gov/vuln/detail/CVE-2026-42507
     - https://pkg.go.dev/vuln/GO-2026-5039
+    - https://www.cve.org/CVERecord?id=CVE-2026-42507
     PublishedDate: '2026-06-02T23:16:38.027Z'
     LastModifiedDate: '2026-06-04T16:15:50.143Z'
 - Target: usr/bin/ctr
@@ -498,21 +504,27 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:06473ec139baa47cc251c4227245ad4c1d9c7edebac13227623be45cc994af47
-    Title: When returning errors, functions in the net/textproto package would in ...
+    Title: 'net/textproto: golang: Golang net/textproto: Misleading error messages via input injection'
     Description: When returning errors, functions in the net/textproto package would include its input as part of the error. This might allow an attacker to inject misleading content to errors that are printed or logged.
     Severity: MEDIUM
     VendorSeverity:
       bitnami: 2
+      redhat: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
         V3Score: 5.3
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
+        V3Score: 5.3
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-42507
     - https://go.dev/cl/777060
     - https://go.dev/issue/79346
     - https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw
     - https://nvd.nist.gov/vuln/detail/CVE-2026-42507
     - https://pkg.go.dev/vuln/GO-2026-5039
+    - https://www.cve.org/CVERecord?id=CVE-2026-42507
     PublishedDate: '2026-06-02T23:16:38.027Z'
     LastModifiedDate: '2026-06-04T16:15:50.143Z'
 - Target: usr/bin/dive
@@ -984,12 +996,12 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:8456
+    - https://access.redhat.com/errata/RHSA-2026:9044
     - https://access.redhat.com/security/cve/CVE-2026-25679
     - https://bugzilla.redhat.com/2445356
     - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
-    - https://errata.almalinux.org/8/ALSA-2026-8456.html
+    - https://errata.almalinux.org/9/ALSA-2026-9044.html
     - https://errata.rockylinux.org/RLSA-2026:9044
     - https://go.dev/cl/752180
     - https://go.dev/issue/77578
@@ -1043,30 +1055,19 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:16875
+    - https://access.redhat.com/errata/RHSA-2026:26447
     - https://access.redhat.com/security/cve/CVE-2026-32280
-    - https://bugzilla.redhat.com/2445356
-    - https://bugzilla.redhat.com/2456336
+    - https://bugzilla.redhat.com/2456333
     - https://bugzilla.redhat.com/2456338
     - https://bugzilla.redhat.com/2456339
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2449833
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2455470
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456333
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456335
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33186
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33810
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986
-    - https://errata.almalinux.org/8/ALSA-2026-16875.html
-    - https://errata.rockylinux.org/RLSA-2026:19353
+    - https://errata.almalinux.org/9/ALSA-2026-26447.html
+    - https://errata.rockylinux.org/RLSA-2026:26447
     - https://go.dev/cl/758320
     - https://go.dev/issue/78282
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -1122,29 +1123,19 @@
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 5.9
     References:
-    - https://access.redhat.com/errata/RHSA-2026:24470
+    - https://access.redhat.com/errata/RHSA-2026:26447
     - https://access.redhat.com/security/cve/CVE-2026-32281
     - https://bugzilla.redhat.com/2456333
     - https://bugzilla.redhat.com/2456338
     - https://bugzilla.redhat.com/2456339
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2449833
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2455470
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456333
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456335
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33186
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33810
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986
-    - https://errata.almalinux.org/10/ALSA-2026-24470.html
-    - https://errata.rockylinux.org/RLSA-2026:19353
+    - https://errata.almalinux.org/9/ALSA-2026-26447.html
+    - https://errata.rockylinux.org/RLSA-2026:26447
     - https://go.dev/cl/758061
     - https://go.dev/issue/78281
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -1199,30 +1190,19 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:16875
+    - https://access.redhat.com/errata/RHSA-2026:26447
     - https://access.redhat.com/security/cve/CVE-2026-32283
-    - https://bugzilla.redhat.com/2445356
-    - https://bugzilla.redhat.com/2456336
+    - https://bugzilla.redhat.com/2456333
     - https://bugzilla.redhat.com/2456338
     - https://bugzilla.redhat.com/2456339
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2434432
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2437111
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2445345
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2449833
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2455470
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456333
     - https://bugzilla.redhat.com/show_bug.cgi?id=2456338
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-61726
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27137
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33186
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986
-    - https://errata.almalinux.org/8/ALSA-2026-16875.html
-    - https://errata.rockylinux.org/RLSA-2026:23228
+    - https://errata.almalinux.org/9/ALSA-2026-26447.html
+    - https://errata.rockylinux.org/RLSA-2026:26447
     - https://go.dev/cl/763767
     - https://go.dev/issue/78334
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
@@ -1739,9 +1719,13 @@
         V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H
         V3Score: 7.8
     References:
-    - https://access.redhat.com/errata/RHSA-2026:16875
+    - https://access.redhat.com/errata/RHSA-2026:19353
     - https://access.redhat.com/security/cve/CVE-2026-32282
     - https://bugzilla.redhat.com/2445356
+    - https://bugzilla.redhat.com/2449833
+    - https://bugzilla.redhat.com/2455470
+    - https://bugzilla.redhat.com/2456333
+    - https://bugzilla.redhat.com/2456335
     - https://bugzilla.redhat.com/2456336
     - https://bugzilla.redhat.com/2456338
     - https://bugzilla.redhat.com/2456339
@@ -1761,7 +1745,7 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33186
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986
-    - https://errata.almalinux.org/8/ALSA-2026-16875.html
+    - https://errata.almalinux.org/9/ALSA-2026-19353.html
     - https://errata.rockylinux.org/RLSA-2026:23228
     - https://go.dev/cl/763761
     - https://go.dev/issue/78293
@@ -1949,21 +1933,27 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:6c623ee88a87536f96cd730a98aefd3da70aa7414827f15f6ae688f2022ab406
-    Title: When returning errors, functions in the net/textproto package would in ...
+    Title: 'net/textproto: golang: Golang net/textproto: Misleading error messages via input injection'
     Description: When returning errors, functions in the net/textproto package would include its input as part of the error. This might allow an attacker to inject misleading content to errors that are printed or logged.
     Severity: MEDIUM
     VendorSeverity:
       bitnami: 2
+      redhat: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
         V3Score: 5.3
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
+        V3Score: 5.3
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-42507
     - https://go.dev/cl/777060
     - https://go.dev/issue/79346
     - https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw
     - https://nvd.nist.gov/vuln/detail/CVE-2026-42507
     - https://pkg.go.dev/vuln/GO-2026-5039
+    - https://www.cve.org/CVERecord?id=CVE-2026-42507
     PublishedDate: '2026-06-02T23:16:38.027Z'
     LastModifiedDate: '2026-06-04T16:15:50.143Z'
   - VulnerabilityID: CVE-2026-27139
@@ -2115,21 +2105,27 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:8c9a79b72a00a97549b2cb1c2cf560bdd436e223487e49ea23033afa472d02ce
-    Title: When returning errors, functions in the net/textproto package would in ...
+    Title: 'net/textproto: golang: Golang net/textproto: Misleading error messages via input injection'
     Description: When returning errors, functions in the net/textproto package would include its input as part of the error. This might allow an attacker to inject misleading content to errors that are printed or logged.
     Severity: MEDIUM
     VendorSeverity:
       bitnami: 2
+      redhat: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
         V3Score: 5.3
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
+        V3Score: 5.3
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-42507
     - https://go.dev/cl/777060
     - https://go.dev/issue/79346
     - https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw
     - https://nvd.nist.gov/vuln/detail/CVE-2026-42507
     - https://pkg.go.dev/vuln/GO-2026-5039
+    - https://www.cve.org/CVERecord?id=CVE-2026-42507
     PublishedDate: '2026-06-02T23:16:38.027Z'
     LastModifiedDate: '2026-06-04T16:15:50.143Z'
 - Target: usr/bin/helm
@@ -2237,21 +2233,27 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:45210290dd63496f6bb20c201beded756aa2a075fce79302d09bc297ca1e50e2
-    Title: When returning errors, functions in the net/textproto package would in ...
+    Title: 'net/textproto: golang: Golang net/textproto: Misleading error messages via input injection'
     Description: When returning errors, functions in the net/textproto package would include its input as part of the error. This might allow an attacker to inject misleading content to errors that are printed or logged.
     Severity: MEDIUM
     VendorSeverity:
       bitnami: 2
+      redhat: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
         V3Score: 5.3
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
+        V3Score: 5.3
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-42507
     - https://go.dev/cl/777060
     - https://go.dev/issue/79346
     - https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw
     - https://nvd.nist.gov/vuln/detail/CVE-2026-42507
     - https://pkg.go.dev/vuln/GO-2026-5039
+    - https://www.cve.org/CVERecord?id=CVE-2026-42507
     PublishedDate: '2026-06-02T23:16:38.027Z'
     LastModifiedDate: '2026-06-04T16:15:50.143Z'
 - Target: usr/bin/skopeo
@@ -2536,14 +2538,15 @@
     References:
     - http://github.com/opencontainers/runc/commit/a41366e74080fa9f26a2cd3544e2801449697322
     - http://github.com/opencontainers/runc/commit/fdcc9d3cad2f85954a241ccb910a61aaa1ef47f3
-    - https://access.redhat.com/errata/RHSA-2025:23543
+    - https://access.redhat.com/errata/RHSA-2025:22011
     - https://access.redhat.com/security/cve/CVE-2025-52881
     - https://bugzilla.redhat.com/2404715
+    - https://bugzilla.redhat.com/2407258
     - https://bugzilla.redhat.com/show_bug.cgi?id=2404715
     - https://bugzilla.redhat.com/show_bug.cgi?id=2407258
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-52881
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58183
-    - https://errata.almalinux.org/8/ALSA-2025-23543.html
+    - https://errata.almalinux.org/9/ALSA-2025-22011.html
     - https://errata.rockylinux.org/RLSA-2025:22011
     - https://github.com/opencontainers/runc
     - https://github.com/opencontainers/runc/blob/v1.4.0-rc.2/RELEASES.md
@@ -2867,21 +2870,27 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:fbc0965a316c354a091e495a4343f01ad1993eb9b3896fe3112f0b24d99f1578
-    Title: When returning errors, functions in the net/textproto package would in ...
+    Title: 'net/textproto: golang: Golang net/textproto: Misleading error messages via input injection'
     Description: When returning errors, functions in the net/textproto package would include its input as part of the error. This might allow an attacker to inject misleading content to errors that are printed or logged.
     Severity: MEDIUM
     VendorSeverity:
       bitnami: 2
+      redhat: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
         V3Score: 5.3
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
+        V3Score: 5.3
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-42507
     - https://go.dev/cl/777060
     - https://go.dev/issue/79346
     - https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw
     - https://nvd.nist.gov/vuln/detail/CVE-2026-42507
     - https://pkg.go.dev/vuln/GO-2026-5039
+    - https://www.cve.org/CVERecord?id=CVE-2026-42507
     PublishedDate: '2026-06-02T23:16:38.027Z'
     LastModifiedDate: '2026-06-04T16:15:50.143Z'
 - Target: usr/bin/syft
@@ -2985,20 +2994,26 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:db1c3165376355a992ef206149aad29db9c6ddf44685d215394d30031cab8de0
-    Title: When returning errors, functions in the net/textproto package would in ...
+    Title: 'net/textproto: golang: Golang net/textproto: Misleading error messages via input injection'
     Description: When returning errors, functions in the net/textproto package would include its input as part of the error. This might allow an attacker to inject misleading content to errors that are printed or logged.
     Severity: MEDIUM
     VendorSeverity:
       bitnami: 2
+      redhat: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
         V3Score: 5.3
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
+        V3Score: 5.3
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-42507
     - https://go.dev/cl/777060
     - https://go.dev/issue/79346
     - https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw
     - https://nvd.nist.gov/vuln/detail/CVE-2026-42507
     - https://pkg.go.dev/vuln/GO-2026-5039
+    - https://www.cve.org/CVERecord?id=CVE-2026-42507
     PublishedDate: '2026-06-02T23:16:38.027Z'
     LastModifiedDate: '2026-06-04T16:15:50.143Z'
