@@ -16,18 +16,18 @@
                         │     ├ InstalledVersion: v28.5.2+incompatible 
                         │     ├ FixedVersion    : 29.3.1 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:6860d8b49c13aeaa48baca58532970bb58c5d28d3ad70
-                        │     │                  │         36d73cbdfcc0b87a37c 
-                        │     │                  ╰ DiffID: sha256:438029e3c68b272daf635e26db7be70713d0b87bffc89
-                        │     │                            d016f012390453792c8 
+                        │     ├ Layer            ╭ Digest: sha256:2c950c4b56147da8b07f0118ba88a6d5fecadf447529f
+                        │     │                  │         efb0d553c6c58e87ce4 
+                        │     │                  ╰ DiffID: sha256:e5a5723faa95fd809795501f4fa9cf4c7448c144db3e2
+                        │     │                            a8d15db16ca3587ef28 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-34040 
                         │     ├ DataSource       ╭ ID  : ghsa 
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
                         │     │                          osystem%3Ago 
-                        │     ├ Fingerprint     : sha256:6aff91730075ecbb827ea6edc322a6bb4a8a79c4f113c719562d01
-                        │     │                   3fb37a7b61 
+                        │     ├ Fingerprint     : sha256:5478f98d430abf278939b6c15e94da2c32f5227964de603f55da86
+                        │     │                   5133e8b524 
                         │     ├ Title           : Moby: Moby: Authorization bypass vulnerability 
                         │     ├ Description     : Moby is an open source container framework. Prior to version
                         │     │                   29.3.1, a security vulnerability has been detected that
@@ -73,18 +73,18 @@
                         │     │                  ╰ UID : 574b64b426d7eeee 
                         │     ├ InstalledVersion: v28.5.2+incompatible 
                         │     ├ Status          : affected 
-                        │     ├ Layer            ╭ Digest: sha256:6860d8b49c13aeaa48baca58532970bb58c5d28d3ad70
-                        │     │                  │         36d73cbdfcc0b87a37c 
-                        │     │                  ╰ DiffID: sha256:438029e3c68b272daf635e26db7be70713d0b87bffc89
-                        │     │                            d016f012390453792c8 
+                        │     ├ Layer            ╭ Digest: sha256:2c950c4b56147da8b07f0118ba88a6d5fecadf447529f
+                        │     │                  │         efb0d553c6c58e87ce4 
+                        │     │                  ╰ DiffID: sha256:e5a5723faa95fd809795501f4fa9cf4c7448c144db3e2
+                        │     │                            a8d15db16ca3587ef28 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-41567 
                         │     ├ DataSource       ╭ ID  : ghsa 
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
                         │     │                          osystem%3Ago 
-                        │     ├ Fingerprint     : sha256:b27818381dbcee1dd310f68a7f3a8dba375b3b6a428f7ffb42b394
-                        │     │                   c225cd23dc 
+                        │     ├ Fingerprint     : sha256:065151c9ee8b721ef6f8c1de3a89aa8e7b4c460eb0d8be2fe46600
+                        │     │                   b2a7ee8c68 
                         │     ├ Title           : Moby is an open source container framework. In versions prior
                         │     │                    to 29.5. ... 
                         │     ├ Description     : Moby is an open source container framework. In versions prior
@@ -125,18 +125,18 @@
                         │     │                  ╰ UID : 574b64b426d7eeee 
                         │     ├ InstalledVersion: v28.5.2+incompatible 
                         │     ├ Status          : affected 
-                        │     ├ Layer            ╭ Digest: sha256:6860d8b49c13aeaa48baca58532970bb58c5d28d3ad70
-                        │     │                  │         36d73cbdfcc0b87a37c 
-                        │     │                  ╰ DiffID: sha256:438029e3c68b272daf635e26db7be70713d0b87bffc89
-                        │     │                            d016f012390453792c8 
+                        │     ├ Layer            ╭ Digest: sha256:2c950c4b56147da8b07f0118ba88a6d5fecadf447529f
+                        │     │                  │         efb0d553c6c58e87ce4 
+                        │     │                  ╰ DiffID: sha256:e5a5723faa95fd809795501f4fa9cf4c7448c144db3e2
+                        │     │                            a8d15db16ca3587ef28 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42306 
                         │     ├ DataSource       ╭ ID  : ghsa 
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
                         │     │                          osystem%3Ago 
-                        │     ├ Fingerprint     : sha256:5ea6b0e7e89a3f8f9e46efa745bdc4469f5024cb9da9944f9af030
-                        │     │                   8b0d2ea5b2 
+                        │     ├ Fingerprint     : sha256:35ace3c6e6db56e50d6f908425806bca1c5b67f79023026682f162
+                        │     │                   654d433e32 
                         │     ├ Title           : Moby is an open source container framework. In Docker Engine
                         │     │                   prior to  ... 
                         │     ├ Description     : Moby is an open source container framework. In Docker Engine
@@ -174,18 +174,18 @@
                         │     ├ InstalledVersion: v28.5.2+incompatible 
                         │     ├ FixedVersion    : 29.3.1 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:6860d8b49c13aeaa48baca58532970bb58c5d28d3ad70
-                        │     │                  │         36d73cbdfcc0b87a37c 
-                        │     │                  ╰ DiffID: sha256:438029e3c68b272daf635e26db7be70713d0b87bffc89
-                        │     │                            d016f012390453792c8 
+                        │     ├ Layer            ╭ Digest: sha256:2c950c4b56147da8b07f0118ba88a6d5fecadf447529f
+                        │     │                  │         efb0d553c6c58e87ce4 
+                        │     │                  ╰ DiffID: sha256:e5a5723faa95fd809795501f4fa9cf4c7448c144db3e2
+                        │     │                            a8d15db16ca3587ef28 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-33997 
                         │     ├ DataSource       ╭ ID  : ghsa 
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
                         │     │                          osystem%3Ago 
-                        │     ├ Fingerprint     : sha256:edc56851e705130156ac19aa0e70ce9b25c9e1c65ec887d671f56e
-                        │     │                   3e236d09e8 
+                        │     ├ Fingerprint     : sha256:b33157b8f57b148d507bd574a81f9f4d6f9664aea6b1067f966e28
+                        │     │                   79a7744058 
                         │     ├ Title           : moby: docker: github.com/moby/moby: Moby: Privilege
                         │     │                   validation bypass during plugin installation 
                         │     ├ Description     : Moby is an open source container framework. Prior to version
@@ -234,18 +234,18 @@
                         │     │                  ╰ UID : 574b64b426d7eeee 
                         │     ├ InstalledVersion: v28.5.2+incompatible 
                         │     ├ Status          : affected 
-                        │     ├ Layer            ╭ Digest: sha256:6860d8b49c13aeaa48baca58532970bb58c5d28d3ad70
-                        │     │                  │         36d73cbdfcc0b87a37c 
-                        │     │                  ╰ DiffID: sha256:438029e3c68b272daf635e26db7be70713d0b87bffc89
-                        │     │                            d016f012390453792c8 
+                        │     ├ Layer            ╭ Digest: sha256:2c950c4b56147da8b07f0118ba88a6d5fecadf447529f
+                        │     │                  │         efb0d553c6c58e87ce4 
+                        │     │                  ╰ DiffID: sha256:e5a5723faa95fd809795501f4fa9cf4c7448c144db3e2
+                        │     │                            a8d15db16ca3587ef28 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-41568 
                         │     ├ DataSource       ╭ ID  : ghsa 
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
                         │     │                          osystem%3Ago 
-                        │     ├ Fingerprint     : sha256:bb74b93cc8ef7c9f68d8dbebe1c6b772a6f2038e5fbbee9b43e91b
-                        │     │                   a451fa6946 
+                        │     ├ Fingerprint     : sha256:4e4aaf082c907bcced441278a2948f24d3828394b61cab6a350470
+                        │     │                   fb74a79ed5 
                         │     ├ Title           : Moby is an open source container framework. In Docker Engine
                         │     │                   prior to  ... 
                         │     ├ Description     : Moby is an open source container framework. In Docker Engine
@@ -277,18 +277,18 @@
                         │     ├ InstalledVersion: v1.42.0 
                         │     ├ FixedVersion    : 1.43.0 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:6860d8b49c13aeaa48baca58532970bb58c5d28d3ad70
-                        │     │                  │         36d73cbdfcc0b87a37c 
-                        │     │                  ╰ DiffID: sha256:438029e3c68b272daf635e26db7be70713d0b87bffc89
-                        │     │                            d016f012390453792c8 
+                        │     ├ Layer            ╭ Digest: sha256:2c950c4b56147da8b07f0118ba88a6d5fecadf447529f
+                        │     │                  │         efb0d553c6c58e87ce4 
+                        │     │                  ╰ DiffID: sha256:e5a5723faa95fd809795501f4fa9cf4c7448c144db3e2
+                        │     │                            a8d15db16ca3587ef28 
                         │     ├ SeveritySource  : ghsa 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39883 
                         │     ├ DataSource       ╭ ID  : ghsa 
                         │     │                  ├ Name: GitHub Security Advisory Go 
                         │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
                         │     │                          osystem%3Ago 
-                        │     ├ Fingerprint     : sha256:66f71be7c50e4a8852bebfa3a970a1fa765e23e140f1058eac2d60
-                        │     │                   2f5e58f5c7 
+                        │     ├ Fingerprint     : sha256:095a1ff954877d50efc73dc51b58acc501729e41eb6ec90ccdaaac
+                        │     │                   c0fb1f432c 
                         │     ├ Title           : github.com/open-telemetry/opentelemetry-go: OpenTelemetry-Go:
                         │     │                    Arbitrary code execution via PATH hijacking on BSD/Solaris[
                         │     │                   m 
@@ -331,16 +331,16 @@
                         │     ├ InstalledVersion: v1.26.3 
                         │     ├ FixedVersion    : 1.25.11, 1.26.4 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:6860d8b49c13aeaa48baca58532970bb58c5d28d3ad70
-                        │     │                  │         36d73cbdfcc0b87a37c 
-                        │     │                  ╰ DiffID: sha256:438029e3c68b272daf635e26db7be70713d0b87bffc89
-                        │     │                            d016f012390453792c8 
+                        │     ├ Layer            ╭ Digest: sha256:2c950c4b56147da8b07f0118ba88a6d5fecadf447529f
+                        │     │                  │         efb0d553c6c58e87ce4 
+                        │     │                  ╰ DiffID: sha256:e5a5723faa95fd809795501f4fa9cf4c7448c144db3e2
+                        │     │                            a8d15db16ca3587ef28 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42504 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
                         │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │     ├ Fingerprint     : sha256:04a7ef27cdeaaeb0e22cdb4f851b04ab1e2ac7c958f9a49f239825
-                        │     │                   750592674d 
+                        │     ├ Fingerprint     : sha256:fbff98b5039d6ddf74d31144813a28efca99d49e260d9576e547f0
+                        │     │                   d03e5f0fa3 
                         │     ├ Title           : Decoding a maliciously-crafted MIME header containing many
                         │     │                   invalid enc ... 
                         │     ├ Description     : Decoding a maliciously-crafted MIME header containing many
@@ -367,16 +367,16 @@
                         │     ├ InstalledVersion: v1.26.3 
                         │     ├ FixedVersion    : 1.25.11, 1.26.4 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:6860d8b49c13aeaa48baca58532970bb58c5d28d3ad70
-                        │     │                  │         36d73cbdfcc0b87a37c 
-                        │     │                  ╰ DiffID: sha256:438029e3c68b272daf635e26db7be70713d0b87bffc89
-                        │     │                            d016f012390453792c8 
+                        │     ├ Layer            ╭ Digest: sha256:2c950c4b56147da8b07f0118ba88a6d5fecadf447529f
+                        │     │                  │         efb0d553c6c58e87ce4 
+                        │     │                  ╰ DiffID: sha256:e5a5723faa95fd809795501f4fa9cf4c7448c144db3e2
+                        │     │                            a8d15db16ca3587ef28 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-27145 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
                         │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │     ├ Fingerprint     : sha256:8ee5bb1c6588832dd096176c8abc4a33d4ca4857b01e2860eace2e
-                        │     │                   02abd0e815 
+                        │     ├ Fingerprint     : sha256:e7dfc5420d98c681cbbf662297e9c8f9255e8b24b886d2ec07072e
+                        │     │                   1aac271eed 
                         │     ├ Title           : *x509.Certificate).VerifyHostname previously called
                         │     │                   matchHostnames in ... 
                         │     ├ Description     : (*x509.Certificate).VerifyHostname previously called
@@ -409,16 +409,16 @@
                               ├ InstalledVersion: v1.26.3 
                               ├ FixedVersion    : 1.25.11, 1.26.4 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:6860d8b49c13aeaa48baca58532970bb58c5d28d3ad70
-                              │                  │         36d73cbdfcc0b87a37c 
-                              │                  ╰ DiffID: sha256:438029e3c68b272daf635e26db7be70713d0b87bffc89
-                              │                            d016f012390453792c8 
+                              ├ Layer            ╭ Digest: sha256:2c950c4b56147da8b07f0118ba88a6d5fecadf447529f
+                              │                  │         efb0d553c6c58e87ce4 
+                              │                  ╰ DiffID: sha256:e5a5723faa95fd809795501f4fa9cf4c7448c144db3e2
+                              │                            a8d15db16ca3587ef28 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42507 
                               ├ DataSource       ╭ ID  : govulndb 
                               │                  ├ Name: The Go Vulnerability Database 
                               │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                              ├ Fingerprint     : sha256:b023fb3f7f1c50a2df6158c529a9b28ebb31a13ebd367a0c4792d3
-                              │                   4616623cb9 
+                              ├ Fingerprint     : sha256:069bca7d7200300991204f3d9c47dbad7dc0f225fbb2e5fe389ecd
+                              │                   354f805512 
                               ├ Title           : net/textproto: golang: Golang net/textproto: Misleading error
                               │                    messages via input injection 
                               ├ Description     : When returning errors, functions in the net/textproto package
