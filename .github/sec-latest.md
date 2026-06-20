@@ -3173,7 +3173,379 @@
 │                       │      ╰ References       ╭ [0]: https://github.com/containerd/containerd 
 │                       │                         ╰ [1]: https://github.com/containerd/containerd/security/advi
 │                       │                                sories/GHSA-fqw6-gf59-qr4w 
-│                       ├ [1]  ╭ VulnerabilityID : CVE-2026-34040 
+│                       ├ [1]  ╭ VulnerabilityID : CVE-2026-53488 
+│                       │      ├ VendorIDs        ─ [0]: GHSA-xhf5-7wjv-pqxp 
+│                       │      ├ PkgID           : github.com/containerd/containerd/v2@v2.2.1 
+│                       │      ├ PkgName         : github.com/containerd/containerd/v2 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/containerd/containerd/v2@v2.2.1 
+│                       │      │                  ╰ UID : 59c4ed9e432d9cfc 
+│                       │      ├ InstalledVersion: v2.2.1 
+│                       │      ├ FixedVersion    : 2.0.10, 2.1.9, 2.2.5, 2.3.2 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ SeveritySource  : ghsa 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-53488 
+│                       │      ├ DataSource       ╭ ID  : ghsa 
+│                       │      │                  ├ Name: GitHub Security Advisory Go 
+│                       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                       │      │                          cosystem%3Ago 
+│                       │      ├ Fingerprint     : sha256:f549b7d462999e20ed05b24cbe72b05380317083d0168f29f0662
+│                       │      │                   7c03632965b 
+│                       │      ├ Title           : containerd CRI — image-config `LABEL` flows to
+│                       │      │                   restart-monitor `binary://` logger: host-root command
+│                       │      │                   execution from an image pull 
+│                       │      ├ Description     : ### Impact
+│                       │      │                   A bug was found in containerd where the CRI plugin
+│                       │      │                   propagates labels from an image config (`LABEL` instruction
+│                       │      │                   in Dockerfile) to a container without validation. This may
+│                       │      │                   result in executing an arbitrary command on the host, via a
+│                       │      │                   plugin that consumes container labels for some operations.
+│                       │      │                   
+│                       │      │                   ### Patches
+│                       │      │                   This bug has been fixed in the following containerd
+│                       │      │                   versions:
+│                       │      │                   * 2.3.2
+│                       │      │                   * 2.2.5
+│                       │      │                   * 2.1.9
+│                       │      │                   * 2.0.10
+│                       │      │                   * 1.7.33
+│                       │      │                   Users should update to these versions to resolve the issue.
+│                       │      │                   ### Workarounds
+│                       │      │                   Ensure that only trusted images are used.
+│                       │      │                   ### Credits
+│                       │      │                   The containerd project would like to thank Anthropic
+│                       │      │                   Research, in collaboration with Claude, the GKE Security
+│                       │      │                   Team using Gemini, and Robert Prast (@robertprast) for
+│                       │      │                   independently discovering and responsibly disclosing this
+│                       │      │                   issue in accordance with the [containerd security
+│                       │      │                   policy](https://github.com/containerd/project/blob/main/SECU
+│                       │      │                   RITY.md).
+│                       │      │                   ### For more information
+│                       │      │                   If you have any questions or comments about this advisory:
+│                       │      │                   * Open an issue in
+│                       │      │                   [containerd](https://github.com/containerd/containerd/issues
+│                       │      │                   /new/choose)
+│                       │      │                   * Email us at
+│                       │      │                   [security@containerd.io](mailto:security@containerd.io)
+│                       │      │                   To report a security issue in containerd:
+│                       │      │                   * [Report a new
+│                       │      │                   vulnerability](https://github.com/containerd/containerd/secu
+│                       │      │                   rity/advisories/new)
+│                       │      │                   [security@containerd.io](mailto:security@containerd.io) 
+│                       │      ├ Severity        : HIGH 
+│                       │      ├ VendorSeverity   ─ ghsa: 3 
+│                       │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI
+│                       │      │                         │            :H/VA:H/SC:N/SI:N/SA:N 
+│                       │      │                         ╰ V40Score : 8.7 
+│                       │      ╰ References       ╭ [0]: https://github.com/containerd/containerd 
+│                       │                         ╰ [1]: https://github.com/containerd/containerd/security/advi
+│                       │                                sories/GHSA-xhf5-7wjv-pqxp 
+│                       ├ [2]  ╭ VulnerabilityID : CVE-2026-53489 
+│                       │      ├ VendorIDs        ─ [0]: GHSA-rgh6-rfwx-v388 
+│                       │      ├ PkgID           : github.com/containerd/containerd/v2@v2.2.1 
+│                       │      ├ PkgName         : github.com/containerd/containerd/v2 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/containerd/containerd/v2@v2.2.1 
+│                       │      │                  ╰ UID : 59c4ed9e432d9cfc 
+│                       │      ├ InstalledVersion: v2.2.1 
+│                       │      ├ FixedVersion    : 2.1.9, 2.2.5, 2.3.2 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ SeveritySource  : ghsa 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-53489 
+│                       │      ├ DataSource       ╭ ID  : ghsa 
+│                       │      │                  ├ Name: GitHub Security Advisory Go 
+│                       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                       │      │                          cosystem%3Ago 
+│                       │      ├ Fingerprint     : sha256:fb731643bcd36400735188b8032c88d547d59587481eacaa8c9fe
+│                       │      │                   c104b979839 
+│                       │      ├ Title           : Arbitrary host CRI log file read via symlink following in
+│                       │      │                   CRI checkpoint restore 
+│                       │      ├ Description     : ### Impact
+│                       │      │                   A bug was found in containerd where the CRI plugin restores
+│                       │      │                   `container.log` from a checkpoint image without validating a
+│                       │      │                    symlinked path. This could result in reading an arbitrary
+│                       │      │                   file on the host via `kubectl logs`.
+│                       │      │                   
+│                       │      │                   ### Patches
+│                       │      │                   This bug has been fixed in the following containerd
+│                       │      │                   versions:
+│                       │      │                   * 2.3.2
+│                       │      │                   * 2.2.5
+│                       │      │                   * 2.1.9
+│                       │      │                   Users should update to these versions to resolve the issue.
+│                       │      │                   ### Workarounds
+│                       │      │                   Ensure that only trusted images and checkpoints are used.
+│                       │      │                   ### Credits
+│                       │      │                   The containerd project would like to thank @gouldnicholas
+│                       │      │                   and @davidrxchester, Yuming Zhang and Song Li of Zhejiang
+│                       │      │                   University, Sangwon Ryu (@sangwon090), Henry Beberman
+│                       │      │                   (@hbeberman) of Microsoft, the GKE Security Team using
+│                       │      │                   Gemini, Anthropic Research, in collaboration with Claude,
+│                       │      │                   Robert Prast (@robertprast),
+│                       │      │                   Kyle Elliott (@kyle-elliott-tob) of Trail of Bits, and
+│                       │      │                   Zhenchen Wang (@Plucky923), who independently discovered and
+│                       │      │                    responsibly disclosed this issue in accordance with the
+│                       │      │                   [containerd security
+│                       │      │                   policy](https://github.com/containerd/project/blob/main/SECU
+│                       │      │                   RITY.md).
+│                       │      │                   ### For more information
+│                       │      │                   If you have any questions or comments about this advisory:
+│                       │      │                   * Open an issue in
+│                       │      │                   [containerd](https://github.com/containerd/containerd/issues
+│                       │      │                   /new/choose)
+│                       │      │                   * Email us at
+│                       │      │                   [security@containerd.io](mailto:security@containerd.io)
+│                       │      │                   To report a security issue in containerd:
+│                       │      │                   * [Report a new
+│                       │      │                   vulnerability](https://github.com/containerd/containerd/secu
+│                       │      │                   rity/advisories/new)
+│                       │      │                   [security@containerd.io](mailto:security@containerd.io) 
+│                       │      ├ Severity        : HIGH 
+│                       │      ├ VendorSeverity   ─ ghsa: 3 
+│                       │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI
+│                       │      │                         │            :N/VA:N/SC:N/SI:N/SA:N 
+│                       │      │                         ╰ V40Score : 7.1 
+│                       │      ╰ References       ╭ [0]: https://github.com/containerd/containerd 
+│                       │                         ╰ [1]: https://github.com/containerd/containerd/security/advi
+│                       │                                sories/GHSA-rgh6-rfwx-v388 
+│                       ├ [3]  ╭ VulnerabilityID : CVE-2026-53492 
+│                       │      ├ VendorIDs        ─ [0]: GHSA-33vj-92qq-66hc 
+│                       │      ├ PkgID           : github.com/containerd/containerd/v2@v2.2.1 
+│                       │      ├ PkgName         : github.com/containerd/containerd/v2 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/containerd/containerd/v2@v2.2.1 
+│                       │      │                  ╰ UID : 59c4ed9e432d9cfc 
+│                       │      ├ InstalledVersion: v2.2.1 
+│                       │      ├ FixedVersion    : 2.1.9, 2.2.5, 2.3.2 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ SeveritySource  : ghsa 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-53492 
+│                       │      ├ DataSource       ╭ ID  : ghsa 
+│                       │      │                  ├ Name: GitHub Security Advisory Go 
+│                       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                       │      │                          cosystem%3Ago 
+│                       │      ├ Fingerprint     : sha256:c9e4bb0bd3ff44af75428fcb82ba3bb9d650213d6260359472ce6
+│                       │      │                   172356f35f6 
+│                       │      ├ Title           : containerd CRI checkpoint restore CDI annotation smuggling 
+│                       │      ├ Description     : ### Impact
+│                       │      │                   
+│                       │      │                   containerd's CRI implementation improperly trusts Container
+│                       │      │                   Device Interface (CDI) annotations found within untrusted
+│                       │      │                   checkpoint image metadata during container restoration. When
+│                       │      │                    restoring a container from a checkpoint, containerd
+│                       │      │                   preserves CDI-related annotations from the checkpoint
+│                       │      │                   archive rather than relying solely on the pod's create-time
+│                       │      │                   specification. This allows a user with pod creation
+│                       │      │                   permissions to bypass standard Kubernetes resource
+│                       │      │                   allocation and device plugin enforcement, injecting
+│                       │      │                   arbitrary CDI edits (such as device nodes and host mounts)
+│                       │      │                   into the restored container. Successful exploitation
+│                       │      │                   requires that the node has CDI enabled and contains a
+│                       │      │                   matching host CDI specification for the requested device;
+│                       │      │                   environments where CDI is disabled or lacking sensitive
+│                       │      │                   device specifications are not affected.
+│                       │      │                   ### Patches
+│                       │      │                   This bug has been fixed in the following containerd
+│                       │      │                   versions:
+│                       │      │                   * 2.3.2
+│                       │      │                   * 2.2.5
+│                       │      │                   * 2.1.9
+│                       │      │                   Users should update to these versions to resolve the issue.
+│                       │      │                   Recreating existing containers restored from untrusted
+│                       │      │                   checkpoints may be necessary to remove smuggled
+│                       │      │                   configuration.
+│                       │      │                   ### Workarounds
+│                       │      │                   Users can mitigate this issue by restricting the restoration
+│                       │      │                    of containers from untrusted checkpoint images. If
+│                       │      │                   Container Device Interface (CDI) capabilities are not
+│                       │      │                   utilized on the node, removing or temporarily relocating
+│                       │      │                   host CDI specifications from the default directories
+│                       │      │                   (`/etc/cdi` and `/var/run/cdi`) will eliminate the
+│                       │      │                   reachability of this vulnerability.
+│                       │      │                   ### Credits
+│                       │      │                   The containerd project would like to thank Robert Prast
+│                       │      │                   (@robertprast) for responsibly disclosing this issue in
+│                       │      │                   accordance with the [containerd security
+│                       │      │                   policy](https://github.com/containerd/project/blob/main/SECU
+│                       │      │                   RITY.md).
+│                       │      │                   ### For more information
+│                       │      │                   If you have any questions or comments about this advisory:
+│                       │      │                   * Open an issue in
+│                       │      │                   [containerd](https://github.com/containerd/containerd/issues
+│                       │      │                   /new/choose)
+│                       │      │                   * Email us at
+│                       │      │                   [security@containerd.io](mailto:security@containerd.io)
+│                       │      │                   To report a security issue in containerd:
+│                       │      │                   * [Report a new
+│                       │      │                   vulnerability](https://github.com/containerd/containerd/secu
+│                       │      │                   rity/advisories/new)
+│                       │      │                   [security@containerd.io](mailto:security@containerd.io) 
+│                       │      ├ Severity        : HIGH 
+│                       │      ├ VendorSeverity   ─ ghsa: 3 
+│                       │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI
+│                       │      │                         │            :H/VA:N/SC:H/SI:H/SA:N 
+│                       │      │                         ╰ V40Score : 8.4 
+│                       │      ╰ References       ╭ [0]: https://github.com/containerd/containerd 
+│                       │                         ╰ [1]: https://github.com/containerd/containerd/security/advi
+│                       │                                sories/GHSA-33vj-92qq-66hc 
+│                       ├ [4]  ╭ VulnerabilityID : CVE-2026-47262 
+│                       │      ├ VendorIDs        ─ [0]: GHSA-jpcc-p29g-p8mq 
+│                       │      ├ PkgID           : github.com/containerd/containerd/v2@v2.2.1 
+│                       │      ├ PkgName         : github.com/containerd/containerd/v2 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/containerd/containerd/v2@v2.2.1 
+│                       │      │                  ╰ UID : 59c4ed9e432d9cfc 
+│                       │      ├ InstalledVersion: v2.2.1 
+│                       │      ├ FixedVersion    : 2.0.10, 2.1.9, 2.2.5, 2.3.2 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ SeveritySource  : ghsa 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-47262 
+│                       │      ├ DataSource       ╭ ID  : ghsa 
+│                       │      │                  ├ Name: GitHub Security Advisory Go 
+│                       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                       │      │                          cosystem%3Ago 
+│                       │      ├ Fingerprint     : sha256:fd37b17022038b420e4abe110e89fad19f84bd01d8e73ffbc34ea
+│                       │      │                   7e9a72152f4 
+│                       │      ├ Title           : containerd image-triggered runtime DoS via unbounded group
+│                       │      │                   parsing 
+│                       │      ├ Description     : ### Impact
+│                       │      │                   A vulnerability in containerd allows a maliciously crafted
+│                       │      │                   image to cause a Denial of Service (DoS) condition. When
+│                       │      │                   creating a container from this image, memory exhaustion
+│                       │      │                   occurs, leading to an Out Of Memory (OOM) kill of the
+│                       │      │                   containerd process. This renders the container runtime API
+│                       │      │                   unavailable and can disrupt clients such as the Docker
+│                       │      │                   Engine or Kubernetes control-plane components.
+│                       │      │                   
+│                       │      │                   ### Patches
+│                       │      │                   This bug has been fixed in the following containerd
+│                       │      │                   versions:
+│                       │      │                   * 2.3.2
+│                       │      │                   * 2.2.5
+│                       │      │                   * 2.1.9
+│                       │      │                   * 2.0.10
+│                       │      │                   * 1.7.33
+│                       │      │                   Users should update to these versions to resolve the issue.
+│                       │      │                   ### Workarounds
+│                       │      │                   Ensure that only trusted images are used and that only
+│                       │      │                   trusted users have permissions to import images or schedule
+│                       │      │                   pods. 
+│                       │      │                   ### Credits
+│                       │      │                   The containerd project would like to thank Jakub Ciolek
+│                       │      │                   (@jake-ciolek) at AlphaSense and Kyle Elliott @ Trail of
+│                       │      │                   Bits who independently discovered and responsibly disclosed
+│                       │      │                   this issue in accordance with the [containerd security
+│                       │      │                   policy](https://github.com/containerd/project/blob/main/SECU
+│                       │      │                   RITY.md).
+│                       │      │                   ### For more information
+│                       │      │                   If you have any questions or comments about this advisory:
+│                       │      │                   * Open an issue in
+│                       │      │                   [containerd](https://github.com/containerd/containerd/issues
+│                       │      │                   /new/choose)
+│                       │      │                   * Email us at
+│                       │      │                   [security@containerd.io](mailto:security@containerd.io)
+│                       │      │                   To report a security issue in containerd:
+│                       │      │                   * [Report a new
+│                       │      │                   vulnerability](https://github.com/containerd/containerd/secu
+│                       │      │                   rity/advisories/new)
+│                       │      │                   [security@containerd.io](mailto:security@containerd.io) 
+│                       │      ├ Severity        : MEDIUM 
+│                       │      ├ VendorSeverity   ─ ghsa: 2 
+│                       │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI
+│                       │      │                         │            :N/VA:H/SC:N/SI:N/SA:N 
+│                       │      │                         ╰ V40Score : 6.9 
+│                       │      ╰ References       ╭ [0]: https://github.com/containerd/containerd 
+│                       │                         ╰ [1]: https://github.com/containerd/containerd/security/advi
+│                       │                                sories/GHSA-jpcc-p29g-p8mq 
+│                       ├ [5]  ╭ VulnerabilityID : CVE-2026-50195 
+│                       │      ├ VendorIDs        ─ [0]: GHSA-cvxm-645q-p574 
+│                       │      ├ PkgID           : github.com/containerd/containerd/v2@v2.2.1 
+│                       │      ├ PkgName         : github.com/containerd/containerd/v2 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/containerd/containerd/v2@v2.2.1 
+│                       │      │                  ╰ UID : 59c4ed9e432d9cfc 
+│                       │      ├ InstalledVersion: v2.2.1 
+│                       │      ├ FixedVersion    : 2.1.9, 2.2.5, 2.3.2 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ SeveritySource  : ghsa 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-50195 
+│                       │      ├ DataSource       ╭ ID  : ghsa 
+│                       │      │                  ├ Name: GitHub Security Advisory Go 
+│                       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                       │      │                          cosystem%3Ago 
+│                       │      ├ Fingerprint     : sha256:767fddf6819376d6da3890ce77ae861948fa6a12bbf6347505b6d
+│                       │      │                   c6e9792fcbd 
+│                       │      ├ Title           : containerd: CRI checkpoint import allows local image tag
+│                       │      │                   poisoning 
+│                       │      ├ Description     : ## Impact
+│                       │      │                   containerd's CRI checkpoint import process contains a
+│                       │      │                   vulnerability where it fails to validate the image
+│                       │      │                   references specified within a checkpoint image's
+│                       │      │                   configuration. An attacker with permissions to create pods
+│                       │      │                   can use a crafted checkpoint image to force containerd to
+│                       │      │                   pull a malicious image and assign it an arbitrary local tag,
+│                       │      │                    thereby poisoning the node's local image cache.
+│                       │      │                   Subsequently, if other pods on the same node attempt to use
+│                       │      │                   the poisoned tag with an `IfNotPresent` (or `Never`) pull
+│                       │      │                   policy, they will unknowingly execute the attacker's
+│                       │      │                   malicious image instead of the legitimate one. This can lead
+│                       │      │                    to a compromise of the affected pods, allowing the attacker
+│                       │      │                    to execute arbitrary code under the victim pod's identity.
+│                       │      │                   
+│                       │      │                   ## Patches
+│                       │      │                   This bug has been fixed in the following containerd
+│                       │      │                   versions:
+│                       │      │                   * 2.3.2
+│                       │      │                   * 2.2.5
+│                       │      │                   * 2.1.9
+│                       │      │                   Users should update to these versions to resolve the issue.
+│                       │      │                   ## Workarounds
+│                       │      │                   Users should only allow trusted images to be pulled.
+│                       │      │                   ## Credits
+│                       │      │                   The containerd project would like to thank Henry Beberman
+│                       │      │                   (@hbeberman) of Microsoft, the GKE Security Team using
+│                       │      │                   Gemini, Anthropic Research, in collaboration with Claude,
+│                       │      │                   and Robert Prast (@robertprast) who independently discovered
+│                       │      │                    and responsibly disclosed this issue in accordance with the
+│                       │      │                    [containerd security
+│                       │      │                   policy](https://github.com/containerd/project/blob/main/SECU
+│                       │      │                   RITY.md).
+│                       │      │                   ## For more information
+│                       │      │                   If you have any questions or comments about this advisory:
+│                       │      │                   * Open an issue in
+│                       │      │                   [containerd](https://github.com/containerd/containerd/issues
+│                       │      │                   /new/choose)
+│                       │      │                   * Email us at
+│                       │      │                   [security@containerd.io](mailto:security@containerd.io)
+│                       │      │                   To report a security issue in containerd:
+│                       │      │                   * [Report a new
+│                       │      │                   vulnerability](https://github.com/containerd/containerd/secu
+│                       │      │                   rity/advisories/new)
+│                       │      │                   [security@containerd.io](mailto:security@containerd.io) 
+│                       │      ├ Severity        : MEDIUM 
+│                       │      ├ VendorSeverity   ─ ghsa: 2 
+│                       │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI
+│                       │      │                         │            :L/VA:N/SC:H/SI:H/SA:L 
+│                       │      │                         ╰ V40Score : 5.6 
+│                       │      ╰ References       ╭ [0]: https://github.com/containerd/containerd 
+│                       │                         ╰ [1]: https://github.com/containerd/containerd/security/advi
+│                       │                                sories/GHSA-cvxm-645q-p574 
+│                       ├ [6]  ╭ VulnerabilityID : CVE-2026-34040 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-x744-4wpc-v9h2 
 │                       │      ├ PkgID           : github.com/docker/docker@v28.5.2+incompatible 
 │                       │      ├ PkgName         : github.com/docker/docker 
@@ -3231,7 +3603,7 @@
 │                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-34040 
 │                       │      ├ PublishedDate   : 2026-03-31T03:15:57.883Z 
 │                       │      ╰ LastModifiedDate: 2026-06-16T14:47:49.937Z 
-│                       ├ [2]  ╭ VulnerabilityID : CVE-2026-41567 
+│                       ├ [7]  ╭ VulnerabilityID : CVE-2026-41567 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-x86f-5xw2-fm2r 
 │                       │      ├ PkgID           : github.com/docker/docker@v28.5.2+incompatible 
 │                       │      ├ PkgName         : github.com/docker/docker 
@@ -3283,7 +3655,7 @@
 │                       │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-41567 
 │                       │      ├ PublishedDate   : 2026-06-05T02:17:13.817Z 
 │                       │      ╰ LastModifiedDate: 2026-06-05T16:01:30.983Z 
-│                       ├ [3]  ╭ VulnerabilityID : CVE-2026-42306 
+│                       ├ [8]  ╭ VulnerabilityID : CVE-2026-42306 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-rg2x-37c3-w2rh 
 │                       │      ├ PkgID           : github.com/docker/docker@v28.5.2+incompatible 
 │                       │      ├ PkgName         : github.com/docker/docker 
@@ -3331,7 +3703,7 @@
 │                       │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-42306 
 │                       │      ├ PublishedDate   : 2026-06-12T19:16:27.49Z 
 │                       │      ╰ LastModifiedDate: 2026-06-16T18:31:31.12Z 
-│                       ├ [4]  ╭ VulnerabilityID : CVE-2026-33997 
+│                       ├ [9]  ╭ VulnerabilityID : CVE-2026-33997 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-pxq6-2prw-chj9 
 │                       │      ├ PkgID           : github.com/docker/docker@v28.5.2+incompatible 
 │                       │      ├ PkgName         : github.com/docker/docker 
@@ -3392,7 +3764,7 @@
 │                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2026-33997 
 │                       │      ├ PublishedDate   : 2026-03-31T03:15:57.523Z 
 │                       │      ╰ LastModifiedDate: 2026-06-16T14:47:38.807Z 
-│                       ├ [5]  ╭ VulnerabilityID : CVE-2026-41568 
+│                       ├ [10] ╭ VulnerabilityID : CVE-2026-41568 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-vp62-88p7-qqf5 
 │                       │      ├ PkgID           : github.com/docker/docker@v28.5.2+incompatible 
 │                       │      ├ PkgName         : github.com/docker/docker 
@@ -3435,7 +3807,7 @@
 │                       │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-41568 
 │                       │      ├ PublishedDate   : 2026-06-12T19:16:26.907Z 
 │                       │      ╰ LastModifiedDate: 2026-06-16T18:31:54.957Z 
-│                       ├ [6]  ╭ VulnerabilityID : CVE-2026-34986 
+│                       ├ [11] ╭ VulnerabilityID : CVE-2026-34986 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-78h2-9frx-2jm8 
 │                       │      ├ PkgID           : github.com/go-jose/go-jose/v4@v4.1.3 
 │                       │      ├ PkgName         : github.com/go-jose/go-jose/v4 
@@ -3542,7 +3914,7 @@
 │                       │      │                  ╰ [34]: https://www.cve.org/CVERecord?id=CVE-2026-34986 
 │                       │      ├ PublishedDate   : 2026-04-06T17:17:11.87Z 
 │                       │      ╰ LastModifiedDate: 2026-05-04T15:20:44.337Z 
-│                       ├ [7]  ╭ VulnerabilityID : CVE-2026-29181 
+│                       ├ [12] ╭ VulnerabilityID : CVE-2026-29181 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-mh2q-q3fh-2475 
 │                       │      ├ PkgID           : go.opentelemetry.io/otel@v1.39.0 
 │                       │      ├ PkgName         : go.opentelemetry.io/otel 
@@ -3599,7 +3971,7 @@
 │                       │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2026-29181 
 │                       │      ├ PublishedDate   : 2026-04-07T21:17:16.003Z 
 │                       │      ╰ LastModifiedDate: 2026-04-14T18:45:01.363Z 
-│                       ├ [8]  ╭ VulnerabilityID : CVE-2026-32280 
+│                       ├ [13] ╭ VulnerabilityID : CVE-2026-32280 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4947 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -3668,7 +4040,7 @@
 │                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:16:42.18Z 
-│                       ├ [9]  ╭ VulnerabilityID : CVE-2026-32281 
+│                       ├ [14] ╭ VulnerabilityID : CVE-2026-32281 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4946 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -3740,7 +4112,7 @@
 │                       │      │                  ╰ [18]: https://www.cve.org/CVERecord?id=CVE-2026-32281 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.35Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:15:57.75Z 
-│                       ├ [10] ╭ VulnerabilityID : CVE-2026-32283 
+│                       ├ [15] ╭ VulnerabilityID : CVE-2026-32283 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4870 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -3813,7 +4185,7 @@
 │                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:12:10.54Z 
-│                       ├ [11] ╭ VulnerabilityID : CVE-2026-33811 
+│                       ├ [16] ╭ VulnerabilityID : CVE-2026-33811 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4981 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -3867,7 +4239,7 @@
 │                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-33811 
 │                       │      ├ PublishedDate   : 2026-05-07T20:16:42.77Z 
 │                       │      ╰ LastModifiedDate: 2026-05-12T20:23:02.333Z 
-│                       ├ [12] ╭ VulnerabilityID : CVE-2026-33814 
+│                       ├ [17] ╭ VulnerabilityID : CVE-2026-33814 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4918 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -3923,7 +4295,7 @@
 │                       │      │                  ╰ [12]: https://www.cve.org/CVERecord?id=CVE-2026-33814 
 │                       │      ├ PublishedDate   : 2026-05-07T20:16:42.88Z 
 │                       │      ╰ LastModifiedDate: 2026-05-13T14:41:59.52Z 
-│                       ├ [13] ╭ VulnerabilityID : CVE-2026-39820 
+│                       ├ [18] ╭ VulnerabilityID : CVE-2026-39820 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4986 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -3971,7 +4343,7 @@
 │                       │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4986 
 │                       │      ├ PublishedDate   : 2026-05-07T20:16:43.187Z 
 │                       │      ╰ LastModifiedDate: 2026-05-13T15:10:58.65Z 
-│                       ├ [14] ╭ VulnerabilityID : CVE-2026-39823 
+│                       ├ [19] ╭ VulnerabilityID : CVE-2026-39823 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4982 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -4017,7 +4389,7 @@
 │                       │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4982 
 │                       │      ├ PublishedDate   : 2026-05-07T20:16:43.29Z 
 │                       │      ╰ LastModifiedDate: 2026-05-13T16:58:45.697Z 
-│                       ├ [15] ╭ VulnerabilityID : CVE-2026-39825 
+│                       ├ [20] ╭ VulnerabilityID : CVE-2026-39825 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4976 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -4069,7 +4441,7 @@
 │                       │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4976 
 │                       │      ├ PublishedDate   : 2026-05-07T20:16:43.39Z 
 │                       │      ╰ LastModifiedDate: 2026-05-13T16:58:56.39Z 
-│                       ├ [16] ╭ VulnerabilityID : CVE-2026-39836 
+│                       ├ [21] ╭ VulnerabilityID : CVE-2026-39836 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4971 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -4114,7 +4486,7 @@
 │                       │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4971 
 │                       │      ├ PublishedDate   : 2026-05-07T20:16:43.593Z 
 │                       │      ╰ LastModifiedDate: 2026-05-13T15:11:10.31Z 
-│                       ├ [17] ╭ VulnerabilityID : CVE-2026-42499 
+│                       ├ [22] ╭ VulnerabilityID : CVE-2026-42499 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4977 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -4155,7 +4527,7 @@
 │                       │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4977 
 │                       │      ├ PublishedDate   : 2026-05-07T20:16:44.54Z 
 │                       │      ╰ LastModifiedDate: 2026-05-13T16:59:17.563Z 
-│                       ├ [18] ╭ VulnerabilityID : CVE-2026-42504 
+│                       ├ [23] ╭ VulnerabilityID : CVE-2026-42504 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-5038 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -4192,7 +4564,7 @@
 │                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-5038 
 │                       │      ├ PublishedDate   : 2026-06-02T23:16:37.927Z 
 │                       │      ╰ LastModifiedDate: 2026-06-04T16:15:50.143Z 
-│                       ├ [19] ╭ VulnerabilityID : CVE-2026-27145 
+│                       ├ [24] ╭ VulnerabilityID : CVE-2026-27145 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-5037 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -4235,7 +4607,7 @@
 │                       │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-5037 
 │                       │      ├ PublishedDate   : 2026-06-02T23:16:35.57Z 
 │                       │      ╰ LastModifiedDate: 2026-06-04T16:15:50.143Z 
-│                       ├ [20] ╭ VulnerabilityID : CVE-2026-32282 
+│                       ├ [25] ╭ VulnerabilityID : CVE-2026-32282 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4864 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -4333,7 +4705,7 @@
 │                       │      │                  ╰ [35]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:15:39.4Z 
-│                       ├ [21] ╭ VulnerabilityID : CVE-2026-32288 
+│                       ├ [26] ╭ VulnerabilityID : CVE-2026-32288 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4869 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -4387,7 +4759,7 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32288 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.707Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:08:52.24Z 
-│                       ├ [22] ╭ VulnerabilityID : CVE-2026-32289 
+│                       ├ [27] ╭ VulnerabilityID : CVE-2026-32289 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4865 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -4444,7 +4816,7 @@
 │                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32289 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.82Z 
 │                       │      ╰ LastModifiedDate: 2026-04-16T19:06:57.367Z 
-│                       ├ [23] ╭ VulnerabilityID : CVE-2026-39826 
+│                       ├ [28] ╭ VulnerabilityID : CVE-2026-39826 
 │                       │      ├ VendorIDs        ─ [0]: GO-2026-4980 
 │                       │      ├ PkgID           : stdlib@v1.25.8 
 │                       │      ├ PkgName         : stdlib 
@@ -4495,7 +4867,7 @@
 │                       │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-39826 
 │                       │      ├ PublishedDate   : 2026-05-07T20:16:43.49Z 
 │                       │      ╰ LastModifiedDate: 2026-05-13T16:59:07.48Z 
-│                       ╰ [24] ╭ VulnerabilityID : CVE-2026-42507 
+│                       ╰ [29] ╭ VulnerabilityID : CVE-2026-42507 
 │                              ├ VendorIDs        ─ [0]: GO-2026-5039 
 │                              ├ PkgID           : stdlib@v1.25.8 
 │                              ├ PkgName         : stdlib 
@@ -5388,7 +5760,379 @@
                         │      ╰ References       ╭ [0]: https://github.com/containerd/containerd 
                         │                         ╰ [1]: https://github.com/containerd/containerd/security/advi
                         │                                sories/GHSA-fqw6-gf59-qr4w 
-                        ├ [1]  ╭ VulnerabilityID : CVE-2026-44973 
+                        ├ [1]  ╭ VulnerabilityID : CVE-2026-53488 
+                        │      ├ VendorIDs        ─ [0]: GHSA-xhf5-7wjv-pqxp 
+                        │      ├ PkgID           : github.com/containerd/containerd/v2@v2.2.2 
+                        │      ├ PkgName         : github.com/containerd/containerd/v2 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/containerd/containerd/v2@v2.2.2 
+                        │      │                  ╰ UID : ad38227b6ded66ab 
+                        │      ├ InstalledVersion: v2.2.2 
+                        │      ├ FixedVersion    : 2.0.10, 2.1.9, 2.2.5, 2.3.2 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+                        │      │                  │         681983635a9c1ff722b4 
+                        │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+                        │      │                            25428cc374c8321dfc38 
+                        │      ├ SeveritySource  : ghsa 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-53488 
+                        │      ├ DataSource       ╭ ID  : ghsa 
+                        │      │                  ├ Name: GitHub Security Advisory Go 
+                        │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+                        │      │                          cosystem%3Ago 
+                        │      ├ Fingerprint     : sha256:5ab12b1ca8852f8a500be0ec30b3d515ba2b52d38101af257c91a
+                        │      │                   58e0c9edbde 
+                        │      ├ Title           : containerd CRI — image-config `LABEL` flows to
+                        │      │                   restart-monitor `binary://` logger: host-root command
+                        │      │                   execution from an image pull 
+                        │      ├ Description     : ### Impact
+                        │      │                   A bug was found in containerd where the CRI plugin
+                        │      │                   propagates labels from an image config (`LABEL` instruction
+                        │      │                   in Dockerfile) to a container without validation. This may
+                        │      │                   result in executing an arbitrary command on the host, via a
+                        │      │                   plugin that consumes container labels for some operations.
+                        │      │                   
+                        │      │                   ### Patches
+                        │      │                   This bug has been fixed in the following containerd
+                        │      │                   versions:
+                        │      │                   * 2.3.2
+                        │      │                   * 2.2.5
+                        │      │                   * 2.1.9
+                        │      │                   * 2.0.10
+                        │      │                   * 1.7.33
+                        │      │                   Users should update to these versions to resolve the issue.
+                        │      │                   ### Workarounds
+                        │      │                   Ensure that only trusted images are used.
+                        │      │                   ### Credits
+                        │      │                   The containerd project would like to thank Anthropic
+                        │      │                   Research, in collaboration with Claude, the GKE Security
+                        │      │                   Team using Gemini, and Robert Prast (@robertprast) for
+                        │      │                   independently discovering and responsibly disclosing this
+                        │      │                   issue in accordance with the [containerd security
+                        │      │                   policy](https://github.com/containerd/project/blob/main/SECU
+                        │      │                   RITY.md).
+                        │      │                   ### For more information
+                        │      │                   If you have any questions or comments about this advisory:
+                        │      │                   * Open an issue in
+                        │      │                   [containerd](https://github.com/containerd/containerd/issues
+                        │      │                   /new/choose)
+                        │      │                   * Email us at
+                        │      │                   [security@containerd.io](mailto:security@containerd.io)
+                        │      │                   To report a security issue in containerd:
+                        │      │                   * [Report a new
+                        │      │                   vulnerability](https://github.com/containerd/containerd/secu
+                        │      │                   rity/advisories/new)
+                        │      │                   [security@containerd.io](mailto:security@containerd.io) 
+                        │      ├ Severity        : HIGH 
+                        │      ├ VendorSeverity   ─ ghsa: 3 
+                        │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI
+                        │      │                         │            :H/VA:H/SC:N/SI:N/SA:N 
+                        │      │                         ╰ V40Score : 8.7 
+                        │      ╰ References       ╭ [0]: https://github.com/containerd/containerd 
+                        │                         ╰ [1]: https://github.com/containerd/containerd/security/advi
+                        │                                sories/GHSA-xhf5-7wjv-pqxp 
+                        ├ [2]  ╭ VulnerabilityID : CVE-2026-53489 
+                        │      ├ VendorIDs        ─ [0]: GHSA-rgh6-rfwx-v388 
+                        │      ├ PkgID           : github.com/containerd/containerd/v2@v2.2.2 
+                        │      ├ PkgName         : github.com/containerd/containerd/v2 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/containerd/containerd/v2@v2.2.2 
+                        │      │                  ╰ UID : ad38227b6ded66ab 
+                        │      ├ InstalledVersion: v2.2.2 
+                        │      ├ FixedVersion    : 2.1.9, 2.2.5, 2.3.2 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+                        │      │                  │         681983635a9c1ff722b4 
+                        │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+                        │      │                            25428cc374c8321dfc38 
+                        │      ├ SeveritySource  : ghsa 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-53489 
+                        │      ├ DataSource       ╭ ID  : ghsa 
+                        │      │                  ├ Name: GitHub Security Advisory Go 
+                        │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+                        │      │                          cosystem%3Ago 
+                        │      ├ Fingerprint     : sha256:efb3ca604a7cf2dfce91d11a94f8595832767787fc0df20a2ec89
+                        │      │                   523cb1f8a65 
+                        │      ├ Title           : Arbitrary host CRI log file read via symlink following in
+                        │      │                   CRI checkpoint restore 
+                        │      ├ Description     : ### Impact
+                        │      │                   A bug was found in containerd where the CRI plugin restores
+                        │      │                   `container.log` from a checkpoint image without validating a
+                        │      │                    symlinked path. This could result in reading an arbitrary
+                        │      │                   file on the host via `kubectl logs`.
+                        │      │                   
+                        │      │                   ### Patches
+                        │      │                   This bug has been fixed in the following containerd
+                        │      │                   versions:
+                        │      │                   * 2.3.2
+                        │      │                   * 2.2.5
+                        │      │                   * 2.1.9
+                        │      │                   Users should update to these versions to resolve the issue.
+                        │      │                   ### Workarounds
+                        │      │                   Ensure that only trusted images and checkpoints are used.
+                        │      │                   ### Credits
+                        │      │                   The containerd project would like to thank @gouldnicholas
+                        │      │                   and @davidrxchester, Yuming Zhang and Song Li of Zhejiang
+                        │      │                   University, Sangwon Ryu (@sangwon090), Henry Beberman
+                        │      │                   (@hbeberman) of Microsoft, the GKE Security Team using
+                        │      │                   Gemini, Anthropic Research, in collaboration with Claude,
+                        │      │                   Robert Prast (@robertprast),
+                        │      │                   Kyle Elliott (@kyle-elliott-tob) of Trail of Bits, and
+                        │      │                   Zhenchen Wang (@Plucky923), who independently discovered and
+                        │      │                    responsibly disclosed this issue in accordance with the
+                        │      │                   [containerd security
+                        │      │                   policy](https://github.com/containerd/project/blob/main/SECU
+                        │      │                   RITY.md).
+                        │      │                   ### For more information
+                        │      │                   If you have any questions or comments about this advisory:
+                        │      │                   * Open an issue in
+                        │      │                   [containerd](https://github.com/containerd/containerd/issues
+                        │      │                   /new/choose)
+                        │      │                   * Email us at
+                        │      │                   [security@containerd.io](mailto:security@containerd.io)
+                        │      │                   To report a security issue in containerd:
+                        │      │                   * [Report a new
+                        │      │                   vulnerability](https://github.com/containerd/containerd/secu
+                        │      │                   rity/advisories/new)
+                        │      │                   [security@containerd.io](mailto:security@containerd.io) 
+                        │      ├ Severity        : HIGH 
+                        │      ├ VendorSeverity   ─ ghsa: 3 
+                        │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI
+                        │      │                         │            :N/VA:N/SC:N/SI:N/SA:N 
+                        │      │                         ╰ V40Score : 7.1 
+                        │      ╰ References       ╭ [0]: https://github.com/containerd/containerd 
+                        │                         ╰ [1]: https://github.com/containerd/containerd/security/advi
+                        │                                sories/GHSA-rgh6-rfwx-v388 
+                        ├ [3]  ╭ VulnerabilityID : CVE-2026-53492 
+                        │      ├ VendorIDs        ─ [0]: GHSA-33vj-92qq-66hc 
+                        │      ├ PkgID           : github.com/containerd/containerd/v2@v2.2.2 
+                        │      ├ PkgName         : github.com/containerd/containerd/v2 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/containerd/containerd/v2@v2.2.2 
+                        │      │                  ╰ UID : ad38227b6ded66ab 
+                        │      ├ InstalledVersion: v2.2.2 
+                        │      ├ FixedVersion    : 2.1.9, 2.2.5, 2.3.2 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+                        │      │                  │         681983635a9c1ff722b4 
+                        │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+                        │      │                            25428cc374c8321dfc38 
+                        │      ├ SeveritySource  : ghsa 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-53492 
+                        │      ├ DataSource       ╭ ID  : ghsa 
+                        │      │                  ├ Name: GitHub Security Advisory Go 
+                        │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+                        │      │                          cosystem%3Ago 
+                        │      ├ Fingerprint     : sha256:e3e7251fe3aa69842f0bc454a0862d22e7522f704e3b1365f00a0
+                        │      │                   65fb46a3dfd 
+                        │      ├ Title           : containerd CRI checkpoint restore CDI annotation smuggling 
+                        │      ├ Description     : ### Impact
+                        │      │                   
+                        │      │                   containerd's CRI implementation improperly trusts Container
+                        │      │                   Device Interface (CDI) annotations found within untrusted
+                        │      │                   checkpoint image metadata during container restoration. When
+                        │      │                    restoring a container from a checkpoint, containerd
+                        │      │                   preserves CDI-related annotations from the checkpoint
+                        │      │                   archive rather than relying solely on the pod's create-time
+                        │      │                   specification. This allows a user with pod creation
+                        │      │                   permissions to bypass standard Kubernetes resource
+                        │      │                   allocation and device plugin enforcement, injecting
+                        │      │                   arbitrary CDI edits (such as device nodes and host mounts)
+                        │      │                   into the restored container. Successful exploitation
+                        │      │                   requires that the node has CDI enabled and contains a
+                        │      │                   matching host CDI specification for the requested device;
+                        │      │                   environments where CDI is disabled or lacking sensitive
+                        │      │                   device specifications are not affected.
+                        │      │                   ### Patches
+                        │      │                   This bug has been fixed in the following containerd
+                        │      │                   versions:
+                        │      │                   * 2.3.2
+                        │      │                   * 2.2.5
+                        │      │                   * 2.1.9
+                        │      │                   Users should update to these versions to resolve the issue.
+                        │      │                   Recreating existing containers restored from untrusted
+                        │      │                   checkpoints may be necessary to remove smuggled
+                        │      │                   configuration.
+                        │      │                   ### Workarounds
+                        │      │                   Users can mitigate this issue by restricting the restoration
+                        │      │                    of containers from untrusted checkpoint images. If
+                        │      │                   Container Device Interface (CDI) capabilities are not
+                        │      │                   utilized on the node, removing or temporarily relocating
+                        │      │                   host CDI specifications from the default directories
+                        │      │                   (`/etc/cdi` and `/var/run/cdi`) will eliminate the
+                        │      │                   reachability of this vulnerability.
+                        │      │                   ### Credits
+                        │      │                   The containerd project would like to thank Robert Prast
+                        │      │                   (@robertprast) for responsibly disclosing this issue in
+                        │      │                   accordance with the [containerd security
+                        │      │                   policy](https://github.com/containerd/project/blob/main/SECU
+                        │      │                   RITY.md).
+                        │      │                   ### For more information
+                        │      │                   If you have any questions or comments about this advisory:
+                        │      │                   * Open an issue in
+                        │      │                   [containerd](https://github.com/containerd/containerd/issues
+                        │      │                   /new/choose)
+                        │      │                   * Email us at
+                        │      │                   [security@containerd.io](mailto:security@containerd.io)
+                        │      │                   To report a security issue in containerd:
+                        │      │                   * [Report a new
+                        │      │                   vulnerability](https://github.com/containerd/containerd/secu
+                        │      │                   rity/advisories/new)
+                        │      │                   [security@containerd.io](mailto:security@containerd.io) 
+                        │      ├ Severity        : HIGH 
+                        │      ├ VendorSeverity   ─ ghsa: 3 
+                        │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI
+                        │      │                         │            :H/VA:N/SC:H/SI:H/SA:N 
+                        │      │                         ╰ V40Score : 8.4 
+                        │      ╰ References       ╭ [0]: https://github.com/containerd/containerd 
+                        │                         ╰ [1]: https://github.com/containerd/containerd/security/advi
+                        │                                sories/GHSA-33vj-92qq-66hc 
+                        ├ [4]  ╭ VulnerabilityID : CVE-2026-47262 
+                        │      ├ VendorIDs        ─ [0]: GHSA-jpcc-p29g-p8mq 
+                        │      ├ PkgID           : github.com/containerd/containerd/v2@v2.2.2 
+                        │      ├ PkgName         : github.com/containerd/containerd/v2 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/containerd/containerd/v2@v2.2.2 
+                        │      │                  ╰ UID : ad38227b6ded66ab 
+                        │      ├ InstalledVersion: v2.2.2 
+                        │      ├ FixedVersion    : 2.0.10, 2.1.9, 2.2.5, 2.3.2 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+                        │      │                  │         681983635a9c1ff722b4 
+                        │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+                        │      │                            25428cc374c8321dfc38 
+                        │      ├ SeveritySource  : ghsa 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-47262 
+                        │      ├ DataSource       ╭ ID  : ghsa 
+                        │      │                  ├ Name: GitHub Security Advisory Go 
+                        │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+                        │      │                          cosystem%3Ago 
+                        │      ├ Fingerprint     : sha256:559729fb7e29f5f77d2b6a20ce7cb06381200e5b07824845aaf8b
+                        │      │                   19cccd38b09 
+                        │      ├ Title           : containerd image-triggered runtime DoS via unbounded group
+                        │      │                   parsing 
+                        │      ├ Description     : ### Impact
+                        │      │                   A vulnerability in containerd allows a maliciously crafted
+                        │      │                   image to cause a Denial of Service (DoS) condition. When
+                        │      │                   creating a container from this image, memory exhaustion
+                        │      │                   occurs, leading to an Out Of Memory (OOM) kill of the
+                        │      │                   containerd process. This renders the container runtime API
+                        │      │                   unavailable and can disrupt clients such as the Docker
+                        │      │                   Engine or Kubernetes control-plane components.
+                        │      │                   
+                        │      │                   ### Patches
+                        │      │                   This bug has been fixed in the following containerd
+                        │      │                   versions:
+                        │      │                   * 2.3.2
+                        │      │                   * 2.2.5
+                        │      │                   * 2.1.9
+                        │      │                   * 2.0.10
+                        │      │                   * 1.7.33
+                        │      │                   Users should update to these versions to resolve the issue.
+                        │      │                   ### Workarounds
+                        │      │                   Ensure that only trusted images are used and that only
+                        │      │                   trusted users have permissions to import images or schedule
+                        │      │                   pods. 
+                        │      │                   ### Credits
+                        │      │                   The containerd project would like to thank Jakub Ciolek
+                        │      │                   (@jake-ciolek) at AlphaSense and Kyle Elliott @ Trail of
+                        │      │                   Bits who independently discovered and responsibly disclosed
+                        │      │                   this issue in accordance with the [containerd security
+                        │      │                   policy](https://github.com/containerd/project/blob/main/SECU
+                        │      │                   RITY.md).
+                        │      │                   ### For more information
+                        │      │                   If you have any questions or comments about this advisory:
+                        │      │                   * Open an issue in
+                        │      │                   [containerd](https://github.com/containerd/containerd/issues
+                        │      │                   /new/choose)
+                        │      │                   * Email us at
+                        │      │                   [security@containerd.io](mailto:security@containerd.io)
+                        │      │                   To report a security issue in containerd:
+                        │      │                   * [Report a new
+                        │      │                   vulnerability](https://github.com/containerd/containerd/secu
+                        │      │                   rity/advisories/new)
+                        │      │                   [security@containerd.io](mailto:security@containerd.io) 
+                        │      ├ Severity        : MEDIUM 
+                        │      ├ VendorSeverity   ─ ghsa: 2 
+                        │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI
+                        │      │                         │            :N/VA:H/SC:N/SI:N/SA:N 
+                        │      │                         ╰ V40Score : 6.9 
+                        │      ╰ References       ╭ [0]: https://github.com/containerd/containerd 
+                        │                         ╰ [1]: https://github.com/containerd/containerd/security/advi
+                        │                                sories/GHSA-jpcc-p29g-p8mq 
+                        ├ [5]  ╭ VulnerabilityID : CVE-2026-50195 
+                        │      ├ VendorIDs        ─ [0]: GHSA-cvxm-645q-p574 
+                        │      ├ PkgID           : github.com/containerd/containerd/v2@v2.2.2 
+                        │      ├ PkgName         : github.com/containerd/containerd/v2 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/containerd/containerd/v2@v2.2.2 
+                        │      │                  ╰ UID : ad38227b6ded66ab 
+                        │      ├ InstalledVersion: v2.2.2 
+                        │      ├ FixedVersion    : 2.1.9, 2.2.5, 2.3.2 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+                        │      │                  │         681983635a9c1ff722b4 
+                        │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+                        │      │                            25428cc374c8321dfc38 
+                        │      ├ SeveritySource  : ghsa 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-50195 
+                        │      ├ DataSource       ╭ ID  : ghsa 
+                        │      │                  ├ Name: GitHub Security Advisory Go 
+                        │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+                        │      │                          cosystem%3Ago 
+                        │      ├ Fingerprint     : sha256:6c0b12e3de83919689fcb4f73ad3542954106a611b3d5ab7fccec
+                        │      │                   d197aa9077d 
+                        │      ├ Title           : containerd: CRI checkpoint import allows local image tag
+                        │      │                   poisoning 
+                        │      ├ Description     : ## Impact
+                        │      │                   containerd's CRI checkpoint import process contains a
+                        │      │                   vulnerability where it fails to validate the image
+                        │      │                   references specified within a checkpoint image's
+                        │      │                   configuration. An attacker with permissions to create pods
+                        │      │                   can use a crafted checkpoint image to force containerd to
+                        │      │                   pull a malicious image and assign it an arbitrary local tag,
+                        │      │                    thereby poisoning the node's local image cache.
+                        │      │                   Subsequently, if other pods on the same node attempt to use
+                        │      │                   the poisoned tag with an `IfNotPresent` (or `Never`) pull
+                        │      │                   policy, they will unknowingly execute the attacker's
+                        │      │                   malicious image instead of the legitimate one. This can lead
+                        │      │                    to a compromise of the affected pods, allowing the attacker
+                        │      │                    to execute arbitrary code under the victim pod's identity.
+                        │      │                   
+                        │      │                   ## Patches
+                        │      │                   This bug has been fixed in the following containerd
+                        │      │                   versions:
+                        │      │                   * 2.3.2
+                        │      │                   * 2.2.5
+                        │      │                   * 2.1.9
+                        │      │                   Users should update to these versions to resolve the issue.
+                        │      │                   ## Workarounds
+                        │      │                   Users should only allow trusted images to be pulled.
+                        │      │                   ## Credits
+                        │      │                   The containerd project would like to thank Henry Beberman
+                        │      │                   (@hbeberman) of Microsoft, the GKE Security Team using
+                        │      │                   Gemini, Anthropic Research, in collaboration with Claude,
+                        │      │                   and Robert Prast (@robertprast) who independently discovered
+                        │      │                    and responsibly disclosed this issue in accordance with the
+                        │      │                    [containerd security
+                        │      │                   policy](https://github.com/containerd/project/blob/main/SECU
+                        │      │                   RITY.md).
+                        │      │                   ## For more information
+                        │      │                   If you have any questions or comments about this advisory:
+                        │      │                   * Open an issue in
+                        │      │                   [containerd](https://github.com/containerd/containerd/issues
+                        │      │                   /new/choose)
+                        │      │                   * Email us at
+                        │      │                   [security@containerd.io](mailto:security@containerd.io)
+                        │      │                   To report a security issue in containerd:
+                        │      │                   * [Report a new
+                        │      │                   vulnerability](https://github.com/containerd/containerd/secu
+                        │      │                   rity/advisories/new)
+                        │      │                   [security@containerd.io](mailto:security@containerd.io) 
+                        │      ├ Severity        : MEDIUM 
+                        │      ├ VendorSeverity   ─ ghsa: 2 
+                        │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI
+                        │      │                         │            :L/VA:N/SC:H/SI:H/SA:L 
+                        │      │                         ╰ V40Score : 5.6 
+                        │      ╰ References       ╭ [0]: https://github.com/containerd/containerd 
+                        │                         ╰ [1]: https://github.com/containerd/containerd/security/advi
+                        │                                sories/GHSA-cvxm-645q-p574 
+                        ├ [6]  ╭ VulnerabilityID : CVE-2026-44973 
                         │      ├ VendorIDs        ─ [0]: GHSA-qw64-3x98-g7q2 
                         │      ├ PkgID           : github.com/go-git/go-billy/v5@v5.8.0 
                         │      ├ PkgName         : github.com/go-git/go-billy/v5 
@@ -5437,7 +6181,7 @@
                         │      │                  ╰ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-44973 
                         │      ├ PublishedDate   : 2026-05-28T22:16:59.937Z 
                         │      ╰ LastModifiedDate: 2026-05-29T16:32:14.4Z 
-                        ├ [2]  ╭ VulnerabilityID : CVE-2026-44740 
+                        ├ [7]  ╭ VulnerabilityID : CVE-2026-44740 
                         │      ├ VendorIDs        ─ [0]: GHSA-m3xc-h892-ggx6 
                         │      ├ PkgID           : github.com/go-git/go-billy/v5@v5.8.0 
                         │      ├ PkgName         : github.com/go-git/go-billy/v5 
@@ -5485,7 +6229,7 @@
                         │      │                  ╰ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-44740 
                         │      ├ PublishedDate   : 2026-06-01T17:17:08.277Z 
                         │      ╰ LastModifiedDate: 2026-06-01T18:53:33.87Z 
-                        ├ [3]  ╭ VulnerabilityID : CVE-2026-45022 
+                        ├ [8]  ╭ VulnerabilityID : CVE-2026-45022 
                         │      ├ VendorIDs        ─ [0]: GHSA-389r-gv7p-r3rp 
                         │      ├ PkgID           : github.com/go-git/go-git/v5@v5.18.0 
                         │      ├ PkgName         : github.com/go-git/go-git/v5 
@@ -5540,7 +6284,7 @@
                         │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-45022 
                         │      ├ PublishedDate   : 2026-05-27T15:16:29.98Z 
                         │      ╰ LastModifiedDate: 2026-06-04T17:57:46.58Z 
-                        ├ [4]  ╭ VulnerabilityID : CVE-2026-45571 
+                        ├ [9]  ╭ VulnerabilityID : CVE-2026-45571 
                         │      ├ VendorIDs        ─ [0]: GHSA-crhj-59gh-8x96 
                         │      ├ PkgID           : github.com/go-git/go-git/v5@v5.18.0 
                         │      ├ PkgName         : github.com/go-git/go-git/v5 
@@ -5582,7 +6326,7 @@
                         │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-45571 
                         │      ├ PublishedDate   : 2026-05-27T15:16:30.387Z 
                         │      ╰ LastModifiedDate: 2026-06-04T18:01:41.563Z 
-                        ├ [5]  ╭ VulnerabilityID : GHSA-w5pp-99ch-qj29 
+                        ├ [10] ╭ VulnerabilityID : GHSA-w5pp-99ch-qj29 
                         │      ├ PkgID           : github.com/go-git/go-git/v5@v5.18.0 
                         │      ├ PkgName         : github.com/go-git/go-git/v5 
                         │      ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/go-git/go-git/v5@v5.18.0 
@@ -5637,7 +6381,7 @@
                         │      │                         HSA-w5pp-99ch-qj29 
                         │      ├ PublishedDate   : 2026-05-29T19:43:27Z 
                         │      ╰ LastModifiedDate: 2026-05-29T19:43:27Z 
-                        ├ [6]  ╭ VulnerabilityID : CVE-2026-45570 
+                        ├ [11] ╭ VulnerabilityID : CVE-2026-45570 
                         │      ├ VendorIDs        ─ [0]: GHSA-m7cr-m3pv-hgrp 
                         │      ├ PkgID           : github.com/go-git/go-git/v5@v5.18.0 
                         │      ├ PkgName         : github.com/go-git/go-git/v5 
@@ -5684,7 +6428,7 @@
                         │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-45570 
                         │      ├ PublishedDate   : 2026-05-27T15:16:30.24Z 
                         │      ╰ LastModifiedDate: 2026-06-04T18:00:39.48Z 
-                        ├ [7]  ╭ VulnerabilityID : CVE-2026-33811 
+                        ├ [12] ╭ VulnerabilityID : CVE-2026-33811 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4981 
                         │      ├ PkgID           : stdlib@v1.26.2 
                         │      ├ PkgName         : stdlib 
@@ -5738,7 +6482,7 @@
                         │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-33811 
                         │      ├ PublishedDate   : 2026-05-07T20:16:42.77Z 
                         │      ╰ LastModifiedDate: 2026-05-12T20:23:02.333Z 
-                        ├ [8]  ╭ VulnerabilityID : CVE-2026-33814 
+                        ├ [13] ╭ VulnerabilityID : CVE-2026-33814 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4918 
                         │      ├ PkgID           : stdlib@v1.26.2 
                         │      ├ PkgName         : stdlib 
@@ -5794,7 +6538,7 @@
                         │      │                  ╰ [12]: https://www.cve.org/CVERecord?id=CVE-2026-33814 
                         │      ├ PublishedDate   : 2026-05-07T20:16:42.88Z 
                         │      ╰ LastModifiedDate: 2026-05-13T14:41:59.52Z 
-                        ├ [9]  ╭ VulnerabilityID : CVE-2026-39820 
+                        ├ [14] ╭ VulnerabilityID : CVE-2026-39820 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4986 
                         │      ├ PkgID           : stdlib@v1.26.2 
                         │      ├ PkgName         : stdlib 
@@ -5842,7 +6586,7 @@
                         │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4986 
                         │      ├ PublishedDate   : 2026-05-07T20:16:43.187Z 
                         │      ╰ LastModifiedDate: 2026-05-13T15:10:58.65Z 
-                        ├ [10] ╭ VulnerabilityID : CVE-2026-39823 
+                        ├ [15] ╭ VulnerabilityID : CVE-2026-39823 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4982 
                         │      ├ PkgID           : stdlib@v1.26.2 
                         │      ├ PkgName         : stdlib 
@@ -5888,7 +6632,7 @@
                         │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4982 
                         │      ├ PublishedDate   : 2026-05-07T20:16:43.29Z 
                         │      ╰ LastModifiedDate: 2026-05-13T16:58:45.697Z 
-                        ├ [11] ╭ VulnerabilityID : CVE-2026-39825 
+                        ├ [16] ╭ VulnerabilityID : CVE-2026-39825 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4976 
                         │      ├ PkgID           : stdlib@v1.26.2 
                         │      ├ PkgName         : stdlib 
@@ -5940,7 +6684,7 @@
                         │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4976 
                         │      ├ PublishedDate   : 2026-05-07T20:16:43.39Z 
                         │      ╰ LastModifiedDate: 2026-05-13T16:58:56.39Z 
-                        ├ [12] ╭ VulnerabilityID : CVE-2026-39836 
+                        ├ [17] ╭ VulnerabilityID : CVE-2026-39836 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4971 
                         │      ├ PkgID           : stdlib@v1.26.2 
                         │      ├ PkgName         : stdlib 
@@ -5985,7 +6729,7 @@
                         │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4971 
                         │      ├ PublishedDate   : 2026-05-07T20:16:43.593Z 
                         │      ╰ LastModifiedDate: 2026-05-13T15:11:10.31Z 
-                        ├ [13] ╭ VulnerabilityID : CVE-2026-42499 
+                        ├ [18] ╭ VulnerabilityID : CVE-2026-42499 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4977 
                         │      ├ PkgID           : stdlib@v1.26.2 
                         │      ├ PkgName         : stdlib 
@@ -6026,7 +6770,7 @@
                         │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4977 
                         │      ├ PublishedDate   : 2026-05-07T20:16:44.54Z 
                         │      ╰ LastModifiedDate: 2026-05-13T16:59:17.563Z 
-                        ├ [14] ╭ VulnerabilityID : CVE-2026-42504 
+                        ├ [19] ╭ VulnerabilityID : CVE-2026-42504 
                         │      ├ VendorIDs        ─ [0]: GO-2026-5038 
                         │      ├ PkgID           : stdlib@v1.26.2 
                         │      ├ PkgName         : stdlib 
@@ -6063,7 +6807,7 @@
                         │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-5038 
                         │      ├ PublishedDate   : 2026-06-02T23:16:37.927Z 
                         │      ╰ LastModifiedDate: 2026-06-04T16:15:50.143Z 
-                        ├ [15] ╭ VulnerabilityID : CVE-2026-27145 
+                        ├ [20] ╭ VulnerabilityID : CVE-2026-27145 
                         │      ├ VendorIDs        ─ [0]: GO-2026-5037 
                         │      ├ PkgID           : stdlib@v1.26.2 
                         │      ├ PkgName         : stdlib 
@@ -6106,7 +6850,7 @@
                         │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-5037 
                         │      ├ PublishedDate   : 2026-06-02T23:16:35.57Z 
                         │      ╰ LastModifiedDate: 2026-06-04T16:15:50.143Z 
-                        ├ [16] ╭ VulnerabilityID : CVE-2026-39826 
+                        ├ [21] ╭ VulnerabilityID : CVE-2026-39826 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4980 
                         │      ├ PkgID           : stdlib@v1.26.2 
                         │      ├ PkgName         : stdlib 
@@ -6157,7 +6901,7 @@
                         │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-39826 
                         │      ├ PublishedDate   : 2026-05-07T20:16:43.49Z 
                         │      ╰ LastModifiedDate: 2026-05-13T16:59:07.48Z 
-                        ╰ [17] ╭ VulnerabilityID : CVE-2026-42507 
+                        ╰ [22] ╭ VulnerabilityID : CVE-2026-42507 
                                ├ VendorIDs        ─ [0]: GO-2026-5039 
                                ├ PkgID           : stdlib@v1.26.2 
                                ├ PkgName         : stdlib 
