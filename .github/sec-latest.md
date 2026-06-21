@@ -860,8 +860,8 @@
 │                       │     │                          osystem%3Ago 
 │                       │     ├ Fingerprint     : sha256:556923cfb15f84f3f52a10d164a082d0baa35a045d231e829d8c96
 │                       │     │                   0053c2005f 
-│                       │     ├ Title           : Moby is an open source container framework. In Docker Engine
-│                       │     │                   prior to  ... 
+│                       │     ├ Title           : github.com/docker/docker: github.com/moby/moby: Moby: Denial
+│                       │     │                   of Service via race condition in docker cp mount setup 
 │                       │     ├ Description     : Moby is an open source container framework. In Docker Engine
 │                       │     │                   prior to version 29.5.1, Docker Daemon versions 28.5.2 and
 │                       │     │                   prior, and Moby Daemon prior to version 2.0.0-beta.14, a race
@@ -873,13 +873,20 @@
 │                       │     ├ Severity        : MEDIUM 
 │                       │     ├ CweIDs           ╭ [0]: CWE-81 
 │                       │     │                  ╰ [1]: CWE-367 
-│                       │     ├ VendorSeverity   ─ ghsa: 2 
-│                       │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:L/A:H 
-│                       │     │                         ╰ V3Score : 6 
-│                       │     ├ References       ╭ [0]: https://github.com/moby/moby 
-│                       │     │                  ├ [1]: https://github.com/moby/moby/security/advisories/GHSA-v
+│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │     │                  ╰ redhat: 1 
+│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:L/
+│                       │     │                  │        │           A:H 
+│                       │     │                  │        ╰ V3Score : 6 
+│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:L/
+│                       │     │                           │           A:L 
+│                       │     │                           ╰ V3Score : 3.9 
+│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-41568 
+│                       │     │                  ├ [1]: https://github.com/moby/moby 
+│                       │     │                  ├ [2]: https://github.com/moby/moby/security/advisories/GHSA-v
 │                       │     │                  │      p62-88p7-qqf5 
-│                       │     │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-41568 
+│                       │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-41568 
+│                       │     │                  ╰ [4]: https://www.cve.org/CVERecord?id=CVE-2026-41568 
 │                       │     ├ PublishedDate   : 2026-06-12T19:16:26.907Z 
 │                       │     ╰ LastModifiedDate: 2026-06-16T18:31:54.957Z 
 │                       ├ [5] ╭ VulnerabilityID : CVE-2026-39883 
@@ -1501,8 +1508,8 @@
 │                       │      │                          cosystem%3Ago 
 │                       │      ├ Fingerprint     : sha256:3412cb6dcb3b464a751eccb150fc039d0221baf71d2d0e322275f
 │                       │      │                   4dc729d092f 
-│                       │      ├ Title           : Moby is an open source container framework. In Docker Engine
-│                       │      │                    prior to  ... 
+│                       │      ├ Title           : github.com/docker/docker: github.com/moby/moby: Moby: Denial
+│                       │      │                    of Service via race condition in docker cp mount setup 
 │                       │      ├ Description     : Moby is an open source container framework. In Docker Engine
 │                       │      │                    prior to version 29.5.1, Docker Daemon versions 28.5.2 and
 │                       │      │                   prior, and Moby Daemon prior to version 2.0.0-beta.14, a
@@ -1514,13 +1521,20 @@
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ╭ [0]: CWE-81 
 │                       │      │                  ╰ [1]: CWE-367 
-│                       │      ├ VendorSeverity   ─ ghsa: 2 
-│                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:L/A:H 
-│                       │      │                         ╰ V3Score : 6 
-│                       │      ├ References       ╭ [0]: https://github.com/moby/moby 
-│                       │      │                  ├ [1]: https://github.com/moby/moby/security/advisories/GHSA-
+│                       │      ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │      │                  ╰ redhat: 1 
+│                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:L
+│                       │      │                  │        │           /A:H 
+│                       │      │                  │        ╰ V3Score : 6 
+│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:L
+│                       │      │                           │           /A:L 
+│                       │      │                           ╰ V3Score : 3.9 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-41568 
+│                       │      │                  ├ [1]: https://github.com/moby/moby 
+│                       │      │                  ├ [2]: https://github.com/moby/moby/security/advisories/GHSA-
 │                       │      │                  │      vp62-88p7-qqf5 
-│                       │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-41568 
+│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-41568 
+│                       │      │                  ╰ [4]: https://www.cve.org/CVERecord?id=CVE-2026-41568 
 │                       │      ├ PublishedDate   : 2026-06-12T19:16:26.907Z 
 │                       │      ╰ LastModifiedDate: 2026-06-16T18:31:54.957Z 
 │                       ├ [6]  ╭ VulnerabilityID : CVE-2025-11065 
@@ -1766,7 +1780,7 @@
 │                       │      ├ Severity        : HIGH 
 │                       │      ├ CweIDs           ─ [0]: CWE-425 
 │                       │      ├ VendorSeverity   ╭ alma       : 3 
-│                       │      │                  ├ amazon     : 2 
+│                       │      │                  ├ amazon     : 3 
 │                       │      │                  ├ azure      : 3 
 │                       │      │                  ├ bitnami    : 3 
 │                       │      │                  ├ oracle-oval: 3 
@@ -3194,55 +3208,21 @@
 │                       │      │                          cosystem%3Ago 
 │                       │      ├ Fingerprint     : sha256:f549b7d462999e20ed05b24cbe72b05380317083d0168f29f0662
 │                       │      │                   7c03632965b 
-│                       │      ├ Title           : containerd CRI — image-config `LABEL` flows to
-│                       │      │                   restart-monitor `binary://` logger: host-root command
-│                       │      │                   execution from an image pull 
-│                       │      ├ Description     : ### Impact
-│                       │      │                   A bug was found in containerd where the CRI plugin
-│                       │      │                   propagates labels from an image config (`LABEL` instruction
-│                       │      │                   in Dockerfile) to a container without validation. This may
-│                       │      │                   result in executing an arbitrary command on the host, via a
-│                       │      │                   plugin that consumes container labels for some operations.
-│                       │      │                   
-│                       │      │                   ### Patches
-│                       │      │                   This bug has been fixed in the following containerd
-│                       │      │                   versions:
-│                       │      │                   * 2.3.2
-│                       │      │                   * 2.2.5
-│                       │      │                   * 2.1.9
-│                       │      │                   * 2.0.10
-│                       │      │                   * 1.7.33
-│                       │      │                   Users should update to these versions to resolve the issue.
-│                       │      │                   ### Workarounds
-│                       │      │                   Ensure that only trusted images are used.
-│                       │      │                   ### Credits
-│                       │      │                   The containerd project would like to thank Anthropic
-│                       │      │                   Research, in collaboration with Claude, the GKE Security
-│                       │      │                   Team using Gemini, and Robert Prast (@robertprast) for
-│                       │      │                   independently discovering and responsibly disclosing this
-│                       │      │                   issue in accordance with the [containerd security
-│                       │      │                   policy](https://github.com/containerd/project/blob/main/SECU
-│                       │      │                   RITY.md).
-│                       │      │                   ### For more information
-│                       │      │                   If you have any questions or comments about this advisory:
-│                       │      │                   * Open an issue in
-│                       │      │                   [containerd](https://github.com/containerd/containerd/issues
-│                       │      │                   /new/choose)
-│                       │      │                   * Email us at
-│                       │      │                   [security@containerd.io](mailto:security@containerd.io)
-│                       │      │                   To report a security issue in containerd:
-│                       │      │                   * [Report a new
-│                       │      │                   vulnerability](https://github.com/containerd/containerd/secu
-│                       │      │                   rity/advisories/new)
-│                       │      │                   [security@containerd.io](mailto:security@containerd.io) 
+│                       │      ├ Title           : CVE-2026-53488 affecting package containerd2 for versions
+│                       │      │                   less than 2.2.4-3 
+│                       │      ├ Description     : CVE-2026-53488 affecting package containerd2 for versions
+│                       │      │                   less than 2.2.4-3. A patched version of the package is
+│                       │      │                   available. 
 │                       │      ├ Severity        : HIGH 
-│                       │      ├ VendorSeverity   ─ ghsa: 3 
+│                       │      ├ VendorSeverity   ╭ azure: 4 
+│                       │      │                  ╰ ghsa : 3 
 │                       │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI
 │                       │      │                         │            :H/VA:H/SC:N/SI:N/SA:N 
 │                       │      │                         ╰ V40Score : 8.7 
 │                       │      ╰ References       ╭ [0]: https://github.com/containerd/containerd 
-│                       │                         ╰ [1]: https://github.com/containerd/containerd/security/advi
-│                       │                                sories/GHSA-xhf5-7wjv-pqxp 
+│                       │                         ├ [1]: https://github.com/containerd/containerd/security/advi
+│                       │                         │      sories/GHSA-xhf5-7wjv-pqxp 
+│                       │                         ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-53488 
 │                       ├ [2]  ╭ VulnerabilityID : CVE-2026-53489 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-rgh6-rfwx-v388 
 │                       │      ├ PkgID           : github.com/containerd/containerd/v2@v2.2.1 
@@ -3264,56 +3244,21 @@
 │                       │      │                          cosystem%3Ago 
 │                       │      ├ Fingerprint     : sha256:fb731643bcd36400735188b8032c88d547d59587481eacaa8c9fe
 │                       │      │                   c104b979839 
-│                       │      ├ Title           : Arbitrary host CRI log file read via symlink following in
-│                       │      │                   CRI checkpoint restore 
-│                       │      ├ Description     : ### Impact
-│                       │      │                   A bug was found in containerd where the CRI plugin restores
-│                       │      │                   `container.log` from a checkpoint image without validating a
-│                       │      │                    symlinked path. This could result in reading an arbitrary
-│                       │      │                   file on the host via `kubectl logs`.
-│                       │      │                   
-│                       │      │                   ### Patches
-│                       │      │                   This bug has been fixed in the following containerd
-│                       │      │                   versions:
-│                       │      │                   * 2.3.2
-│                       │      │                   * 2.2.5
-│                       │      │                   * 2.1.9
-│                       │      │                   Users should update to these versions to resolve the issue.
-│                       │      │                   ### Workarounds
-│                       │      │                   Ensure that only trusted images and checkpoints are used.
-│                       │      │                   ### Credits
-│                       │      │                   The containerd project would like to thank @gouldnicholas
-│                       │      │                   and @davidrxchester, Yuming Zhang and Song Li of Zhejiang
-│                       │      │                   University, Sangwon Ryu (@sangwon090), Henry Beberman
-│                       │      │                   (@hbeberman) of Microsoft, the GKE Security Team using
-│                       │      │                   Gemini, Anthropic Research, in collaboration with Claude,
-│                       │      │                   Robert Prast (@robertprast),
-│                       │      │                   Kyle Elliott (@kyle-elliott-tob) of Trail of Bits, and
-│                       │      │                   Zhenchen Wang (@Plucky923), who independently discovered and
-│                       │      │                    responsibly disclosed this issue in accordance with the
-│                       │      │                   [containerd security
-│                       │      │                   policy](https://github.com/containerd/project/blob/main/SECU
-│                       │      │                   RITY.md).
-│                       │      │                   ### For more information
-│                       │      │                   If you have any questions or comments about this advisory:
-│                       │      │                   * Open an issue in
-│                       │      │                   [containerd](https://github.com/containerd/containerd/issues
-│                       │      │                   /new/choose)
-│                       │      │                   * Email us at
-│                       │      │                   [security@containerd.io](mailto:security@containerd.io)
-│                       │      │                   To report a security issue in containerd:
-│                       │      │                   * [Report a new
-│                       │      │                   vulnerability](https://github.com/containerd/containerd/secu
-│                       │      │                   rity/advisories/new)
-│                       │      │                   [security@containerd.io](mailto:security@containerd.io) 
+│                       │      ├ Title           : CVE-2026-53489 affecting package containerd2 for versions
+│                       │      │                   less than 2.2.4-3 
+│                       │      ├ Description     : CVE-2026-53489 affecting package containerd2 for versions
+│                       │      │                   less than 2.2.4-3. A patched version of the package is
+│                       │      │                   available. 
 │                       │      ├ Severity        : HIGH 
-│                       │      ├ VendorSeverity   ─ ghsa: 3 
+│                       │      ├ VendorSeverity   ╭ azure: 2 
+│                       │      │                  ╰ ghsa : 3 
 │                       │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI
 │                       │      │                         │            :N/VA:N/SC:N/SI:N/SA:N 
 │                       │      │                         ╰ V40Score : 7.1 
 │                       │      ╰ References       ╭ [0]: https://github.com/containerd/containerd 
-│                       │                         ╰ [1]: https://github.com/containerd/containerd/security/advi
-│                       │                                sories/GHSA-rgh6-rfwx-v388 
+│                       │                         ├ [1]: https://github.com/containerd/containerd/security/advi
+│                       │                         │      sories/GHSA-rgh6-rfwx-v388 
+│                       │                         ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-53489 
 │                       ├ [3]  ╭ VulnerabilityID : CVE-2026-53492 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-33vj-92qq-66hc 
 │                       │      ├ PkgID           : github.com/containerd/containerd/v2@v2.2.1 
@@ -3335,68 +3280,21 @@
 │                       │      │                          cosystem%3Ago 
 │                       │      ├ Fingerprint     : sha256:c9e4bb0bd3ff44af75428fcb82ba3bb9d650213d6260359472ce6
 │                       │      │                   172356f35f6 
-│                       │      ├ Title           : containerd CRI checkpoint restore CDI annotation smuggling 
-│                       │      ├ Description     : ### Impact
-│                       │      │                   
-│                       │      │                   containerd's CRI implementation improperly trusts Container
-│                       │      │                   Device Interface (CDI) annotations found within untrusted
-│                       │      │                   checkpoint image metadata during container restoration. When
-│                       │      │                    restoring a container from a checkpoint, containerd
-│                       │      │                   preserves CDI-related annotations from the checkpoint
-│                       │      │                   archive rather than relying solely on the pod's create-time
-│                       │      │                   specification. This allows a user with pod creation
-│                       │      │                   permissions to bypass standard Kubernetes resource
-│                       │      │                   allocation and device plugin enforcement, injecting
-│                       │      │                   arbitrary CDI edits (such as device nodes and host mounts)
-│                       │      │                   into the restored container. Successful exploitation
-│                       │      │                   requires that the node has CDI enabled and contains a
-│                       │      │                   matching host CDI specification for the requested device;
-│                       │      │                   environments where CDI is disabled or lacking sensitive
-│                       │      │                   device specifications are not affected.
-│                       │      │                   ### Patches
-│                       │      │                   This bug has been fixed in the following containerd
-│                       │      │                   versions:
-│                       │      │                   * 2.3.2
-│                       │      │                   * 2.2.5
-│                       │      │                   * 2.1.9
-│                       │      │                   Users should update to these versions to resolve the issue.
-│                       │      │                   Recreating existing containers restored from untrusted
-│                       │      │                   checkpoints may be necessary to remove smuggled
-│                       │      │                   configuration.
-│                       │      │                   ### Workarounds
-│                       │      │                   Users can mitigate this issue by restricting the restoration
-│                       │      │                    of containers from untrusted checkpoint images. If
-│                       │      │                   Container Device Interface (CDI) capabilities are not
-│                       │      │                   utilized on the node, removing or temporarily relocating
-│                       │      │                   host CDI specifications from the default directories
-│                       │      │                   (`/etc/cdi` and `/var/run/cdi`) will eliminate the
-│                       │      │                   reachability of this vulnerability.
-│                       │      │                   ### Credits
-│                       │      │                   The containerd project would like to thank Robert Prast
-│                       │      │                   (@robertprast) for responsibly disclosing this issue in
-│                       │      │                   accordance with the [containerd security
-│                       │      │                   policy](https://github.com/containerd/project/blob/main/SECU
-│                       │      │                   RITY.md).
-│                       │      │                   ### For more information
-│                       │      │                   If you have any questions or comments about this advisory:
-│                       │      │                   * Open an issue in
-│                       │      │                   [containerd](https://github.com/containerd/containerd/issues
-│                       │      │                   /new/choose)
-│                       │      │                   * Email us at
-│                       │      │                   [security@containerd.io](mailto:security@containerd.io)
-│                       │      │                   To report a security issue in containerd:
-│                       │      │                   * [Report a new
-│                       │      │                   vulnerability](https://github.com/containerd/containerd/secu
-│                       │      │                   rity/advisories/new)
-│                       │      │                   [security@containerd.io](mailto:security@containerd.io) 
+│                       │      ├ Title           : CVE-2026-53492 affecting package containerd2 for versions
+│                       │      │                   less than 2.2.4-3 
+│                       │      ├ Description     : CVE-2026-53492 affecting package containerd2 for versions
+│                       │      │                   less than 2.2.4-3. A patched version of the package is
+│                       │      │                   available. 
 │                       │      ├ Severity        : HIGH 
-│                       │      ├ VendorSeverity   ─ ghsa: 3 
+│                       │      ├ VendorSeverity   ╭ azure: 2 
+│                       │      │                  ╰ ghsa : 3 
 │                       │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI
 │                       │      │                         │            :H/VA:N/SC:H/SI:H/SA:N 
 │                       │      │                         ╰ V40Score : 8.4 
 │                       │      ╰ References       ╭ [0]: https://github.com/containerd/containerd 
-│                       │                         ╰ [1]: https://github.com/containerd/containerd/security/advi
-│                       │                                sories/GHSA-33vj-92qq-66hc 
+│                       │                         ├ [1]: https://github.com/containerd/containerd/security/advi
+│                       │                         │      sories/GHSA-33vj-92qq-66hc 
+│                       │                         ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-53492 
 │                       ├ [4]  ╭ VulnerabilityID : CVE-2026-47262 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-jpcc-p29g-p8mq 
 │                       │      ├ PkgID           : github.com/containerd/containerd/v2@v2.2.1 
@@ -3418,57 +3316,21 @@
 │                       │      │                          cosystem%3Ago 
 │                       │      ├ Fingerprint     : sha256:fd37b17022038b420e4abe110e89fad19f84bd01d8e73ffbc34ea
 │                       │      │                   7e9a72152f4 
-│                       │      ├ Title           : containerd image-triggered runtime DoS via unbounded group
-│                       │      │                   parsing 
-│                       │      ├ Description     : ### Impact
-│                       │      │                   A vulnerability in containerd allows a maliciously crafted
-│                       │      │                   image to cause a Denial of Service (DoS) condition. When
-│                       │      │                   creating a container from this image, memory exhaustion
-│                       │      │                   occurs, leading to an Out Of Memory (OOM) kill of the
-│                       │      │                   containerd process. This renders the container runtime API
-│                       │      │                   unavailable and can disrupt clients such as the Docker
-│                       │      │                   Engine or Kubernetes control-plane components.
-│                       │      │                   
-│                       │      │                   ### Patches
-│                       │      │                   This bug has been fixed in the following containerd
-│                       │      │                   versions:
-│                       │      │                   * 2.3.2
-│                       │      │                   * 2.2.5
-│                       │      │                   * 2.1.9
-│                       │      │                   * 2.0.10
-│                       │      │                   * 1.7.33
-│                       │      │                   Users should update to these versions to resolve the issue.
-│                       │      │                   ### Workarounds
-│                       │      │                   Ensure that only trusted images are used and that only
-│                       │      │                   trusted users have permissions to import images or schedule
-│                       │      │                   pods. 
-│                       │      │                   ### Credits
-│                       │      │                   The containerd project would like to thank Jakub Ciolek
-│                       │      │                   (@jake-ciolek) at AlphaSense and Kyle Elliott @ Trail of
-│                       │      │                   Bits who independently discovered and responsibly disclosed
-│                       │      │                   this issue in accordance with the [containerd security
-│                       │      │                   policy](https://github.com/containerd/project/blob/main/SECU
-│                       │      │                   RITY.md).
-│                       │      │                   ### For more information
-│                       │      │                   If you have any questions or comments about this advisory:
-│                       │      │                   * Open an issue in
-│                       │      │                   [containerd](https://github.com/containerd/containerd/issues
-│                       │      │                   /new/choose)
-│                       │      │                   * Email us at
-│                       │      │                   [security@containerd.io](mailto:security@containerd.io)
-│                       │      │                   To report a security issue in containerd:
-│                       │      │                   * [Report a new
-│                       │      │                   vulnerability](https://github.com/containerd/containerd/secu
-│                       │      │                   rity/advisories/new)
-│                       │      │                   [security@containerd.io](mailto:security@containerd.io) 
+│                       │      ├ Title           : CVE-2026-47262 affecting package containerd2 for versions
+│                       │      │                   less than 2.2.4-3 
+│                       │      ├ Description     : CVE-2026-47262 affecting package containerd2 for versions
+│                       │      │                   less than 2.2.4-3. A patched version of the package is
+│                       │      │                   available. 
 │                       │      ├ Severity        : MEDIUM 
-│                       │      ├ VendorSeverity   ─ ghsa: 2 
+│                       │      ├ VendorSeverity   ╭ azure: 2 
+│                       │      │                  ╰ ghsa : 2 
 │                       │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI
 │                       │      │                         │            :N/VA:H/SC:N/SI:N/SA:N 
 │                       │      │                         ╰ V40Score : 6.9 
 │                       │      ╰ References       ╭ [0]: https://github.com/containerd/containerd 
-│                       │                         ╰ [1]: https://github.com/containerd/containerd/security/advi
-│                       │                                sories/GHSA-jpcc-p29g-p8mq 
+│                       │                         ├ [1]: https://github.com/containerd/containerd/security/advi
+│                       │                         │      sories/GHSA-jpcc-p29g-p8mq 
+│                       │                         ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-47262 
 │                       ├ [5]  ╭ VulnerabilityID : CVE-2026-50195 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-cvxm-645q-p574 
 │                       │      ├ PkgID           : github.com/containerd/containerd/v2@v2.2.1 
@@ -3490,61 +3352,21 @@
 │                       │      │                          cosystem%3Ago 
 │                       │      ├ Fingerprint     : sha256:767fddf6819376d6da3890ce77ae861948fa6a12bbf6347505b6d
 │                       │      │                   c6e9792fcbd 
-│                       │      ├ Title           : containerd: CRI checkpoint import allows local image tag
-│                       │      │                   poisoning 
-│                       │      ├ Description     : ## Impact
-│                       │      │                   containerd's CRI checkpoint import process contains a
-│                       │      │                   vulnerability where it fails to validate the image
-│                       │      │                   references specified within a checkpoint image's
-│                       │      │                   configuration. An attacker with permissions to create pods
-│                       │      │                   can use a crafted checkpoint image to force containerd to
-│                       │      │                   pull a malicious image and assign it an arbitrary local tag,
-│                       │      │                    thereby poisoning the node's local image cache.
-│                       │      │                   Subsequently, if other pods on the same node attempt to use
-│                       │      │                   the poisoned tag with an `IfNotPresent` (or `Never`) pull
-│                       │      │                   policy, they will unknowingly execute the attacker's
-│                       │      │                   malicious image instead of the legitimate one. This can lead
-│                       │      │                    to a compromise of the affected pods, allowing the attacker
-│                       │      │                    to execute arbitrary code under the victim pod's identity.
-│                       │      │                   
-│                       │      │                   ## Patches
-│                       │      │                   This bug has been fixed in the following containerd
-│                       │      │                   versions:
-│                       │      │                   * 2.3.2
-│                       │      │                   * 2.2.5
-│                       │      │                   * 2.1.9
-│                       │      │                   Users should update to these versions to resolve the issue.
-│                       │      │                   ## Workarounds
-│                       │      │                   Users should only allow trusted images to be pulled.
-│                       │      │                   ## Credits
-│                       │      │                   The containerd project would like to thank Henry Beberman
-│                       │      │                   (@hbeberman) of Microsoft, the GKE Security Team using
-│                       │      │                   Gemini, Anthropic Research, in collaboration with Claude,
-│                       │      │                   and Robert Prast (@robertprast) who independently discovered
-│                       │      │                    and responsibly disclosed this issue in accordance with the
-│                       │      │                    [containerd security
-│                       │      │                   policy](https://github.com/containerd/project/blob/main/SECU
-│                       │      │                   RITY.md).
-│                       │      │                   ## For more information
-│                       │      │                   If you have any questions or comments about this advisory:
-│                       │      │                   * Open an issue in
-│                       │      │                   [containerd](https://github.com/containerd/containerd/issues
-│                       │      │                   /new/choose)
-│                       │      │                   * Email us at
-│                       │      │                   [security@containerd.io](mailto:security@containerd.io)
-│                       │      │                   To report a security issue in containerd:
-│                       │      │                   * [Report a new
-│                       │      │                   vulnerability](https://github.com/containerd/containerd/secu
-│                       │      │                   rity/advisories/new)
-│                       │      │                   [security@containerd.io](mailto:security@containerd.io) 
+│                       │      ├ Title           : CVE-2026-50195 affecting package containerd2 for versions
+│                       │      │                   less than 2.2.4-3 
+│                       │      ├ Description     : CVE-2026-50195 affecting package containerd2 for versions
+│                       │      │                   less than 2.2.4-3. A patched version of the package is
+│                       │      │                   available. 
 │                       │      ├ Severity        : MEDIUM 
-│                       │      ├ VendorSeverity   ─ ghsa: 2 
+│                       │      ├ VendorSeverity   ╭ azure: 2 
+│                       │      │                  ╰ ghsa : 2 
 │                       │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI
 │                       │      │                         │            :L/VA:N/SC:H/SI:H/SA:L 
 │                       │      │                         ╰ V40Score : 5.6 
 │                       │      ╰ References       ╭ [0]: https://github.com/containerd/containerd 
-│                       │                         ╰ [1]: https://github.com/containerd/containerd/security/advi
-│                       │                                sories/GHSA-cvxm-645q-p574 
+│                       │                         ├ [1]: https://github.com/containerd/containerd/security/advi
+│                       │                         │      sories/GHSA-cvxm-645q-p574 
+│                       │                         ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-50195 
 │                       ├ [6]  ╭ VulnerabilityID : CVE-2026-34040 
 │                       │      ├ VendorIDs        ─ [0]: GHSA-x744-4wpc-v9h2 
 │                       │      ├ PkgID           : github.com/docker/docker@v28.5.2+incompatible 
@@ -3785,8 +3607,8 @@
 │                       │      │                          cosystem%3Ago 
 │                       │      ├ Fingerprint     : sha256:bf475f5dbd1cff8b3d3e7079e8f43ddfc4f82404c55c742bff719
 │                       │      │                   17fedecfcdf 
-│                       │      ├ Title           : Moby is an open source container framework. In Docker Engine
-│                       │      │                    prior to  ... 
+│                       │      ├ Title           : github.com/docker/docker: github.com/moby/moby: Moby: Denial
+│                       │      │                    of Service via race condition in docker cp mount setup 
 │                       │      ├ Description     : Moby is an open source container framework. In Docker Engine
 │                       │      │                    prior to version 29.5.1, Docker Daemon versions 28.5.2 and
 │                       │      │                   prior, and Moby Daemon prior to version 2.0.0-beta.14, a
@@ -3798,13 +3620,20 @@
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ╭ [0]: CWE-81 
 │                       │      │                  ╰ [1]: CWE-367 
-│                       │      ├ VendorSeverity   ─ ghsa: 2 
-│                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:L/A:H 
-│                       │      │                         ╰ V3Score : 6 
-│                       │      ├ References       ╭ [0]: https://github.com/moby/moby 
-│                       │      │                  ├ [1]: https://github.com/moby/moby/security/advisories/GHSA-
+│                       │      ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │      │                  ╰ redhat: 1 
+│                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:L
+│                       │      │                  │        │           /A:H 
+│                       │      │                  │        ╰ V3Score : 6 
+│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:L
+│                       │      │                           │           /A:L 
+│                       │      │                           ╰ V3Score : 3.9 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-41568 
+│                       │      │                  ├ [1]: https://github.com/moby/moby 
+│                       │      │                  ├ [2]: https://github.com/moby/moby/security/advisories/GHSA-
 │                       │      │                  │      vp62-88p7-qqf5 
-│                       │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-41568 
+│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-41568 
+│                       │      │                  ╰ [4]: https://www.cve.org/CVERecord?id=CVE-2026-41568 
 │                       │      ├ PublishedDate   : 2026-06-12T19:16:26.907Z 
 │                       │      ╰ LastModifiedDate: 2026-06-16T18:31:54.957Z 
 │                       ├ [11] ╭ VulnerabilityID : CVE-2026-34986 
@@ -5155,8 +4984,8 @@
 │                       │      │                          cosystem%3Ago 
 │                       │      ├ Fingerprint     : sha256:9c647b85247bef02926142b50f6c41b97b680cb4e334817a0410f
 │                       │      │                   3e305d3100d 
-│                       │      ├ Title           : Moby is an open source container framework. In Docker Engine
-│                       │      │                    prior to  ... 
+│                       │      ├ Title           : github.com/docker/docker: github.com/moby/moby: Moby: Denial
+│                       │      │                    of Service via race condition in docker cp mount setup 
 │                       │      ├ Description     : Moby is an open source container framework. In Docker Engine
 │                       │      │                    prior to version 29.5.1, Docker Daemon versions 28.5.2 and
 │                       │      │                   prior, and Moby Daemon prior to version 2.0.0-beta.14, a
@@ -5168,13 +4997,20 @@
 │                       │      ├ Severity        : MEDIUM 
 │                       │      ├ CweIDs           ╭ [0]: CWE-81 
 │                       │      │                  ╰ [1]: CWE-367 
-│                       │      ├ VendorSeverity   ─ ghsa: 2 
-│                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:L/A:H 
-│                       │      │                         ╰ V3Score : 6 
-│                       │      ├ References       ╭ [0]: https://github.com/moby/moby 
-│                       │      │                  ├ [1]: https://github.com/moby/moby/security/advisories/GHSA-
+│                       │      ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │      │                  ╰ redhat: 1 
+│                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:L
+│                       │      │                  │        │           /A:H 
+│                       │      │                  │        ╰ V3Score : 6 
+│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:L
+│                       │      │                           │           /A:L 
+│                       │      │                           ╰ V3Score : 3.9 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-41568 
+│                       │      │                  ├ [1]: https://github.com/moby/moby 
+│                       │      │                  ├ [2]: https://github.com/moby/moby/security/advisories/GHSA-
 │                       │      │                  │      vp62-88p7-qqf5 
-│                       │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-41568 
+│                       │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-41568 
+│                       │      │                  ╰ [4]: https://www.cve.org/CVERecord?id=CVE-2026-41568 
 │                       │      ├ PublishedDate   : 2026-06-12T19:16:26.907Z 
 │                       │      ╰ LastModifiedDate: 2026-06-16T18:31:54.957Z 
 │                       ├ [5]  ╭ VulnerabilityID : CVE-2025-52881 
@@ -5781,55 +5617,21 @@
                         │      │                          cosystem%3Ago 
                         │      ├ Fingerprint     : sha256:5ab12b1ca8852f8a500be0ec30b3d515ba2b52d38101af257c91a
                         │      │                   58e0c9edbde 
-                        │      ├ Title           : containerd CRI — image-config `LABEL` flows to
-                        │      │                   restart-monitor `binary://` logger: host-root command
-                        │      │                   execution from an image pull 
-                        │      ├ Description     : ### Impact
-                        │      │                   A bug was found in containerd where the CRI plugin
-                        │      │                   propagates labels from an image config (`LABEL` instruction
-                        │      │                   in Dockerfile) to a container without validation. This may
-                        │      │                   result in executing an arbitrary command on the host, via a
-                        │      │                   plugin that consumes container labels for some operations.
-                        │      │                   
-                        │      │                   ### Patches
-                        │      │                   This bug has been fixed in the following containerd
-                        │      │                   versions:
-                        │      │                   * 2.3.2
-                        │      │                   * 2.2.5
-                        │      │                   * 2.1.9
-                        │      │                   * 2.0.10
-                        │      │                   * 1.7.33
-                        │      │                   Users should update to these versions to resolve the issue.
-                        │      │                   ### Workarounds
-                        │      │                   Ensure that only trusted images are used.
-                        │      │                   ### Credits
-                        │      │                   The containerd project would like to thank Anthropic
-                        │      │                   Research, in collaboration with Claude, the GKE Security
-                        │      │                   Team using Gemini, and Robert Prast (@robertprast) for
-                        │      │                   independently discovering and responsibly disclosing this
-                        │      │                   issue in accordance with the [containerd security
-                        │      │                   policy](https://github.com/containerd/project/blob/main/SECU
-                        │      │                   RITY.md).
-                        │      │                   ### For more information
-                        │      │                   If you have any questions or comments about this advisory:
-                        │      │                   * Open an issue in
-                        │      │                   [containerd](https://github.com/containerd/containerd/issues
-                        │      │                   /new/choose)
-                        │      │                   * Email us at
-                        │      │                   [security@containerd.io](mailto:security@containerd.io)
-                        │      │                   To report a security issue in containerd:
-                        │      │                   * [Report a new
-                        │      │                   vulnerability](https://github.com/containerd/containerd/secu
-                        │      │                   rity/advisories/new)
-                        │      │                   [security@containerd.io](mailto:security@containerd.io) 
+                        │      ├ Title           : CVE-2026-53488 affecting package containerd2 for versions
+                        │      │                   less than 2.2.4-3 
+                        │      ├ Description     : CVE-2026-53488 affecting package containerd2 for versions
+                        │      │                   less than 2.2.4-3. A patched version of the package is
+                        │      │                   available. 
                         │      ├ Severity        : HIGH 
-                        │      ├ VendorSeverity   ─ ghsa: 3 
+                        │      ├ VendorSeverity   ╭ azure: 4 
+                        │      │                  ╰ ghsa : 3 
                         │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI
                         │      │                         │            :H/VA:H/SC:N/SI:N/SA:N 
                         │      │                         ╰ V40Score : 8.7 
                         │      ╰ References       ╭ [0]: https://github.com/containerd/containerd 
-                        │                         ╰ [1]: https://github.com/containerd/containerd/security/advi
-                        │                                sories/GHSA-xhf5-7wjv-pqxp 
+                        │                         ├ [1]: https://github.com/containerd/containerd/security/advi
+                        │                         │      sories/GHSA-xhf5-7wjv-pqxp 
+                        │                         ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-53488 
                         ├ [2]  ╭ VulnerabilityID : CVE-2026-53489 
                         │      ├ VendorIDs        ─ [0]: GHSA-rgh6-rfwx-v388 
                         │      ├ PkgID           : github.com/containerd/containerd/v2@v2.2.2 
@@ -5851,56 +5653,21 @@
                         │      │                          cosystem%3Ago 
                         │      ├ Fingerprint     : sha256:efb3ca604a7cf2dfce91d11a94f8595832767787fc0df20a2ec89
                         │      │                   523cb1f8a65 
-                        │      ├ Title           : Arbitrary host CRI log file read via symlink following in
-                        │      │                   CRI checkpoint restore 
-                        │      ├ Description     : ### Impact
-                        │      │                   A bug was found in containerd where the CRI plugin restores
-                        │      │                   `container.log` from a checkpoint image without validating a
-                        │      │                    symlinked path. This could result in reading an arbitrary
-                        │      │                   file on the host via `kubectl logs`.
-                        │      │                   
-                        │      │                   ### Patches
-                        │      │                   This bug has been fixed in the following containerd
-                        │      │                   versions:
-                        │      │                   * 2.3.2
-                        │      │                   * 2.2.5
-                        │      │                   * 2.1.9
-                        │      │                   Users should update to these versions to resolve the issue.
-                        │      │                   ### Workarounds
-                        │      │                   Ensure that only trusted images and checkpoints are used.
-                        │      │                   ### Credits
-                        │      │                   The containerd project would like to thank @gouldnicholas
-                        │      │                   and @davidrxchester, Yuming Zhang and Song Li of Zhejiang
-                        │      │                   University, Sangwon Ryu (@sangwon090), Henry Beberman
-                        │      │                   (@hbeberman) of Microsoft, the GKE Security Team using
-                        │      │                   Gemini, Anthropic Research, in collaboration with Claude,
-                        │      │                   Robert Prast (@robertprast),
-                        │      │                   Kyle Elliott (@kyle-elliott-tob) of Trail of Bits, and
-                        │      │                   Zhenchen Wang (@Plucky923), who independently discovered and
-                        │      │                    responsibly disclosed this issue in accordance with the
-                        │      │                   [containerd security
-                        │      │                   policy](https://github.com/containerd/project/blob/main/SECU
-                        │      │                   RITY.md).
-                        │      │                   ### For more information
-                        │      │                   If you have any questions or comments about this advisory:
-                        │      │                   * Open an issue in
-                        │      │                   [containerd](https://github.com/containerd/containerd/issues
-                        │      │                   /new/choose)
-                        │      │                   * Email us at
-                        │      │                   [security@containerd.io](mailto:security@containerd.io)
-                        │      │                   To report a security issue in containerd:
-                        │      │                   * [Report a new
-                        │      │                   vulnerability](https://github.com/containerd/containerd/secu
-                        │      │                   rity/advisories/new)
-                        │      │                   [security@containerd.io](mailto:security@containerd.io) 
+                        │      ├ Title           : CVE-2026-53489 affecting package containerd2 for versions
+                        │      │                   less than 2.2.4-3 
+                        │      ├ Description     : CVE-2026-53489 affecting package containerd2 for versions
+                        │      │                   less than 2.2.4-3. A patched version of the package is
+                        │      │                   available. 
                         │      ├ Severity        : HIGH 
-                        │      ├ VendorSeverity   ─ ghsa: 3 
+                        │      ├ VendorSeverity   ╭ azure: 2 
+                        │      │                  ╰ ghsa : 3 
                         │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI
                         │      │                         │            :N/VA:N/SC:N/SI:N/SA:N 
                         │      │                         ╰ V40Score : 7.1 
                         │      ╰ References       ╭ [0]: https://github.com/containerd/containerd 
-                        │                         ╰ [1]: https://github.com/containerd/containerd/security/advi
-                        │                                sories/GHSA-rgh6-rfwx-v388 
+                        │                         ├ [1]: https://github.com/containerd/containerd/security/advi
+                        │                         │      sories/GHSA-rgh6-rfwx-v388 
+                        │                         ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-53489 
                         ├ [3]  ╭ VulnerabilityID : CVE-2026-53492 
                         │      ├ VendorIDs        ─ [0]: GHSA-33vj-92qq-66hc 
                         │      ├ PkgID           : github.com/containerd/containerd/v2@v2.2.2 
@@ -5922,68 +5689,21 @@
                         │      │                          cosystem%3Ago 
                         │      ├ Fingerprint     : sha256:e3e7251fe3aa69842f0bc454a0862d22e7522f704e3b1365f00a0
                         │      │                   65fb46a3dfd 
-                        │      ├ Title           : containerd CRI checkpoint restore CDI annotation smuggling 
-                        │      ├ Description     : ### Impact
-                        │      │                   
-                        │      │                   containerd's CRI implementation improperly trusts Container
-                        │      │                   Device Interface (CDI) annotations found within untrusted
-                        │      │                   checkpoint image metadata during container restoration. When
-                        │      │                    restoring a container from a checkpoint, containerd
-                        │      │                   preserves CDI-related annotations from the checkpoint
-                        │      │                   archive rather than relying solely on the pod's create-time
-                        │      │                   specification. This allows a user with pod creation
-                        │      │                   permissions to bypass standard Kubernetes resource
-                        │      │                   allocation and device plugin enforcement, injecting
-                        │      │                   arbitrary CDI edits (such as device nodes and host mounts)
-                        │      │                   into the restored container. Successful exploitation
-                        │      │                   requires that the node has CDI enabled and contains a
-                        │      │                   matching host CDI specification for the requested device;
-                        │      │                   environments where CDI is disabled or lacking sensitive
-                        │      │                   device specifications are not affected.
-                        │      │                   ### Patches
-                        │      │                   This bug has been fixed in the following containerd
-                        │      │                   versions:
-                        │      │                   * 2.3.2
-                        │      │                   * 2.2.5
-                        │      │                   * 2.1.9
-                        │      │                   Users should update to these versions to resolve the issue.
-                        │      │                   Recreating existing containers restored from untrusted
-                        │      │                   checkpoints may be necessary to remove smuggled
-                        │      │                   configuration.
-                        │      │                   ### Workarounds
-                        │      │                   Users can mitigate this issue by restricting the restoration
-                        │      │                    of containers from untrusted checkpoint images. If
-                        │      │                   Container Device Interface (CDI) capabilities are not
-                        │      │                   utilized on the node, removing or temporarily relocating
-                        │      │                   host CDI specifications from the default directories
-                        │      │                   (`/etc/cdi` and `/var/run/cdi`) will eliminate the
-                        │      │                   reachability of this vulnerability.
-                        │      │                   ### Credits
-                        │      │                   The containerd project would like to thank Robert Prast
-                        │      │                   (@robertprast) for responsibly disclosing this issue in
-                        │      │                   accordance with the [containerd security
-                        │      │                   policy](https://github.com/containerd/project/blob/main/SECU
-                        │      │                   RITY.md).
-                        │      │                   ### For more information
-                        │      │                   If you have any questions or comments about this advisory:
-                        │      │                   * Open an issue in
-                        │      │                   [containerd](https://github.com/containerd/containerd/issues
-                        │      │                   /new/choose)
-                        │      │                   * Email us at
-                        │      │                   [security@containerd.io](mailto:security@containerd.io)
-                        │      │                   To report a security issue in containerd:
-                        │      │                   * [Report a new
-                        │      │                   vulnerability](https://github.com/containerd/containerd/secu
-                        │      │                   rity/advisories/new)
-                        │      │                   [security@containerd.io](mailto:security@containerd.io) 
+                        │      ├ Title           : CVE-2026-53492 affecting package containerd2 for versions
+                        │      │                   less than 2.2.4-3 
+                        │      ├ Description     : CVE-2026-53492 affecting package containerd2 for versions
+                        │      │                   less than 2.2.4-3. A patched version of the package is
+                        │      │                   available. 
                         │      ├ Severity        : HIGH 
-                        │      ├ VendorSeverity   ─ ghsa: 3 
+                        │      ├ VendorSeverity   ╭ azure: 2 
+                        │      │                  ╰ ghsa : 3 
                         │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI
                         │      │                         │            :H/VA:N/SC:H/SI:H/SA:N 
                         │      │                         ╰ V40Score : 8.4 
                         │      ╰ References       ╭ [0]: https://github.com/containerd/containerd 
-                        │                         ╰ [1]: https://github.com/containerd/containerd/security/advi
-                        │                                sories/GHSA-33vj-92qq-66hc 
+                        │                         ├ [1]: https://github.com/containerd/containerd/security/advi
+                        │                         │      sories/GHSA-33vj-92qq-66hc 
+                        │                         ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-53492 
                         ├ [4]  ╭ VulnerabilityID : CVE-2026-47262 
                         │      ├ VendorIDs        ─ [0]: GHSA-jpcc-p29g-p8mq 
                         │      ├ PkgID           : github.com/containerd/containerd/v2@v2.2.2 
@@ -6005,57 +5725,21 @@
                         │      │                          cosystem%3Ago 
                         │      ├ Fingerprint     : sha256:559729fb7e29f5f77d2b6a20ce7cb06381200e5b07824845aaf8b
                         │      │                   19cccd38b09 
-                        │      ├ Title           : containerd image-triggered runtime DoS via unbounded group
-                        │      │                   parsing 
-                        │      ├ Description     : ### Impact
-                        │      │                   A vulnerability in containerd allows a maliciously crafted
-                        │      │                   image to cause a Denial of Service (DoS) condition. When
-                        │      │                   creating a container from this image, memory exhaustion
-                        │      │                   occurs, leading to an Out Of Memory (OOM) kill of the
-                        │      │                   containerd process. This renders the container runtime API
-                        │      │                   unavailable and can disrupt clients such as the Docker
-                        │      │                   Engine or Kubernetes control-plane components.
-                        │      │                   
-                        │      │                   ### Patches
-                        │      │                   This bug has been fixed in the following containerd
-                        │      │                   versions:
-                        │      │                   * 2.3.2
-                        │      │                   * 2.2.5
-                        │      │                   * 2.1.9
-                        │      │                   * 2.0.10
-                        │      │                   * 1.7.33
-                        │      │                   Users should update to these versions to resolve the issue.
-                        │      │                   ### Workarounds
-                        │      │                   Ensure that only trusted images are used and that only
-                        │      │                   trusted users have permissions to import images or schedule
-                        │      │                   pods. 
-                        │      │                   ### Credits
-                        │      │                   The containerd project would like to thank Jakub Ciolek
-                        │      │                   (@jake-ciolek) at AlphaSense and Kyle Elliott @ Trail of
-                        │      │                   Bits who independently discovered and responsibly disclosed
-                        │      │                   this issue in accordance with the [containerd security
-                        │      │                   policy](https://github.com/containerd/project/blob/main/SECU
-                        │      │                   RITY.md).
-                        │      │                   ### For more information
-                        │      │                   If you have any questions or comments about this advisory:
-                        │      │                   * Open an issue in
-                        │      │                   [containerd](https://github.com/containerd/containerd/issues
-                        │      │                   /new/choose)
-                        │      │                   * Email us at
-                        │      │                   [security@containerd.io](mailto:security@containerd.io)
-                        │      │                   To report a security issue in containerd:
-                        │      │                   * [Report a new
-                        │      │                   vulnerability](https://github.com/containerd/containerd/secu
-                        │      │                   rity/advisories/new)
-                        │      │                   [security@containerd.io](mailto:security@containerd.io) 
+                        │      ├ Title           : CVE-2026-47262 affecting package containerd2 for versions
+                        │      │                   less than 2.2.4-3 
+                        │      ├ Description     : CVE-2026-47262 affecting package containerd2 for versions
+                        │      │                   less than 2.2.4-3. A patched version of the package is
+                        │      │                   available. 
                         │      ├ Severity        : MEDIUM 
-                        │      ├ VendorSeverity   ─ ghsa: 2 
+                        │      ├ VendorSeverity   ╭ azure: 2 
+                        │      │                  ╰ ghsa : 2 
                         │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI
                         │      │                         │            :N/VA:H/SC:N/SI:N/SA:N 
                         │      │                         ╰ V40Score : 6.9 
                         │      ╰ References       ╭ [0]: https://github.com/containerd/containerd 
-                        │                         ╰ [1]: https://github.com/containerd/containerd/security/advi
-                        │                                sories/GHSA-jpcc-p29g-p8mq 
+                        │                         ├ [1]: https://github.com/containerd/containerd/security/advi
+                        │                         │      sories/GHSA-jpcc-p29g-p8mq 
+                        │                         ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-47262 
                         ├ [5]  ╭ VulnerabilityID : CVE-2026-50195 
                         │      ├ VendorIDs        ─ [0]: GHSA-cvxm-645q-p574 
                         │      ├ PkgID           : github.com/containerd/containerd/v2@v2.2.2 
@@ -6077,61 +5761,21 @@
                         │      │                          cosystem%3Ago 
                         │      ├ Fingerprint     : sha256:6c0b12e3de83919689fcb4f73ad3542954106a611b3d5ab7fccec
                         │      │                   d197aa9077d 
-                        │      ├ Title           : containerd: CRI checkpoint import allows local image tag
-                        │      │                   poisoning 
-                        │      ├ Description     : ## Impact
-                        │      │                   containerd's CRI checkpoint import process contains a
-                        │      │                   vulnerability where it fails to validate the image
-                        │      │                   references specified within a checkpoint image's
-                        │      │                   configuration. An attacker with permissions to create pods
-                        │      │                   can use a crafted checkpoint image to force containerd to
-                        │      │                   pull a malicious image and assign it an arbitrary local tag,
-                        │      │                    thereby poisoning the node's local image cache.
-                        │      │                   Subsequently, if other pods on the same node attempt to use
-                        │      │                   the poisoned tag with an `IfNotPresent` (or `Never`) pull
-                        │      │                   policy, they will unknowingly execute the attacker's
-                        │      │                   malicious image instead of the legitimate one. This can lead
-                        │      │                    to a compromise of the affected pods, allowing the attacker
-                        │      │                    to execute arbitrary code under the victim pod's identity.
-                        │      │                   
-                        │      │                   ## Patches
-                        │      │                   This bug has been fixed in the following containerd
-                        │      │                   versions:
-                        │      │                   * 2.3.2
-                        │      │                   * 2.2.5
-                        │      │                   * 2.1.9
-                        │      │                   Users should update to these versions to resolve the issue.
-                        │      │                   ## Workarounds
-                        │      │                   Users should only allow trusted images to be pulled.
-                        │      │                   ## Credits
-                        │      │                   The containerd project would like to thank Henry Beberman
-                        │      │                   (@hbeberman) of Microsoft, the GKE Security Team using
-                        │      │                   Gemini, Anthropic Research, in collaboration with Claude,
-                        │      │                   and Robert Prast (@robertprast) who independently discovered
-                        │      │                    and responsibly disclosed this issue in accordance with the
-                        │      │                    [containerd security
-                        │      │                   policy](https://github.com/containerd/project/blob/main/SECU
-                        │      │                   RITY.md).
-                        │      │                   ## For more information
-                        │      │                   If you have any questions or comments about this advisory:
-                        │      │                   * Open an issue in
-                        │      │                   [containerd](https://github.com/containerd/containerd/issues
-                        │      │                   /new/choose)
-                        │      │                   * Email us at
-                        │      │                   [security@containerd.io](mailto:security@containerd.io)
-                        │      │                   To report a security issue in containerd:
-                        │      │                   * [Report a new
-                        │      │                   vulnerability](https://github.com/containerd/containerd/secu
-                        │      │                   rity/advisories/new)
-                        │      │                   [security@containerd.io](mailto:security@containerd.io) 
+                        │      ├ Title           : CVE-2026-50195 affecting package containerd2 for versions
+                        │      │                   less than 2.2.4-3 
+                        │      ├ Description     : CVE-2026-50195 affecting package containerd2 for versions
+                        │      │                   less than 2.2.4-3. A patched version of the package is
+                        │      │                   available. 
                         │      ├ Severity        : MEDIUM 
-                        │      ├ VendorSeverity   ─ ghsa: 2 
+                        │      ├ VendorSeverity   ╭ azure: 2 
+                        │      │                  ╰ ghsa : 2 
                         │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI
                         │      │                         │            :L/VA:N/SC:H/SI:H/SA:L 
                         │      │                         ╰ V40Score : 5.6 
                         │      ╰ References       ╭ [0]: https://github.com/containerd/containerd 
-                        │                         ╰ [1]: https://github.com/containerd/containerd/security/advi
-                        │                                sories/GHSA-cvxm-645q-p574 
+                        │                         ├ [1]: https://github.com/containerd/containerd/security/advi
+                        │                         │      sories/GHSA-cvxm-645q-p574 
+                        │                         ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-50195 
                         ├ [6]  ╭ VulnerabilityID : CVE-2026-44973 
                         │      ├ VendorIDs        ─ [0]: GHSA-qw64-3x98-g7q2 
                         │      ├ PkgID           : github.com/go-git/go-billy/v5@v5.8.0 
