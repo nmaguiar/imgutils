@@ -246,8 +246,8 @@
                         │     │                          osystem%3Ago 
                         │     ├ Fingerprint     : sha256:ab88afbb288780b056ac37aeb0f751160a89ddc502b04b61913c18
                         │     │                   7bed726793 
-                        │     ├ Title           : Moby is an open source container framework. In Docker Engine
-                        │     │                   prior to  ... 
+                        │     ├ Title           : github.com/docker/docker: github.com/moby/moby: Moby: Denial
+                        │     │                   of Service via race condition in docker cp mount setup 
                         │     ├ Description     : Moby is an open source container framework. In Docker Engine
                         │     │                   prior to version 29.5.1, Docker Daemon versions 28.5.2 and
                         │     │                   prior, and Moby Daemon prior to version 2.0.0-beta.14, a race
@@ -259,13 +259,20 @@
                         │     ├ Severity        : MEDIUM 
                         │     ├ CweIDs           ╭ [0]: CWE-81 
                         │     │                  ╰ [1]: CWE-367 
-                        │     ├ VendorSeverity   ─ ghsa: 2 
-                        │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:L/A:H 
-                        │     │                         ╰ V3Score : 6 
-                        │     ├ References       ╭ [0]: https://github.com/moby/moby 
-                        │     │                  ├ [1]: https://github.com/moby/moby/security/advisories/GHSA-v
+                        │     ├ VendorSeverity   ╭ ghsa  : 2 
+                        │     │                  ╰ redhat: 1 
+                        │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:L/
+                        │     │                  │        │           A:H 
+                        │     │                  │        ╰ V3Score : 6 
+                        │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:L/
+                        │     │                           │           A:L 
+                        │     │                           ╰ V3Score : 3.9 
+                        │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-41568 
+                        │     │                  ├ [1]: https://github.com/moby/moby 
+                        │     │                  ├ [2]: https://github.com/moby/moby/security/advisories/GHSA-v
                         │     │                  │      p62-88p7-qqf5 
-                        │     │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-41568 
+                        │     │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-41568 
+                        │     │                  ╰ [4]: https://www.cve.org/CVERecord?id=CVE-2026-41568 
                         │     ├ PublishedDate   : 2026-06-12T19:16:26.907Z 
                         │     ╰ LastModifiedDate: 2026-06-16T18:31:54.957Z 
                         ├ [5] ╭ VulnerabilityID : CVE-2026-39883 
