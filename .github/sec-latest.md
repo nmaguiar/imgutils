@@ -6,616 +6,1007 @@
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : jar 
 │     ├ Packages        
-│     ╰ Vulnerabilities ╭ [0] ╭ VulnerabilityID : CVE-2026-50020 
-│                       │     ├ VendorIDs        ─ [0]: GHSA-hvcg-qmg6-jm4c 
-│                       │     ├ PkgName         : io.netty:netty-codec-http 
-│                       │     ├ PkgPath         : openaf/Kube/netty-codec-http-4.2.13.Final.jar 
-│                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-codec-http@4.2.13.Final 
-│                       │     │                  ╰ UID : eedb6bf106be1be7 
-│                       │     ├ InstalledVersion: 4.2.13.Final 
-│                       │     ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
-│                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae26
-│                       │     │                  │         81983635a9c1ff722b4 
-│                       │     │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f7912
-│                       │     │                            5428cc374c8321dfc38 
-│                       │     ├ SeveritySource  : ghsa 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-50020 
-│                       │     ├ DataSource       ╭ ID  : ghsa 
-│                       │     │                  ├ Name: GitHub Security Advisory Maven 
-│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
-│                       │     │                          osystem%3Amaven 
-│                       │     ├ Fingerprint     : sha256:616c764cc13f03258b3313a21e8b0211cdb9b623fbc202e774da0a
-│                       │     │                   747f16d34a 
-│                       │     ├ Title           : netty-codec-http: Netty: Data manipulation via
-│                       │     │                   request-boundary confusion in HttpObjectDecoder 
-│                       │     ├ Description     : Netty is a network application framework for development of
-│                       │     │                   protocol servers and clients. Prior to versions 4.1.135.Final
-│                       │     │                    and 4.2.15.Final, before reading the first request-line,
-│                       │     │                   `HttpObjectDecoder` skips every byte for which
-│                       │     │                   `Character.isISOControl(b)` is `true` (0x00–0x1F and 0x7F) as
-│                       │     │                    well as all whitespace. RFC 9112 §2.2 only asks servers to
-│                       │     │                   ignore empty CRLF lines preceding the request-line — a
-│                       │     │                   carefully scoped robustness allowance intended to handle
-│                       │     │                   HTTP/1.0 POST workarounds. Silently absorbing NUL bytes, SOH,
-│                       │     │                    STX, and other non-CRLF control characters goes
-│                       │     │                   significantly beyond this, and can be exploited for
-│                       │     │                   request-boundary confusion in pipelined or multiplexed
-│                       │     │                   transports where a front-end component treats those bytes
-│                       │     │                   differently. Versions 4.1.135.Final and 4.2.15.Final patch
-│                       │     │                   the issue. 
-│                       │     ├ Severity        : MEDIUM 
-│                       │     ├ CweIDs           ─ [0]: CWE-444 
-│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
-│                       │     │                  ╰ redhat: 2 
-│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/
-│                       │     │                  │        │           A:N 
-│                       │     │                  │        ╰ V3Score : 5.3 
-│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/
-│                       │     │                           │           A:N 
-│                       │     │                           ╰ V3Score : 5.3 
-│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-50020 
-│                       │     │                  ├ [1]: https://github.com/netty/netty 
-│                       │     │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.1.1
-│                       │     │                  │      35.Final 
-│                       │     │                  ├ [3]: https://github.com/netty/netty/releases/tag/netty-4.2.1
-│                       │     │                  │      5.Final 
-│                       │     │                  ├ [4]: https://github.com/netty/netty/security/advisories/GHSA
-│                       │     │                  │      -hvcg-qmg6-jm4c 
-│                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-50020 
-│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-50020 
-│                       │     ├ PublishedDate   : 2026-06-12T16:16:31.447Z 
-│                       │     ╰ LastModifiedDate: 2026-06-17T10:57:35.237Z 
-│                       ├ [1] ╭ VulnerabilityID : CVE-2026-47244 
-│                       │     ├ VendorIDs        ─ [0]: GHSA-5x3r-wrvg-rp6q 
-│                       │     ├ PkgName         : io.netty:netty-codec-http2 
-│                       │     ├ PkgPath         : openaf/Kube/netty-codec-http2-4.2.13.Final.jar 
-│                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-codec-http2@4.2.13.Final 
-│                       │     │                  ╰ UID : 9a8774d6243b7ed4 
-│                       │     ├ InstalledVersion: 4.2.13.Final 
-│                       │     ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
-│                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae26
-│                       │     │                  │         81983635a9c1ff722b4 
-│                       │     │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f7912
-│                       │     │                            5428cc374c8321dfc38 
-│                       │     ├ SeveritySource  : ghsa 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-47244 
-│                       │     ├ DataSource       ╭ ID  : ghsa 
-│                       │     │                  ├ Name: GitHub Security Advisory Maven 
-│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
-│                       │     │                          osystem%3Amaven 
-│                       │     ├ Fingerprint     : sha256:58b7896124c068e91597290b1693ae867b53c618dfc2d751db285a
-│                       │     │                   596f8f9b2f 
-│                       │     ├ Title           : netty-codec-http2: Netty: Denial of Service via uncontrolled
-│                       │     │                   HTTP/2 concurrent streams 
-│                       │     ├ Description     : Netty is a network application framework for development of
-│                       │     │                   protocol servers and clients. Prior to versions 4.1.135.Final
-│                       │     │                    and 4.2.15.Final, DefaultHttp2Connection.DefaultEndpoint
-│                       │     │                   initialises maxActiveStreams/maxStreams to Integer.MAX_VALUE,
-│                       │     │                    and Http2Settings never inserts
-│                       │     │                   SETTINGS_MAX_CONCURRENT_STREAMS by default
-│                       │     │                   (Http2Settings.java:305-307 only clamps a user-supplied
-│                       │     │                   value). Unless the application explicitly calls
-│                       │     │                   initialSettings().maxConcurrentStreams(n), a Netty HTTP/2
-│                       │     │                   server advertises no limit and enforces none locally. Each
-│                       │     │                   open stream allocates a DefaultStream object, PropertyMap
-│                       │     │                   slots, flow-controller state and IntObjectHashMap entry; with
-│                       │     │                    ~2^30 permissible odd stream IDs a single TCP connection can
-│                       │     │                    create hundreds of thousands of long-lived stream objects.
-│                       │     │                   This is also the precondition for CVE-2023-44487-style
-│                       │     │                   Rapid-Reset amplification, where the absence of a low
-│                       │     │                   concurrent cap multiplies backend work. Versions
-│                       │     │                   4.1.135.Final and 4.2.15.Final patch the issue. 
-│                       │     ├ Severity        : MEDIUM 
-│                       │     ├ CweIDs           ─ [0]: CWE-400 
-│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
-│                       │     │                  ╰ redhat: 2 
-│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
-│                       │     │                  │        │           A:L 
-│                       │     │                  │        ╰ V3Score : 5.3 
-│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
-│                       │     │                           │           A:L 
-│                       │     │                           ╰ V3Score : 5.3 
-│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-47244 
-│                       │     │                  ├ [1]: https://github.com/netty/netty 
-│                       │     │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.1.1
-│                       │     │                  │      35.Final 
-│                       │     │                  ├ [3]: https://github.com/netty/netty/releases/tag/netty-4.2.1
-│                       │     │                  │      5.Final 
-│                       │     │                  ├ [4]: https://github.com/netty/netty/security/advisories/GHSA
-│                       │     │                  │      -5x3r-wrvg-rp6q 
-│                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-47244 
-│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-47244 
-│                       │     ├ PublishedDate   : 2026-06-12T15:16:29.217Z 
-│                       │     ╰ LastModifiedDate: 2026-06-17T10:54:25.803Z 
-│                       ├ [2] ╭ VulnerabilityID : CVE-2026-48043 
-│                       │     ├ VendorIDs        ─ [0]: GHSA-c2gf-v879-257j 
-│                       │     ├ PkgName         : io.netty:netty-codec-http2 
-│                       │     ├ PkgPath         : openaf/Kube/netty-codec-http2-4.2.13.Final.jar 
-│                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-codec-http2@4.2.13.Final 
-│                       │     │                  ╰ UID : 9a8774d6243b7ed4 
-│                       │     ├ InstalledVersion: 4.2.13.Final 
-│                       │     ├ FixedVersion    : 4.1.135.Final, 4.2.15.Final 
-│                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae26
-│                       │     │                  │         81983635a9c1ff722b4 
-│                       │     │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f7912
-│                       │     │                            5428cc374c8321dfc38 
-│                       │     ├ SeveritySource  : ghsa 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-48043 
-│                       │     ├ DataSource       ╭ ID  : ghsa 
-│                       │     │                  ├ Name: GitHub Security Advisory Maven 
-│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
-│                       │     │                          osystem%3Amaven 
-│                       │     ├ Fingerprint     : sha256:5d3edd502709d920d8e6f67f99cfb1d0d6c5a52080aae7e5d31982
-│                       │     │                   23b08aecc4 
-│                       │     ├ Title           : netty-codec-http2: netty-codec-http2: Denial of Service due
-│                       │     │                   to resource leak 
-│                       │     ├ Description     : Netty is a network application framework for development of
-│                       │     │                   protocol servers and clients. In netty-codec-http2 prior to
-│                       │     │                   versions 4.1.135.Final and 4.2.15.Final, the
-│                       │     │                   `DelegatingDecompressorFrameListener` class orchestrates
-│                       │     │                   HTTP/2 decompression by embedding a per-stream
-│                       │     │                   `EmbeddedChannel` that runs the appropriate decompression
-│                       │     │                   codec (gzip, deflate, zstd) and forwards decompressed chunks
-│                       │     │                   to a wrapped listener. Each decompressed chunk is a pooled
-│                       │     │                   `ByteBuf` handed to an anonymous
-│                       │     │                   `ChannelInboundHandlerAdapter` tail handler, which becomes
-│                       │     │                   the sole owner responsible for releasing it. A remote peer
-│                       │     │                   could send frames that would result in the flow-controller
-│                       │     │                   throwing and so trigger a resource leak which at the end
-│                       │     │                   might take down the whole JVM due OOME. Versions
-│                       │     │                   4.1.135.Final and 4.2.15.Final patch the issue. 
-│                       │     ├ Severity        : MEDIUM 
-│                       │     ├ CweIDs           ╭ [0]: CWE-400 
-│                       │     │                  ╰ [1]: CWE-401 
-│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
-│                       │     │                  ├ nvd   : 3 
-│                       │     │                  ╰ redhat: 3 
-│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
-│                       │     │                  │        │           A:L 
-│                       │     │                  │        ╰ V3Score : 5.3 
-│                       │     │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
-│                       │     │                  │        │           A:H 
-│                       │     │                  │        ╰ V3Score : 7.5 
-│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
-│                       │     │                           │           A:H 
-│                       │     │                           ╰ V3Score : 7.5 
-│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-48043 
-│                       │     │                  ├ [1]: https://github.com/netty/netty 
-│                       │     │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.1.1
-│                       │     │                  │      35.Final 
-│                       │     │                  ├ [3]: https://github.com/netty/netty/releases/tag/netty-4.2.1
-│                       │     │                  │      5.Final 
-│                       │     │                  ├ [4]: https://github.com/netty/netty/security/advisories/GHSA
-│                       │     │                  │      -c2gf-v879-257j 
-│                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-48043 
-│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-48043 
-│                       │     ├ PublishedDate   : 2026-06-12T16:16:30.587Z 
-│                       │     ╰ LastModifiedDate: 2026-06-17T10:54:50.363Z 
-│                       ├ [3] ╭ VulnerabilityID : CVE-2026-50560 
-│                       │     ├ VendorIDs        ─ [0]: GHSA-563q-j3cm-6jxm 
-│                       │     ├ PkgName         : io.netty:netty-codec-http2 
-│                       │     ├ PkgPath         : openaf/Kube/netty-codec-http2-4.2.13.Final.jar 
-│                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-codec-http2@4.2.13.Final 
-│                       │     │                  ╰ UID : 9a8774d6243b7ed4 
-│                       │     ├ InstalledVersion: 4.2.13.Final 
-│                       │     ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
-│                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae26
-│                       │     │                  │         81983635a9c1ff722b4 
-│                       │     │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f7912
-│                       │     │                            5428cc374c8321dfc38 
-│                       │     ├ SeveritySource  : ghsa 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-50560 
-│                       │     ├ DataSource       ╭ ID  : ghsa 
-│                       │     │                  ├ Name: GitHub Security Advisory Maven 
-│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
-│                       │     │                          osystem%3Amaven 
-│                       │     ├ Fingerprint     : sha256:dd88f7b0c5474ce123d10b096acf5a254e1ce8eb37fc6f89a3d35c
-│                       │     │                   607d16976c 
-│                       │     ├ Title           : netty-codec-http2: Netty: Denial of Service due to HTTP/2 max
-│                       │     │                    header size handling 
-│                       │     ├ Description     : Netty is a network application framework for development of
-│                       │     │                   protocol servers and clients. Prior to versions 4.1.135.Final
-│                       │     │                    and 4.2.15.Final, Netty HTTP/2 max header size handling
-│                       │     │                   produces an attack similar to HTTP/2 Rapid Reset. There is a
-│                       │     │                   setting in the http2 specification called
-│                       │     │                   `SETTINGS_MAX_HEADER_LIST_SIZE`. When a client sends that
-│                       │     │                   setting to Netty, it appears that Netty will behave as
-│                       │     │                   follows: read the request; proxy the request to the origin;
-│                       │     │                   attempt to produce a response; and create an exception while
-│                       │     │                   writing the headers for the response. Functionally, this
-│                       │     │                   should be similar to the http2 reset attack, but with a
-│                       │     │                   different on-the-wire signature. Versions 4.1.135.Final and
-│                       │     │                   4.2.15.Final patch the issue. 
-│                       │     ├ Severity        : MEDIUM 
-│                       │     ├ CweIDs           ─ [0]: CWE-770 
-│                       │     ├ VendorSeverity   ╭ ghsa  : 2 
-│                       │     │                  ├ nvd   : 2 
-│                       │     │                  ╰ redhat: 2 
-│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
-│                       │     │                  │        │            /A:L 
-│                       │     │                  │        ├ V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/V
-│                       │     │                  │        │            I:N/VA:L/SC:N/SI:N/SA:N 
-│                       │     │                  │        ├ V3Score  : 5.3 
-│                       │     │                  │        ╰ V40Score : 6.9 
-│                       │     │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
-│                       │     │                  │        │           A:L 
-│                       │     │                  │        ╰ V3Score : 5.3 
-│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
-│                       │     │                           │           A:L 
-│                       │     │                           ╰ V3Score : 5.3 
-│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-50560 
-│                       │     │                  ├ [1]: https://github.com/netty/netty 
-│                       │     │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.1.1
-│                       │     │                  │      35.Final 
-│                       │     │                  ├ [3]: https://github.com/netty/netty/releases/tag/netty-4.2.1
-│                       │     │                  │      5.Final 
-│                       │     │                  ├ [4]: https://github.com/netty/netty/security/advisories/GHSA
-│                       │     │                  │      -563q-j3cm-6jxm 
-│                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-50560 
-│                       │     │                  ├ [6]: https://www.cve.org/CVERecord?id=CVE-2026-50560 
-│                       │     │                  ╰ [7]: https://www.rfc-editor.org/rfc/rfc9113.html#name-define
-│                       │     │                         d-settings 
-│                       │     ├ PublishedDate   : 2026-06-12T16:16:32.847Z 
-│                       │     ╰ LastModifiedDate: 2026-06-17T10:57:42.65Z 
-│                       ├ [4] ╭ VulnerabilityID : CVE-2026-44249 
-│                       │     ├ VendorIDs        ─ [0]: GHSA-3qp7-7mw8-wx86 
-│                       │     ├ PkgName         : io.netty:netty-handler 
-│                       │     ├ PkgPath         : openaf/Kube/netty-handler-4.2.13.Final.jar 
-│                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-handler@4.2.13.Final 
-│                       │     │                  ╰ UID : 4752ddcaf5c03525 
-│                       │     ├ InstalledVersion: 4.2.13.Final 
-│                       │     ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
-│                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae26
-│                       │     │                  │         81983635a9c1ff722b4 
-│                       │     │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f7912
-│                       │     │                            5428cc374c8321dfc38 
-│                       │     ├ SeveritySource  : ghsa 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-44249 
-│                       │     ├ DataSource       ╭ ID  : ghsa 
-│                       │     │                  ├ Name: GitHub Security Advisory Maven 
-│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
-│                       │     │                          osystem%3Amaven 
-│                       │     ├ Fingerprint     : sha256:1fef38b5486639c0918ecc92d4b0c7852bf77106f79155f9253eb6
-│                       │     │                   33b6cf4f20 
-│                       │     ├ Title           : netty-handler: netty-handler: IPv6 subnet rule bypass due to
-│                       │     │                   incorrect masking operation 
-│                       │     ├ Description     : Netty is a network application framework for development of
-│                       │     │                   protocol servers and clients. In netty-handler prior to
-│                       │     │                   versions 4.1.135.Final and 4.2.15.Final, an attacker can
-│                       │     │                   bypass IPv6 subnet rules due to an incorrect masking
-│                       │     │                   operation in IpSubnetFilterRule.compareTo(). Valid public IP
-│                       │     │                   addresses can bypass the restrictions. Versions 4.1.135.Final
-│                       │     │                    and 4.2.15.Final patch the issue. 
-│                       │     ├ Severity        : HIGH 
-│                       │     ├ CweIDs           ╭ [0]: CWE-284 
-│                       │     │                  ╰ [1]: CWE-697 
-│                       │     ├ VendorSeverity   ╭ ghsa  : 3 
-│                       │     │                  ╰ redhat: 3 
-│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/
-│                       │     │                  │        │           A:H 
-│                       │     │                  │        ╰ V3Score : 8.1 
-│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/
-│                       │     │                           │           A:H 
-│                       │     │                           ╰ V3Score : 8.1 
-│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-44249 
-│                       │     │                  ├ [1]: https://github.com/netty/netty 
-│                       │     │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.1.1
-│                       │     │                  │      35.Final 
-│                       │     │                  ├ [3]: https://github.com/netty/netty/releases/tag/netty-4.2.1
-│                       │     │                  │      5.Final 
-│                       │     │                  ├ [4]: https://github.com/netty/netty/security/advisories/GHSA
-│                       │     │                  │      -3qp7-7mw8-wx86 
-│                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-44249 
-│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-44249 
-│                       │     ├ PublishedDate   : 2026-06-11T22:16:56.707Z 
-│                       │     ╰ LastModifiedDate: 2026-06-17T10:50:24.89Z 
-│                       ├ [5] ╭ VulnerabilityID : CVE-2026-45416 
-│                       │     ├ VendorIDs        ─ [0]: GHSA-x4gw-5cx5-pgmh 
-│                       │     ├ PkgName         : io.netty:netty-handler 
-│                       │     ├ PkgPath         : openaf/Kube/netty-handler-4.2.13.Final.jar 
-│                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-handler@4.2.13.Final 
-│                       │     │                  ╰ UID : 4752ddcaf5c03525 
-│                       │     ├ InstalledVersion: 4.2.13.Final 
-│                       │     ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
-│                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae26
-│                       │     │                  │         81983635a9c1ff722b4 
-│                       │     │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f7912
-│                       │     │                            5428cc374c8321dfc38 
-│                       │     ├ SeveritySource  : ghsa 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-45416 
-│                       │     ├ DataSource       ╭ ID  : ghsa 
-│                       │     │                  ├ Name: GitHub Security Advisory Maven 
-│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
-│                       │     │                          osystem%3Amaven 
-│                       │     ├ Fingerprint     : sha256:2bd58bfe9df4b58a570cb55966566b34b719dedad85b3ce3d0b1a6
-│                       │     │                   7af02a91d3 
-│                       │     ├ Title           : netty-handler: Netty: Denial of Service due to eager buffer
-│                       │     │                   allocation in TLS handshake 
-│                       │     ├ Description     : Netty is a network application framework for development of
-│                       │     │                   protocol servers and clients. Prior to versions 4.1.135.Final
-│                       │     │                    and 4.2.15.Final, SslClientHelloHandler.decode() reads the
-│                       │     │                   24-bit TLS handshake length and, when the ClientHello does
-│                       │     │                   not fit in the first record, eagerly allocates
-│                       │     │                   `ctx.alloc().buffer(handshakeLength)` (line 161). The guard
-│                       │     │                   at line 140 is `handshakeLength > maxClientHelloLength &&
-│                       │     │                   maxClientHelloLength != 0`, and the commonly-used
-│                       │     │                   SniHandler/AbstractSniHandler constructors
-│                       │     │                   (SniHandler(Mapping), SniHandler(AsyncMapping),
-│                       │     │                   AbstractSniHandler()) pass maxClientHelloLength=0 and
-│                       │     │                   handshakeTimeoutMillis=0, so the length guard is disabled and
-│                       │     │                    no timeout is scheduled. A 16 MiB request exceeds the
-│                       │     │                   default pooled chunk size and becomes a huge/unpooled
-│                       │     │                   allocation performed immediately. The buffer is retained in
-│                       │     │                   the handler until the channel closes. Versions 4.1.135.Final
-│                       │     │                   and 4.2.15.Final patch the issue. 
-│                       │     ├ Severity        : HIGH 
-│                       │     ├ CweIDs           ─ [0]: CWE-770 
-│                       │     ├ VendorSeverity   ╭ ghsa  : 3 
-│                       │     │                  ╰ redhat: 3 
-│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
-│                       │     │                  │        │           A:H 
-│                       │     │                  │        ╰ V3Score : 7.5 
-│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/
-│                       │     │                           │           A:H 
-│                       │     │                           ╰ V3Score : 7.5 
-│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-45416 
-│                       │     │                  ├ [1]: https://github.com/netty/netty 
-│                       │     │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.1.1
-│                       │     │                  │      35.Final 
-│                       │     │                  ├ [3]: https://github.com/netty/netty/releases/tag/netty-4.2.1
-│                       │     │                  │      5.Final 
-│                       │     │                  ├ [4]: https://github.com/netty/netty/security/advisories/GHSA
-│                       │     │                  │      -x4gw-5cx5-pgmh 
-│                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-45416 
-│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-45416 
-│                       │     ├ PublishedDate   : 2026-06-12T15:16:26.94Z 
-│                       │     ╰ LastModifiedDate: 2026-06-17T10:52:02.103Z 
-│                       ├ [6] ╭ VulnerabilityID : CVE-2026-50010 
-│                       │     ├ VendorIDs        ─ [0]: GHSA-c653-97m9-rcg9 
-│                       │     ├ PkgName         : io.netty:netty-handler 
-│                       │     ├ PkgPath         : openaf/Kube/netty-handler-4.2.13.Final.jar 
-│                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-handler@4.2.13.Final 
-│                       │     │                  ╰ UID : 4752ddcaf5c03525 
-│                       │     ├ InstalledVersion: 4.2.13.Final 
-│                       │     ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
-│                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae26
-│                       │     │                  │         81983635a9c1ff722b4 
-│                       │     │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f7912
-│                       │     │                            5428cc374c8321dfc38 
-│                       │     ├ SeveritySource  : ghsa 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-50010 
-│                       │     ├ DataSource       ╭ ID  : ghsa 
-│                       │     │                  ├ Name: GitHub Security Advisory Maven 
-│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
-│                       │     │                          osystem%3Amaven 
-│                       │     ├ Fingerprint     : sha256:ba527636a737d2062e6e565460997f0e7503f247d106d64265a606
-│                       │     │                   85390a8091 
-│                       │     ├ Title           : netty-handler: Netty: Improper trust manager handling leads
-│                       │     │                   to hostname verification bypass 
-│                       │     ├ Description     : Netty is a network application framework for development of
-│                       │     │                   protocol servers and clients. Prior to versions 4.1.135.Final
-│                       │     │                    and 4.2.15.Final,
-│                       │     │                   SimpleTrustManagerFactory.engineGetTrustManagers() and
-│                       │     │                   related paths wrap any user-supplied plain X509TrustManager
-│                       │     │                   in X509TrustManagerWrapper, which extends
-│                       │     │                   X509ExtendedTrustManager but implements the 3-arg
-│                       │     │                   checkServerTrusted(chain, authType, SSLEngine) by discarding
-│                       │     │                   the SSLEngine and calling the 2-arg delegate. Because the
-│                       │     │                   object now IS an X509ExtendedTrustManager, neither SunJSSE's
-│                       │     │                   internal AbstractTrustManagerWrapper nor Netty's own
-│                       │     │                   OpenSslX509TrustManagerWrapper will re-wrap it to add
-│                       │     │                   endpoint-identification. Consequently, even though Netty 4.2
-│                       │     │                   sets endpointIdentificationAlgorithm="HTTPS" by default, a
-│                       │     │                   client built with
-│                       │     │                   `SslContextBuilder.forClient().trustManager(somePlainX509Trus
-│                       │     │                   tManager)` performs no hostname verification at all. Versions
-│                       │     │                    4.1.135.Final and 4.2.15.Final patch the issue. 
-│                       │     ├ Severity        : HIGH 
-│                       │     ├ CweIDs           ─ [0]: CWE-347 
-│                       │     ├ VendorSeverity   ╭ ghsa  : 3 
-│                       │     │                  ╰ redhat: 3 
-│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/
-│                       │     │                  │        │           A:N 
-│                       │     │                  │        ╰ V3Score : 7.5 
-│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/
-│                       │     │                           │           A:N 
-│                       │     │                           ╰ V3Score : 7.5 
-│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-50010 
-│                       │     │                  ├ [1]: https://github.com/netty/netty 
-│                       │     │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.1.1
-│                       │     │                  │      35.Final 
-│                       │     │                  ├ [3]: https://github.com/netty/netty/releases/tag/netty-4.2.1
-│                       │     │                  │      5.Final 
-│                       │     │                  ├ [4]: https://github.com/netty/netty/security/advisories/GHSA
-│                       │     │                  │      -c653-97m9-rcg9 
-│                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-50010 
-│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-50010 
-│                       │     ├ PublishedDate   : 2026-06-12T16:16:31.18Z 
-│                       │     ╰ LastModifiedDate: 2026-06-17T10:57:35.027Z 
-│                       ├ [7] ╭ VulnerabilityID : CVE-2026-45674 
-│                       │     ├ VendorIDs        ─ [0]: GHSA-676x-f7gg-47vc 
-│                       │     ├ PkgName         : io.netty:netty-resolver-dns 
-│                       │     ├ PkgPath         : openaf/Kube/netty-resolver-dns-4.2.13.Final.jar 
-│                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-resolver-dns@4.2.13.Final 
-│                       │     │                  ╰ UID : 59e00c5d340ee81 
-│                       │     ├ InstalledVersion: 4.2.13.Final 
-│                       │     ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
-│                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae26
-│                       │     │                  │         81983635a9c1ff722b4 
-│                       │     │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f7912
-│                       │     │                            5428cc374c8321dfc38 
-│                       │     ├ SeveritySource  : ghsa 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-45674 
-│                       │     ├ DataSource       ╭ ID  : ghsa 
-│                       │     │                  ├ Name: GitHub Security Advisory Maven 
-│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
-│                       │     │                          osystem%3Amaven 
-│                       │     ├ Fingerprint     : sha256:3d1c0d337b6a9eefb073cab10cad7770123569003b2171223cadef
-│                       │     │                   9fa22f0081 
-│                       │     ├ Title           : netty-resolver-dns: Netty: Information disclosure and data
-│                       │     │                   manipulation due to improper CNAME record validation 
-│                       │     ├ Description     : Netty is a network application framework for development of
-│                       │     │                   protocol servers and clients. Prior to versions 4.1.135.Final
-│                       │     │                    and 4.2.15.Final, Netty's DnsResolveContext fails to
-│                       │     │                   validate the origin (bailiwick) of CNAME records in DNS
-│                       │     │                   responses. Versions 4.1.135.Final and 4.2.15.Final patch the
-│                       │     │                   issue. 
-│                       │     ├ Severity        : HIGH 
-│                       │     ├ CweIDs           ─ [0]: CWE-345 
-│                       │     ├ VendorSeverity   ╭ ghsa  : 3 
-│                       │     │                  ├ nvd   : 4 
-│                       │     │                  ╰ redhat: 3 
-│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/
-│                       │     │                  │        │           A:N 
-│                       │     │                  │        ╰ V3Score : 8.7 
-│                       │     │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/
-│                       │     │                  │        │           A:N 
-│                       │     │                  │        ╰ V3Score : 10 
-│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/
-│                       │     │                           │           A:N 
-│                       │     │                           ╰ V3Score : 8.7 
-│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-45674 
-│                       │     │                  ├ [1]: https://github.com/netty/netty 
-│                       │     │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.1.1
-│                       │     │                  │      35.Final 
-│                       │     │                  ├ [3]: https://github.com/netty/netty/releases/tag/netty-4.2.1
-│                       │     │                  │      5.Final 
-│                       │     │                  ├ [4]: https://github.com/netty/netty/security/advisories/GHSA
-│                       │     │                  │      -676x-f7gg-47vc 
-│                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-45674 
-│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-45674 
-│                       │     ├ PublishedDate   : 2026-06-12T15:16:27.55Z 
-│                       │     ╰ LastModifiedDate: 2026-06-17T10:52:27.297Z 
-│                       ├ [8] ╭ VulnerabilityID : CVE-2026-47691 
-│                       │     ├ VendorIDs        ─ [0]: GHSA-5pvg-856g-cp85 
-│                       │     ├ PkgName         : io.netty:netty-resolver-dns 
-│                       │     ├ PkgPath         : openaf/Kube/netty-resolver-dns-4.2.13.Final.jar 
-│                       │     ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-resolver-dns@4.2.13.Final 
-│                       │     │                  ╰ UID : 59e00c5d340ee81 
-│                       │     ├ InstalledVersion: 4.2.13.Final 
-│                       │     ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
-│                       │     ├ Status          : fixed 
-│                       │     ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae26
-│                       │     │                  │         81983635a9c1ff722b4 
-│                       │     │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f7912
-│                       │     │                            5428cc374c8321dfc38 
-│                       │     ├ SeveritySource  : ghsa 
-│                       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-47691 
-│                       │     ├ DataSource       ╭ ID  : ghsa 
-│                       │     │                  ├ Name: GitHub Security Advisory Maven 
-│                       │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
-│                       │     │                          osystem%3Amaven 
-│                       │     ├ Fingerprint     : sha256:25578dedb4f89efa194e203788b839fe53db5f7ed780739d9322e3
-│                       │     │                   f2dfc01e64 
-│                       │     ├ Title           : io.netty/netty-resolver-dns: Netty has Insufficient Bailiwick
-│                       │     │                    Validation for NS Records 
-│                       │     ├ Description     : Netty is a network application framework for development of
-│                       │     │                   protocol servers and clients. Prior to versions 4.1.135.Final
-│                       │     │                    and 4.2.15.Final, Netty's `DnsResolveContext` insufficiently
-│                       │     │                    validates the bailiwick of NS records, enabling DNS Cache
-│                       │     │                   Poisoning. An attacker controlling an authoritative name
-│                       │     │                   server for a subdomain can poison the cache for parent
-│                       │     │                   domains (like `.co.uk`). In
-│                       │     │                   `io.netty.resolver.dns.DnsResolveContext.AuthoritativeNameSer
-│                       │     │                   verList#add` method accepts any NS record from the AUTHORITY
-│                       │     │                   section as long as the record's name is a suffix of the
-│                       │     │                   questionName. Subsequently, the `handleWithAdditional` method
-│                       │     │                    caches the associated A records from the ADDITIONAL section
-│                       │     │                   directly into the `authoritativeDnsServerCache` under the
-│                       │     │                   parent domain's key. This bypasses standard bailiwick rules,
-│                       │     │                   where a server authoritative for a subdomain should not be
-│                       │     │                   trusted to provide authoritative records for its parent. The
-│                       │     │                   poisoned cache is then used for all future resolutions under
-│                       │     │                   the parent domain's key. Versions 4.1.135.Final and
-│                       │     │                   4.2.15.Final patch the issue. 
-│                       │     ├ Severity        : HIGH 
-│                       │     ├ CweIDs           ─ [0]: CWE-345 
-│                       │     ├ VendorSeverity   ╭ ghsa  : 3 
-│                       │     │                  ├ nvd   : 4 
-│                       │     │                  ╰ redhat: 3 
-│                       │     ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/
-│                       │     │                  │        │           A:N 
-│                       │     │                  │        ╰ V3Score : 8.7 
-│                       │     │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/
-│                       │     │                  │        │           A:N 
-│                       │     │                  │        ╰ V3Score : 10 
-│                       │     │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/
-│                       │     │                           │           A:N 
-│                       │     │                           ╰ V3Score : 8.7 
-│                       │     ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-47691 
-│                       │     │                  ├ [1]: https://github.com/netty/netty 
-│                       │     │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.1.1
-│                       │     │                  │      35.Final 
-│                       │     │                  ├ [3]: https://github.com/netty/netty/releases/tag/netty-4.2.1
-│                       │     │                  │      5.Final 
-│                       │     │                  ├ [4]: https://github.com/netty/netty/security/advisories/GHSA
-│                       │     │                  │      -5pvg-856g-cp85 
-│                       │     │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-47691 
-│                       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-47691 
-│                       │     ├ PublishedDate   : 2026-06-12T16:16:30.31Z 
-│                       │     ╰ LastModifiedDate: 2026-06-17T10:54:37.5Z 
-│                       ╰ [9] ╭ VulnerabilityID : CVE-2026-45673 
-│                             ├ VendorIDs        ─ [0]: GHSA-xmv7-r254-6q78 
-│                             ├ PkgName         : io.netty:netty-resolver-dns 
-│                             ├ PkgPath         : openaf/Kube/netty-resolver-dns-4.2.13.Final.jar 
-│                             ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-resolver-dns@4.2.13.Final 
-│                             │                  ╰ UID : 59e00c5d340ee81 
-│                             ├ InstalledVersion: 4.2.13.Final 
-│                             ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
-│                             ├ Status          : fixed 
-│                             ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae26
-│                             │                  │         81983635a9c1ff722b4 
-│                             │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f7912
-│                             │                            5428cc374c8321dfc38 
-│                             ├ SeveritySource  : ghsa 
-│                             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-45673 
-│                             ├ DataSource       ╭ ID  : ghsa 
-│                             │                  ├ Name: GitHub Security Advisory Maven 
-│                             │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ec
-│                             │                          osystem%3Amaven 
-│                             ├ Fingerprint     : sha256:b8fcc300a2b587caf00daa2cc2a55d0cf99c416edc82e5b1cbbc37
-│                             │                   fc74feeee4 
-│                             ├ Title           : netty-resolver-dns: Netty DNS resolver: DNS Cache Poisoning
-│                             │                   via predictable transaction IDs 
-│                             ├ Description     : Netty is a network application framework for development of
-│                             │                   protocol servers and clients. Prior to versions 4.1.135.Final
-│                             │                    and 4.2.15.Final, Netty's DNS resolver uses a predictable
-│                             │                   PRNG for generating DNS transaction IDs and defaults to a
-│                             │                   static UDP source port. This combination reduces the entropy
-│                             │                   of DNS queries, enabling DNS Cache Poisoning (Kaminsky
-│                             │                   attack). Versions 4.1.135.Final and 4.2.15.Final patch the
-│                             │                   issue. 
-│                             ├ Severity        : MEDIUM 
-│                             ├ CweIDs           ╭ [0]: CWE-330 
-│                             │                  ╰ [1]: CWE-340 
-│                             ├ VendorSeverity   ╭ ghsa  : 2 
-│                             │                  ╰ redhat: 2 
-│                             ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:H/
-│                             │                  │        │           A:N 
-│                             │                  │        ╰ V3Score : 6.8 
-│                             │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:H/
-│                             │                           │           A:N 
-│                             │                           ╰ V3Score : 6.8 
-│                             ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-45673 
-│                             │                  ├ [1]: https://github.com/netty/netty 
-│                             │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.1.1
-│                             │                  │      35.Final 
-│                             │                  ├ [3]: https://github.com/netty/netty/releases/tag/netty-4.2.1
-│                             │                  │      5.Final 
-│                             │                  ├ [4]: https://github.com/netty/netty/security/advisories/GHSA
-│                             │                  │      -xmv7-r254-6q78 
-│                             │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-45673 
-│                             │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-45673 
-│                             ├ PublishedDate   : 2026-06-12T15:16:27.417Z 
-│                             ╰ LastModifiedDate: 2026-06-17T10:52:27.19Z 
+│     ╰ Vulnerabilities ╭ [0]  ╭ VulnerabilityID : CVE-2026-54512 
+│                       │      ├ VendorIDs        ─ [0]: GHSA-j3rv-43j4-c7qm 
+│                       │      ├ PkgName         : com.fasterxml.jackson.core:jackson-databind 
+│                       │      ├ PkgPath         : openaf/openaf.jar 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:maven/com.fasterxml.jackson.core/jackson-databind
+│                       │      │                  │       @2.21.1 
+│                       │      │                  ╰ UID : f5a07e107dd30f70 
+│                       │      ├ InstalledVersion: 2.21.1 
+│                       │      ├ FixedVersion    : 2.18.8, 3.1.4, 2.21.4 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ SeveritySource  : ghsa 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-54512 
+│                       │      ├ DataSource       ╭ ID  : ghsa 
+│                       │      │                  ├ Name: GitHub Security Advisory Maven 
+│                       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                       │      │                          cosystem%3Amaven 
+│                       │      ├ Fingerprint     : sha256:b00358eed3149ce61dc37816ef329965eee51d3f8d7d2e4d4707e
+│                       │      │                   abbf957956a 
+│                       │      ├ Title           : jackson-databind has a PolymorphicTypeValidator bypass via
+│                       │      │                   generic type parameters that allows arbitrary class
+│                       │      │                   instantiation 
+│                       │      ├ Description     : jackson-databind contains the general-purpose data-binding
+│                       │      │                   functionality and tree-model for Jackson Data Processor.
+│                       │      │                   From 2.10.0 until 2.18.8, 2.21.4, and 3.1.4,
+│                       │      │                   jackson-databind's PolymorphicTypeValidator (PTV) is the
+│                       │      │                   primary safety mechanism guarding polymorphic
+│                       │      │                   deserialization. When polymorphic typing is enabled and a
+│                       │      │                   type identifier contains generic parameters (i.e. the type
+│                       │      │                   ID string contains <),
+│                       │      │                   DatabindContext._resolveAndValidateGeneric() validates only
+│                       │      │                   the raw container class name (the substring before <)
+│                       │      │                   against the configured PTV. If the container type is
+│                       │      │                   approved, the method parses the full canonical type string
+│                       │      │                   via TypeFactory.constructFromCanonical() and returns the
+│                       │      │                   fully parameterized type without ever validating the nested
+│                       │      │                   type arguments against the PTV. The nested type arguments
+│                       │      │                   are then resolved, instantiated, and populated as beans
+│                       │      │                   during deserialization. An attacker who controls the type ID
+│                       │      │                    can therefore place a denied class as a generic type
+│                       │      │                   parameter of an allowed container — for example
+│                       │      │                   java.util.ArrayList<com.evil.Gadget> when only
+│                       │      │                   java.util.ArrayList is allow-listed. The container passes
+│                       │      │                   the PTV check; com.evil.Gadget is loaded via
+│                       │      │                   Class.forName(name, true, loader), instantiated, and its
+│                       │      │                   properties are set from attacker-controlled JSON. This
+│                       │      │                   completely bypasses an explicitly configured PTV allow-list.
+│                       │      │                    This vulnerability is fixed in 2.18.8, 2.21.4, and 3.1.4.[
+│                       │      │                   m 
+│                       │      ├ Severity        : HIGH 
+│                       │      ├ CweIDs           ╭ [0]: CWE-184 
+│                       │      │                  ╰ [1]: CWE-502 
+│                       │      ├ VendorSeverity   ─ ghsa: 3 
+│                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H 
+│                       │      │                         ╰ V3Score : 8.1 
+│                       │      ├ References       ╭ [0]: https://github.com/FasterXML/jackson-databind 
+│                       │      │                  ├ [1]: https://github.com/FasterXML/jackson-databind/commit/4
+│                       │      │                  │      34d6c511de7fdd9872f29157aafb6162d12d8d5 
+│                       │      │                  ├ [2]: https://github.com/FasterXML/jackson-databind/issues/5
+│                       │      │                  │      988 
+│                       │      │                  ╰ [3]: https://github.com/FasterXML/jackson-databind/security
+│                       │      │                         /advisories/GHSA-j3rv-43j4-c7qm 
+│                       │      ├ PublishedDate   : 2026-06-23T21:17:02.203Z 
+│                       │      ╰ LastModifiedDate: 2026-06-23T21:17:02.203Z 
+│                       ├ [1]  ╭ VulnerabilityID : CVE-2026-54513 
+│                       │      ├ VendorIDs        ─ [0]: GHSA-rmj7-2vxq-3g9f 
+│                       │      ├ PkgName         : com.fasterxml.jackson.core:jackson-databind 
+│                       │      ├ PkgPath         : openaf/openaf.jar 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:maven/com.fasterxml.jackson.core/jackson-databind
+│                       │      │                  │       @2.21.1 
+│                       │      │                  ╰ UID : f5a07e107dd30f70 
+│                       │      ├ InstalledVersion: 2.21.1 
+│                       │      ├ FixedVersion    : 2.18.8, 2.21.4, 3.1.4 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ SeveritySource  : ghsa 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-54513 
+│                       │      ├ DataSource       ╭ ID  : ghsa 
+│                       │      │                  ├ Name: GitHub Security Advisory Maven 
+│                       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                       │      │                          cosystem%3Amaven 
+│                       │      ├ Fingerprint     : sha256:7a5e5dc46b2a7591b67a51b20f30668641ad9d0b55cb59f9d175a
+│                       │      │                   009fa9ed3cb 
+│                       │      ├ Title           : jackson-databind has an array subtype allowlist bypass in
+│                       │      │                   BasicPolymorphicTypeValidator (allowIfSubTypeIsArray) 
+│                       │      ├ Description     : jackson-databind contains the general-purpose data-binding
+│                       │      │                   functionality and tree-model for Jackson Data Processor.
+│                       │      │                   From 2.10.0 until 2.18.8, 2.21.4, and 3.1.4,
+│                       │      │                   BasicPolymorphicTypeValidator.Builder.allowIfSubTypeIsArray(
+│                       │      │                   ) allowlists any array type based only on clazz.isArray(),
+│                       │      │                   without validating the array's component (element) type
+│                       │      │                   against the configured allowlist. A PTV built with
+│                       │      │                   allowIfSubTypeIsArray() plus an explicit concrete-type
+│                       │      │                   allowlist therefore still permits EvilType[] even though
+│                       │      │                   EvilType is not allowlisted. When Jackson deserializes the
+│                       │      │                   elements and no per-element type IDs are present, it
+│                       │      │                   instantiates the component type directly with no further PTV
+│                       │      │                    check, bypassing the allowlist. This vulnerability is fixed
+│                       │      │                    in 2.18.8, 2.21.4, and 3.1.4. 
+│                       │      ├ Severity        : HIGH 
+│                       │      ├ CweIDs           ─ [0]: CWE-184 
+│                       │      ├ VendorSeverity   ─ ghsa: 3 
+│                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H 
+│                       │      │                         ╰ V3Score : 8.1 
+│                       │      ├ References       ╭ [0]: https://github.com/FasterXML/jackson-databind 
+│                       │      │                  ├ [1]: https://github.com/FasterXML/jackson-databind/commit/0
+│                       │      │                  │      1d1692c8d0ed03e51a0e3c4f8a9e6908e4931e5 
+│                       │      │                  ├ [2]: https://github.com/FasterXML/jackson-databind/commit/2
+│                       │      │                  │      4529da29fdf46ff94ca38de9ebf31cd188f5e8e 
+│                       │      │                  ├ [3]: https://github.com/FasterXML/jackson-databind/issues/5
+│                       │      │                  │      981 
+│                       │      │                  ├ [4]: https://github.com/FasterXML/jackson-databind/issues/5
+│                       │      │                  │      983 
+│                       │      │                  ├ [5]: https://github.com/FasterXML/jackson-databind/pull/5984 
+│                       │      │                  ╰ [6]: https://github.com/FasterXML/jackson-databind/security
+│                       │      │                         /advisories/GHSA-rmj7-2vxq-3g9f 
+│                       │      ├ PublishedDate   : 2026-06-23T21:17:02.333Z 
+│                       │      ╰ LastModifiedDate: 2026-06-23T21:17:02.333Z 
+│                       ├ [2]  ╭ VulnerabilityID : CVE-2026-54514 
+│                       │      ├ VendorIDs        ─ [0]: GHSA-hgj6-7826-r7m5 
+│                       │      ├ PkgName         : com.fasterxml.jackson.core:jackson-databind 
+│                       │      ├ PkgPath         : openaf/openaf.jar 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:maven/com.fasterxml.jackson.core/jackson-databind
+│                       │      │                  │       @2.21.1 
+│                       │      │                  ╰ UID : f5a07e107dd30f70 
+│                       │      ├ InstalledVersion: 2.21.1 
+│                       │      ├ FixedVersion    : 2.18.8, 2.21.4, 3.1.4 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ SeveritySource  : ghsa 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-54514 
+│                       │      ├ DataSource       ╭ ID  : ghsa 
+│                       │      │                  ├ Name: GitHub Security Advisory Maven 
+│                       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                       │      │                          cosystem%3Amaven 
+│                       │      ├ Fingerprint     : sha256:9336494185533f30f9bc530c55ec75b7623c18efeec75563dba13
+│                       │      │                   2f260466db1 
+│                       │      ├ Title           : jackson-databind: InetSocketAddress deserialization triggers
+│                       │      │                    eager DNS resolution (SSRF) 
+│                       │      ├ Description     : jackson-databind contains the general-purpose data-binding
+│                       │      │                   functionality and tree-model for Jackson Data Processor.
+│                       │      │                   From 2.0.0 until 2.18.8, 2.21.4, and 3.1.4,
+│                       │      │                   JDKFromStringDeserializer constructed InetSocketAddress with
+│                       │      │                    new InetSocketAddress(host, port), which performs eager DNS
+│                       │      │                    name resolution for hostname inputs at deserialization
+│                       │      │                   time. An application that binds untrusted JSON into a type
+│                       │      │                   containing an InetSocketAddress field issues an
+│                       │      │                   attacker-chosen DNS query during readValue, before any
+│                       │      │                   application-level validation or connect logic. The fix uses
+│                       │      │                   InetSocketAddress.createUnresolved(host, port), deferring
+│                       │      │                   DNS to an explicit connect. This vulnerability is fixed in
+│                       │      │                   2.18.8, 2.21.4, and 3.1.4. 
+│                       │      ├ Severity        : MEDIUM 
+│                       │      ├ CweIDs           ─ [0]: CWE-918 
+│                       │      ├ VendorSeverity   ─ ghsa: 2 
+│                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N 
+│                       │      │                         ╰ V3Score : 5.3 
+│                       │      ├ References       ╭ [0]: https://github.com/FasterXML/jackson-databind 
+│                       │      │                  ├ [1]: https://github.com/FasterXML/jackson-databind/commit/1
+│                       │      │                  │      f5a1037b1e9e05920e755cb35f198bcd46667e4 
+│                       │      │                  ├ [2]: https://github.com/FasterXML/jackson-databind/pull/5951 
+│                       │      │                  ╰ [3]: https://github.com/FasterXML/jackson-databind/security
+│                       │      │                         /advisories/GHSA-hgj6-7826-r7m5 
+│                       │      ├ PublishedDate   : 2026-06-23T21:17:02.467Z 
+│                       │      ╰ LastModifiedDate: 2026-06-23T21:17:02.467Z 
+│                       ├ [3]  ╭ VulnerabilityID : CVE-2026-54515 
+│                       │      ├ VendorIDs        ─ [0]: GHSA-5jmj-h7xm-6q6v 
+│                       │      ├ PkgName         : com.fasterxml.jackson.core:jackson-databind 
+│                       │      ├ PkgPath         : openaf/openaf.jar 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:maven/com.fasterxml.jackson.core/jackson-databind
+│                       │      │                  │       @2.21.1 
+│                       │      │                  ╰ UID : f5a07e107dd30f70 
+│                       │      ├ InstalledVersion: 2.21.1 
+│                       │      ├ FixedVersion    : 3.1.4, 2.18.9, 2.21.5 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ SeveritySource  : ghsa 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-54515 
+│                       │      ├ DataSource       ╭ ID  : ghsa 
+│                       │      │                  ├ Name: GitHub Security Advisory Maven 
+│                       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                       │      │                          cosystem%3Amaven 
+│                       │      ├ Fingerprint     : sha256:27f2620c609d08ebbc0dd6200ae26b5f7cf493aa41216c409f667
+│                       │      │                   1cc529f344e 
+│                       │      ├ Title           : jackson-databind has case-insensitive deserialization
+│                       │      │                   bypasses per-property @JsonIgnoreProperties 
+│                       │      ├ Description     : jackson-databind contains the general-purpose data-binding
+│                       │      │                   functionality and tree-model for Jackson Data Processor.
+│                       │      │                   From 2.8.0 until 2.18.9, 2.21.5, and 3.1.4, in
+│                       │      │                   BeanDeserializerBase.createContextual(), per-property
+│                       │      │                   @JsonIgnoreProperties exclusions are applied by
+│                       │      │                   _handleByNameInclusion(), producing a contextual
+│                       │      │                   deserializer whose BeanPropertyMap has the ignored
+│                       │      │                   properties removed. The subsequent per-property
+│                       │      │                   case-insensitivity block (triggered by
+│                       │      │                   @JsonFormat(ACCEPT_CASE_INSENSITIVE_PROPERTIES)) rebuilds
+│                       │      │                   from this._beanProperties (the original, unfiltered map)
+│                       │      │                   instead of contextual._beanProperties, then overwrites the
+│                       │      │                   filtered map — restoring every property
+│                       │      │                   _handleByNameInclusion had just removed. The ignored
+│                       │      │                   property becomes writable again. This vulnerability is fixed
+│                       │      │                    in 2.18.9, 2.21.5, and 3.1.4. 
+│                       │      ├ Severity        : MEDIUM 
+│                       │      ├ CweIDs           ─ [0]: CWE-915 
+│                       │      ├ VendorSeverity   ─ ghsa: 2 
+│                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N 
+│                       │      │                         ╰ V3Score : 5.3 
+│                       │      ├ References       ╭ [0]: https://github.com/FasterXML/jackson-databind 
+│                       │      │                  ├ [1]: https://github.com/FasterXML/jackson-databind/commit/0
+│                       │      │                  │      e1b0b211f7a53baa62ba2f4c9bd006c7bf4d5fa 
+│                       │      │                  ├ [2]: https://github.com/FasterXML/jackson-databind/issues/5
+│                       │      │                  │      962 
+│                       │      │                  ├ [3]: https://github.com/FasterXML/jackson-databind/issues/5
+│                       │      │                  │      964 
+│                       │      │                  ╰ [4]: https://github.com/FasterXML/jackson-databind/security
+│                       │      │                         /advisories/GHSA-5jmj-h7xm-6q6v 
+│                       │      ├ PublishedDate   : 2026-06-23T21:17:02.597Z 
+│                       │      ╰ LastModifiedDate: 2026-06-23T21:17:02.597Z 
+│                       ├ [4]  ╭ VulnerabilityID : CVE-2026-54516 
+│                       │      ├ VendorIDs        ─ [0]: GHSA-9fxm-vc8v-hj55 
+│                       │      ├ PkgName         : com.fasterxml.jackson.core:jackson-databind 
+│                       │      ├ PkgPath         : openaf/openaf.jar 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:maven/com.fasterxml.jackson.core/jackson-databind
+│                       │      │                  │       @2.21.1 
+│                       │      │                  ╰ UID : f5a07e107dd30f70 
+│                       │      ├ InstalledVersion: 2.21.1 
+│                       │      ├ FixedVersion    : 2.21.4, 3.1.4 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ SeveritySource  : ghsa 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-54516 
+│                       │      ├ DataSource       ╭ ID  : ghsa 
+│                       │      │                  ├ Name: GitHub Security Advisory Maven 
+│                       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                       │      │                          cosystem%3Amaven 
+│                       │      ├ Fingerprint     : sha256:62df535d1af6d18944af8a5bcccc9afa215906da7c8993ede6e8e
+│                       │      │                   9f685178ac8 
+│                       │      ├ Title           : jackson-databind's renamed @JsonIgnore'd setters can
+│                       │      │                   deserialize via private fields 
+│                       │      ├ Description     : jackson-databind contains the general-purpose data-binding
+│                       │      │                   functionality and tree-model for Jackson Data Processor.
+│                       │      │                   From 2.21.0 until 2.21.4 and 3.1.4,
+│                       │      │                   POJOPropertiesCollector._renameProperties() allows a
+│                       │      │                   property with @JsonProperty("renamed") on the getter and
+│                       │      │                   @JsonIgnore on the setter to be renamed rather than dropped.
+│                       │      │                    With MapperFeature.INFER_PROPERTY_MUTATORS enabled
+│                       │      │                   (default), the private backing field is retained; during
+│                       │      │                   deserialization BeanDeserializerFactory.addBeanProps() sees
+│                       │      │                   hasField()==true, builds a FieldProperty, and makes the
+│                       │      │                   backing field writable. An attacker supplying the renamed
+│                       │      │                   JSON key writes the backing field directly, bypassing the
+│                       │      │                   @JsonIgnore on the setter. This vulnerability is fixed in
+│                       │      │                   3.1.4. 
+│                       │      ├ Severity        : MEDIUM 
+│                       │      ├ CweIDs           ─ [0]: CWE-915 
+│                       │      ├ VendorSeverity   ─ ghsa: 2 
+│                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N 
+│                       │      │                         ╰ V3Score : 5.3 
+│                       │      ├ References       ╭ [0]: https://github.com/FasterXML/jackson-databind 
+│                       │      │                  ├ [1]: https://github.com/FasterXML/jackson-databind/commit/c
+│                       │      │                  │      3d56dd25d52319828147c5b9aeabf2d485c250a 
+│                       │      │                  ├ [2]: https://github.com/FasterXML/jackson-databind/commit/e
+│                       │      │                  │      88cb17006b6af4883b973058f0bb6486e5074af 
+│                       │      │                  ├ [3]: https://github.com/FasterXML/jackson-databind/pull/5967 
+│                       │      │                  ├ [4]: https://github.com/FasterXML/jackson-databind/pull/5968 
+│                       │      │                  ╰ [5]: https://github.com/FasterXML/jackson-databind/security
+│                       │      │                         /advisories/GHSA-9fxm-vc8v-hj55 
+│                       │      ├ PublishedDate   : 2026-06-23T21:17:02.723Z 
+│                       │      ╰ LastModifiedDate: 2026-06-23T21:17:02.723Z 
+│                       ├ [5]  ╭ VulnerabilityID : CVE-2026-54517 
+│                       │      ├ VendorIDs        ─ [0]: GHSA-5hh8-q8hv-fr38 
+│                       │      ├ PkgName         : com.fasterxml.jackson.core:jackson-databind 
+│                       │      ├ PkgPath         : openaf/openaf.jar 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:maven/com.fasterxml.jackson.core/jackson-databind
+│                       │      │                  │       @2.21.1 
+│                       │      │                  ╰ UID : f5a07e107dd30f70 
+│                       │      ├ InstalledVersion: 2.21.1 
+│                       │      ├ FixedVersion    : 2.21.4, 3.1.4 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ SeveritySource  : ghsa 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-54517 
+│                       │      ├ DataSource       ╭ ID  : ghsa 
+│                       │      │                  ├ Name: GitHub Security Advisory Maven 
+│                       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                       │      │                          cosystem%3Amaven 
+│                       │      ├ Fingerprint     : sha256:845ee0e0e6fffe37ae3a4408e150a02eeb11eb0bc44fe28a772b1
+│                       │      │                   4fa3e31372c 
+│                       │      ├ Title           : jackson-databind has @JsonView bypass for setterless creator
+│                       │      │                    properties 
+│                       │      ├ Description     : jackson-databind contains the general-purpose data-binding
+│                       │      │                   functionality and tree-model for Jackson Data Processor.
+│                       │      │                   From 2.21.0 until 2.21.4 and 3.1.4, in
+│                       │      │                   BeanDeserializer._deserializeUsingPropertyBased, the
+│                       │      │                   active-view (@JsonView) filter was applied only to creator
+│                       │      │                   properties; the regular property-buffering branch performed
+│                       │      │                   no prop.visibleInView(activeView) check. A change making
+│                       │      │                   SetterlessProperty.isMerging() return true routed setterless
+│                       │      │                    Collection/Map properties through this unguarded path, so a
+│                       │      │                    setterless collection annotated with a restricted @JsonView
+│                       │      │                    is populated from attacker JSON even when the active view
+│                       │      │                   excludes it. This vulnerability is fixed in 2.21.4 and
+│                       │      │                   3.1.4. 
+│                       │      ├ Severity        : MEDIUM 
+│                       │      ├ CweIDs           ─ [0]: CWE-863 
+│                       │      ├ VendorSeverity   ─ ghsa: 2 
+│                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N 
+│                       │      │                         ╰ V3Score : 5.3 
+│                       │      ├ References       ╭ [0]: https://github.com/FasterXML/jackson-databind 
+│                       │      │                  ├ [1]: https://github.com/FasterXML/jackson-databind/commit/5
+│                       │      │                  │      bf23edb4221f7dd2ec8e71ff6d26c61640f261d 
+│                       │      │                  ├ [2]: https://github.com/FasterXML/jackson-databind/commit/9
+│                       │      │                  │      4c5d215b3af1505098c686405d9641f041a9962 
+│                       │      │                  ├ [3]: https://github.com/FasterXML/jackson-databind/pull/5969 
+│                       │      │                  ├ [4]: https://github.com/FasterXML/jackson-databind/pull/5970 
+│                       │      │                  ╰ [5]: https://github.com/FasterXML/jackson-databind/security
+│                       │      │                         /advisories/GHSA-5hh8-q8hv-fr38 
+│                       │      ├ PublishedDate   : 2026-06-23T21:17:02.853Z 
+│                       │      ╰ LastModifiedDate: 2026-06-23T21:17:02.853Z 
+│                       ├ [6]  ╭ VulnerabilityID : CVE-2026-54518 
+│                       │      ├ VendorIDs        ─ [0]: GHSA-rcqc-6cw3-h962 
+│                       │      ├ PkgName         : com.fasterxml.jackson.core:jackson-databind 
+│                       │      ├ PkgPath         : openaf/openaf.jar 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:maven/com.fasterxml.jackson.core/jackson-databind
+│                       │      │                  │       @2.21.1 
+│                       │      │                  ╰ UID : f5a07e107dd30f70 
+│                       │      ├ InstalledVersion: 2.21.1 
+│                       │      ├ FixedVersion    : 2.21.4 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ SeveritySource  : ghsa 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-54518 
+│                       │      ├ DataSource       ╭ ID  : ghsa 
+│                       │      │                  ├ Name: GitHub Security Advisory Maven 
+│                       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                       │      │                          cosystem%3Amaven 
+│                       │      ├ Fingerprint     : sha256:73c6e1f90c1d3774da5d8b931a4d51cb8d1756396786821f6fe7c
+│                       │      │                   ff4b97f575f 
+│                       │      ├ Title           : jackson-databind has a @JsonView bypass for unwrapped
+│                       │      │                   creator parameters 
+│                       │      ├ Description     : jackson-databind contains the general-purpose data-binding
+│                       │      │                   functionality and tree-model for Jackson Data Processor.
+│                       │      │                   From 2.21.0 until 2.21.4 and 3.1.4,
+│                       │      │                   UnwrappedPropertyHandler.processUnwrappedCreatorProperties()
+│                       │      │                    replays buffered JSON into creator parameters but never
+│                       │      │                   consults prop.visibleInView(activeView). The normal
+│                       │      │                   property-based creator path gates creator properties on the
+│                       │      │                   active view, but this unwrapped-creator replay path bypasses
+│                       │      │                    that check, so a constructor parameter annotated with both
+│                       │      │                   @JsonView(AdminView.class) and @JsonUnwrapped is populated
+│                       │      │                   from attacker JSON even when a more restrictive view is
+│                       │      │                   active. This vulnerability is fixed in 2.21.4 and 3.1.4. 
+│                       │      ├ Severity        : MEDIUM 
+│                       │      ├ CweIDs           ─ [0]: CWE-863 
+│                       │      ├ VendorSeverity   ─ ghsa: 2 
+│                       │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N 
+│                       │      │                         ╰ V3Score : 6.5 
+│                       │      ├ References       ╭ [0]: https://github.com/FasterXML/jackson-databind 
+│                       │      │                  ├ [1]: https://github.com/FasterXML/jackson-databind/commit/7
+│                       │      │                  │      21fa07ebbd4aab4a659a1a68940878315c3e341 
+│                       │      │                  ├ [2]: https://github.com/FasterXML/jackson-databind/commit/d
+│                       │      │                  │      633bc038f200c1397c07f1a2b46f58e72c91eea 
+│                       │      │                  ├ [3]: https://github.com/FasterXML/jackson-databind/pull/5971 
+│                       │      │                  ├ [4]: https://github.com/FasterXML/jackson-databind/pull/5973 
+│                       │      │                  ╰ [5]: https://github.com/FasterXML/jackson-databind/security
+│                       │      │                         /advisories/GHSA-rcqc-6cw3-h962 
+│                       │      ├ PublishedDate   : 2026-06-23T22:16:32.073Z 
+│                       │      ╰ LastModifiedDate: 2026-06-23T22:16:32.073Z 
+│                       ├ [7]  ╭ VulnerabilityID : CVE-2026-50020 
+│                       │      ├ VendorIDs        ─ [0]: GHSA-hvcg-qmg6-jm4c 
+│                       │      ├ PkgName         : io.netty:netty-codec-http 
+│                       │      ├ PkgPath         : openaf/Kube/netty-codec-http-4.2.13.Final.jar 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-codec-http@4.2.13.Final 
+│                       │      │                  ╰ UID : eedb6bf106be1be7 
+│                       │      ├ InstalledVersion: 4.2.13.Final 
+│                       │      ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ SeveritySource  : ghsa 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-50020 
+│                       │      ├ DataSource       ╭ ID  : ghsa 
+│                       │      │                  ├ Name: GitHub Security Advisory Maven 
+│                       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                       │      │                          cosystem%3Amaven 
+│                       │      ├ Fingerprint     : sha256:616c764cc13f03258b3313a21e8b0211cdb9b623fbc202e774da0
+│                       │      │                   a747f16d34a 
+│                       │      ├ Title           : netty-codec-http: Netty: Data manipulation via
+│                       │      │                   request-boundary confusion in HttpObjectDecoder 
+│                       │      ├ Description     : Netty is a network application framework for development of
+│                       │      │                   protocol servers and clients. Prior to versions
+│                       │      │                   4.1.135.Final and 4.2.15.Final, before reading the first
+│                       │      │                   request-line, `HttpObjectDecoder` skips every byte for which
+│                       │      │                    `Character.isISOControl(b)` is `true` (0x00–0x1F and 0x7F)
+│                       │      │                   as well as all whitespace. RFC 9112 §2.2 only asks servers
+│                       │      │                   to ignore empty CRLF lines preceding the request-line — a
+│                       │      │                   carefully scoped robustness allowance intended to handle
+│                       │      │                   HTTP/1.0 POST workarounds. Silently absorbing NUL bytes,
+│                       │      │                   SOH, STX, and other non-CRLF control characters goes
+│                       │      │                   significantly beyond this, and can be exploited for
+│                       │      │                   request-boundary confusion in pipelined or multiplexed
+│                       │      │                   transports where a front-end component treats those bytes
+│                       │      │                   differently. Versions 4.1.135.Final and 4.2.15.Final patch
+│                       │      │                   the issue. 
+│                       │      ├ Severity        : MEDIUM 
+│                       │      ├ CweIDs           ─ [0]: CWE-444 
+│                       │      ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │      │                  ╰ redhat: 2 
+│                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L
+│                       │      │                  │        │           /A:N 
+│                       │      │                  │        ╰ V3Score : 5.3 
+│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L
+│                       │      │                           │           /A:N 
+│                       │      │                           ╰ V3Score : 5.3 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-50020 
+│                       │      │                  ├ [1]: https://github.com/netty/netty 
+│                       │      │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.1.
+│                       │      │                  │      135.Final 
+│                       │      │                  ├ [3]: https://github.com/netty/netty/releases/tag/netty-4.2.
+│                       │      │                  │      15.Final 
+│                       │      │                  ├ [4]: https://github.com/netty/netty/security/advisories/GHS
+│                       │      │                  │      A-hvcg-qmg6-jm4c 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-50020 
+│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-50020 
+│                       │      ├ PublishedDate   : 2026-06-12T16:16:31.447Z 
+│                       │      ╰ LastModifiedDate: 2026-06-17T10:57:35.237Z 
+│                       ├ [8]  ╭ VulnerabilityID : CVE-2026-47244 
+│                       │      ├ VendorIDs        ─ [0]: GHSA-5x3r-wrvg-rp6q 
+│                       │      ├ PkgName         : io.netty:netty-codec-http2 
+│                       │      ├ PkgPath         : openaf/Kube/netty-codec-http2-4.2.13.Final.jar 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-codec-http2@4.2.13.Final 
+│                       │      │                  ╰ UID : 9a8774d6243b7ed4 
+│                       │      ├ InstalledVersion: 4.2.13.Final 
+│                       │      ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ SeveritySource  : ghsa 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-47244 
+│                       │      ├ DataSource       ╭ ID  : ghsa 
+│                       │      │                  ├ Name: GitHub Security Advisory Maven 
+│                       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                       │      │                          cosystem%3Amaven 
+│                       │      ├ Fingerprint     : sha256:58b7896124c068e91597290b1693ae867b53c618dfc2d751db285
+│                       │      │                   a596f8f9b2f 
+│                       │      ├ Title           : netty-codec-http2: Netty: Denial of Service via uncontrolled
+│                       │      │                    HTTP/2 concurrent streams 
+│                       │      ├ Description     : Netty is a network application framework for development of
+│                       │      │                   protocol servers and clients. Prior to versions
+│                       │      │                   4.1.135.Final and 4.2.15.Final,
+│                       │      │                   DefaultHttp2Connection.DefaultEndpoint initialises
+│                       │      │                   maxActiveStreams/maxStreams to Integer.MAX_VALUE, and
+│                       │      │                   Http2Settings never inserts SETTINGS_MAX_CONCURRENT_STREAMS
+│                       │      │                   by default (Http2Settings.java:305-307 only clamps a
+│                       │      │                   user-supplied value). Unless the application explicitly
+│                       │      │                   calls initialSettings().maxConcurrentStreams(n), a Netty
+│                       │      │                   HTTP/2 server advertises no limit and enforces none locally.
+│                       │      │                    Each open stream allocates a DefaultStream object,
+│                       │      │                   PropertyMap slots, flow-controller state and
+│                       │      │                   IntObjectHashMap entry; with ~2^30 permissible odd stream
+│                       │      │                   IDs a single TCP connection can create hundreds of thousands
+│                       │      │                    of long-lived stream objects. This is also the precondition
+│                       │      │                    for CVE-2023-44487-style Rapid-Reset amplification, where
+│                       │      │                   the absence of a low concurrent cap multiplies backend work.
+│                       │      │                    Versions 4.1.135.Final and 4.2.15.Final patch the issue. 
+│                       │      ├ Severity        : MEDIUM 
+│                       │      ├ CweIDs           ─ [0]: CWE-400 
+│                       │      ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │      │                  ╰ redhat: 2 
+│                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+│                       │      │                  │        │           /A:L 
+│                       │      │                  │        ╰ V3Score : 5.3 
+│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+│                       │      │                           │           /A:L 
+│                       │      │                           ╰ V3Score : 5.3 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-47244 
+│                       │      │                  ├ [1]: https://github.com/netty/netty 
+│                       │      │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.1.
+│                       │      │                  │      135.Final 
+│                       │      │                  ├ [3]: https://github.com/netty/netty/releases/tag/netty-4.2.
+│                       │      │                  │      15.Final 
+│                       │      │                  ├ [4]: https://github.com/netty/netty/security/advisories/GHS
+│                       │      │                  │      A-5x3r-wrvg-rp6q 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-47244 
+│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-47244 
+│                       │      ├ PublishedDate   : 2026-06-12T15:16:29.217Z 
+│                       │      ╰ LastModifiedDate: 2026-06-17T10:54:25.803Z 
+│                       ├ [9]  ╭ VulnerabilityID : CVE-2026-48043 
+│                       │      ├ VendorIDs        ─ [0]: GHSA-c2gf-v879-257j 
+│                       │      ├ PkgName         : io.netty:netty-codec-http2 
+│                       │      ├ PkgPath         : openaf/Kube/netty-codec-http2-4.2.13.Final.jar 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-codec-http2@4.2.13.Final 
+│                       │      │                  ╰ UID : 9a8774d6243b7ed4 
+│                       │      ├ InstalledVersion: 4.2.13.Final 
+│                       │      ├ FixedVersion    : 4.1.135.Final, 4.2.15.Final 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ SeveritySource  : ghsa 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-48043 
+│                       │      ├ DataSource       ╭ ID  : ghsa 
+│                       │      │                  ├ Name: GitHub Security Advisory Maven 
+│                       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                       │      │                          cosystem%3Amaven 
+│                       │      ├ Fingerprint     : sha256:5d3edd502709d920d8e6f67f99cfb1d0d6c5a52080aae7e5d3198
+│                       │      │                   223b08aecc4 
+│                       │      ├ Title           : netty-codec-http2: netty-codec-http2: Denial of Service due
+│                       │      │                   to resource leak 
+│                       │      ├ Description     : Netty is a network application framework for development of
+│                       │      │                   protocol servers and clients. In netty-codec-http2 prior to
+│                       │      │                   versions 4.1.135.Final and 4.2.15.Final, the
+│                       │      │                   `DelegatingDecompressorFrameListener` class orchestrates
+│                       │      │                   HTTP/2 decompression by embedding a per-stream
+│                       │      │                   `EmbeddedChannel` that runs the appropriate decompression
+│                       │      │                   codec (gzip, deflate, zstd) and forwards decompressed chunks
+│                       │      │                    to a wrapped listener. Each decompressed chunk is a pooled
+│                       │      │                   `ByteBuf` handed to an anonymous
+│                       │      │                   `ChannelInboundHandlerAdapter` tail handler, which becomes
+│                       │      │                   the sole owner responsible for releasing it. A remote peer
+│                       │      │                   could send frames that would result in the flow-controller
+│                       │      │                   throwing and so trigger a resource leak which at the end
+│                       │      │                   might take down the whole JVM due OOME. Versions
+│                       │      │                   4.1.135.Final and 4.2.15.Final patch the issue. 
+│                       │      ├ Severity        : MEDIUM 
+│                       │      ├ CweIDs           ╭ [0]: CWE-400 
+│                       │      │                  ╰ [1]: CWE-401 
+│                       │      ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │      │                  ├ nvd   : 3 
+│                       │      │                  ╰ redhat: 3 
+│                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+│                       │      │                  │        │           /A:L 
+│                       │      │                  │        ╰ V3Score : 5.3 
+│                       │      │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+│                       │      │                  │        │           /A:H 
+│                       │      │                  │        ╰ V3Score : 7.5 
+│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+│                       │      │                           │           /A:H 
+│                       │      │                           ╰ V3Score : 7.5 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-48043 
+│                       │      │                  ├ [1]: https://github.com/netty/netty 
+│                       │      │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.1.
+│                       │      │                  │      135.Final 
+│                       │      │                  ├ [3]: https://github.com/netty/netty/releases/tag/netty-4.2.
+│                       │      │                  │      15.Final 
+│                       │      │                  ├ [4]: https://github.com/netty/netty/security/advisories/GHS
+│                       │      │                  │      A-c2gf-v879-257j 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-48043 
+│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-48043 
+│                       │      ├ PublishedDate   : 2026-06-12T16:16:30.587Z 
+│                       │      ╰ LastModifiedDate: 2026-06-17T10:54:50.363Z 
+│                       ├ [10] ╭ VulnerabilityID : CVE-2026-50560 
+│                       │      ├ VendorIDs        ─ [0]: GHSA-563q-j3cm-6jxm 
+│                       │      ├ PkgName         : io.netty:netty-codec-http2 
+│                       │      ├ PkgPath         : openaf/Kube/netty-codec-http2-4.2.13.Final.jar 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-codec-http2@4.2.13.Final 
+│                       │      │                  ╰ UID : 9a8774d6243b7ed4 
+│                       │      ├ InstalledVersion: 4.2.13.Final 
+│                       │      ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ SeveritySource  : ghsa 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-50560 
+│                       │      ├ DataSource       ╭ ID  : ghsa 
+│                       │      │                  ├ Name: GitHub Security Advisory Maven 
+│                       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                       │      │                          cosystem%3Amaven 
+│                       │      ├ Fingerprint     : sha256:dd88f7b0c5474ce123d10b096acf5a254e1ce8eb37fc6f89a3d35
+│                       │      │                   c607d16976c 
+│                       │      ├ Title           : netty-codec-http2: Netty: Denial of Service due to HTTP/2
+│                       │      │                   max header size handling 
+│                       │      ├ Description     : Netty is a network application framework for development of
+│                       │      │                   protocol servers and clients. Prior to versions
+│                       │      │                   4.1.135.Final and 4.2.15.Final, Netty HTTP/2 max header size
+│                       │      │                    handling produces an attack similar to HTTP/2 Rapid Reset.
+│                       │      │                   There is a setting in the http2 specification called
+│                       │      │                   `SETTINGS_MAX_HEADER_LIST_SIZE`. When a client sends that
+│                       │      │                   setting to Netty, it appears that Netty will behave as
+│                       │      │                   follows: read the request; proxy the request to the origin;
+│                       │      │                   attempt to produce a response; and create an exception while
+│                       │      │                    writing the headers for the response. Functionally, this
+│                       │      │                   should be similar to the http2 reset attack, but with a
+│                       │      │                   different on-the-wire signature. Versions 4.1.135.Final and
+│                       │      │                   4.2.15.Final patch the issue. 
+│                       │      ├ Severity        : MEDIUM 
+│                       │      ├ CweIDs           ─ [0]: CWE-770 
+│                       │      ├ VendorSeverity   ╭ ghsa  : 2 
+│                       │      │                  ├ nvd   : 2 
+│                       │      │                  ╰ redhat: 2 
+│                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+│                       │      │                  │        │            N/A:L 
+│                       │      │                  │        ├ V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/
+│                       │      │                  │        │            VI:N/VA:L/SC:N/SI:N/SA:N 
+│                       │      │                  │        ├ V3Score  : 5.3 
+│                       │      │                  │        ╰ V40Score : 6.9 
+│                       │      │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+│                       │      │                  │        │           /A:L 
+│                       │      │                  │        ╰ V3Score : 5.3 
+│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+│                       │      │                           │           /A:L 
+│                       │      │                           ╰ V3Score : 5.3 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-50560 
+│                       │      │                  ├ [1]: https://github.com/netty/netty 
+│                       │      │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.1.
+│                       │      │                  │      135.Final 
+│                       │      │                  ├ [3]: https://github.com/netty/netty/releases/tag/netty-4.2.
+│                       │      │                  │      15.Final 
+│                       │      │                  ├ [4]: https://github.com/netty/netty/security/advisories/GHS
+│                       │      │                  │      A-563q-j3cm-6jxm 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-50560 
+│                       │      │                  ├ [6]: https://www.cve.org/CVERecord?id=CVE-2026-50560 
+│                       │      │                  ╰ [7]: https://www.rfc-editor.org/rfc/rfc9113.html#name-defin
+│                       │      │                         ed-settings 
+│                       │      ├ PublishedDate   : 2026-06-12T16:16:32.847Z 
+│                       │      ╰ LastModifiedDate: 2026-06-17T10:57:42.65Z 
+│                       ├ [11] ╭ VulnerabilityID : CVE-2026-44249 
+│                       │      ├ VendorIDs        ─ [0]: GHSA-3qp7-7mw8-wx86 
+│                       │      ├ PkgName         : io.netty:netty-handler 
+│                       │      ├ PkgPath         : openaf/Kube/netty-handler-4.2.13.Final.jar 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-handler@4.2.13.Final 
+│                       │      │                  ╰ UID : 4752ddcaf5c03525 
+│                       │      ├ InstalledVersion: 4.2.13.Final 
+│                       │      ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ SeveritySource  : ghsa 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-44249 
+│                       │      ├ DataSource       ╭ ID  : ghsa 
+│                       │      │                  ├ Name: GitHub Security Advisory Maven 
+│                       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                       │      │                          cosystem%3Amaven 
+│                       │      ├ Fingerprint     : sha256:1fef38b5486639c0918ecc92d4b0c7852bf77106f79155f9253eb
+│                       │      │                   633b6cf4f20 
+│                       │      ├ Title           : netty-handler: netty-handler: IPv6 subnet rule bypass due to
+│                       │      │                    incorrect masking operation 
+│                       │      ├ Description     : Netty is a network application framework for development of
+│                       │      │                   protocol servers and clients. In netty-handler prior to
+│                       │      │                   versions 4.1.135.Final and 4.2.15.Final, an attacker can
+│                       │      │                   bypass IPv6 subnet rules due to an incorrect masking
+│                       │      │                   operation in IpSubnetFilterRule.compareTo(). Valid public IP
+│                       │      │                    addresses can bypass the restrictions. Versions
+│                       │      │                   4.1.135.Final and 4.2.15.Final patch the issue. 
+│                       │      ├ Severity        : HIGH 
+│                       │      ├ CweIDs           ╭ [0]: CWE-284 
+│                       │      │                  ╰ [1]: CWE-697 
+│                       │      ├ VendorSeverity   ╭ ghsa  : 3 
+│                       │      │                  ╰ redhat: 3 
+│                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H
+│                       │      │                  │        │           /A:H 
+│                       │      │                  │        ╰ V3Score : 8.1 
+│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H
+│                       │      │                           │           /A:H 
+│                       │      │                           ╰ V3Score : 8.1 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-44249 
+│                       │      │                  ├ [1]: https://github.com/netty/netty 
+│                       │      │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.1.
+│                       │      │                  │      135.Final 
+│                       │      │                  ├ [3]: https://github.com/netty/netty/releases/tag/netty-4.2.
+│                       │      │                  │      15.Final 
+│                       │      │                  ├ [4]: https://github.com/netty/netty/security/advisories/GHS
+│                       │      │                  │      A-3qp7-7mw8-wx86 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-44249 
+│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-44249 
+│                       │      ├ PublishedDate   : 2026-06-11T22:16:56.707Z 
+│                       │      ╰ LastModifiedDate: 2026-06-17T10:50:24.89Z 
+│                       ├ [12] ╭ VulnerabilityID : CVE-2026-45416 
+│                       │      ├ VendorIDs        ─ [0]: GHSA-x4gw-5cx5-pgmh 
+│                       │      ├ PkgName         : io.netty:netty-handler 
+│                       │      ├ PkgPath         : openaf/Kube/netty-handler-4.2.13.Final.jar 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-handler@4.2.13.Final 
+│                       │      │                  ╰ UID : 4752ddcaf5c03525 
+│                       │      ├ InstalledVersion: 4.2.13.Final 
+│                       │      ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ SeveritySource  : ghsa 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-45416 
+│                       │      ├ DataSource       ╭ ID  : ghsa 
+│                       │      │                  ├ Name: GitHub Security Advisory Maven 
+│                       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                       │      │                          cosystem%3Amaven 
+│                       │      ├ Fingerprint     : sha256:2bd58bfe9df4b58a570cb55966566b34b719dedad85b3ce3d0b1a
+│                       │      │                   67af02a91d3 
+│                       │      ├ Title           : netty-handler: Netty: Denial of Service due to eager buffer
+│                       │      │                   allocation in TLS handshake 
+│                       │      ├ Description     : Netty is a network application framework for development of
+│                       │      │                   protocol servers and clients. Prior to versions
+│                       │      │                   4.1.135.Final and 4.2.15.Final,
+│                       │      │                   SslClientHelloHandler.decode() reads the 24-bit TLS
+│                       │      │                   handshake length and, when the ClientHello does not fit in
+│                       │      │                   the first record, eagerly allocates
+│                       │      │                   `ctx.alloc().buffer(handshakeLength)` (line 161). The guard
+│                       │      │                   at line 140 is `handshakeLength > maxClientHelloLength &&
+│                       │      │                   maxClientHelloLength != 0`, and the commonly-used
+│                       │      │                   SniHandler/AbstractSniHandler constructors
+│                       │      │                   (SniHandler(Mapping), SniHandler(AsyncMapping),
+│                       │      │                   AbstractSniHandler()) pass maxClientHelloLength=0 and
+│                       │      │                   handshakeTimeoutMillis=0, so the length guard is disabled
+│                       │      │                   and no timeout is scheduled. A 16 MiB request exceeds the
+│                       │      │                   default pooled chunk size and becomes a huge/unpooled
+│                       │      │                   allocation performed immediately. The buffer is retained in
+│                       │      │                   the handler until the channel closes. Versions 4.1.135.Final
+│                       │      │                    and 4.2.15.Final patch the issue. 
+│                       │      ├ Severity        : HIGH 
+│                       │      ├ CweIDs           ─ [0]: CWE-770 
+│                       │      ├ VendorSeverity   ╭ ghsa  : 3 
+│                       │      │                  ╰ redhat: 3 
+│                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+│                       │      │                  │        │           /A:H 
+│                       │      │                  │        ╰ V3Score : 7.5 
+│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+│                       │      │                           │           /A:H 
+│                       │      │                           ╰ V3Score : 7.5 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-45416 
+│                       │      │                  ├ [1]: https://github.com/netty/netty 
+│                       │      │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.1.
+│                       │      │                  │      135.Final 
+│                       │      │                  ├ [3]: https://github.com/netty/netty/releases/tag/netty-4.2.
+│                       │      │                  │      15.Final 
+│                       │      │                  ├ [4]: https://github.com/netty/netty/security/advisories/GHS
+│                       │      │                  │      A-x4gw-5cx5-pgmh 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-45416 
+│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-45416 
+│                       │      ├ PublishedDate   : 2026-06-12T15:16:26.94Z 
+│                       │      ╰ LastModifiedDate: 2026-06-17T10:52:02.103Z 
+│                       ├ [13] ╭ VulnerabilityID : CVE-2026-50010 
+│                       │      ├ VendorIDs        ─ [0]: GHSA-c653-97m9-rcg9 
+│                       │      ├ PkgName         : io.netty:netty-handler 
+│                       │      ├ PkgPath         : openaf/Kube/netty-handler-4.2.13.Final.jar 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-handler@4.2.13.Final 
+│                       │      │                  ╰ UID : 4752ddcaf5c03525 
+│                       │      ├ InstalledVersion: 4.2.13.Final 
+│                       │      ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ SeveritySource  : ghsa 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-50010 
+│                       │      ├ DataSource       ╭ ID  : ghsa 
+│                       │      │                  ├ Name: GitHub Security Advisory Maven 
+│                       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                       │      │                          cosystem%3Amaven 
+│                       │      ├ Fingerprint     : sha256:ba527636a737d2062e6e565460997f0e7503f247d106d64265a60
+│                       │      │                   685390a8091 
+│                       │      ├ Title           : netty-handler: Netty: Improper trust manager handling leads
+│                       │      │                   to hostname verification bypass 
+│                       │      ├ Description     : Netty is a network application framework for development of
+│                       │      │                   protocol servers and clients. Prior to versions
+│                       │      │                   4.1.135.Final and 4.2.15.Final,
+│                       │      │                   SimpleTrustManagerFactory.engineGetTrustManagers() and
+│                       │      │                   related paths wrap any user-supplied plain X509TrustManager
+│                       │      │                   in X509TrustManagerWrapper, which extends
+│                       │      │                   X509ExtendedTrustManager but implements the 3-arg
+│                       │      │                   checkServerTrusted(chain, authType, SSLEngine) by discarding
+│                       │      │                    the SSLEngine and calling the 2-arg delegate. Because the
+│                       │      │                   object now IS an X509ExtendedTrustManager, neither SunJSSE's
+│                       │      │                    internal AbstractTrustManagerWrapper nor Netty's own
+│                       │      │                   OpenSslX509TrustManagerWrapper will re-wrap it to add
+│                       │      │                   endpoint-identification. Consequently, even though Netty 4.2
+│                       │      │                    sets endpointIdentificationAlgorithm="HTTPS" by default, a
+│                       │      │                   client built with
+│                       │      │                   `SslContextBuilder.forClient().trustManager(somePlainX509Tru
+│                       │      │                   stManager)` performs no hostname verification at all.
+│                       │      │                   Versions 4.1.135.Final and 4.2.15.Final patch the issue. 
+│                       │      ├ Severity        : HIGH 
+│                       │      ├ CweIDs           ─ [0]: CWE-347 
+│                       │      ├ VendorSeverity   ╭ ghsa  : 3 
+│                       │      │                  ╰ redhat: 3 
+│                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N
+│                       │      │                  │        │           /A:N 
+│                       │      │                  │        ╰ V3Score : 7.5 
+│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N
+│                       │      │                           │           /A:N 
+│                       │      │                           ╰ V3Score : 7.5 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-50010 
+│                       │      │                  ├ [1]: https://github.com/netty/netty 
+│                       │      │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.1.
+│                       │      │                  │      135.Final 
+│                       │      │                  ├ [3]: https://github.com/netty/netty/releases/tag/netty-4.2.
+│                       │      │                  │      15.Final 
+│                       │      │                  ├ [4]: https://github.com/netty/netty/security/advisories/GHS
+│                       │      │                  │      A-c653-97m9-rcg9 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-50010 
+│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-50010 
+│                       │      ├ PublishedDate   : 2026-06-12T16:16:31.18Z 
+│                       │      ╰ LastModifiedDate: 2026-06-17T10:57:35.027Z 
+│                       ├ [14] ╭ VulnerabilityID : CVE-2026-45674 
+│                       │      ├ VendorIDs        ─ [0]: GHSA-676x-f7gg-47vc 
+│                       │      ├ PkgName         : io.netty:netty-resolver-dns 
+│                       │      ├ PkgPath         : openaf/Kube/netty-resolver-dns-4.2.13.Final.jar 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-resolver-dns@4.2.13.Final 
+│                       │      │                  ╰ UID : 59e00c5d340ee81 
+│                       │      ├ InstalledVersion: 4.2.13.Final 
+│                       │      ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ SeveritySource  : ghsa 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-45674 
+│                       │      ├ DataSource       ╭ ID  : ghsa 
+│                       │      │                  ├ Name: GitHub Security Advisory Maven 
+│                       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                       │      │                          cosystem%3Amaven 
+│                       │      ├ Fingerprint     : sha256:3d1c0d337b6a9eefb073cab10cad7770123569003b2171223cade
+│                       │      │                   f9fa22f0081 
+│                       │      ├ Title           : netty-resolver-dns: Netty: Information disclosure and data
+│                       │      │                   manipulation due to improper CNAME record validation 
+│                       │      ├ Description     : Netty is a network application framework for development of
+│                       │      │                   protocol servers and clients. Prior to versions
+│                       │      │                   4.1.135.Final and 4.2.15.Final, Netty's DnsResolveContext
+│                       │      │                   fails to validate the origin (bailiwick) of CNAME records in
+│                       │      │                    DNS responses. Versions 4.1.135.Final and 4.2.15.Final
+│                       │      │                   patch the issue. 
+│                       │      ├ Severity        : HIGH 
+│                       │      ├ CweIDs           ─ [0]: CWE-345 
+│                       │      ├ VendorSeverity   ╭ ghsa  : 3 
+│                       │      │                  ├ nvd   : 4 
+│                       │      │                  ╰ redhat: 3 
+│                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H
+│                       │      │                  │        │           /A:N 
+│                       │      │                  │        ╰ V3Score : 8.7 
+│                       │      │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
+│                       │      │                  │        │           /A:N 
+│                       │      │                  │        ╰ V3Score : 10 
+│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H
+│                       │      │                           │           /A:N 
+│                       │      │                           ╰ V3Score : 8.7 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-45674 
+│                       │      │                  ├ [1]: https://github.com/netty/netty 
+│                       │      │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.1.
+│                       │      │                  │      135.Final 
+│                       │      │                  ├ [3]: https://github.com/netty/netty/releases/tag/netty-4.2.
+│                       │      │                  │      15.Final 
+│                       │      │                  ├ [4]: https://github.com/netty/netty/security/advisories/GHS
+│                       │      │                  │      A-676x-f7gg-47vc 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-45674 
+│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-45674 
+│                       │      ├ PublishedDate   : 2026-06-12T15:16:27.55Z 
+│                       │      ╰ LastModifiedDate: 2026-06-17T10:52:27.297Z 
+│                       ├ [15] ╭ VulnerabilityID : CVE-2026-47691 
+│                       │      ├ VendorIDs        ─ [0]: GHSA-5pvg-856g-cp85 
+│                       │      ├ PkgName         : io.netty:netty-resolver-dns 
+│                       │      ├ PkgPath         : openaf/Kube/netty-resolver-dns-4.2.13.Final.jar 
+│                       │      ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-resolver-dns@4.2.13.Final 
+│                       │      │                  ╰ UID : 59e00c5d340ee81 
+│                       │      ├ InstalledVersion: 4.2.13.Final 
+│                       │      ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
+│                       │      ├ Status          : fixed 
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
+│                       │      ├ SeveritySource  : ghsa 
+│                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-47691 
+│                       │      ├ DataSource       ╭ ID  : ghsa 
+│                       │      │                  ├ Name: GitHub Security Advisory Maven 
+│                       │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                       │      │                          cosystem%3Amaven 
+│                       │      ├ Fingerprint     : sha256:25578dedb4f89efa194e203788b839fe53db5f7ed780739d9322e
+│                       │      │                   3f2dfc01e64 
+│                       │      ├ Title           : io.netty/netty-resolver-dns: Netty has Insufficient
+│                       │      │                   Bailiwick Validation for NS Records 
+│                       │      ├ Description     : Netty is a network application framework for development of
+│                       │      │                   protocol servers and clients. Prior to versions
+│                       │      │                   4.1.135.Final and 4.2.15.Final, Netty's `DnsResolveContext`
+│                       │      │                   insufficiently validates the bailiwick of NS records,
+│                       │      │                   enabling DNS Cache Poisoning. An attacker controlling an
+│                       │      │                   authoritative name server for a subdomain can poison the
+│                       │      │                   cache for parent domains (like `.co.uk`). In
+│                       │      │                   `io.netty.resolver.dns.DnsResolveContext.AuthoritativeNameSe
+│                       │      │                   rverList#add` method accepts any NS record from the
+│                       │      │                   AUTHORITY section as long as the record's name is a suffix
+│                       │      │                   of the questionName. Subsequently, the
+│                       │      │                   `handleWithAdditional` method caches the associated A
+│                       │      │                   records from the ADDITIONAL section directly into the
+│                       │      │                   `authoritativeDnsServerCache` under the parent domain's key.
+│                       │      │                    This bypasses standard bailiwick rules, where a server
+│                       │      │                   authoritative for a subdomain should not be trusted to
+│                       │      │                   provide authoritative records for its parent. The poisoned
+│                       │      │                   cache is then used for all future resolutions under the
+│                       │      │                   parent domain's key. Versions 4.1.135.Final and 4.2.15.Final
+│                       │      │                    patch the issue. 
+│                       │      ├ Severity        : HIGH 
+│                       │      ├ CweIDs           ─ [0]: CWE-345 
+│                       │      ├ VendorSeverity   ╭ ghsa  : 3 
+│                       │      │                  ├ nvd   : 4 
+│                       │      │                  ╰ redhat: 3 
+│                       │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H
+│                       │      │                  │        │           /A:N 
+│                       │      │                  │        ╰ V3Score : 8.7 
+│                       │      │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H
+│                       │      │                  │        │           /A:N 
+│                       │      │                  │        ╰ V3Score : 10 
+│                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H
+│                       │      │                           │           /A:N 
+│                       │      │                           ╰ V3Score : 8.7 
+│                       │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-47691 
+│                       │      │                  ├ [1]: https://github.com/netty/netty 
+│                       │      │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.1.
+│                       │      │                  │      135.Final 
+│                       │      │                  ├ [3]: https://github.com/netty/netty/releases/tag/netty-4.2.
+│                       │      │                  │      15.Final 
+│                       │      │                  ├ [4]: https://github.com/netty/netty/security/advisories/GHS
+│                       │      │                  │      A-5pvg-856g-cp85 
+│                       │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-47691 
+│                       │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-47691 
+│                       │      ├ PublishedDate   : 2026-06-12T16:16:30.31Z 
+│                       │      ╰ LastModifiedDate: 2026-06-17T10:54:37.5Z 
+│                       ╰ [16] ╭ VulnerabilityID : CVE-2026-45673 
+│                              ├ VendorIDs        ─ [0]: GHSA-xmv7-r254-6q78 
+│                              ├ PkgName         : io.netty:netty-resolver-dns 
+│                              ├ PkgPath         : openaf/Kube/netty-resolver-dns-4.2.13.Final.jar 
+│                              ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-resolver-dns@4.2.13.Final 
+│                              │                  ╰ UID : 59e00c5d340ee81 
+│                              ├ InstalledVersion: 4.2.13.Final 
+│                              ├ FixedVersion    : 4.2.15.Final, 4.1.135.Final 
+│                              ├ Status          : fixed 
+│                              ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                              │                  │         681983635a9c1ff722b4 
+│                              │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                              │                            25428cc374c8321dfc38 
+│                              ├ SeveritySource  : ghsa 
+│                              ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-45673 
+│                              ├ DataSource       ╭ ID  : ghsa 
+│                              │                  ├ Name: GitHub Security Advisory Maven 
+│                              │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+e
+│                              │                          cosystem%3Amaven 
+│                              ├ Fingerprint     : sha256:b8fcc300a2b587caf00daa2cc2a55d0cf99c416edc82e5b1cbbc3
+│                              │                   7fc74feeee4 
+│                              ├ Title           : netty-resolver-dns: Netty DNS resolver: DNS Cache Poisoning
+│                              │                   via predictable transaction IDs 
+│                              ├ Description     : Netty is a network application framework for development of
+│                              │                   protocol servers and clients. Prior to versions
+│                              │                   4.1.135.Final and 4.2.15.Final, Netty's DNS resolver uses a
+│                              │                   predictable PRNG for generating DNS transaction IDs and
+│                              │                   defaults to a static UDP source port. This combination
+│                              │                   reduces the entropy of DNS queries, enabling DNS Cache
+│                              │                   Poisoning (Kaminsky attack). Versions 4.1.135.Final and
+│                              │                   4.2.15.Final patch the issue. 
+│                              ├ Severity        : MEDIUM 
+│                              ├ CweIDs           ╭ [0]: CWE-330 
+│                              │                  ╰ [1]: CWE-340 
+│                              ├ VendorSeverity   ╭ ghsa  : 2 
+│                              │                  ╰ redhat: 2 
+│                              ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:H
+│                              │                  │        │           /A:N 
+│                              │                  │        ╰ V3Score : 6.8 
+│                              │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:H
+│                              │                           │           /A:N 
+│                              │                           ╰ V3Score : 6.8 
+│                              ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-45673 
+│                              │                  ├ [1]: https://github.com/netty/netty 
+│                              │                  ├ [2]: https://github.com/netty/netty/releases/tag/netty-4.1.
+│                              │                  │      135.Final 
+│                              │                  ├ [3]: https://github.com/netty/netty/releases/tag/netty-4.2.
+│                              │                  │      15.Final 
+│                              │                  ├ [4]: https://github.com/netty/netty/security/advisories/GHS
+│                              │                  │      A-xmv7-r254-6q78 
+│                              │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-45673 
+│                              │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-45673 
+│                              ├ PublishedDate   : 2026-06-12T15:16:27.417Z 
+│                              ╰ LastModifiedDate: 2026-06-17T10:52:27.19Z 
 ├ [2] ╭ Target         : usr/bin/crictl 
 │     ├ Class          : lang-pkgs 
 │     ├ Type           : gobinary 
@@ -1870,7 +2261,10 @@
 │                       │      ├ InstalledVersion: v28.0.2+incompatible 
 │                       │      ├ FixedVersion    : 29.2.0 
 │                       │      ├ Status          : fixed 
-
+│                       │      ├ Layer            ╭ Digest: sha256:50d9637cba0051c5b99b75bf9054741db1485f82eae2
+│                       │      │                  │         681983635a9c1ff722b4 
+│                       │      │                  ╰ DiffID: sha256:4be7ca5979220008cdf67c5b9381a14f238b6ed1f791
+│                       │      │                            25428cc374c8321dfc38 
 │                       │      ├ SeveritySource  : ghsa 
 │                       │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-15558 
 │                       │      ├ DataSource       ╭ ID  : ghsa 
@@ -2886,13 +3280,13 @@
 │                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                            │           N/A:H 
 │                       │      │                            ╰ V3Score : 7.5 
-│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:8456 
+│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:9044 
 │                       │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-25679 
 │                       │      │                  ├ [2] : https://bugzilla.redhat.com/2445356 
 │                       │      │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
 │                       │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-25679 
-│                       │      │                  ├ [5] : https://errata.almalinux.org/8/ALSA-2026-8456.html 
+│                       │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-9044.html 
 │                       │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:9044 
 │                       │      │                  ├ [7] : https://go.dev/cl/752180 
 │                       │      │                  ├ [8] : https://go.dev/issue/77578 
@@ -2991,32 +3385,31 @@
 │                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                            │           N/A:H 
 │                       │      │                            ╰ V3Score : 7.5 
-│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:16875 
+│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:28074 
 │                       │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-32280 
-│                       │      │                  ├ [2] : https://bugzilla.redhat.com/2445356 
-│                       │      │                  ├ [3] : https://bugzilla.redhat.com/2456336 
-│                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456338 
-│                       │      │                  ├ [5] : https://bugzilla.redhat.com/2456339 
-│                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456333 
-│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [2] : https://bugzilla.redhat.com/2456333 
+│                       │      │                  ├ [3] : https://bugzilla.redhat.com/2456338 
+│                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456339 
+│                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456333 
+│                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
+│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
+│                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32280 
-│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32281 
-│                       │      │                  ├ [11]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [12]: https://errata.almalinux.org/8/ALSA-2026-16875.html 
-│                       │      │                  ├ [13]: https://errata.rockylinux.org/RLSA-2026:26447 
-│                       │      │                  ├ [14]: https://go.dev/cl/758320 
-│                       │      │                  ├ [15]: https://go.dev/issue/78282 
-│                       │      │                  ├ [16]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-28074.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:26447 
+│                       │      │                  ├ [13]: https://go.dev/cl/758320 
+│                       │      │                  ├ [14]: https://go.dev/issue/78282 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [17]: https://linux.oracle.com/cve/CVE-2026-32280.html 
-│                       │      │                  ├ [18]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
-│                       │      │                  ├ [19]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
-│                       │      │                  ├ [20]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      │                  ╰ [21]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32280.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
 │                       │      ╰ LastModifiedDate: 2026-06-17T10:35:28.84Z 
 │                       ├ [22] ╭ VulnerabilityID : CVE-2026-32281 
@@ -3066,7 +3459,7 @@
 │                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                            │           N/A:H 
 │                       │      │                            ╰ V3Score : 5.9 
-│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:24470 
+│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:28074 
 │                       │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-32281 
 │                       │      │                  ├ [2] : https://bugzilla.redhat.com/2456333 
 │                       │      │                  ├ [3] : https://bugzilla.redhat.com/2456338 
@@ -3080,7 +3473,7 @@
 │                       │      │                  │       26-32281 
 │                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [11]: https://errata.almalinux.org/10/ALSA-2026-24470.html 
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-28074.html 
 │                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:26447 
 │                       │      │                  ├ [13]: https://go.dev/cl/758061 
 │                       │      │                  ├ [14]: https://go.dev/issue/78281 
@@ -3137,32 +3530,31 @@
 │                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                            │           N/A:H 
 │                       │      │                            ╰ V3Score : 7.5 
-│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:16875 
+│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:28074 
 │                       │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-32283 
-│                       │      │                  ├ [2] : https://bugzilla.redhat.com/2445356 
-│                       │      │                  ├ [3] : https://bugzilla.redhat.com/2456336 
-│                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456338 
-│                       │      │                  ├ [5] : https://bugzilla.redhat.com/2456339 
-│                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456333 
-│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [2] : https://bugzilla.redhat.com/2456333 
+│                       │      │                  ├ [3] : https://bugzilla.redhat.com/2456338 
+│                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456339 
+│                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456333 
+│                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
+│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
+│                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32280 
-│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32281 
-│                       │      │                  ├ [11]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [12]: https://errata.almalinux.org/8/ALSA-2026-16875.html 
-│                       │      │                  ├ [13]: https://errata.rockylinux.org/RLSA-2026:26447 
-│                       │      │                  ├ [14]: https://go.dev/cl/763767 
-│                       │      │                  ├ [15]: https://go.dev/issue/78334 
-│                       │      │                  ├ [16]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-28074.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:26447 
+│                       │      │                  ├ [13]: https://go.dev/cl/763767 
+│                       │      │                  ├ [14]: https://go.dev/issue/78334 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [17]: https://linux.oracle.com/cve/CVE-2026-32283.html 
-│                       │      │                  ├ [18]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│                       │      │                  ├ [19]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-│                       │      │                  ├ [20]: https://pkg.go.dev/vuln/GO-2026-4870 
-│                       │      │                  ╰ [21]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32283.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
 │                       │      ╰ LastModifiedDate: 2026-06-17T10:35:29.263Z 
 │                       ├ [24] ╭ VulnerabilityID : CVE-2026-33811 
@@ -3646,47 +4038,51 @@
 │                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:
 │                       │      │                            │           H/A:H 
 │                       │      │                            ╰ V3Score : 7.8 
-│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:16875 
+│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:19353 
 │                       │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-32282 
 │                       │      │                  ├ [2] : https://bugzilla.redhat.com/2445356 
-│                       │      │                  ├ [3] : https://bugzilla.redhat.com/2456336 
-│                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456338 
-│                       │      │                  ├ [5] : https://bugzilla.redhat.com/2456339 
-│                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2434432 
-│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2437111 
-│                       │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2445345 
-│                       │      │                  ├ [9] : https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
-│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2449833 
-│                       │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2455470 
-│                       │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
-│                       │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       25-61726 
-│                       │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       25-68121 
-│                       │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-25679 
-│                       │      │                  ├ [17]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27137 
+│                       │      │                  ├ [3] : https://bugzilla.redhat.com/2449833 
+│                       │      │                  ├ [4] : https://bugzilla.redhat.com/2455470 
+│                       │      │                  ├ [5] : https://bugzilla.redhat.com/2456333 
+│                       │      │                  ├ [6] : https://bugzilla.redhat.com/2456335 
+│                       │      │                  ├ [7] : https://bugzilla.redhat.com/2456336 
+│                       │      │                  ├ [8] : https://bugzilla.redhat.com/2456338 
+│                       │      │                  ├ [9] : https://bugzilla.redhat.com/2456339 
+│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2434432 
+│                       │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2437111 
+│                       │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2445345 
+│                       │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
+│                       │      │                  ├ [14]: https://bugzilla.redhat.com/show_bug.cgi?id=2449833 
+│                       │      │                  ├ [15]: https://bugzilla.redhat.com/show_bug.cgi?id=2455470 
+│                       │      │                  ├ [16]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
+│                       │      │                  ├ [17]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
 │                       │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-32282 
+│                       │      │                  │       25-61726 
 │                       │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-32283 
+│                       │      │                  │       25-68121 
 │                       │      │                  ├ [20]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-33186 
+│                       │      │                  │       26-25679 
 │                       │      │                  ├ [21]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-27137 
+│                       │      │                  ├ [22]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32282 
+│                       │      │                  ├ [23]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32283 
+│                       │      │                  ├ [24]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-33186 
+│                       │      │                  ├ [25]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-34986 
-│                       │      │                  ├ [22]: https://errata.almalinux.org/8/ALSA-2026-16875.html 
-│                       │      │                  ├ [23]: https://errata.rockylinux.org/RLSA-2026:23228 
-│                       │      │                  ├ [24]: https://go.dev/cl/763761 
-│                       │      │                  ├ [25]: https://go.dev/issue/78293 
-│                       │      │                  ├ [26]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [26]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
+│                       │      │                  ├ [27]: https://errata.rockylinux.org/RLSA-2026:23228 
+│                       │      │                  ├ [28]: https://go.dev/cl/763761 
+│                       │      │                  ├ [29]: https://go.dev/issue/78293 
+│                       │      │                  ├ [30]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [27]: https://linux.oracle.com/cve/CVE-2026-32282.html 
-│                       │      │                  ├ [28]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│                       │      │                  ├ [29]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-│                       │      │                  ├ [30]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      │                  ╰ [31]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      │                  ├ [31]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+│                       │      │                  ├ [32]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│                       │      │                  ├ [33]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [34]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [35]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │                       │      ╰ LastModifiedDate: 2026-06-17T10:35:29.12Z 
 │                       ├ [34] ╭ VulnerabilityID : CVE-2026-32288 
@@ -5708,7 +6104,7 @@
 │                       │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
 │                       │      │                           │           /A:H 
 │                       │      │                           ╰ V3Score : 7.5 
-│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:19135 
+│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:19353 
 │                       │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-34986 
 │                       │      │                  ├ [2] : https://bugzilla.redhat.com/2445356 
 │                       │      │                  ├ [3] : https://bugzilla.redhat.com/2449833 
@@ -5742,13 +6138,13 @@
 │                       │      │                  │       26-33186 
 │                       │      │                  ├ [25]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-34986 
-│                       │      │                  ├ [26]: https://errata.almalinux.org/10/ALSA-2026-19135.html 
+│                       │      │                  ├ [26]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
 │                       │      │                  ├ [27]: https://errata.rockylinux.org/RLSA-2026:23228 
 │                       │      │                  ├ [28]: https://github.com/go-jose/go-jose 
 │                       │      │                  ├ [29]: https://github.com/go-jose/go-jose/security/advisorie
 │                       │      │                  │       s/GHSA-78h2-9frx-2jm8 
 │                       │      │                  ├ [30]: https://linux.oracle.com/cve/CVE-2026-34986.html 
-│                       │      │                  ├ [31]: https://linux.oracle.com/errata/ELSA-2026-10135.html 
+│                       │      │                  ├ [31]: https://linux.oracle.com/errata/ELSA-2026-19186.html 
 │                       │      │                  ├ [32]: https://nvd.nist.gov/vuln/detail/CVE-2026-34986 
 │                       │      │                  ├ [33]: https://pkg.go.dev/github.com/go-jose/go-jose/v4#pkg-
 │                       │      │                  │       constants 
@@ -6807,32 +7203,31 @@
 │                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                            │           N/A:H 
 │                       │      │                            ╰ V3Score : 7.5 
-│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:16875 
+│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:28074 
 │                       │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-32280 
-│                       │      │                  ├ [2] : https://bugzilla.redhat.com/2445356 
-│                       │      │                  ├ [3] : https://bugzilla.redhat.com/2456336 
-│                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456338 
-│                       │      │                  ├ [5] : https://bugzilla.redhat.com/2456339 
-│                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456333 
-│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [2] : https://bugzilla.redhat.com/2456333 
+│                       │      │                  ├ [3] : https://bugzilla.redhat.com/2456338 
+│                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456339 
+│                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456333 
+│                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
+│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
+│                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32280 
-│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32281 
-│                       │      │                  ├ [11]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [12]: https://errata.almalinux.org/8/ALSA-2026-16875.html 
-│                       │      │                  ├ [13]: https://errata.rockylinux.org/RLSA-2026:26447 
-│                       │      │                  ├ [14]: https://go.dev/cl/758320 
-│                       │      │                  ├ [15]: https://go.dev/issue/78282 
-│                       │      │                  ├ [16]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-28074.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:26447 
+│                       │      │                  ├ [13]: https://go.dev/cl/758320 
+│                       │      │                  ├ [14]: https://go.dev/issue/78282 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [17]: https://linux.oracle.com/cve/CVE-2026-32280.html 
-│                       │      │                  ├ [18]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
-│                       │      │                  ├ [19]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
-│                       │      │                  ├ [20]: https://pkg.go.dev/vuln/GO-2026-4947 
-│                       │      │                  ╰ [21]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32280.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4947 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
 │                       │      ╰ LastModifiedDate: 2026-06-17T10:35:28.84Z 
 │                       ├ [36] ╭ VulnerabilityID : CVE-2026-32281 
@@ -6882,7 +7277,7 @@
 │                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                            │           N/A:H 
 │                       │      │                            ╰ V3Score : 5.9 
-│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:24470 
+│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:28074 
 │                       │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-32281 
 │                       │      │                  ├ [2] : https://bugzilla.redhat.com/2456333 
 │                       │      │                  ├ [3] : https://bugzilla.redhat.com/2456338 
@@ -6896,7 +7291,7 @@
 │                       │      │                  │       26-32281 
 │                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [11]: https://errata.almalinux.org/10/ALSA-2026-24470.html 
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-28074.html 
 │                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:26447 
 │                       │      │                  ├ [13]: https://go.dev/cl/758061 
 │                       │      │                  ├ [14]: https://go.dev/issue/78281 
@@ -6953,32 +7348,31 @@
 │                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
 │                       │      │                            │           N/A:H 
 │                       │      │                            ╰ V3Score : 7.5 
-│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:16875 
+│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:28074 
 │                       │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-32283 
-│                       │      │                  ├ [2] : https://bugzilla.redhat.com/2445356 
-│                       │      │                  ├ [3] : https://bugzilla.redhat.com/2456336 
-│                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456338 
-│                       │      │                  ├ [5] : https://bugzilla.redhat.com/2456339 
-│                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456333 
-│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [2] : https://bugzilla.redhat.com/2456333 
+│                       │      │                  ├ [3] : https://bugzilla.redhat.com/2456338 
+│                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456339 
+│                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456333 
+│                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
+│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
+│                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32280 
-│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32281 
-│                       │      │                  ├ [11]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-32283 
-│                       │      │                  ├ [12]: https://errata.almalinux.org/8/ALSA-2026-16875.html 
-│                       │      │                  ├ [13]: https://errata.rockylinux.org/RLSA-2026:26447 
-│                       │      │                  ├ [14]: https://go.dev/cl/763767 
-│                       │      │                  ├ [15]: https://go.dev/issue/78334 
-│                       │      │                  ├ [16]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-28074.html 
+│                       │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:26447 
+│                       │      │                  ├ [13]: https://go.dev/cl/763767 
+│                       │      │                  ├ [14]: https://go.dev/issue/78334 
+│                       │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [17]: https://linux.oracle.com/cve/CVE-2026-32283.html 
-│                       │      │                  ├ [18]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│                       │      │                  ├ [19]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-│                       │      │                  ├ [20]: https://pkg.go.dev/vuln/GO-2026-4870 
-│                       │      │                  ╰ [21]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
+│                       │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32283.html 
+│                       │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│                       │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│                       │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4870 
+│                       │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
 │                       │      ╰ LastModifiedDate: 2026-06-17T10:35:29.263Z 
 │                       ├ [38] ╭ VulnerabilityID : CVE-2026-33811 
@@ -7412,47 +7806,51 @@
 │                       │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:
 │                       │      │                            │           H/A:H 
 │                       │      │                            ╰ V3Score : 7.8 
-│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:16875 
+│                       │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:19353 
 │                       │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-32282 
 │                       │      │                  ├ [2] : https://bugzilla.redhat.com/2445356 
-│                       │      │                  ├ [3] : https://bugzilla.redhat.com/2456336 
-│                       │      │                  ├ [4] : https://bugzilla.redhat.com/2456338 
-│                       │      │                  ├ [5] : https://bugzilla.redhat.com/2456339 
-│                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2434432 
-│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2437111 
-│                       │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2445345 
-│                       │      │                  ├ [9] : https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
-│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2449833 
-│                       │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2455470 
-│                       │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
-│                       │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│                       │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       25-61726 
-│                       │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       25-68121 
-│                       │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-25679 
-│                       │      │                  ├ [17]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-27137 
+│                       │      │                  ├ [3] : https://bugzilla.redhat.com/2449833 
+│                       │      │                  ├ [4] : https://bugzilla.redhat.com/2455470 
+│                       │      │                  ├ [5] : https://bugzilla.redhat.com/2456333 
+│                       │      │                  ├ [6] : https://bugzilla.redhat.com/2456335 
+│                       │      │                  ├ [7] : https://bugzilla.redhat.com/2456336 
+│                       │      │                  ├ [8] : https://bugzilla.redhat.com/2456338 
+│                       │      │                  ├ [9] : https://bugzilla.redhat.com/2456339 
+│                       │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2434432 
+│                       │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2437111 
+│                       │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2445345 
+│                       │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
+│                       │      │                  ├ [14]: https://bugzilla.redhat.com/show_bug.cgi?id=2449833 
+│                       │      │                  ├ [15]: https://bugzilla.redhat.com/show_bug.cgi?id=2455470 
+│                       │      │                  ├ [16]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
+│                       │      │                  ├ [17]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
 │                       │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-32282 
+│                       │      │                  │       25-61726 
 │                       │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-32283 
+│                       │      │                  │       25-68121 
 │                       │      │                  ├ [20]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       26-33186 
+│                       │      │                  │       26-25679 
 │                       │      │                  ├ [21]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-27137 
+│                       │      │                  ├ [22]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32282 
+│                       │      │                  ├ [23]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-32283 
+│                       │      │                  ├ [24]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       26-33186 
+│                       │      │                  ├ [25]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       26-34986 
-│                       │      │                  ├ [22]: https://errata.almalinux.org/8/ALSA-2026-16875.html 
-│                       │      │                  ├ [23]: https://errata.rockylinux.org/RLSA-2026:23228 
-│                       │      │                  ├ [24]: https://go.dev/cl/763761 
-│                       │      │                  ├ [25]: https://go.dev/issue/78293 
-│                       │      │                  ├ [26]: https://groups.google.com/g/golang-announce/c/0uYbvbP
+│                       │      │                  ├ [26]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
+│                       │      │                  ├ [27]: https://errata.rockylinux.org/RLSA-2026:23228 
+│                       │      │                  ├ [28]: https://go.dev/cl/763761 
+│                       │      │                  ├ [29]: https://go.dev/issue/78293 
+│                       │      │                  ├ [30]: https://groups.google.com/g/golang-announce/c/0uYbvbP
 │                       │      │                  │       ZRWU 
-│                       │      │                  ├ [27]: https://linux.oracle.com/cve/CVE-2026-32282.html 
-│                       │      │                  ├ [28]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│                       │      │                  ├ [29]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-│                       │      │                  ├ [30]: https://pkg.go.dev/vuln/GO-2026-4864 
-│                       │      │                  ╰ [31]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│                       │      │                  ├ [31]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+│                       │      │                  ├ [32]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│                       │      │                  ├ [33]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│                       │      │                  ├ [34]: https://pkg.go.dev/vuln/GO-2026-4864 
+│                       │      │                  ╰ [35]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │                       │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │                       │      ╰ LastModifiedDate: 2026-06-17T10:35:29.12Z 
 │                       ├ [47] ╭ VulnerabilityID : CVE-2026-32288 
@@ -8002,72 +8400,73 @@
 │                       │      │                  │       4080fa9f26a2cd3544e2801449697322 
 │                       │      │                  ├ [1] : http://github.com/opencontainers/runc/commit/fdcc9d3c
 │                       │      │                  │       ad2f85954a241ccb910a61aaa1ef47f3 
-│                       │      │                  ├ [2] : https://access.redhat.com/errata/RHSA-2025:23543 
+│                       │      │                  ├ [2] : https://access.redhat.com/errata/RHSA-2025:22011 
 │                       │      │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2025-52881 
 │                       │      │                  ├ [4] : https://bugzilla.redhat.com/2404715 
-│                       │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2404715 
-│                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2407258 
-│                       │      │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
-│                       │      │                  │       25-52881 
+│                       │      │                  ├ [5] : https://bugzilla.redhat.com/2407258 
+│                       │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2404715 
+│                       │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2407258 
 │                       │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+│                       │      │                  │       25-52881 
+│                       │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
 │                       │      │                  │       25-58183 
-│                       │      │                  ├ [9] : https://errata.almalinux.org/8/ALSA-2025-23543.html 
-│                       │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2025:22011 
-│                       │      │                  ├ [11]: https://github.com/opencontainers/runc 
-│                       │      │                  ├ [12]: https://github.com/opencontainers/runc/blob/v1.4.0-rc
+│                       │      │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2025-22011.html 
+│                       │      │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22011 
+│                       │      │                  ├ [12]: https://github.com/opencontainers/runc 
+│                       │      │                  ├ [13]: https://github.com/opencontainers/runc/blob/v1.4.0-rc
 │                       │      │                  │       .2/RELEASES.md 
-│                       │      │                  ├ [13]: https://github.com/opencontainers/runc/commit/3f92552
+│                       │      │                  ├ [14]: https://github.com/opencontainers/runc/commit/3f92552
 │                       │      │                  │       5b44d247e390e529e772a0dc0c0bc3557 
-│                       │      │                  ├ [14]: https://github.com/opencontainers/runc/commit/435cc81
+│                       │      │                  ├ [15]: https://github.com/opencontainers/runc/commit/435cc81
 │                       │      │                  │       be6b79cdec73b4002c0dae549b2f6ae6d 
-│                       │      │                  ├ [15]: https://github.com/opencontainers/runc/commit/44a0fcf
+│                       │      │                  ├ [16]: https://github.com/opencontainers/runc/commit/44a0fcf
 │                       │      │                  │       685db051c80b8c269812bb177f5802c58 
-│                       │      │                  ├ [16]: https://github.com/opencontainers/runc/commit/4b37cd9
+│                       │      │                  ├ [17]: https://github.com/opencontainers/runc/commit/4b37cd9
 │                       │      │                  │       3f86e72feac866442988b549b5b7bf3e6 
-│                       │      │                  ├ [17]: https://github.com/opencontainers/runc/commit/6fc1914
+│                       │      │                  ├ [18]: https://github.com/opencontainers/runc/commit/6fc1914
 │                       │      │                  │       49109ea14bb7d61238f24a33fe08c651f 
-│                       │      │                  ├ [18]: https://github.com/opencontainers/runc/commit/77889b5
+│                       │      │                  ├ [19]: https://github.com/opencontainers/runc/commit/77889b5
 │                       │      │                  │       6db939c323d29d1130f28f9aea2edb544 
-│                       │      │                  ├ [19]: https://github.com/opencontainers/runc/commit/77d217c
+│                       │      │                  ├ [20]: https://github.com/opencontainers/runc/commit/77d217c
 │                       │      │                  │       7c3775d8ca5af89e477e81568ef4572db 
-│                       │      │                  ├ [20]: https://github.com/opencontainers/runc/commit/a41366e
+│                       │      │                  ├ [21]: https://github.com/opencontainers/runc/commit/a41366e
 │                       │      │                  │       74080fa9f26a2cd3544e2801449697322 
-│                       │      │                  ├ [21]: https://github.com/opencontainers/runc/commit/b3dd1bc
+│                       │      │                  ├ [22]: https://github.com/opencontainers/runc/commit/b3dd1bc
 │                       │      │                  │       562ed9996d1a0f249e056c16624046d28 
-│                       │      │                  ├ [22]: https://github.com/opencontainers/runc/commit/d40b343
+│                       │      │                  ├ [23]: https://github.com/opencontainers/runc/commit/d40b343
 │                       │      │                  │       9a9614a86e87b81a94c6811ec6fa2d7d2 
-│                       │      │                  ├ [23]: https://github.com/opencontainers/runc/commit/d61fd29
+│                       │      │                  ├ [24]: https://github.com/opencontainers/runc/commit/d61fd29
 │                       │      │                  │       d854b416feaaf128bf650325cd2182165 
-│                       │      │                  ├ [24]: https://github.com/opencontainers/runc/commit/db19bbe
+│                       │      │                  ├ [25]: https://github.com/opencontainers/runc/commit/db19bbe
 │                       │      │                  │       d5348847da433faa9d69e9f90192bfa64 
-│                       │      │                  ├ [25]: https://github.com/opencontainers/runc/commit/ed6b169
+│                       │      │                  ├ [26]: https://github.com/opencontainers/runc/commit/ed6b169
 │                       │      │                  │       3b8b3ae7eb0250a7e76fc888cdacf98c1 
-│                       │      │                  ├ [26]: https://github.com/opencontainers/runc/commit/fdcc9d3
+│                       │      │                  ├ [27]: https://github.com/opencontainers/runc/commit/fdcc9d3
 │                       │      │                  │       cad2f85954a241ccb910a61aaa1ef47f3 
-│                       │      │                  ├ [27]: https://github.com/opencontainers/runc/commit/ff6fe13
+│                       │      │                  ├ [28]: https://github.com/opencontainers/runc/commit/ff6fe13
 │                       │      │                  │       24663538167eca8b3d3eec61e1bd4fa51 
-│                       │      │                  ├ [28]: https://github.com/opencontainers/runc/commit/ff94f99
+│                       │      │                  ├ [29]: https://github.com/opencontainers/runc/commit/ff94f99
 │                       │      │                  │       91bd32076c871ef0ad8bc1b763458e480 
-│                       │      │                  ├ [29]: https://github.com/opencontainers/runc/security/advis
-│                       │      │                  │       ories/GHSA-9493-h29p-rfm2 
 │                       │      │                  ├ [30]: https://github.com/opencontainers/runc/security/advis
-│                       │      │                  │       ories/GHSA-cgrx-mc8f-2prm 
+│                       │      │                  │       ories/GHSA-9493-h29p-rfm2 
 │                       │      │                  ├ [31]: https://github.com/opencontainers/runc/security/advis
-│                       │      │                  │       ories/GHSA-fh74-hm69-rqjw 
+│                       │      │                  │       ories/GHSA-cgrx-mc8f-2prm 
 │                       │      │                  ├ [32]: https://github.com/opencontainers/runc/security/advis
+│                       │      │                  │       ories/GHSA-fh74-hm69-rqjw 
+│                       │      │                  ├ [33]: https://github.com/opencontainers/runc/security/advis
 │                       │      │                  │       ories/GHSA-qw9x-cqr3-wc7r 
-│                       │      │                  ├ [33]: https://github.com/opencontainers/selinux/pull/237 
-│                       │      │                  ├ [34]: https://github.com/opencontainers/selinux/releases/ta
+│                       │      │                  ├ [34]: https://github.com/opencontainers/selinux/pull/237 
+│                       │      │                  ├ [35]: https://github.com/opencontainers/selinux/releases/ta
 │                       │      │                  │       g/v1.13.0 
-│                       │      │                  ├ [35]: https://linux.oracle.com/cve/CVE-2025-52881.html 
-│                       │      │                  ├ [36]: https://linux.oracle.com/errata/ELSA-2025-23543.html 
-│                       │      │                  ├ [37]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
-│                       │      │                  ├ [38]: https://pkg.go.dev/github.com/cyphar/filepath-securej
+│                       │      │                  ├ [36]: https://linux.oracle.com/cve/CVE-2025-52881.html 
+│                       │      │                  ├ [37]: https://linux.oracle.com/errata/ELSA-2025-23543.html 
+│                       │      │                  ├ [38]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
+│                       │      │                  ├ [39]: https://pkg.go.dev/github.com/cyphar/filepath-securej
 │                       │      │                  │       oin/pathrs-lite/procfs 
-│                       │      │                  ├ [39]: https://ubuntu.com/security/notices/USN-7851-1 
-│                       │      │                  ├ [40]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
-│                       │      │                  ├ [41]: https://youtu.be/tGseJW_uBB8 
-│                       │      │                  ╰ [42]: https://youtu.be/y1PaBzxwRWQ 
+│                       │      │                  ├ [40]: https://ubuntu.com/security/notices/USN-7851-1 
+│                       │      │                  ├ [41]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
+│                       │      │                  ├ [42]: https://youtu.be/tGseJW_uBB8 
+│                       │      │                  ╰ [43]: https://youtu.be/y1PaBzxwRWQ 
 │                       │      ├ PublishedDate   : 2025-11-06T21:15:42.817Z 
 │                       │      ╰ LastModifiedDate: 2026-06-17T09:37:12.35Z 
 │                       ├ [6]  ╭ VulnerabilityID : CVE-2025-66506 
