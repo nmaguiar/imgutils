@@ -1,5 +1,320 @@
 ```yaml
-╭ [0] ╭ [0]  ╭ VulnerabilityID : CVE-2026-34040 
+╭ [0] ╭ [0] ╭ VulnerabilityID : CVE-2026-54512 
+│     │     ├ VendorIDs        ─ [0]: GHSA-j3rv-43j4-c7qm 
+│     │     ├ PkgName         : com.fasterxml.jackson.core:jackson-databind 
+│     │     ├ PkgPath         : openaf/openaf.jar 
+│     │     ├ PkgIdentifier    ╭ PURL: pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.21.3 
+│     │     │                  ╰ UID : af9e86e80fd64186 
+│     │     ├ InstalledVersion: 2.21.3 
+│     │     ├ FixedVersion    : 2.18.8, 3.1.4, 2.21.4 
+│     │     ├ Status          : fixed 
+│     │     ├ Layer            ╭ Digest: sha256:1c5438258b02a91acb66ae67f2df2aef833846604c96674ba8a480cc1016f5af 
+│     │     │                  ╰ DiffID: sha256:3525e3df00766b0e8f5645d901e40ae52d70affaeff7242a0b4e4c05ff77d2b3 
+│     │     ├ SeveritySource  : ghsa 
+│     │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-54512 
+│     │     ├ DataSource       ╭ ID  : ghsa 
+│     │     │                  ├ Name: GitHub Security Advisory Maven 
+│     │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven 
+│     │     ├ Fingerprint     : sha256:199b503b9771aa4d117c31be751528de5aa031a1eb960d5d283c2b138be46fa3 
+│     │     ├ Title           : jackson-databind has a PolymorphicTypeValidator bypass via generic type
+│     │     │                   parameters that allows arbitrary class instantiation 
+│     │     ├ Description     : jackson-databind contains the general-purpose data-binding functionality and
+│     │     │                   tree-model for Jackson Data Processor. From 2.10.0 until 2.18.8, 2.21.4, and
+│     │     │                   3.1.4, jackson-databind's PolymorphicTypeValidator (PTV) is the primary safety
+│     │     │                   mechanism guarding polymorphic deserialization. When polymorphic typing is
+│     │     │                   enabled and a type identifier contains generic parameters (i.e. the type ID
+│     │     │                   string contains <), DatabindContext._resolveAndValidateGeneric() validates only
+│     │     │                    the raw container class name (the substring before <) against the configured
+│     │     │                   PTV. If the container type is approved, the method parses the full canonical
+│     │     │                   type string via TypeFactory.constructFromCanonical() and returns the fully
+│     │     │                   parameterized type without ever validating the nested type arguments against
+│     │     │                   the PTV. The nested type arguments are then resolved, instantiated, and
+│     │     │                   populated as beans during deserialization. An attacker who controls the type ID
+│     │     │                    can therefore place a denied class as a generic type parameter of an allowed
+│     │     │                   container — for example java.util.ArrayList<com.evil.Gadget> when only
+│     │     │                   java.util.ArrayList is allow-listed. The container passes the PTV check;
+│     │     │                   com.evil.Gadget is loaded via Class.forName(name, true, loader), instantiated,
+│     │     │                   and its properties are set from attacker-controlled JSON. This completely
+│     │     │                   bypasses an explicitly configured PTV allow-list. This vulnerability is fixed
+│     │     │                   in 2.18.8, 2.21.4, and 3.1.4. 
+│     │     ├ Severity        : HIGH 
+│     │     ├ CweIDs           ╭ [0]: CWE-184 
+│     │     │                  ╰ [1]: CWE-502 
+│     │     ├ VendorSeverity   ─ ghsa: 3 
+│     │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H 
+│     │     │                         ╰ V3Score : 8.1 
+│     │     ├ References       ╭ [0]: https://github.com/FasterXML/jackson-databind 
+│     │     │                  ├ [1]: https://github.com/FasterXML/jackson-databind/commit/434d6c511de7fdd9872f
+│     │     │                  │      29157aafb6162d12d8d5 
+│     │     │                  ├ [2]: https://github.com/FasterXML/jackson-databind/issues/5988 
+│     │     │                  ╰ [3]: https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-j3
+│     │     │                         rv-43j4-c7qm 
+│     │     ├ PublishedDate   : 2026-06-23T21:17:02.203Z 
+│     │     ╰ LastModifiedDate: 2026-06-23T21:17:02.203Z 
+│     ├ [1] ╭ VulnerabilityID : CVE-2026-54513 
+│     │     ├ VendorIDs        ─ [0]: GHSA-rmj7-2vxq-3g9f 
+│     │     ├ PkgName         : com.fasterxml.jackson.core:jackson-databind 
+│     │     ├ PkgPath         : openaf/openaf.jar 
+│     │     ├ PkgIdentifier    ╭ PURL: pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.21.3 
+│     │     │                  ╰ UID : af9e86e80fd64186 
+│     │     ├ InstalledVersion: 2.21.3 
+│     │     ├ FixedVersion    : 2.18.8, 2.21.4, 3.1.4 
+│     │     ├ Status          : fixed 
+│     │     ├ Layer            ╭ Digest: sha256:1c5438258b02a91acb66ae67f2df2aef833846604c96674ba8a480cc1016f5af 
+│     │     │                  ╰ DiffID: sha256:3525e3df00766b0e8f5645d901e40ae52d70affaeff7242a0b4e4c05ff77d2b3 
+│     │     ├ SeveritySource  : ghsa 
+│     │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-54513 
+│     │     ├ DataSource       ╭ ID  : ghsa 
+│     │     │                  ├ Name: GitHub Security Advisory Maven 
+│     │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven 
+│     │     ├ Fingerprint     : sha256:664db6a9dcd1a10b9ada2910b7c56034e1bb8b353169e545daa0b27a7d74e877 
+│     │     ├ Title           : jackson-databind has an array subtype allowlist bypass in
+│     │     │                   BasicPolymorphicTypeValidator (allowIfSubTypeIsArray) 
+│     │     ├ Description     : jackson-databind contains the general-purpose data-binding functionality and
+│     │     │                   tree-model for Jackson Data Processor. From 2.10.0 until 2.18.8, 2.21.4, and
+│     │     │                   3.1.4, BasicPolymorphicTypeValidator.Builder.allowIfSubTypeIsArray() allowlists
+│     │     │                    any array type based only on clazz.isArray(), without validating the array's
+│     │     │                   component (element) type against the configured allowlist. A PTV built with
+│     │     │                   allowIfSubTypeIsArray() plus an explicit concrete-type allowlist therefore
+│     │     │                   still permits EvilType[] even though EvilType is not allowlisted. When Jackson
+│     │     │                   deserializes the elements and no per-element type IDs are present, it
+│     │     │                   instantiates the component type directly with no further PTV check, bypassing
+│     │     │                   the allowlist. This vulnerability is fixed in 2.18.8, 2.21.4, and 3.1.4. 
+│     │     ├ Severity        : HIGH 
+│     │     ├ CweIDs           ─ [0]: CWE-184 
+│     │     ├ VendorSeverity   ─ ghsa: 3 
+│     │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H 
+│     │     │                         ╰ V3Score : 8.1 
+│     │     ├ References       ╭ [0]: https://github.com/FasterXML/jackson-databind 
+│     │     │                  ├ [1]: https://github.com/FasterXML/jackson-databind/commit/01d1692c8d0ed03e51a0
+│     │     │                  │      e3c4f8a9e6908e4931e5 
+│     │     │                  ├ [2]: https://github.com/FasterXML/jackson-databind/commit/24529da29fdf46ff94ca
+│     │     │                  │      38de9ebf31cd188f5e8e 
+│     │     │                  ├ [3]: https://github.com/FasterXML/jackson-databind/issues/5981 
+│     │     │                  ├ [4]: https://github.com/FasterXML/jackson-databind/issues/5983 
+│     │     │                  ├ [5]: https://github.com/FasterXML/jackson-databind/pull/5984 
+│     │     │                  ╰ [6]: https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-rm
+│     │     │                         j7-2vxq-3g9f 
+│     │     ├ PublishedDate   : 2026-06-23T21:17:02.333Z 
+│     │     ╰ LastModifiedDate: 2026-06-23T21:17:02.333Z 
+│     ├ [2] ╭ VulnerabilityID : CVE-2026-54514 
+│     │     ├ VendorIDs        ─ [0]: GHSA-hgj6-7826-r7m5 
+│     │     ├ PkgName         : com.fasterxml.jackson.core:jackson-databind 
+│     │     ├ PkgPath         : openaf/openaf.jar 
+│     │     ├ PkgIdentifier    ╭ PURL: pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.21.3 
+│     │     │                  ╰ UID : af9e86e80fd64186 
+│     │     ├ InstalledVersion: 2.21.3 
+│     │     ├ FixedVersion    : 2.18.8, 2.21.4, 3.1.4 
+│     │     ├ Status          : fixed 
+│     │     ├ Layer            ╭ Digest: sha256:1c5438258b02a91acb66ae67f2df2aef833846604c96674ba8a480cc1016f5af 
+│     │     │                  ╰ DiffID: sha256:3525e3df00766b0e8f5645d901e40ae52d70affaeff7242a0b4e4c05ff77d2b3 
+│     │     ├ SeveritySource  : ghsa 
+│     │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-54514 
+│     │     ├ DataSource       ╭ ID  : ghsa 
+│     │     │                  ├ Name: GitHub Security Advisory Maven 
+│     │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven 
+│     │     ├ Fingerprint     : sha256:6e7f0e7f4930980daed485e43ae3b96bedc1ffbd97cafb088299e85de5199f2f 
+│     │     ├ Title           : jackson-databind: InetSocketAddress deserialization triggers eager DNS
+│     │     │                   resolution (SSRF) 
+│     │     ├ Description     : jackson-databind contains the general-purpose data-binding functionality and
+│     │     │                   tree-model for Jackson Data Processor. From 2.0.0 until 2.18.8, 2.21.4, and
+│     │     │                   3.1.4, JDKFromStringDeserializer constructed InetSocketAddress with new
+│     │     │                   InetSocketAddress(host, port), which performs eager DNS name resolution for
+│     │     │                   hostname inputs at deserialization time. An application that binds untrusted
+│     │     │                   JSON into a type containing an InetSocketAddress field issues an
+│     │     │                   attacker-chosen DNS query during readValue, before any application-level
+│     │     │                   validation or connect logic. The fix uses
+│     │     │                   InetSocketAddress.createUnresolved(host, port), deferring DNS to an explicit
+│     │     │                   connect. This vulnerability is fixed in 2.18.8, 2.21.4, and 3.1.4. 
+│     │     ├ Severity        : MEDIUM 
+│     │     ├ CweIDs           ─ [0]: CWE-918 
+│     │     ├ VendorSeverity   ─ ghsa: 2 
+│     │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N 
+│     │     │                         ╰ V3Score : 5.3 
+│     │     ├ References       ╭ [0]: https://github.com/FasterXML/jackson-databind 
+│     │     │                  ├ [1]: https://github.com/FasterXML/jackson-databind/commit/1f5a1037b1e9e05920e7
+│     │     │                  │      55cb35f198bcd46667e4 
+│     │     │                  ├ [2]: https://github.com/FasterXML/jackson-databind/pull/5951 
+│     │     │                  ╰ [3]: https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-hg
+│     │     │                         j6-7826-r7m5 
+│     │     ├ PublishedDate   : 2026-06-23T21:17:02.467Z 
+│     │     ╰ LastModifiedDate: 2026-06-23T21:17:02.467Z 
+│     ├ [3] ╭ VulnerabilityID : CVE-2026-54515 
+│     │     ├ VendorIDs        ─ [0]: GHSA-5jmj-h7xm-6q6v 
+│     │     ├ PkgName         : com.fasterxml.jackson.core:jackson-databind 
+│     │     ├ PkgPath         : openaf/openaf.jar 
+│     │     ├ PkgIdentifier    ╭ PURL: pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.21.3 
+│     │     │                  ╰ UID : af9e86e80fd64186 
+│     │     ├ InstalledVersion: 2.21.3 
+│     │     ├ FixedVersion    : 3.1.4, 2.18.9, 2.21.5 
+│     │     ├ Status          : fixed 
+│     │     ├ Layer            ╭ Digest: sha256:1c5438258b02a91acb66ae67f2df2aef833846604c96674ba8a480cc1016f5af 
+│     │     │                  ╰ DiffID: sha256:3525e3df00766b0e8f5645d901e40ae52d70affaeff7242a0b4e4c05ff77d2b3 
+│     │     ├ SeveritySource  : ghsa 
+│     │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-54515 
+│     │     ├ DataSource       ╭ ID  : ghsa 
+│     │     │                  ├ Name: GitHub Security Advisory Maven 
+│     │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven 
+│     │     ├ Fingerprint     : sha256:9a96466608dd2784db83d266f118a3ce78fb663565d115b5639d37e3def604f6 
+│     │     ├ Title           : jackson-databind has case-insensitive deserialization bypasses per-property
+│     │     │                   @JsonIgnoreProperties 
+│     │     ├ Description     : jackson-databind contains the general-purpose data-binding functionality and
+│     │     │                   tree-model for Jackson Data Processor. From 2.8.0 until 2.18.9, 2.21.5, and
+│     │     │                   3.1.4, in BeanDeserializerBase.createContextual(), per-property
+│     │     │                   @JsonIgnoreProperties exclusions are applied by _handleByNameInclusion(),
+│     │     │                   producing a contextual deserializer whose BeanPropertyMap has the ignored
+│     │     │                   properties removed. The subsequent per-property case-insensitivity block
+│     │     │                   (triggered by @JsonFormat(ACCEPT_CASE_INSENSITIVE_PROPERTIES)) rebuilds from
+│     │     │                   this._beanProperties (the original, unfiltered map) instead of
+│     │     │                   contextual._beanProperties, then overwrites the filtered map — restoring every
+│     │     │                   property _handleByNameInclusion had just removed. The ignored property becomes
+│     │     │                   writable again. This vulnerability is fixed in 2.18.9, 2.21.5, and 3.1.4. 
+│     │     ├ Severity        : MEDIUM 
+│     │     ├ CweIDs           ─ [0]: CWE-915 
+│     │     ├ VendorSeverity   ─ ghsa: 2 
+│     │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N 
+│     │     │                         ╰ V3Score : 5.3 
+│     │     ├ References       ╭ [0]: https://github.com/FasterXML/jackson-databind 
+│     │     │                  ├ [1]: https://github.com/FasterXML/jackson-databind/commit/0e1b0b211f7a53baa62b
+│     │     │                  │      a2f4c9bd006c7bf4d5fa 
+│     │     │                  ├ [2]: https://github.com/FasterXML/jackson-databind/issues/5962 
+│     │     │                  ├ [3]: https://github.com/FasterXML/jackson-databind/issues/5964 
+│     │     │                  ╰ [4]: https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-5j
+│     │     │                         mj-h7xm-6q6v 
+│     │     ├ PublishedDate   : 2026-06-23T21:17:02.597Z 
+│     │     ╰ LastModifiedDate: 2026-06-23T21:17:02.597Z 
+│     ├ [4] ╭ VulnerabilityID : CVE-2026-54516 
+│     │     ├ VendorIDs        ─ [0]: GHSA-9fxm-vc8v-hj55 
+│     │     ├ PkgName         : com.fasterxml.jackson.core:jackson-databind 
+│     │     ├ PkgPath         : openaf/openaf.jar 
+│     │     ├ PkgIdentifier    ╭ PURL: pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.21.3 
+│     │     │                  ╰ UID : af9e86e80fd64186 
+│     │     ├ InstalledVersion: 2.21.3 
+│     │     ├ FixedVersion    : 2.21.4, 3.1.4 
+│     │     ├ Status          : fixed 
+│     │     ├ Layer            ╭ Digest: sha256:1c5438258b02a91acb66ae67f2df2aef833846604c96674ba8a480cc1016f5af 
+│     │     │                  ╰ DiffID: sha256:3525e3df00766b0e8f5645d901e40ae52d70affaeff7242a0b4e4c05ff77d2b3 
+│     │     ├ SeveritySource  : ghsa 
+│     │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-54516 
+│     │     ├ DataSource       ╭ ID  : ghsa 
+│     │     │                  ├ Name: GitHub Security Advisory Maven 
+│     │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven 
+│     │     ├ Fingerprint     : sha256:0f6b24b5387f0721348e8f346e5d818b2f3e6baa7c7a3b396b1cbc717b12e23f 
+│     │     ├ Title           : jackson-databind's renamed @JsonIgnore'd setters can deserialize via private
+│     │     │                   fields 
+│     │     ├ Description     : jackson-databind contains the general-purpose data-binding functionality and
+│     │     │                   tree-model for Jackson Data Processor. From 2.21.0 until 2.21.4 and 3.1.4,
+│     │     │                   POJOPropertiesCollector._renameProperties() allows a property with
+│     │     │                   @JsonProperty("renamed") on the getter and @JsonIgnore on the setter to be
+│     │     │                   renamed rather than dropped. With MapperFeature.INFER_PROPERTY_MUTATORS enabled
+│     │     │                    (default), the private backing field is retained; during deserialization
+│     │     │                   BeanDeserializerFactory.addBeanProps() sees hasField()==true, builds a
+│     │     │                   FieldProperty, and makes the backing field writable. An attacker supplying the
+│     │     │                   renamed JSON key writes the backing field directly, bypassing the @JsonIgnore
+│     │     │                   on the setter. This vulnerability is fixed in 3.1.4. 
+│     │     ├ Severity        : MEDIUM 
+│     │     ├ CweIDs           ─ [0]: CWE-915 
+│     │     ├ VendorSeverity   ─ ghsa: 2 
+│     │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N 
+│     │     │                         ╰ V3Score : 5.3 
+│     │     ├ References       ╭ [0]: https://github.com/FasterXML/jackson-databind 
+│     │     │                  ├ [1]: https://github.com/FasterXML/jackson-databind/commit/c3d56dd25d5231982814
+│     │     │                  │      7c5b9aeabf2d485c250a 
+│     │     │                  ├ [2]: https://github.com/FasterXML/jackson-databind/commit/e88cb17006b6af4883b9
+│     │     │                  │      73058f0bb6486e5074af 
+│     │     │                  ├ [3]: https://github.com/FasterXML/jackson-databind/pull/5967 
+│     │     │                  ├ [4]: https://github.com/FasterXML/jackson-databind/pull/5968 
+│     │     │                  ╰ [5]: https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-9f
+│     │     │                         xm-vc8v-hj55 
+│     │     ├ PublishedDate   : 2026-06-23T21:17:02.723Z 
+│     │     ╰ LastModifiedDate: 2026-06-23T21:17:02.723Z 
+│     ├ [5] ╭ VulnerabilityID : CVE-2026-54517 
+│     │     ├ VendorIDs        ─ [0]: GHSA-5hh8-q8hv-fr38 
+│     │     ├ PkgName         : com.fasterxml.jackson.core:jackson-databind 
+│     │     ├ PkgPath         : openaf/openaf.jar 
+│     │     ├ PkgIdentifier    ╭ PURL: pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.21.3 
+│     │     │                  ╰ UID : af9e86e80fd64186 
+│     │     ├ InstalledVersion: 2.21.3 
+│     │     ├ FixedVersion    : 2.21.4, 3.1.4 
+│     │     ├ Status          : fixed 
+│     │     ├ Layer            ╭ Digest: sha256:1c5438258b02a91acb66ae67f2df2aef833846604c96674ba8a480cc1016f5af 
+│     │     │                  ╰ DiffID: sha256:3525e3df00766b0e8f5645d901e40ae52d70affaeff7242a0b4e4c05ff77d2b3 
+│     │     ├ SeveritySource  : ghsa 
+│     │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-54517 
+│     │     ├ DataSource       ╭ ID  : ghsa 
+│     │     │                  ├ Name: GitHub Security Advisory Maven 
+│     │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven 
+│     │     ├ Fingerprint     : sha256:e870645149004b2b5f032c93c55f42611203953de77ed7091fd33fe51ebe87e3 
+│     │     ├ Title           : jackson-databind has @JsonView bypass for setterless creator properties 
+│     │     ├ Description     : jackson-databind contains the general-purpose data-binding functionality and
+│     │     │                   tree-model for Jackson Data Processor. From 2.21.0 until 2.21.4 and 3.1.4, in
+│     │     │                   BeanDeserializer._deserializeUsingPropertyBased, the active-view (@JsonView)
+│     │     │                   filter was applied only to creator properties; the regular property-buffering
+│     │     │                   branch performed no prop.visibleInView(activeView) check. A change making
+│     │     │                   SetterlessProperty.isMerging() return true routed setterless Collection/Map
+│     │     │                   properties through this unguarded path, so a setterless collection annotated
+│     │     │                   with a restricted @JsonView is populated from attacker JSON even when the
+│     │     │                   active view excludes it. This vulnerability is fixed in 2.21.4 and 3.1.4. 
+│     │     ├ Severity        : MEDIUM 
+│     │     ├ CweIDs           ─ [0]: CWE-863 
+│     │     ├ VendorSeverity   ─ ghsa: 2 
+│     │     ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N 
+│     │     │                         ╰ V3Score : 5.3 
+│     │     ├ References       ╭ [0]: https://github.com/FasterXML/jackson-databind 
+│     │     │                  ├ [1]: https://github.com/FasterXML/jackson-databind/commit/5bf23edb4221f7dd2ec8
+│     │     │                  │      e71ff6d26c61640f261d 
+│     │     │                  ├ [2]: https://github.com/FasterXML/jackson-databind/commit/94c5d215b3af1505098c
+│     │     │                  │      686405d9641f041a9962 
+│     │     │                  ├ [3]: https://github.com/FasterXML/jackson-databind/pull/5969 
+│     │     │                  ├ [4]: https://github.com/FasterXML/jackson-databind/pull/5970 
+│     │     │                  ╰ [5]: https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-5h
+│     │     │                         h8-q8hv-fr38 
+│     │     ├ PublishedDate   : 2026-06-23T21:17:02.853Z 
+│     │     ╰ LastModifiedDate: 2026-06-23T21:17:02.853Z 
+│     ╰ [6] ╭ VulnerabilityID : CVE-2026-54518 
+│           ├ VendorIDs        ─ [0]: GHSA-rcqc-6cw3-h962 
+│           ├ PkgName         : com.fasterxml.jackson.core:jackson-databind 
+│           ├ PkgPath         : openaf/openaf.jar 
+│           ├ PkgIdentifier    ╭ PURL: pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.21.3 
+│           │                  ╰ UID : af9e86e80fd64186 
+│           ├ InstalledVersion: 2.21.3 
+│           ├ FixedVersion    : 2.21.4 
+│           ├ Status          : fixed 
+│           ├ Layer            ╭ Digest: sha256:1c5438258b02a91acb66ae67f2df2aef833846604c96674ba8a480cc1016f5af 
+│           │                  ╰ DiffID: sha256:3525e3df00766b0e8f5645d901e40ae52d70affaeff7242a0b4e4c05ff77d2b3 
+│           ├ SeveritySource  : ghsa 
+│           ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-54518 
+│           ├ DataSource       ╭ ID  : ghsa 
+│           │                  ├ Name: GitHub Security Advisory Maven 
+│           │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven 
+│           ├ Fingerprint     : sha256:ef55849ba72a57c379e622f3718a0fe166a011f05e50e3a6efbc17ae168dbfd3 
+│           ├ Title           : jackson-databind has a @JsonView bypass for unwrapped creator parameters 
+│           ├ Description     : jackson-databind contains the general-purpose data-binding functionality and
+│           │                   tree-model for Jackson Data Processor. From 2.21.0 until 2.21.4 and 3.1.4,
+│           │                   UnwrappedPropertyHandler.processUnwrappedCreatorProperties() replays buffered
+│           │                   JSON into creator parameters but never consults prop.visibleInView(activeView).
+│           │                    The normal property-based creator path gates creator properties on the active
+│           │                   view, but this unwrapped-creator replay path bypasses that check, so a
+│           │                   constructor parameter annotated with both @JsonView(AdminView.class) and
+│           │                   @JsonUnwrapped is populated from attacker JSON even when a more restrictive
+│           │                   view is active. This vulnerability is fixed in 2.21.4 and 3.1.4. 
+│           ├ Severity        : MEDIUM 
+│           ├ CweIDs           ─ [0]: CWE-863 
+│           ├ VendorSeverity   ─ ghsa: 2 
+│           ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N 
+│           │                         ╰ V3Score : 6.5 
+│           ├ References       ╭ [0]: https://github.com/FasterXML/jackson-databind 
+│           │                  ├ [1]: https://github.com/FasterXML/jackson-databind/commit/721fa07ebbd4aab4a659
+│           │                  │      a1a68940878315c3e341 
+│           │                  ├ [2]: https://github.com/FasterXML/jackson-databind/commit/d633bc038f200c1397c0
+│           │                  │      7f1a2b46f58e72c91eea 
+│           │                  ├ [3]: https://github.com/FasterXML/jackson-databind/pull/5971 
+│           │                  ├ [4]: https://github.com/FasterXML/jackson-databind/pull/5973 
+│           │                  ╰ [5]: https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-rc
+│           │                         qc-6cw3-h962 
+│           ├ PublishedDate   : 2026-06-23T22:16:32.073Z 
+│           ╰ LastModifiedDate: 2026-06-23T22:16:32.073Z 
+├ [1] ╭ [0]  ╭ VulnerabilityID : CVE-2026-34040 
 │     │      ├ VendorIDs        ─ [0]: GHSA-x744-4wpc-v9h2 
 │     │      ├ PkgID           : github.com/docker/docker@v28.5.2+incompatible 
 │     │      ├ PkgName         : github.com/docker/docker 
@@ -644,7 +959,7 @@
 │            │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-42507 
 │            ├ PublishedDate   : 2026-06-02T23:16:38.027Z 
 │            ╰ LastModifiedDate: 2026-06-17T10:47:57.137Z 
-├ [1] ╭ [0]  ╭ VulnerabilityID : CVE-2026-25680 
+├ [2] ╭ [0]  ╭ VulnerabilityID : CVE-2026-25680 
 │     │      ├ VendorIDs        ─ [0]: GO-2026-5028 
 │     │      ├ PkgID           : golang.org/x/net@v0.52.0 
 │     │      ├ PkgName         : golang.org/x/net 
@@ -1027,7 +1342,7 @@
 │            │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-42507 
 │            ├ PublishedDate   : 2026-06-02T23:16:38.027Z 
 │            ╰ LastModifiedDate: 2026-06-17T10:47:57.137Z 
-├ [2] ╭ [0]  ╭ VulnerabilityID : CVE-2025-15558 
+├ [3] ╭ [0]  ╭ VulnerabilityID : CVE-2025-15558 
 │     │      ├ VendorIDs        ─ [0]: GHSA-p436-gjf2-799p 
 │     │      ├ PkgID           : github.com/docker/cli@v28.0.2+incompatible 
 │     │      ├ PkgName         : github.com/docker/cli 
@@ -1892,12 +2207,12 @@
 │     │      │                  │         ╰ V3Score : 7.5 
 │     │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
 │     │      │                            ╰ V3Score : 7.5 
-│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:8456 
+│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:9044 
 │     │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-25679 
 │     │      │                  ├ [2] : https://bugzilla.redhat.com/2445356 
 │     │      │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
 │     │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679 
-│     │      │                  ├ [5] : https://errata.almalinux.org/8/ALSA-2026-8456.html 
+│     │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-9044.html 
 │     │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:9044 
 │     │      │                  ├ [7] : https://go.dev/cl/752180 
 │     │      │                  ├ [8] : https://go.dev/issue/77578 
@@ -1981,28 +2296,27 @@
 │     │      │                  │         ╰ V3Score : 7.5 
 │     │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
 │     │      │                            ╰ V3Score : 7.5 
-│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:16875 
+│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:28074 
 │     │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-32280 
-│     │      │                  ├ [2] : https://bugzilla.redhat.com/2445356 
-│     │      │                  ├ [3] : https://bugzilla.redhat.com/2456336 
-│     │      │                  ├ [4] : https://bugzilla.redhat.com/2456338 
-│     │      │                  ├ [5] : https://bugzilla.redhat.com/2456339 
-│     │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456333 
-│     │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│     │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│     │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280 
-│     │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281 
-│     │      │                  ├ [11]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
-│     │      │                  ├ [12]: https://errata.almalinux.org/8/ALSA-2026-16875.html 
-│     │      │                  ├ [13]: https://errata.rockylinux.org/RLSA-2026:26447 
-│     │      │                  ├ [14]: https://go.dev/cl/758320 
-│     │      │                  ├ [15]: https://go.dev/issue/78282 
-│     │      │                  ├ [16]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
-│     │      │                  ├ [17]: https://linux.oracle.com/cve/CVE-2026-32280.html 
-│     │      │                  ├ [18]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
-│     │      │                  ├ [19]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
-│     │      │                  ├ [20]: https://pkg.go.dev/vuln/GO-2026-4947 
-│     │      │                  ╰ [21]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
+│     │      │                  ├ [2] : https://bugzilla.redhat.com/2456333 
+│     │      │                  ├ [3] : https://bugzilla.redhat.com/2456338 
+│     │      │                  ├ [4] : https://bugzilla.redhat.com/2456339 
+│     │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456333 
+│     │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
+│     │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
+│     │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280 
+│     │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281 
+│     │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
+│     │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-28074.html 
+│     │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:26447 
+│     │      │                  ├ [13]: https://go.dev/cl/758320 
+│     │      │                  ├ [14]: https://go.dev/issue/78282 
+│     │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
+│     │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32280.html 
+│     │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-16875.html 
+│     │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
+│     │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4947 
+│     │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32280 
 │     │      ├ PublishedDate   : 2026-04-08T02:16:03.247Z 
 │     │      ╰ LastModifiedDate: 2026-06-17T10:35:28.84Z 
 │     ├ [22] ╭ VulnerabilityID : CVE-2026-32281 
@@ -2044,7 +2358,7 @@
 │     │      │                  │         ╰ V3Score : 7.5 
 │     │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H 
 │     │      │                            ╰ V3Score : 5.9 
-│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:24470 
+│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:28074 
 │     │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-32281 
 │     │      │                  ├ [2] : https://bugzilla.redhat.com/2456333 
 │     │      │                  ├ [3] : https://bugzilla.redhat.com/2456338 
@@ -2055,7 +2369,7 @@
 │     │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280 
 │     │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281 
 │     │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
-│     │      │                  ├ [11]: https://errata.almalinux.org/10/ALSA-2026-24470.html 
+│     │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-28074.html 
 │     │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:26447 
 │     │      │                  ├ [13]: https://go.dev/cl/758061 
 │     │      │                  ├ [14]: https://go.dev/issue/78281 
@@ -2104,28 +2418,27 @@
 │     │      │                  │         ╰ V3Score : 7.5 
 │     │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
 │     │      │                            ╰ V3Score : 7.5 
-│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:16875 
+│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:28074 
 │     │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-32283 
-│     │      │                  ├ [2] : https://bugzilla.redhat.com/2445356 
-│     │      │                  ├ [3] : https://bugzilla.redhat.com/2456336 
-│     │      │                  ├ [4] : https://bugzilla.redhat.com/2456338 
-│     │      │                  ├ [5] : https://bugzilla.redhat.com/2456339 
-│     │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456333 
-│     │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│     │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│     │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280 
-│     │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281 
-│     │      │                  ├ [11]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
-│     │      │                  ├ [12]: https://errata.almalinux.org/8/ALSA-2026-16875.html 
-│     │      │                  ├ [13]: https://errata.rockylinux.org/RLSA-2026:26447 
-│     │      │                  ├ [14]: https://go.dev/cl/763767 
-│     │      │                  ├ [15]: https://go.dev/issue/78334 
-│     │      │                  ├ [16]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
-│     │      │                  ├ [17]: https://linux.oracle.com/cve/CVE-2026-32283.html 
-│     │      │                  ├ [18]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│     │      │                  ├ [19]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
-│     │      │                  ├ [20]: https://pkg.go.dev/vuln/GO-2026-4870 
-│     │      │                  ╰ [21]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
+│     │      │                  ├ [2] : https://bugzilla.redhat.com/2456333 
+│     │      │                  ├ [3] : https://bugzilla.redhat.com/2456338 
+│     │      │                  ├ [4] : https://bugzilla.redhat.com/2456339 
+│     │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2456333 
+│     │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
+│     │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
+│     │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280 
+│     │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281 
+│     │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
+│     │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2026-28074.html 
+│     │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2026:26447 
+│     │      │                  ├ [13]: https://go.dev/cl/763767 
+│     │      │                  ├ [14]: https://go.dev/issue/78334 
+│     │      │                  ├ [15]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
+│     │      │                  ├ [16]: https://linux.oracle.com/cve/CVE-2026-32283.html 
+│     │      │                  ├ [17]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│     │      │                  ├ [18]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
+│     │      │                  ├ [19]: https://pkg.go.dev/vuln/GO-2026-4870 
+│     │      │                  ╰ [20]: https://www.cve.org/CVERecord?id=CVE-2026-32283 
 │     │      ├ PublishedDate   : 2026-04-08T02:16:03.58Z 
 │     │      ╰ LastModifiedDate: 2026-06-17T10:35:29.263Z 
 │     ├ [24] ╭ VulnerabilityID : CVE-2026-33811 
@@ -2535,38 +2848,42 @@
 │     │      │                  │         ╰ V3Score : 6.4 
 │     │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H 
 │     │      │                            ╰ V3Score : 7.8 
-│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:16875 
+│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:19353 
 │     │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-32282 
 │     │      │                  ├ [2] : https://bugzilla.redhat.com/2445356 
-│     │      │                  ├ [3] : https://bugzilla.redhat.com/2456336 
-│     │      │                  ├ [4] : https://bugzilla.redhat.com/2456338 
-│     │      │                  ├ [5] : https://bugzilla.redhat.com/2456339 
-│     │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2434432 
-│     │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2437111 
-│     │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2445345 
-│     │      │                  ├ [9] : https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
-│     │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2449833 
-│     │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2455470 
-│     │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
-│     │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│     │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-61726 
-│     │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121 
-│     │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679 
-│     │      │                  ├ [17]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27137 
-│     │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282 
-│     │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
-│     │      │                  ├ [20]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33186 
-│     │      │                  ├ [21]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986 
-│     │      │                  ├ [22]: https://errata.almalinux.org/8/ALSA-2026-16875.html 
-│     │      │                  ├ [23]: https://errata.rockylinux.org/RLSA-2026:23228 
-│     │      │                  ├ [24]: https://go.dev/cl/763761 
-│     │      │                  ├ [25]: https://go.dev/issue/78293 
-│     │      │                  ├ [26]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
-│     │      │                  ├ [27]: https://linux.oracle.com/cve/CVE-2026-32282.html 
-│     │      │                  ├ [28]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
-│     │      │                  ├ [29]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-│     │      │                  ├ [30]: https://pkg.go.dev/vuln/GO-2026-4864 
-│     │      │                  ╰ [31]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│     │      │                  ├ [3] : https://bugzilla.redhat.com/2449833 
+│     │      │                  ├ [4] : https://bugzilla.redhat.com/2455470 
+│     │      │                  ├ [5] : https://bugzilla.redhat.com/2456333 
+│     │      │                  ├ [6] : https://bugzilla.redhat.com/2456335 
+│     │      │                  ├ [7] : https://bugzilla.redhat.com/2456336 
+│     │      │                  ├ [8] : https://bugzilla.redhat.com/2456338 
+│     │      │                  ├ [9] : https://bugzilla.redhat.com/2456339 
+│     │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2434432 
+│     │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2437111 
+│     │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2445345 
+│     │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
+│     │      │                  ├ [14]: https://bugzilla.redhat.com/show_bug.cgi?id=2449833 
+│     │      │                  ├ [15]: https://bugzilla.redhat.com/show_bug.cgi?id=2455470 
+│     │      │                  ├ [16]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
+│     │      │                  ├ [17]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
+│     │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-61726 
+│     │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121 
+│     │      │                  ├ [20]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679 
+│     │      │                  ├ [21]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27137 
+│     │      │                  ├ [22]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282 
+│     │      │                  ├ [23]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
+│     │      │                  ├ [24]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33186 
+│     │      │                  ├ [25]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986 
+│     │      │                  ├ [26]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
+│     │      │                  ├ [27]: https://errata.rockylinux.org/RLSA-2026:23228 
+│     │      │                  ├ [28]: https://go.dev/cl/763761 
+│     │      │                  ├ [29]: https://go.dev/issue/78293 
+│     │      │                  ├ [30]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
+│     │      │                  ├ [31]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+│     │      │                  ├ [32]: https://linux.oracle.com/errata/ELSA-2026-17075.html 
+│     │      │                  ├ [33]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│     │      │                  ├ [34]: https://pkg.go.dev/vuln/GO-2026-4864 
+│     │      │                  ╰ [35]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │     │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │     │      ╰ LastModifiedDate: 2026-06-17T10:35:29.12Z 
 │     ├ [34] ╭ VulnerabilityID : CVE-2026-32288 
@@ -2786,7 +3103,7 @@
 │            │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27139 
 │            ├ PublishedDate   : 2026-03-06T22:16:01.07Z 
 │            ╰ LastModifiedDate: 2026-06-17T10:26:44.23Z 
-├ [3] ╭ [0] ╭ VulnerabilityID : CVE-2026-27145 
+├ [4] ╭ [0] ╭ VulnerabilityID : CVE-2026-27145 
 │     │     ├ VendorIDs        ─ [0]: GO-2026-5037 
 │     │     ├ PkgID           : stdlib@v1.26.3 
 │     │     ├ PkgName         : stdlib 
@@ -2892,7 +3209,7 @@
 │           │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-42507 
 │           ├ PublishedDate   : 2026-06-02T23:16:38.027Z 
 │           ╰ LastModifiedDate: 2026-06-17T10:47:57.137Z 
-├ [4] ╭ [0]  ╭ VulnerabilityID : CVE-2026-34040 
+├ [5] ╭ [0]  ╭ VulnerabilityID : CVE-2026-34040 
 │     │      ├ VendorIDs        ─ [0]: GHSA-x744-4wpc-v9h2 
 │     │      ├ PkgID           : github.com/docker/docker@v28.5.1+incompatible 
 │     │      ├ PkgName         : github.com/docker/docker 
@@ -3165,68 +3482,69 @@
 │     │      │                  │       e2801449697322 
 │     │      │                  ├ [1] : http://github.com/opencontainers/runc/commit/fdcc9d3cad2f85954a241ccb91
 │     │      │                  │       0a61aaa1ef47f3 
-│     │      │                  ├ [2] : https://access.redhat.com/errata/RHSA-2025:23543 
+│     │      │                  ├ [2] : https://access.redhat.com/errata/RHSA-2025:22011 
 │     │      │                  ├ [3] : https://access.redhat.com/security/cve/CVE-2025-52881 
 │     │      │                  ├ [4] : https://bugzilla.redhat.com/2404715 
-│     │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2404715 
-│     │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2407258 
-│     │      │                  ├ [7] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-52881 
-│     │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58183 
-│     │      │                  ├ [9] : https://errata.almalinux.org/8/ALSA-2025-23543.html 
-│     │      │                  ├ [10]: https://errata.rockylinux.org/RLSA-2025:22011 
-│     │      │                  ├ [11]: https://github.com/opencontainers/runc 
-│     │      │                  ├ [12]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.2/RELEASES.md 
-│     │      │                  ├ [13]: https://github.com/opencontainers/runc/commit/3f925525b44d247e390e529e7
+│     │      │                  ├ [5] : https://bugzilla.redhat.com/2407258 
+│     │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2404715 
+│     │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2407258 
+│     │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-52881 
+│     │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58183 
+│     │      │                  ├ [10]: https://errata.almalinux.org/9/ALSA-2025-22011.html 
+│     │      │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22011 
+│     │      │                  ├ [12]: https://github.com/opencontainers/runc 
+│     │      │                  ├ [13]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.2/RELEASES.md 
+│     │      │                  ├ [14]: https://github.com/opencontainers/runc/commit/3f925525b44d247e390e529e7
 │     │      │                  │       72a0dc0c0bc3557 
-│     │      │                  ├ [14]: https://github.com/opencontainers/runc/commit/435cc81be6b79cdec73b4002c
+│     │      │                  ├ [15]: https://github.com/opencontainers/runc/commit/435cc81be6b79cdec73b4002c
 │     │      │                  │       0dae549b2f6ae6d 
-│     │      │                  ├ [15]: https://github.com/opencontainers/runc/commit/44a0fcf685db051c80b8c2698
+│     │      │                  ├ [16]: https://github.com/opencontainers/runc/commit/44a0fcf685db051c80b8c2698
 │     │      │                  │       12bb177f5802c58 
-│     │      │                  ├ [16]: https://github.com/opencontainers/runc/commit/4b37cd93f86e72feac8664429
+│     │      │                  ├ [17]: https://github.com/opencontainers/runc/commit/4b37cd93f86e72feac8664429
 │     │      │                  │       88b549b5b7bf3e6 
-│     │      │                  ├ [17]: https://github.com/opencontainers/runc/commit/6fc191449109ea14bb7d61238
+│     │      │                  ├ [18]: https://github.com/opencontainers/runc/commit/6fc191449109ea14bb7d61238
 │     │      │                  │       f24a33fe08c651f 
-│     │      │                  ├ [18]: https://github.com/opencontainers/runc/commit/77889b56db939c323d29d1130
+│     │      │                  ├ [19]: https://github.com/opencontainers/runc/commit/77889b56db939c323d29d1130
 │     │      │                  │       f28f9aea2edb544 
-│     │      │                  ├ [19]: https://github.com/opencontainers/runc/commit/77d217c7c3775d8ca5af89e47
+│     │      │                  ├ [20]: https://github.com/opencontainers/runc/commit/77d217c7c3775d8ca5af89e47
 │     │      │                  │       7e81568ef4572db 
-│     │      │                  ├ [20]: https://github.com/opencontainers/runc/commit/a41366e74080fa9f26a2cd354
+│     │      │                  ├ [21]: https://github.com/opencontainers/runc/commit/a41366e74080fa9f26a2cd354
 │     │      │                  │       4e2801449697322 
-│     │      │                  ├ [21]: https://github.com/opencontainers/runc/commit/b3dd1bc562ed9996d1a0f249e
+│     │      │                  ├ [22]: https://github.com/opencontainers/runc/commit/b3dd1bc562ed9996d1a0f249e
 │     │      │                  │       056c16624046d28 
-│     │      │                  ├ [22]: https://github.com/opencontainers/runc/commit/d40b3439a9614a86e87b81a94
+│     │      │                  ├ [23]: https://github.com/opencontainers/runc/commit/d40b3439a9614a86e87b81a94
 │     │      │                  │       c6811ec6fa2d7d2 
-│     │      │                  ├ [23]: https://github.com/opencontainers/runc/commit/d61fd29d854b416feaaf128bf
+│     │      │                  ├ [24]: https://github.com/opencontainers/runc/commit/d61fd29d854b416feaaf128bf
 │     │      │                  │       650325cd2182165 
-│     │      │                  ├ [24]: https://github.com/opencontainers/runc/commit/db19bbed5348847da433faa9d
+│     │      │                  ├ [25]: https://github.com/opencontainers/runc/commit/db19bbed5348847da433faa9d
 │     │      │                  │       69e9f90192bfa64 
-│     │      │                  ├ [25]: https://github.com/opencontainers/runc/commit/ed6b1693b8b3ae7eb0250a7e7
+│     │      │                  ├ [26]: https://github.com/opencontainers/runc/commit/ed6b1693b8b3ae7eb0250a7e7
 │     │      │                  │       6fc888cdacf98c1 
-│     │      │                  ├ [26]: https://github.com/opencontainers/runc/commit/fdcc9d3cad2f85954a241ccb9
+│     │      │                  ├ [27]: https://github.com/opencontainers/runc/commit/fdcc9d3cad2f85954a241ccb9
 │     │      │                  │       10a61aaa1ef47f3 
-│     │      │                  ├ [27]: https://github.com/opencontainers/runc/commit/ff6fe1324663538167eca8b3d
+│     │      │                  ├ [28]: https://github.com/opencontainers/runc/commit/ff6fe1324663538167eca8b3d
 │     │      │                  │       3eec61e1bd4fa51 
-│     │      │                  ├ [28]: https://github.com/opencontainers/runc/commit/ff94f9991bd32076c871ef0ad
+│     │      │                  ├ [29]: https://github.com/opencontainers/runc/commit/ff94f9991bd32076c871ef0ad
 │     │      │                  │       8bc1b763458e480 
-│     │      │                  ├ [29]: https://github.com/opencontainers/runc/security/advisories/GHSA-9493-h2
+│     │      │                  ├ [30]: https://github.com/opencontainers/runc/security/advisories/GHSA-9493-h2
 │     │      │                  │       9p-rfm2 
-│     │      │                  ├ [30]: https://github.com/opencontainers/runc/security/advisories/GHSA-cgrx-mc
+│     │      │                  ├ [31]: https://github.com/opencontainers/runc/security/advisories/GHSA-cgrx-mc
 │     │      │                  │       8f-2prm 
-│     │      │                  ├ [31]: https://github.com/opencontainers/runc/security/advisories/GHSA-fh74-hm
+│     │      │                  ├ [32]: https://github.com/opencontainers/runc/security/advisories/GHSA-fh74-hm
 │     │      │                  │       69-rqjw 
-│     │      │                  ├ [32]: https://github.com/opencontainers/runc/security/advisories/GHSA-qw9x-cq
+│     │      │                  ├ [33]: https://github.com/opencontainers/runc/security/advisories/GHSA-qw9x-cq
 │     │      │                  │       r3-wc7r 
-│     │      │                  ├ [33]: https://github.com/opencontainers/selinux/pull/237 
-│     │      │                  ├ [34]: https://github.com/opencontainers/selinux/releases/tag/v1.13.0 
-│     │      │                  ├ [35]: https://linux.oracle.com/cve/CVE-2025-52881.html 
-│     │      │                  ├ [36]: https://linux.oracle.com/errata/ELSA-2025-23543.html 
-│     │      │                  ├ [37]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
-│     │      │                  ├ [38]: https://pkg.go.dev/github.com/cyphar/filepath-securejoin/pathrs-lite/pr
+│     │      │                  ├ [34]: https://github.com/opencontainers/selinux/pull/237 
+│     │      │                  ├ [35]: https://github.com/opencontainers/selinux/releases/tag/v1.13.0 
+│     │      │                  ├ [36]: https://linux.oracle.com/cve/CVE-2025-52881.html 
+│     │      │                  ├ [37]: https://linux.oracle.com/errata/ELSA-2025-23543.html 
+│     │      │                  ├ [38]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
+│     │      │                  ├ [39]: https://pkg.go.dev/github.com/cyphar/filepath-securejoin/pathrs-lite/pr
 │     │      │                  │       ocfs 
-│     │      │                  ├ [39]: https://ubuntu.com/security/notices/USN-7851-1 
-│     │      │                  ├ [40]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
-│     │      │                  ├ [41]: https://youtu.be/tGseJW_uBB8 
-│     │      │                  ╰ [42]: https://youtu.be/y1PaBzxwRWQ 
+│     │      │                  ├ [40]: https://ubuntu.com/security/notices/USN-7851-1 
+│     │      │                  ├ [41]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
+│     │      │                  ├ [42]: https://youtu.be/tGseJW_uBB8 
+│     │      │                  ╰ [43]: https://youtu.be/y1PaBzxwRWQ 
 │     │      ├ PublishedDate   : 2025-11-06T21:15:42.817Z 
 │     │      ╰ LastModifiedDate: 2026-06-17T09:37:12.35Z 
 │     ├ [6]  ╭ VulnerabilityID : CVE-2025-66506 
@@ -4303,7 +4621,7 @@
 │            │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-42507 
 │            ├ PublishedDate   : 2026-06-02T23:16:38.027Z 
 │            ╰ LastModifiedDate: 2026-06-17T10:47:57.137Z 
-╰ [5] ╭ [0] ╭ VulnerabilityID : CVE-2026-53488 
+╰ [6] ╭ [0] ╭ VulnerabilityID : CVE-2026-53488 
       │     ├ VendorIDs        ─ [0]: GHSA-xhf5-7wjv-pqxp 
       │     ├ PkgID           : github.com/containerd/containerd/v2@v2.3.1 
       │     ├ PkgName         : github.com/containerd/containerd/v2 
