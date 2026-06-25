@@ -309,6 +309,7 @@
                         │      ├ CweIDs           ─ [0]: CWE-426 
                         │      ├ VendorSeverity   ╭ ghsa  : 3 
                         │      │                  ├ nvd   : 3 
+                        │      │                  ├ photon: 3 
                         │      │                  ╰ redhat: 3 
                         │      ├ CVSS             ╭ ghsa   ╭ V40Vector: CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:H/
                         │      │                  │        │            VI:H/VA:H/SC:N/SI:N/SA:N 
@@ -458,8 +459,9 @@
                         │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
                         │      ├ Fingerprint     : sha256:66bb9e2357763b48a7a9c02da19a7814fcb2a4b0643491fd0deea
                         │      │                   76463e869d2 
-                        │      ├ Title           : When processing HTTP/2 SETTINGS frames, transport will enter
-                        │      │                    an infini ... 
+                        │      ├ Title           : net/http/internal/http2: golang: golang.org/x/net: Go
+                        │      │                   HTTP/2: Denial of Service via malformed
+                        │      │                   SETTINGS_MAX_FRAME_SIZE frame 
                         │      ├ Description     : When processing HTTP/2 SETTINGS frames, transport will enter
                         │      │                    an infinite loop of writing CONTINUATION frames if it
                         │      │                   receives a SETTINGS_MAX_FRAME_SIZE with a value of 0. 
@@ -471,27 +473,32 @@
                         │      │                  ├ nvd        : 3 
                         │      │                  ├ oracle-oval: 3 
                         │      │                  ├ photon     : 3 
+                        │      │                  ├ redhat     : 3 
                         │      │                  ╰ ubuntu     : 2 
                         │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
                         │      │                  │         │           N/A:H 
                         │      │                  │         ╰ V3Score : 7.5 
-                        │      │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+                        │      │                  ├ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+                        │      │                  │         │           N/A:H 
+                        │      │                  │         ╰ V3Score : 7.5 
+                        │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
                         │      │                            │           N/A:H 
                         │      │                            ╰ V3Score : 7.5 
-                        │      ├ References       ╭ [0] : https://github.com/golang/go/issues/78476 
-                        │      │                  ├ [1] : https://go-review.googlesource.com/c/go/+/761581 
-                        │      │                  ├ [2] : https://go-review.googlesource.com/c/net/+/761640 
-                        │      │                  ├ [3] : https://go.dev/cl/761581 
-                        │      │                  ├ [4] : https://go.dev/cl/761640 
-                        │      │                  ├ [5] : https://go.dev/issue/78476 
-                        │      │                  ├ [6] : https://groups.google.com/g/golang-announce/c/qcCIEXs
+                        │      ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2026-33814 
+                        │      │                  ├ [1] : https://github.com/golang/go/issues/78476 
+                        │      │                  ├ [2] : https://go-review.googlesource.com/c/go/+/761581 
+                        │      │                  ├ [3] : https://go-review.googlesource.com/c/net/+/761640 
+                        │      │                  ├ [4] : https://go.dev/cl/761581 
+                        │      │                  ├ [5] : https://go.dev/cl/761640 
+                        │      │                  ├ [6] : https://go.dev/issue/78476 
+                        │      │                  ├ [7] : https://groups.google.com/g/golang-announce/c/qcCIEXs
                         │      │                  │       o47M 
-                        │      │                  ├ [7] : https://linux.oracle.com/cve/CVE-2026-33814.html 
-                        │      │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2026-22112.html 
-                        │      │                  ├ [9] : https://nvd.nist.gov/vuln/detail/CVE-2026-33814 
-                        │      │                  ├ [10]: https://pkg.go.dev/vuln/GO-2026-4918 
-                        │      │                  ├ [11]: https://ubuntu.com/security/notices/USN-8430-1 
-                        │      │                  ╰ [12]: https://www.cve.org/CVERecord?id=CVE-2026-33814 
+                        │      │                  ├ [8] : https://linux.oracle.com/cve/CVE-2026-33814.html 
+                        │      │                  ├ [9] : https://linux.oracle.com/errata/ELSA-2026-22121.html 
+                        │      │                  ├ [10]: https://nvd.nist.gov/vuln/detail/CVE-2026-33814 
+                        │      │                  ├ [11]: https://pkg.go.dev/vuln/GO-2026-4918 
+                        │      │                  ├ [12]: https://ubuntu.com/security/notices/USN-8430-1 
+                        │      │                  ╰ [13]: https://www.cve.org/CVERecord?id=CVE-2026-33814 
                         │      ├ PublishedDate   : 2026-05-07T20:16:42.88Z 
                         │      ╰ LastModifiedDate: 2026-06-17T10:38:08.657Z 
                         ├ [10] ╭ VulnerabilityID : CVE-2026-39821 
