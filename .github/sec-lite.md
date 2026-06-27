@@ -85,8 +85,8 @@
                         │      │                          cosystem%3Ago 
                         │      ├ Fingerprint     : sha256:511568f15773302b2170e8eb0aa1428e82a657e9faf74d3d1c144
                         │      │                   b5c2820f9e1 
-                        │      ├ Title           : Moby is an open source container framework. In versions
-                        │      │                   prior to 29.5. ... 
+                        │      ├ Title           : docker: Moby/Docker Engine: Arbitrary Code Execution via
+                        │      │                   malicious container image and compressed archive upload 
                         │      ├ Description     : Moby is an open source container framework. In versions
                         │      │                   prior to 29.5.1 and in moby/moby v2 prior to v2.0.0-beta.14,
                         │      │                    when a compressed archive is uploaded to a container via
@@ -107,13 +107,20 @@
                         │      │                   untrusted images 
                         │      ├ Severity        : HIGH 
                         │      ├ CweIDs           ─ [0]: CWE-427 
-                        │      ├ VendorSeverity   ─ ghsa: 3 
-                        │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:N 
-                        │      │                         ╰ V3Score : 7.2 
-                        │      ├ References       ╭ [0]: https://github.com/moby/moby 
-                        │      │                  ├ [1]: https://github.com/moby/moby/security/advisories/GHSA-
+                        │      ├ VendorSeverity   ╭ ghsa  : 3 
+                        │      │                  ╰ redhat: 3 
+                        │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:H/I:H
+                        │      │                  │        │           /A:N 
+                        │      │                  │        ╰ V3Score : 7.2 
+                        │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:H/I:H
+                        │      │                           │           /A:H 
+                        │      │                           ╰ V3Score : 7.5 
+                        │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-41567 
+                        │      │                  ├ [1]: https://github.com/moby/moby 
+                        │      │                  ├ [2]: https://github.com/moby/moby/security/advisories/GHSA-
                         │      │                  │      x86f-5xw2-fm2r 
-                        │      │                  ╰ [2]: https://nvd.nist.gov/vuln/detail/CVE-2026-41567 
+                        │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-41567 
+                        │      │                  ╰ [4]: https://www.cve.org/CVERecord?id=CVE-2026-41567 
                         │      ├ PublishedDate   : 2026-06-05T02:17:13.817Z 
                         │      ╰ LastModifiedDate: 2026-06-17T10:46:51.687Z 
                         ├ [2]  ╭ VulnerabilityID : CVE-2026-42306 
@@ -498,7 +505,10 @@
                         │      │                  ├ [10]: https://nvd.nist.gov/vuln/detail/CVE-2026-33814 
                         │      │                  ├ [11]: https://pkg.go.dev/vuln/GO-2026-4918 
                         │      │                  ├ [12]: https://ubuntu.com/security/notices/USN-8430-1 
-                        │      │                  ╰ [13]: https://www.cve.org/CVERecord?id=CVE-2026-33814 
+                        │      │                  ├ [13]: https://ubuntu.com/security/notices/USN-8471-1 
+                        │      │                  ├ [14]: https://ubuntu.com/security/notices/USN-8472-1 
+                        │      │                  ├ [15]: https://ubuntu.com/security/notices/USN-8473-1 
+                        │      │                  ╰ [16]: https://www.cve.org/CVERecord?id=CVE-2026-33814 
                         │      ├ PublishedDate   : 2026-05-07T20:16:42.88Z 
                         │      ╰ LastModifiedDate: 2026-06-17T10:38:08.657Z 
                         ├ [10] ╭ VulnerabilityID : CVE-2026-39821 
@@ -772,23 +782,31 @@
                                │                   might allow an attacker to inject misleading content to
                                │                   errors that are printed or logged. 
                                ├ Severity        : MEDIUM 
-                               ├ VendorSeverity   ╭ amazon : 3 
-                               │                  ├ bitnami: 2 
-                               │                  ╰ redhat : 2 
+                               ├ VendorSeverity   ╭ amazon     : 3 
+                               │                  ├ bitnami    : 2 
+                               │                  ├ oracle-oval: 2 
+                               │                  ├ redhat     : 2 
+                               │                  ╰ rocky      : 2 
                                ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
                                │                  │         │           L/A:N 
                                │                  │         ╰ V3Score : 5.3 
                                │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
                                │                            │           L/A:N 
                                │                            ╰ V3Score : 5.3 
-                               ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-42507 
-                               │                  ├ [1]: https://go.dev/cl/777060 
-                               │                  ├ [2]: https://go.dev/issue/79346 
-                               │                  ├ [3]: https://groups.google.com/g/golang-announce/c/tKs3rmcB
-                               │                  │      cKw 
-                               │                  ├ [4]: https://nvd.nist.gov/vuln/detail/CVE-2026-42507 
-                               │                  ├ [5]: https://pkg.go.dev/vuln/GO-2026-5039 
-                               │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-42507 
+                               ├ References       ╭ [0] : https://access.redhat.com/security/cve/CVE-2026-42507 
+                               │                  ├ [1] : https://bugzilla.redhat.com/show_bug.cgi?id=2484205 
+                               │                  ├ [2] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-20
+                               │                  │       26-42507 
+                               │                  ├ [3] : https://errata.rockylinux.org/RLSA-2026:29981 
+                               │                  ├ [4] : https://go.dev/cl/777060 
+                               │                  ├ [5] : https://go.dev/issue/79346 
+                               │                  ├ [6] : https://groups.google.com/g/golang-announce/c/tKs3rmc
+                               │                  │       BcKw 
+                               │                  ├ [7] : https://linux.oracle.com/cve/CVE-2026-42507.html 
+                               │                  ├ [8] : https://linux.oracle.com/errata/ELSA-2026-29981.html 
+                               │                  ├ [9] : https://nvd.nist.gov/vuln/detail/CVE-2026-42507 
+                               │                  ├ [10]: https://pkg.go.dev/vuln/GO-2026-5039 
+                               │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2026-42507 
                                ├ PublishedDate   : 2026-06-02T23:16:38.027Z 
                                ╰ LastModifiedDate: 2026-06-17T10:47:57.137Z 
 ```
