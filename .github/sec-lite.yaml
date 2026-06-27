@@ -80,21 +80,27 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:511568f15773302b2170e8eb0aa1428e82a657e9faf74d3d1c144b5c2820f9e1
-    Title: Moby is an open source container framework. In versions prior to 29.5. ...
+    Title: 'docker: Moby/Docker Engine: Arbitrary Code Execution via malicious container image and compressed archive upload'
     Description: Moby is an open source container framework. In versions prior to 29.5.1 and in moby/moby v2 prior to v2.0.0-beta.14, when a compressed archive is uploaded to a container via `PUT /containers/{id}/archive` or piped through `docker cp -`, the daemon resolves decompression binaries (such as `xz` or `unpigz`) from the container's filesystem rather than the host's due to incorrect ordering of operations. A malicious container image containing a trojanized decompression binary can achieve arbitrary code execution with full daemon privileges, including host root UID and unrestricted capabilities, when a user uploads a compressed (xz or gzip) archive into that container. This issue is fixed in Docker Engine 29.5.1 and moby/moby v2.0.0-beta.14. Workarounds include only running containers from trusted images, using authorization plugins to restrict access to the `PUT /containers/{id}/archive` endpoint, and avoiding piping compressed archives into containers created from untrusted images
     Severity: HIGH
     CweIDs:
     - CWE-427
     VendorSeverity:
       ghsa: 3
+      redhat: 3
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:N
         V3Score: 7.2
+      redhat:
+        V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H
+        V3Score: 7.5
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-41567
     - https://github.com/moby/moby
     - https://github.com/moby/moby/security/advisories/GHSA-x86f-5xw2-fm2r
     - https://nvd.nist.gov/vuln/detail/CVE-2026-41567
+    - https://www.cve.org/CVERecord?id=CVE-2026-41567
     PublishedDate: '2026-06-05T02:17:13.817Z'
     LastModifiedDate: '2026-06-17T10:46:51.687Z'
   - VulnerabilityID: CVE-2026-42306
@@ -454,6 +460,9 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2026-33814
     - https://pkg.go.dev/vuln/GO-2026-4918
     - https://ubuntu.com/security/notices/USN-8430-1
+    - https://ubuntu.com/security/notices/USN-8471-1
+    - https://ubuntu.com/security/notices/USN-8472-1
+    - https://ubuntu.com/security/notices/USN-8473-1
     - https://www.cve.org/CVERecord?id=CVE-2026-33814
     PublishedDate: '2026-05-07T20:16:42.88Z'
     LastModifiedDate: '2026-06-17T10:38:08.657Z'
@@ -711,7 +720,9 @@
     VendorSeverity:
       amazon: 3
       bitnami: 2
+      oracle-oval: 2
       redhat: 2
+      rocky: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
@@ -721,9 +732,14 @@
         V3Score: 5.3
     References:
     - https://access.redhat.com/security/cve/CVE-2026-42507
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2484205
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42507
+    - https://errata.rockylinux.org/RLSA-2026:29981
     - https://go.dev/cl/777060
     - https://go.dev/issue/79346
     - https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw
+    - https://linux.oracle.com/cve/CVE-2026-42507.html
+    - https://linux.oracle.com/errata/ELSA-2026-29981.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-42507
     - https://pkg.go.dev/vuln/GO-2026-5039
     - https://www.cve.org/CVERecord?id=CVE-2026-42507
