@@ -718,6 +718,7 @@
     Description: When returning errors, functions in the net/textproto package would include its input as part of the error. This might allow an attacker to inject misleading content to errors that are printed or logged.
     Severity: MEDIUM
     VendorSeverity:
+      alma: 2
       amazon: 3
       bitnami: 2
       oracle-oval: 2
@@ -731,9 +732,12 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
         V3Score: 5.3
     References:
+    - https://access.redhat.com/errata/RHSA-2026:29980
     - https://access.redhat.com/security/cve/CVE-2026-42507
+    - https://bugzilla.redhat.com/2484205
     - https://bugzilla.redhat.com/show_bug.cgi?id=2484205
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42507
+    - https://errata.almalinux.org/10/ALSA-2026-29980.html
     - https://errata.rockylinux.org/RLSA-2026:29981
     - https://go.dev/cl/777060
     - https://go.dev/issue/79346
