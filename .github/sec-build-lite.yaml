@@ -492,6 +492,7 @@
     CweIDs:
     - CWE-1289
     VendorSeverity:
+      alma: 3
       amazon: 3
       azure: 4
       redhat: 3
@@ -501,7 +502,10 @@
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N
         V3Score: 8.2
     References:
+    - https://access.redhat.com/errata/RHSA-2026:30853
     - https://access.redhat.com/security/cve/CVE-2026-39821
+    - https://bugzilla.redhat.com/2480756
+    - https://errata.almalinux.org/8/ALSA-2026-30853.html
     - https://github.com/golang/go/issues/78760
     - https://go.dev/cl/767220
     - https://go.dev/issue/78760
