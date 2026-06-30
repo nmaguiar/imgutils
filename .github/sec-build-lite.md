@@ -546,23 +546,27 @@
                         │      │                   "example.com". 
                         │      ├ Severity        : HIGH 
                         │      ├ CweIDs           ─ [0]: CWE-1289 
-                        │      ├ VendorSeverity   ╭ amazon: 3 
+                        │      ├ VendorSeverity   ╭ alma  : 3 
+                        │      │                  ├ amazon: 3 
                         │      │                  ├ azure : 4 
                         │      │                  ├ redhat: 3 
                         │      │                  ╰ ubuntu: 2 
                         │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H
                         │      │                           │           /A:N 
                         │      │                           ╰ V3Score : 8.2 
-                        │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-39821 
-                        │      │                  ├ [1]: https://github.com/golang/go/issues/78760 
-                        │      │                  ├ [2]: https://go.dev/cl/767220 
-                        │      │                  ├ [3]: https://go.dev/issue/78760 
-                        │      │                  ├ [4]: https://groups.google.com/g/golang-announce/c/iI-mYSI0
-                        │      │                  │      lu8 
-                        │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-39821 
-                        │      │                  ├ [6]: https://pkg.go.dev/vuln/GO-2026-5026 
-                        │      │                  ├ [7]: https://ubuntu.com/security/notices/USN-8416-1 
-                        │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-39821 
+                        │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:30853 
+                        │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-39821 
+                        │      │                  ├ [2] : https://bugzilla.redhat.com/2480756 
+                        │      │                  ├ [3] : https://errata.almalinux.org/8/ALSA-2026-30853.html 
+                        │      │                  ├ [4] : https://github.com/golang/go/issues/78760 
+                        │      │                  ├ [5] : https://go.dev/cl/767220 
+                        │      │                  ├ [6] : https://go.dev/issue/78760 
+                        │      │                  ├ [7] : https://groups.google.com/g/golang-announce/c/iI-mYSI
+                        │      │                  │       0lu8 
+                        │      │                  ├ [8] : https://nvd.nist.gov/vuln/detail/CVE-2026-39821 
+                        │      │                  ├ [9] : https://pkg.go.dev/vuln/GO-2026-5026 
+                        │      │                  ├ [10]: https://ubuntu.com/security/notices/USN-8416-1 
+                        │      │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2026-39821 
                         │      ├ PublishedDate   : 2026-05-22T16:16:20.41Z 
                         │      ╰ LastModifiedDate: 2026-06-17T10:42:38.333Z 
                         ├ [11] ╭ VulnerabilityID : CVE-2026-42502 
