@@ -427,6 +427,7 @@
     - CWE-427
     VendorSeverity:
       ghsa: 3
+      photon: 3
       redhat: 3
     CVSS:
       ghsa:
@@ -475,6 +476,7 @@
       amazon: 3
       ghsa: 3
       nvd: 3
+      photon: 3
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:H/A:H
@@ -866,7 +868,7 @@
     - https://access.redhat.com/security/cve/CVE-2026-39821
     - https://bugzilla.redhat.com/2480756
     - https://bugzilla.redhat.com/show_bug.cgi?id=2480756
-    - https://errata.almalinux.org/9/ALSA-2026-30854.html
+    - https://errata.almalinux.org/10/ALSA-2026-30855.html
     - https://github.com/golang/go/issues/78760
     - https://go.dev/cl/767220
     - https://go.dev/issue/78760
@@ -1060,7 +1062,7 @@
     CweIDs:
     - CWE-606
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       bitnami: 2
       redhat: 3
     CVSS:
@@ -1107,11 +1109,11 @@
     Fingerprint: sha256:58a5ae5f1d363af6b4948d28d2bb1cd8d54575b5b5d6e7670ae7960bf96ea169
     Title: Decoding a maliciously-crafted MIME header containing many invalid enc ...
     Description: Decoding a maliciously-crafted MIME header containing many invalid encoded-words can consume excessive CPU.
-    Severity: HIGH
+    Severity: MEDIUM
     CweIDs:
     - CWE-407
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       azure: 3
       bitnami: 3
     CVSS:
@@ -1151,7 +1153,7 @@
     Severity: MEDIUM
     VendorSeverity:
       alma: 2
-      amazon: 3
+      amazon: 2
       bitnami: 2
       oracle-oval: 2
       redhat: 2
@@ -1164,12 +1166,12 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
         V3Score: 5.3
     References:
-    - https://access.redhat.com/errata/RHSA-2026:29981
+    - https://access.redhat.com/errata/RHSA-2026:29980
     - https://access.redhat.com/security/cve/CVE-2026-42507
     - https://bugzilla.redhat.com/2484205
     - https://bugzilla.redhat.com/show_bug.cgi?id=2484205
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42507
-    - https://errata.almalinux.org/9/ALSA-2026-29981.html
+    - https://errata.almalinux.org/10/ALSA-2026-29980.html
     - https://errata.rockylinux.org/RLSA-2026:29981
     - https://go.dev/cl/777060
     - https://go.dev/issue/79346
@@ -1212,7 +1214,7 @@
     CweIDs:
     - CWE-606
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       bitnami: 2
       redhat: 3
     CVSS:
@@ -1259,11 +1261,11 @@
     Fingerprint: sha256:d78e437b9181c83c13ec3ded2cc242caccdd965e9b35ac737431a382b98057d1
     Title: Decoding a maliciously-crafted MIME header containing many invalid enc ...
     Description: Decoding a maliciously-crafted MIME header containing many invalid encoded-words can consume excessive CPU.
-    Severity: HIGH
+    Severity: MEDIUM
     CweIDs:
     - CWE-407
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       azure: 3
       bitnami: 3
     CVSS:
@@ -1303,7 +1305,7 @@
     Severity: MEDIUM
     VendorSeverity:
       alma: 2
-      amazon: 3
+      amazon: 2
       bitnami: 2
       oracle-oval: 2
       redhat: 2
@@ -1316,12 +1318,12 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
         V3Score: 5.3
     References:
-    - https://access.redhat.com/errata/RHSA-2026:29981
+    - https://access.redhat.com/errata/RHSA-2026:29980
     - https://access.redhat.com/security/cve/CVE-2026-42507
     - https://bugzilla.redhat.com/2484205
     - https://bugzilla.redhat.com/show_bug.cgi?id=2484205
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42507
-    - https://errata.almalinux.org/9/ALSA-2026-29981.html
+    - https://errata.almalinux.org/10/ALSA-2026-29980.html
     - https://errata.rockylinux.org/RLSA-2026:29981
     - https://go.dev/cl/777060
     - https://go.dev/issue/79346
@@ -1480,6 +1482,7 @@
     - CWE-427
     VendorSeverity:
       ghsa: 3
+      photon: 3
       redhat: 3
     CVSS:
       ghsa:
@@ -1528,6 +1531,7 @@
       amazon: 3
       ghsa: 3
       nvd: 3
+      photon: 3
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:H/A:H
@@ -1948,7 +1952,7 @@
     - https://access.redhat.com/security/cve/CVE-2026-39821
     - https://bugzilla.redhat.com/2480756
     - https://bugzilla.redhat.com/show_bug.cgi?id=2480756
-    - https://errata.almalinux.org/9/ALSA-2026-30854.html
+    - https://errata.almalinux.org/10/ALSA-2026-30855.html
     - https://github.com/golang/go/issues/78760
     - https://go.dev/cl/767220
     - https://go.dev/issue/78760
@@ -2299,7 +2303,7 @@
     - CWE-1286
     VendorSeverity:
       alma: 3
-      amazon: 2
+      amazon: 3
       azure: 3
       bitnami: 3
       oracle-oval: 3
@@ -2543,7 +2547,7 @@
     - https://bugzilla.redhat.com/2445356
     - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
-    - https://errata.almalinux.org/9/ALSA-2026-9044.html
+    - https://errata.almalinux.org/10/ALSA-2026-8840.html
     - https://errata.rockylinux.org/RLSA-2026:9044
     - https://go.dev/cl/752180
     - https://go.dev/issue/77578
@@ -2582,7 +2586,7 @@
     CweIDs:
     - CWE-606
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       bitnami: 2
       redhat: 3
     CVSS:
@@ -2787,7 +2791,7 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
-    - https://errata.almalinux.org/9/ALSA-2026-29703.html
+    - https://errata.almalinux.org/10/ALSA-2026-29195.html
     - https://errata.rockylinux.org/RLSA-2026:29703
     - https://go.dev/cl/758320
     - https://go.dev/issue/78282
@@ -2846,7 +2850,7 @@
         V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 5.9
     References:
-    - https://access.redhat.com/errata/RHSA-2026:29703
+    - https://access.redhat.com/errata/RHSA-2026:29195
     - https://access.redhat.com/security/cve/CVE-2026-32281
     - https://bugzilla.redhat.com/2445356
     - https://bugzilla.redhat.com/2456333
@@ -2860,7 +2864,7 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
-    - https://errata.almalinux.org/9/ALSA-2026-29703.html
+    - https://errata.almalinux.org/10/ALSA-2026-29195.html
     - https://errata.rockylinux.org/RLSA-2026:29703
     - https://go.dev/cl/758061
     - https://go.dev/issue/78281
@@ -3024,7 +3028,7 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
-    - https://errata.almalinux.org/9/ALSA-2026-29703.html
+    - https://errata.almalinux.org/10/ALSA-2026-29195.html
     - https://errata.rockylinux.org/RLSA-2026:29703
     - https://go.dev/cl/763767
     - https://go.dev/issue/78334
@@ -3350,47 +3354,6 @@
     - https://www.cve.org/CVERecord?id=CVE-2026-42499
     PublishedDate: '2026-05-07T20:16:44.54Z'
     LastModifiedDate: '2026-07-02T12:17:17.153Z'
-  - VulnerabilityID: CVE-2026-42504
-    VendorIDs:
-    - GO-2026-5038
-    PkgID: stdlib@v1.24.13
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.24.13
-      UID: ae746daa41f315ef
-    InstalledVersion: v1.24.13
-    FixedVersion: 1.25.11, 1.26.4
-    Status: fixed
-    Layer:
-      Digest: sha256:72ca0d86ff07c02c36746acea444de6fc032319d050e4cdb49ce926c2ac46d75
-      DiffID: sha256:4aa68222e359a43a7893ddd023cb05c61cc00781184f26c00b919f25a11b8bcb
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-42504
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:ee2fc6f37535e46dad0928de4153ddae8da8270bf3f54b5266e533f02a833f25
-    Title: Decoding a maliciously-crafted MIME header containing many invalid enc ...
-    Description: Decoding a maliciously-crafted MIME header containing many invalid encoded-words can consume excessive CPU.
-    Severity: HIGH
-    CweIDs:
-    - CWE-407
-    VendorSeverity:
-      amazon: 3
-      azure: 3
-      bitnami: 3
-    CVSS:
-      bitnami:
-        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
-        V3Score: 7.5
-    References:
-    - https://go.dev/cl/774481
-    - https://go.dev/issue/79217
-    - https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw
-    - https://nvd.nist.gov/vuln/detail/CVE-2026-42504
-    - https://pkg.go.dev/vuln/GO-2026-5038
-    PublishedDate: '2026-06-02T23:16:37.927Z'
-    LastModifiedDate: '2026-06-17T10:47:56.86Z'
   - VulnerabilityID: CVE-2026-27142
     VendorIDs:
     - GO-2026-4603
@@ -3484,16 +3447,10 @@
         V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H
         V3Score: 7.8
     References:
-    - https://access.redhat.com/errata/RHSA-2026:19353
+    - https://access.redhat.com/errata/RHSA-2026:19136
     - https://access.redhat.com/security/cve/CVE-2026-32282
-    - https://bugzilla.redhat.com/2445356
-    - https://bugzilla.redhat.com/2449833
-    - https://bugzilla.redhat.com/2455470
-    - https://bugzilla.redhat.com/2456333
-    - https://bugzilla.redhat.com/2456335
     - https://bugzilla.redhat.com/2456336
     - https://bugzilla.redhat.com/2456338
-    - https://bugzilla.redhat.com/2456339
     - https://bugzilla.redhat.com/show_bug.cgi?id=2434432
     - https://bugzilla.redhat.com/show_bug.cgi?id=2437111
     - https://bugzilla.redhat.com/show_bug.cgi?id=2445345
@@ -3510,7 +3467,7 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33186
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986
-    - https://errata.almalinux.org/9/ALSA-2026-19353.html
+    - https://errata.almalinux.org/10/ALSA-2026-19136.html
     - https://errata.rockylinux.org/RLSA-2026:23228
     - https://go.dev/cl/763761
     - https://go.dev/issue/78293
@@ -3776,6 +3733,47 @@
     - https://www.cve.org/CVERecord?id=CVE-2026-39826
     PublishedDate: '2026-05-07T20:16:43.49Z'
     LastModifiedDate: '2026-06-17T10:42:38.923Z'
+  - VulnerabilityID: CVE-2026-42504
+    VendorIDs:
+    - GO-2026-5038
+    PkgID: stdlib@v1.24.13
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.24.13
+      UID: ae746daa41f315ef
+    InstalledVersion: v1.24.13
+    FixedVersion: 1.25.11, 1.26.4
+    Status: fixed
+    Layer:
+      Digest: sha256:72ca0d86ff07c02c36746acea444de6fc032319d050e4cdb49ce926c2ac46d75
+      DiffID: sha256:4aa68222e359a43a7893ddd023cb05c61cc00781184f26c00b919f25a11b8bcb
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-42504
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:ee2fc6f37535e46dad0928de4153ddae8da8270bf3f54b5266e533f02a833f25
+    Title: Decoding a maliciously-crafted MIME header containing many invalid enc ...
+    Description: Decoding a maliciously-crafted MIME header containing many invalid encoded-words can consume excessive CPU.
+    Severity: MEDIUM
+    CweIDs:
+    - CWE-407
+    VendorSeverity:
+      amazon: 2
+      azure: 3
+      bitnami: 3
+    CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://go.dev/cl/774481
+    - https://go.dev/issue/79217
+    - https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-42504
+    - https://pkg.go.dev/vuln/GO-2026-5038
+    PublishedDate: '2026-06-02T23:16:37.927Z'
+    LastModifiedDate: '2026-06-17T10:47:56.86Z'
   - VulnerabilityID: CVE-2026-42507
     VendorIDs:
     - GO-2026-5039
@@ -3801,7 +3799,7 @@
     Severity: MEDIUM
     VendorSeverity:
       alma: 2
-      amazon: 3
+      amazon: 2
       bitnami: 2
       oracle-oval: 2
       redhat: 2
@@ -3814,12 +3812,12 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
         V3Score: 5.3
     References:
-    - https://access.redhat.com/errata/RHSA-2026:29981
+    - https://access.redhat.com/errata/RHSA-2026:29980
     - https://access.redhat.com/security/cve/CVE-2026-42507
     - https://bugzilla.redhat.com/2484205
     - https://bugzilla.redhat.com/show_bug.cgi?id=2484205
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42507
-    - https://errata.almalinux.org/9/ALSA-2026-29981.html
+    - https://errata.almalinux.org/10/ALSA-2026-29980.html
     - https://errata.rockylinux.org/RLSA-2026:29981
     - https://go.dev/cl/777060
     - https://go.dev/issue/79346
@@ -3910,7 +3908,7 @@
     CweIDs:
     - CWE-606
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       bitnami: 2
       redhat: 3
     CVSS:
@@ -3957,11 +3955,11 @@
     Fingerprint: sha256:6cfa94be128dfa74a97d21a067c0d83d75d5be8ba3f4c98725cf99be8a91173b
     Title: Decoding a maliciously-crafted MIME header containing many invalid enc ...
     Description: Decoding a maliciously-crafted MIME header containing many invalid encoded-words can consume excessive CPU.
-    Severity: HIGH
+    Severity: MEDIUM
     CweIDs:
     - CWE-407
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       azure: 3
       bitnami: 3
     CVSS:
@@ -4001,7 +3999,7 @@
     Severity: MEDIUM
     VendorSeverity:
       alma: 2
-      amazon: 3
+      amazon: 2
       bitnami: 2
       oracle-oval: 2
       redhat: 2
@@ -4014,12 +4012,12 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
         V3Score: 5.3
     References:
-    - https://access.redhat.com/errata/RHSA-2026:29981
+    - https://access.redhat.com/errata/RHSA-2026:29980
     - https://access.redhat.com/security/cve/CVE-2026-42507
     - https://bugzilla.redhat.com/2484205
     - https://bugzilla.redhat.com/show_bug.cgi?id=2484205
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42507
-    - https://errata.almalinux.org/9/ALSA-2026-29981.html
+    - https://errata.almalinux.org/10/ALSA-2026-29980.html
     - https://errata.rockylinux.org/RLSA-2026:29981
     - https://go.dev/cl/777060
     - https://go.dev/issue/79346
@@ -4341,6 +4339,7 @@
     - CWE-427
     VendorSeverity:
       ghsa: 3
+      photon: 3
       redhat: 3
     CVSS:
       ghsa:
@@ -4389,6 +4388,7 @@
       amazon: 3
       ghsa: 3
       nvd: 3
+      photon: 3
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:H/A:H
@@ -4559,15 +4559,14 @@
     - http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-52881
     - http://github.com/opencontainers/runc/commit/a41366e74080fa9f26a2cd3544e2801449697322
     - http://github.com/opencontainers/runc/commit/fdcc9d3cad2f85954a241ccb910a61aaa1ef47f3
-    - https://access.redhat.com/errata/RHSA-2025:22011
+    - https://access.redhat.com/errata/RHSA-2025:21220
     - https://access.redhat.com/security/cve/CVE-2025-52881
     - https://bugzilla.redhat.com/2404715
-    - https://bugzilla.redhat.com/2407258
     - https://bugzilla.redhat.com/show_bug.cgi?id=2404715
     - https://bugzilla.redhat.com/show_bug.cgi?id=2407258
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-52881
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58183
-    - https://errata.almalinux.org/9/ALSA-2025-22011.html
+    - https://errata.almalinux.org/10/ALSA-2025-21220.html
     - https://errata.rockylinux.org/RLSA-2025:22011
     - https://github.com/bottlerocket-os/bottlerocket-core-kit/blob/develop/advisories/10.9.0/BRSA-fokfzmhxepqx.toml
     - https://github.com/opencontainers/runc
@@ -5730,7 +5729,7 @@
     - https://access.redhat.com/security/cve/CVE-2026-39821
     - https://bugzilla.redhat.com/2480756
     - https://bugzilla.redhat.com/show_bug.cgi?id=2480756
-    - https://errata.almalinux.org/9/ALSA-2026-30854.html
+    - https://errata.almalinux.org/10/ALSA-2026-30855.html
     - https://github.com/golang/go/issues/78760
     - https://go.dev/cl/767220
     - https://go.dev/issue/78760
@@ -5924,7 +5923,7 @@
     CweIDs:
     - CWE-606
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       bitnami: 2
       redhat: 3
     CVSS:
@@ -5971,11 +5970,11 @@
     Fingerprint: sha256:4bb9ea0809a3df66977d6774e9cf6af75c9911f430f8fec781245a002d915718
     Title: Decoding a maliciously-crafted MIME header containing many invalid enc ...
     Description: Decoding a maliciously-crafted MIME header containing many invalid encoded-words can consume excessive CPU.
-    Severity: HIGH
+    Severity: MEDIUM
     CweIDs:
     - CWE-407
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       azure: 3
       bitnami: 3
     CVSS:
@@ -6015,7 +6014,7 @@
     Severity: MEDIUM
     VendorSeverity:
       alma: 2
-      amazon: 3
+      amazon: 2
       bitnami: 2
       oracle-oval: 2
       redhat: 2
@@ -6028,12 +6027,12 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
         V3Score: 5.3
     References:
-    - https://access.redhat.com/errata/RHSA-2026:29981
+    - https://access.redhat.com/errata/RHSA-2026:29980
     - https://access.redhat.com/security/cve/CVE-2026-42507
     - https://bugzilla.redhat.com/2484205
     - https://bugzilla.redhat.com/show_bug.cgi?id=2484205
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42507
-    - https://errata.almalinux.org/9/ALSA-2026-29981.html
+    - https://errata.almalinux.org/10/ALSA-2026-29980.html
     - https://errata.rockylinux.org/RLSA-2026:29981
     - https://go.dev/cl/777060
     - https://go.dev/issue/79346
@@ -6076,7 +6075,7 @@
     CweIDs:
     - CWE-606
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       bitnami: 2
       redhat: 3
     CVSS:
@@ -6123,11 +6122,11 @@
     Fingerprint: sha256:8bf53941cd1e4574b05820cc99888a12957f4728e49fd46b0f16f012a8ebe76d
     Title: Decoding a maliciously-crafted MIME header containing many invalid enc ...
     Description: Decoding a maliciously-crafted MIME header containing many invalid encoded-words can consume excessive CPU.
-    Severity: HIGH
+    Severity: MEDIUM
     CweIDs:
     - CWE-407
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       azure: 3
       bitnami: 3
     CVSS:
@@ -6167,7 +6166,7 @@
     Severity: MEDIUM
     VendorSeverity:
       alma: 2
-      amazon: 3
+      amazon: 2
       bitnami: 2
       oracle-oval: 2
       redhat: 2
@@ -6180,12 +6179,12 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
         V3Score: 5.3
     References:
-    - https://access.redhat.com/errata/RHSA-2026:29981
+    - https://access.redhat.com/errata/RHSA-2026:29980
     - https://access.redhat.com/security/cve/CVE-2026-42507
     - https://bugzilla.redhat.com/2484205
     - https://bugzilla.redhat.com/show_bug.cgi?id=2484205
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42507
-    - https://errata.almalinux.org/9/ALSA-2026-29981.html
+    - https://errata.almalinux.org/10/ALSA-2026-29980.html
     - https://errata.rockylinux.org/RLSA-2026:29981
     - https://go.dev/cl/777060
     - https://go.dev/issue/79346
