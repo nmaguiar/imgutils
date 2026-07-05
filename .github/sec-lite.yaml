@@ -87,6 +87,7 @@
     - CWE-427
     VendorSeverity:
       ghsa: 3
+      photon: 3
       redhat: 3
     CVSS:
       ghsa:
@@ -135,6 +136,7 @@
       amazon: 3
       ghsa: 3
       nvd: 3
+      photon: 3
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:H/A:H
@@ -526,7 +528,7 @@
     - https://access.redhat.com/security/cve/CVE-2026-39821
     - https://bugzilla.redhat.com/2480756
     - https://bugzilla.redhat.com/show_bug.cgi?id=2480756
-    - https://errata.almalinux.org/9/ALSA-2026-30854.html
+    - https://errata.almalinux.org/10/ALSA-2026-30855.html
     - https://github.com/golang/go/issues/78760
     - https://go.dev/cl/767220
     - https://go.dev/issue/78760
@@ -720,7 +722,7 @@
     CweIDs:
     - CWE-606
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       bitnami: 2
       redhat: 3
     CVSS:
@@ -767,11 +769,11 @@
     Fingerprint: sha256:fccdf513dce7fd86c2e82409984c14b62e4bfcd1092a25b399881b29456df2ca
     Title: Decoding a maliciously-crafted MIME header containing many invalid enc ...
     Description: Decoding a maliciously-crafted MIME header containing many invalid encoded-words can consume excessive CPU.
-    Severity: HIGH
+    Severity: MEDIUM
     CweIDs:
     - CWE-407
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       azure: 3
       bitnami: 3
     CVSS:
@@ -811,7 +813,7 @@
     Severity: MEDIUM
     VendorSeverity:
       alma: 2
-      amazon: 3
+      amazon: 2
       bitnami: 2
       oracle-oval: 2
       redhat: 2
@@ -824,12 +826,12 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
         V3Score: 5.3
     References:
-    - https://access.redhat.com/errata/RHSA-2026:29981
+    - https://access.redhat.com/errata/RHSA-2026:29980
     - https://access.redhat.com/security/cve/CVE-2026-42507
     - https://bugzilla.redhat.com/2484205
     - https://bugzilla.redhat.com/show_bug.cgi?id=2484205
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42507
-    - https://errata.almalinux.org/9/ALSA-2026-29981.html
+    - https://errata.almalinux.org/10/ALSA-2026-29980.html
     - https://errata.rockylinux.org/RLSA-2026:29981
     - https://go.dev/cl/777060
     - https://go.dev/issue/79346
