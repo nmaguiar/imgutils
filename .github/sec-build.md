@@ -849,7 +849,7 @@
 │     │      │                  ├ [20]: https://access.redhat.com/security/cve/CVE-2026-39821 
 │     │      │                  ├ [21]: https://bugzilla.redhat.com/2480756 
 │     │      │                  ├ [22]: https://bugzilla.redhat.com/show_bug.cgi?id=2480756 
-│     │      │                  ├ [23]: https://errata.almalinux.org/10/ALSA-2026-30855.html 
+│     │      │                  ├ [23]: https://errata.almalinux.org/9/ALSA-2026-30854.html 
 │     │      │                  ├ [24]: https://github.com/golang/go/issues/78760 
 │     │      │                  ├ [25]: https://go.dev/cl/767220 
 │     │      │                  ├ [26]: https://go.dev/issue/78760 
@@ -1023,7 +1023,7 @@
 │     │      │                   overhead occurred even for untrusted certificates. 
 │     │      ├ Severity        : HIGH 
 │     │      ├ CweIDs           ─ [0]: CWE-606 
-│     │      ├ VendorSeverity   ╭ amazon : 2 
+│     │      ├ VendorSeverity   ╭ amazon : 3 
 │     │      │                  ├ bitnami: 2 
 │     │      │                  ╰ redhat : 3 
 │     │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:H 
@@ -1064,9 +1064,9 @@
 │     │      ├ Title           : Decoding a maliciously-crafted MIME header containing many invalid enc ... 
 │     │      ├ Description     : Decoding a maliciously-crafted MIME header containing many invalid
 │     │      │                   encoded-words can consume excessive CPU. 
-│     │      ├ Severity        : MEDIUM 
+│     │      ├ Severity        : HIGH 
 │     │      ├ CweIDs           ─ [0]: CWE-407 
-│     │      ├ VendorSeverity   ╭ amazon : 2 
+│     │      ├ VendorSeverity   ╭ amazon : 3 
 │     │      │                  ├ azure  : 3 
 │     │      │                  ╰ bitnami: 3 
 │     │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
@@ -1101,7 +1101,7 @@
 │            │                   misleading content to errors that are printed or logged. 
 │            ├ Severity        : MEDIUM 
 │            ├ VendorSeverity   ╭ alma       : 2 
-│            │                  ├ amazon     : 2 
+│            │                  ├ amazon     : 3 
 │            │                  ├ bitnami    : 2 
 │            │                  ├ oracle-oval: 2 
 │            │                  ├ redhat     : 2 
@@ -1110,12 +1110,12 @@
 │            │                  │         ╰ V3Score : 5.3 
 │            │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N 
 │            │                            ╰ V3Score : 5.3 
-│            ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29980 
+│            ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29981 
 │            │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-42507 
 │            │                  ├ [2] : https://bugzilla.redhat.com/2484205 
 │            │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2484205 
 │            │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42507 
-│            │                  ├ [5] : https://errata.almalinux.org/10/ALSA-2026-29980.html 
+│            │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-29981.html 
 │            │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:29981 
 │            │                  ├ [7] : https://go.dev/cl/777060 
 │            │                  ├ [8] : https://go.dev/issue/79346 
@@ -1154,7 +1154,7 @@
 │     │     │                   overhead occurred even for untrusted certificates. 
 │     │     ├ Severity        : HIGH 
 │     │     ├ CweIDs           ─ [0]: CWE-606 
-│     │     ├ VendorSeverity   ╭ amazon : 2 
+│     │     ├ VendorSeverity   ╭ amazon : 3 
 │     │     │                  ├ bitnami: 2 
 │     │     │                  ╰ redhat : 3 
 │     │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:H 
@@ -1195,9 +1195,9 @@
 │     │     ├ Title           : Decoding a maliciously-crafted MIME header containing many invalid enc ... 
 │     │     ├ Description     : Decoding a maliciously-crafted MIME header containing many invalid
 │     │     │                   encoded-words can consume excessive CPU. 
-│     │     ├ Severity        : MEDIUM 
+│     │     ├ Severity        : HIGH 
 │     │     ├ CweIDs           ─ [0]: CWE-407 
-│     │     ├ VendorSeverity   ╭ amazon : 2 
+│     │     ├ VendorSeverity   ╭ amazon : 3 
 │     │     │                  ├ azure  : 3 
 │     │     │                  ╰ bitnami: 3 
 │     │     ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
@@ -1232,7 +1232,7 @@
 │           │                   content to errors that are printed or logged. 
 │           ├ Severity        : MEDIUM 
 │           ├ VendorSeverity   ╭ alma       : 2 
-│           │                  ├ amazon     : 2 
+│           │                  ├ amazon     : 3 
 │           │                  ├ bitnami    : 2 
 │           │                  ├ oracle-oval: 2 
 │           │                  ├ redhat     : 2 
@@ -1241,12 +1241,12 @@
 │           │                  │         ╰ V3Score : 5.3 
 │           │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N 
 │           │                            ╰ V3Score : 5.3 
-│           ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29980 
+│           ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29981 
 │           │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-42507 
 │           │                  ├ [2] : https://bugzilla.redhat.com/2484205 
 │           │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2484205 
 │           │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42507 
-│           │                  ├ [5] : https://errata.almalinux.org/10/ALSA-2026-29980.html 
+│           │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-29981.html 
 │           │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:29981 
 │           │                  ├ [7] : https://go.dev/cl/777060 
 │           │                  ├ [8] : https://go.dev/issue/79346 
@@ -1896,7 +1896,7 @@
 │     │      │                  ├ [20]: https://access.redhat.com/security/cve/CVE-2026-39821 
 │     │      │                  ├ [21]: https://bugzilla.redhat.com/2480756 
 │     │      │                  ├ [22]: https://bugzilla.redhat.com/show_bug.cgi?id=2480756 
-│     │      │                  ├ [23]: https://errata.almalinux.org/10/ALSA-2026-30855.html 
+│     │      │                  ├ [23]: https://errata.almalinux.org/9/ALSA-2026-30854.html 
 │     │      │                  ├ [24]: https://github.com/golang/go/issues/78760 
 │     │      │                  ├ [25]: https://go.dev/cl/767220 
 │     │      │                  ├ [26]: https://go.dev/issue/78760 
@@ -2206,7 +2206,7 @@
 │     │      ├ CweIDs           ╭ [0]: CWE-425 
 │     │      │                  ╰ [1]: CWE-1286 
 │     │      ├ VendorSeverity   ╭ alma       : 3 
-│     │      │                  ├ amazon     : 3 
+│     │      │                  ├ amazon     : 2 
 │     │      │                  ├ azure      : 3 
 │     │      │                  ├ bitnami    : 3 
 │     │      │                  ├ oracle-oval: 3 
@@ -2446,7 +2446,7 @@
 │     │      │                  ├ [226]: https://bugzilla.redhat.com/2445356 
 │     │      │                  ├ [227]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
 │     │      │                  ├ [228]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679 
-│     │      │                  ├ [229]: https://errata.almalinux.org/10/ALSA-2026-8840.html 
+│     │      │                  ├ [229]: https://errata.almalinux.org/9/ALSA-2026-9044.html 
 │     │      │                  ├ [230]: https://errata.rockylinux.org/RLSA-2026:9044 
 │     │      │                  ├ [231]: https://go.dev/cl/752180 
 │     │      │                  ├ [232]: https://go.dev/issue/77578 
@@ -2487,7 +2487,7 @@
 │     │      │                   overhead occurred even for untrusted certificates. 
 │     │      ├ Severity        : HIGH 
 │     │      ├ CweIDs           ─ [0]: CWE-606 
-│     │      ├ VendorSeverity   ╭ amazon : 2 
+│     │      ├ VendorSeverity   ╭ amazon : 3 
 │     │      │                  ├ bitnami: 2 
 │     │      │                  ╰ redhat : 3 
 │     │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:H 
@@ -2683,13 +2683,13 @@
 │     │      │                  ├ [135]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280 
 │     │      │                  ├ [136]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281 
 │     │      │                  ├ [137]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
-│     │      │                  ├ [138]: https://errata.almalinux.org/10/ALSA-2026-29195.html 
+│     │      │                  ├ [138]: https://errata.almalinux.org/9/ALSA-2026-29703.html 
 │     │      │                  ├ [139]: https://errata.rockylinux.org/RLSA-2026:29703 
 │     │      │                  ├ [140]: https://go.dev/cl/758320 
 │     │      │                  ├ [141]: https://go.dev/issue/78282 
 │     │      │                  ├ [142]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
 │     │      │                  ├ [143]: https://linux.oracle.com/cve/CVE-2026-32280.html 
-│     │      │                  ├ [144]: https://linux.oracle.com/errata/ELSA-2026-29703.html 
+│     │      │                  ├ [144]: https://linux.oracle.com/errata/ELSA-2026-33722.html 
 │     │      │                  ├ [145]: https://nvd.nist.gov/vuln/detail/CVE-2026-32280 
 │     │      │                  ├ [146]: https://pkg.go.dev/vuln/GO-2026-4947 
 │     │      │                  ├ [147]: https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-3228
@@ -2737,7 +2737,7 @@
 │     │      │                  │         ╰ V3Score : 7.5 
 │     │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H 
 │     │      │                            ╰ V3Score : 5.9 
-│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29195 
+│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29703 
 │     │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-32281 
 │     │      │                  ├ [2] : https://bugzilla.redhat.com/2445356 
 │     │      │                  ├ [3] : https://bugzilla.redhat.com/2456333 
@@ -2751,13 +2751,13 @@
 │     │      │                  ├ [11]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280 
 │     │      │                  ├ [12]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281 
 │     │      │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
-│     │      │                  ├ [14]: https://errata.almalinux.org/10/ALSA-2026-29195.html 
+│     │      │                  ├ [14]: https://errata.almalinux.org/9/ALSA-2026-29703.html 
 │     │      │                  ├ [15]: https://errata.rockylinux.org/RLSA-2026:29703 
 │     │      │                  ├ [16]: https://go.dev/cl/758061 
 │     │      │                  ├ [17]: https://go.dev/issue/78281 
 │     │      │                  ├ [18]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
 │     │      │                  ├ [19]: https://linux.oracle.com/cve/CVE-2026-32281.html 
-│     │      │                  ├ [20]: https://linux.oracle.com/errata/ELSA-2026-29703.html 
+│     │      │                  ├ [20]: https://linux.oracle.com/errata/ELSA-2026-33722.html 
 │     │      │                  ├ [21]: https://nvd.nist.gov/vuln/detail/CVE-2026-32281 
 │     │      │                  ├ [22]: https://pkg.go.dev/vuln/GO-2026-4946 
 │     │      │                  ╰ [23]: https://www.cve.org/CVERecord?id=CVE-2026-32281 
@@ -2908,13 +2908,13 @@
 │     │      │                  ├ [102]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280 
 │     │      │                  ├ [103]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281 
 │     │      │                  ├ [104]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
-│     │      │                  ├ [105]: https://errata.almalinux.org/10/ALSA-2026-29195.html 
+│     │      │                  ├ [105]: https://errata.almalinux.org/9/ALSA-2026-29703.html 
 │     │      │                  ├ [106]: https://errata.rockylinux.org/RLSA-2026:29703 
 │     │      │                  ├ [107]: https://go.dev/cl/763767 
 │     │      │                  ├ [108]: https://go.dev/issue/78334 
 │     │      │                  ├ [109]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
 │     │      │                  ├ [110]: https://linux.oracle.com/cve/CVE-2026-32283.html 
-│     │      │                  ├ [111]: https://linux.oracle.com/errata/ELSA-2026-29703.html 
+│     │      │                  ├ [111]: https://linux.oracle.com/errata/ELSA-2026-33722.html 
 │     │      │                  ├ [112]: https://nvd.nist.gov/vuln/detail/CVE-2026-32283 
 │     │      │                  ├ [113]: https://pkg.go.dev/vuln/GO-2026-4870 
 │     │      │                  ├ [114]: https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-3228
@@ -3195,7 +3195,40 @@
 │     │      │                  ╰ [16]: https://www.cve.org/CVERecord?id=CVE-2026-42499 
 │     │      ├ PublishedDate   : 2026-05-07T20:16:44.54Z 
 │     │      ╰ LastModifiedDate: 2026-07-02T12:17:17.153Z 
-│     ├ [29] ╭ VulnerabilityID : CVE-2026-27142 
+│     ├ [29] ╭ VulnerabilityID : CVE-2026-42504 
+│     │      ├ VendorIDs        ─ [0]: GO-2026-5038 
+│     │      ├ PkgID           : stdlib@v1.24.13 
+│     │      ├ PkgName         : stdlib 
+│     │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.13 
+│     │      │                  ╰ UID : ae746daa41f315ef 
+│     │      ├ InstalledVersion: v1.24.13 
+│     │      ├ FixedVersion    : 1.25.11, 1.26.4 
+│     │      ├ Status          : fixed 
+│     │      ├ Layer            ╭ Digest: sha256:72ca0d86ff07c02c36746acea444de6fc032319d050e4cdb49ce926c2ac46d75 
+│     │      │                  ╰ DiffID: sha256:4aa68222e359a43a7893ddd023cb05c61cc00781184f26c00b919f25a11b8bcb 
+│     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42504 
+│     │      ├ DataSource       ╭ ID  : govulndb 
+│     │      │                  ├ Name: The Go Vulnerability Database 
+│     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+│     │      ├ Fingerprint     : sha256:ee2fc6f37535e46dad0928de4153ddae8da8270bf3f54b5266e533f02a833f25 
+│     │      ├ Title           : Decoding a maliciously-crafted MIME header containing many invalid enc ... 
+│     │      ├ Description     : Decoding a maliciously-crafted MIME header containing many invalid
+│     │      │                   encoded-words can consume excessive CPU. 
+│     │      ├ Severity        : HIGH 
+│     │      ├ CweIDs           ─ [0]: CWE-407 
+│     │      ├ VendorSeverity   ╭ amazon : 3 
+│     │      │                  ├ azure  : 3 
+│     │      │                  ╰ bitnami: 3 
+│     │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
+│     │      │                            ╰ V3Score : 7.5 
+│     │      ├ References       ╭ [0]: https://go.dev/cl/774481 
+│     │      │                  ├ [1]: https://go.dev/issue/79217 
+│     │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw 
+│     │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-42504 
+│     │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-5038 
+│     │      ├ PublishedDate   : 2026-06-02T23:16:37.927Z 
+│     │      ╰ LastModifiedDate: 2026-06-17T10:47:56.86Z 
+│     ├ [30] ╭ VulnerabilityID : CVE-2026-27142 
 │     │      ├ VendorIDs        ─ [0]: GO-2026-4603 
 │     │      ├ PkgID           : stdlib@v1.24.13 
 │     │      ├ PkgName         : stdlib 
@@ -3238,7 +3271,7 @@
 │     │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-27142 
 │     │      ├ PublishedDate   : 2026-03-06T22:16:01.177Z 
 │     │      ╰ LastModifiedDate: 2026-06-17T10:26:44.67Z 
-│     ├ [30] ╭ VulnerabilityID : CVE-2026-32282 
+│     ├ [31] ╭ VulnerabilityID : CVE-2026-32282 
 │     │      ├ VendorIDs        ─ [0]: GO-2026-4864 
 │     │      ├ PkgID           : stdlib@v1.24.13 
 │     │      ├ PkgName         : stdlib 
@@ -3280,39 +3313,45 @@
 │     │      │                  │         ╰ V3Score : 6.4 
 │     │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H 
 │     │      │                            ╰ V3Score : 7.8 
-│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:19136 
+│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:19353 
 │     │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-32282 
-│     │      │                  ├ [2] : https://bugzilla.redhat.com/2456336 
-│     │      │                  ├ [3] : https://bugzilla.redhat.com/2456338 
-│     │      │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2434432 
-│     │      │                  ├ [5] : https://bugzilla.redhat.com/show_bug.cgi?id=2437111 
-│     │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2445345 
-│     │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
-│     │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2449833 
-│     │      │                  ├ [9] : https://bugzilla.redhat.com/show_bug.cgi?id=2455470 
-│     │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
-│     │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│     │      │                  ├ [12]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-61726 
-│     │      │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121 
-│     │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679 
-│     │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27137 
-│     │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282 
-│     │      │                  ├ [17]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
-│     │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33186 
-│     │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986 
-│     │      │                  ├ [20]: https://errata.almalinux.org/10/ALSA-2026-19136.html 
-│     │      │                  ├ [21]: https://errata.rockylinux.org/RLSA-2026:23228 
-│     │      │                  ├ [22]: https://go.dev/cl/763761 
-│     │      │                  ├ [23]: https://go.dev/issue/78293 
-│     │      │                  ├ [24]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
-│     │      │                  ├ [25]: https://linux.oracle.com/cve/CVE-2026-32282.html 
-│     │      │                  ├ [26]: https://linux.oracle.com/errata/ELSA-2026-19352.html 
-│     │      │                  ├ [27]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-│     │      │                  ├ [28]: https://pkg.go.dev/vuln/GO-2026-4864 
-│     │      │                  ╰ [29]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│     │      │                  ├ [2] : https://bugzilla.redhat.com/2445356 
+│     │      │                  ├ [3] : https://bugzilla.redhat.com/2449833 
+│     │      │                  ├ [4] : https://bugzilla.redhat.com/2455470 
+│     │      │                  ├ [5] : https://bugzilla.redhat.com/2456333 
+│     │      │                  ├ [6] : https://bugzilla.redhat.com/2456335 
+│     │      │                  ├ [7] : https://bugzilla.redhat.com/2456336 
+│     │      │                  ├ [8] : https://bugzilla.redhat.com/2456338 
+│     │      │                  ├ [9] : https://bugzilla.redhat.com/2456339 
+│     │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2434432 
+│     │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2437111 
+│     │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2445345 
+│     │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
+│     │      │                  ├ [14]: https://bugzilla.redhat.com/show_bug.cgi?id=2449833 
+│     │      │                  ├ [15]: https://bugzilla.redhat.com/show_bug.cgi?id=2455470 
+│     │      │                  ├ [16]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
+│     │      │                  ├ [17]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
+│     │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-61726 
+│     │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121 
+│     │      │                  ├ [20]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679 
+│     │      │                  ├ [21]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27137 
+│     │      │                  ├ [22]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282 
+│     │      │                  ├ [23]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
+│     │      │                  ├ [24]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33186 
+│     │      │                  ├ [25]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986 
+│     │      │                  ├ [26]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
+│     │      │                  ├ [27]: https://errata.rockylinux.org/RLSA-2026:23228 
+│     │      │                  ├ [28]: https://go.dev/cl/763761 
+│     │      │                  ├ [29]: https://go.dev/issue/78293 
+│     │      │                  ├ [30]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
+│     │      │                  ├ [31]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+│     │      │                  ├ [32]: https://linux.oracle.com/errata/ELSA-2026-19352.html 
+│     │      │                  ├ [33]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│     │      │                  ├ [34]: https://pkg.go.dev/vuln/GO-2026-4864 
+│     │      │                  ╰ [35]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │     │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │     │      ╰ LastModifiedDate: 2026-06-17T10:35:29.12Z 
-│     ├ [31] ╭ VulnerabilityID : CVE-2026-32288 
+│     ├ [32] ╭ VulnerabilityID : CVE-2026-32288 
 │     │      ├ VendorIDs        ─ [0]: GO-2026-4869 
 │     │      ├ PkgID           : stdlib@v1.24.13 
 │     │      ├ PkgName         : stdlib 
@@ -3358,7 +3397,7 @@
 │     │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32288 
 │     │      ├ PublishedDate   : 2026-04-08T02:16:03.707Z 
 │     │      ╰ LastModifiedDate: 2026-06-17T10:35:29.977Z 
-│     ├ [32] ╭ VulnerabilityID : CVE-2026-32289 
+│     ├ [33] ╭ VulnerabilityID : CVE-2026-32289 
 │     │      ├ VendorIDs        ─ [0]: GO-2026-4865 
 │     │      ├ PkgID           : stdlib@v1.24.13 
 │     │      ├ PkgName         : stdlib 
@@ -3405,7 +3444,7 @@
 │     │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-32289 
 │     │      ├ PublishedDate   : 2026-04-08T02:16:03.82Z 
 │     │      ╰ LastModifiedDate: 2026-06-17T10:35:30.123Z 
-│     ├ [33] ╭ VulnerabilityID : CVE-2026-39823 
+│     ├ [34] ╭ VulnerabilityID : CVE-2026-39823 
 │     │      ├ VendorIDs        ─ [0]: GO-2026-4982 
 │     │      ├ PkgID           : stdlib@v1.24.13 
 │     │      ├ PkgName         : stdlib 
@@ -3449,7 +3488,7 @@
 │     │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-39823 
 │     │      ├ PublishedDate   : 2026-05-07T20:16:43.29Z 
 │     │      ╰ LastModifiedDate: 2026-06-17T10:42:38.473Z 
-│     ├ [34] ╭ VulnerabilityID : CVE-2026-39825 
+│     ├ [35] ╭ VulnerabilityID : CVE-2026-39825 
 │     │      ├ VendorIDs        ─ [0]: GO-2026-4976 
 │     │      ├ PkgID           : stdlib@v1.24.13 
 │     │      ├ PkgName         : stdlib 
@@ -3498,7 +3537,7 @@
 │     │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-39825 
 │     │      ├ PublishedDate   : 2026-05-07T20:16:43.39Z 
 │     │      ╰ LastModifiedDate: 2026-06-17T10:42:38.77Z 
-│     ├ [35] ╭ VulnerabilityID : CVE-2026-39826 
+│     ├ [36] ╭ VulnerabilityID : CVE-2026-39826 
 │     │      ├ VendorIDs        ─ [0]: GO-2026-4980 
 │     │      ├ PkgID           : stdlib@v1.24.13 
 │     │      ├ PkgName         : stdlib 
@@ -3542,39 +3581,6 @@
 │     │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-39826 
 │     │      ├ PublishedDate   : 2026-05-07T20:16:43.49Z 
 │     │      ╰ LastModifiedDate: 2026-06-17T10:42:38.923Z 
-│     ├ [36] ╭ VulnerabilityID : CVE-2026-42504 
-│     │      ├ VendorIDs        ─ [0]: GO-2026-5038 
-│     │      ├ PkgID           : stdlib@v1.24.13 
-│     │      ├ PkgName         : stdlib 
-│     │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.24.13 
-│     │      │                  ╰ UID : ae746daa41f315ef 
-│     │      ├ InstalledVersion: v1.24.13 
-│     │      ├ FixedVersion    : 1.25.11, 1.26.4 
-│     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:72ca0d86ff07c02c36746acea444de6fc032319d050e4cdb49ce926c2ac46d75 
-│     │      │                  ╰ DiffID: sha256:4aa68222e359a43a7893ddd023cb05c61cc00781184f26c00b919f25a11b8bcb 
-│     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42504 
-│     │      ├ DataSource       ╭ ID  : govulndb 
-│     │      │                  ├ Name: The Go Vulnerability Database 
-│     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:ee2fc6f37535e46dad0928de4153ddae8da8270bf3f54b5266e533f02a833f25 
-│     │      ├ Title           : Decoding a maliciously-crafted MIME header containing many invalid enc ... 
-│     │      ├ Description     : Decoding a maliciously-crafted MIME header containing many invalid
-│     │      │                   encoded-words can consume excessive CPU. 
-│     │      ├ Severity        : MEDIUM 
-│     │      ├ CweIDs           ─ [0]: CWE-407 
-│     │      ├ VendorSeverity   ╭ amazon : 2 
-│     │      │                  ├ azure  : 3 
-│     │      │                  ╰ bitnami: 3 
-│     │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
-│     │      │                            ╰ V3Score : 7.5 
-│     │      ├ References       ╭ [0]: https://go.dev/cl/774481 
-│     │      │                  ├ [1]: https://go.dev/issue/79217 
-│     │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw 
-│     │      │                  ├ [3]: https://nvd.nist.gov/vuln/detail/CVE-2026-42504 
-│     │      │                  ╰ [4]: https://pkg.go.dev/vuln/GO-2026-5038 
-│     │      ├ PublishedDate   : 2026-06-02T23:16:37.927Z 
-│     │      ╰ LastModifiedDate: 2026-06-17T10:47:56.86Z 
 │     ├ [37] ╭ VulnerabilityID : CVE-2026-42507 
 │     │      ├ VendorIDs        ─ [0]: GO-2026-5039 
 │     │      ├ PkgID           : stdlib@v1.24.13 
@@ -3598,7 +3604,7 @@
 │     │      │                   misleading content to errors that are printed or logged. 
 │     │      ├ Severity        : MEDIUM 
 │     │      ├ VendorSeverity   ╭ alma       : 2 
-│     │      │                  ├ amazon     : 2 
+│     │      │                  ├ amazon     : 3 
 │     │      │                  ├ bitnami    : 2 
 │     │      │                  ├ oracle-oval: 2 
 │     │      │                  ├ redhat     : 2 
@@ -3607,12 +3613,12 @@
 │     │      │                  │         ╰ V3Score : 5.3 
 │     │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N 
 │     │      │                            ╰ V3Score : 5.3 
-│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29980 
+│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29981 
 │     │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-42507 
 │     │      │                  ├ [2] : https://bugzilla.redhat.com/2484205 
 │     │      │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2484205 
 │     │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42507 
-│     │      │                  ├ [5] : https://errata.almalinux.org/10/ALSA-2026-29980.html 
+│     │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-29981.html 
 │     │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:29981 
 │     │      │                  ├ [7] : https://go.dev/cl/777060 
 │     │      │                  ├ [8] : https://go.dev/issue/79346 
@@ -3693,7 +3699,7 @@
 │     │     │                   overhead occurred even for untrusted certificates. 
 │     │     ├ Severity        : HIGH 
 │     │     ├ CweIDs           ─ [0]: CWE-606 
-│     │     ├ VendorSeverity   ╭ amazon : 2 
+│     │     ├ VendorSeverity   ╭ amazon : 3 
 │     │     │                  ├ bitnami: 2 
 │     │     │                  ╰ redhat : 3 
 │     │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:H 
@@ -3734,9 +3740,9 @@
 │     │     ├ Title           : Decoding a maliciously-crafted MIME header containing many invalid enc ... 
 │     │     ├ Description     : Decoding a maliciously-crafted MIME header containing many invalid
 │     │     │                   encoded-words can consume excessive CPU. 
-│     │     ├ Severity        : MEDIUM 
+│     │     ├ Severity        : HIGH 
 │     │     ├ CweIDs           ─ [0]: CWE-407 
-│     │     ├ VendorSeverity   ╭ amazon : 2 
+│     │     ├ VendorSeverity   ╭ amazon : 3 
 │     │     │                  ├ azure  : 3 
 │     │     │                  ╰ bitnami: 3 
 │     │     ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
@@ -3771,7 +3777,7 @@
 │           │                   content to errors that are printed or logged. 
 │           ├ Severity        : MEDIUM 
 │           ├ VendorSeverity   ╭ alma       : 2 
-│           │                  ├ amazon     : 2 
+│           │                  ├ amazon     : 3 
 │           │                  ├ bitnami    : 2 
 │           │                  ├ oracle-oval: 2 
 │           │                  ├ redhat     : 2 
@@ -3780,12 +3786,12 @@
 │           │                  │         ╰ V3Score : 5.3 
 │           │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N 
 │           │                            ╰ V3Score : 5.3 
-│           ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29980 
+│           ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29981 
 │           │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-42507 
 │           │                  ├ [2] : https://bugzilla.redhat.com/2484205 
 │           │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2484205 
 │           │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42507 
-│           │                  ├ [5] : https://errata.almalinux.org/10/ALSA-2026-29980.html 
+│           │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-29981.html 
 │           │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:29981 
 │           │                  ├ [7] : https://go.dev/cl/777060 
 │           │                  ├ [8] : https://go.dev/issue/79346 
@@ -4310,70 +4316,71 @@
 │     │      │                  │       e2801449697322 
 │     │      │                  ├ [2] : http://github.com/opencontainers/runc/commit/fdcc9d3cad2f85954a241ccb91
 │     │      │                  │       0a61aaa1ef47f3 
-│     │      │                  ├ [3] : https://access.redhat.com/errata/RHSA-2025:21220 
+│     │      │                  ├ [3] : https://access.redhat.com/errata/RHSA-2025:22011 
 │     │      │                  ├ [4] : https://access.redhat.com/security/cve/CVE-2025-52881 
 │     │      │                  ├ [5] : https://bugzilla.redhat.com/2404715 
-│     │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2404715 
-│     │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2407258 
-│     │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-52881 
-│     │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58183 
-│     │      │                  ├ [10]: https://errata.almalinux.org/10/ALSA-2025-21220.html 
-│     │      │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22011 
-│     │      │                  ├ [12]: https://github.com/bottlerocket-os/bottlerocket-core-kit/blob/develop/a
+│     │      │                  ├ [6] : https://bugzilla.redhat.com/2407258 
+│     │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2404715 
+│     │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2407258 
+│     │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-52881 
+│     │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58183 
+│     │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2025-22011.html 
+│     │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2025:22011 
+│     │      │                  ├ [13]: https://github.com/bottlerocket-os/bottlerocket-core-kit/blob/develop/a
 │     │      │                  │       dvisories/10.9.0/BRSA-fokfzmhxepqx.toml 
-│     │      │                  ├ [13]: https://github.com/opencontainers/runc 
-│     │      │                  ├ [14]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.2/RELEASES.md 
-│     │      │                  ├ [15]: https://github.com/opencontainers/runc/commit/3f925525b44d247e390e529e7
+│     │      │                  ├ [14]: https://github.com/opencontainers/runc 
+│     │      │                  ├ [15]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.2/RELEASES.md 
+│     │      │                  ├ [16]: https://github.com/opencontainers/runc/commit/3f925525b44d247e390e529e7
 │     │      │                  │       72a0dc0c0bc3557 
-│     │      │                  ├ [16]: https://github.com/opencontainers/runc/commit/435cc81be6b79cdec73b4002c
+│     │      │                  ├ [17]: https://github.com/opencontainers/runc/commit/435cc81be6b79cdec73b4002c
 │     │      │                  │       0dae549b2f6ae6d 
-│     │      │                  ├ [17]: https://github.com/opencontainers/runc/commit/44a0fcf685db051c80b8c2698
+│     │      │                  ├ [18]: https://github.com/opencontainers/runc/commit/44a0fcf685db051c80b8c2698
 │     │      │                  │       12bb177f5802c58 
-│     │      │                  ├ [18]: https://github.com/opencontainers/runc/commit/4b37cd93f86e72feac8664429
+│     │      │                  ├ [19]: https://github.com/opencontainers/runc/commit/4b37cd93f86e72feac8664429
 │     │      │                  │       88b549b5b7bf3e6 
-│     │      │                  ├ [19]: https://github.com/opencontainers/runc/commit/6fc191449109ea14bb7d61238
+│     │      │                  ├ [20]: https://github.com/opencontainers/runc/commit/6fc191449109ea14bb7d61238
 │     │      │                  │       f24a33fe08c651f 
-│     │      │                  ├ [20]: https://github.com/opencontainers/runc/commit/77889b56db939c323d29d1130
+│     │      │                  ├ [21]: https://github.com/opencontainers/runc/commit/77889b56db939c323d29d1130
 │     │      │                  │       f28f9aea2edb544 
-│     │      │                  ├ [21]: https://github.com/opencontainers/runc/commit/77d217c7c3775d8ca5af89e47
+│     │      │                  ├ [22]: https://github.com/opencontainers/runc/commit/77d217c7c3775d8ca5af89e47
 │     │      │                  │       7e81568ef4572db 
-│     │      │                  ├ [22]: https://github.com/opencontainers/runc/commit/a41366e74080fa9f26a2cd354
+│     │      │                  ├ [23]: https://github.com/opencontainers/runc/commit/a41366e74080fa9f26a2cd354
 │     │      │                  │       4e2801449697322 
-│     │      │                  ├ [23]: https://github.com/opencontainers/runc/commit/b3dd1bc562ed9996d1a0f249e
+│     │      │                  ├ [24]: https://github.com/opencontainers/runc/commit/b3dd1bc562ed9996d1a0f249e
 │     │      │                  │       056c16624046d28 
-│     │      │                  ├ [24]: https://github.com/opencontainers/runc/commit/d40b3439a9614a86e87b81a94
+│     │      │                  ├ [25]: https://github.com/opencontainers/runc/commit/d40b3439a9614a86e87b81a94
 │     │      │                  │       c6811ec6fa2d7d2 
-│     │      │                  ├ [25]: https://github.com/opencontainers/runc/commit/d61fd29d854b416feaaf128bf
+│     │      │                  ├ [26]: https://github.com/opencontainers/runc/commit/d61fd29d854b416feaaf128bf
 │     │      │                  │       650325cd2182165 
-│     │      │                  ├ [26]: https://github.com/opencontainers/runc/commit/db19bbed5348847da433faa9d
+│     │      │                  ├ [27]: https://github.com/opencontainers/runc/commit/db19bbed5348847da433faa9d
 │     │      │                  │       69e9f90192bfa64 
-│     │      │                  ├ [27]: https://github.com/opencontainers/runc/commit/ed6b1693b8b3ae7eb0250a7e7
+│     │      │                  ├ [28]: https://github.com/opencontainers/runc/commit/ed6b1693b8b3ae7eb0250a7e7
 │     │      │                  │       6fc888cdacf98c1 
-│     │      │                  ├ [28]: https://github.com/opencontainers/runc/commit/fdcc9d3cad2f85954a241ccb9
+│     │      │                  ├ [29]: https://github.com/opencontainers/runc/commit/fdcc9d3cad2f85954a241ccb9
 │     │      │                  │       10a61aaa1ef47f3 
-│     │      │                  ├ [29]: https://github.com/opencontainers/runc/commit/ff6fe1324663538167eca8b3d
+│     │      │                  ├ [30]: https://github.com/opencontainers/runc/commit/ff6fe1324663538167eca8b3d
 │     │      │                  │       3eec61e1bd4fa51 
-│     │      │                  ├ [30]: https://github.com/opencontainers/runc/commit/ff94f9991bd32076c871ef0ad
+│     │      │                  ├ [31]: https://github.com/opencontainers/runc/commit/ff94f9991bd32076c871ef0ad
 │     │      │                  │       8bc1b763458e480 
-│     │      │                  ├ [31]: https://github.com/opencontainers/runc/security/advisories/GHSA-9493-h2
+│     │      │                  ├ [32]: https://github.com/opencontainers/runc/security/advisories/GHSA-9493-h2
 │     │      │                  │       9p-rfm2 
-│     │      │                  ├ [32]: https://github.com/opencontainers/runc/security/advisories/GHSA-cgrx-mc
+│     │      │                  ├ [33]: https://github.com/opencontainers/runc/security/advisories/GHSA-cgrx-mc
 │     │      │                  │       8f-2prm 
-│     │      │                  ├ [33]: https://github.com/opencontainers/runc/security/advisories/GHSA-fh74-hm
+│     │      │                  ├ [34]: https://github.com/opencontainers/runc/security/advisories/GHSA-fh74-hm
 │     │      │                  │       69-rqjw 
-│     │      │                  ├ [34]: https://github.com/opencontainers/runc/security/advisories/GHSA-qw9x-cq
+│     │      │                  ├ [35]: https://github.com/opencontainers/runc/security/advisories/GHSA-qw9x-cq
 │     │      │                  │       r3-wc7r 
-│     │      │                  ├ [35]: https://github.com/opencontainers/selinux/pull/237 
-│     │      │                  ├ [36]: https://github.com/opencontainers/selinux/releases/tag/v1.13.0 
-│     │      │                  ├ [37]: https://linux.oracle.com/cve/CVE-2025-52881.html 
-│     │      │                  ├ [38]: https://linux.oracle.com/errata/ELSA-2025-23543.html 
-│     │      │                  ├ [39]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
-│     │      │                  ├ [40]: https://pkg.go.dev/github.com/cyphar/filepath-securejoin/pathrs-lite/pr
+│     │      │                  ├ [36]: https://github.com/opencontainers/selinux/pull/237 
+│     │      │                  ├ [37]: https://github.com/opencontainers/selinux/releases/tag/v1.13.0 
+│     │      │                  ├ [38]: https://linux.oracle.com/cve/CVE-2025-52881.html 
+│     │      │                  ├ [39]: https://linux.oracle.com/errata/ELSA-2025-23543.html 
+│     │      │                  ├ [40]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
+│     │      │                  ├ [41]: https://pkg.go.dev/github.com/cyphar/filepath-securejoin/pathrs-lite/pr
 │     │      │                  │       ocfs 
-│     │      │                  ├ [41]: https://ubuntu.com/security/notices/USN-7851-1 
-│     │      │                  ├ [42]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
-│     │      │                  ├ [43]: https://youtu.be/tGseJW_uBB8 
-│     │      │                  ╰ [44]: https://youtu.be/y1PaBzxwRWQ 
+│     │      │                  ├ [42]: https://ubuntu.com/security/notices/USN-7851-1 
+│     │      │                  ├ [43]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
+│     │      │                  ├ [44]: https://youtu.be/tGseJW_uBB8 
+│     │      │                  ╰ [45]: https://youtu.be/y1PaBzxwRWQ 
 │     │      ├ PublishedDate   : 2025-11-06T21:15:42.817Z 
 │     │      ╰ LastModifiedDate: 2026-06-17T09:37:12.35Z 
 │     ├ [6]  ╭ VulnerabilityID : CVE-2025-66506 
@@ -5452,7 +5459,7 @@
 │     │      │                  ├ [20]: https://access.redhat.com/security/cve/CVE-2026-39821 
 │     │      │                  ├ [21]: https://bugzilla.redhat.com/2480756 
 │     │      │                  ├ [22]: https://bugzilla.redhat.com/show_bug.cgi?id=2480756 
-│     │      │                  ├ [23]: https://errata.almalinux.org/10/ALSA-2026-30855.html 
+│     │      │                  ├ [23]: https://errata.almalinux.org/9/ALSA-2026-30854.html 
 │     │      │                  ├ [24]: https://github.com/golang/go/issues/78760 
 │     │      │                  ├ [25]: https://go.dev/cl/767220 
 │     │      │                  ├ [26]: https://go.dev/issue/78760 
@@ -5626,7 +5633,7 @@
 │     │      │                   overhead occurred even for untrusted certificates. 
 │     │      ├ Severity        : HIGH 
 │     │      ├ CweIDs           ─ [0]: CWE-606 
-│     │      ├ VendorSeverity   ╭ amazon : 2 
+│     │      ├ VendorSeverity   ╭ amazon : 3 
 │     │      │                  ├ bitnami: 2 
 │     │      │                  ╰ redhat : 3 
 │     │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:H 
@@ -5667,9 +5674,9 @@
 │     │      ├ Title           : Decoding a maliciously-crafted MIME header containing many invalid enc ... 
 │     │      ├ Description     : Decoding a maliciously-crafted MIME header containing many invalid
 │     │      │                   encoded-words can consume excessive CPU. 
-│     │      ├ Severity        : MEDIUM 
+│     │      ├ Severity        : HIGH 
 │     │      ├ CweIDs           ─ [0]: CWE-407 
-│     │      ├ VendorSeverity   ╭ amazon : 2 
+│     │      ├ VendorSeverity   ╭ amazon : 3 
 │     │      │                  ├ azure  : 3 
 │     │      │                  ╰ bitnami: 3 
 │     │      ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
@@ -5704,7 +5711,7 @@
 │            │                   misleading content to errors that are printed or logged. 
 │            ├ Severity        : MEDIUM 
 │            ├ VendorSeverity   ╭ alma       : 2 
-│            │                  ├ amazon     : 2 
+│            │                  ├ amazon     : 3 
 │            │                  ├ bitnami    : 2 
 │            │                  ├ oracle-oval: 2 
 │            │                  ├ redhat     : 2 
@@ -5713,12 +5720,12 @@
 │            │                  │         ╰ V3Score : 5.3 
 │            │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N 
 │            │                            ╰ V3Score : 5.3 
-│            ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29980 
+│            ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29981 
 │            │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-42507 
 │            │                  ├ [2] : https://bugzilla.redhat.com/2484205 
 │            │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2484205 
 │            │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42507 
-│            │                  ├ [5] : https://errata.almalinux.org/10/ALSA-2026-29980.html 
+│            │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-29981.html 
 │            │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:29981 
 │            │                  ├ [7] : https://go.dev/cl/777060 
 │            │                  ├ [8] : https://go.dev/issue/79346 
@@ -5757,7 +5764,7 @@
       │     │                   overhead occurred even for untrusted certificates. 
       │     ├ Severity        : HIGH 
       │     ├ CweIDs           ─ [0]: CWE-606 
-      │     ├ VendorSeverity   ╭ amazon : 2 
+      │     ├ VendorSeverity   ╭ amazon : 3 
       │     │                  ├ bitnami: 2 
       │     │                  ╰ redhat : 3 
       │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:H 
@@ -5798,9 +5805,9 @@
       │     ├ Title           : Decoding a maliciously-crafted MIME header containing many invalid enc ... 
       │     ├ Description     : Decoding a maliciously-crafted MIME header containing many invalid
       │     │                   encoded-words can consume excessive CPU. 
-      │     ├ Severity        : MEDIUM 
+      │     ├ Severity        : HIGH 
       │     ├ CweIDs           ─ [0]: CWE-407 
-      │     ├ VendorSeverity   ╭ amazon : 2 
+      │     ├ VendorSeverity   ╭ amazon : 3 
       │     │                  ├ azure  : 3 
       │     │                  ╰ bitnami: 3 
       │     ├ CVSS             ─ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
@@ -5835,7 +5842,7 @@
             │                   content to errors that are printed or logged. 
             ├ Severity        : MEDIUM 
             ├ VendorSeverity   ╭ alma       : 2 
-            │                  ├ amazon     : 2 
+            │                  ├ amazon     : 3 
             │                  ├ bitnami    : 2 
             │                  ├ oracle-oval: 2 
             │                  ├ redhat     : 2 
@@ -5844,12 +5851,12 @@
             │                  │         ╰ V3Score : 5.3 
             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N 
             │                            ╰ V3Score : 5.3 
-            ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29980 
+            ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29981 
             │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-42507 
             │                  ├ [2] : https://bugzilla.redhat.com/2484205 
             │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2484205 
             │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42507 
-            │                  ├ [5] : https://errata.almalinux.org/10/ALSA-2026-29980.html 
+            │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-29981.html 
             │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:29981 
             │                  ├ [7] : https://go.dev/cl/777060 
             │                  ├ [8] : https://go.dev/issue/79346 
