@@ -22,9 +22,16 @@ RUN apk add --no-cache \
 WORKDIR /go/src/github.com/containers/skopeo
 
 # Clone Skopeo source & Vendor all Go dependencies & Build Skopeo binary
-RUN git clone https://github.com/containers/skopeo.git .\
- && SKOPEO_VERSION=$(curl -s https://api.github.com/repos/containers/skopeo/releases/latest | jq -r .tag_name)\
- && git checkout tags/${SKOPEO_VERSION} -b build-branch\
+# Fail before checkout if GitHub's API returns an error payload (whose tag_name
+# would otherwise be parsed by jq as null).
+RUN set -eux; \
+ git clone https://github.com/containers/skopeo.git . \
+ && SKOPEO_VERSION="$(curl --fail --show-error --location --retry 5 --retry-all-errors \
+      --connect-timeout 15 --max-time 60 \
+      https://api.github.com/repos/containers/skopeo/releases/latest \
+      | jq --exit-status --raw-output '.tag_name | strings | select(length > 0)')" \
+ && git rev-parse --verify --quiet "refs/tags/${SKOPEO_VERSION}" \
+ && git checkout --detach "refs/tags/${SKOPEO_VERSION}" \
  && sed -i "s/^GIT_COMMIT := .*/GIT_COMMIT := ''/" Makefile\
  && make vendor\
  && make bin/skopeo\
