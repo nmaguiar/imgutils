@@ -1736,9 +1736,9 @@
 │                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │                       │      ├ Fingerprint     : sha256:da6ebd9946d6fd8c067be6d0f84c7525f30de77c4539f474f7a4f
 │                       │      │                   f91bab1b129 
-│                       │      ├ Title           : golang.org/x/net/idna: golang: golang.org/x/net/idna:
-│                       │      │                   Privilege escalation via incorrect Punycode label
-│                       │      │                   processing 
+│                       │      ├ Title           : golang.org/x/net/idna: golang: net/http:
+│                       │      │                   golang.org/x/net/idna: Privilege escalation via incorrect
+│                       │      │                   Punycode label processing 
 │                       │      ├ Description     : The ToASCII and ToUnicode functions incorrectly accept
 │                       │      │                   Punycode-encoded labels that decode to an ASCII-only label.
 │                       │      │                   For example, ToUnicode("xn--example-.com") incorrectly
@@ -2609,9 +2609,9 @@
 │                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │                       │      ├ Fingerprint     : sha256:fad61a2dbee4f4b5e9dfd8db0aaeb0e9cf20abb394ac95baecc00
 │                       │      │                   71e60623322 
-│                       │      ├ Title           : golang.org/x/net/idna: golang: golang.org/x/net/idna:
-│                       │      │                   Privilege escalation via incorrect Punycode label
-│                       │      │                   processing 
+│                       │      ├ Title           : golang.org/x/net/idna: golang: net/http:
+│                       │      │                   golang.org/x/net/idna: Privilege escalation via incorrect
+│                       │      │                   Punycode label processing 
 │                       │      ├ Description     : The ToASCII and ToUnicode functions incorrectly accept
 │                       │      │                   Punycode-encoded labels that decode to an ASCII-only label.
 │                       │      │                   For example, ToUnicode("xn--example-.com") incorrectly
@@ -4007,9 +4007,9 @@
 │                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │                       │      ├ Fingerprint     : sha256:00f80c8919ed713f07c79bb178e5f9d2f9b2ada7409600688e3b3
 │                       │      │                   423cd9372ba 
-│                       │      ├ Title           : golang.org/x/net/idna: golang: golang.org/x/net/idna:
-│                       │      │                   Privilege escalation via incorrect Punycode label
-│                       │      │                   processing 
+│                       │      ├ Title           : golang.org/x/net/idna: golang: net/http:
+│                       │      │                   golang.org/x/net/idna: Privilege escalation via incorrect
+│                       │      │                   Punycode label processing 
 │                       │      ├ Description     : The ToASCII and ToUnicode functions incorrectly accept
 │                       │      │                   Punycode-encoded labels that decode to an ASCII-only label.
 │                       │      │                   For example, ToUnicode("xn--example-.com") incorrectly
@@ -7921,9 +7921,9 @@
 │                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │                       │      ├ Fingerprint     : sha256:5485ac4d38c002487a10b985281a242b0a9bf8805e6b7775ca401
 │                       │      │                   718b8d82c46 
-│                       │      ├ Title           : golang.org/x/net/idna: golang: golang.org/x/net/idna:
-│                       │      │                   Privilege escalation via incorrect Punycode label
-│                       │      │                   processing 
+│                       │      ├ Title           : golang.org/x/net/idna: golang: net/http:
+│                       │      │                   golang.org/x/net/idna: Privilege escalation via incorrect
+│                       │      │                   Punycode label processing 
 │                       │      ├ Description     : The ToASCII and ToUnicode functions incorrectly accept
 │                       │      │                   Punycode-encoded labels that decode to an ASCII-only label.
 │                       │      │                   For example, ToUnicode("xn--example-.com") incorrectly
@@ -11366,9 +11366,9 @@
 │                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │                       │      ├ Fingerprint     : sha256:e33d6df0b7a444b1ecf856fc9d746aa60f29cfddfbdfa09445c4b
 │                       │      │                   c47d8eedee7 
-│                       │      ├ Title           : golang.org/x/net/idna: golang: golang.org/x/net/idna:
-│                       │      │                   Privilege escalation via incorrect Punycode label
-│                       │      │                   processing 
+│                       │      ├ Title           : golang.org/x/net/idna: golang: net/http:
+│                       │      │                   golang.org/x/net/idna: Privilege escalation via incorrect
+│                       │      │                   Punycode label processing 
 │                       │      ├ Description     : The ToASCII and ToUnicode functions incorrectly accept
 │                       │      │                   Punycode-encoded labels that decode to an ASCII-only label.
 │                       │      │                   For example, ToUnicode("xn--example-.com") incorrectly
@@ -15155,9 +15155,9 @@
 │                       │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │                       │      ├ Fingerprint     : sha256:4fc8b34a4b912f6eca6ec12e8e11b2adb3246ad31359ba592e573
 │                       │      │                   8b06592d2af 
-│                       │      ├ Title           : golang.org/x/net/idna: golang: golang.org/x/net/idna:
-│                       │      │                   Privilege escalation via incorrect Punycode label
-│                       │      │                   processing 
+│                       │      ├ Title           : golang.org/x/net/idna: golang: net/http:
+│                       │      │                   golang.org/x/net/idna: Privilege escalation via incorrect
+│                       │      │                   Punycode label processing 
 │                       │      ├ Description     : The ToASCII and ToUnicode functions incorrectly accept
 │                       │      │                   Punycode-encoded labels that decode to an ASCII-only label.
 │                       │      │                   For example, ToUnicode("xn--example-.com") incorrectly
@@ -17669,9 +17669,9 @@
                         │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
                         │      ├ Fingerprint     : sha256:2afa6f3cd96977614cf3e8a9ae25ab14863422f13dee7ee2c94df
                         │      │                   b7a2369920f 
-                        │      ├ Title           : golang.org/x/net/idna: golang: golang.org/x/net/idna:
-                        │      │                   Privilege escalation via incorrect Punycode label
-                        │      │                   processing 
+                        │      ├ Title           : golang.org/x/net/idna: golang: net/http:
+                        │      │                   golang.org/x/net/idna: Privilege escalation via incorrect
+                        │      │                   Punycode label processing 
                         │      ├ Description     : The ToASCII and ToUnicode functions incorrectly accept
                         │      │                   Punycode-encoded labels that decode to an ASCII-only label.
                         │      │                   For example, ToUnicode("xn--example-.com") incorrectly
