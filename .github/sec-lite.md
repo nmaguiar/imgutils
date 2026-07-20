@@ -613,9 +613,9 @@
                         │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
                         │      ├ Fingerprint     : sha256:6780cf79e4c5c1e8f9e2127b68af2f6bafb2b5ddfea2ac9bd4980
                         │      │                   3c7eb542521 
-                        │      ├ Title           : golang.org/x/net/idna: golang: golang.org/x/net/idna:
-                        │      │                   Privilege escalation via incorrect Punycode label
-                        │      │                   processing 
+                        │      ├ Title           : golang.org/x/net/idna: golang: net/http:
+                        │      │                   golang.org/x/net/idna: Privilege escalation via incorrect
+                        │      │                   Punycode label processing 
                         │      ├ Description     : The ToASCII and ToUnicode functions incorrectly accept
                         │      │                   Punycode-encoded labels that decode to an ASCII-only label.
                         │      │                   For example, ToUnicode("xn--example-.com") incorrectly
