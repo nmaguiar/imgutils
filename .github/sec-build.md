@@ -556,8 +556,8 @@
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │     │      ├ Fingerprint     : sha256:883a143a534f64a2173f0de368cc0ebb3a122c413e3d690094299005d6931a68 
-│     │      ├ Title           : golang.org/x/net/idna: golang: golang.org/x/net/idna: Privilege escalation via
-│     │      │                    incorrect Punycode label processing 
+│     │      ├ Title           : golang.org/x/net/idna: golang: net/http: golang.org/x/net/idna: Privilege
+│     │      │                   escalation via incorrect Punycode label processing 
 │     │      ├ Description     : The ToASCII and ToUnicode functions incorrectly accept Punycode-encoded labels
 │     │      │                    that decode to an ASCII-only label. For example,
 │     │      │                   ToUnicode("xn--example-.com") incorrectly returns the name "example.com"
@@ -1205,7 +1205,53 @@
 │     │      │                  ╰ [13]: https://www.zerodayinitiative.com/advisories/ZDI-CAN-28304/ 
 │     │      ├ PublishedDate   : 2026-03-04T17:16:14.763Z 
 │     │      ╰ LastModifiedDate: 2026-07-15T02:17:22.307Z 
-
+│     ├ [1]  ╭ VulnerabilityID : CVE-2026-34040 
+│     │      ├ VendorIDs        ─ [0]: GHSA-x744-4wpc-v9h2 
+│     │      ├ PkgID           : github.com/docker/docker@v28.0.4+incompatible 
+│     │      ├ PkgName         : github.com/docker/docker 
+│     │      ├ PkgIdentifier    ╭ PURL: pkg:golang/github.com/docker/docker@v28.0.4%2Bincompatible 
+│     │      │                  ╰ UID : 55fb5abb1612e962 
+│     │      ├ InstalledVersion: v28.0.4+incompatible 
+│     │      ├ FixedVersion    : 29.3.1 
+│     │      ├ Status          : fixed 
+│     │      ├ Layer            ╭ Digest: sha256:363b4a607781fe55099b43157685912192641b3c135645d513926b364514821b 
+│     │      │                  ╰ DiffID: sha256:49d3a0bc3dd5dc7981355184182041b447ba94f37754d121b122625e0d5652f4 
+│     │      ├ SeveritySource  : ghsa 
+│     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-34040 
+│     │      ├ DataSource       ╭ ID  : ghsa 
+│     │      │                  ├ Name: GitHub Security Advisory Go 
+│     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
+│     │      ├ Fingerprint     : sha256:cdb839c2ac205255088a51edd8e97f42bbbb14f1e1f54b115a62e56b57a92782 
+│     │      ├ Title           : Moby: Moby: Authorization bypass vulnerability 
+│     │      ├ Description     : Moby is an open source container framework. Prior to version 29.3.1, a
+│     │      │                   security vulnerability has been detected that allows attackers to bypass
+│     │      │                   authorization plugins (AuthZ). This issue has been patched in version
+│     │      │                   29.3.1. 
+│     │      ├ Severity        : HIGH 
+│     │      ├ CweIDs           ─ [0]: CWE-288 
+│     │      ├ VendorSeverity   ╭ amazon: 3 
+│     │      │                  ├ ghsa  : 3 
+│     │      │                  ├ nvd   : 3 
+│     │      │                  ├ photon: 3 
+│     │      │                  ╰ redhat: 2 
+│     │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H 
+│     │      │                  │        ╰ V3Score : 8.8 
+│     │      │                  ├ nvd    ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H 
+│     │      │                  │        ╰ V3Score : 7.8 
+│     │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N 
+│     │      │                           ╰ V3Score : 8.4 
+│     │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-34040 
+│     │      │                  ├ [1]: https://docs.docker.com/engine/extend/plugins_authorization 
+│     │      │                  ├ [2]: https://github.com/moby/moby 
+│     │      │                  ├ [3]: https://github.com/moby/moby/commit/e89edb19ad7de0407a5d31e3111cb01aa10b
+│     │      │                  │      5a38 
+│     │      │                  ├ [4]: https://github.com/moby/moby/releases/tag/docker-v29.3.1 
+│     │      │                  ├ [5]: https://github.com/moby/moby/security/advisories/GHSA-v23v-6jw2-98fq 
+│     │      │                  ├ [6]: https://github.com/moby/moby/security/advisories/GHSA-x744-4wpc-v9h2 
+│     │      │                  ├ [7]: https://nvd.nist.gov/vuln/detail/CVE-2026-34040 
+│     │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-34040 
+│     │      ├ PublishedDate   : 2026-03-31T03:15:57.883Z 
+│     │      ╰ LastModifiedDate: 2026-06-17T10:38:28.383Z 
 │     ├ [2]  ╭ VulnerabilityID : CVE-2026-41567 
 │     │      ├ VendorIDs        ─ [0]: GHSA-x86f-5xw2-fm2r 
 │     │      ├ PkgID           : github.com/docker/docker@v28.0.4+incompatible 
@@ -1748,8 +1794,8 @@
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │     │      ├ Fingerprint     : sha256:76d8b7f65f00e6dad925864e29bf27b37673afd449ac23ffcccd4ddda49985d0 
-│     │      ├ Title           : golang.org/x/net/idna: golang: golang.org/x/net/idna: Privilege escalation via
-│     │      │                    incorrect Punycode label processing 
+│     │      ├ Title           : golang.org/x/net/idna: golang: net/http: golang.org/x/net/idna: Privilege
+│     │      │                   escalation via incorrect Punycode label processing 
 │     │      ├ Description     : The ToASCII and ToUnicode functions incorrectly accept Punycode-encoded labels
 │     │      │                    that decode to an ASCII-only label. For example,
 │     │      │                   ToUnicode("xn--example-.com") incorrectly returns the name "example.com"
@@ -5762,8 +5808,8 @@
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │     │      ├ Fingerprint     : sha256:acbf3040e90d850b5f844b077de9bf0010b1ac461c860d938cd01b2627477bd8 
-│     │      ├ Title           : golang.org/x/net/idna: golang: golang.org/x/net/idna: Privilege escalation via
-│     │      │                    incorrect Punycode label processing 
+│     │      ├ Title           : golang.org/x/net/idna: golang: net/http: golang.org/x/net/idna: Privilege
+│     │      │                   escalation via incorrect Punycode label processing 
 │     │      ├ Description     : The ToASCII and ToUnicode functions incorrectly accept Punycode-encoded labels
 │     │      │                    that decode to an ASCII-only label. For example,
 │     │      │                   ToUnicode("xn--example-.com") incorrectly returns the name "example.com"
