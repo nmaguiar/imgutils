@@ -18,15 +18,15 @@
     FixedVersion: 29.3.1
     Status: fixed
     Layer:
-      Digest: sha256:8eead438872b02b5d29387025bcb5ccc680fec7174ca44a820306f1187c21168
-      DiffID: sha256:947d94ae3f076394c379586e33c264e3df6f8b90f93aa37e4fa320e1f1e8495d
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-34040
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Fingerprint: sha256:c2236972aac334cad07fb16413b8d6030b656f4d9bc90cef35ec2555eb2c5817
+    Fingerprint: sha256:159755d5c3843e6761c8eb38c8ce304620c2ffa039321f47f84649f2ab0e319e
     Title: 'Moby: Moby: Authorization bypass vulnerability'
     Description: Moby is an open source container framework. Prior to version 29.3.1, a security vulnerability has been detected that allows attackers to bypass authorization plugins (AuthZ). This issue has been patched in version 29.3.1.
     Severity: HIGH
@@ -71,15 +71,15 @@
     InstalledVersion: v28.5.2+incompatible
     Status: affected
     Layer:
-      Digest: sha256:8eead438872b02b5d29387025bcb5ccc680fec7174ca44a820306f1187c21168
-      DiffID: sha256:947d94ae3f076394c379586e33c264e3df6f8b90f93aa37e4fa320e1f1e8495d
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-41567
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Fingerprint: sha256:760470109d89f21a2a1d831bc7077650e176e910ec092ac970ca4714eb45a092
+    Fingerprint: sha256:3d1956281fdf6743c244289bd8d5f236e7f637ef085489bff4c468e4d0392d1d
     Title: 'docker: Moby/Docker Engine: Arbitrary Code Execution via malicious container image and compressed archive upload'
     Description: Moby is an open source container framework. In versions prior to 29.5.1 and in moby/moby v2 prior to v2.0.0-beta.14, when a compressed archive is uploaded to a container via `PUT /containers/{id}/archive` or piped through `docker cp -`, the daemon resolves decompression binaries (such as `xz` or `unpigz`) from the container's filesystem rather than the host's due to incorrect ordering of operations. A malicious container image containing a trojanized decompression binary can achieve arbitrary code execution with full daemon privileges, including host root UID and unrestricted capabilities, when a user uploads a compressed (xz or gzip) archive into that container. This issue is fixed in Docker Engine 29.5.1 and moby/moby v2.0.0-beta.14. Workarounds include only running containers from trusted images, using authorization plugins to restrict access to the `PUT /containers/{id}/archive` endpoint, and avoiding piping compressed archives into containers created from untrusted images
     Severity: HIGH
@@ -122,15 +122,15 @@
     InstalledVersion: v28.5.2+incompatible
     Status: affected
     Layer:
-      Digest: sha256:8eead438872b02b5d29387025bcb5ccc680fec7174ca44a820306f1187c21168
-      DiffID: sha256:947d94ae3f076394c379586e33c264e3df6f8b90f93aa37e4fa320e1f1e8495d
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-42306
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Fingerprint: sha256:b6fb28bfba78e426520bb4b2926146aaf70cf7b06ba07f78a36b861ddbab24cb
+    Fingerprint: sha256:6d3c78746d8e6f9b34732eabdfd98c065c76f8cbd9fcbf37096390877498c3a4
     Title: 'github.com/docker/docker: github.com/moby/moby: Moby container framework: Host file overwrite via race condition in docker cp mount setup'
     Description: Moby is an open source container framework. In Docker Engine prior to version 29.5.1, Docker Daemon versions 28.5.2 and prior, and Moby Daemon prior to version 2.0.0-beta.14, a race condition during docker cp mount setup allows a malicious container to redirect a bind mount target to an arbitrary host path, potentially overwriting host files or causing denial of service. This issue has been patched in Docker Engine version 29.5.1 and Moby Daemon version 2.0.0-beta.14.
     Severity: HIGH
@@ -173,15 +173,15 @@
     FixedVersion: 29.3.1
     Status: fixed
     Layer:
-      Digest: sha256:8eead438872b02b5d29387025bcb5ccc680fec7174ca44a820306f1187c21168
-      DiffID: sha256:947d94ae3f076394c379586e33c264e3df6f8b90f93aa37e4fa320e1f1e8495d
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33997
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Fingerprint: sha256:7a91952ec7bc4e48a82ffe800b5f1c599a2ad953cbe07d76827d1080650eb802
+    Fingerprint: sha256:aeeb4e5d9571cc853983b1e2f252fd6e22c19ae825aa78767e0a2f1aff09efe2
     Title: 'moby: docker: github.com/moby/moby: Moby: Privilege validation bypass during plugin installation'
     Description: Moby is an open source container framework. Prior to version 29.3.1, a security vulnerability has been detected that allows plugins privilege validation to be bypassed during docker plugin install. Due to an error in the daemon's privilege comparison logic, the daemon may incorrectly accept a privilege set that differs from the one approved by the user. Plugins that request exactly one privilege are also affected, because no comparison is performed at all. This issue has been patched in version 29.3.1.
     Severity: MEDIUM
@@ -231,15 +231,15 @@
     InstalledVersion: v28.5.2+incompatible
     Status: affected
     Layer:
-      Digest: sha256:8eead438872b02b5d29387025bcb5ccc680fec7174ca44a820306f1187c21168
-      DiffID: sha256:947d94ae3f076394c379586e33c264e3df6f8b90f93aa37e4fa320e1f1e8495d
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-41568
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Fingerprint: sha256:c9ce1821a27343ce6a893267fa8e8e0244c804a3f5749f821c536c2abf5b6a03
+    Fingerprint: sha256:2a53e6bab1760f651f89d5ccc438ef48cc1503e91e47795815b644b1d861d236
     Title: 'github.com/docker/docker: github.com/moby/moby: Moby: Denial of Service via race condition in docker cp mount setup'
     Description: Moby is an open source container framework. In Docker Engine prior to version 29.5.1, Docker Daemon versions 28.5.2 and prior, and Moby Daemon prior to version 2.0.0-beta.14, a race condition during docker cp mount setup allows a malicious container to create empty files or directories at arbitrary absolute paths on the host filesystem. This issue has been patched in Docker Engine version 29.5.1 and Moby Daemon version 2.0.0-beta.14.
     Severity: MEDIUM
@@ -276,15 +276,15 @@
     FixedVersion: 1.43.0
     Status: fixed
     Layer:
-      Digest: sha256:8eead438872b02b5d29387025bcb5ccc680fec7174ca44a820306f1187c21168
-      DiffID: sha256:947d94ae3f076394c379586e33c264e3df6f8b90f93aa37e4fa320e1f1e8495d
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39883
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Fingerprint: sha256:f637db9744c592f368dafc79cde5b46ce13bd3ac1613f8bff6cbef3bafa85f65
+    Fingerprint: sha256:957440e13a0c50b06098ee049ca3b84ad5b16318d0ec5bf76f404c16568b5481
     Title: 'github.com/open-telemetry/opentelemetry-go: OpenTelemetry-Go: Arbitrary code execution via PATH hijacking on BSD/Solaris'
     Description: OpenTelemetry-Go is the Go implementation of OpenTelemetry. From 1.15.0 to 1.42.0, the fix for CVE-2026-24051 changed the Darwin ioreg command to use an absolute path but left the BSD kenv command using a bare name, allowing the same PATH hijacking attack on BSD and Solaris platforms. This vulnerability is fixed in 1.43.0.
     Severity: HIGH
@@ -331,14 +331,14 @@
     FixedVersion: 0.55.0
     Status: fixed
     Layer:
-      Digest: sha256:8eead438872b02b5d29387025bcb5ccc680fec7174ca44a820306f1187c21168
-      DiffID: sha256:947d94ae3f076394c379586e33c264e3df6f8b90f93aa37e4fa320e1f1e8495d
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-25681
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:b9c9e35388d9ae8054af7c1035680ca2d2fc7eb39980fbace4373bcd15463169
+    Fingerprint: sha256:1a6186b8fffd07665f4e2a7425de2fbd79db734e2c5906cd480698514fffa486
     Title: 'golang.org/x/net/html: golang.org/x/net/html: Arbitrary code execution via Cross-Site Scripting'
     Description: Parsing arbitrary HTML which is then rendered using Render can result in an unexpected HTML tree. This can be leveraged to execute XSS attacks in applications that attempt to sanitize input HTML before rendering.
     Severity: HIGH
@@ -356,15 +356,14 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N
         V3Score: 8.1
     References:
-    - https://access.redhat.com/errata/RHSA-2026:37123
+    - https://access.redhat.com/errata/RHSA-2026:34357
     - https://access.redhat.com/security/cve/CVE-2026-25681
-    - https://bugzilla.redhat.com/2480680
-    - https://bugzilla.redhat.com/2480681
-    - https://bugzilla.redhat.com/2480685
-    - https://bugzilla.redhat.com/2480688
-    - https://bugzilla.redhat.com/2480757
+    - https://bugzilla.redhat.com/2466505
+    - https://bugzilla.redhat.com/2466507
+    - https://bugzilla.redhat.com/2467822
+    - https://bugzilla.redhat.com/2480756
     - https://bugzilla.redhat.com/2480761
-    - https://bugzilla.redhat.com/2493620
+    - https://bugzilla.redhat.com/2484207
     - https://bugzilla.redhat.com/show_bug.cgi?id=2480680
     - https://bugzilla.redhat.com/show_bug.cgi?id=2480681
     - https://bugzilla.redhat.com/show_bug.cgi?id=2480685
@@ -379,7 +378,7 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39835
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42508
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-57231
-    - https://errata.almalinux.org/9/ALSA-2026-37123.html
+    - https://errata.almalinux.org/10/ALSA-2026-34357.html
     - https://errata.rockylinux.org/RLSA-2026:37123
     - https://go.dev/cl/781703
     - https://go.dev/issue/79574
@@ -403,14 +402,14 @@
     FixedVersion: 0.55.0
     Status: fixed
     Layer:
-      Digest: sha256:8eead438872b02b5d29387025bcb5ccc680fec7174ca44a820306f1187c21168
-      DiffID: sha256:947d94ae3f076394c379586e33c264e3df6f8b90f93aa37e4fa320e1f1e8495d
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-27136
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:eac17c660d01c1330536f1ff3f9b3e25feadbb43f487ef301456030ba7f859f1
+    Fingerprint: sha256:33638c705eb057fc8e2171ea9a388f4e92eea428b29cc70344b32894dabf53a9
     Title: 'golang.org/x/net/html: golang: golang.org/x/net/html: Cross-Site Scripting via HTML parsing bypass'
     Description: Parsing arbitrary HTML which is then rendered using Render can result in an unexpected HTML tree. This can be leveraged to execute XSS attacks in applications that attempt to sanitize input HTML before rendering.
     Severity: HIGH
@@ -475,15 +474,15 @@
     FixedVersion: 0.53.0
     Status: fixed
     Layer:
-      Digest: sha256:8eead438872b02b5d29387025bcb5ccc680fec7174ca44a820306f1187c21168
-      DiffID: sha256:947d94ae3f076394c379586e33c264e3df6f8b90f93aa37e4fa320e1f1e8495d
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
     SeveritySource: nvd
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-33814
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:e91b794d3815d816e0e0565263d2b0e7dc160fc8be22fa38daee6432f5d75292
+    Fingerprint: sha256:dad4df9fd8350ec679a42ca9a80e7ff36feb73dad3b6e8671a7e38dd638339a9
     Title: 'net/http/internal/http2: golang: golang.org/x/net: Go HTTP/2: Denial of Service via malformed SETTINGS_MAX_FRAME_SIZE frame'
     Description: When processing HTTP/2 SETTINGS frames, transport will enter an infinite loop of writing CONTINUATION frames if it receives a SETTINGS_MAX_FRAME_SIZE with a value of 0.
     Severity: HIGH
@@ -553,14 +552,14 @@
     FixedVersion: 0.55.0
     Status: fixed
     Layer:
-      Digest: sha256:8eead438872b02b5d29387025bcb5ccc680fec7174ca44a820306f1187c21168
-      DiffID: sha256:947d94ae3f076394c379586e33c264e3df6f8b90f93aa37e4fa320e1f1e8495d
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39821
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:ada8dc6ac59a83245e507cf5a9b31f4186194e9606d87790965a4803daebd0c2
+    Fingerprint: sha256:fdde3c54d82acdff66b8679c015ec209e2beb6ead830d37ee8d1b104db71783b
     Title: 'golang.org/x/net/idna: golang: net/http: golang.org/x/net/idna: Privilege escalation via incorrect Punycode label processing'
     Description: The ToASCII and ToUnicode functions incorrectly accept Punycode-encoded labels that decode to an ASCII-only label. For example, ToUnicode("xn--example-.com") incorrectly returns the name "example.com" rather than an error. This behavior can lead to privilege escalation in programs using the idna package. For example, a program which performs privilege checks on the ASCII hostname may reject "example.com" but permit "xn--example-.com". If that program subsequently converts the ASCII hostname to Unicode, it will inadvertently permits access to the Unicode name "example.com".
     Severity: HIGH
@@ -667,11 +666,12 @@
     - https://access.redhat.com/errata/RHSA-2026:47952
     - https://access.redhat.com/security/cve/CVE-2026-39821
     - https://bugzilla.redhat.com/2480756
+    - https://bugzilla.redhat.com/2484207
     - https://bugzilla.redhat.com/show_bug.cgi?id=2480756
     - https://bugzilla.redhat.com/show_bug.cgi?id=2498152
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39821
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39822
-    - https://errata.almalinux.org/9/ALSA-2026-37435.html
+    - https://errata.almalinux.org/10/ALSA-2026-46395.html
     - https://errata.rockylinux.org/RLSA-2026:37435
     - https://github.com/golang/go/issues/78760
     - https://go.dev/cl/767220
@@ -698,14 +698,14 @@
     FixedVersion: 0.55.0
     Status: fixed
     Layer:
-      Digest: sha256:8eead438872b02b5d29387025bcb5ccc680fec7174ca44a820306f1187c21168
-      DiffID: sha256:947d94ae3f076394c379586e33c264e3df6f8b90f93aa37e4fa320e1f1e8495d
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-25680
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:74ea88ccb79ba32613b8b4f01cad8ab8280768f62e608311b17ef1cd49941678
+    Fingerprint: sha256:2848640315e5b111c08f07d1c5a43c09082de7f7a0d0194eb149838394f88e2d
     Title: 'golang.org/x/net/html: golang.org/x/net/html: Denial of Service due to excessive HTML parsing'
     Description: Parsing arbitrary HTML can consume excessive CPU time, possibly leading to denial of service.
     Severity: MEDIUM
@@ -741,14 +741,14 @@
     FixedVersion: 0.55.0
     Status: fixed
     Layer:
-      Digest: sha256:8eead438872b02b5d29387025bcb5ccc680fec7174ca44a820306f1187c21168
-      DiffID: sha256:947d94ae3f076394c379586e33c264e3df6f8b90f93aa37e4fa320e1f1e8495d
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-42502
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:1c0b8ad524450ef1249f2a0ee67e54d69f016d5c4ec666d6e959cbc891adce05
+    Fingerprint: sha256:afe2f09fb0c35d2d6cbf35620e7b00f50daba711b0fb1c3a9a24f1f5c5194146
     Title: 'golang.org/x/net/html: golang: golang.org/x/net/html: Cross-Site Scripting via unexpected HTML tree rendering'
     Description: Parsing arbitrary HTML which is then rendered using Render can result in an unexpected HTML tree. This can be leveraged to execute XSS attacks in applications that attempt to sanitize input HTML before rendering.
     Severity: MEDIUM
@@ -784,14 +784,14 @@
     FixedVersion: 0.55.0
     Status: fixed
     Layer:
-      Digest: sha256:8eead438872b02b5d29387025bcb5ccc680fec7174ca44a820306f1187c21168
-      DiffID: sha256:947d94ae3f076394c379586e33c264e3df6f8b90f93aa37e4fa320e1f1e8495d
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-42506
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:935476d5644415de38dd80cecc277a041b075f8f711182536f9470cbe0098c01
+    Fingerprint: sha256:96200428a4b1be1d1da5c81338068c33a3561a71c89bbcde251b25380e6fea1b
     Title: 'golang.org/x/net/html: golang.org/x/net/html: Cross-Site Scripting (XSS) via arbitrary HTML parsing'
     Description: Parsing arbitrary HTML which is then rendered using Render can result in an unexpected HTML tree. This can be leveraged to execute XSS attacks in applications that attempt to sanitize input HTML before rendering.
     Severity: MEDIUM
@@ -827,14 +827,14 @@
     FixedVersion: 0.56.0
     Status: fixed
     Layer:
-      Digest: sha256:8eead438872b02b5d29387025bcb5ccc680fec7174ca44a820306f1187c21168
-      DiffID: sha256:947d94ae3f076394c379586e33c264e3df6f8b90f93aa37e4fa320e1f1e8495d
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-46600
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:e00d3f331630ef50c0f8610a9c289824f95c94d0586a6732ac2db3f8995c2d03
+    Fingerprint: sha256:cd033dea5ae8c349a5d835b0e94a60f0b7e0264e38537632ff980054c2d80e57
     Title: Parsing an invalid SVCB or HTTPS RR can panic when the size of a param ...
     Description: Parsing an invalid SVCB or HTTPS RR can panic when the size of a parameter value overflows the message buffer.
     Severity: UNKNOWN
@@ -858,14 +858,14 @@
     FixedVersion: 0.44.0
     Status: fixed
     Layer:
-      Digest: sha256:8eead438872b02b5d29387025bcb5ccc680fec7174ca44a820306f1187c21168
-      DiffID: sha256:947d94ae3f076394c379586e33c264e3df6f8b90f93aa37e4fa320e1f1e8495d
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39824
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:97bfafb2eb6e563c1dc41796c62693f6e24ba2dc609a156e79de1711f4d0e5d7
+    Fingerprint: sha256:4d86008e3e1e9b3887c3886fb99b15301a7281aa531654b330f4094bed60e598
     Title: Invoking integer overflow in NewNTUnicodeString in golang.org/x/sys/windows
     Description: NewNTUnicodeString does not check for string length overflow. When provided with a string that overflows the maximum size of a NTUnicodeString (a 16-bit number of bytes), it returns a truncated string rather than an error.
     Severity: UNKNOWN
@@ -890,14 +890,14 @@
     FixedVersion: 0.39.0
     Status: fixed
     Layer:
-      Digest: sha256:8eead438872b02b5d29387025bcb5ccc680fec7174ca44a820306f1187c21168
-      DiffID: sha256:947d94ae3f076394c379586e33c264e3df6f8b90f93aa37e4fa320e1f1e8495d
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-56852
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:c6896920489ecc64edfe1a29e8c0dd4aa158fcb1a91f38924a12b0e60f9a4c2e
+    Fingerprint: sha256:88400391d453af9a65c80f04ddee5e483f290e5a1906491d7e8c28b6aa686d80
     Title: A norm.Iter can enter an infinite loop when handling input containing  ...
     Description: A norm.Iter can enter an infinite loop when handling input containing invalid UTF-8 bytes.
     Severity: HIGH
@@ -922,15 +922,15 @@
     FixedVersion: 1.82.1
     Status: fixed
     Layer:
-      Digest: sha256:8eead438872b02b5d29387025bcb5ccc680fec7174ca44a820306f1187c21168
-      DiffID: sha256:947d94ae3f076394c379586e33c264e3df6f8b90f93aa37e4fa320e1f1e8495d
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
     SeveritySource: ghsa
     PrimaryURL: https://github.com/advisories/GHSA-hrxh-6v49-42gf
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Fingerprint: sha256:602494018d0409fc215546d0e5752ec593d657d14f353609ae6d90d57c3ddbeb
+    Fingerprint: sha256:3203027ea66df2448f6d3daeb6905f1682fbad886b7176a826e94f5914a82e13
     Title: 'gRPC-Go: xDS RBAC and HTTP/2 Vulnerabilities'
     Description: |-
       Multiple security vulnerabilities have been identified and addressed in grpc-go affecting the xDS RBAC authorization engine (internal/xds/rbac) and the HTTP/2 transport server implementation (internal/transport). These vulnerabilities could result in:
@@ -1013,14 +1013,14 @@
     FixedVersion: 1.25.11, 1.26.4
     Status: fixed
     Layer:
-      Digest: sha256:8eead438872b02b5d29387025bcb5ccc680fec7174ca44a820306f1187c21168
-      DiffID: sha256:947d94ae3f076394c379586e33c264e3df6f8b90f93aa37e4fa320e1f1e8495d
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-27145
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:f0fe91cefaa75cce5471e44045e20edb445436113738cf4ff8a3c88683f36911
+    Fingerprint: sha256:b90f6a2791589374b87fbdd4e43e586d9636ee84a2525f6d4236edcde84cd4aa
     Title: 'crypto/x509: golang: golang crypto/x509: Denial of Service via excessive processing of DNS SAN entries'
     Description: (*x509.Certificate).VerifyHostname previously called matchHostnames in a loop over all DNS Subject Alternative Name (SAN) entries. This caused strings.Split(host, ".") to execute repeatedly on the same input hostname. With a large DNS SAN list, verification costs scaled quadratically based on the number of SAN entries multiplied by the hostname's label count. Because x509.Verify validates hostnames before building the certificate chain, this overhead occurred even for untrusted certificates.
     Severity: HIGH
@@ -1080,13 +1080,13 @@
     - https://access.redhat.com/errata/RHSA-2026:47735
     - https://access.redhat.com/errata/RHSA-2026:47737
     - https://access.redhat.com/security/cve/CVE-2026-27145
-    - https://bugzilla.redhat.com/2445356
+    - https://bugzilla.redhat.com/2480756
     - https://bugzilla.redhat.com/2484207
     - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
     - https://bugzilla.redhat.com/show_bug.cgi?id=2484207
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27145
-    - https://errata.almalinux.org/9/ALSA-2026-36317.html
+    - https://errata.almalinux.org/10/ALSA-2026-46395.html
     - https://errata.rockylinux.org/RLSA-2026:36317
     - https://go.dev/cl/783621
     - https://go.dev/issue/79694
@@ -1111,14 +1111,14 @@
     FixedVersion: 1.25.12, 1.26.5, 1.27.0-rc.2
     Status: fixed
     Layer:
-      Digest: sha256:8eead438872b02b5d29387025bcb5ccc680fec7174ca44a820306f1187c21168
-      DiffID: sha256:947d94ae3f076394c379586e33c264e3df6f8b90f93aa37e4fa320e1f1e8495d
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-39822
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:91929abd5b8e878f1212db22ced85c65a917393e847ca2fa5507daca0628a5f5
+    Fingerprint: sha256:aad3a23c528090a42cc92cc60fdb312497d2943553e81c67bb024b37507ee77f
     Title: 'os: golang: Go os.Root: Symlink following vulnerability allows directory traversal'
     Description: On Unix systems, opening a file in an os.Root improperly follows symlinks to locations outside of the Root when the final path component of the a path is a symbolic link and the path ends in /. For example, 'root.Open("symlink/")' will open "symlink" even when "symlink" is a symbolic link pointing outside of the root.
     Severity: HIGH
@@ -1139,12 +1139,12 @@
         V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
         V3Score: 7.8
     References:
-    - https://access.redhat.com/errata/RHSA-2026:38878
+    - https://access.redhat.com/errata/RHSA-2026:38495
     - https://access.redhat.com/security/cve/CVE-2026-39822
     - https://bugzilla.redhat.com/2498152
     - https://bugzilla.redhat.com/show_bug.cgi?id=2498152
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39822
-    - https://errata.almalinux.org/9/ALSA-2026-38878.html
+    - https://errata.almalinux.org/10/ALSA-2026-38495.html
     - https://errata.rockylinux.org/RLSA-2026:38878
     - https://go.dev/cl/797880
     - https://go.dev/issue/79005
@@ -1168,14 +1168,14 @@
     FixedVersion: 1.25.11, 1.26.4
     Status: fixed
     Layer:
-      Digest: sha256:8eead438872b02b5d29387025bcb5ccc680fec7174ca44a820306f1187c21168
-      DiffID: sha256:947d94ae3f076394c379586e33c264e3df6f8b90f93aa37e4fa320e1f1e8495d
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-42504
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:cfda6de3a0d16105d637d7c7eb8029b1e0c92ed3cbaf7ba08ba4cd215b4ba281
+    Fingerprint: sha256:ffe73ba231d1872cf43047144273464f384f93298861b589a281d93ba09bd2b8
     Title: 'mime: golang: Golang MIME: Denial of Service via maliciously-crafted MIME header'
     Description: Decoding a maliciously-crafted MIME header containing many invalid encoded-words can consume excessive CPU.
     Severity: HIGH
@@ -1215,14 +1215,14 @@
     FixedVersion: 1.25.12, 1.26.5, 1.27.0-rc.2
     Status: fixed
     Layer:
-      Digest: sha256:8eead438872b02b5d29387025bcb5ccc680fec7174ca44a820306f1187c21168
-      DiffID: sha256:947d94ae3f076394c379586e33c264e3df6f8b90f93aa37e4fa320e1f1e8495d
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-42505
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:fd7fd210f17796a68fc3237b3818cfa478ac576a18a52a6662897655e327fd40
+    Fingerprint: sha256:ea1ba7010b4922cf6536bd2977ffa6fd016cca48e56ad510ad984ce089ee9573
     Title: 'crypto/tls: golang: Go crypto/tls: Information disclosure in Encrypted Client Hello'
     Description: Handshakes which used Encrypted Client Hello could be de-anonymized by a passive network observer due to a disclosure of pre-shared key identities in the unencrypted client hello.
     Severity: MEDIUM
@@ -1261,14 +1261,14 @@
     FixedVersion: 1.25.11, 1.26.4
     Status: fixed
     Layer:
-      Digest: sha256:8eead438872b02b5d29387025bcb5ccc680fec7174ca44a820306f1187c21168
-      DiffID: sha256:947d94ae3f076394c379586e33c264e3df6f8b90f93aa37e4fa320e1f1e8495d
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-42507
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:5eb2a60250fa7dceb6eb866e0409d0601fbebc21749a74a26f73d2e9d5bf1093
+    Fingerprint: sha256:6143ef3c0813a4103c170f92af513d954ae532908de5708a9d4e84e50a292648
     Title: 'net/textproto: golang: Golang net/textproto: Misleading error messages via input injection'
     Description: When returning errors, functions in the net/textproto package would include its input as part of the error. This might allow an attacker to inject misleading content to errors that are printed or logged.
     Severity: MEDIUM
@@ -1287,14 +1287,14 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
         V3Score: 5.3
     References:
-    - https://access.redhat.com/errata/RHSA-2026:29981
+    - https://access.redhat.com/errata/RHSA-2026:29980
     - https://access.redhat.com/security/cve/CVE-2026-42507
     - https://bugzilla.redhat.com/2484205
     - https://bugzilla.redhat.com/show_bug.cgi?id=2484205
     - https://bugzilla.redhat.com/show_bug.cgi?id=2484207
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27145
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42507
-    - https://errata.almalinux.org/9/ALSA-2026-29981.html
+    - https://errata.almalinux.org/10/ALSA-2026-29980.html
     - https://errata.rockylinux.org/RLSA-2026:29981
     - https://go.dev/cl/777060
     - https://go.dev/issue/79346
