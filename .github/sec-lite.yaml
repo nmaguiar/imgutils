@@ -111,7 +111,7 @@
     - https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-41567.json
     - https://www.cve.org/CVERecord?id=CVE-2026-41567
     PublishedDate: '2026-06-05T02:17:13.817Z'
-    LastModifiedDate: '2026-08-14T13:18:36.457Z'
+    LastModifiedDate: '2026-08-17T12:18:27.84Z'
   - VulnerabilityID: CVE-2026-42306
     VendorIDs:
     - GHSA-rg2x-37c3-w2rh
@@ -220,7 +220,7 @@
     - https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-33997.json
     - https://www.cve.org/CVERecord?id=CVE-2026-33997
     PublishedDate: '2026-03-31T03:15:57.523Z'
-    LastModifiedDate: '2026-08-14T13:18:14.96Z'
+    LastModifiedDate: '2026-08-17T12:18:11.717Z'
   - VulnerabilityID: CVE-2026-41568
     VendorIDs:
     - GHSA-vp62-88p7-qqf5
@@ -624,7 +624,7 @@
     - https://ubuntu.com/security/notices/USN-8473-1
     - https://www.cve.org/CVERecord?id=CVE-2026-33814
     PublishedDate: '2026-05-07T20:16:42.88Z'
-    LastModifiedDate: '2026-08-13T13:18:25.52Z'
+    LastModifiedDate: '2026-08-17T12:18:05.377Z'
   - VulnerabilityID: CVE-2026-39821
     VendorIDs:
     - GO-2026-5026
@@ -799,7 +799,7 @@
     - https://ubuntu.com/security/notices/USN-8416-1
     - https://www.cve.org/CVERecord?id=CVE-2026-39821
     PublishedDate: '2026-05-22T16:16:20.41Z'
-    LastModifiedDate: '2026-08-14T13:18:24.667Z'
+    LastModifiedDate: '2026-08-17T12:18:16.93Z'
   - VulnerabilityID: CVE-2026-46600
     VendorIDs:
     - GO-2026-5942
@@ -826,8 +826,12 @@
     CweIDs:
     - CWE-125
     VendorSeverity:
+      bitnami: 3
       redhat: 3
     CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
       redhat:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
@@ -1261,7 +1265,7 @@
     - https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-27145.json
     - https://www.cve.org/CVERecord?id=CVE-2026-27145
     PublishedDate: '2026-06-02T23:16:35.57Z'
-    LastModifiedDate: '2026-08-14T13:17:49.537Z'
+    LastModifiedDate: '2026-08-17T12:17:35.723Z'
   - VulnerabilityID: CVE-2026-33818
     VendorIDs:
     - GO-2026-5972
@@ -1477,7 +1481,7 @@
     - https://ubuntu.com/security/notices/USN-8416-1
     - https://www.cve.org/CVERecord?id=CVE-2026-39821
     PublishedDate: '2026-05-22T16:16:20.41Z'
-    LastModifiedDate: '2026-08-14T13:18:24.667Z'
+    LastModifiedDate: '2026-08-17T12:18:16.93Z'
   - VulnerabilityID: CVE-2026-39822
     VendorIDs:
     - GO-2026-4970
@@ -1616,8 +1620,12 @@
     CweIDs:
     - CWE-125
     VendorSeverity:
+      bitnami: 3
       redhat: 3
     CVSS:
+      bitnami:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
       redhat:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
