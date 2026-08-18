@@ -132,7 +132,7 @@
                         │      │                  │       026/cve-2026-41567.json 
                         │      │                  ╰ [11]: https://www.cve.org/CVERecord?id=CVE-2026-41567 
                         │      ├ PublishedDate   : 2026-06-05T02:17:13.817Z 
-                        │      ╰ LastModifiedDate: 2026-08-14T13:18:36.457Z 
+                        │      ╰ LastModifiedDate: 2026-08-17T12:18:27.84Z 
                         ├ [2]  ╭ VulnerabilityID : CVE-2026-42306 
                         │      ├ VendorIDs        ─ [0]: GHSA-rg2x-37c3-w2rh 
                         │      ├ PkgID           : github.com/docker/docker@v28.5.2+incompatible 
@@ -259,7 +259,7 @@
                         │      │                  │       026/cve-2026-33997.json 
                         │      │                  ╰ [12]: https://www.cve.org/CVERecord?id=CVE-2026-33997 
                         │      ├ PublishedDate   : 2026-03-31T03:15:57.523Z 
-                        │      ╰ LastModifiedDate: 2026-08-14T13:18:14.96Z 
+                        │      ╰ LastModifiedDate: 2026-08-17T12:18:11.717Z 
                         ├ [4]  ╭ VulnerabilityID : CVE-2026-41568 
                         │      ├ VendorIDs        ─ [0]: GHSA-vp62-88p7-qqf5 
                         │      ├ PkgID           : github.com/docker/docker@v28.5.2+incompatible 
@@ -704,7 +704,7 @@
                         │      │                  ├ [34]: https://ubuntu.com/security/notices/USN-8473-1 
                         │      │                  ╰ [35]: https://www.cve.org/CVERecord?id=CVE-2026-33814 
                         │      ├ PublishedDate   : 2026-05-07T20:16:42.88Z 
-                        │      ╰ LastModifiedDate: 2026-08-13T13:18:25.52Z 
+                        │      ╰ LastModifiedDate: 2026-08-17T12:18:05.377Z 
                         ├ [11] ╭ VulnerabilityID : CVE-2026-39821 
                         │      ├ VendorIDs        ─ [0]: GO-2026-5026 
                         │      ├ PkgID           : golang.org/x/net@v0.51.0 
@@ -892,7 +892,7 @@
                         │      │                  ├ [133]: https://ubuntu.com/security/notices/USN-8416-1 
                         │      │                  ╰ [134]: https://www.cve.org/CVERecord?id=CVE-2026-39821 
                         │      ├ PublishedDate   : 2026-05-22T16:16:20.41Z 
-                        │      ╰ LastModifiedDate: 2026-08-14T13:18:24.667Z 
+                        │      ╰ LastModifiedDate: 2026-08-17T12:18:16.93Z 
                         ├ [12] ╭ VulnerabilityID : CVE-2026-46600 
                         │      ├ VendorIDs        ─ [0]: GO-2026-5942 
                         │      ├ PkgID           : golang.org/x/net@v0.51.0 
@@ -919,10 +919,14 @@
                         │      │                   of a parameter value overflows the message buffer. 
                         │      ├ Severity        : HIGH 
                         │      ├ CweIDs           ─ [0]: CWE-125 
-                        │      ├ VendorSeverity   ─ redhat: 3 
-                        │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
-                        │      │                           │           /A:H 
-                        │      │                           ╰ V3Score : 7.5 
+                        │      ├ VendorSeverity   ╭ bitnami: 3 
+                        │      │                  ╰ redhat : 3 
+                        │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+                        │      │                  │         │           N/A:H 
+                        │      │                  │         ╰ V3Score : 7.5 
+                        │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+                        │      │                            │           N/A:H 
+                        │      │                            ╰ V3Score : 7.5 
                         │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-46600 
                         │      │                  ├ [1]: https://go.dev/cl/786345 
                         │      │                  ├ [2]: https://go.dev/issue/79795 
@@ -1395,7 +1399,7 @@
                         │      │                  │       026/cve-2026-27145.json 
                         │      │                  ╰ [85]: https://www.cve.org/CVERecord?id=CVE-2026-27145 
                         │      ├ PublishedDate   : 2026-06-02T23:16:35.57Z 
-                        │      ╰ LastModifiedDate: 2026-08-14T13:17:49.537Z 
+                        │      ╰ LastModifiedDate: 2026-08-17T12:17:35.723Z 
                         ├ [20] ╭ VulnerabilityID : CVE-2026-33818 
                         │      ├ VendorIDs        ─ [0]: GO-2026-5972 
                         │      ├ PkgID           : stdlib@v1.26.3 
@@ -1623,7 +1627,7 @@
                         │      │                  ├ [133]: https://ubuntu.com/security/notices/USN-8416-1 
                         │      │                  ╰ [134]: https://www.cve.org/CVERecord?id=CVE-2026-39821 
                         │      ├ PublishedDate   : 2026-05-22T16:16:20.41Z 
-                        │      ╰ LastModifiedDate: 2026-08-14T13:18:24.667Z 
+                        │      ╰ LastModifiedDate: 2026-08-17T12:18:16.93Z 
                         ├ [22] ╭ VulnerabilityID : CVE-2026-39822 
                         │      ├ VendorIDs        ─ [0]: GO-2026-4970 
                         │      ├ PkgID           : stdlib@v1.26.3 
@@ -1765,10 +1769,14 @@
                         │      │                   of a parameter value overflows the message buffer. 
                         │      ├ Severity        : HIGH 
                         │      ├ CweIDs           ─ [0]: CWE-125 
-                        │      ├ VendorSeverity   ─ redhat: 3 
-                        │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
-                        │      │                           │           /A:H 
-                        │      │                           ╰ V3Score : 7.5 
+                        │      ├ VendorSeverity   ╭ bitnami: 3 
+                        │      │                  ╰ redhat : 3 
+                        │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+                        │      │                  │         │           N/A:H 
+                        │      │                  │         ╰ V3Score : 7.5 
+                        │      │                  ╰ redhat  ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:
+                        │      │                            │           N/A:H 
+                        │      │                            ╰ V3Score : 7.5 
                         │      ├ References       ╭ [0]: https://access.redhat.com/security/cve/CVE-2026-46600 
                         │      │                  ├ [1]: https://go.dev/cl/786345 
                         │      │                  ├ [2]: https://go.dev/issue/79795 
