@@ -9,6 +9,7 @@ Alpine based image ("nmaguiar/imgutils") with:
 * ctr
 * nerdctl
 * syft
+* cosign
 * dive (https://github.com/wagoodman/dive rebuilt using https://github.com/jauderho/dive)
 * openaf (with DockerRegistry, Kube, oafp)
 * mc (Midnight Commander)
@@ -36,6 +37,7 @@ This should be enough tools to be able to manage images on a Kubernetes cluster 
 * [Accessing the Docker daemon](#accessing-the-docker-daemon)
 * [Accessing Kubernetes container runtime](#accessing-kubernetes-container-runtime)
 * [Checking images content](#checking-images-content)
+* [Verifying container image signatures](#verifying-container-image-signatures)
 * [Using the local docker authentication](#using-the-local-docker-authentication)
 
 ## Usage
@@ -353,6 +355,30 @@ expandFilesInImage.sh docker.io/some/image:latest output_files
 ls -R output_files
 cd output_files && mc
 ```
+
+### Verifying container image signatures
+
+Cosign verifies a container image before it is copied or deployed. Pin the image
+to its digest and verify it against either a trusted public key or the expected
+keyless signing identity. Do not use mutable tags as the verification target.
+
+```bash
+IMAGE=registry.example.com/team/app@sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+
+# Verify a signature made with the publisher's public key.
+cosign verify --key /path/to/publisher-cosign.pub "$IMAGE"
+
+# Verify a keyless GitHub Actions signature. Replace the identity with the
+# publisher's documented release workflow identity.
+cosign verify \
+  --certificate-identity 'https://github.com/example/project/.github/workflows/release.yml@refs/tags/v1.2.3' \
+  --certificate-oidc-issuer 'https://token.actions.githubusercontent.com' \
+  "$IMAGE"
+```
+
+For signing workflows and advanced verification options, see the Cosign
+documentation at https://docs.sigstore.dev/cosign/.
+
 ### Using the local docker authentication
 
 To start imgutils/nmaguiar with the local host docker authentication:

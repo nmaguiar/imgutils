@@ -42,6 +42,7 @@ jobs:
               .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `/openaf/oafp cmd="/usr/bin/dive -v" path="split(@,' ').split([1],'-')[0]"`])
               .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `TERM=UTF-8 mc -V | /openaf/oafp in=lines linesjoin=true path="split([0], ' ')[3]"`])
               .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `syft --version | /openaf/oafp path="split(@, ' ')[1]"`])
+              .sh(["docker", "run", "--rm", "nmaguiar/imgutils:" + args.tag, "/bin/sh", "-c", `cosign version | awk '/^GitVersion:/ { print $2; exit }'`])
               .get()
 
     var _r = {
@@ -54,7 +55,8 @@ jobs:
       nerdctl: res[6].stdout.trim().replace(/\"/g, ''),
       dive   : res[7].stdout.trim().replace(/\"/g, ''),
       mc     : res[8].stdout.trim().replace(/\"/g, ''),
-      syft   : res[9].stdout.trim().replace(/\"/g, '')
+      syft   : res[9].stdout.trim().replace(/\"/g, ''),
+      cosign : res[10].stdout.trim().replace(/\"/g, '')
     }
     cprint(_r)
 
@@ -88,6 +90,8 @@ jobs:
           version: "{{nerdctl}}"
         - tool   : 'syft'
           version: "{{syft}}"
+        - tool   : 'cosign'
+          version: "{{cosign}}"
       aSpace: ""
     ((templateArgs)): true
   #to   :
@@ -104,7 +108,7 @@ jobs:
   from :
   - (get): versions
   to   : 
-  - (template): " oaf: {{openaf}} | docker: {{docker}} | helm: {{helm}} | skopeo: {{skopeo}} | crictl: {{crictl}} | ctr: {{ctr}} | nerdctl: {{nerdctl}} | dive: {{dive}} | syft: {{syft}} "
+  - (template): " oaf: {{openaf}} | docker: {{docker}} | helm: {{helm}} | skopeo: {{skopeo}} | crictl: {{crictl}} | ctr: {{ctr}} | nerdctl: {{nerdctl}} | dive: {{dive}} | syft: {{syft}} | cosign: {{cosign}} "
     ((outPath): status
     ((key    ): args
     ((out    ): args

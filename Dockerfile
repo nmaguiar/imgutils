@@ -26,7 +26,7 @@ USER root
 RUN sed -i 's/v[0-9]*\.[0-9]*/edge/g' /etc/apk/repositories\
  && apk update\
  && apk upgrade --available\
- && apk --no-cache add skopeo docker-cli curl tar bash gzip mc tmux containerd-ctr bash-completion\
+ && apk --no-cache add skopeo docker-cli curl tar bash gzip mc tmux containerd-ctr bash-completion cosign\
  && /openaf/ojob ojob.io/kube/getHelm path=/usr/bin\
  && /openaf/ojob ojob.io/kube/getNerdCtl path=/usr/bin\
  && /openaf/opack install DockerRegistry Kube BouncyCastle oafproc\
@@ -70,6 +70,7 @@ RUN echo "source <(crictl completion bash)" >> /etc/bash/start.sh\
  && echo "source <(skopeo completion bash)" >> /etc/bash/start.sh\
  && echo "source <(nerdctl completion bash)" >> /etc/bash/start.sh\
  && echo "source <(syft completion bash)" >> /etc/bash/start.sh\
+ && echo "source <(cosign completion bash)" >> /etc/bash/start.sh\
  && /openaf/oaf --bashcompletion all > /openaf/.openaf_completion.sh\
  && chmod a+x /openaf/.openaf_*.sh\
  && chown openaf:openaf /openaf/.openaf_*.sh\

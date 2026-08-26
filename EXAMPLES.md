@@ -16,6 +16,7 @@ List of examples:
 | Images   | Checking images content |
 | Images   | Checkout the files per layer on an existing image |
 | Images   | Generate a BOM (Bill Of Materials) for a provided image |
+| Supply chain | Verifying a container image signature |
 | Images   | Retrieve a specific file from an image |
 | Images   | Comparing file contents between two image tags |
 | Images   | Squashing image layers to reduce size and improve performance |
@@ -424,6 +425,43 @@ You can use the _syft_ tool to generate a CycloneDX JSON BOM (Bill Of Materials)
 ```bash
 syft scan nmaguiar/imgutils -o cyclonedx-json
 ```
+
+---
+
+## 🔐 Verifying a container image signature
+
+Verify the exact digest that will be copied or deployed. Obtain the public key
+or keyless identity constraints from the image publisher; verification without
+those constraints does not establish who signed the image.
+
+```bash
+# Run imgutils with the registry authentication required for the image, if any.
+docker run --rm -ti nmaguiar/imgutils /bin/bash
+
+IMAGE=registry.example.com/team/app@sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+
+# Verify an image signed with a publisher-provided public key.
+cosign verify --key /path/to/publisher-cosign.pub "$IMAGE"
+
+# Verify a keyless signature from a specific GitHub Actions release workflow.
+cosign verify \
+  --certificate-identity 'https://github.com/example/project/.github/workflows/release.yml@refs/tags/v1.2.3' \
+  --certificate-oidc-issuer 'https://token.actions.githubusercontent.com' \
+  "$IMAGE"
+```
+
+To sign an image you control, generate a key pair, sign the digest, then verify
+with the corresponding public key. Signing requires write access to the image
+registry; protect `cosign.key` and do not commit it.
+
+```bash
+cosign generate-key-pair
+cosign sign --yes --key cosign.key "$IMAGE"
+cosign verify --key cosign.pub "$IMAGE"
+```
+
+See https://docs.sigstore.dev/cosign/ for keyless signing and other supported
+key-management options.
 
 ---
 

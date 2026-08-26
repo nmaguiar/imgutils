@@ -247,3 +247,15 @@ jobs:
       uses: ./
       with:
         cmd: sudo syft scan nmaguiar/imgutils -o syft-table > /dev/null
+
+  test-cosign:
+    name   : test cosign
+    runs-on: ubuntu-latest
+    needs  : build
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Test cosign
+      uses: ./
+      with:
+        cmd: cosign version > /dev/null
