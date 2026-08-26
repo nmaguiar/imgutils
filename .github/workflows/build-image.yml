@@ -256,6 +256,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Test cosign
-      uses: ./
-      with:
-        cmd: cosign version > /dev/null
+      run: docker run --rm nmaguiar/imgutils:build cosign version > /dev/null
