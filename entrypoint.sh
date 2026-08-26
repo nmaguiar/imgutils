@@ -30,6 +30,7 @@ if [ -n "$REGAUTH" ]; then
         echo -n "  skopeo: " >&2 && echo "$password" | skopeo login --username "$username" --password-stdin "$registry" --tls-verify=false
         echo -n "  helm  : " >&2 && echo "$password" | helm registry login "$registry" --username "$username" --password-stdin --insecure
         echo -n "  syft  : " >&2 && echo "$password" | syft login $registry -u $username --password-stdin
+        echo -n "  cosign: " >&2 && echo "$password" | cosign login "$registry" --username "$username" --password-stdin
         echo "" >&2
       fi
     }
