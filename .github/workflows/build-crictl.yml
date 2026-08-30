@@ -3,7 +3,11 @@ name: Build crictl
 on:
   workflow_dispatch:
   schedule:
-    - cron: '11 0 * * 6'
+    - cron: '11 0 * * 4'
+
+permissions:
+  actions: write
+  contents: read
 
 jobs:
     build:
@@ -13,6 +17,12 @@ jobs:
         steps:
         - name: Checkout
           uses: actions/checkout@v4
+
+        - name: Delete crictl cache
+          continue-on-error: true
+          run: gh api "repos/${{ github.repository }}/actions/caches?key=crictl" -X DELETE
+          env:
+            GH_TOKEN: ${{ github.token }}
 
         - name: build
           run : |

@@ -3,7 +3,11 @@ name: Build skopeo
 on:
   workflow_dispatch:
   schedule:
-    - cron: '07 0 * * 6'
+    - cron: '07 0 * * 4'
+
+permissions:
+  actions: write
+  contents: read
 
 jobs:
     build:
@@ -13,6 +17,12 @@ jobs:
         steps:
         - name: Checkout
           uses: actions/checkout@v4
+
+        - name: Delete skopeo cache
+          continue-on-error: true
+          run: gh api "repos/${{ github.repository }}/actions/caches?key=skopeo" -X DELETE
+          env:
+            GH_TOKEN: ${{ github.token }}
 
         - name: build
           run : |
@@ -29,5 +39,3 @@ jobs:
             key : skopeo
             path: |
               skopeo_*
-              
-    
