@@ -17,6 +17,7 @@ List of examples:
 | Images   | Checkout the files per layer on an existing image |
 | Images   | Generate a BOM (Bill Of Materials) for a provided image |
 | Supply chain | Verifying a container image signature |
+| Supply chain | Managing OCI artifacts with ORAS |
 | Images   | Retrieve a specific file from an image |
 | Images   | Comparing file contents between two image tags |
 | Images   | Squashing image layers to reduce size and improve performance |
@@ -462,6 +463,29 @@ cosign verify --key cosign.pub "$IMAGE"
 
 See https://docs.sigstore.dev/cosign/ for keyless signing and other supported
 key-management options.
+
+---
+
+## 📦 Managing OCI artifacts with ORAS
+
+ORAS stores OCI artifacts alongside container images. Log in to a private
+registry first when needed, then push or pull the artifact reference.
+
+```bash
+oras login registry.example.com --username "$REGISTRY_USER" --password-stdin
+
+# Publish an SPDX SBOM as an OCI artifact.
+oras push registry.example.com/team/app-sbom:v1.2.3 \
+  ./sbom.spdx.json:application/spdx+json \
+  --annotation org.opencontainers.image.description='SPDX SBOM for app v1.2.3'
+
+# Inspect related artifacts and download the published SBOM.
+oras discover registry.example.com/team/app:v1.2.3
+oras pull registry.example.com/team/app-sbom:v1.2.3 -o ./sbom
+```
+
+Use a digest instead of a mutable tag when consuming an artifact that must not
+change. See https://oras.land/docs/ for supported artifact types and workflows.
 
 ---
 

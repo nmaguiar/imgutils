@@ -31,6 +31,7 @@ if [ -n "$REGAUTH" ]; then
         echo -n "  helm  : " >&2 && echo "$password" | helm registry login "$registry" --username "$username" --password-stdin --insecure
         echo -n "  syft  : " >&2 && echo "$password" | syft login $registry -u $username --password-stdin
         echo -n "  cosign: " >&2 && echo "$password" | cosign login "$registry" --username "$username" --password-stdin
+        echo -n "  oras  : " >&2 && echo "$password" | oras login "$registry" --username "$username" --password-stdin
         echo "" >&2
       fi
     }

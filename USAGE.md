@@ -84,6 +84,7 @@ First check the nodes' names with 'kubectl get nodes'
 | openaf  | A "swiss-army knife" devops tool & runtime |
 | syft    | Syft is a tool that generates a Software Bill of Materials (SBOM) from container images and filesystems, providing detailed insights into software components and dependencies |
 | cosign  | Sign and verify container images, blobs and other artifacts with Sigstore |
+| oras    | Push, pull and discover OCI artifacts in container registries |
 | imgExpand.yaml | Expands a docker container archive file, layer by layer, into an output folder (uses OpenAF's oJob) |
 | imgInfo.yaml | Expands a docker container archive file, layer by layer, to return the list of files (uses OpenAF's oJob) |
 | imgCollapse.yaml | Collapse a previously expanded docker container archive file, layer by layer, into an output image file (uses OpenAF's oJob) |

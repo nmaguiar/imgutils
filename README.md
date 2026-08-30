@@ -10,6 +10,7 @@ Alpine based image ("nmaguiar/imgutils") with:
 * nerdctl
 * syft
 * cosign
+* oras
 * dive (https://github.com/wagoodman/dive rebuilt using https://github.com/jauderho/dive)
 * openaf (with DockerRegistry, Kube, oafp)
 * mc (Midnight Commander)
@@ -38,6 +39,7 @@ This should be enough tools to be able to manage images on a Kubernetes cluster 
 * [Accessing Kubernetes container runtime](#accessing-kubernetes-container-runtime)
 * [Checking images content](#checking-images-content)
 * [Verifying container image signatures](#verifying-container-image-signatures)
+* [Managing OCI artifacts with ORAS](#managing-oci-artifacts-with-oras)
 * [Using the local docker authentication](#using-the-local-docker-authentication)
 
 ## Usage
@@ -378,6 +380,27 @@ cosign verify \
 
 For signing workflows and advanced verification options, see the Cosign
 documentation at https://docs.sigstore.dev/cosign/.
+
+### Managing OCI artifacts with ORAS
+
+ORAS stores and retrieves arbitrary OCI artifacts, such as SBOMs, Helm charts,
+or configuration bundles. Log in with the same registry credentials used by
+the other registry tools, then use an immutable tag or digest when consuming a
+published artifact.
+
+```bash
+# Push a local SBOM with its media type and an OCI annotation.
+oras push registry.example.com/team/app-sbom:v1.2.3 \
+  ./sbom.spdx.json:application/spdx+json \
+  --annotation org.opencontainers.image.description='SPDX SBOM for app v1.2.3'
+
+# Discover the artifact and retrieve it to a local directory.
+oras discover registry.example.com/team/app:v1.2.3
+oras pull registry.example.com/team/app-sbom:v1.2.3 -o ./sbom
+```
+
+For artifact types, attachment workflows, and registry compatibility, see the
+ORAS documentation at https://oras.land/docs/.
 
 ### Using the local docker authentication
 
