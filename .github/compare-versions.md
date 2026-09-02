@@ -1,7 +1,7 @@
 | tool | latestOnline | buildVersion | latestversion |
 |------|--------------|--------------|---------------|
 | cosign | v3.1.3 | v3.0.6 |  |
-| crictl | v1.36.0 | 1.36.0 | 1.36.0 |
+| crictl | v1.37.0 | 1.36.0 | 1.36.0 |
 | ctr | containerd 2.3.4 | 2.3.3 | 2.3.3 |
 | docker | v29.8.0-rc.1 | 29.7.2 | 29.7.1 |
 | helm | v4.2.4 | v4.2.4 | v4.2.3 |
