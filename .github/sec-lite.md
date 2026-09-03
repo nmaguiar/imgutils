@@ -742,6 +742,9 @@
                         │      │                  https://access.redhat.com/errata/RHSA-2026:57845             
                         │      │                  https://access.redhat.com/errata/RHSA-2026:60441             
                         │      │                  https://access.redhat.com/errata/RHSA-2026:60442             
+                        │      │                  https://access.redhat.com/errata/RHSA-2026:60446             
+                        │      │                  https://access.redhat.com/errata/RHSA-2026:60447             
+                        │      │                  https://access.redhat.com/errata/RHSA-2026:60454             
                         │      │                  https://access.redhat.com/errata/RHSA-2026:60477             
                         │      │                  https://access.redhat.com/errata/RHSA-2026:60478             
                         │      │                  https://access.redhat.com/errata/RHSA-2026:60520             
@@ -797,7 +800,7 @@
                         │      │                                                                               
                         │      │                  
                         │      ├ PublishedDate   : 2026-05-07T20:16:42.88Z 
-                        │      ╰ LastModifiedDate: 2026-09-01T13:18:52.72Z 
+                        │      ╰ LastModifiedDate: 2026-09-02T13:17:27.973Z 
                         ├ [10] ╭ VulnerabilityID : CVE-2026-39821 
                         │      ├ VendorIDs                    
                         │      │                  ────────────
