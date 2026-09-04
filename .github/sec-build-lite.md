@@ -429,7 +429,7 @@
                         │      │                  https://pkg.go.dev/vuln/GO-2026-6180                     
                         │      │                  
                         │      ├ PublishedDate   : 2026-08-13T22:17:22.677Z 
-                        │      ╰ LastModifiedDate: 2026-08-14T17:19:14.06Z 
+                        │      ╰ LastModifiedDate: 2026-09-03T16:37:52.17Z 
                         ├ [6]  ╭ VulnerabilityID : CVE-2026-56865 
                         │      ├ VendorIDs                    
                         │      │                  ────────────
@@ -490,7 +490,7 @@
                         │      │                  https://www.cve.org/CVERecord?id=CVE-2026-56865          
                         │      │                  
                         │      ├ PublishedDate   : 2026-08-13T22:17:22.797Z 
-                        │      ╰ LastModifiedDate: 2026-08-14T16:16:57.86Z 
+                        │      ╰ LastModifiedDate: 2026-09-03T16:37:52.17Z 
                         ├ [7]  ╭ VulnerabilityID : CVE-2026-25681 
                         │      ├ VendorIDs                    
                         │      │                  ────────────
@@ -740,6 +740,8 @@
                         │      │                  https://access.redhat.com/errata/RHSA-2026:57545             
                         │      │                  https://access.redhat.com/errata/RHSA-2026:57649             
                         │      │                  https://access.redhat.com/errata/RHSA-2026:57845             
+                        │      │                  https://access.redhat.com/errata/RHSA-2026:59833             
+                        │      │                  https://access.redhat.com/errata/RHSA-2026:60025             
                         │      │                  https://access.redhat.com/errata/RHSA-2026:60441             
                         │      │                  https://access.redhat.com/errata/RHSA-2026:60442             
                         │      │                  https://access.redhat.com/errata/RHSA-2026:60446             
@@ -800,7 +802,7 @@
                         │      │                                                                               
                         │      │                  
                         │      ├ PublishedDate   : 2026-05-07T20:16:42.88Z 
-                        │      ╰ LastModifiedDate: 2026-09-02T13:17:27.973Z 
+                        │      ╰ LastModifiedDate: 2026-09-03T13:05:20.56Z 
                         ├ [10] ╭ VulnerabilityID : CVE-2026-39821 
                         │      ├ VendorIDs                    
                         │      │                  ────────────
