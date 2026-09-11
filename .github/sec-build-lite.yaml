@@ -26,7 +26,7 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:8ac4442fe3a5607dcc7322e2d3545d7891860a7ec8ff7acf68c3f72ea5e4a249
-    Title: A malicious GOSUMDB was capable of serving arbitrary module content no ...
+    Title: 'golang.org/x/mod/sumdb: golang.org/x/mod/sumdb: Integrity bypass via malicious GOSUMDB'
     Description: 'A malicious GOSUMDB was capable of serving arbitrary module content not contained within the transparency log. This attack allows for a coordinating GOPROXY and GOSUMDB to serve a client malicious module content that cannot be detected by evaluating the transparency log. In order to determine if you have been affected:   rm -r go.sum go.work.sum vendor/ && go mod tidy'
     Severity: HIGH
     CweIDs:
@@ -34,17 +34,23 @@
     VendorSeverity:
       amazon: 3
       bitnami: 3
+      redhat: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
         V3Score: 7.5
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N
+        V3Score: 8.1
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-56864
     - https://go.dev/cl/815000
     - https://go.dev/cl/815020
     - https://go.dev/issue/80745
     - https://groups.google.com/g/golang-announce/c/94pEornpRlI
     - https://nvd.nist.gov/vuln/detail/CVE-2026-56864
     - https://pkg.go.dev/vuln/GO-2026-6180
+    - https://www.cve.org/CVERecord?id=CVE-2026-56864
     PublishedDate: '2026-08-13T22:17:22.677Z'
     LastModifiedDate: '2026-09-03T16:37:52.17Z'
   - VulnerabilityID: CVE-2026-56865
