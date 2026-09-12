@@ -18,16 +18,16 @@
                         │     ├ InstalledVersion: v0.38.0 
                         │     ├ FixedVersion    : 0.40.0 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:7e80bdc204b88dac81a3504f0690e6ae62d3ce7d8d2e1
-                        │     │                  │         72f450700febb68ddcc 
-                        │     │                  ╰ DiffID: sha256:1234ceb9dc8412c800be8fbc423b35a4a90648c6bb41d
-                        │     │                            4d464d5b25b21445f7b 
+                        │     ├ Layer            ╭ Digest: sha256:b79c6958d229371f924234d8f3dc658091402773ac76c
+                        │     │                  │         6fb73a3fd75a4f517a5 
+                        │     │                  ╰ DiffID: sha256:22583096ff040f17f549b392e4675dcaab662e297dab5
+                        │     │                            98bc74277fa5d685f6f 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-56864 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
                         │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │     ├ Fingerprint     : sha256:8ac4442fe3a5607dcc7322e2d3545d7891860a7ec8ff7acf68c3f7
-                        │     │                   2ea5e4a249 
+                        │     ├ Fingerprint     : sha256:7598edae41f4b147c4a86bf90bb45109c5eb1ef0c239b0d6f52b9e
+                        │     │                   60bf0c0392 
                         │     ├ Title           : golang.org/x/mod/sumdb: golang.org/x/mod/sumdb: Integrity
                         │     │                   bypass via malicious GOSUMDB 
                         │     ├ Description     : A malicious GOSUMDB was capable of serving arbitrary module
@@ -76,16 +76,16 @@
                               ├ InstalledVersion: v0.38.0 
                               ├ FixedVersion    : 0.40.0 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:7e80bdc204b88dac81a3504f0690e6ae62d3ce7d8d2e1
-                              │                  │         72f450700febb68ddcc 
-                              │                  ╰ DiffID: sha256:1234ceb9dc8412c800be8fbc423b35a4a90648c6bb41d
-                              │                            4d464d5b25b21445f7b 
+                              ├ Layer            ╭ Digest: sha256:b79c6958d229371f924234d8f3dc658091402773ac76c
+                              │                  │         6fb73a3fd75a4f517a5 
+                              │                  ╰ DiffID: sha256:22583096ff040f17f549b392e4675dcaab662e297dab5
+                              │                            98bc74277fa5d685f6f 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-56865 
                               ├ DataSource       ╭ ID  : govulndb 
                               │                  ├ Name: The Go Vulnerability Database 
                               │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                              ├ Fingerprint     : sha256:e33fbe960365bcf3eb3facdcc5d57f1ed00eb10f0798c16932795c
-                              │                   2d508a9fcc 
+                              ├ Fingerprint     : sha256:57738c10fc4c1dfb0cd402b649321e69bd952fd330e1d277904fe2
+                              │                   5d1ad73f4d 
                               ├ Title           : golang.org/x/mod/sumdb/tlog: golang.org/x/mod/sumdb/tlog:
                               │                   Supply chain compromise via transparency log tile
                               │                   verification bypass 
