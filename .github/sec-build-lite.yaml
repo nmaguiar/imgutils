@@ -18,14 +18,14 @@
     FixedVersion: 0.40.0
     Status: fixed
     Layer:
-      Digest: sha256:b79c6958d229371f924234d8f3dc658091402773ac76c6fb73a3fd75a4f517a5
-      DiffID: sha256:22583096ff040f17f549b392e4675dcaab662e297dab598bc74277fa5d685f6f
+      Digest: sha256:42d50a8d11432c946d45e6b9370be3ffc56ed3e310d31e5fed916f005c1d0716
+      DiffID: sha256:72babcf004e1d7797fb45283abeea5d97b0d8d4b459d0da9d5312f0a0193b1f3
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-56864
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:7598edae41f4b147c4a86bf90bb45109c5eb1ef0c239b0d6f52b9e60bf0c0392
+    Fingerprint: sha256:d917d60bc15d1ee7fcc3ffe74d74c0b368cb426521bed7c986c99843e0a14625
     Title: 'golang.org/x/mod/sumdb: golang.org/x/mod/sumdb: Integrity bypass via malicious GOSUMDB'
     Description: 'A malicious GOSUMDB was capable of serving arbitrary module content not contained within the transparency log. This attack allows for a coordinating GOPROXY and GOSUMDB to serve a client malicious module content that cannot be detected by evaluating the transparency log. In order to determine if you have been affected:   rm -r go.sum go.work.sum vendor/ && go mod tidy'
     Severity: HIGH
@@ -66,14 +66,14 @@
     FixedVersion: 0.40.0
     Status: fixed
     Layer:
-      Digest: sha256:b79c6958d229371f924234d8f3dc658091402773ac76c6fb73a3fd75a4f517a5
-      DiffID: sha256:22583096ff040f17f549b392e4675dcaab662e297dab598bc74277fa5d685f6f
+      Digest: sha256:42d50a8d11432c946d45e6b9370be3ffc56ed3e310d31e5fed916f005c1d0716
+      DiffID: sha256:72babcf004e1d7797fb45283abeea5d97b0d8d4b459d0da9d5312f0a0193b1f3
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-56865
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:57738c10fc4c1dfb0cd402b649321e69bd952fd330e1d277904fe25d1ad73f4d
+    Fingerprint: sha256:eb27521857a2adcc7cc2cf6fbc33eace343f018305dd91b346386ed5a8690ae7
     Title: 'golang.org/x/mod/sumdb/tlog: golang.org/x/mod/sumdb/tlog: Supply chain compromise via transparency log tile verification bypass'
     Description: 'A malicious GOPROXY was previously capable of forging up to two sumdb tiles that allow for a requested module to bypass the GOSUMDB check and persist attacker-controlled module content to a local Go module cache. This attack allows for a malicious GOPROXY to serve malicious module content that cannot be detected by evaluating the transparency log. All tiles are now correctly verified against their parents. In order to determine if you have been affected:   rm -r go.sum go.work.sum vendor/ && go mod tidy'
     Severity: HIGH
