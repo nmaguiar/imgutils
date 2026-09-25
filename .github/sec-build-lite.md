@@ -105,6 +105,7 @@
                               │                  CWE-347
                               │                  
                               ├ VendorSeverity   ╭ amazon : 3 
+                              │                  ├ azure  : 3 
                               │                  ├ bitnami: 3 
                               │                  ├ photon : 3 
                               │                  ╰ redhat : 3 
