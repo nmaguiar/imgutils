@@ -321,8 +321,9 @@
                         │      │                          cosystem%3Ago 
                         │      ├ Fingerprint     : sha256:b6d2f7d7cbc9becaf8e3b6c353ee6eae8402aa4ad082264b30fe7
                         │      │                   04a213cf9a4 
-                        │      ├ Title           : OpenTelemetry-Go is the Go implementation of OpenTelemetry.
-                        │      │                   From versi ... 
+                        │      ├ Title           : github.com/open-telemetry/opentelemetry-go:
+                        │      │                   OpenTelemetry-Go: Information disclosure via exporter
+                        │      │                   configuration logging 
                         │      ├ Description     : OpenTelemetry-Go is the Go implementation of OpenTelemetry.
                         │      │                   From version 1.5.0 to 1.44.0, sdk/trace.NewTracerProvider
                         │      │                   emits a TracerProvider created internal Info-level
@@ -345,12 +346,17 @@
                         │      │                  CWE-200
                         │      │                  CWE-532
                         │      │                  
-                        │      ├ VendorSeverity   ─ ghsa: 1 
-                        │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:L/VI
-                        │      │                         │            :N/VA:N/SC:N/SI:N/SA:N 
-                        │      │                         ╰ V40Score : 2 
+                        │      ├ VendorSeverity   ╭ ghsa  : 1 
+                        │      │                  ╰ redhat: 1 
+                        │      ├ CVSS             ╭ ghsa   ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:L/
+                        │      │                  │        │            VI:N/VA:N/SC:N/SI:N/SA:N 
+                        │      │                  │        ╰ V40Score : 2 
+                        │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N
+                        │      │                           │           /A:N 
+                        │      │                           ╰ V3Score : 3.3 
                         │      ├ References                                                                    
                         │      │                  ─────────────────────────────────────────────────────────────
+                        │      │                  https://access.redhat.com/security/cve/CVE-2026-81870        
                         │      │                  https://github.com/open-telemetry/opentelemetry-go           
                         │      │                  https://github.com/open-telemetry/opentelemetry-go/commit/3a1
                         │      │                  412d2b3bc4e4231fbeac2ed42117ae541bb38                        
@@ -363,6 +369,8 @@
                         │      │                  https://github.com/open-telemetry/opentelemetry-go/security/a
                         │      │                  dvisories/GHSA-8wmf-6v46-5gfg                                
                         │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-81870              
+                        │      │                                                                               
+                        │      │                  https://www.cve.org/CVERecord?id=CVE-2026-81870              
                         │      │                                                                               
                         │      │                  
                         │      ├ PublishedDate   : 2026-09-16T20:17:32.733Z 
@@ -394,8 +402,9 @@
                         │      │                          cosystem%3Ago 
                         │      ├ Fingerprint     : sha256:9849f4abb8f0ba31dfce9ffdf1ec7a059d5b268bbab0856abad82
                         │      │                   45cfd90920f 
-                        │      ├ Title           : OpenTelemetry-Go is the Go implementation of OpenTelemetry.
-                        │      │                   From versi ... 
+                        │      ├ Title           : github.com/open-telemetry/opentelemetry-go:
+                        │      │                   OpenTelemetry-Go: Information disclosure via exporter
+                        │      │                   configuration logging 
                         │      ├ Description     : OpenTelemetry-Go is the Go implementation of OpenTelemetry.
                         │      │                   From version 1.5.0 to 1.44.0, sdk/trace.NewTracerProvider
                         │      │                   emits a TracerProvider created internal Info-level
@@ -418,12 +427,17 @@
                         │      │                  CWE-200
                         │      │                  CWE-532
                         │      │                  
-                        │      ├ VendorSeverity   ─ ghsa: 1 
-                        │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:L/VI
-                        │      │                         │            :N/VA:N/SC:N/SI:N/SA:N 
-                        │      │                         ╰ V40Score : 2 
+                        │      ├ VendorSeverity   ╭ ghsa  : 1 
+                        │      │                  ╰ redhat: 1 
+                        │      ├ CVSS             ╭ ghsa   ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:L/
+                        │      │                  │        │            VI:N/VA:N/SC:N/SI:N/SA:N 
+                        │      │                  │        ╰ V40Score : 2 
+                        │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N
+                        │      │                           │           /A:N 
+                        │      │                           ╰ V3Score : 3.3 
                         │      ├ References                                                                    
                         │      │                  ─────────────────────────────────────────────────────────────
+                        │      │                  https://access.redhat.com/security/cve/CVE-2026-81870        
                         │      │                  https://github.com/open-telemetry/opentelemetry-go           
                         │      │                  https://github.com/open-telemetry/opentelemetry-go/commit/3a1
                         │      │                  412d2b3bc4e4231fbeac2ed42117ae541bb38                        
@@ -436,6 +450,8 @@
                         │      │                  https://github.com/open-telemetry/opentelemetry-go/security/a
                         │      │                  dvisories/GHSA-8wmf-6v46-5gfg                                
                         │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-81870              
+                        │      │                                                                               
+                        │      │                  https://www.cve.org/CVERecord?id=CVE-2026-81870              
                         │      │                                                                               
                         │      │                  
                         │      ├ PublishedDate   : 2026-09-16T20:17:32.733Z 
@@ -548,8 +564,9 @@
                         │      │                          cosystem%3Ago 
                         │      ├ Fingerprint     : sha256:f31d6ad51c8947f1e6a195902968e8d5b4e5d03ee1263de31e1ed
                         │      │                   d2303800173 
-                        │      ├ Title           : OpenTelemetry-Go is the Go implementation of OpenTelemetry.
-                        │      │                   From versi ... 
+                        │      ├ Title           : github.com/open-telemetry/opentelemetry-go:
+                        │      │                   OpenTelemetry-Go: Information disclosure via exporter
+                        │      │                   configuration logging 
                         │      ├ Description     : OpenTelemetry-Go is the Go implementation of OpenTelemetry.
                         │      │                   From version 1.5.0 to 1.44.0, sdk/trace.NewTracerProvider
                         │      │                   emits a TracerProvider created internal Info-level
@@ -572,12 +589,17 @@
                         │      │                  CWE-200
                         │      │                  CWE-532
                         │      │                  
-                        │      ├ VendorSeverity   ─ ghsa: 1 
-                        │      ├ CVSS             ─ ghsa ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:L/VI
-                        │      │                         │            :N/VA:N/SC:N/SI:N/SA:N 
-                        │      │                         ╰ V40Score : 2 
+                        │      ├ VendorSeverity   ╭ ghsa  : 1 
+                        │      │                  ╰ redhat: 1 
+                        │      ├ CVSS             ╭ ghsa   ╭ V40Vector: CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:L/
+                        │      │                  │        │            VI:N/VA:N/SC:N/SI:N/SA:N 
+                        │      │                  │        ╰ V40Score : 2 
+                        │      │                  ╰ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N
+                        │      │                           │           /A:N 
+                        │      │                           ╰ V3Score : 3.3 
                         │      ├ References                                                                    
                         │      │                  ─────────────────────────────────────────────────────────────
+                        │      │                  https://access.redhat.com/security/cve/CVE-2026-81870        
                         │      │                  https://github.com/open-telemetry/opentelemetry-go           
                         │      │                  https://github.com/open-telemetry/opentelemetry-go/commit/3a1
                         │      │                  412d2b3bc4e4231fbeac2ed42117ae541bb38                        
@@ -590,6 +612,8 @@
                         │      │                  https://github.com/open-telemetry/opentelemetry-go/security/a
                         │      │                  dvisories/GHSA-8wmf-6v46-5gfg                                
                         │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-81870              
+                        │      │                                                                               
+                        │      │                  https://www.cve.org/CVERecord?id=CVE-2026-81870              
                         │      │                                                                               
                         │      │                  
                         │      ├ PublishedDate   : 2026-09-16T20:17:32.733Z 
