@@ -1114,7 +1114,7 @@
                         │      │                  ├ oracle-oval: 3 
                         │      │                  ├ redhat     : 3 
                         │      │                  ├ rocky      : 3 
-                        │      │                  ╰ ubuntu     : 2 
+                        │      │                  ╰ ubuntu     : 3 
                         │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H
                         │      │                           │           /A:N 
                         │      │                           ╰ V3Score : 8.2 
@@ -2333,7 +2333,7 @@
                         │      │                  ├ oracle-oval: 3 
                         │      │                  ├ redhat     : 3 
                         │      │                  ├ rocky      : 3 
-                        │      │                  ╰ ubuntu     : 2 
+                        │      │                  ╰ ubuntu     : 3 
                         │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H
                         │      │                           │           /A:N 
                         │      │                           ╰ V3Score : 8.2 
