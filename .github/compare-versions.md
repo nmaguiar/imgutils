@@ -3,10 +3,10 @@
 | cosign | v3.1.3 | v3.0.6 |  |
 | crictl | v1.37.0 | 1.37.0 | 1.36.0 |
 | ctr | containerd 2.4.1 | 2.4.1 | 2.3.3 |
-| docker | v29.9.0-rc.1 | 29.8.2 | 29.7.1 |
+| docker | v29.9.0-rc.2 | 29.8.2 | 29.7.1 |
 | helm | v4.3.0 | v4.3.0 | v4.2.3 |
 | nerdctl | v2.4.1 | 2.4.1 | 2.3.5 |
-| oaf | 20260728 | 20261002 | 20260801 |
+| oaf | {"error":"JavaException: Exception java.net.SocketTimeoutException: timeout; error = undefined"} | 20261002 | 20260801 |
 | oras | v1.3.4 | 1.3.0 |  |
 | skopeo | v1.24.1 | 1.24.1 | 1.22.2 |
 | syft | v1.54.1 | 1.54.0 | 1.50.0 |
