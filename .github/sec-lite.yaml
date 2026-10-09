@@ -1044,6 +1044,7 @@
     - https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-39821.json
     - https://ubuntu.com/security/notices/USN-8416-1
     - https://ubuntu.com/security/notices/USN-8883-1
+    - https://ubuntu.com/security/notices/USN-8900-1
     - https://www.cve.org/CVERecord?id=CVE-2026-39821
     PublishedDate: '2026-05-22T16:16:20.41Z'
     LastModifiedDate: '2026-09-17T12:18:05.767Z'
@@ -1361,6 +1362,35 @@
     - https://www.cve.org/CVERecord?id=CVE-2026-56852
     PublishedDate: '2026-07-21T20:17:02.867Z'
     LastModifiedDate: '2026-07-23T18:27:48.877Z'
+  - VulnerabilityID: CVE-2026-56851
+    VendorIDs:
+    - GO-2026-6629
+    PkgID: golang.org/x/text@v0.35.0
+    PkgName: golang.org/x/text
+    PkgIdentifier:
+      PURL: pkg:golang/golang.org/x/text@v0.35.0
+      UID: a9f39cf56d190707
+    InstalledVersion: v0.35.0
+    FixedVersion: 0.41.0
+    Status: fixed
+    Layer:
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-56851
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:689729235b09429ce377cecb217fa720a19f1c783bd82ffde09e462b2d104646
+    Title: The Nickname profile can panic with an out-of-bounds slice error when  ...
+    Description: The Nickname profile can panic with an out-of-bounds slice error when transforming crafted input into a short destination buffer.
+    Severity: UNKNOWN
+    References:
+    - https://go.dev/cl/793360
+    - https://go.dev/issue/80112
+    - https://pkg.go.dev/vuln/GO-2026-6629
+    PublishedDate: '2026-10-07T18:17:20.903Z'
+    LastModifiedDate: '2026-10-07T18:17:20.903Z'
   - VulnerabilityID: CVE-2026-84304
     VendorIDs:
     - GHSA-vp52-pcj8-j9qc
@@ -1442,6 +1472,7 @@
       azure: 3
       ghsa: 3
       redhat: 3
+      rocky: 3
     CVSS:
       ghsa:
         V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N
@@ -1450,7 +1481,12 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
+    - https://access.redhat.com/errata/RHSA-2026:76743
     - https://access.redhat.com/security/cve/CVE-2026-84445
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2533175
+    - https://creativecommons.org/licenses/by/4.0/
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-84445
+    - https://errata.rockylinux.org/RLSA-2026:76743
     - https://github.com/grpc/grpc-go
     - https://github.com/grpc/grpc-go/commit/3822494d8ea03b992c089fd2a195f041762fffb7
     - https://github.com/grpc/grpc-go/commit/8668b69c167df908b6b3666dcbf40992b9e932a4
@@ -2068,6 +2104,7 @@
     - https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-39821.json
     - https://ubuntu.com/security/notices/USN-8416-1
     - https://ubuntu.com/security/notices/USN-8883-1
+    - https://ubuntu.com/security/notices/USN-8900-1
     - https://www.cve.org/CVERecord?id=CVE-2026-39821
     PublishedDate: '2026-05-22T16:16:20.41Z'
     LastModifiedDate: '2026-09-17T12:18:05.767Z'
@@ -2098,7 +2135,7 @@
     - CWE-61
     VendorSeverity:
       alma: 3
-      amazon: 2
+      amazon: 3
       azure: 3
       bitnami: 3
       oracle-oval: 3
@@ -2374,7 +2411,7 @@
       amazon: 3
       bitnami: 2
       oracle-oval: 3
-      photon: 4
+      photon: 2
       redhat: 3
       rocky: 3
     CVSS:
@@ -2529,7 +2566,7 @@
       amazon: 3
       bitnami: 2
       oracle-oval: 3
-      photon: 3
+      photon: 2
       redhat: 3
       rocky: 3
     CVSS:
