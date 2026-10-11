@@ -128,7 +128,116 @@
                         │      │                  
                         │      ├ PublishedDate   : 2026-08-13T22:17:22.797Z 
                         │      ╰ LastModifiedDate: 2026-09-03T16:37:52.17Z 
-                        ├ [2]  ╭ VulnerabilityID : CVE-2026-97032 
+                        ├ [2]  ╭ VulnerabilityID : CVE-2026-78669 
+                        │      ├ VendorIDs                    
+                        │      │                  ────────────
+                        │      │                  GO-2026-6611
+                        │      │                  
+                        │      ├ PkgID           : golang.org/x/net@v0.58.0 
+                        │      ├ PkgName         : golang.org/x/net 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.58.0 
+                        │      │                  ╰ UID : 1dec109cafa81b6f 
+                        │      ├ InstalledVersion: v0.58.0 
+                        │      ├ FixedVersion    : 0.60.0 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:0f94d38bd3f71957930b8e696f8cc0ea5602e3f6fb88
+                        │      │                  │         1de443dd8364f054ab2d 
+                        │      │                  ╰ DiffID: sha256:819a1de78d615c45a7842e66be6c5beaa43fcb07d9ad
+                        │      │                            e2b8c47000d21b7dc240 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-78669 
+                        │      ├ DataSource       ╭ ID  : govulndb 
+                        │      │                  ├ Name: The Go Vulnerability Database 
+                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │      ├ Fingerprint     : sha256:52b8e7273b223a8ef422f5da736f8be5ebb13491393685b76058c
+                        │      │                   8fb97554eef 
+                        │      ├ Title           : net/http: net/http/internal/http2: golang:
+                        │      │                   golang.org/x/net/http2: net/http: Denial of Service via
+                        │      │                   excessive HTTP/2 SETTINGS frames 
+                        │      ├ Description     : A malicious HTTP/2 peer can cause excessive CPU consumption
+                        │      │                   in the client or server by opening a large number of streams
+                        │      │                    and then sending many small SETTINGS frames containing
+                        │      │                   SETTINGS_INITIAL_WINDOW_SIZE values. 
+                        │      ├ Severity        : HIGH 
+                        │      ├ CweIDs                  
+                        │      │                  ───────
+                        │      │                  CWE-405
+                        │      │                  
+                        │      ├ VendorSeverity   ─ redhat: 3 
+                        │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+                        │      │                           │           /A:H 
+                        │      │                           ╰ V3Score : 7.5 
+                        │      ├ References                                                                
+                        │      │                  ─────────────────────────────────────────────────────────
+                        │      │                  https://access.redhat.com/security/cve/CVE-2026-78669    
+                        │      │                  https://go.dev/cl/847186                                 
+                        │      │                  https://go.dev/cl/847308                                 
+                        │      │                  https://go.dev/issue/81742                               
+                        │      │                  https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
+                        │      │                  https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
+                        │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-78669          
+                        │      │                  https://pkg.go.dev/vuln/GO-2026-6611                     
+                        │      │                  https://www.cve.org/CVERecord?id=CVE-2026-78669          
+                        │      │                  
+                        │      ├ PublishedDate   : 2026-10-08T23:17:04.01Z 
+                        │      ╰ LastModifiedDate: 2026-10-09T17:16:49.857Z 
+                        ├ [3]  ╭ VulnerabilityID : CVE-2026-78663 
+                        │      ├ VendorIDs                    
+                        │      │                  ────────────
+                        │      │                  GO-2026-6612
+                        │      │                  
+                        │      ├ PkgID           : golang.org/x/net@v0.58.0 
+                        │      ├ PkgName         : golang.org/x/net 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.58.0 
+                        │      │                  ╰ UID : 1dec109cafa81b6f 
+                        │      ├ InstalledVersion: v0.58.0 
+                        │      ├ FixedVersion    : 0.60.0 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:0f94d38bd3f71957930b8e696f8cc0ea5602e3f6fb88
+                        │      │                  │         1de443dd8364f054ab2d 
+                        │      │                  ╰ DiffID: sha256:819a1de78d615c45a7842e66be6c5beaa43fcb07d9ad
+                        │      │                            e2b8c47000d21b7dc240 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-78663 
+                        │      ├ DataSource       ╭ ID  : govulndb 
+                        │      │                  ├ Name: The Go Vulnerability Database 
+                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │      ├ Fingerprint     : sha256:6d420b037dd29e3f7a1aa475166301c06b080c22ce96f3305289e
+                        │      │                   e9d76cb7a6a 
+                        │      ├ Title           : net/http: net/http/internal/http2: golang:
+                        │      │                   golang.org/x/net/http2: golang: flow control limit bypass
+                        │      │                   via double refund in HTTP/2 server 
+                        │      ├ Description     : The HTTP/2 server can refund connection-level flow control
+                        │      │                   twice for the same data: Once when a client resets a stream
+                        │      │                   (refunding data for any sent-but-unread portion of the
+                        │      │                   stream), and again when a request handler reads the buffered
+                        │      │                    data. A malicious client can exploit this to bypass the
+                        │      │                   configured connection-level flow control limit
+                        │      │                   (MaxReceiveBufferPerConnection). Total buffered data is
+                        │      │                   still limited by the concurrent stream limit and
+                        │      │                   stream-level flow control. 
+                        │      ├ Severity        : MEDIUM 
+                        │      ├ CweIDs                  
+                        │      │                  ───────
+                        │      │                  CWE-675
+                        │      │                  
+                        │      ├ VendorSeverity   ─ redhat: 2 
+                        │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+                        │      │                           │           /A:L 
+                        │      │                           ╰ V3Score : 5.3 
+                        │      ├ References                                                                
+                        │      │                  ─────────────────────────────────────────────────────────
+                        │      │                  https://access.redhat.com/security/cve/CVE-2026-78663    
+                        │      │                  https://go.dev/cl/847187                                 
+                        │      │                  https://go.dev/cl/847310                                 
+                        │      │                  https://go.dev/issue/81743                               
+                        │      │                  https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
+                        │      │                  https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
+                        │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-78663          
+                        │      │                  https://pkg.go.dev/vuln/GO-2026-6612                     
+                        │      │                  https://www.cve.org/CVERecord?id=CVE-2026-78663          
+                        │      │                  
+                        │      ├ PublishedDate   : 2026-10-08T23:17:03.647Z 
+                        │      ╰ LastModifiedDate: 2026-10-09T17:16:49.42Z 
+                        ├ [4]  ╭ VulnerabilityID : CVE-2026-97032 
                         │      ├ VendorIDs                    
                         │      │                  ────────────
                         │      │                  GO-2026-6617
@@ -181,8 +290,8 @@
                         │      │                  https://www.cve.org/CVERecord?id=CVE-2026-97032          
                         │      │                  
                         │      ├ PublishedDate   : 2026-10-08T23:17:06.213Z 
-                        │      ╰ LastModifiedDate: 2026-10-08T23:17:06.213Z 
-                        ├ [3]  ╭ VulnerabilityID : CVE-2026-78659 
+                        │      ╰ LastModifiedDate: 2026-10-09T16:35:35.9Z 
+                        ├ [5]  ╭ VulnerabilityID : CVE-2026-78659 
                         │      ├ VendorIDs                    
                         │      │                  ────────────
                         │      │                  GO-2026-6603
@@ -220,6 +329,10 @@
                         │      │                   connection, and whose Server.MaxHeaderBytes are calculated
                         │      │                   differently. 
                         │      ├ Severity        : UNKNOWN 
+                        │      ├ CweIDs                  
+                        │      │                  ───────
+                        │      │                  CWE-405
+                        │      │                  
                         │      ├ References                                                                
                         │      │                  ─────────────────────────────────────────────────────────
                         │      │                  https://go.dev/cl/847185                                 
@@ -230,8 +343,8 @@
                         │      │                  https://pkg.go.dev/vuln/GO-2026-6603                     
                         │      │                  
                         │      ├ PublishedDate   : 2026-10-08T23:17:03.27Z 
-                        │      ╰ LastModifiedDate: 2026-10-08T23:17:03.27Z 
-                        ├ [4]  ╭ VulnerabilityID : CVE-2026-78660 
+                        │      ╰ LastModifiedDate: 2026-10-09T16:35:35.9Z 
+                        ├ [6]  ╭ VulnerabilityID : CVE-2026-78660 
                         │      ├ VendorIDs                    
                         │      │                  ────────────
                         │      │                  GO-2026-6610
@@ -264,6 +377,10 @@
                         │      │                   not behave strictly enough, this can result in response
                         │      │                   smuggling. 
                         │      ├ Severity        : UNKNOWN 
+                        │      ├ CweIDs                  
+                        │      │                  ───────
+                        │      │                  CWE-444
+                        │      │                  
                         │      ├ References                                                                
                         │      │                  ─────────────────────────────────────────────────────────
                         │      │                  https://go.dev/cl/835145                                 
@@ -273,92 +390,7 @@
                         │      │                  https://pkg.go.dev/vuln/GO-2026-6610                     
                         │      │                  
                         │      ├ PublishedDate   : 2026-10-08T23:17:03.51Z 
-                        │      ╰ LastModifiedDate: 2026-10-08T23:17:03.51Z 
-                        ├ [5]  ╭ VulnerabilityID : CVE-2026-78663 
-                        │      ├ VendorIDs                    
-                        │      │                  ────────────
-                        │      │                  GO-2026-6612
-                        │      │                  
-                        │      ├ PkgID           : golang.org/x/net@v0.58.0 
-                        │      ├ PkgName         : golang.org/x/net 
-                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.58.0 
-                        │      │                  ╰ UID : 1dec109cafa81b6f 
-                        │      ├ InstalledVersion: v0.58.0 
-                        │      ├ FixedVersion    : 0.60.0 
-                        │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:0f94d38bd3f71957930b8e696f8cc0ea5602e3f6fb88
-                        │      │                  │         1de443dd8364f054ab2d 
-                        │      │                  ╰ DiffID: sha256:819a1de78d615c45a7842e66be6c5beaa43fcb07d9ad
-                        │      │                            e2b8c47000d21b7dc240 
-                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-78663 
-                        │      ├ DataSource       ╭ ID  : govulndb 
-                        │      │                  ├ Name: The Go Vulnerability Database 
-                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │      ├ Fingerprint     : sha256:6d420b037dd29e3f7a1aa475166301c06b080c22ce96f3305289e
-                        │      │                   e9d76cb7a6a 
-                        │      ├ Title           : The HTTP/2 server can refund connection-level flow control
-                        │      │                   twice for t ... 
-                        │      ├ Description     : The HTTP/2 server can refund connection-level flow control
-                        │      │                   twice for the same data: Once when a client resets a stream
-                        │      │                   (refunding data for any sent-but-unread portion of the
-                        │      │                   stream), and again when a request handler reads the buffered
-                        │      │                    data. A malicious client can exploit this to bypass the
-                        │      │                   configured connection-level flow control limit
-                        │      │                   (MaxReceiveBufferPerConnection). Total buffered data is
-                        │      │                   still limited by the concurrent stream limit and
-                        │      │                   stream-level flow control. 
-                        │      ├ Severity        : UNKNOWN 
-                        │      ├ References                                                                
-                        │      │                  ─────────────────────────────────────────────────────────
-                        │      │                  https://go.dev/cl/847187                                 
-                        │      │                  https://go.dev/cl/847310                                 
-                        │      │                  https://go.dev/issue/81743                               
-                        │      │                  https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
-                        │      │                  https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
-                        │      │                  https://pkg.go.dev/vuln/GO-2026-6612                     
-                        │      │                  
-                        │      ├ PublishedDate   : 2026-10-08T23:17:03.647Z 
-                        │      ╰ LastModifiedDate: 2026-10-08T23:17:03.647Z 
-                        ├ [6]  ╭ VulnerabilityID : CVE-2026-78669 
-                        │      ├ VendorIDs                    
-                        │      │                  ────────────
-                        │      │                  GO-2026-6611
-                        │      │                  
-                        │      ├ PkgID           : golang.org/x/net@v0.58.0 
-                        │      ├ PkgName         : golang.org/x/net 
-                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/golang.org/x/net@v0.58.0 
-                        │      │                  ╰ UID : 1dec109cafa81b6f 
-                        │      ├ InstalledVersion: v0.58.0 
-                        │      ├ FixedVersion    : 0.60.0 
-                        │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:0f94d38bd3f71957930b8e696f8cc0ea5602e3f6fb88
-                        │      │                  │         1de443dd8364f054ab2d 
-                        │      │                  ╰ DiffID: sha256:819a1de78d615c45a7842e66be6c5beaa43fcb07d9ad
-                        │      │                            e2b8c47000d21b7dc240 
-                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-78669 
-                        │      ├ DataSource       ╭ ID  : govulndb 
-                        │      │                  ├ Name: The Go Vulnerability Database 
-                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │      ├ Fingerprint     : sha256:52b8e7273b223a8ef422f5da736f8be5ebb13491393685b76058c
-                        │      │                   8fb97554eef 
-                        │      ├ Title           : A malicious HTTP/2 peer can cause excessive CPU consumption
-                        │      │                   in the cli ... 
-                        │      ├ Description     : A malicious HTTP/2 peer can cause excessive CPU consumption
-                        │      │                   in the client or server by opening a large number of streams
-                        │      │                    and then sending many small SETTINGS frames containing
-                        │      │                   SETTINGS_INITIAL_WINDOW_SIZE values. 
-                        │      ├ Severity        : UNKNOWN 
-                        │      ├ References                                                                
-                        │      │                  ─────────────────────────────────────────────────────────
-                        │      │                  https://go.dev/cl/847186                                 
-                        │      │                  https://go.dev/cl/847308                                 
-                        │      │                  https://go.dev/issue/81742                               
-                        │      │                  https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
-                        │      │                  https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
-                        │      │                  https://pkg.go.dev/vuln/GO-2026-6611                     
-                        │      │                  
-                        │      ├ PublishedDate   : 2026-10-08T23:17:04.01Z 
-                        │      ╰ LastModifiedDate: 2026-10-08T23:17:04.01Z 
+                        │      ╰ LastModifiedDate: 2026-10-09T17:16:49.243Z 
                         ├ [7]  ╭ VulnerabilityID : CVE-2026-78667 
                         │      ├ VendorIDs                    
                         │      │                  ────────────
@@ -387,6 +419,10 @@
                         │      │                   small ranges, FileServer(FS), ServeContent, and
                         │      │                   ServeFile(FS) can consume an excessive amount of CPU. 
                         │      ├ Severity        : HIGH 
+                        │      ├ CweIDs                  
+                        │      │                  ───────
+                        │      │                  CWE-770
+                        │      │                  
                         │      ├ VendorSeverity   ─ redhat: 3 
                         │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
                         │      │                           │           /A:H 
@@ -402,8 +438,60 @@
                         │      │                  https://www.cve.org/CVERecord?id=CVE-2026-78667          
                         │      │                  
                         │      ├ PublishedDate   : 2026-10-08T23:17:03.88Z 
-                        │      ╰ LastModifiedDate: 2026-10-08T23:17:03.88Z 
-                        ├ [8]  ╭ VulnerabilityID : CVE-2026-97031 
+                        │      ╰ LastModifiedDate: 2026-10-09T17:16:49.69Z 
+                        ├ [8]  ╭ VulnerabilityID : CVE-2026-78669 
+                        │      ├ VendorIDs                    
+                        │      │                  ────────────
+                        │      │                  GO-2026-6611
+                        │      │                  
+                        │      ├ PkgID           : stdlib@v1.27.1 
+                        │      ├ PkgName         : stdlib 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.27.1 
+                        │      │                  ╰ UID : 971b3d5816036f72 
+                        │      ├ InstalledVersion: v1.27.1 
+                        │      ├ FixedVersion    : 1.26.9, 1.27.2 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:0f94d38bd3f71957930b8e696f8cc0ea5602e3f6fb88
+                        │      │                  │         1de443dd8364f054ab2d 
+                        │      │                  ╰ DiffID: sha256:819a1de78d615c45a7842e66be6c5beaa43fcb07d9ad
+                        │      │                            e2b8c47000d21b7dc240 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-78669 
+                        │      ├ DataSource       ╭ ID  : govulndb 
+                        │      │                  ├ Name: The Go Vulnerability Database 
+                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │      ├ Fingerprint     : sha256:1d9e7698e31bbf8aebf6dd7d2395290550532cb6364e38d0885f5
+                        │      │                   35374e8549e 
+                        │      ├ Title           : net/http: net/http/internal/http2: golang:
+                        │      │                   golang.org/x/net/http2: net/http: Denial of Service via
+                        │      │                   excessive HTTP/2 SETTINGS frames 
+                        │      ├ Description     : A malicious HTTP/2 peer can cause excessive CPU consumption
+                        │      │                   in the client or server by opening a large number of streams
+                        │      │                    and then sending many small SETTINGS frames containing
+                        │      │                   SETTINGS_INITIAL_WINDOW_SIZE values. 
+                        │      ├ Severity        : HIGH 
+                        │      ├ CweIDs                  
+                        │      │                  ───────
+                        │      │                  CWE-405
+                        │      │                  
+                        │      ├ VendorSeverity   ─ redhat: 3 
+                        │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+                        │      │                           │           /A:H 
+                        │      │                           ╰ V3Score : 7.5 
+                        │      ├ References                                                                
+                        │      │                  ─────────────────────────────────────────────────────────
+                        │      │                  https://access.redhat.com/security/cve/CVE-2026-78669    
+                        │      │                  https://go.dev/cl/847186                                 
+                        │      │                  https://go.dev/cl/847308                                 
+                        │      │                  https://go.dev/issue/81742                               
+                        │      │                  https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
+                        │      │                  https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
+                        │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-78669          
+                        │      │                  https://pkg.go.dev/vuln/GO-2026-6611                     
+                        │      │                  https://www.cve.org/CVERecord?id=CVE-2026-78669          
+                        │      │                  
+                        │      ├ PublishedDate   : 2026-10-08T23:17:04.01Z 
+                        │      ╰ LastModifiedDate: 2026-10-09T17:16:49.857Z 
+                        ├ [9]  ╭ VulnerabilityID : CVE-2026-97031 
                         │      ├ VendorIDs                    
                         │      │                  ────────────
                         │      │                  GO-2026-6607
@@ -434,6 +522,10 @@
                         │      │                    reject these as malformed and curb the memory amplification
                         │      │                    vector as a result. 
                         │      ├ Severity        : HIGH 
+                        │      ├ CweIDs                  
+                        │      │                  ───────
+                        │      │                  CWE-405
+                        │      │                  
                         │      ├ VendorSeverity   ─ redhat: 3 
                         │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
                         │      │                           │           /A:H 
@@ -449,8 +541,124 @@
                         │      │                  https://www.cve.org/CVERecord?id=CVE-2026-97031          
                         │      │                  
                         │      ├ PublishedDate   : 2026-10-08T23:17:06.037Z 
-                        │      ╰ LastModifiedDate: 2026-10-08T23:17:06.037Z 
-                        ├ [9]  ╭ VulnerabilityID : CVE-2026-94439 
+                        │      ╰ LastModifiedDate: 2026-10-09T16:35:35.9Z 
+                        ├ [10] ╭ VulnerabilityID : CVE-2026-56866 
+                        │      ├ VendorIDs                    
+                        │      │                  ────────────
+                        │      │                  GO-2026-6605
+                        │      │                  
+                        │      ├ PkgID           : stdlib@v1.27.1 
+                        │      ├ PkgName         : stdlib 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.27.1 
+                        │      │                  ╰ UID : 971b3d5816036f72 
+                        │      ├ InstalledVersion: v1.27.1 
+                        │      ├ FixedVersion    : 1.26.9, 1.27.2 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:0f94d38bd3f71957930b8e696f8cc0ea5602e3f6fb88
+                        │      │                  │         1de443dd8364f054ab2d 
+                        │      │                  ╰ DiffID: sha256:819a1de78d615c45a7842e66be6c5beaa43fcb07d9ad
+                        │      │                            e2b8c47000d21b7dc240 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-56866 
+                        │      ├ DataSource       ╭ ID  : govulndb 
+                        │      │                  ├ Name: The Go Vulnerability Database 
+                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │      ├ Fingerprint     : sha256:9750205a7fb1c82266ed5ce67c43f10a3391d96c4079537e88350
+                        │      │                   09a46bc6a95 
+                        │      ├ Title           : net/http: golang: golang: Cross-user response poisoning via
+                        │      │                   desynchronized HTTP CONNECT connections 
+                        │      ├ Description     : When http.Transport sends an HTTP/1 CONNECT request with a
+                        │      │                   non-empty Request.Body, it writes the body directly to the
+                        │      │                   connection without framing after the request headers. If the
+                        │      │                    server rejects the CONNECT request with a non-2xx
+                        │      │                   keep-alive response, Transport returns the connection to the
+                        │      │                    idle pool. Because CONNECT requests do not have a request
+                        │      │                   body, the server may interpret the trailing body bytes as a
+                        │      │                   subsequent pipelined HTTP/1.1 request on the connection,
+                        │      │                   leaving the pooled connection desynchronized and causing the
+                        │      │                    next caller that reuses it to read the response to the
+                        │      │                   injected request. In reverse proxies (including
+                        │      │                   httputil.ReverseProxy) that forward CONNECT requests through
+                        │      │                    a shared Transport, this can lead to cross-user response
+                        │      │                   poisoning. 
+                        │      ├ Severity        : MEDIUM 
+                        │      ├ CweIDs                  
+                        │      │                  ───────
+                        │      │                  CWE-444
+                        │      │                  
+                        │      ├ VendorSeverity   ─ redhat: 2 
+                        │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L
+                        │      │                           │           /A:N 
+                        │      │                           ╰ V3Score : 6.5 
+                        │      ├ References                                                                
+                        │      │                  ─────────────────────────────────────────────────────────
+                        │      │                  https://access.redhat.com/security/cve/CVE-2026-56866    
+                        │      │                  https://go.dev/cl/847306                                 
+                        │      │                  https://go.dev/issue/81740                               
+                        │      │                  https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
+                        │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-56866          
+                        │      │                  https://pkg.go.dev/vuln/GO-2026-6605                     
+                        │      │                  https://www.cve.org/CVERecord?id=CVE-2026-56866          
+                        │      │                  
+                        │      ├ PublishedDate   : 2026-10-08T23:17:01.62Z 
+                        │      ╰ LastModifiedDate: 2026-10-09T16:35:35.9Z 
+                        ├ [11] ╭ VulnerabilityID : CVE-2026-78663 
+                        │      ├ VendorIDs                    
+                        │      │                  ────────────
+                        │      │                  GO-2026-6612
+                        │      │                  
+                        │      ├ PkgID           : stdlib@v1.27.1 
+                        │      ├ PkgName         : stdlib 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.27.1 
+                        │      │                  ╰ UID : 971b3d5816036f72 
+                        │      ├ InstalledVersion: v1.27.1 
+                        │      ├ FixedVersion    : 1.26.9, 1.27.2 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:0f94d38bd3f71957930b8e696f8cc0ea5602e3f6fb88
+                        │      │                  │         1de443dd8364f054ab2d 
+                        │      │                  ╰ DiffID: sha256:819a1de78d615c45a7842e66be6c5beaa43fcb07d9ad
+                        │      │                            e2b8c47000d21b7dc240 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-78663 
+                        │      ├ DataSource       ╭ ID  : govulndb 
+                        │      │                  ├ Name: The Go Vulnerability Database 
+                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │      ├ Fingerprint     : sha256:90751f2af95414cb754e0b2173d03cb5ce4534a1d82369c7c7650
+                        │      │                   a24d1e61483 
+                        │      ├ Title           : net/http: net/http/internal/http2: golang:
+                        │      │                   golang.org/x/net/http2: golang: flow control limit bypass
+                        │      │                   via double refund in HTTP/2 server 
+                        │      ├ Description     : The HTTP/2 server can refund connection-level flow control
+                        │      │                   twice for the same data: Once when a client resets a stream
+                        │      │                   (refunding data for any sent-but-unread portion of the
+                        │      │                   stream), and again when a request handler reads the buffered
+                        │      │                    data. A malicious client can exploit this to bypass the
+                        │      │                   configured connection-level flow control limit
+                        │      │                   (MaxReceiveBufferPerConnection). Total buffered data is
+                        │      │                   still limited by the concurrent stream limit and
+                        │      │                   stream-level flow control. 
+                        │      ├ Severity        : MEDIUM 
+                        │      ├ CweIDs                  
+                        │      │                  ───────
+                        │      │                  CWE-675
+                        │      │                  
+                        │      ├ VendorSeverity   ─ redhat: 2 
+                        │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
+                        │      │                           │           /A:L 
+                        │      │                           ╰ V3Score : 5.3 
+                        │      ├ References                                                                
+                        │      │                  ─────────────────────────────────────────────────────────
+                        │      │                  https://access.redhat.com/security/cve/CVE-2026-78663    
+                        │      │                  https://go.dev/cl/847187                                 
+                        │      │                  https://go.dev/cl/847310                                 
+                        │      │                  https://go.dev/issue/81743                               
+                        │      │                  https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
+                        │      │                  https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
+                        │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-78663          
+                        │      │                  https://pkg.go.dev/vuln/GO-2026-6612                     
+                        │      │                  https://www.cve.org/CVERecord?id=CVE-2026-78663          
+                        │      │                  
+                        │      ├ PublishedDate   : 2026-10-08T23:17:03.647Z 
+                        │      ╰ LastModifiedDate: 2026-10-09T17:16:49.42Z 
+                        ├ [12] ╭ VulnerabilityID : CVE-2026-94439 
                         │      ├ VendorIDs                    
                         │      │                  ────────────
                         │      │                  GO-2026-6613
@@ -485,6 +693,10 @@
                         │      │                   intermediate proxy considers the data on the connection to
                         │      │                   be tunneled and the server considers it to be HTTP. 
                         │      ├ Severity        : MEDIUM 
+                        │      ├ CweIDs                  
+                        │      │                  ───────
+                        │      │                  CWE-444
+                        │      │                  
                         │      ├ VendorSeverity   ─ redhat: 2 
                         │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L
                         │      │                           │           /A:N 
@@ -500,8 +712,55 @@
                         │      │                  https://www.cve.org/CVERecord?id=CVE-2026-94439          
                         │      │                  
                         │      ├ PublishedDate   : 2026-10-08T23:17:04.76Z 
-                        │      ╰ LastModifiedDate: 2026-10-08T23:17:04.76Z 
-                        ├ [10] ╭ VulnerabilityID : CVE-2026-97032 
+                        │      ╰ LastModifiedDate: 2026-10-09T17:16:50.703Z 
+                        ├ [13] ╭ VulnerabilityID : CVE-2026-94448 
+                        │      ├ VendorIDs                    
+                        │      │                  ────────────
+                        │      │                  GO-2026-6599
+                        │      │                  
+                        │      ├ PkgID           : stdlib@v1.27.1 
+                        │      ├ PkgName         : stdlib 
+                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.27.1 
+                        │      │                  ╰ UID : 971b3d5816036f72 
+                        │      ├ InstalledVersion: v1.27.1 
+                        │      ├ FixedVersion    : 1.26.9, 1.27.2 
+                        │      ├ Status          : fixed 
+                        │      ├ Layer            ╭ Digest: sha256:0f94d38bd3f71957930b8e696f8cc0ea5602e3f6fb88
+                        │      │                  │         1de443dd8364f054ab2d 
+                        │      │                  ╰ DiffID: sha256:819a1de78d615c45a7842e66be6c5beaa43fcb07d9ad
+                        │      │                            e2b8c47000d21b7dc240 
+                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-94448 
+                        │      ├ DataSource       ╭ ID  : govulndb 
+                        │      │                  ├ Name: The Go Vulnerability Database 
+                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
+                        │      ├ Fingerprint     : sha256:0dcdfb4d12faaf9081931b1d647f4c4214ea4e13aa1fbcf2d8262
+                        │      │                   cc63e2aab42 
+                        │      ├ Title           : html/template: golang: golang: cross-site scripting via
+                        │      │                   consecutive expressions in JavaScript template literals 
+                        │      ├ Description     : When a JavaScript template literal contains consecutive
+                        │      │                   expressions, the context tracking state was not properly
+                        │      │                   reset upon entering a new expression. We now ensure that
+                        │      │                   template-literal expression entries correctly reset context
+                        │      │                   variables so all subsequent regular expression literals are
+                        │      │                   accurately recognized and escaped. 
+                        │      ├ Severity        : MEDIUM 
+                        │      ├ VendorSeverity   ─ redhat: 2 
+                        │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L
+                        │      │                           │           /A:N 
+                        │      │                           ╰ V3Score : 6.1 
+                        │      ├ References                                                                
+                        │      │                  ─────────────────────────────────────────────────────────
+                        │      │                  https://access.redhat.com/security/cve/CVE-2026-94448    
+                        │      │                  https://go.dev/cl/839866                                 
+                        │      │                  https://go.dev/issue/81821                               
+                        │      │                  https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
+                        │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-94448          
+                        │      │                  https://pkg.go.dev/vuln/GO-2026-6599                     
+                        │      │                  https://www.cve.org/CVERecord?id=CVE-2026-94448          
+                        │      │                  
+                        │      ├ PublishedDate   : 2026-10-08T23:17:05.3Z 
+                        │      ╰ LastModifiedDate: 2026-10-09T16:35:35.9Z 
+                        ├ [14] ╭ VulnerabilityID : CVE-2026-97032 
                         │      ├ VendorIDs                    
                         │      │                  ────────────
                         │      │                  GO-2026-6617
@@ -554,8 +813,8 @@
                         │      │                  https://www.cve.org/CVERecord?id=CVE-2026-97032          
                         │      │                  
                         │      ├ PublishedDate   : 2026-10-08T23:17:06.213Z 
-                        │      ╰ LastModifiedDate: 2026-10-08T23:17:06.213Z 
-                        ├ [11] ╭ VulnerabilityID : CVE-2026-56857 
+                        │      ╰ LastModifiedDate: 2026-10-09T16:35:35.9Z 
+                        ├ [15] ╭ VulnerabilityID : CVE-2026-56857 
                         │      ├ VendorIDs                    
                         │      │                  ────────────
                         │      │                  GO-2026-6604
@@ -577,73 +836,36 @@
                         │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
                         │      ├ Fingerprint     : sha256:295fb91017a62ff23954f76d0c3783b87f7537748654b806f80ce
                         │      │                   3dac0288e5d 
-                        │      ├ Title           : Root.Mkdir(All) can follow junctions out of the root on
-                        │      │                   Windows in os 
+                        │      ├ Title           : os: golang: golang: Directory traversal via Windows junction
+                        │      │                    handling 
                         │      ├ Description     : On Windows, when the target of Root.Mkdir or Root.MkdirAll
                         │      │                   is a junction pointing to an empty location, the operation
                         │      │                   can create a directory at the junction target even when that
                         │      │                    target is located outside the root. This only applies to
                         │      │                   operations where the last path component is a junction
                         │      │                   (path/to/junction, but not path/junction/target). 
-                        │      ├ Severity        : UNKNOWN 
+                        │      ├ Severity        : LOW 
+                        │      ├ CweIDs                   
+                        │      │                  ────────
+                        │      │                  CWE-1386
+                        │      │                  
+                        │      ├ VendorSeverity   ─ redhat: 1 
+                        │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L
+                        │      │                           │           /A:N 
+                        │      │                           ╰ V3Score : 3.3 
                         │      ├ References                                                                
                         │      │                  ─────────────────────────────────────────────────────────
+                        │      │                  https://access.redhat.com/security/cve/CVE-2026-56857    
                         │      │                  https://go.dev/cl/847305                                 
                         │      │                  https://go.dev/issue/81739                               
                         │      │                  https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
+                        │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-56857          
                         │      │                  https://pkg.go.dev/vuln/GO-2026-6604                     
+                        │      │                  https://www.cve.org/CVERecord?id=CVE-2026-56857          
                         │      │                  
                         │      ├ PublishedDate   : 2026-10-08T23:17:01.487Z 
-                        │      ╰ LastModifiedDate: 2026-10-08T23:17:01.487Z 
-                        ├ [12] ╭ VulnerabilityID : CVE-2026-56866 
-                        │      ├ VendorIDs                    
-                        │      │                  ────────────
-                        │      │                  GO-2026-6605
-                        │      │                  
-                        │      ├ PkgID           : stdlib@v1.27.1 
-                        │      ├ PkgName         : stdlib 
-                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.27.1 
-                        │      │                  ╰ UID : 971b3d5816036f72 
-                        │      ├ InstalledVersion: v1.27.1 
-                        │      ├ FixedVersion    : 1.26.9, 1.27.2 
-                        │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:0f94d38bd3f71957930b8e696f8cc0ea5602e3f6fb88
-                        │      │                  │         1de443dd8364f054ab2d 
-                        │      │                  ╰ DiffID: sha256:819a1de78d615c45a7842e66be6c5beaa43fcb07d9ad
-                        │      │                            e2b8c47000d21b7dc240 
-                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-56866 
-                        │      ├ DataSource       ╭ ID  : govulndb 
-                        │      │                  ├ Name: The Go Vulnerability Database 
-                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │      ├ Fingerprint     : sha256:9750205a7fb1c82266ed5ce67c43f10a3391d96c4079537e88350
-                        │      │                   09a46bc6a95 
-                        │      ├ Title           : When http.Transport sends an HTTP/1 CONNECT request with a
-                        │      │                   non-empty R ... 
-                        │      ├ Description     : When http.Transport sends an HTTP/1 CONNECT request with a
-                        │      │                   non-empty Request.Body, it writes the body directly to the
-                        │      │                   connection without framing after the request headers. If the
-                        │      │                    server rejects the CONNECT request with a non-2xx
-                        │      │                   keep-alive response, Transport returns the connection to the
-                        │      │                    idle pool. Because CONNECT requests do not have a request
-                        │      │                   body, the server may interpret the trailing body bytes as a
-                        │      │                   subsequent pipelined HTTP/1.1 request on the connection,
-                        │      │                   leaving the pooled connection desynchronized and causing the
-                        │      │                    next caller that reuses it to read the response to the
-                        │      │                   injected request. In reverse proxies (including
-                        │      │                   httputil.ReverseProxy) that forward CONNECT requests through
-                        │      │                    a shared Transport, this can lead to cross-user response
-                        │      │                   poisoning. 
-                        │      ├ Severity        : UNKNOWN 
-                        │      ├ References                                                                
-                        │      │                  ─────────────────────────────────────────────────────────
-                        │      │                  https://go.dev/cl/847306                                 
-                        │      │                  https://go.dev/issue/81740                               
-                        │      │                  https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
-                        │      │                  https://pkg.go.dev/vuln/GO-2026-6605                     
-                        │      │                  
-                        │      ├ PublishedDate   : 2026-10-08T23:17:01.62Z 
-                        │      ╰ LastModifiedDate: 2026-10-08T23:17:01.62Z 
-                        ├ [13] ╭ VulnerabilityID : CVE-2026-78659 
+                        │      ╰ LastModifiedDate: 2026-10-09T16:35:35.9Z 
+                        ├ [16] ╭ VulnerabilityID : CVE-2026-78659 
                         │      ├ VendorIDs                    
                         │      │                  ────────────
                         │      │                  GO-2026-6603
@@ -681,6 +903,10 @@
                         │      │                   connection, and whose Server.MaxHeaderBytes are calculated
                         │      │                   differently. 
                         │      ├ Severity        : UNKNOWN 
+                        │      ├ CweIDs                  
+                        │      │                  ───────
+                        │      │                  CWE-405
+                        │      │                  
                         │      ├ References                                                                
                         │      │                  ─────────────────────────────────────────────────────────
                         │      │                  https://go.dev/cl/847185                                 
@@ -691,8 +917,8 @@
                         │      │                  https://pkg.go.dev/vuln/GO-2026-6603                     
                         │      │                  
                         │      ├ PublishedDate   : 2026-10-08T23:17:03.27Z 
-                        │      ╰ LastModifiedDate: 2026-10-08T23:17:03.27Z 
-                        ├ [14] ╭ VulnerabilityID : CVE-2026-78660 
+                        │      ╰ LastModifiedDate: 2026-10-09T16:35:35.9Z 
+                        ├ [17] ╭ VulnerabilityID : CVE-2026-78660 
                         │      ├ VendorIDs                    
                         │      │                  ────────────
                         │      │                  GO-2026-6610
@@ -725,6 +951,10 @@
                         │      │                   not behave strictly enough, this can result in response
                         │      │                   smuggling. 
                         │      ├ Severity        : UNKNOWN 
+                        │      ├ CweIDs                  
+                        │      │                  ───────
+                        │      │                  CWE-444
+                        │      │                  
                         │      ├ References                                                                
                         │      │                  ─────────────────────────────────────────────────────────
                         │      │                  https://go.dev/cl/835145                                 
@@ -734,93 +964,8 @@
                         │      │                  https://pkg.go.dev/vuln/GO-2026-6610                     
                         │      │                  
                         │      ├ PublishedDate   : 2026-10-08T23:17:03.51Z 
-                        │      ╰ LastModifiedDate: 2026-10-08T23:17:03.51Z 
-                        ├ [15] ╭ VulnerabilityID : CVE-2026-78663 
-                        │      ├ VendorIDs                    
-                        │      │                  ────────────
-                        │      │                  GO-2026-6612
-                        │      │                  
-                        │      ├ PkgID           : stdlib@v1.27.1 
-                        │      ├ PkgName         : stdlib 
-                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.27.1 
-                        │      │                  ╰ UID : 971b3d5816036f72 
-                        │      ├ InstalledVersion: v1.27.1 
-                        │      ├ FixedVersion    : 1.26.9, 1.27.2 
-                        │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:0f94d38bd3f71957930b8e696f8cc0ea5602e3f6fb88
-                        │      │                  │         1de443dd8364f054ab2d 
-                        │      │                  ╰ DiffID: sha256:819a1de78d615c45a7842e66be6c5beaa43fcb07d9ad
-                        │      │                            e2b8c47000d21b7dc240 
-                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-78663 
-                        │      ├ DataSource       ╭ ID  : govulndb 
-                        │      │                  ├ Name: The Go Vulnerability Database 
-                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │      ├ Fingerprint     : sha256:90751f2af95414cb754e0b2173d03cb5ce4534a1d82369c7c7650
-                        │      │                   a24d1e61483 
-                        │      ├ Title           : The HTTP/2 server can refund connection-level flow control
-                        │      │                   twice for t ... 
-                        │      ├ Description     : The HTTP/2 server can refund connection-level flow control
-                        │      │                   twice for the same data: Once when a client resets a stream
-                        │      │                   (refunding data for any sent-but-unread portion of the
-                        │      │                   stream), and again when a request handler reads the buffered
-                        │      │                    data. A malicious client can exploit this to bypass the
-                        │      │                   configured connection-level flow control limit
-                        │      │                   (MaxReceiveBufferPerConnection). Total buffered data is
-                        │      │                   still limited by the concurrent stream limit and
-                        │      │                   stream-level flow control. 
-                        │      ├ Severity        : UNKNOWN 
-                        │      ├ References                                                                
-                        │      │                  ─────────────────────────────────────────────────────────
-                        │      │                  https://go.dev/cl/847187                                 
-                        │      │                  https://go.dev/cl/847310                                 
-                        │      │                  https://go.dev/issue/81743                               
-                        │      │                  https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
-                        │      │                  https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
-                        │      │                  https://pkg.go.dev/vuln/GO-2026-6612                     
-                        │      │                  
-                        │      ├ PublishedDate   : 2026-10-08T23:17:03.647Z 
-                        │      ╰ LastModifiedDate: 2026-10-08T23:17:03.647Z 
-                        ├ [16] ╭ VulnerabilityID : CVE-2026-78669 
-                        │      ├ VendorIDs                    
-                        │      │                  ────────────
-                        │      │                  GO-2026-6611
-                        │      │                  
-                        │      ├ PkgID           : stdlib@v1.27.1 
-                        │      ├ PkgName         : stdlib 
-                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.27.1 
-                        │      │                  ╰ UID : 971b3d5816036f72 
-                        │      ├ InstalledVersion: v1.27.1 
-                        │      ├ FixedVersion    : 1.26.9, 1.27.2 
-                        │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:0f94d38bd3f71957930b8e696f8cc0ea5602e3f6fb88
-                        │      │                  │         1de443dd8364f054ab2d 
-                        │      │                  ╰ DiffID: sha256:819a1de78d615c45a7842e66be6c5beaa43fcb07d9ad
-                        │      │                            e2b8c47000d21b7dc240 
-                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-78669 
-                        │      ├ DataSource       ╭ ID  : govulndb 
-                        │      │                  ├ Name: The Go Vulnerability Database 
-                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │      ├ Fingerprint     : sha256:1d9e7698e31bbf8aebf6dd7d2395290550532cb6364e38d0885f5
-                        │      │                   35374e8549e 
-                        │      ├ Title           : A malicious HTTP/2 peer can cause excessive CPU consumption
-                        │      │                   in the cli ... 
-                        │      ├ Description     : A malicious HTTP/2 peer can cause excessive CPU consumption
-                        │      │                   in the client or server by opening a large number of streams
-                        │      │                    and then sending many small SETTINGS frames containing
-                        │      │                   SETTINGS_INITIAL_WINDOW_SIZE values. 
-                        │      ├ Severity        : UNKNOWN 
-                        │      ├ References                                                                
-                        │      │                  ─────────────────────────────────────────────────────────
-                        │      │                  https://go.dev/cl/847186                                 
-                        │      │                  https://go.dev/cl/847308                                 
-                        │      │                  https://go.dev/issue/81742                               
-                        │      │                  https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
-                        │      │                  https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
-                        │      │                  https://pkg.go.dev/vuln/GO-2026-6611                     
-                        │      │                  
-                        │      ├ PublishedDate   : 2026-10-08T23:17:04.01Z 
-                        │      ╰ LastModifiedDate: 2026-10-08T23:17:04.01Z 
-                        ├ [17] ╭ VulnerabilityID : CVE-2026-94440 
+                        │      ╰ LastModifiedDate: 2026-10-09T17:16:49.243Z 
+                        ├ [18] ╭ VulnerabilityID : CVE-2026-94440 
                         │      ├ VendorIDs                    
                         │      │                  ────────────
                         │      │                  GO-2026-6608
@@ -848,6 +993,10 @@
                         │      │                   an arbitrarily long line into memory when the remaining
                         │      │                   limit at the start of a part is less than 400 bytes. 
                         │      ├ Severity        : UNKNOWN 
+                        │      ├ CweIDs                  
+                        │      │                  ───────
+                        │      │                  CWE-770
+                        │      │                  
                         │      ├ References                                                                
                         │      │                  ─────────────────────────────────────────────────────────
                         │      │                  https://go.dev/cl/847307                                 
@@ -856,47 +1005,7 @@
                         │      │                  https://pkg.go.dev/vuln/GO-2026-6608                     
                         │      │                  
                         │      ├ PublishedDate   : 2026-10-08T23:17:04.917Z 
-                        │      ╰ LastModifiedDate: 2026-10-08T23:17:04.917Z 
-                        ├ [18] ╭ VulnerabilityID : CVE-2026-94448 
-                        │      ├ VendorIDs                    
-                        │      │                  ────────────
-                        │      │                  GO-2026-6599
-                        │      │                  
-                        │      ├ PkgID           : stdlib@v1.27.1 
-                        │      ├ PkgName         : stdlib 
-                        │      ├ PkgIdentifier    ╭ PURL: pkg:golang/stdlib@v1.27.1 
-                        │      │                  ╰ UID : 971b3d5816036f72 
-                        │      ├ InstalledVersion: v1.27.1 
-                        │      ├ FixedVersion    : 1.26.9, 1.27.2 
-                        │      ├ Status          : fixed 
-                        │      ├ Layer            ╭ Digest: sha256:0f94d38bd3f71957930b8e696f8cc0ea5602e3f6fb88
-                        │      │                  │         1de443dd8364f054ab2d 
-                        │      │                  ╰ DiffID: sha256:819a1de78d615c45a7842e66be6c5beaa43fcb07d9ad
-                        │      │                            e2b8c47000d21b7dc240 
-                        │      ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-94448 
-                        │      ├ DataSource       ╭ ID  : govulndb 
-                        │      │                  ├ Name: The Go Vulnerability Database 
-                        │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │      ├ Fingerprint     : sha256:0dcdfb4d12faaf9081931b1d647f4c4214ea4e13aa1fbcf2d8262
-                        │      │                   cc63e2aab42 
-                        │      ├ Title           : When a JavaScript template literal contains consecutive
-                        │      │                   expressions, t ... 
-                        │      ├ Description     : When a JavaScript template literal contains consecutive
-                        │      │                   expressions, the context tracking state was not properly
-                        │      │                   reset upon entering a new expression. We now ensure that
-                        │      │                   template-literal expression entries correctly reset context
-                        │      │                   variables so all subsequent regular expression literals are
-                        │      │                   accurately recognized and escaped. 
-                        │      ├ Severity        : UNKNOWN 
-                        │      ├ References                                                                
-                        │      │                  ─────────────────────────────────────────────────────────
-                        │      │                  https://go.dev/cl/839866                                 
-                        │      │                  https://go.dev/issue/81821                               
-                        │      │                  https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
-                        │      │                  https://pkg.go.dev/vuln/GO-2026-6599                     
-                        │      │                  
-                        │      ├ PublishedDate   : 2026-10-08T23:17:05.3Z 
-                        │      ╰ LastModifiedDate: 2026-10-08T23:17:05.3Z 
+                        │      ╰ LastModifiedDate: 2026-10-09T17:16:50.907Z 
                         ╰ [19] ╭ VulnerabilityID : CVE-2026-97030 
                                ├ VendorIDs                    
                                │                  ────────────
@@ -934,5 +1043,5 @@
                                │                  https://pkg.go.dev/vuln/GO-2026-6600                     
                                │                  
                                ├ PublishedDate   : 2026-10-08T23:17:05.91Z 
-                               ╰ LastModifiedDate: 2026-10-08T23:17:05.91Z 
+                               ╰ LastModifiedDate: 2026-10-09T16:35:35.9Z 
 ```
