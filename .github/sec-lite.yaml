@@ -550,13 +550,15 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N
         V3Score: 8.1
     References:
-    - https://access.redhat.com/errata/RHSA-2026:69293
+    - https://access.redhat.com/errata/RHSA-2026:66432
     - https://access.redhat.com/security/cve/CVE-2026-25681
+    - https://bugzilla.redhat.com/2480756
     - https://bugzilla.redhat.com/2480757
     - https://bugzilla.redhat.com/2480761
     - https://bugzilla.redhat.com/2480762
     - https://bugzilla.redhat.com/2484830
     - https://bugzilla.redhat.com/2493622
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2480756
     - https://bugzilla.redhat.com/show_bug.cgi?id=2480757
     - https://bugzilla.redhat.com/show_bug.cgi?id=2480761
     - https://bugzilla.redhat.com/show_bug.cgi?id=2480762
@@ -565,11 +567,12 @@
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25681
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27136
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39821
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-41178
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42502
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-55677
-    - https://errata.almalinux.org/9/ALSA-2026-69293.html
-    - https://errata.rockylinux.org/RLSA-2026:69293
+    - https://errata.almalinux.org/10/ALSA-2026-66432.html
+    - https://errata.rockylinux.org/RLSA-2026:66432
     - https://go.dev/cl/781703
     - https://go.dev/issue/79574
     - https://groups.google.com/g/golang-announce/c/iI-mYSI0lu8
@@ -617,13 +620,15 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N
         V3Score: 8.1
     References:
-    - https://access.redhat.com/errata/RHSA-2026:69293
+    - https://access.redhat.com/errata/RHSA-2026:66432
     - https://access.redhat.com/security/cve/CVE-2026-27136
+    - https://bugzilla.redhat.com/2480756
     - https://bugzilla.redhat.com/2480757
     - https://bugzilla.redhat.com/2480761
     - https://bugzilla.redhat.com/2480762
     - https://bugzilla.redhat.com/2484830
     - https://bugzilla.redhat.com/2493622
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2480756
     - https://bugzilla.redhat.com/show_bug.cgi?id=2480757
     - https://bugzilla.redhat.com/show_bug.cgi?id=2480761
     - https://bugzilla.redhat.com/show_bug.cgi?id=2480762
@@ -632,11 +637,12 @@
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25681
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27136
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39821
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-41178
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42502
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-55677
-    - https://errata.almalinux.org/9/ALSA-2026-69293.html
-    - https://errata.rockylinux.org/RLSA-2026:69293
+    - https://errata.almalinux.org/10/ALSA-2026-66432.html
+    - https://errata.rockylinux.org/RLSA-2026:66432
     - https://go.dev/cl/781685
     - https://go.dev/issue/79575
     - https://groups.google.com/g/golang-announce/c/iI-mYSI0lu8
@@ -784,7 +790,7 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42499
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42501
     - https://errata.almalinux.org/8/ALSA-2026-22112.html
-    - https://errata.rockylinux.org/RLSA-2026:22121
+    - https://errata.rockylinux.org/RLSA-2026:22120
     - https://github.com/golang/go/issues/78476
     - https://go-review.googlesource.com/c/go/+/761581
     - https://go-review.googlesource.com/c/net/+/761640
@@ -994,45 +1000,31 @@
     - https://access.redhat.com/errata/RHSA-2026:67517
     - https://access.redhat.com/errata/RHSA-2026:68504
     - https://access.redhat.com/security/cve/CVE-2026-39821
-    - https://bugzilla.redhat.com/2467809
+    - https://bugzilla.redhat.com/2315719
+    - https://bugzilla.redhat.com/2341751
     - https://bugzilla.redhat.com/2467820
     - https://bugzilla.redhat.com/2480756
-    - https://bugzilla.redhat.com/2484204
     - https://bugzilla.redhat.com/2515815
     - https://bugzilla.redhat.com/2515820
     - https://bugzilla.redhat.com/2515827
     - https://bugzilla.redhat.com/2515838
     - https://bugzilla.redhat.com/2515839
     - https://bugzilla.redhat.com/2515840
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456333
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2467809
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2467820
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2467822
     - https://bugzilla.redhat.com/show_bug.cgi?id=2480756
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2484204
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2515815
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2515820
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2515827
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2515838
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2515839
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2515840
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2480757
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2480761
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2480762
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2484830
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2493622
     - https://creativecommons.org/licenses/by/4.0/
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33811
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33818
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39820
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25681
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27136
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39821
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42499
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42504
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56853
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56858
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56859
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56860
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56862
-    - https://errata.almalinux.org/9/ALSA-2026-65153.html
-    - https://errata.rockylinux.org/RLSA-2026:65886
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-41178
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42502
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-55677
+    - https://errata.almalinux.org/8/ALSA-2026-66016.html
+    - https://errata.rockylinux.org/RLSA-2026:66432
     - https://go.dev/cl/767220
     - https://go.dev/issue/78760
     - https://groups.google.com/g/golang-announce/c/94pEornpRlI
@@ -1094,6 +1086,49 @@
     - https://www.cve.org/CVERecord?id=CVE-2026-46600
     PublishedDate: '2026-07-21T20:17:01.213Z'
     LastModifiedDate: '2026-08-14T16:16:55.673Z'
+  - VulnerabilityID: CVE-2026-78669
+    VendorIDs:
+    - GO-2026-6611
+    PkgID: golang.org/x/net@v0.51.0
+    PkgName: golang.org/x/net
+    PkgIdentifier:
+      PURL: pkg:golang/golang.org/x/net@v0.51.0
+      UID: 5e89717fe2a26868
+    InstalledVersion: v0.51.0
+    FixedVersion: 0.60.0
+    Status: fixed
+    Layer:
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-78669
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:01dc1ec47d91f82e6bacab5c38eae85e8d8b72b84bf8a18b90fc70e3737f90a3
+    Title: 'net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via excessive HTTP/2 SETTINGS frames'
+    Description: A malicious HTTP/2 peer can cause excessive CPU consumption in the client or server by opening a large number of streams and then sending many small SETTINGS frames containing SETTINGS_INITIAL_WINDOW_SIZE values.
+    Severity: HIGH
+    CweIDs:
+    - CWE-405
+    VendorSeverity:
+      redhat: 3
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://access.redhat.com/security/cve/CVE-2026-78669
+    - https://go.dev/cl/847186
+    - https://go.dev/cl/847308
+    - https://go.dev/issue/81742
+    - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
+    - https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-78669
+    - https://pkg.go.dev/vuln/GO-2026-6611
+    - https://www.cve.org/CVERecord?id=CVE-2026-78669
+    PublishedDate: '2026-10-08T23:17:04.01Z'
+    LastModifiedDate: '2026-10-09T17:16:49.857Z'
   - VulnerabilityID: CVE-2026-25680
     VendorIDs:
     - GO-2026-5028
@@ -1174,13 +1209,15 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
         V3Score: 6.1
     References:
-    - https://access.redhat.com/errata/RHSA-2026:69293
+    - https://access.redhat.com/errata/RHSA-2026:66432
     - https://access.redhat.com/security/cve/CVE-2026-42502
+    - https://bugzilla.redhat.com/2480756
     - https://bugzilla.redhat.com/2480757
     - https://bugzilla.redhat.com/2480761
     - https://bugzilla.redhat.com/2480762
     - https://bugzilla.redhat.com/2484830
     - https://bugzilla.redhat.com/2493622
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2480756
     - https://bugzilla.redhat.com/show_bug.cgi?id=2480757
     - https://bugzilla.redhat.com/show_bug.cgi?id=2480761
     - https://bugzilla.redhat.com/show_bug.cgi?id=2480762
@@ -1189,11 +1226,12 @@
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25681
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27136
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39821
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-41178
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42502
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-55677
-    - https://errata.almalinux.org/9/ALSA-2026-69293.html
-    - https://errata.rockylinux.org/RLSA-2026:69293
+    - https://errata.almalinux.org/10/ALSA-2026-66432.html
+    - https://errata.rockylinux.org/RLSA-2026:66432
     - https://go.dev/cl/781701
     - https://go.dev/issue/79572
     - https://groups.google.com/g/golang-announce/c/iI-mYSI0lu8
@@ -1247,6 +1285,49 @@
     - https://www.cve.org/CVERecord?id=CVE-2026-42506
     PublishedDate: '2026-05-22T16:16:20.803Z'
     LastModifiedDate: '2026-07-23T16:10:00.137Z'
+  - VulnerabilityID: CVE-2026-78663
+    VendorIDs:
+    - GO-2026-6612
+    PkgID: golang.org/x/net@v0.51.0
+    PkgName: golang.org/x/net
+    PkgIdentifier:
+      PURL: pkg:golang/golang.org/x/net@v0.51.0
+      UID: 5e89717fe2a26868
+    InstalledVersion: v0.51.0
+    FixedVersion: 0.60.0
+    Status: fixed
+    Layer:
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-78663
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:dcbab88b81cc4cb5b06f71aa1dc08a0094e001ab0538df12de63008765c77388
+    Title: 'net/http: net/http/internal/http2: golang: golang.org/x/net/http2: golang: flow control limit bypass via double refund in HTTP/2 server'
+    Description: 'The HTTP/2 server can refund connection-level flow control twice for the same data: Once when a client resets a stream (refunding data for any sent-but-unread portion of the stream), and again when a request handler reads the buffered data. A malicious client can exploit this to bypass the configured connection-level flow control limit (MaxReceiveBufferPerConnection). Total buffered data is still limited by the concurrent stream limit and stream-level flow control.'
+    Severity: MEDIUM
+    CweIDs:
+    - CWE-675
+    VendorSeverity:
+      redhat: 2
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+        V3Score: 5.3
+    References:
+    - https://access.redhat.com/security/cve/CVE-2026-78663
+    - https://go.dev/cl/847187
+    - https://go.dev/cl/847310
+    - https://go.dev/issue/81743
+    - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
+    - https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-78663
+    - https://pkg.go.dev/vuln/GO-2026-6612
+    - https://www.cve.org/CVERecord?id=CVE-2026-78663
+    PublishedDate: '2026-10-08T23:17:03.647Z'
+    LastModifiedDate: '2026-10-09T17:16:49.42Z'
   - VulnerabilityID: CVE-2026-97032
     VendorIDs:
     - GO-2026-6617
@@ -1287,7 +1368,7 @@
     - https://pkg.go.dev/vuln/GO-2026-6617
     - https://www.cve.org/CVERecord?id=CVE-2026-97032
     PublishedDate: '2026-10-08T23:17:06.213Z'
-    LastModifiedDate: '2026-10-08T23:17:06.213Z'
+    LastModifiedDate: '2026-10-09T16:35:35.9Z'
   - VulnerabilityID: CVE-2026-78659
     VendorIDs:
     - GO-2026-6603
@@ -1311,6 +1392,8 @@
     Title: When "Trailer" headers are sent by a client, the HTTP server internall ...
     Description: When "Trailer" headers are sent by a client, the HTTP server internally uses the header values to populate the Request.Trailer map passed to the server handler. Because Request.Trailer is a map, each entry incurs memory overhead. For HTTP/2 servers, a malicious client can exploit this by sending a "Trailer" header that declares a large number of fields, causing the server to allocate a disproportionate amount of memory while bypassing Server.MaxHeaderValueCount and Server.MaxHeaderBytes limits. This exploit is not applicable for HTTP/1 servers, which do not support multiplexing a large number of requests over one TCP connection, and whose Server.MaxHeaderBytes are calculated differently.
     Severity: UNKNOWN
+    CweIDs:
+    - CWE-405
     References:
     - https://go.dev/cl/847185
     - https://go.dev/cl/847314
@@ -1319,7 +1402,7 @@
     - https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
     - https://pkg.go.dev/vuln/GO-2026-6603
     PublishedDate: '2026-10-08T23:17:03.27Z'
-    LastModifiedDate: '2026-10-08T23:17:03.27Z'
+    LastModifiedDate: '2026-10-09T16:35:35.9Z'
   - VulnerabilityID: CVE-2026-78660
     VendorIDs:
     - GO-2026-6610
@@ -1343,6 +1426,8 @@
     Title: Historically, we have been rather lax about malformed framing-related  ...
     Description: Historically, we have been rather lax about malformed framing-related headers in our HTTP/2 implementation, as they cannot interfere with HTTP/2 framing. However, this makes it possible for our HTTP/2 implementation to forward responses containing such headers to an HTTP/1 client when acting as a reverse proxy. If the HTTP/1 client also does not behave strictly enough, this can result in response smuggling.
     Severity: UNKNOWN
+    CweIDs:
+    - CWE-444
     References:
     - https://go.dev/cl/835145
     - https://go.dev/cl/836385
@@ -1350,71 +1435,7 @@
     - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
     - https://pkg.go.dev/vuln/GO-2026-6610
     PublishedDate: '2026-10-08T23:17:03.51Z'
-    LastModifiedDate: '2026-10-08T23:17:03.51Z'
-  - VulnerabilityID: CVE-2026-78663
-    VendorIDs:
-    - GO-2026-6612
-    PkgID: golang.org/x/net@v0.51.0
-    PkgName: golang.org/x/net
-    PkgIdentifier:
-      PURL: pkg:golang/golang.org/x/net@v0.51.0
-      UID: 5e89717fe2a26868
-    InstalledVersion: v0.51.0
-    FixedVersion: 0.60.0
-    Status: fixed
-    Layer:
-      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
-      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-78663
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:dcbab88b81cc4cb5b06f71aa1dc08a0094e001ab0538df12de63008765c77388
-    Title: The HTTP/2 server can refund connection-level flow control twice for t ...
-    Description: 'The HTTP/2 server can refund connection-level flow control twice for the same data: Once when a client resets a stream (refunding data for any sent-but-unread portion of the stream), and again when a request handler reads the buffered data. A malicious client can exploit this to bypass the configured connection-level flow control limit (MaxReceiveBufferPerConnection). Total buffered data is still limited by the concurrent stream limit and stream-level flow control.'
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/847187
-    - https://go.dev/cl/847310
-    - https://go.dev/issue/81743
-    - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
-    - https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
-    - https://pkg.go.dev/vuln/GO-2026-6612
-    PublishedDate: '2026-10-08T23:17:03.647Z'
-    LastModifiedDate: '2026-10-08T23:17:03.647Z'
-  - VulnerabilityID: CVE-2026-78669
-    VendorIDs:
-    - GO-2026-6611
-    PkgID: golang.org/x/net@v0.51.0
-    PkgName: golang.org/x/net
-    PkgIdentifier:
-      PURL: pkg:golang/golang.org/x/net@v0.51.0
-      UID: 5e89717fe2a26868
-    InstalledVersion: v0.51.0
-    FixedVersion: 0.60.0
-    Status: fixed
-    Layer:
-      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
-      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-78669
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:01dc1ec47d91f82e6bacab5c38eae85e8d8b72b84bf8a18b90fc70e3737f90a3
-    Title: A malicious HTTP/2 peer can cause excessive CPU consumption in the cli ...
-    Description: A malicious HTTP/2 peer can cause excessive CPU consumption in the client or server by opening a large number of streams and then sending many small SETTINGS frames containing SETTINGS_INITIAL_WINDOW_SIZE values.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/847186
-    - https://go.dev/cl/847308
-    - https://go.dev/issue/81742
-    - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
-    - https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
-    - https://pkg.go.dev/vuln/GO-2026-6611
-    PublishedDate: '2026-10-08T23:17:04.01Z'
-    LastModifiedDate: '2026-10-08T23:17:04.01Z'
+    LastModifiedDate: '2026-10-09T17:16:49.243Z'
   - VulnerabilityID: CVE-2026-39824
     VendorIDs:
     - GO-2026-5024
@@ -1651,12 +1672,12 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:76744
+    - https://access.redhat.com/errata/RHSA-2026:76743
     - https://access.redhat.com/security/cve/CVE-2026-84445
     - https://bugzilla.redhat.com/show_bug.cgi?id=2533175
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-84445
-    - https://errata.rockylinux.org/RLSA-2026:76744
+    - https://errata.rockylinux.org/RLSA-2026:76743
     - https://github.com/grpc/grpc-go
     - https://github.com/grpc/grpc-go/commit/3822494d8ea03b992c089fd2a195f041762fffb7
     - https://github.com/grpc/grpc-go/commit/8668b69c167df908b6b3666dcbf40992b9e932a4
@@ -1941,15 +1962,16 @@
     - https://access.redhat.com/errata/RHSA-2026:68334
     - https://access.redhat.com/errata/RHSA-2026:68335
     - https://access.redhat.com/security/cve/CVE-2026-27145
-    - https://bugzilla.redhat.com/2445356
+    - https://bugzilla.redhat.com/2480756
     - https://bugzilla.redhat.com/2484207
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2445356
+    - https://bugzilla.redhat.com/2498152
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2467822
     - https://bugzilla.redhat.com/show_bug.cgi?id=2484207
     - https://creativecommons.org/licenses/by/4.0/
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25679
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27145
-    - https://errata.almalinux.org/9/ALSA-2026-36317.html
-    - https://errata.rockylinux.org/RLSA-2026:36317
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33811
+    - https://errata.almalinux.org/8/ALSA-2026-38995.html
+    - https://errata.rockylinux.org/RLSA-2026:35832
     - https://go.dev/cl/783621
     - https://go.dev/issue/79694
     - https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw
@@ -2002,28 +2024,35 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:70641
+    - https://access.redhat.com/errata/RHSA-2026:65895
+    - https://access.redhat.com/errata/RHSA-2026:67161
     - https://access.redhat.com/security/cve/CVE-2026-33818
     - https://bugzilla.redhat.com/2515815
     - https://bugzilla.redhat.com/2515820
-    - https://bugzilla.redhat.com/2515827
-    - https://bugzilla.redhat.com/2515838
     - https://bugzilla.redhat.com/2515839
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2402034
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456335
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2467809
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2467820
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2484204
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515815
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515820
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515827
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515838
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515839
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2515840
     - https://creativecommons.org/licenses/by/4.0/
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-11395
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33810
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33818
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39820
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42499
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42504
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56853
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56858
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56859
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56860
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56862
-    - https://errata.almalinux.org/9/ALSA-2026-70641.html
-    - https://errata.rockylinux.org/RLSA-2026:70641
+    - https://errata.almalinux.org/8/ALSA-2026-67161.html
+    - https://errata.rockylinux.org/RLSA-2026:65895
     - https://go.dev/cl/814980
     - https://go.dev/issue/80405
     - https://groups.google.com/g/golang-announce/c/94pEornpRlI
@@ -2224,45 +2253,31 @@
     - https://access.redhat.com/errata/RHSA-2026:67517
     - https://access.redhat.com/errata/RHSA-2026:68504
     - https://access.redhat.com/security/cve/CVE-2026-39821
-    - https://bugzilla.redhat.com/2467809
+    - https://bugzilla.redhat.com/2315719
+    - https://bugzilla.redhat.com/2341751
     - https://bugzilla.redhat.com/2467820
     - https://bugzilla.redhat.com/2480756
-    - https://bugzilla.redhat.com/2484204
     - https://bugzilla.redhat.com/2515815
     - https://bugzilla.redhat.com/2515820
     - https://bugzilla.redhat.com/2515827
     - https://bugzilla.redhat.com/2515838
     - https://bugzilla.redhat.com/2515839
     - https://bugzilla.redhat.com/2515840
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456333
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2467809
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2467820
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2467822
     - https://bugzilla.redhat.com/show_bug.cgi?id=2480756
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2484204
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2515815
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2515820
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2515827
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2515838
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2515839
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2515840
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2480757
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2480761
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2480762
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2484830
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2493622
     - https://creativecommons.org/licenses/by/4.0/
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33811
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33818
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39820
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-25681
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27136
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39821
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42499
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42504
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56853
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56858
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56859
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56860
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56862
-    - https://errata.almalinux.org/9/ALSA-2026-65153.html
-    - https://errata.rockylinux.org/RLSA-2026:65886
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-41178
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42502
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-55677
+    - https://errata.almalinux.org/8/ALSA-2026-66016.html
+    - https://errata.rockylinux.org/RLSA-2026:66432
     - https://go.dev/cl/767220
     - https://go.dev/issue/78760
     - https://groups.google.com/g/golang-announce/c/94pEornpRlI
@@ -2305,7 +2320,7 @@
     - CWE-61
     VendorSeverity:
       alma: 3
-      amazon: 2
+      amazon: 3
       azure: 3
       bitnami: 3
       oracle-oval: 3
@@ -2320,14 +2335,17 @@
         V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
         V3Score: 7.8
     References:
-    - https://access.redhat.com/errata/RHSA-2026:38878
+    - https://access.redhat.com/errata/RHSA-2026:38495
+    - https://access.redhat.com/errata/RHSA-2026:38995
     - https://access.redhat.com/security/cve/CVE-2026-39822
+    - https://bugzilla.redhat.com/2480756
+    - https://bugzilla.redhat.com/2484207
     - https://bugzilla.redhat.com/2498152
     - https://bugzilla.redhat.com/show_bug.cgi?id=2498152
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39822
-    - https://errata.almalinux.org/9/ALSA-2026-38878.html
-    - https://errata.rockylinux.org/RLSA-2026:38878
+    - https://errata.almalinux.org/8/ALSA-2026-38995.html
+    - https://errata.rockylinux.org/RLSA-2026:38495
     - https://go.dev/cl/797880
     - https://go.dev/issue/79005
     - https://groups.google.com/g/golang-announce/c/OrmQE_Yp5Sc
@@ -2380,25 +2398,18 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:65153
-    - https://access.redhat.com/errata/RHSA-2026:65886
+    - https://access.redhat.com/errata/RHSA-2026:65895
+    - https://access.redhat.com/errata/RHSA-2026:67148
     - https://access.redhat.com/security/cve/CVE-2026-42504
+    - https://bugzilla.redhat.com/2344219
+    - https://bugzilla.redhat.com/2456333
     - https://bugzilla.redhat.com/2467809
-    - https://bugzilla.redhat.com/2467820
-    - https://bugzilla.redhat.com/2480756
     - https://bugzilla.redhat.com/2484204
-    - https://bugzilla.redhat.com/2515815
-    - https://bugzilla.redhat.com/2515820
-    - https://bugzilla.redhat.com/2515827
-    - https://bugzilla.redhat.com/2515838
-    - https://bugzilla.redhat.com/2515839
-    - https://bugzilla.redhat.com/2515840
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456333
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2456339
+    - https://bugzilla.redhat.com/2484830
+    - https://bugzilla.redhat.com/2493622
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456335
     - https://bugzilla.redhat.com/show_bug.cgi?id=2467809
     - https://bugzilla.redhat.com/show_bug.cgi?id=2467820
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2467822
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2480756
     - https://bugzilla.redhat.com/show_bug.cgi?id=2484204
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515815
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515820
@@ -2407,12 +2418,9 @@
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515839
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515840
     - https://creativecommons.org/licenses/by/4.0/
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33811
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33810
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33818
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39820
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39821
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42499
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42504
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56853
@@ -2420,8 +2428,8 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56859
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56860
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56862
-    - https://errata.almalinux.org/9/ALSA-2026-65153.html
-    - https://errata.rockylinux.org/RLSA-2026:65886
+    - https://errata.almalinux.org/8/ALSA-2026-67148.html
+    - https://errata.rockylinux.org/RLSA-2026:65895
     - https://go.dev/cl/774481
     - https://go.dev/issue/79217
     - https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw
@@ -2519,28 +2527,42 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:70641
+    - https://access.redhat.com/errata/RHSA-2026:65895
+    - https://access.redhat.com/errata/RHSA-2026:66016
     - https://access.redhat.com/security/cve/CVE-2026-56853
+    - https://bugzilla.redhat.com/2315719
+    - https://bugzilla.redhat.com/2341751
+    - https://bugzilla.redhat.com/2467820
+    - https://bugzilla.redhat.com/2480756
     - https://bugzilla.redhat.com/2515815
     - https://bugzilla.redhat.com/2515820
     - https://bugzilla.redhat.com/2515827
     - https://bugzilla.redhat.com/2515838
     - https://bugzilla.redhat.com/2515839
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2402034
+    - https://bugzilla.redhat.com/2515840
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456335
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2467809
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2467820
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2484204
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515815
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515820
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515827
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515838
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515839
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2515840
     - https://creativecommons.org/licenses/by/4.0/
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-11395
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33810
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33818
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39820
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42499
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42504
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56853
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56858
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56859
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56860
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56862
-    - https://errata.almalinux.org/9/ALSA-2026-70641.html
-    - https://errata.rockylinux.org/RLSA-2026:70641
+    - https://errata.almalinux.org/8/ALSA-2026-66016.html
+    - https://errata.rockylinux.org/RLSA-2026:65895
     - https://go.dev/cl/795540
     - https://go.dev/issue/80205
     - https://groups.google.com/g/golang-announce/c/94pEornpRlI
@@ -2592,28 +2614,42 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N
         V3Score: 8.1
     References:
-    - https://access.redhat.com/errata/RHSA-2026:70641
+    - https://access.redhat.com/errata/RHSA-2026:65895
+    - https://access.redhat.com/errata/RHSA-2026:66016
     - https://access.redhat.com/security/cve/CVE-2026-56858
+    - https://bugzilla.redhat.com/2315719
+    - https://bugzilla.redhat.com/2341751
+    - https://bugzilla.redhat.com/2467820
+    - https://bugzilla.redhat.com/2480756
     - https://bugzilla.redhat.com/2515815
     - https://bugzilla.redhat.com/2515820
     - https://bugzilla.redhat.com/2515827
     - https://bugzilla.redhat.com/2515838
     - https://bugzilla.redhat.com/2515839
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2402034
+    - https://bugzilla.redhat.com/2515840
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456335
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2467809
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2467820
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2484204
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515815
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515820
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515827
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515838
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515839
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2515840
     - https://creativecommons.org/licenses/by/4.0/
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-11395
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33810
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33818
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39820
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42499
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42504
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56853
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56858
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56859
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56860
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56862
-    - https://errata.almalinux.org/9/ALSA-2026-70641.html
-    - https://errata.rockylinux.org/RLSA-2026:70641
+    - https://errata.almalinux.org/8/ALSA-2026-66016.html
+    - https://errata.rockylinux.org/RLSA-2026:65895
     - https://go.dev/cl/807100
     - https://go.dev/issue/80435
     - https://groups.google.com/g/golang-announce/c/94pEornpRlI
@@ -2665,37 +2701,42 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:69961
+    - https://access.redhat.com/errata/RHSA-2026:65895
+    - https://access.redhat.com/errata/RHSA-2026:66016
     - https://access.redhat.com/security/cve/CVE-2026-56859
-    - https://bugzilla.redhat.com/2480684
-    - https://bugzilla.redhat.com/2508234
+    - https://bugzilla.redhat.com/2315719
+    - https://bugzilla.redhat.com/2341751
+    - https://bugzilla.redhat.com/2467820
+    - https://bugzilla.redhat.com/2480756
     - https://bugzilla.redhat.com/2515815
     - https://bugzilla.redhat.com/2515820
     - https://bugzilla.redhat.com/2515827
     - https://bugzilla.redhat.com/2515838
     - https://bugzilla.redhat.com/2515839
     - https://bugzilla.redhat.com/2515840
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2480684
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2508234
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456335
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2467809
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2467820
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2484204
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515815
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515820
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515827
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515838
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515839
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515840
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2518147
     - https://creativecommons.org/licenses/by/4.0/
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-17106
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-19730
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33810
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33818
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39830
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39820
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42499
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42504
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56853
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56858
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56859
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56860
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56862
-    - https://errata.almalinux.org/9/ALSA-2026-69961.html
-    - https://errata.rockylinux.org/RLSA-2026:69961
+    - https://errata.almalinux.org/8/ALSA-2026-66016.html
+    - https://errata.rockylinux.org/RLSA-2026:65895
     - https://go.dev/cl/803320
     - https://go.dev/issue/80481
     - https://groups.google.com/g/golang-announce/c/94pEornpRlI
@@ -2747,28 +2788,35 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:70641
+    - https://access.redhat.com/errata/RHSA-2026:65895
+    - https://access.redhat.com/errata/RHSA-2026:67161
     - https://access.redhat.com/security/cve/CVE-2026-56860
     - https://bugzilla.redhat.com/2515815
     - https://bugzilla.redhat.com/2515820
-    - https://bugzilla.redhat.com/2515827
-    - https://bugzilla.redhat.com/2515838
     - https://bugzilla.redhat.com/2515839
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2402034
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456335
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2467809
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2467820
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2484204
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515815
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515820
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515827
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515838
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515839
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2515840
     - https://creativecommons.org/licenses/by/4.0/
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-11395
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33810
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33818
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39820
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42499
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42504
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56853
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56858
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56859
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56860
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56862
-    - https://errata.almalinux.org/9/ALSA-2026-70641.html
-    - https://errata.rockylinux.org/RLSA-2026:70641
+    - https://errata.almalinux.org/8/ALSA-2026-67161.html
+    - https://errata.rockylinux.org/RLSA-2026:65895
     - https://go.dev/cl/803681
     - https://go.dev/issue/80494
     - https://groups.google.com/g/golang-announce/c/94pEornpRlI
@@ -2820,28 +2868,35 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:70641
+    - https://access.redhat.com/errata/RHSA-2026:65895
+    - https://access.redhat.com/errata/RHSA-2026:67161
     - https://access.redhat.com/security/cve/CVE-2026-56862
     - https://bugzilla.redhat.com/2515815
     - https://bugzilla.redhat.com/2515820
-    - https://bugzilla.redhat.com/2515827
-    - https://bugzilla.redhat.com/2515838
     - https://bugzilla.redhat.com/2515839
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2402034
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2456335
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2467809
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2467820
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2484204
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515815
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515820
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515827
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515838
     - https://bugzilla.redhat.com/show_bug.cgi?id=2515839
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2515840
     - https://creativecommons.org/licenses/by/4.0/
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-11395
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33810
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33818
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39820
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42499
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42504
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56853
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56858
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56859
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56860
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56862
-    - https://errata.almalinux.org/9/ALSA-2026-70641.html
-    - https://errata.rockylinux.org/RLSA-2026:70641
+    - https://errata.almalinux.org/8/ALSA-2026-67161.html
+    - https://errata.rockylinux.org/RLSA-2026:65895
     - https://go.dev/cl/804261
     - https://go.dev/issue/80528
     - https://groups.google.com/g/golang-announce/c/94pEornpRlI
@@ -2875,6 +2930,8 @@
     Title: 'net/http: golang: golang: Denial of Service via crafted HTTP Range headers'
     Description: When parsing a Range header containing a large number of small ranges, FileServer(FS), ServeContent, and ServeFile(FS) can consume an excessive amount of CPU.
     Severity: HIGH
+    CweIDs:
+    - CWE-770
     VendorSeverity:
       redhat: 3
     CVSS:
@@ -2890,7 +2947,50 @@
     - https://pkg.go.dev/vuln/GO-2026-6609
     - https://www.cve.org/CVERecord?id=CVE-2026-78667
     PublishedDate: '2026-10-08T23:17:03.88Z'
-    LastModifiedDate: '2026-10-08T23:17:03.88Z'
+    LastModifiedDate: '2026-10-09T17:16:49.69Z'
+  - VulnerabilityID: CVE-2026-78669
+    VendorIDs:
+    - GO-2026-6611
+    PkgID: stdlib@v1.26.3
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.3
+      UID: d70a4c65b1ff5c43
+    InstalledVersion: v1.26.3
+    FixedVersion: 1.26.9, 1.27.2
+    Status: fixed
+    Layer:
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-78669
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:239b9700557a2301ba4967c81ca5e10697eccc8f2d39722078b11726ee230e60
+    Title: 'net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via excessive HTTP/2 SETTINGS frames'
+    Description: A malicious HTTP/2 peer can cause excessive CPU consumption in the client or server by opening a large number of streams and then sending many small SETTINGS frames containing SETTINGS_INITIAL_WINDOW_SIZE values.
+    Severity: HIGH
+    CweIDs:
+    - CWE-405
+    VendorSeverity:
+      redhat: 3
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 7.5
+    References:
+    - https://access.redhat.com/security/cve/CVE-2026-78669
+    - https://go.dev/cl/847186
+    - https://go.dev/cl/847308
+    - https://go.dev/issue/81742
+    - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
+    - https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-78669
+    - https://pkg.go.dev/vuln/GO-2026-6611
+    - https://www.cve.org/CVERecord?id=CVE-2026-78669
+    PublishedDate: '2026-10-08T23:17:04.01Z'
+    LastModifiedDate: '2026-10-09T17:16:49.857Z'
   - VulnerabilityID: CVE-2026-97031
     VendorIDs:
     - GO-2026-6607
@@ -2914,6 +3014,8 @@
     Title: 'crypto/tls: golang: crypto/tls: Denial of Service via multiple ECH outer extension references'
     Description: Multiple ECH outer extension references are not permitted under RFC 9849; previously, a client could send a well-crafted packet that could trigger memory exhaustion in the server process by specifying multiple references. We now reject these as malformed and curb the memory amplification vector as a result.
     Severity: HIGH
+    CweIDs:
+    - CWE-405
     VendorSeverity:
       redhat: 3
     CVSS:
@@ -2929,7 +3031,7 @@
     - https://pkg.go.dev/vuln/GO-2026-6607
     - https://www.cve.org/CVERecord?id=CVE-2026-97031
     PublishedDate: '2026-10-08T23:17:06.037Z'
-    LastModifiedDate: '2026-10-08T23:17:06.037Z'
+    LastModifiedDate: '2026-10-09T16:35:35.9Z'
   - VulnerabilityID: CVE-2026-42505
     VendorIDs:
     - GO-2026-5856
@@ -2970,12 +3072,10 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
         V3Score: 5.3
     References:
-    - https://access.redhat.com/errata/RHSA-2026:66364
+    - https://access.redhat.com/errata/RHSA-2026:37436
     - https://access.redhat.com/security/cve/CVE-2026-42505
-    - https://bugzilla.redhat.com/2515815
-    - https://bugzilla.redhat.com/2515820
-    - https://bugzilla.redhat.com/2515839
-    - https://errata.almalinux.org/9/ALSA-2026-66364.html
+    - https://bugzilla.redhat.com/2480756
+    - https://errata.almalinux.org/10/ALSA-2026-37436.html
     - https://go.dev/cl/775960
     - https://go.dev/issue/79282
     - https://groups.google.com/g/golang-announce/c/OrmQE_Yp5Sc
@@ -3008,7 +3108,7 @@
     Description: When returning errors, functions in the net/textproto package would include its input as part of the error. This might allow an attacker to inject misleading content to errors that are printed or logged.
     Severity: MEDIUM
     VendorSeverity:
-      alma: 3
+      alma: 2
       amazon: 2
       azure: 2
       bitnami: 2
@@ -3024,19 +3124,14 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
         V3Score: 5.3
     References:
-    - https://access.redhat.com/errata/RHSA-2026:29981
-    - https://access.redhat.com/errata/RHSA-2026:66364
+    - https://access.redhat.com/errata/RHSA-2026:29980
     - https://access.redhat.com/security/cve/CVE-2026-42507
-    - https://bugzilla.redhat.com/2515815
-    - https://bugzilla.redhat.com/2515820
-    - https://bugzilla.redhat.com/2515839
+    - https://bugzilla.redhat.com/2484205
     - https://bugzilla.redhat.com/show_bug.cgi?id=2484205
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2484207
     - https://creativecommons.org/licenses/by/4.0/
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27145
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42507
-    - https://errata.almalinux.org/9/ALSA-2026-66364.html
-    - https://errata.rockylinux.org/RLSA-2026:29981
+    - https://errata.almalinux.org/10/ALSA-2026-29980.html
+    - https://errata.rockylinux.org/RLSA-2026:29980
     - https://go.dev/cl/777060
     - https://go.dev/issue/79346
     - https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw
@@ -3047,6 +3142,90 @@
     - https://www.cve.org/CVERecord?id=CVE-2026-42507
     PublishedDate: '2026-06-02T23:16:38.027Z'
     LastModifiedDate: '2026-07-22T19:10:00.12Z'
+  - VulnerabilityID: CVE-2026-56866
+    VendorIDs:
+    - GO-2026-6605
+    PkgID: stdlib@v1.26.3
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.3
+      UID: d70a4c65b1ff5c43
+    InstalledVersion: v1.26.3
+    FixedVersion: 1.26.9, 1.27.2
+    Status: fixed
+    Layer:
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-56866
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:7f1bf583fe79eafb8e8cfab416d130ec1ba4ff33b14821a6e796b44f82ed0a9f
+    Title: 'net/http: golang: golang: Cross-user response poisoning via desynchronized HTTP CONNECT connections'
+    Description: When http.Transport sends an HTTP/1 CONNECT request with a non-empty Request.Body, it writes the body directly to the connection without framing after the request headers. If the server rejects the CONNECT request with a non-2xx keep-alive response, Transport returns the connection to the idle pool. Because CONNECT requests do not have a request body, the server may interpret the trailing body bytes as a subsequent pipelined HTTP/1.1 request on the connection, leaving the pooled connection desynchronized and causing the next caller that reuses it to read the response to the injected request. In reverse proxies (including httputil.ReverseProxy) that forward CONNECT requests through a shared Transport, this can lead to cross-user response poisoning.
+    Severity: MEDIUM
+    CweIDs:
+    - CWE-444
+    VendorSeverity:
+      redhat: 2
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
+        V3Score: 6.5
+    References:
+    - https://access.redhat.com/security/cve/CVE-2026-56866
+    - https://go.dev/cl/847306
+    - https://go.dev/issue/81740
+    - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-56866
+    - https://pkg.go.dev/vuln/GO-2026-6605
+    - https://www.cve.org/CVERecord?id=CVE-2026-56866
+    PublishedDate: '2026-10-08T23:17:01.62Z'
+    LastModifiedDate: '2026-10-09T16:35:35.9Z'
+  - VulnerabilityID: CVE-2026-78663
+    VendorIDs:
+    - GO-2026-6612
+    PkgID: stdlib@v1.26.3
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.3
+      UID: d70a4c65b1ff5c43
+    InstalledVersion: v1.26.3
+    FixedVersion: 1.26.9, 1.27.2
+    Status: fixed
+    Layer:
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-78663
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:1a9609d48419c126455f74ab9a2a313e6eb23d18fcf78c7f6d0b21ae7f7df612
+    Title: 'net/http: net/http/internal/http2: golang: golang.org/x/net/http2: golang: flow control limit bypass via double refund in HTTP/2 server'
+    Description: 'The HTTP/2 server can refund connection-level flow control twice for the same data: Once when a client resets a stream (refunding data for any sent-but-unread portion of the stream), and again when a request handler reads the buffered data. A malicious client can exploit this to bypass the configured connection-level flow control limit (MaxReceiveBufferPerConnection). Total buffered data is still limited by the concurrent stream limit and stream-level flow control.'
+    Severity: MEDIUM
+    CweIDs:
+    - CWE-675
+    VendorSeverity:
+      redhat: 2
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L
+        V3Score: 5.3
+    References:
+    - https://access.redhat.com/security/cve/CVE-2026-78663
+    - https://go.dev/cl/847187
+    - https://go.dev/cl/847310
+    - https://go.dev/issue/81743
+    - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
+    - https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-78663
+    - https://pkg.go.dev/vuln/GO-2026-6612
+    - https://www.cve.org/CVERecord?id=CVE-2026-78663
+    PublishedDate: '2026-10-08T23:17:03.647Z'
+    LastModifiedDate: '2026-10-09T17:16:49.42Z'
   - VulnerabilityID: CVE-2026-94439
     VendorIDs:
     - GO-2026-6613
@@ -3070,6 +3249,8 @@
     Title: 'net/http: golang: net/http: HTTP request smuggling via improper handling of HTTP/1 CONNECT responses'
     Description: When an HTTP server handler sends a 2xx response to an HTTP/1 CONNECT request and returns without hijacking the connection, the server improperly continues to read and serve requests from the connection. Since a 2xx response to an HTTP/1 CONNECT converts the connection into a tunnel, the server should not treat the connection as continuing to contain HTTP. The impact of this misbehavior is mostly limited to potential request smuggling, where an intermediate proxy considers the data on the connection to be tunneled and the server considers it to be HTTP.
     Severity: MEDIUM
+    CweIDs:
+    - CWE-444
     VendorSeverity:
       redhat: 2
     CVSS:
@@ -3085,7 +3266,46 @@
     - https://pkg.go.dev/vuln/GO-2026-6613
     - https://www.cve.org/CVERecord?id=CVE-2026-94439
     PublishedDate: '2026-10-08T23:17:04.76Z'
-    LastModifiedDate: '2026-10-08T23:17:04.76Z'
+    LastModifiedDate: '2026-10-09T17:16:50.703Z'
+  - VulnerabilityID: CVE-2026-94448
+    VendorIDs:
+    - GO-2026-6599
+    PkgID: stdlib@v1.26.3
+    PkgName: stdlib
+    PkgIdentifier:
+      PURL: pkg:golang/stdlib@v1.26.3
+      UID: d70a4c65b1ff5c43
+    InstalledVersion: v1.26.3
+    FixedVersion: 1.26.9, 1.27.2
+    Status: fixed
+    Layer:
+      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
+      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-94448
+    DataSource:
+      ID: govulndb
+      Name: The Go Vulnerability Database
+      URL: https://pkg.go.dev/vuln/
+    Fingerprint: sha256:8b258ab445e1e4e5e8062d3a9bf72da617001e04f876a38cbe779383b6f431b4
+    Title: 'html/template: golang: golang: cross-site scripting via consecutive expressions in JavaScript template literals'
+    Description: When a JavaScript template literal contains consecutive expressions, the context tracking state was not properly reset upon entering a new expression. We now ensure that template-literal expression entries correctly reset context variables so all subsequent regular expression literals are accurately recognized and escaped.
+    Severity: MEDIUM
+    VendorSeverity:
+      redhat: 2
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+        V3Score: 6.1
+    References:
+    - https://access.redhat.com/security/cve/CVE-2026-94448
+    - https://go.dev/cl/839866
+    - https://go.dev/issue/81821
+    - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-94448
+    - https://pkg.go.dev/vuln/GO-2026-6599
+    - https://www.cve.org/CVERecord?id=CVE-2026-94448
+    PublishedDate: '2026-10-08T23:17:05.3Z'
+    LastModifiedDate: '2026-10-09T16:35:35.9Z'
   - VulnerabilityID: CVE-2026-97032
     VendorIDs:
     - GO-2026-6617
@@ -3126,7 +3346,7 @@
     - https://pkg.go.dev/vuln/GO-2026-6617
     - https://www.cve.org/CVERecord?id=CVE-2026-97032
     PublishedDate: '2026-10-08T23:17:06.213Z'
-    LastModifiedDate: '2026-10-08T23:17:06.213Z'
+    LastModifiedDate: '2026-10-09T16:35:35.9Z'
   - VulnerabilityID: CVE-2026-56857
     VendorIDs:
     - GO-2026-6604
@@ -3147,46 +3367,27 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:0ade2738dfeab657874e5b5c951803822f24394f8d924d9e439dea4519a2d995
-    Title: Root.Mkdir(All) can follow junctions out of the root on Windows in os
+    Title: 'os: golang: golang: Directory traversal via Windows junction handling'
     Description: On Windows, when the target of Root.Mkdir or Root.MkdirAll is a junction pointing to an empty location, the operation can create a directory at the junction target even when that target is located outside the root. This only applies to operations where the last path component is a junction (path/to/junction, but not path/junction/target).
-    Severity: UNKNOWN
+    Severity: LOW
+    CweIDs:
+    - CWE-1386
+    VendorSeverity:
+      redhat: 1
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
+        V3Score: 3.3
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-56857
     - https://go.dev/cl/847305
     - https://go.dev/issue/81739
     - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-56857
     - https://pkg.go.dev/vuln/GO-2026-6604
+    - https://www.cve.org/CVERecord?id=CVE-2026-56857
     PublishedDate: '2026-10-08T23:17:01.487Z'
-    LastModifiedDate: '2026-10-08T23:17:01.487Z'
-  - VulnerabilityID: CVE-2026-56866
-    VendorIDs:
-    - GO-2026-6605
-    PkgID: stdlib@v1.26.3
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.3
-      UID: d70a4c65b1ff5c43
-    InstalledVersion: v1.26.3
-    FixedVersion: 1.26.9, 1.27.2
-    Status: fixed
-    Layer:
-      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
-      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-56866
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:7f1bf583fe79eafb8e8cfab416d130ec1ba4ff33b14821a6e796b44f82ed0a9f
-    Title: When http.Transport sends an HTTP/1 CONNECT request with a non-empty R ...
-    Description: When http.Transport sends an HTTP/1 CONNECT request with a non-empty Request.Body, it writes the body directly to the connection without framing after the request headers. If the server rejects the CONNECT request with a non-2xx keep-alive response, Transport returns the connection to the idle pool. Because CONNECT requests do not have a request body, the server may interpret the trailing body bytes as a subsequent pipelined HTTP/1.1 request on the connection, leaving the pooled connection desynchronized and causing the next caller that reuses it to read the response to the injected request. In reverse proxies (including httputil.ReverseProxy) that forward CONNECT requests through a shared Transport, this can lead to cross-user response poisoning.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/847306
-    - https://go.dev/issue/81740
-    - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
-    - https://pkg.go.dev/vuln/GO-2026-6605
-    PublishedDate: '2026-10-08T23:17:01.62Z'
-    LastModifiedDate: '2026-10-08T23:17:01.62Z'
+    LastModifiedDate: '2026-10-09T16:35:35.9Z'
   - VulnerabilityID: CVE-2026-78659
     VendorIDs:
     - GO-2026-6603
@@ -3210,6 +3411,8 @@
     Title: When "Trailer" headers are sent by a client, the HTTP server internall ...
     Description: When "Trailer" headers are sent by a client, the HTTP server internally uses the header values to populate the Request.Trailer map passed to the server handler. Because Request.Trailer is a map, each entry incurs memory overhead. For HTTP/2 servers, a malicious client can exploit this by sending a "Trailer" header that declares a large number of fields, causing the server to allocate a disproportionate amount of memory while bypassing Server.MaxHeaderValueCount and Server.MaxHeaderBytes limits. This exploit is not applicable for HTTP/1 servers, which do not support multiplexing a large number of requests over one TCP connection, and whose Server.MaxHeaderBytes are calculated differently.
     Severity: UNKNOWN
+    CweIDs:
+    - CWE-405
     References:
     - https://go.dev/cl/847185
     - https://go.dev/cl/847314
@@ -3218,7 +3421,7 @@
     - https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
     - https://pkg.go.dev/vuln/GO-2026-6603
     PublishedDate: '2026-10-08T23:17:03.27Z'
-    LastModifiedDate: '2026-10-08T23:17:03.27Z'
+    LastModifiedDate: '2026-10-09T16:35:35.9Z'
   - VulnerabilityID: CVE-2026-78660
     VendorIDs:
     - GO-2026-6610
@@ -3242,6 +3445,8 @@
     Title: Historically, we have been rather lax about malformed framing-related  ...
     Description: Historically, we have been rather lax about malformed framing-related headers in our HTTP/2 implementation, as they cannot interfere with HTTP/2 framing. However, this makes it possible for our HTTP/2 implementation to forward responses containing such headers to an HTTP/1 client when acting as a reverse proxy. If the HTTP/1 client also does not behave strictly enough, this can result in response smuggling.
     Severity: UNKNOWN
+    CweIDs:
+    - CWE-444
     References:
     - https://go.dev/cl/835145
     - https://go.dev/cl/836385
@@ -3249,71 +3454,7 @@
     - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
     - https://pkg.go.dev/vuln/GO-2026-6610
     PublishedDate: '2026-10-08T23:17:03.51Z'
-    LastModifiedDate: '2026-10-08T23:17:03.51Z'
-  - VulnerabilityID: CVE-2026-78663
-    VendorIDs:
-    - GO-2026-6612
-    PkgID: stdlib@v1.26.3
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.3
-      UID: d70a4c65b1ff5c43
-    InstalledVersion: v1.26.3
-    FixedVersion: 1.26.9, 1.27.2
-    Status: fixed
-    Layer:
-      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
-      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-78663
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:1a9609d48419c126455f74ab9a2a313e6eb23d18fcf78c7f6d0b21ae7f7df612
-    Title: The HTTP/2 server can refund connection-level flow control twice for t ...
-    Description: 'The HTTP/2 server can refund connection-level flow control twice for the same data: Once when a client resets a stream (refunding data for any sent-but-unread portion of the stream), and again when a request handler reads the buffered data. A malicious client can exploit this to bypass the configured connection-level flow control limit (MaxReceiveBufferPerConnection). Total buffered data is still limited by the concurrent stream limit and stream-level flow control.'
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/847187
-    - https://go.dev/cl/847310
-    - https://go.dev/issue/81743
-    - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
-    - https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
-    - https://pkg.go.dev/vuln/GO-2026-6612
-    PublishedDate: '2026-10-08T23:17:03.647Z'
-    LastModifiedDate: '2026-10-08T23:17:03.647Z'
-  - VulnerabilityID: CVE-2026-78669
-    VendorIDs:
-    - GO-2026-6611
-    PkgID: stdlib@v1.26.3
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.3
-      UID: d70a4c65b1ff5c43
-    InstalledVersion: v1.26.3
-    FixedVersion: 1.26.9, 1.27.2
-    Status: fixed
-    Layer:
-      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
-      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-78669
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:239b9700557a2301ba4967c81ca5e10697eccc8f2d39722078b11726ee230e60
-    Title: A malicious HTTP/2 peer can cause excessive CPU consumption in the cli ...
-    Description: A malicious HTTP/2 peer can cause excessive CPU consumption in the client or server by opening a large number of streams and then sending many small SETTINGS frames containing SETTINGS_INITIAL_WINDOW_SIZE values.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/847186
-    - https://go.dev/cl/847308
-    - https://go.dev/issue/81742
-    - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
-    - https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
-    - https://pkg.go.dev/vuln/GO-2026-6611
-    PublishedDate: '2026-10-08T23:17:04.01Z'
-    LastModifiedDate: '2026-10-08T23:17:04.01Z'
+    LastModifiedDate: '2026-10-09T17:16:49.243Z'
   - VulnerabilityID: CVE-2026-94440
     VendorIDs:
     - GO-2026-6608
@@ -3337,43 +3478,15 @@
     Title: Parsing a multipart form can bypass memory limits and read an arbitrar ...
     Description: Parsing a multipart form can bypass memory limits and read an arbitrarily long line into memory when the remaining limit at the start of a part is less than 400 bytes.
     Severity: UNKNOWN
+    CweIDs:
+    - CWE-770
     References:
     - https://go.dev/cl/847307
     - https://go.dev/issue/81741
     - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
     - https://pkg.go.dev/vuln/GO-2026-6608
     PublishedDate: '2026-10-08T23:17:04.917Z'
-    LastModifiedDate: '2026-10-08T23:17:04.917Z'
-  - VulnerabilityID: CVE-2026-94448
-    VendorIDs:
-    - GO-2026-6599
-    PkgID: stdlib@v1.26.3
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.26.3
-      UID: d70a4c65b1ff5c43
-    InstalledVersion: v1.26.3
-    FixedVersion: 1.26.9, 1.27.2
-    Status: fixed
-    Layer:
-      Digest: sha256:4f430a0ccf5ecf6d635dd3d868ba44b03639f1900e8c59903347a4c5c66a0d42
-      DiffID: sha256:fbcce1cb0554efab259be5a7ec880439415b064a7b0c8909647b9b3db786eaf6
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-94448
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:8b258ab445e1e4e5e8062d3a9bf72da617001e04f876a38cbe779383b6f431b4
-    Title: When a JavaScript template literal contains consecutive expressions, t ...
-    Description: When a JavaScript template literal contains consecutive expressions, the context tracking state was not properly reset upon entering a new expression. We now ensure that template-literal expression entries correctly reset context variables so all subsequent regular expression literals are accurately recognized and escaped.
-    Severity: UNKNOWN
-    References:
-    - https://go.dev/cl/839866
-    - https://go.dev/issue/81821
-    - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
-    - https://pkg.go.dev/vuln/GO-2026-6599
-    PublishedDate: '2026-10-08T23:17:05.3Z'
-    LastModifiedDate: '2026-10-08T23:17:05.3Z'
+    LastModifiedDate: '2026-10-09T17:16:50.907Z'
   - VulnerabilityID: CVE-2026-97030
     VendorIDs:
     - GO-2026-6600
@@ -3403,4 +3516,4 @@
     - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
     - https://pkg.go.dev/vuln/GO-2026-6600
     PublishedDate: '2026-10-08T23:17:05.91Z'
-    LastModifiedDate: '2026-10-08T23:17:05.91Z'
+    LastModifiedDate: '2026-10-09T16:35:35.9Z'
