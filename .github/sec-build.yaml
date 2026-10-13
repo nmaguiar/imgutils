@@ -3570,7 +3570,7 @@
       amazon: 3
       bitnami: 2
       oracle-oval: 3
-      photon: 4
+      photon: 2
       redhat: 3
       rocky: 3
     CVSS:
@@ -3725,7 +3725,7 @@
       amazon: 3
       bitnami: 2
       oracle-oval: 3
-      photon: 3
+      photon: 2
       redhat: 3
       rocky: 3
     CVSS:
@@ -9933,7 +9933,7 @@
       amazon: 3
       bitnami: 2
       oracle-oval: 3
-      photon: 4
+      photon: 2
       redhat: 3
       rocky: 3
     CVSS:
@@ -10088,7 +10088,7 @@
       amazon: 3
       bitnami: 2
       oracle-oval: 3
-      photon: 3
+      photon: 2
       redhat: 3
       rocky: 3
     CVSS:
@@ -15615,7 +15615,7 @@
       amazon: 3
       bitnami: 2
       oracle-oval: 3
-      photon: 4
+      photon: 2
       redhat: 3
       rocky: 3
     CVSS:
@@ -15770,7 +15770,7 @@
       amazon: 3
       bitnami: 2
       oracle-oval: 3
-      photon: 3
+      photon: 2
       redhat: 3
       rocky: 3
     CVSS:
