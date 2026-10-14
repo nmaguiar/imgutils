@@ -34,6 +34,7 @@
     - CWE-400
     - CWE-1333
     VendorSeverity:
+      amazon: 3
       ghsa: 3
       redhat: 2
     CVSS:
@@ -86,6 +87,7 @@
     - CWE-400
     - CWE-770
     VendorSeverity:
+      amazon: 3
       ghsa: 3
       redhat: 3
     CVSS:
@@ -169,7 +171,7 @@
     - https://github.com/FasterXML/jackson-databind/releases/tag/jackson-databind-3.2.2
     - https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-q4xh-88c3-wmh7
     - https://linux.oracle.com/cve/CVE-2026-68497.html
-    - https://linux.oracle.com/errata/ELSA-2026-77648.html
+    - https://linux.oracle.com/errata/ELSA-2026-80504.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-68497
     - https://www.cve.org/CVERecord?id=CVE-2026-68497
     PublishedDate: '2026-09-11T16:17:39.61Z'
@@ -310,6 +312,7 @@
     - CWE-470
     - CWE-610
     VendorSeverity:
+      amazon: 2
       ghsa: 2
       redhat: 2
     CVSS:
@@ -365,6 +368,7 @@
     - CWE-502
     - CWE-915
     VendorSeverity:
+      amazon: 2
       ghsa: 2
       redhat: 2
     CVSS:
@@ -2156,6 +2160,7 @@
     - https://ubuntu.com/security/notices/USN-8416-1
     - https://ubuntu.com/security/notices/USN-8883-1
     - https://ubuntu.com/security/notices/USN-8900-1
+    - https://ubuntu.com/security/notices/USN-8914-1
     - https://www.cve.org/CVERecord?id=CVE-2026-39821
     PublishedDate: '2026-05-22T16:16:20.41Z'
     LastModifiedDate: '2026-09-17T12:18:05.767Z'
@@ -3412,6 +3417,7 @@
     - https://ubuntu.com/security/notices/USN-8416-1
     - https://ubuntu.com/security/notices/USN-8883-1
     - https://ubuntu.com/security/notices/USN-8900-1
+    - https://ubuntu.com/security/notices/USN-8914-1
     - https://www.cve.org/CVERecord?id=CVE-2026-39821
     PublishedDate: '2026-05-22T16:16:20.41Z'
     LastModifiedDate: '2026-09-17T12:18:05.767Z'
@@ -3442,7 +3448,7 @@
     - CWE-61
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 3
       bitnami: 3
       oracle-oval: 3
@@ -4141,7 +4147,7 @@
     - CWE-201
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 2
       bitnami: 2
       photon: 2
@@ -5726,6 +5732,7 @@
     - https://ubuntu.com/security/notices/USN-8416-1
     - https://ubuntu.com/security/notices/USN-8883-1
     - https://ubuntu.com/security/notices/USN-8900-1
+    - https://ubuntu.com/security/notices/USN-8914-1
     - https://www.cve.org/CVERecord?id=CVE-2026-39821
     PublishedDate: '2026-05-22T16:16:20.41Z'
     LastModifiedDate: '2026-09-17T12:18:05.767Z'
@@ -7535,6 +7542,7 @@
     - https://ubuntu.com/security/notices/USN-8416-1
     - https://ubuntu.com/security/notices/USN-8883-1
     - https://ubuntu.com/security/notices/USN-8900-1
+    - https://ubuntu.com/security/notices/USN-8914-1
     - https://www.cve.org/CVERecord?id=CVE-2026-39821
     PublishedDate: '2026-05-22T16:16:20.41Z'
     LastModifiedDate: '2026-09-17T12:18:05.767Z'
@@ -10156,6 +10164,7 @@
     - https://ubuntu.com/security/notices/USN-8416-1
     - https://ubuntu.com/security/notices/USN-8883-1
     - https://ubuntu.com/security/notices/USN-8900-1
+    - https://ubuntu.com/security/notices/USN-8914-1
     - https://www.cve.org/CVERecord?id=CVE-2026-39821
     PublishedDate: '2026-05-22T16:16:20.41Z'
     LastModifiedDate: '2026-09-17T12:18:05.767Z'
@@ -10186,7 +10195,7 @@
     - CWE-61
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 3
       bitnami: 3
       oracle-oval: 3
@@ -11586,7 +11595,7 @@
     - CWE-201
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 2
       bitnami: 2
       photon: 2
@@ -12418,6 +12427,7 @@
     - https://ubuntu.com/security/notices/USN-8416-1
     - https://ubuntu.com/security/notices/USN-8883-1
     - https://ubuntu.com/security/notices/USN-8900-1
+    - https://ubuntu.com/security/notices/USN-8914-1
     - https://www.cve.org/CVERecord?id=CVE-2026-39821
     PublishedDate: '2026-05-22T16:16:20.41Z'
     LastModifiedDate: '2026-09-17T12:18:05.767Z'
@@ -13414,7 +13424,7 @@
     - CWE-770
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 2
       oracle-oval: 3
       redhat: 2
@@ -13486,7 +13496,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       azure: 2
       redhat: 2
     CVSS:
@@ -13870,6 +13880,7 @@
     CweIDs:
     - CWE-918
     VendorSeverity:
+      amazon: 2
       ghsa: 2
     CVSS:
       ghsa:
@@ -14197,6 +14208,7 @@
     - https://ubuntu.com/security/notices/USN-8416-1
     - https://ubuntu.com/security/notices/USN-8883-1
     - https://ubuntu.com/security/notices/USN-8900-1
+    - https://ubuntu.com/security/notices/USN-8914-1
     - https://www.cve.org/CVERecord?id=CVE-2026-39821
     PublishedDate: '2026-05-22T16:16:20.41Z'
     LastModifiedDate: '2026-09-17T12:18:05.767Z'
@@ -15261,6 +15273,7 @@
     CweIDs:
     - CWE-400
     VendorSeverity:
+      amazon: 2
       bottlerocket: 2
       ghsa: 2
       redhat: 2
@@ -15358,7 +15371,7 @@
     - CWE-770
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 2
       oracle-oval: 3
       redhat: 2
@@ -15430,7 +15443,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       azure: 2
       redhat: 2
     CVSS:
@@ -16435,6 +16448,7 @@
     - https://ubuntu.com/security/notices/USN-8416-1
     - https://ubuntu.com/security/notices/USN-8883-1
     - https://ubuntu.com/security/notices/USN-8900-1
+    - https://ubuntu.com/security/notices/USN-8914-1
     - https://www.cve.org/CVERecord?id=CVE-2026-39821
     PublishedDate: '2026-05-22T16:16:20.41Z'
     LastModifiedDate: '2026-09-17T12:18:05.767Z'
@@ -19089,7 +19103,7 @@
     - CWE-770
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 2
       oracle-oval: 3
       redhat: 2
@@ -19161,7 +19175,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       azure: 2
       redhat: 2
     CVSS:
@@ -19735,6 +19749,7 @@
     - https://ubuntu.com/security/notices/USN-8416-1
     - https://ubuntu.com/security/notices/USN-8883-1
     - https://ubuntu.com/security/notices/USN-8900-1
+    - https://ubuntu.com/security/notices/USN-8914-1
     - https://www.cve.org/CVERecord?id=CVE-2026-39821
     PublishedDate: '2026-05-22T16:16:20.41Z'
     LastModifiedDate: '2026-09-17T12:18:05.767Z'
@@ -20991,6 +21006,7 @@
     - https://ubuntu.com/security/notices/USN-8416-1
     - https://ubuntu.com/security/notices/USN-8883-1
     - https://ubuntu.com/security/notices/USN-8900-1
+    - https://ubuntu.com/security/notices/USN-8914-1
     - https://www.cve.org/CVERecord?id=CVE-2026-39821
     PublishedDate: '2026-05-22T16:16:20.41Z'
     LastModifiedDate: '2026-09-17T12:18:05.767Z'
@@ -21021,7 +21037,7 @@
     - CWE-61
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 3
       bitnami: 3
       oracle-oval: 3
@@ -21720,7 +21736,7 @@
     - CWE-201
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 2
       bitnami: 2
       photon: 2
@@ -22266,6 +22282,7 @@
     CweIDs:
     - CWE-400
     VendorSeverity:
+      amazon: 2
       bottlerocket: 2
       ghsa: 2
       redhat: 2
@@ -22322,7 +22339,7 @@
     CweIDs:
     - CWE-59
     VendorSeverity:
-      amazon: 3
+      amazon: 4
       azure: 3
       ghsa: 3
       redhat: 3
@@ -22372,7 +22389,7 @@
     CweIDs:
     - CWE-22
     VendorSeverity:
-      amazon: 3
+      amazon: 4
       azure: 2
       ghsa: 2
       redhat: 2
@@ -22560,7 +22577,7 @@
     - CWE-770
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 2
       oracle-oval: 3
       redhat: 2
@@ -22632,7 +22649,7 @@
     CweIDs:
     - CWE-770
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       azure: 2
       redhat: 2
     CVSS:
@@ -23621,6 +23638,7 @@
     - https://ubuntu.com/security/notices/USN-8416-1
     - https://ubuntu.com/security/notices/USN-8883-1
     - https://ubuntu.com/security/notices/USN-8900-1
+    - https://ubuntu.com/security/notices/USN-8914-1
     - https://www.cve.org/CVERecord?id=CVE-2026-39821
     PublishedDate: '2026-05-22T16:16:20.41Z'
     LastModifiedDate: '2026-09-17T12:18:05.767Z'
@@ -23651,7 +23669,7 @@
     - CWE-61
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 3
       bitnami: 3
       oracle-oval: 3
@@ -24350,7 +24368,7 @@
     - CWE-201
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 2
       bitnami: 2
       photon: 2
