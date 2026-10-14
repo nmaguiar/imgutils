@@ -1045,6 +1045,7 @@
     - https://ubuntu.com/security/notices/USN-8416-1
     - https://ubuntu.com/security/notices/USN-8883-1
     - https://ubuntu.com/security/notices/USN-8900-1
+    - https://ubuntu.com/security/notices/USN-8914-1
     - https://www.cve.org/CVERecord?id=CVE-2026-39821
     PublishedDate: '2026-05-22T16:16:20.41Z'
     LastModifiedDate: '2026-09-17T12:18:05.767Z'
@@ -2301,6 +2302,7 @@
     - https://ubuntu.com/security/notices/USN-8416-1
     - https://ubuntu.com/security/notices/USN-8883-1
     - https://ubuntu.com/security/notices/USN-8900-1
+    - https://ubuntu.com/security/notices/USN-8914-1
     - https://www.cve.org/CVERecord?id=CVE-2026-39821
     PublishedDate: '2026-05-22T16:16:20.41Z'
     LastModifiedDate: '2026-09-17T12:18:05.767Z'
@@ -2331,7 +2333,7 @@
     - CWE-61
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 3
       bitnami: 3
       oracle-oval: 3
@@ -3030,7 +3032,7 @@
     - CWE-201
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 2
       bitnami: 2
       photon: 2
