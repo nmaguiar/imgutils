@@ -1321,6 +1321,8 @@
                         │      │                                                                               
                         │      │                  https://ubuntu.com/security/notices/USN-8900-1               
                         │      │                                                                               
+                        │      │                  https://ubuntu.com/security/notices/USN-8914-1               
+                        │      │                                                                               
                         │      │                  https://www.cve.org/CVERecord?id=CVE-2026-39821              
                         │      │                                                                               
                         │      │                  
@@ -2866,6 +2868,8 @@
                         │      │                                                                               
                         │      │                  https://ubuntu.com/security/notices/USN-8900-1               
                         │      │                                                                               
+                        │      │                  https://ubuntu.com/security/notices/USN-8914-1               
+                        │      │                                                                               
                         │      │                  https://www.cve.org/CVERecord?id=CVE-2026-39821              
                         │      │                                                                               
                         │      │                  
@@ -2907,7 +2911,7 @@
                         │      │                  CWE-61
                         │      │                  
                         │      ├ VendorSeverity   ╭ alma       : 3 
-                        │      │                  ├ amazon     : 3 
+                        │      │                  ├ amazon     : 2 
                         │      │                  ├ azure      : 3 
                         │      │                  ├ bitnami    : 3 
                         │      │                  ├ oracle-oval: 3 
@@ -3696,7 +3700,7 @@
                         │      │                  CWE-201
                         │      │                  
                         │      ├ VendorSeverity   ╭ alma   : 3 
-                        │      │                  ├ amazon : 3 
+                        │      │                  ├ amazon : 2 
                         │      │                  ├ azure  : 2 
                         │      │                  ├ bitnami: 2 
                         │      │                  ├ photon : 2 
