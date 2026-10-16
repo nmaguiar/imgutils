@@ -2132,12 +2132,13 @@
                         │      ├ References                                                                    
                         │      │                  ─────────────────────────────────────────────────────────────
                         │      │                  https://access.redhat.com/errata/RHSA-2026:76743             
+                        │      │                  https://access.redhat.com/errata/RHSA-2026:76744             
                         │      │                  https://access.redhat.com/security/cve/CVE-2026-84445        
                         │      │                  https://bugzilla.redhat.com/2533175                          
                         │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2533175          
                         │      │                  https://creativecommons.org/licenses/by/4.0/                 
                         │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-84445
-                        │      │                  https://errata.almalinux.org/10/ALSA-2026-76743.html         
+                        │      │                  https://errata.almalinux.org/9/ALSA-2026-76744.html          
                         │      │                  https://errata.rockylinux.org/RLSA-2026:76743                
                         │      │                  https://github.com/grpc/grpc-go                              
                         │      │                  https://github.com/grpc/grpc-go/commit/3822494d8ea03b992c089f
