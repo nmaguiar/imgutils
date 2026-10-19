@@ -4232,7 +4232,7 @@
     - CWE-201
     VendorSeverity:
       alma: 3
-      amazon: 2
+      amazon: 4
       azure: 2
       bitnami: 2
       photon: 2
@@ -4813,7 +4813,7 @@
     - CWE-189
     - CWE-190
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       ghsa: 1
       nvd: 2
       redhat: 2
@@ -8655,7 +8655,7 @@
     - CWE-1286
     VendorSeverity:
       alma: 3
-      amazon: 2
+      amazon: 3
       azure: 3
       bitnami: 3
       oracle-oval: 3
@@ -12005,7 +12005,7 @@
     - CWE-201
     VendorSeverity:
       alma: 3
-      amazon: 2
+      amazon: 4
       azure: 2
       bitnami: 2
       photon: 2
@@ -15926,7 +15926,7 @@
     - CWE-189
     - CWE-190
     VendorSeverity:
-      amazon: 3
+      amazon: 2
       ghsa: 1
       nvd: 2
       redhat: 2
@@ -18427,7 +18427,7 @@
     - https://github.com/distribution/distribution/security/advisories/GHSA-685w-q87j-wqw3
     - https://nvd.nist.gov/vuln/detail/CVE-2026-85747
     PublishedDate: '2026-10-13T19:21:02.1Z'
-    LastModifiedDate: '2026-10-13T19:27:44.137Z'
+    LastModifiedDate: '2026-10-18T14:16:56.91Z'
   - VulnerabilityID: CVE-2026-41567
     VendorIDs:
     - GHSA-x86f-5xw2-fm2r
@@ -18825,7 +18825,7 @@
     - https://nvd.nist.gov/vuln/detail/CVE-2025-66506
     - https://www.cve.org/CVERecord?id=CVE-2025-66506
     PublishedDate: '2025-12-04T22:15:49.503Z'
-    LastModifiedDate: '2026-06-17T09:56:57.13Z'
+    LastModifiedDate: '2026-10-18T15:10:00.097Z'
   - VulnerabilityID: CVE-2026-49478
     VendorIDs:
     - GHSA-f5mr-q85p-6hh6
@@ -22868,7 +22868,7 @@
     - CWE-201
     VendorSeverity:
       alma: 3
-      amazon: 2
+      amazon: 4
       azure: 2
       bitnami: 2
       photon: 2
@@ -25752,7 +25752,7 @@
     - CWE-201
     VendorSeverity:
       alma: 3
-      amazon: 2
+      amazon: 4
       azure: 2
       bitnami: 2
       photon: 2
