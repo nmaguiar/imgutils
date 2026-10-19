@@ -3117,7 +3117,7 @@
     - CWE-201
     VendorSeverity:
       alma: 3
-      amazon: 2
+      amazon: 4
       azure: 2
       bitnami: 2
       photon: 2
