@@ -126,6 +126,7 @@
                         │     │                  https://groups.google.com/g/golang-announce/c/94pEornpRlI
                         │     │                  https://nvd.nist.gov/vuln/detail/CVE-2026-56865          
                         │     │                  https://pkg.go.dev/vuln/GO-2026-6179                     
+                        │     │                  https://ubuntu.com/security/notices/USN-8935-1           
                         │     │                  https://www.cve.org/CVERecord?id=CVE-2026-56865          
                         │     │                  
                         │     ├ PublishedDate   : 2026-08-13T22:17:22.797Z 
@@ -185,6 +186,7 @@
                         │     │                  https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
                         │     │                  https://nvd.nist.gov/vuln/detail/CVE-2026-78669          
                         │     │                  https://pkg.go.dev/vuln/GO-2026-6611                     
+                        │     │                  https://ubuntu.com/security/notices/USN-8935-1           
                         │     │                  https://www.cve.org/CVERecord?id=CVE-2026-78669          
                         │     │                  https://www.openwall.com/lists/oss-security/2026/10/08/9 
                         │     │                  
@@ -248,6 +250,7 @@
                         │     │                  https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
                         │     │                  https://nvd.nist.gov/vuln/detail/CVE-2026-78659          
                         │     │                  https://pkg.go.dev/vuln/GO-2026-6603                     
+                        │     │                  https://ubuntu.com/security/notices/USN-8935-1           
                         │     │                  https://www.cve.org/CVERecord?id=CVE-2026-78659          
                         │     │                  https://www.openwall.com/lists/oss-security/2026/10/08/9 
                         │     │                  
@@ -304,6 +307,7 @@
                         │     │                  https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
                         │     │                  https://nvd.nist.gov/vuln/detail/CVE-2026-78660          
                         │     │                  https://pkg.go.dev/vuln/GO-2026-6610                     
+                        │     │                  https://ubuntu.com/security/notices/USN-8935-1           
                         │     │                  https://www.cve.org/CVERecord?id=CVE-2026-78660          
                         │     │                  https://www.openwall.com/lists/oss-security/2026/10/08/9 
                         │     │                  
@@ -369,6 +373,7 @@
                         │     │                  https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
                         │     │                  https://nvd.nist.gov/vuln/detail/CVE-2026-78663          
                         │     │                  https://pkg.go.dev/vuln/GO-2026-6612                     
+                        │     │                  https://ubuntu.com/security/notices/USN-8935-1           
                         │     │                  https://www.cve.org/CVERecord?id=CVE-2026-78663          
                         │     │                  https://www.openwall.com/lists/oss-security/2026/10/08/9 
                         │     │                  
