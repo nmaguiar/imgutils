@@ -18,16 +18,16 @@
                         │     ├ InstalledVersion: v0.38.0 
                         │     ├ FixedVersion    : 0.40.0 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:83fc9b37dbcf555cb8ec96d30be069b85e30ae4db1b18
-                        │     │                  │         e4717755f4e4e2e6bac 
-                        │     │                  ╰ DiffID: sha256:9c543b0bc74c77cce0e11076a232c21e59f4e5175d519
-                        │     │                            f8c9e609fb29f18b7f2 
+                        │     ├ Layer            ╭ Digest: sha256:b9570b321bba6e3f20911488df5cb311500dd9dd35b1e
+                        │     │                  │         c8f6fc3f6cd38a06ecc 
+                        │     │                  ╰ DiffID: sha256:7396dc5daf739ef624c11c4de5acd202726d856f25049
+                        │     │                            6dd1ba5b70a2e50ef31 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-56864 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
                         │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │     ├ Fingerprint     : sha256:84ef89ae44cd66f45d548ab00bfbc4e818a1a41612aa1c0485f808
-                        │     │                   fb4a04b2a4 
+                        │     ├ Fingerprint     : sha256:2063e1e0f666e056ebff10db8313fd036d83e295164dc765d3eb87
+                        │     │                   a7ff79eea9 
                         │     ├ Title           : golang.org/x/mod/sumdb: golang.org/x/mod/sumdb: Integrity
                         │     │                   bypass via malicious GOSUMDB 
                         │     ├ Description     : A malicious GOSUMDB was capable of serving arbitrary module
@@ -77,16 +77,16 @@
                         │     ├ InstalledVersion: v0.38.0 
                         │     ├ FixedVersion    : 0.40.0 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:83fc9b37dbcf555cb8ec96d30be069b85e30ae4db1b18
-                        │     │                  │         e4717755f4e4e2e6bac 
-                        │     │                  ╰ DiffID: sha256:9c543b0bc74c77cce0e11076a232c21e59f4e5175d519
-                        │     │                            f8c9e609fb29f18b7f2 
+                        │     ├ Layer            ╭ Digest: sha256:b9570b321bba6e3f20911488df5cb311500dd9dd35b1e
+                        │     │                  │         c8f6fc3f6cd38a06ecc 
+                        │     │                  ╰ DiffID: sha256:7396dc5daf739ef624c11c4de5acd202726d856f25049
+                        │     │                            6dd1ba5b70a2e50ef31 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-56865 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
                         │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │     ├ Fingerprint     : sha256:ce4da69fd7c6750ce1c7080ee01445c9eb6b4f806421b0fca3f9f4
-                        │     │                   7af29ea500 
+                        │     ├ Fingerprint     : sha256:7bf92a27fdcb8456368d33ea462a83741ea851423751eb29aea30c
+                        │     │                   86bc1be0d5 
                         │     ├ Title           : golang.org/x/mod/sumdb/tlog: golang.org/x/mod/sumdb/tlog:
                         │     │                   Supply chain compromise via transparency log tile
                         │     │                   verification bypass 
@@ -143,16 +143,16 @@
                         │     ├ InstalledVersion: v0.58.0 
                         │     ├ FixedVersion    : 0.60.0 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:83fc9b37dbcf555cb8ec96d30be069b85e30ae4db1b18
-                        │     │                  │         e4717755f4e4e2e6bac 
-                        │     │                  ╰ DiffID: sha256:9c543b0bc74c77cce0e11076a232c21e59f4e5175d519
-                        │     │                            f8c9e609fb29f18b7f2 
+                        │     ├ Layer            ╭ Digest: sha256:b9570b321bba6e3f20911488df5cb311500dd9dd35b1e
+                        │     │                  │         c8f6fc3f6cd38a06ecc 
+                        │     │                  ╰ DiffID: sha256:7396dc5daf739ef624c11c4de5acd202726d856f25049
+                        │     │                            6dd1ba5b70a2e50ef31 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-78669 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
                         │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │     ├ Fingerprint     : sha256:40cada3277eb7b8d7a01dde657d7eaf1c3a14a7470bbd70f294b00
-                        │     │                   e25fa0f67b 
+                        │     ├ Fingerprint     : sha256:c051e50edb86a3fe7e37af4c527b69a99c2650e3e9a40a540733a1
+                        │     │                   8b96548d55 
                         │     ├ Title           : net/http: net/http/internal/http2: golang.org/x/net/http2:
                         │     │                   net/http: Denial of Service via excessive HTTP/2 SETTINGS
                         │     │                   frames 
@@ -196,8 +196,8 @@
                         │     │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667 
                         │     │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669 
                         │     │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031 
-                        │     │                  https://errata.almalinux.org/9/ALSA-2026-86196.html           
-                        │     │                  https://errata.rockylinux.org/RLSA-2026:86203                 
+                        │     │                  https://errata.almalinux.org/8/ALSA-2026-86203.html           
+                        │     │                  https://errata.rockylinux.org/RLSA-2026:86196                 
                         │     │                  https://github.com/golang/go/issues/81742                     
                         │     │                  https://go.dev/cl/847186                                      
                         │     │                  https://go.dev/cl/847308                                      
@@ -226,16 +226,16 @@
                         │     ├ InstalledVersion: v0.58.0 
                         │     ├ FixedVersion    : 0.60.0 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:83fc9b37dbcf555cb8ec96d30be069b85e30ae4db1b18
-                        │     │                  │         e4717755f4e4e2e6bac 
-                        │     │                  ╰ DiffID: sha256:9c543b0bc74c77cce0e11076a232c21e59f4e5175d519
-                        │     │                            f8c9e609fb29f18b7f2 
+                        │     ├ Layer            ╭ Digest: sha256:b9570b321bba6e3f20911488df5cb311500dd9dd35b1e
+                        │     │                  │         c8f6fc3f6cd38a06ecc 
+                        │     │                  ╰ DiffID: sha256:7396dc5daf739ef624c11c4de5acd202726d856f25049
+                        │     │                            6dd1ba5b70a2e50ef31 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-78659 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
                         │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │     ├ Fingerprint     : sha256:60f4379f269484f3426d9a0657446d520d042fec4c36bc5913b479
-                        │     │                   35ebda71a3 
+                        │     ├ Fingerprint     : sha256:cd6ec08db884220c5f953bef362e7e78e19e0029d8d059190ea646
+                        │     │                   72c58b9bcd 
                         │     ├ Title           : When "Trailer" headers are sent by a client, the HTTP server
                         │     │                   internall ... 
                         │     ├ Description     : When "Trailer" headers are sent by a client, the HTTP server
@@ -290,16 +290,16 @@
                         │     ├ InstalledVersion: v0.58.0 
                         │     ├ FixedVersion    : 0.60.0 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:83fc9b37dbcf555cb8ec96d30be069b85e30ae4db1b18
-                        │     │                  │         e4717755f4e4e2e6bac 
-                        │     │                  ╰ DiffID: sha256:9c543b0bc74c77cce0e11076a232c21e59f4e5175d519
-                        │     │                            f8c9e609fb29f18b7f2 
+                        │     ├ Layer            ╭ Digest: sha256:b9570b321bba6e3f20911488df5cb311500dd9dd35b1e
+                        │     │                  │         c8f6fc3f6cd38a06ecc 
+                        │     │                  ╰ DiffID: sha256:7396dc5daf739ef624c11c4de5acd202726d856f25049
+                        │     │                            6dd1ba5b70a2e50ef31 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-78660 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
                         │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │     ├ Fingerprint     : sha256:d8229a33c2c757d2d42b782e418be07b4030ef88d4535570825547
-                        │     │                   9288357b52 
+                        │     ├ Fingerprint     : sha256:cbe73ab8f4387b26104e0afe27349a44c0e237724bfc167bb9fe9a
+                        │     │                   60b1794b82 
                         │     ├ Title           : Historically, we have been rather lax about malformed
                         │     │                   framing-related  ... 
                         │     ├ Description     : Historically, we have been rather lax about malformed
@@ -347,16 +347,16 @@
                         │     ├ InstalledVersion: v0.58.0 
                         │     ├ FixedVersion    : 0.60.0 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:83fc9b37dbcf555cb8ec96d30be069b85e30ae4db1b18
-                        │     │                  │         e4717755f4e4e2e6bac 
-                        │     │                  ╰ DiffID: sha256:9c543b0bc74c77cce0e11076a232c21e59f4e5175d519
-                        │     │                            f8c9e609fb29f18b7f2 
+                        │     ├ Layer            ╭ Digest: sha256:b9570b321bba6e3f20911488df5cb311500dd9dd35b1e
+                        │     │                  │         c8f6fc3f6cd38a06ecc 
+                        │     │                  ╰ DiffID: sha256:7396dc5daf739ef624c11c4de5acd202726d856f25049
+                        │     │                            6dd1ba5b70a2e50ef31 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-78663 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
                         │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │     ├ Fingerprint     : sha256:016a360fb677543c899008cd4e24c07106586814bc651411f8fbf4
-                        │     │                   5e831de38f 
+                        │     ├ Fingerprint     : sha256:918c0a71e5f13bec445bb1050821a21d2da4314206751ea22826eb
+                        │     │                   13e4603346 
                         │     ├ Title           : net/http: net/http/internal/http2: golang:
                         │     │                   golang.org/x/net/http2: golang: flow control limit bypass via
                         │     │                    double refund in HTTP/2 server 
@@ -413,16 +413,16 @@
                         │     ├ InstalledVersion: v0.58.0 
                         │     ├ FixedVersion    : 0.60.0 
                         │     ├ Status          : fixed 
-                        │     ├ Layer            ╭ Digest: sha256:83fc9b37dbcf555cb8ec96d30be069b85e30ae4db1b18
-                        │     │                  │         e4717755f4e4e2e6bac 
-                        │     │                  ╰ DiffID: sha256:9c543b0bc74c77cce0e11076a232c21e59f4e5175d519
-                        │     │                            f8c9e609fb29f18b7f2 
+                        │     ├ Layer            ╭ Digest: sha256:b9570b321bba6e3f20911488df5cb311500dd9dd35b1e
+                        │     │                  │         c8f6fc3f6cd38a06ecc 
+                        │     │                  ╰ DiffID: sha256:7396dc5daf739ef624c11c4de5acd202726d856f25049
+                        │     │                            6dd1ba5b70a2e50ef31 
                         │     ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-97032 
                         │     ├ DataSource       ╭ ID  : govulndb 
                         │     │                  ├ Name: The Go Vulnerability Database 
                         │     │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                        │     ├ Fingerprint     : sha256:02352f226e06794446d83b3ca3ed0112e2c6d7e5381020600136d3
-                        │     │                   cd2aa38609 
+                        │     ├ Fingerprint     : sha256:424e20060e51b49a6fd55ccc997a8e63165b28fea36ce59ae48741
+                        │     │                   66460ece18 
                         │     ├ Title           : net/http: net/http/internal/http2: golang:
                         │     │                   golang.org/x/net/http2: net/http: Denial of Service via
                         │     │                   concurrent HPACK encoder modification 
@@ -476,16 +476,16 @@
                               ├ InstalledVersion: v1.27.2 
                               ├ FixedVersion    : 1.26.10, 1.27.3 
                               ├ Status          : fixed 
-                              ├ Layer            ╭ Digest: sha256:83fc9b37dbcf555cb8ec96d30be069b85e30ae4db1b18
-                              │                  │         e4717755f4e4e2e6bac 
-                              │                  ╰ DiffID: sha256:9c543b0bc74c77cce0e11076a232c21e59f4e5175d519
-                              │                            f8c9e609fb29f18b7f2 
+                              ├ Layer            ╭ Digest: sha256:b9570b321bba6e3f20911488df5cb311500dd9dd35b1e
+                              │                  │         c8f6fc3f6cd38a06ecc 
+                              │                  ╰ DiffID: sha256:7396dc5daf739ef624c11c4de5acd202726d856f25049
+                              │                            6dd1ba5b70a2e50ef31 
                               ├ PrimaryURL      : https://avd.aquasec.com/nvd/cve-2026-111943 
                               ├ DataSource       ╭ ID  : govulndb 
                               │                  ├ Name: The Go Vulnerability Database 
                               │                  ╰ URL : https://pkg.go.dev/vuln/ 
-                              ├ Fingerprint     : sha256:813604d536c18022e5ebbe7d1188eef4afdf0d9d39569d2ac5b1bc
-                              │                   e8482356b8 
+                              ├ Fingerprint     : sha256:0382e5edc86ff696018985d1dc2fb1c76593e4f933d136127af726
+                              │                   1801047d46 
                               ├ Title           : crypto/x509: golang: crypto/x509: Man-in-the-middle attacks
                               │                   via untrusted intermediate certificates 
                               ├ Description     : On most platforms, Go uses the given system root
@@ -504,39 +504,38 @@
                               ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/
                               │                           │           A:N 
                               │                           ╰ V3Score : 6.8 
-                              ├ References                                                                       
-                              │                  ────────────────────────────────────────────────────────────────
-                              │                  http://www.openwall.com/lists/oss-security/2026/10/20/29        
-                              │                  https://access.redhat.com/errata/RHSA-2026:86196                
-                              │                  https://access.redhat.com/errata/RHSA-2026:86203                
-                              │                  https://access.redhat.com/security/cve/CVE-2026-111943          
-                              │                  https://access.redhat.com/security/vulnerabilities/RHSB-2026-012
-                              │                  https://bugzilla.redhat.com/2548334                             
-                              │                  https://bugzilla.redhat.com/2548336                             
-                              │                  https://bugzilla.redhat.com/2548344                             
-                              │                  https://bugzilla.redhat.com/2556068                             
-                              │                  https://bugzilla.redhat.com/show_bug.cgi?id=2548334             
-                              │                  https://bugzilla.redhat.com/show_bug.cgi?id=2548336             
-                              │                  https://bugzilla.redhat.com/show_bug.cgi?id=2548344             
-                              │                  https://bugzilla.redhat.com/show_bug.cgi?id=2556068             
-                              │                  https://creativecommons.org/licenses/by/4.0/                    
-                              │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943  
-                              │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667   
-                              │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669   
-                              │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031   
-                              │                  https://errata.almalinux.org/9/ALSA-2026-86196.html             
-                              │                  https://errata.rockylinux.org/RLSA-2026:86203                   
-                              │                  https://github.com/golang/go/issues/82345                       
-                              │                  https://go.dev/cl/851047                                        
-                              │                  https://go.dev/issue/82345                                      
-                              │                  https://groups.google.com/g/golang-announce/c/66pojueaQek       
-                              │                  https://groups.google.com/g/golang-nuts/c/K22sG2AYnKU           
-                              │                  https://linux.oracle.com/cve/CVE-2026-111943.html               
-                              │                  https://linux.oracle.com/errata/ELSA-2026-86196.html            
-                              │                  https://nvd.nist.gov/vuln/detail/CVE-2026-111943                
-                              │                  https://pkg.go.dev/vuln/GO-2026-6809                            
-                              │                  https://www.cve.org/CVERecord?id=CVE-2026-111943                
+                              ├ References                                                                     
+                              │                  ──────────────────────────────────────────────────────────────
+                              │                  http://www.openwall.com/lists/oss-security/2026/10/20/29      
+                              │                  https://access.redhat.com/errata/RHSA-2026:86196              
+                              │                  https://access.redhat.com/errata/RHSA-2026:86203              
+                              │                  https://access.redhat.com/security/cve/CVE-2026-111943        
+                              │                  https://bugzilla.redhat.com/2548334                           
+                              │                  https://bugzilla.redhat.com/2548336                           
+                              │                  https://bugzilla.redhat.com/2548344                           
+                              │                  https://bugzilla.redhat.com/2556068                           
+                              │                  https://bugzilla.redhat.com/show_bug.cgi?id=2548334           
+                              │                  https://bugzilla.redhat.com/show_bug.cgi?id=2548336           
+                              │                  https://bugzilla.redhat.com/show_bug.cgi?id=2548344           
+                              │                  https://bugzilla.redhat.com/show_bug.cgi?id=2556068           
+                              │                  https://creativecommons.org/licenses/by/4.0/                  
+                              │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
+                              │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667 
+                              │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669 
+                              │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031 
+                              │                  https://errata.almalinux.org/8/ALSA-2026-86203.html           
+                              │                  https://errata.rockylinux.org/RLSA-2026:86196                 
+                              │                  https://github.com/golang/go/issues/82345                     
+                              │                  https://go.dev/cl/851047                                      
+                              │                  https://go.dev/issue/82345                                    
+                              │                  https://groups.google.com/g/golang-announce/c/66pojueaQek     
+                              │                  https://groups.google.com/g/golang-nuts/c/K22sG2AYnKU         
+                              │                  https://linux.oracle.com/cve/CVE-2026-111943.html             
+                              │                  https://linux.oracle.com/errata/ELSA-2026-86196.html          
+                              │                  https://nvd.nist.gov/vuln/detail/CVE-2026-111943              
+                              │                  https://pkg.go.dev/vuln/GO-2026-6809                          
+                              │                  https://www.cve.org/CVERecord?id=CVE-2026-111943              
                               │                  
                               ├ PublishedDate   : 2026-10-21T01:17:20.797Z 
-                              ╰ LastModifiedDate: 2026-10-21T02:17:06.71Z 
+                              ╰ LastModifiedDate: 2026-10-22T16:18:19.04Z 
 ```
