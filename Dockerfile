@@ -160,9 +160,9 @@ COPY entrypoint.sh /.entrypoint.sh
 RUN gzip /USAGE.md\
  && gzip /EXAMPLES.md\
  && echo "#!/bin/sh" > /usr/bin/usage-help\
- && echo "zcat /USAGE.md.gz | oafp in=md mdtemplate=true | less -r" >> /usr/bin/usage-help\
+ && echo "oafp /USAGE.md.gz in=md mdtemplate=true -p" >> /usr/bin/usage-help\
  && echo "#!/bin/sh" > /usr/bin/examples-help\
- && echo "zcat /EXAMPLES.md.gz | oafp in=md mdtemplate=true | less -r" > /usr/bin/examples-help\
+ && echo "oafp /EXAMPLES.md.gz in=md mdtemplate=true -p" > /usr/bin/examples-help\
  && chmod a+x /usr/bin/usage-help\
  && chmod a+x /usr/bin/examples-help\
  && chmod a+x /status\
