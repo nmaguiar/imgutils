@@ -1844,7 +1844,8 @@
       PURL: pkg:golang/golang.org/x/crypto@v0.49.0
       UID: 5739d00bfe6473f5
     InstalledVersion: v0.49.0
-    Status: affected
+    FixedVersion: 0.58.1-0.20261009181718-2f1f834330b2
+    Status: fixed
     Layer:
       Digest: sha256:77d3fadee8b3121441d45aa4dd8e81f1ae3b50867a36778221dbacf90c7a3c8c
       DiffID: sha256:bde555f2bb0a3cc6b24b3387858928fd0c633226f66bdb68d24f6cac228bfec0
@@ -1861,6 +1862,7 @@
     Severity: UNKNOWN
     References:
     - https://go.dev/issue/44226
+    - https://go.dev/issue/81227
     - https://pkg.go.dev/vuln/GO-2026-5932
   - VulnerabilityID: CVE-2026-56864
     VendorIDs:
@@ -4304,7 +4306,7 @@
     - CWE-189
     - CWE-190
     VendorSeverity:
-      amazon: 2
+      amazon: 3
       ghsa: 1
       nvd: 2
       redhat: 2
@@ -6882,7 +6884,7 @@
     - CWE-1286
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 3
       bitnami: 3
       oracle-oval: 3
@@ -9759,7 +9761,7 @@
       alma: 4
       amazon: 3
       bitnami: 3
-      oracle-oval: 4
+      oracle-oval: 3
       redhat: 3
       rocky: 4
     CVSS:
@@ -9794,7 +9796,7 @@
     - https://go.dev/issue/81855
     - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
     - https://linux.oracle.com/cve/CVE-2026-97031.html
-    - https://linux.oracle.com/errata/ELSA-2026-89744.html
+    - https://linux.oracle.com/errata/ELSA-2026-89751.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-97031
     - https://pkg.go.dev/vuln/GO-2026-6607
     - https://www.cve.org/CVERecord?id=CVE-2026-97031
@@ -10309,7 +10311,7 @@
     - CWE-201
     VendorSeverity:
       alma: 3
-      amazon: 4
+      amazon: 2
       azure: 2
       bitnami: 2
       photon: 2
@@ -11320,7 +11322,8 @@
       PURL: pkg:golang/golang.org/x/crypto@v0.58.0
       UID: b91331781fa43a2d
     InstalledVersion: v0.58.0
-    Status: affected
+    FixedVersion: 0.58.1-0.20261009181718-2f1f834330b2
+    Status: fixed
     Layer:
       Digest: sha256:77d3fadee8b3121441d45aa4dd8e81f1ae3b50867a36778221dbacf90c7a3c8c
       DiffID: sha256:bde555f2bb0a3cc6b24b3387858928fd0c633226f66bdb68d24f6cac228bfec0
@@ -11337,6 +11340,7 @@
     Severity: UNKNOWN
     References:
     - https://go.dev/issue/44226
+    - https://go.dev/issue/81227
     - https://pkg.go.dev/vuln/GO-2026-5932
   - VulnerabilityID: CVE-2026-78661
     VendorIDs:
@@ -11467,7 +11471,8 @@
       PURL: pkg:golang/golang.org/x/crypto@v0.58.0
       UID: e08cce10fb6ab786
     InstalledVersion: v0.58.0
-    Status: affected
+    FixedVersion: 0.58.1-0.20261009181718-2f1f834330b2
+    Status: fixed
     Layer:
       Digest: sha256:77d3fadee8b3121441d45aa4dd8e81f1ae3b50867a36778221dbacf90c7a3c8c
       DiffID: sha256:bde555f2bb0a3cc6b24b3387858928fd0c633226f66bdb68d24f6cac228bfec0
@@ -11484,6 +11489,7 @@
     Severity: UNKNOWN
     References:
     - https://go.dev/issue/44226
+    - https://go.dev/issue/81227
     - https://pkg.go.dev/vuln/GO-2026-5932
   - VulnerabilityID: CVE-2026-78661
     VendorIDs:
@@ -12914,7 +12920,8 @@
       PURL: pkg:golang/golang.org/x/crypto@v0.40.0
       UID: 6c31890c8659e6ee
     InstalledVersion: v0.40.0
-    Status: affected
+    FixedVersion: 0.58.1-0.20261009181718-2f1f834330b2
+    Status: fixed
     Layer:
       Digest: sha256:77d3fadee8b3121441d45aa4dd8e81f1ae3b50867a36778221dbacf90c7a3c8c
       DiffID: sha256:bde555f2bb0a3cc6b24b3387858928fd0c633226f66bdb68d24f6cac228bfec0
@@ -12931,6 +12938,7 @@
     Severity: UNKNOWN
     References:
     - https://go.dev/issue/44226
+    - https://go.dev/issue/81227
     - https://pkg.go.dev/vuln/GO-2026-5932
   - VulnerabilityID: CVE-2026-39824
     VendorIDs:
@@ -13081,7 +13089,7 @@
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
     Fingerprint: sha256:3f64ed32d5375e46e0b016858732aef7c9f31f98d7bf35957bd27c326e5ecacc
-    Title: oras-go is a Go library for managing OCI artifacts. Prior to 2.6.2, co ...
+    Title: 'github.com/oras-project/oras-go: oras-go: Arbitrary file write and code execution via symlink-chain bypass'
     Description: oras-go is a Go library for managing OCI artifacts. Prior to 2.6.2, content/file.Store extraction of OCI layers marked with io.deis.oras.content.unpack=true can write outside the store working directory. The pushDir path through extractTarDirectory and ensureLinkPath validates symlink targets lexically, resolveRelToBase skips its parent-symlink walk for root-level entries, and writeFile follows a terminal symlink when opening a regular file. A malicious archive can therefore create a symlink chain whose lexical target remains inside the extraction root but whose resolved target is an attacker-selected absolute path, then overwrite that target with a same-named regular-file entry even when AllowPathTraversalOnWrite is false. Pulling an attacker-controlled artifact can create or overwrite any file writable by the process and may lead to code execution. This issue is fixed in version 2.6.2.
     Severity: HIGH
     CweIDs:
@@ -13089,16 +13097,22 @@
     - CWE-59
     VendorSeverity:
       ghsa: 3
+      redhat: 3
     CVSS:
       ghsa:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
         V3Score: 8.8
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+        V3Score: 8.8
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-85731
     - https://github.com/oras-project/oras-go
     - https://github.com/oras-project/oras-go/commit/adab2f25ea95ef4e6e41f50db9266a6701399422
     - https://github.com/oras-project/oras-go/releases/tag/v2.6.2
     - https://github.com/oras-project/oras-go/security/advisories/GHSA-m37j-52j7-pjw7
     - https://nvd.nist.gov/vuln/detail/CVE-2026-85731
+    - https://www.cve.org/CVERecord?id=CVE-2026-85731
     PublishedDate: '2026-09-16T17:18:15.833Z'
     LastModifiedDate: '2026-09-16T18:17:17.963Z'
   - VulnerabilityID: CVE-2026-50162
@@ -13616,7 +13630,8 @@
       PURL: pkg:golang/golang.org/x/crypto@v0.54.0
       UID: f84cce82bb94e06f
     InstalledVersion: v0.54.0
-    Status: affected
+    FixedVersion: 0.58.1-0.20261009181718-2f1f834330b2
+    Status: fixed
     Layer:
       Digest: sha256:77d3fadee8b3121441d45aa4dd8e81f1ae3b50867a36778221dbacf90c7a3c8c
       DiffID: sha256:bde555f2bb0a3cc6b24b3387858928fd0c633226f66bdb68d24f6cac228bfec0
@@ -13633,6 +13648,7 @@
     Severity: UNKNOWN
     References:
     - https://go.dev/issue/44226
+    - https://go.dev/issue/81227
     - https://pkg.go.dev/vuln/GO-2026-5932
   - VulnerabilityID: CVE-2026-78669
     VendorIDs:
@@ -14542,7 +14558,8 @@
       PURL: pkg:golang/golang.org/x/crypto@v0.58.0
       UID: 84b215ef55b1849e
     InstalledVersion: v0.58.0
-    Status: affected
+    FixedVersion: 0.58.1-0.20261009181718-2f1f834330b2
+    Status: fixed
     Layer:
       Digest: sha256:77d3fadee8b3121441d45aa4dd8e81f1ae3b50867a36778221dbacf90c7a3c8c
       DiffID: sha256:bde555f2bb0a3cc6b24b3387858928fd0c633226f66bdb68d24f6cac228bfec0
@@ -14559,6 +14576,7 @@
     Severity: UNKNOWN
     References:
     - https://go.dev/issue/44226
+    - https://go.dev/issue/81227
     - https://pkg.go.dev/vuln/GO-2026-5932
   - VulnerabilityID: CVE-2026-78661
     VendorIDs:
@@ -14850,7 +14868,7 @@
       alma: 4
       amazon: 3
       bitnami: 3
-      oracle-oval: 4
+      oracle-oval: 3
       redhat: 3
       rocky: 4
     CVSS:
@@ -14885,7 +14903,7 @@
     - https://go.dev/issue/81855
     - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
     - https://linux.oracle.com/cve/CVE-2026-97031.html
-    - https://linux.oracle.com/errata/ELSA-2026-89744.html
+    - https://linux.oracle.com/errata/ELSA-2026-89751.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-97031
     - https://pkg.go.dev/vuln/GO-2026-6607
     - https://www.cve.org/CVERecord?id=CVE-2026-97031
