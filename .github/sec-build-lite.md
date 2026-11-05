@@ -165,13 +165,13 @@
                         │     │                  ───────
                         │     │                  CWE-405
                         │     │                  
-                        │     ├ VendorSeverity   ╭ alma       : 4 
+                        │     ├ VendorSeverity   ╭ alma       : 3 
                         │     │                  ├ amazon     : 3 
                         │     │                  ├ azure      : 3 
                         │     │                  ├ bitnami    : 3 
                         │     │                  ├ oracle-oval: 3 
                         │     │                  ├ redhat     : 3 
-                        │     │                  ├ rocky      : 4 
+                        │     │                  ├ rocky      : 3 
                         │     │                  ╰ ubuntu     : 2 
                         │     ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N
                         │     │                  │         │           /A:H 
@@ -181,26 +181,26 @@
                         │     │                            ╰ V3Score : 7.5 
                         │     ├ References                                                                     
                         │     │                  ──────────────────────────────────────────────────────────────
-                        │     │                  https://access.redhat.com/errata/RHSA-2026:89744              
+                        │     │                  https://access.redhat.com/errata/RHSA-2026:93617              
                         │     │                  https://access.redhat.com/security/cve/CVE-2026-78669         
-                        │     │                  https://bugzilla.redhat.com/2519801                           
                         │     │                  https://bugzilla.redhat.com/2548334                           
                         │     │                  https://bugzilla.redhat.com/2548336                           
+                        │     │                  https://bugzilla.redhat.com/2548341                           
                         │     │                  https://bugzilla.redhat.com/2548344                           
                         │     │                  https://bugzilla.redhat.com/2556068                           
-                        │     │                  https://bugzilla.redhat.com/show_bug.cgi?id=2519801           
                         │     │                  https://bugzilla.redhat.com/show_bug.cgi?id=2548334           
                         │     │                  https://bugzilla.redhat.com/show_bug.cgi?id=2548336           
+                        │     │                  https://bugzilla.redhat.com/show_bug.cgi?id=2548341           
                         │     │                  https://bugzilla.redhat.com/show_bug.cgi?id=2548344           
                         │     │                  https://bugzilla.redhat.com/show_bug.cgi?id=2556068           
                         │     │                  https://creativecommons.org/licenses/by/4.0/                  
                         │     │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-                        │     │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-17183 
                         │     │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667 
                         │     │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669 
+                        │     │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440 
                         │     │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031 
-                        │     │                  https://errata.almalinux.org/9/ALSA-2026-89744.html           
-                        │     │                  https://errata.rockylinux.org/RLSA-2026:89744                 
+                        │     │                  https://errata.almalinux.org/9/ALSA-2026-93617.html           
+                        │     │                  https://errata.rockylinux.org/RLSA-2026:93617                 
                         │     │                  https://github.com/golang/go/issues/81742                     
                         │     │                  https://go.dev/cl/847186                                      
                         │     │                  https://go.dev/cl/847308                                      
@@ -675,6 +675,10 @@
                         │     │                   parsing and materialize Data strings once at the end of
                         │     │                   parse. 
                         │     ├ Severity        : UNKNOWN 
+                        │     ├ CweIDs                  
+                        │     │                  ───────
+                        │     │                  CWE-407
+                        │     │                  
                         │     ├ References                                                                
                         │     │                  ─────────────────────────────────────────────────────────
                         │     │                  https://go.dev/cl/849365                                 
@@ -683,7 +687,7 @@
                         │     │                  https://pkg.go.dev/vuln/GO-2026-6860                     
                         │     │                  
                         │     ├ PublishedDate   : 2026-10-27T22:18:05.93Z 
-                        │     ╰ LastModifiedDate: 2026-10-28T15:24:56.033Z 
+                        │     ╰ LastModifiedDate: 2026-11-04T17:17:37.673Z 
                         ├ [8] ╭ VulnerabilityID : CVE-2026-97045 
                         │     ├ VendorIDs                    
                         │     │                  ────────────
@@ -720,6 +724,10 @@
                         │     │                   non-empty namespace occurs at an HTML integration point
                         │     │                   before emitting literal text. 
                         │     ├ Severity        : UNKNOWN 
+                        │     ├ CweIDs                 
+                        │     │                  ──────
+                        │     │                  CWE-79
+                        │     │                  
                         │     ├ References                                                                
                         │     │                  ─────────────────────────────────────────────────────────
                         │     │                  https://go.dev/cl/855121                                 
@@ -728,7 +736,7 @@
                         │     │                  https://pkg.go.dev/vuln/GO-2026-6866                     
                         │     │                  
                         │     ├ PublishedDate   : 2026-10-27T22:19:22.613Z 
-                        │     ╰ LastModifiedDate: 2026-10-28T15:24:56.033Z 
+                        │     ╰ LastModifiedDate: 2026-11-04T17:17:38.33Z 
                         ╰ [9] ╭ VulnerabilityID : CVE-2026-111943 
                               ├ VendorIDs                    
                               │                  ────────────
@@ -777,14 +785,26 @@
                               ├ References                                                                     
                               │                  ──────────────────────────────────────────────────────────────
                               │                  http://www.openwall.com/lists/oss-security/2026/10/20/29      
-                              │                  https://access.redhat.com/errata/RHSA-2026:91719              
+                              │                  https://access.redhat.com/errata/RHSA-2026:93617              
                               │                  https://access.redhat.com/security/cve/CVE-2026-111943        
+                              │                  https://bugzilla.redhat.com/2548334                           
+                              │                  https://bugzilla.redhat.com/2548336                           
+                              │                  https://bugzilla.redhat.com/2548341                           
+                              │                  https://bugzilla.redhat.com/2548344                           
                               │                  https://bugzilla.redhat.com/2556068                           
+                              │                  https://bugzilla.redhat.com/show_bug.cgi?id=2548334           
+                              │                  https://bugzilla.redhat.com/show_bug.cgi?id=2548336           
+                              │                  https://bugzilla.redhat.com/show_bug.cgi?id=2548341           
+                              │                  https://bugzilla.redhat.com/show_bug.cgi?id=2548344           
                               │                  https://bugzilla.redhat.com/show_bug.cgi?id=2556068           
                               │                  https://creativecommons.org/licenses/by/4.0/                  
                               │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-                              │                  https://errata.almalinux.org/9/ALSA-2026-91719.html           
-                              │                  https://errata.rockylinux.org/RLSA-2026:91719                 
+                              │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667 
+                              │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669 
+                              │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440 
+                              │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031 
+                              │                  https://errata.almalinux.org/9/ALSA-2026-93617.html           
+                              │                  https://errata.rockylinux.org/RLSA-2026:93617                 
                               │                  https://github.com/golang/go/issues/82345                     
                               │                  https://go.dev/cl/851047                                      
                               │                  https://go.dev/issue/82345                                    
