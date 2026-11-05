@@ -105,6 +105,173 @@
     - https://www.tenable.com/security/research/tra-2026-66
     PublishedDate: '2026-10-21T14:17:14.69Z'
     LastModifiedDate: '2026-10-21T18:17:27.563Z'
+  - VulnerabilityID: GHSA-3fxj-6jh8-hvhx
+    PkgID: github.com/go-chi/chi/v5@v5.2.5
+    PkgName: github.com/go-chi/chi/v5
+    PkgIdentifier:
+      PURL: pkg:golang/github.com/go-chi/chi/v5@v5.2.5
+      UID: 4dfc3400cd0eadd7
+    InstalledVersion: v5.2.5
+    FixedVersion: 5.3.0
+    Status: fixed
+    Layer:
+      Digest: sha256:5f01173da442c056c8467998fb929bd914e7b87cc446cedca29e82d531683682
+      DiffID: sha256:3fd004286b7dd873355eba4d28127a8e8ade50d39c6ebce7c4a667c6ff7cc2fe
+    SeveritySource: ghsa
+    PrimaryURL: https://github.com/advisories/GHSA-3fxj-6jh8-hvhx
+    DataSource:
+      ID: ghsa
+      Name: GitHub Security Advisory Go
+      URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
+    Fingerprint: sha256:fd676fdfa8d9ae0dc5a6be984bb236f40bdf557fdb02eccc3cefa78fd770a0d4
+    Title: chi Has an IP Spoofing Vulnerability in `middleware.RealIP`
+    Description: |-
+      ## Summary
+      The `RealIP` middleware in `go-chi/chi` is vulnerable to IP spoofing because it blindly trusts the first (leftmost) element of the `X-Forwarded-For` HTTP header. This allows a remote attacker to bypass IP-based access control lists (ACLs) and rate-limiting mechanisms by providing a spoofed IP address in the header.
+
+      ## Details
+      In `middleware/realip.go`, the `realIP` function parses the `X-Forwarded-For` header and extracts the first comma-separated value:
+
+      ```go
+      func realIP(r *http.Request) string {
+          // ...
+          } else if xff := r.Header.Get(xForwardedFor); xff != "" {
+              ip, _, _ = strings.Cut(xff, ",")
+          }
+          // ...
+      }
+      ```
+
+      Standard practice for `X-Forwarded-For` is that each proxy appends the client's IP to the end of the list. However, since the client can also provide this header, the leftmost values are untrusted. A client can send a header like `X-Forwarded-For: <spoofed_ip>, <actual_proxy_ip>`, and `go-chi/chi` will treat `<spoofed_ip>` as the source of the request.
+
+      ## Proof of Concept (PoC)
+      The following code demonstrates how an attacker can bypass an IP-based restriction.
+
+      ```go
+      package main
+
+      import (
+              "fmt"
+              "net/http"
+              "net/http/httptest"
+
+              "github.com/go-chi/chi/v5"
+              "github.com/go-chi/chi/v5/middleware"
+      )
+
+      func main() {
+              r := chi.NewRouter()
+
+              // Enable the vulnerable RealIP middleware
+              r.Use(middleware.RealIP)
+
+              // An endpoint that should be restricted to a specific administrator IP (1.2.3.4)
+              r.Get("/admin/secret", func(w http.ResponseWriter, r *http.Request) {
+                      clientIP := r.RemoteAddr
+                      fmt.Printf("[Server] Request received from IP: %s\n", clientIP)
+
+                      // Simulate IP-based access control
+                      if clientIP == "1.2.3.4" {
+                              w.WriteHeader(http.StatusOK)
+                              w.Write([]byte("CONFIDENTIAL: The secret code is 42\n"))
+                      } else {
+                              w.WriteHeader(http.StatusForbidden)
+                              w.Write([]byte("Access Denied: You are not an administrator.\n"))
+                      }
+              })
+
+              // --- Attack Simulation ---
+              fmt.Println("--- PoC: IP Spoofing Attack on chi/middleware.RealIP ---")
+
+              // 1. Normal Request (Should be denied)
+              req1, _ := http.NewRequest("GET", "/admin/secret", nil)
+              rr1 := httptest.NewRecorder()
+              r.ServeHTTP(rr1, req1)
+              fmt.Printf("[Client] Normal Request -> Status: %d, Body: %s", rr1.Code, rr1.Body.String())
+
+              // 2. Spoofed Request (Using X-Forwarded-For)
+              // Attacker claims to be '1.2.3.4'
+              req2, _ := http.NewRequest("GET", "/admin/secret", nil)
+              req2.Header.Set("X-Forwarded-For", "1.2.3.4, 5.6.7.8") // 5.6.7.8 is a fake proxy IP
+              rr2 := httptest.NewRecorder()
+              r.ServeHTTP(rr2, req2)
+              fmt.Printf("[Client] Spoofed Request -> Status: %d, Body: %s", rr2.Code, rr2.Body.String())
+      }
+      ```
+
+      ## Impact
+      An attacker can masquerade as any IP address. This can lead to:
+      - **Bypass of Authentication/Authorization:** Accessing administrative panels or private APIs restricted by IP.
+      - **Rate Limiting Evasion:** Circumbeting rate limiters that use `RemoteAddr` as a key.
+      - **Log Forgery:** Causing incorrect IP addresses to be recorded in security logs.
+
+      ## CWE
+      - **CWE-290:** Authentication Bypass by Spoofing
+      - **CWE-345:** Insufficient Verification of Data Authenticity
+
+      ## CVSS Score
+      - **CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N** (6.9 Moderate)
+
+      ## Affected Versions
+      - `github.com/go-chi/chi/v5` <= `v5.2.1` (and all previous versions)
+
+      ## Recommendation
+      1.  **Stop using `middleware.RealIP`** if you cannot guarantee that the incoming request headers are from a trusted source and have been sanitized by a proxy.
+      2.  Implement a trust-based IP extraction mechanism that verifies the chain of proxies.
+      3.  Use the `X-Forwarded-For` header by traversing it from **right to left** and stopping at the first IP address that is not in your list of trusted proxies.
+
+      ## Suggested Fix
+      A secure implementation of `RealIP` should allow developers to specify a list of trusted proxy IP ranges (CIDRs). Below is a conceptual example of how to fix this by traversing the `X-Forwarded-For` header from right to left:
+
+      ```go
+      func GetClientIP(r *http.Request, trustedProxies []net.IPNet) string {
+              xff := r.Header.Get("X-Forwarded-For")
+              if xff == "" {
+                      return r.RemoteAddr
+              }
+
+              ips := strings.Split(xff, ",")
+              // Traverse from right to left
+              for i := len(ips) - 1; i >= 0; i-- {
+                      ipStr := strings.TrimSpace(ips[i])
+                      ip := net.ParseIP(ipStr)
+                      if ip == nil {
+                              continue
+                      }
+
+                      if !isTrustedProxy(ip, trustedProxies) {
+                              return ipStr
+                      }
+              }
+
+              return r.RemoteAddr
+      }
+
+      func isTrustedProxy(ip net.IP, trustedProxies []net.IPNet) bool {
+              for _, network := range trustedProxies {
+                      if network.Contains(ip) {
+                              return true
+                      }
+              }
+              return false
+      }
+      ```
+
+      By providing a configuration like `middleware.RealIPWithConfig(Config{TrustedProxies: []string{"10.0.0.0/8"}})` , the middleware can safely identify the true client IP even in complex proxy environments.
+    Severity: MEDIUM
+    VendorSeverity:
+      ghsa: 2
+    CVSS:
+      ghsa:
+        V40Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N
+        V40Score: 6.9
+    References:
+    - https://github.com/go-chi/chi
+    - https://github.com/go-chi/chi/commit/3b171578ca44dfd75ca3c5cbddc7b44c600a7b49
+    - https://github.com/go-chi/chi/pull/967
+    - https://github.com/go-chi/chi/security/advisories/GHSA-3fxj-6jh8-hvhx
+    PublishedDate: '2026-06-25T18:21:37Z'
+    LastModifiedDate: '2026-11-04T03:49:24Z'
   - VulnerabilityID: CVE-2026-116587
     VendorIDs:
     - GHSA-mgcc-cww5-fp2q
@@ -2573,13 +2740,13 @@
     CweIDs:
     - CWE-405
     VendorSeverity:
-      alma: 4
+      alma: 3
       amazon: 3
       azure: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
-      rocky: 4
+      rocky: 3
       ubuntu: 2
     CVSS:
       bitnami:
@@ -2589,26 +2756,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:89744
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-78669
-    - https://bugzilla.redhat.com/2519801
     - https://bugzilla.redhat.com/2548334
     - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
     - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2519801
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-17183
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
-    - https://errata.almalinux.org/9/ALSA-2026-89744.html
-    - https://errata.rockylinux.org/RLSA-2026:89744
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/81742
     - https://go.dev/cl/847186
     - https://go.dev/cl/847308
@@ -3167,13 +3334,15 @@
     Title: When coalescing adjacent text nodes in addText and fosterParent, appen ...
     Description: When coalescing adjacent text nodes in addText and fosterParent, appending to an existing TextNode's Data via string concatenation (n.Data += text) reallocated and copied the accumulated string on every token. Inputs containing many short text runs separated by ignored end tags (such as "a</x>") caused O(n^2) allocations and byte copies. Accumulate coalesced text in per-node byte slices during parsing and materialize Data strings once at the end of parse.
     Severity: UNKNOWN
+    CweIDs:
+    - CWE-407
     References:
     - https://go.dev/cl/849365
     - https://go.dev/issue/82224
     - https://groups.google.com/g/golang-announce/c/sqrs2vTx_Xs
     - https://pkg.go.dev/vuln/GO-2026-6860
     PublishedDate: '2026-10-27T22:18:05.93Z'
-    LastModifiedDate: '2026-10-28T15:24:56.033Z'
+    LastModifiedDate: '2026-11-04T17:17:37.673Z'
   - VulnerabilityID: CVE-2026-97045
     VendorIDs:
     - GO-2026-6866
@@ -3197,13 +3366,15 @@
     Title: In childTextNodesAreLiteral, walking up the tree previously stopped at ...
     Description: In childTextNodesAreLiteral, walking up the tree previously stopped at the nearest foreign ancestor once an HTML integration point was found. However, that integration point may itself be a descendant of an element that was foster-parented into a foreign namespace (such as <mglyph> or <malignmark> fostered under <mtext>), causing a parser to resolve the subtree in a different foreign namespace upon re-parsing the rendered output. Continue walking the full ancestor chain and verify that every transition from a non-empty namespace occurs at an HTML integration point before emitting literal text.
     Severity: UNKNOWN
+    CweIDs:
+    - CWE-79
     References:
     - https://go.dev/cl/855121
     - https://go.dev/issue/82622
     - https://groups.google.com/g/golang-announce/c/sqrs2vTx_Xs
     - https://pkg.go.dev/vuln/GO-2026-6866
     PublishedDate: '2026-10-27T22:19:22.613Z'
-    LastModifiedDate: '2026-10-28T15:24:56.033Z'
+    LastModifiedDate: '2026-11-04T17:17:38.33Z'
   - VulnerabilityID: CVE-2026-39824
     VendorIDs:
     - GO-2026-5024
@@ -3644,14 +3815,26 @@
         V3Score: 6.8
     References:
     - http://www.openwall.com/lists/oss-security/2026/10/20/29
-    - https://access.redhat.com/errata/RHSA-2026:91719
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-111943
+    - https://bugzilla.redhat.com/2548334
+    - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
+    - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://errata.almalinux.org/9/ALSA-2026-91719.html
-    - https://errata.rockylinux.org/RLSA-2026:91719
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/82345
     - https://go.dev/cl/851047
     - https://go.dev/issue/82345
@@ -4453,19 +4636,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:90462
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-78667
     - https://bugzilla.redhat.com/2548334
+    - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
+    - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2402034
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-11395
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
-    - https://errata.almalinux.org/9/ALSA-2026-90462.html
-    - https://errata.rockylinux.org/RLSA-2026:90462
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/81858
     - https://go.dev/cl/847309
     - https://go.dev/issue/81858
@@ -4505,13 +4695,13 @@
     CweIDs:
     - CWE-405
     VendorSeverity:
-      alma: 4
+      alma: 3
       amazon: 3
       azure: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
-      rocky: 4
+      rocky: 3
       ubuntu: 2
     CVSS:
       bitnami:
@@ -4521,26 +4711,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:89744
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-78669
-    - https://bugzilla.redhat.com/2519801
     - https://bugzilla.redhat.com/2548334
     - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
     - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2519801
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-17183
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
-    - https://errata.almalinux.org/9/ALSA-2026-89744.html
-    - https://errata.rockylinux.org/RLSA-2026:89744
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/81742
     - https://go.dev/cl/847186
     - https://go.dev/cl/847308
@@ -4582,12 +4772,12 @@
     CweIDs:
     - CWE-405
     VendorSeverity:
-      alma: 4
+      alma: 3
       amazon: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
-      rocky: 4
+      rocky: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -4596,26 +4786,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:89744
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-97031
-    - https://bugzilla.redhat.com/2519801
     - https://bugzilla.redhat.com/2548334
     - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
     - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2519801
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-17183
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
-    - https://errata.almalinux.org/9/ALSA-2026-89744.html
-    - https://errata.rockylinux.org/RLSA-2026:89744
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://go.dev/cl/847312
     - https://go.dev/issue/81855
     - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
@@ -5125,45 +5315,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:86196
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-94440
     - https://bugzilla.redhat.com/2548334
     - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
     - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548335
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548337
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548338
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548339
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548340
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548342
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548343
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548345
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548346
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548347
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56866
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78659
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78660
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78663
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94439
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94444
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94447
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94448
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97030
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97032
-    - https://errata.almalinux.org/9/ALSA-2026-86196.html
-    - https://errata.rockylinux.org/RLSA-2026:86196
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/81741
     - https://go.dev/cl/847307
     - https://go.dev/issue/81741
@@ -5614,13 +5785,13 @@
     CweIDs:
     - CWE-405
     VendorSeverity:
-      alma: 4
+      alma: 3
       amazon: 3
       azure: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
-      rocky: 4
+      rocky: 3
       ubuntu: 2
     CVSS:
       bitnami:
@@ -5630,26 +5801,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:89744
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-78669
-    - https://bugzilla.redhat.com/2519801
     - https://bugzilla.redhat.com/2548334
     - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
     - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2519801
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-17183
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
-    - https://errata.almalinux.org/9/ALSA-2026-89744.html
-    - https://errata.rockylinux.org/RLSA-2026:89744
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/81742
     - https://go.dev/cl/847186
     - https://go.dev/cl/847308
@@ -6055,13 +6226,15 @@
     Title: When coalescing adjacent text nodes in addText and fosterParent, appen ...
     Description: When coalescing adjacent text nodes in addText and fosterParent, appending to an existing TextNode's Data via string concatenation (n.Data += text) reallocated and copied the accumulated string on every token. Inputs containing many short text runs separated by ignored end tags (such as "a</x>") caused O(n^2) allocations and byte copies. Accumulate coalesced text in per-node byte slices during parsing and materialize Data strings once at the end of parse.
     Severity: UNKNOWN
+    CweIDs:
+    - CWE-407
     References:
     - https://go.dev/cl/849365
     - https://go.dev/issue/82224
     - https://groups.google.com/g/golang-announce/c/sqrs2vTx_Xs
     - https://pkg.go.dev/vuln/GO-2026-6860
     PublishedDate: '2026-10-27T22:18:05.93Z'
-    LastModifiedDate: '2026-10-28T15:24:56.033Z'
+    LastModifiedDate: '2026-11-04T17:17:37.673Z'
   - VulnerabilityID: CVE-2026-97045
     VendorIDs:
     - GO-2026-6866
@@ -6085,13 +6258,15 @@
     Title: In childTextNodesAreLiteral, walking up the tree previously stopped at ...
     Description: In childTextNodesAreLiteral, walking up the tree previously stopped at the nearest foreign ancestor once an HTML integration point was found. However, that integration point may itself be a descendant of an element that was foster-parented into a foreign namespace (such as <mglyph> or <malignmark> fostered under <mtext>), causing a parser to resolve the subtree in a different foreign namespace upon re-parsing the rendered output. Continue walking the full ancestor chain and verify that every transition from a non-empty namespace occurs at an HTML integration point before emitting literal text.
     Severity: UNKNOWN
+    CweIDs:
+    - CWE-79
     References:
     - https://go.dev/cl/855121
     - https://go.dev/issue/82622
     - https://groups.google.com/g/golang-announce/c/sqrs2vTx_Xs
     - https://pkg.go.dev/vuln/GO-2026-6866
     PublishedDate: '2026-10-27T22:19:22.613Z'
-    LastModifiedDate: '2026-10-28T15:24:56.033Z'
+    LastModifiedDate: '2026-11-04T17:17:38.33Z'
   - VulnerabilityID: CVE-2026-111943
     VendorIDs:
     - GO-2026-6809
@@ -6129,14 +6304,26 @@
         V3Score: 6.8
     References:
     - http://www.openwall.com/lists/oss-security/2026/10/20/29
-    - https://access.redhat.com/errata/RHSA-2026:91719
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-111943
+    - https://bugzilla.redhat.com/2548334
+    - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
+    - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://errata.almalinux.org/9/ALSA-2026-91719.html
-    - https://errata.rockylinux.org/RLSA-2026:91719
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/82345
     - https://go.dev/cl/851047
     - https://go.dev/issue/82345
@@ -6240,13 +6427,13 @@
     CweIDs:
     - CWE-405
     VendorSeverity:
-      alma: 4
+      alma: 3
       amazon: 3
       azure: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
-      rocky: 4
+      rocky: 3
       ubuntu: 2
     CVSS:
       bitnami:
@@ -6256,26 +6443,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:89744
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-78669
-    - https://bugzilla.redhat.com/2519801
     - https://bugzilla.redhat.com/2548334
     - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
     - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2519801
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-17183
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
-    - https://errata.almalinux.org/9/ALSA-2026-89744.html
-    - https://errata.rockylinux.org/RLSA-2026:89744
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/81742
     - https://go.dev/cl/847186
     - https://go.dev/cl/847308
@@ -6681,13 +6868,15 @@
     Title: When coalescing adjacent text nodes in addText and fosterParent, appen ...
     Description: When coalescing adjacent text nodes in addText and fosterParent, appending to an existing TextNode's Data via string concatenation (n.Data += text) reallocated and copied the accumulated string on every token. Inputs containing many short text runs separated by ignored end tags (such as "a</x>") caused O(n^2) allocations and byte copies. Accumulate coalesced text in per-node byte slices during parsing and materialize Data strings once at the end of parse.
     Severity: UNKNOWN
+    CweIDs:
+    - CWE-407
     References:
     - https://go.dev/cl/849365
     - https://go.dev/issue/82224
     - https://groups.google.com/g/golang-announce/c/sqrs2vTx_Xs
     - https://pkg.go.dev/vuln/GO-2026-6860
     PublishedDate: '2026-10-27T22:18:05.93Z'
-    LastModifiedDate: '2026-10-28T15:24:56.033Z'
+    LastModifiedDate: '2026-11-04T17:17:37.673Z'
   - VulnerabilityID: CVE-2026-97045
     VendorIDs:
     - GO-2026-6866
@@ -6711,13 +6900,15 @@
     Title: In childTextNodesAreLiteral, walking up the tree previously stopped at ...
     Description: In childTextNodesAreLiteral, walking up the tree previously stopped at the nearest foreign ancestor once an HTML integration point was found. However, that integration point may itself be a descendant of an element that was foster-parented into a foreign namespace (such as <mglyph> or <malignmark> fostered under <mtext>), causing a parser to resolve the subtree in a different foreign namespace upon re-parsing the rendered output. Continue walking the full ancestor chain and verify that every transition from a non-empty namespace occurs at an HTML integration point before emitting literal text.
     Severity: UNKNOWN
+    CweIDs:
+    - CWE-79
     References:
     - https://go.dev/cl/855121
     - https://go.dev/issue/82622
     - https://groups.google.com/g/golang-announce/c/sqrs2vTx_Xs
     - https://pkg.go.dev/vuln/GO-2026-6866
     PublishedDate: '2026-10-27T22:19:22.613Z'
-    LastModifiedDate: '2026-10-28T15:24:56.033Z'
+    LastModifiedDate: '2026-11-04T17:17:38.33Z'
   - VulnerabilityID: CVE-2026-111943
     VendorIDs:
     - GO-2026-6809
@@ -6755,14 +6946,26 @@
         V3Score: 6.8
     References:
     - http://www.openwall.com/lists/oss-security/2026/10/20/29
-    - https://access.redhat.com/errata/RHSA-2026:91719
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-111943
+    - https://bugzilla.redhat.com/2548334
+    - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
+    - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://errata.almalinux.org/9/ALSA-2026-91719.html
-    - https://errata.rockylinux.org/RLSA-2026:91719
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/82345
     - https://go.dev/cl/851047
     - https://go.dev/issue/82345
@@ -7787,13 +7990,13 @@
     CweIDs:
     - CWE-405
     VendorSeverity:
-      alma: 4
+      alma: 3
       amazon: 3
       azure: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
-      rocky: 4
+      rocky: 3
       ubuntu: 2
     CVSS:
       bitnami:
@@ -7803,26 +8006,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:89744
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-78669
-    - https://bugzilla.redhat.com/2519801
     - https://bugzilla.redhat.com/2548334
     - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
     - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2519801
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-17183
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
-    - https://errata.almalinux.org/9/ALSA-2026-89744.html
-    - https://errata.rockylinux.org/RLSA-2026:89744
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/81742
     - https://go.dev/cl/847186
     - https://go.dev/cl/847308
@@ -8539,13 +8742,15 @@
     Title: When coalescing adjacent text nodes in addText and fosterParent, appen ...
     Description: When coalescing adjacent text nodes in addText and fosterParent, appending to an existing TextNode's Data via string concatenation (n.Data += text) reallocated and copied the accumulated string on every token. Inputs containing many short text runs separated by ignored end tags (such as "a</x>") caused O(n^2) allocations and byte copies. Accumulate coalesced text in per-node byte slices during parsing and materialize Data strings once at the end of parse.
     Severity: UNKNOWN
+    CweIDs:
+    - CWE-407
     References:
     - https://go.dev/cl/849365
     - https://go.dev/issue/82224
     - https://groups.google.com/g/golang-announce/c/sqrs2vTx_Xs
     - https://pkg.go.dev/vuln/GO-2026-6860
     PublishedDate: '2026-10-27T22:18:05.93Z'
-    LastModifiedDate: '2026-10-28T15:24:56.033Z'
+    LastModifiedDate: '2026-11-04T17:17:37.673Z'
   - VulnerabilityID: CVE-2026-97045
     VendorIDs:
     - GO-2026-6866
@@ -8569,13 +8774,15 @@
     Title: In childTextNodesAreLiteral, walking up the tree previously stopped at ...
     Description: In childTextNodesAreLiteral, walking up the tree previously stopped at the nearest foreign ancestor once an HTML integration point was found. However, that integration point may itself be a descendant of an element that was foster-parented into a foreign namespace (such as <mglyph> or <malignmark> fostered under <mtext>), causing a parser to resolve the subtree in a different foreign namespace upon re-parsing the rendered output. Continue walking the full ancestor chain and verify that every transition from a non-empty namespace occurs at an HTML integration point before emitting literal text.
     Severity: UNKNOWN
+    CweIDs:
+    - CWE-79
     References:
     - https://go.dev/cl/855121
     - https://go.dev/issue/82622
     - https://groups.google.com/g/golang-announce/c/sqrs2vTx_Xs
     - https://pkg.go.dev/vuln/GO-2026-6866
     PublishedDate: '2026-10-27T22:19:22.613Z'
-    LastModifiedDate: '2026-10-28T15:24:56.033Z'
+    LastModifiedDate: '2026-11-04T17:17:38.33Z'
   - VulnerabilityID: CVE-2026-39824
     VendorIDs:
     - GO-2026-5024
@@ -8769,14 +8976,26 @@
         V3Score: 6.8
     References:
     - http://www.openwall.com/lists/oss-security/2026/10/20/29
-    - https://access.redhat.com/errata/RHSA-2026:91719
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-111943
+    - https://bugzilla.redhat.com/2548334
+    - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
+    - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://errata.almalinux.org/9/ALSA-2026-91719.html
-    - https://errata.rockylinux.org/RLSA-2026:91719
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/82345
     - https://go.dev/cl/851047
     - https://go.dev/issue/82345
@@ -10752,6 +10971,7 @@
       photon: 3
       redhat: 3
       rocky: 3
+      ubuntu: 2
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
@@ -10768,6 +10988,7 @@
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39822
     - https://errata.almalinux.org/9/ALSA-2026-38878.html
     - https://errata.rockylinux.org/RLSA-2026:38878
+    - https://github.com/golang/go/issues/79005
     - https://go.dev/cl/797880
     - https://go.dev/issue/79005
     - https://groups.google.com/g/golang-announce/c/OrmQE_Yp5Sc
@@ -11562,19 +11783,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:90462
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-78667
     - https://bugzilla.redhat.com/2548334
+    - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
+    - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2402034
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-11395
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
-    - https://errata.almalinux.org/9/ALSA-2026-90462.html
-    - https://errata.rockylinux.org/RLSA-2026:90462
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/81858
     - https://go.dev/cl/847309
     - https://go.dev/issue/81858
@@ -11614,13 +11842,13 @@
     CweIDs:
     - CWE-405
     VendorSeverity:
-      alma: 4
+      alma: 3
       amazon: 3
       azure: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
-      rocky: 4
+      rocky: 3
       ubuntu: 2
     CVSS:
       bitnami:
@@ -11630,26 +11858,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:89744
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-78669
-    - https://bugzilla.redhat.com/2519801
     - https://bugzilla.redhat.com/2548334
     - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
     - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2519801
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-17183
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
-    - https://errata.almalinux.org/9/ALSA-2026-89744.html
-    - https://errata.rockylinux.org/RLSA-2026:89744
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/81742
     - https://go.dev/cl/847186
     - https://go.dev/cl/847308
@@ -11691,12 +11919,12 @@
     CweIDs:
     - CWE-405
     VendorSeverity:
-      alma: 4
+      alma: 3
       amazon: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
-      rocky: 4
+      rocky: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -11705,26 +11933,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:89744
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-97031
-    - https://bugzilla.redhat.com/2519801
     - https://bugzilla.redhat.com/2548334
     - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
     - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2519801
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-17183
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
-    - https://errata.almalinux.org/9/ALSA-2026-89744.html
-    - https://errata.rockylinux.org/RLSA-2026:89744
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://go.dev/cl/847312
     - https://go.dev/issue/81855
     - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
@@ -12833,45 +13061,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:86196
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-94440
     - https://bugzilla.redhat.com/2548334
     - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
     - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548335
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548337
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548338
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548339
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548340
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548342
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548343
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548345
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548346
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548347
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56866
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78659
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78660
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78663
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94439
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94444
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94447
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94448
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97030
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97032
-    - https://errata.almalinux.org/9/ALSA-2026-86196.html
-    - https://errata.rockylinux.org/RLSA-2026:86196
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/81741
     - https://go.dev/cl/847307
     - https://go.dev/issue/81741
@@ -13281,14 +13490,26 @@
         V3Score: 6.8
     References:
     - http://www.openwall.com/lists/oss-security/2026/10/20/29
-    - https://access.redhat.com/errata/RHSA-2026:91719
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-111943
+    - https://bugzilla.redhat.com/2548334
+    - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
+    - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://errata.almalinux.org/9/ALSA-2026-91719.html
-    - https://errata.rockylinux.org/RLSA-2026:91719
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/82345
     - https://go.dev/cl/851047
     - https://go.dev/issue/82345
@@ -13356,13 +13577,15 @@
     Title: When coalescing adjacent text nodes in addText and fosterParent, appen ...
     Description: When coalescing adjacent text nodes in addText and fosterParent, appending to an existing TextNode's Data via string concatenation (n.Data += text) reallocated and copied the accumulated string on every token. Inputs containing many short text runs separated by ignored end tags (such as "a</x>") caused O(n^2) allocations and byte copies. Accumulate coalesced text in per-node byte slices during parsing and materialize Data strings once at the end of parse.
     Severity: UNKNOWN
+    CweIDs:
+    - CWE-407
     References:
     - https://go.dev/cl/849365
     - https://go.dev/issue/82224
     - https://groups.google.com/g/golang-announce/c/sqrs2vTx_Xs
     - https://pkg.go.dev/vuln/GO-2026-6860
     PublishedDate: '2026-10-27T22:18:05.93Z'
-    LastModifiedDate: '2026-10-28T15:24:56.033Z'
+    LastModifiedDate: '2026-11-04T17:17:37.673Z'
   - VulnerabilityID: CVE-2026-97045
     VendorIDs:
     - GO-2026-6866
@@ -13386,13 +13609,15 @@
     Title: In childTextNodesAreLiteral, walking up the tree previously stopped at ...
     Description: In childTextNodesAreLiteral, walking up the tree previously stopped at the nearest foreign ancestor once an HTML integration point was found. However, that integration point may itself be a descendant of an element that was foster-parented into a foreign namespace (such as <mglyph> or <malignmark> fostered under <mtext>), causing a parser to resolve the subtree in a different foreign namespace upon re-parsing the rendered output. Continue walking the full ancestor chain and verify that every transition from a non-empty namespace occurs at an HTML integration point before emitting literal text.
     Severity: UNKNOWN
+    CweIDs:
+    - CWE-79
     References:
     - https://go.dev/cl/855121
     - https://go.dev/issue/82622
     - https://groups.google.com/g/golang-announce/c/sqrs2vTx_Xs
     - https://pkg.go.dev/vuln/GO-2026-6866
     PublishedDate: '2026-10-27T22:19:22.613Z'
-    LastModifiedDate: '2026-10-28T15:24:56.033Z'
+    LastModifiedDate: '2026-11-04T17:17:38.33Z'
   - VulnerabilityID: CVE-2026-111943
     VendorIDs:
     - GO-2026-6809
@@ -13430,14 +13655,26 @@
         V3Score: 6.8
     References:
     - http://www.openwall.com/lists/oss-security/2026/10/20/29
-    - https://access.redhat.com/errata/RHSA-2026:91719
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-111943
+    - https://bugzilla.redhat.com/2548334
+    - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
+    - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://errata.almalinux.org/9/ALSA-2026-91719.html
-    - https://errata.rockylinux.org/RLSA-2026:91719
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/82345
     - https://go.dev/cl/851047
     - https://go.dev/issue/82345
@@ -13555,13 +13792,13 @@
     CweIDs:
     - CWE-405
     VendorSeverity:
-      alma: 4
+      alma: 3
       amazon: 3
       azure: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
-      rocky: 4
+      rocky: 3
       ubuntu: 2
     CVSS:
       bitnami:
@@ -13571,26 +13808,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:89744
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-78669
-    - https://bugzilla.redhat.com/2519801
     - https://bugzilla.redhat.com/2548334
     - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
     - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2519801
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-17183
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
-    - https://errata.almalinux.org/9/ALSA-2026-89744.html
-    - https://errata.rockylinux.org/RLSA-2026:89744
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/81742
     - https://go.dev/cl/847186
     - https://go.dev/cl/847308
@@ -13996,13 +14233,15 @@
     Title: When coalescing adjacent text nodes in addText and fosterParent, appen ...
     Description: When coalescing adjacent text nodes in addText and fosterParent, appending to an existing TextNode's Data via string concatenation (n.Data += text) reallocated and copied the accumulated string on every token. Inputs containing many short text runs separated by ignored end tags (such as "a</x>") caused O(n^2) allocations and byte copies. Accumulate coalesced text in per-node byte slices during parsing and materialize Data strings once at the end of parse.
     Severity: UNKNOWN
+    CweIDs:
+    - CWE-407
     References:
     - https://go.dev/cl/849365
     - https://go.dev/issue/82224
     - https://groups.google.com/g/golang-announce/c/sqrs2vTx_Xs
     - https://pkg.go.dev/vuln/GO-2026-6860
     PublishedDate: '2026-10-27T22:18:05.93Z'
-    LastModifiedDate: '2026-10-28T15:24:56.033Z'
+    LastModifiedDate: '2026-11-04T17:17:37.673Z'
   - VulnerabilityID: CVE-2026-97045
     VendorIDs:
     - GO-2026-6866
@@ -14026,13 +14265,15 @@
     Title: In childTextNodesAreLiteral, walking up the tree previously stopped at ...
     Description: In childTextNodesAreLiteral, walking up the tree previously stopped at the nearest foreign ancestor once an HTML integration point was found. However, that integration point may itself be a descendant of an element that was foster-parented into a foreign namespace (such as <mglyph> or <malignmark> fostered under <mtext>), causing a parser to resolve the subtree in a different foreign namespace upon re-parsing the rendered output. Continue walking the full ancestor chain and verify that every transition from a non-empty namespace occurs at an HTML integration point before emitting literal text.
     Severity: UNKNOWN
+    CweIDs:
+    - CWE-79
     References:
     - https://go.dev/cl/855121
     - https://go.dev/issue/82622
     - https://groups.google.com/g/golang-announce/c/sqrs2vTx_Xs
     - https://pkg.go.dev/vuln/GO-2026-6866
     PublishedDate: '2026-10-27T22:19:22.613Z'
-    LastModifiedDate: '2026-10-28T15:24:56.033Z'
+    LastModifiedDate: '2026-11-04T17:17:38.33Z'
   - VulnerabilityID: CVE-2026-111943
     VendorIDs:
     - GO-2026-6809
@@ -14070,14 +14311,26 @@
         V3Score: 6.8
     References:
     - http://www.openwall.com/lists/oss-security/2026/10/20/29
-    - https://access.redhat.com/errata/RHSA-2026:91719
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-111943
+    - https://bugzilla.redhat.com/2548334
+    - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
+    - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://errata.almalinux.org/9/ALSA-2026-91719.html
-    - https://errata.rockylinux.org/RLSA-2026:91719
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/82345
     - https://go.dev/cl/851047
     - https://go.dev/issue/82345
@@ -14131,19 +14384,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:90462
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-78667
     - https://bugzilla.redhat.com/2548334
+    - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
+    - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2402034
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-11395
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
-    - https://errata.almalinux.org/9/ALSA-2026-90462.html
-    - https://errata.rockylinux.org/RLSA-2026:90462
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/81858
     - https://go.dev/cl/847309
     - https://go.dev/issue/81858
@@ -14183,13 +14443,13 @@
     CweIDs:
     - CWE-405
     VendorSeverity:
-      alma: 4
+      alma: 3
       amazon: 3
       azure: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
-      rocky: 4
+      rocky: 3
       ubuntu: 2
     CVSS:
       bitnami:
@@ -14199,26 +14459,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:89744
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-78669
-    - https://bugzilla.redhat.com/2519801
     - https://bugzilla.redhat.com/2548334
     - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
     - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2519801
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-17183
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
-    - https://errata.almalinux.org/9/ALSA-2026-89744.html
-    - https://errata.rockylinux.org/RLSA-2026:89744
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/81742
     - https://go.dev/cl/847186
     - https://go.dev/cl/847308
@@ -14260,12 +14520,12 @@
     CweIDs:
     - CWE-405
     VendorSeverity:
-      alma: 4
+      alma: 3
       amazon: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
-      rocky: 4
+      rocky: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -14274,26 +14534,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:89744
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-97031
-    - https://bugzilla.redhat.com/2519801
     - https://bugzilla.redhat.com/2548334
     - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
     - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2519801
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-17183
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
-    - https://errata.almalinux.org/9/ALSA-2026-89744.html
-    - https://errata.rockylinux.org/RLSA-2026:89744
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://go.dev/cl/847312
     - https://go.dev/issue/81855
     - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
@@ -14803,45 +15063,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:86196
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-94440
     - https://bugzilla.redhat.com/2548334
     - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
     - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548335
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548337
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548338
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548339
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548340
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548342
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548343
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548345
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548346
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548347
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56866
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78659
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78660
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78663
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94439
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94444
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94447
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94448
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97030
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97032
-    - https://errata.almalinux.org/9/ALSA-2026-86196.html
-    - https://errata.rockylinux.org/RLSA-2026:86196
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/81741
     - https://go.dev/cl/847307
     - https://go.dev/issue/81741
@@ -16932,14 +17173,26 @@
         V3Score: 6.8
     References:
     - http://www.openwall.com/lists/oss-security/2026/10/20/29
-    - https://access.redhat.com/errata/RHSA-2026:91719
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-111943
+    - https://bugzilla.redhat.com/2548334
+    - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
+    - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://errata.almalinux.org/9/ALSA-2026-91719.html
-    - https://errata.rockylinux.org/RLSA-2026:91719
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/82345
     - https://go.dev/cl/851047
     - https://go.dev/issue/82345
@@ -17741,19 +17994,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:90462
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-78667
     - https://bugzilla.redhat.com/2548334
+    - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
+    - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2402034
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-11395
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
-    - https://errata.almalinux.org/9/ALSA-2026-90462.html
-    - https://errata.rockylinux.org/RLSA-2026:90462
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/81858
     - https://go.dev/cl/847309
     - https://go.dev/issue/81858
@@ -17793,13 +18053,13 @@
     CweIDs:
     - CWE-405
     VendorSeverity:
-      alma: 4
+      alma: 3
       amazon: 3
       azure: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
-      rocky: 4
+      rocky: 3
       ubuntu: 2
     CVSS:
       bitnami:
@@ -17809,26 +18069,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:89744
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-78669
-    - https://bugzilla.redhat.com/2519801
     - https://bugzilla.redhat.com/2548334
     - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
     - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2519801
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-17183
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
-    - https://errata.almalinux.org/9/ALSA-2026-89744.html
-    - https://errata.rockylinux.org/RLSA-2026:89744
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/81742
     - https://go.dev/cl/847186
     - https://go.dev/cl/847308
@@ -17870,12 +18130,12 @@
     CweIDs:
     - CWE-405
     VendorSeverity:
-      alma: 4
+      alma: 3
       amazon: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
-      rocky: 4
+      rocky: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -17884,26 +18144,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:89744
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-97031
-    - https://bugzilla.redhat.com/2519801
     - https://bugzilla.redhat.com/2548334
     - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
     - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2519801
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-17183
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
-    - https://errata.almalinux.org/9/ALSA-2026-89744.html
-    - https://errata.rockylinux.org/RLSA-2026:89744
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://go.dev/cl/847312
     - https://go.dev/issue/81855
     - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
@@ -18413,45 +18673,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:86196
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-94440
     - https://bugzilla.redhat.com/2548334
     - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
     - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548335
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548337
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548338
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548339
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548340
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548342
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548343
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548345
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548346
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548347
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56866
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78659
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78660
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78663
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94439
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94444
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94447
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94448
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97030
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97032
-    - https://errata.almalinux.org/9/ALSA-2026-86196.html
-    - https://errata.rockylinux.org/RLSA-2026:86196
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/81741
     - https://go.dev/cl/847307
     - https://go.dev/issue/81741
@@ -19162,13 +19403,13 @@
     CweIDs:
     - CWE-405
     VendorSeverity:
-      alma: 4
+      alma: 3
       amazon: 3
       azure: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
-      rocky: 4
+      rocky: 3
       ubuntu: 2
     CVSS:
       bitnami:
@@ -19178,26 +19419,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:89744
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-78669
-    - https://bugzilla.redhat.com/2519801
     - https://bugzilla.redhat.com/2548334
     - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
     - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2519801
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-17183
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
-    - https://errata.almalinux.org/9/ALSA-2026-89744.html
-    - https://errata.rockylinux.org/RLSA-2026:89744
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/81742
     - https://go.dev/cl/847186
     - https://go.dev/cl/847308
@@ -19603,13 +19844,15 @@
     Title: When coalescing adjacent text nodes in addText and fosterParent, appen ...
     Description: When coalescing adjacent text nodes in addText and fosterParent, appending to an existing TextNode's Data via string concatenation (n.Data += text) reallocated and copied the accumulated string on every token. Inputs containing many short text runs separated by ignored end tags (such as "a</x>") caused O(n^2) allocations and byte copies. Accumulate coalesced text in per-node byte slices during parsing and materialize Data strings once at the end of parse.
     Severity: UNKNOWN
+    CweIDs:
+    - CWE-407
     References:
     - https://go.dev/cl/849365
     - https://go.dev/issue/82224
     - https://groups.google.com/g/golang-announce/c/sqrs2vTx_Xs
     - https://pkg.go.dev/vuln/GO-2026-6860
     PublishedDate: '2026-10-27T22:18:05.93Z'
-    LastModifiedDate: '2026-10-28T15:24:56.033Z'
+    LastModifiedDate: '2026-11-04T17:17:37.673Z'
   - VulnerabilityID: CVE-2026-97045
     VendorIDs:
     - GO-2026-6866
@@ -19633,13 +19876,15 @@
     Title: In childTextNodesAreLiteral, walking up the tree previously stopped at ...
     Description: In childTextNodesAreLiteral, walking up the tree previously stopped at the nearest foreign ancestor once an HTML integration point was found. However, that integration point may itself be a descendant of an element that was foster-parented into a foreign namespace (such as <mglyph> or <malignmark> fostered under <mtext>), causing a parser to resolve the subtree in a different foreign namespace upon re-parsing the rendered output. Continue walking the full ancestor chain and verify that every transition from a non-empty namespace occurs at an HTML integration point before emitting literal text.
     Severity: UNKNOWN
+    CweIDs:
+    - CWE-79
     References:
     - https://go.dev/cl/855121
     - https://go.dev/issue/82622
     - https://groups.google.com/g/golang-announce/c/sqrs2vTx_Xs
     - https://pkg.go.dev/vuln/GO-2026-6866
     PublishedDate: '2026-10-27T22:19:22.613Z'
-    LastModifiedDate: '2026-10-28T15:24:56.033Z'
+    LastModifiedDate: '2026-11-04T17:17:38.33Z'
   - VulnerabilityID: CVE-2026-56851
     VendorIDs:
     - GO-2026-6629
@@ -19965,14 +20210,26 @@
         V3Score: 6.8
     References:
     - http://www.openwall.com/lists/oss-security/2026/10/20/29
-    - https://access.redhat.com/errata/RHSA-2026:91719
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-111943
+    - https://bugzilla.redhat.com/2548334
+    - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
+    - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://errata.almalinux.org/9/ALSA-2026-91719.html
-    - https://errata.rockylinux.org/RLSA-2026:91719
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/82345
     - https://go.dev/cl/851047
     - https://go.dev/issue/82345
@@ -20090,13 +20347,13 @@
     CweIDs:
     - CWE-405
     VendorSeverity:
-      alma: 4
+      alma: 3
       amazon: 3
       azure: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
-      rocky: 4
+      rocky: 3
       ubuntu: 2
     CVSS:
       bitnami:
@@ -20106,26 +20363,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:89744
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-78669
-    - https://bugzilla.redhat.com/2519801
     - https://bugzilla.redhat.com/2548334
     - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
     - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2519801
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-17183
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
-    - https://errata.almalinux.org/9/ALSA-2026-89744.html
-    - https://errata.rockylinux.org/RLSA-2026:89744
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/81742
     - https://go.dev/cl/847186
     - https://go.dev/cl/847308
@@ -20531,13 +20788,15 @@
     Title: When coalescing adjacent text nodes in addText and fosterParent, appen ...
     Description: When coalescing adjacent text nodes in addText and fosterParent, appending to an existing TextNode's Data via string concatenation (n.Data += text) reallocated and copied the accumulated string on every token. Inputs containing many short text runs separated by ignored end tags (such as "a</x>") caused O(n^2) allocations and byte copies. Accumulate coalesced text in per-node byte slices during parsing and materialize Data strings once at the end of parse.
     Severity: UNKNOWN
+    CweIDs:
+    - CWE-407
     References:
     - https://go.dev/cl/849365
     - https://go.dev/issue/82224
     - https://groups.google.com/g/golang-announce/c/sqrs2vTx_Xs
     - https://pkg.go.dev/vuln/GO-2026-6860
     PublishedDate: '2026-10-27T22:18:05.93Z'
-    LastModifiedDate: '2026-10-28T15:24:56.033Z'
+    LastModifiedDate: '2026-11-04T17:17:37.673Z'
   - VulnerabilityID: CVE-2026-97045
     VendorIDs:
     - GO-2026-6866
@@ -20561,13 +20820,15 @@
     Title: In childTextNodesAreLiteral, walking up the tree previously stopped at ...
     Description: In childTextNodesAreLiteral, walking up the tree previously stopped at the nearest foreign ancestor once an HTML integration point was found. However, that integration point may itself be a descendant of an element that was foster-parented into a foreign namespace (such as <mglyph> or <malignmark> fostered under <mtext>), causing a parser to resolve the subtree in a different foreign namespace upon re-parsing the rendered output. Continue walking the full ancestor chain and verify that every transition from a non-empty namespace occurs at an HTML integration point before emitting literal text.
     Severity: UNKNOWN
+    CweIDs:
+    - CWE-79
     References:
     - https://go.dev/cl/855121
     - https://go.dev/issue/82622
     - https://groups.google.com/g/golang-announce/c/sqrs2vTx_Xs
     - https://pkg.go.dev/vuln/GO-2026-6866
     PublishedDate: '2026-10-27T22:19:22.613Z'
-    LastModifiedDate: '2026-10-28T15:24:56.033Z'
+    LastModifiedDate: '2026-11-04T17:17:38.33Z'
   - VulnerabilityID: CVE-2026-111943
     VendorIDs:
     - GO-2026-6809
@@ -20605,14 +20866,26 @@
         V3Score: 6.8
     References:
     - http://www.openwall.com/lists/oss-security/2026/10/20/29
-    - https://access.redhat.com/errata/RHSA-2026:91719
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-111943
+    - https://bugzilla.redhat.com/2548334
+    - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
+    - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://errata.almalinux.org/9/ALSA-2026-91719.html
-    - https://errata.rockylinux.org/RLSA-2026:91719
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/82345
     - https://go.dev/cl/851047
     - https://go.dev/issue/82345
@@ -20666,19 +20939,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:90462
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-78667
     - https://bugzilla.redhat.com/2548334
+    - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
+    - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2402034
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-11395
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
-    - https://errata.almalinux.org/9/ALSA-2026-90462.html
-    - https://errata.rockylinux.org/RLSA-2026:90462
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/81858
     - https://go.dev/cl/847309
     - https://go.dev/issue/81858
@@ -20718,13 +20998,13 @@
     CweIDs:
     - CWE-405
     VendorSeverity:
-      alma: 4
+      alma: 3
       amazon: 3
       azure: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
-      rocky: 4
+      rocky: 3
       ubuntu: 2
     CVSS:
       bitnami:
@@ -20734,26 +21014,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:89744
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-78669
-    - https://bugzilla.redhat.com/2519801
     - https://bugzilla.redhat.com/2548334
     - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
     - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2519801
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-17183
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
-    - https://errata.almalinux.org/9/ALSA-2026-89744.html
-    - https://errata.rockylinux.org/RLSA-2026:89744
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/81742
     - https://go.dev/cl/847186
     - https://go.dev/cl/847308
@@ -20795,12 +21075,12 @@
     CweIDs:
     - CWE-405
     VendorSeverity:
-      alma: 4
+      alma: 3
       amazon: 3
       bitnami: 3
       oracle-oval: 3
       redhat: 3
-      rocky: 4
+      rocky: 3
     CVSS:
       bitnami:
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
@@ -20809,26 +21089,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:89744
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-97031
-    - https://bugzilla.redhat.com/2519801
     - https://bugzilla.redhat.com/2548334
     - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
     - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2519801
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
+    - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-17183
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
-    - https://errata.almalinux.org/9/ALSA-2026-89744.html
-    - https://errata.rockylinux.org/RLSA-2026:89744
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://go.dev/cl/847312
     - https://go.dev/issue/81855
     - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
@@ -21338,45 +21618,26 @@
         V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
         V3Score: 7.5
     References:
-    - https://access.redhat.com/errata/RHSA-2026:86196
+    - https://access.redhat.com/errata/RHSA-2026:93617
     - https://access.redhat.com/security/cve/CVE-2026-94440
     - https://bugzilla.redhat.com/2548334
     - https://bugzilla.redhat.com/2548336
+    - https://bugzilla.redhat.com/2548341
     - https://bugzilla.redhat.com/2548344
     - https://bugzilla.redhat.com/2556068
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548334
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548335
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548336
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548337
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548338
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548339
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548340
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548341
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548342
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548343
     - https://bugzilla.redhat.com/show_bug.cgi?id=2548344
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548345
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548346
-    - https://bugzilla.redhat.com/show_bug.cgi?id=2548347
     - https://bugzilla.redhat.com/show_bug.cgi?id=2556068
     - https://creativecommons.org/licenses/by/4.0/
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56866
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78659
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78660
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78663
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94439
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94444
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94447
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94448
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97030
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031
-    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97032
-    - https://errata.almalinux.org/9/ALSA-2026-86196.html
-    - https://errata.rockylinux.org/RLSA-2026:86196
+    - https://errata.almalinux.org/9/ALSA-2026-93617.html
+    - https://errata.rockylinux.org/RLSA-2026:93617
     - https://github.com/golang/go/issues/81741
     - https://go.dev/cl/847307
     - https://go.dev/issue/81741
