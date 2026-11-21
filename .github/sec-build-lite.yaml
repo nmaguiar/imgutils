@@ -18,15 +18,15 @@
     FixedVersion: 1.47.0
     Status: fixed
     Layer:
-      Digest: sha256:db09c8b6c74ad65d82eeead7da7401e1677cab8f3f56aca432d3ea52d01d7738
-      DiffID: sha256:e81dede6a57da2bbbc0d98887aa70273310f8e07c5180d6f590971a3c658ff94
+      Digest: sha256:445a8b5e96782e9591f069a25121ea9b38cee02c61be3da7940011c08f081a9b
+      DiffID: sha256:2e3d018edb526ca3d8609dd09ecc908814eac77f8d6dc54d19d51a27f5a93993
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-128085
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Fingerprint: sha256:b1d574cb916f502d2a75c8af15a45b79cf41cddd39ab1480eb9487494150d58d
+    Fingerprint: sha256:c6df3616f8411dc068765c96bc0c61e9bf080ae19b1ea0459aa2cd8c18714615
     Title: 'go.opentelemetry.io/otel/sdk: go.opentelemetry.io/otel/sdk/log: go.opentelemetry.io/otel/trace: OpenTelemetry-Go: Denial of Service via attribute truncation bypass using Unicode replacement characters'
     Description: OpenTelemetry-Go is the Go implementation of OpenTelemetry. From SDK version 1.33.0, SDK log version 0.9.0, and trace version 1.35.0 until version 1.47.0, the AttributeValueLengthLimit and WithAttributeValueLengthLimit truncation paths in sdk/internal/attrnorm, sdk/log/internal/attrnorm, and trace/auto.go do not count valid U+FFFD replacement characters. This is a distinct incomplete-fix defect in the replacement truncation code introduced by the remediation for CVE-2026-81869. Values composed of or dominated by those characters can therefore exceed the configured character and memory bound in span, log-record, and auto-instrumentation trace attributes. Attacker-controlled telemetry attributes can increase retained memory and pipeline pressure, while confidentiality and integrity are not affected. This issue is fixed in version 1.47.0.
     Severity: MEDIUM
@@ -68,15 +68,15 @@
     FixedVersion: 1.47.0
     Status: fixed
     Layer:
-      Digest: sha256:db09c8b6c74ad65d82eeead7da7401e1677cab8f3f56aca432d3ea52d01d7738
-      DiffID: sha256:e81dede6a57da2bbbc0d98887aa70273310f8e07c5180d6f590971a3c658ff94
+      Digest: sha256:445a8b5e96782e9591f069a25121ea9b38cee02c61be3da7940011c08f081a9b
+      DiffID: sha256:2e3d018edb526ca3d8609dd09ecc908814eac77f8d6dc54d19d51a27f5a93993
     SeveritySource: ghsa
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-128085
     DataSource:
       ID: ghsa
       Name: GitHub Security Advisory Go
       URL: https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago
-    Fingerprint: sha256:f1d306d1195066d66a17ac901acd4c3b9750d4dd5fd87919d706bf0ec2658b2e
+    Fingerprint: sha256:a0fc33f4bd2795e81e24cc1a3a758cb178d81635e48298df1646e507531a332f
     Title: 'go.opentelemetry.io/otel/sdk: go.opentelemetry.io/otel/sdk/log: go.opentelemetry.io/otel/trace: OpenTelemetry-Go: Denial of Service via attribute truncation bypass using Unicode replacement characters'
     Description: OpenTelemetry-Go is the Go implementation of OpenTelemetry. From SDK version 1.33.0, SDK log version 0.9.0, and trace version 1.35.0 until version 1.47.0, the AttributeValueLengthLimit and WithAttributeValueLengthLimit truncation paths in sdk/internal/attrnorm, sdk/log/internal/attrnorm, and trace/auto.go do not count valid U+FFFD replacement characters. This is a distinct incomplete-fix defect in the replacement truncation code introduced by the remediation for CVE-2026-81869. Values composed of or dominated by those characters can therefore exceed the configured character and memory bound in span, log-record, and auto-instrumentation trace attributes. Attacker-controlled telemetry attributes can increase retained memory and pipeline pressure, while confidentiality and integrity are not affected. This issue is fixed in version 1.47.0.
     Severity: MEDIUM
@@ -118,14 +118,14 @@
     FixedVersion: 0.40.0
     Status: fixed
     Layer:
-      Digest: sha256:db09c8b6c74ad65d82eeead7da7401e1677cab8f3f56aca432d3ea52d01d7738
-      DiffID: sha256:e81dede6a57da2bbbc0d98887aa70273310f8e07c5180d6f590971a3c658ff94
+      Digest: sha256:445a8b5e96782e9591f069a25121ea9b38cee02c61be3da7940011c08f081a9b
+      DiffID: sha256:2e3d018edb526ca3d8609dd09ecc908814eac77f8d6dc54d19d51a27f5a93993
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-56864
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:cb930d1768bc46dffb39857c286a2934e99824024c54cc1a880d24dc37ae343f
+    Fingerprint: sha256:52cdcff8afdeb2dbd907e2eaab9d22875d47e282b30b0d6a699eef2313475305
     Title: 'golang.org/x/mod/sumdb: golang.org/x/mod/sumdb: Integrity bypass via malicious GOSUMDB'
     Description: 'A malicious GOSUMDB was capable of serving arbitrary module content not contained within the transparency log. This attack allows for a coordinating GOPROXY and GOSUMDB to serve a client malicious module content that cannot be detected by evaluating the transparency log. In order to determine if you have been affected:   rm -r go.sum go.work.sum vendor/ && go mod tidy'
     Severity: HIGH
@@ -166,14 +166,14 @@
     FixedVersion: 0.40.0
     Status: fixed
     Layer:
-      Digest: sha256:db09c8b6c74ad65d82eeead7da7401e1677cab8f3f56aca432d3ea52d01d7738
-      DiffID: sha256:e81dede6a57da2bbbc0d98887aa70273310f8e07c5180d6f590971a3c658ff94
+      Digest: sha256:445a8b5e96782e9591f069a25121ea9b38cee02c61be3da7940011c08f081a9b
+      DiffID: sha256:2e3d018edb526ca3d8609dd09ecc908814eac77f8d6dc54d19d51a27f5a93993
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-56865
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:5f90dc348ba9c38dfd497d3a94d767fd498b669ef36a484f9f93495a8d8599ff
+    Fingerprint: sha256:c7fdfa35c182448fe331d4a7cea007a4cbe2f78956118557768c78236b3d5f05
     Title: 'golang.org/x/mod/sumdb/tlog: golang.org/x/mod/sumdb/tlog: Supply chain compromise via transparency log tile verification bypass'
     Description: 'A malicious GOPROXY was previously capable of forging up to two sumdb tiles that allow for a requested module to bypass the GOSUMDB check and persist attacker-controlled module content to a local Go module cache. This attack allows for a malicious GOPROXY to serve malicious module content that cannot be detected by evaluating the transparency log. All tiles are now correctly verified against their parents. In order to determine if you have been affected:   rm -r go.sum go.work.sum vendor/ && go mod tidy'
     Severity: HIGH
@@ -218,14 +218,14 @@
     FixedVersion: 0.62.0
     Status: fixed
     Layer:
-      Digest: sha256:db09c8b6c74ad65d82eeead7da7401e1677cab8f3f56aca432d3ea52d01d7738
-      DiffID: sha256:e81dede6a57da2bbbc0d98887aa70273310f8e07c5180d6f590971a3c658ff94
+      Digest: sha256:445a8b5e96782e9591f069a25121ea9b38cee02c61be3da7940011c08f081a9b
+      DiffID: sha256:2e3d018edb526ca3d8609dd09ecc908814eac77f8d6dc54d19d51a27f5a93993
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-78661
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:87ed8db3d34c5f206643e18f3ff507dc9bc53f0f8a64276b43756b99475e6726
+    Fingerprint: sha256:3f2166c7b7a44f6a78d06c3ad8718ecdd9130a02845570e0d703f513504be0bb
     Title: 'golang.org/x/net/html: golang.org/x/net/html: Denial of Service via crafted HTML input'
     Description: When coalescing adjacent text nodes in addText and fosterParent, appending to an existing TextNode's Data via string concatenation (n.Data += text) reallocated and copied the accumulated string on every token. Inputs containing many short text runs separated by ignored end tags (such as "a</x>") caused O(n^2) allocations and byte copies. Accumulate coalesced text in per-node byte slices during parsing and materialize Data strings once at the end of parse.
     Severity: HIGH
@@ -262,14 +262,14 @@
     FixedVersion: 0.60.0
     Status: fixed
     Layer:
-      Digest: sha256:db09c8b6c74ad65d82eeead7da7401e1677cab8f3f56aca432d3ea52d01d7738
-      DiffID: sha256:e81dede6a57da2bbbc0d98887aa70273310f8e07c5180d6f590971a3c658ff94
+      Digest: sha256:445a8b5e96782e9591f069a25121ea9b38cee02c61be3da7940011c08f081a9b
+      DiffID: sha256:2e3d018edb526ca3d8609dd09ecc908814eac77f8d6dc54d19d51a27f5a93993
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-78669
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:22419bc42ef36e8b93c40290d3e837a0d1ff5910318e2ee5f6537e9a20099da2
+    Fingerprint: sha256:5414c9f88151a467dbbe09c703d62b69d03cf41d7490969098afe0434a6aa37a
     Title: 'net/http: net/http/internal/http2: golang.org/x/net/http2: net/http: Denial of Service via excessive HTTP/2 SETTINGS frames'
     Description: A malicious HTTP/2 peer can cause excessive CPU consumption in the client or server by opening a large number of streams and then sending many small SETTINGS frames containing SETTINGS_INITIAL_WINDOW_SIZE values.
     Severity: HIGH
@@ -346,14 +346,14 @@
     FixedVersion: 0.60.0
     Status: fixed
     Layer:
-      Digest: sha256:db09c8b6c74ad65d82eeead7da7401e1677cab8f3f56aca432d3ea52d01d7738
-      DiffID: sha256:e81dede6a57da2bbbc0d98887aa70273310f8e07c5180d6f590971a3c658ff94
+      Digest: sha256:445a8b5e96782e9591f069a25121ea9b38cee02c61be3da7940011c08f081a9b
+      DiffID: sha256:2e3d018edb526ca3d8609dd09ecc908814eac77f8d6dc54d19d51a27f5a93993
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-78659
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:da42038bb02b95a079d734a436c58b2aa4e7de3a412b6e060340f10c71f48ac4
+    Fingerprint: sha256:6ea2b7b588a2bc22b8b549f697e0dddb0228f032d49d25e8decd4d6d2f549255
     Title: 'net/http: golang.org/x/net/http2: golang: net/http: Denial of Service via HTTP/2 trailer header memory exhaustion'
     Description: When "Trailer" headers are sent by a client, the HTTP server internally uses the header values to populate the Request.Trailer map passed to the server handler. Because Request.Trailer is a map, each entry incurs memory overhead. For HTTP/2 servers, a malicious client can exploit this by sending a "Trailer" header that declares a large number of fields, causing the server to allocate a disproportionate amount of memory while bypassing Server.MaxHeaderValueCount and Server.MaxHeaderBytes limits. This exploit is not applicable for HTTP/1 servers, which do not support multiplexing a large number of requests over one TCP connection, and whose Server.MaxHeaderBytes are calculated differently.
     Severity: MEDIUM
@@ -439,14 +439,14 @@
     FixedVersion: 0.60.0
     Status: fixed
     Layer:
-      Digest: sha256:db09c8b6c74ad65d82eeead7da7401e1677cab8f3f56aca432d3ea52d01d7738
-      DiffID: sha256:e81dede6a57da2bbbc0d98887aa70273310f8e07c5180d6f590971a3c658ff94
+      Digest: sha256:445a8b5e96782e9591f069a25121ea9b38cee02c61be3da7940011c08f081a9b
+      DiffID: sha256:2e3d018edb526ca3d8609dd09ecc908814eac77f8d6dc54d19d51a27f5a93993
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-78660
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:3645829ecef285ef8347617c0f2f9411471478d982acf2e49fa64d9e1da69fd5
+    Fingerprint: sha256:2536f7578f187a213773d28945add9bd36c0db5b514d334b80da02baf6c65744
     Title: 'net/http: golang: golang.org/x/net/http2: net/http: HTTP response smuggling via malformed HTTP/2 framing headers'
     Description: Historically, we have been rather lax about malformed framing-related headers in our HTTP/2 implementation, as they cannot interfere with HTTP/2 framing. However, this makes it possible for our HTTP/2 implementation to forward responses containing such headers to an HTTP/1 client when acting as a reverse proxy. If the HTTP/1 client also does not behave strictly enough, this can result in response smuggling.
     Severity: MEDIUM
@@ -531,14 +531,14 @@
     FixedVersion: 0.60.0
     Status: fixed
     Layer:
-      Digest: sha256:db09c8b6c74ad65d82eeead7da7401e1677cab8f3f56aca432d3ea52d01d7738
-      DiffID: sha256:e81dede6a57da2bbbc0d98887aa70273310f8e07c5180d6f590971a3c658ff94
+      Digest: sha256:445a8b5e96782e9591f069a25121ea9b38cee02c61be3da7940011c08f081a9b
+      DiffID: sha256:2e3d018edb526ca3d8609dd09ecc908814eac77f8d6dc54d19d51a27f5a93993
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-78663
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:65c069b62ea6697c66b455d549a2335d9c61f853cc771fd99192bf7dc59778e5
+    Fingerprint: sha256:fe1f76ccc3e20ab08bbd4a131b6b34e4fbded055e56721be76eed191f8771354
     Title: 'net/http: net/http/internal/http2: golang: golang.org/x/net/http2: golang: flow control limit bypass via double refund in HTTP/2 server'
     Description: 'The HTTP/2 server can refund connection-level flow control twice for the same data: Once when a client resets a stream (refunding data for any sent-but-unread portion of the stream), and again when a request handler reads the buffered data. A malicious client can exploit this to bypass the configured connection-level flow control limit (MaxReceiveBufferPerConnection). Total buffered data is still limited by the concurrent stream limit and stream-level flow control.'
     Severity: MEDIUM
@@ -546,7 +546,7 @@
     - CWE-675
     VendorSeverity:
       alma: 3
-      amazon: 3
+      amazon: 2
       azure: 3
       bitnami: 4
       redhat: 2
@@ -624,14 +624,14 @@
     FixedVersion: 0.60.0
     Status: fixed
     Layer:
-      Digest: sha256:db09c8b6c74ad65d82eeead7da7401e1677cab8f3f56aca432d3ea52d01d7738
-      DiffID: sha256:e81dede6a57da2bbbc0d98887aa70273310f8e07c5180d6f590971a3c658ff94
+      Digest: sha256:445a8b5e96782e9591f069a25121ea9b38cee02c61be3da7940011c08f081a9b
+      DiffID: sha256:2e3d018edb526ca3d8609dd09ecc908814eac77f8d6dc54d19d51a27f5a93993
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-97032
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:8bf664700cfbfeb1be8adf301789ffa2bf1428bb017a305b262a91732002ebf2
+    Fingerprint: sha256:092f3815a620ff1901d2e12d12e4ccfafa97614db2d4abc5c5da9304f33be598
     Title: 'net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via concurrent HPACK encoder modification'
     Description: 'HTTP/2 servers could end up crashing due to inadvertently modifying its HPACK encoder concurrently. This happens because the server modifies the HPACK encoder from two goroutines without synchronization: one uses the encoder to encode a HEADERS frame as part of a response sent to a client and the other modifies the encoder''s table size when handling a SETTINGS frame containing SETTINGS_HEADER_TABLE_SIZE that a client sends. A malicious client can repeatedly send a request while changing the header table size to crash the server.'
     Severity: MEDIUM
@@ -716,14 +716,14 @@
     FixedVersion: 0.62.0
     Status: fixed
     Layer:
-      Digest: sha256:db09c8b6c74ad65d82eeead7da7401e1677cab8f3f56aca432d3ea52d01d7738
-      DiffID: sha256:e81dede6a57da2bbbc0d98887aa70273310f8e07c5180d6f590971a3c658ff94
+      Digest: sha256:445a8b5e96782e9591f069a25121ea9b38cee02c61be3da7940011c08f081a9b
+      DiffID: sha256:2e3d018edb526ca3d8609dd09ecc908814eac77f8d6dc54d19d51a27f5a93993
     PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-97045
     DataSource:
       ID: govulndb
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:3c68220a10ce495e98ed759aebbacfba16360f1f72d4e75c67de54fdba74fcd5
+    Fingerprint: sha256:6e1cc0b9fa01112cdf6f72b87757761a34b165e0b80e466c81576924c92b34a5
     Title: 'golang.org/x/net/html: golang.org/x/net/html: Cross-Site Scripting via improper namespace handling during HTML rendering'
     Description: In childTextNodesAreLiteral, walking up the tree previously stopped at the nearest foreign ancestor once an HTML integration point was found. However, that integration point may itself be a descendant of an element that was foster-parented into a foreign namespace (such as <mglyph> or <malignmark> fostered under <mtext>), causing a parser to resolve the subtree in a different foreign namespace upon re-parsing the rendered output. Continue walking the full ancestor chain and verify that every transition from a non-empty namespace occurs at an HTML integration point before emitting literal text.
     Severity: MEDIUM
@@ -748,38 +748,3 @@
     - https://www.cve.org/CVERecord?id=CVE-2026-97045
     PublishedDate: '2026-10-27T22:19:22.613Z'
     LastModifiedDate: '2026-11-04T17:17:38.33Z'
-  - VulnerabilityID: CVE-2026-97054
-    VendorIDs:
-    - GO-2026-6859
-    PkgID: stdlib@v1.27.3
-    PkgName: stdlib
-    PkgIdentifier:
-      PURL: pkg:golang/stdlib@v1.27.3
-      UID: cb4176a0844b0f06
-    InstalledVersion: v1.27.3
-    FixedVersion: 1.26.11, 1.27.4
-    Status: fixed
-    Layer:
-      Digest: sha256:db09c8b6c74ad65d82eeead7da7401e1677cab8f3f56aca432d3ea52d01d7738
-      DiffID: sha256:e81dede6a57da2bbbc0d98887aa70273310f8e07c5180d6f590971a3c658ff94
-    PrimaryURL: https://avd.aquasec.com/nvd/cve-2026-97054
-    DataSource:
-      ID: govulndb
-      Name: The Go Vulnerability Database
-      URL: https://pkg.go.dev/vuln/
-    Fingerprint: sha256:a6d6954b920731d3872634a48d118edc19d6d33d78ff4119fec6e5f91dd11379
-    Title: For HTTP/1 servers, when MaxBytesReader's limit is exceeded, "Connecti ...
-    Description: 'For HTTP/1 servers, when MaxBytesReader''s limit is exceeded, "Connection: close" header is automatically set without synchronization, which might race with another header being set explicitly in the server handler. As a result, an HTTP/1 server that utilizes MaxBytesReader or MaxBytesHandler can crash due to runtime panic if its handler reads the request body concurrently with writing the response header.'
-    Severity: HIGH
-    CweIDs:
-    - CWE-362
-    - CWE-820
-    VendorSeverity:
-      amazon: 3
-    References:
-    - https://go.dev/cl/862185
-    - https://go.dev/issue/82563
-    - https://groups.google.com/g/golang-announce/c/iY8TY0wWgbM
-    - https://pkg.go.dev/vuln/GO-2026-6859
-    PublishedDate: '2026-11-11T05:19:58.943Z'
-    LastModifiedDate: '2026-11-16T16:17:56.29Z'
