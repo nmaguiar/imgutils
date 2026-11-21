@@ -697,7 +697,7 @@
                         │      │                  CWE-675
                         │      │                  
                         │      ├ VendorSeverity   ╭ alma   : 3 
-                        │      │                  ├ amazon : 3 
+                        │      │                  ├ amazon : 2 
                         │      │                  ├ azure  : 3 
                         │      │                  ├ bitnami: 4 
                         │      │                  ├ redhat : 2 
@@ -997,7 +997,7 @@
                         │      │                  https://groups.google.com/g/golang-announce/c/66pojueaQek     
                         │      │                  https://groups.google.com/g/golang-nuts/c/K22sG2AYnKU         
                         │      │                  https://linux.oracle.com/cve/CVE-2026-111943.html             
-                        │      │                  https://linux.oracle.com/errata/ELSA-2026-97877.html          
+                        │      │                  https://linux.oracle.com/errata/ELSA-2026-98539.html          
                         │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-111943              
                         │      │                  https://pkg.go.dev/vuln/GO-2026-6809                          
                         │      │                  https://www.cve.org/CVERecord?id=CVE-2026-111943              
@@ -1035,13 +1035,13 @@
                                │                    server that utilizes MaxBytesReader or MaxBytesHandler can
                                │                   crash due to runtime panic if its handler reads the request
                                │                   body concurrently with writing the response header. 
-                               ├ Severity        : HIGH 
+                               ├ Severity        : MEDIUM 
                                ├ CweIDs                  
                                │                  ───────
                                │                  CWE-362
                                │                  CWE-820
                                │                  
-                               ├ VendorSeverity   ─ amazon: 3 
+                               ├ VendorSeverity   ─ amazon: 2 
                                ├ References                                                                
                                │                  ─────────────────────────────────────────────────────────
                                │                  https://go.dev/cl/862185                                 
