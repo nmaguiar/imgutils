@@ -246,7 +246,7 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:2e7e9a907e2b587c385c8133ec448dc11f8a084ff14dc506a1a0603d18807fe9
-    Title: For HTTP/1 servers, when MaxBytesReader's limit is exceeded, "Connecti ...
+    Title: 'net/http: golang: net/http: Denial of Service via race condition when handling oversized HTTP/1 requests'
     Description: 'For HTTP/1 servers, when MaxBytesReader''s limit is exceeded, "Connection: close" header is automatically set without synchronization, which might race with another header being set explicitly in the server handler. As a result, an HTTP/1 server that utilizes MaxBytesReader or MaxBytesHandler can crash due to runtime panic if its handler reads the request body concurrently with writing the response header.'
     Severity: MEDIUM
     CweIDs:
@@ -254,11 +254,20 @@
     - CWE-820
     VendorSeverity:
       amazon: 2
+      photon: 2
+      redhat: 2
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 5.9
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-97054
     - https://go.dev/cl/862185
     - https://go.dev/issue/82563
     - https://groups.google.com/g/golang-announce/c/iY8TY0wWgbM
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-97054
     - https://pkg.go.dev/vuln/GO-2026-6859
+    - https://www.cve.org/CVERecord?id=CVE-2026-97054
     PublishedDate: '2026-11-11T05:19:58.943Z'
     LastModifiedDate: '2026-11-16T16:17:56.29Z'
 - Target: usr/bin/crictl
@@ -586,7 +595,7 @@
     - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
     - https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
     - https://linux.oracle.com/cve/CVE-2026-78669.html
-    - https://linux.oracle.com/errata/ELSA-2026-95519.html
+    - https://linux.oracle.com/errata/ELSA-2026-98454.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-78669
     - https://pkg.go.dev/vuln/GO-2026-6611
     - https://ubuntu.com/security/notices/USN-8935-1
@@ -717,6 +726,7 @@
       amazon: 3
       azure: 3
       bitnami: 3
+      photon: 3
       redhat: 2
       rocky: 3
       ubuntu: 2
@@ -1243,7 +1253,7 @@
     - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
     - https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
     - https://linux.oracle.com/cve/CVE-2026-78669.html
-    - https://linux.oracle.com/errata/ELSA-2026-95519.html
+    - https://linux.oracle.com/errata/ELSA-2026-98454.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-78669
     - https://pkg.go.dev/vuln/GO-2026-6611
     - https://ubuntu.com/security/notices/USN-8935-1
@@ -1374,6 +1384,7 @@
       amazon: 3
       azure: 3
       bitnami: 3
+      photon: 3
       redhat: 2
       rocky: 3
       ubuntu: 2
@@ -1685,7 +1696,7 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:88fd2080cce15f438526427e1efd270d2822db36024290768a38c3dbb6a6dcb4
-    Title: For HTTP/1 servers, when MaxBytesReader's limit is exceeded, "Connecti ...
+    Title: 'net/http: golang: net/http: Denial of Service via race condition when handling oversized HTTP/1 requests'
     Description: 'For HTTP/1 servers, when MaxBytesReader''s limit is exceeded, "Connection: close" header is automatically set without synchronization, which might race with another header being set explicitly in the server handler. As a result, an HTTP/1 server that utilizes MaxBytesReader or MaxBytesHandler can crash due to runtime panic if its handler reads the request body concurrently with writing the response header.'
     Severity: MEDIUM
     CweIDs:
@@ -1693,11 +1704,20 @@
     - CWE-820
     VendorSeverity:
       amazon: 2
+      photon: 2
+      redhat: 2
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 5.9
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-97054
     - https://go.dev/cl/862185
     - https://go.dev/issue/82563
     - https://groups.google.com/g/golang-announce/c/iY8TY0wWgbM
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-97054
     - https://pkg.go.dev/vuln/GO-2026-6859
+    - https://www.cve.org/CVERecord?id=CVE-2026-97054
     PublishedDate: '2026-11-11T05:19:58.943Z'
     LastModifiedDate: '2026-11-16T16:17:56.29Z'
 - Target: usr/bin/dive
@@ -2639,7 +2659,7 @@
     - https://groups.google.com/g/golang-announce/c/94pEornpRlI
     - https://groups.google.com/g/golang-announce/c/iI-mYSI0lu8
     - https://linux.oracle.com/cve/CVE-2026-39821.html
-    - https://linux.oracle.com/errata/ELSA-2026-66432-0.html
+    - https://linux.oracle.com/errata/ELSA-2026-97386.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-39821
     - https://pkg.go.dev/vuln/GO-2026-5026
     - https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-39821.json
@@ -2818,7 +2838,7 @@
     - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
     - https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
     - https://linux.oracle.com/cve/CVE-2026-78669.html
-    - https://linux.oracle.com/errata/ELSA-2026-95519.html
+    - https://linux.oracle.com/errata/ELSA-2026-98454.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-78669
     - https://pkg.go.dev/vuln/GO-2026-6611
     - https://ubuntu.com/security/notices/USN-8935-1
@@ -3260,6 +3280,7 @@
       amazon: 3
       azure: 3
       bitnami: 3
+      photon: 3
       redhat: 2
       rocky: 3
       ubuntu: 2
@@ -3742,6 +3763,7 @@
       amazon: 3
       bitnami: 2
       oracle-oval: 3
+      photon: 2
       redhat: 3
       rocky: 3
     CVSS:
@@ -4081,7 +4103,7 @@
     - https://go.dev/issue/77578
     - https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk
     - https://linux.oracle.com/cve/CVE-2026-25679.html
-    - https://linux.oracle.com/errata/ELSA-2026-9044.html
+    - https://linux.oracle.com/errata/ELSA-2026-97387.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-25679
     - https://pkg.go.dev/vuln/GO-2026-4601
     - https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-25679.json
@@ -4586,7 +4608,7 @@
     - https://go.dev/issue/78281
     - https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU
     - https://linux.oracle.com/cve/CVE-2026-32281.html
-    - https://linux.oracle.com/errata/ELSA-2026-67148-0.html
+    - https://linux.oracle.com/errata/ELSA-2026-97284.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-32281
     - https://pkg.go.dev/vuln/GO-2026-4946
     - https://www.cve.org/CVERecord?id=CVE-2026-32281
@@ -5660,7 +5682,7 @@
     - https://groups.google.com/g/golang-announce/c/94pEornpRlI
     - https://groups.google.com/g/golang-announce/c/iI-mYSI0lu8
     - https://linux.oracle.com/cve/CVE-2026-39821.html
-    - https://linux.oracle.com/errata/ELSA-2026-66432-0.html
+    - https://linux.oracle.com/errata/ELSA-2026-97386.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-39821
     - https://pkg.go.dev/vuln/GO-2026-5026
     - https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-39821.json
@@ -5980,7 +6002,7 @@
     - https://go.dev/issue/78987
     - https://groups.google.com/g/golang-announce/c/qcCIEXso47M
     - https://linux.oracle.com/cve/CVE-2026-42499.html
-    - https://linux.oracle.com/errata/ELSA-2026-70201.html
+    - https://linux.oracle.com/errata/ELSA-2026-98447.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-42499
     - https://pkg.go.dev/vuln/GO-2026-4977
     - https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-42499.json
@@ -6230,7 +6252,7 @@
     - https://go.dev/issue/80435
     - https://groups.google.com/g/golang-announce/c/94pEornpRlI
     - https://linux.oracle.com/cve/CVE-2026-56858.html
-    - https://linux.oracle.com/errata/ELSA-2026-70641.html
+    - https://linux.oracle.com/errata/ELSA-2026-98454.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-56858
     - https://pkg.go.dev/vuln/GO-2026-6091
     - https://www.cve.org/CVERecord?id=CVE-2026-56858
@@ -6306,7 +6328,7 @@
     - https://go.dev/issue/80481
     - https://groups.google.com/g/golang-announce/c/94pEornpRlI
     - https://linux.oracle.com/cve/CVE-2026-56859.html
-    - https://linux.oracle.com/errata/ELSA-2026-70201.html
+    - https://linux.oracle.com/errata/ELSA-2026-98454.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-56859
     - https://pkg.go.dev/vuln/GO-2026-6088
     - https://ubuntu.com/security/notices/USN-8935-1
@@ -6381,7 +6403,7 @@
     - https://go.dev/issue/80494
     - https://groups.google.com/g/golang-announce/c/94pEornpRlI
     - https://linux.oracle.com/cve/CVE-2026-56860.html
-    - https://linux.oracle.com/errata/ELSA-2026-71619.html
+    - https://linux.oracle.com/errata/ELSA-2026-98454.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-56860
     - https://pkg.go.dev/vuln/GO-2026-6218
     - https://www.cve.org/CVERecord?id=CVE-2026-56860
@@ -6623,7 +6645,7 @@
     - https://groups.google.com/g/golang-announce/c/U2fTuyDJznI
     - https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs
     - https://linux.oracle.com/cve/CVE-2026-78669.html
-    - https://linux.oracle.com/errata/ELSA-2026-95519.html
+    - https://linux.oracle.com/errata/ELSA-2026-98454.html
     - https://nvd.nist.gov/vuln/detail/CVE-2026-78669
     - https://pkg.go.dev/vuln/GO-2026-6611
     - https://ubuntu.com/security/notices/USN-8935-1
@@ -7335,6 +7357,7 @@
       alma: 3
       amazon: 3
       bitnami: 3
+      photon: 3
       redhat: 2
       rocky: 3
       ubuntu: 2
@@ -7519,6 +7542,7 @@
       amazon: 3
       azure: 3
       bitnami: 3
+      photon: 3
       redhat: 2
       rocky: 3
       ubuntu: 2
@@ -7703,6 +7727,7 @@
       alma: 3
       amazon: 2
       bitnami: 3
+      photon: 3
       redhat: 2
       rocky: 3
       ubuntu: 2
@@ -7959,6 +7984,7 @@
       alma: 3
       amazon: 2
       bitnami: 2
+      photon: 2
       redhat: 2
       rocky: 3
     CVSS:
@@ -8128,7 +8154,7 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:91874c075f202d2aa2a51c8627416469bf6a00ee16f99a08b4120bf147cfe6a0
-    Title: For HTTP/1 servers, when MaxBytesReader's limit is exceeded, "Connecti ...
+    Title: 'net/http: golang: net/http: Denial of Service via race condition when handling oversized HTTP/1 requests'
     Description: 'For HTTP/1 servers, when MaxBytesReader''s limit is exceeded, "Connection: close" header is automatically set without synchronization, which might race with another header being set explicitly in the server handler. As a result, an HTTP/1 server that utilizes MaxBytesReader or MaxBytesHandler can crash due to runtime panic if its handler reads the request body concurrently with writing the response header.'
     Severity: MEDIUM
     CweIDs:
@@ -8136,11 +8162,20 @@
     - CWE-820
     VendorSeverity:
       amazon: 2
+      photon: 2
+      redhat: 2
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 5.9
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-97054
     - https://go.dev/cl/862185
     - https://go.dev/issue/82563
     - https://groups.google.com/g/golang-announce/c/iY8TY0wWgbM
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-97054
     - https://pkg.go.dev/vuln/GO-2026-6859
+    - https://www.cve.org/CVERecord?id=CVE-2026-97054
     PublishedDate: '2026-11-11T05:19:58.943Z'
     LastModifiedDate: '2026-11-16T16:17:56.29Z'
   - VulnerabilityID: CVE-2026-27139
@@ -8218,6 +8253,7 @@
     - CWE-1386
     VendorSeverity:
       bitnami: 4
+      photon: 4
       redhat: 1
       ubuntu: 2
     CVSS:
@@ -8415,7 +8451,7 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:e7970eda887c19f2d8b0886bf2a09ad297e6f1bc8a52701d4da3ee7fc1b24442
-    Title: For HTTP/1 servers, when MaxBytesReader's limit is exceeded, "Connecti ...
+    Title: 'net/http: golang: net/http: Denial of Service via race condition when handling oversized HTTP/1 requests'
     Description: 'For HTTP/1 servers, when MaxBytesReader''s limit is exceeded, "Connection: close" header is automatically set without synchronization, which might race with another header being set explicitly in the server handler. As a result, an HTTP/1 server that utilizes MaxBytesReader or MaxBytesHandler can crash due to runtime panic if its handler reads the request body concurrently with writing the response header.'
     Severity: MEDIUM
     CweIDs:
@@ -8423,11 +8459,20 @@
     - CWE-820
     VendorSeverity:
       amazon: 2
+      photon: 2
+      redhat: 2
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 5.9
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-97054
     - https://go.dev/cl/862185
     - https://go.dev/issue/82563
     - https://groups.google.com/g/golang-announce/c/iY8TY0wWgbM
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-97054
     - https://pkg.go.dev/vuln/GO-2026-6859
+    - https://www.cve.org/CVERecord?id=CVE-2026-97054
     PublishedDate: '2026-11-11T05:19:58.943Z'
     LastModifiedDate: '2026-11-16T16:17:56.29Z'
 - Target: usr/bin/oras
@@ -10207,7 +10252,7 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:ad12a7983ee0cc40714760c688e7a227899cd0ef6d58e6f7a7d0b14966959b1e
-    Title: For HTTP/1 servers, when MaxBytesReader's limit is exceeded, "Connecti ...
+    Title: 'net/http: golang: net/http: Denial of Service via race condition when handling oversized HTTP/1 requests'
     Description: 'For HTTP/1 servers, when MaxBytesReader''s limit is exceeded, "Connection: close" header is automatically set without synchronization, which might race with another header being set explicitly in the server handler. As a result, an HTTP/1 server that utilizes MaxBytesReader or MaxBytesHandler can crash due to runtime panic if its handler reads the request body concurrently with writing the response header.'
     Severity: MEDIUM
     CweIDs:
@@ -10215,11 +10260,20 @@
     - CWE-820
     VendorSeverity:
       amazon: 2
+      photon: 2
+      redhat: 2
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 5.9
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-97054
     - https://go.dev/cl/862185
     - https://go.dev/issue/82563
     - https://groups.google.com/g/golang-announce/c/iY8TY0wWgbM
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-97054
     - https://pkg.go.dev/vuln/GO-2026-6859
+    - https://www.cve.org/CVERecord?id=CVE-2026-97054
     PublishedDate: '2026-11-11T05:19:58.943Z'
     LastModifiedDate: '2026-11-16T16:17:56.29Z'
 - Target: usr/bin/skopeo
@@ -10543,7 +10597,7 @@
       Name: The Go Vulnerability Database
       URL: https://pkg.go.dev/vuln/
     Fingerprint: sha256:79d8a02e96375438e6c86385f8ceb2733bb012b42996cf8da274772df421ee06
-    Title: For HTTP/1 servers, when MaxBytesReader's limit is exceeded, "Connecti ...
+    Title: 'net/http: golang: net/http: Denial of Service via race condition when handling oversized HTTP/1 requests'
     Description: 'For HTTP/1 servers, when MaxBytesReader''s limit is exceeded, "Connection: close" header is automatically set without synchronization, which might race with another header being set explicitly in the server handler. As a result, an HTTP/1 server that utilizes MaxBytesReader or MaxBytesHandler can crash due to runtime panic if its handler reads the request body concurrently with writing the response header.'
     Severity: MEDIUM
     CweIDs:
@@ -10551,10 +10605,19 @@
     - CWE-820
     VendorSeverity:
       amazon: 2
+      photon: 2
+      redhat: 2
+    CVSS:
+      redhat:
+        V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
+        V3Score: 5.9
     References:
+    - https://access.redhat.com/security/cve/CVE-2026-97054
     - https://go.dev/cl/862185
     - https://go.dev/issue/82563
     - https://groups.google.com/g/golang-announce/c/iY8TY0wWgbM
+    - https://nvd.nist.gov/vuln/detail/CVE-2026-97054
     - https://pkg.go.dev/vuln/GO-2026-6859
+    - https://www.cve.org/CVERecord?id=CVE-2026-97054
     PublishedDate: '2026-11-11T05:19:58.943Z'
     LastModifiedDate: '2026-11-16T16:17:56.29Z'
