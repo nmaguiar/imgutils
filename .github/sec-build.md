@@ -272,7 +272,8 @@
 │           │                  ├ Name: The Go Vulnerability Database 
 │           │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │           ├ Fingerprint     : sha256:2e7e9a907e2b587c385c8133ec448dc11f8a084ff14dc506a1a0603d18807fe9 
-│           ├ Title           : For HTTP/1 servers, when MaxBytesReader's limit is exceeded, "Connecti ... 
+│           ├ Title           : net/http: golang: net/http: Denial of Service via race condition when handling
+│           │                   oversized HTTP/1 requests 
 │           ├ Description     : For HTTP/1 servers, when MaxBytesReader's limit is exceeded, "Connection:
 │           │                   close" header is automatically set without synchronization, which might race
 │           │                   with another header being set explicitly in the server handler. As a result, an
@@ -285,13 +286,20 @@
 │           │                  CWE-362
 │           │                  CWE-820
 │           │                  
-│           ├ VendorSeverity   ─ amazon: 2 
+│           ├ VendorSeverity   ╭ amazon: 2 
+│           │                  ├ photon: 2 
+│           │                  ╰ redhat: 2 
+│           ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H 
+│           │                           ╰ V3Score : 5.9 
 │           ├ References                                                                
 │           │                  ─────────────────────────────────────────────────────────
+│           │                  https://access.redhat.com/security/cve/CVE-2026-97054    
 │           │                  https://go.dev/cl/862185                                 
 │           │                  https://go.dev/issue/82563                               
 │           │                  https://groups.google.com/g/golang-announce/c/iY8TY0wWgbM
+│           │                  https://nvd.nist.gov/vuln/detail/CVE-2026-97054          
 │           │                  https://pkg.go.dev/vuln/GO-2026-6859                     
+│           │                  https://www.cve.org/CVERecord?id=CVE-2026-97054          
 │           │                  
 │           ├ PublishedDate   : 2026-11-11T05:19:58.943Z 
 │           ╰ LastModifiedDate: 2026-11-16T16:17:56.29Z 
@@ -365,9 +373,9 @@
 │     │      ├ PublishedDate   : 2026-11-13T19:19:31.193Z 
 │     │      ╰ LastModifiedDate: 2026-11-18T05:19:02.727Z 
 │     ├ [1]  ╭ VulnerabilityID : CVE-2026-128085 
-│     │      ├ VendorIDs                           
-│     │      │                  ───────────────────
-│     │      │                  GHSA-q7gw-24fr-5p69
+│     │      ├ VendorIDs                                                             
+│     │      │                  ─────────────────────────────────────────────────────
+│     │      │                  https://access.redhat.com/security/cve/CVE-2026-97054
 │     │      │                  
 │     │      ├ PkgID           : go.opentelemetry.io/otel/trace@v1.46.0 
 │     │      ├ PkgName         : go.opentelemetry.io/otel/trace 
@@ -671,7 +679,7 @@
 │     │      │                  https://groups.google.com/g/golang-announce/c/U2fTuyDJznI     
 │     │      │                  https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs     
 │     │      │                  https://linux.oracle.com/cve/CVE-2026-78669.html              
-│     │      │                  https://linux.oracle.com/errata/ELSA-2026-95519.html          
+│     │      │                  https://linux.oracle.com/errata/ELSA-2026-98454.html          
 │     │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-78669               
 │     │      │                  https://pkg.go.dev/vuln/GO-2026-6611                          
 │     │      │                  https://ubuntu.com/security/notices/USN-8935-1                
@@ -762,7 +770,7 @@
 │     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440 
 │     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94444 
 │     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94447 
-│     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94448 
+│     │      │                  CWE-281                                                       
 │     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97030 
 │     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031 
 │     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97032 
@@ -818,6 +826,7 @@
 │     │      │                  ├ amazon : 3 
 │     │      │                  ├ azure  : 3 
 │     │      │                  ├ bitnami: 3 
+│     │      │                  ├ photon : 3 
 │     │      │                  ├ redhat : 2 
 │     │      │                  ├ rocky  : 3 
 │     │      │                  ╰ ubuntu : 2 
@@ -833,7 +842,7 @@
 │     │      │                  https://bugzilla.redhat.com/2548336                           
 │     │      │                  https://bugzilla.redhat.com/2548344                           
 │     │      │                  https://bugzilla.redhat.com/2556068                           
-│     │      │                  https://access.redhat.com/errata/RHSA-2026:36207              
+│     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2548334           
 │     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2548335           
 │     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2548336           
 │     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2548337           
@@ -859,7 +868,7 @@
 │     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94439 
 │     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440 
 │     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94444 
-│     │      │                  https://access.redhat.com/errata/RHSA-2026:39573              
+│     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94447 
 │     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94448 
 │     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97030 
 │     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97031 
@@ -946,17 +955,17 @@
 │     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2548346           
 │     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2548347           
 │     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2556068           
-│     │      │                  https://creativecommons.org/licenses/by/4.0/                  
-│     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111943
-│     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56866 
+│     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2484204           
+│     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2515815           
+│     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2515820           
 │     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78659 
-│     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78660 
+│     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2515838           
 │     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78663 
 │     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667 
 │     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669 
-│     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94439 
-│     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94440 
-│     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94444 
+│     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280 
+│     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281 
+│     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33811 
 │     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94447 
 │     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94448 
 │     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97030 
@@ -1391,7 +1400,7 @@
 │     │     │                  https://groups.google.com/g/golang-announce/c/U2fTuyDJznI     
 │     │     │                  https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs     
 │     │     │                  https://linux.oracle.com/cve/CVE-2026-78669.html              
-│     │     │                  https://linux.oracle.com/errata/ELSA-2026-95519.html          
+│     │     │                  https://linux.oracle.com/errata/ELSA-2026-98454.html          
 │     │     │                  https://nvd.nist.gov/vuln/detail/CVE-2026-78669               
 │     │     │                  https://pkg.go.dev/vuln/GO-2026-6611                          
 │     │     │                  https://ubuntu.com/security/notices/USN-8935-1                
@@ -1537,6 +1546,7 @@
 │     │     │                  ├ amazon : 3 
 │     │     │                  ├ azure  : 3 
 │     │     │                  ├ bitnami: 3 
+│     │     │                  ├ photon : 3 
 │     │     │                  ├ redhat : 2 
 │     │     │                  ├ rocky  : 3 
 │     │     │                  ╰ ubuntu : 2 
@@ -1867,7 +1877,8 @@
 │           │                  ├ Name: The Go Vulnerability Database 
 │           │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │           ├ Fingerprint     : sha256:88fd2080cce15f438526427e1efd270d2822db36024290768a38c3dbb6a6dcb4 
-│           ├ Title           : For HTTP/1 servers, when MaxBytesReader's limit is exceeded, "Connecti ... 
+│           ├ Title           : net/http: golang: net/http: Denial of Service via race condition when handling
+│           │                   oversized HTTP/1 requests 
 │           ├ Description     : For HTTP/1 servers, when MaxBytesReader's limit is exceeded, "Connection:
 │           │                   close" header is automatically set without synchronization, which might race
 │           │                   with another header being set explicitly in the server handler. As a result, an
@@ -1880,13 +1891,20 @@
 │           │                  CWE-362
 │           │                  CWE-820
 │           │                  
-│           ├ VendorSeverity   ─ amazon: 2 
+│           ├ VendorSeverity   ╭ amazon: 2 
+│           │                  ├ photon: 2 
+│           │                  ╰ redhat: 2 
+│           ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H 
+│           │                           ╰ V3Score : 5.9 
 │           ├ References                                                                
 │           │                  ─────────────────────────────────────────────────────────
+│           │                  https://access.redhat.com/security/cve/CVE-2026-97054    
 │           │                  https://go.dev/cl/862185                                 
 │           │                  https://go.dev/issue/82563                               
 │           │                  https://groups.google.com/g/golang-announce/c/iY8TY0wWgbM
+│           │                  https://nvd.nist.gov/vuln/detail/CVE-2026-97054          
 │           │                  https://pkg.go.dev/vuln/GO-2026-6859                     
+│           │                  https://www.cve.org/CVERecord?id=CVE-2026-97054          
 │           │                  
 │           ├ PublishedDate   : 2026-11-11T05:19:58.943Z 
 │           ╰ LastModifiedDate: 2026-11-16T16:17:56.29Z 
@@ -2424,7 +2442,7 @@
 │     ├ [8]  ╭ VulnerabilityID : CVE-2026-25681 
 │     │      ├ VendorIDs                    
 │     │      │                  ────────────
-│     │      │                  GO-2026-5017
+│     │      │                  GO-2026-5029
 │     │      │                  
 │     │      ├ PkgID           : golang.org/x/net@v0.37.0 
 │     │      ├ PkgName         : golang.org/x/net 
@@ -2788,7 +2806,7 @@
 │     │      │                  https://access.redhat.com/errata/RHSA-2026:35828                            
 │     │      │                  https://access.redhat.com/errata/RHSA-2026:35829                            
 │     │      │                  https://access.redhat.com/errata/RHSA-2026:35830                            
-│     │      │                  https://access.redhat.com/errata/RHSA-2026:86196                            
+│     │      │                  https://access.redhat.com/errata/RHSA-2026:35831                            
 │     │      │                  https://access.redhat.com/errata/RHSA-2026:35993                            
 │     │      │                  https://access.redhat.com/errata/RHSA-2026:35994                            
 │     │      │                  https://access.redhat.com/errata/RHSA-2026:36105                            
@@ -2929,15 +2947,15 @@
 │     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2467809                         
 │     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2467820                         
 │     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2467822                         
-│     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2480756                         
+│     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2556068                         
 │     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2484204                         
 │     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2515815                         
 │     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2515820                         
-│     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2515827                         
+│     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78659               
 │     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2515838                         
-│     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2515839                         
-│     │      │                  https://bugzilla.redhat.com/show_bug.cgi?id=2515840                         
-│     │      │                  https://creativecommons.org/licenses/by/4.0/                                
+│     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78663               
+│     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78667               
+│     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78669               
 │     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32280               
 │     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32281               
 │     │      │                  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33811               
@@ -2958,7 +2976,7 @@
 │     │      │                  https://groups.google.com/g/golang-announce/c/94pEornpRlI                   
 │     │      │                  https://groups.google.com/g/golang-announce/c/iI-mYSI0lu8                   
 │     │      │                  https://linux.oracle.com/cve/CVE-2026-39821.html                            
-│     │      │                  https://linux.oracle.com/errata/ELSA-2026-66432-0.html                      
+│     │      │                  https://linux.oracle.com/errata/ELSA-2026-97386.html                        
 │     │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-39821                             
 │     │      │                  https://pkg.go.dev/vuln/GO-2026-5026                                        
 │     │      │                  https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-39821.json
@@ -3147,7 +3165,7 @@
 │     │      │                  https://groups.google.com/g/golang-announce/c/U2fTuyDJznI     
 │     │      │                  https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs     
 │     │      │                  https://linux.oracle.com/cve/CVE-2026-78669.html              
-│     │      │                  https://linux.oracle.com/errata/ELSA-2026-95519.html          
+│     │      │                  https://linux.oracle.com/errata/ELSA-2026-98454.html          
 │     │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-78669               
 │     │      │                  https://pkg.go.dev/vuln/GO-2026-6611                          
 │     │      │                  https://ubuntu.com/security/notices/USN-8935-1                
@@ -3631,6 +3649,7 @@
 │     │      │                  ├ amazon : 3 
 │     │      │                  ├ azure  : 3 
 │     │      │                  ├ bitnami: 3 
+│     │      │                  ├ photon : 3 
 │     │      │                  ├ redhat : 2 
 │     │      │                  ├ rocky  : 3 
 │     │      │                  ╰ ubuntu : 2 
@@ -4148,6 +4167,7 @@
 │     │      │                  ├ amazon     : 3 
 │     │      │                  ├ bitnami    : 2 
 │     │      │                  ├ oracle-oval: 3 
+│     │      │                  ├ photon     : 2 
 │     │      │                  ├ redhat     : 3 
 │     │      │                  ╰ rocky      : 3 
 │     │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N 
@@ -4485,7 +4505,7 @@
 │     │      │                  https://go.dev/issue/77578                                                  
 │     │      │                  https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk                   
 │     │      │                  https://linux.oracle.com/cve/CVE-2026-25679.html                            
-│     │      │                  https://linux.oracle.com/errata/ELSA-2026-9044.html                         
+│     │      │                  https://linux.oracle.com/errata/ELSA-2026-97387.html                        
 │     │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-25679                             
 │     │      │                  https://pkg.go.dev/vuln/GO-2026-4601                                        
 │     │      │                  https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-25679.json
@@ -4743,7 +4763,7 @@
 │     │      │                  https://access.redhat.com/errata/RHSA-2026:19550                            
 │     │      │                  https://access.redhat.com/errata/RHSA-2026:19634                            
 │     │      │                  https://access.redhat.com/errata/RHSA-2026:19714                            
-│     │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-116587                            
+│     │      │                  https://access.redhat.com/errata/RHSA-2026:19715                            
 │     │      │                  https://access.redhat.com/errata/RHSA-2026:19719                            
 │     │      │                  https://access.redhat.com/errata/RHSA-2026:19720                            
 │     │      │                  https://access.redhat.com/errata/RHSA-2026:19721                            
@@ -5002,7 +5022,7 @@
 │     │      │                  https://go.dev/issue/78281                                   
 │     │      │                  https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU    
 │     │      │                  https://linux.oracle.com/cve/CVE-2026-32281.html             
-│     │      │                  https://linux.oracle.com/errata/ELSA-2026-67148-0.html       
+│     │      │                  https://linux.oracle.com/errata/ELSA-2026-97284.html         
 │     │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-32281              
 │     │      │                  https://pkg.go.dev/vuln/GO-2026-4946                         
 │     │      │                  https://www.cve.org/CVERecord?id=CVE-2026-32281              
@@ -6088,7 +6108,7 @@
 │     │      │                  https://groups.google.com/g/golang-announce/c/94pEornpRlI                   
 │     │      │                  https://groups.google.com/g/golang-announce/c/iI-mYSI0lu8                   
 │     │      │                  https://linux.oracle.com/cve/CVE-2026-39821.html                            
-│     │      │                  https://linux.oracle.com/errata/ELSA-2026-66432-0.html                      
+│     │      │                  https://linux.oracle.com/errata/ELSA-2026-97386.html                        
 │     │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-39821                             
 │     │      │                  https://pkg.go.dev/vuln/GO-2026-5026                                        
 │     │      │                  https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-39821.json
@@ -6412,7 +6432,7 @@
 │     │      │                  https://go.dev/issue/78987                                                  
 │     │      │                  https://groups.google.com/g/golang-announce/c/qcCIEXso47M                   
 │     │      │                  https://linux.oracle.com/cve/CVE-2026-42499.html                            
-│     │      │                  https://linux.oracle.com/errata/ELSA-2026-70201.html                        
+│     │      │                  https://linux.oracle.com/errata/ELSA-2026-98447.html                        
 │     │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-42499                             
 │     │      │                  https://pkg.go.dev/vuln/GO-2026-4977                                        
 │     │      │                  https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-42499.json
@@ -6667,7 +6687,7 @@
 │     │      │                  https://go.dev/issue/80435                                    
 │     │      │                  https://groups.google.com/g/golang-announce/c/94pEornpRlI     
 │     │      │                  https://linux.oracle.com/cve/CVE-2026-56858.html              
-│     │      │                  https://linux.oracle.com/errata/ELSA-2026-70641.html          
+│     │      │                  https://linux.oracle.com/errata/ELSA-2026-98454.html          
 │     │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-56858               
 │     │      │                  https://pkg.go.dev/vuln/GO-2026-6091                          
 │     │      │                  https://www.cve.org/CVERecord?id=CVE-2026-56858               
@@ -6744,7 +6764,7 @@
 │     │      │                  https://go.dev/issue/80481                                   
 │     │      │                  https://groups.google.com/g/golang-announce/c/94pEornpRlI    
 │     │      │                  https://linux.oracle.com/cve/CVE-2026-56859.html             
-│     │      │                  https://linux.oracle.com/errata/ELSA-2026-70201.html         
+│     │      │                  https://linux.oracle.com/errata/ELSA-2026-98454.html         
 │     │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-56859              
 │     │      │                  https://pkg.go.dev/vuln/GO-2026-6088                         
 │     │      │                  https://ubuntu.com/security/notices/USN-8935-1               
@@ -6824,7 +6844,7 @@
 │     │      │                  https://go.dev/issue/80494                                    
 │     │      │                  https://groups.google.com/g/golang-announce/c/94pEornpRlI     
 │     │      │                  https://linux.oracle.com/cve/CVE-2026-56860.html              
-│     │      │                  https://linux.oracle.com/errata/ELSA-2026-71619.html          
+│     │      │                  https://linux.oracle.com/errata/ELSA-2026-98454.html          
 │     │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-56860               
 │     │      │                  https://pkg.go.dev/vuln/GO-2026-6218                          
 │     │      │                  https://www.cve.org/CVERecord?id=CVE-2026-56860               
@@ -7072,7 +7092,7 @@
 │     │      │                  https://groups.google.com/g/golang-announce/c/U2fTuyDJznI     
 │     │      │                  https://groups.google.com/g/golang-announce/c/ZPwCyRUuGBs     
 │     │      │                  https://linux.oracle.com/cve/CVE-2026-78669.html              
-│     │      │                  https://linux.oracle.com/errata/ELSA-2026-95519.html          
+│     │      │                  https://linux.oracle.com/errata/ELSA-2026-98454.html          
 │     │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-78669               
 │     │      │                  https://pkg.go.dev/vuln/GO-2026-6611                          
 │     │      │                  https://ubuntu.com/security/notices/USN-8935-1                
@@ -7830,6 +7850,7 @@
 │     │      ├ VendorSeverity   ╭ alma   : 3 
 │     │      │                  ├ amazon : 3 
 │     │      │                  ├ bitnami: 3 
+│     │      │                  ├ photon : 3 
 │     │      │                  ├ redhat : 2 
 │     │      │                  ├ rocky  : 3 
 │     │      │                  ╰ ubuntu : 2 
@@ -8028,6 +8049,7 @@
 │     │      │                  ├ amazon : 3 
 │     │      │                  ├ azure  : 3 
 │     │      │                  ├ bitnami: 3 
+│     │      │                  ├ photon : 3 
 │     │      │                  ├ redhat : 2 
 │     │      │                  ├ rocky  : 3 
 │     │      │                  ╰ ubuntu : 2 
@@ -8225,6 +8247,7 @@
 │     │      ├ VendorSeverity   ╭ alma   : 3 
 │     │      │                  ├ amazon : 2 
 │     │      │                  ├ bitnami: 3 
+│     │      │                  ├ photon : 3 
 │     │      │                  ├ redhat : 2 
 │     │      │                  ├ rocky  : 3 
 │     │      │                  ╰ ubuntu : 2 
@@ -8489,6 +8512,7 @@
 │     │      ├ VendorSeverity   ╭ alma   : 3 
 │     │      │                  ├ amazon : 2 
 │     │      │                  ├ bitnami: 2 
+│     │      │                  ├ photon : 2 
 │     │      │                  ├ redhat : 2 
 │     │      │                  ╰ rocky  : 3 
 │     │      ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N 
@@ -8663,7 +8687,8 @@
 │     │      │                  ├ Name: The Go Vulnerability Database 
 │     │      │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │     │      ├ Fingerprint     : sha256:91874c075f202d2aa2a51c8627416469bf6a00ee16f99a08b4120bf147cfe6a0 
-│     │      ├ Title           : For HTTP/1 servers, when MaxBytesReader's limit is exceeded, "Connecti ... 
+│     │      ├ Title           : net/http: golang: net/http: Denial of Service via race condition when handling
+│     │      │                    oversized HTTP/1 requests 
 │     │      ├ Description     : For HTTP/1 servers, when MaxBytesReader's limit is exceeded, "Connection:
 │     │      │                   close" header is automatically set without synchronization, which might race
 │     │      │                   with another header being set explicitly in the server handler. As a result,
@@ -8676,13 +8701,20 @@
 │     │      │                  CWE-362
 │     │      │                  CWE-820
 │     │      │                  
-│     │      ├ VendorSeverity   ─ amazon: 2 
+│     │      ├ VendorSeverity   ╭ amazon: 2 
+│     │      │                  ├ photon: 2 
+│     │      │                  ╰ redhat: 2 
+│     │      ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H 
+│     │      │                           ╰ V3Score : 5.9 
 │     │      ├ References                                                                
 │     │      │                  ─────────────────────────────────────────────────────────
+│     │      │                  https://access.redhat.com/security/cve/CVE-2026-97054    
 │     │      │                  https://go.dev/cl/862185                                 
 │     │      │                  https://go.dev/issue/82563                               
 │     │      │                  https://groups.google.com/g/golang-announce/c/iY8TY0wWgbM
+│     │      │                  https://nvd.nist.gov/vuln/detail/CVE-2026-97054          
 │     │      │                  https://pkg.go.dev/vuln/GO-2026-6859                     
+│     │      │                  https://www.cve.org/CVERecord?id=CVE-2026-97054          
 │     │      │                  
 │     │      ├ PublishedDate   : 2026-11-11T05:19:58.943Z 
 │     │      ╰ LastModifiedDate: 2026-11-16T16:17:56.29Z 
@@ -8768,6 +8800,7 @@
 │            │                  CWE-1386
 │            │                  
 │            ├ VendorSeverity   ╭ bitnami: 4 
+│            │                  ├ photon : 4 
 │            │                  ├ redhat : 1 
 │            │                  ╰ ubuntu : 2 
 │            ├ CVSS             ╭ bitnami ╭ V3Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H 
@@ -8967,7 +9000,8 @@
 │           │                  ├ Name: The Go Vulnerability Database 
 │           │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │           ├ Fingerprint     : sha256:e7970eda887c19f2d8b0886bf2a09ad297e6f1bc8a52701d4da3ee7fc1b24442 
-│           ├ Title           : For HTTP/1 servers, when MaxBytesReader's limit is exceeded, "Connecti ... 
+│           ├ Title           : net/http: golang: net/http: Denial of Service via race condition when handling
+│           │                   oversized HTTP/1 requests 
 │           ├ Description     : For HTTP/1 servers, when MaxBytesReader's limit is exceeded, "Connection:
 │           │                   close" header is automatically set without synchronization, which might race
 │           │                   with another header being set explicitly in the server handler. As a result, an
@@ -8980,13 +9014,20 @@
 │           │                  CWE-362
 │           │                  CWE-820
 │           │                  
-│           ├ VendorSeverity   ─ amazon: 2 
+│           ├ VendorSeverity   ╭ amazon: 2 
+│           │                  ├ photon: 2 
+│           │                  ╰ redhat: 2 
+│           ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H 
+│           │                           ╰ V3Score : 5.9 
 │           ├ References                                                                
 │           │                  ─────────────────────────────────────────────────────────
+│           │                  https://access.redhat.com/security/cve/CVE-2026-97054    
 │           │                  https://go.dev/cl/862185                                 
 │           │                  https://go.dev/issue/82563                               
 │           │                  https://groups.google.com/g/golang-announce/c/iY8TY0wWgbM
+│           │                  https://nvd.nist.gov/vuln/detail/CVE-2026-97054          
 │           │                  https://pkg.go.dev/vuln/GO-2026-6859                     
+│           │                  https://www.cve.org/CVERecord?id=CVE-2026-97054          
 │           │                  
 │           ├ PublishedDate   : 2026-11-11T05:19:58.943Z 
 │           ╰ LastModifiedDate: 2026-11-16T16:17:56.29Z 
@@ -10333,7 +10374,7 @@
 │     ├ [17] ╭ VulnerabilityID : CVE-2026-56855 
 │     │      ├ VendorIDs                    
 │     │      │                  ────────────
-│     │      │                  GO-2026-6355
+│     │      │                  GO-2026-6617
 │     │      │                  
 │     │      ├ PkgID           : golang.org/x/crypto@v0.40.0 
 │     │      ├ PkgName         : golang.org/x/crypto 
@@ -11230,7 +11271,8 @@
 │            │                  ├ Name: The Go Vulnerability Database 
 │            │                  ╰ URL : https://pkg.go.dev/vuln/ 
 │            ├ Fingerprint     : sha256:ad12a7983ee0cc40714760c688e7a227899cd0ef6d58e6f7a7d0b14966959b1e 
-│            ├ Title           : For HTTP/1 servers, when MaxBytesReader's limit is exceeded, "Connecti ... 
+│            ├ Title           : net/http: golang: net/http: Denial of Service via race condition when handling
+│            │                    oversized HTTP/1 requests 
 │            ├ Description     : For HTTP/1 servers, when MaxBytesReader's limit is exceeded, "Connection:
 │            │                   close" header is automatically set without synchronization, which might race
 │            │                   with another header being set explicitly in the server handler. As a result,
@@ -11243,13 +11285,20 @@
 │            │                  CWE-362
 │            │                  CWE-820
 │            │                  
-│            ├ VendorSeverity   ─ amazon: 2 
+│            ├ VendorSeverity   ╭ amazon: 2 
+│            │                  ├ photon: 2 
+│            │                  ╰ redhat: 2 
+│            ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H 
+│            │                           ╰ V3Score : 5.9 
 │            ├ References                                                                
 │            │                  ─────────────────────────────────────────────────────────
+│            │                  https://access.redhat.com/security/cve/CVE-2026-97054    
 │            │                  https://go.dev/cl/862185                                 
 │            │                  https://go.dev/issue/82563                               
 │            │                  https://groups.google.com/g/golang-announce/c/iY8TY0wWgbM
+│            │                  https://nvd.nist.gov/vuln/detail/CVE-2026-97054          
 │            │                  https://pkg.go.dev/vuln/GO-2026-6859                     
+│            │                  https://www.cve.org/CVERecord?id=CVE-2026-97054          
 │            │                  
 │            ├ PublishedDate   : 2026-11-11T05:19:58.943Z 
 │            ╰ LastModifiedDate: 2026-11-16T16:17:56.29Z 
@@ -11509,14 +11558,14 @@
 │     │     │                           ╰ V3Score : 7.5 
 │     │     ├ References                                                                
 │     │     │                  ─────────────────────────────────────────────────────────
-│     │     │                  https://access.redhat.com/security/cve/CVE-2026-78661    
+│     │     │                  GHSA-pxq6-2prw-chj9                                      
 │     │     │                  https://advisory.echohq.com/cve/CVE-2026-78661           
 │     │     │                  https://go.dev/cl/849365                                 
 │     │     │                  https://go.dev/issue/82224                               
 │     │     │                  https://groups.google.com/g/golang-announce/c/sqrs2vTx_Xs
 │     │     │                  https://nvd.nist.gov/vuln/detail/CVE-2026-78661          
 │     │     │                  https://pkg.go.dev/vuln/GO-2026-6860                     
-│     │     │                  https://www.cve.org/CVERecord?id=CVE-2026-78661          
+│     │     │                  https://nvd.nist.gov/vuln/detail/CVE-2026-78661          
 │     │     │                  
 │     │     ├ PublishedDate   : 2026-10-27T22:18:05.93Z 
 │     │     ╰ LastModifiedDate: 2026-11-04T17:17:37.673Z 
@@ -11620,7 +11669,8 @@
             │                  ├ Name: The Go Vulnerability Database 
             │                  ╰ URL : https://pkg.go.dev/vuln/ 
             ├ Fingerprint     : sha256:79d8a02e96375438e6c86385f8ceb2733bb012b42996cf8da274772df421ee06 
-            ├ Title           : For HTTP/1 servers, when MaxBytesReader's limit is exceeded, "Connecti ... 
+            ├ Title           : net/http: golang: net/http: Denial of Service via race condition when handling
+            │                   oversized HTTP/1 requests 
             ├ Description     : For HTTP/1 servers, when MaxBytesReader's limit is exceeded, "Connection:
             │                   close" header is automatically set without synchronization, which might race
             │                   with another header being set explicitly in the server handler. As a result, an
@@ -11633,13 +11683,20 @@
             │                  CWE-362
             │                  CWE-820
             │                  
-            ├ VendorSeverity   ─ amazon: 2 
+            ├ VendorSeverity   ╭ amazon: 2 
+            │                  ├ photon: 2 
+            │                  ╰ redhat: 2 
+            ├ CVSS             ─ redhat ╭ V3Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H 
+            │                           ╰ V3Score : 5.9 
             ├ References                                                                
             │                  ─────────────────────────────────────────────────────────
+            │                  https://access.redhat.com/security/cve/CVE-2026-97054    
             │                  https://go.dev/cl/862185                                 
             │                  https://go.dev/issue/82563                               
             │                  https://groups.google.com/g/golang-announce/c/iY8TY0wWgbM
+            │                  https://nvd.nist.gov/vuln/detail/CVE-2026-97054          
             │                  https://pkg.go.dev/vuln/GO-2026-6859                     
+            │                  https://www.cve.org/CVERecord?id=CVE-2026-97054          
             │                  
             ├ PublishedDate   : 2026-11-11T05:19:58.943Z 
             ╰ LastModifiedDate: 2026-11-16T16:17:56.29Z 
