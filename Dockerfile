@@ -14,6 +14,16 @@
 #  && make build\
 #  && arch=$(uname -m) && if [ "$arch" == "aarch64" ]; then cp snapshot/dive_linux_arm64/dive /dive; elif [ "$arch" == "x86_64" ]; then cp snapshot/dive_linux_amd64_v1/dive /dive; fi
 
+# Package only the Podman remote client and its Bash completion
+FROM alpine:edge AS podman-client
+
+RUN apk --no-cache add podman-remote\
+ && mkdir -p /image/usr/bin /image/etc/bash\
+ && cp /usr/bin/podman-remote /image/usr/bin/\
+ && ln -s podman-remote /image/usr/bin/podman\
+ && /image/usr/bin/podman completion bash > /image/etc/bash/podman-completion.sh\
+ && test -s /image/etc/bash/podman-completion.sh
+
 # ---------------------
 FROM openaf/oaf:edge as main
 
@@ -26,8 +36,7 @@ USER root
 RUN sed -i 's/v[0-9]*\.[0-9]*/edge/g' /etc/apk/repositories\
  && apk update\
  && apk upgrade --available\
- && apk --no-cache add skopeo docker-cli podman-remote curl tar bash gzip mc tmux containerd-ctr bash-completion cosign oras-cli oras-cli-bash-completion\
- && ln -s podman-remote /usr/bin/podman\
+ && apk --no-cache add skopeo docker-cli curl tar bash gzip mc tmux containerd-ctr bash-completion cosign oras-cli oras-cli-bash-completion\
  && /openaf/ojob ojob.io/kube/getHelm path=/usr/bin\
  && /openaf/ojob ojob.io/kube/getNerdCtl path=/usr/bin\
  && /openaf/opack install DockerRegistry Kube BouncyCastle oafproc\
@@ -65,10 +74,7 @@ RUN sed -i 's/v[0-9]*\.[0-9]*/edge/g' /etc/apk/repositories\
 
 # Setup bash completion
 # ---------------------
-RUN podman --version\
- && podman completion bash > /etc/bash/podman-completion.sh\
- && test -s /etc/bash/podman-completion.sh\
- && echo "source <(crictl completion bash)" >> /etc/bash/start.sh\
+RUN echo "source <(crictl completion bash)" >> /etc/bash/start.sh\
  && echo "source <(helm completion bash)" >> /etc/bash/start.sh\
  && echo "source <(docker completion bash)" >> /etc/bash/start.sh\
  && echo "source /etc/bash/podman-completion.sh" >> /etc/bash/start.sh\
@@ -156,6 +162,12 @@ RUN gzip /etc/imgutils\
  && echo "export PATH=$PATH:/openaf:/openaf/ojobs" >> /etc/bash/start.sh\
  && cp /etc/bash/start.sh /etc/profile.d/start.sh
 
+# -------------------
+FROM scratch as final
+
+COPY --from=main / /
+COPY --from=podman-client /image/ /
+
 # Setup usage and examples
 # ------------------------
 COPY USAGE.md /USAGE.md
@@ -173,15 +185,12 @@ RUN gzip /USAGE.md\
  && chmod a+x /status\
  && chmod a+x /.entrypoint.sh
 
-# -------------------
-FROM scratch as final
-
-COPY --from=main / /
-
 ENV OAF_HOME=/openaf
 ENV PATH=$PATH:$OAF_HOME:$OAF_HOME/ojobs
 USER openaf
 
 WORKDIR /imgutils
+RUN podman --version
+
 #CMD ["/usr/bin/usage-help"]
 ENTRYPOINT ["/.entrypoint.sh"]
