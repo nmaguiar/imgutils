@@ -18,11 +18,23 @@
 FROM alpine:edge AS podman-client
 
 RUN apk --no-cache add podman-remote\
- && mkdir -p /image/usr/bin /image/etc/bash\
+ && mkdir -p /image/usr/bin /image/usr/share/bash-completion/completions\
  && cp /usr/bin/podman-remote /image/usr/bin/\
  && ln -s podman-remote /image/usr/bin/podman\
- && /image/usr/bin/podman completion bash > /image/etc/bash/podman-completion.sh\
- && test -s /image/etc/bash/podman-completion.sh
+ && /image/usr/bin/podman completion bash > /image/usr/share/bash-completion/completions/podman.bash\
+ && test -s /image/usr/share/bash-completion/completions/podman.bash
+
+# Generate OpenAF completion in parallel with the main image's tool setup.
+FROM openaf/oaf:edge AS openaf-completion
+
+USER root
+RUN mkdir /completions\
+ && /openaf/oaf --bashcompletion all > /completions/oaf.bash\
+ && chmod a+x /openaf/.openaf_completion_*.sh\
+ && cd /completions\
+ && ln -s oaf.bash ojob.bash\
+ && ln -s oaf.bash oafp.bash\
+ && ln -s oaf.bash opack.bash
 
 # ---------------------
 FROM openaf/oaf:edge as main
@@ -72,29 +84,6 @@ RUN sed -i 's/v[0-9]*\.[0-9]*/edge/g' /etc/apk/repositories\
  && chmod g+w /run\
  && touch /etc/crictl.yaml
 
-COPY --from=podman-client /image/ /
-
-# Setup bash completion
-# ---------------------
-RUN echo "source <(crictl completion bash)" >> /etc/bash/start.sh\
- && echo "source <(helm completion bash)" >> /etc/bash/start.sh\
- && echo "source <(docker completion bash)" >> /etc/bash/start.sh\
- && echo "source /etc/bash/podman-completion.sh" >> /etc/bash/start.sh\
- && echo "source <(skopeo completion bash)" >> /etc/bash/start.sh\
- && echo "source <(nerdctl completion bash)" >> /etc/bash/start.sh\
- && echo "source <(syft completion bash)" >> /etc/bash/start.sh\
- && echo "source <(cosign completion bash)" >> /etc/bash/start.sh\
- && echo "source <(oras completion bash)" >> /etc/bash/start.sh\
- && /openaf/oaf --bashcompletion all > /openaf/.openaf_completion.sh\
- && chmod a+x /openaf/.openaf_*.sh\
- && chown openaf:openaf /openaf/.openaf_*.sh\
- && echo ". /openaf/.openaf_completion.sh" >> /etc/bash/start.sh
-
-# Copy scripts
-# ------------
-COPY scripts /usr/local/bin
-RUN chmod a+x /usr/local/bin/*.sh
-
 # Setup Dive
 # ----------
 # RUN cd /tmp\
@@ -142,6 +131,22 @@ RUN if [ "`uname -m`" = "x86_64" ]; then \
 # -----------------------
 RUN curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/bin
 
+# Install completion from the final binaries for Bash to load on demand.
+# The Alpine packages supply the Cosign and ORAS completions.
+RUN cd /usr/share/bash-completion/completions\
+ && for tool in crictl helm docker skopeo nerdctl syft; do \
+      "$tool" completion bash > "$tool.bash" && test -s "$tool.bash" || exit 1; \
+    done
+
+COPY --from=openaf-completion --chown=openaf:openaf /openaf/.openaf_completion_*.sh /openaf/
+COPY --from=openaf-completion /completions/ /usr/share/bash-completion/completions/
+COPY --from=podman-client /image/ /
+
+# Copy scripts
+# ------------
+COPY scripts /usr/local/bin
+RUN chmod a+x /usr/local/bin/*.sh
+
 # Setup imgutils folder
 # ---------------------
 RUN mkdir /imgutils\
@@ -182,7 +187,8 @@ RUN gzip /USAGE.md\
  && chmod a+x /.entrypoint.sh
 
 USER openaf
-RUN /usr/bin/podman --version
+RUN /usr/bin/podman --version\
+ && bash -ec '. /usr/share/bash-completion/completions/oaf.bash; complete -p oaf ojob oafp opack >/dev/null'
 
 # -------------------
 FROM scratch as final
