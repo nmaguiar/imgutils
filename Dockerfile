@@ -26,7 +26,8 @@ USER root
 RUN sed -i 's/v[0-9]*\.[0-9]*/edge/g' /etc/apk/repositories\
  && apk update\
  && apk upgrade --available\
- && apk --no-cache add skopeo docker-cli curl tar bash gzip mc tmux containerd-ctr bash-completion cosign oras-cli oras-cli-bash-completion\
+ && apk --no-cache add skopeo docker-cli podman-remote curl tar bash gzip mc tmux containerd-ctr bash-completion cosign oras-cli oras-cli-bash-completion\
+ && ln -s podman-remote /usr/bin/podman\
  && /openaf/ojob ojob.io/kube/getHelm path=/usr/bin\
  && /openaf/ojob ojob.io/kube/getNerdCtl path=/usr/bin\
  && /openaf/opack install DockerRegistry Kube BouncyCastle oafproc\
@@ -64,9 +65,13 @@ RUN sed -i 's/v[0-9]*\.[0-9]*/edge/g' /etc/apk/repositories\
 
 # Setup bash completion
 # ---------------------
-RUN echo "source <(crictl completion bash)" >> /etc/bash/start.sh\
+RUN podman --version\
+ && podman completion bash > /etc/bash/podman-completion.sh\
+ && test -s /etc/bash/podman-completion.sh\
+ && echo "source <(crictl completion bash)" >> /etc/bash/start.sh\
  && echo "source <(helm completion bash)" >> /etc/bash/start.sh\
  && echo "source <(docker completion bash)" >> /etc/bash/start.sh\
+ && echo "source /etc/bash/podman-completion.sh" >> /etc/bash/start.sh\
  && echo "source <(skopeo completion bash)" >> /etc/bash/start.sh\
  && echo "source <(nerdctl completion bash)" >> /etc/bash/start.sh\
  && echo "source <(syft completion bash)" >> /etc/bash/start.sh\

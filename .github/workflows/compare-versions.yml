@@ -47,6 +47,10 @@ jobs:
         - url : https://api.github.com/repos/docker/cli/tags
           path: "[0].{tool:'docker',lastVer:name}"
 
+        # Podman
+        - url : https://api.github.com/repos/podman-container-tools/podman/releases/latest
+          path: "{tool:'podman',lastVer:tag_name}"
+
         # CriCtl
         - url : https://api.github.com/repos/kubernetes-sigs/cri-tools/releases/latest
           path: "{tool:'crictl',lastVer:name}"

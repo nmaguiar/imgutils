@@ -10,6 +10,36 @@ Welcome to the ImgUtils image. Check the deployment options available and the li
 
 ---
 
+## Deploy using Podman
+
+```bash
+podman run --rm -it docker.io/nmaguiar/imgutils /bin/bash
+```
+
+On a Linux host with systemd, start your rootless Podman service and mount its socket to list your images from ImgUtils.
+
+```bash
+systemctl --user start podman.socket
+podman run --rm --userns=host --user 0:0 --security-opt label=disable \
+  --volume "$XDG_RUNTIME_DIR/podman/podman.sock:/run/podman/podman.sock" \
+  --env CONTAINER_HOST=unix:///run/podman/podman.sock \
+  docker.io/nmaguiar/imgutils podman images
+```
+
+For the rootful service, start the system socket and run ImgUtils with `sudo`.
+
+```bash
+sudo systemctl start podman.socket
+sudo podman run --rm --userns=host --user 0:0 --security-opt label=disable \
+  --volume /run/podman/podman.sock:/run/podman/podman.sock \
+  --env CONTAINER_HOST=unix:///run/podman/podman.sock \
+  docker.io/nmaguiar/imgutils podman images
+```
+
+The rootless command maps container UID 0 to your host account. A mounted socket grants control over the corresponding Podman service.
+
+---
+
 ## 🤓 Deploy using nerdctl 
 
 {{{$acolor 'FAINT,ITALIC' 'nerdctl run --rm -ti -v /run/k3s/containerd/containerd.sock:/run/containerd/containerd.sock nmaguiar/imgutils /bin/bash'}}}
@@ -76,6 +106,7 @@ First check the nodes' names with 'kubectl get nodes'
 | skopeo  | Copy from/to container registries, archive files and from/to docker daemon |
 | helm    | The most popular Kubernetes package manager (for use to pull/push charts) |
 | docker  | Docker client to interact with a docker daemon (see above 'Deploy using docker') |
+| podman  | Remote client for a host Podman service (see above 'Deploy using Podman') |
 | crictl  | Client to interact with containerd/cri-o with Kubernetes (see above 'Deploy using kubectl') |
 | ctr     | Containerd low-level client tool |
 | nerdctl | Containerd high-level client tool (see above 'Deploy using nerdctl' and/or 'Deploy using kubectl') |

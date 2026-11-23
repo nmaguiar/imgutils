@@ -279,6 +279,14 @@ jobs:
       with:
         cmd: docker run --rm nmaguiar/imgutils:build id
 
+  test-podman:
+    name: test podman
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: Test Podman client
+      run: docker run --rm nmaguiar/imgutils:build podman --version
+
   test-crictl:
     name: test crictl
     runs-on: ubuntu-latest
@@ -336,7 +344,7 @@ jobs:
 
   version-images:
     runs-on: ubuntu-latest
-    needs: [build-image-lite, test-skopeo, test-helm, test-docker, test-crictl, test-ctr, test-nerdctl, test-openaf, test-syft]
+    needs: [build-image-lite, test-skopeo, test-helm, test-docker, test-podman, test-crictl, test-ctr, test-nerdctl, test-openaf, test-syft]
     permissions:
       contents: write
       pull-requests: write
@@ -414,6 +422,10 @@ jobs:
         # Docker
         - url : https://api.github.com/repos/docker/cli/tags
           path: "[0].{tool:'docker',lastVer:name}"
+
+        # Podman
+        - url : https://api.github.com/repos/podman-container-tools/podman/releases/latest
+          path: "{tool:'podman',lastVer:tag_name}"
 
         # CriCtl
         - url : https://api.github.com/repos/kubernetes-sigs/cri-tools/releases/latest

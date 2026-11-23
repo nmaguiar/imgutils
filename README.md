@@ -5,6 +5,7 @@ Alpine based image ("nmaguiar/imgutils") with:
 * skopeo
 * helm
 * docker-cli
+* podman (remote client)
 * crictl
 * ctr
 * nerdctl
@@ -36,6 +37,7 @@ This should be enough tools to be able to manage images on a Kubernetes cluster 
 * [Copying images and charts between registries](#copying-images-and-charts-between-registries)
 * [Copying images and charts from a file to a registry](#copying-images-and-charts-from-a-file-to-a-registry)
 * [Accessing the Docker daemon](#accessing-the-docker-daemon)
+* [Using Podman](#podman)
 * [Accessing Kubernetes container runtime](#accessing-kubernetes-container-runtime)
 * [Checking images content](#checking-images-content)
 * [Verifying container image signatures](#verifying-container-image-signatures)
@@ -51,6 +53,36 @@ This should be enough tools to be able to manage images on a Kubernetes cluster 
 ```bash
 docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock nmaguiar/imgutils sudo /bin/bash
 ```
+
+#### Podman
+
+Launch an interactive ImgUtils shell with Podman.
+
+```bash
+podman run --rm -it docker.io/nmaguiar/imgutils /bin/bash
+```
+
+On a Linux host with systemd, start your rootless Podman service and mount its socket to list your images from ImgUtils.
+
+```bash
+systemctl --user start podman.socket
+podman run --rm --userns=host --user 0:0 --security-opt label=disable \
+  --volume "$XDG_RUNTIME_DIR/podman/podman.sock:/run/podman/podman.sock" \
+  --env CONTAINER_HOST=unix:///run/podman/podman.sock \
+  docker.io/nmaguiar/imgutils podman images
+```
+
+For the rootful service, start the system socket and run ImgUtils with `sudo`.
+
+```bash
+sudo systemctl start podman.socket
+sudo podman run --rm --userns=host --user 0:0 --security-opt label=disable \
+  --volume /run/podman/podman.sock:/run/podman/podman.sock \
+  --env CONTAINER_HOST=unix:///run/podman/podman.sock \
+  docker.io/nmaguiar/imgutils podman images
+```
+
+The rootless command maps container UID 0 to your host account so it can access your socket. A mounted socket grants control over the corresponding Podman service. [Podman service documentation](https://docs.podman.io/en/stable/markdown/podman-system-service.1.html)
 
 #### Nerdctl
 
