@@ -72,6 +72,8 @@ RUN sed -i 's/v[0-9]*\.[0-9]*/edge/g' /etc/apk/repositories\
  && chmod g+w /run\
  && touch /etc/crictl.yaml
 
+COPY --from=podman-client /image/ /
+
 # Setup bash completion
 # ---------------------
 RUN echo "source <(crictl completion bash)" >> /etc/bash/start.sh\
@@ -162,12 +164,6 @@ RUN gzip /etc/imgutils\
  && echo "export PATH=$PATH:/openaf:/openaf/ojobs" >> /etc/bash/start.sh\
  && cp /etc/bash/start.sh /etc/profile.d/start.sh
 
-# -------------------
-FROM scratch as final
-
-COPY --from=main / /
-COPY --from=podman-client /image/ /
-
 # Setup usage and examples
 # ------------------------
 COPY USAGE.md /USAGE.md
@@ -185,12 +181,18 @@ RUN gzip /USAGE.md\
  && chmod a+x /status\
  && chmod a+x /.entrypoint.sh
 
+USER openaf
+RUN /usr/bin/podman --version
+
+# -------------------
+FROM scratch as final
+
+# Keep the assembled filesystem in a single layer.
+COPY --from=main / /
+
 ENV OAF_HOME=/openaf
 ENV PATH=$PATH:$OAF_HOME:$OAF_HOME/ojobs
 USER openaf
-
-WORKDIR /imgutils
-RUN podman --version
 
 #CMD ["/usr/bin/usage-help"]
 ENTRYPOINT ["/.entrypoint.sh"]

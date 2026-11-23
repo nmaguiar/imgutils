@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# Set the default working directory without adding a WORKDIR layer.
+if [ "$PWD" = / ]; then
+  cd /imgutils || exit 1
+fi
+
 # Make sure openaf can access /var/run/docker.sock
 if [ -e /var/run/docker.sock ]; then
   sudo chown root:openaf /var/run/docker.sock
